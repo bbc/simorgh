@@ -3,41 +3,30 @@
 exports[`Consent Banner Text should correctly render banner text in the UK 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
 }
 
 <div>
@@ -53,41 +42,30 @@ exports[`Consent Banner Text should correctly render banner text in the UK 1`] =
 exports[`Consent Banner Text should correctly render banner text outside the UK 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
 }
 
 <div>
@@ -103,41 +81,30 @@ exports[`Consent Banner Text should correctly render banner text outside the UK 
 exports[`Consent Banner Text should correctly render banner text with a link in the UK 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
 }
 
 <div>
@@ -159,41 +126,30 @@ exports[`Consent Banner Text should correctly render banner text with a link in 
 exports[`Consent Banner Text should correctly render banner text with a link outside the UK 1`] = `
 .emotion-0 {
   font-size: 0.9375rem;
-  line-height: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   color: #BEBEBE;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
-    margin: 0;
-    float: left;
-    width: 53%;
+    margin-top: 1.5rem;
   }
-}
-
-.emotion-0 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0 a:focus,
-.emotion-0 a:hover {
-  color: #FFFFFF;
 }
 
 <div>

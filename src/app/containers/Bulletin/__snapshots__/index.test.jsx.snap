@@ -3,105 +3,9 @@
 exports[`Bulletin Container snapshots should render a Live Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.21212121212121%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-0 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-0 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-8 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.emotion-8:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-8:hover,
-.emotion-8:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-8:visited {
-  color: #6E6E73;
-}
-
-.emotion-6 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.5rem;
-}
-
-.emotion-16 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 1rem;
-  margin: 0;
-}
-
-.emotion-4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
-}
-
-.emotion-22 {
-  position: relative;
   background-color: #F2F2F2;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
   background-color: #F2F2F2;
 }
@@ -113,58 +17,87 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-2 {
     width: 33.33%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-2 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-2 {
-      grid-column: 1 / span 2;
+      grid-column: 1/span 2;
     }
-}
+  }
 }
 
-.emotion-20 {
+.emotion-4 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  padding-bottom: 56.21212121212121%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-4 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-6 {
   display: inline-block;
   width: 100%;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-20 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-6 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-20 {
-      grid-column: 3 / span 4;
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-column: 3/span 4;
       padding: 0;
     }
-}
+  }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -175,29 +108,79 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 0;
   }
 }
 
+.emotion-10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.emotion-10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #6E6E73;
+}
+
 .emotion-12 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-14 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -208,33 +191,24 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-16 {
     padding-left: 0;
   }
-}
-
-.emotion-14 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
 }
 
 .emotion-18 {
@@ -251,8 +225,8 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -261,21 +235,21 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -286,15 +260,44 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
   }
 }
 
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.emotion-20>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 1rem;
+  margin: 0;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
-    class="emotion-22 emotion-23"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <div
           class="lazyload-wrapper"
@@ -306,15 +309,15 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
       </div>
     </div>
     <div
-      class="emotion-20 emotion-21"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -322,13 +325,13 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
           >
             <span
               aria-hidden="true"
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-6 emotion-7"
+              class="emotion-14 emotion-15"
               lang="en-GB"
             >
               Gee ntị Live, 
@@ -338,7 +341,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         </a>
       </h3>
       <p
-        class="emotion-12 emotion-13"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         Test Radio summary
@@ -349,12 +352,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         dir="ltr"
       >
         <span
-          class="emotion-16 emotion-17"
+          class="emotion-20 emotion-21"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-14 emotion-15"
+            class="emotion-22 emotion-23"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -376,16 +379,16 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
 `;
 
 exports[`Bulletin Container snapshots should render a Live TV bulletin correctly 1`] = `
-.emotion-22 {
+.emotion-0 {
   position: relative;
   background-color: #F2F2F2;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-0 {
     padding: 1rem;
   }
 }
@@ -397,83 +400,87 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     width: 50%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-2 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
+  @media (min-width: 37.5rem) {
     .emotion-2 {
-      grid-column: 1 / span 3;
+      grid-column: 1/span 3;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.21212121212121%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-0 {
+@media (min-width: 25rem) {
+  .emotion-4 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-0 {
+@media (min-width: 63rem) {
+  .emotion-4 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-20 {
+.emotion-6 {
   display: inline-block;
   width: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     width: 50%;
     padding-right: 1rem;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-20 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-6 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-20 {
-      grid-column: 4 / span 3;
+  @media (min-width: 37.5rem) {
+    .emotion-6 {
+      grid-column: 4/span 3;
       padding: 0;
     }
-}
+  }
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #222222;
   margin: 0;
   padding: 0.5rem;
@@ -484,27 +491,27 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   line-height: 1.375rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     padding: 0 0 0.5rem 0;
   }
 }
 
-.emotion-8 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -512,7 +519,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   overflow-wrap: break-word;
 }
 
-.emotion-8:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -524,21 +531,29 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   z-index: 1;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-8:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-6 {
+.emotion-12 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #B80000;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.emotion-14 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -546,7 +561,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-16 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -557,63 +572,25 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-12 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-16 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-16 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-12 {
+@media (min-width: 37.5rem) {
+  .emotion-16 {
     padding-left: 0;
     padding-right: 0;
   }
-}
-
-.emotion-16 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.5rem;
-}
-
-.emotion-16 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 1rem;
-  margin: 0;
-}
-
-.emotion-14 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-4 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: #B80000;
-  display: inline-block;
-  margin-right: 0.5rem;
 }
 
 .emotion-18 {
@@ -630,8 +607,8 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -640,21 +617,21 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-18 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -664,15 +641,44 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
   }
 }
 
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.emotion-20>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 1rem;
+  margin: 0;
+}
+
+.emotion-22 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
-    class="emotion-22 emotion-23"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <div
           class="lazyload-wrapper"
@@ -684,15 +690,15 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
       </div>
     </div>
     <div
-      class="emotion-20 emotion-21"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         dir="ltr"
       >
         <a
-          class="emotion-8 emotion-9"
+          class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
@@ -700,13 +706,13 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
           >
             <span
               aria-hidden="true"
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               NA EME UGBU A 
             </span>
             <span
-              class="emotion-6 emotion-7"
+              class="emotion-14 emotion-15"
               lang="en-GB"
             >
               Lee Live, 
@@ -716,7 +722,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         </a>
       </h3>
       <p
-        class="emotion-12 emotion-13"
+        class="emotion-16 emotion-17"
         dir="ltr"
       >
         Test TV summary
@@ -727,12 +733,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         dir="ltr"
       >
         <span
-          class="emotion-16 emotion-17"
+          class="emotion-20 emotion-21"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-14 emotion-15"
+            class="emotion-22 emotion-23"
             focusable="false"
             height="12px"
             viewBox="0 0 32 32"
@@ -753,96 +759,9 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
 exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1`] = `
 .emotion-0 {
   position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.21212121212121%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-0 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-0 {
-    background-size: 93px 27px;
-  }
-}
-
-.emotion-6 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.emotion-6:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-6:hover,
-.emotion-6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-6:visited {
-  color: #6E6E73;
-}
-
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.5rem;
-}
-
-.emotion-14 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 1rem;
-  margin: 0;
-}
-
-.emotion-20 {
-  position: relative;
   background-color: #F2F2F2;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
   background-color: #F2F2F2;
 }
@@ -854,55 +773,84 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-2 {
     width: 33.33%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-2 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
     .emotion-2 {
-      grid-column: 1 / span 2;
+      grid-column: 1/span 2;
     }
-}
+  }
 }
 
-.emotion-18 {
+.emotion-4 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  padding-bottom: 56.21212121212121%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-4 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-6 {
   display: inline-block;
   width: 100%;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-18 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-6 {
     width: 66.67%;
     padding-right: 1rem;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-18 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-6 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-18 {
-      grid-column: 3 / span 4;
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-6 {
+      grid-column: 3/span 4;
       padding: 0;
     }
-}
+  }
 }
 
 .emotion-8 {
@@ -916,21 +864,21 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-8 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-8 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
@@ -939,6 +887,47 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 }
 
 .emotion-10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.emotion-10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #6E6E73;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -949,22 +938,22 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-14 {
     padding-left: 0;
   }
 }
@@ -983,8 +972,8 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -993,21 +982,21 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
   .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -1018,7 +1007,27 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
   }
 }
 
-.emotion-12 {
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.emotion-18>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 1rem;
+  margin: 0;
+}
+
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1029,13 +1038,13 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 
 <div>
   <div
-    class="emotion-20 emotion-21"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <div
           class="lazyload-wrapper"
@@ -1047,7 +1056,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
       </div>
     </div>
     <div
-      class="emotion-18 emotion-19"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
@@ -1055,14 +1064,14 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         dir="ltr"
       >
         <a
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
             role="text"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
             >
               Gee ntị, 
             </span>
@@ -1073,7 +1082,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         </a>
       </h3>
       <p
-        class="emotion-10 emotion-11"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test Radio summary
@@ -1084,12 +1093,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         dir="ltr"
       >
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-12 emotion-13"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12px"
             viewBox="0 0 13 12"
@@ -1111,16 +1120,16 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
 `;
 
 exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] = `
-.emotion-20 {
+.emotion-0 {
   position: relative;
   background-color: #F2F2F2;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) {
+  .emotion-0 {
     padding: 1rem;
   }
 }
@@ -1132,80 +1141,84 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     width: 50%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-2 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
+  @media (min-width: 37.5rem) {
     .emotion-2 {
-      grid-column: 1 / span 3;
+      grid-column: 1/span 3;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.21212121212121%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-0 {
+@media (min-width: 25rem) {
+  .emotion-4 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-0 {
+@media (min-width: 63rem) {
+  .emotion-4 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-6 {
   display: inline-block;
   width: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-18 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     width: 50%;
     padding-right: 1rem;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-18 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-6 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-18 {
-      grid-column: 4 / span 3;
+  @media (min-width: 37.5rem) {
+    .emotion-6 {
+      grid-column: 4/span 3;
       padding: 0;
     }
-}
+  }
 }
 
 .emotion-8 {
@@ -1219,27 +1232,27 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   line-height: 1.375rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-8 {
     padding: 0 0 0.5rem 0;
   }
 }
 
-.emotion-6 {
+.emotion-10 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1247,7 +1260,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   overflow-wrap: break-word;
 }
 
-.emotion-6:before {
+.emotion-10:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1259,21 +1272,20 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   z-index: 1;
 }
 
-.emotion-6:hover,
-.emotion-6:focus {
+.emotion-10:hover,
+.emotion-10:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-6:visited {
+.emotion-10:visited {
   color: #6E6E73;
 }
 
-.emotion-4 {
+.emotion-12 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -1281,7 +1293,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1292,22 +1304,22 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1327,8 +1339,8 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1337,21 +1349,21 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -1361,7 +1373,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   }
 }
 
-.emotion-14 {
+.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1373,7 +1385,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   padding-right: 0.5rem;
 }
 
-.emotion-14 > svg {
+.emotion-18>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1381,7 +1393,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
   margin: 0;
 }
 
-.emotion-12 {
+.emotion-20 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1392,13 +1404,13 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 
 <div>
   <div
-    class="emotion-20 emotion-21"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <div
           class="lazyload-wrapper"
@@ -1410,7 +1422,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
       </div>
     </div>
     <div
-      class="emotion-18 emotion-19"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
@@ -1418,14 +1430,14 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         dir="ltr"
       >
         <a
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
             role="text"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
             >
               Lee, 
             </span>
@@ -1436,7 +1448,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         </a>
       </h3>
       <p
-        class="emotion-10 emotion-11"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test TV summary
@@ -1447,12 +1459,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         dir="ltr"
       >
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-12 emotion-13"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12px"
             viewBox="0 0 32 32"
@@ -1471,16 +1483,16 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
 `;
 
 exports[`Bulletin Container snapshots should render a TV bulletin with lang attribute 1`] = `
-.emotion-20 {
+.emotion-0 {
   position: relative;
   background-color: #F2F2F2;
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 1rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-20 {
+@media (min-width: 37.5rem) {
+  .emotion-0 {
     padding: 1rem;
   }
 }
@@ -1492,151 +1504,84 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     width: 50%;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-2 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
+  @media (min-width: 37.5rem) {
     .emotion-2 {
-      grid-column: 1 / span 3;
+      grid-column: 1/span 3;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.21212121212121%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-0 {
+@media (min-width: 25rem) {
+  .emotion-4 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-0 {
+@media (min-width: 63rem) {
+  .emotion-4 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-18 {
+.emotion-6 {
   display: inline-block;
   width: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-18 {
+@media (min-width: 37.5rem) {
+  .emotion-6 {
     width: 50%;
     padding-right: 1rem;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-18 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-6 {
     width: initial;
-    grid-column: 1 / span 6;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-18 {
-      grid-column: 4 / span 3;
+  @media (min-width: 37.5rem) {
+    .emotion-6 {
+      grid-column: 4/span 3;
       padding: 0;
     }
-}
-}
-
-.emotion-6 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.emotion-6:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-6:hover,
-.emotion-6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-6:visited {
-  color: #6E6E73;
-}
-
-.emotion-4 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.5rem;
-}
-
-.emotion-14 > svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 1rem;
-  margin: 0;
-}
-
-.emotion-12 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.75rem;
-  height: 0.75rem;
+  }
 }
 
 .emotion-8 {
@@ -1650,27 +1595,68 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   line-height: 1.375rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-8 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-8 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-8 {
     padding: 0 0 0.5rem 0;
   }
 }
 
 .emotion-10 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.emotion-10:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-10:hover,
+.emotion-10:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10:visited {
+  color: #6E6E73;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
   color: #3F3F42;
   margin: 0;
   padding: 0 0.5rem 1rem;
@@ -1681,22 +1667,22 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-10 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-10 {
+@media (min-width: 37.5rem) {
+  .emotion-14 {
     padding-left: 0;
     padding-right: 0;
   }
@@ -1716,8 +1702,8 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1726,21 +1712,21 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-16 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -1750,15 +1736,44 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
   }
 }
 
+.emotion-18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.emotion-18>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 1rem;
+  margin: 0;
+}
+
+.emotion-20 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
 <div>
   <div
-    class="emotion-20 emotion-21"
+    class="emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <div
           class="lazyload-wrapper"
@@ -1770,7 +1785,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
       </div>
     </div>
     <div
-      class="emotion-18 emotion-19"
+      class="emotion-6 emotion-7"
       dir="ltr"
     >
       <h3
@@ -1778,14 +1793,14 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         dir="ltr"
       >
         <a
-          class="emotion-6 emotion-7"
+          class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
             role="text"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               lang="en-GB"
             >
               Watch, 
@@ -1797,7 +1812,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         </a>
       </h3>
       <p
-        class="emotion-10 emotion-11"
+        class="emotion-14 emotion-15"
         dir="ltr"
       >
         Test TV summary
@@ -1808,12 +1823,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         dir="ltr"
       >
         <span
-          class="emotion-14 emotion-15"
+          class="emotion-18 emotion-19"
           dir="ltr"
         >
           <svg
             aria-hidden="true"
-            class="emotion-12 emotion-13"
+            class="emotion-20 emotion-21"
             focusable="false"
             height="12px"
             viewBox="0 0 32 32"

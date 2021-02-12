@@ -1,182 +1,182 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio Page Main should match snapshot for AMP 1`] = `
-.emotion-12 {
+.emotion-1 {
   width: 100%;
 }
 
-@supports (display:grid) {
-  .emotion-12 {
+@supports (display: grid) {
+  .emotion-1 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-12 {
-      grid-template-columns: repeat(20,1fr);
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-12 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-12 {
+@media (min-width: 80rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-9 {
+@media (max-width: 14.9375rem) {
+  .emotion-3 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-9 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-3 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-9 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-9 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-9 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-9 {
+@media (min-width: 80rem) {
+  .emotion-3 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-9 {
+@supports (display: grid) {
+  .emotion-3 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-9 {
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-5 {
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -188,27 +188,27 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   padding: 2rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-5 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-5 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2 {
+.emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -219,42 +219,42 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-7 amp-iframe,
-.emotion-7 div > iframe {
+.emotion-10 amp-iframe,
+.emotion-10 div>iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-7 amp-iframe,
-  .emotion-7 div > iframe {
+@media (min-width: 25rem) {
+  .emotion-10 amp-iframe,
+  .emotion-10 div>iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
-.emotion-4 {
+.emotion-12 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-@media (min-width:63rem) {
-  .emotion-4 {
+@media (min-width: 63rem) {
+  .emotion-12 {
     margin-bottom: 2rem;
   }
 }
@@ -280,31 +280,31 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     </script>
   </amp-analytics>
   <main
-    class="emotion-11 emotion-12 emotion-10"
+    class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-9 emotion-10"
+      class="emotion-3 emotion-2"
       dir="ltr"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-5 emotion-6"
         id="content"
         tabindex="-1"
       >
         BBC Afrique Radio
       </h1>
       <p
-        class="emotion-2 emotion-3"
+        class="emotion-7 emotion-8"
       >
         Infos, musique et sports
       </p>
       <div
-        class="emotion-6 emotion-7 emotion-8"
+        class="emotion-9 emotion-10 emotion-11"
       >
         <div
-          class="emotion-4 emotion-5"
+          class="emotion-12 emotion-13"
         >
           <amp-iframe
             allowfullscreen="allowfullscreen"
@@ -334,182 +334,182 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
 `;
 
 exports[`Radio Page Main should match snapshot for Canonical 1`] = `
-.emotion-14 {
+.emotion-1 {
   width: 100%;
 }
 
-@supports (display:grid) {
-  .emotion-14 {
+@supports (display: grid) {
+  .emotion-1 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-14 {
-      grid-template-columns: repeat(20,1fr);
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-14 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-14 {
+@media (min-width: 80rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-11 {
+@media (max-width: 14.9375rem) {
+  .emotion-3 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-11 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-3 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-11 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-3 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-11 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-11 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-3 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-11 {
+@media (min-width: 80rem) {
+  .emotion-3 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-11 {
+@supports (display: grid) {
+  .emotion-3 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-11 {
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-3 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-5 {
   font-size: 1.75rem;
   line-height: 2.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -521,27 +521,27 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding: 2rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-5 {
     font-size: 2rem;
     line-height: 2.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-5 {
     font-size: 2.75rem;
     line-height: 3.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-5 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-2 {
+.emotion-7 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -552,47 +552,47 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-9 amp-iframe,
-.emotion-9 div > iframe {
+.emotion-10 amp-iframe,
+.emotion-10 div>iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-9 amp-iframe,
-  .emotion-9 div > iframe {
+@media (min-width: 25rem) {
+  .emotion-10 amp-iframe,
+  .emotion-10 div>iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
-.emotion-6 {
+.emotion-12 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-@media (min-width:63rem) {
-  .emotion-6 {
+@media (min-width: 63rem) {
+  .emotion-12 {
     margin-bottom: 2rem;
   }
 }
 
-.emotion-4 {
+.emotion-14 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -602,12 +602,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 100%;
 }
 
-.emotion-188 {
+.emotion-16 {
   background-color: #F2F2F2;
   padding: 0 1rem;
 }
 
-.emotion-25 {
+.emotion-19 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -617,38 +617,38 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding-top: 0.5rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
+@media (min-width: 63rem) {
+  .emotion-19 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     margin: 0 auto;
     padding-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
+@media (min-width: 63rem) {
+  .emotion-19 {
     max-width: 63rem;
     padding-top: 2rem;
   }
 }
 
-.emotion-22 {
+.emotion-21 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-20 {
+.emotion-23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -658,17 +658,17 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   flex-direction: column;
 }
 
-.emotion-18 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 2.75rem;
   -webkit-align-items: baseline;
@@ -677,8 +677,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-18 {
+@media (min-width: 37.5rem) {
+  .emotion-25 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -686,7 +686,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-27 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -705,147 +705,147 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-16 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-27 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-27 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-27 {
     padding-right: 1rem;
   }
 }
 
-.emotion-186 {
+.emotion-29 {
   margin: 0 auto;
   width: 100%;
   padding-bottom: 1rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-186 {
+@media (min-width: 37.5rem) {
+  .emotion-29 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-186 {
+@media (min-width: 63rem) {
+  .emotion-29 {
     max-width: 63rem;
     padding-bottom: 1.5rem;
   }
 }
 
-.emotion-184 {
+.emotion-32 {
   padding: 0;
   margin: 0;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-184 {
+@media (max-width: 14.9375rem) {
+  .emotion-32 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-184 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-32 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-184 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-32 {
     padding: 0 1rem;
   }
 }
 
-@supports (display:grid) {
-  .emotion-184 {
+@supports (display: grid) {
+  .emotion-32 {
     display: grid;
     position: initial;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(4,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
       padding: 0 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(4,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
       grid-column-gap: 0.5rem;
       padding: 0 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
       padding: 0 1rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-184 {
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 80rem) {
+    .emotion-32 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-@media (max-width:37.5rem) {
-  .emotion-184 {
+@media (max-width: 37.5rem) {
+  .emotion-32 {
     padding: 0;
   }
 }
 
-.emotion-64 {
+.emotion-35 {
   position: relative;
   padding-bottom: 1rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-64 {
+@media (max-width: 14.9375rem) {
+  .emotion-35 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -853,8 +853,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-64 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-35 {
     width: calc(4/4*(100% - 4 * 0.5rem) + 3 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -862,8 +862,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-64 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-35 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -871,8 +871,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-64 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-35 {
     width: calc(3/6*(100% - 6 * 1rem) + 2 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -880,8 +880,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-64 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-35 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -889,8 +889,8 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-64 {
+@media (min-width: 80rem) {
+  .emotion-35 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -898,58 +898,58 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@supports (display:grid) {
-  .emotion-64 {
+@supports (display: grid) {
+  .emotion-35 {
     display: block;
     width: initial;
     margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(4,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(4,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(3,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(2,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-64 {
-      grid-template-columns: repeat(2,1fr);
+  @media (min-width: 80rem) {
+    .emotion-35 {
+      grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
-}
+  }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-64 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-35 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -964,7 +964,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding-bottom: 0.5rem;
 }
 
-.emotion-35 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -975,7 +975,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   align-items: center;
 }
 
-.emotion-29 {
+.emotion-41 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -987,13 +987,13 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   padding-right: 0.25rem;
 }
 
-.emotion-29 > svg {
+.emotion-41>svg {
   color: #5A5A5A;
   margin: 0;
   overflow: visible;
 }
 
-.emotion-27 {
+.emotion-43 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1002,7 +1002,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 0.725rem;
 }
 
-.emotion-33 {
+.emotion-45 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1017,7 +1017,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   width: 100%;
 }
 
-.emotion-33 > time {
+.emotion-45>time {
   color: #5A5A5A;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1026,21 +1026,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-33 > time {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-45>time {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-33 > time {
+@media (min-width: 37.5rem) {
+  .emotion-45>time {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-33::after {
+.emotion-45::after {
   content: '';
   border-top: 0.0625rem solid #AEAEB5;
   top: 1rem;
@@ -1048,7 +1048,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   width: 100%;
 }
 
-.emotion-31 {
+.emotion-47 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1058,21 +1058,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-31 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-47 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-31 {
+@media (min-width: 37.5rem) {
+  .emotion-47 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-61 {
+.emotion-49 {
   padding-top: 0.5rem;
   background-color: #FFFFFF;
   display: -webkit-box;
@@ -1086,7 +1086,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 100%;
 }
 
-.emotion-49 {
+.emotion-51 {
   padding: 0 0.5rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1094,7 +1094,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   flex-grow: 1;
 }
 
-.emotion-45 {
+.emotion-53 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1104,21 +1104,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-45 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-53 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-45 {
+@media (min-width: 37.5rem) {
+  .emotion-53 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-43 {
+.emotion-55 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1126,7 +1126,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   overflow-wrap: break-word;
 }
 
-.emotion-43:before {
+.emotion-55:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1138,31 +1138,30 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   z-index: 1;
 }
 
-.emotion-43:hover,
-.emotion-43:focus {
+.emotion-55:hover,
+.emotion-55:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-43:visited {
+.emotion-55:visited {
   color: #6E6E73;
 }
 
-.emotion-43:hover .emotion-42 {
+.emotion-55:hover .emotion-60 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-43:focus .emotion-42 {
+.emotion-55:focus .emotion-60 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-39 {
+.emotion-57 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -1170,7 +1169,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.emotion-41 {
+.emotion-59 {
   color: #3F3F42;
   padding: 0.5rem 0;
   display: inline-block;
@@ -1182,21 +1181,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-41 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-59 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-41 {
+@media (min-width: 37.5rem) {
+  .emotion-59 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-47 {
+.emotion-61 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1207,21 +1206,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-47 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-61 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-47 {
+@media (min-width: 37.5rem) {
+  .emotion-61 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-59 {
+.emotion-63 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1233,28 +1232,28 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #FFFFFF;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-59 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-63 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-59 {
+@media (min-width: 37.5rem) {
+  .emotion-63 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-59 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-63 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-53 > svg {
+.emotion-65>svg {
   color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
@@ -1262,7 +1261,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-.emotion-51 {
+.emotion-67 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -1271,11 +1270,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 0.75rem;
 }
 
-.emotion-57 {
+.emotion-69 {
   padding-left: 0.5rem;
 }
 
-.emotion-162 {
+.emotion-170 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1285,21 +1284,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin: 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-162 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-170 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-162 {
+@media (min-width: 37.5rem) {
+  .emotion-170 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-156 {
+.emotion-172 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1310,21 +1309,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   margin-right: 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-156 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-172 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-156 {
+@media (min-width: 37.5rem) {
+  .emotion-172 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-160 {
+.emotion-176 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -1336,21 +1335,21 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   line-height: 1.25rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-160 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-176 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-160 {
+@media (min-width: 37.5rem) {
+  .emotion-176 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-176 {
+.emotion-180 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1362,28 +1361,28 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   color: #11708C;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-176 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-180 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-176 {
+@media (min-width: 37.5rem) {
+  .emotion-180 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-176 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-180 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-170 > svg {
+.emotion-182>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -1397,36 +1396,36 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     chartbeat
   </div>
   <main
-    class="emotion-13 emotion-14 emotion-12"
+    class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     role="main"
   >
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-3 emotion-2"
       dir="ltr"
     >
       <h1
-        class="emotion-0 emotion-1"
+        class="emotion-5 emotion-6"
         id="content"
         tabindex="-1"
       >
         BBC Afrique Radio
       </h1>
       <p
-        class="emotion-2 emotion-3"
+        class="emotion-7 emotion-8"
       >
         Infos, musique et sports
       </p>
       <div
-        class="emotion-8 emotion-9 emotion-10"
+        class="emotion-9 emotion-10 emotion-11"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-12 emotion-13"
         >
           <iframe
             allow="autoplay"
             allowfullscreen=""
-            class="emotion-4 emotion-5"
+            class="emotion-14 emotion-15"
             scrolling="no"
             src="https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
             title="Lecteur audio"
@@ -1438,23 +1437,23 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   </main>
   <section
     aria-labelledby="Radio-Schedule"
-    class=" emotion-188 emotion-189"
+    class=" emotion-16 emotion-17"
     role="region"
   >
     <div
-      class="emotion-24 emotion-25 emotion-26"
+      class="emotion-18 emotion-19 emotion-20"
     >
       <h2
-        class="emotion-22 emotion-23"
+        class="emotion-21 emotion-22"
       >
         <span
-          class="emotion-20 emotion-21"
+          class="emotion-23 emotion-24"
         >
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-25 emotion-26"
           >
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-27 emotion-28"
               dir="ltr"
               id="Radio-Schedule"
             >
@@ -1465,16 +1464,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       </h2>
     </div>
     <div
-      class="emotion-186 emotion-187"
+      class="emotion-29 emotion-30"
       data-e2e="radio-schedule"
     >
       <div
-        class="emotion-183 emotion-184 emotion-12"
+        class="emotion-31 emotion-32 emotion-2"
         dir="ltr"
         role="list"
       >
         <li
-          class="emotion-63 emotion-64 emotion-12"
+          class="emotion-34 emotion-35 emotion-2"
           data-e2e="onDemand"
           dir="ltr"
           role="listitem"
@@ -1483,15 +1482,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             class="emotion-37 emotion-38"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-39 emotion-40"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-41 emotion-42"
                 dir="ltr"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-27 emotion-28"
+                  class="emotion-43 emotion-44"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1507,11 +1506,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-33 emotion-34"
+                class="emotion-45 emotion-46"
                 dir="ltr"
               >
                 <time
-                  class="emotion-31 emotion-32"
+                  class="emotion-47 emotion-48"
                   datetime="2020-03-26"
                 >
                   05:30
@@ -1520,16 +1519,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             </div>
           </div>
           <div
-            class="emotion-61 emotion-62"
+            class="emotion-49 emotion-50"
           >
             <div
-              class="emotion-49 emotion-50"
+              class="emotion-51 emotion-52"
             >
               <h3
-                class="emotion-45 emotion-46"
+                class="emotion-53 emotion-54"
               >
                 <a
-                  class="emotion-43 emotion-44"
+                  class="emotion-55 emotion-56"
                   href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
                 >
                   <span
@@ -1537,14 +1536,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     Actu Monde
                     <span
-                      class="emotion-39 emotion-40"
+                      class="emotion-57 emotion-58"
                     >
                       , 
                       05:30
                       , 
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-59 emotion-60"
                     >
                       26 mars 2020
                     </span>
@@ -1552,20 +1551,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-47 emotion-48"
+                class="emotion-61 emotion-62"
               >
                 C'est la principale tranche dédiée à l'actualité internationale. De 5H 30 à 6H 30, des interviews d'analystes et des information
               </p>
             </div>
             <div
-              class="emotion-59 emotion-60"
+              class="emotion-63 emotion-64"
             >
               <span
-                class="emotion-53 emotion-54"
+                class="emotion-65 emotion-66"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-67 emotion-68"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1580,12 +1579,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-57 emotion-58"
+                class="emotion-69 emotion-70"
                 datetime="PT6M"
                 dir="ltr"
               >
                 <span
-                  class="emotion-39 emotion-40"
+                  class="emotion-57 emotion-58"
                 >
                    Durée 06,00 
                 </span>
@@ -1599,7 +1598,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           </div>
         </li>
         <li
-          class="emotion-63 emotion-64 emotion-12"
+          class="emotion-34 emotion-35 emotion-2"
           data-e2e="onDemand"
           dir="ltr"
           role="listitem"
@@ -1608,15 +1607,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             class="emotion-37 emotion-38"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-39 emotion-40"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-41 emotion-42"
                 dir="ltr"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-27 emotion-28"
+                  class="emotion-43 emotion-44"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1632,11 +1631,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-33 emotion-34"
+                class="emotion-45 emotion-46"
                 dir="ltr"
               >
                 <time
-                  class="emotion-31 emotion-32"
+                  class="emotion-47 emotion-48"
                   datetime="2020-03-26"
                 >
                   05:16
@@ -1645,16 +1644,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             </div>
           </div>
           <div
-            class="emotion-61 emotion-62"
+            class="emotion-49 emotion-50"
           >
             <div
-              class="emotion-49 emotion-50"
+              class="emotion-51 emotion-52"
             >
               <h3
-                class="emotion-45 emotion-46"
+                class="emotion-53 emotion-54"
               >
                 <a
-                  class="emotion-43 emotion-44"
+                  class="emotion-55 emotion-56"
                   href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
                 >
                   <span
@@ -1662,14 +1661,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     Reportage
                     <span
-                      class="emotion-39 emotion-40"
+                      class="emotion-57 emotion-58"
                     >
                       , 
                       05:16
                       , 
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-59 emotion-60"
                     >
                       26 mars 2020
                     </span>
@@ -1677,20 +1676,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-47 emotion-48"
+                class="emotion-61 emotion-62"
               >
                 Un sujet traité en profondeur et qui fait appel aux différents genres journalistiques.
               </p>
             </div>
             <div
-              class="emotion-59 emotion-60"
+              class="emotion-63 emotion-64"
             >
               <span
-                class="emotion-53 emotion-54"
+                class="emotion-65 emotion-66"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-67 emotion-68"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1705,12 +1704,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-57 emotion-58"
+                class="emotion-69 emotion-70"
                 datetime="PT8M"
                 dir="ltr"
               >
                 <span
-                  class="emotion-39 emotion-40"
+                  class="emotion-57 emotion-58"
                 >
                    Durée 08,00 
                 </span>
@@ -1724,7 +1723,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           </div>
         </li>
         <li
-          class="emotion-63 emotion-64 emotion-12"
+          class="emotion-34 emotion-35 emotion-2"
           data-e2e="onDemand"
           dir="ltr"
           role="listitem"
@@ -1733,15 +1732,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             class="emotion-37 emotion-38"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-39 emotion-40"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-41 emotion-42"
                 dir="ltr"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-27 emotion-28"
+                  class="emotion-43 emotion-44"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1757,11 +1756,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-33 emotion-34"
+                class="emotion-45 emotion-46"
                 dir="ltr"
               >
                 <time
-                  class="emotion-31 emotion-32"
+                  class="emotion-47 emotion-48"
                   datetime="2020-03-26"
                 >
                   05:15
@@ -1770,16 +1769,16 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             </div>
           </div>
           <div
-            class="emotion-61 emotion-62"
+            class="emotion-49 emotion-50"
           >
             <div
-              class="emotion-49 emotion-50"
+              class="emotion-51 emotion-52"
             >
               <h3
-                class="emotion-45 emotion-46"
+                class="emotion-53 emotion-54"
               >
                 <a
-                  class="emotion-43 emotion-44"
+                  class="emotion-55 emotion-56"
                   href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
                 >
                   <span
@@ -1787,14 +1786,14 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   >
                     Bulletin D'informations
                     <span
-                      class="emotion-39 emotion-40"
+                      class="emotion-57 emotion-58"
                     >
                       , 
                       05:15
                       , 
                     </span>
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-59 emotion-60"
                     >
                       26 mars 2020
                     </span>
@@ -1802,20 +1801,20 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </a>
               </h3>
               <p
-                class="emotion-47 emotion-48"
+                class="emotion-61 emotion-62"
               >
                 Le tour du monde de l'actualité en 2 minutes 
               </p>
             </div>
             <div
-              class="emotion-59 emotion-60"
+              class="emotion-63 emotion-64"
             >
               <span
-                class="emotion-53 emotion-54"
+                class="emotion-65 emotion-66"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-67 emotion-68"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1830,12 +1829,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-57 emotion-58"
+                class="emotion-69 emotion-70"
                 datetime="PT1M"
                 dir="ltr"
               >
                 <span
-                  class="emotion-39 emotion-40"
+                  class="emotion-57 emotion-58"
                 >
                    Durée 01,00 
                 </span>
@@ -1849,7 +1848,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
           </div>
         </li>
         <li
-          class="emotion-63 emotion-64 emotion-12"
+          class="emotion-34 emotion-35 emotion-2"
           data-e2e="next"
           dir="ltr"
           role="listitem"
@@ -1858,15 +1857,15 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             class="emotion-37 emotion-38"
           >
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-39 emotion-40"
             >
               <span
-                class="emotion-29 emotion-30"
+                class="emotion-41 emotion-42"
                 dir="ltr"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-27 emotion-28"
+                  class="emotion-43 emotion-44"
                   focusable="false"
                   height="13"
                   viewBox="0 0 13 13"
@@ -1882,11 +1881,11 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               </span>
               <span
                 aria-hidden="true"
-                class="emotion-33 emotion-34"
+                class="emotion-45 emotion-46"
                 dir="ltr"
               >
                 <time
-                  class="emotion-31 emotion-32"
+                  class="emotion-47 emotion-48"
                   datetime="2030-01-01"
                 >
                   09:00
@@ -1895,53 +1894,53 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             </div>
           </div>
           <div
-            class="emotion-61 emotion-62"
+            class="emotion-49 emotion-50"
           >
             <div
-              class="emotion-49 emotion-50"
+              class="emotion-51 emotion-52"
             >
               <h3
-                class="emotion-162 emotion-46"
+                class="emotion-170 emotion-54"
               >
                 <span
                   role="text"
                 >
                   <span
-                    class="emotion-156 emotion-157"
+                    class="emotion-172 emotion-173"
                     dir="ltr"
                   >
                     SUIVANT 
                   </span>
                   A Vous L'antenne
                   <span
-                    class="emotion-39 emotion-40"
+                    class="emotion-57 emotion-58"
                   >
                     , 
                     09:00
                     , 
                   </span>
                   <span
-                    class="emotion-160 emotion-42"
+                    class="emotion-176 emotion-60"
                   >
                     1 janvier 2030
                   </span>
                 </span>
               </h3>
               <p
-                class="emotion-47 emotion-48"
+                class="emotion-61 emotion-62"
               >
                 Du lundi au vendredi les auditeurs réagissent à chaud sur les sujets qui rythment l'actualité 
               </p>
             </div>
             <div
-              class="emotion-176 emotion-60"
+              class="emotion-180 emotion-64"
             >
               <span
-                class="emotion-170 emotion-54"
+                class="emotion-182 emotion-66"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-67 emotion-68"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1956,12 +1955,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 </svg>
               </span>
               <time
-                class="emotion-57 emotion-58"
+                class="emotion-69 emotion-70"
                 datetime="PT15M"
                 dir="ltr"
               >
                 <span
-                  class="emotion-39 emotion-40"
+                  class="emotion-57 emotion-58"
                 >
                    Durée 15,00 
                 </span>
