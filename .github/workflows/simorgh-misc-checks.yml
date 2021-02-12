@@ -62,10 +62,10 @@ jobs:
         run: npx apache2-license-checker
 
       - name: Duplicate Dependency Checker
-        run: npm run test:dependencies
+        run: yarn run test:dependencies
 
       - name: Linting
-        run: npm run test:lint
+        run: yarn run test:lint
 
       - name: NPM Audit
         run: npx audit-ci --config audit-ci.json

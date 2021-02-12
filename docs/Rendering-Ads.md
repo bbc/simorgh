@@ -23,7 +23,7 @@ Given you are using Chrome browser.
 
    e.g. ![image](https://user-images.githubusercontent.com/30599794/90151074-40bd7f80-dd7e-11ea-985d-902ed04641ac.png)
 
-3. Run local environment: `npm run dev`. If you would like to run with Simorgh's CSP Headers, run the following command: `npm run build && npm run start`
+3. Run local environment: `yarn run dev`. If you would like to run with Simorgh's CSP Headers, run the following command: `yarn run build && yarn run start`
 
 4. Visit the home page of one of the services with Ads enabled and append this query string to the url: `?site=test&ads-debug=true`
 
@@ -53,7 +53,7 @@ If you are unable to set a proxy on one of the Windows a11y laptops, you won't b
 
 4. If you can't set the `BBC-Adverts` header in the Windows laptop, you will need to remove [this](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Ad/Canonical/index.jsx#L63) condition from the codebase to be able to render the ad
 
-5. Run Simorgh with a production build `npm run build && npm run start`
+5. Run Simorgh with a production build `yarn run build && yarn run start`
 
 6. Connect to your machine running Simorgh using the Windows laptop by visiting the IP address of it appended with the correct query strings
 

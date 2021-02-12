@@ -6,7 +6,7 @@ We have a very bespoke approach to testing. We split our tests in 3 sections: Ap
 
 We only run a subset of these integrations tests in CI and CD (those we always run are called smoke tests), but have a regular [cron job](https://en.wikipedia.org/wiki/Cron) that runs all integration tests (a.k.a. e2e tests) in this directory against localhost, test.bbc.com and www.bbc.com.
 
-If you would like to run e2e tests as it runs on the cron pass this env variable to cypress `CYPRESS_SMOKE=false`, so your script could be something like `CYPRESS_SMOKE=false npm run test:e2e`.
+If you would like to run e2e tests as it runs on the cron pass this env variable to cypress `CYPRESS_SMOKE=false`, so your script could be something like `CYPRESS_SMOKE=false yarn run test:e2e`.
 
 ## [Config used in the tests](../support/config)
 
