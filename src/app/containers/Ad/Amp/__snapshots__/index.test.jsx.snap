@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
-.emotion-8 {
+.emotion-0 {
   background-color: #F8F8F8;
   margin-top: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-2 {
   display: none;
   visibility: hidden;
 }
 
-@media (min-width:20rem) {
-  .emotion-6 {
+@media (min-width: 20rem) {
+  .emotion-2 {
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -22,15 +22,15 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     visibility: visible;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-6 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     min-height: 17.6875rem;
   }
 }
@@ -40,13 +40,13 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   text-align: center;
 }
 
-.amp-geo-pending .emotion-2,
-.amp-geo-group-gbOrUnknown .emotion-2 {
+.amp-geo-pending .emotion-6,
+.amp-geo-group-gbOrUnknown .emotion-6 {
   display: none;
   visibility: hidden;
 }
 
-.emotion-0 {
+.emotion-8 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -61,21 +61,21 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   text-align: right;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-0:hover {
+.emotion-8:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -84,12 +84,12 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
   <section
     aria-hidden="true"
     aria-label="Publicités"
-    class="emotion-8 emotion-9"
+    class="emotion-0 emotion-1"
     data-e2e="advertisement"
     role="region"
   >
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-2 emotion-3"
     >
       <div
         class="emotion-4 emotion-5"
@@ -97,10 +97,10 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
         <div
           amp-access="toggles.ads.enabled"
           amp-access-hide="true"
-          class="emotion-2 emotion-3"
+          class="emotion-6 emotion-7"
         >
           <a
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"
@@ -141,9 +141,33 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 `;
 
 exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
-.emotion-8 {
+.emotion-0 {
   background-color: #F8F8F8;
   margin-top: 0.5rem;
+}
+
+.emotion-2 {
+  display: none;
+  visibility: hidden;
+  padding: 0;
+}
+
+@media (min-width: 18.75rem) {
+  .emotion-2 {
+    min-height: 17.6875rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    visibility: visible;
+  }
 }
 
 .emotion-4 {
@@ -151,13 +175,13 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   text-align: center;
 }
 
-.amp-geo-pending .emotion-2,
-.amp-geo-group-gbOrUnknown .emotion-2 {
+.amp-geo-pending .emotion-6,
+.amp-geo-group-gbOrUnknown .emotion-6 {
   display: none;
   visibility: hidden;
 }
 
-.emotion-0 {
+.emotion-8 {
   font-size: 0.75rem;
   line-height: 1rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -172,59 +196,35 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   text-align: right;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-0:hover {
+.emotion-8:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-6 {
-  display: none;
-  visibility: hidden;
-  padding: 0;
-}
-
-@media (min-width:18.75rem) {
-  .emotion-6 {
-    min-height: 17.6875rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    visibility: visible;
-  }
 }
 
 <div>
   <section
     aria-hidden="true"
     aria-label="Publicités 2"
-    class="emotion-8 emotion-9"
+    class="emotion-0 emotion-1"
     data-e2e="advertisement"
     role="region"
   >
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-2 emotion-3"
     >
       <div
         class="emotion-4 emotion-5"
@@ -232,10 +232,10 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
         <div
           amp-access="toggles.ads.enabled"
           amp-access-hide="true"
-          class="emotion-2 emotion-3"
+          class="emotion-6 emotion-7"
         >
           <a
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             dir="ltr"
             href="https://www.bbc.com/usingthebbc/cookies/"
             tabindex="-1"

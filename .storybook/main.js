@@ -1,6 +1,9 @@
 /* eslint-disable no-param-reassign */
 const webpack = require('webpack');
+const path = require('path');
 const { webpackDirAlias } = require('../dirAlias');
+
+const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: ['../src/app/**/**/*.stories.jsx'],
@@ -31,6 +34,12 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
       ...webpackDirAlias,
+
+      // Storybook 6 does not support emotion 11 - these 3 aliases work around that
+      // https://github.com/storybookjs/storybook/issues/13277
+      '@emotion/core': toPath('node_modules/@emotion/react'),
+      '@emotion/styled': toPath('node_modules/@emotion/styled'),
+      'emotion-theming': toPath('node_modules/@emotion/react'),
     };
 
     return config;
