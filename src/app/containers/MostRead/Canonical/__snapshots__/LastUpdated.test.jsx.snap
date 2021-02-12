@@ -11,14 +11,14 @@ exports[`MostReadCanonical - LastUpdated should render LastUpdated correctly 1`]
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
     font-size: 0.8125rem;
     line-height: 1rem;
