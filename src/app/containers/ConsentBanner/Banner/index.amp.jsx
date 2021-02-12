@@ -6,13 +6,13 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
-const Accept = (message, onClick, dataAttribute) => (
+const Button = (message, onClick, dataAttribute) => (
   <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
 
-const Reject = (message, href, onClick, dataAttribute) => (
+const Anchor = (message, href, onClick, dataAttribute) => (
   <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>
@@ -37,14 +37,13 @@ const AmpConsentBannerContainer = ({
         translations.consentBanner.cookie.amp.initial,
         translations.consentBanner.cookie.amp.manage,
       ]}
-      accept={Accept(
+      accept={Button(
         translations.consentBanner.cookie.amp.accept,
         acceptAction,
         dataAttribute('accept'),
       )}
-      reject={Reject(
+      reject={Button(
         translations.consentBanner.cookie.amp.reject,
-        null,
         rejectAction,
         dataAttribute('reject'),
       )}
@@ -58,12 +57,12 @@ const AmpConsentBannerContainer = ({
       id={promptId}
       title={translations.consentBanner[type].title}
       text={BannerText(translations.consentBanner[type].description)}
-      accept={Accept(
+      accept={Button(
         translations.consentBanner[type].accept,
         acceptAction,
         dataAttribute('accept'),
       )}
-      reject={Reject(
+      reject={Anchor(
         translations.consentBanner[type].reject,
         translations.consentBanner[type].rejectUrl,
         rejectAction,
