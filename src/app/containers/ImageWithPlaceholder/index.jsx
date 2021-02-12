@@ -57,7 +57,10 @@ const ImageWithPlaceholder = ({
           />
         </Helmet>
       )}
-      <ImagePlaceholder css={isLoaded && `background: none`} ratio={ratio}>
+      <ImagePlaceholder
+        style={isLoaded ? { background: 'none' } : null}
+        ratio={ratio}
+      >
         {isAmp ? (
           <AmpImg
             alt={alt}
