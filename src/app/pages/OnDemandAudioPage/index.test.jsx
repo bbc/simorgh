@@ -155,17 +155,15 @@ describe('OnDemand Radio Page ', () => {
       pageType: MEDIA_PAGE,
       toggles,
     });
-    const { getAllByText } = await renderPage({
+    const { getByText } = await renderPage({
       pageData,
       service: 'arabic',
     });
-    const elements = getAllByText(
+    const element = getByText(
       'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
     );
-    const elementTypes = elements.map(el => el.tagName);
 
-    expect(elements.length).toBe(2);
-    expect(elementTypes).toEqual(['SPAN', 'P']);
+    expect(element.tagName).toEqual('SPAN');
 
     await waitFor(() => {
       const actual = document.querySelector('head > title').innerHTML;
