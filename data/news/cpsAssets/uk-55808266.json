@@ -1,0 +1,1079 @@
+{
+  "metadata":{
+    "id":"urn:bbc:ares::asset:news/uk-55808266",
+    "locators":{
+      "assetUri":"/news/uk-55808266",
+      "cpsUrn":"urn:bbc:content:assetUri:news/uk-55808266",
+      "curie":"http://www.bbc.co.uk/asset/00299556-57e3-4631-bfe2-de4131d97b61",
+      "assetId":"55808266"
+    },
+    "type":"STY",
+    "createdBy":"news",
+    "language":"en-gb",
+    "lastUpdated":1611683344124,
+    "firstPublished":1611649021000,
+    "lastPublished":1611683336000,
+    "timestamp":1611683336000,
+    "options":{
+      "isIgorSeoTagsEnabled":false,
+      "includeComments":true,
+      "allowRightHandSide":true,
+      "isFactCheck":false,
+      "allowDateStamp":true,
+      "suitableForSyndication":true,
+      "hasNewsTracker":false,
+      "allowRelatedStoriesBox":true,
+      "isKeyContent":false,
+      "allowHeadline":true,
+      "allowAdvertising":true,
+      "hasContentWarning":false,
+      "isBreakingNews":false,
+      "allowPrintingSharingLinks":true
+    },
+    "analyticsLabels":{
+      "cps_asset_type":"sty",
+      "counterName":"news.uk.story.55808266.page",
+      "cps_asset_id":"55808266"
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "language":"en-gb",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator":"urn:bbc:cps:curie:asset:00299556-57e3-4631-bfe2-de4131d97b61",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/8a322569-dc6c-4e68-be62-215addc477ac#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/b292bb01-997b-4720-8daa-917a9089718b#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/eab275e0-57b1-4236-8d32-d5cabdd3b128#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "tags":{
+      "about":[
+        {
+          "thingLabel":"AstraZeneca",
+          "thingUri":"http://www.bbc.co.uk/things/5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6#id",
+          "thingId":"5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6",
+          "thingType":[
+            "core:Thing",
+            "tagging:Agent",
+            "tagging:AmbiguousTerm",
+            "core:Organisation",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs":[
+            "http://dbpedia.org/resource/AstraZeneca"
+          ],
+          "topicName":"AstraZeneca",
+          "topicId":"cz4pr2gd52lt",
+          "curationList":[
+            {
+              "curationId":"5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"AstraZeneca"
+        },
+        {
+          "thingLabel":"Coronavirus pandemic",
+          "thingUri":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId":"5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Event"
+          ],
+          "thingSameAs":[
+            "http://dbpedia.org/resource/COVID-19_pandemic",
+            "http://www.wikidata.org/entity/Q81068910"
+          ],
+          "topicName":"Coronavirus pandemic",
+          "topicId":"cyz0z8w0ydwt",
+          "curationList":[
+            {
+              "curationId":"2d4efc43-223e-4c4d-9ac0-416a38955a37",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Coronavirus pandemic"
+        },
+        {
+          "thingLabel":"Coronavirus vaccines",
+          "thingUri":"http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+          "thingId":"67634070-62db-491e-8bb4-434f21123d6d",
+          "thingType":[
+            "core:Theme",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs":[
+            "http://dbpedia.org/resource/COVID-19_vaccine",
+            "http://www.wikidata.org/entity/Q87719492"
+          ],
+          "topicName":"Coronavirus vaccine development",
+          "topicId":"c87z0we2g0zt",
+          "curationList":[
+            {
+              "curationId":"1d62d302-53c9-4f79-b281-62993210e174",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Coronavirus vaccines"
+        },
+        {
+          "thingLabel":"Vaccination",
+          "thingUri":"http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+          "thingId":"7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+          "thingType":[
+            "core:Theme",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q134808",
+            "http://dbpedia.org/resource/Vaccine"
+          ],
+          "topicName":"Vaccination",
+          "topicId":"cdl8n2ede1zt",
+          "curationList":[
+            {
+              "curationId":"7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Vaccination"
+        },
+        {
+          "thingLabel":"Pfizer",
+          "thingUri":"http://www.bbc.co.uk/things/b292bb01-997b-4720-8daa-917a9089718b#id",
+          "thingId":"b292bb01-997b-4720-8daa-917a9089718b",
+          "thingType":[
+            "core:Thing",
+            "core:Organisation",
+            "tagging:TagConcept",
+            "tagging:Agent",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Pfizer"
+          ],
+          "topicName":"Pfizer",
+          "topicId":"cq23pdgvglxt",
+          "curationList":[
+            {
+              "curationId":"b292bb01-997b-4720-8daa-917a9089718b",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Pfizer"
+        },
+        {
+          "thingLabel":"Nadhim Zahawi",
+          "thingUri":"http://www.bbc.co.uk/things/eab275e0-57b1-4236-8d32-d5cabdd3b128#id",
+          "thingId":"eab275e0-57b1-4236-8d32-d5cabdd3b128",
+          "thingType":[
+            "core:Thing",
+            "tagging:Agent",
+            "core:Person",
+            "tagging:TagConcept",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q259361",
+            "http://dbpedia.org/resource/Nadhim_Zahawi",
+            "http://rdf.freebase.com/ns/m.0bwmdws"
+          ],
+          "topicName":"Nadhim Zahawi",
+          "topicId":"c5mzpy2wx6dt",
+          "curationList":[
+            {
+              "curationId":"feb2abb9-e3cb-4d18-ab1f-b699d712b0c7",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Nadhim Zahawi"
+        }
+      ]
+    },
+    "version":"v1.3.11",
+    "blockTypes":[
+      "media",
+      "paragraph",
+      "list",
+      "crosshead",
+      "image"
+    ],
+    "includeComments":true,
+    "atiAnalytics":{
+      "producerName":"NEWS",
+      "producerId":"64",
+      "chapter":"uk"
+    },
+    "readTime":6,
+    "siteUri":"/news",
+    "topics":[
+      {
+        "topicName":"Nadhim Zahawi",
+        "topicId":"c5mzpy2wx6dt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/eab275e0-57b1-4236-8d32-d5cabdd3b128#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"feb2abb9-e3cb-4d18-ab1f-b699d712b0c7",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "tagging:Agent",
+          "core:Person",
+          "tagging:TagConcept",
+          "tagging:AmbiguousTerm"
+        ]
+      },
+      {
+        "topicName":"Coronavirus vaccine development",
+        "topicId":"c87z0we2g0zt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"1d62d302-53c9-4f79-b281-62993210e174",
+            "curationType":"vivo-stream",
+            "position":0,
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Theme",
+          "core:Thing",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName":"Vaccination",
+        "topicId":"cdl8n2ede1zt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Theme",
+          "core:Thing",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName":"Pfizer",
+        "topicId":"cq23pdgvglxt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/b292bb01-997b-4720-8daa-917a9089718b#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"b292bb01-997b-4720-8daa-917a9089718b",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "core:Organisation",
+          "tagging:TagConcept",
+          "tagging:Agent",
+          "tagging:AmbiguousTerm"
+        ]
+      },
+      {
+        "topicName":"Coronavirus pandemic",
+        "topicId":"cyz0z8w0ydwt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"2d4efc43-223e-4c4d-9ac0-416a38955a37",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "tagging:TagConcept",
+          "core:Thing",
+          "core:Event"
+        ]
+      },
+      {
+        "topicName":"AstraZeneca",
+        "topicId":"cz4pr2gd52lt",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "tagging:Agent",
+          "tagging:AmbiguousTerm",
+          "core:Organisation",
+          "tagging:TagConcept"
+        ]
+      }
+    ]
+  },
+  "content":{
+    "blocks":[
+      {
+        "id":"p0953xyp",
+        "subType":"clip",
+        "format":"video",
+        "title":"UK vaccines minister 'confident' over Pfizer supply",
+        "synopses":{
+          "short":"Covid: UK vaccines minister 'confident' over Pfizer supply",
+          "long":"Vaccines minister Nadhim Zahawi says he is \"confident\" the UK's Pfizer supply \"remains safe\".\n\nThe EU has warned it will tighten exports of Covid vaccines produced in the bloc, amid a row with AstraZeneca over a cut in planned supplies.\n\nLast week, AstraZeneca told the EU it was falling behind on its supply target because of production problems.",
+          "medium":"The EU has warned it will tighten exports of Covid vaccines produced in the bloc, amid a row with AstraZeneca over a cut in planned supplies."
+        },
+        "imageUrl":"ichef.bbci.co.uk/images/ic/$recipe/p0953z9y.jpg",
+        "embedding":true,
+        "advertising":true,
+        "caption":"Nadhim Zahawi: \"We have 367m vaccines from seven different manufacturers that we have contracted with\"",
+        "versions":[
+          {
+            "versionId":"p0953xyr",
+            "types":[
+              "Original"
+            ],
+            "duration":139,
+            "durationISO8601":"PT2M19S",
+            "warnings":{
+
+            },
+            "availableTerritories":{
+              "uk":true,
+              "nonUk":true
+            },
+            "availableFrom":1611650719000
+          }
+        ],
+        "imageCopyright":"BBC",
+        "smpKind":"programme",
+        "type":"media"
+      },
+      {
+        "text":"Supplies of vaccines are &quot;tight&quot; but the UK believes it will receive enough doses to meet its targets, the vaccine minister has said.",
+        "role":"introduction",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Nadhim Zahawi told BBC Breakfast manufacturers were &quot;confident&quot; they would deliver for the UK amid warnings of production delays.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"It comes as the EU said <link><caption>it might tighten vaccine export controls</caption><url href=\"https://www.bbc.co.uk/news/world-europe-55805903\" platform=\"highweb\"/></link>.",
+        "markupType":"candy_xml",
+        "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/world-europe-55805903",
+        "type":"paragraph"
+      },
+      {
+        "text":"Countries should avoid &quot;vaccine nationalism&quot; and ensure a fair global supply, Mr Zahawi said.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Meanwhile, <link><caption>more than 100,000 people have died with Covid-19 in the UK</caption><url href=\"https://www.bbc.co.uk/news/uk-55814751\" platform=\"highweb\"/></link>, after 1,631 deaths within 28 days of a positive test were recorded in the <link><caption>daily figures</caption><url href=\"https://coronavirus.data.gov.uk/\" platform=\"highweb\"/></link>.",
+        "markupType":"candy_xml",
+        "type":"paragraph"
+      },
+      {
+        "numbered":false,
+        "items":[
+          {
+            "text":"<itemMeta>news/world-europe-55805903</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"Vaccine supply fears grow amid EU export threat",
+                  "headline":"Coronavirus: Vaccine supply fears grow amid EU export threat",
+                  "overtyped":"EU to tighten vaccine exports amid AstraZeneca row"
+                },
+                "locators":{
+                  "href":"https://www.bbc.co.uk/news/world-europe-55805903"
+                },
+                "summary":"The EU calls for \"fair\" distribution after vaccine companies cut back on pledged supplies.",
+                "timestamp":1611669186000,
+                "language":"en-gb",
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName":"News"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:news/world-europe-55805903",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          },
+          {
+            "text":"<itemMeta>news/explainers-52380823</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"What's the problem with the EU's vaccine programme?",
+                  "headline":"Covid: What’s happening to the EU vaccine scheme?",
+                  "overtyped":"What's the problem with the EU's vaccine programme?"
+                },
+                "locators":{
+                  "href":"https://www.bbc.co.uk/news/explainers-52380823"
+                },
+                "summary":"The coronavirus vaccine is being rolled out across the EU but there have been delays and supply problems.",
+                "timestamp":1611672406000,
+                "language":"en-gb",
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName":"Explainer"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:news/explainers-52380823",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          },
+          {
+            "text":"<itemMeta>news/health-55757369</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"Why won't vaccinating the vulnerable end lockdown?",
+                  "headline":"Covid: Why won't vaccinating the vulnerable end lockdown?",
+                  "overtyped":"Why won't vaccinating the vulnerable end lockdown?"
+                },
+                "locators":{
+                  "href":"https://www.bbc.co.uk/news/health-55757369"
+                },
+                "summary":"Doubts have been raised about lifting Covid restrictions in the spring. What are the hurdles in the way?",
+                "timestamp":1611276951000,
+                "language":"en-gb",
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName":"News"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:news/health-55757369",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          }
+        ],
+        "type":"list"
+      },
+      {
+        "text":"Mr Zahawi said the vaccination programme was still on track to deliver a first dose to 15 million of the most vulnerable by mid-February and to offer all adults their first dose by autumn.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He said the UK had supplies of the Oxford vaccine manufactured domestically by AstraZeneca as well as the Pfizer one, which is made in Belgium.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"The government is also planning to publish figures on the take-up of the vaccine by ethnicity from Thursday, following concerns that some black, Asian and ethnic minority communities were more hesitant to get the jab.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Supply 'lumpy'",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"&quot;I'm confident we will meet our mid-February target and continue beyond that,&quot; Mr Zahawi told the BBC.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"&quot;Supplies are tight, they continue to be, these are new manufacturing processes,&quot; he added. &quot;It's lumpy and bumpy, it gets better and stabilises and improves going forward.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"But he declined to say that he had received guarantees about the number of doses the UK would receive from Pfizer or other manufacturers and refused to confirm how many doses had already arrived.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"The prime minister's spokesman said AstraZeneca had committed to delivering two million doses a week to the UK, and the government was not expecting any changes to that supply.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Downing Street also rejected German media reports claiming a very low efficacy rate for the Oxford-AstraZeneca vaccine among older people, saying they had been denied by Oxford University, AstraZeneca and the German health ministry.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Chief scientific adviser Sir Patrick Vallance told the cabinet the trials showed similar immune responses in younger and older adults.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"And England's chief medical adviser, Prof Chris Whitty, has defended the UK's strategy of extending the time between first and second doses of coronavirus vaccines from three to 12 weeks in order to immunise more people. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He told the Downing Street coronavirus briefing on Tuesday that the &quot;great majority&quot; of protection came from the first dose.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He also said there was &quot;no evidence&quot; that immunity waned between three and 12 weeks after the first dose was administered.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Prof Whitty said: &quot;We thought very carefully about what the balance of this is, but the balance of risk in terms of reducing the number of deaths in the community - and I really want to stress that, that is the aim of this - is to maximise the number of people who get that first dose, where the great majority of protection comes from.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"105894347",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/1226D/production/_105894347_grey_line-nc.png",
+        "path":"/cpsprodpb/1226D/production/_105894347_grey_line-nc.png",
+        "height":2,
+        "width":640,
+        "altText":"2px presentational grey line",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"Doubts over UK's medium-term vaccine roll-out",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "id":"112811838",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/14763/production/_112811838__112171791_nicktriggle_tr-nc.png",
+        "path":"/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png",
+        "height":340,
+        "width":1706,
+        "altText":"Analysis box by Nick Triggle, health correspondent",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"The latest tension over supply of the Covid vaccine is another illustration of just how fragile this issue is.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"There are huge global demands for Covid vaccine, limited raw materials and constraints on manufacturing.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"The UK already has enough vaccine to jab all the highest-risk groups by mid-February, although not all of it has been packaged up or been through the final safety checks.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"This explains why ministers are confident about the immediate target for the over-70s, health and care workers and the extremely clinically vulnerable.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"But what is in doubt is how quickly the UK can vaccinate in the medium term.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"With the Oxford-AstraZeneca vaccine manufactured in the UK those supply routes are more guaranteed.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"But the Pfizer-BioNTech vaccine is made in Belgium. The UK, like the rest of Europe, is affected by the problems with manufacturing that are being experienced with that vaccine.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"With Europe experiencing major problems rolling out its vaccination programme - per head of population five times fewer vaccines have been delivered - this is a story that is going to rumble on for months.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"105894347",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/1226D/production/_105894347_grey_line-nc.png",
+        "path":"/cpsprodpb/1226D/production/_105894347_grey_line-nc.png",
+        "height":2,
+        "width":640,
+        "altText":"2px presentational grey line",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"The UK has placed orders for 367 million doses of vaccines from seven manufacturers, Mr Zahawi said. &quot;As vaccines come along we will get more volume, millions more in the weeks and months to come,&quot; he added.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"The tension over vaccine supplies increased after UK-based AstraZeneca warned the EU it would have to reduce planned deliveries because of production problems. Pfizer-BioNTech has also said supplies will be temporarily lower as it works to increase capacity at its Belgian factory.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"It has prompted the EU to accuse AstraZeneca of failing to meet its commitments and to warn that it might require all companies producing Covid vaccines to provide &quot;early notification&quot; whenever they planned to export supplies out of the EU.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"116668991",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/4E12/production/_116668991_image-2.png",
+        "path":"/cpsprodpb/4E12/production/_116668991_image-2.png",
+        "height":2166,
+        "width":2666,
+        "altText":"Graph showing vaccine doses against UK target",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"&quot;The thing to do now is not to go down the dead end of vaccine nationalism. It's to work together to protect our people,&quot; Mr Zahawi said.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"&quot;No-one is safe until the whole world is safe.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Health Secretary Matt Hancock subsequently said the UK government &quot;oppose protectionism in all its forms&quot; and urged all international partners to &quot;be collaborative&quot; and &quot;work closely together&quot; on vaccine distribution.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He added that the EU's warning that it could restrict exports of vaccines made in the bloc was &quot;unfortunate and especially so in the midst of a pandemic&quot;.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Meanwhile, the head of NHS England earlier told MPs coronavirus could become a &quot;much more treatable disease&quot; over the next six to 18 months, with the hope of a return to a &quot;much more normal future&quot;.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Sir Simon Stevens told the Health and Social Care Committee: &quot;The first half of the year, vaccination is going to be crucial.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"&quot;I think a lot of us in the health service are increasingly hopeful that in the second half of the year and beyond we will also see more therapeutics and more treatments for coronavirus.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He also said it &quot;would be great&quot; if the Covid vaccine and flu vaccine were combined into a single jab, if not for next winter then future ones.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"And he said vaccines were being used as fast as they arrived in the NHS, with more than half of those aged 75-79 having now had their first dose.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"111165274",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/B898/production/_111165274_cps_web_banner_top_640x3-nc.png",
+        "path":"/cpsprodpb/B898/production/_111165274_cps_web_banner_top_640x3-nc.png",
+        "height":228,
+        "width":1920,
+        "altText":"Banner image reading 'more about coronavirus'",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "numbered":false,
+        "items":[
+          {
+            "text":"FACE MASKS: <link><caption>When do I need to wear one?</caption><url href=\"https://www.bbc.co.uk/news/health-51205344\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/health-51205344",
+            "type":"listItem"
+          },
+          {
+            "text":"TESTING: <link><caption>How do I get a virus test?</caption><url href=\"https://www.bbc.co.uk/news/health-51943612\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/health-51943612",
+            "type":"listItem"
+          },
+          {
+            "text":"JOBS: <link><caption>How will I be kept safe at work?</caption><url href=\"https://www.bbc.co.uk/news/business-52567567\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/business-52567567",
+            "type":"listItem"
+          },
+          {
+            "text":"SYMPTOMS: <link><caption>What are they and how to guard against them?</caption><url href=\"https://www.bbc.co.uk/news/health-51048366\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/health-51048366",
+            "type":"listItem"
+          }
+        ],
+        "type":"list"
+      },
+      {
+        "id":"111165255",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/D7D8/production/_111165255_cps_web_banner_bottom_640x3-nc.png",
+        "path":"/cpsprodpb/D7D8/production/_111165255_cps_web_banner_bottom_640x3-nc.png",
+        "height":33,
+        "width":1920,
+        "altText":"Banner",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"The UK aims to offer Covid vaccination to every adult by autumn. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Mr Zahawi said confidence in the vaccines was high, with 85% of people saying they would accept the jab.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"But he said those who were hesitant &quot;skew heavily&quot; towards black, Asian and minority ethnic communities. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"The government is providing £23m of funding to 60 local councils and voluntary groups to boost vaccine take-up among groups such as older people, disabled people, and people from ethnic minority backgrounds.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"It comes as celebrities such as comedians Romesh Ranganathan and Meera Syal and cricketer Moeen Ali appeared in <link><caption>a video urging people in their communities to get vaccinated</caption><url href=\"https://www.bbc.co.uk/news/entertainment-arts-55809355\" platform=\"highweb\"/></link>.",
+        "markupType":"candy_xml",
+        "aresUrl":"https://ares-api.api.bbci.co.uk/api/asset/news/entertainment-arts-55809355",
+        "type":"paragraph"
+      },
+      {
+        "text":"'Genuine and deep concern'",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"Mr Zahawi told ITV's Good Morning Britain his uncle had died from Covid-19 last week. He had been eligible for vaccination but caught the virus before he could receive it, the minister said.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"This &quot;grim and horrible&quot; experience made him determined to ensure that the most vulnerable were protected as quickly as possible, Mr Zahawi said.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Sir Simon said there was concern about vaccine hesitancy in some groups, where there were access problems as well as &quot;systematic attempts to misinform and lie about the vaccine programme targeted particularly at minority populations, and - in some cases - long-standing mistrust of public services&quot;.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"He said disruption to vaccine deliveries from EU export restrictions was not thought to be likely.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"112292543",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/86E1/production/_112292543_aroundthebbc-iplayerfulllogo-nc.png",
+        "path":"/cpsprodpb/86E1/production/_112292543_aroundthebbc-iplayerfulllogo-nc.png",
+        "height":228,
+        "width":1920,
+        "altText":"Around the BBC iPlayer banner",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "numbered":false,
+        "items":[
+          {
+            "text":"BBC IPLAYER UK PREMIERE: <link><caption>'Pretty Little Liars: The Perfectionists' is streaming now. Secrets, lies and alibis - can you suss the scandal?</caption><url href=\"https://www.bbc.co.uk/iplayer/episode/p08zgm6q/pretty-little-liars-the-perfectionists-series-1-1-pilot?xtor=CS8-1000-%5BIn_Article_Promo_Box%5D-%5BNews_Promo_In_Article%5D-%5BNews_Promo_In_Article_BBCiPlayer%5D-%5BPS_IPLAYER~C~p08zgm6q~Pretty_Little_Liars_The_Perfectionists%5D\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "type":"listItem"
+          },
+          {
+            "text":"THRIFTY COOKING: <link><caption>Dr. Rupy creates three scrumptiously tasty meals for less than £1 per portion</caption><url href=\"https://www.bbc.co.uk/iplayer/episode/p08zskgg/thrifty-cooking-in-the-doctors-kitchen-series-1-6-family-feasts?xtor=CS8-1000-%5BIn_Article_Promo_Box%5D-%5BNews_Promo_In_Article%5D-%5BNews_Promo_In_Article_BBCiPlayer%5D-%5BPS_IPLAYER~C~p08zskgg~Thrifty_cooking_ep1%5D\" platform=\"highweb\"/></link>",
+            "markupType":"candy_xml",
+            "type":"listItem"
+          }
+        ],
+        "type":"list"
+      },
+      {
+        "id":"112292544",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/ADF1/production/_112292544_iplayerpinkfooter-nc.png",
+        "path":"/cpsprodpb/ADF1/production/_112292544_iplayerpinkfooter-nc.png",
+        "height":33,
+        "width":1920,
+        "altText":"Around the BBC iPlayer footer",
+        "copyrightHolder":"BBC",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"In other developments, the UK has offered to carry out genomic sequencing for other countries around the world to help identify further new variants.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"Public Health England said it would give &quot;crucial early warning&quot; of any mutations that might cause the virus to spread faster, make people more ill or possibly reduce the effectiveness of vaccines.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      }
+    ]
+  },
+  "promo":{
+    "headlines":{
+      "shortHeadline":"Vaccine minister 'confident' of supplies",
+      "headline":"Covid-19: Vaccine minister 'confident' of supplies amid production delays"
+    },
+    "locators":{
+      "assetUri":"/news/uk-55808266",
+      "cpsUrn":"urn:bbc:content:assetUri:news/uk-55808266",
+      "curie":"http://www.bbc.co.uk/asset/00299556-57e3-4631-bfe2-de4131d97b61",
+      "assetId":"55808266"
+    },
+    "summary":"Nadhim Zahawi says supply is tight, but he expects the UK to meet its February target of 15 million doses.",
+    "timestamp":1611683336000,
+    "language":"en-gb",
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "language":"en-gb",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator":"urn:bbc:cps:curie:asset:00299556-57e3-4631-bfe2-de4131d97b61",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/8a322569-dc6c-4e68-be62-215addc477ac#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/5250ca1e-7a0f-4dbe-ad72-b4c81f4662f6#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/b292bb01-997b-4720-8daa-917a9089718b#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/eab275e0-57b1-4236-8d32-d5cabdd3b128#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "indexImage":{
+      "id":"116668988",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/15B9A/production/_116668988_hi065330460.jpg",
+      "path":"/cpsprodpb/15B9A/production/_116668988_hi065330460.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Vaccination at a Glasgow hospital",
+      "copyrightHolder":"PA Media",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:news/uk-55808266",
+    "type":"cps"
+  },
+  "relatedContent":{
+    "section":{
+      "subType":"index",
+      "name":"UK",
+      "uri":"/news/uk",
+      "type":"simple"
+    },
+    "site":{
+      "subType":"site",
+      "name":"BBC News",
+      "uri":"/news",
+      "type":"simple"
+    },
+    "groups":[
+      {
+        "type":"see-alsos",
+        "promos":[
+          {
+            "headlines":{
+              "shortHeadline":"Vaccine supply fears grow amid EU export threat",
+              "headline":"Coronavirus: Vaccine supply fears grow amid EU export threat"
+            },
+            "locators":{
+              "assetUri":"/news/world-europe-55805903",
+              "cpsUrn":"urn:bbc:content:assetUri:/news/world-europe-55805903"
+            },
+            "summary":"The EU calls for \"fair\" distribution after vaccine companies cut back on pledged supplies.",
+            "timestamp":1611669186000,
+            "language":"en-gb",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"116672216",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/EF2B/production/_116672216_mediaitem116672213.jpg",
+              "path":"/cpsprodpb/EF2B/production/_116672216_mediaitem116672213.jpg",
+              "height":549,
+              "width":976,
+              "altText":"A worker with Covid vaccines sets out to inoculate patients in Dillenberg, Germany",
+              "copyrightHolder":"Reuters",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:news/world-europe-55805903",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"Why won't vaccinating the vulnerable end lockdown?",
+              "headline":"Covid: Why won't vaccinating the vulnerable end lockdown?"
+            },
+            "locators":{
+              "assetUri":"/news/health-55757369",
+              "cpsUrn":"urn:bbc:content:assetUri:/news/health-55757369"
+            },
+            "summary":"Doubts have been raised about lifting Covid restrictions in the spring. What are the hurdles in the way?",
+            "timestamp":1611276951000,
+            "language":"en-gb",
+            "cpsType":"CSP",
+            "id":"urn:bbc:ares::asset:news/health-55757369",
+            "type":"cps"
+          }
+        ]
+      }
+    ]
+  }
+}
