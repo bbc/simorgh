@@ -131,17 +131,17 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
-              <EpisodeList.Metadata>
+              <EpisodeList.DateTimeDuration>
                 <span aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: datetimeLocale,
                   })}`}
                 </span>
-              </EpisodeList.Metadata>
+              </EpisodeList.DateTimeDuration>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <EpisodeList.Metadata>
+              <EpisodeList.DateTimeDuration>
                 <>
                   {' '}
                   <StyledSpan aria-hidden>|</StyledSpan>
@@ -156,7 +156,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                     timezone={timezone}
                   />
                 </>
-              </EpisodeList.Metadata>
+              </EpisodeList.DateTimeDuration>
             )}
           </EpisodeList.Episode>
         ))}
