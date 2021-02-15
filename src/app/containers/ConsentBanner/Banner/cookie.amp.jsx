@@ -171,10 +171,10 @@ const AmpCookieBanner = ({
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
           <Paragraph script={script}>
-            {initial.description.first}{' '}
+            {initial.description.first}
             <a href={initial.description.linkUrl}>
               {initial.description.linkText}
-            </a>{' '}
+            </a>
             {initial.description.last}
           </Paragraph>
           <OptionsList script={script}>
