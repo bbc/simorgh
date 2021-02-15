@@ -44,6 +44,10 @@ const StyledTimestamp = styled(Timestamp)`
   display: inline;
 `;
 
+const InlineDiv = styled.div`
+  display: inline;
+`;
+
 const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const {
     translations,
@@ -141,22 +145,23 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
               </EpisodeList.DateTimeDuration>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <EpisodeList.DateTimeDuration>
-                <>
-                  {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan>
-                  <StyledTimestamp
-                    timestamp={episode.timestamp}
-                    format="LL"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
-                  />
-                </>
-              </EpisodeList.DateTimeDuration>
+              <InlineDiv>
+                <EpisodeList.DateTimeDuration>
+                  <>
+                    <StyledSpan aria-hidden>|</StyledSpan>
+                    <StyledTimestamp
+                      timestamp={episode.timestamp}
+                      format="LL"
+                      dateTimeFormat="YYYY-MM-DD"
+                      padding={false}
+                      script={script}
+                      locale={datetimeLocale}
+                      service={service}
+                      timezone={timezone}
+                    />
+                  </>
+                </EpisodeList.DateTimeDuration>
+              </InlineDiv>
             )}
           </EpisodeList.Episode>
         ))}

@@ -143,6 +143,7 @@
                 }
               ],
               "availability": "available",
+              "episodeTitle": "Le journal télévisé international de BBC Afrique",
               "smpKind": "programme",
               "type": "media"
             },
@@ -203,6 +204,7 @@
                 }
               ],
               "availability": "available",
+              
               "smpKind": "programme",
               "type": "media"
             },
