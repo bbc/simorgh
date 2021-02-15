@@ -3,7 +3,10 @@ import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
@@ -43,6 +46,20 @@ const getGroups = (zero, one, two, three, four, five) => ({
 const StyledGelWrapperGrid = styled(GelPageGrid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
+  }
+`;
+
+const StyledGridItemParagraph = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
+`;
+
+const StyledGridItemImage = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
   }
 `;
 
@@ -135,7 +152,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <Grid item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
@@ -146,10 +163,10 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               {episodeTitle && (
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
-            </Grid>
-            <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+            </StyledGridItemParagraph>
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} />
-            </Grid>
+            </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
             <AVPlayer
