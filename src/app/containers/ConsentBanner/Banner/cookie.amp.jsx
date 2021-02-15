@@ -32,7 +32,9 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
-const MIN_TAP_HEIGHT = '2.75rem';
+const MIN_TAP_HEIGHT = '2.75rem'; // 44px
+const KEYLINE_WIDTH = '0.0625rem'; // 1px
+const KEYLINE_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
@@ -64,12 +66,6 @@ const BannerPage = styled.div`
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_QUAD};
   }
-
-  a {
-    color: ${C_CONSENT_ACTION};
-    text-decoration: underline;
-    text-decoration-color: ${C_PEBBLE};
-  }
 `;
 
 const Title = styled.h2`
@@ -86,6 +82,31 @@ const Paragraph = styled.p`
   color: ${C_CONSENT_CONTENT};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
+`;
+
+const Link = ({ text, href, className }) => (
+  <a href={href} className={className}>
+    <span>{text}</span>
+  </a>
+);
+
+const StyledLink = styled(Link)`
+  color: ${C_CONSENT_ACTION};
+  text-decoration: none;
+
+  span {
+    border-bottom: ${C_PEBBLE} solid ${KEYLINE_WIDTH};
+  }
+
+  &:hover,
+  &:focus {
+    background-color: ${C_CONSENT_ACTION};
+    color: ${C_EBON};
+
+    span {
+      border-bottom: transparent solid ${KEYLINE_WIDTH_TRANSPARENT};
+    }
+  }
 `;
 
 const OptionsList = styled.ul`
@@ -141,7 +162,7 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: 0.0625rem solid ${C_CONSENT_ACTION};
+    border: ${KEYLINE_WIDTH} solid ${C_CONSENT_ACTION};
     color: ${C_CONSENT_ACTION};
   }
 `;
@@ -172,9 +193,10 @@ const AmpCookieBanner = ({
           <Title script={script}>{initial.title}</Title>
           <Paragraph script={script}>
             {initial.description.first}
-            <a href={initial.description.linkUrl}>
-              {initial.description.linkText}
-            </a>
+            <StyledLink
+              href={initial.description.linkUrl}
+              text={initial.description.linkText}
+            />
             {initial.description.last}
           </Paragraph>
           <OptionsList script={script}>
@@ -198,17 +220,19 @@ const AmpCookieBanner = ({
           <Heading>{manage.description.heading2}</Heading>
           <Paragraph script={script}>{manage.description.para3}</Paragraph>
           <Paragraph script={script}>
-            <a href={manage.description.para4.url}>
-              {manage.description.para4.text}
-            </a>
+            <StyledLink
+              href={manage.description.para4.url}
+              text={manage.description.para4.text}
+            />
           </Paragraph>
           <Paragraph script={script}>{manage.description.para5}</Paragraph>
           <Heading>{manage.description.heading3}</Heading>
           <Paragraph script={script}>{manage.description.para6}</Paragraph>
           <Paragraph script={script}>
-            <a href={manage.description.para7.url}>
-              {manage.description.para7.text}
-            </a>
+            <StyledLink
+              href={manage.description.para7.url}
+              text={manage.description.para7.text}
+            />
           </Paragraph>
           <Paragraph script={script}>{manage.description.para8}</Paragraph>
           <Paragraph script={script}>{manage.description.para9}</Paragraph>
@@ -224,6 +248,12 @@ const AmpCookieBanner = ({
       </Wrapper>
     </div>
   );
+};
+
+Link.propTypes = {
+  text: string.isRequired,
+  href: string.isRequired,
+  className: string.isRequired,
 };
 
 AmpCookieBanner.propTypes = {
