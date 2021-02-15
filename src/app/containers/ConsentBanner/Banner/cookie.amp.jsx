@@ -194,7 +194,7 @@ const AmpCookieBanner = ({
             />
             {initial.description.last}
           </Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
@@ -231,7 +231,7 @@ const AmpCookieBanner = ({
           </Paragraph>
           <Paragraph script={script}>{manage.description.para8}</Paragraph>
           <Paragraph script={script}>{manage.description.para9}</Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
