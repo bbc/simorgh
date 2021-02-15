@@ -100,7 +100,14 @@ describe('CpsRelatedContent', () => {
     fetch.mockResponse(
       JSON.stringify({
         ...pidginPageData,
-        relatedContent: { groups: [{ promos: initialPromo }] },
+        relatedContent: {
+          groups: [
+            {
+              type: 'see-alsos',
+              promos: initialPromo,
+            },
+          ],
+        },
       }),
     );
 
