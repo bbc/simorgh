@@ -33,13 +33,17 @@ import {
 } from '@bbc/gel-foundations/spacings';
 
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
-const KEYLINE_WIDTH = '0.0625rem'; // 1px
-const KEYLINE_WIDTH_TRANSPARENT = '0.125rem'; // 2px
+const BORDER_WIDTH = '0.0625rem'; // 1px
+const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
-  margin-top: 0;
+  margin-top: ${GEL_SPACING_TRPL};
   margin-bottom: 0;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
 `;
 
 const Wrapper = styled.div`
@@ -61,11 +65,6 @@ const BannerPage = styled.div`
   max-height: 100vh;
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
-  padding-top: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_QUAD};
-  }
 `;
 
 const Title = styled.h2`
@@ -95,7 +94,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   span {
-    border-bottom: ${C_PEBBLE} solid ${KEYLINE_WIDTH};
+    border-bottom: ${C_PEBBLE} solid ${BORDER_WIDTH};
   }
 
   &:hover,
@@ -104,7 +103,7 @@ const StyledLink = styled(Link)`
     color: ${C_EBON};
 
     span {
-      border-bottom: transparent solid ${KEYLINE_WIDTH_TRANSPARENT};
+      border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
     }
   }
 `;
@@ -119,12 +118,11 @@ const OptionsList = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
-  padding-bottom: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
-    padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
@@ -136,33 +134,30 @@ const OptionsItem = styled.li`
     width: calc(50% - ${GEL_SPACING});
   }
 
-  a,
   button {
     ${({ service }) => getSansBold(service)}
-    cursor: pointer;
-    display: block;
-  }
-
-  a {
-    padding-top: ${GEL_SPACING};
-    padding-bottom: ${GEL_SPACING};
-    text-align: center;
-  }
-
-  button {
     ${({ script }) => getLongPrimer(script)}
     background: ${C_GHOST};
     border: none;
     color: ${C_EBON};
+    cursor: pointer;
+    display: block;
     height: 100%;
     min-height: ${MIN_TAP_HEIGHT};
     padding: ${GEL_SPACING};
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: ${C_CONSENT_ACTION};
+      color: ${C_EBON};
+      text-decoration: underline;
+    }
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${KEYLINE_WIDTH} solid ${C_CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
     color: ${C_CONSENT_ACTION};
   }
 `;
