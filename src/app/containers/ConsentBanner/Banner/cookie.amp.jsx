@@ -33,8 +33,8 @@ import {
 } from '@bbc/gel-foundations/spacings';
 
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
-const KEYLINE_WIDTH = '0.0625rem'; // 1px
-const KEYLINE_WIDTH_TRANSPARENT = '0.125rem'; // 2px
+const BORDER_WIDTH = '0.0625rem'; // 1px
+const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
@@ -95,7 +95,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   span {
-    border-bottom: ${C_PEBBLE} solid ${KEYLINE_WIDTH};
+    border-bottom: ${C_PEBBLE} solid ${BORDER_WIDTH};
   }
 
   &:hover,
@@ -104,7 +104,7 @@ const StyledLink = styled(Link)`
     color: ${C_EBON};
 
     span {
-      border-bottom: transparent solid ${KEYLINE_WIDTH_TRANSPARENT};
+      border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
     }
   }
 `;
@@ -162,7 +162,7 @@ const OptionsItem = styled.li`
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: ${KEYLINE_WIDTH} solid ${C_CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
     color: ${C_CONSENT_ACTION};
   }
 `;
