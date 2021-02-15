@@ -133,51 +133,53 @@ export const service = {
         },
         cookie: {
           amp: {
-            accept: 'Accept data collection and continue',
-            reject: 'Reject data collection and continue',
+            accept: 'Gabh ri cruinneachadh dàta agus lean ort',
+            reject: 'Na gabh ri cruinneachadh dàta agus lean ort',
             initial: {
-              title: 'Let us know you agree to data collection on AMP',
+              title:
+                'Dearbh dhuinn gu bheil thu ag aontachadh ri dàta air AMP a chruinneachadh',
               description: {
-                first: 'We and our partners use technologies, such as ',
-                linkText: 'cookies',
+                first:
+                  "Bidh sinn agus ar luchd-pàirt a' cur teicneòlais an sàs, a leithid ",
+                linkText: 'dàta-brabhsair',
                 last:
-                  ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                  ", agus fiosrachadh mu bhrabhsadh 'son an t-seirbheis air loidhne as fheàrr a thoirt seachad agus 'son duilleagan agus sanasachd anns am bi ùidh agaibh a lìbhrigeadh. Leig fios dhuinn ma tha sibh ag aontachadh.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
-              manage: 'Manage my settings',
+              manage: 'Na roghainnean agam',
             },
             manage: {
-              title: 'Manage consent settings on AMP pages',
+              title: 'Stiùireadh cead air duilleagan AMP',
               description: {
                 para1:
-                  'These settings apply to AMP pages only. You may be asked to set these preferences again when you visit non-AMP BBC pages.',
+                  "Roghainnean do dhuilleagan AMP a-mhàin. 'S dòcha gun tèid iarraidh ort roghainn a dhèanamh a-rithist ma thadhlas tu air duilleagan a' BhBC nach eil air AMP.",
                 para2:
-                  'The lightweight mobile page you have visited has been built using Google AMP technology.',
-                heading2: 'Strictly necessary data collection',
+                  "Chaidh an duilleag aotram air a bheil thu a' tadhal a thogail le teicneòlas Google AMP.",
+                heading2: 'Cruinneachadh dàta riatanach',
                 para3:
-                  'To make our web pages work, we store some limited information on your device without your consent.',
+                  "Bidh sinn a' cumail rud beag fiosrachaidh air an inneal agad gun chead gus an obraich na duilleagan againn.",
                 para4: {
                   text:
-                    'Read more about the essential information we store on your device to make our web pages work.',
+                    "Leugh tuilleadh mun fhiosrachadh riatanach a tha sinn a' cumail air an inneal agad gus an obraich na duilleagan againn.",
                   url:
                     'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
-                  'We use local storage to store your consent preferences on your device.',
-                heading3: 'Optional data collection',
+                  "Tha sinn a' stòradh fiosrachaidh gu h-ionadail 'son na roghainnean agad a chumail air an inneal agad.",
+                heading3: 'Cruinneachadh dàta roghainneil',
                 para6:
-                  'When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.',
+                  "Tha cead do dhuilleagan AMP a' ciallachadh gu bheil thu a' toirt cead dhuinn sansachd a lìbhrigeadh a tha pearsanta dhut fhèin nuair a tha thu taobh a-muigh na RA.",
                 para7: {
                   text:
-                    'Read more about how we personalise ads in the BBC and our advertising partners.',
+                    "Leugh tuilleadh mu mar a tha sinn a' lìbhrigeadh sanasachd pearsanta aig a' BhBC agus mun luchd-pàirt againn.",
                   url:
                     'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
-                  'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
+                  'Faodadh tu sanasachd phearsanta a sheachdnadh le a bhith a\' taghadh "Na gabh ri dàta pearsanta a chruinneachadh agus lean ort" gu h-ìosal. Thoireabh an aire gum faic thu sanasachd fhathast ach cha bhi i pearsanta.',
                 para9:
-                  'You can change these settings by clicking “Ad Choices / Do not sell my info” in the footer at any time.',
+                  'Faodaidh tu na roghinnean seo atharrachadh le a bhith a\' taghadh "Roghainnean Sanasachd / Na reic am fiosrachadh agam" aig bonn na duilleige aig àm sam bith.',
               },
             },
           },

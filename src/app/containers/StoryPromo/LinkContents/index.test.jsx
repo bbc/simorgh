@@ -1,6 +1,8 @@
 import React from 'react';
+import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import LinkContents from '.';
 import {
   MEDIA_ASSET_PAGE,
@@ -70,44 +72,23 @@ const mediaItemWithOvertyped = { ...mediaItem };
 mediaItemWithOvertyped.headlines.overtyped =
   'An overtyped headline for a media item';
 
-const mockServiceConfig = {
-  translations: {
-    media: {
-      audio: 'AUDIO',
-      listen: 'LISTEN',
-      video: 'VIDEO',
-      photogallery: 'PHOTOGALLERY',
-      duration: 'DURATION',
-    },
-  },
-};
+const withServiceContext = component => (
+  <ServiceContextProvider service="news">{component}</ServiceContextProvider>
+);
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-const { useContext } = jest.requireMock('react');
+const renderWithContext = compose(render, withServiceContext);
+const shouldMatchSnapshotWithContext = (title, component) =>
+  shouldMatchSnapshot(title, withServiceContext(component));
 
 describe('Story Promo Link Contents', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(mockServiceConfig);
-  });
-
-  afterEach(() => {
-    useContext.mockReset();
-  });
-
   it("should render a story's headline as bare text", () => {
-    const { container } = render(<LinkContents item={item} />);
+    const { container } = renderWithContext(<LinkContents item={item} />);
 
     expect(container.innerHTML).toEqual(item.headlines.headline);
   });
 
   it('should render overtyped headline if provided', () => {
-    const { container } = render(
+    const { container } = renderWithContext(
       <LinkContents item={itemWithOvertypedHeadline} />,
     );
 
@@ -116,17 +97,17 @@ describe('Story Promo Link Contents', () => {
     );
   });
 
-  shouldMatchSnapshot(
+  shouldMatchSnapshotWithContext(
     'should render with visually hidden text for media promos',
     <LinkContents item={mediaItem} />,
   );
 
-  shouldMatchSnapshot(
+  shouldMatchSnapshotWithContext(
     'should render with visually hidden text for media with overtyped headline',
     <LinkContents item={mediaItemWithOvertyped} />,
   );
 
-  shouldMatchSnapshot(
+  shouldMatchSnapshotWithContext(
     'should render with visually hidden text for photogallery promos',
     <LinkContents item={photogalleryItem} />,
   );

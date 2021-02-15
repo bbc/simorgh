@@ -8,16 +8,17 @@ import {
   C_CONSENT_BACKGROUND,
   C_CONSENT_ACTION,
   C_PEBBLE,
-  C_WHITE,
   C_CONSENT_CONTENT,
-  C_METAL,
+  C_WHITE,
+  C_EBON,
+  C_GHOST,
 } from '@bbc/psammead-styles/colours';
 import {
   getDoublePica,
   getLongPrimer,
   getBodyCopy,
 } from '@bbc/gel-foundations/typography';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -27,76 +28,89 @@ import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_SPACING_DBL,
   GEL_SPACING,
+  GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
-const HEADING_STYLES = `
+const MIN_TAP_HEIGHT = '2.75rem'; // 44px
+const KEYLINE_WIDTH = '0.0625rem'; // 1px
+const KEYLINE_WIDTH_TRANSPARENT = '0.125rem'; // 2px
+
+const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
   margin-top: 0;
   margin-bottom: 0;
-`;
-
-const KEYLINE_STYLE = `0.0625rem solid ${C_METAL}`;
-
-const CONTAINER_STYLES = `
-  margin-left: ${GEL_MARGIN_BELOW_400PX};
-  margin-right: ${GEL_MARGIN_BELOW_400PX};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-left: ${GEL_MARGIN_ABOVE_400PX};
-    margin-right: ${GEL_MARGIN_ABOVE_400PX};
-  }
 `;
 
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
   max-height: 100vh;
+  padding-right: ${GEL_MARGIN_BELOW_400PX};
+  padding-left: ${GEL_MARGIN_BELOW_400PX};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-left: ${GEL_MARGIN_ABOVE_400PX};
+    padding-right: ${GEL_MARGIN_ABOVE_400PX};
+  }
 `;
 
 const BannerPage = styled.div`
-  display: flex;
-  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   max-height: 100vh;
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
+  overflow-y: auto;
+  padding-top: ${GEL_SPACING_DBL};
 
-  a {
-    color: ${C_CONSENT_ACTION};
-    text-decoration: underline;
-    text-decoration-color: ${C_PEBBLE};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-top: ${GEL_SPACING_QUAD};
   }
 `;
 
 const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
-  ${HEADING_STYLES}
-  ${CONTAINER_STYLES}
-  padding-top: ${GEL_SPACING_DBL};
-  padding-bottom: ${GEL_SPACING_DBL};
-`;
-
-const ScrollBox = styled.div`
-  ${CONTAINER_STYLES}
-  border-top: ${KEYLINE_STYLE};
-  border-bottom: ${KEYLINE_STYLE};
-  overflow-y: auto;
+  ${COMMON_HEADING_STYLES}
 `;
 
 const Heading = styled.h3`
-  ${HEADING_STYLES}
+  ${COMMON_HEADING_STYLES}
 `;
 
-const Text = styled.p`
-  ${({ script }) => script && getBodyCopy(script)}
+const Paragraph = styled.p`
+  ${({ script }) => getBodyCopy(script)}
   color: ${C_CONSENT_CONTENT};
   margin-top: ${GEL_SPACING_DBL};
   margin-bottom: ${GEL_SPACING_DBL};
 `;
 
+const Link = ({ text, href, className }) => (
+  <a href={href} className={className}>
+    <span>{text}</span>
+  </a>
+);
+
+const StyledLink = styled(Link)`
+  color: ${C_CONSENT_ACTION};
+  text-decoration: none;
+
+  span {
+    border-bottom: ${C_PEBBLE} solid ${KEYLINE_WIDTH};
+  }
+
+  &:hover,
+  &:focus {
+    background-color: ${C_CONSENT_ACTION};
+    color: ${C_EBON};
+
+    span {
+      border-bottom: transparent solid ${KEYLINE_WIDTH_TRANSPARENT};
+    }
+  }
+`;
+
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
-  ${CONTAINER_STYLES}
   align-items: stretch;
   display: flex;
   flex-direction: column;
@@ -104,11 +118,14 @@ const OptionsList = styled.ul`
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: ${GEL_SPACING};
+  padding-right: 0;
+  padding-bottom: ${GEL_SPACING};
   padding-left: 0;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
+    padding-top: ${GEL_SPACING};
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
 
@@ -117,12 +134,16 @@ const OptionsItem = styled.li`
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: calc(50% - ${GEL_SPACING});
-    margin-bottom: ${GEL_SPACING};
+  }
+
+  a,
+  button {
+    ${({ service }) => getSansBold(service)}
+    cursor: pointer;
+    display: block;
   }
 
   a {
-    cursor: pointer;
-    display: block;
     padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING};
     text-align: center;
@@ -130,18 +151,18 @@ const OptionsItem = styled.li`
 
   button {
     ${({ script }) => getLongPrimer(script)}
-    background: ${C_WHITE};
+    background: ${C_GHOST};
     border: none;
-    display: block;
-    cursor: pointer;
+    color: ${C_EBON};
     height: 100%;
+    min-height: ${MIN_TAP_HEIGHT};
     padding: ${GEL_SPACING};
     width: 100%;
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: 0.0625rem solid ${C_CONSENT_ACTION};
+    border: ${KEYLINE_WIDTH} solid ${C_CONSENT_ACTION};
     color: ${C_CONSENT_ACTION};
   }
 `;
@@ -170,18 +191,19 @@ const AmpCookieBanner = ({
       <Wrapper dir={dir} service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
-          <ScrollBox>
-            <Text script={script}>
-              {initial.description.first}{' '}
-              <a href={initial.description.linkUrl}>
-                {initial.description.linkText}
-              </a>{' '}
-              {initial.description.last}
-            </Text>
-          </ScrollBox>
+          <Paragraph script={script}>
+            {initial.description.first}
+            <StyledLink
+              href={initial.description.linkUrl}
+              text={initial.description.linkText}
+            />
+            {initial.description.last}
+          </Paragraph>
           <OptionsList script={script}>
-            <OptionsItem script={script}>{accept}</OptionsItem>
-            <OptionsItem script={script}>
+            <OptionsItem script={script} service={service}>
+              {accept}
+            </OptionsItem>
+            <OptionsItem script={script} service={service}>
               <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
@@ -193,34 +215,45 @@ const AmpCookieBanner = ({
         </BannerPage>
         <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
           <Title script={script}>{manage.title}</Title>
-          <ScrollBox>
-            <Text script={script}>{manage.description.para1}</Text>
-            <Text script={script}>{manage.description.para2}</Text>
-            <Heading>{manage.description.heading2}</Heading>
-            <Text script={script}>{manage.description.para3}</Text>
-            <Text script={script}>
-              <a href={manage.description.para4.url}>
-                {manage.description.para4.text}
-              </a>
-            </Text>
-            <Text script={script}>{manage.description.para5}</Text>
-            <Text script={script}>{manage.description.para6}</Text>
-            <Text script={script}>
-              <a href={manage.description.para7.url}>
-                {manage.description.para7.text}
-              </a>
-            </Text>
-            <Text script={script}>{manage.description.para8}</Text>
-            <Text script={script}>{manage.description.para9}</Text>
-          </ScrollBox>
+          <Paragraph script={script}>{manage.description.para1}</Paragraph>
+          <Paragraph script={script}>{manage.description.para2}</Paragraph>
+          <Heading>{manage.description.heading2}</Heading>
+          <Paragraph script={script}>{manage.description.para3}</Paragraph>
+          <Paragraph script={script}>
+            <StyledLink
+              href={manage.description.para4.url}
+              text={manage.description.para4.text}
+            />
+          </Paragraph>
+          <Paragraph script={script}>{manage.description.para5}</Paragraph>
+          <Heading>{manage.description.heading3}</Heading>
+          <Paragraph script={script}>{manage.description.para6}</Paragraph>
+          <Paragraph script={script}>
+            <StyledLink
+              href={manage.description.para7.url}
+              text={manage.description.para7.text}
+            />
+          </Paragraph>
+          <Paragraph script={script}>{manage.description.para8}</Paragraph>
+          <Paragraph script={script}>{manage.description.para9}</Paragraph>
           <OptionsList script={script}>
-            <OptionsItem script={script}>{accept}</OptionsItem>
-            <OptionsItem script={script}>{reject}</OptionsItem>
+            <OptionsItem script={script} service={service}>
+              {accept}
+            </OptionsItem>
+            <OptionsItem script={script} service={service}>
+              {reject}
+            </OptionsItem>
           </OptionsList>
         </BannerPage>
       </Wrapper>
     </div>
   );
+};
+
+Link.propTypes = {
+  text: string.isRequired,
+  href: string.isRequired,
+  className: string.isRequired,
 };
 
 AmpCookieBanner.propTypes = {

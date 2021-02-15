@@ -263,7 +263,7 @@ export const service = {
       hasMostRead: true,
     },
     mostWatched: {
-      header: 'En fazla izlenilen içerek',
+      header: 'En fazla izlenen içerik',
       numberOfItems: 5,
       hasMostWatched: true,
     },

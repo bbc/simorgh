@@ -12,7 +12,7 @@ const pageTypes = [
   'liveRadio',
   'photoGalleryPage',
   'mostReadPage',
-  'onDemandRadio',
+  'onDemandAudio',
   'onDemandTV',
   'mediaAssetPage',
   'storyPage',
