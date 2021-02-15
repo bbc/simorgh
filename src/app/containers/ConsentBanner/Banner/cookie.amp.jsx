@@ -38,8 +38,12 @@ const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
-  margin-top: 0;
+  margin-top: ${GEL_SPACING_TRPL};
   margin-bottom: 0;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
 `;
 
 const Wrapper = styled.div`
@@ -61,11 +65,6 @@ const BannerPage = styled.div`
   max-height: 100vh;
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
-  padding-top: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_QUAD};
-  }
 `;
 
 const Title = styled.h2`
@@ -119,12 +118,11 @@ const OptionsList = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
-  padding-bottom: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
-    padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
