@@ -23,6 +23,7 @@ import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
+import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -63,15 +64,21 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     radioScheduleData,
     recentEpisodes,
     brandId,
+    episodeTitle,
   } = pageData;
 
   const pageType = path(['metadata', 'type'], pageData);
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    dir,
+    liveRadioOverrides,
+    lang,
+    service,
+    translations,
+    serviceName,
+  } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -95,6 +102,9 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   );
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+  const metadataTitle = episodeTitle
+    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
+    : headline;
 
   return (
     <>
@@ -102,7 +112,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
-        title={headline}
+        title={metadataTitle}
         lang={language}
         description={shortSynopsis}
         openGraphType="website"
@@ -129,9 +139,13 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
+                episodeTitle={episodeTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
               <OnDemandParagraphContainer text={summary} />
+              {episodeTitle && (
+                <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
+              )}
             </Grid>
             <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} />
@@ -153,7 +167,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
           <LinkedData
             type="WebPage"
-            seoTitle={headline}
+            seoTitle={metadataTitle}
             entities={
               mediaIsAvailable
                 ? [
@@ -206,6 +220,7 @@ OnDemandAudioPage.propTypes = {
     language: string,
     releaseDateTimeStamp: number,
     imageUrl: string,
+    episodeTitle: string,
   }).isRequired,
 };
 
