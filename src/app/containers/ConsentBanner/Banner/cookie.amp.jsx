@@ -136,28 +136,25 @@ const OptionsItem = styled.li`
     width: calc(50% - ${GEL_SPACING});
   }
 
-  a,
   button {
     ${({ service }) => getSansBold(service)}
-    cursor: pointer;
-    display: block;
-  }
-
-  a {
-    padding-top: ${GEL_SPACING};
-    padding-bottom: ${GEL_SPACING};
-    text-align: center;
-  }
-
-  button {
     ${({ script }) => getLongPrimer(script)}
     background: ${C_GHOST};
     border: none;
     color: ${C_EBON};
+    cursor: pointer;
+    display: block;
     height: 100%;
     min-height: ${MIN_TAP_HEIGHT};
     padding: ${GEL_SPACING};
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: ${C_CONSENT_ACTION};
+      color: ${C_EBON};
+      text-decoration: underline;
+    }
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
