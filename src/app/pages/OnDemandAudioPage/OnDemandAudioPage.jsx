@@ -164,7 +164,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
             </StyledGridItemParagraph>
-            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>    
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} />
             </StyledGridItemImage>
           </StyledGelWrapperGrid>
