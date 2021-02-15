@@ -1,4 +1,5 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
+import dissocPath from 'ramda/src/dissocPath';
 import loggerMock from '#testHelpers/loggerMock';
 import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
@@ -54,7 +55,7 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.headline).toEqual('BBC Xtra');
     expect(pageData.releaseDateTimeStamp).toEqual(1603929600000);
     expect(pageData.summary).toEqual(
-      'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
+      'التصويت الانتخابي عبر البريد خيار يلجأ إليه البعض\nمتى وكيف بدأ توتر العلاقات بين الدولة العثمانية وفرنسا؟\nونتابع احتفالات المغاربة بالمولد النبوي\nبي بي سي إكسترا بصحبة محمد مطر',
     );
     expect(pageData.language).toEqual('ar');
     expect(pageData.metadata.type).toEqual('Podcast');
@@ -65,6 +66,25 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.durationISO8601).toEqual('PT6M50S');
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p02rt7vj.jpg',
+    );
+  });
+
+  it('should use short synopsis as page summary for podcast pages when medium synopsis is absent', async () => {
+    const podcastJsonNoMediumSynopsis = dissocPath(
+      ['content', 'blocks', 0, 'synopses', 'medium'],
+      podcastJson,
+    );
+    fetch.mockResponse(JSON.stringify(podcastJsonNoMediumSynopsis));
+    const { pageData } = await getInitialData({
+      path: 'mock-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles: {
+        recentPodcastEpisodes: { enabled: false, value: 8 },
+      },
+    });
+
+    expect(pageData.summary).toEqual(
+      'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
     );
   });
 

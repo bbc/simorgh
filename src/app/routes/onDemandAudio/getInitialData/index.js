@@ -99,20 +99,25 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       'pageIdentifier',
     ]);
 
+    const shortSynopsis = get(
+      ['content', 'blocks', 0, 'synopses', 'short'],
+      LOG_LEVELS.INFO,
+    );
+    const mediumSynopsis =
+      get(['content', 'blocks', 0, 'synopses', 'medium']) || shortSynopsis;
+    const summary = isPodcast ? mediumSynopsis : shortSynopsis;
+
     return {
       status,
       pageData: {
         metadata: { type: detailPageType },
         language: get(['metadata', 'language'], LOG_LEVELS.INFO),
         brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
-        episodeTitle: get(['content', 'blocks', 0, 'title']),
+        episodeTitle: get(['content', 'blocks', 0, 'episodeTitle']),
         headline: get(['promo', 'headlines', 'headline'], LOG_LEVELS.WARN),
         shortSynopsis: get(['promo', 'media', 'synopses', 'short']),
         id: get(['metadata', 'id']),
-        summary: get(
-          ['content', 'blocks', 0, 'synopses', 'short'],
-          LOG_LEVELS.INFO,
-        ),
+        summary,
         contentType: get(
           ['metadata', 'analyticsLabels', 'contentType'],
           LOG_LEVELS.INFO,
