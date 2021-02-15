@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import assocPath from 'ramda/src/assocPath';
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -12,6 +12,7 @@ import koreanPageWithScheduleData from './fixtureData/korean.json';
 import zhongwenPageData from '#data/zhongwen/bbc_cantonese_radio/w172xf3r5x8hw4v';
 import indonesiaPageData from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
 import afaanoromooPageData from '#data/afaanoromoo/bbc_afaanoromoo_radio/w13xttnw';
+import arabicPodcastPageData from '#data/arabic/podcasts/p02pc9qc/p08wtg4d.json';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandAudio/getInitialData';
@@ -24,6 +25,10 @@ const toggles = {
   recentAudioEpisodes: {
     enabled: false,
     value: 4,
+  },
+  recentPodcastEpisodes: {
+    enabled: false,
+    value: 8,
   },
 };
 
@@ -140,6 +145,33 @@ describe('OnDemand Radio Page ', () => {
     });
 
     expect(getByText('ماښامنۍ خپرونه')).toBeInTheDocument();
+  });
+
+  it('should show the episode title when it is available', async () => {
+    fetch.mockResponse(JSON.stringify(arabicPodcastPageData));
+
+    const { pageData } = await getInitialData({
+      path: 'some-podcast-path',
+      pageType: MEDIA_PAGE,
+      toggles,
+    });
+    const { getByText } = await renderPage({
+      pageData,
+      service: 'arabic',
+    });
+    const element = getByText(
+      'التصويت عبر البريد في الانتخابات الرئاسية الأميركية',
+    );
+
+    expect(element.tagName).toEqual('SPAN');
+
+    await waitFor(() => {
+      const actual = document.querySelector('head > title').innerHTML;
+
+      expect(actual).toEqual(
+        'التصويت عبر البريد في الانتخابات الرئاسية الأميركية - BBC Xtra - Arabic - BBC News عربي',
+      );
+    });
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {
