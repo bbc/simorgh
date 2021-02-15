@@ -11,7 +11,6 @@ import {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -24,9 +23,6 @@ import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 
-const StyledSpan = styled.span`
-  padding: 0 ${GEL_SPACING};
-`;
 const Spacer = styled.aside`
   position: relative;
   margin-bottom: ${GEL_SPACING_QUAD};
@@ -146,21 +142,19 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
             </EpisodeList.Link>
             {episode.episodeTitle && (
               <InlineDiv>
-                <EpisodeList.DateTimeDuration>
-                  <>
-                    <StyledSpan aria-hidden>|</StyledSpan>
-                    <StyledTimestamp
-                      timestamp={episode.timestamp}
-                      format="LL"
-                      dateTimeFormat="YYYY-MM-DD"
-                      padding={false}
-                      script={script}
-                      locale={datetimeLocale}
-                      service={service}
-                      timezone={timezone}
-                    />
-                  </>
-                </EpisodeList.DateTimeDuration>
+                <EpisodeList.DateTimeDuration
+                  hasBorder
+                  dir={dir}
+                  as={StyledTimestamp}
+                  timestamp={episode.timestamp}
+                  format="LL"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
               </InlineDiv>
             )}
           </EpisodeList.Episode>
