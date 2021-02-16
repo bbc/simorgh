@@ -143,6 +143,7 @@
     "react-router": "5.2.0",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.2.0",
+    "smp-react": "github:bbc/smp-react",
     "url-parse": "1.4.7",
     "uuid": "8.3.2",
     "winston": "3.3.3"
