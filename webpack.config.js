@@ -56,10 +56,6 @@ module.exports = (shell = {}) => {
           __dirname,
           'node_modules/@emotion/utils',
         ),
-        '@emotion/sheet': path.resolve(
-          __dirname,
-          'node_modules/@emotion/sheet',
-        ),
       },
     },
     devServer: {
