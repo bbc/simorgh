@@ -1,7 +1,248 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
-.emotion-24 {
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-16 {
+  background-color: #B80000;
+  min-height: 2.5rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-16 {
+    min-height: 3.25rem;
+    padding: 0 1rem;
+  }
+}
+
+.emotion-18 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9,12 +250,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -22,8 +263,8 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   margin: 0 auto;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-24 {
+@media (max-width: 14.9375rem) {
+  .emotion-18 {
     display: block;
   }
 }
@@ -39,13 +280,13 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (max-width:14.9375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-20 {
     display: block;
   }
 }
 
-.emotion-16 {
+.emotion-22 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -61,39 +302,38 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-16 {
+@media (min-width: 25rem) {
+  .emotion-22 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-22 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active),print {
-  .emotion-16 {
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-22 {
     fill: windowText;
   }
 }
 
-.emotion-21:hover .emotion-16,
-.emotion-21:focus .emotion-16 {
+.emotion-21:hover .emotion-22,
+.emotion-21:focus .emotion-22 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-18 {
+.emotion-24 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -101,12 +341,11 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-26 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -123,24 +362,23 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-22 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-22:focus {
+.emotion-26:focus {
   -webkit-clip-path: none;
   clip-path: none;
-  -webkit-clip: auto;
   clip: auto;
   height: auto;
   width: auto;
@@ -148,39 +386,39 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   left: 0;
 }
 
-@media (min-width:25rem) {
-  .emotion-22:focus {
+@media (min-width: 25rem) {
+  .emotion-26:focus {
     top: 0.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-22 {
+@media (max-width: 37.4375rem) {
+  .emotion-26 {
     padding: 0.5rem;
   }
 }
 
-.emotion-110 {
+.emotion-28 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-110 .emotion-37::after {
+.emotion-28 .emotion-45::after {
   left: 0;
 }
 
-.emotion-108 {
+.emotion-30 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-70 {
+.emotion-32 {
   position: relative;
 }
 
-.emotion-32 {
+.emotion-34 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -191,14 +429,14 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   width: 2.75rem;
 }
 
-.emotion-32:hover,
-.emotion-32:focus {
+.emotion-34:hover,
+.emotion-34:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-32:hover::after,
-.emotion-32:focus::after {
+.emotion-34:hover::after,
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -208,50 +446,44 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-32 {
+@media (min-width: 37.5rem) {
+  .emotion-34 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:20rem) {
-  .emotion-32 {
+@media (min-width: 20rem) {
+  .emotion-34 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-32 svg {
+.emotion-34 svg {
   vertical-align: middle;
 }
 
-.emotion-28 {
+.emotion-36 {
   color: #fff;
   fill: currentColor;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-68 {
+@media (max-width: 37.4375rem) {
+  .emotion-40 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: auto;
-    -moz-scroll-behavior: auto;
-    -ms-scroll-behavior: auto;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  .emotion-68::-webkit-scrollbar {
+  .emotion-40::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-68:after {
+  .emotion-40:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -261,43 +493,48 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     z-index: 3;
     overflow: hidden;
     pointer-events: none;
-    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+    background: linear-gradient(
+            to right,
+            rgba(184, 0, 0, 0) 0%,
+            rgba(184, 0, 0, 1)
+              100%
+          );
   }
 
-@media (min-width:25rem) {
-    .emotion-68:after {
+  @media (min-width: 25rem) {
+    .emotion-40:after {
       width: 6rem;
     }
-}
+  }
 }
 
-.emotion-66 {
+.emotion-42 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-66 {
+@media (min-width: 37.5rem) {
+  .emotion-42 {
     overflow: hidden;
   }
 }
 
-.emotion-36 {
+.emotion-44 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-36:last-child {
+@media (max-width: 37.4375rem) {
+  .emotion-44:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-36::after {
+@media (min-width: 37.5rem) {
+  .emotion-44::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -307,7 +544,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   }
 }
 
-.emotion-34 {
+.emotion-46 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -321,27 +558,27 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   padding: 0.75rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-34 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-34 {
+@media (min-width: 37.5rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-34 {
+@media (max-width: 37.4375rem) {
+  .emotion-46 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-34:hover::after {
+.emotion-46:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -350,7 +587,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-34:focus::after {
+.emotion-46:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -361,50 +598,49 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-106 {
+.emotion-76 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-106 {
+@media (min-width: 37.5rem) {
+  .emotion-76 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-  .emotion-106 {
+@media (prefers-reduced-motion: reduce) {
+  .emotion-76 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-104 {
+.emotion-78 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-74 {
+.emotion-80 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-74:last-child {
+.emotion-80:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-72 {
+.emotion-82 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -415,221 +651,24 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   text-decoration: none;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-72 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-72 {
+@media (min-width: 37.5rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-72:hover,
-.emotion-72:focus {
+.emotion-82:hover,
+.emotion-82:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-14 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2147483647;
-}
-
-.emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-@media (min-width:25rem) {
-  .emotion-12 {
-    padding: 1rem;
-  }
-}
-
-.emotion-10 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-.emotion-2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
-}
-
-.emotion-8 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-8 li + li {
-  padding-top: 0.5rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    width: 18%;
-    float: right;
-  }
-}
-
-.emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-4 button:focus,
-.emotion-4 button:hover {
-  color: #FFFFFF;
-}
-
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
-}
-
-.emotion-26 {
-  background-color: #B80000;
-  min-height: 2.5rem;
-  width: 100%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width:25rem) {
-  .emotion-26 {
-    min-height: 3.25rem;
-    padding: 0 1rem;
-  }
 }
 
 <div>
@@ -637,34 +676,35 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
     role="banner"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-2 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-4 emotion-5"
           dir="ltr"
         >
           <h2
-            class="emotion-0 emotion-1"
+            class="emotion-6 emotion-7"
             dir="ltr"
           >
             We don update our Privacy and Cookies Policy
           </h2>
           <p
-            class="emotion-2 emotion-3"
+            class="emotion-8 emotion-9"
             dir="ltr"
           >
             We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
           </p>
           <ul
-            class="emotion-8 emotion-9"
+            class="emotion-10 emotion-11"
             dir="ltr"
+            role="list"
           >
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               <button
@@ -674,24 +714,26 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               </button>
             </li>
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
-              <a
-                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-              >
-                Find out wetin don change
-              </a>
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div
-      class="emotion-26 emotion-27"
+      class="emotion-16 emotion-17"
     >
       <div
-        class="emotion-24 emotion-25"
+        class="emotion-18 emotion-19"
       >
         <a
           class="emotion-20 emotion-21"
@@ -699,7 +741,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="emotion-16 emotion-17"
+            class="emotion-22 emotion-23"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -727,7 +769,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-24 emotion-25"
             role="text"
           >
             <span
@@ -740,7 +782,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </span>
         </a>
         <a
-          class="emotion-22 emotion-23"
+          class="emotion-26 emotion-27"
           dir="ltr"
           href="#content"
         >
@@ -749,25 +791,25 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-110 emotion-111"
+      class="emotion-28 emotion-29"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-108 emotion-109"
+        class="emotion-30 emotion-31"
       >
         <div
-          class="emotion-70 emotion-71"
+          class="emotion-32 emotion-33"
         >
           <button
             aria-expanded="false"
-            class="emotion-32 emotion-33"
+            class="emotion-34 emotion-35"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-28 emotion-29"
+              class="emotion-36 emotion-37"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -778,110 +820,110 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               />
             </svg>
             <span
-              class="emotion-18 emotion-19"
+              class="emotion-24 emotion-25"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-68 emotion-69"
+            class="emotion-40 emotion-41"
             dir="ltr"
           >
             <ul
-              class="emotion-66 emotion-67"
+              class="emotion-42 emotion-43"
               role="list"
             >
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -891,96 +933,96 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </div>
         </div>
         <div
-          class="emotion-106 emotion-107"
+          class="emotion-76 emotion-77"
           height="0"
         >
           <ul
-            class="emotion-104 emotion-105"
+            class="emotion-78 emotion-79"
             role="list"
           >
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -995,7 +1037,234 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 `;
 
 exports[`Header Snapshots should render correctly for WS radio page 1`] = `
-.emotion-26 {
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-16 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -1003,14 +1272,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media (min-width:25rem) {
-  .emotion-26 {
+@media (min-width: 25rem) {
+  .emotion-16 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-24 {
+.emotion-18 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1018,12 +1287,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -1031,8 +1300,8 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   margin: 0 auto;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-24 {
+@media (max-width: 14.9375rem) {
+  .emotion-18 {
     display: block;
   }
 }
@@ -1048,13 +1317,13 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (max-width:14.9375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-20 {
     display: block;
   }
 }
 
-.emotion-16 {
+.emotion-22 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -1070,39 +1339,38 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-16 {
+@media (min-width: 25rem) {
+  .emotion-22 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-22 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active),print {
-  .emotion-16 {
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-22 {
     fill: windowText;
   }
 }
 
-.emotion-21:hover .emotion-16,
-.emotion-21:focus .emotion-16 {
+.emotion-21:hover .emotion-22,
+.emotion-21:focus .emotion-22 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-18 {
+.emotion-24 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -1110,12 +1378,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-26 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -1132,24 +1399,23 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-22 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-22:focus {
+.emotion-26:focus {
   -webkit-clip-path: none;
   clip-path: none;
-  -webkit-clip: auto;
   clip: auto;
   height: auto;
   width: auto;
@@ -1157,39 +1423,39 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   left: 0;
 }
 
-@media (min-width:25rem) {
-  .emotion-22:focus {
+@media (min-width: 25rem) {
+  .emotion-26:focus {
     top: 0.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-22 {
+@media (max-width: 37.4375rem) {
+  .emotion-26 {
     padding: 0.5rem;
   }
 }
 
-.emotion-110 {
+.emotion-28 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-110 .emotion-37::after {
+.emotion-28 .emotion-45::after {
   left: 0;
 }
 
-.emotion-108 {
+.emotion-30 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-70 {
+.emotion-32 {
   position: relative;
 }
 
-.emotion-32 {
+.emotion-34 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -1200,14 +1466,14 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   width: 2.75rem;
 }
 
-.emotion-32:hover,
-.emotion-32:focus {
+.emotion-34:hover,
+.emotion-34:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-32:hover::after,
-.emotion-32:focus::after {
+.emotion-34:hover::after,
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1217,50 +1483,44 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-32 {
+@media (min-width: 37.5rem) {
+  .emotion-34 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:20rem) {
-  .emotion-32 {
+@media (min-width: 20rem) {
+  .emotion-34 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-32 svg {
+.emotion-34 svg {
   vertical-align: middle;
 }
 
-.emotion-28 {
+.emotion-36 {
   color: #fff;
   fill: currentColor;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-68 {
+@media (max-width: 37.4375rem) {
+  .emotion-40 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: auto;
-    -moz-scroll-behavior: auto;
-    -ms-scroll-behavior: auto;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  .emotion-68::-webkit-scrollbar {
+  .emotion-40::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-68:after {
+  .emotion-40:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -1270,43 +1530,48 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     z-index: 3;
     overflow: hidden;
     pointer-events: none;
-    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+    background: linear-gradient(
+            to right,
+            rgba(184, 0, 0, 0) 0%,
+            rgba(184, 0, 0, 1)
+              100%
+          );
   }
 
-@media (min-width:25rem) {
-    .emotion-68:after {
+  @media (min-width: 25rem) {
+    .emotion-40:after {
       width: 6rem;
     }
-}
+  }
 }
 
-.emotion-66 {
+.emotion-42 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-66 {
+@media (min-width: 37.5rem) {
+  .emotion-42 {
     overflow: hidden;
   }
 }
 
-.emotion-36 {
+.emotion-44 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-36:last-child {
+@media (max-width: 37.4375rem) {
+  .emotion-44:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-36::after {
+@media (min-width: 37.5rem) {
+  .emotion-44::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -1316,7 +1581,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
-.emotion-34 {
+.emotion-46 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1330,27 +1595,27 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   padding: 0.75rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-34 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-34 {
+@media (min-width: 37.5rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-34 {
+@media (max-width: 37.4375rem) {
+  .emotion-46 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-34:hover::after {
+.emotion-46:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1359,7 +1624,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-34:focus::after {
+.emotion-46:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1370,50 +1635,49 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-106 {
+.emotion-76 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-106 {
+@media (min-width: 37.5rem) {
+  .emotion-76 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-  .emotion-106 {
+@media (prefers-reduced-motion: reduce) {
+  .emotion-76 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-104 {
+.emotion-78 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-74 {
+.emotion-80 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-74:last-child {
+.emotion-80:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-72 {
+.emotion-82 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1424,207 +1688,24 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   text-decoration: none;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-72 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-72 {
+@media (min-width: 37.5rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-72:hover,
-.emotion-72:focus {
+.emotion-82:hover,
+.emotion-82:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-14 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2147483647;
-}
-
-.emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-@media (min-width:25rem) {
-  .emotion-12 {
-    padding: 1rem;
-  }
-}
-
-.emotion-10 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-.emotion-2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
-}
-
-.emotion-8 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-8 li + li {
-  padding-top: 0.5rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    width: 18%;
-    float: right;
-  }
-}
-
-.emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-4 button:focus,
-.emotion-4 button:hover {
-  color: #FFFFFF;
-}
-
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
 }
 
 <div>
@@ -1632,34 +1713,35 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
     role="banner"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-2 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-4 emotion-5"
           dir="ltr"
         >
           <h2
-            class="emotion-0 emotion-1"
+            class="emotion-6 emotion-7"
             dir="ltr"
           >
             We don update our Privacy and Cookies Policy
           </h2>
           <p
-            class="emotion-2 emotion-3"
+            class="emotion-8 emotion-9"
             dir="ltr"
           >
             We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
           </p>
           <ul
-            class="emotion-8 emotion-9"
+            class="emotion-10 emotion-11"
             dir="ltr"
+            role="list"
           >
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               <button
@@ -1669,24 +1751,26 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               </button>
             </li>
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
-              <a
-                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-              >
-                Find out wetin don change
-              </a>
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div
-      class="emotion-26 emotion-27"
+      class="emotion-16 emotion-17"
     >
       <div
-        class="emotion-24 emotion-25"
+        class="emotion-18 emotion-19"
       >
         <a
           class="emotion-20 emotion-21"
@@ -1694,7 +1778,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="emotion-16 emotion-17"
+            class="emotion-22 emotion-23"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -1722,7 +1806,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-24 emotion-25"
             role="text"
           >
             <span
@@ -1735,7 +1819,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </span>
         </a>
         <a
-          class="emotion-22 emotion-23"
+          class="emotion-26 emotion-27"
           dir="ltr"
           href="#content"
         >
@@ -1744,25 +1828,25 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-110 emotion-111"
+      class="emotion-28 emotion-29"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-108 emotion-109"
+        class="emotion-30 emotion-31"
       >
         <div
-          class="emotion-70 emotion-71"
+          class="emotion-32 emotion-33"
         >
           <button
             aria-expanded="false"
-            class="emotion-32 emotion-33"
+            class="emotion-34 emotion-35"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-28 emotion-29"
+              class="emotion-36 emotion-37"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -1773,110 +1857,110 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               />
             </svg>
             <span
-              class="emotion-18 emotion-19"
+              class="emotion-24 emotion-25"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-68 emotion-69"
+            class="emotion-40 emotion-41"
             dir="ltr"
           >
             <ul
-              class="emotion-66 emotion-67"
+              class="emotion-42 emotion-43"
               role="list"
             >
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -1886,96 +1970,96 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </div>
         </div>
         <div
-          class="emotion-106 emotion-107"
+          class="emotion-76 emotion-77"
           height="0"
         >
           <ul
-            class="emotion-104 emotion-105"
+            class="emotion-78 emotion-79"
             role="list"
           >
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/popular/read"
               >
                 Most popular
@@ -1990,7 +2074,234 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 `;
 
 exports[`Header Snapshots should render correctly for news article 1`] = `
-.emotion-26 {
+.emotion-0 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2147483647;
+}
+
+.emotion-2 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #323232;
+  border-top: solid 0.0625rem transparent;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    padding: calc(1rem - 0.0625rem) 1rem 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    padding: calc(2rem - 0.0625rem) 1rem 2rem 1rem;
+  }
+}
+
+.emotion-4 {
+  max-width: 37.4375rem;
+  margin: 0 auto;
+}
+
+.emotion-4 a {
+  color: #F6A21D;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-bottom: solid 0.0625rem #AEAEB5;
+}
+
+.emotion-4 a:focus,
+.emotion-4 a:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-4 a:hover,
+.emotion-4 a:focus {
+  border-bottom: solid 0.125rem transparent;
+}
+
+.emotion-6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: #BEBEBE;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    margin-top: 1.5rem;
+  }
+}
+
+.emotion-10 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F6A21D;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-10 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-10 li+li {
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .emotion-10 li+li {
+    margin-top: 0;
+  }
+}
+
+.emotion-12 {
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+}
+
+.emotion-12 button {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  width: 100%;
+  min-height: 2.75rem;
+  color: #222222;
+  font-weight: bold;
+  background-color: #FDFDFD;
+  border: solid 0.0625rem transparent;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-12 button {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 button {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-12 button:focus,
+.emotion-12 button:hover {
+  color: #222222;
+  background-color: #F6A21D;
+}
+
+.emotion-12 button:hover,
+.emotion-12 button:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media (min-width: 25rem) {
+  .emotion-12 {
+    width: 17.3125rem;
+  }
+}
+
+.emotion-16 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -1998,14 +2309,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media (min-width:25rem) {
-  .emotion-26 {
+@media (min-width: 25rem) {
+  .emotion-16 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-24 {
+.emotion-18 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2013,12 +2324,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -2026,8 +2337,8 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   margin: 0 auto;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-24 {
+@media (max-width: 14.9375rem) {
+  .emotion-18 {
     display: block;
   }
 }
@@ -2043,13 +2354,13 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (max-width:14.9375rem) {
+@media (max-width: 14.9375rem) {
   .emotion-20 {
     display: block;
   }
 }
 
-.emotion-16 {
+.emotion-22 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -2065,39 +2376,38 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -ms-flex-preferred-size: 14.880600000000001rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-16 {
+@media (min-width: 25rem) {
+  .emotion-22 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-16 {
+@media (min-width: 37.5rem) {
+  .emotion-22 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active),print {
-  .emotion-16 {
+@media screen and (-ms-high-contrast: active),print {
+  .emotion-22 {
     fill: windowText;
   }
 }
 
-.emotion-21:hover .emotion-16,
-.emotion-21:focus .emotion-16 {
+.emotion-21:hover .emotion-22,
+.emotion-21:focus .emotion-22 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-18 {
+.emotion-24 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2105,12 +2415,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   margin: 0;
 }
 
-.emotion-22 {
+.emotion-26 {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -2127,24 +2436,23 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-22 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-22 {
+@media (min-width: 37.5rem) {
+  .emotion-26 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-22:focus {
+.emotion-26:focus {
   -webkit-clip-path: none;
   clip-path: none;
-  -webkit-clip: auto;
   clip: auto;
   height: auto;
   width: auto;
@@ -2152,39 +2460,39 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   left: 0;
 }
 
-@media (min-width:25rem) {
-  .emotion-22:focus {
+@media (min-width: 25rem) {
+  .emotion-26:focus {
     top: 0.5rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-22 {
+@media (max-width: 37.4375rem) {
+  .emotion-26 {
     padding: 0.5rem;
   }
 }
 
-.emotion-110 {
+.emotion-28 {
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
 }
 
-.emotion-110 .emotion-37::after {
+.emotion-28 .emotion-45::after {
   left: 0;
 }
 
-.emotion-108 {
+.emotion-30 {
   position: relative;
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-70 {
+.emotion-32 {
   position: relative;
 }
 
-.emotion-32 {
+.emotion-34 {
   position: relative;
   padding: 0;
   margin: 0;
@@ -2195,14 +2503,14 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   width: 2.75rem;
 }
 
-.emotion-32:hover,
-.emotion-32:focus {
+.emotion-34:hover,
+.emotion-34:focus {
   cursor: pointer;
   box-shadow: inset 0 0 0 0.25rem #FFFFFF;
 }
 
-.emotion-32:hover::after,
-.emotion-32:focus::after {
+.emotion-34:hover::after,
+.emotion-34:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2212,50 +2520,44 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-32 {
+@media (min-width: 37.5rem) {
+  .emotion-34 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (min-width:20rem) {
-  .emotion-32 {
+@media (min-width: 20rem) {
+  .emotion-34 {
     height: 2.75rem;
     width: 2.75rem;
   }
 }
 
-.emotion-32 svg {
+.emotion-34 svg {
   vertical-align: middle;
 }
 
-.emotion-28 {
+.emotion-36 {
   color: #fff;
   fill: currentColor;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-68 {
+@media (max-width: 37.4375rem) {
+  .emotion-40 {
     white-space: nowrap;
     overflow-x: scroll;
-    -webkit-scroll-behavior: auto;
-    -moz-scroll-behavior: auto;
-    -ms-scroll-behavior: auto;
     scroll-behavior: auto;
     -webkit-overflow-scrolling: touch;
-    -webkit-scrollbar-width: none;
-    -moz-scrollbar-width: none;
-    -ms-scrollbar-width: none;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
 
-  .emotion-68::-webkit-scrollbar {
+  .emotion-40::-webkit-scrollbar {
     display: none;
   }
 
-  .emotion-68:after {
+  .emotion-40:after {
     content: ' ';
     height: 100%;
     width: 3rem;
@@ -2265,43 +2567,48 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     z-index: 3;
     overflow: hidden;
     pointer-events: none;
-    background: linear-gradient( to right,rgba(184,0,0,0) 0%,rgba(184,0,0,1) 100% );
+    background: linear-gradient(
+            to right,
+            rgba(184, 0, 0, 0) 0%,
+            rgba(184, 0, 0, 1)
+              100%
+          );
   }
 
-@media (min-width:25rem) {
-    .emotion-68:after {
+  @media (min-width: 25rem) {
+    .emotion-40:after {
       width: 6rem;
     }
-}
+  }
 }
 
-.emotion-66 {
+.emotion-42 {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: relative;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-66 {
+@media (min-width: 37.5rem) {
+  .emotion-42 {
     overflow: hidden;
   }
 }
 
-.emotion-36 {
+.emotion-44 {
   display: inline-block;
   position: relative;
   z-index: 2;
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-36:last-child {
+@media (max-width: 37.4375rem) {
+  .emotion-44:last-child {
     margin-right: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-36::after {
+@media (min-width: 37.5rem) {
+  .emotion-44::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -2311,7 +2618,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
-.emotion-34 {
+.emotion-46 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2325,27 +2632,27 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   padding: 0.75rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-34 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-34 {
+@media (min-width: 37.5rem) {
+  .emotion-46 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (max-width:37.4375rem) {
-  .emotion-34 {
+@media (max-width: 37.4375rem) {
+  .emotion-46 {
     padding: 0.75rem 0.5rem;
   }
 }
 
-.emotion-34:hover::after {
+.emotion-46:hover::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2354,7 +2661,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border-bottom: 0.25rem solid #FFFFFF;
 }
 
-.emotion-34:focus::after {
+.emotion-46:focus::after {
   content: '';
   position: absolute;
   left: 0;
@@ -2365,50 +2672,49 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   border: 0.25rem solid #FFFFFF;
 }
 
-.emotion-106 {
+.emotion-76 {
   background-color: #222222;
   clear: both;
   overflow: hidden;
   height: 0;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  -webkit-transition-timing-function: cubic-bezier(0,0,0.58,1);
-  transition-timing-function: cubic-bezier(0,0,0.58,1);
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
   visibility: hidden;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-106 {
+@media (min-width: 37.5rem) {
+  .emotion-76 {
     display: none;
     visibility: hidden;
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-  .emotion-106 {
+@media (prefers-reduced-motion: reduce) {
+  .emotion-76 {
     -webkit-transition: none;
     transition: none;
   }
 }
 
-.emotion-104 {
+.emotion-78 {
   list-style-type: none;
   margin: 0;
   padding: 0 0.5rem;
   border-bottom: 0.125rem solid #3F3F42;
 }
 
-.emotion-74 {
+.emotion-80 {
   padding: 0.75rem 0;
   border-bottom: 0.0625rem solid #3F3F42;
 }
 
-.emotion-74:last-child {
+.emotion-80:last-child {
   padding-bottom: 1rem;
   border: 0;
 }
 
-.emotion-72 {
+.emotion-82 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2419,207 +2725,24 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   text-decoration: none;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-72 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-72 {
+@media (min-width: 37.5rem) {
+  .emotion-82 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-72:hover,
-.emotion-72:focus {
+.emotion-82:hover,
+.emotion-82:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-14 {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2147483647;
-}
-
-.emotion-12 {
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #323232;
-  padding: 1rem 0.5rem;
-}
-
-@media (min-width:25rem) {
-  .emotion-12 {
-    padding: 1rem;
-  }
-}
-
-.emotion-10 {
-  max-width: 80rem;
-  margin: 0 auto;
-}
-
-.emotion-10::after {
-  content: '\\0020';
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-.emotion-0 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #FFFFFF;
-  font-weight: 700;
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-0 {
-    float: left;
-    margin-right: 3.5%;
-    width: 22%;
-  }
-}
-
-.emotion-2 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #BEBEBE;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    margin: 0;
-    float: left;
-    width: 53%;
-  }
-}
-
-.emotion-2 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-2 a:focus,
-.emotion-2 a:hover {
-  color: #FFFFFF;
-}
-
-.emotion-8 {
-  font-size: 0.9375rem;
-  line-height: 1.125rem;
-  color: #F6A21D;
-  font-weight: 600;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-8 {
-    font-size: 0.9375rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-.emotion-8 li + li {
-  padding-top: 0.5rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-8 {
-    width: 18%;
-    float: right;
-  }
-}
-
-.emotion-4 button {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  color: #F6A21D;
-  font-weight: 700;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-4 button {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 button {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-4 button:focus,
-.emotion-4 button:hover {
-  color: #FFFFFF;
-}
-
-.emotion-4 a {
-  color: #F6A21D;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-4 a:focus,
-.emotion-4 a:hover {
-  color: #FFFFFF;
 }
 
 <div>
@@ -2627,34 +2750,35 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
     role="banner"
   >
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-0 emotion-1"
     >
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-2 emotion-3"
         dir="ltr"
       >
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-4 emotion-5"
           dir="ltr"
         >
           <h2
-            class="emotion-0 emotion-1"
+            class="emotion-6 emotion-7"
             dir="ltr"
           >
             We don update our Privacy and Cookies Policy
           </h2>
           <p
-            class="emotion-2 emotion-3"
+            class="emotion-8 emotion-9"
             dir="ltr"
           >
             We don make some important changes to our Privacy and Cookies Policy and we wan make you know wetin dis one mean for you and your personal infomation.
           </p>
           <ul
-            class="emotion-8 emotion-9"
+            class="emotion-10 emotion-11"
             dir="ltr"
+            role="list"
           >
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
               <button
@@ -2664,24 +2788,26 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               </button>
             </li>
             <li
-              class="emotion-4 emotion-5"
+              class="emotion-12 emotion-13"
               dir="ltr"
             >
-              <a
-                href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
-              >
-                Find out wetin don change
-              </a>
+              <span>
+                <a
+                  href="https://www.bbc.co.uk/usingthebbc/your-data-matters"
+                >
+                  Find out wetin don change
+                </a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
     </div>
     <div
-      class="emotion-26 emotion-27"
+      class="emotion-16 emotion-17"
     >
       <div
-        class="emotion-24 emotion-25"
+        class="emotion-18 emotion-19"
       >
         <a
           class="emotion-20 emotion-21"
@@ -2689,7 +2815,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="emotion-16 emotion-17"
+            class="emotion-22 emotion-23"
             focusable="false"
             height="24"
             viewBox="0 0 238 24"
@@ -2717,7 +2843,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-18 emotion-19"
+            class="emotion-24 emotion-25"
             role="text"
           >
             <span
@@ -2730,7 +2856,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </span>
         </a>
         <a
-          class="emotion-22 emotion-23"
+          class="emotion-26 emotion-27"
           dir="ltr"
           href="#content"
         >
@@ -2739,25 +2865,25 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
       </div>
     </div>
     <nav
-      class="emotion-110 emotion-111"
+      class="emotion-28 emotion-29"
       dir="ltr"
       role="navigation"
     >
       <div
-        class="emotion-108 emotion-109"
+        class="emotion-30 emotion-31"
       >
         <div
-          class="emotion-70 emotion-71"
+          class="emotion-32 emotion-33"
         >
           <button
             aria-expanded="false"
-            class="emotion-32 emotion-33"
+            class="emotion-34 emotion-35"
             dir="ltr"
             type="button"
           >
             <svg
               aria-hidden="true"
-              class="emotion-28 emotion-29"
+              class="emotion-36 emotion-37"
               focusable="false"
               height="2.75rem"
               viewBox="0 0 44 44"
@@ -2768,110 +2894,110 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               />
             </svg>
             <span
-              class="emotion-18 emotion-19"
+              class="emotion-24 emotion-25"
             >
               Plenti seshon
             </span>
           </button>
           <div
-            class="emotion-68 emotion-69"
+            class="emotion-40 emotion-41"
             dir="ltr"
           >
             <ul
-              class="emotion-66 emotion-67"
+              class="emotion-42 emotion-43"
               role="list"
             >
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin"
                 >
                   Home
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c2dwqd1zr92t"
                 >
                   Nigeria
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c404v061z85t"
                 >
                   Africa
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/c0823e52dd0t"
                 >
                   World
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/media/video"
                 >
                   Video
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cjgn7gv77vrt"
                 >
                   Sport
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/topics/cqywjyzk2vyt"
                 >
                   Entertainment
                 </a>
               </li>
               <li
-                class="emotion-36 emotion-37"
+                class="emotion-44 emotion-45"
                 dir="ltr"
                 role="listitem"
               >
                 <a
-                  class="emotion-34 emotion-35"
+                  class="emotion-46 emotion-47"
                   href="/pidgin/popular/read"
                 >
                   Most popular
@@ -2881,96 +3007,96 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </div>
         </div>
         <div
-          class="emotion-106 emotion-107"
+          class="emotion-76 emotion-77"
           height="0"
         >
           <ul
-            class="emotion-104 emotion-105"
+            class="emotion-78 emotion-79"
             role="list"
           >
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin"
               >
                 Home
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
                 Nigeria
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c404v061z85t"
               >
                 Africa
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/c0823e52dd0t"
               >
                 World
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/media/video"
               >
                 Video
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
                 Sport
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
                 Entertainment
               </a>
             </li>
             <li
-              class="emotion-74 emotion-75"
+              class="emotion-80 emotion-81"
               role="listitem"
             >
               <a
-                class="emotion-72 emotion-73"
+                class="emotion-82 emotion-83"
                 href="/pidgin/popular/read"
               >
                 Most popular
