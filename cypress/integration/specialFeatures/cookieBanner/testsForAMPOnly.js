@@ -4,7 +4,9 @@ import {
   getPrivacyBanner,
   getPrivacyBannerAccept,
   getCookieBannerManageSettings,
+  getCookieBannerManageSettingsButton,
   getCookieBannerAcceptInManageSettings,
+  getCookieBannerRejectInManageSettings,
 } from '../utilities/cookiePrivacyBanner';
 import visitPage from '../../../support/helpers/visitPage';
 
@@ -32,12 +34,46 @@ export default ({ service, variant, pageType, path }) => {
     getCookieBannerAmp(service, variant).should('not.be.visible');
   });
 
-  it('should go to manage settings banner once manage settings button is clicked, and save cookies when accepted', () => {
+  it('should go to manage settings banner once manage settings button is clicked, and when accept button is clicked the banners no longer show', () => {
     getPrivacyBanner(service, variant).should('be.visible');
     getCookieBannerAmp(service, variant).should('not.be.visible');
 
     getPrivacyBannerAccept(service, variant).click();
-    getCookieBannerManageSettings(service, variant).click();
+    getCookieBannerManageSettingsButton(service, variant).click();
     getCookieBannerAcceptInManageSettings(service, variant).click();
+    getCookieBannerManageSettings(service, variant).should('not.be.visible');
+
+    cy.reload();
+
+    getPrivacyBanner(service, variant).should('not.be.visible');
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+  });
+
+  it('should go to manage settings banner once manage settings button is clicked, and when reject button is clicked the banners no longer show', () => {
+    getPrivacyBanner(service, variant).should('be.visible');
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+
+    getPrivacyBannerAccept(service, variant).click();
+    getCookieBannerManageSettingsButton(service, variant).click();
+    getCookieBannerRejectInManageSettings(service, variant).click();
+    getCookieBannerManageSettings(service, variant).should('not.be.visible');
+
+    cy.reload();
+
+    getPrivacyBanner(service, variant).should('not.be.visible');
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+  });
+
+  it('should show privacy banner once you reload the page on the Manage settings expanded view without clicking Accept or Reject buttons', () => {
+    getPrivacyBanner(service, variant).should('be.visible');
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+
+    getPrivacyBannerAccept(service, variant).click();
+    getCookieBannerManageSettingsButton(service, variant).click();
+    getCookieBannerManageSettings(service, variant).should('be.visible');
+
+    cy.reload();
+
+    getPrivacyBanner(service, variant).should('be.visible');
   });
 };

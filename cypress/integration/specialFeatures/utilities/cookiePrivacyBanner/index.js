@@ -25,7 +25,7 @@ const getPrivacyBannerContainer = (service, variant) =>
 const getCookieBannerContainerCanonical = (service, variant) =>
   getCookieBannerCanonical(service, variant).parent();
 
-const getCookieBannerContainerAmp = (service, variant) =>
+export const getCookieBannerContainerAmp = (service, variant) =>
   getCookieBannerAmp(service, variant).parent();
 
 export const getPrivacyBannerAccept = (service, variant) =>
@@ -68,7 +68,7 @@ export const getCookieBannerRejectAmp = (service, variant) =>
         .amp.reject,
     );
 
-export const getCookieBannerManageSettings = (service, variant) =>
+export const getCookieBannerManageSettingsButton = (service, variant) =>
   getCookieBannerContainerAmp(service, variant)
     .find('button')
     .contains(
@@ -76,7 +76,28 @@ export const getCookieBannerManageSettings = (service, variant) =>
         .amp.initial.manage,
     );
 
-export const getCookieBannerAcceptInManageSettings = () =>
-  cy.get('data-amp-bind-hidden=isManagingSettings').within(() => {
-    cy.get('[data-cookie-banner=accept]').click();
-  });
+export const getCookieBannerManageSettings = (service, variant) =>
+  cy.contains(
+    appConfig[config[service].name][variant].translations.consentBanner.cookie
+      .amp.manage.description.heading3,
+  );
+
+export const getCookieBannerAcceptInManageSettings = (service, variant) =>
+  cy
+    .get('[data-amp-bind-hidden="!isManagingSettings"]')
+    .scrollTo('bottom')
+    .find('button')
+    .contains(
+      appConfig[config[service].name][variant].translations.consentBanner.cookie
+        .amp.accept,
+    );
+
+export const getCookieBannerRejectInManageSettings = (service, variant) =>
+  cy
+    .get('[data-amp-bind-hidden="!isManagingSettings"]')
+    .scrollTo('bottom')
+    .find('button')
+    .contains(
+      appConfig[config[service].name][variant].translations.consentBanner.cookie
+        .amp.reject,
+    );
