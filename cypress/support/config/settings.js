@@ -4138,7 +4138,14 @@ module.exports = () => ({
             enabled: false,
           },
           local: {
-            paths: ['/mundo/articles/ce42wzqr2mko'],
+            paths: [
+              '/mundo/articles/c123456abcdo',
+              '/mundo/media-23283126es/ce42wzqr2mko',
+              '/mundo',
+              '/mundo/noticias-internacional-53826365',
+              '/mundo/popular/read',
+              '/mundo/media-23283126',
+            ],
             enabled: true,
           },
         },
