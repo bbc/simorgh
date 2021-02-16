@@ -19,9 +19,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import EpisodeList from '#containers/EpisodeList';
 
 const Spacer = styled.aside`
   position: relative;

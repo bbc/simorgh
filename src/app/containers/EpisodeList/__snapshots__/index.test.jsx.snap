@@ -1,0 +1,1109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episode List  should render radio episodes correctly 1`] = `
+.emotion-0 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  padding: 1rem 0;
+  line-height: 0;
+}
+
+.emotion-2:first-child {
+  padding-top: 0;
+}
+
+.emotion-2:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-2:not(:last-child) {
+  border-bottom: 1px #BABABA solid;
+}
+
+.emotion-4 {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.emotion-6 {
+  line-height: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-6 .rounded-play-button__ring,
+.emotion-6 .rounded-play-button__triangle {
+  color: #000;
+}
+
+.emotion-6:focus [class*='--hover'],
+.emotion-6:hover [class*='--hover'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .rounded-play-button__ring,
+.emotion-6:hover .rounded-play-button__ring,
+.emotion-6:focus .rounded-play-button__inner,
+.emotion-6:hover .rounded-play-button__inner {
+  fill: currentColor;
+  color: #B80000;
+}
+
+.emotion-6:focus .rounded-play-button__triangle,
+.emotion-6:hover .rounded-play-button__triangle {
+  fill: transparent;
+}
+
+.emotion-6:visited [class*='--visited'] {
+  color: #6E6E73;
+}
+
+.emotion-8 {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+}
+
+.emotion-10 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-50 {
+  display: inline;
+}
+
+.emotion-52 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  border-left: 0.0625rem solid #BABABA;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-52 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-52 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <ul
+    class="emotion-0 emotion-1"
+    role="list"
+  >
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/blahasda"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Magazine de la Culture
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              4 Avril 2020, 14:00
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 03,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 03:00
+              </span>
+            </span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/1"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Le Journal
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              Le premier rendez-vous d'information de la soirée.
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 1,30,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 1:30:00
+              </span>
+            </span>
+          </span>
+        </a>
+        <div
+          class="emotion-50 emotion-51"
+        >
+          <time
+            class="emotion-52 emotion-25"
+            datetime="2020-10-20"
+            dir="ltr"
+          >
+            20 octobre 2020
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/2"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Afrique Avenir
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              Tout savoir sur les jeunes entrepreneurs africains.
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 59,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 59:00
+              </span>
+            </span>
+          </span>
+        </a>
+        <div
+          class="emotion-50 emotion-51"
+        >
+          <time
+            class="emotion-52 emotion-25"
+            datetime="2020-10-21"
+            dir="ltr"
+          >
+            21 octobre 2020
+          </time>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Episode List  should render video episodes correctly 1`] = `
+.emotion-0 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emotion-2 {
+  padding: 1rem 0;
+  line-height: 0;
+}
+
+.emotion-2:first-child {
+  padding-top: 0;
+}
+
+.emotion-2:last-child {
+  padding-bottom: 0;
+}
+
+.emotion-2:not(:last-child) {
+  border-bottom: 1px #BABABA solid;
+}
+
+.emotion-4 {
+  position: relative;
+  padding-left: 4rem;
+}
+
+.emotion-6 {
+  line-height: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-6:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  overflow: hidden;
+  z-index: 1;
+}
+
+.emotion-6 .rounded-play-button__ring,
+.emotion-6 .rounded-play-button__triangle {
+  color: #000;
+}
+
+.emotion-6:focus [class*='--hover'],
+.emotion-6:hover [class*='--hover'] {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:focus .rounded-play-button__ring,
+.emotion-6:hover .rounded-play-button__ring,
+.emotion-6:focus .rounded-play-button__inner,
+.emotion-6:hover .rounded-play-button__inner {
+  fill: currentColor;
+  color: #B80000;
+}
+
+.emotion-6:focus .rounded-play-button__triangle,
+.emotion-6:hover .rounded-play-button__triangle {
+  fill: transparent;
+}
+
+.emotion-6:visited [class*='--visited'] {
+  color: #6E6E73;
+}
+
+.emotion-8 {
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+}
+
+.emotion-10 {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.emotion-12 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-14 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-14 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-18 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #222222;
+  display: inline-block;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-18 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-24 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+.emotion-50 {
+  display: inline;
+}
+
+.emotion-52 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  border-left: 0.0625rem solid #BABABA;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-52 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-52 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <ul
+    class="emotion-0 emotion-1"
+    role="list"
+  >
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/blahasda"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Magazine de la Culture
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              4 Avril 2020, 14:00
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 03,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 03:00
+              </span>
+            </span>
+          </span>
+        </a>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/1"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Le Journal
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              Le premier rendez-vous d'information de la soirée.
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 1,30,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 1:30:00
+              </span>
+            </span>
+          </span>
+        </a>
+        <div
+          class="emotion-50 emotion-51"
+        >
+          <time
+            class="emotion-52 emotion-25"
+            datetime="2020-10-20"
+            dir="ltr"
+          >
+            20 octobre 2020
+          </time>
+        </div>
+      </div>
+    </li>
+    <li
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="https://www.bbc.com/2"
+        >
+          <div
+            class="emotion-8 emotion-9"
+            dir="ltr"
+          >
+            <div
+              aria-hidden="true"
+              class="emotion-10 emotion-11"
+            >
+              
+      
+              <svg
+                class="rounded-play-button"
+                focusable="false"
+                viewBox="0 0 40 40"
+                width="2.5rem"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                
+        
+                <path
+                  class="rounded-play-button__inner"
+                  d="M20,0C8.971,0,0,8.972,0,20c0,11.028,8.972,20,20,20c11.029,0,20.002-8.972,20.002-20C40.002,8.972,31.028,0,20,0z
+        M15.799,26.939V13.078l11.264,6.93L15.799,26.939z"
+                  fill="transparent"
+                />
+                
+        
+                <path
+                  class="rounded-play-button__ring"
+                  d="M20,40C8.971,40,0,31.028,0,20C0,8.972,8.971,0,20,0c11.029,0,20.002,8.972,20.002,20C40.002,31.028,31.028,40,20,40z
+        M20,1.765C9.945,1.765,1.764,9.945,1.764,20S9.945,38.234,20,38.234c10.056,0,18.237-8.18,18.237-18.234S30.056,1.765,20,1.765z"
+                  fill="currentColor"
+                />
+                
+        
+                <polygon
+                  class="rounded-play-button__triangle"
+                  fill="currentColor"
+                  points="15.799,26.939 27.062,20.008 15.799,13.078 "
+                />
+                
+      
+              </svg>
+              
+      
+            </div>
+          </div>
+          <span
+            role="text"
+          >
+            <span
+              class="emotion-12 emotion-13"
+            >
+              Audio, 
+            </span>
+            <span
+              class="episode-list__title--hover episode-list__title--visited emotion-14 emotion-15"
+              dir="ltr"
+            >
+              Afrique Avenir
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="episode-list__description--hover episode-list__description--visited emotion-18 emotion-19"
+              dir="ltr"
+            >
+              Tout savoir sur les jeunes entrepreneurs africains.
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+              , 
+            </span>
+            <span
+              class="emotion-12 emotion-13"
+            >
+               Durée 59,00 
+            </span>
+            <span
+              class="emotion-24 emotion-25"
+              dir="ltr"
+            >
+              <span
+                aria-hidden="true"
+              >
+                 Durée 59:00
+              </span>
+            </span>
+          </span>
+        </a>
+        <div
+          class="emotion-50 emotion-51"
+        >
+          <time
+            class="emotion-52 emotion-25"
+            datetime="2020-10-21"
+            dir="ltr"
+          >
+            21 octobre 2020
+          </time>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
