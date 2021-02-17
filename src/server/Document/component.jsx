@@ -12,14 +12,26 @@ import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
+const Document = ({
+  assetOrigins,
+  app,
+  data,
+  helmet,
+  isAmp,
+  scripts,
+  userAgent,
+}) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
   const helmetLinkTags = helmet.link.toComponent();
   const headScript = helmet.script.toComponent();
   const serialisedData = serialiseForScript(data);
-  const scriptsAllowed = !isAmp;
+
+  // Presto is the renderer used by Opera Mini in "extreme savings mode"
+  // Our JS bundles are incompatible with this renderer
+  const isUsingPresto = (userAgent || '').includes('Presto');
+  const scriptsAllowed = !(isAmp || isUsingPresto);
 
   const { html, css, ids } = app;
 
@@ -79,6 +91,7 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
+        ua: {userAgent} isOM: {isOperaMini}
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script

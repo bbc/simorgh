@@ -178,6 +178,7 @@ server.get(
         service,
         url,
         variant,
+        userAgent: headers['user-agent'],
       });
 
       logger.info(ROUTING_INFORMATION, {
