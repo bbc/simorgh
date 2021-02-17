@@ -174,7 +174,7 @@ module.exports = ({
       }),
       new DuplicatesPlugin({
         // Emit compilation warning or error? (Default: `false`)
-        emitErrors: true,
+        emitErrors: false,
         // Display full duplicates information? (Default: `false`)
         verbose: true,
       }),
