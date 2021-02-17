@@ -7,7 +7,6 @@
 const fs = require('fs');
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
@@ -72,16 +71,7 @@ module.exports = ({
         : prodPublicPath,
     },
     optimization: {
-      minimizer: [
-        new TerserPlugin({
-          terserOptions: {
-            // These options are enabled in production profile builds only and
-            // prevent the discarding or mangling of class and function names.
-            keep_classnames: IS_PROD_PROFILE,
-            keep_fnames: IS_PROD_PROFILE,
-          },
-        }),
-      ],
+      minimize: false,
       // specify min/max file sizes for each JS chunk for optimal performance
       splitChunks: {
         chunks: 'all',
@@ -174,7 +164,7 @@ module.exports = ({
       }),
       new DuplicatesPlugin({
         // Emit compilation warning or error? (Default: `false`)
-        emitErrors: true,
+        emitErrors: false,
         // Display full duplicates information? (Default: `false`)
         verbose: true,
       }),
