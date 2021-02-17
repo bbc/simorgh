@@ -18,6 +18,7 @@ const renderDocument = async ({
   routes,
   service,
   url,
+  userAgent,
 }) => {
   const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
@@ -84,6 +85,7 @@ const renderDocument = async ({
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}
+      userAgent={userAgent}
     />,
   );
 
