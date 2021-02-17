@@ -91,7 +91,7 @@ const Document = ({
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        ua: {userAgent} isOM: {isOperaMini}
+        ua: {userAgent}
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
