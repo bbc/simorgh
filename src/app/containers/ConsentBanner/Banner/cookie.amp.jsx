@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string, arrayOf, element, oneOf, shape } from 'prop-types';
+import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
@@ -163,7 +163,6 @@ const OptionsItem = styled.li`
 `;
 
 const AmpCookieBanner = ({
-  dir,
   id,
   pages,
   accept,
@@ -183,7 +182,7 @@ const AmpCookieBanner = ({
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
       </Helmet>
-      <Wrapper dir={dir} service={service}>
+      <Wrapper service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
           <Paragraph script={script}>
@@ -194,7 +193,7 @@ const AmpCookieBanner = ({
             />
             {initial.description.last}
           </Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
@@ -231,7 +230,7 @@ const AmpCookieBanner = ({
           </Paragraph>
           <Paragraph script={script}>{manage.description.para8}</Paragraph>
           <Paragraph script={script}>{manage.description.para9}</Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
@@ -252,7 +251,6 @@ Link.propTypes = {
 };
 
 AmpCookieBanner.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
   pages: arrayOf(shape({})).isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
@@ -263,7 +261,6 @@ AmpCookieBanner.propTypes = {
 };
 
 AmpCookieBanner.defaultProps = {
-  dir: 'ltr',
   id: null,
   hidden: null,
 };
