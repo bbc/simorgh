@@ -48,18 +48,6 @@ module.exports = (shell = {}) => {
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
         'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
-        '@emotion/serialize': path.resolve(
-          __dirname,
-          'node_modules/@emotion/serialize',
-        ),
-        '@emotion/utils': path.resolve(
-          __dirname,
-          'node_modules/@emotion/utils',
-        ),
-        '@emotion/sheet': path.resolve(
-          __dirname,
-          'node_modules/@emotion/sheet',
-        ),
       },
     },
     devServer: {
