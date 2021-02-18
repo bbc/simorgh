@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
@@ -123,16 +124,25 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
     : headline;
 
+  const metadataImageProps = is(String, imageUrl)
+    ? {
+        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
+        imageWidth: 400,
+        imageHeight: 400,
+      }
+    : {};
+
   return (
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
-        title={metadataTitle}
-        lang={language}
-        description={shortSynopsis}
         openGraphType="website"
+        lang={language}
+        title={metadataTitle}
+        description={shortSynopsis}
+        {...metadataImageProps}
       />
 
       <GelPageGrid

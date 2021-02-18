@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node, shape, arrayOf, bool } from 'prop-types';
+import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -47,6 +47,8 @@ const MetadataContainer = ({
   mentionsTags,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   children,
   hasAppleItunesAppBanner,
 }) => {
@@ -146,6 +148,8 @@ const MetadataContainer = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
+      {imageWidth && <meta property="og:image:width" content={imageWidth} />}
+      {imageHeight && <meta property="og:image:height" content={imageHeight} />}
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
       <meta property="og:title" content={socialTitle} />
@@ -193,6 +197,8 @@ MetadataContainer.propTypes = {
   mentionsTags: arrayOf(tagPropTypes),
   image: string,
   imageAltText: string,
+  imageWidth: number,
+  imageHeight: number,
   children: node,
   hasAppleItunesAppBanner: bool,
 };
@@ -203,6 +209,8 @@ MetadataContainer.defaultProps = {
   mentionsTags: [],
   image: null,
   imageAltText: null,
+  imageWidth: null,
+  imageHeight: null,
   children: null,
   hasAppleItunesAppBanner: false,
 };
