@@ -1,31 +1,23 @@
 import React from 'react';
+import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { service as hausaConfig } from '#lib/config/services/hausa';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relatedItems from './relatedItems';
 import IndexAlsosContainer from '.';
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-const { useContext } = jest.requireMock('react');
+const withServiceContext = component => (
+  <ServiceContextProvider service="hausa">{component}</ServiceContextProvider>
+);
+
+const renderWithContext = compose(render, withServiceContext);
+const shouldMatchSnapshotWithContext = (title, component) =>
+  shouldMatchSnapshot(title, withServiceContext(component));
 
 describe('Index Alsos', () => {
-  beforeEach(() => {
-    useContext.mockReturnValue(hausaConfig.default);
-  });
-
-  afterEach(() => {
-    useContext.mockReset();
-  });
-
   describe('Snapshots', () => {
-    shouldMatchSnapshot(
+    shouldMatchSnapshotWithContext(
       'should render multiple correctly',
       <IndexAlsosContainer
         alsoItems={relatedItems}
@@ -34,7 +26,7 @@ describe('Index Alsos', () => {
       />,
     );
 
-    shouldMatchSnapshot(
+    shouldMatchSnapshotWithContext(
       'should render one correctly',
       <IndexAlsosContainer
         alsoItems={[relatedItems[0]]}
@@ -47,7 +39,7 @@ describe('Index Alsos', () => {
   describe('Assertions', () => {
     describe('It links to a CPS asset', () => {
       it('should render a regular headline', () => {
-        const { container } = render(
+        const { container } = renderWithContext(
           <IndexAlsosContainer
             alsoItems={relatedItems}
             script={latin}
@@ -62,7 +54,7 @@ describe('Index Alsos', () => {
       });
 
       it('should render an overtyped headline', () => {
-        const { container } = render(
+        const { container } = renderWithContext(
           <IndexAlsosContainer
             alsoItems={relatedItems}
             script={latin}
@@ -77,7 +69,7 @@ describe('Index Alsos', () => {
       });
 
       it('should render a CPS url', () => {
-        const { container } = render(
+        const { container } = renderWithContext(
           <IndexAlsosContainer
             alsoItems={relatedItems}
             script={latin}
@@ -93,7 +85,7 @@ describe('Index Alsos', () => {
 
     describe('It links to a url', () => {
       it('should render a promo headline', () => {
-        const { container } = render(
+        const { container } = renderWithContext(
           <IndexAlsosContainer
             alsoItems={relatedItems}
             script={latin}
@@ -108,7 +100,7 @@ describe('Index Alsos', () => {
       });
 
       it('should render a promo hyperlink', () => {
-        const { container } = render(
+        const { container } = renderWithContext(
           <IndexAlsosContainer
             alsoItems={relatedItems}
             script={latin}

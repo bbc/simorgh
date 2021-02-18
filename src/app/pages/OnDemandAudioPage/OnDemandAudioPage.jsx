@@ -3,7 +3,10 @@ import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
@@ -23,6 +26,7 @@ import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
+import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -45,6 +49,20 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
+const StyledGridItemParagraph = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
+`;
+
+const StyledGridItemImage = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
+  }
+`;
+
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
@@ -63,15 +81,21 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     radioScheduleData,
     recentEpisodes,
     brandId,
+    episodeTitle,
   } = pageData;
 
   const pageType = path(['metadata', 'type'], pageData);
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    dir,
+    liveRadioOverrides,
+    lang,
+    service,
+    translations,
+    serviceName,
+  } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -95,6 +119,9 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   );
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+  const metadataTitle = episodeTitle
+    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
+    : headline;
 
   return (
     <>
@@ -102,7 +129,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
-        title={headline}
+        title={metadataTitle}
         lang={language}
         description={shortSynopsis}
         openGraphType="website"
@@ -125,17 +152,21 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <Grid item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
+                episodeTitle={episodeTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
               <OnDemandParagraphContainer text={summary} />
-            </Grid>
-            <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+              {episodeTitle && (
+                <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
+              )}
+            </StyledGridItemParagraph>
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
               <EpisodeImage imageUrl={imageUrl} />
-            </Grid>
+            </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
             <AVPlayer
@@ -153,7 +184,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
           <LinkedData
             type="WebPage"
-            seoTitle={headline}
+            seoTitle={metadataTitle}
             entities={
               mediaIsAvailable
                 ? [
@@ -206,6 +237,7 @@ OnDemandAudioPage.propTypes = {
     language: string,
     releaseDateTimeStamp: number,
     imageUrl: string,
+    episodeTitle: string,
   }).isRequired,
 };
 

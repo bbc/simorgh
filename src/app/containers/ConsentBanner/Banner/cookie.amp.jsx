@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string, arrayOf, element, oneOf, shape } from 'prop-types';
+import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
@@ -32,12 +32,18 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
-const MIN_TAP_HEIGHT = '2.75rem';
+const MIN_TAP_HEIGHT = '2.75rem'; // 44px
+const BORDER_WIDTH = '0.0625rem'; // 1px
+const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
-  margin-top: 0;
+  margin-top: ${GEL_SPACING_TRPL};
   margin-bottom: 0;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+  }
 `;
 
 const Wrapper = styled.div`
@@ -59,17 +65,6 @@ const BannerPage = styled.div`
   max-height: 100vh;
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
-  padding-top: ${GEL_SPACING_DBL};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_QUAD};
-  }
-
-  a {
-    color: ${C_CONSENT_ACTION};
-    text-decoration: underline;
-    text-decoration-color: ${C_PEBBLE};
-  }
 `;
 
 const Title = styled.h2`
@@ -88,6 +83,31 @@ const Paragraph = styled.p`
   margin-bottom: ${GEL_SPACING_DBL};
 `;
 
+const Link = ({ text, href, className }) => (
+  <a href={href} className={className}>
+    <span>{text}</span>
+  </a>
+);
+
+const StyledLink = styled(Link)`
+  color: ${C_CONSENT_ACTION};
+  text-decoration: none;
+
+  span {
+    border-bottom: ${C_PEBBLE} solid ${BORDER_WIDTH};
+  }
+
+  &:hover,
+  &:focus {
+    background-color: ${C_CONSENT_ACTION};
+    color: ${C_EBON};
+
+    span {
+      border-bottom: transparent solid ${BORDER_WIDTH_TRANSPARENT};
+    }
+  }
+`;
+
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
   align-items: stretch;
@@ -98,12 +118,11 @@ const OptionsList = styled.ul`
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 0;
-  padding-bottom: ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
-    padding-top: ${GEL_SPACING};
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
@@ -115,39 +134,35 @@ const OptionsItem = styled.li`
     width: calc(50% - ${GEL_SPACING});
   }
 
-  a,
   button {
     ${({ service }) => getSansBold(service)}
-    cursor: pointer;
-    display: block;
-  }
-
-  a {
-    padding-top: ${GEL_SPACING};
-    padding-bottom: ${GEL_SPACING};
-    text-align: center;
-  }
-
-  button {
     ${({ script }) => getLongPrimer(script)}
     background: ${C_GHOST};
     border: none;
     color: ${C_EBON};
+    cursor: pointer;
+    display: block;
     height: 100%;
     min-height: ${MIN_TAP_HEIGHT};
     padding: ${GEL_SPACING};
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background-color: ${C_CONSENT_ACTION};
+      color: ${C_EBON};
+      text-decoration: underline;
+    }
   }
 
   button[on='tap:AMP.setState({ isManagingSettings: true })'] {
     background: none;
-    border: 0.0625rem solid ${C_CONSENT_ACTION};
+    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
     color: ${C_CONSENT_ACTION};
   }
 `;
 
 const AmpCookieBanner = ({
-  dir,
   id,
   pages,
   accept,
@@ -167,17 +182,18 @@ const AmpCookieBanner = ({
           src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"
         />
       </Helmet>
-      <Wrapper dir={dir} service={service}>
+      <Wrapper service={service}>
         <BannerPage data-amp-bind-hidden="isManagingSettings">
           <Title script={script}>{initial.title}</Title>
           <Paragraph script={script}>
-            {initial.description.first}{' '}
-            <a href={initial.description.linkUrl}>
-              {initial.description.linkText}
-            </a>{' '}
+            {initial.description.first}
+            <StyledLink
+              href={initial.description.linkUrl}
+              text={initial.description.linkText}
+            />
             {initial.description.last}
           </Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
@@ -198,21 +214,23 @@ const AmpCookieBanner = ({
           <Heading>{manage.description.heading2}</Heading>
           <Paragraph script={script}>{manage.description.para3}</Paragraph>
           <Paragraph script={script}>
-            <a href={manage.description.para4.url}>
-              {manage.description.para4.text}
-            </a>
+            <StyledLink
+              href={manage.description.para4.url}
+              text={manage.description.para4.text}
+            />
           </Paragraph>
           <Paragraph script={script}>{manage.description.para5}</Paragraph>
           <Heading>{manage.description.heading3}</Heading>
           <Paragraph script={script}>{manage.description.para6}</Paragraph>
           <Paragraph script={script}>
-            <a href={manage.description.para7.url}>
-              {manage.description.para7.text}
-            </a>
+            <StyledLink
+              href={manage.description.para7.url}
+              text={manage.description.para7.text}
+            />
           </Paragraph>
           <Paragraph script={script}>{manage.description.para8}</Paragraph>
           <Paragraph script={script}>{manage.description.para9}</Paragraph>
-          <OptionsList script={script}>
+          <OptionsList script={script} role="list">
             <OptionsItem script={script} service={service}>
               {accept}
             </OptionsItem>
@@ -226,8 +244,13 @@ const AmpCookieBanner = ({
   );
 };
 
+Link.propTypes = {
+  text: string.isRequired,
+  href: string.isRequired,
+  className: string.isRequired,
+};
+
 AmpCookieBanner.propTypes = {
-  dir: oneOf(['ltr', 'rtl']),
   pages: arrayOf(shape({})).isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
@@ -238,7 +261,6 @@ AmpCookieBanner.propTypes = {
 };
 
 AmpCookieBanner.defaultProps = {
-  dir: 'ltr',
   id: null,
   hidden: null,
 };

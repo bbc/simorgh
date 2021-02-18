@@ -31,7 +31,6 @@ const AmpConsentBannerContainer = ({
 
   return type === 'cookie' ? (
     <AmpCookieBanner
-      dir={dir}
       id={promptId}
       pages={[
         translations.consentBanner.cookie.amp.initial,
