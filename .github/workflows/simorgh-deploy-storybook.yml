@@ -25,7 +25,7 @@ jobs:
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: yarn ci
 
       - name: Build Storybook
         run: |

@@ -10,7 +10,7 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - yarn install --frozen-lockfile
+      - yarn ci
       - yarn build
   build:
     commands:
