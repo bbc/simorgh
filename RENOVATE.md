@@ -20,7 +20,6 @@ https://github.com/bbc/simorgh/blob/bf3961e69a98f42410a80622bd9e9855f1145ed1/ren
 We chose to group minor and patch dependencies together as these _should_ not have any breaking changes, please see https://semver.org/ for expectations of minor and patch upgrades. These PRs should be safe merge once we have:
 - Looked through the release notes [on the PR](https://github.com/bbc/simorgh/pull/8787) to see if any changes sound like they could be breaking; semver is sometimes 
 interpreted differently so it is worth looking for anything that could cause issues in Simorgh.
-- Forced resolutions (checked-out the branch, ran `npm install` to apply force resolutions defined [here](https://github.com/bbc/simorgh/blob/latest/package.json#L6) and pushed back to the PR)
 - Ensured all CI checks have passed
 
 ## Group Webpack and Loadable

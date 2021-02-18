@@ -160,12 +160,20 @@ Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the versi
 nvm use
 ```
 
+#### Install Yarn
+
+The Simorgh project uses Yarn for package management. It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system. To install Yarn, run this command:
+
+```
+npm install --global yarn
+```
+
 Then you can run the following commands to install Simorgh
 
 ```
 git clone git@github.com:bbc/simorgh.git
 cd simorgh
-npm install
+yarn install
 ```
 
 ## Local Development
@@ -173,7 +181,7 @@ npm install
 To run this application locally, with hot-reloading, run
 
 ```
-npm run dev
+yarn dev
 ```
 
 The application will start on [http://localhost:7080](http://localhost:7080).
@@ -222,7 +230,7 @@ You can find other pages types by looking through our routes and their associate
 
 We use Storybook for developing components in isolation from the Simorgh Application. You can access this at [https://bbc.github.io/simorgh/](https://bbc.github.io/simorgh/)
 
-To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
+To run locally `yarn storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
 When viewing Video stories locally, make sure to use a BBC domain, as outlined in the [changing request location section](https://github.com/bbc/simorgh#changing-request-location). Video will not work in the hosted version of Storybook linked above for this reason.
 
@@ -233,9 +241,9 @@ Please also note that if you would like to see the components rendered with our 
 ## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build && npm run start`.
+`yarn build && yarn start`.
 
-We use `npm run build` locally which bundles the application pointing at localhost for data and static assets.
+We use `yarn build` locally which bundles the application pointing at localhost for data and static assets.
 
 ## Using environment builds locally
 
@@ -245,14 +253,14 @@ To run TEST bundles on localhost:
 
 - In `envConfig/test.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-- Then run `rm -rf build && npm run build:test && npm run start`
+- Then run `rm -rf build && yarn build:test && yarn start`
 - Visit a test article: http://localhost:7080/news/articles/c0g992jmmkko
 
 To run LIVE bundles on localhost:
 
 - In `envConfig/live.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-- Then run `rm -rf build && npm run build:live && npm run start`
+- Then run `rm -rf build && yarn build:live && yarn start`
 - Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
 ## Changing request location
@@ -275,15 +283,15 @@ On deployment `make buildCi` is run in the CI environment which creates bundles 
 
 ### Bundle analysis reports
 
-Every run of `npm run build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
+Every run of `yarn build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
 
 ## Tests
 
 ### Linting and unit tests
 
-We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `npm run test:lint`.
+We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
-We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `npm run test:unit`.
+We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
 `npm test` runs both sets of these.
 
@@ -294,14 +302,14 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/tree/latest/cypress/integration#how-our-cypress-tests-work) locally, run this single command:
 
 ```
-npm run test:e2e
+yarn test:e2e
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
 To run the smoke tests interactively, run:
 
 ```
-npm run test:e2e:interactive
+yarn test:e2e:interactive
 ```
 
 This loads a user interface which easily allows for individual tests to be run alongside a visual stream of the browser, as the tests run.
@@ -322,16 +330,16 @@ These commands can be run in combination.
 
 #### Full suite of tests
 
-The default way to run the e2e suite aka `npm run test:e2e` or `npm run test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
+The default way to run the e2e suite aka `yarn test:e2e` or `yarn test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
 
-`CYPRESS_SMOKE=false npm run test:e2e`
+`CYPRESS_SMOKE=false yarn test:e2e`
 
 #### Limiting scope of runs
 
 Tests can be restricted to only run for a single service by specifying it using the `CYPRESS_ONLY_SERVICE` environment variable. For example:
 
 ```
-CYPRESS_ONLY_SERVICE=urdu npm run test:e2e
+CYPRESS_ONLY_SERVICE=urdu yarn test:e2e
 ```
 
 To run only a particular spec it is necessary to invoke Cypress directly. First ensure Simorgh is already running in another tab and then run (for example, to only run article tests):
@@ -351,7 +359,7 @@ Cypress .visit() function is locked to visiting a single domain per test. This b
 Here is an example command:
 
 ```
-CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
+CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true yarn cypress
 ```
 
 #### Running e2e outside EU
@@ -363,13 +371,13 @@ Running Cypress tests outside the EU will not show the EU consent banners on AMP
 An example command will be:
 
 ```
-CYPRESS_SKIP_EU=true npm run cypress:interactive
+CYPRESS_SKIP_EU=true yarn cypress:interactive
 ```
 
 The following command runs both simorgh and cypress:
 
 ```
-CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run test:e2e
+CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true yarn test:e2e
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.
