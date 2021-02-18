@@ -126,7 +126,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const metadataImageProps = is(String, imageUrl)
     ? {
-        image: imageUrl.replace('$recipe', `400x400`),
+        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
         imageWidth: 400,
         imageHeight: 400,
       }
