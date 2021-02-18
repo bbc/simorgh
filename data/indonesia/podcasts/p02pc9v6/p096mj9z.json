@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p096mj9z",
+    "locators": { "pid": "p096mj9z", "brandPid": "p02pc9v6" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_indonesian_radio",
+    "language": "id",
+    "lastUpdated": 1613046065041,
+    "firstPublished": 1612995982000,
+    "lastPublished": 1612995982000,
+    "timestamp": 1612995982000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC Indonesia - BBC News Indonesia",
+      "pageIdentifier": "indonesia.bbc_indonesian_radio.p096mj9z.page",
+      "producerId": "54",
+      "contentType": "player-episode",
+      "producer": "INDONESIAN"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "BBC Indonesia",
+    "releaseDateTimeStamp": 1612915200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p096mj9z",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Versi podcast siaran berita pagi BBC News Indonesia.",
+          "medium": "Aktivis hak-hak perempuan Arab Saudi yang terkenal, Loujain al-Hathloul, dibebaskan dari penjara setelah ditahan selama lebih dari seribu hari."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p096mhtk",
+            "types": ["Podcast"],
+            "duration": 899,
+            "durationISO8601": "PT14M59S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1613604600000,
+            "availableFrom": 1612999800000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Kamis 11 Februari 2021",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "BBC Indonesia" },
+    "locators": { "pid": "p096mj9z", "brandPid": "p02pc9v6" },
+    "media": {
+      "id": "p096mj9z",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "Versi podcast siaran berita pagi BBC News Indonesia.",
+        "medium": "Aktivis hak-hak perempuan Arab Saudi yang terkenal, Loujain al-Hathloul, dibebaskan dari penjara setelah ditahan selama lebih dari seribu hari."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p096mhtk",
+          "types": ["Podcast"],
+          "duration": 899,
+          "durationISO8601": "PT14M59S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1613604600000,
+          "availableFrom": 1612999800000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Kamis 11 Februari 2021",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1612915200000,
+    "brand": { "pid": "p02pc9v6", "title": "BBC Indonesia" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p096mj9z",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Indonesia",
+      "uri": "/indonesia",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "BBC Indonesia" },
+            "locators": { "pid": "p096j6lf", "brandPid": "p02pc9v6" },
+            "media": {
+              "id": "p096j6lf",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Versi podcast siaran berita pagi BBC News Indonesia.",
+                "medium": "Tim ilmuwan Organisasi Kesehatan Dunia, WHO, mengatakan virus corona amat tidak mungkin menyebar ke manusia dari laboratorium di China."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p096j67g",
+                  "types": ["Podcast"],
+                  "duration": 898,
+                  "durationISO8601": "PT14M58S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613514600000,
+                  "availableFrom": 1612909800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Rabu 10 Februari 2021",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612828800000,
+            "brand": { "pid": "p02pc9v6", "title": "BBC Indonesia" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p096j6lf",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Indonesia" },
+            "locators": { "pid": "p096f6vx", "brandPid": "p02pc9v6" },
+            "media": {
+              "id": "p096f6vx",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Versi podcast siaran berita pagi BBC News Indonesia.",
+                "medium": "Penguasa militer Myanmar, Jenderal Min Aung Hlaing, untuk pertama kalinya memberikan alasan di balik kudeta pekan lalu."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p096f6ky",
+                  "types": ["Podcast"],
+                  "duration": 899,
+                  "durationISO8601": "PT14M59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613428200000,
+                  "availableFrom": 1612823400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Selasa 9 Februari 2021",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612742400000,
+            "brand": { "pid": "p02pc9v6", "title": "BBC Indonesia" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p096f6vx",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Indonesia" },
+            "locators": { "pid": "p096b8c7", "brandPid": "p02pc9v6" },
+            "media": {
+              "id": "p096b8c7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Versi podcast siaran berita pagi BBC News Indonesia.",
+                "medium": "Myanmar dilanda unjuk rasa besar menentang kudeta, namun penguasa militer sejauh ini belum memberikan tanggapan."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p096b81x",
+                  "types": ["Podcast"],
+                  "duration": 903,
+                  "durationISO8601": "PT15M3S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613341740000,
+                  "availableFrom": 1612736940000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Senin 08 Februari 2021",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612656000000,
+            "brand": { "pid": "p02pc9v6", "title": "BBC Indonesia" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p096b8c7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC Indonesia" },
+            "locators": { "pid": "p0963fdc", "brandPid": "p02pc9v6" },
+            "media": {
+              "id": "p0963fdc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Pemda diwajibkan mencabut peraturan pemakaian seragam dan atribut agama di sekolah.",
+                "medium": "Semua kepala daerah di Indonesia dalam satu bulan ke depan, diwajibkan mencabut peraturan tentang pemakaian seragam dan atribut agama di sekolah."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09636t4",
+                  "types": ["Podcast"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613085600000,
+                  "availableFrom": 1612480800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Dunia Pagi Ini BBC Indonesia, Jumat 5 Februari 2021",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612396800000,
+            "brand": { "pid": "p02pc9v6", "title": "BBC Indonesia" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p0963fdc",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
