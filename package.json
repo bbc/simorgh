@@ -4,7 +4,10 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "immer": "8.0.1"
+    "immer": "8.0.1",
+    "@emotion/serialize": "1.0.0",
+    "@emotion/sheet": "1.0.1",
+    "@emotion/utils": "1.0.0"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -114,11 +117,8 @@
     "@bbc/web-vitals": "1.0.2",
     "@emotion/cache": "11.1.3",
     "@emotion/react": "11.1.5",
-    "@emotion/serialize": "1.0.0",
     "@emotion/server": "11.0.0",
-    "@emotion/sheet": "1.0.1",
     "@emotion/styled": "11.1.5",
-    "@emotion/utils": "1.0.0",
     "@loadable/component": "5.14.1",
     "@loadable/server": "5.14.2",
     "aws-embedded-metrics": "2.0.2",
