@@ -48,6 +48,8 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   aboutTags,
   mentionsTags,
   hasAppleItunesAppBanner,
@@ -72,6 +74,8 @@ const MetadataWithContext = ({
         mentionsTags={mentionsTags}
         image={image}
         imageAltText={imageAltText}
+        imageHeight={imageHeight}
+        imageWidth={imageWidth}
         hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     </RequestContextProvider>
