@@ -2510,7 +2510,7 @@ module.exports = () => ({
               '/hindi/podcasts/p0552909', // Podcast Brand
               '/hindi/podcasts/p0552909/p0964mwl', // Podcast Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
