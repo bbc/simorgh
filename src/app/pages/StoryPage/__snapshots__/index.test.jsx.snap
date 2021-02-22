@@ -2559,7 +2559,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="emotion-29 emotion-30"
                           >
                             <div
-                              class="lazyload-wrapper "
+                              class="lazyload-wrapper"
                             >
                               <div
                                 class="lazyload-placeholder"
@@ -2701,7 +2701,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
-                        class="lazyload-wrapper "
+                        class="lazyload-wrapper"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -3076,7 +3076,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3129,7 +3129,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3182,7 +3182,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3235,7 +3235,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3288,7 +3288,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3341,7 +3341,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3394,7 +3394,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3495,7 +3495,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -3548,7 +3548,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-29 emotion-30"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -6341,7 +6341,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                             class="emotion-34 emotion-35"
                           >
                             <div
-                              class="lazyload-wrapper "
+                              class="lazyload-wrapper"
                             >
                               <div
                                 class="lazyload-placeholder"
@@ -6483,7 +6483,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
-                        class="lazyload-wrapper "
+                        class="lazyload-wrapper"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -9772,7 +9772,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="emotion-34 emotion-35"
                           >
                             <div
-                              class="lazyload-wrapper "
+                              class="lazyload-wrapper"
                             >
                               <div
                                 class="lazyload-placeholder"
@@ -9914,7 +9914,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
-                        class="lazyload-wrapper "
+                        class="lazyload-wrapper"
                       >
                         <div
                           class="lazyload-placeholder"
@@ -10237,7 +10237,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10290,7 +10290,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10389,7 +10389,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10480,7 +10480,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10533,7 +10533,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10586,7 +10586,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10639,7 +10639,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10692,7 +10692,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
@@ -10745,7 +10745,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-34 emotion-35"
                               >
                                 <div
-                                  class="lazyload-wrapper "
+                                  class="lazyload-wrapper"
                                 >
                                   <div
                                     class="lazyload-placeholder"
