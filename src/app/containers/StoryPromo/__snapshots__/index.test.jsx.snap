@@ -753,7 +753,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -2446,7 +2446,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -3946,7 +3946,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -5230,7 +5230,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
           class="emotion-7 emotion-8"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -7062,7 +7062,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -8123,7 +8123,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -9952,7 +9952,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -11224,7 +11224,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -12496,7 +12496,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"
@@ -13936,7 +13936,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           class="emotion-6 emotion-7"
         >
           <div
-            class="lazyload-wrapper "
+            class="lazyload-wrapper"
           >
             <div
               class="lazyload-placeholder"

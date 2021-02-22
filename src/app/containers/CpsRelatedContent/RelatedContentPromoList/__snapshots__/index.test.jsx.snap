@@ -417,7 +417,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               class="emotion-13 emotion-14"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"
@@ -482,7 +482,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               class="emotion-13 emotion-14"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"
@@ -536,7 +536,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               class="emotion-13 emotion-14"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"
@@ -979,7 +979,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               class="emotion-12 emotion-13"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"
@@ -1044,7 +1044,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               class="emotion-12 emotion-13"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"
@@ -1098,7 +1098,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               class="emotion-12 emotion-13"
             >
               <div
-                class="lazyload-wrapper "
+                class="lazyload-wrapper"
               >
                 <div
                   class="lazyload-placeholder"

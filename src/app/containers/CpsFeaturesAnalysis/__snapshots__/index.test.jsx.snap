@@ -653,7 +653,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                   class="emotion-29 emotion-30"
                 >
                   <div
-                    class="lazyload-wrapper "
+                    class="lazyload-wrapper"
                   >
                     <div
                       class="lazyload-placeholder"
@@ -706,7 +706,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                   class="emotion-29 emotion-30"
                 >
                   <div
-                    class="lazyload-wrapper "
+                    class="lazyload-wrapper"
                   >
                     <div
                       class="lazyload-placeholder"
@@ -1401,7 +1401,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="emotion-27 emotion-28"
               >
                 <div
-                  class="lazyload-wrapper "
+                  class="lazyload-wrapper"
                 >
                   <div
                     class="lazyload-placeholder"

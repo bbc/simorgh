@@ -780,7 +780,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         class="emotion-26 emotion-27"
                       >
                         <div
-                          class="lazyload-wrapper "
+                          class="lazyload-wrapper"
                         >
                           <div
                             class="lazyload-placeholder"
@@ -869,7 +869,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         class="emotion-26 emotion-27"
                       >
                         <div
-                          class="lazyload-wrapper "
+                          class="lazyload-wrapper"
                         >
                           <div
                             class="lazyload-placeholder"
@@ -958,7 +958,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         class="emotion-26 emotion-27"
                       >
                         <div
-                          class="lazyload-wrapper "
+                          class="lazyload-wrapper"
                         >
                           <div
                             class="lazyload-placeholder"
