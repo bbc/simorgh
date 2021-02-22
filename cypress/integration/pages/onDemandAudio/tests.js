@@ -51,6 +51,8 @@ export default ({ service, pageType, variant, isAmp }) => {
         },
         () => {
           it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
+            // Reload for retry if data didn't update on page
+            cy.reload();
             let toggleName;
             if (Cypress.env('currentPath').includes('podcasts')) {
               toggleName = 'recentPodcastEpisodes';
