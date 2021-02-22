@@ -84,7 +84,7 @@ export const getCookieBannerManageSettings = (service, variant) =>
 
 export const getCookieBannerAcceptInManageSettings = (service, variant) =>
   cy
-    .get('[data-amp-bind-hidden="!isManagingSettings"]')
+    .get('[data-testid=amp-cookie-banner-manage-settings]')
     .find('button')
     .contains(
       appConfig[config[service].name][variant].translations.consentBanner.cookie
@@ -93,7 +93,7 @@ export const getCookieBannerAcceptInManageSettings = (service, variant) =>
 
 export const getCookieBannerRejectInManageSettings = (service, variant) =>
   cy
-    .get('[data-amp-bind-hidden="!isManagingSettings"]')
+    .get('[data-testid=amp-cookie-banner-manage-settings]')
     .find('button')
     .contains(
       appConfig[config[service].name][variant].translations.consentBanner.cookie
