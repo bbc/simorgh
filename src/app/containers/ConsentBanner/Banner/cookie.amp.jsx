@@ -182,7 +182,10 @@ const AmpCookieBanner = ({
         />
       </Helmet>
       <Wrapper service={service}>
-        <BannerPage data-amp-bind-hidden="isManagingSettings">
+        <BannerPage
+          data-amp-bind-hidden="isManagingSettings"
+          data-testid="amp-cookie-banner"
+        >
           <Title script={script}>{initial.title}</Title>
           <Paragraph script={script}>
             {initial.description.first}
@@ -206,7 +209,11 @@ const AmpCookieBanner = ({
             </OptionsItem>
           </OptionsList>
         </BannerPage>
-        <BannerPage hidden data-amp-bind-hidden="!isManagingSettings">
+        <BannerPage
+          hidden
+          data-amp-bind-hidden="!isManagingSettings"
+          data-testid="amp-cookie-banner-manage-settings"
+        >
           <Title script={script}>{manage.title}</Title>
           <Paragraph script={script}>{manage.description.para1}</Paragraph>
           <Paragraph script={script}>{manage.description.para2}</Paragraph>
