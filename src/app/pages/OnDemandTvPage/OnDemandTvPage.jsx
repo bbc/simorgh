@@ -30,7 +30,7 @@ import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
-import RecentVideoEpisodes from '#containers/RecentVideoEpisodes';
+import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#containers/OnDemandTvFooterTimestamp';
 
 const getGroups = (zero, one, two, three, four, five) => ({

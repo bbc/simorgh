@@ -9,6 +9,13 @@ export const audioEpisodesFixture = [
     durationLabel: 'Durée',
     time: '14:00',
     locale: 'fr',
+
+    // id: string.isRequired,
+    // url: string.isRequired,
+    // brandTitle: string.isRequired,
+    // episodeTitle: string,
+    // timestamp: number.isRequired,
+    // duration: string.isRequired,
   },
   {
     id: '2',

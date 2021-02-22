@@ -171,7 +171,6 @@ RecentAudioEpisodes.propTypes = {
   episodes: arrayOf(
     shape({
       id: string.isRequired,
-      url: string.isRequired,
       brandTitle: string.isRequired,
       episodeTitle: string,
       timestamp: number.isRequired,

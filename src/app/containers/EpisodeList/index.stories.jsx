@@ -10,7 +10,7 @@ import {
 import AudioEpisodesExample from './examples/AudioEpisodesExample';
 import VideoEpisodesExample from './examples/VideoEpisodesExample';
 
-storiesOf('Containers/EpisodeList', module)
+storiesOf('Containers/EpisodeList1', module)
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
   .add('audio', ({ script, service, dir }) =>
