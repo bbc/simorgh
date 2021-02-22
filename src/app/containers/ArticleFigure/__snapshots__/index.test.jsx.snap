@@ -200,7 +200,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
         class="emotion-6 emotion-7"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"

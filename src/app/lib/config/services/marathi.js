@@ -222,6 +222,7 @@ export const service = {
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
+        recentEpisodes: 'ताजे एपिसोड',
       },
       socialEmbed: {
         caption: {

@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { bool, string, arrayOf, element, shape } from 'prop-types';
@@ -154,24 +153,24 @@ const OptionsItem = styled.li`
       text-decoration: underline;
     }
   }
+`;
 
-  button[on='tap:AMP.setState({ isManagingSettings: true })'] {
-    background: none;
-    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
-    color: ${C_CONSENT_ACTION};
-  }
+const ManageSettingsButton = styled.button`
+  background: none;
+  border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
+  color: ${C_CONSENT_ACTION};
 `;
 
 const AmpCookieBanner = ({
   id,
-  pages,
+  translations,
   accept,
   reject,
   hidden,
   script,
   service,
 }) => {
-  const [initial, manage] = pages;
+  const [initial, manage] = translations;
 
   return (
     <div id={id} hidden={hidden}>
@@ -198,12 +197,12 @@ const AmpCookieBanner = ({
               {accept}
             </OptionsItem>
             <OptionsItem script={script} service={service}>
-              <button
+              <ManageSettingsButton
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
                 {initial.manage}
-              </button>
+              </ManageSettingsButton>
             </OptionsItem>
           </OptionsList>
         </BannerPage>
@@ -251,7 +250,7 @@ Link.propTypes = {
 };
 
 AmpCookieBanner.propTypes = {
-  pages: arrayOf(shape({})).isRequired,
+  translations: arrayOf(shape({})).isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
   id: string,
