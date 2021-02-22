@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import RecentVideoEpisodes from '.';
-import recentVideoFixtures from './fixtures';
+import { afrique } from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 
@@ -22,7 +22,7 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
 describe('RecentAudioEpisodes', () => {
   it('should render the translated section label', () => {
     const { getByText } = render(
-      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
     );
 
     const recentEpisodesLabel = getByText('Editions Précédentes');
@@ -31,7 +31,7 @@ describe('RecentAudioEpisodes', () => {
 
   it('should render the list items', async () => {
     const { container } = render(
-      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
     );
 
     expect(container.querySelectorAll('li').length).toEqual(3);
@@ -39,7 +39,7 @@ describe('RecentAudioEpisodes', () => {
 
   it('should render the list item links', async () => {
     const { getAllByText } = render(
-      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
     );
 
     const links = getAllByText('BBC Info').map(
@@ -55,7 +55,7 @@ describe('RecentAudioEpisodes', () => {
 
   it('should include the visually hidden audio and date', () => {
     const { getAllByText } = render(
-      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
     );
 
     const visuallyHiddenAudioLabel = getAllByText('Vidéo,');
@@ -66,7 +66,7 @@ describe('RecentAudioEpisodes', () => {
 
   it('should aria-hide the duration on the video', () => {
     const { container } = render(
-      <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} />,
+      <RecentVideoEpisodesWithContext episodes={afrique} />,
     );
 
     const hiddenDuration = container.querySelector('div[aria-hidden=true]');
@@ -78,7 +78,7 @@ describe('RecentAudioEpisodes', () => {
   describe('on amp', () => {
     it('should use amp-img rather than img', () => {
       const { container } = render(
-        <RecentVideoEpisodesWithContext episodes={recentVideoFixtures} isAmp />,
+        <RecentVideoEpisodesWithContext episodes={afrique} isAmp />,
       );
 
       expect(container.querySelector('amp-img')).toBeDefined();
