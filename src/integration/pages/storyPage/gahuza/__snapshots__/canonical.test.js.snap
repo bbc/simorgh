@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Canonical Story Page Includes I can see a fallback image when there are disallowed scripts 1`] = `
+<img
+  alt="Map: St. Albans"
+  class="bbc-13lcmnl-StyledImg e1enwo3v0"
+  id="include-1"
+  src="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/816"
+  srcset="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640 640w,https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/816 816w"
+/>
+`;

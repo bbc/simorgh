@@ -48,6 +48,8 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   aboutTags,
   mentionsTags,
   hasAppleItunesAppBanner,
@@ -72,6 +74,8 @@ const MetadataWithContext = ({
         mentionsTags={mentionsTags}
         image={image}
         imageAltText={imageAltText}
+        imageHeight={imageHeight}
+        imageWidth={imageWidth}
         hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     </RequestContextProvider>
@@ -95,6 +99,8 @@ const CanonicalMapInternationalOrigin = () => (
     service="pidgin"
     image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
+    imageWidth={100}
+    imageHeight={200}
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
@@ -548,6 +554,8 @@ it('should render the open graph image if provided', async () => {
         'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
+    { property: 'og:image:width', content: '100' },
+    { property: 'og:image:height', content: '200' },
     { name: 'twitter:image:alt', content: 'connectionAltText' },
     {
       name: 'twitter:image:src',

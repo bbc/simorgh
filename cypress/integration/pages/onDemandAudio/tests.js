@@ -11,20 +11,6 @@ import getDataUrl from '../../../support/helpers/getDataUrl';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
-    describe('Brand image visible above 400px, not visible below 400px', () => {
-      it(`Should display image on default viewport (1000x660))`, () => {
-        cy.get('div[data-e2e="on-demand-image"]').find('img');
-      });
-
-      it(`Should not display image on iphone-6 screen (375x667)`, () => {
-        cy.viewport('iphone-6');
-
-        cy.get('div[data-e2e="on-demand-image"]')
-          .find('img')
-          .should('not.be.visible');
-      });
-    });
-
     describe('Audio Player', () => {
       it('should render an iframe with a valid URL', () => {
         cy.request(
@@ -60,9 +46,15 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
       describe('Recent Episodes component', () => {
         it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
+          let toggleName;
+          if (Cypress.env('currentPath').includes('podcasts')) {
+            toggleName = 'recentPodcastEpisodes';
+          } else {
+            toggleName = 'recentAudioEpisodes';
+          }
           cy.fixture(`toggles/${service}.json`).then(toggles => {
             const recentEpisodesEnabled = path(
-              ['recentAudioEpisodes', 'enabled'],
+              [toggleName, 'enabled'],
               toggles,
             );
             cy.log(
@@ -71,7 +63,7 @@ export default ({ service, pageType, variant, isAmp }) => {
             // There cannot be more episodes shown than the max allowed
             if (recentEpisodesEnabled) {
               const recentEpisodesMaxNumber = path(
-                ['recentAudioEpisodes', 'value'],
+                [toggleName, 'value'],
                 toggles,
               );
               const currentPath = Cypress.env('currentPath');

@@ -27,14 +27,14 @@ const filesToTest = getFilesToTest(argv.pageTypes);
 
 const stopApp = () =>
   new Promise(resolve => {
-    const child = exec('npm run stop');
+    const child = exec('yarn stop');
 
     child.on('exit', resolve);
   });
 
 const buildApp = () =>
   new Promise(resolve => {
-    const child = exec('npm run build:local');
+    const child = exec('yarn build:local');
 
     child.on('exit', resolve);
   });
@@ -42,7 +42,7 @@ const buildApp = () =>
 const startApp = () => {
   return new Promise(resolve => {
     const child = exec(
-      `npm run ${
+      `yarn ${
         isDev ? 'dev' : 'start'
       } & ./node_modules/.bin/wait-on -t 20000 http://localhost:7080/status`,
     );
