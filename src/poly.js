@@ -11,6 +11,9 @@ import 'core-js/es/set';
 // IE11, IE10
 import 'core-js/es/object/assign';
 
+// Needed by Opera Mini Extreme Mode (we think!)
+import 'core-js/es/weak-map';
+
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
 

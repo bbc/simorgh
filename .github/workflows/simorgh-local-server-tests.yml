@@ -31,28 +31,29 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: node-modules-${{ hashFiles('package-lock.json') }}
+          key: node-modules-${{ hashFiles('yarn.lock') }}
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: yarn ci
 
       - name: Build Simorgh
-        run: npm run build:local
+        run: yarn build:local
 
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Run AMP Validator
-        run: npm run amp:validate
+        run: yarn amp:validate
 
       - name: Run bbc-a11y
-        run: npm run bbcA11y:ci
+        run: yarn bbcA11y:ci
 
       - name: Run Lighthouse
-        run: npm run lighthouse
+        run: yarn lighthouse
 
       - name: Run Puppeteer Tests
         run: |
-          npm install --no-save puppeteer
-          npm run test:puppeteer
+          yarn add puppeteer
+          yarn test:puppeteer
+          yarn remove puppeteer

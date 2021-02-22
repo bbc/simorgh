@@ -12,14 +12,14 @@ if [[ $(pwd) =~ .+simorgh ]]; then
   fi
 
   # cut is used to transform 'version=6.4.1' into '6.4.1' for easy comparison
-  desired_npm_version=$(cat .npmrc | cut -d "=" -f2)
+  desired_yarn_version=$(cat .yarnrc | cut -d "=" -f2)
 
-  if [[ $(npm -v) != $desired_npm_version ]]; then
+  if [[ $(yarn -v) != $desired_yarn_version ]]; then
     tput setaf 1
-    echo "\nOh no! You're not using our version of npm, please move to version $desired_npm_version in order to reduce bundling inconsistency"
+    echo "\nOh no! You're not using our version of yarn, please move to version $desired_yarn_version in order to reduce bundling inconsistency"
     tput setaf 3
-    echo "This can be done by running 'npm i -g npm@$desired_npm_version'"
-    echo "Once you have done this please run 'npm install' again and commit any changes to your package-lock.json\n"
+    echo "This can be done by running 'npm i -g yarn@$desired_yarn_version'"
+    echo "Once you have done this please run 'yarn install' again and commit any changes to your yarn.lock\n"
     tput sgr0
     exit 1
   fi
