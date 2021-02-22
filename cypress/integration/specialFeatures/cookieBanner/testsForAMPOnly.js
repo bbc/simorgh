@@ -13,6 +13,18 @@ import visitPage from '../../../support/helpers/visitPage';
 export default ({ service, variant, pageType, path }) => {
   it('should have a privacy & cookie banner, which disappears once "accepted" ', () => {
     getPrivacyBanner(service, variant).should('be.visible');
+
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+
+    getPrivacyBannerAccept(service, variant).click();
+
+    getCookieBannerAmp(service, variant).should('be.visible');
+    getPrivacyBanner(service, variant).should('not.be.visible');
+
+    getCookieBannerAcceptAmp(service, variant).click();
+
+    getCookieBannerAmp(service, variant).should('not.be.visible');
+    getPrivacyBanner(service, variant).should('not.be.visible');
   });
 
   it('should show privacy banner if cookie banner isnt accepted, on reload', () => {
