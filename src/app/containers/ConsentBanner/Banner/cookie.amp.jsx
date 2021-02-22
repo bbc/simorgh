@@ -163,14 +163,14 @@ const ManageSettingsButton = styled.button`
 
 const AmpCookieBanner = ({
   id,
-  pages,
+  translations,
   accept,
   reject,
   hidden,
   script,
   service,
 }) => {
-  const [initial, manage] = pages;
+  const [initial, manage] = translations;
 
   return (
     <div id={id} hidden={hidden}>
@@ -250,7 +250,7 @@ Link.propTypes = {
 };
 
 AmpCookieBanner.propTypes = {
-  pages: arrayOf(shape({})).isRequired,
+  translations: arrayOf(shape({})).isRequired,
   accept: element.isRequired,
   reject: element.isRequired,
   id: string,
