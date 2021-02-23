@@ -70,28 +70,35 @@ describe('fetchPageData', () => {
       );
     });
 
+    const fetchOptions = {
+      headers: {
+        'User-Agent': 'Simorgh/ws-web-rendering',
+      },
+      timeout: 4000,
+    };
+
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4000 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 4000 });
+      expect(fetch).toHaveBeenCalledWith(fullTestPath, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 4000 });
+      expect(fetch).toHaveBeenCalledWith(fullLivePath, fetchOptions);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4000 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should return expected response', async () => {
