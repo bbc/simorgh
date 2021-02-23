@@ -223,6 +223,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       <div
         class="emotion-2 emotion-3"
         data-amp-bind-hidden="isManagingSettings"
+        data-testid="amp-cookie-banner"
       >
         <h2
           class="emotion-4 emotion-5"
@@ -274,6 +275,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       <div
         class="emotion-2 emotion-3"
         data-amp-bind-hidden="!isManagingSettings"
+        data-testid="amp-cookie-banner-manage-settings"
         hidden=""
       >
         <h2
@@ -606,6 +608,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       <div
         class="emotion-2 emotion-3"
         data-amp-bind-hidden="isManagingSettings"
+        data-testid="amp-cookie-banner"
       >
         <h2
           class="emotion-4 emotion-5"
@@ -657,6 +660,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       <div
         class="emotion-2 emotion-3"
         data-amp-bind-hidden="!isManagingSettings"
+        data-testid="amp-cookie-banner-manage-settings"
         hidden=""
       >
         <h2
