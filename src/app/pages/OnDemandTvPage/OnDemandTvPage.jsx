@@ -31,7 +31,7 @@ import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
-import FooterTimestamp from '#containers/OnDemandTvFooterTimestamp';
+import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -203,7 +203,10 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             darkMode
           />
           {episodeTitle && (
-            <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
+            <FooterTimestamp
+              releaseDateTimeStamp={releaseDateTimeStamp}
+              darkMode
+            />
           )}
         </Grid>
       </StyledGelPageGrid>

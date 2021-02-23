@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p095k3hd",
+    "locators": { "pid": "p095k3hd", "brandPid": "p08mlgcb" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_hausa_radio",
+    "language": "ha",
+    "lastUpdated": 1613044765368,
+    "firstPublished": 1611947060000,
+    "lastPublished": 1611947060000,
+    "timestamp": 1611947060000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Korona: Ina Mafita? - BBC News Hausa",
+      "pageIdentifier": "hausa.bbc_hausa_radio.p095k3hd.page",
+      "producerId": "51",
+      "contentType": "player-episode",
+      "producer": "HAUSA"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Korona: Ina Mafita?",
+    "releaseDateTimeStamp": 1611878400000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p095k3hd",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Takaitattun labaran korona da bayani kan tattaunawar shugaba Buhari da malamai kan cutar."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p095k33z",
+            "types": ["Podcast"],
+            "duration": 240,
+            "durationISO8601": "PT4M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1611946980000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Ganawar Buhari da malamai kan cutar korona",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "Korona: Ina Mafita?" },
+    "locators": { "pid": "p095k3hd", "brandPid": "p08mlgcb" },
+    "media": {
+      "id": "p095k3hd",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "Takaitattun labaran korona da bayani kan tattaunawar shugaba Buhari da malamai kan cutar."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p095k33z",
+          "types": ["Podcast"],
+          "duration": 240,
+          "durationISO8601": "PT4M",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1611946980000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "Ganawar Buhari da malamai kan cutar korona",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1611878400000,
+    "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p095k3hd",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hausa",
+      "uri": "/hausa",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p0952sm2", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p0952sm2",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Labaran korona a takaice da bayani kan yadda korona ke yaduwa a kasashe makwaftan Najeriya"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0952sdh",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1611598920000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Yadda korona ke yaduwa a kasashen da ke makwaftaka da Najeriya",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611532800000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p0952sm2",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p09415mc", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p09415mc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Labaran korona a takaice da bayani kan shirin samar da rigakafin korona na duniya."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09415hd",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1610647440000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Shirin samar da rigakafin korona na duniya",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610582400000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p09415mc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p0927h2f", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p0927h2f",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Takaitattun labaran korona da bayani kan bullar sabuwar nau’in cutar."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0927gmd",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1608673140000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Bullar sabuwar cutar korona",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608595200000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p0927h2f",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p091wvwl", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p091wvwl",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Takaitattun labaran korona a fadin duniya."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p091wvl7",
+                  "types": ["Podcast"],
+                  "duration": 242,
+                  "durationISO8601": "PT4M2S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1608315240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Kotu ta tilasta karbar rigakafin korona...",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p091wvwl",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p091r3bc", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p091r3bc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Takaitattun labaran korona da kuma bayanin karfafa gwiwa ga al'umma kan maganin."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p091r26t",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1608223920000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Abin da wadanda aka yi wa rigakafin korona ke cewa",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p091r3bc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p090j1qm", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p090j1qm",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Bayani kan wani kagaggen labari da aka rubuta da Hausa game da cutar korona."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p090j1jd",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1607097240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Littafin Hausa da aka rubuta kan cutar korona",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607040000000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p090j1qm",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p0909c2b", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p0909c2b",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Burtaniya ta amince da fara amfani da rigakafin korona wanda kamfanin Pfizer ya samar."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0909b6v",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1606926780000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Rigakafin korona da za a fara amfani da shi",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1606867200000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p0909c2b",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "Korona: Ina Mafita?" },
+            "locators": { "pid": "p08yn5g6", "brandPid": "p08mlgcb" },
+            "media": {
+              "id": "p08yn5g6",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Labaran korona a takaice da bayani kan matakan kare dawowar cutar."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p08yn42t",
+                  "types": ["Podcast"],
+                  "duration": 240,
+                  "durationISO8601": "PT4M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1605543720000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Yadda za a kiyaye dawowar korona",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08mlbwl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1605484800000,
+            "brand": { "pid": "p08mlgcb", "title": "Korona: Ina Mafita?" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hausa_radio/p08yn5g6",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

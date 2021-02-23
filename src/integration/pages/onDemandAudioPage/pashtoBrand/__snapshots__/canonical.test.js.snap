@@ -311,7 +311,7 @@ Object {
 
 exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"د نړۍ وروستي خبرونه"`;
 
-exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b23c8.png"`;
 
 exports[`Canonical On Demand Audio Page SEO OG image alt 1`] = `"BBC News پښتو"`;
 
@@ -337,7 +337,7 @@ exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"د نړ�
 
 exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News پښتو"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/pashto.png"`;
+exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b23c8.png"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter site 1`] = `"@bbcpashto"`;
 

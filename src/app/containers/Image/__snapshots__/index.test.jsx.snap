@@ -297,7 +297,7 @@ exports[`Image with data should render a lazyload container and not preload the 
             class="emotion-8 emotion-9"
           >
             <div
-              class="lazyload-wrapper"
+              class="lazyload-wrapper "
             >
               <div
                 class="lazyload-placeholder"
