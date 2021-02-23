@@ -35,6 +35,12 @@ const fetchPageData = async ({
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
+  const fetchOptions = {
+    headers: {
+      'User-Agent': 'Simorgh/ws-web-rendering',
+    },
+    timeout: effectiveTimeout,
+  };
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,
@@ -46,7 +52,7 @@ const fetchPageData = async ({
 
   try {
     const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
-    const response = await fetch(url, { timeout: effectiveTimeout });
+    const response = await fetch(url, fetchOptions);
     const { status } = response;
 
     if (shouldLogFetchTime && canDetermineFetchTime) {
