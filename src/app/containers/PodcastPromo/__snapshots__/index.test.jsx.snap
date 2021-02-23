@@ -323,7 +323,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
           class="emotion-12 emotion-13"
         >
           <div
-            class="lazyload-wrapper"
+            class="lazyload-wrapper "
           >
             <div
               class="lazyload-placeholder"

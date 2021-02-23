@@ -38,4 +38,4 @@ We use `@loadable/component` to code-split service specific and page type code i
 
 ### Total bundles sizes for each page type and service
 
-We use a custom script to output the total JavaScript bundle size for each service and page type after every build. You can view this information in your terminal after running `npm run build`.
+We use a custom script to output the total JavaScript bundle size for each service and page type after every build. You can view this information in your terminal after running `yarn build`.
