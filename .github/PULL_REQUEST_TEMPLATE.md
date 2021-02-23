@@ -17,5 +17,5 @@ _A very high-level summary of easily-reproducible changes that can be understood
 **Testing:**
 
 - [ ] Automated (jest and/or cypress) tests added (for new features) or updated (for existing features)
-- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false npm run test:e2e:interactive`)
+- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false yarn test:e2e:interactive`)
 - [ ] This PR requires manual testing

@@ -300,7 +300,7 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         class="emotion-4 emotion-5"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"
@@ -681,7 +681,7 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         class="emotion-4 emotion-5"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"
@@ -1047,7 +1047,7 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         class="emotion-4 emotion-5"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"
@@ -1413,7 +1413,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         class="emotion-4 emotion-5"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"
@@ -1776,7 +1776,7 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         class="emotion-4 emotion-5"
       >
         <div
-          class="lazyload-wrapper"
+          class="lazyload-wrapper "
         >
           <div
             class="lazyload-placeholder"
