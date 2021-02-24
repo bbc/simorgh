@@ -56,10 +56,10 @@ export default (data, service, currentTime) => {
   }
 
   const programsToShow = scheduleDataIsComplete && [
+    schedules[latestProgramIndex + 1],
     schedules[latestProgramIndex],
     schedules[latestProgramIndex - 1],
     schedules[latestProgramIndex - 2],
-    schedules[latestProgramIndex + 1],
   ];
 
   const processedSchedule =
