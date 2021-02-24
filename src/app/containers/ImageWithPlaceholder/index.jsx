@@ -66,6 +66,7 @@ const ImageWithPlaceholder = ({
             attribution={copyright || ''}
             layout="responsive"
             src={src}
+            srcset={srcset}
             height={height}
             width={width}
           >
