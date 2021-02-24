@@ -13,6 +13,7 @@ import 'core-js/es/object/assign';
 
 // Needed by Opera Mini Extreme Mode (we think!)
 import 'core-js/es/weak-map';
+// import 'core-js/es/typed-array/uint8-array';
 
 // IE10
 import getRandomValues from 'polyfill-crypto.getrandomvalues';
