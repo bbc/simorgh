@@ -4,6 +4,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
+  AmpImageWithPlaceholderFallback,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 
@@ -64,5 +65,10 @@ describe('ImageWithPlaceholder', () => {
   shouldMatchSnapshot(
     'should render an AMP image',
     <AmpImageWithPlaceholder />,
+  );
+
+  shouldMatchSnapshot(
+    'should render a fallback when AMP image fails to load',
+    <AmpImageWithPlaceholderFallback />,
   );
 });
