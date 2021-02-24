@@ -291,7 +291,7 @@ We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascrip
 
 We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
-`npm test` runs both sets of these.
+`yarn test` runs both sets of these.
 
 ### End-to-end tests
 
