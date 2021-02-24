@@ -68,11 +68,9 @@ describe('processRadioSchedule', () => {
       expect(programs).toHaveLength(4);
     });
 
-    it('should return programs in the right order', () => {
-      // Checks the order of live and onDemand programs
+    it('should return the programs ordered by start time, newest first', () => {
       expect(programs[0].startTime).toBeGreaterThan(programs[1].startTime);
       expect(programs[1].startTime).toBeGreaterThan(programs[2].startTime);
-      // Checks that the next program is last item on the array
       expect(programs[2].startTime).toBeGreaterThan(programs[3].startTime);
     });
 
