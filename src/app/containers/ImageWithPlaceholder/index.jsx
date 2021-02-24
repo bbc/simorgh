@@ -1,7 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder, {
+  ImagePlaceholderAmp,
+} from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
@@ -57,25 +59,29 @@ const ImageWithPlaceholder = ({
           />
         </Helmet>
       )}
-      <ImagePlaceholder
-        style={isLoaded ? { background: 'none' } : null}
-        ratio={ratio}
-      >
-        {isAmp ? (
+      {isAmp ? (
+        <>
           <AmpImg
             alt={alt}
             attribution={copyright || ''}
             layout="responsive"
             src={src}
-            srcset={srcset}
             height={height}
             width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad, fallback)
-        )}
-        {children}
-      </ImagePlaceholder>
+          >
+            <ImagePlaceholderAmp />
+          </AmpImg>
+          {children}
+        </>
+      ) : (
+        <ImagePlaceholder
+          style={{ background: isLoaded && 'none' }}
+          ratio={ratio}
+        >
+          {renderImage(imageToRender, lazyLoad, fallback)}
+          {children}
+        </ImagePlaceholder>
+      )}
     </>
   );
 };
