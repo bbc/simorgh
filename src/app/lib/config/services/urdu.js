@@ -162,6 +162,7 @@ export const service = {
         video: 'ویڈیو',
         listen: 'سنیں',
         watch: 'دیکھیں',
+        listenLive: 'لائیو سنیں',
         liveLabel: 'لائیو',
         nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',

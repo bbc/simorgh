@@ -158,6 +158,7 @@ export const service = {
         video: 'ቪዲዮ',
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
+        listenLive: 'በቀጥታ ያድምጡ ',
         liveLabel: 'ቀጥታ',
         nextLabel: 'ቀጣይ',
         previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
