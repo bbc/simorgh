@@ -1383,7 +1383,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                         class="emotion-16 emotion-17"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="lazyload-wrapper "
                         >
                           <div
                             class="lazyload-placeholder"
@@ -3898,7 +3898,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-16 emotion-17"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="lazyload-wrapper "
                         >
                           <div
                             class="lazyload-placeholder"
@@ -3962,7 +3962,7 @@ exports[`Media Asset Page should render component 1`] = `
                         class="emotion-16 emotion-17"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="lazyload-wrapper "
                         >
                           <div
                             class="lazyload-placeholder"
@@ -4131,7 +4131,7 @@ exports[`Media Asset Page should render component 1`] = `
                             class="emotion-16 emotion-17"
                           >
                             <div
-                              class="lazyload-wrapper"
+                              class="lazyload-wrapper "
                             >
                               <div
                                 class="lazyload-placeholder"
@@ -4185,7 +4185,7 @@ exports[`Media Asset Page should render component 1`] = `
                             class="emotion-16 emotion-17"
                           >
                             <div
-                              class="lazyload-wrapper"
+                              class="lazyload-wrapper "
                             >
                               <div
                                 class="lazyload-placeholder"
@@ -4324,7 +4324,7 @@ exports[`Media Asset Page should render component 1`] = `
                             class="emotion-16 emotion-17"
                           >
                             <div
-                              class="lazyload-wrapper"
+                              class="lazyload-wrapper "
                             >
                               <div
                                 class="lazyload-placeholder"

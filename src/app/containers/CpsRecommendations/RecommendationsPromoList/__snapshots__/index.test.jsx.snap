@@ -428,7 +428,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                   class="emotion-16 emotion-17"
                 >
                   <div
-                    class="lazyload-wrapper"
+                    class="lazyload-wrapper "
                   >
                     <div
                       class="lazyload-placeholder"
@@ -498,7 +498,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                   class="emotion-16 emotion-17"
                 >
                   <div
-                    class="lazyload-wrapper"
+                    class="lazyload-wrapper "
                   >
                     <div
                       class="lazyload-placeholder"
@@ -557,7 +557,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                   class="emotion-16 emotion-17"
                 >
                   <div
-                    class="lazyload-wrapper"
+                    class="lazyload-wrapper "
                   >
                     <div
                       class="lazyload-placeholder"
