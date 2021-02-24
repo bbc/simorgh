@@ -102,6 +102,24 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
+  const listenLive = pathOr(
+    'Listen Live',
+    ['media', 'listenLive'],
+    translations,
+  );
+  const listen = pathOr('Listen', ['media', 'listen'], translations);
+  const listenNext = pathOr(
+    'Listen Next',
+    ['media', 'listenNext'],
+    translations,
+  );
+
+  const listenLabels = {
+    live: listenLive,
+    next: listenNext,
+    onDemand: listen,
+  };
+
   useEffect(() => {
     if (!radioSchedule) {
       const handleResponse = url => async response => {
@@ -173,6 +191,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
           liveLabel={liveLabel}
           nextLabel={nextLabel}
           durationLabel={durationLabel}
+          listenLabels={listenLabels}
         />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
