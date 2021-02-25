@@ -213,6 +213,7 @@ export const service = {
         video: 'วิดีโอ',
         listen: 'ฟัง',
         watch: 'ดูู',
+        listenLive: 'ฟัง สด',
         liveLabel: 'สด',
         nextLabel: 'ถัดไป',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',

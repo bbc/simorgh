@@ -227,6 +227,7 @@ export const service = {
         video: 'Video',
         listen: 'Escuchar',
         watch: 'Ver',
+        listenLive: 'Escuchar en vivo',
         liveLabel: 'EN VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Programa anterior',
