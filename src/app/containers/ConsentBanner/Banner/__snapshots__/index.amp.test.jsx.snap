@@ -6,6 +6,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
+  border: 0.125rem solid transparent;
   max-height: 75vh;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -391,6 +392,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
+  border: 0.125rem solid transparent;
   max-height: 75vh;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
