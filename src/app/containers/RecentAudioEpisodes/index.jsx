@@ -11,7 +11,6 @@ import {
 import Timestamp from '@bbc/psammead-timestamp-container';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -24,9 +23,6 @@ import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 
-const StyledSpan = styled.span`
-  padding: 0 ${GEL_SPACING};
-`;
 const Spacer = styled.aside`
   position: relative;
   margin-bottom: ${GEL_SPACING_QUAD};
@@ -41,6 +37,10 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 const StyledTimestamp = styled(Timestamp)`
+  display: inline;
+`;
+
+const InlineDiv = styled.div`
   display: inline;
 `;
 
@@ -131,32 +131,31 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                   locale: datetimeLocale,
                 })} `}
               </VisuallyHiddenText>
-              <EpisodeList.Metadata>
+              <EpisodeList.DateTimeDuration>
                 <span aria-hidden="true">
                   {` ${durationLabel} ${formatDuration({
                     duration: episode.duration,
                     locale: datetimeLocale,
                   })}`}
                 </span>
-              </EpisodeList.Metadata>
+              </EpisodeList.DateTimeDuration>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <EpisodeList.Metadata>
-                <>
-                  {' '}
-                  <StyledSpan aria-hidden>|</StyledSpan>
-                  <StyledTimestamp
-                    timestamp={episode.timestamp}
-                    format="LL"
-                    dateTimeFormat="YYYY-MM-DD"
-                    padding={false}
-                    script={script}
-                    locale={datetimeLocale}
-                    service={service}
-                    timezone={timezone}
-                  />
-                </>
-              </EpisodeList.Metadata>
+              <InlineDiv>
+                <EpisodeList.DateTimeDuration
+                  hasBorder
+                  dir={dir}
+                  as={StyledTimestamp}
+                  timestamp={episode.timestamp}
+                  format="LL"
+                  dateTimeFormat="YYYY-MM-DD"
+                  padding={false}
+                  script={script}
+                  locale={datetimeLocale}
+                  service={service}
+                  timezone={timezone}
+                />
+              </InlineDiv>
             )}
           </EpisodeList.Episode>
         ))}

@@ -173,6 +173,7 @@ export const service = {
         },
         listen: 'استمع',
         watch: 'شاهد',
+        listenLive: 'استمع للبث المباشر',
         liveLabel: 'مباشر',
         nextLabel: 'لاحق',
         previousRadioShow: 'البرنامج الإذاعي السابق',

@@ -174,6 +174,7 @@ export const service = {
         },
         listen: 'கேட்க',
         watch: 'பார்க்க',
+        listenLive: 'நேரலையை கேட்க',
         liveLabel: 'நேரலை',
         nextLabel: 'NEXT',
         previousRadioShow: 'முந்தைய வானொலி நிகழ்ச்சி',
