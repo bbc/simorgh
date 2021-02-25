@@ -7,7 +7,8 @@
     "immer": "8.0.1",
     "@emotion/serialize": "1.0.0",
     "@emotion/sheet": "1.0.1",
-    "@emotion/utils": "1.0.0"
+    "@emotion/utils": "1.0.0",
+    "lodash": "4.17.21"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -86,7 +87,7 @@
     "@bbc/psammead-copyright": "3.0.12",
     "@bbc/psammead-detokeniser": "1.0.2",
     "@bbc/psammead-embed-error": "3.0.16",
-    "@bbc/psammead-episode-list": "1.0.20",
+    "@bbc/psammead-episode-list": "1.0.21",
     "@bbc/psammead-figure": "2.0.5",
     "@bbc/psammead-grid": "3.0.15",
     "@bbc/psammead-heading-index": "3.0.12",
