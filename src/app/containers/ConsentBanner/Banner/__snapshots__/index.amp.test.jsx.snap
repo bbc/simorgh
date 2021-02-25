@@ -6,7 +6,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  max-height: 100vh;
+  max-height: 75vh;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
@@ -21,7 +21,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 .emotion-2 {
   margin-left: auto;
   margin-right: auto;
-  max-height: 100vh;
+  max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
 }
@@ -391,7 +391,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   font-weight: 400;
   font-style: normal;
   background-color: #323232;
-  max-height: 100vh;
+  max-height: 75vh;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
 }
@@ -406,7 +406,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 .emotion-2 {
   margin-left: auto;
   margin-right: auto;
-  max-height: 100vh;
+  max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
 }
