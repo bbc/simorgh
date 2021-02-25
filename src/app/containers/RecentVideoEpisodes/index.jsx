@@ -34,6 +34,10 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
+const InlineDiv = styled.div`
+  display: inline;
+`;
+
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const {
     script,
@@ -133,8 +137,8 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               </VisuallyHiddenText>
             </EpisodeList.Link>
             {episode.episodeTitle && (
-              <div>
-                <EpisodeList.Metadata
+              <InlineDiv>
+                <EpisodeList.DateTimeDuration
                   as={Timestamp}
                   timestamp={episode.timestamp}
                   format="D MMMM YYYY"
@@ -145,7 +149,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                   service={service}
                   timezone={timezone}
                 />
-              </div>
+              </InlineDiv>
             )}
           </EpisodeList.Episode>
         ))}

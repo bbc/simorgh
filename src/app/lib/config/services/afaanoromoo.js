@@ -163,6 +163,7 @@ export const service = {
         video: 'Viidiyoo',
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
+        listenLive: 'Kallattiin caqasaa',
         liveLabel: 'KALLATTIIN',
         nextLabel: 'KAN ITTAANU',
         previousRadioShow: 'Sagantaa raadiyoo dabre',

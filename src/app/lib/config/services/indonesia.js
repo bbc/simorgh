@@ -162,6 +162,7 @@ export const service = {
         video: 'Video',
         listen: 'Dengar',
         watch: 'Tonton',
+        listenLive: 'Mendengarkan langsung',
         liveLabel: 'LANGSUNG',
         nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
