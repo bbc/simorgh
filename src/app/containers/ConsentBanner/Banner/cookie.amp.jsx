@@ -49,6 +49,7 @@ const COMMON_HEADING_STYLES = `
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
+  border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
   max-height: ${BANNER_MAX_HEIGHT};
   padding-right: ${GEL_MARGIN_BELOW_400PX};
   padding-left: ${GEL_MARGIN_BELOW_400PX};
