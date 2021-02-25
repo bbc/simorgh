@@ -31,6 +31,7 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 
+const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
 const BORDER_WIDTH = '0.0625rem'; // 1px
 const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
@@ -48,7 +49,7 @@ const COMMON_HEADING_STYLES = `
 const Wrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   background-color: ${C_CONSENT_BACKGROUND};
-  max-height: 100vh;
+  max-height: ${BANNER_MAX_HEIGHT};
   padding-right: ${GEL_MARGIN_BELOW_400PX};
   padding-left: ${GEL_MARGIN_BELOW_400PX};
 
@@ -61,7 +62,7 @@ const Wrapper = styled.div`
 const BannerPage = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-height: 100vh;
+  max-height: ${BANNER_MAX_HEIGHT};
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
 `;
