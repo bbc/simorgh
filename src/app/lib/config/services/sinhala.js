@@ -171,6 +171,7 @@ export const service = {
         },
         listen: 'සවන්දෙන්න',
         watch: 'නරඹන්න',
+        listenLive: 'සජීව ශ්‍රවණය',
         liveLabel: 'සජීවී.',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
