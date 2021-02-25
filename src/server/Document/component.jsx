@@ -79,7 +79,6 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        {Uint8Array}
         <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
         {scriptsAllowed && (
           <script
