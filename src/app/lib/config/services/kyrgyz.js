@@ -170,6 +170,7 @@ export const service = {
         },
         listen: 'Угуу',
         watch: 'Көрүү',
+        listenLive: 'Түз ободо угуу',
         liveLabel: 'Түз ободо',
         nextLabel: 'NEXT',
         previousRadioShow: 'Мурдагы радио программа',

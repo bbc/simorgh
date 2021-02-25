@@ -140,6 +140,7 @@ export const mainTranslations = {
     },
     listen: 'Слушать',
     watch: 'Смотреть',
+    listenLive: 'Слушать LIVE',
     liveLabel: 'LIVE',
     nextLabel: 'Дальше',
     previousRadioShow: 'Предыдущая передача',
