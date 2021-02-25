@@ -1,5 +1,4 @@
 import React from 'react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -41,16 +40,6 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
 );
 
 describe('Episode List ', () => {
-  shouldMatchSnapshot(
-    'should render audio episodes correctly',
-    <RecentAudioEpisodesWithContext episodes={indonesian} />,
-  );
-
-  shouldMatchSnapshot(
-    'should render video episodes correctly',
-    <RecentVideoEpisodesWithContext episodes={afrique} />,
-  );
-
   it('should render the list', () => {
     const { getByRole } = render(
       <RecentAudioEpisodesWithContext episodes={indonesian} />,

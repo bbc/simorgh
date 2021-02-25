@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import RecentAudioEpisodes from '.';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -33,6 +34,10 @@ const RecentAudioEpisodesWithContext = ({
 );
 
 describe('RecentAudioEpisodes', () => {
+  shouldMatchSnapshot(
+    'should render audio episodes correctly',
+    <RecentAudioEpisodesWithContext episodes={indonesian} />,
+  );
   it('should render the translated section label', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
