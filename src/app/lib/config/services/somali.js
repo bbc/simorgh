@@ -174,6 +174,7 @@ export const service = {
         },
         listen: 'Dhageyso',
         watch: 'Daawo',
+        listenLive: 'Toos u dhageyso',
         liveLabel: 'TOOS',
         nextLabel: 'Xiga',
         previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
