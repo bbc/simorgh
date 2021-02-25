@@ -61,8 +61,7 @@ const skipMiddleware = (_req, _res, next) => {
   next();
 };
 
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+const injectCspHeaderProdBuild = skipMiddleware;
 
 server
   .disable('x-powered-by')
@@ -189,7 +188,12 @@ server.get(
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
-        res.status(status).send(result.html);
+        res
+          .set({
+            'Access-Control-Allow-Origin': '*',
+          })
+          .status(status)
+          .send(result.html);
       } else {
         throw new Error('unknown result');
       }
