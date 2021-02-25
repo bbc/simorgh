@@ -221,6 +221,7 @@ export const service = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
+        listenLive: 'లైవ్ వినండి',
         liveLabel: 'లైవ్',
         nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',

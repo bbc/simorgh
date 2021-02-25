@@ -207,6 +207,7 @@ export const service = {
         video: 'ቪድዮ',
         listen: 'ስምዑ',
         watch: 'ተዓዘቡ',
+        listenLive: 'ብቀጥታ ስምዑ',
         liveLabel: 'ቀጥታ',
         nextLabel: 'ዝቕጽል',
         previousRadioShow: 'ኣቐዲሙ ዝነበረ ፈነወ ራድዮ',

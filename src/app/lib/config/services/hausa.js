@@ -219,6 +219,7 @@ export const service = {
         },
         listen: 'Saurari',
         watch: 'Kalla',
+        listenLive: 'Saurara Kai Tsaye',
         liveLabel: 'KAI TSAYE',
         nextLabel: 'NA GABA',
         previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',

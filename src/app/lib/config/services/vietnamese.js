@@ -211,6 +211,7 @@ export const service = {
         video: 'Video',
         listen: 'Nghe',
         watch: 'Xem',
+        listenLive: 'Nghe trực tiếp',
         liveLabel: 'TRỰC TIẾP',
         nextLabel: 'TỚI',
         previousRadioShow: 'Show radio trước',

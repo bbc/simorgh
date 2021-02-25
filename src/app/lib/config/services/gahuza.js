@@ -216,6 +216,7 @@ export const service = {
         },
         listen: 'Umviriza',
         watch: 'Raba',
+        listenLive: 'Umviriza live',
         liveLabel: 'IKIBIRIRAHO',
         nextLabel: 'IBIKURIKIRA',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
