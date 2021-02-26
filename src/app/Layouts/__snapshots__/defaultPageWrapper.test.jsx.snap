@@ -96,6 +96,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
+.emotion-8:focus {
+  outline: none;
+}
+
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -899,6 +903,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             <h2
               class="emotion-8 emotion-9"
               dir="ltr"
+              tabindex="-1"
             >
               We've updated our Privacy and Cookies Policy
             </h2>
