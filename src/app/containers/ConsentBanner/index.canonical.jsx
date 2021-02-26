@@ -22,7 +22,9 @@ const Canonical = ({ brandRef }) => {
   const onCookieAccept = () => {
     cookieOnAllow();
     updateCookiePolicy();
-    brandRef.current.focus();
+    if (brandRef) {
+      brandRef.current.focus();
+    }
   };
 
   const consentBannerRef = useRef(null);

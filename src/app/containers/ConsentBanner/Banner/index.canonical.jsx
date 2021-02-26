@@ -47,7 +47,9 @@ const CanonicalConsentBannerContainer = ({
   const dataAttribute = getDataAttribute(type);
 
   useEffect(() => {
-    consentBannerRef.current.focus();
+    if (consentBannerRef) {
+      consentBannerRef.current.focus();
+    }
   });
 
   return (
