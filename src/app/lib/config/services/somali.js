@@ -174,6 +174,7 @@ export const service = {
         },
         listen: 'Dhageyso',
         watch: 'Daawo',
+        listenLive: 'Toos u dhageyso',
         liveLabel: 'TOOS',
         nextLabel: 'Xiga',
         previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
@@ -289,6 +290,10 @@ export const service = {
       {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/media-54071665',
+      },
+      {
+        title: 'Barnaamijka Baafinta',
+        url: '/somali/war-48705502',
       },
     ],
   },

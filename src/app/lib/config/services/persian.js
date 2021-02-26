@@ -185,6 +185,7 @@ export const service = {
         },
         listen: 'بشنوید',
         watch: 'ببینید',
+        listenLive: 'بشنوید - زنده',
         liveLabel: 'زنده',
         nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',

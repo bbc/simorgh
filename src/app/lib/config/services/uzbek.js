@@ -171,6 +171,7 @@ export const service = {
         },
         listen: 'Тингланг',
         watch: 'Кўринг',
+        listenLive: 'Жонли эфирда тингланг',
         liveLabel: 'ЖОНЛИ ЭФИР',
         nextLabel: 'NEXT',
         previousRadioShow: 'Аввалги радио дастур',
