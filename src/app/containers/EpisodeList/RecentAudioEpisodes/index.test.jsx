@@ -272,7 +272,7 @@ describe('RecentAudioEpisodes', () => {
     expect(wrappingDiv.style.borderBottom).toBe('');
   });
 
-  it('should render a border between two elements', () => {
+  it('should render a border between two DateTimeDuration elements when there is an episode title', () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
         masterBrand="bbc_indonesian_radio"

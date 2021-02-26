@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecentAudioEpisodes should render video episodes correctly 1`] = `
+exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 .emotion-1 {
   position: relative;
   z-index: 0;
