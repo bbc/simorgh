@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
+import { oneOfType, func, shape, any } from 'prop-types';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
 import { UserContext } from '#contexts/UserContext';
 
-const Canonical = () => {
+const Canonical = ({ brandRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
@@ -21,7 +22,10 @@ const Canonical = () => {
   const onCookieAccept = () => {
     cookieOnAllow();
     updateCookiePolicy();
+    brandRef.current.focus();
   };
+
+  const consentBannerRef = useRef(null);
 
   return (
     <>
@@ -30,6 +34,7 @@ const Canonical = () => {
           type="privacy"
           onAccept={privacyOnAllow}
           onReject={privacyOnReject}
+          consentBannerRef={consentBannerRef}
         />
       ) : null}
       {!showPrivacy && showCookie ? (
@@ -37,10 +42,20 @@ const Canonical = () => {
           type="cookie"
           onAccept={onCookieAccept}
           onReject={cookieOnReject}
+          consentBannerRef={consentBannerRef}
         />
       ) : null}
     </>
   );
+};
+
+Canonical.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  brandRef: oneOfType([func, shape({ current: any })]),
+};
+
+Canonical.defaultProps = {
+  brandRef: null,
 };
 
 export default Canonical;

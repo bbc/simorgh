@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import SkipLink from '@bbc/psammead-brand/skip-link';
 import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
@@ -32,6 +32,8 @@ const HeaderContainer = () => {
 
   const isOperaMini = useOperaMiniDetection();
 
+  const brandRef = useRef(null);
+
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
   // However, the skip to content link remains set in the page language.
@@ -49,11 +51,12 @@ const HeaderContainer = () => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      <ConsentBanner />
+      <ConsentBanner brandRef={brandRef} />
       <BrandContainer
         borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink && <ScriptLink />}
+        brandRef={brandRef}
       />
       {showNav && <NavigationContainer />}
     </header>
