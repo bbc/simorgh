@@ -36,7 +36,12 @@ const RecentAudioEpisodesWithContext = ({
 describe('RecentAudioEpisodes', () => {
   shouldMatchSnapshot(
     'should render audio episodes correctly',
-    <RecentAudioEpisodesWithContext episodes={indonesian} />,
+    <RecentAudioEpisodesWithContext
+      masterBrand="bbc_indonesian_radio"
+      episodes={indonesian}
+      service="indonesia"
+      pageType="On Demand Radio"
+    />,
   );
   it('should render the translated section label', () => {
     const { getByText } = render(
@@ -91,6 +96,19 @@ describe('RecentAudioEpisodes', () => {
 
     const episodeTitle = getByText('Wednesday Evening');
     expect(episodeTitle).toBeInTheDocument();
+  });
+
+  it('should render the brand title', () => {
+    const { getAllByText } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+
+    expect(getAllByText('Dunia Pagi Ini')[0]).toBeInTheDocument();
   });
 
   it('should render the correct list item links for OD Radio', async () => {
@@ -201,6 +219,75 @@ describe('RecentAudioEpisodes', () => {
     ]);
   });
 
+  it('should render the media indicator', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+    const svgs = container.querySelectorAll('svg');
+
+    expect(svgs).toHaveLength(4);
+  });
+
+  it('should render the duration', () => {
+    const { getAllByText } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+
+    expect(getAllByText('Durasi 15:30')[0]).toBeInTheDocument();
+  });
+
+  it('should render the date', () => {
+    const { getByText } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+
+    expect(getByText('17 November 2020')).toBeInTheDocument();
+  });
+
+  it('should not render a border when list contains only one element', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={[indonesian[0]]}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+    const wrappingDiv = container.querySelector("div[class*='Wrapper']");
+    expect(wrappingDiv.style.borderBottom).toBe('');
+  });
+
+  it('should render a border between two elements', () => {
+    const { getByText } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+    const spanEl = getByText('17 November 2020');
+    const style = window.getComputedStyle(spanEl);
+
+    expect(style.borderLeft).toBe('0.0625rem solid #BABABA');
+    expect(style.borderRight).toBe('');
+  });
+
   it('should aria-hide the duration', () => {
     const { container } = render(
       <RecentAudioEpisodesWithContext
@@ -215,5 +302,40 @@ describe('RecentAudioEpisodes', () => {
 
     expect(hiddenDuration).toBeDefined();
     expect(hiddenDuration).toContainHTML('Durasi 15:30');
+  });
+
+  it('should render a span with role=text to avoid text splitting in screenreaders', () => {
+    const { getAllByRole } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+
+    expect(getAllByRole('text')[0].closest('a')).toBeInTheDocument();
+  });
+
+  it('should include the data-e2e attribute if passed', () => {
+    const { container } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={indonesian}
+        service="indonesia"
+        pageType="On Demand Radio"
+        ulProps={{ 'data-e2e': 'recent-episode-list' }}
+        liProps={{ 'data-e2e': 'recent-episode-list-item' }}
+      />,
+    );
+
+    expect(container.querySelector('ul')).toHaveAttribute(
+      'data-e2e',
+      'recent-episodes-list',
+    );
+    expect(container.querySelector('li')).toHaveAttribute(
+      'data-e2e',
+      'recent-episodes-list-item',
+    );
   });
 });

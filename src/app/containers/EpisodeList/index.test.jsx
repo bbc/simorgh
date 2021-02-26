@@ -40,30 +40,30 @@ const RecentVideoEpisodesWithContext = ({ episodes, isAmp = false }) => (
 );
 
 describe('Episode List ', () => {
-  // it('should render the list', () => {
-  //   const { getByRole } = render(
-  //     <RecentAudioEpisodesWithContext episodes={indonesian} />,
-  //   );
+  it('should render the list', () => {
+    const { getByRole } = render(
+      <RecentAudioEpisodesWithContext episodes={indonesian} />,
+    );
 
-  //   expect(getByRole('list')).toBeInTheDocument();
-  // });
+    expect(getByRole('list')).toBeInTheDocument();
+  });
 
-  // it('should render the list item', () => {
-  //   const { getAllByRole } = render(
-  //     <RecentAudioEpisodesWithContext episodes={indonesian} />,
-  //   );
+  it('should render the list item', () => {
+    const { getAllByRole } = render(
+      <RecentAudioEpisodesWithContext episodes={indonesian} />,
+    );
 
-  //   expect(getAllByRole('listitem')[0]).toBeInTheDocument();
-  // });
+    expect(getAllByRole('listitem')[0]).toBeInTheDocument();
+  });
 
-  // it('should not render a list when there is only one episode', () => {
-  //   const { queryByRole } = render(
-  //     <RecentAudioEpisodesWithContext episodes={[indonesian[0]]} />,
-  //   );
+  it('should not render a list when there is only one episode', () => {
+    const { queryByRole } = render(
+      <RecentAudioEpisodesWithContext episodes={[indonesian[0]]} />,
+    );
 
-  //   expect(queryByRole('list')).not.toBeInTheDocument();
-  //   expect(queryByRole('listitem')).not.toBeInTheDocument();
-  // });
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(queryByRole('listitem')).not.toBeInTheDocument();
+  });
 
   it('should render the brand title', () => {
     const { getAllByText } = render(
