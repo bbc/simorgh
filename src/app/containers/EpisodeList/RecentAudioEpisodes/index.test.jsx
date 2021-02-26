@@ -65,6 +65,20 @@ describe('RecentAudioEpisodes', () => {
     expect(container.querySelectorAll('li').length).toEqual(4);
   });
 
+  it('should not render a list when there is only one episode', () => {
+    const { queryByRole } = render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        episodes={[indonesian[0]]}
+        service="indonesia"
+        pageType="On Demand Radio"
+      />,
+    );
+
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(queryByRole('listitem')).not.toBeInTheDocument();
+  });
+
   it('should render the episode title when supplied', async () => {
     const { getByText } = render(
       <RecentAudioEpisodesWithContext
