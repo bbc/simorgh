@@ -51,13 +51,6 @@ const Wrapper = styled.div`
   background-color: ${C_CONSENT_BACKGROUND};
   border: ${BORDER_WIDTH_TRANSPARENT} solid transparent;
   max-height: ${BANNER_MAX_HEIGHT};
-  padding-right: ${GEL_MARGIN_BELOW_400PX};
-  padding-left: ${GEL_MARGIN_BELOW_400PX};
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding-left: ${GEL_MARGIN_ABOVE_400PX};
-    padding-right: ${GEL_MARGIN_ABOVE_400PX};
-  }
 `;
 
 const BannerPage = styled.div`
@@ -66,6 +59,13 @@ const BannerPage = styled.div`
   max-height: ${BANNER_MAX_HEIGHT};
   max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX};
   overflow-y: auto;
+  padding-right: ${GEL_MARGIN_BELOW_400PX};
+  padding-left: ${GEL_MARGIN_BELOW_400PX};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding-left: ${GEL_MARGIN_ABOVE_400PX};
+    padding-right: ${GEL_MARGIN_ABOVE_400PX};
+  }
 `;
 
 const Title = styled.h2`
