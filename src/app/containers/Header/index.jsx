@@ -32,7 +32,7 @@ const HeaderContainer = () => {
 
   const isOperaMini = useOperaMiniDetection();
 
-  const brandRef = useRef(null);
+  const brandFocusRef = useRef(null);
 
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
@@ -51,12 +51,12 @@ const HeaderContainer = () => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      <ConsentBanner brandRef={brandRef} />
+      <ConsentBanner onDismissFocusRef={brandFocusRef} />
       <BrandContainer
         borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink && <ScriptLink />}
-        brandRef={brandRef}
+        focusRef={brandFocusRef}
       />
       {showNav && <NavigationContainer />}
     </header>

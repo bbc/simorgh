@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
-import { func, string, oneOfType, shape, any } from 'prop-types';
+import { func, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
@@ -35,16 +35,13 @@ const Reject = (message, href, onClick, dataAttribute) => {
   );
 };
 
-const CanonicalConsentBannerContainer = ({
-  type,
-  onReject,
-  onAccept,
-  consentBannerRef,
-}) => {
+const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
   const consentBannerConfig = translations.consentBanner[type];
 
   const dataAttribute = getDataAttribute(type);
+
+  const consentBannerRef = useRef(null);
 
   useEffect(() => {
     if (consentBannerRef) {
@@ -81,12 +78,6 @@ CanonicalConsentBannerContainer.propTypes = {
   type: string.isRequired,
   onReject: func.isRequired,
   onAccept: func.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  consentBannerRef: oneOfType([func, shape({ current: any })]),
-};
-
-CanonicalConsentBannerContainer.defaultProps = {
-  consentBannerRef: null,
 };
 
 export default CanonicalConsentBannerContainer;

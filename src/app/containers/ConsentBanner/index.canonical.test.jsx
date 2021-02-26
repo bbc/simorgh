@@ -79,9 +79,6 @@ describe('Canonical Consent Banner Container', () => {
     });
     expect(Banner).toHaveBeenCalledWith(
       {
-        consentBannerRef: {
-          current: null,
-        },
         onAccept: privacyOnAllow,
         onReject: privacyOnReject,
         type: 'privacy',
@@ -106,9 +103,6 @@ describe('Canonical Consent Banner Container', () => {
     });
     expect(Banner).toHaveBeenCalledWith(
       {
-        consentBannerRef: {
-          current: null,
-        },
         onAccept: privacyOnAllow,
         onReject: privacyOnReject,
         type: 'privacy',
@@ -133,9 +127,6 @@ describe('Canonical Consent Banner Container', () => {
     });
     expect(Banner).toHaveBeenCalledWith(
       {
-        consentBannerRef: {
-          current: null,
-        },
         onAccept: expect.any(Function),
         onReject: cookieOnReject,
         type: 'cookie',

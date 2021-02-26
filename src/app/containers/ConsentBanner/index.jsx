@@ -4,18 +4,18 @@ import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const ConsentBanner = ({ brandRef }) => {
+const ConsentBanner = ({ onDismissFocusRef }) => {
   const { isAmp } = useContext(RequestContext);
-  return isAmp ? <Amp /> : <Canonical brandRef={brandRef} />;
+  return isAmp ? <Amp /> : <Canonical onDismissFocusRef={onDismissFocusRef} />;
 };
 
 ConsentBanner.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  brandRef: oneOfType([func, shape({ current: any })]),
+  onDismissFocusRef: oneOfType([func, shape({ current: any })]),
 };
 
 ConsentBanner.defaultProps = {
-  brandRef: null,
+  onDismissFocusRef: null,
 };
 
 export default ConsentBanner;

@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
 import { UserContext } from '#contexts/UserContext';
 
-const Canonical = ({ brandRef }) => {
+const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
@@ -22,12 +22,10 @@ const Canonical = ({ brandRef }) => {
   const onCookieAccept = () => {
     cookieOnAllow();
     updateCookiePolicy();
-    if (brandRef) {
-      brandRef.current.focus();
+    if (onDismissFocusRef) {
+      onDismissFocusRef.current.focus();
     }
   };
-
-  const consentBannerRef = useRef(null);
 
   return (
     <>
@@ -36,7 +34,6 @@ const Canonical = ({ brandRef }) => {
           type="privacy"
           onAccept={privacyOnAllow}
           onReject={privacyOnReject}
-          consentBannerRef={consentBannerRef}
         />
       ) : null}
       {!showPrivacy && showCookie ? (
@@ -44,7 +41,6 @@ const Canonical = ({ brandRef }) => {
           type="cookie"
           onAccept={onCookieAccept}
           onReject={cookieOnReject}
-          consentBannerRef={consentBannerRef}
         />
       ) : null}
     </>
@@ -53,11 +49,11 @@ const Canonical = ({ brandRef }) => {
 
 Canonical.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  brandRef: oneOfType([func, shape({ current: any })]),
+  onDismissFocusRef: oneOfType([func, shape({ current: any })]),
 };
 
 Canonical.defaultProps = {
-  brandRef: null,
+  onDismissFocusRef: null,
 };
 
 export default Canonical;
