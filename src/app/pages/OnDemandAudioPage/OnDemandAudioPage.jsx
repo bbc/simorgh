@@ -26,7 +26,8 @@ import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
-import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -66,6 +67,7 @@ const StyledGridItemImage = styled(Grid)`
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
+    isPodcast,
     language,
     brandTitle,
     headline,
@@ -201,6 +203,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
+          {isPodcast && <PodcastExternalLinks brandPid={brandId} />}
         </Grid>
       </GelPageGrid>
       {hasRecentEpisodes && (
@@ -231,6 +234,7 @@ OnDemandAudioPage.propTypes = {
   MediaError: func.isRequired,
   mediaIsAvailable: bool.isRequired,
   pageData: shape({
+    isPodcast: bool,
     brandTitle: string,
     headline: string,
     summary: string,

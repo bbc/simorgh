@@ -110,6 +110,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
     return {
       status,
       pageData: {
+        isPodcast,
         metadata: { type: detailPageType },
         language: get(['metadata', 'language'], LOG_LEVELS.INFO),
         brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
