@@ -190,6 +190,7 @@ export const service = {
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {

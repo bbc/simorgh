@@ -179,6 +179,7 @@ export const service = {
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
         recentEpisodes: 'البرامج السابقة',
+        podcastExternalLinks: 'هذا البودكاست متاح عبر',
       },
       socialEmbed: {
         caption: {

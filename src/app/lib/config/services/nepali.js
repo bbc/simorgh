@@ -172,6 +172,7 @@ export const service = {
         nextRadioShow: 'अघिल्लो रेडिओ कार्यक्रम',
         duration: 'समयावधि',
         recentEpisodes: 'पहिलेका कार्यक्रमहरु',
+        podcastExternalLinks: 'यो पडकास्ट सुन्नकालागि यहाँ उपलब्ध छ',
       },
       socialEmbed: {
         caption: {

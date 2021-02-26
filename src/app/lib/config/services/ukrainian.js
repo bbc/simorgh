@@ -170,6 +170,7 @@ const baseServiceConfig = {
       nextRadioShow: 'Наступна радіопрограма',
       duration: 'Тривалість',
       recentEpisodes: 'Більше',
+      podcastExternalLinks: 'Цей подкаст доступний у',
     },
     socialEmbed: {
       caption: {

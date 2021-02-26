@@ -147,6 +147,7 @@ export const mainTranslations = {
     duration: 'Продолжительность',
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
+    podcastExternalLinks: 'Этот подкаст доступен на',
   },
   socialEmbed: {
     caption: {

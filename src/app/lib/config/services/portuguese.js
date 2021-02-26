@@ -181,6 +181,7 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Mais',
+        podcastExternalLinks: 'O podcast está disponível em',
       },
       socialEmbed: {
         caption: {

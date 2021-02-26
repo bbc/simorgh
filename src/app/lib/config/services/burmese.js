@@ -179,6 +179,7 @@ export const service = {
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
         recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {
