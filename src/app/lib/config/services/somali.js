@@ -344,6 +344,10 @@ export const service = {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/media-54071665',
       },
+      {
+        title: 'Barnaamijka Baafinta',
+        url: '/somali/war-48705502',
+      },
     ],
   },
 };
