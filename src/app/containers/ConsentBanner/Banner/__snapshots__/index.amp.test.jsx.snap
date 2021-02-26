@@ -8,15 +8,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   background-color: #323232;
   border: 0.125rem solid transparent;
   max-height: 75vh;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 .emotion-2 {
@@ -25,6 +16,15 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .emotion-4 {
@@ -394,15 +394,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   background-color: #323232;
   border: 0.125rem solid transparent;
   max-height: 75vh;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-0 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
 }
 
 .emotion-2 {
@@ -411,6 +402,15 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   max-height: 75vh;
   max-width: 37.4375rem;
   overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .emotion-4 {
