@@ -1542,7 +1542,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #6E6E73;
   margin: 0;
 }
 
@@ -1561,47 +1561,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-274 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #11708C;
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 
-.emotion-274:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-274 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
-.emotion-274:hover,
-.emotion-274:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-274:visited {
-  color: #6E6E73;
-}
-
-.emotion-274:hover .emotion-279 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-274:focus .emotion-279 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
+@media (min-width: 37.5rem) {
+  .emotion-274 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .emotion-278 {
-  color: #3F3F42;
+  color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
   width: 100%;
@@ -1658,9 +1643,9 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #222222;
+  background-color: #FFFFFF;
   outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
+  color: #11708C;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1685,7 +1670,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 .emotion-284>svg {
-  color: #FFFFFF;
+  color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -1705,57 +1690,72 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   padding-right: 0.5rem;
 }
 
-.emotion-389 {
+.emotion-311 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #6E6E73;
+  color: #222222;
   margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-389 {
+  .emotion-311 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-389 {
+  .emotion-311 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-391 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #11708C;
-  display: inline-block;
-  margin-left: 0.5rem;
+.emotion-313 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-391 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.emotion-313:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-391 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+.emotion-313:hover,
+.emotion-313:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
-.emotion-395 {
+.emotion-313:visited {
   color: #6E6E73;
+}
+
+.emotion-313:hover .emotion-279 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-313:focus .emotion-279 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-317 {
+  color: #3F3F42;
   padding: 0.5rem 0;
   display: inline-block;
   width: 100%;
@@ -1767,54 +1767,54 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-395 {
+  .emotion-317 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-395 {
+  .emotion-317 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-399 {
+.emotion-321 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.75rem;
   line-height: 1.125rem;
   padding: 0.5rem;
-  background-color: #FFFFFF;
+  background-color: #222222;
   outline: 0.0625rem solid transparent;
-  color: #11708C;
+  color: #FFFFFF;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-399 {
+  .emotion-321 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-399 {
+  .emotion-321 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-399 {
+  .emotion-321 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-401>svg {
-  color: #11708C;
+.emotion-323>svg {
+  color: #FFFFFF;
   fill: currentColor;
   width: 1.0625rem;
   height: 0.75rem;
@@ -2471,7 +2471,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2576,7 +2576,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2681,7 +2681,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2786,7 +2786,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2891,7 +2891,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3019,6 +3019,132 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           >
             <li
               class="emotion-253 emotion-254 emotion-56"
+              data-e2e="next"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="emotion-256 emotion-257"
+              >
+                <div
+                  class="emotion-258 emotion-259"
+                >
+                  <span
+                    class="emotion-260 emotion-261"
+                    dir="rtl"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="emotion-262 emotion-263"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="emotion-264 emotion-265"
+                    dir="rtl"
+                  >
+                    <time
+                      class="emotion-40 emotion-41"
+                      datetime="2030-01-01"
+                    >
+                      ۰۹:۰۰
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="emotion-268 emotion-269"
+              >
+                <div
+                  class="emotion-270 emotion-271"
+                >
+                  <h3
+                    class="emotion-272 emotion-273"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="emotion-274 emotion-275"
+                        dir="rtl"
+                      >
+                        بعدی 
+                      </span>
+                      چشم انداز بامدادی 1
+                      <span
+                        class="emotion-86 emotion-87"
+                      >
+                        , 
+                        ۰۹:۰۰
+                        , 
+                      </span>
+                      <span
+                        class="emotion-278 emotion-279"
+                      >
+                        ۱ ژانویه ۲۰۳۰
+                      </span>
+                    </span>
+                  </h3>
+                  <p
+                    class="emotion-280 emotion-281"
+                  >
+                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
+                  </p>
+                </div>
+                <div
+                  class="emotion-282 emotion-283"
+                >
+                  <span
+                    class="emotion-284 emotion-285"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="emotion-286 emotion-287"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="emotion-288 emotion-289"
+                    datetime="PT26M30S"
+                    dir="rtl"
+                  >
+                    <span
+                      class="emotion-86 emotion-87"
+                    >
+                       ۲۶،۳۰ المدة الزمنية 
+                    </span>
+                    <span
+                      aria-hidden="true"
+                    >
+                      ۲۶:۳۰
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+            <li
+              class="emotion-253 emotion-254 emotion-56"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
@@ -3070,10 +3196,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-311 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-313 emotion-314"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
@@ -3088,7 +3214,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-317 emotion-279"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -3102,10 +3228,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-321 emotion-283"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-323 emotion-285"
                   >
                     <svg
                       aria-hidden="true"
@@ -3195,10 +3321,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-311 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-313 emotion-314"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
@@ -3213,7 +3339,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-317 emotion-279"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -3227,10 +3353,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-321 emotion-283"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-323 emotion-285"
                   >
                     <svg
                       aria-hidden="true"
@@ -3320,10 +3446,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-311 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-313 emotion-314"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
@@ -3338,7 +3464,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-317 emotion-279"
                         >
                           ۲۶ مارس ۲۰۲۰
                         </span>
@@ -3352,10 +3478,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-321 emotion-283"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-323 emotion-285"
                   >
                     <svg
                       aria-hidden="true"
@@ -3387,132 +3513,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       aria-hidden="true"
                     >
                       ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-253 emotion-254 emotion-56"
-              data-e2e="next"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-256 emotion-257"
-              >
-                <div
-                  class="emotion-258 emotion-259"
-                >
-                  <span
-                    class="emotion-260 emotion-261"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-262 emotion-263"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-264 emotion-265"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-40 emotion-41"
-                      datetime="2030-01-01"
-                    >
-                      ۰۹:۰۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-268 emotion-269"
-              >
-                <div
-                  class="emotion-270 emotion-271"
-                >
-                  <h3
-                    class="emotion-389 emotion-273"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="emotion-391 emotion-392"
-                        dir="rtl"
-                      >
-                        بعدی 
-                      </span>
-                      چشم انداز بامدادی 1
-                      <span
-                        class="emotion-86 emotion-87"
-                      >
-                        , 
-                        ۰۹:۰۰
-                        , 
-                      </span>
-                      <span
-                        class="emotion-395 emotion-279"
-                      >
-                        ۱ ژانویه ۲۰۳۰
-                      </span>
-                    </span>
-                  </h3>
-                  <p
-                    class="emotion-280 emotion-281"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="emotion-399 emotion-283"
-                >
-                  <span
-                    class="emotion-401 emotion-285"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-286 emotion-287"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-288 emotion-289"
-                    datetime="PT26M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="emotion-86 emotion-87"
-                    >
-                       ۲۶،۳۰ المدة الزمنية 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۲۶:۳۰
                     </span>
                   </time>
                 </div>
@@ -3576,7 +3576,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3635,7 +3635,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3694,7 +3694,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3753,7 +3753,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3812,7 +3812,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -5997,7 +5997,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6030,7 +6030,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6153,7 +6153,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6186,7 +6186,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6245,7 +6245,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6304,7 +6304,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6363,7 +6363,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6422,7 +6422,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6481,7 +6481,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6540,7 +6540,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6599,7 +6599,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6658,7 +6658,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6769,7 +6769,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6828,7 +6828,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-419 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6887,7 +6887,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6946,7 +6946,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7005,7 +7005,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7128,7 +7128,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7161,7 +7161,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7220,7 +7220,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7279,7 +7279,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7338,7 +7338,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7397,7 +7397,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"

@@ -173,6 +173,7 @@ export const service = {
         },
         listen: 'सुनिए',
         watch: 'देखिए',
+        listenLive: 'लाइव सुनें',
         liveLabel: 'लाइव',
         nextLabel: 'अगला',
         previousRadioShow: 'पिछला रेडियो शो',

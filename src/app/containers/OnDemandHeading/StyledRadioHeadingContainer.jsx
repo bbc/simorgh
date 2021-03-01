@@ -19,7 +19,7 @@ const StyledRadioHeadingContainer = styled(OnDemandHeading)`
   }
 
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING} ${GEL_SPACING_DBL};
+    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING};
   }
 `;
 

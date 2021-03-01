@@ -10,11 +10,11 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - npm ci
-      - npm run build
+      - yarn ci
+      - yarn build
   build:
     commands:
-      - npm run cypress:ci
+      - yarn cypress:ci
 reports:
   JunitReportsTest:
     files:

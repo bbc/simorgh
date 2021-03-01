@@ -35,7 +35,7 @@ exports[`ImageWithPlaceholder should not provide non-js fallback 1`] = `
     class="emotion-0 emotion-1"
   >
     <div
-      class="lazyload-wrapper"
+      class="lazyload-wrapper "
     >
       <div
         class="lazyload-placeholder"

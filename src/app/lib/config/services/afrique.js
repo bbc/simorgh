@@ -175,6 +175,7 @@ export const service = {
         },
         listen: 'Ecoutez',
         watch: 'Suivez',
+        listenLive: 'Suivre le direct',
         liveLabel: 'EN DIRECT',
         nextLabel: 'SUIVANT',
         previousRadioShow: 'Emission de radio précédente',
