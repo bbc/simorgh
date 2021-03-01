@@ -27,7 +27,7 @@ const PodcastLink = styled.a`
       dir === 'rtl'
         ? `
       padding-right: 1rem;
-      border-left: 1px ${C_CLOUD_LIGHT} solid;`
+      border-right: 1px ${C_CLOUD_LIGHT} solid;`
         : `
       padding-left: 1rem;
       border-left: 1px ${C_CLOUD_LIGHT} solid;
