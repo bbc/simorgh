@@ -134,6 +134,8 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
           ? getPodcastPageIdentifier(pageIdentifier)
           : pageIdentifier,
         imageUrl: get(['content', 'blocks', 0, 'imageUrl'], LOG_LEVELS.INFO),
+        // An empty string in alt text will cause it not to be read out by AT; a null value will fall back to the default
+        imageAltText: isPodcast ? '' : null,
         promoBrandTitle: get(['promo', 'brand', 'title']),
         durationISO8601: get(
           ['promo', 'media', 'versions', 0, 'durationISO8601'],
