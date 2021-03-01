@@ -241,6 +241,13 @@ Object {
 }
 `;
 
+exports[`AMP On Demand T V Page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Barnaamijka Baafinta",
+  "url": "/somali/war-48705502",
+}
+`;
+
 exports[`AMP On Demand T V Page I can see the brand title 1`] = `"Caawa Iyo Caalamka"`;
 
 exports[`AMP On Demand T V Page I can see the episode summary 1`] = `"Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"`;
