@@ -73,7 +73,7 @@ SitewideLinks.propTypes = {
   copyrightText: node.isRequired,
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
-  script: string.isRequired,
+  script: shape({}).isRequired,
   service: string.isRequired,
 };
 
