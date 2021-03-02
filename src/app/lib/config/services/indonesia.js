@@ -169,7 +169,7 @@ export const service = {
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
-        podcastExternalLinks: 'This podcast is also available on',
+        podcastExternalLinks: 'Podcast ini juga tersedia di',
       },
       socialEmbed: {
         caption: {

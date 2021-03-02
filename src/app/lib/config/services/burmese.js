@@ -179,7 +179,7 @@ export const service = {
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
         recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
-        podcastExternalLinks: 'This podcast is also available on',
+        podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
       },
       socialEmbed: {
         caption: {
