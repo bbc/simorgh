@@ -1,7 +1,7 @@
 import {
-  getCookieBanner,
-  getCookieBannerAccept,
-  getCookieBannerReject,
+  getCookieBannerCanonical,
+  getCookieBannerAcceptCanonical,
+  getCookieBannerRejectCanonical,
   getPrivacyBanner,
   getPrivacyBannerAccept,
 } from '../utilities/cookiePrivacyBanner';
@@ -40,7 +40,7 @@ export default ({ service, variant, pageType, path }) => {
     visitPage(path, pageType);
 
     getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.be.visible');
 
     assertCookieValues({
       ckns_privacy: 'july2019',
@@ -49,10 +49,10 @@ export default ({ service, variant, pageType, path }) => {
 
     getPrivacyBannerAccept(service, variant).click();
 
-    getCookieBanner(service, variant).should('be.visible');
+    getCookieBannerCanonical(service, variant).should('be.visible');
     getPrivacyBanner(service, variant).should('not.be.visible');
 
-    getCookieBannerAccept(service, variant).click();
+    getCookieBannerAcceptCanonical(service, variant).click();
 
     assertCookieValues({
       ckns_explicit: '1',
@@ -60,7 +60,7 @@ export default ({ service, variant, pageType, path }) => {
       ckns_policy: '111',
     });
 
-    getCookieBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.be.visible');
     getPrivacyBanner(service, variant).should('not.be.visible');
 
     ensureCookieExpiryDates();
@@ -71,7 +71,7 @@ export default ({ service, variant, pageType, path }) => {
     visitPage(path, pageType);
 
     getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.be.visible');
 
     assertCookieValues({
       ckns_privacy: 'july2019',
@@ -79,7 +79,7 @@ export default ({ service, variant, pageType, path }) => {
     });
 
     getPrivacyBannerAccept(service, variant).click();
-    getCookieBannerReject(service, variant).click();
+    getCookieBannerRejectCanonical(service, variant).click();
 
     visitPage(path, pageType);
 
@@ -89,7 +89,7 @@ export default ({ service, variant, pageType, path }) => {
       ckns_policy: '000',
     });
 
-    getCookieBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.be.visible');
     getPrivacyBanner(service, variant).should('not.be.visible');
 
     ensureCookieExpiryDates();
@@ -101,7 +101,7 @@ export default ({ service, variant, pageType, path }) => {
     visitPage(path, pageType);
 
     getPrivacyBanner(service, variant).should('not.be.visible');
-    getCookieBanner(service, variant).should('be.visible');
+    getCookieBannerCanonical(service, variant).should('be.visible');
   });
 
   it("should not override the user's default cookie policy", () => {
