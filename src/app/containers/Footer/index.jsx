@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import SitewideLinks from '@bbc/psammead-sitewide-links';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Footer from '#components/Footer';
 import BrandContainer from '../Brand';
 
 const currentYear = () => new Date().getFullYear();
@@ -14,7 +14,7 @@ const getCopyrightText = text => (
 const FooterContainer = () => {
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
-  const { footer, service, serviceLang } = useContext(ServiceContext);
+  const { footer, script, service, serviceLang } = useContext(ServiceContext);
 
   if (!footer) {
     return null;
@@ -25,10 +25,11 @@ const FooterContainer = () => {
   return (
     <footer role="contentinfo" lang={serviceLang}>
       <BrandContainer borderTop />
-      <SitewideLinks
+      <Footer
         links={links}
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}
+        script={script}
         service={service}
         trustProjectLink={trustProjectLink}
       />

@@ -1672,14 +1672,6 @@
     "@bbc/gel-foundations" "^6.1.1"
     "@bbc/psammead-styles" "^7.2.2"
 
-"@bbc/psammead-sitewide-links@6.0.13":
-  version "6.0.13"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-sitewide-links/-/psammead-sitewide-links-6.0.13.tgz#3afdb1eb8515e55855a32ff2b98734b17c6886c2"
-  integrity sha512-7I6CKjBPl10ajXma3VQjz4h+BB+0jTJ8Uy6rcaOS7gz5Vr7tMUy06gvb0arlpEstZbQUWHco49XRjLBrCxC5rw==
-  dependencies:
-    "@bbc/gel-foundations" "^6.1.1"
-    "@bbc/psammead-styles" "^7.2.2"
-
 "@bbc/psammead-social-embed@3.1.10":
   version "3.1.10"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-social-embed/-/psammead-social-embed-3.1.10.tgz#92c7432d0ab64497ea5dc92def71f5a13971cf9b"
