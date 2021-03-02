@@ -139,12 +139,15 @@ describe('OnDemand Radio Page ', () => {
       pageType: MEDIA_PAGE,
       toggles,
     });
-    const { getByText } = await renderPage({
+    const { getByText, queryByText } = await renderPage({
       pageData: pageDataWithWithoutVideo,
       service: 'pashto',
     });
 
     expect(getByText('ماښامنۍ خپرونه')).toBeInTheDocument();
+    expect(
+      queryByText('This podcast is also available on'),
+    ).not.toBeInTheDocument();
   });
 
   it('should show the episode title when it is available', async () => {
@@ -172,6 +175,23 @@ describe('OnDemand Radio Page ', () => {
         'التصويت عبر البريد في الانتخابات الرئاسية الأميركية - BBC Xtra - Arabic - BBC News عربي',
       );
     });
+  });
+
+  it('should show the external links for podcast pages', async () => {
+    fetch.mockResponse(JSON.stringify(arabicPodcastPageData));
+
+    const { pageData } = await getInitialData({
+      path: 'some-podcast-path',
+      service: 'arabic',
+      pageType: MEDIA_PAGE,
+      toggles,
+    });
+    const { getByText } = await renderPage({
+      pageData,
+      service: 'arabic',
+    });
+
+    expect(getByText('هذا البودكاست متاح عبر')).toBeInTheDocument();
   });
 
   it('should show the datestamp correctly for Pashto OnDemand Radio Pages', async () => {

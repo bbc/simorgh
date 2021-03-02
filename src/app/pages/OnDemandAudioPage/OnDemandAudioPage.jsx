@@ -85,6 +85,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     recentEpisodes,
     brandId,
     episodeTitle,
+    externalLinks,
   } = pageData;
 
   const pageType = path(['metadata', 'type'], pageData);
@@ -213,7 +214,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          {isPodcast && <PodcastExternalLinks brandPid={brandId} />}
+          {isPodcast && <PodcastExternalLinks links={externalLinks} />}
         </Grid>
       </GelPageGrid>
       {hasRecentEpisodes && (
