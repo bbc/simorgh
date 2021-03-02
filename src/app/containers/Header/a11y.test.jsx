@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { service as newsServiceConfig } from '#lib/config/services/news';
 const bannerMock = require('../ConsentBanner');
 const brandMock = require('../Brand');
-import { render, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -29,7 +29,6 @@ jest.mock('../ConsentBanner', () => jest.fn());
 jest.mock('../Brand', () => jest.fn());
 
 brandMock.mockImplementation(({ focusRef }) => {
-  console.log('focusRef - ' + focusRef);
   return (
     <a tabIndex="-1" ref={focusRef}>
       The BBC Brand
@@ -38,7 +37,6 @@ brandMock.mockImplementation(({ focusRef }) => {
 });
 
 bannerMock.mockImplementation(({ onDismissFocusRef }) => {
-  console.log('hello');
   const [showBanner, setShowBanner] = useState(true);
   return showBanner ? (
     <>
@@ -56,8 +54,8 @@ bannerMock.mockImplementation(({ onDismissFocusRef }) => {
   ) : null;
 });
 
-describe('focus', () => {
-  it('should focus on brand image on consent banner dismiss', async () => {
+describe('a11y', () => {
+  it('should focus on brand link on consent banner dismiss', async () => {
     /* eslint-disable react/prop-types */
 
     const HeaderContainerWithContext2 = ({
@@ -99,6 +97,6 @@ describe('focus', () => {
     const consentYesButton = getByText('Yes');
     userEvent.click(consentYesButton);
 
-    await waitFor(() => expect(document.activeElement).toBe(brand));
+    expect(document.activeElement).toBe(brand);
   });
 });
