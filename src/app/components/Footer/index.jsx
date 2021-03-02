@@ -35,7 +35,7 @@ const ConstrainedWrapper = styled.div`
   max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   margin: 0 auto;
   ${({ trustProjectLink }) =>
-    trustProjectLink && `padding-top: ${GEL_SPACING})`}
+    trustProjectLink && `padding-top: ${GEL_SPACING};`}
 `;
 
 const StyledParagraph = styled.p`
