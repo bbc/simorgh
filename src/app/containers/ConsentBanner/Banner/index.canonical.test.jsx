@@ -2,6 +2,7 @@ import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Banner from './index.canonical';
+import { render } from '@testing-library/react';
 
 describe('Canonical Consent Banner Container', () => {
   const privacy = ({ description, service }) =>
@@ -38,5 +39,16 @@ describe('Canonical Consent Banner Container', () => {
   cookie({
     description: 'should correctly render cookie banner - RTL layout',
     service: 'arabic',
+  });
+
+  it('should focus on banner heading on mount', () => {
+    const { getByText } = render(
+      <ServiceContextProvider service="news">
+        <Banner type="cookie" onAccept={() => {}} onReject={() => {}} />
+      </ServiceContextProvider>,
+    );
+
+    const heading = getByText('Let us know you agree to cookies');
+    expect(document.activeElement).toBe(heading);
   });
 });
