@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import Footer from '#components/Footer';
 import BrandContainer from '../Brand';
 
@@ -12,13 +13,10 @@ const getCopyrightText = text => (
 );
 
 const FooterContainer = () => {
-  // `serviceLang` is defined when the language the page is written in is different to the
-  // language of the service. `serviceLang` is used to override the page language.
+  const { isAmp } = useContext(RequestContext);
   const { footer, script, service, serviceLang } = useContext(ServiceContext);
 
-  if (!footer) {
-    return null;
-  }
+  if (!footer) return null;
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
@@ -26,6 +24,7 @@ const FooterContainer = () => {
     <footer role="contentinfo" lang={serviceLang}>
       <BrandContainer borderTop />
       <Footer
+        isAmp={isAmp}
         links={links}
         copyrightText={getCopyrightText(copyrightText)}
         externalLink={externalLink}
