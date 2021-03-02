@@ -130,28 +130,82 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'راته ووایاست چې ایا غواړئ ډېټا در ولېږل شي',
-          description: {
-            uk: {
-              first: 'موږ ستاسې د اسانۍ لپاره ',
-              linkText: 'کوکیز',
-              last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept:
+              'تاسې د انټرنټ کارېدنې په اړه د مالوماتو ټولېدو سره هوکړه وکړئ او مخکې لاړ شئ',
+            reject:
+              'ستاسې د انټرنټ کارېدنې په اړه د مالوماتو ټولېدل رد کړئ‌ او مخکې لاړ شئ',
+            initial: {
+              title:
+                'راته ووایاست چې ایا پر موبایل پاڼو د مالوماتو له راټولولو سره موافق یاست که نه.',
+              description: {
+                first: 'زموږ ملګري د ',
+                linkText: 'کوکیز',
+                last:
+                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'خپل سېټنګز مدیریت کړئ',
             },
-            international: {
-              first: 'زموږ ملګري د ',
-              linkText: 'کوکیز',
-              last:
-                ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'پر موبایلي پاڼو د اجازې اخیستنې برخه تنظیم کړئ',
+              description: {
+                para1:
+                  'دا سېټنګز یوازې د موبایلي پاڼو لپاره دي. که چېرې د بي بي سي پاڼې له موبایل پرته بل ځای ګورئ نو ښایي‌ هلته درنه دا پوښتنې بیا وشي.‌',
+                para2:
+                  'دا پاڼه چې تاسې ولیده، د ګوګل موبایلي پاڼو تکنالوژۍ په کارولو سره جوړه شوې',
+                heading2: 'د مالوماتو اړینه راټولېدنه',
+                para3:
+                  'د دې لپاره چې زموږ پاڼه سم کار وکړي، موږ محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
+                para4: {
+                  text:
+                    'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ستاسې د اجازې په اړه مالومات موږ ستاسې پر موبایل خوندي کوو',
+                heading3: 'د مالوماتو غیر لازمي راټولېدنه',
+                para6:
+                  'کله چې تاسې د مالوماتو ټولونې اجازه راکوئ، ورسره دا هم منئ چې کله له بریتانیا بهر زموږ پاڼه ګورئ نو موږ به اړوند اعلانونه درته ښکاره کوو',
+                para7: {
+                  text:
+                    'دلته ولولئ چې موږ بي بي سي کې او زموږ شریکان څه ډول تاسې ته اړوند اعلانونه ښکاره کوي.‌',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'که نه غواړئ چې اړوند اعلانونه درته وښودل شي نو لاندې برخه کې د مالوماتو راټولېدو اجازه مه ورکوئ. خو پام مو وي چې اعلانونه به بیا هم در ښودل کېږي،‌ البته اړوند یا ستاسې په خوښه به نه وي.‌',
+                para9:
+                  'هر وخت کولی شئ چې دا سېټنګز بدل کړئ. د دې چارې لپاره لاندې برخه کې Ad Choices / Do not sell my info” باندې کلېک وکړئ',
+              },
             },
           },
-          accept: 'هو، موافق یم',
-          reject: 'نه، غواړم سېټنګز ته ولاړ شم',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'راته ووایاست چې ایا غواړئ ډېټا در ولېږل شي',
+            description: {
+              uk: {
+                first: 'موږ ستاسې د اسانۍ لپاره ',
+                linkText: 'کوکیز',
+                last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'زموږ ملګري د ',
+                linkText: 'کوکیز',
+                last:
+                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'هو، موافق یم',
+            reject: 'نه، غواړم سېټنګز ته ولاړ شم',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
