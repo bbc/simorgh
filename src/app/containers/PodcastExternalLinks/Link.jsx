@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
-import { oneOf, string } from 'prop-types';
+import { oneOf, string, shape } from 'prop-types';
 import { C_CLOUD_LIGHT, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
+import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 
-const PodcastLink = styled.a`
+const Link = styled.a`
   ${({ script }) => script && getLongPrimer(script)};
   ${({ service }) => getSansBold(service)}
   ${({ dir }) =>
@@ -22,7 +23,7 @@ const PodcastLink = styled.a`
     text-decoration: underline;
   }
 
-  &:not(:first-child) {
+  &:not(:first-of-type) > span {
     ${({ dir }) =>
       dir === 'rtl'
         ? `
@@ -33,12 +34,17 @@ const PodcastLink = styled.a`
       border-left: 1px ${C_CLOUD_LIGHT} solid;
       `}
   }
+
+  > span {
+    margin: 0.8125rem 0;
+    display: inline-block;
+  }
 `;
 
-PodcastLink.propTypes = {
-  script: string.isRequired,
+Link.propTypes = {
+  script: shape(scriptPropType).isRequired,
   dir: oneOf(['rtl', 'ltr']).isRequired,
   service: string.isRequired,
 };
 
-export default PodcastLink;
+export default Link;
