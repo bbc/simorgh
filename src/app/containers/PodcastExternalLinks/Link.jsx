@@ -6,7 +6,7 @@ import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 
 const Link = styled.a`
-  ${({ script }) => script && getLongPrimer(script)};
+  ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansBold(service)}
   ${({ dir }) =>
     dir === 'rtl' ? 'padding-left: 1rem' : 'padding-right: 1rem'};
@@ -23,6 +23,11 @@ const Link = styled.a`
     text-decoration: underline;
   }
 
+  > span {
+    margin: 0.8125rem 0;
+    display: inline-block;
+  }
+
   &:not(:first-of-type) > span {
     ${({ dir }) =>
       dir === 'rtl'
@@ -33,11 +38,6 @@ const Link = styled.a`
       padding-left: 1rem;
       border-left: 1px ${C_CLOUD_LIGHT} solid;
       `}
-  }
-
-  > span {
-    margin: 0.8125rem 0;
-    display: inline-block;
   }
 `;
 
