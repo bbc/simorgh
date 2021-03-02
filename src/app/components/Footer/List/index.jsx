@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, shape, element } from 'prop-types';
 import { C_SHADOW } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
@@ -19,68 +19,75 @@ import Link from '../Link';
 
 // Gets the number of grid rows, taking into account the
 // trustProjectLink in the grid being separate, on its own row.
-const getRowCount = (links, columns, trustProjectLink) =>
+const getRowCount = (itemCount, columns, trustProjectLink) =>
   trustProjectLink
-    ? Math.ceil(links.length / columns) + 1
-    : Math.ceil(links.length / columns);
+    ? Math.ceil(itemCount / columns) + 1
+    : Math.ceil(itemCount / columns);
 
 const StyledList = styled.ul`
   border-bottom: 0.0625rem solid ${C_SHADOW};
-  list-style-type: none;
+  column-count: 4;
   margin: 0;
+  list-style-type: none;
   ${({ trustProjectLink }) =>
     trustProjectLink
       ? `padding: 0 0 ${GEL_SPACING};`
       : `padding: ${GEL_SPACING} 0;`}
-  column-count: 4;
+
   @supports (${grid}) {
     display: grid;
     grid-auto-flow: column;
   }
+
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     grid-auto-flow: row;
     column-count: 1;
   }
+
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     grid-column-gap: ${GEL_SPACING};
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(
-      ${({ links, trustProjectLink }) =>
-        getRowCount(links, 2, trustProjectLink)},
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 2, trustProjectLink)},
       auto
     );
     column-count: 2;
   }
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(
-      ${({ links, trustProjectLink }) =>
-        getRowCount(links, 3, trustProjectLink)},
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 3, trustProjectLink)},
       auto
     );
     column-count: 3;
   }
+
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(
-      ${({ links, trustProjectLink }) =>
-        getRowCount(links, 4, trustProjectLink)},
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 4, trustProjectLink)},
       auto
     );
     column-count: 4;
   }
+
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     grid-column-gap: ${GEL_SPACING_DBL};
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(
-      ${({ links, trustProjectLink }) =>
-        getRowCount(links, 5, trustProjectLink)},
+      ${({ itemCount, trustProjectLink }) =>
+        getRowCount(itemCount, 5, trustProjectLink)},
       auto
     );
     column-count: 5;
   }
+
   ${({ trustProjectLink }) =>
     trustProjectLink &&
     `> li:first-of-type {
@@ -99,23 +106,29 @@ const StyledListItem = styled.li`
   break-inside: avoid-column;
 `;
 
-const listItem = (key, text, href, lang) => (
-  <StyledListItem key={key} role="listitem">
-    <Link text={text} href={href} lang={lang} />
-  </StyledListItem>
-);
+const List = ({ elements, trustProjectLink }) => {
+  const listItems = elements.map((elem, index) => (
+    // eslint-disable-next-line react/no-array-index-key
+    <StyledListItem key={index} role="listitem">
+      {elem}
+    </StyledListItem>
+  ));
 
-const List = ({ links, trustProjectLink }) => (
-  <StyledList role="list" trustProjectLink={trustProjectLink} links={links}>
-    {trustProjectLink &&
-      listItem(
-        trustProjectLink.text,
-        trustProjectLink.text,
-        trustProjectLink.href,
+  return (
+    <StyledList
+      role="list"
+      trustProjectLink={trustProjectLink}
+      itemCount={listItems.length}
+    >
+      {trustProjectLink && (
+        <StyledListItem>
+          <Link text={trustProjectLink.text} href={trustProjectLink.href} />
+        </StyledListItem>
       )}
-    {links.map(link => listItem(link.text, link.text, link.href, link.lang))}
-  </StyledList>
-);
+      {listItems}
+    </StyledList>
+  );
+};
 
 const linkPropTypes = shape({
   href: string.isRequired,
@@ -124,7 +137,7 @@ const linkPropTypes = shape({
 });
 
 List.propTypes = {
-  links: arrayOf(linkPropTypes.isRequired).isRequired,
+  elements: arrayOf(element).isRequired,
   trustProjectLink: linkPropTypes,
 };
 

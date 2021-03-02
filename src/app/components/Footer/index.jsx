@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string, node } from 'prop-types';
+import { arrayOf, shape, string, node, bool } from 'prop-types';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getBrevier } from '@bbc/gel-foundations/typography';
 import {
@@ -49,19 +49,36 @@ const SitewideLinks = ({
   trustProjectLink,
   copyrightText,
   externalLink,
+  isAmp,
   script,
   service,
-}) => (
-  <SitewideLinksWrapper script={script} service={service}>
-    <ConstrainedWrapper trustProjectLink={trustProjectLink}>
-      <List links={links} trustProjectLink={trustProjectLink} />
-      <StyledParagraph>
-        {copyrightText}{' '}
-        <Link text={externalLink.text} href={externalLink.href} inline />
-      </StyledParagraph>
-    </ConstrainedWrapper>
-  </SitewideLinksWrapper>
-);
+}) => {
+  const elements = links.map(({ id, text, href, lang }) => {
+    /**
+     * On AMP, we map the 'COOKIE_SETTINGS' link to a button.
+     */
+    if (isAmp && id === 'COOKIE_SETTINGS') {
+      return (
+        <button type="button" lang={lang}>
+          {text}
+        </button>
+      );
+    }
+    return <Link text={text} href={href} lang={lang} />;
+  });
+
+  return (
+    <SitewideLinksWrapper script={script} service={service}>
+      <ConstrainedWrapper trustProjectLink={trustProjectLink}>
+        <List elements={elements} trustProjectLink={trustProjectLink} />
+        <StyledParagraph>
+          {copyrightText}{' '}
+          <Link text={externalLink.text} href={externalLink.href} inline />
+        </StyledParagraph>
+      </ConstrainedWrapper>
+    </SitewideLinksWrapper>
+  );
+};
 
 const linkPropTypes = shape({
   href: string.isRequired,
@@ -73,10 +90,14 @@ SitewideLinks.propTypes = {
   copyrightText: node.isRequired,
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
+  isAmp: bool,
   script: shape({}).isRequired,
   service: string.isRequired,
 };
 
-SitewideLinks.defaultProps = { trustProjectLink: null };
+SitewideLinks.defaultProps = {
+  isAmp: false,
+  trustProjectLink: null,
+};
 
 export default SitewideLinks;
