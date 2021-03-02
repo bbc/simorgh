@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT, C_EBON } from '@bbc/psammead-styles/colours';
@@ -7,8 +7,7 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 
 import { ServiceContext } from '#contexts/ServiceContext';
-import { PodcastContext } from '#contexts/PodcastContext';
-import Link from './PodcastLink';
+import Link from './Link';
 
 const Wrapper = styled.div`
   border-top: 1px ${C_CLOUD_LIGHT} solid;
@@ -23,7 +22,7 @@ const Title = styled.h2`
   color: ${C_EBON};
 `;
 
-const PodcastExternalLinks = ({ brandPid }) => {
+const PodcastExternalLinks = ({ links }) => {
   const { translations, service, script, dir } = useContext(ServiceContext);
   const defaultTranslation = 'This podcast is also available on';
   const title = pathOr(
@@ -32,10 +31,7 @@ const PodcastExternalLinks = ({ brandPid }) => {
     translations,
   );
 
-  const externalLinkData = useContext(PodcastContext);
-  const externalLinks = pathOr([], [brandPid], externalLinkData);
-
-  if (!externalLinks.length) return null;
+  if (!links.length) return null;
 
   return (
     <Wrapper>
@@ -43,7 +39,7 @@ const PodcastExternalLinks = ({ brandPid }) => {
         {title}
       </Title>
       <div>
-        {externalLinks.map(({ linkText, linkUrl }) => (
+        {links.map(({ linkText, linkUrl }) => (
           <Link
             href={linkUrl}
             key={linkText}
@@ -51,7 +47,7 @@ const PodcastExternalLinks = ({ brandPid }) => {
             script={script}
             dir={dir}
           >
-            {linkText}
+            <span>{linkText}</span>
           </Link>
         ))}
       </div>
@@ -60,7 +56,12 @@ const PodcastExternalLinks = ({ brandPid }) => {
 };
 
 PodcastExternalLinks.propTypes = {
-  brandPid: string.isRequired,
+  links: arrayOf(
+    shape({
+      linkText: string.isRequired,
+      linkUrl: string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default PodcastExternalLinks;
