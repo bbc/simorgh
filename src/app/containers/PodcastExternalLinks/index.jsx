@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h2`
   ${({ service }) => getSansRegular(service)}
-  ${({ script }) => getGreatPrimer(script)};
+  ${({ script }) => getGreatPrimer(script)}
   color: ${C_EBON};
 `;
 
