@@ -1,5 +1,3 @@
-import withContext from '../../../contexts/utils/withContext';
-
 const common = {
   p02pc9xp: [
     {
@@ -14,9 +12,9 @@ const common = {
   ],
 };
 
-export const externalLinks = {
+const externalLinks = {
   simp: { ...common },
   trad: { ...common },
 };
 
-export default withContext(externalLinks);
+export default externalLinks;

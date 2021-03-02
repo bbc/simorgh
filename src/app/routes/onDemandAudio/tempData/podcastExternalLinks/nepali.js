@@ -1,6 +1,4 @@
-import withContext from '../../../contexts/utils/withContext';
-
-export const externalLinks = {
+const externalLinks = {
   default: {
     p02pc9w3: [
       {
@@ -16,4 +14,4 @@ export const externalLinks = {
   },
 };
 
-export default withContext(externalLinks);
+export default externalLinks;
