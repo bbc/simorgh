@@ -30,7 +30,7 @@ jest.mock('../Brand', () => jest.fn());
 
 brandMock.mockImplementation(({ focusRef }) => {
   return (
-    <a tabIndex="-1" ref={focusRef}>
+    <a href="#" ref={focusRef}>
       The BBC Brand
     </a>
   );
