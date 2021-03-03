@@ -46,7 +46,21 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
+  background: none;
+  border: none;
+  color: ${C_WHITE};
   cursor: pointer;
+  display: block;
+  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
+  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 `;
 
 const SitewideLinks = ({
