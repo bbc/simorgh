@@ -1,8 +1,7 @@
 /* eslint-disable global-require */
-import React, { useRef, forwardRef, useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import { render } from '@testing-library/react';
 
 let CanonicalContainer;
 let logic;
