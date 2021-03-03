@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const getIconAssetUrl = (service, size) =>
-  `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
+  `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
 
 const createIconLinks = (service, iconSizes, iconType) => {
   return iconSizes.map(size => {
