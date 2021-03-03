@@ -217,6 +217,7 @@ const baseServiceConfig = {
       },
       listen: 'Прослухати',
       watch: 'Дивитися',
+      listenNext: 'Слухати наступний',
       liveLabel: 'LIVE',
       nextLabel: 'NEXT',
       previousRadioShow: 'Попередня радіопрограма',

@@ -210,6 +210,7 @@ export const service = {
         video: '비디오',
         listen: '듣기',
         watch: '보기',
+        listenNext: '다음에피소드듣기',
         liveLabel: 'LIVE',
         nextLabel: '다음',
         previousRadioShow: '이전 라디오 방송',
