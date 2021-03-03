@@ -7,10 +7,9 @@ const RADIO_SERVICE_MAPPINGS = {
 
 export default ({ service, pathname }) => {
   const isPodcast = pathname.includes('podcasts');
-  const isPersianRadio =
-    service === 'persian' && pathname.includes('bbc_persian_radio');
+  const isPersianRadioMasterBrand = pathname.includes('bbc_persian_radio');
 
-  if (isPersianRadio || isPodcast) {
+  if (service === 'persian' && (isPersianRadioMasterBrand || isPodcast)) {
     return 'persian';
   }
 
