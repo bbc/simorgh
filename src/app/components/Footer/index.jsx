@@ -17,6 +17,7 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
 import Link from './Link';
 import List from './List';
+import { AmpCookieSettingsButton } from '#app/containers/ConsentBanner/Banner/cookie.amp';
 
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}
@@ -44,6 +45,10 @@ const StyledParagraph = styled.p`
   padding: ${GEL_SPACING_DBL} 0;
 `;
 
+const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
+  cursor: pointer;
+`;
+
 const SitewideLinks = ({
   links,
   trustProjectLink,
@@ -54,14 +59,11 @@ const SitewideLinks = ({
   service,
 }) => {
   const elements = links.map(({ id, text, href, lang }) => {
-    /**
-     * On AMP, we map the 'COOKIE_SETTINGS' link to a button.
-     */
     if (isAmp && id === 'COOKIE_SETTINGS') {
       return (
-        <button type="button" lang={lang}>
+        <StyledAmpCookieSettingsButton lang={lang}>
           {text}
-        </button>
+        </StyledAmpCookieSettingsButton>
       );
     }
     return <Link text={text} href={href} lang={lang} />;
