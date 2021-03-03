@@ -58,3 +58,12 @@ it('should return service passed in when there is no mapping', () => {
 
   expect(actual).toEqual('pidgin');
 });
+
+it('should return persian for podcast when there is no bbc_persian_radio masterbrand', () => {
+  const actual = getRadioService({
+    service: 'persian',
+    pathname: '/persian/podcasts/example',
+  });
+
+  expect(actual).toEqual('persian');
+});
