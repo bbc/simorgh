@@ -34,7 +34,7 @@ const mockToggleDispatch = jest.fn();
 /* eslint-disable react/prop-types */
 const HeaderContainerWithContext = ({
   pageType,
-  service = 'news',
+  service = 'pidgin',
   serviceContext = pidginServiceConfig,
   bbcOrigin = 'https://www.test.bbc.com',
   variant = 'default',
