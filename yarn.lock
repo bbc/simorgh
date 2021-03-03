@@ -1490,10 +1490,10 @@
     "@bbc/psammead-assets" "^3.1.5"
     "@bbc/psammead-styles" "^7.2.2"
 
-"@bbc/psammead-episode-list@1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-episode-list/-/psammead-episode-list-1.0.20.tgz#183fd847456dfa2ae19dfbedbceccfb06780319f"
-  integrity sha512-HtCxmpJzLo1yHLscSGpt3PJFsDwgTm48E0y3m6/pNL5kxpHfXL4AEKXlun7a5YpiCNbauyXXeOGh3Heq7GDXPA==
+"@bbc/psammead-episode-list@1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-episode-list/-/psammead-episode-list-1.0.21.tgz#f202e2b1eadc4adc2e9f73a9dabb1d02b0604542"
+  integrity sha512-QPKv3S0gY9zGjZD2xkRotlqQkLDr9HmEHyz6kzZVRVXMw0v9sQKCeoy52H17uAteXnC7qX1qlIPBJVjqUNNhrw==
   dependencies:
     "@bbc/gel-foundations" "^6.1.1"
     "@bbc/psammead-assets" "^3.1.5"

@@ -137,29 +137,84 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Déjanos saber si aceptas las cookies',
-          description: {
-            uk: {
-              first: 'Usamos ',
-              linkText: 'cookies',
-              last:
-                ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Aceptar la recopilación de datos y continuar.',
+            reject: 'Rechazar la recopilación de datos y continuar.',
+            initial: {
+              title:
+                'Déjanos saber que aceptas la recopilación de datos en AMP',
+              description: {
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                linkText: 'cookies',
+                last:
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Administrar mi configuración',
             },
-            international: {
-              first: 'Nosotros y nuestros socios usamos tecnologías, como las ',
-              linkText: 'cookies',
-              last:
-                ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                'Administrar la configuración de consentimiento en las páginas AMP',
+              description: {
+                para1:
+                  'Esta configuración se aplica solo a las páginas AMP. Es posible que se te solicitemos establecer estas preferencias nuevamente cuando visites páginas de la BBC que no sean AMP.',
+                para2:
+                  'La página móvil liviana que has visitado se creó con la tecnología AMP de Google.',
+                heading2: 'Recopilación de datos estrictamente necesaria',
+                para3:
+                  'Para que nuestras páginas web funcionen, almacenamos cierta información limitada en tu dispositivo sin tu consentimiento.',
+                para4: {
+                  text:
+                    'Lee más más sobre la información esencial que almacenamos en tu dispositivo para que nuestras páginas web funcionen (en inglés).',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Usamos almacenamiento local para guardar tus preferencias de consentimiento en tu dispositivo.',
+                heading3: 'Recopilación de datos opcional',
+                para6:
+                  'Al dar tu consentimiento para la recopilación de datos en las páginas AMP, nos das tu consentimiento para mostrarte anuncios personalizados que sean relevantes para ti cuando te encuentras fuera de Reino Unido.',
+                para7: {
+                  text:
+                    'Obtén más información sobre cómo personalizamos los anuncios en la BBC y sobre nuestros socios publicitarios (en inglés).',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Puedes optar por no recibir anuncios personalizados haciendo clic en "Rechazar la recopilación de datos y continuar". Ten en cuenta que seguirás viendo publicidad, pero no se personalizará para ti.',
+                para9:
+                  'Puedes cambiar esta configuración haciendo clic en "Ad Choices / Do not sell my info" ("Opciones de anuncios / No vender mi información") en la parte inferior de nuestra página en cualquier momento.',
+              },
             },
           },
-          accept: 'Sí, estoy de acuerdo',
-          reject: 'No, llévame a la configuración',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Déjanos saber si aceptas las cookies',
+            description: {
+              uk: {
+                first: 'Usamos ',
+                linkText: 'cookies',
+                last:
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                linkText: 'cookies',
+                last:
+                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Sí, estoy de acuerdo',
+            reject: 'No, llévame a la configuración',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -172,6 +227,7 @@ export const service = {
         video: 'Video',
         listen: 'Escuchar',
         watch: 'Ver',
+        listenLive: 'Escuchar en vivo',
         liveLabel: 'EN VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Programa anterior',
