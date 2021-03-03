@@ -76,7 +76,7 @@ const ImageWithPlaceholder = ({
         </>
       ) : (
         <ImagePlaceholder
-          style={{ background: isLoaded && 'none' }}
+          style={isLoaded ? { background: 'none' } : null}
           ratio={ratio}
         >
           {renderImage(imageToRender, lazyLoad, fallback)}
