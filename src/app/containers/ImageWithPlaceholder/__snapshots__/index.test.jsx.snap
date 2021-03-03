@@ -53,6 +53,7 @@ exports[`ImageWithPlaceholder should render a fallback when AMP image fails to l
     height="360"
     layout="responsive"
     src="foo"
+    srcset="foo 640w"
     width="640"
   >
     <div
@@ -119,6 +120,7 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
     height="360"
     layout="responsive"
     src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+    srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
     width="640"
   >
     <div
