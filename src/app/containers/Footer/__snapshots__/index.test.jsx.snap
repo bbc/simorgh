@@ -116,12 +116,10 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 .emotion-10 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #222222;
 }
 
 @media (max-width: 25rem) {
@@ -136,18 +134,6 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    font-size: 0.8125rem;
-  }
-}
-
 .emotion-12 {
   max-width: 80rem;
   margin: 0 auto;
@@ -155,11 +141,11 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .emotion-14 {
   border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0.5rem 0;
   -webkit-column-count: 4;
   column-count: 4;
+  margin: 0;
+  list-style-type: none;
+  padding: 0.5rem 0;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {

@@ -710,12 +710,26 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-150 {
-  background-color: #222222;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-150 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-150 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
 }
 
 @media (max-width: 25rem) {
@@ -730,31 +744,19 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-150 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-150 {
-    font-size: 0.8125rem;
-  }
-}
-
 .emotion-152 {
   max-width: 80rem;
   margin: 0 auto;
-  padding-top: 0.5rem);
+  padding-top: 0.5rem;
 }
 
 .emotion-154 {
   border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
   -webkit-column-count: 4;
   column-count: 4;
+  margin: 0;
+  list-style-type: none;
+  padding: 0 0 0.5rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
@@ -1366,7 +1368,6 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           >
             <li
               class="emotion-156 emotion-157"
-              role="listitem"
             >
               <a
                 class="emotion-158 emotion-159"
