@@ -126,29 +126,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tumenyesha niba wemeye cookies',
-          description: {
-            uk: {
-              first: 'Dukoresha ',
-              linkText: 'cookies',
-              last:
-                ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: "Emera itkusanywa ry'ibikuranga hanyuma ubandanye",
+            reject: "Anka ikusanywa ry'ibikuranga hanyuma ubandanye",
+            initial: {
+              title: 'Tumenyeshe nimba wemeye ko dukusanya ibikuranda kuri AMP',
+              description: {
+                first: "Twebwe n'abo dukorana dukoresha ikoranabuhinga, nka ",
+                linkText: 'cookies',
+                last:
+                  ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Tunganya integurwa zanje',
             },
-            international: {
-              first: "Twebwe n'abo dukorana dukoresha ikoranabuhinga, nka ",
-              linkText: 'cookies',
-              last:
-                ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Tunganya integurwa  ku mpapuro za AMP',
+              description: {
+                para1:
+                  'Izi ntegurwa ziraba gusa impapuro za AMP. Urashobora gusabwa gusubira gutegura mu buryo ubishima iyo ugiye ku mpapuro za BBC zidakoresha AMP.',
+                para2:
+                  'Urupapuro ruhwahwutse rwa mobile wagiyeko rwatunganijwe hakoreshejwe ubuhinga bwa Google AMP.',
+                heading2: 'Gukusanya ibikuranga ni ngombwa cane',
+                para3:
+                  "Kugira impapuro z'urubuga rwacu zikore, turabika amakuru amwe amwe ku cuma cawe utarinze kubitwemerera.",
+                para4: {
+                  text:
+                    "Soma ibindi vyinshi ku makuru ya nkenerwa tubika ku cuma cawe kugira impapuro z'imbuga zacu zikore neza.",
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Dukoresha ububiko bwawe kugira tubike ku cuma cawe ivyo ushima wemeye.',
+                heading3: 'Gukusanya amakuru ku buryo bwo guhitamwo',
+                para6:
+                  "Iyo wemeye ikusanywa ry'ibikuranga ku mpapuro za AMP uba wemeye yuko uturetse tukakwereka ibirangishwa bikwerekeye iyo uri hanze y'Ubwongereza.",
+                para7: {
+                  text:
+                    "Soma ibindi vyinshi ku kuntu dutegura ibirangishwa bikwerekeye kuri BBC hamwe n'abarangisha dukorana.",
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Urashobora guhitamwo kutaronswa ibirangishwa bikwerekeye mu gufyonda "Anka ikusanywa ry\'ibikuranga hanyuma ubandanye" aho munsi. Twokumenyesha yuko uzoguma ubona ibirangishwa, ariko ntibizoba bikwerekeye bwite.',
+                para9:
+                  'Urashobora guhindura izi ntegurwa mu gukanda kuri "Ongera amahitamwo / Ntugurishire ibindanda" mu nyandiko zo munsi igihe cose ushatse.',
+              },
             },
           },
-          accept: 'Ego, ndavyemeye',
-          reject: 'Oya, njana aho bihindurirwa',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Tumenyesha niba wemeye cookies',
+            description: {
+              uk: {
+                first: 'Dukoresha ',
+                linkText: 'cookies',
+                last:
+                  ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: "Twebwe n'abo dukorana dukoresha ikoranabuhinga, nka ",
+                linkText: 'cookies',
+                last:
+                  ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ego, ndavyemeye',
+            reject: 'Oya, njana aho bihindurirwa',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -165,6 +216,7 @@ export const service = {
         },
         listen: 'Umviriza',
         watch: 'Raba',
+        listenLive: 'Umviriza live',
         liveLabel: 'IKIBIRIRAHO',
         nextLabel: 'IBIKURIKIRA',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
