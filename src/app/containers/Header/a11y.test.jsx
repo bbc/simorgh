@@ -58,7 +58,7 @@ describe('a11y', () => {
   it('should focus on brand link on consent banner dismiss', async () => {
     /* eslint-disable react/prop-types */
 
-    const HeaderContainerWithContext2 = ({
+    const HeaderContainerWithContext = ({
       pageType,
       service = 'news',
       serviceContext = newsServiceConfig,
@@ -88,7 +88,7 @@ describe('a11y', () => {
     );
 
     const { getByText } = render(
-      HeaderContainerWithContext2({
+      HeaderContainerWithContext({
         pageType: FRONT_PAGE,
       }),
     );
