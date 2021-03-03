@@ -224,6 +224,7 @@ export const service = {
         listen: 'استمع',
         watch: 'شاهد',
         listenLive: 'استمع للبث المباشر',
+        listenNext: 'واصل الاستماع',
         liveLabel: 'مباشر',
         nextLabel: 'لاحق',
         previousRadioShow: 'البرنامج الإذاعي السابق',
