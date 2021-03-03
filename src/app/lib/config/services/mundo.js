@@ -228,6 +228,7 @@ export const service = {
         listen: 'Escuchar',
         watch: 'Ver',
         listenLive: 'Escuchar en vivo',
+        listenNext: 'Escuchar el siguiente',
         liveLabel: 'EN VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Programa anterior',

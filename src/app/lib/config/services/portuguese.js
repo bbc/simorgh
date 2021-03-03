@@ -228,6 +228,7 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',

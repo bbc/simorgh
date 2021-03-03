@@ -216,6 +216,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         listenLive: 'لائیو سنیں',
+        listenNext: 'اگلی قسط سنی',
         liveLabel: 'لائیو',
         nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',

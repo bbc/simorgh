@@ -229,6 +229,7 @@ export const service = {
         listen: 'واورئ',
         watch: 'و یې ګورئ',
         listenLive: 'ژوندۍ خپرونه واورئ',
+        listenNext: 'راتلونکې برخه واورئ ',
         liveLabel: 'ژوندۍ',
         nextLabel: 'بل',
         previousRadioShow: 'تېره راډیویي‌ خپرونه',
