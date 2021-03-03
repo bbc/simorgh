@@ -165,7 +165,7 @@ describe('Canonical Consent Banner Container', () => {
       const focusRef = useRef(null);
       return (
         <>
-          <a href="#" ref={focusRef}>
+          <a href="/" ref={focusRef}>
             BBC Brand Logo
           </a>
           <CanonicalContainer onDismissFocusRef={focusRef} />

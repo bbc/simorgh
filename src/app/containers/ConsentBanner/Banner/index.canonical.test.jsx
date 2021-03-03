@@ -1,8 +1,8 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Banner from './index.canonical';
-import { render } from '@testing-library/react';
 
 describe('Canonical Consent Banner Container', () => {
   const privacy = ({ description, service }) =>

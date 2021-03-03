@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { service as newsServiceConfig } from '#lib/config/services/news';
-const bannerMock = require('../ConsentBanner');
-const brandMock = require('../Brand');
 import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { service as newsServiceConfig } from '#lib/config/services/news';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import HeaderContainer from './index';
+
+const bannerMock = require('../ConsentBanner');
+const brandMock = require('../Brand');
 
 const defaultToggleState = {
   navOnArticles: {
@@ -30,7 +31,7 @@ jest.mock('../Brand', () => jest.fn());
 
 brandMock.mockImplementation(({ focusRef }) => {
   return (
-    <a href="#" ref={focusRef}>
+    <a href="/" ref={focusRef}>
       The BBC Brand
     </a>
   );
@@ -42,6 +43,7 @@ bannerMock.mockImplementation(({ onDismissFocusRef }) => {
     <>
       <div>Do you consent?</div>
       <button
+        type="button"
         onClick={() => {
           console.log('click');
           setShowBanner(false);
