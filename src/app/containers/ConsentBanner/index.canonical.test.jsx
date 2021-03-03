@@ -162,14 +162,13 @@ describe('Canonical Consent Banner Container', () => {
   });
 
   it('should focus on provided ref when cookie banner is accepted', () => {
-    const FocusElement = forwardRef((props, ref) => (
-      <a ref={ref}>BBC Brand Logo</a>
-    ));
     const TestComponent = () => {
       const focusRef = useRef(null);
       return (
         <>
-          <FocusElement ref={focusRef} />
+          <a tabIndex="-1" ref={focusRef}>
+            BBC Brand Logo
+          </a>
           <CanonicalContainer onDismissFocusRef={focusRef} />
         </>
       );
@@ -183,6 +182,8 @@ describe('Canonical Consent Banner Container', () => {
 
     Banner.mock.calls[0][0].onAccept();
 
-    expect(document.querySelector('a').text).toBe('BBC Brand Logo');
+    const brand = document.querySelector('a');
+    expect(brand.text).toBe('BBC Brand Logo');
+    expect(document.activeElement).toBe(brand);
   });
 });
