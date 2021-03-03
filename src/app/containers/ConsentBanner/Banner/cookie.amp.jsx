@@ -163,6 +163,21 @@ const ManageSettingsButton = styled.button`
   color: ${C_CONSENT_ACTION};
 `;
 
+/**
+ * AmpCookieSettingsButton is a control that can be used externally to display
+ * the Manage Cookie Settings banner.
+ */
+// eslint-disable-next-line react/prop-types
+export const AmpCookieSettingsButton = ({ children, ...rest }) => (
+  <button
+    on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
+    type="button"
+    {...rest}
+  >
+    {children}
+  </button>
+);
+
 const AmpCookieBanner = ({
   id,
   translations,
