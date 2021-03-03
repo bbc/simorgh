@@ -217,6 +217,7 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         listenLive: 'Kallattiin caqasaa',
+        listenNext: 'Kan ittaanu caqasi',
         liveLabel: 'KALLATTIIN',
         nextLabel: 'KAN ITTAANU',
         previousRadioShow: 'Sagantaa raadiyoo dabre',
