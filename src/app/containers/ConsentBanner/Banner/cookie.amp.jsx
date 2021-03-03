@@ -172,6 +172,7 @@ export const AmpCookieSettingsButton = ({ children, ...rest }) => (
   <button
     on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
     type="button"
+    data-testid="amp-cookie-settings-button"
     {...rest}
   >
     {children}
