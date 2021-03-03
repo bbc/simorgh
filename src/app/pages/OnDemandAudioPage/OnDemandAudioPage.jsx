@@ -76,6 +76,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     episodeId,
     releaseDateTimeStamp,
     imageUrl,
+    imageAltText,
     promoBrandTitle,
     durationISO8601,
     thumbnailImageUrl,
@@ -175,7 +176,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               )}
             </StyledGridItemParagraph>
             <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage imageUrl={imageUrl} />
+              <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
             </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
@@ -247,6 +248,7 @@ OnDemandAudioPage.propTypes = {
     language: string,
     releaseDateTimeStamp: number,
     imageUrl: string,
+    imageAltText: string,
     episodeTitle: string,
   }).isRequired,
 };
