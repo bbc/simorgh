@@ -50,87 +50,85 @@ describe('AMP Ads', () => {
   });
 
   describe('Assertions', () => {
-    describe('When ampAds is toggled on', () => {
-      it('should render two leaderboard ads', () => {
-        const { container } = render(adWithContext('leaderboard'));
-        const ampAd = container.querySelectorAll('amp-ad');
+    it('should render two leaderboard ads', () => {
+      const { container } = render(adWithContext('leaderboard'));
+      const ampAd = container.querySelectorAll('amp-ad');
 
-        expect(ampAd.length).toBe(2);
-      });
+      expect(ampAd.length).toBe(2);
+    });
 
-      it('should display leaderboard ad with values for all of the needed attributes', () => {
-        const { container } = render(adWithContext('leaderboard'));
+    it('should display leaderboard ad with values for all of the needed attributes', () => {
+      const { container } = render(adWithContext('leaderboard'));
 
-        const ampAd = container.querySelectorAll('amp-ad');
-        ampAd.forEach(ad => {
-          expect(ad).toHaveAttribute('data-block-on-consent', 'default');
-          expect(ad).toHaveAttribute('data-npa-on-unknown-consent', 'true');
-          expect(ad).toHaveAttribute('media');
-          expect(ad).toHaveAttribute('type');
-          expect(ad).toHaveAttribute('width');
-          expect(ad).toHaveAttribute('height');
-          expect(ad).toHaveAttribute('data-multi-size');
-          expect(ad).toHaveAttribute('data-slot');
-          expect(ad).toHaveAttribute('data-amp-slot-index');
-          expect(ad).toHaveAttribute('data-a4a-upgrade-type');
-          expect(ad).toHaveAttribute(
-            'json',
-            JSON.stringify(adJsonAttributes('leaderboard')),
-          );
-        });
-      });
-
-      it('should render one mpu ad', () => {
-        const { container } = render(adWithContext('mpu'));
-        const ampAd = container.querySelectorAll('amp-ad');
-
-        expect(ampAd.length).toBe(1);
-      });
-
-      it('should display mpu ad with values for all of the needed attributes', () => {
-        const { container } = render(adWithContext('mpu'));
-
-        const ampAd = container.querySelectorAll('amp-ad');
-        ampAd.forEach(ad => {
-          expect(ad).toHaveAttribute('data-block-on-consent', 'default');
-          expect(ad).toHaveAttribute('data-npa-on-unknown-consent', 'true');
-          expect(ad).toHaveAttribute('type');
-          expect(ad).toHaveAttribute('width');
-          expect(ad).toHaveAttribute('height');
-          expect(ad).toHaveAttribute('data-multi-size');
-          expect(ad).toHaveAttribute('data-slot');
-          expect(ad).toHaveAttribute('data-amp-slot-index');
-          expect(ad).toHaveAttribute('data-a4a-upgrade-type');
-          expect(ad).toHaveAttribute(
-            'json',
-            JSON.stringify(adJsonAttributes('mpu')),
-          );
-        });
-      });
-
-      it('should render an `advertisement` label', () => {
-        const { container } = render(adWithContext('leaderboard'));
-        const links = container.querySelectorAll('a');
-        const advertisementLabel = links && links[0];
-        expect(advertisementLabel.textContent).toEqual('Publicités');
-        expect(advertisementLabel).toHaveAttribute('tabIndex', '-1');
+      const ampAd = container.querySelectorAll('amp-ad');
+      ampAd.forEach(ad => {
+        expect(ad).toHaveAttribute('data-block-on-consent', 'default');
+        expect(ad).toHaveAttribute('data-npa-on-unknown-consent', 'true');
+        expect(ad).toHaveAttribute('media');
+        expect(ad).toHaveAttribute('type');
+        expect(ad).toHaveAttribute('width');
+        expect(ad).toHaveAttribute('height');
+        expect(ad).toHaveAttribute('data-multi-size');
+        expect(ad).toHaveAttribute('data-slot');
+        expect(ad).toHaveAttribute('data-amp-slot-index');
+        expect(ad).toHaveAttribute('data-a4a-upgrade-type');
+        expect(ad).toHaveAttribute(
+          'json',
+          JSON.stringify(adJsonAttributes('leaderboard')),
+        );
       });
     });
 
-    describe('AMP_ACCESS_FETCH', () => {
-      it('should retrieve data from the correct endpoint', () => {
-        const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
-        const ampAccessData = ampAccessFetch('afrique');
-        const expectedReturn =
-          'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=afrique';
+    it('should render one mpu ad', () => {
+      const { container } = render(adWithContext('mpu'));
+      const ampAd = container.querySelectorAll('amp-ad');
 
-        expect(ampAccessFetch).toHaveReturned();
-        expect(ampAccessFetch).toHaveBeenCalledWith('afrique');
-        expect(ampAccessData.type).toEqual('script');
-        expect(JSON.parse(ampAccessData.props.children).authorization).toEqual(
-          expectedReturn,
+      expect(ampAd.length).toBe(1);
+    });
+
+    it('should display mpu ad with values for all of the needed attributes', () => {
+      const { container } = render(adWithContext('mpu'));
+
+      const ampAd = container.querySelectorAll('amp-ad');
+      ampAd.forEach(ad => {
+        expect(ad).toHaveAttribute('data-block-on-consent', 'default');
+        expect(ad).toHaveAttribute('data-npa-on-unknown-consent', 'true');
+        expect(ad).toHaveAttribute('type');
+        expect(ad).toHaveAttribute('width');
+        expect(ad).toHaveAttribute('height');
+        expect(ad).toHaveAttribute('data-multi-size');
+        expect(ad).toHaveAttribute('data-slot');
+        expect(ad).toHaveAttribute('data-amp-slot-index');
+        expect(ad).toHaveAttribute('data-a4a-upgrade-type');
+        expect(ad).toHaveAttribute(
+          'json',
+          JSON.stringify(adJsonAttributes('mpu')),
         );
       });
+    });
+
+    it('should render an `advertisement` label', () => {
+      const { container } = render(adWithContext('leaderboard'));
+      const links = container.querySelectorAll('a');
+      const advertisementLabel = links && links[0];
+      expect(advertisementLabel.textContent).toEqual('Publicités');
+      expect(advertisementLabel).toHaveAttribute('tabIndex', '-1');
+    });
+  });
+
+  describe('AMP_ACCESS_FETCH', () => {
+    it('should retrieve data from the correct endpoint', () => {
+      const ampAccessFetch = jest.fn().mockImplementation(AMP_ACCESS_FETCH);
+      const ampAccessData = ampAccessFetch('afrique');
+      const expectedReturn =
+        'https://mock-toggles-endpoint.bbc.co.uk?application=simorgh&service=afrique';
+
+      expect(ampAccessFetch).toHaveReturned();
+      expect(ampAccessFetch).toHaveBeenCalledWith('afrique');
+      expect(ampAccessData.type).toEqual('script');
+      expect(JSON.parse(ampAccessData.props.children).authorization).toEqual(
+        expectedReturn,
+      );
     });
   });
 });
