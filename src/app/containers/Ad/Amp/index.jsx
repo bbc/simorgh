@@ -106,18 +106,15 @@ const AmpAd = ({ slotType }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <AdSection
-        aria-label={ariaLabel}
-        role="region"
-        data-e2e="advertisement"
-        aria-hidden="true"
-      >
-        <AdContainer slotType={slotType}>
-          <StyledWrapper>
-            <DisplayWrapper
-              amp-access="toggles.ads.enabled"
-              amp-access-hide="true"
-            >
+      <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
+        <AdSection
+          aria-label={ariaLabel}
+          role="region"
+          data-e2e="advertisement"
+          aria-hidden="true"
+        >
+          <AdContainer slotType={slotType}>
+            <StyledWrapper>
               <StyledLink
                 href={LABEL_LINK}
                 script={script}
@@ -128,10 +125,10 @@ const AmpAd = ({ slotType }) => {
                 {label}
               </StyledLink>
               <AdSlot service={service} slotType={slotType} />
-            </DisplayWrapper>
-          </StyledWrapper>
-        </AdContainer>
-      </AdSection>
+            </StyledWrapper>
+          </AdContainer>
+        </AdSection>
+      </DisplayWrapper>
     </>
   );
 };
