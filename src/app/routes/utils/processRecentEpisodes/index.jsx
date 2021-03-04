@@ -41,14 +41,11 @@ const excludeEpisode = idToExclude => episode =>
 const processRecentEpisodes = (
   pageData,
   { recentEpisodesLimit = 4, exclude = null } = {},
-) => {
-  // const wat = path(['relatedContent', 'groups', 0, 'promos'], pageData);
-
-  return path(['relatedContent', 'groups', 0, 'promos'], pageData)
+) =>
+  path(['relatedContent', 'groups', 0, 'promos'], pageData)
     .filter(validateEpisode)
     .filter(excludeEpisode(exclude))
     .map(formatEpisode)
     .slice(0, recentEpisodesLimit);
-};
 
 export default processRecentEpisodes;
