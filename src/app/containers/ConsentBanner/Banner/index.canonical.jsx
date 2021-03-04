@@ -51,7 +51,7 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
     if (consentBannerRef) {
       consentBannerRef.current.focus();
     }
-  });
+  }, []);
 
   return (
     <ConsentBannerWrapper>
