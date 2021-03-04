@@ -56,7 +56,7 @@ const HeaderContainer = () => {
         borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink && <ScriptLink />}
-        focusRef={brandFocusRef}
+        linkRef={brandFocusRef}
       />
       {showNav && <NavigationContainer />}
     </header>

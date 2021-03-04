@@ -3,7 +3,7 @@ import Brand from '@bbc/psammead-brand';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const BrandContainer = ({ skipLink, scriptLink, focusRef, ...props }) => {
+const BrandContainer = ({ skipLink, scriptLink, linkRef, ...props }) => {
   const {
     product,
     serviceLocalizedName,
@@ -32,7 +32,7 @@ const BrandContainer = ({ skipLink, scriptLink, focusRef, ...props }) => {
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}
-      focusRef={focusRef}
+      focusRef={linkRef}
       {...props}
     />
   );
@@ -44,7 +44,7 @@ BrandContainer.propTypes = {
   skipLink: node,
   scriptLink: node,
   // eslint-disable-next-line react/forbid-prop-types
-  focusRef: oneOfType([func, shape({ current: any })]),
+  linkRef: oneOfType([func, shape({ current: any })]),
 };
 
 BrandContainer.defaultProps = {
@@ -52,7 +52,7 @@ BrandContainer.defaultProps = {
   borderBottom: false,
   skipLink: null,
   scriptLink: null,
-  focusRef: null,
+  linkRef: null,
 };
 
 export default BrandContainer;
