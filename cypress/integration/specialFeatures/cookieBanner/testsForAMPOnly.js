@@ -89,7 +89,7 @@ export default ({ service, variant, pageType, path }) => {
     getPrivacyBanner(service, variant).should('be.visible');
   });
 
-  it.only('should show the manage cookie settings banner when the cookie settings button in the footer is clicked', () => {
+  it('should show the manage cookie settings banner when the cookie settings button in the footer is clicked', () => {
     /**
      * Accept the Privacy and Cookie consent banner.
      */
