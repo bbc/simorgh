@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const adJsonAttributes = slotType => ({
@@ -15,7 +14,7 @@ const adJsonAttributes = slotType => ({
   },
 });
 
-const adWithContext = (slotType, toggleContext) => (
+const adWithContext = slotType => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
@@ -24,9 +23,7 @@ const adWithContext = (slotType, toggleContext) => (
     pathname="/"
   >
     <ServiceContextProvider service="afrique">
-      <ToggleContext.Provider value={toggleContext}>
-        <AmpAd slotType={slotType} />
-      </ToggleContext.Provider>
+      <AmpAd slotType={slotType} />
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -41,58 +38,28 @@ describe('AMP Ads', () => {
   });
 
   describe('Snapshots', () => {
-    const toggleState = {
-      ampAds: {
-        enabled: true,
-      },
-    };
-
-    const mockToggleDispatch = jest.fn();
-
-    const toggleContextMock = {
-      toggleState,
-      toggleDispatch: mockToggleDispatch,
-    };
-
     shouldMatchSnapshot(
       'should correctly render an AMP leaderboard ad',
-      adWithContext('leaderboard', toggleContextMock),
+      adWithContext('leaderboard'),
     );
 
     shouldMatchSnapshot(
       'should correctly render an AMP mpu ad',
-      adWithContext('mpu', toggleContextMock),
+      adWithContext('mpu'),
     );
   });
 
   describe('Assertions', () => {
     describe('When ampAds is toggled on', () => {
-      const toggleState = {
-        ampAds: {
-          enabled: true,
-        },
-      };
-
-      const mockToggleDispatch = jest.fn();
-
-      const toggleContextMock = {
-        toggleState,
-        toggleDispatch: mockToggleDispatch,
-      };
-
       it('should render two leaderboard ads', () => {
-        const { container } = render(
-          adWithContext('leaderboard', toggleContextMock),
-        );
+        const { container } = render(adWithContext('leaderboard'));
         const ampAd = container.querySelectorAll('amp-ad');
 
         expect(ampAd.length).toBe(2);
       });
 
       it('should display leaderboard ad with values for all of the needed attributes', () => {
-        const { container } = render(
-          adWithContext('leaderboard', toggleContextMock),
-        );
+        const { container } = render(adWithContext('leaderboard'));
 
         const ampAd = container.querySelectorAll('amp-ad');
         ampAd.forEach(ad => {
@@ -114,14 +81,14 @@ describe('AMP Ads', () => {
       });
 
       it('should render one mpu ad', () => {
-        const { container } = render(adWithContext('mpu', toggleContextMock));
+        const { container } = render(adWithContext('mpu'));
         const ampAd = container.querySelectorAll('amp-ad');
 
         expect(ampAd.length).toBe(1);
       });
 
       it('should display mpu ad with values for all of the needed attributes', () => {
-        const { container } = render(adWithContext('mpu', toggleContextMock));
+        const { container } = render(adWithContext('mpu'));
 
         const ampAd = container.querySelectorAll('amp-ad');
         ampAd.forEach(ad => {
@@ -142,42 +109,11 @@ describe('AMP Ads', () => {
       });
 
       it('should render an `advertisement` label', () => {
-        const { container } = render(
-          adWithContext('leaderboard', toggleContextMock),
-        );
+        const { container } = render(adWithContext('leaderboard'));
         const links = container.querySelectorAll('a');
         const advertisementLabel = links && links[0];
         expect(advertisementLabel.textContent).toEqual('Publicités');
         expect(advertisementLabel).toHaveAttribute('tabIndex', '-1');
-      });
-    });
-
-    describe('When ampAds is toggled off', () => {
-      const toggleState = {
-        ampAds: {
-          enabled: false,
-        },
-      };
-
-      const mockToggleDispatch = jest.fn();
-
-      const toggleContextMock = {
-        toggleState,
-        toggleDispatch: mockToggleDispatch,
-      };
-
-      it('should not render mpu ads on AMP when ampAds toggle is set to false', () => {
-        const { container } = render(adWithContext('mpu', toggleContextMock));
-
-        expect(container.firstChild).toBeNull();
-      });
-
-      it('should not render leaderboard ads on AMP when ampAds toggle is set to false', () => {
-        const { container } = render(
-          adWithContext('leaderboard', toggleContextMock),
-        );
-
-        expect(container.firstChild).toBeNull();
       });
     });
 
