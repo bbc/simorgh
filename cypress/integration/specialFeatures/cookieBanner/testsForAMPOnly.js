@@ -82,7 +82,7 @@ export default ({ service, variant, pageType, path }) => {
 
     getPrivacyBannerAccept(service, variant).click();
     getCookieBannerManageSettingsButton(service, variant).click();
-    getCookieBannerManageSettings(service, variant).should('be.visible');
+    getCookieBannerManageSettings().should('be.visible');
 
     cy.reload();
 
