@@ -9,7 +9,7 @@ describe('getPodcastExternalLinks', () => {
       ...hausaExternalLinks.default.p08mlgcb,
       {
         linkText: 'RSS',
-        linkUrl: 'http://podcasts.files.bbci.co.uk/p08mlgcb.rss',
+        linkUrl: 'https://podcasts.files.bbci.co.uk/p08mlgcb.rss',
       },
     ];
     expect(links).toEqual(expectedLinks);
@@ -30,7 +30,7 @@ describe('getPodcastExternalLinks', () => {
     expect(otherLinks).toEqual([
       {
         linkText: 'RSS',
-        linkUrl: 'http://podcasts.files.bbci.co.uk/bar.rss',
+        linkUrl: 'https://podcasts.files.bbci.co.uk/bar.rss',
       },
     ]);
   });
@@ -41,7 +41,7 @@ describe('getPodcastExternalLinks', () => {
       ...zhongwenExternalLinks.simp.p02pc9xp,
       {
         linkText: 'RSS',
-        linkUrl: 'http://podcasts.files.bbci.co.uk/p02pc9xp.rss',
+        linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9xp.rss',
       },
     ];
     expect(links).toEqual(expectedLinks);

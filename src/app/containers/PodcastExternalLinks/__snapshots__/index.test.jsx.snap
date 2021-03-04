@@ -68,14 +68,14 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   text-decoration: underline;
 }
 
-.emotion-4:not(:first-of-type)>span {
-  padding-left: 1rem;
-  border-left: 1px #BABABA solid;
-}
-
 .emotion-4>span {
   margin: 0.8125rem 0;
   display: inline-block;
+}
+
+.emotion-4:not(:first-of-type)>span {
+  padding-left: 1rem;
+  border-left: 1px #BABABA solid;
 }
 
 <div>

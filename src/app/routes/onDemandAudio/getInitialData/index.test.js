@@ -74,7 +74,7 @@ describe('Get initial data for on demand radio', () => {
       ...arabicExternalLinks.default.p02pc9qc,
       {
         linkText: 'RSS',
-        linkUrl: 'http://podcasts.files.bbci.co.uk/p02pc9qc.rss',
+        linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9qc.rss',
       },
     ]);
   });
