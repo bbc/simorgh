@@ -39,14 +39,14 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
   );
 
   if (headlineBlocks.length > 0) {
-    if (imageOrAresMediaFirst(mainBlocks) && json.metadata.type === 'STY') {
+    if (firstBlockIsMedia(mainBlocks) && json.metadata.type === 'STY') {
       json.content.model.blocks = [
         ...headlineBlocks,
         timestampBlock,
         mainBlocks[0],
         ...mainBlocks.slice(1),
       ];
-    } else if (imageOrAresMediaFirst(mainBlocks)) {
+    } else if (firstBlockIsMedia(mainBlocks)) {
       json.content.model.blocks = [
         ...headlineBlocks,
         mainBlocks[0],
@@ -79,6 +79,5 @@ const splitBlocksByHeadline = blocks => {
   return { headlineBlocks, mainBlocks };
 };
 
-const imageOrAresMediaFirst = blocks =>
-  blocks.length > 0 &&
-  (blocks[0].type === 'image' || blocks[0].type === 'aresMedia');
+const firstBlockIsMedia = blocks =>
+  blocks.length > 0 && ['image', 'aresMedia', 'video'].includes(blocks[0].type);
