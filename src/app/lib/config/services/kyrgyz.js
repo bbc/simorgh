@@ -306,6 +306,7 @@ export const service = {
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
