@@ -16,6 +16,8 @@ const validateEpisode = episode => {
       is(String, episode.media.versions[0].durationISO8601),
       is(Number, episode.releaseDateTimestamp),
     ];
+    console.log(episode.media.versions, '- versions');
+    console.log(checks, '- checks');
 
     return checks.every(Boolean);
   } catch {
@@ -39,11 +41,14 @@ const excludeEpisode = idToExclude => episode =>
 const processRecentEpisodes = (
   pageData,
   { recentEpisodesLimit = 4, exclude = null } = {},
-) =>
-  path(['relatedContent', 'groups', 0, 'promos'], pageData)
+) => {
+  // const wat = path(['relatedContent', 'groups', 0, 'promos'], pageData);
+
+  return path(['relatedContent', 'groups', 0, 'promos'], pageData)
     .filter(validateEpisode)
     .filter(excludeEpisode(exclude))
     .map(formatEpisode)
     .slice(0, recentEpisodesLimit);
+};
 
 export default processRecentEpisodes;
