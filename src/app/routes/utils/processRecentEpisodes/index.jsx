@@ -15,6 +15,7 @@ const validateEpisode = episode => {
       is(String, episode.media.versions[0].durationISO8601),
       is(Number, episode.releaseDateTimestamp),
     ];
+
     return checks.every(Boolean);
   } catch {
     return false;
