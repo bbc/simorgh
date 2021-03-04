@@ -114,7 +114,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
     translations,
   );
 
-  const listenLabels = {
+  const listenLabelTranslations = {
     live: listenLive,
     next: listenNext,
     onDemand: listen,
@@ -191,7 +191,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
           liveLabel={liveLabel}
           nextLabel={nextLabel}
           durationLabel={durationLabel}
-          listenLabels={listenLabels}
+          listenLabelTranslations={listenLabelTranslations}
         />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
