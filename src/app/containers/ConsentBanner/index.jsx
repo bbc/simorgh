@@ -5,11 +5,7 @@ import Amp from './index.amp';
 
 const ConsentBanner = forwardRef(({ ...props }, onDismissFocusRef) => {
   const { isAmp } = useContext(RequestContext);
-  return isAmp ? (
-    <Amp />
-  ) : (
-    <Canonical onDismissFocusRef={onDismissFocusRef} {...props} />
-  );
+  return isAmp ? <Amp /> : <Canonical ref={onDismissFocusRef} {...props} />;
 });
 
 export default ConsentBanner;

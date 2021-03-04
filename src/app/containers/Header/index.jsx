@@ -51,12 +51,12 @@ const HeaderContainer = () => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      <ConsentBanner onDismissFocusRef={brandFocusRef} />
+      <ConsentBanner ref={brandFocusRef} />
       <BrandContainer
         borderBottom={borderBottom}
         skipLink={skipLink}
         scriptLink={scriptLink && <ScriptLink />}
-        linkRef={brandFocusRef}
+        ref={brandFocusRef}
       />
       {showNav && <NavigationContainer />}
     </header>
