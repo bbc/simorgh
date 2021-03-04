@@ -239,6 +239,7 @@ export const service = {
         listen: 'بشنوید',
         watch: 'ببینید',
         listenLive: 'بشنوید - زنده',
+        listenNext: 'به بعدی گوش کنید',
         liveLabel: 'زنده',
         nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',

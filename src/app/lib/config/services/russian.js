@@ -193,6 +193,7 @@ export const mainTranslations = {
     listen: 'Слушать',
     watch: 'Смотреть',
     listenLive: 'Слушать LIVE',
+    listenNext: 'Вперед',
     liveLabel: 'LIVE',
     nextLabel: 'Дальше',
     previousRadioShow: 'Предыдущая передача',

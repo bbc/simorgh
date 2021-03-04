@@ -217,6 +217,7 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         listenLive: 'Mendengarkan langsung',
+        listenNext: 'Dengar yang berikut',
         liveLabel: 'LANGSUNG',
         nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',

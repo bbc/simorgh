@@ -4173,12 +4173,24 @@ module.exports = () => ({
       cookieBanner: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/mundo/articles/cdwrpl7qwqqo',
+              '/mundo',
+              '/mundo/noticias-internacional-53826365',
+              '/mundo/popular/read',
+              '/mundo/media-52123665',
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/mundo/articles/ce42wzqr2mko',
+              '/mundo',
+              '/mundo/noticias-internacional-23055705',
+              '/mundo/popular/read',
+              '/mundo/media-23283126',
+            ],
+            enabled: true,
           },
           local: {
             paths: [
