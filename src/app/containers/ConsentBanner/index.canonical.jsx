@@ -3,7 +3,7 @@ import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
 import { UserContext } from '#contexts/UserContext';
 
-const Canonical = forwardRef((_props, onDismissFocusRef) => {
+const Canonical = forwardRef(({ ...props }, onDismissFocusRef) => {
   const { updateCookiePolicy } = useContext(UserContext);
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
@@ -33,6 +33,7 @@ const Canonical = forwardRef((_props, onDismissFocusRef) => {
           type="privacy"
           onAccept={privacyOnAllow}
           onReject={privacyOnReject}
+          {...props}
         />
       ) : null}
       {!showPrivacy && showCookie ? (
@@ -40,6 +41,7 @@ const Canonical = forwardRef((_props, onDismissFocusRef) => {
           type="cookie"
           onAccept={onCookieAccept}
           onReject={cookieOnReject}
+          {...props}
         />
       ) : null}
     </>

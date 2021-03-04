@@ -1,6 +1,6 @@
 import React, { useContext, forwardRef } from 'react';
 import Brand from '@bbc/psammead-brand';
-import { bool, node, oneOfType, func, shape, any } from 'prop-types';
+import { bool, node } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandContainer = forwardRef(
@@ -45,8 +45,6 @@ BrandContainer.propTypes = {
   borderBottom: bool,
   skipLink: node,
   scriptLink: node,
-  // eslint-disable-next-line react/forbid-prop-types
-  linkRef: oneOfType([func, shape({ current: any })]),
 };
 
 BrandContainer.defaultProps = {
@@ -54,7 +52,6 @@ BrandContainer.defaultProps = {
   borderBottom: false,
   skipLink: null,
   scriptLink: null,
-  linkRef: null,
 };
 
 export default BrandContainer;

@@ -35,7 +35,12 @@ const Reject = (message, href, onClick, dataAttribute) => {
   );
 };
 
-const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
+const CanonicalConsentBannerContainer = ({
+  type,
+  onReject,
+  onAccept,
+  ...props
+}) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
 
   const consentBannerConfig =
@@ -73,6 +78,7 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
         script={script}
         service={service}
         focusRef={consentBannerRef}
+        {...props}
       />
     </ConsentBannerWrapper>
   );
