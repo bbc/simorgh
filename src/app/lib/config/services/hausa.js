@@ -220,6 +220,7 @@ export const service = {
         listen: 'Saurari',
         watch: 'Kalla',
         listenLive: 'Saurara Kai Tsaye',
+        listenNext: 'Saurari na gaba',
         liveLabel: 'KAI TSAYE',
         nextLabel: 'NA GABA',
         previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',
