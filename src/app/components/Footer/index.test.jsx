@@ -61,4 +61,23 @@ describe('Footer', () => {
       ).toHaveAttribute('data-testid', 'amp-cookie-settings-button');
     });
   });
+
+  describe('Canonical', () => {
+    it('should render the cookie settings link as an anchor element', () => {
+      render(
+        <Footer
+          links={links}
+          copyrightText={copyrightText}
+          externalLink={externalLink}
+          trustProjectLink={trustProjectLink}
+        />,
+      );
+      expect(
+        screen.getByText('AdChoices / Do Not Sell My Info'),
+      ).toHaveAttribute(
+        'href',
+        'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+      );
+    });
+  });
 });
