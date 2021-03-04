@@ -1,27 +1,26 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
+import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 
 const StyledLink = styled.a`
-  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
+  ${({ service }) => getSansBold(service)}
   color: ${C_WHITE};
-  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
-  text-decoration: none;
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
-`;
+  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
+  text-decoration: none;
 
-const StyleLinkText = styled.span`
-  ${/* sc-selector */ StyledLink}:hover &,
-  ${/* sc-selector */ StyledLink}:focus & {
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
 `;
 
-const Link = ({ text, href, inline, lang }) => (
-  <StyledLink lang={lang} inline={inline} href={href}>
-    <StyleLinkText>{text}</StyleLinkText>
+const Link = ({ service, text, href, inline, lang }) => (
+  <StyledLink service={service} lang={lang} inline={inline} href={href}>
+    {text}
   </StyledLink>
 );
 
@@ -31,6 +30,7 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
+  service: string.isRequired,
   href: string.isRequired,
   text: string.isRequired,
   lang: string,

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node, bool } from 'prop-types';
 import { C_EBON, C_WHITE } from '@bbc/psammead-styles/colours';
+import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { getBrevier } from '@bbc/gel-foundations/typography';
 import {
   GEL_SPACING,
@@ -13,7 +14,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 
 import Link from './Link';
 import List from './List';
@@ -46,12 +46,12 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
+  ${({ service }) => getSansBold(service)}
   background: none;
   border: none;
   color: ${C_WHITE};
   cursor: pointer;
   display: block;
-  font-weight: 700; /* Used instead of Reith Sans Bold since it is not worth the performance cost in this case. */
   padding: ${GEL_SPACING} 0 ${GEL_SPACING};
   text-decoration: none;
   text-align: left;
@@ -75,21 +75,30 @@ const SitewideLinks = ({
   const elements = links.map(({ id, text, href, lang }) => {
     if (isAmp && id === 'COOKIE_SETTINGS') {
       return (
-        <StyledAmpCookieSettingsButton lang={lang}>
+        <StyledAmpCookieSettingsButton lang={lang} service={service}>
           {text}
         </StyledAmpCookieSettingsButton>
       );
     }
-    return <Link text={text} href={href} lang={lang} />;
+    return <Link service={service} text={text} href={href} lang={lang} />;
   });
 
   return (
     <SitewideLinksWrapper script={script} service={service}>
       <ConstrainedWrapper trustProjectLink={trustProjectLink}>
-        <List elements={elements} trustProjectLink={trustProjectLink} />
+        <List
+          service={service}
+          elements={elements}
+          trustProjectLink={trustProjectLink}
+        />
         <StyledParagraph>
           {copyrightText}{' '}
-          <Link text={externalLink.text} href={externalLink.href} inline />
+          <Link
+            service={service}
+            text={externalLink.text}
+            href={externalLink.href}
+            inline
+          />
         </StyledParagraph>
       </ConstrainedWrapper>
     </SitewideLinksWrapper>

@@ -106,7 +106,7 @@ const StyledListItem = styled.li`
   break-inside: avoid-column;
 `;
 
-const List = ({ elements, trustProjectLink }) => {
+const List = ({ service, elements, trustProjectLink }) => {
   const listItems = elements.map((elem, index) => (
     // eslint-disable-next-line react/no-array-index-key
     <StyledListItem key={index} role="listitem">
@@ -122,7 +122,11 @@ const List = ({ elements, trustProjectLink }) => {
     >
       {trustProjectLink && (
         <StyledListItem>
-          <Link text={trustProjectLink.text} href={trustProjectLink.href} />
+          <Link
+            service={service}
+            text={trustProjectLink.text}
+            href={trustProjectLink.href}
+          />
         </StyledListItem>
       )}
       {listItems}
@@ -130,15 +134,14 @@ const List = ({ elements, trustProjectLink }) => {
   );
 };
 
-const linkPropTypes = shape({
-  href: string.isRequired,
-  text: string.isRequired,
-  lang: string,
-});
-
 List.propTypes = {
+  service: string.isRequired,
   elements: arrayOf(element).isRequired,
-  trustProjectLink: linkPropTypes,
+  trustProjectLink: shape({
+    href: string.isRequired,
+    text: string.isRequired,
+    lang: string,
+  }),
 };
 
 List.defaultProps = { trustProjectLink: null };
