@@ -21,7 +21,7 @@ import { AmpCookieSettingsButton } from '#app/containers/ConsentBanner/Banner/co
 
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}
-  ${({ service }) => getSansRegular(service)}
+  ${({ service }) => service && getSansRegular(service)}
   background-color: ${C_EBON};
 
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -46,7 +46,7 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledAmpCookieSettingsButton = styled(AmpCookieSettingsButton)`
-  ${({ service }) => getSansBold(service)}
+  ${({ service }) => service && getSansBold(service)}
   background: none;
   border: none;
   color: ${C_WHITE};
@@ -116,11 +116,13 @@ SitewideLinks.propTypes = {
   trustProjectLink: linkPropTypes,
   externalLink: linkPropTypes.isRequired,
   isAmp: bool,
-  script: shape({}).isRequired,
-  service: string.isRequired,
+  script: shape({}),
+  service: string,
 };
 
 SitewideLinks.defaultProps = {
+  script: null,
+  service: null,
   isAmp: false,
   trustProjectLink: null,
 };

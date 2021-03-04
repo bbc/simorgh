@@ -135,7 +135,7 @@ const List = ({ service, elements, trustProjectLink }) => {
 };
 
 List.propTypes = {
-  service: string.isRequired,
+  service: string,
   elements: arrayOf(element).isRequired,
   trustProjectLink: shape({
     href: string.isRequired,
@@ -144,6 +144,9 @@ List.propTypes = {
   }),
 };
 
-List.defaultProps = { trustProjectLink: null };
+List.defaultProps = {
+  service: null,
+  trustProjectLink: null,
+};
 
 export default List;

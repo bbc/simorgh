@@ -6,7 +6,7 @@ import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 
 const StyledLink = styled.a`
-  ${({ service }) => getSansBold(service)}
+  ${({ service }) => service && getSansBold(service)}
   color: ${C_WHITE};
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
   padding: ${GEL_SPACING} 0 ${GEL_SPACING};
@@ -25,12 +25,13 @@ const Link = ({ service, text, href, inline, lang }) => (
 );
 
 Link.defaultProps = {
+  service: null,
   inline: false,
   lang: null,
 };
 
 Link.propTypes = {
-  service: string.isRequired,
+  service: string,
   href: string.isRequired,
   text: string.isRequired,
   lang: string,
