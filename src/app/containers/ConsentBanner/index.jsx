@@ -1,13 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, forwardRef } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const ConsentBanner = ({ onDismissFocusRef }) => {
+const ConsentBanner = forwardRef(({ ...props }, onDismissFocusRef) => {
   const { isAmp } = useContext(RequestContext);
-  return isAmp ? <Amp /> : <Canonical onDismissFocusRef={onDismissFocusRef} />;
-};
+  return isAmp ? (
+    <Amp />
+  ) : (
+    <Canonical {...props} onDismissFocusRef={onDismissFocusRef} />
+  );
+});
 
 ConsentBanner.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
