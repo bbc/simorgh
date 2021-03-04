@@ -9,7 +9,7 @@ const Link = styled.a`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => getSansBold(service)}
   ${({ dir }) =>
-    dir === 'rtl' ? 'padding-left: 1rem' : 'padding-right: 1rem'};
+    dir === 'rtl' ? 'padding-left: 1rem;' : 'padding-right: 1rem;'}
   color: ${C_EBON};
   text-decoration: none;
   display: inline-block;
