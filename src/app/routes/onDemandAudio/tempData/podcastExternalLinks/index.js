@@ -21,7 +21,7 @@ const podcastExternalLinks = {
 };
 
 const getRssLink = brandPid => ({
-  linkUrl: `http://podcasts.files.bbci.co.uk/${brandPid}.rss`,
+  linkUrl: `https://podcasts.files.bbci.co.uk/${brandPid}.rss`,
   linkText: 'RSS',
 });
 
@@ -33,9 +33,10 @@ export const getPodcastExternalLinks = async (
   try {
     const linkData = await podcastExternalLinks[service]();
     if (!linkData) return [];
+    if (!brandPid) return [];
 
     const links = pathOr([], ['default', variant, brandPid], linkData);
-    return brandPid ? [...links, getRssLink(brandPid)] : [];
+    return [...links, getRssLink(brandPid)];
   } catch (err) {
     logger.warn(PODCAST_SERVICE_MISSING, {
       service,

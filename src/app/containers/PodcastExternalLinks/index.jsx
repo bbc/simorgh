@@ -24,14 +24,15 @@ const Title = styled.h2`
 
 const PodcastExternalLinks = ({ links }) => {
   const { translations, service, script, dir } = useContext(ServiceContext);
+
+  if (!links.length) return null;
+
   const defaultTranslation = 'This podcast is also available on';
   const title = pathOr(
     defaultTranslation,
     ['media', 'podcastExternalLinks'],
     translations,
   );
-
-  if (!links.length) return null;
 
   return (
     <Wrapper>
