@@ -232,6 +232,7 @@ export const service = {
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
         recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
+        podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
       },
       socialEmbed: {
         caption: {
@@ -307,6 +308,7 @@ export const service = {
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

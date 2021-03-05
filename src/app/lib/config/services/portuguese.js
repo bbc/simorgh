@@ -235,6 +235,7 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Mais',
+        podcastExternalLinks: 'O podcast está disponível em',
       },
       socialEmbed: {
         caption: {
@@ -315,6 +316,7 @@ export const service = {
           text: 'Fale com a BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -97,6 +97,7 @@ export const service = {
           text: '联络BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -307,6 +308,7 @@ export const service = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {
@@ -377,6 +379,7 @@ export const service = {
           text: '聯絡BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -587,6 +590,7 @@ export const service = {
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {

@@ -227,6 +227,7 @@ export const service = {
         nextRadioShow: 'Shirye-shiryen rediyo na gaba',
         duration: 'Tsawon lokaci',
         recentEpisodes: 'Kari',
+        podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
       },
       socialEmbed: {
         caption: {
@@ -306,6 +307,7 @@ export const service = {
           text: 'Tuntubi BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
