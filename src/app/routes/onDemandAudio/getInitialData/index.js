@@ -14,6 +14,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 import processRecentEpisodes from '../../utils/processRecentEpisodes';
+import { getPodcastExternalLinks } from '../tempData/podcastExternalLinks';
 
 const getRadioScheduleData = path(['radioScheduleData']);
 const getScheduleToggle = path(['onDemandRadioSchedule', 'enabled']);
@@ -47,7 +48,13 @@ const getPodcastPageIdentifier = pageIdentifier => {
   return [service, masterbrand, 'podcasts', ...rest].join('.');
 };
 
-export default async ({ path: pathname, pageType, service, toggles }) => {
+export default async ({
+  path: pathname,
+  pageType,
+  service,
+  toggles,
+  variant,
+}) => {
   try {
     const {
       isPodcast,
@@ -107,9 +114,14 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
       get(['content', 'blocks', 0, 'synopses', 'medium']) || shortSynopsis;
     const summary = isPodcast ? mediumSynopsis : shortSynopsis;
 
+    const externalLinks = isPodcast
+      ? await getPodcastExternalLinks(service, brandId, variant)
+      : [];
+
     return {
       status,
       pageData: {
+        isPodcast,
         metadata: { type: detailPageType },
         language: get(['metadata', 'language'], LOG_LEVELS.INFO),
         brandTitle: get(['metadata', 'title'], LOG_LEVELS.INFO),
@@ -147,6 +159,7 @@ export default async ({ path: pathname, pageType, service, toggles }) => {
         episodeAvailability: getEpisodeAvailability(json),
         radioScheduleData: getRadioScheduleData(json),
         recentEpisodes,
+        externalLinks,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
