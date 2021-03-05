@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { render, waitForElementToBeRemoved } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
