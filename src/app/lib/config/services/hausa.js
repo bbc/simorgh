@@ -229,6 +229,7 @@ export const service = {
         nextRadioShow: 'Shirye-shiryen rediyo na gaba',
         duration: 'Tsawon lokaci',
         recentEpisodes: 'Kari',
+        podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
       },
       socialEmbed: {
         caption: {
