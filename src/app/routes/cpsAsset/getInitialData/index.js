@@ -70,6 +70,10 @@ export default async ({
   pageType,
   toggles,
 }) => {
+  const additionalDataFetchingDisabled = service === 'newsround'; // Temp method to disable additional data fetching for newsround
+  let additionalPageData;
+  let processedAdditionalData;
+
   try {
     const env = pathname.includes('renderer_env=live')
       ? 'live'
@@ -81,25 +85,34 @@ export default async ({
       apiContext: 'primary_data',
     });
 
-    const additionalPageData = await getAdditionalPageData({
-      pageData: json,
-      service,
-      variant,
-      env,
-    });
-    const processedAdditionalData = processMostWatched({
-      data: additionalPageData,
-      service,
-      path: pathname,
-      toggles,
-      page: pageType,
-    });
+    if (!additionalDataFetchingDisabled) {
+      additionalPageData = await getAdditionalPageData({
+        pageData: json,
+        service,
+        variant,
+        env,
+      });
+    }
+
+    if (!additionalDataFetchingDisabled) {
+      processedAdditionalData = processMostWatched({
+        data: additionalPageData,
+        service,
+        path: pathname,
+        toggles,
+        page: pageType,
+      });
+    }
+
+    const additionalData = additionalDataFetchingDisabled
+      ? {}
+      : processedAdditionalData;
 
     return {
       status,
       pageData: {
         ...(await transformJson(json, pathname)),
-        ...processedAdditionalData,
+        ...additionalData,
       },
     };
   } catch ({ message, status = getErrorStatusCode() }) {
