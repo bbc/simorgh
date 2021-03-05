@@ -129,8 +129,7 @@ export const service = {
         },
         cookie: {
           amp: {
-            accept:
-              'Dis settings apply to AMP pages only. You fit see kwesion wey dey ask you to set dis preferences again if you visit non-AMP BBC pages.',
+            accept: 'Accept data collection and continue',
             reject: 'Reject data collection and continue',
             initial: {
               title:
