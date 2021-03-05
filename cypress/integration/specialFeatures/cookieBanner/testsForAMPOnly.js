@@ -90,16 +90,9 @@ export default ({ service, variant, pageType, path }) => {
   });
 
   it('should show the manage cookie settings banner when the cookie settings button in the footer is clicked', () => {
-    /**
-     * Accept the Privacy and Cookie consent banner.
-     */
     getPrivacyBannerAccept(service, variant).click();
     getCookieBannerAcceptAmp(service, variant).click();
 
-    /**
-     * Click the Cookie Settings button in the footer and test
-     * if the Manage Cookie Settings Banner is now visible.
-     */
     cy.get('[data-testid="amp-cookie-settings-button"]')
       .click()
       .get('[data-testid="amp-cookie-banner-manage-settings"]')
