@@ -88,4 +88,14 @@ export default ({ service, variant, pageType, path }) => {
 
     getPrivacyBanner(service, variant).should('be.visible');
   });
+
+  it('should show the manage cookie settings banner when the cookie settings button in the footer is clicked', () => {
+    getPrivacyBannerAccept(service, variant).click();
+    getCookieBannerAcceptAmp(service, variant).click();
+
+    cy.get('[data-testid="amp-cookie-settings-button"]')
+      .click()
+      .get('[data-testid="amp-cookie-banner-manage-settings"]')
+      .should('be.visible');
+  });
 };

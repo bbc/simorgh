@@ -5,6 +5,7 @@
     "paths": {
       "#app/*": ["./src/app/*"],
       "#contexts/*": ["./src/app/contexts/*"],
+      "#components/*": ["./src/app/components/*"],
       "#containers/*": ["./src/app/containers/*"],
       "#data/*": ["./data/*"],
       "#hooks/*": [".src/app/hooks/*"],
@@ -12,7 +13,7 @@
       "#models/*": ["./src/app/models/*"],
       "#pages/*": ["./src/app/pages/*"],
       "#testHelpers/*": ["./src/testHelpers/*"],
-      "#server/*": ["./src/server/*"],
+      "#server/*": ["./src/server/*"]
     }
   },
   "exclude": ["node_modules", "dist"]

@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
-
-exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
-
-exports[`AMP Photo Gallery Page Footer Link should match text and url 1`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Mundo",
   "url": "/mundo",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 2`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Por qué puedes confiar en la BBC",
   "url": "https://www.bbc.com/mundo/institucional-51359666",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 3`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Términos de uso",
   "url": "https://www.bbc.com/mundo/institucional-36400005",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 4`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Sobre la BBC",
   "url": "https://www.bbc.com/mundo/institucional-36400007",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 5`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Política de privacidad",
   "url": "https://www.bbc.com/mundo/institucional-36400009",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 6`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 7`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contacta a la BBC",
   "url": "https://www.bbc.co.uk/send/u50853489",
 }
 `;
 
-exports[`AMP Photo Gallery Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Photo Gallery Page Footer Link should match text and url 9`] = `
+exports[`AMP Photo Gallery Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Lee sobre nuestra postura acerca de enlaces externos.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Photo Gallery Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Photo Gallery Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/mundo"`;
+
+exports[`AMP Photo Gallery Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC no se hace responsable del contenido de sitios externos. Lee sobre nuestra postura acerca de enlaces externos."`;
 
 exports[`AMP Photo Gallery Page Header I can see the branding 1`] = `"BBC News, Mundo"`;
 
