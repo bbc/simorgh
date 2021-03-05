@@ -103,7 +103,7 @@
     "@bbc/psammead-navigation": "9.0.8",
     "@bbc/psammead-paragraph": "4.0.12",
     "@bbc/psammead-podcast-promo": "0.1.0-alpha.27",
-    "@bbc/psammead-radio-schedule": "5.1.26",
+    "@bbc/psammead-radio-schedule": "5.1.29",
     "@bbc/psammead-rich-text-transforms": "2.0.3",
     "@bbc/psammead-script-link": "3.0.14",
     "@bbc/psammead-section-label": "7.0.14",
