@@ -245,6 +245,7 @@ export const service = {
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
+        podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
       },
       socialEmbed: {
         caption: {

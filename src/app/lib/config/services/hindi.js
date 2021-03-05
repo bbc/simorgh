@@ -233,6 +233,7 @@ export const service = {
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
         recentEpisodes: 'प्रसारण का समय',
+        podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
       },
       socialEmbed: {
         caption: {
