@@ -308,6 +308,7 @@ export const service = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {
@@ -589,6 +590,7 @@ export const service = {
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {

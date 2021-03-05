@@ -5,6 +5,7 @@ import getInitialData from '.';
 import * as fetchPageData from '../../utils/fetchPageData';
 import onDemandRadioJson from '#data/pashto/bbc_pashto_radio/w3ct0lz1';
 import podcastJson from '#data/arabic/podcasts/p02pc9qc/p08wtg4d';
+import arabicExternalLinks from '../tempData/podcastExternalLinks/arabic';
 import { RADIO_MISSING_FIELD } from '#lib/logger.const';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
@@ -40,6 +41,7 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png',
     );
+    expect(pageData.externalLinks).toEqual([]);
   });
 
   it('should return essential data for a podcast page to render', async () => {
@@ -47,6 +49,7 @@ describe('Get initial data for on demand radio', () => {
     const { pageData } = await getInitialData({
       path: 'mock-podcast-path',
       pageType: MEDIA_PAGE,
+      service: 'arabic',
       toggles: {
         recentPodcastEpisodes: { enabled: false, value: 8 },
       },
@@ -67,6 +70,13 @@ describe('Get initial data for on demand radio', () => {
     expect(pageData.thumbnailImageUrl).toEqual(
       'https://ichef.bbci.co.uk/images/ic/1024x576/p02rt7vj.jpg',
     );
+    expect(pageData.externalLinks).toEqual([
+      ...arabicExternalLinks.default.p02pc9qc,
+      {
+        linkText: 'RSS',
+        linkUrl: 'https://podcasts.files.bbci.co.uk/p02pc9qc.rss',
+      },
+    ]);
   });
 
   it('should use short synopsis as page summary for podcast pages when medium synopsis is absent', async () => {

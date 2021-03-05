@@ -224,6 +224,7 @@ export const service = {
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
         recentEpisodes: 'Ibiganiro byashise',
+        podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
       },
       socialEmbed: {
         caption: {

@@ -224,6 +224,7 @@ export const service = {
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
+        podcastExternalLinks: 'Podcast ini juga tersedia di',
       },
       socialEmbed: {
         caption: {
