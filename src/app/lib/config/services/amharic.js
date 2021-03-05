@@ -125,28 +125,77 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን',
-          description: {
-            uk: {
-              first: 'ለርስዎ ',
-              linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
-              last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'ለሚሰበሰበው መረጃ ፈቃደኛ ሆነው ይቀጥሉ',
+            reject: 'ለሚሰበሰበው መረጃ ፈቃደኛ ሳይሆኑ ይቀጥሉ',
+            initial: {
+              title: 'ገጻችንን በቀላሉ እንዲያገኙ ለማገዝ በምንሰበስበው መረጃ ላይ ይስማሙ እንደሆነ ያሳውቁን',
+              description: {
+                first: 'እኛም ሆንን አጋሮቻችን ',
+                linkText: 'ኩኪዎችን',
+                last:
+                  'የመሳሰሉ ቴክኖሎጂዎችን የምንጠቀመውና መረጃዎችን የምንሰብስበው እርስዎ የሚፈልጉት መረጃና ማስታወቂያ ቅድሚያ እንዲደርስዎና የላቀ የድረገጽ አገልግሎት እንዲያገኙ ለማድረግ ነው። እባክዎ መስማማትዎን ያሳውቁን።',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'የአጠቃቀም ምርጫዎን ለማስተካከል',
             },
-            international: {
-              first: 'እኛም ሆን ቴክኖሎጂያችንን የሚጠቀሙ አጋሮቻችን ለምሳሌም ',
-              linkText: 'ኩኪዎችን የምንጠቀመው',
-              last:
-                ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'በቀላሉ የሚከፈቱ ገጾች የአጠቃቀም ምርጫዎን ለማስተካከል',
+              description: {
+                para1:
+                  'ይህ የአጠቃቀም ምርጫ በቀላሉ በሚከፈቱ ገጾች ላይ ብቻ የሚሰራ ነው። የሚጎበኙት ለዚሁ የተዘጋጀ የቢቢሲ ገጽ ካልሆነ በድጋሚ ምርጫዎን ሊጠየቁ ይችላሉ።',
+                para2: 'የጎበኙት በቀላሉ የሚከፈት ገጽ የተዘጋጀው የጉግል ቴክኖሎጂን በመጠቀም ነው።',
+                heading2: 'የግድ አስፈላጊ የሆነ መረጃ',
+                para3:
+                  'ድረ ገጻችን እንዲሰራ ለማድረግ የእርስዎ ፈቃድ ሳያስፈልግ የተወሰኑ መረጃዎችን በሚገለገሉበት መሳሪያ ላይ እናስቀምጣለን።',
+                para4: {
+                  text:
+                    'ድረ ገጻችን እንዲሰራ ለማድረግ በሚገለገሉበት መሳሪያ ላይ ያስቀመጥነውን ጠቃሚ መረጃን በተመለከተ ተጨማሪ ያንብቡ',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: 'በመገልገያ መሳሪያዎ ላይ የስምምነት ምርጫዎችዎን እናስቀምጣለን።',
+                heading3: 'የግድ ያልሆነ መረጃ',
+                para6:
+                  'በቀላሉ ገጻችንን ለመመልከት ሲስማሙ፤ ከዩናይትድ ኪንግደም ውጪ በሚሆኑበት ጊዜ እርስዎን የሚመለከቱ ማስታወቂያዎች እንዲደርስዎ ፈቃደኛ መሆንዎን ያመለክታል።',
+                para7: {
+                  text:
+                    'ቢቢሲ እና የማስታወቂያ አጋሮቹ ማስታወቂያዎችን እንዴት ግለሰቦችን የሚመለከቱ እንደሚያደርጉት የበለጠ ያንብቡ',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'እርስዎን የሚመለከቱ ማስታወቂያዎች እንዲደርስዎ ካልፈለጉ ከታች ያለውን "ለሚሰበሰበው መረጃ ፈቃደኛ ሳይሆኑ ይቀጥሉ" የሚለውን ይጫኑ። ልብ ማለት ያለብዎ ነገር የማይመለከቱት እርስዎን የሚመለከቱ ማስታወቂያዎችን እንጂ ሌሎች ማስታወቂያዎችን መመልከትዎ አይቀርም።',
+                para9:
+                  'ይህንን ምርጫዎን ለመቀየር ከግርጌ ያለውን “Ad Choices / Do not sell my info” የሚለውን በመጫን በፈለጉ ጊዜ መቀየር ይችላሉ።',
+              },
             },
           },
-          accept: 'እሺ፣ እስማማለሁ',
-          reject: 'ወደ ማውጫ መመለስ እፈልጋለሁ',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'ኩኪዎችን መጠቀም ላይ መስማማትዎን ያሳውቁን',
+            description: {
+              uk: {
+                first: 'ለርስዎ ',
+                linkText: 'የምናቀርበውን አገልግሎት ለማሻሻል በማሰብ ኩኪዎችን',
+                last: ' እንጠቀማለን። ኩኪዎችን መጠቀም ላይ መስማማትዎን እባክዎ ያሳውቁን.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'እኛም ሆን ቴክኖሎጂያችንን የሚ ጠቀሙ አጋሮቻችን ለምሳሌም ',
+                linkText: 'ኩኪዎችን የምንጠቀመው',
+                last:
+                  ', ና መረጃዎችንም የምንሰብስበው የሚፈልጓቸውን መረጃዎችና ማስታወቂያዎች ቅድሚያ እንዲያገኙዋቸው በማሰብና አግልግሎታችንም የተሻለ እንዲሆን ነው።እባክዎ መስማማትዎን ያሳውቁን',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'እሺ፣ እስማማለሁ',
+            reject: 'ወደ ማውጫ መመለስ እፈልጋለሁ',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -159,6 +208,7 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         listenLive: 'በቀጥታ ያድምጡ',
+        listenNext: 'ቀጣዩን ያድምጡ',
         liveLabel: 'ቀጥታ',
         nextLabel: 'ቀጣይ',
         previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
