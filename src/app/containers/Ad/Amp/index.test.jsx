@@ -1,6 +1,6 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { render } from '@testing-library/react';
+import { render, waitForElementToBeRemoved } from '@testing-library/react';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -50,6 +50,31 @@ describe('AMP Ads', () => {
   });
 
   describe('Assertions', () => {
+    it('should not render ad placeholder in UK', () => {
+      const { getByLabelText } = render(
+        <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
+          {adWithContext('leaderboard')}
+        </div>,
+      );
+
+      expect(getByLabelText('Publicités')).not.toBeVisible();
+    });
+
+    it.each`
+      location           | className
+      ${'europe'}        | ${'amp-geo-group-eea'}
+      ${'rest of world'} | ${''}
+    `(
+      'should render ad placeholder outside of the UK - $location',
+      ({ className }) => {
+        const { getByLabelText } = render(
+          <div className={className}>{adWithContext('leaderboard')}</div>,
+        );
+
+        expect(getByLabelText('Publicités')).toBeVisible();
+      },
+    );
+
     it('should render two leaderboard ads', () => {
       const { container } = render(adWithContext('leaderboard'));
       const ampAd = container.querySelectorAll('amp-ad');
