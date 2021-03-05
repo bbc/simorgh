@@ -29,9 +29,9 @@ jest.mock('../ConsentBanner', () => jest.fn());
 
 jest.mock('../Brand', () => jest.fn());
 
-brandMock.mockImplementation(({ focusRef }) => {
+brandMock.mockImplementation(({ linkRef }) => {
   return (
-    <a href="/" ref={focusRef}>
+    <a href="/" ref={linkRef}>
       The BBC Brand
     </a>
   );
