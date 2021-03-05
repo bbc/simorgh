@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
-
-exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
-
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 1`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, 코리아",
   "url": "/korean",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 2`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "BBC News를 신뢰할 수 있는 이유",
   "url": "https://www.bbc.com/korean/institutional-49283197",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 3`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "이용 약관",
   "url": "https://www.bbc.co.uk/usingthebbc/terms/",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 4`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "BBC 소개",
   "url": "https://www.bbc.co.uk/aboutthebbc",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 5`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "개인정보취급방침",
   "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 6`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "쿠키정책",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 7`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "고객센터",
   "url": "https://www.bbc.co.uk/send/u50853423",
 }
 `;
 
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Korean Live Radio Page Footer Link should match text and url 9`] = `
+exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "외부 링크에 대한 본사 정책 보기",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Korean Live Radio Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Korean Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/korean"`;
+
+exports[`AMP Korean Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC는 외부 사이트 및 타사 콘텐츠에 대한 책임을 지지 않습니다 외부 링크에 대한 본사 정책 보기"`;
 
 exports[`AMP Korean Live Radio Page Header I can see the branding 1`] = `"BBC News, 코리아"`;
 

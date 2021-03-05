@@ -11,72 +11,72 @@ Object {
 }
 `;
 
-exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
-
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
-
-exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, عربي",
   "url": "/arabic",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
   "url": "https://www.bbc.com/arabic/institutional-49283069",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "شروط الاستخدام",
   "url": "https://www.bbc.com/arabic/institutional-37731351",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "عن بي بي سي",
   "url": "https://www.bbc.com/arabic/institutional-37731352",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "سياسة الخصوصية",
   "url": "https://www.bbc.com/arabic/institutional-37731353",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "ملفات الارتباط Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
   "url": "https://www.bbc.co.uk/send/u50853203",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "سياستنا بخصوص الروابط الخارجية.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+
+exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 

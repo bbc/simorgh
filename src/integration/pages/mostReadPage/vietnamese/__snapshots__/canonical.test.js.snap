@@ -4,72 +4,72 @@ exports[`Canonical Most Read Page A11y I can see the skip to content link 1`] = 
 
 exports[`Canonical Most Read Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=97&amp;p=vietnamese.popular.read.page&amp;x2=[responsive]&amp;x3=[news-vietnamese]&amp;x4=[vi]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%C4%90%E1%BB%8Dc%2Bnhi%E1%BB%81u%2Bnh%E1%BA%A5t%2B-%2BBBC%2BNews%2BTi%E1%BA%BFng%2BVi%E1%BB%87t]&amp;x11=[2019-11-06T16%3A54%3A00Z]&amp;x12=[2100-11-06T17%3A09%3A00Z]\\"/>"`;
 
-exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
-
-exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
-
-exports[`Canonical Most Read Page Footer Link should match text and url 1`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Tiếng Việt",
   "url": "/vietnamese",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 2`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Tại sao bạn có thể tin tưởng BBC News",
   "url": "https://www.bbc.com/vietnamese/institutional-49283563",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 3`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Điều khoản sử dụng",
   "url": "https://www.bbc.com/vietnamese/institutional-37622991",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 4`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Về BBC",
   "url": "https://www.bbc.com/vietnamese/institutional-37623840",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 5`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Chính sách riêng tư",
   "url": "https://www.bbc.com/vietnamese/institutional-37623841",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 6`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookie",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 7`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Liên hệ BBC",
   "url": "https://www.bbc.co.uk/send/u50853951",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 8`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Most Read Page Footer Link should match text and url 9`] = `
+exports[`Canonical Most Read Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`Canonical Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
+
+exports[`Canonical Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`Canonical Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 
