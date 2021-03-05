@@ -126,72 +126,72 @@ Object {
 }
 `;
 
-exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
-
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
-
-exports[`AMP Most Watched Page Footer Link should match text and url 1`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, اردو",
   "url": "/urdu",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 2`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں",
   "url": "https://www.bbc.com/urdu/institutional-49282935",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 3`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "استعمال کے ضوابط",
   "url": "https://www.bbc.com/urdu/institutional-37588278",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 4`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "بی بی سی کے بارے میں",
   "url": "https://www.bbc.com/urdu/institutional-37588280",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 5`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "پرائیویسی پالیسی",
   "url": "https://www.bbc.com/urdu/institutional-37588282",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 6`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکیز",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 7`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
   "url": "https://www.bbc.co.uk/send/u50853907",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Most Watched Page Footer Link should match text and url 9`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Most Watched Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
+
+exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 

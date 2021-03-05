@@ -4,79 +4,79 @@ exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"Skip
 
 exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598286&amp;s2=64&amp;p=news.articles.c5jje4ejkqvo.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac5jje4ejkqvo]&amp;x2=[responsive]&amp;x3=[news]&amp;x4=[en-gb]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[The%2BGermans%2Bsolving%2Brising%2Brents%2Bwith%2Bpeople%2Bpower]&amp;x11=[2019-03-27T16%3A13%3A36.863Z]&amp;x12=[2019-03-27T16%3A20%3A33.751Z]\\"/>"`;
 
-exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
-
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
-
-exports[`Canonical Articles Footer Link should match text and url 1`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News",
   "url": "/news",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 2`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Why you can trust the BBC",
   "url": "https://www.bbc.com/news/help-41670342",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 3`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Terms of Use",
   "url": "https://www.bbc.com/terms",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 4`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
 Object {
   "text": "About the BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 5`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
   "url": "https://www.bbc.com/privacy/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 6`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 7`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Accessibility Help",
   "url": "https://www.bbc.com/accessibility/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 8`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Contact the BBC",
   "url": "https://www.bbc.com/contact/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 9`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 10`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 10`] = `
 Object {
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
+
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News"`;
 
