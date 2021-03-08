@@ -15,8 +15,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
 const Wrapper = styled.aside`
-  border-top: 1px ${C_CLOUD_LIGHT} solid;
-  border-bottom: 1px ${C_CLOUD_LIGHT} solid;
+  border-top: 0.0625rem ${C_CLOUD_LIGHT} solid;
+  border-bottom: 0.0625rem ${C_CLOUD_LIGHT} solid;
   margin: 0;
   padding: 0;
 `;
