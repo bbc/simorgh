@@ -4,72 +4,72 @@ exports[`Canonical Most Watched Page A11y I can see the skip to content link 1`]
 
 exports[`Canonical Most Watched Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=95&amp;p=urdu.media.video.page&amp;x2=[responsive]&amp;x3=[news-urdu]&amp;x4=[ur]&amp;x7=[list-datadriven]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%B3%D8%A8%2B%D8%B3%DB%92%2B%D8%B2%DB%8C%D8%A7%D8%AF%DB%81%2B%D8%AF%DB%8C%DA%A9%DA%BE%DB%8C%2B%DA%AF%D8%A6%DB%8C%2B-%2BBBC%2BNews%2B%D8%A7%D8%B1%D8%AF%D9%88]\\"/>"`;
 
-exports[`Canonical Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
-
-exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
-
-exports[`Canonical Most Watched Page Footer Link should match text and url 1`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, اردو",
   "url": "/urdu",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 2`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں",
   "url": "https://www.bbc.com/urdu/institutional-49282935",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 3`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "استعمال کے ضوابط",
   "url": "https://www.bbc.com/urdu/institutional-37588278",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 4`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "بی بی سی کے بارے میں",
   "url": "https://www.bbc.com/urdu/institutional-37588280",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 5`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "پرائیویسی پالیسی",
   "url": "https://www.bbc.com/urdu/institutional-37588282",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 6`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکیز",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 7`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
   "url": "https://www.bbc.co.uk/send/u50853907",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 8`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Most Watched Page Footer Link should match text and url 9`] = `
+exports[`Canonical Most Watched Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`Canonical Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
+
+exports[`Canonical Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`Canonical Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 

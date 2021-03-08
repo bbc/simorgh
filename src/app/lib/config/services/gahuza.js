@@ -217,12 +217,14 @@ export const service = {
         listen: 'Umviriza',
         watch: 'Raba',
         listenLive: 'Umviriza live',
+        listenNext: 'Umva ibikurikira',
         liveLabel: 'IKIBIRIRAHO',
         nextLabel: 'IBIKURIKIRA',
         previousRadioShow: 'Ikiganiro ca radiyo giheruka',
         nextRadioShow: 'Ikiganiro ca radiyo gikurikira',
         duration: 'Umwanya bimara',
         recentEpisodes: 'Ibiganiro byashise',
+        podcastExternalLinks: 'Iyi podcast iraboneka kandi kuri',
       },
       socialEmbed: {
         caption: {
@@ -299,6 +301,7 @@ export const service = {
           text: 'Vugana na BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

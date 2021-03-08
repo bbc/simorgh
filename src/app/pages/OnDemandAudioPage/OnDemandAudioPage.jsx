@@ -28,6 +28,7 @@ import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -67,6 +68,7 @@ const StyledGridItemImage = styled(Grid)`
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
+    isPodcast,
     language,
     brandTitle,
     headline,
@@ -76,6 +78,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     episodeId,
     releaseDateTimeStamp,
     imageUrl,
+    imageAltText,
     promoBrandTitle,
     durationISO8601,
     thumbnailImageUrl,
@@ -83,6 +86,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     recentEpisodes,
     brandId,
     episodeTitle,
+    externalLinks,
   } = pageData;
 
   const pageType = path(['metadata', 'type'], pageData);
@@ -175,7 +179,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               )}
             </StyledGridItemParagraph>
             <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage imageUrl={imageUrl} />
+              <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
             </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
@@ -211,6 +215,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
+          {isPodcast && <PodcastExternalLinks links={externalLinks} />}
         </Grid>
       </GelPageGrid>
       {hasRecentEpisodes && (
@@ -241,12 +246,14 @@ OnDemandAudioPage.propTypes = {
   MediaError: func.isRequired,
   mediaIsAvailable: bool.isRequired,
   pageData: shape({
+    isPodcast: bool,
     brandTitle: string,
     headline: string,
     summary: string,
     language: string,
     releaseDateTimeStamp: number,
     imageUrl: string,
+    imageAltText: string,
     episodeTitle: string,
   }).isRequired,
 };

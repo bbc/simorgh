@@ -312,6 +312,7 @@ export const service = {
           text: 'La xiriir BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

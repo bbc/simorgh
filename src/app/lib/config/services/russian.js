@@ -193,6 +193,7 @@ export const mainTranslations = {
     listen: 'Слушать',
     watch: 'Смотреть',
     listenLive: 'Слушать LIVE',
+    listenNext: 'Вперед',
     liveLabel: 'LIVE',
     nextLabel: 'Дальше',
     previousRadioShow: 'Предыдущая передача',
@@ -200,6 +201,7 @@ export const mainTranslations = {
     duration: 'Продолжительность',
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
+    podcastExternalLinks: 'Этот подкаст доступен на',
   },
   socialEmbed: {
     caption: {
@@ -338,6 +340,7 @@ export const service = {
           text: 'Связаться с Би-би-си',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

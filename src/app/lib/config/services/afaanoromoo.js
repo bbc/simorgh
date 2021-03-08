@@ -217,6 +217,7 @@ export const service = {
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
         listenLive: 'Kallattiin caqasaa',
+        listenNext: 'Kan ittaanu caqasi',
         liveLabel: 'KALLATTIIN',
         nextLabel: 'KAN ITTAANU',
         previousRadioShow: 'Sagantaa raadiyoo dabre',
@@ -300,6 +301,7 @@ export const service = {
           text: 'BBC qunnami',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

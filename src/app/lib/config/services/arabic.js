@@ -224,12 +224,14 @@ export const service = {
         listen: 'استمع',
         watch: 'شاهد',
         listenLive: 'استمع للبث المباشر',
+        listenNext: 'واصل الاستماع',
         liveLabel: 'مباشر',
         nextLabel: 'لاحق',
         previousRadioShow: 'البرنامج الإذاعي السابق',
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
         recentEpisodes: 'البرامج السابقة',
+        podcastExternalLinks: 'هذا البودكاست متاح عبر',
       },
       socialEmbed: {
         caption: {
@@ -313,6 +315,7 @@ export const service = {
           text: 'اتصل بـ بي بي سي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

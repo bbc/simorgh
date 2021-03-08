@@ -217,12 +217,14 @@ export const service = {
         listen: 'Dengar',
         watch: 'Tonton',
         listenLive: 'Mendengarkan langsung',
+        listenNext: 'Dengar yang berikut',
         liveLabel: 'LANGSUNG',
         nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
+        podcastExternalLinks: 'Podcast ini juga tersedia di',
       },
       socialEmbed: {
         caption: {
@@ -301,6 +303,7 @@ export const service = {
           text: 'Hubungi BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

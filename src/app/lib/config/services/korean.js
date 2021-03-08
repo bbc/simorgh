@@ -210,6 +210,7 @@ export const service = {
         video: '비디오',
         listen: '듣기',
         watch: '보기',
+        listenNext: '다음에피소드듣기',
         liveLabel: 'LIVE',
         nextLabel: '다음',
         previousRadioShow: '이전 라디오 방송',
@@ -293,6 +294,7 @@ export const service = {
           text: '고객센터',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

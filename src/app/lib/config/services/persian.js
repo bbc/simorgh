@@ -239,11 +239,13 @@ export const service = {
         listen: 'بشنوید',
         watch: 'ببینید',
         listenLive: 'بشنوید - زنده',
+        listenNext: 'به بعدی گوش کنید',
         liveLabel: 'زنده',
         nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
+        podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
       },
       socialEmbed: {
         caption: {
@@ -323,6 +325,7 @@ export const service = {
           text: 'تماس با بی بی سی',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

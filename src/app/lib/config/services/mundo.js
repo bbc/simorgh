@@ -228,6 +228,7 @@ export const service = {
         listen: 'Escuchar',
         watch: 'Ver',
         listenLive: 'Escuchar en vivo',
+        listenNext: 'Escuchar el siguiente',
         liveLabel: 'EN VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Programa anterior',
@@ -315,6 +316,7 @@ export const service = {
           text: 'Contacta a la BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

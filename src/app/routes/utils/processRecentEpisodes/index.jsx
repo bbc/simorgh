@@ -11,7 +11,6 @@ const validateEpisode = episode => {
       is(String, episode.brand.title),
       episode.media,
       is(String, episode.media.id),
-      is(Array, episode.media.versions),
       episode.media.versions[0],
       is(String, episode.media.versions[0].durationISO8601),
       is(Number, episode.releaseDateTimestamp),

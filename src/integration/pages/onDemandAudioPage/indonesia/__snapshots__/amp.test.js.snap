@@ -137,72 +137,65 @@ Object {
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
-
-exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
-
-exports[`AMP On Demand Audio Page Footer Link should match text and url 1`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Indonesia",
   "url": "/indonesia",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 2`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Alasan Anda dapat mempercayai BBC News",
   "url": "https://www.bbc.com/indonesia/institutional-49283175",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 3`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Peraturan Penggunaan",
   "url": "https://www.bbc.com/indonesia/institutional-37818421",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 4`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Mengenai BBC",
   "url": "https://www.bbc.com/indonesia/institutional-37818424",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 5`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Kebijakan tentang Privasi",
   "url": "https://www.bbc.com/indonesia/institutional-37818425",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 6`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 7`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Hubungi BBC",
   "url": "https://www.bbc.co.uk/send/u50853401",
 }
 `;
 
-exports[`AMP On Demand Audio Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP On Demand Audio Page Footer Link should match text and url 9`] = `
+exports[`AMP On Demand Audio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Baca tentang peraturan baru terkait link eksternal.",
   "url": "https://www.bbc.com/indonesia/institutional/2011/02/000001_links",
 }
 `;
+
+exports[`AMP On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`AMP On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`AMP On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 

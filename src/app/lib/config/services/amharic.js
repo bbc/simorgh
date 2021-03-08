@@ -208,6 +208,7 @@ export const service = {
         listen: 'ያድምጡ',
         watch: 'ተመልከት',
         listenLive: 'በቀጥታ ያድምጡ',
+        listenNext: 'ቀጣዩን ያድምጡ',
         liveLabel: 'ቀጥታ',
         nextLabel: 'ቀጣይ',
         previousRadioShow: 'ያለፈ የሬዲዮ ስርጭት',
@@ -290,6 +291,7 @@ export const service = {
           text: 'ቢቢሲን ያግኙ',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

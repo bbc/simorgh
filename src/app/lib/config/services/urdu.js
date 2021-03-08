@@ -216,6 +216,7 @@ export const service = {
         listen: 'سنیں',
         watch: 'دیکھیں',
         listenLive: 'لائیو سنیں',
+        listenNext: 'اگلی قسط سنی',
         liveLabel: 'لائیو',
         nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
@@ -300,6 +301,7 @@ export const service = {
           text: 'بی بی سی سے رابطہ کریں',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -228,12 +228,14 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Mais',
+        podcastExternalLinks: 'O podcast está disponível em',
       },
       socialEmbed: {
         caption: {
@@ -314,6 +316,7 @@ export const service = {
           text: 'Fale com a BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

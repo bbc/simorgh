@@ -229,6 +229,7 @@ export const service = {
         listen: 'واورئ',
         watch: 'و یې ګورئ',
         listenLive: 'ژوندۍ خپرونه واورئ',
+        listenNext: 'راتلونکې برخه واورئ ',
         liveLabel: 'ژوندۍ',
         nextLabel: 'بل',
         previousRadioShow: 'تېره راډیویي‌ خپرونه',
@@ -313,6 +314,7 @@ export const service = {
           text: 'زموږ سره اړیکي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

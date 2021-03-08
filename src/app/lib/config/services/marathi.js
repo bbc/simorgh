@@ -219,6 +219,7 @@ export const service = {
         watch: 'पाहा',
         liveLabel: 'LIVE',
         nextLabel: 'पुढचे',
+        listenNext: 'पुढचा ऐका',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
@@ -294,6 +295,7 @@ export const service = {
           text: 'बीबीसीशी संपर्क साधा',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

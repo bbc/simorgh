@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
-
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
-
-exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Pidgin",
   "url": "/pidgin",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Why you fit trust BBC News",
   "url": "https://www.bbc.com/pidgin/institutional-48528766",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "How dem dey take use am",
   "url": "https://www.bbc.co.uk/usingthebbc/terms/",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "As e concern BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
   "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Call BBC",
   "url": "https://www.bbc.co.uk/send/u50853577",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "De way wey we de take go external link.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Media Asset Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
-
-exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
-
-exports[`AMP Media Asset Page Footer Link should match text and url 1`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, فارسی",
   "url": "/persian",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 2`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
   "url": "https://www.bbc.com/persian/institutional-49283091",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 3`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "شرایط استفاده",
   "url": "https://www.bbc.com/persian/institutional-37474133",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 4`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "درباره بی بی سی",
   "url": "https://www.bbc.com/persian/institutional-37474136",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 5`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "سیاست حفظ حریم خصوصی",
   "url": "https://www.bbc.com/persian/institutional-37540067",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 6`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکی ها",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 7`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
   "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
-exports[`AMP Media Asset Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Media Asset Page Footer Link should match text and url 9`] = `
+exports[`AMP Media Asset Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
 `;
+
+exports[`AMP Media Asset Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Media Asset Page Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
