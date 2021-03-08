@@ -64,7 +64,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     ['media', 'podcastExternalLinks'],
     translations,
   );
-  const moreThanOneLink = links.length > 1;
+  const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
 
   return (
@@ -78,7 +78,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       >
         {title}
       </StyledSectionLabel>
-      {moreThanOneLink ? (
+      {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={linkText}>
