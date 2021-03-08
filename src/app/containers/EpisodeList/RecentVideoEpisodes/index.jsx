@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import EpisodeList from '@bbc/psammead-episode-list';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import {
@@ -22,6 +21,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import EpisodeList from '#containers/EpisodeList';
 
 const StyledSectionLabel = styled(SectionLabel)`
   color: ${C_WHITE};
