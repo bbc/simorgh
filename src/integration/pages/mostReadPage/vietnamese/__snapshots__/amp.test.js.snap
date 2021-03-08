@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
-
-exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
-
-exports[`AMP Most Read Page Footer Link should match text and url 1`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Tiếng Việt",
   "url": "/vietnamese",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 2`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Tại sao bạn có thể tin tưởng BBC News",
   "url": "https://www.bbc.com/vietnamese/institutional-49283563",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 3`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Điều khoản sử dụng",
   "url": "https://www.bbc.com/vietnamese/institutional-37622991",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 4`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Về BBC",
   "url": "https://www.bbc.com/vietnamese/institutional-37623840",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 5`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Chính sách riêng tư",
   "url": "https://www.bbc.com/vietnamese/institutional-37623841",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 6`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookie",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 7`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Liên hệ BBC",
   "url": "https://www.bbc.co.uk/send/u50853951",
 }
 `;
 
-exports[`AMP Most Read Page Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Most Read Page Footer Link should match text and url 9`] = `
+exports[`AMP Most Read Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Most Read Page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Most Read Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/vietnamese"`;
+
+exports[`AMP Most Read Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC không chịu trách nhiệm nội dung các trang ngoài. Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài"`;
 
 exports[`AMP Most Read Page Header I can see the branding 1`] = `"BBC News, Tiếng Việt"`;
 

@@ -137,65 +137,65 @@ Object {
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Україна",
   "url": "/ukrainian",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Чому BBC заслуговує на довіру",
   "url": "https://www.bbc.com/ukrainian/institutional-50170368",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Правила користування",
   "url": "https://www.bbc.com/ukrainian/institutional-38144387",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Особисті дані",
   "url": "https://www.bbc.com/ukrainian/institutional-38144827",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Зв'язатися з BBC",
   "url": "https://www.bbc.co.uk/send/u50853885",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 

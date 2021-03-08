@@ -23,25 +23,25 @@ export default () => {
       expect(brandingImageEl).toBeInTheDocument();
     });
 
-    describe('Link', () => {
-      const footerLinks = document.querySelectorAll('footer a');
+    describe('Anchors', () => {
+      const footerAnchors = document.querySelectorAll('footer a');
 
-      footerLinks.forEach(footerLink => {
-        const linkText = footerLink.textContent;
-        const linkUrl = footerLink.getAttribute('href');
+      footerAnchors.forEach(footerAnchor => {
+        const anchorText = footerAnchor.textContent;
+        const anchorUrl = footerAnchor.getAttribute('href');
 
         it('should be in the document', () => {
-          expect(footerLink).toBeInTheDocument();
+          expect(footerAnchor).toBeInTheDocument();
         });
 
         it('should contain text', () => {
-          expect(linkText).toBeTruthy();
+          expect(anchorText).toBeTruthy();
         });
 
         it('should match text and url', () => {
           expect({
-            text: linkText,
-            url: linkUrl,
+            text: anchorText,
+            url: anchorUrl,
           }).toMatchSnapshot();
         });
       });

@@ -131,9 +131,10 @@ export const service = {
                 'Masu ziyarar shafin AMP ku sanar da mu idan kun amince mu tattara bayananku',
               description: {
                 first:
-                  'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu tattara wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
-                linkText: '',
-                last: '',
+                  'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu ',
+                linkText: 'tattara',
+                last:
+                  ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -307,6 +308,7 @@ export const service = {
           text: 'Tuntubi BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
