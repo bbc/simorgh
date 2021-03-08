@@ -6,6 +6,13 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   border-bottom: 0.0625rem #BABABA solid;
   margin: 0;
   padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    margin-bottom: 1rem;
+  }
 }
 
 .emotion-3 {
@@ -14,6 +21,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   color: #3F3F42;
   margin-top: 2rem;
   margin: 0;
+  margin-top: 1rem;
 }
 
 @media (min-width: 37.5rem) {
@@ -30,12 +38,14 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
 
 @media (min-width: 25rem) {
   .emotion-3 {
+    margin-top: 1rem;
     margin-bottom: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-3 {
+    margin-top: 1rem;
     margin-bottom: 0;
   }
 }
