@@ -9,7 +9,9 @@ import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
@@ -19,14 +21,22 @@ const Wrapper = styled.aside`
   border-bottom: 0.0625rem ${C_CLOUD_LIGHT} solid;
   margin: 0;
   padding: 0;
+  margin-bottom: ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-bottom: ${GEL_SPACING_DBL};
+  }
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin: 0;
+  margin-top: 1rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin-top: 1rem;
     margin-bottom: 0;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin-top: 1rem;
     margin-bottom: 0;
   }
 `;
