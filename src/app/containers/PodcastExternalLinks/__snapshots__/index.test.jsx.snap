@@ -2,8 +2,8 @@
 
 exports[`PodcastExternalLinks Should render external links 1`] = `
 .emotion-0 {
-  border-top: 1px #BABABA solid;
-  border-bottom: 1px #BABABA solid;
+  border-top: 0.0625rem #BABABA solid;
+  border-bottom: 0.0625rem #BABABA solid;
   margin: 0;
   padding: 0;
 }
