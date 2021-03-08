@@ -93,11 +93,11 @@ const AmpAd = ({ slotType }) => {
     translations,
   );
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
-  const { enabled: ampAdsEnabled } = useToggle('ampAds');
+  // const { enabled: ampAdsEnabled } = useToggle('ampAds');
 
-  if (!ampAdsEnabled) {
-    return null;
-  }
+  // if (!ampAdsEnabled) {
+  //   return null;
+  // }
 
   return (
     <>
