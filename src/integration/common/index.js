@@ -4,6 +4,7 @@ import runCanonicalAnalyticsTests from './analytics.canonical';
 import runCoreAmpTests from './core.amp';
 import runCoreCanonicalTests from './core.canonical';
 import runFooterTests from './footer';
+import runAmpFooterTests from './footer.amp';
 import runHeaderTests from './header';
 import runMainHeadingTests from './mainHeading';
 import runMediaPlaceholderTests from './mediaPlaceholder';
@@ -36,6 +37,7 @@ export {
   runCoreAmpTests,
   runCoreCanonicalTests,
   runFooterTests,
+  runAmpFooterTests,
   runHeaderTests,
   runMainHeadingTests,
   runMediaPlaceholderTests,

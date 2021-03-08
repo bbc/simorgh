@@ -31,6 +31,8 @@ const logCodes = {
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
   UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
 
+  PODCAST_SERVICE_MISSING: 'podcast_service_missing',
+
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
 

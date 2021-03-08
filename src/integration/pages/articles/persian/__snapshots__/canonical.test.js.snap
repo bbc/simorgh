@@ -4,72 +4,72 @@ exports[`Canonical Articles A11y I can see the skip to content link 1`] = `"مش
 
 exports[`Canonical Articles Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=69&amp;p=persian.articles.c4vlle3q337o.page&amp;x1=[urn%3Abbc%3Aoptimo%3Ac4vlle3q337o]&amp;x2=[responsive]&amp;x3=[news-persian]&amp;x4=[fa]&amp;x7=[article]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%BE%D9%87%D9%BE%D8%A7%D8%AF%DB%8C%2B%DA%A9%D9%87%2B%D8%A8%D8%B1%D8%A7%DB%8C%D8%AA%D8%A7%D9%86%2B%D9%82%D9%87%D9%88%D9%87%2B%D9%85%DB%8C%E2%80%8C%D8%A2%D9%88%D8%B1%D8%AF]&amp;x11=[2018-08-24T14%3A57%3A42.000Z]&amp;x12=[2018-08-24T14%3A57%3A42.000Z]&amp;x13=[Drones]&amp;x14=[c6176220-b6bb-4a1c-b3b4-3a6fcdc283b1]\\"/>"`;
 
-exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
-
-exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
-
-exports[`Canonical Articles Footer Link should match text and url 1`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, فارسی",
   "url": "/persian",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 2`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 2`] = `
 Object {
   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
   "url": "https://www.bbc.com/persian/institutional-49283091",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 3`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 3`] = `
 Object {
   "text": "شرایط استفاده",
   "url": "https://www.bbc.com/persian/institutional-37474133",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 4`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 4`] = `
 Object {
   "text": "درباره بی بی سی",
   "url": "https://www.bbc.com/persian/institutional-37474136",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 5`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 5`] = `
 Object {
   "text": "سیاست حفظ حریم خصوصی",
   "url": "https://www.bbc.com/persian/institutional-37540067",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 6`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکی ها",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 7`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
   "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 8`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Articles Footer Link should match text and url 9`] = `
+exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 Object {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
 `;
+
+exports[`Canonical Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`Canonical Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`Canonical Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 

@@ -224,6 +224,7 @@ const baseServiceConfig = {
       nextRadioShow: 'Наступна радіопрограма',
       duration: 'Тривалість',
       recentEpisodes: 'Більше',
+      podcastExternalLinks: 'Цей подкаст доступний у',
     },
     socialEmbed: {
       caption: {
@@ -297,6 +298,7 @@ const baseServiceConfig = {
         text: "Зв'язатися з BBC",
       },
       {
+        id: 'COOKIE_SETTINGS',
         href:
           'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         text: 'AdChoices / Do Not Sell My Info',
