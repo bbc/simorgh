@@ -299,6 +299,7 @@ export const service = {
           text: 'બીબીસીનો સંપર્ક કરો',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

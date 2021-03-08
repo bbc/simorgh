@@ -116,12 +116,10 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 .emotion-10 {
-  background-color: #222222;
-  font-size: 0.875rem;
-  line-height: 1rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #222222;
 }
 
 @media (max-width: 25rem) {
@@ -136,18 +134,6 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-10 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-10 {
-    font-size: 0.8125rem;
-  }
-}
-
 .emotion-12 {
   max-width: 80rem;
   margin: 0 auto;
@@ -155,11 +141,11 @@ exports[`FooterContainer should render correctly 1`] = `
 
 .emotion-14 {
   border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0.5rem 0;
   -webkit-column-count: 4;
   column-count: 4;
+  margin: 0;
+  list-style-type: none;
+  padding: 0.5rem 0;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
@@ -237,33 +223,43 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 .emotion-18 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  display: block;
+  padding: 0.5rem 0 0.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: block;
 }
 
-.emotion-19:hover .emotion-20,
-.emotion-19:focus .emotion-20 {
+.emotion-18:hover,
+.emotion-18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-22 {
+.emotion-20 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-24 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
+.emotion-22 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  display: inline;
+  padding: 0.5rem 0 0.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline;
+}
+
+.emotion-22:hover,
+.emotion-22:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <div>
@@ -328,16 +324,12 @@ exports[`FooterContainer should render correctly 1`] = `
               class="emotion-18 emotion-19"
               href="https://www.bbc.com/yoruba/institutional-48528718"
             >
-              <span
-                class="emotion-20 emotion-21"
-              >
-                Why you can trust the BBC
-              </span>
+              Why you can trust the BBC
             </a>
           </li>
         </ul>
         <p
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
         >
           <span
             lang="en-GB"
@@ -348,14 +340,10 @@ exports[`FooterContainer should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="emotion-24 emotion-19"
+            class="emotion-22 emotion-19"
             href="https://www.bbc.co.uk/help/web/links/"
           >
-            <span
-              class="emotion-20 emotion-21"
-            >
-              Read about our approach to external linking.
-            </span>
+            Read about our approach to external linking.
           </a>
         </p>
       </div>

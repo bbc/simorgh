@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PodcastExternalLinks Should render external links 1`] = `
+.emotion-0 {
+  border-top: 1px #BABABA solid;
+  border-bottom: 1px #BABABA solid;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.emotion-2 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-4 {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-right: 1rem;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+.emotion-4:visited {
+  color: #6E6E73;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-4>span {
+  margin: 0.8125rem 0;
+  display: inline-block;
+}
+
+.emotion-4:not(:first-of-type)>span {
+  padding-left: 1rem;
+  border-left: 1px #BABABA solid;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <h2
+      class="emotion-2 emotion-3"
+    >
+      Этот подкаст доступен на
+    </h2>
+    <div>
+      <a
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        href="https://bbc.com"
+      >
+        <span>
+          Apple
+        </span>
+      </a>
+      <a
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        href="https://bbc.com"
+      >
+        <span>
+          Spotify
+        </span>
+      </a>
+      <a
+        class="emotion-4 emotion-5"
+        dir="ltr"
+        href="https://bbc.com"
+      >
+        <span>
+          RSS
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
