@@ -170,6 +170,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   }
 }
 
+.emotion-17>span {
+  margin: 0.8125rem 0;
+  display: inline-block;
+}
+
 .emotion-17:visited {
   color: #6E6E73;
 }
@@ -178,11 +183,6 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
 .emotion-17:hover>span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
-}
-
-.emotion-17>span {
-  margin: 0.8125rem 0;
-  display: inline-block;
 }
 
 .emotion-19 {
