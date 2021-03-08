@@ -10,14 +10,13 @@ const externalLinks = {
         linkUrl:
           'https://podcasts.apple.com/gb/podcast/%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%B1%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8/id1248943501',
       },
-      { linkText: 'Yandex', linkUrl: 'no' },
       {
         linkText: 'Castbox',
         linkUrl:
           'https://castbox.fm/channel/%D0%A0%D0%B0%D0%B4%D0%B8%D0%BE%D0%B0%D1%80%D1%85%D0%B8%D0%B2-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D1%83%D0%B6%D0%B1%D1%8B-%D0%91%D0%B8-%D0%B1%D0%B8-%D1%81%D0%B8-id933314?country=us',
       },
     ],
-    'p076qqzl ': [
+    p076qqzl: [
       {
         linkText: 'Spotify',
         linkUrl: 'https://open.spotify.com/show/2CR7Wn6IzBVXPxQ5uzkkz1',
