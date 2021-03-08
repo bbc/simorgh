@@ -318,7 +318,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   color: #6E6E73;
   padding-left: 0.5rem;
   margin-left: 0.5rem;
-  border-left: 0.0625rem solid #BABABA;
+  border-left: 0.0625rem solid #AEAEB5;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
