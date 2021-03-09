@@ -34,6 +34,7 @@ import {
 
 const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
+const OPTIONS_MAX_WIDTH = '23.875rem'; // 382px
 const BORDER_WIDTH = '0.0625rem'; // 1px
 const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
@@ -112,17 +113,17 @@ const StyledLink = styled(Link)`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
-  align-items: stretch;
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: ${OPTIONS_MAX_WIDTH};
   padding-right: 0;
   padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    max-width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: ${GEL_SPACING_TRPL};
