@@ -6,9 +6,6 @@ Object {
   "ads": Object {
     "enabled": false,
   },
-  "ampAds": Object {
-    "enabled": false,
-  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -57,9 +54,6 @@ Object {
   "_environment": "local",
   "ads": Object {
     "enabled": false,
-  },
-  "ampAds": Object {
-    "enabled": true,
   },
   "chartbeatAnalytics": Object {
     "enabled": true,
@@ -112,9 +106,6 @@ Object {
   "_environment": "test",
   "ads": Object {
     "enabled": false,
-  },
-  "ampAds": Object {
-    "enabled": true,
   },
   "chartbeatAnalytics": Object {
     "enabled": true,

@@ -12,7 +12,6 @@ import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
@@ -93,11 +92,6 @@ const AmpAd = ({ slotType }) => {
     translations,
   );
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
-  const { enabled: ampAdsEnabled } = useToggle('ampAds');
-
-  if (!ampAdsEnabled) {
-    return null;
-  }
 
   return (
     <>
@@ -106,18 +100,15 @@ const AmpAd = ({ slotType }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <AdSection
-        aria-label={ariaLabel}
-        role="region"
-        data-e2e="advertisement"
-        aria-hidden="true"
-      >
-        <AdContainer slotType={slotType}>
-          <StyledWrapper>
-            <DisplayWrapper
-              amp-access="toggles.ads.enabled"
-              amp-access-hide="true"
-            >
+      <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
+        <AdSection
+          aria-label={ariaLabel}
+          role="region"
+          data-e2e="advertisement"
+          aria-hidden="true"
+        >
+          <AdContainer slotType={slotType}>
+            <StyledWrapper>
               <StyledLink
                 href={LABEL_LINK}
                 script={script}
@@ -128,10 +119,10 @@ const AmpAd = ({ slotType }) => {
                 {label}
               </StyledLink>
               <AdSlot service={service} slotType={slotType} />
-            </DisplayWrapper>
-          </StyledWrapper>
-        </AdContainer>
-      </AdSection>
+            </StyledWrapper>
+          </AdContainer>
+        </AdSection>
+      </DisplayWrapper>
     </>
   );
 };

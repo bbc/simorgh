@@ -457,7 +457,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
 <div>
   <aside
     aria-labelledby="recent-episodes"
-    role="complimentary"
+    role="complementary"
   >
     <div
       class="emotion-0 emotion-1 emotion-2"
