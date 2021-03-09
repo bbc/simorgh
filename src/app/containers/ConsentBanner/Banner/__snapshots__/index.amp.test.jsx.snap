@@ -101,10 +101,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,8 +109,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 23.875rem;
   padding-right: 0;
   padding-bottom: 1rem;
   padding-left: 0;
@@ -136,6 +132,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 @media (min-width: 37.5rem) {
   .emotion-10 {
+    max-width: 100%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -486,10 +483,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -498,8 +491,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 23.875rem;
   padding-right: 0;
   padding-bottom: 1rem;
   padding-left: 0;
@@ -521,6 +514,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 @media (min-width: 37.5rem) {
   .emotion-10 {
+    max-width: 100%;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
