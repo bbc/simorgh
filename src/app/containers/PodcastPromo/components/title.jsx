@@ -8,8 +8,8 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 
 const Heading = styled.h2`
-  ${({ script }) => getGreatPrimer(script)};
-  ${({ service }) => getSansRegular(service)};
+  ${({ script }) => getGreatPrimer(script)}
+  ${({ service }) => getSansRegular(service)}
   display: inline;
   color: ${C_EBON};
 

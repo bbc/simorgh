@@ -9,8 +9,8 @@ import { C_METAL } from '@bbc/psammead-styles/colours';
 
 const EpisodesText = styled.p`
   display: inline;
-  ${({ script }) => getPica(script)};
-  ${({ service }) => getSansRegular(service)};
+  ${({ script }) => getPica(script)}
+  ${({ service }) => getSansRegular(service)}
   color: ${C_METAL};
   > svg {
     fill: currentColor;

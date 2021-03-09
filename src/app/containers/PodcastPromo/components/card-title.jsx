@@ -5,7 +5,7 @@ import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 
 const CardTitle = styled.h3`
-  ${({ script }) => getPica(script)};
+  ${({ script }) => getPica(script)}
   ${({ service }) => getSerifMedium(service)}
   margin-top: 0;
   margin-bottom: ${GEL_SPACING};
