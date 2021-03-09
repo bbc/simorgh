@@ -353,7 +353,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
   <aside
     aria-labelledby="recent-episodes"
     class="emotion-0 emotion-1"
-    role="complimentary"
+    role="complementary"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
