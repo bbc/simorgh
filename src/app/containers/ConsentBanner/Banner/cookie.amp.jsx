@@ -170,12 +170,13 @@ const OptionsItem = styled.li`
  * the Manage Cookie Settings banner.
  */
 // eslint-disable-next-line react/prop-types
-export const AmpCookieSettingsButton = ({ children, ...rest }) => (
+export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
     on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
     type="button"
     data-testid="amp-cookie-settings-button"
-    {...rest}
+    lang={lang}
+    className={className}
   >
     {children}
   </button>
