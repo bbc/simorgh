@@ -21,6 +21,7 @@ import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -114,7 +115,6 @@ const OptionsList = styled.ul`
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -122,8 +122,9 @@ const OptionsList = styled.ul`
   padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     flex-direction: row;
+    justify-content: space-between;
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
@@ -131,7 +132,7 @@ const OptionsList = styled.ul`
 const OptionsItem = styled.li`
   margin-bottom: ${GEL_SPACING};
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: calc(50% - ${GEL_SPACING});
   }
 
