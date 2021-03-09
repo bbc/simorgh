@@ -155,12 +155,12 @@ const OptionsItem = styled.li`
       text-decoration: underline;
     }
   }
-`;
 
-const ManageSettingsButton = styled.button`
-  background: none;
-  border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
-  color: ${C_CONSENT_ACTION};
+  button[on='tap:AMP.setState({ isManagingSettings: true })'] {
+    background: none;
+    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
+    color: ${C_CONSENT_ACTION};
+  }
 `;
 
 /**
@@ -218,12 +218,12 @@ const AmpCookieBanner = ({
               {accept}
             </OptionsItem>
             <OptionsItem script={script} service={service}>
-              <ManageSettingsButton
+              <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
                 {initial.manage}
-              </ManageSettingsButton>
+              </button>
             </OptionsItem>
           </OptionsList>
         </BannerPage>
