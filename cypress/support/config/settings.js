@@ -9026,14 +9026,14 @@ module.exports = () => ({
               '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
               '/urdu/bbc_urdu_radio/w172xphchh1df2k', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
               '/urdu/bbc_urdu_radio/w172xphchh1df2k', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/bbc_urdu_radio/w172x9dx052c8sr'],
