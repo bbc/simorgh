@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
-.emotion-0 {
+.amp-geo-pending .emotion-0,
+.amp-geo-group-gbOrUnknown .emotion-0 {
+  display: none;
+  visibility: hidden;
+}
+
+.emotion-2 {
   background-color: #F8F8F8;
   margin-top: 0.5rem;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: none;
   visibility: hidden;
 }
 
 @media (min-width: 20rem) {
-  .emotion-2 {
+  .emotion-4 {
     min-height: 5.1875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -30,20 +36,14 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-2 {
+  .emotion-4 {
     min-height: 17.6875rem;
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: 0 auto;
   text-align: center;
-}
-
-.amp-geo-pending .emotion-6,
-.amp-geo-group-gbOrUnknown .emotion-6 {
-  display: none;
-  visibility: hidden;
 }
 
 .emotion-8 {
@@ -81,22 +81,22 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 }
 
 <div>
-  <section
-    aria-hidden="true"
-    aria-label="Publicités"
+  <div
+    amp-access="toggles.ads.enabled"
+    amp-access-hide="true"
     class="emotion-0 emotion-1"
-    data-e2e="advertisement"
-    role="region"
   >
-    <div
+    <section
+      aria-hidden="true"
+      aria-label="Publicités"
       class="emotion-2 emotion-3"
+      data-e2e="advertisement"
+      role="region"
     >
       <div
         class="emotion-4 emotion-5"
       >
         <div
-          amp-access="toggles.ads.enabled"
-          amp-access-hide="true"
           class="emotion-6 emotion-7"
         >
           <a
@@ -135,25 +135,31 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
           />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 `;
 
 exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
-.emotion-0 {
+.amp-geo-pending .emotion-0,
+.amp-geo-group-gbOrUnknown .emotion-0 {
+  display: none;
+  visibility: hidden;
+}
+
+.emotion-2 {
   background-color: #F8F8F8;
   margin-top: 0.5rem;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: none;
   visibility: hidden;
   padding: 0;
 }
 
 @media (min-width: 18.75rem) {
-  .emotion-2 {
+  .emotion-4 {
     min-height: 17.6875rem;
     display: -webkit-box;
     display: -webkit-flex;
@@ -170,15 +176,9 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: 0 auto;
   text-align: center;
-}
-
-.amp-geo-pending .emotion-6,
-.amp-geo-group-gbOrUnknown .emotion-6 {
-  display: none;
-  visibility: hidden;
 }
 
 .emotion-8 {
@@ -216,22 +216,22 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
 }
 
 <div>
-  <section
-    aria-hidden="true"
-    aria-label="Publicités 2"
+  <div
+    amp-access="toggles.ads.enabled"
+    amp-access-hide="true"
     class="emotion-0 emotion-1"
-    data-e2e="advertisement"
-    role="region"
   >
-    <div
+    <section
+      aria-hidden="true"
+      aria-label="Publicités 2"
       class="emotion-2 emotion-3"
+      data-e2e="advertisement"
+      role="region"
     >
       <div
         class="emotion-4 emotion-5"
       >
         <div
-          amp-access="toggles.ads.enabled"
-          amp-access-hide="true"
           class="emotion-6 emotion-7"
         >
           <a
@@ -256,7 +256,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP mpu ad 1`] = `
           />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 `;
