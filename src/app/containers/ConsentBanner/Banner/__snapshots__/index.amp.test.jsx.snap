@@ -112,9 +112,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -137,11 +134,14 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     padding-bottom: 1.5rem;
   }
 }
@@ -150,7 +150,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-12 {
     width: calc(50% - 0.5rem);
   }
@@ -195,20 +195,20 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   text-decoration: underline;
 }
 
-.emotion-16 {
+.emotion-12 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
   border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
 
-.emotion-26 {
+.emotion-24 {
   color: #FFFFFF;
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 25rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-top: 2rem;
   }
 }
@@ -264,7 +264,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             class="emotion-12 emotion-13"
           >
             <button
-              class="emotion-16 emotion-17"
               on="tap:AMP.setState({ isManagingSettings: true })"
               type="button"
             >
@@ -295,7 +294,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
           The lightweight mobile page you have visited has been built using Google AMP technology.
         </p>
         <h3
-          class="emotion-26 emotion-27"
+          class="emotion-24 emotion-25"
         >
           Strictly necessary data collection
         </h3>
@@ -322,7 +321,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
           We use local storage to store your consent preferences on your device.
         </p>
         <h3
-          class="emotion-26 emotion-27"
+          class="emotion-24 emotion-25"
         >
           Optional data collection
         </h3>
@@ -498,9 +497,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
@@ -523,11 +519,14 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-10 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     padding-bottom: 1.5rem;
   }
 }
@@ -536,7 +535,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-12 {
     width: calc(50% - 0.5rem);
   }
@@ -581,20 +580,20 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   text-decoration: underline;
 }
 
-.emotion-16 {
+.emotion-12 button[on='tap:AMP.setState({ isManagingSettings: true })'] {
   background: none;
   border: 0.0625rem solid #F6A21D;
   color: #F6A21D;
 }
 
-.emotion-26 {
+.emotion-24 {
   color: #FFFFFF;
   margin-top: 1.5rem;
   margin-bottom: 0;
 }
 
 @media (min-width: 25rem) {
-  .emotion-26 {
+  .emotion-24 {
     margin-top: 2rem;
   }
 }
@@ -650,7 +649,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             class="emotion-12 emotion-13"
           >
             <button
-              class="emotion-16 emotion-17"
               on="tap:AMP.setState({ isManagingSettings: true })"
               type="button"
             >
@@ -681,7 +679,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.
         </p>
         <h3
-          class="emotion-26 emotion-27"
+          class="emotion-24 emotion-25"
         >
           جمع المعلومات ضروري جدا ولابد منه
         </h3>
@@ -708,7 +706,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
           نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.
         </p>
         <h3
-          class="emotion-26 emotion-27"
+          class="emotion-24 emotion-25"
         >
           شروط اختيارية لجمع المعلومات
         </h3>
