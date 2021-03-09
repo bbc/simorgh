@@ -6,6 +6,7 @@ export const indonesian = [
     duration: 'PT15M30S',
     image: '//ichef.bbci.co.uk/images/ic/768x432/p08b4828.png',
     altText: 'Dunia Pagi Ini',
+    episodeTitle: 'BBC Indonesia, Kamis 18 Februari 2021',
   },
   {
     id: 'w172xnm84wjrkv2',

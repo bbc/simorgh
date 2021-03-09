@@ -19,9 +19,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import EpisodeList from '@bbc/psammead-episode-list';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import EpisodeList from '#containers/EpisodeList';
 
 const Spacer = styled.aside`
   position: relative;
@@ -90,7 +90,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <Spacer role="complimentary" aria-labelledby="recent-episodes">
+    <Spacer role="complementary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
@@ -171,7 +171,6 @@ RecentAudioEpisodes.propTypes = {
   episodes: arrayOf(
     shape({
       id: string.isRequired,
-      url: string.isRequired,
       brandTitle: string.isRequired,
       episodeTitle: string,
       timestamp: number.isRequired,

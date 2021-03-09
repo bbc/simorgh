@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
-import { shape, string, number, bool, func } from 'prop-types';
+import { shape, string, number, bool, func, node } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -26,7 +26,7 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
+import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 
@@ -64,6 +64,23 @@ const StyledGridItemImage = styled(Grid)`
     grid-column-end: span 2;
   }
 `;
+
+const PageGrid = ({ children }) => (
+  <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
+    <Grid
+      item
+      startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+      columns={getGroups(6, 6, 6, 6, 6, 12)}
+      margins={getGroups(true, true, true, true, false, false)}
+    >
+      {children}
+    </Grid>
+  </GelPageGrid>
+);
+
+PageGrid.propTypes = {
+  children: node.isRequired,
+};
 
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
@@ -215,25 +232,22 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 : []
             }
           />
-          {isPodcast && <PodcastExternalLinks links={externalLinks} />}
         </Grid>
       </GelPageGrid>
+      {isPodcast && (
+        <PageGrid>
+          <PodcastExternalLinks links={externalLinks} brandTitle={brandTitle} />
+        </PageGrid>
+      )}
       {hasRecentEpisodes && (
-        <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
-          <Grid
-            item
-            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-            columns={getGroups(6, 6, 6, 6, 6, 12)}
-            margins={getGroups(true, true, true, true, false, false)}
-          >
-            <RecentAudioEpisodes
-              masterBrand={masterBrand}
-              episodes={recentEpisodes}
-              brandId={brandId}
-              pageType={pageType}
-            />
-          </Grid>
-        </GelPageGrid>
+        <PageGrid>
+          <RecentAudioEpisodes
+            masterBrand={masterBrand}
+            episodes={recentEpisodes}
+            brandId={brandId}
+            pageType={pageType}
+          />
+        </PageGrid>
       )}
       {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
