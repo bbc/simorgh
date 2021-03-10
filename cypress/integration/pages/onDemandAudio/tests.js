@@ -108,25 +108,39 @@ export default ({ service, pageType, variant, isAmp }) => {
                       episode => episode.innerText,
                     );
 
-                    const jsonResWithHumanReadableDates = processedEpisodesData.map(
-                      episodeData => ({
-                        ...episodeData,
-                        timestamp: new Date(
-                          episodeData.timestamp,
-                        ).toLocaleString(),
-                      }),
+                    const convertTimestampsToLocaleString = recentEpisodesArray => {
+                      return recentEpisodesArray.map(episode => ({
+                        ...episode,
+                        timestamp: new Date(episode.timestamp).toLocaleString(),
+                      }));
+                    };
+
+                    const cypressJsonResWithLocaleStringTimestamp = convertTimestampsToLocaleString(
+                      processedEpisodesData,
                     );
+
+                    const simorghJsonResWithLocaleStringTimestamp =
+                      !isAmp &&
+                      convertTimestampsToLocaleString(
+                        win.SIMORGH_DATA.pageData.recentEpisodes,
+                      );
 
                     if (
                       renderedEpisodesArray.length !==
-                      jsonResWithHumanReadableDates.length
+                      cypressJsonResWithLocaleStringTimestamp.length
                     ) {
                       /* eslint-disable no-console */
                       console.log(
-                        'From json response - ',
-                        jsonResWithHumanReadableDates,
+                        'Cypress json response - ',
+                        cypressJsonResWithLocaleStringTimestamp,
                       );
-                      console.log('On page - ', renderedEpisodesInnerText);
+                      console.log('HTML on page - ', renderedEpisodesInnerText);
+                      if (!isAmp) {
+                        console.log(
+                          'Simorgh json response - ',
+                          simorghJsonResWithLocaleStringTimestamp,
+                        );
+                      }
                       /* eslint-enable no-console */
                     }
 
