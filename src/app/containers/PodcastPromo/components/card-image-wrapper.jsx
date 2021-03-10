@@ -8,7 +8,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardImageWrapper = styled.div`
-  margin: ${GEL_SPACING} 0 0 ${GEL_SPACING};
+  margin: ${GEL_SPACING} 0 ${GEL_SPACING} ${GEL_SPACING};
   display: none;
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     display: block;
