@@ -4,13 +4,9 @@ import { RequestContext } from '#contexts/RequestContext';
 import Canonical from './index.canonical';
 import Amp from './index.amp';
 
-const ConsentBanner = ({ onDismissFocusRef, ...props }) => {
+const ConsentBanner = ({ onDismissFocusRef }) => {
   const { isAmp } = useContext(RequestContext);
-  return isAmp ? (
-    <Amp />
-  ) : (
-    <Canonical onDismissFocusRef={onDismissFocusRef} {...props} />
-  );
+  return isAmp ? <Amp /> : <Canonical onDismissFocusRef={onDismissFocusRef} />;
 };
 
 ConsentBanner.propTypes = {
