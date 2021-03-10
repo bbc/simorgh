@@ -248,7 +248,9 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           dir="ltr"
           href="https://bbc.com"
         >
-          <span>
+          <span
+            role="text"
+          >
             Apple
             <span
               class="emotion-19 emotion-20"
@@ -267,7 +269,9 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           dir="ltr"
           href="https://bbc.com"
         >
-          <span>
+          <span
+            role="text"
+          >
             Spotify
             <span
               class="emotion-19 emotion-20"
@@ -286,7 +290,9 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           dir="ltr"
           href="https://bbc.com"
         >
-          <span>
+          <span
+            role="text"
+          >
             RSS
             <span
               class="emotion-19 emotion-20"
