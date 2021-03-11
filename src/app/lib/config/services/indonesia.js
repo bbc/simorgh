@@ -127,29 +127,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
-          description: {
-            uk: {
-              first: 'Kami menggunakan ',
-              linkText: 'cookies',
-              last:
-                ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Terima pengambilan data dan lanjutkan',
+            reject: 'Tolak pengambilan data dan lanjutkan',
+            initial: {
+              title:
+                'Beri tahu kami Anda jika setuju dengan pengambilan data melalui AMP.',
+              description: {
+                first:
+                  'Kami dan para mitra kami menggunakan teknologi, seperti ',
+                linkText: 'cookies',
+                last:
+                  ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Atur pengaturan saya',
             },
-            international: {
-              first: 'Kami dan para mitra kami menggunakan teknologi, seperti ',
-              linkText: 'cookies',
-              last:
-                ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Atur persetujuan pengaturan di halaman AMP',
+              description: {
+                para1:
+                  'Pengaturan itu berlaku pada halaman AMP saja. Anda mungkin akan ditanya lagi untuk mengatur preferensi ketika Anda mengunjungi halaman non-AMP BBC.',
+                para2:
+                  'Halaman ponsel yang Anda kunjungi dibuat dengan menggunakan teknologi AMP Google',
+                heading2: 'Pengambilan data sangat diperlukan',
+                para3:
+                  'Agar situs kami tetap berjalan, kami menyimpan sejumlah informasi terbatas dalam perangkat Anda tanpa persetujuan Anda.',
+                para4: {
+                  text:
+                    'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Kami menggunakan penyimpanan lokal untuk menyimpan preferensi yang Anda pilih dalam perangkat Anda.',
+                heading3: 'Pengambilan data opsional',
+                para6:
+                  'Bila Anda menyetujui pengambilan data pada halaman AMP, Anda mengizinkan kami menampilkan preferensi iklan Anda, yang relevan bagi Anda bila Anda berada di luar Inggris.',
+                para7: {
+                  text:
+                    'Baca lebih lanjut bagaimana kami menyesuaikan iklan di BBC dan mitra-mira iklan kami.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Anda dapat memilih untuk tidak menerima iklan yang disesuaikan dengan pilihan Anda dengan mengeklik "Tolak pengambilan data dan lanjutkan" di bawah ini. Anda tetap dapat melihat iklan, namun tak sesuai dengan pilihan Anda.',
+                para9:
+                  'Anda dapat mengubah pengaturan dengan mengeklik "Pilihan iklan/Jangan sebarkan informasi saya" di catatan kaki, kapan saja.',
+              },
             },
           },
-          accept: 'Ya, saya setuju',
-          reject: 'Tidak, tampilkan pengaturan',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
+            description: {
+              uk: {
+                first: 'Kami menggunakan ',
+                linkText: 'cookies',
+                last:
+                  ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Kami dan para mitra kami menggunakan teknologi, seperti ',
+                linkText: 'cookies',
+                last:
+                  ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ya, saya setuju',
+            reject: 'Tidak, tampilkan pengaturan',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -162,12 +216,15 @@ export const service = {
         video: 'Video',
         listen: 'Dengar',
         watch: 'Tonton',
+        listenLive: 'Mendengarkan langsung',
+        listenNext: 'Dengar yang berikut',
         liveLabel: 'LANGSUNG',
         nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
         recentEpisodes: 'Siaran sebelumnya',
+        podcastExternalLinks: 'Podcast ini juga tersedia di',
       },
       socialEmbed: {
         caption: {
@@ -246,6 +303,7 @@ export const service = {
           text: 'Hubungi BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

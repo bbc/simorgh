@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 import styled from '@emotion/styled';
-import { shape, string, number, bool, func } from 'prop-types';
+import { shape, string, number, bool, func, node } from 'prop-types';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
@@ -22,7 +26,9 @@ import getMediaId from '#lib/utilities/getMediaId';
 import getMasterbrand from '#lib/utilities/getMasterbrand';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import RadioScheduleContainer from '#containers/RadioSchedule';
-import RecentAudioEpisodes from '#containers/RecentAudioEpisodes';
+import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
+import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
+import PodcastExternalLinks from '#containers/PodcastExternalLinks';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 
@@ -45,9 +51,41 @@ const StyledGelWrapperGrid = styled(GelPageGrid)`
   }
 `;
 
+const StyledGridItemParagraph = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
+`;
+
+const StyledGridItemImage = styled(Grid)`
+  @media (min-width: 22.5rem) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
+  }
+`;
+
+const PageGrid = ({ children }) => (
+  <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
+    <Grid
+      item
+      startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+      columns={getGroups(6, 6, 6, 6, 6, 12)}
+      margins={getGroups(true, true, true, true, false, false)}
+    >
+      {children}
+    </Grid>
+  </GelPageGrid>
+);
+
+PageGrid.propTypes = {
+  children: node.isRequired,
+};
+
 const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   const idAttr = SKIP_LINK_ANCHOR_ID;
   const {
+    isPodcast,
     language,
     brandTitle,
     headline,
@@ -57,21 +95,29 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     episodeId,
     releaseDateTimeStamp,
     imageUrl,
+    imageAltText,
     promoBrandTitle,
     durationISO8601,
     thumbnailImageUrl,
     radioScheduleData,
     recentEpisodes,
     brandId,
+    episodeTitle,
+    externalLinks,
   } = pageData;
 
   const pageType = path(['metadata', 'type'], pageData);
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const { dir, liveRadioOverrides, lang, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    dir,
+    liveRadioOverrides,
+    lang,
+    service,
+    translations,
+    serviceName,
+  } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
@@ -95,6 +141,17 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   );
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+  const metadataTitle = episodeTitle
+    ? `${episodeTitle} - ${brandTitle} - ${serviceName}`
+    : headline;
+
+  const metadataImageProps = is(String, imageUrl)
+    ? {
+        image: `https://${imageUrl.replace('$recipe', `400x400`)}`,
+        imageWidth: 400,
+        imageHeight: 400,
+      }
+    : {};
 
   return (
     <>
@@ -102,10 +159,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
-        title={headline}
-        lang={language}
-        description={shortSynopsis}
         openGraphType="website"
+        lang={language}
+        title={metadataTitle}
+        description={shortSynopsis}
+        {...metadataImageProps}
       />
 
       <GelPageGrid
@@ -125,17 +183,21 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <Grid item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
+                episodeTitle={episodeTitle}
                 releaseDateTimeStamp={releaseDateTimeStamp}
               />
               <OnDemandParagraphContainer text={summary} />
-            </Grid>
-            <Grid item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage imageUrl={imageUrl} />
-            </Grid>
+              {episodeTitle && (
+                <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
+              )}
+            </StyledGridItemParagraph>
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+              <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
+            </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
             <AVPlayer
@@ -153,7 +215,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
           <LinkedData
             type="WebPage"
-            seoTitle={headline}
+            seoTitle={metadataTitle}
             entities={
               mediaIsAvailable
                 ? [
@@ -172,22 +234,20 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </Grid>
       </GelPageGrid>
+      {isPodcast && (
+        <PageGrid>
+          <PodcastExternalLinks links={externalLinks} brandTitle={brandTitle} />
+        </PageGrid>
+      )}
       {hasRecentEpisodes && (
-        <GelPageGrid columns={getGroups(6, 6, 6, 6, 8, 20)} enableGelGutters>
-          <Grid
-            item
-            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
-            columns={getGroups(6, 6, 6, 6, 6, 12)}
-            margins={getGroups(true, true, true, true, false, false)}
-          >
-            <RecentAudioEpisodes
-              masterBrand={masterBrand}
-              episodes={recentEpisodes}
-              brandId={brandId}
-              pageType={pageType}
-            />
-          </Grid>
-        </GelPageGrid>
+        <PageGrid>
+          <RecentAudioEpisodes
+            masterBrand={masterBrand}
+            episodes={recentEpisodes}
+            brandId={brandId}
+            pageType={pageType}
+          />
+        </PageGrid>
       )}
       {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
@@ -200,12 +260,15 @@ OnDemandAudioPage.propTypes = {
   MediaError: func.isRequired,
   mediaIsAvailable: bool.isRequired,
   pageData: shape({
+    isPodcast: bool,
     brandTitle: string,
     headline: string,
     summary: string,
     language: string,
     releaseDateTimeStamp: number,
     imageUrl: string,
+    imageAltText: string,
+    episodeTitle: string,
   }).isRequired,
 };
 

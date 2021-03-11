@@ -127,30 +127,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'మీరు కుకీస్‌ను అంగీకరిస్తే మాకు తెలియచేయండి',
-          description: {
-            uk: {
-              first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
-              linkText: 'కుకీలు',
-              last:
-                ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'డేటా సేకరణకు అంగీకరించి, కొనసాగండి.',
+            reject: 'డేటా సేకరణకు నిరాకరించి, కొనసాగండి.',
+            initial: {
+              title:
+                'ఏఎంపీ (Accelerated Mobile Page)లో డేటా సేకరణకు మీ అంగీకారాన్ని మాకు తెలియజేయండి',
+              description: {
+                first:
+                  'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
+                linkText: 'వంటి టెక్నాలజీలు',
+                last:
+                  ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'నా సెటింగ్స్‌ను మేనేజ్ చేయండి.',
             },
-            international: {
-              first:
-                'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
-              linkText: 'వంటి టెక్నాలజీలు',
-              last:
-                ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP పేజీల్లో సమ్మతి సెటింగ్స్‌ను మేనేజ్ చేయండి.',
+              description: {
+                para1:
+                  'ఈ సెటింగ్స్ AMP పేజీలకు మాత్రమే వర్తిస్తాయి. మీరు AMP కాని బీబీసీ పేజీలను సందర్శించినప్పుడు మరోసారి మీ ప్రాధాన్యాల్ని సెట్ చెయ్యమని అడగవచ్చు.',
+                para2:
+                  'మీరు చూసిన లైట్‌వెయిట్ మొబైల్ పేజీ గూగుల్ AMP టెక్నాలజీని ఉపయోగించి రూపొందించారు.',
+                heading2: 'డేటా సేకరణ తప్పనిసరి',
+                para3:
+                  'మా వెబ్ పేజీ పని చేసేందుకు మీ అనుమతి లేకుండానే మీ డివైస్‌లో కొంత పరిమితిలో సమాచారాన్ని స్టోర్ చేస్తాం.',
+                para4: {
+                  text:
+                    'మా వెబ్ పేజీలు పని చేసేందుకు మీ డివైస్‌లో స్టోర్ చేసిన అత్యవసర సమాచారం గురించి మరింత తెలుసుకోండి.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'మీరు అనుమతించిన మీ ప్రాధాన్యాలను మీ డివైస్‌లో స్టోర్ చేసేందుకు మేము లోకల్ స్టోరేజిని ఉపయోగిస్తాం.',
+                heading3: 'ఐచ్ఛిక సమాచార సేకరణ',
+                para6:
+                  'మీరు AMP పేజీల్లో డేటా సేకరణకు అనుమతించారు అంటే.. మీరు బ్రిటన్‌ బయట నివసిస్తున్నప్పుడు కూడా మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనల్ని చూపించేందుకు మాకు అనుమతినిచ్చినట్లే.',
+                para7: {
+                  text:
+                    'బీబీసీ, బీబీసీ ప్రకటనల భాగస్వాములు మీ ఆసక్తి మేరకు ప్రత్యేకమైన ప్రకటనల్ని ఎలా రూపొందిస్తారో మరింత తెలుసుకోండి.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'కిందున్న “డేటా సేకరణకు తిరస్కరించి, కొనసాగండి”పై క్లిక్ చేసి మీకు మాత్రమే కనిపించే ప్రత్యేకమైన ప్రకటనలు కూడా రాకుండా చూసుకోవచ్చు. అయితే, ఇది క్లిక్ చేశాక కూడా ప్రకటనలు మీకు కనిపిస్తాయి కానీ అవి మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనలు కాదని గమనించాలి.',
+                para9:
+                  'కిందున్న “ప్రకటన ఎంపిక/నా సమాచారాన్ని అమ్మొద్దు”పై క్లిక్ చేసి ఈ సెటింగ్‌లను మీరు ఎప్పుడైనా మార్చుకోవచ్చు.',
+              },
             },
           },
-          accept: 'అవును, అంగీకరిస్తున్నా',
-          reject: 'లేదు, నన్ను సెట్టింగ్స్ పేజీకి తీసుకెళ్లండి',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'మీరు కుకీస్‌ను అంగీకరిస్తే మాకు తెలియచేయండి',
+            description: {
+              uk: {
+                first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
+                linkText: 'కుకీలు',
+                last:
+                  ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
+                linkText: 'వంటి టెక్నాలజీలు',
+                last:
+                  ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'అవును, అంగీకరిస్తున్నా',
+            reject: 'లేదు, నన్ను సెట్టింగ్స్ పేజీకి తీసుకెళ్లండి',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -168,6 +221,7 @@ export const service = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
+        listenLive: 'లైవ్ వినండి',
         liveLabel: 'లైవ్',
         nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
@@ -248,6 +302,7 @@ export const service = {
           text: 'బీబీసీని సంప్రదించండి',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

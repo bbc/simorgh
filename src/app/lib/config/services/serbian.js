@@ -106,6 +106,7 @@ export const service = {
           text: 'Kontaktirajte BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -229,29 +230,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Obavestite nas da li se slažete sa korišćenjem kolačića',
-          description: {
-            uk: {
-              first: 'Koristimo ',
-              linkText: 'kolačiće',
-              last:
-                ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Prihvatite prikupljanje podataka i nastavite',
+            reject: 'Odbijate prikupljanje podataka i nastavite',
+            initial: {
+              title:
+                'Obavestite nas da li se slažete sa prikupljanjem podataka na AMP stranicama',
+              description: {
+                first: 'Mi i naši partneri koristimo tehnologije poput ',
+                linkText: 'kolačića',
+                last:
+                  ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Promenite moja podešavanja',
             },
-            international: {
-              first: 'Mi i naši partneri koristimo tehnologije poput ',
-              linkText: 'kolačića',
-              last:
-                ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Promenite moja podešavanja na AMP stranicama',
+              description: {
+                para1:
+                  'Ova podešavanja se koriste samo na AMP stranicama. Možda će vam biti traženo da ponovo izvršite podešavanja kada posećujete ne-AMP BBC stranice.',
+                para2:
+                  'Manje opterećena mobilna stranica koju ste posetili napravljena je korišćenjem Gugl AMP tehnologije.',
+                heading2: 'Samo neophodno prikupljanje podataka',
+                para3:
+                  'Da bi naše internet stranice funkcionisale, čuvamo određenu i ograničenu količinu podataka na vašem uređaju bez vaše saglasnosti.',
+                para4: {
+                  text:
+                    'Pročitajte više o neophodnim podacima koje čuvamo na vašem uređaju da bi naše stranice funkcionisale. (na engleskom jeziku)',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Koristimo lokalne servere da bismo sačuvali vaše podatke o saglasnosti na vašem uređaju.',
+                heading3: 'Opciono prikupljanje podataka',
+                para6:
+                  'Kada pristanete na prikupljanje podataka na AMP stranicama, pristajete da nam dozvolite da vam prikažemo personalizovane oglase koji su važni za vas kada ste van Velike Britanije.',
+                para7: {
+                  text:
+                    'Pročitajte više o načinu na koji personalizujemo oglase na BBC-ju i kod naših partnerskih oglašivača.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Možete da odaberete da ne dobijate personalizovane oglase ako kliknete na "Odbiti prikupljanje podataka i nastaviti" ispod. Molimo vas da uzmete u obzir da ćete i dalje videti oglase, ali neće biti personalizovani za vas.',
+                para9:
+                  'Možete da promenite ova podešavanja ako kliknete na "Izbor oglasa / Ne možete prodavati moje podatke" u dnu stranice u svakom trenutku.',
+              },
             },
           },
-          accept: 'Da, slažem se',
-          reject: 'Ne, vratite me na podešavanja',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Obavestite nas da li se slažete sa korišćenjem kolačića',
+            description: {
+              uk: {
+                first: 'Koristimo ',
+                linkText: 'kolačiće',
+                last:
+                  ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Mi i naši partneri koristimo tehnologije poput ',
+                linkText: 'kolačića',
+                last:
+                  ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Da, slažem se',
+            reject: 'Ne, vratite me na podešavanja',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -265,6 +318,7 @@ export const service = {
         video: 'Video',
         listen: 'Slušajte',
         watch: 'Gledajte',
+        listenLive: 'Slušajte uživo',
         liveLabel: 'UŽIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Prethodna radio emisija',
@@ -353,6 +407,7 @@ export const service = {
           text: 'Контактирајте ББЦ',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -476,29 +531,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Обавестите нас да ли се слажете са коришћењем колачића',
-          description: {
-            uk: {
-              first: 'Користимо ',
-              linkText: 'колачиће',
-              last:
-                ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Прихватите прикупљање података и наставите',
+            reject: 'Одбијате прикупљање података и наставите',
+            initial: {
+              title:
+                'Обавестите нас да ли се слажете са прикупљањем података на АМП страницама',
+              description: {
+                first: 'Ми и наши партнери користимо технологије попут ',
+                linkText: 'колачиће',
+                last:
+                  ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Промените моја подешавања',
             },
-            international: {
-              first: 'Ми и наши партнери користимо технологије попут ',
-              linkText: 'колачиће',
-              last:
-                ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Промените моја подешавања на АМП страницама',
+              description: {
+                para1:
+                  'Ова подешавања се користе само на АМП страницама. Можда ће вам бити тражено да поново извршите подешавања када посећујете не-АМП ББЦ странице.',
+                para2:
+                  'Мање оптерећена мобилна страница коју сте посетили направљена је коришћењем Гугл АМП технологије.',
+                heading2: 'Само неопходно прикупљање података',
+                para3:
+                  'Да би наше интернет странице функционисале, чувамо одређену и ограничену количину података на вашем уређају без ваше сагласности.',
+                para4: {
+                  text:
+                    'Прочитајте више о неопходним подацима које чувамо на вашем уређају да би наше странице функционисале. (на енглеском језику)',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Користимо локалне сервере да бисмо сачували ваше податке о сагласности на вашем уређају.',
+                heading3: 'Опционо прикупљање података',
+                para6:
+                  'Када пристанете на прикупљање података на АМП страницама, пристајете да нам дозволите да вам прикажемо персонализоване огласе који су важни за вас када сте ван Велике Британије.',
+                para7: {
+                  text:
+                    'Прочитајте више о начину на који персонализујемо огласе на ББЦ-ју и код наших партнерских оглашавача.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Можете да одаберете да не добијате персонализоване огласе ако кликнете на ”Одбити прикупљање података и наставити” испод. Молимо вас да узмете у обзир да ћете и даље видети огласе, али неће бити персонализовани за вас.',
+                para9:
+                  'Можете да промените ова подешавања ако кликнете на ”Избор огласа / Не можете продавати моје податке” у дну странице у сваком тренутку.',
+              },
             },
           },
-          accept: 'Да, слажем се',
-          reject: 'Не, вратите ме на подешавања',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Обавестите нас да ли се слажете са коришћењем колачића',
+            description: {
+              uk: {
+                first: 'Користимо ',
+                linkText: 'колачиће',
+                last:
+                  ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Ми и наши партнери користимо технологије попут ',
+                linkText: 'колачиће',
+                last:
+                  ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Да, слажем се',
+            reject: 'Не, вратите ме на подешавања',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -511,6 +618,7 @@ export const service = {
         photogallery: 'Фото галерија',
         video: 'Видео',
         listen: 'Слушајте',
+        listenLive: 'Слушајте уживо',
         watch: 'Гледајте',
         liveLabel: 'УЖИВО',
         nextLabel: 'NEXT',

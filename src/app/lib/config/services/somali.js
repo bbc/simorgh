@@ -127,31 +127,84 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title:
-            'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
-          description: {
-            uk: {
-              first: 'Waxaan isticmaaleynaa lifaaq ',
-              linkText: 'cookies',
-              last:
-                ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Ogolow xog uruurinta horeyna u soco',
+            reject: 'Diid xog uruurinta horeyna u soco',
+            initial: {
+              title: 'Aan isla ogaano in aad ogoshahay xog uruurinta AMP',
+              description: {
+                first:
+                  'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
+                linkText: 'cookies',
+                last:
+                  ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Maareynta qeybteyda',
             },
-            international: {
-              first:
-                'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
-              linkText: 'cookies',
-              last:
-                ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Maareynta qeybta ogolaanshaha ee bogagga AMP',
+              description: {
+                para1:
+                  'Qeybahan waxay quseeyaan bogagga AMP oo keli ah. Markale waa lagu weydiin karaa in aad wax ka bedesho, marka aad booqato bogagga BBC ee aan AMP ahayn.',
+                para2:
+                  'Bogagga fudud ee Mobile-ka ee aad booqatay waxaa lagu dhisay isticmaalka tiknolojiyadda Google AMP.',
+                heading2:
+                  'Wuxuu ku kooban yahay oo keli ah xogta aan laga maarmin.',
+                para3:
+                  'Si ay bogaggeena web-ka u shaqeeyaa, waxaan xog kooban ku keydineynaa qalabkaaga, adigoo aan ogolaan.',
+                para4: {
+                  text:
+                    'Akhriso xog dheeraad ah oo ku saabsan macluumaadka muhiimka ah ee aan qalabkaaga ku keydineyno si aan uga shaqeysiiyo bogaggeena.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Waxaan isticmaaleynaa keydin gudaha ah si aan ogolaanshahaaga ugu keydino qalabkaaga gudihiisa.',
+                heading3: 'Xog uruurinta ikhtiyaariga ah',
+                para6:
+                  'Marka aad ogolaato xog uruurinta bogagga AMP waxaad ogolaaneysaa oo aad inoo fasexeysaa in aad ku tusno xayeysiin xiriir kula leh, marka aad ku sugan tahay meel ka baxsan UK.',
+                para7: {
+                  text:
+                    'Akhriso xogta dheeraadka ah ee ku saabsan xayeysiinta xiriirka kula leh ee BBC iyo kuwa nagala shaqeeya xayeysiiska.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Waad dooran kartaa in aanan lagu soo gaarsiin xayeysiin xiriirka kula leh adigoo gujinaya "Diid xog uruurinta siina soco" ee hoose. Fadlan ogow weli waad arkeysaa xayeysiis, balse ma noqoneyso mid kula xiriirta.',
+                para9:
+                  'Waad bedeli kartaa qeybahan adigoo gujinaya "dookha xayeysiin / Ha iibin xogteyda" ee kuu soo muuqaneysa, markasta.',
+              },
             },
           },
-          accept: 'Haa, waan ogolaaday',
-          reject: 'Maya, igee settings-ka',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title:
+              'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
+            description: {
+              uk: {
+                first: 'Waxaan isticmaaleynaa lifaaq ',
+                linkText: 'cookies',
+                last:
+                  ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
+                linkText: 'cookies',
+                last:
+                  ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Haa, waan ogolaaday',
+            reject: 'Maya, igee settings-ka',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -174,6 +227,7 @@ export const service = {
         },
         listen: 'Dhageyso',
         watch: 'Daawo',
+        listenLive: 'Toos u dhageyso',
         liveLabel: 'TOOS',
         nextLabel: 'Xiga',
         previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
@@ -258,6 +312,7 @@ export const service = {
           text: 'La xiriir BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -289,6 +344,10 @@ export const service = {
       {
         title: 'Barnaamijyada Idaacadda',
         url: '/somali/media-54071665',
+      },
+      {
+        title: 'Barnaamijka Baafinta',
+        url: '/somali/war-48705502',
       },
     ],
   },

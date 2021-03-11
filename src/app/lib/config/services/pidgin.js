@@ -128,29 +128,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know say you agree to cookies',
-          description: {
-            uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Accept data collection and continue',
+            reject: 'Reject data collection and continue',
+            initial: {
+              title:
+                'Make we know weda you agree to informate [data] collection on AMP',
+              description: {
+                first: 'We and our partners use technologies, like ',
+                linkText: 'cookies',
+                last:
+                  ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Manage my settings',
             },
-            international: {
-              first: 'We and our partners use technologies, like ',
-              linkText: 'cookies',
-              last:
-                ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Manage consent settings on AMP pages',
+              description: {
+                para1:
+                  'Dis settings apply to AMP pages only. You fit see kwesion wey dey ask you to set dis preferences again if you visit non-AMP BBC pages.',
+                para2:
+                  'Di lightweight mobile page you don visit na Google AMP technology dem use build am.',
+                heading2: 'Only for important informate alias data collection',
+                para3:
+                  'To make our web pages work, we store some limited information ontop your device without your permision alias consent.',
+                para4: {
+                  text:
+                    'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'We use local storage to store your consent preferences ontop your device.',
+                heading3: 'Informate alias data collection wey dey optional.',
+                para6:
+                  'Wen you agree to informate alias data collection on AMP pages you dey approve to allow us to display ads wey dey special and relevant to you when you dey outside of di UK.',
+                para7: {
+                  text:
+                    'Read more about how we personalise ads for di BBC and our advertising partners.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'You fit choose not to receive personalised ads by clicking “Reject data collection and continue” wey dey below. Abeg note say you go still see advertising, but e no go dey personalised to you.',
+                para9:
+                  'You fit change these settings by clicking “Ad Choices / Do not sell my info” inside di footer at any time.',
+              },
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, cari me go settings',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Let us know say you agree to cookies',
+            description: {
+              uk: {
+                first: 'We use ',
+                linkText: 'cookies',
+                last:
+                  ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'We and our partners use technologies, like ',
+                linkText: 'cookies',
+                last:
+                  ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Yes, I agree',
+            reject: 'No, cari me go settings',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -279,6 +331,7 @@ export const service = {
           text: 'Call BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

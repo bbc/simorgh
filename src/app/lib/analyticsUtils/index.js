@@ -4,6 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
 import onClient from '../utilities/onClient';
+import isOperaProxy from '../utilities/isOperaProxy';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
   XTOR_CAMPAIGN_IDENTIFIER,
@@ -150,6 +151,10 @@ export const getReferrer = (platform, origin, previousPath) => {
 
 export const getAtUserId = () => {
   if (!onClient()) return null;
+
+  // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
+  // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
+  if (isOperaProxy()) return null;
 
   const cookieName = 'atuserid';
   const cookie = Cookie.getJSON(cookieName);

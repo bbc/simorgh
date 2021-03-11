@@ -124,29 +124,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'クッキー使用に同意するか教えてください',
-          description: {
-            uk: {
-              first: '本サイトでは最高のオンライン体験をご提供するため ',
-              linkText: 'クッキー',
-              last:
-                ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'データ取得に同意して続ける',
+            reject: 'データ取得を拒否して続ける',
+            initial: {
+              title: 'AMPのデータ取得に同意するか教えてください。',
+              description: {
+                first: '本サイトおよび提携サイトは ',
+                linkText: 'クッキー',
+                last:
+                  ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '設定を管理する',
             },
-            international: {
-              first: '本サイトおよび提携サイトは ',
-              linkText: 'クッキー',
-              last:
-                ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMPの同意設定を管理する',
+              description: {
+                para1:
+                  'こちらの設定はAMPのページにのみ使われます。AMPではないBBC.com上のページを開いた際には再度、環境設定を要求される場合があります。',
+                para2:
+                  '閲覧いただいた軽量化モバイルページはGoogle AMP技術を使って構築されています。',
+                heading2: '必要不可欠なデータ取得',
+                para3:
+                  'サイト上ページの機能維持のため、読者の方の同意なしでご使用端末について限定的な情報を保存しています。',
+                para4: {
+                  text:
+                    'サイト上のページを機能させるため保存する、読者の使用端末に関する必要不可欠な情報について、さらに読む。',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  '読者の使用端末の同意設定をローカル･ストレージに保存しています。',
+                heading3: 'データ取得オプション',
+                para6:
+                  'AMPページ上のデータ取得に同意した場合、イギリス国外において、読者の関心に関連するパーソナライズ広告の表示に同意したことになります。',
+                para7: {
+                  text:
+                    'BBCのパーソナライズ広告と広告パートナーについてもっと読む。',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'パーソナライズ広告を拒否する場合はこの下の「データ取得を拒否して続ける」をクリックしてください。この場合、広告の表示は続きますが、パーソナライズはされません。',
+                para9:
+                  '広告の設定は、ページ最下部のフッターにある「広告について選ぶ／私の情報を第三者に提供しない」をいつでも選んで変更することができます。',
+              },
             },
           },
-          accept: 'はい、同意します',
-          reject: 'いいえ、設定ページを開いてください',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'クッキー使用に同意するか教えてください',
+            description: {
+              uk: {
+                first: '本サイトでは最高のオンライン体験をご提供するため ',
+                linkText: 'クッキー',
+                last:
+                  ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: '本サイトおよび提携サイトは ',
+                linkText: 'クッキー',
+                last:
+                  ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'はい、同意します',
+            reject: 'いいえ、設定ページを開いてください',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -238,6 +289,7 @@ export const service = {
           text: 'BBCに連絡する',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

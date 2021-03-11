@@ -499,7 +499,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #6E6E73;
   margin: 0;
 }
 
@@ -518,46 +518,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 .emotion-39 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.emotion-39:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-39:hover,
-.emotion-39:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-39:visited {
-  color: #6E6E73;
-}
-
-.emotion-39:hover .emotion-44 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-39:focus .emotion-44 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-41 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -568,136 +528,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
-.emotion-43 {
-  color: #3F3F42;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-43 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-45 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-45 {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-47 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-47 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-47 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-47 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-.emotion-49>svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.emotion-51 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.emotion-53 {
-  padding-right: 0.5rem;
-}
-
-.emotion-154 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-154 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-154 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-156 {
+.emotion-41 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -709,20 +540,20 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-156 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-156 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-160 {
+.emotion-45 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -735,20 +566,45 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-160 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-160 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-164 {
+.emotion-49 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-49 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-49 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-51 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -761,27 +617,27 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-164 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-164 {
+  .emotion-51 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-164 {
+  .emotion-51 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-166>svg {
+.emotion-53>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -789,7 +645,151 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   margin: 0;
 }
 
-.emotion-174 {
+.emotion-55 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.emotion-57 {
+  padding-right: 0.5rem;
+}
+
+.emotion-78 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-78 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-78 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-80 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.emotion-80:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-80:hover,
+.emotion-80:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-80:visited {
+  color: #6E6E73;
+}
+
+.emotion-80:hover .emotion-46 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-80:focus .emotion-46 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-86 {
+  color: #3F3F42;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-86 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-86 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-92 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-92 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-92 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-92 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-94>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.emotion-182 {
   font-size: 0.9375rem;
   line-height: 1.375rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -801,26 +801,26 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-174 {
+  .emotion-182 {
     font-size: 0.9375rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-174 {
+  .emotion-182 {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-174:hover,
-.emotion-174:focus {
+.emotion-182:hover,
+.emotion-182:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-174:visited {
+.emotion-182:visited {
   color: #6E6E73;
 }
 
@@ -862,6 +862,138 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
         dir="rtl"
         role="list"
       >
+        <li
+          class="emotion-18 emotion-19 emotion-17"
+          data-e2e="next"
+          dir="rtl"
+          role="listitem"
+        >
+          <div
+            class="emotion-21 emotion-22"
+          >
+            <div
+              class="emotion-23 emotion-24"
+            >
+              <span
+                class="emotion-25 emotion-26"
+                dir="rtl"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="emotion-27 emotion-28"
+                  focusable="false"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  width="13"
+                >
+                  <path
+                    d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                  />
+                  <path
+                    d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                  />
+                </svg>
+              </span>
+              <span
+                aria-hidden="true"
+                class="emotion-29 emotion-30"
+                dir="rtl"
+              >
+                <time
+                  class="emotion-31 emotion-32"
+                  datetime="2030-01-01"
+                >
+                  09:00
+                </time>
+              </span>
+            </div>
+          </div>
+          <div
+            class="emotion-33 emotion-34"
+          >
+            <div
+              class="emotion-35 emotion-36"
+            >
+              <h3
+                class="emotion-37 emotion-38"
+              >
+                <span
+                  role="text"
+                >
+                  <span
+                    class="emotion-39 emotion-40"
+                  >
+                    واصل الاستماع, 
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="emotion-41 emotion-42"
+                    dir="rtl"
+                  >
+                    لاحق 
+                  </span>
+                  العالم هذا الصباح
+                  <span
+                    class="emotion-39 emotion-40"
+                  >
+                    , 
+                    09:00
+                    , 
+                  </span>
+                  <span
+                    class="emotion-45 emotion-46"
+                  >
+                    1 يناير/ كانون الثاني 2030
+                  </span>
+                  <span
+                    class="emotion-39 emotion-40"
+                  >
+                    , المدة 1،30،30 
+                  </span>
+                </span>
+              </h3>
+              <p
+                class="emotion-49 emotion-50"
+              >
+                الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
+              </p>
+            </div>
+            <div
+              class="emotion-51 emotion-52"
+            >
+              <span
+                class="emotion-53 emotion-54"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="emotion-55 emotion-56"
+                  focusable="false"
+                  height="12px"
+                  viewBox="0 0 13 12"
+                  width="13px"
+                >
+                  <path
+                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                  />
+                  <path
+                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                  />
+                </svg>
+              </span>
+              <time
+                class="emotion-57 emotion-58"
+                datetime="PT1H30M30S"
+                dir="rtl"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  1:30:30
+                </span>
+              </time>
+            </div>
+          </div>
+        </li>
         <li
           class="emotion-18 emotion-19 emotion-17"
           data-e2e="onDemand"
@@ -915,46 +1047,56 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-78 emotion-38"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
                     role="text"
                   >
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      استمع, 
+                    </span>
                     العالم هذا الصباح
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 
                       02:59
                       , 
                     </span>
                     <span
-                      class="emotion-43 emotion-44"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
+                    </span>
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      , المدة 2،00،00 
                     </span>
                   </span>
                 </a>
               </h3>
               <p
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
               >
                 الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
               </p>
             </div>
             <div
-              class="emotion-47 emotion-48"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-49 emotion-50"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -969,15 +1111,10 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-53 emotion-54"
+                class="emotion-57 emotion-58"
                 datetime="PT2H"
                 dir="rtl"
               >
-                <span
-                  class="emotion-41 emotion-42"
-                >
-                   المدة 2،00،00 
-                </span>
                 <span
                   aria-hidden="true"
                 >
@@ -1040,46 +1177,56 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-78 emotion-38"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
                     role="text"
                   >
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      استمع, 
+                    </span>
                     موجز الأنباء
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 
                       02:30
                       , 
                     </span>
                     <span
-                      class="emotion-43 emotion-44"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
+                    </span>
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      , المدة 02،00 
                     </span>
                   </span>
                 </a>
               </h3>
               <p
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
               >
                 نشرة موجزة في دقيقتين لأهم الأنباء الأقليمية والدولية
               </p>
             </div>
             <div
-              class="emotion-47 emotion-48"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-49 emotion-50"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1094,15 +1241,10 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-53 emotion-54"
+                class="emotion-57 emotion-58"
                 datetime="PT2M"
                 dir="rtl"
               >
-                <span
-                  class="emotion-41 emotion-42"
-                >
-                   المدة 02،00 
-                </span>
                 <span
                   aria-hidden="true"
                 >
@@ -1165,46 +1307,56 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
               class="emotion-35 emotion-36"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-78 emotion-38"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-80 emotion-81"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
                     role="text"
                   >
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      استمع, 
+                    </span>
                     نشرة الأخبار
                     <span
-                      class="emotion-41 emotion-42"
+                      class="emotion-39 emotion-40"
                     >
                       , 
                       02:00
                       , 
                     </span>
                     <span
-                      class="emotion-43 emotion-44"
+                      class="emotion-86 emotion-46"
                     >
                       26 مارس/ آذار 2020
+                    </span>
+                    <span
+                      class="emotion-39 emotion-40"
+                    >
+                      , المدة 06،00 
                     </span>
                   </span>
                 </a>
               </h3>
               <p
-                class="emotion-45 emotion-46"
+                class="emotion-49 emotion-50"
               >
                 نشرة اخبارية على رأس الساعة تركز على أهم أخبار المنطقة والعالم وتتضمن تصريحات المسؤولين وإفادات مراسلينا
               </p>
             </div>
             <div
-              class="emotion-47 emotion-48"
+              class="emotion-92 emotion-52"
             >
               <span
-                class="emotion-49 emotion-50"
+                class="emotion-94 emotion-54"
               >
                 <svg
                   aria-hidden="true"
-                  class="emotion-51 emotion-52"
+                  class="emotion-55 emotion-56"
                   focusable="false"
                   height="12px"
                   viewBox="0 0 13 12"
@@ -1219,15 +1371,10 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 </svg>
               </span>
               <time
-                class="emotion-53 emotion-54"
+                class="emotion-57 emotion-58"
                 datetime="PT6M"
                 dir="rtl"
               >
-                <span
-                  class="emotion-41 emotion-42"
-                >
-                   المدة 06،00 
-                </span>
                 <span
                   aria-hidden="true"
                 >
@@ -1237,135 +1384,9 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
             </div>
           </div>
         </li>
-        <li
-          class="emotion-18 emotion-19 emotion-17"
-          data-e2e="next"
-          dir="rtl"
-          role="listitem"
-        >
-          <div
-            class="emotion-21 emotion-22"
-          >
-            <div
-              class="emotion-23 emotion-24"
-            >
-              <span
-                class="emotion-25 emotion-26"
-                dir="rtl"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-27 emotion-28"
-                  focusable="false"
-                  height="13"
-                  viewBox="0 0 13 13"
-                  width="13"
-                >
-                  <path
-                    d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                  />
-                  <path
-                    d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                  />
-                </svg>
-              </span>
-              <span
-                aria-hidden="true"
-                class="emotion-29 emotion-30"
-                dir="rtl"
-              >
-                <time
-                  class="emotion-31 emotion-32"
-                  datetime="2030-01-01"
-                >
-                  09:00
-                </time>
-              </span>
-            </div>
-          </div>
-          <div
-            class="emotion-33 emotion-34"
-          >
-            <div
-              class="emotion-35 emotion-36"
-            >
-              <h3
-                class="emotion-154 emotion-38"
-              >
-                <span
-                  role="text"
-                >
-                  <span
-                    class="emotion-156 emotion-157"
-                    dir="rtl"
-                  >
-                    لاحق 
-                  </span>
-                  العالم هذا الصباح
-                  <span
-                    class="emotion-41 emotion-42"
-                  >
-                    , 
-                    09:00
-                    , 
-                  </span>
-                  <span
-                    class="emotion-160 emotion-44"
-                  >
-                    1 يناير/ كانون الثاني 2030
-                  </span>
-                </span>
-              </h3>
-              <p
-                class="emotion-45 emotion-46"
-              >
-                الفترة الإخبارية الرئيسية كل صباح على مدى أربع ساعات وتتناول أهم الأخبار والموضوعات الأقليمية والدولية بالتغطية والتحليل.
-              </p>
-            </div>
-            <div
-              class="emotion-164 emotion-48"
-            >
-              <span
-                class="emotion-166 emotion-50"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="emotion-51 emotion-52"
-                  focusable="false"
-                  height="12px"
-                  viewBox="0 0 13 12"
-                  width="13px"
-                >
-                  <path
-                    d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                  />
-                  <path
-                    d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                  />
-                </svg>
-              </span>
-              <time
-                class="emotion-53 emotion-54"
-                datetime="PT1H30M30S"
-                dir="rtl"
-              >
-                <span
-                  class="emotion-41 emotion-42"
-                >
-                   المدة 1،30،30 
-                </span>
-                <span
-                  aria-hidden="true"
-                >
-                  1:30:30
-                </span>
-              </time>
-            </div>
-          </div>
-        </li>
       </div>
       <a
-        class="emotion-174 emotion-175"
+        class="emotion-182 emotion-183"
         href="/arabic/institutional/2011/01/000000_frequencies_radio"
       >
         استقبال البث

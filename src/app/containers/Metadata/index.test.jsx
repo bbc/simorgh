@@ -48,6 +48,8 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   aboutTags,
   mentionsTags,
   hasAppleItunesAppBanner,
@@ -72,6 +74,8 @@ const MetadataWithContext = ({
         mentionsTags={mentionsTags}
         image={image}
         imageAltText={imageAltText}
+        imageHeight={imageHeight}
+        imageWidth={imageWidth}
         hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     </RequestContextProvider>
@@ -95,6 +99,8 @@ const CanonicalMapInternationalOrigin = () => (
     service="pidgin"
     image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
+    imageWidth={100}
+    imageHeight={200}
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
@@ -177,47 +183,47 @@ it('should render the apple touch icons', async () => {
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
       sizes: '128x128',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
       sizes: '144x144',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
       sizes: '152x152',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
       sizes: '180x180',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
       sizes: '384x384',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png',
       sizes: '512x512',
     },
   ];
@@ -240,19 +246,19 @@ it('should render the icons', async () => {
   const expected = [
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
       type: 'image/png',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
       type: 'image/png',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
       type: 'image/png',
     },
@@ -411,7 +417,7 @@ it('should render the msapplication meta tags', async () => {
 
     expect(tileColour).toEqual('#B80000');
     expect(tileImage).toEqual(
-      'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
     );
   });
 });
@@ -548,6 +554,8 @@ it('should render the open graph image if provided', async () => {
         'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
+    { property: 'og:image:width', content: '100' },
+    { property: 'og:image:height', content: '200' },
     { name: 'twitter:image:alt', content: 'connectionAltText' },
     {
       name: 'twitter:image:src',

@@ -93,72 +93,72 @@ Object {
 }
 `;
 
-exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
-
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
-
-exports[`AMP Articles Footer Link should match text and url 1`] = `
+exports[`AMP Articles Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, فارسی",
   "url": "/persian",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 2`] = `
+exports[`AMP Articles Footer Anchors should match text and url 2`] = `
 Object {
   "text": "چرا می‌توانید به بی‌بی‌سی اطمینان کنید؟",
   "url": "https://www.bbc.com/persian/institutional-49283091",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 3`] = `
+exports[`AMP Articles Footer Anchors should match text and url 3`] = `
 Object {
   "text": "شرایط استفاده",
   "url": "https://www.bbc.com/persian/institutional-37474133",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 4`] = `
+exports[`AMP Articles Footer Anchors should match text and url 4`] = `
 Object {
   "text": "درباره بی بی سی",
   "url": "https://www.bbc.com/persian/institutional-37474136",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 5`] = `
+exports[`AMP Articles Footer Anchors should match text and url 5`] = `
 Object {
   "text": "سیاست حفظ حریم خصوصی",
   "url": "https://www.bbc.com/persian/institutional-37540067",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 6`] = `
+exports[`AMP Articles Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکی ها",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 7`] = `
+exports[`AMP Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "تماس با بی بی سی",
   "url": "https://www.bbc.co.uk/send/u50853555",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 8`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Articles Footer Link should match text and url 9`] = `
+exports[`AMP Articles Footer Anchors should match text and url 8`] = `
 Object {
   "text": "سیاست ما درباره لینک دادن به سایت های دیگر.",
   "url": "https://www.bbc.com/persian/institutional/2011/04/000001_links",
 }
 `;
+
+exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/persian"`;
+
+exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست. سیاست ما درباره لینک دادن به سایت های دیگر."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News, فارسی"`;
 
@@ -286,63 +286,63 @@ Object {
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/persian/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/persian/images/icons/icon-512x512.png",
 }
 `;
 

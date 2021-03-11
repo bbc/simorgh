@@ -128,30 +128,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
-          description: {
-            uk: {
-              first: 'हम ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'डेटा कलेक्शन की मंजूरी दें और आगे बढ़ें',
+            reject: 'डेटा कलेक्शन को नामंज़ूर करें और आगे बढ़ें',
+            initial: {
+              title:
+                'हमें बताएँ कि आप एएमपी पर डेटा क्लेक्शन की सहमति दे रहे हैं',
+              description: {
+                first:
+                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'सेटिंग्स मैनेज करें',
             },
-            international: {
-              first:
-                'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'एएमपी पेज की सेटिंग्स पर जाकर अपनी मंज़ूरी को मैनेज करें',
+              description: {
+                para1:
+                  'ये सेटिंग्स सिर्फ़ एएमपी पन्नों के लिए ही है, आपसे आपकी पसंद दोबारा पूछी जा सकती है अगर आप बिना एएमपी वाले बीबीसी पन्ने पर जाते हैं.',
+                para2:
+                  'जो हल्का मोबाइल पन्ना आप देख रहे हैं उसे गूगल की एएमपी टेक्नोलॉजी के ज़रिए बनाया गया है.',
+                heading2: 'पूरी तरह ज़रूरी डेटा क्लेक्शन',
+                para3:
+                  'अपनी वेबसाइट के ठीक से काम करने के लिए हमें सीमित स्तर पर कुछ जानकारियाँ सेव करनी पड़ती हैं जिसके लिए हम आपसे मंज़ूरी नहीं मांगते.',
+                para4: {
+                  text:
+                    'उन जरूरी जानकारी के बारे में और अधिक पढ़ें जो हमने आपके डिवाइस पर स्टोर किए हैं ताकि पेज ठीक से दिख सके.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'हमें आपकी मंज़ूरी और पसंद को आपकी डिवाइस के लोकल स्टोरेज में स्टोर करते हैं.',
+                heading3: 'वैकल्पिक डेटा क्लेक्शन',
+                para6:
+                  'जब आप हमें एएमपी डेटा कलेक्शन की मंज़ूरी देते हैं तो इसका मतलब होता है कि आप हमें आपकी रुचि के विज्ञापन दिखाने की भी मंज़ूरी दे रहे हैं. ऐसा तभी होता है जब आप ब्रिटेन से बाहर हों.',
+                para7: {
+                  text:
+                    'हम आपकी रुचि के अनुरूप विज्ञापन और अपने विज्ञापनदाता कैसे चुनते हैं यह जानने के लिए और पढ़ें.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'आप डेटा कलेक्शन को नामंज़ूर करके आगे बढ़ने का विकल्प चुनते हैं तो आपकी रुचि के अनुरूप विज्ञापन नहीं दिखाए जाएँगे, लेकिन विज्ञापन आपको फिर भी दिखाए जाएँगे लेकिन वे पर्सनलाइज्ड नहीं होंगे.',
+                para9:
+                  'आप एड च्वाइसेस वाले बटन पर क्लिक करके अपनी पसंद बदल सकते हैं. आप डो नॉट सेल माइ इनफ़ो वाले बटन पर कभी भी क्लिक कर सकते हैं.',
+              },
             },
           },
-          accept: 'हां, मैं राज़ी हूं',
-          reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
+            description: {
+              uk: {
+                first: 'हम ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                linkText: 'कुकीज़',
+                last:
+                  ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'हां, मैं राज़ी हूं',
+            reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -173,12 +226,14 @@ export const service = {
         },
         listen: 'सुनिए',
         watch: 'देखिए',
+        listenLive: 'लाइव सुनें',
         liveLabel: 'लाइव',
         nextLabel: 'अगला',
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
         recentEpisodes: 'प्रसारण का समय',
+        podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
       },
       socialEmbed: {
         caption: {
@@ -259,6 +314,7 @@ export const service = {
           text: 'बीबीसी से संपर्क करें',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -97,6 +97,7 @@ export const service = {
           text: '联络BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -219,28 +220,77 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '请告知您认可接受Cookies',
-          description: {
-            uk: {
-              first: '我们使用',
-              linkText: 'cookies',
-              last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: '接受数据收集并继续',
+            reject: '拒绝数据收集并继续',
+            initial: {
+              title: '请告知是否允许我们在AMP收集数据',
+              description: {
+                first: '我们及合作伙伴使用例如',
+                linkText: 'cookies',
+                last:
+                  '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '管理我的设置',
             },
-            international: {
-              first: '我们及合作伙伴使用例如',
-              linkText: 'cookies',
-              last:
-                '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: '管理AMP页面认可授权设置',
+              description: {
+                para1:
+                  '上述设置仅用于AMP页面。如果您再度访问沒有AMP技术的BBC.com网页，也可能会被要求设定个人选项。',
+                para2:
+                  '您刚刚浏览的上述轻载移动页面，建立时使用了谷歌AMP技术。',
+                heading2: '仅限于必需数据收集',
+                para3:
+                  '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
+                para4: {
+                  text:
+                    '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
+                heading3: '可选项数据收集',
+                para6:
+                  '认可AMP页面收集数据，也就是认可您在英国之外区域浏览页面时我们可以显示个人化的广告。',
+                para7: {
+                  text: '阅读更多有关BBC及合作伙伴如何实现广告个人化的资讯',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  '您可以选择点击“拒绝数据收集并继续”，选择不接受个人化广告。请注意，这一选项并不意味着您将不再看到广告，只是您看到的广告将不具备个人化设置。',
+                para9:
+                  '您可以点击页面下边“Ad Choices / Do not sell my info”选项，更改这些设置。',
+              },
             },
           },
-          accept: '可以，我同意',
-          reject: '不可，带我去设置页面',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: '请告知您认可接受Cookies',
+            description: {
+              uk: {
+                first: '我们使用',
+                linkText: 'cookies',
+                last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: '我们及合作伙伴使用例如',
+                linkText: 'cookies',
+                last:
+                  '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: '可以，我同意',
+            reject: '不可，带我去设置页面',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -258,6 +308,7 @@ export const service = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {
@@ -328,6 +379,7 @@ export const service = {
           text: '聯絡BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -450,28 +502,77 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '請告知您認可接受Cookies',
-          description: {
-            uk: {
-              first: '我們使用',
-              linkText: 'cookies',
-              last: '以便給您最好的網上體驗。請告知您是否認同使cookies。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: '接受數據收集並繼續',
+            reject: '拒絕數據收集並繼續',
+            initial: {
+              title: '請告知是否允許我們在AMP收集數據',
+              description: {
+                first: '我們及合作夥伴使用例如',
+                linkText: 'cookies',
+                last:
+                  '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '管理我的設置',
             },
-            international: {
-              first: '我們及合作夥伴使用例如',
-              linkText: 'cookies',
-              last:
-                '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: '管理AMP頁面認可授權設置',
+              description: {
+                para1:
+                  '上述設置僅用於AMP頁面。如果您再度訪問沒有AMP技術的BBC.com網頁，也可能會被要求設定個人選項。',
+                para2:
+                  '您剛剛瀏覽的上述輕載移動頁面，建立時使用了谷歌AMP技術。',
+                heading2: '僅限於必須數據收集',
+                para3:
+                  '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
+                para4: {
+                  text:
+                    '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
+                heading3: '可選項數據收集',
+                para6:
+                  '認可AMP頁面收集數據，也就是認可您在英國之外區域瀏覽頁面時我們可以顯示個人化的廣告。',
+                para7: {
+                  text: '閲讀更多有關BBC及合作夥伴如何實現廣告個人化的咨訊',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  '您可以選擇點擊“拒絕數據收集並繼續”，選擇不接受個人化廣告。請注意，這一選項並不意味著您將不再看到廣告，只是您看到的廣告將不具備個人化設置。',
+                para9:
+                  '您可以點擊頁面下邊“Ad Choices / Do not sell my info”選項，更改這些設置。',
+              },
             },
           },
-          accept: '可以，我同意',
-          reject: '不可，帶我去設置頁面',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: '請告知您認可接受Cookies',
+            description: {
+              uk: {
+                first: '我們使用',
+                linkText: 'cookies',
+                last: '以便給您最好的網上體驗。請告知您是否認同使cookies。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: '我們及合作夥伴使用例如',
+                linkText: 'cookies',
+                last:
+                  '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: '可以，我同意',
+            reject: '不可，帶我去設置頁面',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -489,6 +590,7 @@ export const service = {
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {

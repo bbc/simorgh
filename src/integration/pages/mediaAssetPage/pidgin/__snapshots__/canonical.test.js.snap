@@ -4,72 +4,72 @@ exports[`Canonical Media Asset Page A11y I can see the skip to content link 1`] 
 
 exports[`Canonical Media Asset Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.media_asset.23248703.page&amp;x1=[urn%3Abbc%3Acps%3A5679389a-3ea6-0b40-9de4-f4d33d6bcd9f]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[article-media-asset]&amp;x8=[simorgh-nojs]&amp;x9=[Simorgh%3A%2BMedia%2BPod%2BBuild%2BFirst%2BCPS%2BMedia%2BAsset%2BPage%2Bin%2BSimorgh%2B%26%2B%3C%2B%3E%2B-%2BBBC%2BNews%2BPidgin]&amp;x11=[2019-09-13T15%3A31%3A44.000Z]&amp;x12=[2019-11-20T12%3A24%3A25.000Z]&amp;x16=[Inspire%20me~Give%20me%20perspective~Keep%20me%20on%20trend]&amp;x17=[Opinion]\\"/>"`;
 
-exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
-
-exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
-
-exports[`Canonical Media Asset Page Footer Link should match text and url 1`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Pidgin",
   "url": "/pidgin",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 2`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Why you fit trust BBC News",
   "url": "https://www.bbc.com/pidgin/institutional-48528766",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 3`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "How dem dey take use am",
   "url": "https://www.bbc.co.uk/usingthebbc/terms/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 4`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "As e concern BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 5`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
   "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 6`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 7`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Call BBC",
   "url": "https://www.bbc.co.uk/send/u50853577",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 8`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Media Asset Page Footer Link should match text and url 9`] = `
+exports[`Canonical Media Asset Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "De way wey we de take go external link.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`Canonical Media Asset Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Canonical Media Asset Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Media Asset Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -177,63 +177,63 @@ Object {
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical Media Asset Page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/pidgin/images/icons/icon-512x512.png",
 }
 `;
 

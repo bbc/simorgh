@@ -93,79 +93,79 @@ Object {
 }
 `;
 
-exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
-
-exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
-
-exports[`AMP Articles Footer Link should match text and url 1`] = `
+exports[`AMP Articles Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News",
   "url": "/news",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 2`] = `
+exports[`AMP Articles Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Why you can trust the BBC",
   "url": "https://www.bbc.com/news/help-41670342",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 3`] = `
+exports[`AMP Articles Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Terms of Use",
   "url": "https://www.bbc.com/terms",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 4`] = `
+exports[`AMP Articles Footer Anchors should match text and url 4`] = `
 Object {
   "text": "About the BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 5`] = `
+exports[`AMP Articles Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
   "url": "https://www.bbc.com/privacy/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 6`] = `
+exports[`AMP Articles Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 7`] = `
+exports[`AMP Articles Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Accessibility Help",
   "url": "https://www.bbc.com/accessibility/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 8`] = `
+exports[`AMP Articles Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Contact the BBC",
   "url": "https://www.bbc.com/contact/",
 }
 `;
 
-exports[`AMP Articles Footer Link should match text and url 9`] = `
-Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
-}
-`;
-
-exports[`AMP Articles Footer Link should match text and url 10`] = `
+exports[`AMP Articles Footer Anchors should match text and url 9`] = `
 Object {
   "text": "Read about our approach to external linking.",
   "url": "https://www.bbc.co.uk/help/web/links/",
 }
 `;
+
+exports[`AMP Articles Footer Cookie Settings Button should match text and on handler 1`] = `
+Object {
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
+}
+`;
+
+exports[`AMP Articles Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/news"`;
+
+exports[`AMP Articles Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. The BBC is not responsible for the content of external sites. Read about our approach to external linking."`;
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC News"`;
 
@@ -272,63 +272,63 @@ Object {
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Articles SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png",
 }
 `;
 

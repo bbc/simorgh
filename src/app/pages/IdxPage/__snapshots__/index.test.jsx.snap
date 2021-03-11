@@ -1542,7 +1542,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.5rem;
-  color: #222222;
+  color: #6E6E73;
   margin: 0;
 }
 
@@ -1560,176 +1560,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-274 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-}
-
-.emotion-274:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-274:hover,
-.emotion-274:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-274:visited {
-  color: #6E6E73;
-}
-
-.emotion-274:hover .emotion-279 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-274:focus .emotion-279 {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-278 {
-  color: #3F3F42;
-  padding: 0.5rem 0;
-  display: inline-block;
-  width: 100%;
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-278 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-278 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-280 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #6E6E73;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-280 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-280 {
-    font-size: 0.8125rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-282 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
-  padding: 0.5rem;
-  background-color: #222222;
-  outline: 0.0625rem solid transparent;
-  color: #FFFFFF;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-282 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-282 {
-    font-size: 0.75rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media screen and (-ms-high-contrast: active) {
-  .emotion-282 {
-    background-color: transparent;
-    outline: none;
-  }
-}
-
-.emotion-284>svg {
-  color: #FFFFFF;
-  fill: currentColor;
-  width: 1.0625rem;
-  height: 0.75rem;
-  margin: 0;
-}
-
-.emotion-286 {
-  vertical-align: middle;
-  margin: 0 0.25rem;
-  color: #222222;
-  fill: currentColor;
-  width: 0.8125rem;
-  height: 0.75rem;
-}
-
-.emotion-288 {
-  padding-right: 0.5rem;
-}
-
-.emotion-389 {
-  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.5rem;
-  color: #6E6E73;
-  margin: 0;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-389 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-389 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-.emotion-391 {
+.emotion-276 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -1741,20 +1572,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-391 {
+  .emotion-276 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-391 {
+  .emotion-276 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-395 {
+.emotion-280 {
   color: #6E6E73;
   padding: 0.5rem 0;
   display: inline-block;
@@ -1767,20 +1598,45 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-395 {
+  .emotion-280 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-395 {
+  .emotion-280 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-399 {
+.emotion-284 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6E6E73;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-284 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-284 {
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-286 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1793,27 +1649,27 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-399 {
+  .emotion-286 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-399 {
+  .emotion-286 {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-399 {
+  .emotion-286 {
     background-color: transparent;
     outline: none;
   }
 }
 
-.emotion-401>svg {
+.emotion-288>svg {
   color: #11708C;
   fill: currentColor;
   width: 1.0625rem;
@@ -1821,18 +1677,162 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   margin: 0;
 }
 
-.emotion-541 {
+.emotion-290 {
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  color: #222222;
+  fill: currentColor;
+  width: 0.8125rem;
+  height: 0.75rem;
+}
+
+.emotion-292 {
+  padding-right: 0.5rem;
+}
+
+.emotion-313 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  color: #222222;
+  margin: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-313 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-313 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-315 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+.emotion-315:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-315:hover,
+.emotion-315:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-315:visited {
+  color: #6E6E73;
+}
+
+.emotion-315:hover .emotion-281 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-315:focus .emotion-281 {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-321 {
+  color: #3F3F42;
+  padding: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-321 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-321 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.emotion-327 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  padding: 0.5rem;
+  background-color: #222222;
+  outline: 0.0625rem solid transparent;
+  color: #FFFFFF;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-327 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-327 {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-327 {
+    background-color: transparent;
+    outline: none;
+  }
+}
+
+.emotion-329>svg {
+  color: #FFFFFF;
+  fill: currentColor;
+  width: 1.0625rem;
+  height: 0.75rem;
+  margin: 0;
+}
+
+.emotion-549 {
   margin: 0 auto;
   width: 100%;
 }
 
 @media (min-width: 63rem) {
-  .emotion-541 {
+  .emotion-549 {
     max-width: 63rem;
   }
 }
 
-.emotion-544 {
+.emotion-552 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -1840,24 +1840,24 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-544 {
+  .emotion-552 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-544 {
+  .emotion-552 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-544 {
+  .emotion-552 {
     margin-bottom: 1rem;
   }
 }
 
-.emotion-557 {
+.emotion-565 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1866,7 +1866,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display: grid) {
-  .emotion-557 {
+  .emotion-565 {
     display: grid;
     position: initial;
     width: initial;
@@ -1874,7 +1874,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1882,7 +1882,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1890,7 +1890,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -1898,7 +1898,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -1906,7 +1906,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1914,7 +1914,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 
   @media (min-width: 80rem) {
-    .emotion-557 {
+    .emotion-565 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -1923,7 +1923,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-557 {
+  .emotion-565 {
     grid-template-rows: repeat(
           5,
           auto
@@ -1931,13 +1931,13 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-.emotion-560 {
+.emotion-568 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1945,7 +1945,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1953,7 +1953,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1961,7 +1961,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1969,7 +1969,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1977,7 +1977,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 80rem) {
-  .emotion-560 {
+  .emotion-568 {
     width: calc(50%);
     display: inline-block;
     vertical-align: top;
@@ -1985,56 +1985,56 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @supports (display: grid) {
-  .emotion-560 {
+  .emotion-568 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-560 {
+    .emotion-568 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-562 {
+.emotion-570 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2047,44 +2047,44 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-564 {
+  .emotion-572 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-564 {
+  .emotion-572 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-564 {
+  .emotion-572 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-564 {
+  .emotion-572 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-564 {
+  .emotion-572 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-564 {
+    .emotion-572 {
       min-width: 1.5rem;
     }
   }
 }
 
-.emotion-566 {
+.emotion-574 {
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2097,32 +2097,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-566 {
+  .emotion-574 {
     font-size: 2.5rem;
     line-height: 2.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-566 {
+  .emotion-574 {
     font-size: 3.5rem;
     line-height: 3.75rem;
   }
 }
 
-.emotion-568 {
+.emotion-576 {
   padding-top: 0.375rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-568 {
+  .emotion-576 {
     padding-left: 0;
   }
 }
 
-.emotion-570 {
+.emotion-578 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -2136,26 +2136,26 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-570 {
+  .emotion-578 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-570 {
+  .emotion-578 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-570:hover,
-.emotion-570:focus {
+.emotion-578:hover,
+.emotion-578:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-570:before {
+.emotion-578:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2168,139 +2168,139 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 }
 
 @media (min-width: 25rem) {
-  .emotion-570 {
+  .emotion-578 {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
-    .emotion-570 {
+    .emotion-578 {
       font-size: 1.125rem;
       line-height: 1.625rem;
     }
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-570 {
+    .emotion-578 {
       font-size: 1.25rem;
       line-height: 1.75rem;
     }
   }
 }
 
-.emotion-572 {
+.emotion-580 {
   padding-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-581 {
+  .emotion-589 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-581 {
+  .emotion-589 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-581 {
+  .emotion-589 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-581 {
+  .emotion-589 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-581 {
+  .emotion-589 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-581 {
+    .emotion-589 {
       min-width: 1.5rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-649 {
+  .emotion-657 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-649 {
+  .emotion-657 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-649 {
+  .emotion-657 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-649 {
+  .emotion-657 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-649 {
+  .emotion-657 {
     min-width: 2rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-649 {
+    .emotion-657 {
       min-width: 2rem;
     }
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-666 {
+  .emotion-674 {
     min-width: 1rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-666 {
+  .emotion-674 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-666 {
+  .emotion-674 {
     min-width: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-666 {
+  .emotion-674 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-666 {
+  .emotion-674 {
     min-width: 1.5rem;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
   @media (min-width: 37.5rem) {
-    .emotion-666 {
+    .emotion-674 {
       min-width: 2rem;
     }
   }
@@ -2471,7 +2471,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2576,7 +2576,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2681,7 +2681,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2786,7 +2786,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -2891,7 +2891,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3019,6 +3019,138 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           >
             <li
               class="emotion-253 emotion-254 emotion-56"
+              data-e2e="next"
+              dir="rtl"
+              role="listitem"
+            >
+              <div
+                class="emotion-256 emotion-257"
+              >
+                <div
+                  class="emotion-258 emotion-259"
+                >
+                  <span
+                    class="emotion-260 emotion-261"
+                    dir="rtl"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="emotion-262 emotion-263"
+                      focusable="false"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      width="13"
+                    >
+                      <path
+                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
+                      />
+                      <path
+                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="emotion-264 emotion-265"
+                    dir="rtl"
+                  >
+                    <time
+                      class="emotion-40 emotion-41"
+                      datetime="2030-01-01"
+                    >
+                      ۰۹:۰۰
+                    </time>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="emotion-268 emotion-269"
+              >
+                <div
+                  class="emotion-270 emotion-271"
+                >
+                  <h3
+                    class="emotion-272 emotion-273"
+                  >
+                    <span
+                      role="text"
+                    >
+                      <span
+                        class="emotion-86 emotion-87"
+                      >
+                        به بعدی گوش کنید, 
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        class="emotion-276 emotion-277"
+                        dir="rtl"
+                      >
+                        بعدی 
+                      </span>
+                      چشم انداز بامدادی 1
+                      <span
+                        class="emotion-86 emotion-87"
+                      >
+                        , 
+                        ۰۹:۰۰
+                        , 
+                      </span>
+                      <span
+                        class="emotion-280 emotion-281"
+                      >
+                        ۱ ژانویه ۲۰۳۰
+                      </span>
+                      <span
+                        class="emotion-86 emotion-87"
+                      >
+                        , ۲۶،۳۰ المدة الزمنية 
+                      </span>
+                    </span>
+                  </h3>
+                  <p
+                    class="emotion-284 emotion-285"
+                  >
+                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
+                  </p>
+                </div>
+                <div
+                  class="emotion-286 emotion-287"
+                >
+                  <span
+                    class="emotion-288 emotion-289"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="emotion-290 emotion-291"
+                      focusable="false"
+                      height="12px"
+                      viewBox="0 0 13 12"
+                      width="13px"
+                    >
+                      <path
+                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
+                      />
+                      <path
+                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
+                      />
+                    </svg>
+                  </span>
+                  <time
+                    class="emotion-292 emotion-293"
+                    datetime="PT26M30S"
+                    dir="rtl"
+                  >
+                    <span
+                      aria-hidden="true"
+                    >
+                      ۲۶:۳۰
+                    </span>
+                  </time>
+                </div>
+              </div>
+            </li>
+            <li
+              class="emotion-253 emotion-254 emotion-56"
               data-e2e="onDemand"
               dir="rtl"
               role="listitem"
@@ -3070,15 +3202,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-313 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-315 emotion-316"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
                         role="text"
                       >
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          بشنوید, 
+                        </span>
                         نبض خبر
                         <span
                           class="emotion-86 emotion-87"
@@ -3088,28 +3225,33 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-321 emotion-281"
                         >
                           ۲۶ مارس ۲۰۲۰
+                        </span>
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          , ۰۳،۰۰ المدة الزمنية 
                         </span>
                       </span>
                     </a>
                   </h3>
                   <p
-                    class="emotion-280 emotion-281"
+                    class="emotion-284 emotion-285"
                   >
                     تازه ترین خبرهای جهان
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-327 emotion-287"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-329 emotion-289"
                   >
                     <svg
                       aria-hidden="true"
-                      class="emotion-286 emotion-287"
+                      class="emotion-290 emotion-291"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -3124,15 +3266,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="emotion-288 emotion-289"
+                    class="emotion-292 emotion-293"
                     datetime="PT3M"
                     dir="rtl"
                   >
-                    <span
-                      class="emotion-86 emotion-87"
-                    >
-                       ۰۳،۰۰ المدة الزمنية 
-                    </span>
                     <span
                       aria-hidden="true"
                     >
@@ -3195,15 +3332,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-313 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-315 emotion-316"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
                         role="text"
                       >
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          بشنوید, 
+                        </span>
                         چشم انداز بامدادی 2
                         <span
                           class="emotion-86 emotion-87"
@@ -3213,28 +3355,33 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-321 emotion-281"
                         >
                           ۲۶ مارس ۲۰۲۰
+                        </span>
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          , ۲۹،۳۰ المدة الزمنية 
                         </span>
                       </span>
                     </a>
                   </h3>
                   <p
-                    class="emotion-280 emotion-281"
+                    class="emotion-284 emotion-285"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-327 emotion-287"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-329 emotion-289"
                   >
                     <svg
                       aria-hidden="true"
-                      class="emotion-286 emotion-287"
+                      class="emotion-290 emotion-291"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -3249,15 +3396,10 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="emotion-288 emotion-289"
+                    class="emotion-292 emotion-293"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
-                    <span
-                      class="emotion-86 emotion-87"
-                    >
-                       ۲۹،۳۰ المدة الزمنية 
-                    </span>
                     <span
                       aria-hidden="true"
                     >
@@ -3320,15 +3462,20 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-270 emotion-271"
                 >
                   <h3
-                    class="emotion-272 emotion-273"
+                    class="emotion-313 emotion-273"
                   >
                     <a
-                      class="emotion-274 emotion-275"
+                      class="emotion-315 emotion-316"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
                         role="text"
                       >
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          بشنوید, 
+                        </span>
                         چشم انداز بامدادی 1
                         <span
                           class="emotion-86 emotion-87"
@@ -3338,28 +3485,33 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                           , 
                         </span>
                         <span
-                          class="emotion-278 emotion-279"
+                          class="emotion-321 emotion-281"
                         >
                           ۲۶ مارس ۲۰۲۰
+                        </span>
+                        <span
+                          class="emotion-86 emotion-87"
+                        >
+                          , ۲۹،۳۰ المدة الزمنية 
                         </span>
                       </span>
                     </a>
                   </h3>
                   <p
-                    class="emotion-280 emotion-281"
+                    class="emotion-284 emotion-285"
                   >
                     تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
                   </p>
                 </div>
                 <div
-                  class="emotion-282 emotion-283"
+                  class="emotion-327 emotion-287"
                 >
                   <span
-                    class="emotion-284 emotion-285"
+                    class="emotion-329 emotion-289"
                   >
                     <svg
                       aria-hidden="true"
-                      class="emotion-286 emotion-287"
+                      class="emotion-290 emotion-291"
                       focusable="false"
                       height="12px"
                       viewBox="0 0 13 12"
@@ -3374,145 +3526,14 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     </svg>
                   </span>
                   <time
-                    class="emotion-288 emotion-289"
+                    class="emotion-292 emotion-293"
                     datetime="PT29M30S"
                     dir="rtl"
                   >
                     <span
-                      class="emotion-86 emotion-87"
-                    >
-                       ۲۹،۳۰ المدة الزمنية 
-                    </span>
-                    <span
                       aria-hidden="true"
                     >
                       ۲۹:۳۰
-                    </span>
-                  </time>
-                </div>
-              </div>
-            </li>
-            <li
-              class="emotion-253 emotion-254 emotion-56"
-              data-e2e="next"
-              dir="rtl"
-              role="listitem"
-            >
-              <div
-                class="emotion-256 emotion-257"
-              >
-                <div
-                  class="emotion-258 emotion-259"
-                >
-                  <span
-                    class="emotion-260 emotion-261"
-                    dir="rtl"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-262 emotion-263"
-                      focusable="false"
-                      height="13"
-                      viewBox="0 0 13 13"
-                      width="13"
-                    >
-                      <path
-                        d="M6.5 0A6.5 6.5 0 1013 6.5 6.5 6.5 0 006.5 0zm0 11.5a5 5 0 115-5 5 5 0 01-5 5z"
-                      />
-                      <path
-                        d="M7.34 2.9h-1v3.8L9.4 8.57l.41-.56-2.47-1.89V2.9z"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    class="emotion-264 emotion-265"
-                    dir="rtl"
-                  >
-                    <time
-                      class="emotion-40 emotion-41"
-                      datetime="2030-01-01"
-                    >
-                      ۰۹:۰۰
-                    </time>
-                  </span>
-                </div>
-              </div>
-              <div
-                class="emotion-268 emotion-269"
-              >
-                <div
-                  class="emotion-270 emotion-271"
-                >
-                  <h3
-                    class="emotion-389 emotion-273"
-                  >
-                    <span
-                      role="text"
-                    >
-                      <span
-                        class="emotion-391 emotion-392"
-                        dir="rtl"
-                      >
-                        بعدی 
-                      </span>
-                      چشم انداز بامدادی 1
-                      <span
-                        class="emotion-86 emotion-87"
-                      >
-                        , 
-                        ۰۹:۰۰
-                        , 
-                      </span>
-                      <span
-                        class="emotion-395 emotion-279"
-                      >
-                        ۱ ژانویه ۲۰۳۰
-                      </span>
-                    </span>
-                  </h3>
-                  <p
-                    class="emotion-280 emotion-281"
-                  >
-                    تازه ترین خبرهای افغانستان، منطقه و جهان همراه با گزارش ها و بررسی روزنامه های مهم جهان وافغانستان.
-                  </p>
-                </div>
-                <div
-                  class="emotion-399 emotion-283"
-                >
-                  <span
-                    class="emotion-401 emotion-285"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="emotion-286 emotion-287"
-                      focusable="false"
-                      height="12px"
-                      viewBox="0 0 13 12"
-                      width="13px"
-                    >
-                      <path
-                        d="M9.021 1.811l-.525.525c.938.938 1.5 2.25 1.5 3.675s-.563 2.738-1.5 3.675l.525.525c1.05-1.087 1.725-2.55 1.725-4.2s-.675-3.112-1.725-4.2z"
-                      />
-                      <path
-                        d="M10.596.199l-.525.562c1.35 1.35 2.175 3.225 2.175 5.25s-.825 3.9-2.175 5.25l.525.525c1.5-1.462 2.4-3.525 2.4-5.775s-.9-4.312-2.4-5.812zM6.996 1.511l-2.25 2.25H.996v4.5h3.75l2.25 2.25z"
-                      />
-                    </svg>
-                  </span>
-                  <time
-                    class="emotion-288 emotion-289"
-                    datetime="PT26M30S"
-                    dir="rtl"
-                  >
-                    <span
-                      class="emotion-86 emotion-87"
-                    >
-                       ۲۶،۳۰ المدة الزمنية 
-                    </span>
-                    <span
-                      aria-hidden="true"
-                    >
-                      ۲۶:۳۰
                     </span>
                   </time>
                 </div>
@@ -3576,7 +3597,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3635,7 +3656,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3694,7 +3715,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3753,7 +3774,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3812,7 +3833,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -3856,12 +3877,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       </section>
       <section
         aria-labelledby="Most-Read"
-        class=" emotion-541 emotion-542"
+        class=" emotion-549 emotion-550"
         data-e2e="most-read"
         role="region"
       >
         <div
-          class="emotion-543 emotion-544 emotion-7"
+          class="emotion-551 emotion-552 emotion-7"
         >
           <div
             class="emotion-8 emotion-9"
@@ -3887,40 +3908,40 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
           </h2>
         </div>
         <ol
-          class="emotion-556 emotion-557 emotion-56"
+          class="emotion-564 emotion-565 emotion-56"
           dir="rtl"
           role="list"
         >
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-564 emotion-565"
+                class="emotion-572 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۱
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/world-50317704"
                 >
                   توافق با جدایی‌طلبان یمن؛ ایران اعتراض کرد، سازمان ملل استقبال
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -3933,35 +3954,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-581 emotion-565"
+                class="emotion-589 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۲
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/iran-50319870"
                 >
                   فراخوان آذری جهرمی برای مناظره اینستاگرامی - زرآبادی: در مجلس مناظره کنیم
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -3974,35 +3995,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-564 emotion-565"
+                class="emotion-572 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۳
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/world-50320610"
                 >
                   ترکیه: همسر ابوبکر بغدادی را 'دستگیر کردیم'
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4015,35 +4036,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-581 emotion-565"
+                class="emotion-589 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۴
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/world-50316456"
                 >
                   غنی سازی مجدد در فردو: مکرون اقدام ایران را 'عمیقا مایه نگرانی' خواند
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4056,35 +4077,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-564 emotion-565"
+                class="emotion-572 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۵
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/magazine-50249226"
                 >
                   دوازده دلیل حکمرانی حشرات: سوسک می‌تواند دو هفته بدون سر زنده بماند
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4097,35 +4118,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-649 emotion-565"
+                class="emotion-657 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۶
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/world-50317700"
                 >
                   انتخابات ایالتی آمریکا؛ دموکرات‌ها از جمهوری‌خواهان پیش افتادند
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4138,35 +4159,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-666 emotion-565"
+                class="emotion-674 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۷
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/sport-50322486"
                 >
                   عراق اردن را به عنوان میزبان بازی با ایران معرفی کرد
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4179,35 +4200,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-649 emotion-565"
+                class="emotion-657 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۸
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/iran-features-50310665"
                 >
                   آیا تهران بازی هسته ای را به هم می‌زند؟
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4220,35 +4241,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-666 emotion-565"
+                class="emotion-674 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۹
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/world-50316450"
                 >
                   آمریکا: دو ایرانی اتهام جمع‌آوری اطلاعات علیه سازمان مجاهدین در خاک آمریکا را پذیرفتند
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -4261,35 +4282,35 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
             </div>
           </li>
           <li
-            class="emotion-559 emotion-560 emotion-56"
+            class="emotion-567 emotion-568 emotion-56"
             dir="rtl"
             role="listitem"
           >
             <div
-              class="emotion-562 emotion-563"
+              class="emotion-570 emotion-571"
             >
               <div
-                class="emotion-649 emotion-565"
+                class="emotion-657 emotion-573"
                 dir="rtl"
               >
                 <span
-                  class="emotion-566 emotion-567"
+                  class="emotion-574 emotion-575"
                 >
                   ۱۰
                 </span>
               </div>
               <div
-                class="emotion-568 emotion-569"
+                class="emotion-576 emotion-577"
                 dir="rtl"
               >
                 <a
-                  class="emotion-570 emotion-571"
+                  class="emotion-578 emotion-579"
                   href="/persian/sport-50318030"
                 >
                   فوتبال ایران و عراق؛ ایران: امن است بازی می‌کنیم، فیفا: ناامن است بازی نکنید
                 </a>
                 <div
-                  class="emotion-572 emotion-573"
+                  class="emotion-580 emotion-581"
                 >
                   <time
                     class="emotion-40 emotion-41"
@@ -5997,7 +6018,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6030,7 +6051,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6153,7 +6174,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6186,7 +6207,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6245,7 +6266,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6304,7 +6325,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6363,7 +6384,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6422,7 +6443,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6481,7 +6502,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6540,7 +6561,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6599,7 +6620,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6658,7 +6679,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6769,7 +6790,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6828,7 +6849,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-419 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6887,7 +6908,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -6946,7 +6967,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7005,7 +7026,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7128,7 +7149,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7161,7 +7182,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7220,7 +7241,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7279,7 +7300,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7338,7 +7359,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"
@@ -7397,7 +7418,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-26 emotion-27"
                   >
                     <div
-                      class="lazyload-wrapper"
+                      class="lazyload-wrapper "
                     >
                       <div
                         class="lazyload-placeholder"

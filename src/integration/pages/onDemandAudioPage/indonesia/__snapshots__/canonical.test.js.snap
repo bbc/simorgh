@@ -4,72 +4,72 @@ exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 
 
 exports[`Canonical On Demand Audio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=54&amp;p=indonesia.bbc_indonesian_radio.w172xh267fpn19l.page&amp;x1=[urn%3Abbc%3Apips%3Aw172xh267fpn19l]&amp;x2=[responsive]&amp;x3=[news-indonesia]&amp;x4=[id]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[Dunia%2BPagi%2BIni%2B-%2BBBC%2BNews%2BIndonesia]\\"/>"`;
 
-exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
-
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
-
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 1`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Indonesia",
   "url": "/indonesia",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 2`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Alasan Anda dapat mempercayai BBC News",
   "url": "https://www.bbc.com/indonesia/institutional-49283175",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 3`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Peraturan Penggunaan",
   "url": "https://www.bbc.com/indonesia/institutional-37818421",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 4`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Mengenai BBC",
   "url": "https://www.bbc.com/indonesia/institutional-37818424",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 5`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Kebijakan tentang Privasi",
   "url": "https://www.bbc.com/indonesia/institutional-37818425",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 6`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 7`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Hubungi BBC",
   "url": "https://www.bbc.co.uk/send/u50853401",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 8`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 9`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "Baca tentang peraturan baru terkait link eksternal.",
   "url": "https://www.bbc.com/indonesia/institutional/2011/02/000001_links",
 }
 `;
+
+exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/indonesia"`;
+
+exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC tidak bertanggung jawab atas konten dari situs eksternal. Baca tentang peraturan baru terkait link eksternal."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, Indonesia"`;
 
@@ -167,63 +167,63 @@ Object {
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical On Demand Audio Page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/indonesia/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/indonesia/images/icons/icon-512x512.png",
 }
 `;
 
@@ -290,7 +290,7 @@ Object {
 
 exports[`Canonical On Demand Audio Page SEO OG description 1`] = `"Berita terbaru dari seluruh dunia dan ulasan peristiwa dari Indonesia. Juga berita olahraga terbaru dan berbeda setiap harinya."`;
 
-exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+exports[`Canonical On Demand Audio Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b4828.png"`;
 
 exports[`Canonical On Demand Audio Page SEO OG image alt 1`] = `"BBC News Indonesia"`;
 
@@ -316,7 +316,7 @@ exports[`Canonical On Demand Audio Page SEO Twitter description 1`] = `"Berita t
 
 exports[`Canonical On Demand Audio Page SEO Twitter image alt 1`] = `"BBC News Indonesia"`;
 
-exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://news.files.bbci.co.uk/ws/img/logos/og/indonesia.png"`;
+exports[`Canonical On Demand Audio Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/images/ic/400x400/p08b4828.png"`;
 
 exports[`Canonical On Demand Audio Page SEO Twitter site 1`] = `"@bbcindonesia"`;
 
