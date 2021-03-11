@@ -5,11 +5,12 @@
   "main": "./src/client.js",
   "resolutions": {
     "immer": "8.0.1",
-    "@emotion/serialize": "1.0.0",
+    "@emotion/serialize": "1.0.1",
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
     "lodash": "4.17.21",
-    "elliptic": "6.5.4"
+    "elliptic": "6.5.4",
+    "argparse": "2.0.0"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
