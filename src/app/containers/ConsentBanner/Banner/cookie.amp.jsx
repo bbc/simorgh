@@ -40,10 +40,10 @@ const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
-  margin-top: ${GEL_SPACING_TRPL};
+  margin-top: ${GEL_SPACING_DBL};
   margin-bottom: 0;
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUAD};
   }
 `;
