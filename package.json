@@ -5,7 +5,7 @@
   "main": "./src/client.js",
   "resolutions": {
     "immer": "8.0.1",
-    "@emotion/serialize": "1.0.1",
+    "@emotion/serialize": "1.0.0",
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
     "lodash": "4.17.21",

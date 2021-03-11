@@ -2224,10 +2224,10 @@
     "@emotion/weak-memoize" "^0.2.5"
     hoist-non-react-statics "^3.3.1"
 
-"@emotion/serialize@1.0.1", "@emotion/serialize@^0.11.15", "@emotion/serialize@^0.11.16", "@emotion/serialize@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.1.tgz#322cdebfdbb5a88946f17006548191859b9b0855"
-  integrity sha512-TXlKs5sgUKhFlszp/rg4lIAZd7UUSmJpwaf9/lAEFcUh2vPi32i7x4wk7O8TN8L8v2Ol8k0CxnhRBY0zQalTxA==
+"@emotion/serialize@1.0.0", "@emotion/serialize@^0.11.15", "@emotion/serialize@^0.11.16", "@emotion/serialize@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.0.tgz#1a61f4f037cf39995c97fc80ebe99abc7b191ca9"
+  integrity sha512-zt1gm4rhdo5Sry8QpCOpopIUIKU+mUSpV9WNmFILUraatm5dttNEaYzUWWSboSMUE6PtN2j1cAsuvcugfdI3mw==
   dependencies:
     "@emotion/hash" "^0.8.0"
     "@emotion/memoize" "^0.7.4"
