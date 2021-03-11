@@ -280,7 +280,7 @@ export const service = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [

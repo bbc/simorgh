@@ -269,7 +269,7 @@ export const service = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [

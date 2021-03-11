@@ -266,7 +266,7 @@ export const service = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [

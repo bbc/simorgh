@@ -249,7 +249,7 @@ export const service = {
         text: 'Pam y gallwch ymddiried yn BBC Cymru Fyw',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: "Sut ry'n ni'n defnyddio dolenni allanol.",
       },
       links: [

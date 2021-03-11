@@ -145,7 +145,7 @@ Object {
 exports[`AMP Articles Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Read about our approach to external linking.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
