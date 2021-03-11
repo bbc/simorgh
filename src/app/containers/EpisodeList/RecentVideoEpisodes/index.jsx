@@ -77,7 +77,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <aside role="complimentary" aria-labelledby="recent-episodes">
+    <aside role="complementary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
