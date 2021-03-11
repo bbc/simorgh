@@ -31,7 +31,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   font-size: 1.125rem;
   line-height: 1.375rem;
   color: #FFFFFF;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -49,7 +49,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-4 {
     margin-top: 2rem;
   }
@@ -200,11 +200,11 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
 
 .emotion-24 {
   color: #FFFFFF;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-24 {
     margin-top: 2rem;
   }
@@ -413,7 +413,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #FFFFFF;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -431,7 +431,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-4 {
     margin-top: 2rem;
   }
@@ -582,11 +582,11 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
 
 .emotion-24 {
   color: #FFFFFF;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 37.5rem) {
   .emotion-24 {
     margin-top: 2rem;
   }
