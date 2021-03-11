@@ -1383,15 +1383,10 @@
     colors "^1.1.2"
     license-checker "^8.0.4"
 
-"@bbc/gel-foundations@6.1.3":
+"@bbc/gel-foundations@6.1.3", "@bbc/gel-foundations@^6.1.1":
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@bbc/gel-foundations/-/gel-foundations-6.1.3.tgz#af9743eced46883294a3bed77ff50878079d811c"
   integrity sha512-CHPubw7sUnAaywgcnG0hJ27t16r1ThfCM8GS02MvPO20nonm/+ug5VBQRLD+HuGRtrW3ZVeU5r/E0kI7KmOCCA==
-
-"@bbc/gel-foundations@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@bbc/gel-foundations/-/gel-foundations-6.1.1.tgz#3284ec65018a9494d3f594800fdf7d8a097390e0"
-  integrity sha512-IDJxmb45hhC6DjbEOcS0Y/P85xLymNeaZ1v1EAGaYX7ErnYlVH8y9wCf4dQzcImWNwOYKUjXZiLJnAA7YSQrtA==
 
 "@bbc/moment-timezone-include@1.1.8":
   version "1.1.8"
@@ -1741,15 +1736,10 @@
     "@bbc/gel-foundations" "^6.1.1"
     react-helmet "^6.1.0"
 
-"@bbc/psammead-styles@7.2.5":
+"@bbc/psammead-styles@7.2.5", "@bbc/psammead-styles@^7.2.2":
   version "7.2.5"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.5.tgz#183f81d70487ffe167eeb956d916dae20de13bc5"
   integrity sha512-mJGZ+KYHVvGK4E773xPVlz62DaL+WK6hYN7SwJTg6puBZ0EoThFbDLVmz7NCEz+vL9m0uEiABtucn96OcZwpMQ==
-
-"@bbc/psammead-styles@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.2.tgz#628642ec22e7199212749066e18bd22b47823be0"
-  integrity sha512-TbR/2nvvkkDPcl+VIs6HvZkNlXtLLjJs0eyKIOXMHSWnxoNbcvy3aYpLzS4d7iXrJR7hPFg8f1MrUjGXIWEziw==
 
 "@bbc/psammead-test-helpers@6.0.4":
   version "6.0.4"
