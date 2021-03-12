@@ -90,7 +90,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <Spacer role="complimentary" aria-labelledby="recent-episodes">
+    <Spacer role="complementary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
