@@ -22,9 +22,7 @@ const Canonical = ({ onDismissFocusRef }) => {
   const onCookieAccept = () => {
     cookieOnAllow();
     updateCookiePolicy();
-    if (onDismissFocusRef) {
-      onDismissFocusRef.current.focus();
-    }
+    onDismissFocusRef.current?.querySelector('a')?.focus();
   };
 
   return (
