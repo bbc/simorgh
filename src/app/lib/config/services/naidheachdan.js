@@ -252,7 +252,8 @@ export const service = {
         text: 'Carson as urrainear earbsa a chur sa BhBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text:
           'Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh',
       },

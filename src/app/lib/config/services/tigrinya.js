@@ -264,7 +264,8 @@ export const service = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [

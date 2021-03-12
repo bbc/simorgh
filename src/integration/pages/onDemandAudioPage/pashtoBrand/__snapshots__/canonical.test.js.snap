@@ -63,7 +63,7 @@ Object {
 exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
