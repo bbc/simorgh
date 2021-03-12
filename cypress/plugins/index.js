@@ -16,3 +16,14 @@ module.exports = (on, config) => {
 
   return config;
 };
+// eslint-disable-next-line no-unused-vars
+module.exports = (on, config) => {
+  on('task', {
+    log(message) {
+      // eslint-disable-next-line no-console
+      console.log(message);
+
+      return null;
+    },
+  });
+};

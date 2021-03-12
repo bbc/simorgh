@@ -108,6 +108,10 @@ export default ({ service, pageType, variant, isAmp }) => {
                       episode => episode.innerText,
                     );
 
+                    const renderedEpisodesInnerTextString = JSON.stringify(
+                      renderedEpisodesInnerText,
+                    );
+
                     const convertTimestampsToLocaleString = recentEpisodesArray => {
                       return recentEpisodesArray.map(episode => ({
                         ...episode,
@@ -119,29 +123,30 @@ export default ({ service, pageType, variant, isAmp }) => {
                       processedEpisodesData,
                     );
 
+                    const cypressJsonDataString = JSON.stringify(
+                      cypressJsonResWithLocaleStringTimestamp,
+                    );
+
                     const simorghJsonResWithLocaleStringTimestamp =
                       !isAmp &&
                       convertTimestampsToLocaleString(
                         win.SIMORGH_DATA.pageData.recentEpisodes,
                       );
-
+                    const simorghJsonDataString = JSON.stringify(
+                      simorghJsonResWithLocaleStringTimestamp,
+                    );
+                    let fullStringToPrintCypressJson = '';
+                    let fullStringToPrintSimorghJson = '';
                     if (
                       renderedEpisodesArray.length !==
                       cypressJsonResWithLocaleStringTimestamp.length
                     ) {
-                      /* eslint-disable no-console */
-                      console.log(
-                        'Cypress json response - ',
-                        cypressJsonResWithLocaleStringTimestamp,
-                      );
-                      console.log('HTML on page - ', renderedEpisodesInnerText);
+                      fullStringToPrintCypressJson = `Cypress json response - ${cypressJsonDataString}\n\nHTML on page - ${renderedEpisodesInnerTextString}`;
+                      cy.task('log', fullStringToPrintCypressJson);
                       if (!isAmp) {
-                        console.log(
-                          'Simorgh json response - ',
-                          simorghJsonResWithLocaleStringTimestamp,
-                        );
+                        fullStringToPrintSimorghJson = `Simorgh json response - ${simorghJsonDataString}`;
+                        cy.task('log', fullStringToPrintSimorghJson);
                       }
-                      /* eslint-enable no-console */
                     }
 
                     // More than one episode expected
