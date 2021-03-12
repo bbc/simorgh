@@ -246,7 +246,8 @@ export const service = {
         text: 'Why you can trust the BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Read about our approach to external linking.',
       },
       links: [

@@ -315,7 +315,8 @@ export const service = {
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [

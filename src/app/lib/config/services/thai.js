@@ -299,7 +299,8 @@ export const service = {
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี ได้',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก',
       },
       links: [
