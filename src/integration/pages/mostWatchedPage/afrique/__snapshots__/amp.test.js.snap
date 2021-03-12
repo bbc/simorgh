@@ -178,7 +178,7 @@ Object {
 exports[`AMP Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Découvrez notre approche en matière de liens externes.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 

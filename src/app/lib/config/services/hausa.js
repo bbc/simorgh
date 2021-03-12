@@ -283,7 +283,8 @@ export const service = {
         text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [

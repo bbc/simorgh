@@ -341,7 +341,7 @@ exports[`FooterContainer should render correctly 1`] = `
            
           <a
             class="emotion-22 emotion-19"
-            href="https://www.bbc.co.uk/help/web/links/"
+            href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.
           </a>

@@ -189,7 +189,7 @@ Object {
 exports[`AMP Korean Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "외부 링크에 대한 본사 정책 보기",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
