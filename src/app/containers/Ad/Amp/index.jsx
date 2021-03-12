@@ -11,6 +11,7 @@ import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
@@ -86,6 +87,7 @@ export const AMP_ACCESS_FETCH = service => {
 
 const AmpAd = ({ slotType }) => {
   const { translations, dir, script, service } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],
@@ -118,7 +120,11 @@ const AmpAd = ({ slotType }) => {
               >
                 {label}
               </StyledLink>
-              <AdSlot service={service} slotType={slotType} />
+              <AdSlot
+                service={service}
+                slotType={slotType}
+                pageType={pageType}
+              />
             </StyledWrapper>
           </AdContainer>
         </AdSection>

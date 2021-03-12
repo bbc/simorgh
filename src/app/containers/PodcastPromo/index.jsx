@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import PodcastPromo from '@bbc/psammead-podcast-promo';
+import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
@@ -41,17 +41,17 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <PodcastPromo
+    <PromoComponent
       script={script}
       service={service}
       role="region"
       aria-labelledby="podcast-promo"
     >
-      <PodcastPromo.Title id="podcast-promo">
+      <PromoComponent.Title id="podcast-promo">
         {podcastPromoTitle}
-      </PodcastPromo.Title>
-      <PodcastPromo.Card>
-        <PodcastPromo.Card.ImageWrapper>
+      </PromoComponent.Title>
+      <PromoComponent.Card>
+        <PromoComponent.Card.ImageWrapper>
           <ImageWithPlaceholder
             src={imgSrc}
             srcset={srcset}
@@ -62,24 +62,24 @@ const Promo = () => {
             ratio={100}
             lazyLoad
           />
-        </PodcastPromo.Card.ImageWrapper>
-        <PodcastPromo.Card.Content>
-          <PodcastPromo.Card.Title>
-            <PodcastPromo.Card.Link href={url}>
+        </PromoComponent.Card.ImageWrapper>
+        <PromoComponent.Card.Content>
+          <PromoComponent.Card.Title>
+            <PromoComponent.Card.Link href={url}>
               <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                 {podcastBrandTitle}
               </span>
-            </PodcastPromo.Card.Link>
-          </PodcastPromo.Card.Title>
-          <PodcastPromo.Card.Description>
+            </PromoComponent.Card.Link>
+          </PromoComponent.Card.Title>
+          <PromoComponent.Card.Description>
             {description}
-          </PodcastPromo.Card.Description>
-          <PodcastPromo.Card.EpisodesText>
+          </PromoComponent.Card.Description>
+          <PromoComponent.Card.EpisodesText>
             {label}
-          </PodcastPromo.Card.EpisodesText>
-        </PodcastPromo.Card.Content>
-      </PodcastPromo.Card>
-    </PodcastPromo>
+          </PromoComponent.Card.EpisodesText>
+        </PromoComponent.Card.Content>
+      </PromoComponent.Card>
+    </PromoComponent>
   );
 };
 

@@ -21,6 +21,7 @@ import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_MARGIN_BELOW_400PX,
@@ -33,15 +34,16 @@ import {
 
 const BANNER_MAX_HEIGHT = '75vh';
 const MIN_TAP_HEIGHT = '2.75rem'; // 44px
+const OPTIONS_MAX_WIDTH = '23.875rem'; // 382px
 const BORDER_WIDTH = '0.0625rem'; // 1px
 const BORDER_WIDTH_TRANSPARENT = '0.125rem'; // 2px
 
 const COMMON_HEADING_STYLES = `
   color: ${C_WHITE};
-  margin-top: ${GEL_SPACING_TRPL};
+  margin-top: ${GEL_SPACING_DBL};
   margin-bottom: 0;
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUAD};
   }
 `;
@@ -111,19 +113,19 @@ const StyledLink = styled(Link)`
 
 const OptionsList = styled.ul`
   ${({ script }) => getLongPrimer(script)}
-  align-items: stretch;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: ${OPTIONS_MAX_WIDTH};
   padding-right: 0;
   padding-bottom: ${GEL_SPACING_DBL};
   padding-left: 0;
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    max-width: 100%;
     flex-direction: row;
+    justify-content: space-between;
     padding-bottom: ${GEL_SPACING_TRPL};
   }
 `;
@@ -131,7 +133,7 @@ const OptionsList = styled.ul`
 const OptionsItem = styled.li`
   margin-bottom: ${GEL_SPACING};
 
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: calc(50% - ${GEL_SPACING});
   }
 
@@ -155,12 +157,12 @@ const OptionsItem = styled.li`
       text-decoration: underline;
     }
   }
-`;
 
-const ManageSettingsButton = styled.button`
-  background: none;
-  border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
-  color: ${C_CONSENT_ACTION};
+  button[on='tap:AMP.setState({ isManagingSettings: true })'] {
+    background: none;
+    border: ${BORDER_WIDTH} solid ${C_CONSENT_ACTION};
+    color: ${C_CONSENT_ACTION};
+  }
 `;
 
 /**
@@ -168,12 +170,13 @@ const ManageSettingsButton = styled.button`
  * the Manage Cookie Settings banner.
  */
 // eslint-disable-next-line react/prop-types
-export const AmpCookieSettingsButton = ({ children, ...rest }) => (
+export const AmpCookieSettingsButton = ({ children, lang, className }) => (
   <button
     on="tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })"
     type="button"
     data-testid="amp-cookie-settings-button"
-    {...rest}
+    lang={lang}
+    className={className}
   >
     {children}
   </button>
@@ -218,12 +221,12 @@ const AmpCookieBanner = ({
               {accept}
             </OptionsItem>
             <OptionsItem script={script} service={service}>
-              <ManageSettingsButton
+              <button
                 type="button"
                 on="tap:AMP.setState({ isManagingSettings: true })"
               >
                 {initial.manage}
-              </ManageSettingsButton>
+              </button>
             </OptionsItem>
           </OptionsList>
         </BannerPage>
