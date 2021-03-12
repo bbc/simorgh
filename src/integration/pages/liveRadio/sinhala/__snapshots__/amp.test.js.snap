@@ -182,7 +182,7 @@ Object {
 exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 

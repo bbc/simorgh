@@ -267,7 +267,8 @@ export const service = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
