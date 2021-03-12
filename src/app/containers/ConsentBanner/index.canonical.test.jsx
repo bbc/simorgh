@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import React, { useRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
@@ -158,31 +158,5 @@ describe('Canonical Consent Banner Container', () => {
       setShowPrivacyBanner: expect.any(Function),
     });
     expect(Banner).not.toHaveBeenCalled();
-  });
-
-  it('should focus on provided ref when cookie banner is accepted', () => {
-    const TestComponent = () => {
-      const focusRef = useRef(null);
-      return (
-        <>
-          <a href="/" ref={focusRef}>
-            BBC Brand Logo
-          </a>
-          <CanonicalContainer onDismissFocusRef={focusRef} />
-        </>
-      );
-    };
-    act(() => {
-      ReactDOM.render(<TestComponent />, container);
-
-      setShowPrivacyBannerState(false);
-      setShowCookieBannerState(true);
-    });
-
-    Banner.mock.calls[0][0].onAccept();
-
-    const brand = document.querySelector('a');
-    expect(brand.text).toBe('BBC Brand Logo');
-    expect(document.activeElement).toBe(brand);
   });
 });
