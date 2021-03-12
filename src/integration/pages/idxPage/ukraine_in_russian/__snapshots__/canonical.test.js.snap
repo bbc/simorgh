@@ -56,7 +56,7 @@ Object {
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 

@@ -1483,7 +1483,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
              
             <a
               class="emotion-190 emotion-159"
-              href="https://www.bbc.co.uk/help/web/links/"
+              href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.
             </a>
