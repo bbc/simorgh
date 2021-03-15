@@ -131,8 +131,8 @@ const PhotoGalleryPage = ({ pageData }) => {
         }}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        <CpsRelatedContent content={relatedContent} enableGridWrapper />
       </StyledGelPageGrid>
+      <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );
 };

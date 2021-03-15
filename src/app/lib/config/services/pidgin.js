@@ -306,7 +306,8 @@ export const service = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'De way wey we de take go external link.',
       },
       links: [
