@@ -19,9 +19,13 @@ const Canonical = ({ onDismissFocusRef }) => {
 
   useEffect(runInitial, []);
 
-  const onCookieAccept = () => {
-    cookieOnAllow();
-    updateCookiePolicy();
+  const onCookieAction = actionType => {
+    if (actionType === 'accept') {
+      cookieOnAllow();
+      updateCookiePolicy();
+    } else if (actionType === 'reject') {
+      cookieOnReject();
+    }
     onDismissFocusRef?.current?.querySelector('a')?.focus();
   };
 
@@ -37,8 +41,8 @@ const Canonical = ({ onDismissFocusRef }) => {
       {!showPrivacy && showCookie ? (
         <Banner
           type="cookie"
-          onAccept={onCookieAccept}
-          onReject={cookieOnReject}
+          onAccept={() => onCookieAction('accept')}
+          onReject={() => onCookieAction('reject')}
         />
       ) : null}
     </>

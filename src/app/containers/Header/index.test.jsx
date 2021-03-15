@@ -171,6 +171,7 @@ describe(`Header`, () => {
     });
 
     it('should focus on consent banner heading on mount', () => {
+      const initialFocusElement = document.activeElement;
       const { getByText } = render(
         HeaderContainerWithContext({
           pageType: INDEX_PAGE,
@@ -181,9 +182,10 @@ describe(`Header`, () => {
       const pidginPrivacyHeading =
         pidginServiceConfig.default.translations.consentBanner.privacy.title;
       expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
+      expect(document.activeElement).not.toBe(initialFocusElement);
     });
 
-    it('should focus on the brand link on consent banner dismiss', () => {
+    it('should focus on the brand link on cookie banner accept', () => {
       const { getByText } = render(
         HeaderContainerWithContext({
           pageType: INDEX_PAGE,
@@ -201,6 +203,30 @@ describe(`Header`, () => {
 
       getByText(pidginPrivacyAccept).click();
       getByText(pidginCookieAccept).click();
+
+      expect(document.activeElement).toBe(
+        document.querySelector(`a[href="${logoHref}"]`),
+      );
+    });
+
+    it('should focus on the brand link on cookie banner reject', () => {
+      const { getByText } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      const pidginPrivacyAccept =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieReject =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .reject;
+      const logoHref = pidginServiceConfig.default.navigation[0].url;
+
+      getByText(pidginPrivacyAccept).click();
+      getByText(pidginCookieReject).click();
 
       expect(document.activeElement).toBe(
         document.querySelector(`a[href="${logoHref}"]`),
