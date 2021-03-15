@@ -1388,11 +1388,6 @@
   resolved "https://registry.yarnpkg.com/@bbc/gel-foundations/-/gel-foundations-6.1.3.tgz#af9743eced46883294a3bed77ff50878079d811c"
   integrity sha512-CHPubw7sUnAaywgcnG0hJ27t16r1ThfCM8GS02MvPO20nonm/+ug5VBQRLD+HuGRtrW3ZVeU5r/E0kI7KmOCCA==
 
-"@bbc/gel-foundations@^6.1.1":
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/@bbc/gel-foundations/-/gel-foundations-6.1.1.tgz#3284ec65018a9494d3f594800fdf7d8a097390e0"
-  integrity sha512-IDJxmb45hhC6DjbEOcS0Y/P85xLymNeaZ1v1EAGaYX7ErnYlVH8y9wCf4dQzcImWNwOYKUjXZiLJnAA7YSQrtA==
-
 "@bbc/moment-timezone-include@1.1.8":
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/@bbc/moment-timezone-include/-/moment-timezone-include-1.1.8.tgz#e014ee798836734aeb033bc83d4bffb63d606927"
@@ -1681,12 +1676,12 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-storybook-helpers@9.0.13":
-  version "9.0.13"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-storybook-helpers/-/psammead-storybook-helpers-9.0.13.tgz#9a66b9297ee8fdcac04ac4ed88868db9fe52ad8a"
-  integrity sha512-5U+/AyZImLb/07QiH0qakpi73weGxIzGqeWIstCqHDQB/LH1QMIkqUtmiPByf/eXGPmel661m+Nel1frK3qMDQ==
+"@bbc/psammead-storybook-helpers@9.0.14":
+  version "9.0.14"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-storybook-helpers/-/psammead-storybook-helpers-9.0.14.tgz#a3013968ec794760e54bde7610f03f63e0aed503"
+  integrity sha512-Jooxv/uCC7UK5oQ88r/G67ofP5PN37VLBdL5wpgciHNuXq7c1+k9WuzCNIxXlXgVDoXId4W2WaAmkT8Vd3s3uQ==
   dependencies:
-    "@bbc/gel-foundations" "^6.1.1"
+    "@bbc/gel-foundations" "6.1.3"
     react-helmet "^6.1.0"
 
 "@bbc/psammead-styles@7.2.5":
@@ -1694,24 +1689,10 @@
   resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.5.tgz#183f81d70487ffe167eeb956d916dae20de13bc5"
   integrity sha512-mJGZ+KYHVvGK4E773xPVlz62DaL+WK6hYN7SwJTg6puBZ0EoThFbDLVmz7NCEz+vL9m0uEiABtucn96OcZwpMQ==
 
-"@bbc/psammead-styles@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.2.tgz#628642ec22e7199212749066e18bd22b47823be0"
-  integrity sha512-TbR/2nvvkkDPcl+VIs6HvZkNlXtLLjJs0eyKIOXMHSWnxoNbcvy3aYpLzS4d7iXrJR7hPFg8f1MrUjGXIWEziw==
-
 "@bbc/psammead-test-helpers@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-test-helpers/-/psammead-test-helpers-6.0.4.tgz#e2030a6f3cff8b7bdd076fd2771817377415e704"
   integrity sha512-UI5+gJOy2ZgP08T005rH1MUR2ySngyRH0BLVl0xbwKq19uAbcVclv94zx9jqwdUvxjycykJyNbu1Tjg0L3DrSw==
-
-"@bbc/psammead-timestamp-container@5.0.28":
-  version "5.0.28"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp-container/-/psammead-timestamp-container-5.0.28.tgz#201b549f6b81671bc10f9c60a30b86f9d252b662"
-  integrity sha512-4txAnBInrPrIyqdPXlUPTcrrwp1rgQ28n2auS6JKWk+PJcGl5aaTOXuE0sPFk0O3g5If9Sz6jJBFZ7zzlWb9fA==
-  dependencies:
-    "@bbc/gel-foundations" "^6.1.1"
-    "@bbc/psammead-timestamp" "^4.0.13"
-    moment-timezone "^0.5.26"
 
 "@bbc/psammead-timestamp-container@5.0.29":
   version "5.0.29"
@@ -1730,21 +1711,13 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-timestamp@^4.0.13":
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp/-/psammead-timestamp-4.0.13.tgz#17354250679c351f5dfbc5dc2823c250b09be9e4"
-  integrity sha512-OIK7JhHnUGAUMPjnUctnwK0n2k5syoSlRGRmnF5L1ugcrr97AH1sYmIqswcxb5I+V/ECJ4TgkdB4sVy0WjA6kA==
+"@bbc/psammead-useful-links@3.0.18":
+  version "3.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.18.tgz#5d8d86597a6a90151400bd3b9bde75cf899db9c8"
+  integrity sha512-njr1lcVme5965mBunTmcKn1dLLnX3r2sgKnwH3o7RvYVKf/C1/Wgi9lafa9ZCvA0DGORxK/OQsGeysTifV/g2A==
   dependencies:
-    "@bbc/gel-foundations" "^6.1.1"
-    "@bbc/psammead-styles" "^7.2.2"
-
-"@bbc/psammead-useful-links@3.0.17":
-  version "3.0.17"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.17.tgz#884884dd9780519afc040190e6bcaf97cedf9f4e"
-  integrity sha512-X9Xh8Q9QSgCHUGdNKGlz/YfAEejonSzzMsCh19fKbJ+3NpKEeRfo/LgNDkrGHR1c/uvKMHHSmrlgFUew1Hi2gw==
-  dependencies:
-    "@bbc/gel-foundations" "^6.1.1"
-    "@bbc/psammead-styles" "^7.2.2"
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.5"
 
 "@bbc/psammead-visually-hidden-text@2.0.6":
   version "2.0.6"
