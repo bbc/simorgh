@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
@@ -21,7 +23,7 @@ import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
@@ -36,6 +38,7 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
 import SocialEmbed from '#containers/SocialEmbed';
 import CpsRecommendations from '#containers/CpsRecommendations';
+import PodcastPromo from '#containers/PodcastPromo';
 import {
   getFirstPublished,
   getLastPublished,
@@ -62,6 +65,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLang,
     lang,
   } = useContext(ServiceContext);
+  const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const category = path(
@@ -141,6 +145,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   // ads
   const { enabled: adsEnabled } = useToggle('ads');
+  const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
 
@@ -162,7 +167,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image,
+    image: props => <Image {...props} shouldPreload={preloadLeadImageToggle} />,
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
@@ -216,6 +221,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
       width: 100%;
     }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      width: 100%;
+    }
     padding-bottom: ${GEL_SPACING_QUAD};
   `;
 
@@ -238,6 +246,17 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ResponsiveComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-bottom: ${GEL_SPACING_SEXT};
+      padding: ${GEL_SPACING_DBL};
+    }
+  `;
+
+  const ResponsivePodcastPromoWrapper = styled.div`
+    margin-top: ${GEL_SPACING_TRPL};
+    margin-bottom: ${GEL_SPACING_TRPL};
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      margin-top: -${GEL_SPACING_SEXT};
+      margin-bottom: -${GEL_SPACING};
       padding: ${GEL_SPACING_DBL};
     }
   `;
@@ -327,6 +346,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
                 parentColumns={gridColsSecondary}
               />
             </ResponsiveComponentWrapper>
+          )}
+          {podcastPromoEnabled && (
+            <ResponsivePodcastPromoWrapper>
+              <PodcastPromo />
+            </ResponsivePodcastPromoWrapper>
           )}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>

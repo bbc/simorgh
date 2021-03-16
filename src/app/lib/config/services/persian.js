@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import {
-  F_NASSIM_PERSIAN_REGULAR,
-  F_NASSIM_PERSIAN_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -53,6 +58,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -125,30 +133,83 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'آیا با دریافت کوکی‌های ما موافقید؟',
-          description: {
-            uk: {
-              first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
-              linkText: 'کوکی',
-              last:
-                ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'پذیرش جمع آوری داده ها، و ادامه دادن',
+            reject: 'رد کردن جمع آوری داده ها و ادامه دادن',
+            initial: {
+              title:
+                'به ما اطلاع دهید که موافق جمع آوری داده ها در صفحات موبایلی پرشتاب (AMP) هستید',
+              description: {
+                first:
+                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
+                linkText: 'کوکی ها',
+                last:
+                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'مدیریت تنظیمات',
             },
-            international: {
-              first:
-                'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
-              linkText: 'کوکی ها',
-              last:
-                ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'مدیریت تنظیمات مربوط به رضایت در صفحات AMP',
+              description: {
+                para1:
+                  'این تنظیمات فقط برای صفحات AMP اعمال می شود. هنگامی که از صفحات غیر AMP در بی بی سی بازدید می کنید ممکن است از شما بخواهند که این تنظیمات را دوباره انجام دهید.',
+                para2:
+                  'صفحه موبایل سبک که از آن بازدید کرده اید با استفاده از فناوری Google AMP ساخته شده است.',
+                heading2: 'جمع آوری اطلاعات کاملاً ضروری',
+                para3:
+                  'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
+                para4: {
+                  text:
+                    'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
+                heading3: 'جمع آوری اطلاعات اختیاری',
+                para6:
+                  'وقتی موافقت خود را برای جمع آوری داده ها در صفحات AMP اعلام می کنید، به ما اجازه می دهید تبلیغات شخصی شده مربوط به شما را هنگامی که خارج از بریتانیا هستنید، نمایش دهیم.',
+                para7: {
+                  text:
+                    'درباره نحوه شخصی سازی تبلیغات در بی بی سی و شرکای تبلیغاتی ما بیشتر بخوانید.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'شما می توانید با کلیک "رد کردن جمع آوری داده ها و ادامه دادن" در زیر، تبلیغات شخصی را دریافت نکنید. لطفاً توجه داشته باشید که همچنان تبلیغات را مشاهده خواهید کرد، اما برای شما شخصی نخواهد شد.',
+                para9:
+                  'می توانید این تنظیمات را با کلیک کردن روی  "گزینه های مربوط به تبلیغات / اطلاعاتم را نفروشید" در پایین صفحه در هر زمان تغییر دهید."',
+              },
             },
           },
-          accept: 'بله، موافقم',
-          reject: 'خیر، بازگشت به صفحه تنظیمات',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'آیا با دریافت کوکی‌های ما موافقید؟',
+            description: {
+              uk: {
+                first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
+                linkText: 'کوکی',
+                last:
+                  ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
+                linkText: 'کوکی ها',
+                last:
+                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'بله، موافقم',
+            reject: 'خیر، بازگشت به صفحه تنظیمات',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -159,6 +220,7 @@ export const service = {
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
+        recentEpisodes: 'برنامه قبلی',
         bbc_persian_radio: {
           title: 'رادیو فارسی بی‌بی‌سی',
           subtitle:
@@ -176,11 +238,14 @@ export const service = {
         },
         listen: 'بشنوید',
         watch: 'ببینید',
+        listenLive: 'بشنوید - زنده',
+        listenNext: 'به بعدی گوش کنید',
         liveLabel: 'زنده',
         nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
+        podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
       },
       socialEmbed: {
         caption: {
@@ -260,6 +325,7 @@ export const service = {
           text: 'تماس با بی بی سی',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -269,15 +335,11 @@ export const service = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',
         url: '/persian',
-      },
-      {
-        title: 'انتخابات آمریکا',
-        url: '/persian/world-54468359',
       },
       {
         title: 'کرونا',

@@ -1,5 +1,13 @@
 import { buildATIUrl, buildATIClickParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -151,7 +159,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right article url', () => {
       const url = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -162,7 +170,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right frontPage url', () => {
       const url = buildATIUrl(
         frontPage,
-        { ...requestContext, pageType: 'frontPage' },
+        { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -173,7 +181,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page url', () => {
       const url = buildATIUrl(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -184,7 +192,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right media url', () => {
       const url = buildATIUrl(
         media,
-        { ...requestContext, pageType: 'media' },
+        { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -195,7 +203,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP url', () => {
       const url = buildATIUrl(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -206,7 +214,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right PGL url', () => {
       const url = buildATIUrl(
         PGL,
-        { ...requestContext, pageType: 'PGL' },
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
@@ -217,7 +225,7 @@ describe('ATIAnalytics params', () => {
     it('should have both ref parameter and x6 referrer url parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -229,7 +237,7 @@ describe('ATIAnalytics params', () => {
     it('should have ref parameter as the last parameter, if referrer url exists', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -240,7 +248,7 @@ describe('ATIAnalytics params', () => {
     it('should not have ref and x6 parameters, if referrer url does not exist', () => {
       const atiUrl = buildATIUrl(
         article,
-        { ...requestContext, pageType: 'article', previousPath: '' },
+        { ...requestContext, pageType: ARTICLE_PAGE, previousPath: '' },
         serviceContext,
       );
       const params = atiUrl.split('&');
@@ -254,7 +262,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right article params', () => {
       const params = buildATIClickParams(
         article,
-        { ...requestContext, pageType: 'article' },
+        { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -282,7 +290,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right frontPage params', () => {
       const params = buildATIClickParams(
         frontPage,
-        { ...requestContext, pageType: 'frontPage' },
+        { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -305,7 +313,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right IDX page params', () => {
       const params = buildATIClickParams(
         idxPage,
-        { ...requestContext, pageType: 'IDX' },
+        { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -328,7 +336,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right media params', () => {
       const params = buildATIClickParams(
         media,
-        { ...requestContext, pageType: 'media' },
+        { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -349,7 +357,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right MAP params', () => {
       const params = buildATIClickParams(
         MAP,
-        { ...requestContext, pageType: 'MAP' },
+        { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
       );
       expect(params).toEqual({
@@ -379,7 +387,7 @@ describe('ATIAnalytics params', () => {
     it('should return the right PGL params', () => {
       const params = buildATIClickParams(
         PGL,
-        { ...requestContext, pageType: 'PGL' },
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
       );
       expect(params).toEqual({

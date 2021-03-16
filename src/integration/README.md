@@ -7,49 +7,49 @@ These tests use the [Jest](#what-is-jest) test runner and operate in a [JSDOM](#
 To run the tests locally:
 
 ```
-npm run test:integration
+yarn test:integration
 ```
 
 To run tests for a single page type with the watch task:
 
 ```
-npm run test:integration -- --pageTypes=articles --watch
+yarn test:integration -- --pageTypes=articles --watch
 ```
 
 To run tests for multiple page types:
 
 ```
-npm run test:integration -- --pageTypes=articles,frontPage
+yarn test:integration -- --pageTypes=articles,frontPage
 ```
 
 To run tests for a single page type with the watch task and webpack hot reloading of application code:
 
 ```
-npm run test:integration -- --pageTypes=liveRadio --watch --dev
+yarn test:integration -- --pageTypes=liveRadio --watch --dev
 ```
 
 To run tests in CI so they fail if a snapshot was not captured:
 
 ```
-npm run test:integration:ci
+yarn test:integration:ci
 ```
 
 To stop running tests immediately when there is a failure - NB this is useful when you want to reduce noise if there are a lot of failing tests and you want to inspect one failing test at a time:
 
 ```
-npm run test:integration -- --bail
+yarn test:integration -- --bail
 ```
 
 To run tests updating existing snapshots
 
 ```
-npm run test:integration -- -u
+yarn test:integration -- -u
 ```
 
 To run tests without building and starting the app
 
 ```
-npm run test:integration -- --onlyRunTests
+yarn test:integration -- --onlyRunTests
 ```
 
 Any other Jest CLI args and flags can be passed along in the `test:integration` script.
@@ -156,14 +156,18 @@ Tests for pages are located in the `src/app/integration/pages` directory within 
 
 ```
 ├── pages
-|  ├── articlePage
-|  ├── errorPage
+|  ├── articles
+|  ├── featureIdxPage
 |  ├── frontPage
+|  ├── idxPage
+|  ├── liveRadio
 |  ├── mediaAssetPage
-|  ├── onDemandRadioPage
+|  ├── mostReadPage
+|  ├── mostWatchedPage
+|  ├── onDemandAudioPage
+|  ├── onDemandTVPage
 |  ├── photoGalleryPage
-|  ├── liveRadioPage
-|  ├── onDemandRadioPage
+|  ├── storyPage
 ```
 
 within a page type directory we tell Jest where our test suites are by using the `.test.js` file extension, for example, `amp.test.js`, `canonical.test.js`. To test the `amharic` service we have created a directory specifically for this and located the AMP and canonical test files within.

@@ -6,6 +6,7 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import {
   GEL_SPACING,
@@ -21,6 +22,7 @@ import {
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import getAssetUri from './utils/getAssetUri';
 
 const Wrapper = styled(GridItemLargeNoMargin)`
   margin-top: ${GEL_SPACING};
@@ -30,6 +32,10 @@ const Wrapper = styled(GridItemLargeNoMargin)`
     `figure {
       padding-bottom: ${GEL_SPACING_DBL};
     }`}
+
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    margin-top: ${GEL_SPACING};
+  }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_DBL};
@@ -67,12 +73,11 @@ const CpsAssetMediaPlayer = ({
   );
 
   const available = path(['model', 'available'], metadataBlock);
-
   return (
     <Wrapper hasBottomPadding={hasBottomPadding} dir={dir}>
       <MediaPlayerContainer
         blocks={blocks}
-        assetId={assetUri.substr(1)}
+        assetId={getAssetUri(assetUri.substr(1))}
         assetType={isLegacyMedia ? 'legacy' : 'cps'}
         showPlaceholder={false}
         available={available}

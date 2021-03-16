@@ -1,681 +1,1011 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Most Read Page Main should match snapshot for most read page 1`] = `
-<html
-  dir="ltr"
-  lang="pcm"
->
-  <head>
-    <title>
-      De one we dem de read well well - BBC News Pidgin
-    </title>
-    <link
-      href="https://www.test.bbc.com/pathname"
-      rel="canonical"
-    />
-    <link
-      href="https://www.test.bbc.com/pathname.amp"
-      rel="amphtml"
-    />
-    <link
-      href="http://localhost:7080/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="apple-touch-icon"
-      sizes="96x96"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-128x128.png"
-      rel="apple-touch-icon"
-      sizes="128x128"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-180x180.png"
-      rel="apple-touch-icon"
-      sizes="180x180"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="apple-touch-icon"
-      sizes="192x192"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-384x384.png"
-      rel="apple-touch-icon"
-      sizes="384x384"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-icon"
-      sizes="512x512"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-72x72.png"
-      rel="icon"
-      sizes="72x72"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-96x96.png"
-      rel="icon"
-      sizes="96x96"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-192x192.png"
-      rel="icon"
-      sizes="192x192"
-      type="image/png"
-    />
-    <link
-      href="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-512x512.png"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <meta
-      content="IE=edge"
-      http-equiv="X-UA-Compatible"
-    />
-    <meta
-      charset="utf-8"
-    />
-    <meta
-      content="noodp,noydir"
-      name="robots"
-    />
-    <meta
-      content="#B80000"
-      name="theme-color"
-    />
-    <meta
-      content="width=device-width, initial-scale=1, minimum-scale=1"
-      name="viewport"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="application-name"
-    />
-    <meta
-      content="De one we dem de read well well - BBC News Pidgin"
-      name="description"
-    />
-    <meta
-      content="100004154058350"
-      property="fb:admins"
-    />
-    <meta
-      content="1609039196070050"
-      property="fb:app_id"
-    />
-    <meta
-      content="285361880228,192168680794107,9432520138,347501767628,264572343581678,303522857815,166580710064489,592266607456680,260669183761,160817274042538,236659822607,237647452933504,10150118096995434,113097918700687,143048895744759,81395234664,207150596007088,167959249906191,64040652712,190992343324,103678496456574,367167334474,160894643929209,186742265162,1526071940947174,230299653821,124158667615790,126548377386804,298318986864908,1068750829805728,228458913833525,163571453661989,660673490805047,948946275170651,485274381864409,1633841096923106,654070648098812"
-      property="fb:pages"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#B80000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/include/articles/public/pidgin/images/icons/icon-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="De one we dem de read well well - BBC News Pidgin"
-      property="og:description"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      property="og:image"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:image:alt"
-    />
-    <meta
-      content="pcm"
-      property="og:locale"
-    />
-    <meta
-      content="BBC News Pidgin"
-      property="og:site_name"
-    />
-    <meta
-      content="De one we dem de read well well - BBC News Pidgin"
-      property="og:title"
-    />
-    <meta
-      content="website"
-      property="og:type"
-    />
-    <meta
-      content="https://www.test.bbc.com/pathname"
-      property="og:url"
-    />
-    <meta
-      content="summary_large_image"
-      name="twitter:card"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:creator"
-    />
-    <meta
-      content="De one we dem de read well well - BBC News Pidgin"
-      name="twitter:description"
-    />
-    <meta
-      content="BBC News Pidgin"
-      name="twitter:image:alt"
-    />
-    <meta
-      content="https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"
-      name="twitter:image:src"
-    />
-    <meta
-      content="@BBCNews"
-      name="twitter:site"
-    />
-    <meta
-      content="De one we dem de read well well - BBC News Pidgin"
-      name="twitter:title"
-    />
-    <noscript>
-      &lt;img src="https://sb.scorecardresearch.com/p?c1=2&c2=17986528&cv=2.0&cj=1" /&gt;
-    </noscript>
-    <script
-      async="true"
-      src="http://localhost:7080/static/js/comscore/main-1.0.js"
-      type="text/javascript"
-    />
-    <script
-      type="application/ld+json"
+.emotion-0 {
+  margin: 0 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    margin: 0 1rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6E6E73;
+  margin: 0;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
+    padding: 1.5rem 0 0.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    padding: 1.5rem 0 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-2 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-4 {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-4 {
+    margin-top: 2rem;
+  }
+}
+
+.emotion-7 {
+  width: 100%;
+}
+
+@supports (display: grid) {
+  .emotion-7 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(8, 1fr);
+      grid-column-end: span 8;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-7 {
+      grid-template-columns: repeat(20, 1fr);
+      grid-column-end: span 20;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-7 {
+    margin: 0 auto;
+    max-width: 63rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-7 {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-9 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-9 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-9 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-9 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-9 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-9 {
+    margin-left: 18.181818181818183%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-9 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-9 {
+      grid-template-columns: repeat(11, 1fr);
+      grid-column-end: span 11;
+      grid-column-start: 3;
+    }
+  }
+}
+
+.emotion-12 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(10, auto);
+}
+
+@supports (display: grid) {
+  .emotion-12 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-12 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-15 {
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+@supports (display: grid) {
+  .emotion-15 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-15 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-19 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-19 {
+    min-width: 2.5rem;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
+    min-width: 3rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    min-width: 4rem;
+  }
+}
+
+.emotion-21 {
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  position: relative;
+  color: #B80000;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-21 {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-21 {
+    font-size: 3.5rem;
+    line-height: 3.75rem;
+  }
+}
+
+.emotion-23 {
+  padding-top: 0.375rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-23 {
+    padding-right: 0;
+  }
+}
+
+.emotion-25 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-25:hover,
+.emotion-25:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-25:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+@media (min-width: 25rem) {
+  .emotion-25 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-25 {
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-25 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.emotion-27 {
+  padding-top: 0.5rem;
+}
+
+.emotion-29 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+<div>
+  <noscript />
+  <div>
+    chartbeat
+  </div>
+  <main
+    data-e2e="most-read"
+    role="main"
+  >
+    <div
+      class="emotion-0 emotion-1"
     >
-      {"@context":"http://schema.org","@graph":[{"@type":"WebPage","url":"https://www.test.bbc.com/pathname","publisher":{"@type":"NewsMediaOrganization","name":"BBC News Pidgin","publishingPrinciples":"https://www.bbc.com/pidgin/institutional-48528766","logo":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"}},"thumbnailUrl":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png","image":{"@type":"ImageObject","width":1024,"height":576,"url":"https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.test.bbc.com/pathname","name":"De one we dem de read well well"},"inLanguage":{"@type":"Language","name":"Nigerian Pidgin","alternateName":"pcm"}}]}
-    </script>
-  </head>
-  <body>
-    <div>
-      <noscript />
-      <div>
-        chartbeat
-      </div>
-      <main
-        data-e2e="most-read"
-        role="main"
+      <h1
+        class="emotion-2 emotion-3"
+        dir="ltr"
+        id="content"
+        tabindex="-1"
+      >
+        De one we dem de read well well
+      </h1>
+      <div
+        class="emotion-4 emotion-5"
       >
         <div
-          class="css-195slon-IndexPageContainer emotion-97"
+          class="emotion-6 emotion-7 emotion-8"
+          dir="ltr"
         >
-          <h1
-            class="css-10a1bf8-HeadingIndex-StyledIndexHeading emotion-0"
-            dir="ltr"
-            id="content"
-            tabindex="-1"
-          >
-            De one we dem de read well well
-          </h1>
           <div
-            class="css-1v0dpl6-MarginWrapper emotion-96"
+            class="emotion-9 emotion-8"
+            dir="ltr"
           >
-            <div
-              class="emotion-94 css-py1rac-GridComponent-GelPageGrid emotion-9"
+            <ol
+              class="emotion-11 emotion-12 emotion-8"
               dir="ltr"
+              role="list"
             >
-              <div
-                class="css-beh5tb-GridComponent emotion-9"
+              <li
+                class="emotion-14 emotion-15 emotion-8"
                 dir="ltr"
+                role="listitem"
               >
-                <ol
-                  class="emotion-91 css-1hfov0s-GridComponent-OneColumnGrid emotion-9"
-                  dir="ltr"
-                  role="list"
+                <div
+                  class="emotion-17 emotion-18"
                 >
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                  <div
+                    class="emotion-19 emotion-20"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <span
+                      class="emotion-21 emotion-22"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
-                      >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          1
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-46729879"
-                        >
-                          Public Holidays wey go happun for 2019
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-05-21"
-                          >
-                            De one we dem update for: 21st May 2019
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                      1
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-46729879"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
+                      Public Holidays wey go happun for 2019
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-05-21"
                       >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          2
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50304653"
-                        >
-                          Liberia banks don run out of money
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-11-05"
-                          >
-                            De one we dem update for: 5th November 2019
-                          </time>
-                        </div>
-                      </div>
+                        De one we dem update for: 21st May 2019
+                      </time>
                     </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <span
+                      class="emotion-21 emotion-22"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
-                      >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          3
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50298882"
-                        >
-                          Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-11-05"
-                          >
-                            De one we dem update for: 5th November 2019
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                      2
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50304653"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
+                      Liberia banks don run out of money
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-11-05"
                       >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          4
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50315150"
-                        >
-                          Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
-                      </div>
+                        De one we dem update for: 5th November 2019
+                      </time>
                     </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <span
+                      class="emotion-21 emotion-22"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
-                      >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          5
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50315157"
-                        >
-                          How Balogun market fire kill Policeman for Lagos
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                      3
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50298882"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
+                      Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-11-05"
                       >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          6
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50093818"
-                        >
-                          Labour, FG finally agree minimum wage salary adjustment
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-10-18"
-                          >
-                            De one we dem update for: 18th October 2019
-                          </time>
-                        </div>
-                      </div>
+                        De one we dem update for: 5th November 2019
+                      </time>
                     </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <span
+                      class="emotion-21 emotion-22"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
-                      >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          7
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-50187218"
-                        >
-                          Naira Marley na 'Bad Influence'?
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-10-25"
-                          >
-                            De one we dem update for: 25th October 2019
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                      4
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50315150"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
+                      Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-11-06"
                       >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          8
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-48347911"
-                        >
-                          Tins you suppose know about Naira Marley
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-05-23"
-                          >
-                            De one we dem update for: 23rd May 2019
-                          </time>
-                        </div>
-                      </div>
+                        De one we dem update for: 6th November 2019
+                      </time>
                     </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <span
+                      class="emotion-21 emotion-22"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
-                      >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          9
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/sport-50312710"
-                        >
-                          Golden Eaglets crash out of Fifa U17 World Cup
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-11-06"
-                          >
-                            De one we dem update for: 6th November 2019
-                          </time>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="emotion-8 css-kegltc-GridComponent-StyledGrid emotion-9"
+                      5
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
                     dir="ltr"
-                    role="listitem"
                   >
-                    <div
-                      class="css-u7e1hf-ItemWrapper emotion-7"
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50315157"
                     >
-                      <div
-                        class="css-b35vh8-OneColumnWrapper emotion-2"
-                        dir="ltr"
+                      How Balogun market fire kill Policeman for Lagos
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-11-06"
                       >
-                        <span
-                          class="css-4v2w16-StyledSpan emotion-1"
-                        >
-                          10
-                        </span>
-                      </div>
-                      <div
-                        class="css-1y5c4e1-StyledItem emotion-6"
-                        dir="ltr"
-                      >
-                        <a
-                          class="css-am0g2e-StyledLink emotion-3"
-                          href="/pidgin/tori-42945173"
-                        >
-                          Tiger nut drink fit wake up your sex drive - Nutritionist
-                        </a>
-                        <div
-                          class="css-1v2l371-TimestampWrapper emotion-5"
-                        >
-                          <time
-                            class="css-1s2kt38-StyledTimestamp emotion-4"
-                            datetime="2019-05-21"
-                          >
-                            De one we dem update for: 21st May 2019
-                          </time>
-                        </div>
-                      </div>
+                        De one we dem update for: 6th November 2019
+                      </time>
                     </div>
-                  </li>
-                </ol>
-              </div>
-            </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
+                    dir="ltr"
+                  >
+                    <span
+                      class="emotion-21 emotion-22"
+                    >
+                      6
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
+                    dir="ltr"
+                  >
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50093818"
+                    >
+                      Labour, FG finally agree minimum wage salary adjustment
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-10-18"
+                      >
+                        De one we dem update for: 18th October 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
+                    dir="ltr"
+                  >
+                    <span
+                      class="emotion-21 emotion-22"
+                    >
+                      7
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
+                    dir="ltr"
+                  >
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-50187218"
+                    >
+                      Naira Marley na 'Bad Influence'?
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-10-25"
+                      >
+                        De one we dem update for: 25th October 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
+                    dir="ltr"
+                  >
+                    <span
+                      class="emotion-21 emotion-22"
+                    >
+                      8
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
+                    dir="ltr"
+                  >
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-48347911"
+                    >
+                      Tins you suppose know about Naira Marley
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-05-23"
+                      >
+                        De one we dem update for: 23rd May 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
+                    dir="ltr"
+                  >
+                    <span
+                      class="emotion-21 emotion-22"
+                    >
+                      9
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
+                    dir="ltr"
+                  >
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/sport-50312710"
+                    >
+                      Golden Eaglets crash out of Fifa U17 World Cup
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-11-06"
+                      >
+                        De one we dem update for: 6th November 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="emotion-14 emotion-15 emotion-8"
+                dir="ltr"
+                role="listitem"
+              >
+                <div
+                  class="emotion-17 emotion-18"
+                >
+                  <div
+                    class="emotion-19 emotion-20"
+                    dir="ltr"
+                  >
+                    <span
+                      class="emotion-21 emotion-22"
+                    >
+                      10
+                    </span>
+                  </div>
+                  <div
+                    class="emotion-23 emotion-24"
+                    dir="ltr"
+                  >
+                    <a
+                      class="emotion-25 emotion-26"
+                      href="/pidgin/tori-42945173"
+                    >
+                      Tiger nut drink fit wake up your sex drive - Nutritionist
+                    </a>
+                    <div
+                      class="emotion-27 emotion-28"
+                    >
+                      <time
+                        class="emotion-29 emotion-30"
+                        datetime="2019-05-21"
+                      >
+                        De one we dem update for: 21st May 2019
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
-      </main>
+      </div>
     </div>
-  </body>
-</html>
+  </main>
+</div>
 `;

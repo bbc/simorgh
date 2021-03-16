@@ -3,9 +3,6 @@ export default {
   ads: {
     enabled: false,
   },
-  ampAds: {
-    enabled: true,
-  },
   chartbeatAnalytics: {
     enabled: true,
   },
@@ -30,6 +27,9 @@ export default {
     enabled: true,
   },
   navOnArticles: {
+    enabled: true,
+  },
+  preloadLeadImage: {
     enabled: true,
   },
   prerollAds: {

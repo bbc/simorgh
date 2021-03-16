@@ -9,6 +9,7 @@ import { validVideoWithCaptionBlock } from './fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggles = {
   mediaPlayer: {
@@ -18,7 +19,7 @@ const defaultToggles = {
 
 const articleID = 'c3wmq4d1y3wo';
 
-storiesOf('Containers|Media Player/Canonical', module)
+storiesOf('Containers/Media Player/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -30,7 +31,7 @@ storiesOf('Containers|Media Player/Canonical', module)
         platform="canonical"
         pathname="/pathname"
         id={articleID}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         bbcOrigin="https://www.test.bbc.com"
       >
         <ServiceContextProvider service="news">
@@ -49,7 +50,7 @@ storiesOf('Containers|Media Player/Canonical', module)
     );
   });
 
-storiesOf('Containers|Media Player/AMP', module)
+storiesOf('Containers/Media Player/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
@@ -61,7 +62,7 @@ storiesOf('Containers|Media Player/AMP', module)
         service={service}
         platform="amp"
         id="c3wmq4d1y3wo"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         bbcOrigin="https://www.test.bbc.com"
       >

@@ -7,7 +7,6 @@ import deepClone from 'ramda/src/clone';
 import { render } from '@testing-library/react';
 import assocPath from 'ramda/src/assocPath';
 import fetchMock from 'fetch-mock';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 
 // contexts
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -25,6 +24,9 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
+import russianPageData from '#data/russian/cpsAssets/news-55041160';
+import russianMostReadData from '#data/russian/mostRead/index.json';
+import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
@@ -180,7 +182,11 @@ describe('Story Page', () => {
         pageType,
       });
 
-      await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+      const { container } = render(
+        <Page pageData={pageData} service="pidgin" />,
+      );
+
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -241,7 +247,9 @@ describe('Story Page', () => {
       pageType,
     });
 
-    await matchSnapshotAsync(<Page pageData={pageData} service="pidgin" />);
+    const { container } = render(<Page pageData={pageData} service="pidgin" />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('should render secondary column with lang attribute of `serviceLang` when a language override is present', async () => {
@@ -540,5 +548,47 @@ describe('Story Page', () => {
 
     const adBootstrap = queryByTestId('adBootstrap');
     expect(adBootstrap).not.toBeInTheDocument();
+  });
+
+  it('should render the podcast promo component on russian pages', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      podcastPromo: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock('http://localhost/some-cps-sty-path.json', russianPageData);
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    const { getAllByRole } = render(
+      <Page
+        pageData={pageData}
+        service="russian"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const regions = getAllByRole('region');
+    expect(regions.length).toEqual(4);
+
+    const thirdRegion = regions[2];
+    expect(thirdRegion.getAttribute('aria-labelledby')).toEqual(
+      'podcast-promo',
+    );
   });
 });

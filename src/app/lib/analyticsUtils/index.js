@@ -1,9 +1,10 @@
 import Cookie from 'js-cookie';
-import uuid from 'uuid/v4';
+import { v4 as uuid } from 'uuid';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import Url from 'url-parse';
 import onClient from '../utilities/onClient';
+import isOperaProxy from '../utilities/isOperaProxy';
 import {
   MEDIUM_CAMPAIGN_IDENTIFIER,
   XTOR_CAMPAIGN_IDENTIFIER,
@@ -26,6 +27,12 @@ export const getDestination = statsDestination => {
     PS_HOMEPAGE_TEST: 598274,
     BBC_ARCHIVE_PS: 605565,
     BBC_ARCHIVE_PS_TEST: 605566,
+    NEWSROUND: 598293,
+    NEWSROUND_TEST: 598294,
+    SPORT_GNL: 598308,
+    SPORT_GNL_TEST: 598309,
+    SPORT_PS: 598310,
+    SPORT_PS_TEST: 598311,
   };
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
@@ -144,6 +151,10 @@ export const getReferrer = (platform, origin, previousPath) => {
 
 export const getAtUserId = () => {
   if (!onClient()) return null;
+
+  // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
+  // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
+  if (isOperaProxy()) return null;
 
   const cookieName = 'atuserid';
   const cookie = Cookie.getJSON(cookieName);

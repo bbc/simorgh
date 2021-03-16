@@ -4,65 +4,65 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page A11y I can see the skip
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=94&amp;p=ukrainian.ukraine_in_russian.page&amp;x1=[urn%3Abbc%3Acps%3A40c7c53a-ba2e-8679-e050-380a4e807947]&amp;x2=[responsive]&amp;x3=[news-ukrainian]&amp;x4=[ru]&amp;x7=[index-section]&amp;x8=[simorgh-nojs]&amp;x9=[%D0%A0%D0%A3%D0%A1%2B-%2BBBC%2BNews%2B%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B0]&amp;x11=[2016-11-22T07%3A16%3A56.000Z]&amp;x12=[2020-05-19T14%3A28%3A22.000Z]\\"/>"`;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 1`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Україна",
   "url": "/ukrainian",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 2`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Чому BBC заслуговує на довіру",
   "url": "https://www.bbc.com/ukrainian/institutional-50170368",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 3`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Правила користування",
   "url": "https://www.bbc.com/ukrainian/institutional-38144387",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 4`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Особисті дані",
   "url": "https://www.bbc.com/ukrainian/institutional-38144827",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 5`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 6`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Зв'язатися з BBC",
   "url": "https://www.bbc.co.uk/send/u50853885",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 7`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Link should match text and url 8`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "Ознайомтеся з нашими правилами зовнішніх посилань.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/ukrainian"`;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC не несе відповідальності за контент інших сайтів. Ознайомтеся з нашими правилами зовнішніх посилань."`;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Footer lang code should match text 1`] = `"uk"`;
 
@@ -112,12 +112,19 @@ Object {
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
 Object {
+  "text": "Відео",
+  "url": "/ukrainian/55425840",
+}
+`;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+Object {
   "text": "Книга року BBC",
   "url": "/ukrainian/features-50320117",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
@@ -138,63 +145,63 @@ Object {
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/ukrainian/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/ukrainian/images/icons/icon-512x512.png",
 }
 `;
 
@@ -297,7 +304,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
-  class="css-13lcmnl-StyledImg e1enwo3v0"
+  class="bbc-13lcmnl-StyledImg e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"

@@ -2,13 +2,14 @@ import path from 'path';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { ChunkExtractor } from '@loadable/server';
-import { CacheProvider } from '@emotion/core';
-import createEmotionServer from 'create-emotion-server';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
+import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const renderDocument = async ({
   bbcOrigin,
@@ -18,7 +19,7 @@ const renderDocument = async ({
   service,
   url,
 }) => {
-  const cache = createCache();
+  const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
 
   const statsFile = path.resolve(
@@ -56,11 +57,22 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements({
-    crossOrigin: 'anonymous',
-    type: 'text/javascript',
-    defer: true,
+  const scripts = extractor.getScriptElements(chunk => {
+    const commonAttributes = {
+      crossOrigin: 'anonymous',
+      defer: true,
+    };
+
+    if (chunk && chunk.url) {
+      return {
+        ...commonAttributes,
+        src: encodeChunkFilename(chunk),
+      };
+    }
+
+    return commonAttributes;
   });
+
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(

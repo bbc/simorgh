@@ -8,6 +8,7 @@ const logCodes = {
   CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
 
   // Data fetch
+  DATA_FETCH_RESPONSE_TIME: 'data_fetch_response_time',
   DATA_FETCH_ERROR: 'data_fetch_error',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
@@ -25,9 +26,12 @@ const logCodes = {
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
   RADIO_MISSING_FIELD: 'radio_missing_field',
+  PODCAST_MISSING_FIELD: 'podcast_missing_field',
   EPISODE_EXPIRED: 'episode_expired',
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
   UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
+
+  PODCAST_SERVICE_MISSING: 'podcast_service_missing',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',

@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { urdu as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_URDU_REGULAR,
-  F_NASSIM_URDU_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Karachi';
 import '@bbc/psammead-locales/moment/ur';
@@ -52,6 +57,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -120,29 +128,82 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'بتائیے کہ آپ کوکیز کے بارے میں متفق ہیں',
-          description: {
-            uk: {
-              first: 'ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے ',
-              linkText: 'کوکیز',
-              last:
-                ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'ڈیٹا کلیکشن کو قبول کیجیے اور جاری رکھیے',
+            reject: 'ڈیٹا کلیکشن کی درخواست نامنظور کیجیے اور جاری رکھیے',
+            initial: {
+              title:
+                'ہمیں بتائیں کہ آپ اے این پی پر ڈیٹا اکٹھا کرنے پر رضامند ہیں',
+              description: {
+                first: 'ہم اور ہمارے پارٹنر ٹیکنالوجی جیسے کہ ',
+                linkText: 'کوکیز',
+                last:
+                  ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'اپنی سیٹنگز کو ترتیب دیجیے',
             },
-            international: {
-              first: 'ہم اور ہمارے پارٹنر ٹیکنالوجی جیسے کہ ',
-              linkText: 'کوکیز',
-              last:
-                ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                'اے ایم پی پیجز پر اجازت دینے سے متعلق سیٹنگز کو ترتیب دیجیے',
+              description: {
+                para1:
+                  'ان سیٹنگز کا اطلاق صرف اے ایم پی پیجز پر ہوتا ہے۔ اگر آپ نان اے ایم پی بی بی بی سی ڈاٹ کام صفحات پر جاتے ہیں تو شاید آپ کو یہ ترجیحات دوبارہ ترتیب دینے کے لیے کہا جا سکتا ہے۔',
+                para2:
+                  'وہ لائٹ ویٹ موبائل پیج جو آپ نے ملاحظہ کیا وہ گوگل اے ایم پی ٹیکنالوجی کی مدد سے تیار کیا گیا ہے۔',
+                heading2: 'انتہائی ضروری ڈیٹا کلیکشن',
+                para3:
+                  'اپنے ویب صفحات کو جاری رکھنے کے لیے ہم آپ کی رضامندی کے بغیر آپ کے ڈیوائس پر موجود کچھ محدود معلومات محفوظ کرتے ہیں۔',
+                para4: {
+                  text:
+                    'ان محدود معلومات کے بارے میں پڑھیے جو ہم اپنے ویب صفحات کو جاری رکھنے کے لیے محفوظ کرتے ہیں۔',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ہم آپ کے ڈیوائس  پر آپ کی رضامندی کی ترجیحات کو محفوظ کرنے کے لیے مقامی سٹوریج کا استعمال کرتے ہیں۔',
+                heading3: 'آپشنل (اختیاری) ڈیٹا کلیکشن',
+                para6:
+                  'جب آپ اے ایم پی پیجز پر ڈیٹا اکھٹا کرنے کی منظوری دیتے ہیں تو آپ ہمیں ان پرسنلائیزڈ اشتہارت کو ڈسپلے کرنے کی اجازت دیتے ہیں، جب آپ یو کے سے باہر ہوں، جو آپ سے متعلقہ ہوں۔',
+                para7: {
+                  text:
+                    'پڑھیے کہ بی بی سی اور ہمارے ایڈورٹائزنگ شراکت دار اشتہارات کو کیسے پرسنلائیز کرتے ہیں۔',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'آپ پرسنلائیزڈ اشتہارات کی درخواست مسترد کر سکتے ہیں اس کے لیے آپ کو ذیل میں موجود ’ڈیٹا کلیکشن نامنظور اور جاری رکھیے‘ کو کلک کرنا ہو گا۔',
+                para9:
+                  'فوسٹر میں موجود ’ایڈ چوائس، میری معلومات فروخت مت کیجیے‘ کو کلک کر کے آپ سیٹنگز کو تبدیل کر سکتے ہیں۔',
+              },
             },
           },
-          accept: 'میں متفق ہوں',
-          reject: 'نہیں، مجھے سیٹنگز میں لے جائیں',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'بتائیے کہ آپ کوکیز کے بارے میں متفق ہیں',
+            description: {
+              uk: {
+                first: 'ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے ',
+                linkText: 'کوکیز',
+                last:
+                  ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'ہم اور ہمارے پارٹنر ٹیکنالوجی جیسے کہ ',
+                linkText: 'کوکیز',
+                last:
+                  ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'میں متفق ہوں',
+            reject: 'نہیں، مجھے سیٹنگز میں لے جائیں',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -154,11 +215,14 @@ export const service = {
         video: 'ویڈیو',
         listen: 'سنیں',
         watch: 'دیکھیں',
+        listenLive: 'لائیو سنیں',
+        listenNext: 'اگلی قسط سنی',
         liveLabel: 'لائیو',
         nextLabel: 'آگے جائیں',
         previousRadioShow: 'گذشتہ ریڈیو پروگرام',
         nextRadioShow: 'اگلا ریڈیو پروگرام',
         duration: 'دورانیہ',
+        recentEpisodes: 'سابق پروگرام',
       },
       socialEmbed: {
         caption: {
@@ -211,7 +275,8 @@ export const service = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
@@ -237,6 +302,7 @@ export const service = {
           text: 'بی بی سی سے رابطہ کریں',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -246,7 +312,7 @@ export const service = {
       copyrightText:
         'بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں',
     },
-    fonts: [F_NASSIM_URDU_REGULAR, F_NASSIM_URDU_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'Asia/Karachi',
     navigation: [
       {

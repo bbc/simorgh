@@ -126,72 +126,72 @@ Object {
 }
 `;
 
-exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
-
-exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
-
-exports[`AMP Most Watched Page Footer Link should match text and url 1`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, اردو",
   "url": "/urdu",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 2`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں",
   "url": "https://www.bbc.com/urdu/institutional-49282935",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 3`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "استعمال کے ضوابط",
   "url": "https://www.bbc.com/urdu/institutional-37588278",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 4`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "بی بی سی کے بارے میں",
   "url": "https://www.bbc.com/urdu/institutional-37588280",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 5`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "پرائیویسی پالیسی",
   "url": "https://www.bbc.com/urdu/institutional-37588282",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 6`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "کوکیز",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 7`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "بی بی سی سے رابطہ کریں",
   "url": "https://www.bbc.co.uk/send/u50853907",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 8`] = `
+exports[`AMP Most Watched Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP Most Watched Page Footer Link should match text and url 9`] = `
+exports[`AMP Most Watched Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
-  "text": "بیرونی لنکس کے بارے میں ہماری پالیسی.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
 }
 `;
+
+exports[`AMP Most Watched Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/urdu"`;
+
+exports[`AMP Most Watched Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بی بی سی. بی بی سی بیرونی ویب سائٹس کے مواد کا ذمہ دار نہیں بیرونی لنکس کے بارے میں ہماری پالیسی."`;
 
 exports[`AMP Most Watched Page Header I can see the branding 1`] = `"BBC News, اردو"`;
 
@@ -285,63 +285,63 @@ Object {
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Most Watched Page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/urdu/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/urdu/images/icons/icon-512x512.png",
 }
 `;
 

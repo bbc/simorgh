@@ -36,19 +36,44 @@ If you never created a pull request before, [here is a great tutorial on how to 
 
 Fork the project, clone your fork, configure the remotes and install the dependencies:
 
+1. Clone your fork of the repo into the current directory
+
+   ```
+   git clone https://github.com/<YOUR ACCOUNT>/simorgh.git
+   ```
+
+2. Navigate to the newly cloned directory
+
+   ```
+   cd simorgh
+   ```
+
+3. Assign the original repo to a remote called "upstream"
+
+   ```
+   git remote add upstream https://github.com/bbc/simorgh
+   ```
+
+4. Use recommended version of node for the project, listed in [`.nvmrc`](https://github.com/bbc/simorgh/blob/latest/.nvmrc)
+
+   ```
+   nvm use
+   ```
+
+### Installing dependencies
+
+**Install Yarn**
+
+The Simorgh project uses Yarn for package management. To install Yarn, run this command:
+
 ```
-# Clone your fork of the repo into the current directory
-git clone https://github.com/<YOUR ACCOUNT>/simorgh.git
-# Navigate to the newly cloned directory
-cd simorgh
-# Assign the original repo to a remote called "upstream"
-git remote add upstream https://github.com/bbc/simorgh
-# Use recommended version of node for the project, listed in `.nvmrc`
-nvm use
-# Install latest version of npm
-npm install --global npm@latest
-# Install the project dependencies
-npm install
+npm install --global yarn
+```
+
+**Install the project dependencies with Yarn**
+
+```
+yarn install
 ```
 
 If it has been a while since you've cloned the repo, pull from the `latest` branch
@@ -60,7 +85,7 @@ git pull upstream latest
 
 ### Your work
 
-> Make sure you have a valid GPG key set up in GitHub. **All commits must be GPG signed** We do have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on MacOS.
+> We recommend you have a valid GPG key set up in GitHub. **All commits should be GPG signed** We have a very small [guide](docs/GPG-Signing-Guide.md) for setting up GPG signing on macOS.
 
 Create a new topic branch (off the main project `latest` branch) that will contain your feature, change, or fix:
 
@@ -89,9 +114,7 @@ All pull requests need to have linting, unit tests and integration tests passing
 
 ### Writing tests
 
-For new components, we write Jest Snapshot tests, with a deep render, using the `shouldMatchSnapshot` test utility function.
-
-For new containers, we write Jest Snapshot tests with a shallow render, using the `shouldShallowMatchSnapshot` test utility function. We also write assertion-based enzyme tests to capture variations in prop values. [See the Article `getInitialProps` tests here as an example.](https://github.com/bbc/simorgh/blob/latest/src/app/containers/Article/index.test.jsx)
+We use React Testing Library for writing our React component and custom hook unit tests. An introduction to using React Testing Library can be found [here](https://testing-library.com/docs/react-testing-library/intro/).
 
 ### Run tests on your fork
 
@@ -121,7 +144,7 @@ Pick a JSON file under `data/news/articles/[id].json`, and:
 1. add an example of your block somewhere in the `content.model.blocks` array.
 2. add your new component to the `blockTypes` array.
 
-Run `npm run dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
+Run `yarn dev` and you should see your component at your article of choice, eg http://localhost:7080/news/articles/c0000000001o
 
 #### Update the schema
 
@@ -185,7 +208,7 @@ If on the other hand you are adding new files to the root directory of simorgh, 
 
 ### `.env` is showing in my `git status`
 
-The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `npm install` so should be run during setup of the application.
+The `.env` file should not be commited as it is often overwritten by the values in `envConfig/` at build time. There is a `postshrinkwrap` command which runs after an `yarn install` so should be run during setup of the application.
 
 If the `.env` file is appearing in your `git status` it means it is now longer being assumed as unchanged, to fix this run:
 

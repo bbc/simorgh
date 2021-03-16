@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { hausa as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -47,6 +52,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -115,29 +123,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: "Bayyana mana idan ka amince da ka'idojin",
-          description: {
-            uk: {
-              first: 'Muna amfani da ',
-              linkText: "ka'idoji",
-              last:
-                " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Ku amince da tattara bayananku sannan ku ci gaba',
+            reject: 'Ƙin amincewa da tattara bayananku sannan ku ci gaba',
+            initial: {
+              title:
+                'Masu ziyarar shafin AMP ku sanar da mu idan kun amince mu tattara bayananku',
+              description: {
+                first:
+                  'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu ',
+                linkText: 'tattara',
+                last:
+                  ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Na ba da damar aiwatar da tsare-tsarena',
             },
-            international: {
-              first:
-                'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu tattara wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
-              linkText: '',
-              last: '',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Na ba da izinin sarrafa tsare-tsarena na shafukan AMP',
+              description: {
+                para1:
+                  'Waɗannan tsare-tsaren sun shafi shafukan AMP ne kawai. Za a iya buƙatarku ku sake tura zaɓin naku idan kuka ziyarci shafukan BBC da ba na AMP ba.',
+                para2:
+                  'An yi amfani da fasahar Google AMP wajen tsara shafin da kuka ziyarta marar nauyi a kan wayarku.',
+                heading2: 'Dole ne a tattara bayananku idan kuka zo nan',
+                para3:
+                  'Domin shafukanmu su gudana, mun tattara wasu ƴan bayanai kan wayarku ba tare da izininku ba.',
+                para4: {
+                  text:
+                    'Karanta muhimman bayanan da muka tattara kan wayarku domin inganta shafukanmu.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: 'Muna adana bayanan da kuka amice mu ɗauka na wayarku.',
+                heading3: 'Zaɓi kan tara bayanai',
+                para6:
+                  'Idan kuka amince mu tattara bayanai a kanku a shafukan AMP, hakan na nufin kun amince mu nuna muku tallace-tallacen da suka dace da ku idan a wajen Burtaniya kuke.',
+                para7: {
+                  text:
+                    "Karanta ƙarin bayani kan yadda muke tsara tallace-tallace da suke dacewa da ra'ayinku a shafukan BBC da na abokan hulɗarmu.",
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  "Kuna da zaɓin ƙin turo muku da tallace-tallacen da suka dace da ra'ayinku ta hanyar latsa wajen da aka nemi amincewarku sannan ku ci gaba.",
+                para9:
+                  'Kuna iya sauya waɗannan tsare-tsaren ta hanyar latsa wannan wurin “Ad Choices / Do not sell my info” da ke can ƙasa a ko yaushe.',
+              },
             },
           },
-          accept: 'Eh, na gamsu',
-          reject: "A'a, ku kai ni wurin zabar tsari",
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: "Bayyana mana idan ka amince da ka'idojin",
+            description: {
+              uk: {
+                first: 'Muna amfani da ',
+                linkText: "ka'idoji",
+                last:
+                  " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu tattara wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
+                linkText: '',
+                last: '',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Eh, na gamsu',
+            reject: "A'a, ku kai ni wurin zabar tsari",
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -160,11 +220,15 @@ export const service = {
         },
         listen: 'Saurari',
         watch: 'Kalla',
+        listenLive: 'Saurara Kai Tsaye',
+        listenNext: 'Saurari na gaba',
         liveLabel: 'KAI TSAYE',
         nextLabel: 'NA GABA',
         previousRadioShow: 'Shirye-shiryen rediyo da suka gabata',
         nextRadioShow: 'Shirye-shiryen rediyo na gaba',
         duration: 'Tsawon lokaci',
+        recentEpisodes: 'Kari',
+        podcastExternalLinks: 'Za a iya samun wannan Podcast din a',
       },
       socialEmbed: {
         caption: {
@@ -219,7 +283,8 @@ export const service = {
         text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [
@@ -244,6 +309,7 @@ export const service = {
           text: 'Tuntubi BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -262,11 +328,11 @@ export const service = {
       },
       {
         title: 'Wasanni',
-        url: '/hausa/wasanni',
+        url: '/hausa/topics/cz74kjgv220t',
       },
       {
         title: 'Nishadi',
-        url: '/hausa/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
+        url: '/hausa/topics/cg726kz37wdt',
       },
       {
         title: 'Cikakkun Rahotanni',
@@ -278,7 +344,7 @@ export const service = {
       },
       {
         title: 'Shirye-shirye na Musamman',
-        url: '/hausa/shirye_shirye_na_musamman',
+        url: '/hausa/shirye-shirye-na-musamman-54712348',
       },
       {
         title: 'Shirye-shiryen rediyo',

@@ -36,7 +36,7 @@
         "title": "01/05/2020 GMT",
         "synopses": {
           "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
-          "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
+          "medium": "د بي بي سي ورلډ سروس څخه پروګرامد بي بي سي ورلډ سروس څخه پروګرام کول"
         },
         "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b23c8.png",
         "embedding": false,
@@ -133,14 +133,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m3k",
+              "pid": "w3ct155x",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m3k",
+              "id": "w3ct155x",
               "subType": "episode",
               "format": "Audio",
-              "title": "30/04/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -150,7 +150,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5z3",
+                  "versionId": "w4hqwv91",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -160,10 +160,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590863400000,
-                  "availableFrom": 1588260600000
+                  "availableUntil": 1610119800000,
+                  "availableFrom": 1607527800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -177,11 +180,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m3k",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct155x",
             "type": "ws_radio"
           },
           {
@@ -189,14 +193,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m5t",
+              "pid": "w3ct154s",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m5t",
+              "id": "w3ct154s",
               "subType": "episode",
               "format": "Audio",
-              "title": "29/04/2020 GMT",
+              "title": "08/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -206,7 +210,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw61c",
+                  "versionId": "w4hqwv7x",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -216,10 +220,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590777000000,
-                  "availableFrom": 1588174200000
+                  "availableUntil": 1610044170000,
+                  "availableFrom": 1607441400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -233,11 +240,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607385600000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m5t",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct154s",
             "type": "ws_radio"
           },
           {
@@ -245,14 +253,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m4p",
+              "pid": "w3ct1508",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m4p",
+              "id": "w3ct1508",
               "subType": "episode",
               "format": "Audio",
-              "title": "28/04/2020 GMT",
+              "title": "07/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -262,7 +270,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw607",
+                  "versionId": "w4hqwv3d",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -272,10 +280,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590690600000,
-                  "availableFrom": 1588087800000
+                  "availableUntil": 1609957800000,
+                  "availableFrom": 1607355000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -289,11 +300,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607299200000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m4p",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct1508",
             "type": "ws_radio"
           },
           {
@@ -301,14 +313,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m05",
+              "pid": "w3ct152h",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m05",
+              "id": "w3ct152h",
               "subType": "episode",
               "format": "Audio",
-              "title": "27/04/2020 GMT",
+              "title": "06/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -318,7 +330,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5vq",
+                  "versionId": "w4hqwv5m",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -328,10 +340,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590604200000,
-                  "availableFrom": 1588001400000
+                  "availableUntil": 1609871400000,
+                  "availableFrom": 1607268600000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -345,11 +360,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607212800000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m05",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct152h",
             "type": "ws_radio"
           },
           {
@@ -357,14 +373,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m2d",
+              "pid": "w3ct151c",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m2d",
+              "id": "w3ct151c",
               "subType": "episode",
               "format": "Audio",
-              "title": "26/04/2020 GMT",
+              "title": "05/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -374,7 +390,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5xy",
+                  "versionId": "w4hqwv4h",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -384,10 +400,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590517800000,
-                  "availableFrom": 1587915000000
+                  "availableUntil": 1609785000000,
+                  "availableFrom": 1607182200000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -401,11 +420,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607126400000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m2d",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct151c",
             "type": "ws_radio"
           },
           {
@@ -413,14 +433,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m18",
+              "pid": "w3ct14z3",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m18",
+              "id": "w3ct14z3",
               "subType": "episode",
               "format": "Audio",
-              "title": "25/04/2020 GMT",
+              "title": "04/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -430,7 +450,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5wt",
+                  "versionId": "w4hqwv27",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -440,10 +460,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590431400000,
-                  "availableFrom": 1587828600000
+                  "availableUntil": 1609698600000,
+                  "availableFrom": 1607095800000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -457,11 +480,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607040000000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m18",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct14z3",
             "type": "ws_radio"
           },
           {
@@ -469,14 +493,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0lz0",
+              "pid": "w3ct153m",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0lz0",
+              "id": "w3ct153m",
               "subType": "episode",
               "format": "Audio",
-              "title": "24/04/2020 GMT",
+              "title": "03/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -486,7 +510,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5tk",
+                  "versionId": "w4hqwv6r",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -496,10 +520,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590345000000,
-                  "availableFrom": 1587742200000
+                  "availableUntil": 1609612200000,
+                  "availableFrom": 1607009400000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -513,11 +540,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606953600000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0lz0",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct153m",
             "type": "ws_radio"
           },
           {
@@ -525,14 +553,14 @@
               "headline": "ماښامنۍ خپرونه"
             },
             "locators": {
-              "pid": "w3ct0m3j",
+              "pid": "w3ct155w",
               "brandPid": "p0340v0j"
             },
             "media": {
-              "id": "w3ct0m3j",
+              "id": "w3ct155w",
               "subType": "episode",
               "format": "Audio",
-              "title": "23/04/2020 GMT",
+              "title": "02/12/2020 GMT",
               "synopses": {
                 "short": "د بي بي سي ورلډ سروس څخه پروګرام کول",
                 "medium": "د بي بي سي ورلډ سروس څخه پروګرام کول"
@@ -542,7 +570,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w4hqw5z2",
+                  "versionId": "w4hqwv90",
                   "types": ["Original"],
                   "duration": 1770,
                   "durationISO8601": "PT29M30S",
@@ -552,10 +580,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1590258600000,
-                  "availableFrom": 1587655800000
+                  "availableUntil": 1609525800000,
+                  "availableFrom": 1606923000000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -569,11 +600,12 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1606867200000,
             "brand": {
               "pid": "p0340v0j",
               "title": "ماښامنۍ خپرونه"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct0m3j",
+            "id": "urn:bbc:ares:ws_media:page:bbc_pashto_radio/w3ct155w",
             "type": "ws_radio"
           }
         ]

@@ -6,9 +6,6 @@ Object {
   "ads": Object {
     "enabled": false,
   },
-  "ampAds": Object {
-    "enabled": false,
-  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -29,6 +26,9 @@ Object {
     "enabled": false,
   },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "preloadLeadImage": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -55,9 +55,6 @@ Object {
   "ads": Object {
     "enabled": false,
   },
-  "ampAds": Object {
-    "enabled": true,
-  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -81,6 +78,9 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "preloadLeadImage": Object {
     "enabled": true,
   },
   "prerollAds": Object {
@@ -107,9 +107,6 @@ Object {
   "ads": Object {
     "enabled": false,
   },
-  "ampAds": Object {
-    "enabled": true,
-  },
   "chartbeatAnalytics": Object {
     "enabled": true,
   },
@@ -130,6 +127,9 @@ Object {
     "enabled": true,
   },
   "navOnArticles": Object {
+    "enabled": true,
+  },
+  "preloadLeadImage": Object {
     "enabled": true,
   },
   "prerollAds": Object {

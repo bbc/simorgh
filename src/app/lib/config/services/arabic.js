@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_ARABIC_REGULAR,
-  F_NASSIM_ARABIC_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -52,6 +57,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -126,29 +134,79 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'أخبرنا عما إذا كنت توافق على تحميل الكوكيز',
-          description: {
-            uk: {
-              first: 'نستخدم ',
-              linkText: 'ملفات ارتباط',
-              last:
-                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'وافق على جمع المعلومات واستمر',
+            reject: 'رفض جمع المعلومات واستمر',
+            initial: {
+              title: 'أعلمونا بموافقتكم على جمع المعلومات من خلال AMP',
+              description: {
+                first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
+                linkText: 'ملفات الارتباط',
+                last:
+                  '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'ادارة خياراتي',
             },
-            international: {
-              first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
-              linkText: 'ملفات الارتباط',
-              last:
-                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'ادارة خيارات الموافقة في صفحات AMP',
+              description: {
+                para1:
+                  'تسري هذه الاعدادات على صفحات AMP فقط. قد يطلب منكم اعادة تحديد الاعدادات عند زيارتكم صفحات بي بي سي غير الخاضعة لـ AMP.',
+                para2:
+                  'الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.',
+                heading2: 'جمع المعلومات ضروري جدا ولابد منه',
+                para3:
+                  'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
+                para4: {
+                  text:
+                    'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
+                heading3: 'شروط اختيارية لجمع المعلومات',
+                para6:
+                  'في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.',
+                para7: {
+                  text:
+                    'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.\nيرجى ملاحظة أنكم ستستمرون في مشاهدة الإعلانات، ولكنها لن تكون اعلانات موجهة لكم بشكل مخصص.',
+                para9:
+                  'يمكنكم تغيير هذه الإعدادات في أي وقت عن طريق النقر على "خيارات الإعلانات/ لا تبيعوا معلوماتي" الموجود في أسفل الصفحة.',
+              },
             },
           },
-          accept: 'نعم، موافق',
-          reject: 'كلا، أعدني إلى الإعدادات',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'أخبرنا عما إذا كنت توافق على تحميل الكوكيز',
+            description: {
+              uk: {
+                first: 'نستخدم ',
+                linkText: 'ملفات ارتباط',
+                last:
+                  ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
+                linkText: 'ملفات الارتباط',
+                last:
+                  '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'نعم، موافق',
+            reject: 'كلا، أعدني إلى الإعدادات',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -165,11 +223,15 @@ export const service = {
         },
         listen: 'استمع',
         watch: 'شاهد',
+        listenLive: 'استمع للبث المباشر',
+        listenNext: 'واصل الاستماع',
         liveLabel: 'مباشر',
         nextLabel: 'لاحق',
         previousRadioShow: 'البرنامج الإذاعي السابق',
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
+        recentEpisodes: 'البرامج السابقة',
+        podcastExternalLinks: 'هذا البودكاست متاح عبر',
       },
       socialEmbed: {
         caption: {
@@ -228,7 +290,8 @@ export const service = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
@@ -253,6 +316,7 @@ export const service = {
           text: 'اتصل بـ بي بي سي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -262,7 +326,7 @@ export const service = {
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
-    fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {

@@ -15,6 +15,8 @@ import {
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
   liveRadioDataPath,
+  podcastEpisodeDataPath,
+  podcastBrandDataPath,
 } from '#app/routes/utils/regex';
 import { LOCAL_SENDFILE_ERROR } from '#lib/logger.const';
 import nodeLogger from '#lib/logger.node';
@@ -104,6 +106,34 @@ export default server => {
 
       sendDataFile(res, dataFilePath, next);
     })
+    .get(podcastEpisodeDataPath, async ({ params }, res, next) => {
+      const { service, brandId, mediaId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        'podcasts',
+        brandId,
+        mediaId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+
+    .get(podcastBrandDataPath, async ({ params }, res, next) => {
+      const { service, brandId } = params;
+
+      const dataFilePath = path.join(
+        process.cwd(),
+        'data',
+        service,
+        'podcasts',
+        brandId,
+      );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
     .get(onDemandRadioDataPath, async ({ params }, res, next) => {
       const { service, serviceId, mediaId } = params;
 
@@ -177,21 +207,6 @@ export default server => {
       });
       sendDataFile(res, dataFilePath, next);
     })
-    .get(
-      '/:service/election/us2020/results/oembed.json',
-      ({ params }, res, next) => {
-        const dataFilePath = path.join(
-          process.cwd(),
-          'data',
-          params.service,
-          'election',
-          'us2020',
-          'results',
-          'oembed.json',
-        );
-        sendDataFile(res, dataFilePath, next);
-      },
-    )
     .get(legacyAssetPageDataPath, async ({ params }, res, next) => {
       const { service, assetUri, variant } = params;
 

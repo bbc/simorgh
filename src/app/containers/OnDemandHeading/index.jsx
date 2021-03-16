@@ -6,7 +6,7 @@ import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { GEL_SPACING, GEL_SPACING_SEPT } from '@bbc/gel-foundations/spacings';
 import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import { getDoublePica } from '@bbc/gel-foundations/typography';
+import { getDoublePica, getParagon } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -15,6 +15,7 @@ const BrandTitle = styled.span`
   width: 100%;
   padding-bottom: ${GEL_SPACING};
   word-break: break-word;
+  ${({ script, darkMode }) => (darkMode ? '' : script && getParagon(script))}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: 0;
     word-break: break-word;
@@ -22,7 +23,7 @@ const BrandTitle = styled.span`
   }
 `;
 
-const Datestamp = styled.span`
+const Subheading = styled.span`
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
   margin: 0;
@@ -32,6 +33,7 @@ const OnDemandHeadingContainer = ({
   idAttr,
   brandTitle,
   releaseDateTimeStamp,
+  episodeTitle,
   ariaHidden,
   darkMode,
   className,
@@ -61,11 +63,13 @@ const OnDemandHeadingContainer = ({
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
-        <BrandTitle>{brandTitle}</BrandTitle>
+        <BrandTitle script={script} darkMode={darkMode}>
+          {brandTitle}
+        </BrandTitle>
         <VisuallyHiddenText>, </VisuallyHiddenText>
-        <Datestamp script={script} service={service}>
-          {formattedTimestamp}
-        </Datestamp>
+        <Subheading script={script} service={service}>
+          {episodeTitle || formattedTimestamp}
+        </Subheading>
       </TextWrapper>
     </Headline>
   );
@@ -75,6 +79,7 @@ OnDemandHeadingContainer.propTypes = {
   idAttr: string,
   brandTitle: string.isRequired,
   releaseDateTimeStamp: number.isRequired,
+  episodeTitle: string,
   ariaHidden: bool,
   darkMode: bool,
   className: string,
@@ -82,6 +87,7 @@ OnDemandHeadingContainer.propTypes = {
 
 OnDemandHeadingContainer.defaultProps = {
   idAttr: null,
+  episodeTitle: null,
   ariaHidden: false,
   darkMode: false,
   className: '',

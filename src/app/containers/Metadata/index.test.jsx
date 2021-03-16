@@ -2,9 +2,13 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
-
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
 import {
   articleDataNews,
   articleDataPersian,
@@ -44,6 +48,8 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   aboutTags,
   mentionsTags,
   hasAppleItunesAppBanner,
@@ -68,6 +74,8 @@ const MetadataWithContext = ({
         mentionsTags={mentionsTags}
         image={image}
         imageAltText={imageAltText}
+        imageHeight={imageHeight}
+        imageWidth={imageWidth}
         hasAppleItunesAppBanner={hasAppleItunesAppBanner}
       />
     </RequestContextProvider>
@@ -80,7 +88,7 @@ const CanonicalNewsInternationalOrigin = () => (
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o"
     {...newsArticleMetadataProps}
   />
@@ -91,10 +99,12 @@ const CanonicalMapInternationalOrigin = () => (
     service="pidgin"
     image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
+    imageWidth={100}
+    imageHeight={200}
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/pigdin/23248703"
     {...newsArticleMetadataProps}
   />
@@ -173,47 +183,47 @@ it('should render the apple touch icons', async () => {
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
       sizes: '128x128',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
       sizes: '144x144',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
       sizes: '152x152',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-180x180.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
       sizes: '180x180',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
       sizes: '384x384',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png',
       sizes: '512x512',
     },
   ];
@@ -236,19 +246,19 @@ it('should render the icons', async () => {
   const expected = [
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
       type: 'image/png',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
       type: 'image/png',
     },
     {
       href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
       type: 'image/png',
     },
@@ -407,7 +417,7 @@ it('should render the msapplication meta tags', async () => {
 
     expect(tileColour).toEqual('#B80000');
     expect(tileImage).toEqual(
-      'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
     );
   });
 });
@@ -544,6 +554,8 @@ it('should render the open graph image if provided', async () => {
         'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
+    { property: 'og:image:width', content: '100' },
+    { property: 'og:image:height', content: '200' },
     { name: 'twitter:image:alt', content: 'connectionAltText' },
     {
       name: 'twitter:image:src',
@@ -585,7 +597,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o.amp"
     {...newsArticleMetadataProps}
   />,
@@ -598,7 +610,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o"
     {...persianArticleMetadataProps}
   />,
@@ -611,7 +623,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o.amp"
     {...persianArticleMetadataProps}
   />,
@@ -624,7 +636,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
     lang={frontPageData.metadata.language}
@@ -640,7 +652,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/korean/bbc_korean_radio/liveradio"
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
@@ -657,7 +669,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -673,7 +685,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="amp"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781.amp"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -689,7 +701,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -705,7 +717,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="amp"
     id="news-53577781"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/ukrainian/news-53577781.amp"
     description="BBC Ukrainian"
     openGraphType="website"
@@ -726,7 +738,7 @@ describe('apple-itunes-app meta tag', () => {
       bbcOrigin={dotComOrigin}
       platform={platform}
       id="asset-12345678"
-      pageType="STY"
+      pageType={STORY_PAGE}
       pathname={`/${service}/asset-12345678`}
       {...newsArticleMetadataProps}
       hasAppleItunesAppBanner={hasAppleItunesAppBanner}

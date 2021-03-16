@@ -1,12 +1,12 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import CanonicalRadioSchedule from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
@@ -14,7 +14,7 @@ const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     service="arabic"
     pathname="/arabic"
     timeOnServer={Date.now()}
@@ -42,9 +42,10 @@ describe('Canonical RadioSchedule', () => {
         'arabic',
         Date.now(),
       );
-      await matchSnapshotAsync(
+      const { container } = render(
         <RadioScheduleWithContext initialData={initialData} />,
       );
+      expect(container).toMatchSnapshot();
       expect(fetchMock.calls(endpoint).length).toBeFalsy();
     });
 
@@ -100,8 +101,9 @@ describe('Canonical RadioSchedule', () => {
   describe('Without initial data', () => {
     it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
       fetchMock.mock(endpoint, arabicRadioScheduleData);
+      const { container } = render(<RadioScheduleWithContext />);
 
-      await matchSnapshotAsync(<RadioScheduleWithContext />);
+      expect(container).toMatchSnapshot();
       expect(fetchMock.calls(endpoint).length).toBeTruthy();
     });
 

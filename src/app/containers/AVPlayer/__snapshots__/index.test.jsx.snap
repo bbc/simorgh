@@ -1,7 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`] = `
-.emotion-0 {
+.emotion-1 amp-iframe,
+.emotion-1 div>iframe {
+  width: calc(100% + 1rem);
+  margin: 0 -0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-1 amp-iframe,
+  .emotion-1 div>iframe {
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+  }
+}
+
+.emotion-3 {
+  height: 165px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 63rem) {
+  .emotion-3 {
+    margin-bottom: 2rem;
+  }
+}
+
+.emotion-5 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -11,43 +37,17 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
   height: 100%;
 }
 
-.emotion-5 amp-iframe,
-.emotion-5 div > iframe {
-  width: calc(100% + 1rem);
-  margin: 0 -0.5rem;
-}
-
-@media (min-width:25rem) {
-  .emotion-5 amp-iframe,
-  .emotion-5 div > iframe {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem;
-  }
-}
-
-.emotion-2 {
-  height: 165px;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-@media (min-width:63rem) {
-  .emotion-2 {
-    margin-bottom: 2rem;
-  }
-}
-
 <div>
   <div
-    class="emotion-4 emotion-5 emotion-6"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-3 emotion-4"
     >
       <iframe
-        allow="autoplay; fullscreen"
+        allow="autoplay"
         allowfullscreen=""
-        class="emotion-0 emotion-1"
+        class="emotion-5 emotion-6"
         scrolling="no"
         src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
         title="오디오 플레이어"
@@ -59,38 +59,38 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
 `;
 
 exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`] = `
-.emotion-3 amp-iframe,
-.emotion-3 div > iframe {
+.emotion-1 amp-iframe,
+.emotion-1 div>iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
-@media (min-width:25rem) {
-  .emotion-3 amp-iframe,
-  .emotion-3 div > iframe {
+@media (min-width: 25rem) {
+  .emotion-1 amp-iframe,
+  .emotion-1 div>iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
-.emotion-0 {
+.emotion-3 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
-@media (min-width:63rem) {
-  .emotion-0 {
+@media (min-width: 63rem) {
+  .emotion-3 {
     margin-bottom: 2rem;
   }
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3 emotion-4"
+    class="emotion-0 emotion-1 emotion-2"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-3 emotion-4"
     >
       <amp-iframe
         allowfullscreen="allowfullscreen"
@@ -124,7 +124,7 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
   overflow: hidden;
 }
 
-.emotion-0 {
+.emotion-4 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -136,15 +136,15 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
 
 <div>
   <div
-    class=" emotion-4 emotion-5"
+    class=" emotion-0 emotion-1"
   >
     <div
       class="emotion-2 emotion-3"
     >
       <iframe
-        allow="autoplay; fullscreen"
+        allow="autoplay"
         allowfullscreen=""
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
         scrolling="no"
         src="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
         title="ویډیو پلیئر"

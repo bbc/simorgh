@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { korean as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Seoul';
@@ -9,8 +14,8 @@ export const service = {
   default: {
     lang: `ko`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
-    articleTimestampPrefix: '에 업데이트됨',
-    articleTimestampSuffix: '',
+    articleTimestampPrefix: '',
+    articleTimestampSuffix: '에 업데이트 됨',
     atiAnalyticsAppName: 'news-korean',
     atiAnalyticsProducerId: '57',
     chartbeatDomain: 'korean.bbc.co.uk',
@@ -47,6 +52,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -118,28 +126,79 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '쿠키 수집에 동의하십니까?',
-          description: {
-            uk: {
-              first: 'BBC는 이용자에게 최적의 온라인 경험을 제공하기 위해 ',
-              linkText: '쿠키',
-              last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: '데이터 수집 동의하고 계속하기',
+            reject: '데이터 수집 거부하고 계속하기',
+            initial: {
+              title: 'AMP 자료 수집 동의 여부를 알려주십시오',
+              description: {
+                first: 'BBC와 파트너사는 ',
+                linkText: '쿠키',
+                last:
+                  ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '나의 설정 바꾸기',
             },
-            international: {
-              first: 'BBC와 파트너사는 ',
-              linkText: '쿠키',
-              last:
-                ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP 페이지 관련 동의 설정 바꾸기',
+              description: {
+                para1:
+                  '이러한 설정은 AMP 페이지에만 적용됩니다. 만약 비-AMP BBC 홈페이지를 방문하실 경우에는 페이지 설정을 다시 해야 할 수 있습니다.',
+                para2:
+                  '방문하신 경량 모바일 페이지는 구글 AMP 기술로 만들어졌습니다.',
+                heading2: '필수적인 데이터 수집',
+                para3:
+                  '홈페이지를 가동하기 위해 사용자의 동의 없이 기기의 정보를 제한적으로 저장합니다.',
+                para4: {
+                  text:
+                    '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  '사용자의 정보 수집 동의 여부는 로컬 스토리지에 저장됩니다.',
+                heading3: '선택적인 정보 수집',
+                para6:
+                  'AMP 데이터 수집에 동의하시면, 영국 밖에서 맞춤형 광고 수신에 동의하는 것입니다.',
+                para7: {
+                  text:
+                    'BBC와 파트너사의 맞춤형 광고 제공에 대해 더 자세히 알아보기',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  "맞춤형 광고를 보지 않기 위해선 '데이터 수집 거부하고 계속하기'를 클릭하시면 됩니다. 이 경우에 맞춤형 광고가 아닌 다른 광고는 제공될 수 있습니다.",
+                para9:
+                  "하단의 '광고 선택하기/내 정보 제공하지 않기'를 클릭해 언제든지 설정을 바꿀 수 있습니다.",
+              },
             },
           },
-          accept: '네, 동의합니다',
-          reject: '아니요, 설정 화면으로 이동합니다',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: '쿠키 수집에 동의하십니까?',
+            description: {
+              uk: {
+                first: 'BBC는 이용자에게 최적의 온라인 경험을 제공하기 위해 ',
+                linkText: '쿠키',
+                last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'BBC와 파트너사는 ',
+                linkText: '쿠키',
+                last:
+                  ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: '네, 동의합니다',
+            reject: '아니요, 설정 화면으로 이동합니다',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -151,11 +210,13 @@ export const service = {
         video: '비디오',
         listen: '듣기',
         watch: '보기',
+        listenNext: '다음에피소드듣기',
         liveLabel: 'LIVE',
         nextLabel: '다음',
         previousRadioShow: '이전 라디오 방송',
         nextRadioShow: '다음 라디오 방송',
         duration: '방송 길이',
+        recentEpisodes: '이전',
       },
       socialEmbed: {
         caption: {
@@ -208,7 +269,8 @@ export const service = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
@@ -233,6 +295,7 @@ export const service = {
           text: '고객센터',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -14,6 +14,7 @@ import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import { textBlock } from '#models/blocks/index';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
@@ -32,7 +33,7 @@ const Context = ({ service, children }) => (
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         service={service}
         statusCode={200}
@@ -69,6 +70,108 @@ it('should use headline for meta description if summary does not exist', async (
         .querySelector('meta[name="description"]')
         .getAttribute('content'),
     ).toEqual('Article Headline for SEO');
+  });
+});
+describe('ArticleMetadata get branded image', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.SIMORGH_APP_ENV = 'test';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
+  });
+
+  it('should use default images for opengraph if promo image does not exist', async () => {
+    render(
+      <Context service="news">
+        <ArticlePage pageData={articleDataNews} />
+      </Context>,
+    );
+
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('meta[property="og:image"]')
+          .getAttribute('content'),
+      ).toEqual(
+        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      );
+    });
+  });
+
+  it('should use branded images for opengraph if promo image exists', async () => {
+    const articleDataNewsWithPromoImage = mergeDeepLeft(
+      {
+        promo: {
+          images: {
+            defaultPromoImage: {
+              blocks: [
+                {
+                  type: 'altText',
+                  model: {
+                    blocks: [
+                      {
+                        type: 'text',
+                        model: {
+                          blocks: [
+                            {
+                              type: 'paragraph',
+                              model: {
+                                text: 'Шайлоо 2020',
+                                blocks: [
+                                  {
+                                    type: 'fragment',
+                                    model: {
+                                      text: 'Шайлоо 2020',
+                                      attributes: [],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+                {
+                  type: 'rawImage',
+                  model: {
+                    width: 749,
+                    height: 421,
+                    locator:
+                      'c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+                    originCode: 'cpsprodpb',
+                    copyrightHolder: 'BBC',
+                    suitableForSyndication: true,
+                  },
+                },
+              ],
+            },
+          },
+        },
+      },
+      articleDataNews,
+    );
+
+    render(
+      <Context service="news">
+        <ArticlePage pageData={articleDataNewsWithPromoImage} />
+      </Context>,
+    );
+
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('meta[property="og:image"]')
+          .getAttribute('content'),
+      ).toEqual(
+        'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+      );
+    });
   });
 });
 

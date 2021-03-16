@@ -12,12 +12,17 @@ const pageTypes = [
   'liveRadio',
   'photoGalleryPage',
   'mostReadPage',
-  'onDemandRadio',
+  'onDemandAudio',
   'onDemandTV',
   'mediaAssetPage',
   'storyPage',
   'idxPage',
   'featureIndexPage',
+];
+
+// list of urls we have decided are acceptable to fail amp validation
+const excludedUrls = [
+  '/mundo/23263889' /* https://github.com/bbc/simorgh/issues/8104 */,
 ];
 
 const getPageString = async url => {
@@ -58,7 +63,8 @@ const runValidator = async verbose => {
 
   const urls = pageTypes
     .map(pageType => getPageUrls({ pageType, environment, isSmoke }).flat())
-    .flat();
+    .flat()
+    .filter(url => !excludedUrls.includes(url));
 
   return Promise.all(urls.map(url => validate({ validator, url }))).then(
     results => {

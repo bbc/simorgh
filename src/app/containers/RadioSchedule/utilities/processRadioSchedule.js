@@ -4,6 +4,7 @@ import { RADIO_SCHEDULE_DATA_INCOMPLETE_ERROR } from '#lib/logger.const';
 import {
   getLastProgramIndex,
   isScheduleDataComplete,
+  getIsProgramValid,
 } from './evaluateScheduleData';
 
 const logger = nodeLogger(__filename);
@@ -38,7 +39,11 @@ export default (data, service, currentTime) => {
     return null;
   }
 
-  const { schedules = [] } = data;
+  const logServiceError = error => logProgramError({ error, service });
+
+  const isProgramValid = getIsProgramValid(logServiceError);
+  const { schedules: initialSchedules = [] } = data;
+  const schedules = initialSchedules.filter(isProgramValid);
   const latestProgramIndex = getLastProgramIndex({ schedules, currentTime });
 
   const scheduleDataIsComplete = isScheduleDataComplete({
@@ -47,14 +52,14 @@ export default (data, service, currentTime) => {
   });
 
   if (!scheduleDataIsComplete) {
-    logProgramError({ error: 'Incomplete program schedule', service });
+    logServiceError('Incomplete program schedule');
   }
 
   const programsToShow = scheduleDataIsComplete && [
+    schedules[latestProgramIndex + 1],
     schedules[latestProgramIndex],
     schedules[latestProgramIndex - 1],
     schedules[latestProgramIndex - 2],
-    schedules[latestProgramIndex + 1],
   ];
 
   const processedSchedule =
@@ -67,20 +72,6 @@ export default (data, service, currentTime) => {
       } = program;
 
       const brandTitle = path(['brand', 'title'], program);
-
-      if (!publishedTimeStart) {
-        logProgramError({
-          error: 'publishTimeStart field is missing in program',
-          service,
-        });
-      }
-      if (!brandTitle) {
-        logProgramError({
-          error: 'title field is missing in program',
-          service,
-        });
-      }
-
       const currentState = getProgramState(
         currentTime,
         publishedTimeStart,

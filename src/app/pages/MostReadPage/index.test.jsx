@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import MostReadPage from './MostReadPage';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { MOST_READ_PAGE } from '#app/routes/utils/pageTypes';
 
 fetch.mockResponse(JSON.stringify(pidginMostReadData));
 
@@ -24,7 +24,7 @@ const MostReadPageWithContext = () => (
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.com"
         isAmp={false}
-        pageType="mostRead"
+        pageType={MOST_READ_PAGE}
         pathname="/pathname"
         service="pidgin"
         statusCode={200}
@@ -38,8 +38,10 @@ const MostReadPageWithContext = () => (
 );
 
 describe('Most Read Page Main', () => {
-  it('should match snapshot for most read page', async () => {
-    await matchSnapshotAsync(<MostReadPageWithContext />);
+  it('should match snapshot for most read page', () => {
+    const { container } = render(<MostReadPageWithContext />);
+
+    expect(container).toMatchSnapshot();
   });
 
   it('shoulder render most read page', async () => {

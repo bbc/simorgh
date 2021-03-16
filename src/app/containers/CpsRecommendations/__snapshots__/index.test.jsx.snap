@@ -7,151 +7,141 @@ exports[`CpsRecommendations should not render when the service does not support 
 exports[`CpsRecommendations should not render when there is no recommendations data 1`] = `<div />`;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for a single item 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-43 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-43 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-43 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-43 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-43 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-43 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-43 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-41 {
+.emotion-2 {
   background-color: #F2F2F2;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-41 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 0 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-41 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 1rem 0;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-41 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-39 {
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-39 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
     padding: 0 1rem;
   }
 }
 
-.emotion-37 {
+.emotion-6 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -171,23 +161,22 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
+.emotion-8:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -204,30 +193,30 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-11 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width: 63rem) {
   .emotion-11 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-11 {
     margin: 0 0 1rem;
   }
 }
 
-.emotion-8 {
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -237,17 +226,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 2.75rem;
   -webkit-align-items: baseline;
@@ -256,8 +245,8 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -265,7 +254,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-2 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -284,107 +273,97 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
-@supports (display:grid) {
-  .emotion-31 {
+@supports (display: grid) {
+  .emotion-23 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 80rem) {
+    .emotion-23 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-29 > div {
+.emotion-25>div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-29 > div {
+@media (max-width: 62.9375rem) {
+  .emotion-25>div {
     margin: 0.25rem 0;
   }
 }
@@ -393,132 +372,136 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   position: relative;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-27 {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
+  @media (min-width: 37.5rem) {
     .emotion-27 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
+  @media (min-width: 63rem) {
     .emotion-27 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-19 {
+.emotion-29 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
+@media (min-width: 63rem) {
+  .emotion-29 {
     display: block;
     width: 100%;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-29 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-17 {
+.emotion-31 {
   position: relative;
 }
 
-.emotion-13 {
+.emotion-33 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-13 {
+@media (min-width: 25rem) {
+  .emotion-33 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-13 {
+@media (min-width: 63rem) {
+  .emotion-33 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-@media (min-width:25rem) {
-  .emotion-15 {
+@media (min-width: 25rem) {
+  .emotion-35 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-15 > * {
+.emotion-35>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-15 > * {
+@media (max-width: 24.9375rem) {
+  .emotion-35>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-25 {
+.emotion-37 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) {
+  .emotion-37 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
+@media (min-width: 63rem) {
+  .emotion-37 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-25 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-37 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-25 {
+  @media (min-width: 63rem) {
+    .emotion-37 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-23 {
+.emotion-39 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -530,27 +513,27 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-23 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-23 {
+@media (min-width: 37.5rem) {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-23 {
+@media (min-width: 63rem) {
+  .emotion-39 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
 
-.emotion-21 {
+.emotion-41 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -559,7 +542,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.emotion-21:before {
+.emotion-41:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -571,21 +554,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
+.emotion-41:hover,
+.emotion-41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-21:visited {
+.emotion-41:visited {
   color: #6E6E73;
 }
 
-.emotion-35 {
+.emotion-43 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -595,23 +577,23 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 <div>
   <div
-    class="emotion-43 emotion-32"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
-      class="emotion-41 emotion-42"
+      class="emotion-2 emotion-3"
     >
       <section
         aria-labelledby="recommendations-heading"
-        class=" emotion-39 emotion-40"
+        class=" emotion-4 emotion-5"
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="emotion-37 emotion-38"
+          class="emotion-6 emotion-7"
         >
           <a
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             href="#end-of-recommendations"
           >
             Saltar Quizás también te interese y continuar leyendo
@@ -620,16 +602,16 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             class="emotion-10 emotion-11 emotion-12"
           >
             <strong
-              class="emotion-8 emotion-9"
+              class="emotion-13 emotion-14"
             >
               <span
-                class="emotion-6 emotion-7"
+                class="emotion-15 emotion-16"
               >
                 <span
-                  class="emotion-4 emotion-5"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-2 emotion-3"
+                    class="emotion-19 emotion-20"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -640,14 +622,14 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <div
-            class="emotion-33 emotion-34"
+            class="emotion-21 emotion-22"
           >
             <div
-              class="emotion-31 emotion-32"
+              class="emotion-23 emotion-1"
               dir="ltr"
             >
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-25 emotion-26"
                 data-e2e="story-promo-wrapper"
               >
                 <div
@@ -655,17 +637,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo"
                 >
                   <div
-                    class="emotion-19 emotion-20"
+                    class="emotion-29 emotion-30"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-17 emotion-18"
+                      class="emotion-31 emotion-32"
                     >
                       <div
-                        class="emotion-13 emotion-14"
+                        class="emotion-33 emotion-34"
                       >
                         <div
-                          class="lazyload-wrapper"
+                          class="lazyload-wrapper "
                         >
                           <div
                             class="lazyload-placeholder"
@@ -673,19 +655,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                         </div>
                       </div>
                       <div
-                        class="emotion-15 emotion-16"
+                        class="emotion-35 emotion-36"
                       />
                     </div>
                   </div>
                   <div
-                    class="emotion-25 emotion-26"
+                    class="emotion-37 emotion-38"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-23 emotion-24"
+                      class="emotion-39 emotion-40"
                     >
                       <a
-                        class="emotion-21 emotion-22"
+                        class="emotion-41 emotion-42"
                         href="/mundo/noticias-53377054"
                       >
                         La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -697,7 +679,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </div>
           </div>
           <p
-            class="emotion-35 emotion-36"
+            class="emotion-43 emotion-44"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -711,151 +693,141 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for multiple items 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-116 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-116 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-116 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-116 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-116 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-116 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-116 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-114 {
+.emotion-2 {
   background-color: #F2F2F2;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-114 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 0 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-114 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 1rem 0;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-114 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-112 {
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-112 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
     padding: 0 1rem;
   }
 }
 
-.emotion-110 {
+.emotion-6 {
   position: relative;
 }
 
-.emotion-0 {
+.emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -875,23 +847,22 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
+.emotion-8:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -908,30 +879,30 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0;
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-11 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
+@media (min-width: 63rem) {
   .emotion-11 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-11 {
     margin: 0 0 1rem;
   }
 }
 
-.emotion-8 {
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -941,17 +912,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 2.75rem;
   -webkit-align-items: baseline;
@@ -960,8 +931,8 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -969,7 +940,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-2 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -988,378 +959,352 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
-@supports (display:grid) {
-  .emotion-31 {
-    display: grid;
-    position: initial;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-.emotion-106 {
+.emotion-22 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-@supports (display:grid) {
-  .emotion-106 {
+@supports (display: grid) {
+  .emotion-22 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 80rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-.emotion-34:last-child {
+.emotion-25:last-child {
   border: none;
 }
 
-@supports (display:grid) {
-  .emotion-34 {
+@supports (display: grid) {
+  .emotion-25 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
+  @media (min-width: 80rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
-}
+  }
 }
 
-.emotion-29 > div {
+@supports (display: grid) {
+  .emotion-27 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-29>div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-29 > div {
+@media (max-width: 62.9375rem) {
+  .emotion-29>div {
     margin: 0.25rem 0;
   }
 }
 
-.emotion-27 {
+.emotion-31 {
   position: relative;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-27 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-31 {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-27 {
+  @media (min-width: 37.5rem) {
+    .emotion-31 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-27 {
+  @media (min-width: 63rem) {
+    .emotion-31 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-19 {
+.emotion-33 {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 33.33%;
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
+@media (min-width: 63rem) {
+  .emotion-33 {
     display: block;
     width: 100%;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-33 {
     width: initial;
-    grid-column: 1 / span 2;
+    grid-column: 1/span 2;
   }
 }
 
-.emotion-17 {
+.emotion-35 {
   position: relative;
 }
 
-.emotion-13 {
+.emotion-37 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-13 {
+@media (min-width: 25rem) {
+  .emotion-37 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-13 {
+@media (min-width: 63rem) {
+  .emotion-37 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-@media (min-width:25rem) {
-  .emotion-15 {
+@media (min-width: 25rem) {
+  .emotion-39 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-15 > * {
+.emotion-39>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-15 > * {
+@media (max-width: 24.9375rem) {
+  .emotion-39>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-25 {
+.emotion-41 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
   padding: 0 0.5rem;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) {
+  .emotion-41 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-25 {
+@media (min-width: 63rem) {
+  .emotion-41 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-25 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-41 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
+    grid-column: 3/span 4;
   }
 
-@media (min-width:63rem) {
-    .emotion-25 {
+  @media (min-width: 63rem) {
+    .emotion-41 {
       padding-top: 0.5rem;
     }
-}
+  }
 }
 
-.emotion-23 {
+.emotion-43 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1371,27 +1316,27 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-23 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-23 {
+@media (min-width: 37.5rem) {
+  .emotion-43 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-23 {
+@media (min-width: 63rem) {
+  .emotion-43 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
 
-.emotion-21 {
+.emotion-45 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1400,7 +1345,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.emotion-21:before {
+.emotion-45:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1412,21 +1357,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.emotion-21:hover,
-.emotion-21:focus {
+.emotion-45:hover,
+.emotion-45:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-21:visited {
+.emotion-45:visited {
   color: #6E6E73;
 }
 
-.emotion-108 {
+.emotion-116 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -1436,23 +1380,23 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 <div>
   <div
-    class="emotion-116 emotion-32"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <div
-      class="emotion-114 emotion-115"
+      class="emotion-2 emotion-3"
     >
       <section
         aria-labelledby="recommendations-heading"
-        class=" emotion-112 emotion-113"
+        class=" emotion-4 emotion-5"
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="emotion-110 emotion-111"
+          class="emotion-6 emotion-7"
         >
           <a
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             href="#end-of-recommendations"
           >
             Saltar Quizás también te interese y continuar leyendo
@@ -1461,16 +1405,16 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             class="emotion-10 emotion-11 emotion-12"
           >
             <strong
-              class="emotion-8 emotion-9"
+              class="emotion-13 emotion-14"
             >
               <span
-                class="emotion-6 emotion-7"
+                class="emotion-15 emotion-16"
               >
                 <span
-                  class="emotion-4 emotion-5"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-2 emotion-3"
+                    class="emotion-19 emotion-20"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -1481,17 +1425,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="emotion-32 emotion-106 emotion-107"
+            class="emotion-1 emotion-22 emotion-23"
             dir="ltr"
             role="list"
           >
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="ltr"
               >
                 <div
@@ -1499,21 +1443,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-13 emotion-14"
+                          class="emotion-37 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1521,19 +1465,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/mundo/noticias-53377054"
                         >
                           La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -1545,12 +1489,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="ltr"
               >
                 <div
@@ -1558,21 +1502,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-13 emotion-14"
+                          class="emotion-37 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1580,19 +1524,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/mundo/noticias-america-latina-52884902"
                         >
                           Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
@@ -1604,12 +1548,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="ltr"
               >
                 <div
@@ -1617,21 +1561,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-13 emotion-14"
+                          class="emotion-37 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1639,19 +1583,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/mundo/noticias-internacional-53113381"
                         >
                           Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
@@ -1663,12 +1607,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="ltr"
               >
                 <div
@@ -1676,21 +1620,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-13 emotion-14"
+                          class="emotion-37 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -1698,19 +1642,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/mundo/vert-cul-53370542"
                         >
                           Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
@@ -1723,7 +1667,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="emotion-108 emotion-109"
+            class="emotion-116 emotion-117"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -1737,610 +1681,142 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 `;
 
 exports[`CpsRecommendations should render when cpsRecommendations toggle is enabled and the service supports recommendations for rtl service 1`] = `
-.emotion-114 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    margin-right: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-right: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
   background-color: #F2F2F2;
   margin: 1.5rem 0;
   padding: 1rem 0.5rem;
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-114 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 0 0 1rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-114 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     margin: 0 0 1.5rem;
     padding: 1rem 0;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-114 {
+@media (min-width: 63rem) {
+  .emotion-2 {
     padding: 1rem;
   }
 }
 
-@media (max-width:24.9375rem) {
-  .emotion-112 {
+@media (max-width: 24.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
   }
 }
 
-@media (min-width:25rem) and (max-width:62.9375rem) {
-  .emotion-112 {
+@media (min-width: 25rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
     padding: 0 1rem;
   }
-}
-
-.emotion-110 {
-  position: relative;
-}
-
-.emotion-11 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-11 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width:37.5rem) {
-  .emotion-11 {
-    margin: 0 0 1rem;
-  }
-}
-
-.emotion-8 {
-  margin: 0;
-  padding: 0;
 }
 
 .emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-4 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-31 {
-    display: grid;
-    position: initial;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-31 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-.emotion-106 {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-@supports (display:grid) {
-  .emotion-106 {
-    display: grid;
-    position: initial;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 0.5rem;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-106 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-      grid-column-gap: 1rem;
-    }
-}
-}
-
-.emotion-34:last-child {
-  border: none;
-}
-
-@supports (display:grid) {
-  .emotion-34 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-34 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(1,1fr);
-      grid-column-end: span 1;
-    }
-}
-}
-
-.emotion-29 > div {
-  display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
-}
-
-@media (max-width:62.9375rem) {
-  .emotion-29 > div {
-    margin: 0.25rem 0;
-  }
-}
-
-.emotion-27 {
   position: relative;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-27 {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 0.5rem;
-  }
-
-@media (min-width:37.5rem) {
-    .emotion-27 {
-      grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width:63rem) {
-    .emotion-27 {
-      display: block;
-    }
-}
-}
-
-.emotion-19 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-@media (min-width:63rem) {
-  .emotion-19 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
-    width: initial;
-    grid-column: 1 / span 2;
-  }
-}
-
-.emotion-17 {
-  position: relative;
-}
-
-.emotion-36 {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  background-color: #F2F2F2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 60px 17px;
-  padding-bottom: 56.25%;
-  width: 100%;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
-}
-
-@media (min-width:25rem) {
-  .emotion-36 {
-    background-size: 77px 22px;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-36 {
-    background-size: 93px 27px;
-  }
-}
-
-@media (min-width:25rem) {
-  .emotion-15 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.emotion-15 > * {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-@media (max-width:24.9375rem) {
-  .emotion-15 > * {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-.emotion-25 {
-  display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
-  padding: 0 0.5rem;
-}
-
-@media (min-width:37.5rem) {
-  .emotion-25 {
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-25 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-25 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3 / span 4;
-  }
-
-@media (min-width:63rem) {
-    .emotion-25 {
-      padding-top: 0.5rem;
-    }
-}
-}
-
-.emotion-21 {
-  position: static;
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  overflow-wrap: anywhere;
-}
-
-.emotion-21:before {
-  bottom: 0;
-  content: '';
-  left: 0;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 0;
-  white-space: nowrap;
-  z-index: 1;
-}
-
-.emotion-21:hover,
-.emotion-21:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-21:visited {
-  color: #6E6E73;
-}
-
-.emotion-108 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-@media (max-width:14.9375rem) {
-  .emotion-116 {
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-116 {
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-116 {
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-116 {
-    margin-right: 0%;
-  }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-116 {
-    margin-right: 20%;
-  }
-}
-
-@media (min-width:80rem) {
-  .emotion-116 {
-    margin-right: 40%;
-  }
-}
-
-@supports (display:grid) {
-  .emotion-116 {
-    display: block;
-  }
-
-@media (max-width:14.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-}
-
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-}
-
-@media (min-width:80rem) {
-    .emotion-116 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-}
-}
-
-.emotion-0 {
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-8 {
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.875rem;
@@ -2359,23 +1835,22 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 10;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.8125rem;
   }
 }
 
-.emotion-0:not(:focus):not(:active) {
+.emotion-8:not(:focus):not(:active) {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -2383,10 +1858,80 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   margin: 0;
 }
 
-.emotion-2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+.emotion-11 {
+  position: relative;
+  z-index: 0;
+  color: #3F3F42;
+  margin-top: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-11 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    margin: 0 0 1rem;
+  }
+}
+
+.emotion-13 {
+  margin: 0;
+  padding: 0;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-17 {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+
+.emotion-19 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
   background-color: #F2F2F2;
@@ -2402,108 +1947,473 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-19 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
-    font-size: 1.75rem;
-    line-height: 2.25rem;
+@media (min-width: 37.5rem) {
+  .emotion-19 {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-19 {
     padding-left: 1rem;
   }
 }
 
-.emotion-13 {
+.emotion-22 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@supports (display: grid) {
+  .emotion-22 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-22 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-25:last-child {
+  border: none;
+}
+
+@supports (display: grid) {
+  .emotion-25 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-25 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .emotion-27 {
+    display: grid;
+    position: initial;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 0.5rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-27 {
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-end: span 1;
+      grid-column-gap: 1rem;
+    }
+  }
+}
+
+.emotion-29>div {
+  display: grid;
+  margin: 0.25rem 0;
+  background-color: #FDFDFD;
+}
+
+@media (max-width: 62.9375rem) {
+  .emotion-29>div {
+    margin: 0.25rem 0;
+  }
+}
+
+.emotion-31 {
+  position: relative;
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-31 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-31 {
+      grid-column-gap: 1rem;
+    }
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-31 {
+      display: block;
+    }
+  }
+}
+
+.emotion-33 {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 33.33%;
+}
+
+@media (min-width: 63rem) {
+  .emotion-33 {
+    display: block;
+    width: 100%;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-33 {
+    width: initial;
+    grid-column: 1/span 2;
+  }
+}
+
+.emotion-35 {
+  position: relative;
+}
+
+.emotion-37 {
   position: relative;
   height: 0;
   overflow: hidden;
   background-color: #F2F2F2;
+  -webkit-background-position: center center;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
   padding-bottom: 56.21212121212121%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
-@media (min-width:25rem) {
-  .emotion-13 {
+@media (min-width: 25rem) {
+  .emotion-37 {
+    -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-13 {
+@media (min-width: 63rem) {
+  .emotion-37 {
+    -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-23 {
+@media (min-width: 25rem) {
+  .emotion-39 {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.emotion-39>* {
+  height: 2rem;
+  padding: 0.5rem 0.25rem;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-39>* {
+    height: 1.25rem;
+    padding: 0.25rem 0.25rem 0;
+  }
+}
+
+.emotion-41 {
+  display: inline-block;
+  vertical-align: top;
+  width: 66.67%;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-41 {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-41 {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-41 {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 3/span 4;
+  }
+
+  @media (min-width: 63rem) {
+    .emotion-41 {
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.emotion-43 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
-  font-family: "BBC Nassim Arabic",Arial,Verdana,Geneva,Helvetica,sans-serif;
+  font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 1rem;
-  line-height: 1.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
   padding: 0.5rem 0 0.5rem 0.5rem;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-43 {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-23 {
-    font-size: 1.25rem;
-    line-height: 1.625rem;
+@media (min-width: 37.5rem) {
+  .emotion-43 {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-23 {
+@media (min-width: 63rem) {
+  .emotion-43 {
     padding: 0.5rem 0 1rem 1rem;
   }
 }
 
+.emotion-45 {
+  position: static;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.emotion-45:before {
+  bottom: 0;
+  content: '';
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.emotion-45:hover,
+.emotion-45:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-45:visited {
+  color: #6E6E73;
+}
+
+.emotion-60 {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  background-color: #F2F2F2;
+  -webkit-background-position: center center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px 17px;
+  background-size: 60px 17px;
+  padding-bottom: 56.25%;
+  width: 100%;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
+}
+
+@media (min-width: 25rem) {
+  .emotion-60 {
+    -webkit-background-size: 77px 22px;
+    background-size: 77px 22px;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-60 {
+    -webkit-background-size: 93px 27px;
+    background-size: 93px 27px;
+  }
+}
+
+.emotion-116 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
 <div>
   <div
-    class="emotion-116 emotion-32"
+    class="emotion-0 emotion-1"
     dir="rtl"
   >
     <div
-      class="emotion-114 emotion-115"
+      class="emotion-2 emotion-3"
     >
       <section
         aria-labelledby="recommendations-heading"
-        class=" emotion-112 emotion-113"
+        class=" emotion-4 emotion-5"
         data-e2e="recommendations-heading"
         role="region"
       >
         <div
-          class="emotion-110 emotion-111"
+          class="emotion-6 emotion-7"
         >
           <a
-            class="emotion-0 emotion-1"
+            class="emotion-8 emotion-9"
             href="#end-of-recommendations"
           >
             تخطى مواضيع قد تهمك وواصل القراءة
@@ -2512,16 +2422,16 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             class="emotion-10 emotion-11 emotion-12"
           >
             <strong
-              class="emotion-8 emotion-9"
+              class="emotion-13 emotion-14"
             >
               <span
-                class="emotion-6 emotion-7"
+                class="emotion-15 emotion-16"
               >
                 <span
-                  class="emotion-4 emotion-5"
+                  class="emotion-17 emotion-18"
                 >
                   <span
-                    class="emotion-2 emotion-3"
+                    class="emotion-19 emotion-20"
                     dir="rtl"
                     id="recommendations-heading"
                   >
@@ -2532,17 +2442,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="emotion-32 emotion-106 emotion-107"
+            class="emotion-1 emotion-22 emotion-23"
             dir="rtl"
             role="list"
           >
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="rtl"
               >
                 <div
@@ -2550,21 +2460,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-13 emotion-14"
+                          class="emotion-37 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2572,19 +2482,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/arabic/middleeast-53329495"
                         >
                           الصراع في سوريا: الأمم المتحدة تقول إن جرائم حرب "فظيعة" ارتكبت في معركة ادلب
@@ -2596,12 +2506,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="rtl"
               >
                 <div
@@ -2609,21 +2519,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-36 emotion-14"
+                          class="emotion-60 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2631,19 +2541,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/arabic/middleeast-53146050"
                         >
                           الحرب في ليبيا: الرئيس الفرنسي ماكرون يقول إن تركيا تمارس "لعبة خطرة" في ليبيا
@@ -2655,12 +2565,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="rtl"
               >
                 <div
@@ -2668,21 +2578,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-36 emotion-14"
+                          class="emotion-60 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2690,19 +2600,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/arabic/middleeast-52959311"
                         >
                           ليبيا: هل يخوض أردوغان مغامرة وقودها السوريون؟
@@ -2714,12 +2624,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-32 emotion-34 emotion-35"
+              class="emotion-1 emotion-25 emotion-26"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-31 emotion-32"
+                class="emotion-27 emotion-1"
                 dir="rtl"
               >
                 <div
@@ -2727,21 +2637,21 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-27 emotion-28"
+                    class="emotion-31 emotion-32"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-19 emotion-20"
+                      class="emotion-33 emotion-34"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-17 emotion-18"
+                        class="emotion-35 emotion-36"
                       >
                         <div
-                          class="emotion-36 emotion-14"
+                          class="emotion-60 emotion-38"
                         >
                           <div
-                            class="lazyload-wrapper"
+                            class="lazyload-wrapper "
                           >
                             <div
                               class="lazyload-placeholder"
@@ -2749,19 +2659,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-15 emotion-16"
+                          class="emotion-39 emotion-40"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-25 emotion-26"
+                      class="emotion-41 emotion-42"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-23 emotion-24"
+                        class="emotion-43 emotion-44"
                       >
                         <a
-                          class="emotion-21 emotion-22"
+                          class="emotion-45 emotion-46"
                           href="/arabic/inthepress-52320329"
                         >
                           صحف بريطانية تناقش "الاختبار" الروسي في الشرق الأوسط و"العلاجات الدجلية" لفيروس كورونا
@@ -2774,7 +2684,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="emotion-108 emotion-109"
+            class="emotion-116 emotion-117"
             id="end-of-recommendations"
             tabindex="-1"
           >

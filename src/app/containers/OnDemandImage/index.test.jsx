@@ -1,20 +1,21 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { render, getByAltText } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import OnDemandImage from '.';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
-const component = ({ url, isAmp, service }) => (
+const component = ({ url, isAmp, service, alt }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       isAmp={isAmp}
       service={service}
-      pageType="media"
+      pageType={MEDIA_PAGE}
       pathname="/path"
     >
-      <OnDemandImage imageUrl={url} />
+      <OnDemandImage imageUrl={url} alt={alt} />
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -26,14 +27,14 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
   );
 
   it('should ensure the image has the right attributes', () => {
-    const { container } = render(
+    const { getByAltText } = render(
       component({
         url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
         isAmp: false,
         service: 'pashto',
       }),
     );
-    const img = getByAltText(container, 'BBC News پښتو');
+    const img = getByAltText('BBC News پښتو');
     expect(img.src).toEqual(
       'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg',
     );
@@ -42,6 +43,18 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
       'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p063j1dv.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p063j1dv.jpg 480w',
     );
     expect(img.sizes).toEqual('(min-width: 1008px) 228px, 30vw');
+  });
+
+  it('should correctly pass through an alt attribute', () => {
+    const { getByAltText } = render(
+      component({
+        url: 'ichef.bbci.co.uk/images/ic/$recipe/p063j1dv.jpg',
+        isAmp: false,
+        service: 'pashto',
+        alt: 'test alt text',
+      }),
+    );
+    expect(getByAltText('test alt text')).toBeInTheDocument();
   });
 
   it('should ensure the image has the right attributes for amp', () => {

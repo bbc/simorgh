@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { vietnamese as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Ho_Chi_Minh';
@@ -49,6 +54,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -117,29 +125,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Cho chúng tôi biết bạn đồng ý về cookie',
-          description: {
-            uk: {
-              first: 'Chúng tôi dùng ',
-              linkText: 'cookie',
-              last:
-                ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Chấp nhận thu thập dữ liệu và tiếp tục',
+            reject: 'Từ chối thu thập dữ liệu và tiếp tục',
+            initial: {
+              title:
+                'Hãy cho chúng tôi biết bạn đồng ý với việc thu thập dữ liệu trên AMP',
+              description: {
+                first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
+                linkText: 'cookie',
+                last:
+                  ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Quản lý cài đặt của tôi',
             },
-            international: {
-              first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
-              linkText: 'cookie',
-              last:
-                ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Quản lý cài đặt sự đồng ý trên các trang AMP',
+              description: {
+                para1:
+                  'Các cài đặt này chỉ áp dụng cho các trang AMP. Bạn có thể được yêu cầu đặt lại các tùy chọn này khi truy cập các trang BBC không phải AMP.',
+                para2:
+                  'Trang dành cho thiết bị di động nhẹ mà bạn đã truy cập đã được xây dựng bằng công nghệ AMP của Google.',
+                heading2: 'Thu thập dữ liệu cần thiết nghiêm ngặt',
+                para3:
+                  'Để làm cho các trang web của chúng tôi hoạt động, chúng tôi lưu trữ một số thông tin hạn chế trên thiết bị của bạn mà không có sự đồng ý của bạn.',
+                para4: {
+                  text:
+                    'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Chúng tôi sử dụng bộ nhớ cục bộ để lưu trữ các tùy chọn đồng ý của bạn trên thiết bị của bạn.',
+                heading3: 'Thu thập dữ liệu tùy chọn',
+                para6:
+                  'Khi bạn đồng ý thu thập dữ liệu trên các trang AMP, bạn đồng ý cho phép chúng tôi hiển thị quảng cáo được cá nhân hóa có liên quan đến bạn khi bạn ở bên ngoài Vương quốc Anh.',
+                para7: {
+                  text:
+                    'Đọc thêm về cách chúng tôi cá nhân hóa quảng cáo trên BBC và các đối tác quảng cáo của chúng tôi.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Bạn có thể chọn không nhận quảng cáo được cá nhân hóa bằng cách nhấp vào Từ chối thu thập dữ liệu và tiếp tục "bên dưới. Xin lưu ý rằng bạn sẽ vẫn thấy quảng cáo, nhưng nó sẽ không được cá nhân hóa cho bạn.',
+                para9:
+                  'Bạn có thể thay đổi các cài đặt này bằng cách nhấp vào “Lựa chọn quảng cáo / Không bán thông tin của tôi” ở chân trang bất kỳ lúc nào.',
+              },
             },
           },
-          accept: 'Vâng, tôi đồng ý',
-          reject: 'Không, đưa tôi xem phần Settings',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Cho chúng tôi biết bạn đồng ý về cookie',
+            description: {
+              uk: {
+                first: 'Chúng tôi dùng ',
+                linkText: 'cookie',
+                last:
+                  ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
+                linkText: 'cookie',
+                last:
+                  ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Vâng, tôi đồng ý',
+            reject: 'Không, đưa tôi xem phần Settings',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -151,11 +211,13 @@ export const service = {
         video: 'Video',
         listen: 'Nghe',
         watch: 'Xem',
+        listenLive: 'Nghe trực tiếp',
         liveLabel: 'TRỰC TIẾP',
         nextLabel: 'TỚI',
         previousRadioShow: 'Show radio trước',
         nextRadioShow: 'Show radio sau',
         duration: 'Thời lượng',
+        recentEpisodes: 'Xem thêm',
       },
       socialEmbed: {
         caption: {
@@ -204,7 +266,8 @@ export const service = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
@@ -230,6 +293,7 @@ export const service = {
           text: 'Liên hệ BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -248,31 +312,27 @@ export const service = {
       },
       {
         title: 'Việt Nam',
-        url: '/vietnamese/vietnam',
+        url: '/vietnamese/topics/ckdxnx1x5rnt',
       },
       {
         title: 'Thế giới',
-        url: '/vietnamese/world',
+        url: '/vietnamese/topics/cnlv9j1ekq0t',
       },
       {
         title: 'Diễn đàn',
-        url: '/vietnamese/forum',
+        url: '/vietnamese/forum-54540875',
       },
       {
         title: 'Kinh tế',
-        url: '/vietnamese/business',
+        url: '/vietnamese/topics/cez1ey7nzj3t',
       },
       {
         title: 'Nhịp sống mới',
-        url: '/vietnamese/magazine',
+        url: '/vietnamese/magazine-54029179',
       },
       {
         title: 'Thể thao',
-        url: '/vietnamese/sport',
-      },
-      {
-        title: 'Học tiếng Anh',
-        url: '/vietnamese/english',
+        url: '/vietnamese/topics/ckdxnx1k7zxt',
       },
       {
         title: 'Video',

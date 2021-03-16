@@ -8,6 +8,7 @@ import { ToggleContext } from '#contexts/ToggleContext';
 
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const renderRecommendations = (items, service, dir) => {
   const toggleState = {
@@ -28,7 +29,7 @@ const renderRecommendations = (items, service, dir) => {
       <ServiceContextProvider service={service}>
         <RequestContextProvider
           isAmp={false}
-          pageType="STY"
+          pageType={STORY_PAGE}
           service={service}
           pathname="/pathname"
         >
@@ -43,7 +44,7 @@ const renderRecommendations = (items, service, dir) => {
   );
 };
 
-storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
+storiesOf('Containers/CPS Recommendations/LTR (mundo)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
     renderRecommendations(mundoRecommendationsData, 'mundo', 'ltr'),
@@ -52,7 +53,7 @@ storiesOf('Containers|CPS Recommendations/LTR (mundo)', module)
     renderRecommendations([mundoRecommendationsData[0]], 'mundo', 'ltr'),
   );
 
-storiesOf('Containers|CPS Recommendations/RTL (arabic)', module)
+storiesOf('Containers/CPS Recommendations/RTL (arabic)', module)
   .addParameters({ chromatic: { disable: true } })
   .add('multiple items', () =>
     renderRecommendations(arabicRecommendationsData, 'arabic', 'rtl'),

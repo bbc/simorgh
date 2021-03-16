@@ -10,7 +10,8 @@ const RealDate = Date;
 const contextStub = {
   footer: {
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href:
+        'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Read about our approach to external linking.',
     },
     links: [
@@ -57,6 +58,7 @@ const FooterWithContext = stub => (
 
 describe(`FooterContainer`, () => {
   beforeEach(() => {
+    // eslint-disable-next-line prettier/prettier
     global.Date = class extends RealDate {
       constructor() {
         super();

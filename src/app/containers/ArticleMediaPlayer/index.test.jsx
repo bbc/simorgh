@@ -5,6 +5,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ArticleMediaPlayerContainer from '.';
 import { validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -18,7 +19,7 @@ const GenerateMediaPlayer = ({
     statusCode={200}
     platform={platform}
     id="c1234567890"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">

@@ -23,7 +23,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
         allowlist: ['webpack/hot/poll?100'],
       }),
     ],
-    watch: true,
+
     node: {
       /**
        * Override webpacks default handling of __dirname
@@ -45,7 +45,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
     const StartServerPlugin = require('start-server-webpack-plugin');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
-      new StartServerPlugin('server.js'), // only start the server if we've run `npm run dev`
+      new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
     ];
   }
 

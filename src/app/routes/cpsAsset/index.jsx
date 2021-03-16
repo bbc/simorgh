@@ -15,6 +15,8 @@ import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
+  ERROR_PAGE,
+  CORRESPONDENT_STORY_PAGE,
 } from '../utils/pageTypes';
 
 // CPS Asset Mapping to PageType
@@ -23,6 +25,7 @@ const CpsAsset = props => {
 
   const PageType = {
     [STORY_PAGE]: StoryPage,
+    [CORRESPONDENT_STORY_PAGE]: StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
@@ -31,7 +34,7 @@ const CpsAsset = props => {
   return PageType ? (
     <PageType {...props} pageType={type} />
   ) : (
-    <ErrorPage {...props} pageType="error" errorCode={404} />
+    <ErrorPage {...props} pageType={ERROR_PAGE} errorCode={404} />
   );
 };
 

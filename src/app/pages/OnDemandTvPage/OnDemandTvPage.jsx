@@ -28,8 +28,10 @@ import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
 import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
-import getEmbedUrl from '#lib/utilities/getEmbedUrl';
+import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
+import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
+import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
@@ -75,11 +77,19 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     promoBrandTitle,
     thumbnailImageUrl,
     durationISO8601,
+    recentEpisodes,
+    episodeTitle,
+    mediumSynopsis,
   } = pageData;
 
-  const { lang, timezone, datetimeLocale, service, translations } = useContext(
-    ServiceContext,
-  );
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    service,
+    translations,
+    brandName,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 
@@ -106,20 +116,25 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
   );
 
+  const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
+  const metadataTitle = episodeTitle
+    ? `${brandTitle} - ${episodeTitle} - ${brandName}`
+    : headline;
+
   return (
     <>
       <ChartbeatAnalytics data={pageData} />
       <ATIAnalytics data={pageData} />
       <ComscoreAnalytics />
       <MetadataContainer
-        title={headline}
+        title={metadataTitle}
         lang={language}
         description={shortSynopsis}
         openGraphType="website"
       />
       <LinkedData
         type="WebPage"
-        seoTitle={headline}
+        seoTitle={metadataTitle}
         entities={
           mediaIsAvailable
             ? [
@@ -162,6 +177,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
               iframeTitle={iframeTitle}
               hasBottomPadding={false}
               skin="classic"
+              showLoadingImage
+              darkMode
             />
           ) : (
             <MediaError skin="video" />
@@ -170,6 +187,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           <StyledTvHeadingContainer
             brandTitle={brandTitle}
             releaseDateTimeStamp={releaseDateTimeStamp}
+            episodeTitle={episodeTitle}
             darkMode
             ariaHidden
           />
@@ -180,9 +198,37 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           startOffset={getGroups(1, 1, 1, 1, 2, 5)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <OnDemandParagraphContainer text={shortSynopsis} darkMode />
+          <OnDemandParagraphContainer
+            text={episodeTitle ? mediumSynopsis : shortSynopsis}
+            darkMode
+          />
+          {episodeTitle && (
+            <FooterTimestamp
+              releaseDateTimeStamp={releaseDateTimeStamp}
+              darkMode
+            />
+          )}
         </Grid>
       </StyledGelPageGrid>
+
+      {hasRecentEpisodes && (
+        <StyledGelPageGrid
+          columns={getGroups(6, 6, 6, 6, 8, 20)}
+          enableGelGutters
+        >
+          <Grid
+            item
+            startOffset={getGroups(1, 1, 1, 1, 2, 5)}
+            columns={getGroups(6, 6, 6, 6, 6, 12)}
+            margins={getGroups(true, true, true, true, false, false)}
+          >
+            <RecentVideoEpisodes
+              masterBrand={masterBrand}
+              episodes={recentEpisodes}
+            />
+          </Grid>
+        </StyledGelPageGrid>
+      )}
     </>
   );
 };
@@ -194,6 +240,7 @@ OnDemandTvPage.propTypes = {
     language: string,
     headline: string,
     shortSynopsis: string,
+    mediumSynopsis: string,
     brandTitle: string,
     releaseDateTimeStamp: number,
     masterBrand: string,
@@ -202,6 +249,7 @@ OnDemandTvPage.propTypes = {
     promoBrandTitle: string,
     thumbnailImageUrl: string,
     durationISO8601: string,
+    episodeTitle: string,
   }).isRequired,
 };
 

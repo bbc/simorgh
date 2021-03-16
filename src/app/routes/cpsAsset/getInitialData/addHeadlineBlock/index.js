@@ -6,6 +6,7 @@ import {
   getFauxHeadlineBlock,
   getHeadlineBlock,
 } from './models';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const getHeadlineBlocks = json => {
   const headlineText = pathOr(null, ['promo', 'headlines', 'headline'], json);
@@ -40,7 +41,7 @@ const insertHeadlineBlocks = originalJson => {
     return json;
   }
 
-  if (type === 'MAP' && firstBlockIsVideo(blocks)) {
+  if (type === MEDIA_ASSET_PAGE && firstBlockIsVideo(blocks)) {
     json.content.model.blocks = [
       visuallyHiddenHeadlineBlock,
       blocks.shift(),

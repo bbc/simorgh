@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { igbo as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/ig';
@@ -49,6 +54,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -123,29 +131,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: "Ka anyị mara ma i kwenyere n'iwu ndị a",
-          description: {
-            uk: {
-              first: 'Anyị na-eji ',
-              linkText: 'cookies',
-              last:
-                ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: "Nabata ka e were data gị ma gaa n'ihu",
+            reject: "Anabatala ka e were data gị ma gaa n'ihu",
+            initial: {
+              title: "Mee ka anyị ma i kwere ka anata data gị n'AMP",
+              description: {
+                first:
+                  'Anyị na ndị anyị na ha na-emekọrịta na-eji teknụzụdịka ',
+                linkText: 'cookies',
+                last:
+                  ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Hazie akara usoro m',
             },
-            international: {
-              first: 'Anyị na ndị anyị na ha na-emekọrịta na-eji teknụzụdịka ',
-              linkText: 'cookies',
-              last:
-                ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Hazie akara usoro m na peeji AMP',
+              description: {
+                para1:
+                  'Usoro ndị a megidere sọọsọ na peeji AMP. A nwereike isi gị dowe usoro ndị a mgbe ịbịakwara peeji abụghị -AMP peeji BBC.',
+                para2:
+                  'E jiri ụzụ AMP nke Google rụọ peeji mfe nke akara ekwenti i banyere.',
+                heading2: 'Sọọsọ nnabata data',
+                para3:
+                  "Ime ka peeji anyị rụọ ọrụ, anyị na-edowe ozi ụfọdụ n'ekwenti gị na-agwaghị gị.",
+                para4: {
+                  text:
+                    "Gụkọọ maka ozi dị mkpa anyị na-edowe n'igwe ekwenti gị n'iji me ka peeji websaịt anyị rụọ ọrụ.",
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: "Anyị na-edowe nnabata gị n'ime igwe ekwenti gị.",
+                heading3: 'Nnabata gị ma ịchọ',
+                para6:
+                  "I kwete n'usoro inye ikikere ka e ji nara gị data na peeji AMP ị na-ekwete ka anyị gosi ngwa ahịa masịrị gị mgbe ị nọghị na UK.",
+                para7: {
+                  text:
+                    'Gụkọọ maka etu anyị na ndị otu anyị si egosi ahịa na BBC.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'I nwereike ịghara ikwe ka i na-ahụ ngosi ahịa ma ị pịa "Ekweghị m ka anata data makwa gaa n\'ihu" n\'ala. Biko marakwa na ị ka ga-anahụ ngosi ahịa mana o nwereike ha agaghị amasị gị.',
+                para9:
+                  'I nwereike ịgbanwe usoro ngosi ahịa ma ị pịa "Ngosi ahia / Erekwala ụdị ahịa ndị ga-amasị m" dị n\'okpuru mgbe ọbụla ị chọrọ.',
+              },
             },
           },
-          accept: 'Eeh, ekwere m',
-          reject: "Mba, duga m n'ebe mwube",
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: "Ka anyị mara ma i kwenyere n'iwu ndị a",
+            description: {
+              uk: {
+                first: 'Anyị na-eji ',
+                linkText: 'cookies',
+                last:
+                  ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first:
+                  'Anyị na ndị anyị na ha na-emekọrịta na-eji teknụzụdịka ',
+                linkText: 'cookies',
+                last:
+                  ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Eeh, ekwere m',
+            reject: "Mba, duga m n'ebe mwube",
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -216,7 +276,7 @@ export const service = {
       },
       {
         title: 'Egwuregwu',
-        url: '/igbo/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+        url: '/igbo/topics/cnq68k0x2vrt',
       },
       {
         title: 'Ihe nkiri',
@@ -233,7 +293,8 @@ export const service = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
@@ -258,6 +319,7 @@ export const service = {
           text: 'Kpọtụrụ BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -1,117 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Headings with headline data should render correctly 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-2 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-2 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -124,37 +114,37 @@ exports[`Headings with headline data should render correctly 1`] = `
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
+.emotion-2:focus {
   outline: none;
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="content"
       tabindex="-1"
     >
@@ -165,117 +155,107 @@ exports[`Headings with headline data should render correctly 1`] = `
 `;
 
 exports[`Headings with plain text headline should render h1 containing correct text 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-2 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-2 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -288,37 +268,37 @@ exports[`Headings with plain text headline should render h1 containing correct t
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
+.emotion-2:focus {
   outline: none;
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="content"
       tabindex="-1"
     >
@@ -329,117 +309,107 @@ exports[`Headings with plain text headline should render h1 containing correct t
 `;
 
 exports[`Headings with plain text subheadline should render h2 containing correct text 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-2 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-2 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -450,33 +420,33 @@ exports[`Headings with plain text subheadline should render h2 containing correc
   padding: 1.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding-top: 2rem;
   }
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h2
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="Plain-subheadline"
       tabindex="-1"
     >
@@ -487,117 +457,107 @@ exports[`Headings with plain text subheadline should render h2 containing correc
 `;
 
 exports[`Headings with rich text headline with bold text should render h1 with <b> tag 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-2 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-2 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-size: 1.75rem;
   line-height: 2rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -610,37 +570,37 @@ exports[`Headings with rich text headline with bold text should render h1 with <
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding: 2.5rem 0;
   }
 }
 
-.emotion-0:focus {
+.emotion-2:focus {
   outline: none;
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="content"
       tabindex="-1"
     >
@@ -653,114 +613,104 @@ exports[`Headings with rich text headline with bold text should render h1 with <
 `;
 
 exports[`Headings with rich text headline with italic text should render h1 with <i> tag 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-4 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-4 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
 .emotion-2 {
@@ -776,21 +726,21 @@ exports[`Headings with rich text headline with italic text should render h1 with
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 2.5rem 0;
   }
@@ -800,7 +750,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
   outline: none;
 }
 
-.emotion-0 {
+.emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -810,7 +760,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
@@ -819,7 +769,7 @@ exports[`Headings with rich text headline with italic text should render h1 with
       tabindex="-1"
     >
       <i
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         All is italic
       </i>
@@ -829,114 +779,104 @@ exports[`Headings with rich text headline with italic text should render h1 with
 `;
 
 exports[`Headings with rich text should render headline with bold & italic text should render h1 with <i><b> tags 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-4 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-4 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
 .emotion-2 {
@@ -952,21 +892,21 @@ exports[`Headings with rich text should render headline with bold & italic text 
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 2.5rem 0;
   }
@@ -976,7 +916,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -986,7 +926,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
@@ -995,7 +935,7 @@ exports[`Headings with rich text should render headline with bold & italic text 
       tabindex="-1"
     >
       <i
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <b>
           All is bold and italic
@@ -1007,114 +947,104 @@ exports[`Headings with rich text should render headline with bold & italic text 
 `;
 
 exports[`Headings with rich text should render headline with italic & bold text should render h1 with <b><i> tags 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-4 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-4 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
 .emotion-2 {
@@ -1130,21 +1060,21 @@ exports[`Headings with rich text should render headline with italic & bold text 
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 2.5rem 0;
   }
@@ -1154,7 +1084,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
   outline: none;
 }
 
-.emotion-0 {
+.emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1164,7 +1094,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
@@ -1174,7 +1104,7 @@ exports[`Headings with rich text should render headline with italic & bold text 
     >
       <b>
         <i
-          class="emotion-0 emotion-1"
+          class="emotion-4 emotion-5"
         >
           All is italic and bold
         </i>
@@ -1185,114 +1115,104 @@ exports[`Headings with rich text should render headline with italic & bold text 
 `;
 
 exports[`Headings with rich text with different attributes should render headline with only middle of text italic should render correctly 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-4 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-4 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
 .emotion-2 {
@@ -1308,21 +1228,21 @@ exports[`Headings with rich text with different attributes should render headlin
   overflow-wrap: anywhere;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     font-size: 2.75rem;
     line-height: 3rem;
   }
 }
 
-@media (min-width:37.5rem) {
+@media (min-width: 37.5rem) {
   .emotion-2 {
     padding: 2.5rem 0;
   }
@@ -1332,7 +1252,7 @@ exports[`Headings with rich text with different attributes should render headlin
   outline: none;
 }
 
-.emotion-0 {
+.emotion-4 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -1342,7 +1262,7 @@ exports[`Headings with rich text with different attributes should render headlin
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h1
@@ -1352,7 +1272,7 @@ exports[`Headings with rich text with different attributes should render headlin
     >
       This is 
       <i
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         very
       </i>
@@ -1363,117 +1283,107 @@ exports[`Headings with rich text with different attributes should render headlin
 `;
 
 exports[`Headings with subheadline data should render correctly 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-2 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-2 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-2 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-2 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-2 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-2 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-0 {
+.emotion-2 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1484,33 +1394,33 @@ exports[`Headings with subheadline data should render correctly 1`] = `
   padding: 1.5rem 0;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-0 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-2 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     padding-top: 2rem;
   }
 }
 
 <div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <h2
-      class="emotion-0 emotion-1"
+      class="emotion-2 emotion-3"
       id="This-is-a-subheadline"
       tabindex="-1"
     >

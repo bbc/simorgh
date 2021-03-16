@@ -21,13 +21,21 @@ export const testsThatFollowSmokeTestConfig = ({
     if (errorPath) {
       describe(`${service} Test we get a 404`, () => {
         it('should return a 404 error code', () => {
-          cy.testResponseCodeAndType(errorPath, 404, 'text/html');
+          cy.testResponseCodeAndType({
+            path: errorPath,
+            responseCode: 404,
+            type: 'text/html',
+          });
         });
       });
 
       describe(`${service} Error Page Tests`, () => {
         before(() => {
-          cy.testResponseCodeAndType(errorPath, 404, 'text/html');
+          cy.testResponseCodeAndType({
+            path: errorPath,
+            responseCode: 404,
+            type: 'text/html',
+          });
           cy.visit(errorPath, {
             failOnStatusCode: false,
           });
@@ -107,11 +115,11 @@ export const testsThatFollowSmokeTestConfig = ({
       if (envConfig.standaloneErrorPages) {
         describe(`${service} error page routes`, () => {
           it(`/${service}/404 should have response code 200`, () => {
-            cy.testResponseCodeAndType(
-              `/${config[service].name}/404`,
-              200,
-              'text/html',
-            );
+            cy.testResponseCodeAndType({
+              path: `/${config[service].name}/404`,
+              responseCode: 200,
+              type: 'text/html',
+            });
             cy.visit(`${config[service].name}/404`)
               .get('[data-e2e="status-code"]')
               .should(
@@ -121,11 +129,11 @@ export const testsThatFollowSmokeTestConfig = ({
               );
           });
           it(`/${service}/500 should have response code 200`, () => {
-            cy.testResponseCodeAndType(
-              `/${config[service].name}/500`,
-              200,
-              'text/html',
-            );
+            cy.testResponseCodeAndType({
+              path: `/${config[service].name}/500`,
+              responseCode: 200,
+              type: 'text/html',
+            });
             cy.visit(`${config[service].name}/500`)
               .get('[data-e2e="status-code"]')
               .should(

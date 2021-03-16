@@ -31,6 +31,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GridWrapper, GridItemLarge } from '#app/components/Grid';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 const LargeGridColumns = {
   group0: 1,
@@ -89,7 +90,14 @@ const gridMarginSmall = `
 
 const LegacyGridItemLarge = styled(GridItemLarge)`
   ${gridMarginSmall}
-  padding-bottom: 2rem;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
@@ -168,7 +176,7 @@ const CpsOnwardJourney = ({
   const { script, service, dir } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
 
-  const isMostWatched = pageType === 'mostWatched';
+  const isMostWatched = pageType === MOST_WATCHED_PAGE;
   const a11yAttributes = isMostWatched
     ? {
         as: 'div',

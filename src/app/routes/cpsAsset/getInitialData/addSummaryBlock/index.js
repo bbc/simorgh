@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import deepClone from '../../../utils/jsonClone';
 import { singleTextBlock } from '#app/models/blocks';
 import { insertBlockAfterHeadline } from '../helpers';
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getSummary = json => {
   const summary = pathOr(null, ['promo', 'summary'], json);
@@ -19,7 +20,7 @@ const addSummaryBlocks = originalJson => {
   const pageType = path(['metadata', 'type'], json);
   const blocks = path(['content', 'model', 'blocks'], json);
 
-  if (pageType !== 'PGL' || !blocks) {
+  if (pageType !== PHOTO_GALLERY_PAGE || !blocks) {
     return json;
   }
 

@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { burmese } from '@bbc/gel-foundations/scripts';
 import { burmese as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_PADAUK_BOLD, F_PADAUK_REGULAR } from '@bbc/psammead-styles/fonts';
@@ -49,6 +54,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -120,30 +128,82 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'ကွတ်ကီးများအသုံးပြုမှုကို သဘောတူမတူ ပြောပါ။',
-          description: {
-            uk: {
-              first:
-                'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
-              linkText: 'နှင့် ကွတ်ကီးများ',
-              last:
-                ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'အချက်အလက်ကောက်ယူခြင်းကို သဘောတူပြီး ရှေ့ဆက်ကြည့်ရန်',
+            reject: 'အချက်အလက်ကောက်ယူခြင်းကို သဘောမတူဘဲ ရှေ့ဆက်ကြည့်ရန်',
+            initial: {
+              title: 'AMP တွင် အချက်အလက်ကောက်ယူခြင်းကို သဘောတူ မတူပြောပါ။',
+              description: {
+                first: 'ဘီဘီစီနှင့် ပါတနာများသည် ',
+                linkText: ' နှင့် ကွတ်ကီးများ ',
+                last:
+                  ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'လိုလားချက်များကို သတ်မှတ်/ပြောင်းလဲရန်',
             },
-            international: {
-              first: 'ဘီဘီစီနှင့် ပါတနာများသည် ',
-              linkText: ' နှင့် ကွတ်ကီးများ ',
-              last:
-                ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                'AMP စာမျက်နှာများပေါ်တွင် သဘောတူခွင့်ပြုချက်များပြောင်းလဲရန်',
+              description: {
+                para1:
+                  'ယခုသတ်မှတ်ချက်များမှာ AMP စာမျက်နှာများအတွက်သာဖြစ်သည်။ AMP မဟုတ်သည့် အခြား ဘီဘီစီစာမျက်နှာများ သွားကြည့်လျင် မိမိစိတ်ကြိုက်သတ်မှတ်ချက်များကို ပြန်လည်ပြောင်းလဲခိုင်းနိုင်ပါသည်။',
+                para2:
+                  'သင်ဝင်ကြည့်ခဲ့သော ပေါ့ပါးသည့်မိုဘိုင်းစာမျက်နှာမှာ ဂူဂဲလ်၏ AMP နည်းပညာကို သုံးထားပါသည်။',
+                heading2: 'မဖြစ်မနေလိုအပ်သော အချက်အလက်ကောက်ယူခြင်း',
+                para3:
+                  'မိမိတို့၏စာမျက်နှာများအလုပ်လုပ်နိုင်ရန် သင်အသုံးပြုသောစက်ထဲတွင် အချက်အလက်အနည်းငယ်ကို သင့်ခွင့်ပြုချက်မပါဘဲ သိုမှီးထားပါသည်။',
+                para4: {
+                  text:
+                    'မိမိတို့စာမျက်နှာများအလုပ်လုပ်ရန် မရှိမဖြစ်လိုအပ်သောအချက်များ သင့်စက်ထဲတွင် သိုမှီးထားခြင်းနှင့်ပတ်သက်၍ နောက်ထပ်သိလိုပါက ဖတ်ရှုရန်',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'သင်သဘောတူထားသောနှစ်ခြိုက်သည့်ပုံစံများကို သင့်စက်ထဲတွင် သိမ်းဆည်းထားပါသည်။',
+                heading3: 'နောက်ထပ် အချက်အလက်ကောက်ယူခြင်း',
+                para6:
+                  'AMP စာမျက်နှာများပေါ်တွင်အချက်အလက်ကောက်ယူခြင်းကို သင့်ဘက်မှသဘောတူခဲ့လျှင် သင်ယူကေအပြင်ဘက်တွင်ရှိစဉ် သင့်အတွက်သီးသန့်ပို့သော ကြော်ငြာများကို ပြသရန်လည်း မိမိတို့အား သဘောတူ ခွင့်ပြုခြင်းဖြစ်ပါသည်။',
+                para7: {
+                  text:
+                    'ဘီဘီစီနှင့် မိမိတို့၏ မိတ်ဖက်ကြော်ငြာရှင်များက သီးသန့်ကြော်ငြာများမည်သို့ပြုလုပ်သည်ကို နောက်ထပ်ဖတ်ရှုရန်',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'မိမိအတွက်သီးသန့်ပေးပို့သော ကြော်ငြာများမရရှိလိုလျင် “အချက်အလက်ကောက်ခံခြင်းကို လက်မခံပဲ ဆက်ကြည့်မည်” ဆိုသောနေရာကို နှိပ်ပါ။ သင်ကြော်ငြာများကိုတော့ဆက်တွေ့နေရပါမည်၊ သို့သော်ကိုယ့်အတွက် သီးသန့်ပေးပို့မှုများရှိမည်မဟုတ်ပါ။',
+                para9:
+                  'ယခုစိတ်ကြိုက်သတ်မှတ်ချက်များကို ပြောင်းလဲလိုလျင် စာမျက်နှာအောက်ခြေတွင်ရှိသော “ကြော်ငြာရွေးချယ်မှု/ မိမိ၏အချက်အလက်များကို ရောင်းချခြင်းမပြုရန်” ဆိုသည်ကို အချိန်မရွေးနှိပ်၍ ပြောင်းနိုင်ပါသည်။',
+              },
             },
           },
-          accept: 'သဘောတူပါသည်။',
-          reject: 'သဘောမတူပါ၊ ဆက်တင်ကို သွားကြည့်လိုပါသည်။',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'ကွတ်ကီးများအသုံးပြုမှုကို သဘောတူမတူ ပြောပါ။',
+            description: {
+              uk: {
+                first:
+                  'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
+                linkText: 'နှင့် ကွတ်ကီးများ',
+                last:
+                  ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'ဘီဘီစီနှင့် ပါတနာများသည် ',
+                linkText: ' နှင့် ကွတ်ကီးများ ',
+                last:
+                  ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'သဘောတူပါသည်။',
+            reject: 'သဘောမတူပါ၊ ဆက်တင်ကို သွားကြည့်လိုပါသည်။',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -165,11 +225,14 @@ export const service = {
         },
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
+        listenNext: 'နောက်ထပ်နားဆင်ရန်',
         liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
         nextLabel: 'နောက်တစ်ခုသို့',
         previousRadioShow: 'ယခင် ရေဒီယိုအစီအစဉ်',
         nextRadioShow: 'နောက် ရေဒီယိုအစီအစဉ်',
         duration: 'ကြာမြင့်ချိန်',
+        recentEpisodes: 'ထုတ်လွှင့်ပြီး အစီအစဉ်မျာ',
+        podcastExternalLinks: 'ဒီပေါ့ဒ်ကတ်စ်ကို နောက်ထပ်ရနိုင်သည့်နေရာ',
       },
       socialEmbed: {
         caption: {
@@ -223,7 +286,8 @@ export const service = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text:
           'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
@@ -245,6 +309,7 @@ export const service = {
           text: 'ဘီဘီစီကို ဆက်သွယ်ရန်',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -263,23 +328,23 @@ export const service = {
       },
       {
         title: 'မြန်မာ့ရေးရာ',
-        url: '/burmese/burma',
+        url: '/burmese/topics/c404v08p1wxt',
       },
       {
         title: 'နိုင်ငံတကာ',
-        url: '/burmese/world',
+        url: '/burmese/topics/cnlv9j1z93wt',
       },
       {
         title: 'ဆောင်းပါး',
-        url: '/burmese/in_depth',
+        url: '/burmese/in-depth-54539126',
       },
       {
         title: 'အားကစား',
-        url: '/burmese/sport',
+        url: '/burmese/topics/cxnykndgd87t',
       },
       {
         title: 'ကုန်သွယ်စီးပွား',
-        url: '/burmese/economy',
+        url: '/burmese/topics/c9wpm0en9jdt',
       },
       {
         title: 'ဗီဒီယိုများ',

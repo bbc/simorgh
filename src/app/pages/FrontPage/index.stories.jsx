@@ -9,8 +9,9 @@ import serbianLatData from '#data/serbian/frontpage/lat';
 import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
-import { getLocalMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import FrontPage from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const serviceDataSets = {
   arabic: { default: arabicData },
@@ -27,7 +28,7 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-const stories = storiesOf('Pages|Front Page', module).addDecorator(story => (
+const stories = storiesOf('Pages/Front Page', module).addDecorator(story => (
   <WithTimeMachine>{story()}</WithTimeMachine>
 ));
 
@@ -37,7 +38,7 @@ Object.keys(serviceDataSets).forEach(service => {
       <BrowserRouter>
         <FrontPage
           isAmp={false}
-          pageType="frontPage"
+          pageType={FRONT_PAGE}
           status={200}
           pathname={serviceConfigs[service][variant].navigation[0].url}
           service={service}

@@ -10,6 +10,7 @@ import pidginFrontPageData from '#data/pidgin/frontpage/index-light';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import getInitialData from '#app/routes/home/getInitialData';
 import FrontPage from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const mockToggles = {
   ads: {
@@ -23,7 +24,7 @@ const mockToggles = {
   },
 };
 const requestContextData = ({ service = 'pidgin' }) => ({
-  pageType: 'frontPage',
+  pageType: FRONT_PAGE,
   service,
   pathname: '/pathname',
   data: { status: 200 },
@@ -53,9 +54,11 @@ const FrontPageWithContext = ({
 
 jest.mock('uuid', () => {
   let x = 1;
-  return () => {
-    x += 1;
-    return `mockid-${x}`;
+  return {
+    v4: () => {
+      x += 1;
+      return `mockid-${x}`;
+    },
   };
 });
 

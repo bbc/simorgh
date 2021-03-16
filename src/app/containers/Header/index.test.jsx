@@ -9,6 +9,13 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
+import {
+  INDEX_PAGE,
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -59,7 +66,7 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for news article',
       HeaderContainerWithContext({
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         service: 'news',
       }),
     );
@@ -67,33 +74,33 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for WS frontPage',
       HeaderContainerWithContext({
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
       }),
     );
 
     shouldMatchSnapshot(
       'should render correctly for WS radio page',
       HeaderContainerWithContext({
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
       }),
     );
   });
 
   describe('Assertions', () => {
     it('should output a nav bar for media asset pages', () => {
-      render(HeaderContainerWithContext({ pageType: 'MAP' }));
+      render(HeaderContainerWithContext({ pageType: MEDIA_ASSET_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
     it('should output a nav bar for articles', () => {
-      render(HeaderContainerWithContext({ pageType: 'article' }));
+      render(HeaderContainerWithContext({ pageType: ARTICLE_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
         }),
       );
 
@@ -106,7 +113,7 @@ describe(`Header`, () => {
     it('should not render script link for a service without variants', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'pidgin',
           serviceContext: pidginServiceConfig,
         }),
@@ -117,7 +124,7 @@ describe(`Header`, () => {
     it('should render script link for a service with variants', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'serbian',
           serviceContext: serbianServiceConfig,
           variant: 'cyr',
@@ -133,7 +140,7 @@ describe(`Header`, () => {
     it('should render header with lang when serviceLang is defined', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
@@ -149,7 +156,7 @@ describe(`Header`, () => {
     it('should render a skip to content link with lang', async () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',

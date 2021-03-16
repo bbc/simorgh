@@ -11,6 +11,7 @@ import {
 import FigureContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
@@ -26,7 +27,7 @@ const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
       service="news"
       statusCode={200}
       pathname="/pathname"
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
     >
       <FigureContainer {...otherProps} />
     </RequestContextProvider>
@@ -73,8 +74,12 @@ const baseFixture = {
   width: 640,
 };
 
-export const ImageWithPlaceholder = () => {
-  const props = baseFixture;
+// eslint-disable-next-line react/prop-types
+export const ImageWithPlaceholder = ({ preload = false }) => {
+  const props = {
+    ...baseFixture,
+    preload,
+  };
   return <WrappedImageWithPlaceholder {...props} />;
 };
 
@@ -88,11 +93,11 @@ export const AmpImageWithPlaceholder = () => {
 };
 
 // eslint-disable-next-line react/prop-types
-export const LazyLoadImageWithPlaceholder = ({ fallback }) => {
+export const LazyLoadImageWithPlaceholder = ({ fallback, lazyLoad = true }) => {
   const props = {
     ...baseFixture,
     fallback,
-    lazyLoad: true,
+    lazyLoad,
   };
 
   return <WrappedImageWithPlaceholder {...props} />;

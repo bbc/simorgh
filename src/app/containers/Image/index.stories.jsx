@@ -10,7 +10,7 @@ import {
   square,
 } from './helpers/fixtureData';
 
-storiesOf('Containers|Image within grid', module)
+storiesOf('Containers/Image within grid', module)
   .addParameters({ chromatic: { disable: true } })
   .add('landscape image', () => (
     <GridWrapper>

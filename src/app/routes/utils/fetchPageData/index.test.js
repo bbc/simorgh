@@ -46,6 +46,17 @@ describe('fetchPageData', () => {
         requestOrigin,
       });
     });
+
+    it('should log data fetch response time on server', async () => {
+      await fetchPageData({
+        path: requestedPathname,
+        shouldLogFetchTime: true,
+      });
+      const loggerCall = loggerMock.info.mock.calls[1];
+
+      expect(loggerCall[0]).toBe('data_fetch_response_time');
+      expect(typeof loggerCall[1].nanoseconds).toBe('number');
+    });
   });
 
   describe('Successful fetch', () => {
@@ -59,28 +70,35 @@ describe('fetchPageData', () => {
       );
     });
 
+    const fetchOptions = {
+      headers: {
+        'User-Agent': 'Simorgh/ws-web-rendering',
+      },
+      timeout: 4000,
+    };
+
     it('should call fetch with the correct url when passed the pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full test path', async () => {
       await fetchPageData({ path: fullTestPath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullTestPath, { timeout: 4500 });
+      expect(fetch).toHaveBeenCalledWith(fullTestPath, fetchOptions);
     });
 
     it('should call fetch with the correct url when passed the full live path', async () => {
       await fetchPageData({ path: fullLivePath, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(fullLivePath, { timeout: 4500 });
+      expect(fetch).toHaveBeenCalledWith(fullLivePath, fetchOptions);
     });
 
     it('should call fetch on amp pages without .amp in pathname', async () => {
       await fetchPageData({ path: requestedPathname, pageType });
 
-      expect(fetch).toHaveBeenCalledWith(expectedUrl, { timeout: 4500 });
+      expect(fetch).toHaveBeenCalledWith(expectedUrl, fetchOptions);
     });
 
     it('should return expected response', async () => {
@@ -268,7 +286,6 @@ describe('fetchPageData', () => {
 
     it('should log, and propogate the status code as 502', async () => {
       fetch.mockResponse('Internal server error', { status: 500 });
-
       return fetchPageData({ path: requestedPathname, pageType }).catch(
         ({ message, status }) => {
           expect(loggerMock.error).toBeCalledWith(DATA_FETCH_ERROR, {

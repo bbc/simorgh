@@ -9,6 +9,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import urduPageData from '#data/urdu/cpsAssets/science-51314202';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import FeatureIdxPage from '.';
+import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const mockToggles = {
   comscoreAnalytics: {
@@ -20,7 +21,7 @@ const mockToggles = {
 };
 
 const requestContextData = ({ service = 'urdu', showAdsBasedOnLocation }) => ({
-  pageType: 'FIX',
+  pageType: FEATURE_INDEX_PAGE,
   service,
   pathname: '/pathname',
   data: { status: 200 },
@@ -51,12 +52,13 @@ const FeatureIdxPageWithContext = ({
 
 jest.mock('uuid', () => {
   let x = 1;
-  return () => {
-    x += 1;
-    return `mockid-${x}`;
+  return {
+    v4: () => {
+      x += 1;
+      return `mockid-${x}`;
+    },
   };
 });
-
 jest.mock('#containers/ChartbeatAnalytics', () => {
   return () => <div>chartbeat</div>;
 });

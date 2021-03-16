@@ -1,4 +1,4 @@
-name: Simorgh CI - E2E & 3rd Party Tests
+name: Simorgh CI - Cypress E2E Tests
 on:
   create:
     branches:
@@ -21,13 +21,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Run Simorgh E2Es
         uses: cypress-io/github-action@v2
         with:
-          build: npm run build
-          start: npm start
-      - name: Run 3rd Party E2Es
-        uses: cypress-io/github-action@v2
-        with:
-          project: ./3rdPartyCypress
+          build: yarn build
+          start: yarn start

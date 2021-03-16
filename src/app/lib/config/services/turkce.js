@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
@@ -56,6 +61,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -128,29 +136,81 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Çerez politikasını onayladığınızı bize iletin',
-          description: {
-            uk: {
-              first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
-              linkText: 'çerezler',
-              last:
-                ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Veri toplanmaya izin ver ve devam et',
+            reject: 'Veri toplamayı reddet ve devam et',
+            initial: {
+              title:
+                'AMP ile veri toplamaya onay verip vermediğinizi bize bildirin.',
+              description: {
+                first: 'Biz ve ortaklarımız ',
+                linkText: 'çerezleri gibi',
+                last:
+                  ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Ayarlarımı yönet',
             },
-            international: {
-              first: 'Biz ve ortaklarımız ',
-              linkText: 'çerezleri gibi',
-              last:
-                ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP ayarlarını yönet',
+              description: {
+                para1:
+                  'Bu ayarlar sadece hızlandırılmış mobil sayfalar (AMP) için geçerli. Eğer AMP özelliği olmayan bir BBC sayfasını ziyaret ederseniz bu seçimleri yeniden yapmanız istenebilir.',
+                para2:
+                  'Ziyaret ettiğiniz mobil sayfa, Google AMP teknolojisi kullanılarak geliştirilmiştir.',
+                heading2: 'Zorunlu veri toplama',
+                para3:
+                  'İnternet sayfalarımızın düzgün çalışabilmesi için sizin rıcanız olmadan sınırlı düzeyde veri toplamamız gerekiyor.',
+                para4: {
+                  text:
+                    'Sayfalarımızın çalışması için gereken veri toplama süreci hakkında detaylı bilgi almak için tıklayın.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Lokal veri saklama yöntemi ile vermiş olduğunuz izinlerin bilgilerini telefonunuzda saklıyoruz.',
+                heading3: 'Tercihe dayalı veri toplama',
+                para6:
+                  'AMP üzerinden veri toplamaya izin verdiğinizde kişiselleştirilmiş reklamların sunulmasına onay vermiş oluyorsunuz.',
+                para7: {
+                  text:
+                    "BBC'nin ve reklam ortaklarının kişiselleştirilmiş reklamları nasıl oluşturduğunu okumak için tıklayın.",
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  "Kişiselleştirilmiş reklamları görmek istemiyorsanız 'Veri toplamayı reddet ve devam et' seçeneğini tıklayabilirsiniz. Yine de reklamları görmeye devam edeceksiniz ancak bu reklamlar kişiselleştirilmemiş olacak.",
+                para9:
+                  "Ayarları 'Reklam seçenekleri/Verilerimi satma' seçeneği altında dilediğiniz zaman değiştirebilirsiniz.",
+              },
             },
           },
-          accept: 'Evet, kabul ediyorum',
-          reject: 'Hayır, beni ayarlara götür',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Çerez politikasını onayladığınızı bize iletin',
+            description: {
+              uk: {
+                first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
+                linkText: 'çerezler',
+                last:
+                  ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Biz ve ortaklarımız ',
+                linkText: 'çerezleri gibi',
+                last:
+                  ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Evet, kabul ediyorum',
+            reject: 'Hayır, beni ayarlara götür',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -167,6 +227,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'Diğerleri',
       },
       socialEmbed: {
         caption: {
@@ -192,7 +253,7 @@ export const service = {
         linkText: 'Tüm içeriği görmek için sayfanın tüm sürümünü görüntüleyin ',
       },
       topStoriesTitle: 'Manşet haber',
-      featuresAnalysisTitle: 'Aramızda Kalmasın',
+      featuresAnalysisTitle: 'Seçtiklerimiz',
     },
     brandSVG,
     mostRead: {
@@ -202,7 +263,7 @@ export const service = {
       hasMostRead: true,
     },
     mostWatched: {
-      header: 'En fazla izlenilen içerek',
+      header: 'En fazla izlenen içerik',
       numberOfItems: 5,
       hasMostWatched: true,
     },
@@ -222,7 +283,8 @@ export const service = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [
@@ -243,6 +305,7 @@ export const service = {
           text: "BBC'yle temas kurun",
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

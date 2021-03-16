@@ -6,6 +6,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import ArticlePage from './ArticlePage';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // article c5jje4ejkqvo contains a Headline, a Paragraph, a timestamp
 // a Portrait Image with Caption, a Landscape Image with Caption and Square Image with Caption.
@@ -14,7 +15,7 @@ import articleData from '#data/news/articles/c5jje4ejkqvo';
 // Not all services have fixtures for article data yet
 // the service selector will be constrained to services that have article fixtures:
 
-storiesOf('Pages|Article Page', module)
+storiesOf('Pages/Article Page', module)
   .addDecorator(withKnobs)
   .add('Articles', () => (
     <ToggleContextProvider>
@@ -22,7 +23,7 @@ storiesOf('Pages|Article Page', module)
       <ServiceContextProvider service="pidgin">
         <RequestContextProvider
           isAmp={false}
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           service="pidgin"
         >
           <UserContextProvider>

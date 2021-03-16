@@ -22,9 +22,9 @@ jobs:
       GIT_COMMIT_SHA: ${{ github.sha }}
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -38,14 +38,24 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
 
-      - name: Install & Build Simorgh
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn ci
+
+      - name: Build Simorgh
         run: |
           echo ${GITHUB_REF##*/}
-          npm ci
-          npm run build
+          yarn build
 
       - name: Setup Code Climate Test Coverage
-        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }}
+        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
         run: |
           echo $GIT_BRANCH
           echo $GIT_COMMIT_SHA
@@ -54,7 +64,8 @@ jobs:
           ./cc-test-reporter before-build
 
       - name: Unit Tests
-        run: npm run test:unit
+        run: yarn test:unit
 
       - name: Report Code Climate Test Coverage
+        if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == 'bbc/simorgh' }} # Only run if PR originates from the Simorgh repo
         run: ./cc-test-reporter after-build -t lcov --debug --exit-code 0

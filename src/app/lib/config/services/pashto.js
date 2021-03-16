@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { pashto as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_PASHTO_REGULAR,
-  F_NASSIM_PASHTO_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ps';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -53,6 +58,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -122,28 +130,82 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'راته ووایاست چې ایا غواړئ ډېټا در ولېږل شي',
-          description: {
-            uk: {
-              first: 'موږ ستاسې د اسانۍ لپاره ',
-              linkText: 'کوکیز',
-              last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept:
+              'تاسې د انټرنټ کارېدنې په اړه د مالوماتو ټولېدو سره هوکړه وکړئ او مخکې لاړ شئ',
+            reject:
+              'ستاسې د انټرنټ کارېدنې په اړه د مالوماتو ټولېدل رد کړئ‌ او مخکې لاړ شئ',
+            initial: {
+              title:
+                'راته ووایاست چې ایا پر موبایل پاڼو د مالوماتو له راټولولو سره موافق یاست که نه.',
+              description: {
+                first: 'زموږ ملګري د ',
+                linkText: 'کوکیز',
+                last:
+                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'خپل سېټنګز مدیریت کړئ',
             },
-            international: {
-              first: 'زموږ ملګري د ',
-              linkText: 'کوکیز',
-              last:
-                ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'پر موبایلي پاڼو د اجازې اخیستنې برخه تنظیم کړئ',
+              description: {
+                para1:
+                  'دا سېټنګز یوازې د موبایلي پاڼو لپاره دي. که چېرې د بي بي سي پاڼې له موبایل پرته بل ځای ګورئ نو ښایي‌ هلته درنه دا پوښتنې بیا وشي.‌',
+                para2:
+                  'دا پاڼه چې تاسې ولیده، د ګوګل موبایلي پاڼو تکنالوژۍ په کارولو سره جوړه شوې',
+                heading2: 'د مالوماتو اړینه راټولېدنه',
+                para3:
+                  'د دې لپاره چې زموږ پاڼه سم کار وکړي، موږ محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
+                para4: {
+                  text:
+                    'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ستاسې د اجازې په اړه مالومات موږ ستاسې پر موبایل خوندي کوو',
+                heading3: 'د مالوماتو غیر لازمي راټولېدنه',
+                para6:
+                  'کله چې تاسې د مالوماتو ټولونې اجازه راکوئ، ورسره دا هم منئ چې کله له بریتانیا بهر زموږ پاڼه ګورئ نو موږ به اړوند اعلانونه درته ښکاره کوو',
+                para7: {
+                  text:
+                    'دلته ولولئ چې موږ بي بي سي کې او زموږ شریکان څه ډول تاسې ته اړوند اعلانونه ښکاره کوي.‌',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'که نه غواړئ چې اړوند اعلانونه درته وښودل شي نو لاندې برخه کې د مالوماتو راټولېدو اجازه مه ورکوئ. خو پام مو وي چې اعلانونه به بیا هم در ښودل کېږي،‌ البته اړوند یا ستاسې په خوښه به نه وي.‌',
+                para9:
+                  'هر وخت کولی شئ چې دا سېټنګز بدل کړئ. د دې چارې لپاره لاندې برخه کې Ad Choices / Do not sell my info” باندې کلېک وکړئ',
+              },
             },
           },
-          accept: 'هو، موافق یم',
-          reject: 'نه، غواړم سېټنګز ته ولاړ شم',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'راته ووایاست چې ایا غواړئ ډېټا در ولېږل شي',
+            description: {
+              uk: {
+                first: 'موږ ستاسې د اسانۍ لپاره ',
+                linkText: 'کوکیز',
+                last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'زموږ ملګري د ',
+                linkText: 'کوکیز',
+                last:
+                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'هو، موافق یم',
+            reject: 'نه، غواړم سېټنګز ته ولاړ شم',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -153,6 +215,7 @@ export const service = {
         audio: 'غږ',
         photogallery: 'دعکسونو ګالري',
         video: 'ویډیو',
+        recentEpisodes: 'پخواني پروګرامونه',
         bbc_pashto_radio: {
           title: 'بي بي سي افغانستان (پښتو خپرونه)',
           subtitle:
@@ -165,6 +228,8 @@ export const service = {
         },
         listen: 'واورئ',
         watch: 'و یې ګورئ',
+        listenLive: 'ژوندۍ خپرونه واورئ',
+        listenNext: 'راتلونکې برخه واورئ ',
         liveLabel: 'ژوندۍ',
         nextLabel: 'بل',
         previousRadioShow: 'تېره راډیویي‌ خپرونه',
@@ -224,7 +289,8 @@ export const service = {
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
@@ -249,6 +315,7 @@ export const service = {
           text: 'زموږ سره اړیکي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -257,7 +324,7 @@ export const service = {
       ],
       copyrightText: 'بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده.',
     },
-    fonts: [F_NASSIM_PASHTO_REGULAR, F_NASSIM_PASHTO_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {
@@ -290,7 +357,7 @@ export const service = {
       },
       {
         title: 'ځانګړې پاڼې',
-        url: '/pashto/in_depth',
+        url: '/pashto/in-depth-54540873',
       },
       {
         title: 'کالم',

@@ -5,13 +5,14 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import MediaAssetPage from '.';
 import pageData from './fixtureData';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const isAmp = platform => platform === 'AMP';
 
 const platforms = ['Canonical', 'AMP'];
 
 platforms.forEach(platform => {
-  const mapStories = storiesOf(`Pages|Media Asset Page/${platform}`, module);
+  const mapStories = storiesOf(`Pages/Media Asset Page/${platform}`, module);
 
   mapStories.addDecorator(story => (
     <WithTimeMachine>{story()}</WithTimeMachine>
@@ -25,7 +26,7 @@ platforms.forEach(platform => {
     return (
       <BrowserRouter>
         <MediaAssetPage
-          pageType="MAP"
+          pageType={MEDIA_ASSET_PAGE}
           isAmp={isAmp(platform)}
           pathname="/pathname"
           status={200}

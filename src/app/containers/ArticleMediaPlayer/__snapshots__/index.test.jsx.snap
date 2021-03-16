@@ -1,106 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MediaPlayer Calls the amp media player 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-4 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-4 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-4 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-4 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-4 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-4 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-4 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
 .emotion-2 {
@@ -109,7 +99,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -117,14 +107,14 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <figure
       class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-0 emotion-1"
+        class="emotion-4 emotion-5"
       >
         <amp-iframe
           allowfullscreen="allowfullscreen"
@@ -154,121 +144,111 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 `;
 
 exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = `
-@media (max-width:14.9375rem) {
-  .emotion-25 {
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-25 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-25 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-25 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-25 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
     margin-left: 20%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-25 {
+@media (min-width: 80rem) {
+  .emotion-0 {
     margin-left: 40%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-25 {
+@supports (display: grid) {
+  .emotion-0 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(5,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-25 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(10,1fr);
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-.emotion-23 {
+.emotion-2 {
   margin: 0;
   padding-bottom: 1.5rem;
   width: 100%;
 }
 
-.emotion-21 {
+.emotion-4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-19 {
+.emotion-6 {
   position: absolute;
   top: 0;
   left: 0;
@@ -277,7 +257,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-6:hover .emotion-14,
+.emotion-6:focus .emotion-14 {
+  background-color: #B80000;
+}
+
+.emotion-8 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -288,55 +273,55 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   position: absolute;
   border: 0.0625rem solid transparent;
   color: #FFFFFF;
-  background-color: rgba(34,34,34,0.75);
+  background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-8 {
     font-size: 0.875rem;
   }
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-4 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-8 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-4 {
-  background-color: rgba(34,34,34,0.75);
+.no-js .emotion-8 {
+  background-color: rgba(34, 34, 34, 0.75);
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .no-js .emotion-4 {
+@media screen and (-ms-high-contrast: active) {
+  .no-js .emotion-8 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-4 .guidance-message {
+.no-js .emotion-8 .guidance-message {
   display: none;
 }
 
-.emotion-0 {
+.emotion-10 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
   border-bottom: 0.0625rem solid transparent;
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-10 {
     background-color: window;
   }
 }
 
-@media (min-width:25rem) {
-  .emotion-0 {
+@media (min-width: 25rem) {
+  .emotion-10 {
     padding: 1rem;
   }
 }
 
-.emotion-2 {
+.emotion-12 {
   position: absolute;
   bottom: 0;
 }
@@ -372,16 +357,10 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   display: none;
 }
 
-.emotion-20:hover .emotion-15,
-.emotion-20:focus .emotion-15 {
-  background-color: #B80000;
-}
-
-.emotion-6 {
+.emotion-17 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
-  -webkit-clip: rect(1px,1px,1px,1px);
-  clip: rect(1px,1px,1px,1px);
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
@@ -389,7 +368,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.emotion-10 > svg {
+.emotion-19>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -397,7 +376,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.emotion-8 {
+.emotion-21 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -406,12 +385,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.emotion-12 {
+.emotion-23 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-17 {
+.emotion-25 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -419,46 +398,46 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 
 <div>
   <div
-    class="emotion-25 emotion-26"
+    class="emotion-0 emotion-1"
     dir="ltr"
   >
     <figure
-      class="emotion-23 emotion-24"
+      class="emotion-2 emotion-3"
     >
       <div
-        class="emotion-21 emotion-22"
+        class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-19 emotion-20"
+          class="emotion-6 emotion-7"
         >
           <div
-            class="emotion-4 emotion-5"
+            class="emotion-8 emotion-9"
           >
             <strong
               aria-hidden="true"
-              class="guidance-message emotion-0 emotion-1"
+              class="guidance-message emotion-10 emotion-11"
             >
               Contains strong language and adult humour.
             </strong>
             <noscript
-              class="emotion-2 emotion-3"
+              class="emotion-12 emotion-13"
             />
           </div>
           <button
             class="emotion-14 emotion-15 emotion-16"
           >
             <span
-              class="emotion-6 emotion-7"
+              class="emotion-17 emotion-18"
             >
               Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
             </span>
             <div
               aria-hidden="true"
-              class="emotion-10 emotion-11"
+              class="emotion-19 emotion-20"
             >
               <svg
                 aria-hidden="true"
-                class="emotion-8 emotion-9"
+                class="emotion-21 emotion-22"
                 focusable="false"
                 height="12px"
                 viewBox="0 0 32 32"
@@ -471,7 +450,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
             </div>
             <time
               aria-hidden="true"
-              class="emotion-12 emotion-13"
+              class="emotion-23 emotion-24"
               datetime="PT3M11S"
             >
               03:11
@@ -479,7 +458,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           </button>
           <img
             alt=""
-            class="emotion-17 emotion-18"
+            class="emotion-25 emotion-26"
             src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
             srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
           />

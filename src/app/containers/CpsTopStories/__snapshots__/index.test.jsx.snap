@@ -2,213 +2,206 @@
 
 exports[`CpsRelatedContent should render Top Stories components when given appropriate data 1`] = `
 <DocumentFragment>
-  .emotion-43 {
+  .emotion-1 {
   width: 100%;
 }
 
-@supports (display:grid) {
-  .emotion-43 {
+@supports (display: grid) {
+  .emotion-1 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-43 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(20,1fr);
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-43 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-43 {
+@media (min-width: 80rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-.emotion-40 {
+.emotion-4 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-40 {
+@media (max-width: 14.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-40 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-40 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-40 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-40 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-40 {
+@media (min-width: 80rem) {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-40 {
+@supports (display: grid) {
+  .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-40 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-40 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .emotion-4 {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-7 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -216,37 +209,37 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   margin-top: 0;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-11 {
+@media (min-width: 63rem) {
+  .emotion-7 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     margin-top: 0;
   }
 }
 
-.emotion-0 {
+.emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-9 {
     border-color: windowText;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-9 {
     position: absolute;
     left: 0;
     right: 0;
@@ -254,12 +247,12 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
-.emotion-8 {
+.emotion-11 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,17 +262,17 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 2.75rem;
   -webkit-align-items: baseline;
@@ -288,8 +281,8 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-15 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -297,7 +290,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   }
 }
 
-.emotion-2 {
+.emotion-17 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -316,103 +309,103 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     padding-right: 1rem;
   }
 }
 
-.emotion-37 {
+.emotion-19 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.emotion-23 {
+.emotion-21 {
   padding: 0.5rem 0 1rem;
 }
 
-@media (max-width:62.9375rem) {
-  .emotion-23 {
+@media (max-width: 62.9375rem) {
+  .emotion-21 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-23:last-child {
+.emotion-21:last-child {
   border: none;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-23 {
+@media (min-width: 37.5rem) {
+  .emotion-21 {
     padding: 1rem 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-23 {
+@media (min-width: 63rem) {
+  .emotion-21 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-23:first-child {
+.emotion-21:first-child {
   padding-top: 0;
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23:first-child {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-21:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-23:last-child {
+.emotion-21:last-child {
   padding-bottom: 0;
 }
 
-.emotion-21 {
+.emotion-23 {
   position: relative;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-21 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-23 {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
-    .emotion-21 {
+  @media (min-width: 37.5rem) {
+    .emotion-23 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
-    .emotion-21 {
+  @media (min-width: 63rem) {
+    .emotion-23 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-19 {
+.emotion-25 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -420,50 +413,50 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   width: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-19 {
+@media (min-width: 37.5rem) {
+  .emotion-25 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
+@media (min-width: 63rem) {
+  .emotion-25 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-19 >div {
+.emotion-25>div {
   vertical-align: middle;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-25 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
+    grid-column: 3/span 4;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:63rem) {
-    .emotion-19 {
+  @media (min-width: 63rem) {
+    .emotion-25 {
       padding-top: 0;
     }
-}
+  }
 }
 
-.emotion-19 >div {
+.emotion-25>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-19 svg {
+.emotion-25 svg {
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-27 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -475,21 +468,21 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   display: inline;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-15 {
+@media (min-width: 37.5rem) {
+  .emotion-27 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-13 {
+.emotion-29 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -498,7 +491,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   overflow-wrap: anywhere;
 }
 
-.emotion-13:before {
+.emotion-29:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -510,17 +503,17 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   z-index: 1;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-29:hover,
+.emotion-29:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-13:visited {
+.emotion-29:visited {
   color: #6E6E73;
 }
 
-.emotion-17 {
+.emotion-31 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -530,15 +523,15 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-31 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-17 {
+@media (min-width: 37.5rem) {
+  .emotion-31 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -546,32 +539,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 <section
     aria-labelledby="top-stories-heading"
-    class="emotion-42 emotion-43 emotion-41"
+    class="emotion-0 emotion-1 emotion-2"
     data-e2e="top-stories-heading"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-39 emotion-40 emotion-41"
+      class="emotion-3 emotion-4 emotion-2"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="emotion-6 emotion-7 emotion-8"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-9 emotion-10"
         />
         <h2
-          class="emotion-8 emotion-9"
+          class="emotion-11 emotion-12"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="emotion-17 emotion-18"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -582,32 +575,32 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
         </h2>
       </div>
       <ul
-        class="emotion-37 emotion-38"
+        class="emotion-19 emotion-20"
         role="list"
       >
         <li
-          class="emotion-23 emotion-24"
+          class="emotion-21 emotion-22"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-23 emotion-24"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="emotion-25 emotion-26"
               dir="ltr"
             >
               <h3
-                class="emotion-15 emotion-16"
+                class="emotion-27 emotion-28"
               >
                 <a
-                  class="emotion-13 emotion-14"
+                  class="emotion-29 emotion-30"
                   href="/mundo/noticias-internacional-51939501"
                 >
                   China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
                 </a>
               </h3>
               <time
-                class="emotion-17 emotion-18"
+                class="emotion-31 emotion-32"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -616,28 +609,28 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
           </div>
         </li>
         <li
-          class="emotion-23 emotion-24"
+          class="emotion-21 emotion-22"
         >
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-23 emotion-24"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-19 emotion-20"
+              class="emotion-25 emotion-26"
               dir="ltr"
             >
               <h3
-                class="emotion-15 emotion-16"
+                class="emotion-27 emotion-28"
               >
                 <a
-                  class="emotion-13 emotion-14"
+                  class="emotion-29 emotion-30"
                   href="/pidgin/tori-51945757"
                 >
                   Nigeria don get five new cases of Coronavirus - See how e happun
                 </a>
               </h3>
               <time
-                class="emotion-17 emotion-18"
+                class="emotion-31 emotion-32"
                 datetime="2020-02-03"
               >
                 3rd February 2020
@@ -653,213 +646,206 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
 
 exports[`CpsRelatedContent should render Top Stories components when without <ul> 1`] = `
 <DocumentFragment>
-  .emotion-29 {
+  .emotion-1 {
   width: 100%;
 }
 
-@supports (display:grid) {
-  .emotion-29 {
+@supports (display: grid) {
+  .emotion-1 {
     display: grid;
     position: initial;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(8,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-29 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(20,1fr);
+  @media (min-width: 80rem) {
+    .emotion-1 {
+      grid-template-columns: repeat(20, 1fr);
       grid-column-end: span 20;
       grid-column-gap: 1rem;
     }
-}
+  }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-29 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 63rem;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-29 {
+@media (min-width: 80rem) {
+  .emotion-1 {
     margin: 0 auto;
     max-width: 80rem;
   }
 }
 
-.emotion-26 {
+.emotion-4 {
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
 }
 
-@media (max-width:14.9375rem) {
-  .emotion-26 {
+@media (max-width: 14.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-  .emotion-26 {
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-4 {
     padding: 0 0.5rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-  .emotion-26 {
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-26 {
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-4 {
     padding: 0 1rem;
     margin-left: 0%;
   }
 }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-  .emotion-26 {
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-4 {
     margin-left: 16.666666666666668%;
   }
 }
 
-@media (min-width:80rem) {
-  .emotion-26 {
+@media (min-width: 80rem) {
+  .emotion-4 {
     margin-left: 33.333333333333336%;
   }
 }
 
-@supports (display:grid) {
-  .emotion-26 {
+@supports (display: grid) {
+  .emotion-4 {
     display: block;
+    width: initial;
+    margin: 0;
   }
 
-@media (max-width:14.9375rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (max-width: 14.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:15rem) and (max-width:24.9375rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 0.5rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:25rem) and (max-width:37.4375rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       padding: 0 1rem;
       grid-column-start: 1;
     }
-}
+  }
 
-@media (min-width:63rem) and (max-width:79.9375rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(6,1fr);
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
     }
-}
+  }
 
-@media (min-width:80rem) {
-    .emotion-26 {
-      width: initial;
-      margin: 0;
-      grid-template-columns: repeat(12,1fr);
+  @media (min-width: 80rem) {
+    .emotion-4 {
+      grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
     }
-}
+  }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-26 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .emotion-4 {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.emotion-7 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -867,37 +853,37 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   margin-top: 0;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     margin-top: 1.5rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-11 {
+@media (min-width: 63rem) {
+  .emotion-7 {
     margin-bottom: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-11 {
+@media (min-width: 37.5rem) {
+  .emotion-7 {
     margin-top: 0;
   }
 }
 
-.emotion-0 {
+.emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
 }
 
-@media screen and (-ms-high-contrast:active) {
-  .emotion-0 {
+@media screen and (-ms-high-contrast: active) {
+  .emotion-9 {
     border-color: windowText;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-0 {
+@media (min-width: 37.5rem) {
+  .emotion-9 {
     position: absolute;
     left: 0;
     right: 0;
@@ -905,12 +891,12 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   }
 }
 
-.emotion-8 {
+.emotion-11 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-6 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -920,17 +906,17 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   flex-direction: column;
 }
 
-.emotion-4 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 2.75rem;
   -webkit-align-items: baseline;
@@ -939,8 +925,8 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: baseline;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-4 {
+@media (min-width: 37.5rem) {
+  .emotion-15 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -948,7 +934,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   }
 }
 
-.emotion-2 {
+.emotion-17 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -967,29 +953,41 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   align-items: center;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-2 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     margin: 0;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-2 {
+@media (min-width: 37.5rem) {
+  .emotion-17 {
     padding-right: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-19 {
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-19 {
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -997,27 +995,27 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   position: relative;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
+@supports (grid-template-columns: fit-content(200px)) {
   .emotion-21 {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
-@media (min-width:37.5rem) {
+  @media (min-width: 37.5rem) {
     .emotion-21 {
       grid-column-gap: 1rem;
     }
-}
+  }
 
-@media (min-width:63rem) {
+  @media (min-width: 63rem) {
     .emotion-21 {
       display: block;
     }
-}
+  }
 }
 
-.emotion-19 {
+.emotion-23 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1025,50 +1023,50 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   width: 100%;
 }
 
-@media (min-width:37.5rem) {
-  .emotion-19 {
+@media (min-width: 37.5rem) {
+  .emotion-23 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width:63rem) {
-  .emotion-19 {
+@media (min-width: 63rem) {
+  .emotion-23 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
   }
 }
 
-.emotion-19 >div {
+.emotion-23>div {
   vertical-align: middle;
 }
 
-@supports (grid-template-columns:fit-content(200px)) {
-  .emotion-19 {
+@supports (grid-template-columns: fit-content(200px)) {
+  .emotion-23 {
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 3 / span 4;
-    grid-column: 1 / span 6;
+    grid-column: 3/span 4;
+    grid-column: 1/span 6;
   }
 
-@media (min-width:63rem) {
-    .emotion-19 {
+  @media (min-width: 63rem) {
+    .emotion-23 {
       padding-top: 0;
     }
-}
+  }
 }
 
-.emotion-19 >div {
+.emotion-23>div {
   display: inline-block;
   vertical-align: initial;
 }
 
-.emotion-19 svg {
+.emotion-23 svg {
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-25 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1080,21 +1078,21 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   display: inline;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-15 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-25 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-15 {
+@media (min-width: 37.5rem) {
+  .emotion-25 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-13 {
+.emotion-27 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1103,7 +1101,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   overflow-wrap: anywhere;
 }
 
-.emotion-13:before {
+.emotion-27:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1115,17 +1113,17 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   z-index: 1;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
+.emotion-27:hover,
+.emotion-27:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-13:visited {
+.emotion-27:visited {
   color: #6E6E73;
 }
 
-.emotion-17 {
+.emotion-29 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1135,60 +1133,48 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
   font-style: normal;
 }
 
-@media (min-width:20rem) and (max-width:37.4375rem) {
-  .emotion-17 {
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-@media (min-width:37.5rem) {
-  .emotion-17 {
+@media (min-width: 37.5rem) {
+  .emotion-29 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-@media (min-width:37.5rem) and (max-width:62.9375rem) {
-  .emotion-23 {
-    padding-top: 1rem;
-  }
-}
-
-@media (min-width:63rem) {
-  .emotion-23 {
-    padding-bottom: 1.5rem;
-  }
-}
-
 <section
     aria-labelledby="top-stories-heading"
-    class="emotion-28 emotion-29 emotion-27"
+    class="emotion-0 emotion-1 emotion-2"
     data-e2e="top-stories-heading"
     dir="ltr"
     role="region"
   >
     <div
-      class="emotion-25 emotion-26 emotion-27"
+      class="emotion-3 emotion-4 emotion-2"
       dir="ltr"
     >
       <div
-        class="emotion-10 emotion-11 emotion-12"
+        class="emotion-6 emotion-7 emotion-8"
       >
         <div
-          class="emotion-0 emotion-1"
+          class="emotion-9 emotion-10"
         />
         <h2
-          class="emotion-8 emotion-9"
+          class="emotion-11 emotion-12"
         >
           <span
-            class="emotion-6 emotion-7"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="emotion-4 emotion-5"
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-2 emotion-3"
+                class="emotion-17 emotion-18"
                 dir="ltr"
                 id="top-stories-heading"
               >
@@ -1199,28 +1185,28 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
         </h2>
       </div>
       <div
-        class="emotion-23 emotion-24"
+        class="emotion-19 emotion-20"
       >
         <div
           class="emotion-21 emotion-22"
           data-e2e="story-promo"
         >
           <div
-            class="emotion-19 emotion-20"
+            class="emotion-23 emotion-24"
             dir="ltr"
           >
             <h3
-              class="emotion-15 emotion-16"
+              class="emotion-25 emotion-26"
             >
               <a
-                class="emotion-13 emotion-14"
+                class="emotion-27 emotion-28"
                 href="/mundo/noticias-internacional-51939501"
               >
                 China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
               </a>
             </h3>
             <time
-              class="emotion-17 emotion-18"
+              class="emotion-29 emotion-30"
               datetime="2020-02-03"
             >
               3rd February 2020

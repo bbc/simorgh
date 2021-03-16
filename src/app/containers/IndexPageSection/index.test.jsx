@@ -1,11 +1,9 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { service as newsConfig } from '#lib/config/services/news';
 import IndexPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-
-const React = jest.requireActual('react');
 
 const group = {
   type: 'responsive-top-stories',
@@ -365,43 +363,36 @@ const startsWithRadioBulletins = {
   },
 };
 
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn(),
-  };
-});
-const { useContext } = jest.requireMock('react');
+const withServiceContext = component => (
+  <ServiceContextProvider service="news">{component}</ServiceContextProvider>
+);
 
 describe('IndexPageSection Container', () => {
   describe('snapshots', () => {
-    beforeEach(() => {
-      useContext.mockReturnValue(newsConfig.default);
-    });
-
-    afterEach(() => {
-      useContext.mockReset();
-    });
-
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      <IndexPageSection group={group} sectionNumber={0} />,
+      withServiceContext(<IndexPageSection group={group} sectionNumber={0} />),
     );
 
     shouldMatchSnapshot(
       'should render correctly with a linking strapline',
-      <IndexPageSection group={groupWithLink} sectionNumber={2} />,
+      withServiceContext(
+        <IndexPageSection group={groupWithLink} sectionNumber={2} />,
+      ),
     );
 
     shouldMatchSnapshot(
       'should render without a bar',
-      <IndexPageSection group={group} bar={false} sectionNumber={1} />,
+      withServiceContext(
+        <IndexPageSection group={group} bar={false} sectionNumber={1} />,
+      ),
     );
 
     shouldMatchSnapshot(
       'should render with only one item',
-      <IndexPageSection group={hasOneItem} sectionNumber={0} />,
+      withServiceContext(
+        <IndexPageSection group={hasOneItem} sectionNumber={0} />,
+      ),
     );
   });
 
@@ -412,7 +403,6 @@ describe('IndexPageSection Container', () => {
 
     beforeEach(() => {
       jest.spyOn(SectionLabel, 'default');
-      useContext.mockReturnValue(newsConfig.default);
     });
 
     it('should be called with true when sectionNumber === 0', () => {
@@ -441,14 +431,6 @@ describe('IndexPageSection Container', () => {
   });
 
   describe('assertions', () => {
-    beforeEach(() => {
-      useContext.mockImplementation(React.useContext);
-    });
-
-    afterEach(() => {
-      useContext.mockReset();
-    });
-
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
         <ServiceContextProvider service="igbo">

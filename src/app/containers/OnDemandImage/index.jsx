@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import is from 'ramda/src/is';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -6,7 +7,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
@@ -15,7 +15,7 @@ const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 const ImageContainer = styled.div`
   padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_TRPL};
   ${paddingDir}: ${GEL_SPACING_DBL};
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+  @media (max-width: 22.4375rem) {
     display: none;
   }
 `;
@@ -30,8 +30,10 @@ const smallImageSize = 128;
 const mediumImageSize = 240;
 const largeImageSize = 480;
 
-const OnDemandImage = ({ imageUrl, dir }) => {
-  const { defaultImageAltText: alt } = useContext(ServiceContext);
+const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
+  const { defaultImageAltText } = useContext(ServiceContext);
+
+  const alt = is(String, altFromProps) ? altFromProps : defaultImageAltText;
 
   const src = getSrc({ imageUrl, size: smallImageSize });
   const srcset = getSrcSet({
@@ -57,10 +59,12 @@ const OnDemandImage = ({ imageUrl, dir }) => {
 
 OnDemandImage.propTypes = {
   imageUrl: string.isRequired,
+  alt: string,
   dir: string,
 };
 
 OnDemandImage.defaultProps = {
+  alt: null,
   dir: 'ltr',
 };
 

@@ -20,30 +20,40 @@ jobs:
       LOG_LEVEL: 'error'
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install & Build Simorgh
-        run: |
-          npm ci
-          npm run build:local
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn ci
+
+      - name: Build Simorgh
+        run: yarn build:local
 
       - name: Start Simorgh Server
         run: nohup node build/server.js > /dev/null 2>&1 &
 
       - name: Run AMP Validator
-        run: npm run amp:validate
+        run: yarn amp:validate
 
       - name: Run bbc-a11y
-        run: npm run bbcA11y:ci
+        run: yarn bbcA11y:ci
 
       - name: Run Lighthouse
-        run: npm run lighthouse
+        run: yarn lighthouse
 
       - name: Run Puppeteer Tests
         run: |
-          npm install --no-save puppeteer
-          npm run test:puppeteer
+          yarn add puppeteer
+          yarn test:puppeteer
+          yarn remove puppeteer

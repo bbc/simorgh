@@ -97,7 +97,7 @@ exports[`AMP Story Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=58&p=story%3A%3Akyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Abb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test%2BSTY%2Bfor%2Bsocial%2Bembeds%2B-%2BBBC%2BNews%2B%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2B%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B]&x11=[2020-04-24T14%3A51%3A17.000Z]&x12=[2020-04-24T14%3A51%3A17.000Z]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=58&p=kyrgyz.story.23292889.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3Abb9390aa-4b35-e448-b295-cbd7369fe457]&x2=[amp]&x3=[news-kyrgyz]&x4=[ky]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Test%2BSTY%2Bfor%2Bsocial%2Bembeds%2B-%2BBBC%2BNews%2B%D0%9A%D1%8B%D1%80%D0%B3%D1%8B%D0%B7%2B%D0%9A%D1%8B%D0%B7%D0%BC%D0%B0%D1%82%D1%8B]&x11=[2020-04-24T14%3A51%3A17.000Z]&x12=[2020-04-24T14%3A51%3A17.000Z]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
-
-exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2020 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
-
-exports[`AMP Story Page Footer Link should match text and url 1`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Кыргыз КызMATы",
   "url": "/kyrgyz",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 2`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Эмнеге BBC News ишенсе болот?",
   "url": "https://www.bbc.com/kyrgyz/institutional-49677275",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 3`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Колдонуу эрежелери",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157280",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 4`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Би-Би-Си жөнүндө",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157281",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 5`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Купуялык",
   "url": "https://www.bbc.com/kyrgyz/institutional-38157282",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 6`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 7`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Би-Би-Си менен байланышыңыз",
   "url": "https://www.bbc.co.uk/send/u50853445",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 8`] = `
+exports[`AMP Story Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP Story Page Footer Link should match text and url 9`] = `
+exports[`AMP Story Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
-  "text": "Башка интернет сайттардын мазмуну боюнча биздин позиция.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
 }
 `;
+
+exports[`AMP Story Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/kyrgyz"`;
+
+exports[`AMP Story Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. Би-Би-Си сырткы интернет сайттардын мазмуну үчүн жооптуу эмес. Башка интернет сайттардын мазмуну боюнча биздин позиция."`;
 
 exports[`AMP Story Page Header I can see the branding 1`] = `"BBC News, Кыргыз КызMATы"`;
 
@@ -274,63 +274,63 @@ Object {
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 2`] = `
 Object {
   "sizes": "72x72",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-72x72.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-72x72.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 3`] = `
 Object {
   "sizes": "96x96",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-96x96.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-96x96.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 4`] = `
 Object {
   "sizes": "128x128",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-128x128.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-128x128.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 5`] = `
 Object {
   "sizes": "144x144",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-144x144.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-144x144.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 6`] = `
 Object {
   "sizes": "152x152",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-152x152.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-152x152.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 7`] = `
 Object {
   "sizes": "180x180",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-180x180.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-180x180.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 8`] = `
 Object {
   "sizes": "192x192",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-192x192.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-192x192.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 9`] = `
 Object {
   "sizes": "384x384",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-384x384.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-384x384.png",
 }
 `;
 
 exports[`AMP Story Page SEO Apple Touch Icon should match attributes 10`] = `
 Object {
   "sizes": "512x512",
-  "url": "https://news.files.bbci.co.uk/include/articles/public/kyrgyz/images/icons/icon-512x512.png",
+  "url": "https://static.files.bbci.co.uk/ws/simorgh-assets/public/kyrgyz/images/icons/icon-512x512.png",
 }
 `;
 
@@ -394,7 +394,7 @@ Object {
         "name": "BBC News Кыргыз Кызматы",
         "publishingPrinciples": "https://www.bbc.com/kyrgyz/institutional-49677275",
       },
-      "thumbnailUrl": "https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png",
+      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_kyrgyz/CF33/test/_63734035_socialmedia.jpg",
       "url": "http://localhost:7080/kyrgyz/23292889",
     },
   ],

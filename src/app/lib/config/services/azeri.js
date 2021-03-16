@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import { azeri as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Baku';
@@ -47,6 +52,9 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
     translations: {
       ads: {
@@ -118,29 +126,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Kukilərlə razı olduğunuzu bizə bildirin',
-          description: {
-            uk: {
-              first: 'Biz ',
-              linkText: 'kukilərdən',
-              last:
-                ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Məlumat toplanmasına razılaşın və davam edin',
+            reject: 'Məlumat toplanmasını rədd edin və davam edin',
+            initial: {
+              title: 'AMP-də məlumat toplanmasına razı olduğunuzu bildirin',
+              description: {
+                first: 'Biz və partnyorlarımız ',
+                linkText: 'kukilər',
+                last:
+                  ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Seçimlərimi idarə edin',
             },
-            international: {
-              first: 'Biz və partnyorlarımız ',
-              linkText: 'kukilər',
-              last:
-                ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP səhifələrindəki razılıq seçimlərini idarə edin',
+              description: {
+                para1:
+                  'Bu seçimlər yalnız AMP səhifələrə aiddir. BBC-nin qeyri-AMP səhifələrinə keçərkən bu seçimləri yenidən təyin etməyiniz xahiş oluna bilər.',
+                para2:
+                  'Açdığınız mobil səhifə Google AMP texnologiyası istifadə olunmaqla hazırlanıb.',
+                heading2: 'Olduqca zəruri məlumatların toplanması',
+                para3:
+                  'Veb səhifələrimizin işləməsi üçün bəzi məhdud məlumatları razılığınız olmadan cihazınızda saxlayırıq.',
+                para4: {
+                  text:
+                    'Veb səhifələrimizin işləməsi üçün cihazınızda saxladığımız lazımi məlumatlar haqqında daha ətraflı oxuyun.',
+                  url:
+                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Seçim üstünlüklərinizi cihazınızda saxlamaq üçün lokal yaddaşdan istifadə edirik.',
+                heading3: 'Əlavə məlumat toplanması',
+                para6:
+                  'AMP səhifələrdə məlumatların toplanmasına razılıq verdiyinizdə Birləşmiş Krallığın xaricində olduğunuz vaxt sizə uyğun, fərdiləşdirilmiş reklamın göstərilməsinə icazə vermis olursunuz.',
+                para7: {
+                  text:
+                    'BBC-də və reklam partnyorlarımızda reklamı necə fərdiləşdirdiyimiz barədə daha ətraflı oxuyun.',
+                  url:
+                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Aşağıdakı “Məlumat toplanmasını rədd edin və davam edin” düyməsinə basaraq fərdi reklam almamağı seçə bilərsiniz. Lütfən nəzərə alın ki, bu halda fərdiləşdirilməmiş reklam hələ də görünəcək.',
+                para9:
+                  'Səhifənin altında "Reklam Seçimləri / Məlumatımı satmayın" düyməsinə basaraq bu seçimləri istənilən vaxt dəyişə bilərsiniz.',
+              },
             },
           },
-          accept: 'Bəli, razıyam',
-          reject: 'Xeyr, kökləmələrə keçin',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Kukilərlə razı olduğunuzu bizə bildirin',
+            description: {
+              uk: {
+                first: 'Biz ',
+                linkText: 'kukilərdən',
+                last:
+                  ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Biz və partnyorlarımız ',
+                linkText: 'kukilər',
+                last:
+                  ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Bəli, razıyam',
+            reject: 'Xeyr, kökləmələrə keçin',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -158,6 +217,7 @@ export const service = {
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'Daha ətraflı',
       },
       socialEmbed: {
         caption: {
@@ -207,7 +267,8 @@ export const service = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -233,6 +294,7 @@ export const service = {
           text: 'BBC ilə Əlaqə',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -3,8 +3,8 @@ import { string, shape, arrayOf } from 'prop-types';
 const bylineBlockPropTypes = {
   blocks: arrayOf(
     shape({
-      title: string,
-      name: string,
+      title: string.isRequired,
+      name: string.isRequired,
     }),
   ),
   className: string,

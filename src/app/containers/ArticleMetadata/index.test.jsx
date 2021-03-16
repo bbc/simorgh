@@ -9,6 +9,7 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
@@ -20,7 +21,7 @@ const Context = ({ service, children }) => (
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         pathname="/pathname"
         service={service}
         statusCode={200}
@@ -69,6 +70,40 @@ it('should render the article tags', async () => {
     }));
 
     expect(actual).toEqual(expected);
+  });
+});
+
+describe('ArticleMetadata get branded image', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.SIMORGH_APP_ENV = 'test';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
+  });
+
+  it('should render og:image if image provided', async () => {
+    render(
+      <Context service="news">
+        <ArticleMetadata
+          {...propsForNewsInternational}
+          imageLocator="c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg"
+          imageAltText="Mock Image Alt Text"
+        />
+      </Context>,
+    );
+
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('head > meta[property="og:image"]')
+          .getAttribute('content'),
+      ).toEqual(
+        'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+      );
+    });
   });
 });
 

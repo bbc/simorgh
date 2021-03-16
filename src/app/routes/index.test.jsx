@@ -14,6 +14,7 @@ import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
+import podcastPageJson from '#data/arabic/podcasts/p02pc9qc.json';
 import onDemandRadioPageJson from '#data/indonesia/bbc_indonesian_radio/w172xh267fpn19l.json';
 import onDemandTvPageJson from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4.json';
 import articlePageJson from '#data/persian/articles/c4vlle3q337o.json';
@@ -28,6 +29,8 @@ import storyPageMostReadData from '#data/pidgin/mostRead/index.json';
 import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
+import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
 // mock pages/index.js to return a non async page component
@@ -35,7 +38,7 @@ jest.mock('#pages/index.js', () => ({
   StoryPage: jest.requireActual('#pages/StoryPage').default,
   OnDemandTvPage: jest.requireActual('#pages/OnDemandTvPage').default,
   PhotoGalleryPage: jest.requireActual('#pages/PhotoGalleryPage').default,
-  OnDemandRadioPage: jest.requireActual('#pages/OnDemandRadioPage').default,
+  OnDemandAudioPage: jest.requireActual('#pages/OnDemandAudioPage').default,
   MostReadPage: jest.requireActual('#pages/MostReadPage').default,
   MostWatchedPage: jest.requireActual('#pages/MostWatchedPage').default,
   MediaAssetPage: jest.requireActual('#pages/MediaAssetPage').default,
@@ -90,7 +93,7 @@ it('should have correct properties in each route', () => {
 
     // Last route should be catchall (no path specified) error page
     if (index === routes.length - 1) {
-      expect(route.pageType).toEqual('error');
+      expect(route.pageType).toEqual(ERROR_PAGE);
       expect(route).not.toHaveProperty('path');
     } else {
       expect(route).toHaveProperty('path');
@@ -125,6 +128,33 @@ it('should route to and render live radio page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
+it('should route to and render the podcast page', async () => {
+  const pathname = '/arabic/podcasts/p02pc9qc';
+  fetchMock.mock(
+    `http://localhost${pathname}.json?renderer_env=live`,
+    podcastPageJson,
+  );
+
+  const { getInitialData, pageType } = getMatchingRoute(pathname);
+  const { pageData } = await getInitialData({
+    path: pathname,
+    pageType,
+    toggles: {
+      recentAudioEpisodes: { enabled: false, value: 4 },
+    },
+  });
+  const { getByText } = renderRouter({
+    pathname,
+    pageData,
+    pageType,
+    service: 'arabic',
+  });
+
+  const EXPECTED_TEXT_RENDERED_IN_DOCUMENT = 'BBC Xtra';
+
+  expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
+});
+
 it('should route to and render the onDemand Radio page', async () => {
   const pathname = '/indonesia/bbc_indonesian_radio/w172xh267fpn19l';
   fetchMock.mock(
@@ -136,6 +166,9 @@ it('should route to and render the onDemand Radio page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      recentAudioEpisodes: { enabled: false, value: 4 },
+    },
   });
   const { getByText } = renderRouter({
     pathname,
@@ -160,6 +193,9 @@ it('should route to and render the onDemand TV Brand page', async () => {
   const { pageData } = await getInitialData({
     path: pathname,
     pageType,
+    toggles: {
+      recentVideoEpisodes: { enabled: false, value: 4 },
+    },
   });
   const { getByText } = renderRouter({
     pathname,
@@ -213,7 +249,7 @@ it('should route to and render a front page', async () => {
   expect(getByText(EXPECTED_TEXT_RENDERED_IN_DOCUMENT)).toBeInTheDocument();
 });
 
-it('should route to and render a skeleton most watched page', async () => {
+it('should route to and render a most watched page', async () => {
   process.env.SIMORGH_APP_ENV = 'local';
   const pathname = '/pidgin/media/video';
   fetchMock.mock('http://localhost/pidgin/mostwatched.json', mostWatchedData);
@@ -429,7 +465,7 @@ it('should fallback to and render a 500 error page if there is a problem with pa
   });
   const { getByText } = renderRouter({
     pathname,
-    pageType: 'frontPage',
+    pageType: FRONT_PAGE,
     service: 'afrique',
     error: {
       message: error,

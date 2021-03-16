@@ -19,14 +19,16 @@ const AdContainer = styled.section`
 
 export const getBootstrapSrc = (queryString, useLegacy = false) => {
   const adsTestScript =
-    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap.js';
   const adsLegacyTestScript =
-    'https://gn-web-assets.api.bbc.com/ngas/test/dotcom-bootstrap-legacy.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/test/dotcom-bootstrap-legacy.js';
   const adsLiveScript =
-    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap.js';
   const adsLegacyLiveScript =
-    'https://gn-web-assets.api.bbc.com/ngas/dotcom-bootstrap-legacy.js';
+    'https://gn-web-assets.api.bbc.com/ngas/latest/dotcom-bootstrap-legacy.js';
+
   const useLiveSrc = isLive() || queryString.includes('ads-js-env=live');
+
   if (useLiveSrc) {
     return useLegacy ? adsLegacyLiveScript : adsLiveScript;
   }
@@ -70,6 +72,7 @@ const CanonicalAd = ({ slotType, className }) => {
   return (
     <>
       <Helmet>
+        {/* Add Ad scripts to document head */}
         <script type="module" src={getBootstrapSrc(queryString)} async />
         <script
           nomodule="nomodule"
@@ -77,6 +80,7 @@ const CanonicalAd = ({ slotType, className }) => {
           async
         />
       </Helmet>
+
       <AdContainer
         slotType={slotType}
         aria-label={ariaLabel}
