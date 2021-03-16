@@ -224,6 +224,7 @@ const baseServiceConfig = {
       nextRadioShow: 'Наступна радіопрограма',
       duration: 'Тривалість',
       recentEpisodes: 'Більше',
+      podcastExternalLinks: 'Цей подкаст доступний у',
     },
     socialEmbed: {
       caption: {
@@ -276,7 +277,8 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href:
+        'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [
@@ -297,6 +299,7 @@ const baseServiceConfig = {
         text: "Зв'язатися з BBC",
       },
       {
+        id: 'COOKIE_SETTINGS',
         href:
           'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
         text: 'AdChoices / Do Not Sell My Info',

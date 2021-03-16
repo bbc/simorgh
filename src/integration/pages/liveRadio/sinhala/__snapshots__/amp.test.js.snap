@@ -137,65 +137,65 @@ Object {
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
-
-exports[`AMP Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
-
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 1`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, සිංහල",
   "url": "/sinhala",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 2`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි",
   "url": "https://www.bbc.com/sinhala/institutional-50288553",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 3`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "භාවිතයේ කොන්දේසි",
   "url": "https://www.bbc.com/sinhala/institutional-36017568",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 4`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
   "url": "https://www.bbc.com/sinhala/institutional-36019591",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 5`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "කුකීස්",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 6`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "බීබීසී අමතන්න",
   "url": "https://www.bbc.co.uk/send/u50853687",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 7`] = `
+exports[`AMP Sinhala Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP Sinhala Live Radio Page Footer Link should match text and url 8`] = `
+exports[`AMP Sinhala Live Radio Page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
-  "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
 }
 `;
+
+exports[`AMP Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
+
+exports[`AMP Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
 exports[`AMP Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
 

@@ -3,16 +3,11 @@ import styled from '@emotion/styled';
 import AmpGeo from '@bbc/psammead-amp-geo';
 import Banner from './Banner/index.amp';
 
-const parentId = 'consent';
-const promptId = 'consent-prompt';
-const privacyId = 'privacy';
-const cookieId = 'cookie';
-
 const ampConsentData = {
   consents: {
     'user-consent': {
       promptIfUnknownForGeoGroup: 'eea',
-      promptUI: promptId,
+      promptUI: 'consent-prompt',
     },
   },
   policy: {
@@ -49,20 +44,20 @@ const AmpConsentWrapper = styled.div`
 const Amp = () => (
   <AmpConsentWrapper>
     <AmpGeo />
-    <amp-consent id={parentId} layout="nodisplay">
+    <amp-consent id="consent" layout="nodisplay">
       {jsonInlinedScript(ampConsentData)}
-      <div id={promptId}>
+      <div id="consent-prompt">
         <Banner
           type="privacy"
-          acceptAction={`tap:${cookieId}.show, ${privacyId}.hide`}
-          rejectAction={`tap:${cookieId}.show, ${privacyId}.hide`}
-          promptId={privacyId}
+          acceptAction="tap:cookie.show, privacy.hide"
+          rejectAction="tap:cookie.show, privacy.hide"
+          promptId="privacy"
         />
         <Banner
           type="cookie"
-          acceptAction={`tap:${parentId}.accept`}
-          rejectAction={`tap:${parentId}.reject`}
-          promptId={cookieId}
+          acceptAction="tap:consent.accept"
+          rejectAction="tap:consent.reject"
+          promptId="cookie"
           hidden
         />
       </div>

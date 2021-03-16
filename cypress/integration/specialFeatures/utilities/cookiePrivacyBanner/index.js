@@ -76,11 +76,8 @@ export const getCookieBannerManageSettingsButton = (service, variant) =>
         .amp.initial.manage,
     );
 
-export const getCookieBannerManageSettings = (service, variant) =>
-  cy.contains(
-    appConfig[config[service].name][variant].translations.consentBanner.cookie
-      .amp.manage.description.heading3,
-  );
+export const getCookieBannerManageSettings = () =>
+  cy.get('[data-testid=amp-cookie-banner-manage-settings]');
 
 export const getCookieBannerAcceptInManageSettings = (service, variant) =>
   cy

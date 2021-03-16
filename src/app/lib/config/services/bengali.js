@@ -281,7 +281,8 @@ export const service = {
         text: 'বিবিসির ওপর কেন আপনি আস্থা রাখতে পারেন',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'বাইরের লিংক সম্পর্কে বিবিসির দৃষ্টিভঙ্গি সম্বন্ধে পড়ুন।',
       },
       links: [
@@ -306,6 +307,7 @@ export const service = {
           text: 'বিবিসির সঙ্গে যোগাযোগ করুন',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

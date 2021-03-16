@@ -289,7 +289,8 @@ export const service = {
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
@@ -314,6 +315,7 @@ export const service = {
           text: 'زموږ سره اړیکي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

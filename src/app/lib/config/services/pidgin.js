@@ -129,8 +129,7 @@ export const service = {
         },
         cookie: {
           amp: {
-            accept:
-              'Dis settings apply to AMP pages only. You fit see kwesion wey dey ask you to set dis preferences again if you visit non-AMP BBC pages.',
+            accept: 'Accept data collection and continue',
             reject: 'Reject data collection and continue',
             initial: {
               title:
@@ -307,7 +306,8 @@ export const service = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'De way wey we de take go external link.',
       },
       links: [
@@ -332,6 +332,7 @@ export const service = {
           text: 'Call BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

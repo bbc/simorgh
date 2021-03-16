@@ -4,72 +4,72 @@ exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"Wa
 
 exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=70&amp;p=pidgin.page&amp;x1=[urn%3Abbc%3Acps%3A52f3c7b1-83ed-2338-e050-17ac8045cd94]&amp;x2=[responsive]&amp;x3=[news-pidgin]&amp;x4=[pcm]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[Domot%2B-%2BBBC%2BNews%2BPidgin]&amp;x11=[1970-01-18T08%3A30%3A40.608Z]&amp;x12=[1970-01-19T01%3A24%3A09.011Z]\\"/>"`;
 
-exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
-
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
-
-exports[`Canonical Front Page Footer Link should match text and url 1`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Pidgin",
   "url": "/pidgin",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 2`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Why you fit trust BBC News",
   "url": "https://www.bbc.com/pidgin/institutional-48528766",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 3`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "How dem dey take use am",
   "url": "https://www.bbc.co.uk/usingthebbc/terms/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 4`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "As e concern BBC",
   "url": "https://www.bbc.co.uk/aboutthebbc",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 5`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Privacy Policy",
   "url": "https://www.bbc.co.uk/usingthebbc/privacy/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 6`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.co.uk/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 7`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Call BBC",
   "url": "https://www.bbc.co.uk/send/u50853577",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 8`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 9`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "De way wey we de take go external link.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
+
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 

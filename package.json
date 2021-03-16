@@ -8,7 +8,8 @@
     "@emotion/serialize": "1.0.0",
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
-    "lodash": "4.17.21"
+    "lodash": "4.17.21",
+    "elliptic": "6.5.4"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -87,7 +88,6 @@
     "@bbc/psammead-copyright": "3.0.12",
     "@bbc/psammead-detokeniser": "1.0.2",
     "@bbc/psammead-embed-error": "3.0.16",
-    "@bbc/psammead-episode-list": "1.0.24",
     "@bbc/psammead-figure": "2.0.5",
     "@bbc/psammead-grid": "3.0.15",
     "@bbc/psammead-heading-index": "3.0.12",
@@ -103,11 +103,10 @@
     "@bbc/psammead-navigation": "9.0.8",
     "@bbc/psammead-paragraph": "4.0.12",
     "@bbc/psammead-podcast-promo": "0.1.0-alpha.30",
-    "@bbc/psammead-radio-schedule": "5.1.26",
+    "@bbc/psammead-radio-schedule": "5.1.29",
     "@bbc/psammead-rich-text-transforms": "2.0.3",
     "@bbc/psammead-script-link": "3.0.14",
     "@bbc/psammead-section-label": "7.0.14",
-    "@bbc/psammead-sitewide-links": "6.0.13",
     "@bbc/psammead-social-embed": "3.1.10",
     "@bbc/psammead-story-promo": "8.0.15",
     "@bbc/psammead-story-promo-list": "6.0.13",

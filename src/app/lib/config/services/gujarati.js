@@ -274,7 +274,8 @@ export const service = {
         text: 'બીબીસી વિશ્વાસપાત્ર કેમ?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'બહારની વેબસાઇટ્સની લિંક આપવા અંગેની અમારી નીતિ વિશે વાંચો',
       },
       links: [
@@ -299,6 +300,7 @@ export const service = {
           text: 'બીબીસીનો સંપર્ક કરો',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -4,72 +4,72 @@ exports[`Canonical Front Page A11y I can see the skip to content link 1`] = `"إ
 
 exports[`Canonical Front Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=5&amp;p=arabic.page&amp;x1=[urn%3Abbc%3Acps%3A3f0c7dec-d826-8578-e050-380a4e807810]&amp;x2=[responsive]&amp;x3=[news-arabic]&amp;x4=[ar]&amp;x7=[index-home]&amp;x8=[simorgh-nojs]&amp;x9=[%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9%2B-%2BBBC%2BNews%2B%D8%B9%D8%B1%D8%A8%D9%8A]&amp;x11=[1970-01-18T02%3A13%3A01.429Z]&amp;x12=[1970-01-19T02%3A08%3A48.876Z]\\"/>"`;
 
-exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
-
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
-
-exports[`Canonical Front Page Footer Link should match text and url 1`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, عربي",
   "url": "/arabic",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 2`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "لماذا يمكنك الاعتماد على أخبار بي بي سي",
   "url": "https://www.bbc.com/arabic/institutional-49283069",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 3`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "شروط الاستخدام",
   "url": "https://www.bbc.com/arabic/institutional-37731351",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 4`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "عن بي بي سي",
   "url": "https://www.bbc.com/arabic/institutional-37731352",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 5`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "سياسة الخصوصية",
   "url": "https://www.bbc.com/arabic/institutional-37731353",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 6`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "ملفات الارتباط Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 7`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "اتصل بـ بي بي سي",
   "url": "https://www.bbc.co.uk/send/u50853203",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 8`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Front Page Footer Link should match text and url 9`] = `
+exports[`Canonical Front Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "سياستنا بخصوص الروابط الخارجية.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
+
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 

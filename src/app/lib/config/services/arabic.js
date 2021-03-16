@@ -231,6 +231,7 @@ export const service = {
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
         recentEpisodes: 'البرامج السابقة',
+        podcastExternalLinks: 'هذا البودكاست متاح عبر',
       },
       socialEmbed: {
         caption: {
@@ -289,7 +290,8 @@ export const service = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
@@ -314,6 +316,7 @@ export const service = {
           text: 'اتصل بـ بي بي سي',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

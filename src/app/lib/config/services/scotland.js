@@ -235,7 +235,8 @@ export const service = {
     },
     footer: {
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Read about our approach to external linking.',
       },
       links: [
@@ -264,6 +265,7 @@ export const service = {
           text: 'Contact the BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

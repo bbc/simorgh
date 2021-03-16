@@ -201,6 +201,7 @@ export const mainTranslations = {
     duration: 'Продолжительность',
     recentEpisodes: 'Прошлые передачи',
     episodes: 'передачи',
+    podcastExternalLinks: 'Этот подкаст доступен на',
   },
   socialEmbed: {
     caption: {
@@ -314,7 +315,8 @@ export const service = {
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [
@@ -339,6 +341,7 @@ export const service = {
           text: 'Связаться с Би-би-си',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

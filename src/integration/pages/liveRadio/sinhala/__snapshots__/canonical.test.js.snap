@@ -4,65 +4,65 @@ exports[`Canonical Sinhala Live Radio Page A11y I can see the skip to content li
 
 exports[`Canonical Sinhala Live Radio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=82&amp;p=sinhala.bbc_sinhala_radio.liveradio.page&amp;x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_sinhala_radio]&amp;x2=[responsive]&amp;x3=[news-sinhala]&amp;x4=[si]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[%E0%B6%B6%E0%B7%93%E0%B6%B6%E0%B7%93%E0%B7%83%E0%B7%93%2B%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD%2B%E0%B7%83%E0%B6%82%E0%B6%AF%E0%B7%9A%E0%B7%81%E0%B6%BA%2B-%2BBBC%2BNews%2B%E0%B7%83%E0%B7%92%E0%B6%82%E0%B7%84%E0%B6%BD]\\"/>"`;
 
-exports[`Canonical Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
-
-exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
-
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 1`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, සිංහල",
   "url": "/sinhala",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 2`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි",
   "url": "https://www.bbc.com/sinhala/institutional-50288553",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 3`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "භාවිතයේ කොන්දේසි",
   "url": "https://www.bbc.com/sinhala/institutional-36017568",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 4`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
   "url": "https://www.bbc.com/sinhala/institutional-36019591",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 5`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "කුකීස්",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 6`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "බීබීසී අමතන්න",
   "url": "https://www.bbc.co.uk/send/u50853687",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 7`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Sinhala Live Radio Page Footer Link should match text and url 8`] = `
+exports[`Canonical Sinhala Live Radio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical Sinhala Live Radio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/sinhala"`;
+
+exports[`Canonical Sinhala Live Radio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ. බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න."`;
 
 exports[`Canonical Sinhala Live Radio Page Header I can see the branding 1`] = `"BBC News, සිංහල"`;
 

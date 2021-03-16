@@ -266,7 +266,8 @@ export const service = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
@@ -291,6 +292,7 @@ export const service = {
           text: 'ቢቢሲን ያግኙ',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

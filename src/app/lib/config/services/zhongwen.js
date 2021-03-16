@@ -76,7 +76,8 @@ export const service = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -97,6 +98,7 @@ export const service = {
           text: '联络BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -307,6 +309,7 @@ export const service = {
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {
@@ -356,7 +359,8 @@ export const service = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
@@ -377,6 +381,7 @@ export const service = {
           text: '聯絡BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -587,6 +592,7 @@ export const service = {
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
         recentEpisodes: '存档节目',
+        podcastExternalLinks: 'This podcast is also available on',
       },
       socialEmbed: {
         caption: {

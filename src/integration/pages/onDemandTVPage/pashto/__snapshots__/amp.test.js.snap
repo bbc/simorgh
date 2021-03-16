@@ -137,72 +137,65 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
-
-exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
-
-exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, پښتو",
   "url": "/pashto",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 2`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "ولې تاسې پر بي بي سي خبرونو باور کولی شئ",
   "url": "https://www.bbc.com/pashto/institutional-49283007",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 3`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "د کارولو شرايط",
   "url": "https://www.bbc.com/pashto/institutional-37620701",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 4`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "د بي بي سي‌ په اړه",
   "url": "https://www.bbc.com/pashto/institutional-37622761",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 5`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "د محرميت تگلاره",
   "url": "https://www.bbc.com/pashto/institutional-37622762",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 6`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
   "url": "https://www.bbc.co.uk/send/u50853533",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 8`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 9`] = `
-Object {
-  "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
-}
-`;
+exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 

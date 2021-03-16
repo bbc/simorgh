@@ -8,6 +8,7 @@ import {
 } from '../../../support/helpers/onDemandRadioTv';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import getDataUrl from '../../../support/helpers/getDataUrl';
+import processRecentEpisodes from '../../../../src/app/routes/utils/processRecentEpisodes';
 
 export default ({ service, pageType, variant, isAmp }) => {
   describe(`Tests for ${service} ${pageType}`, () => {
@@ -68,10 +69,12 @@ export default ({ service, pageType, variant, isAmp }) => {
                   : `${currentPath}`;
 
               cy.request(getDataUrl(url)).then(({ body }) => {
-                // Count the number of episodes that are available and so will show (there can be unavailable episodes in the list)
-                const expectedNumberOfEpisodes = body.relatedContent.groups[0].promos
-                  .filter(({ media }) => media.versions.length)
-                  .slice(0, recentEpisodesMaxNumber).length;
+                const episodeId = path(['content', 'blocks', 0, 'id'], body);
+
+                const expectedNumberOfEpisodes = processRecentEpisodes(body, {
+                  exclude: episodeId,
+                  recentEpisodesLimit: recentEpisodesMaxNumber,
+                }).length;
 
                 cy.log(
                   `Number of available episodes? ${expectedNumberOfEpisodes}`,

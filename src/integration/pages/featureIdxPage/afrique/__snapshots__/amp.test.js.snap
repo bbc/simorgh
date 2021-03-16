@@ -137,72 +137,72 @@ Object {
 }
 `;
 
-exports[`AMP Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
-
-exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
-
-exports[`AMP Feature Index page Footer Link should match text and url 1`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Afrique",
   "url": "/afrique",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 2`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Pourquoi vous pouvez faire confiance à BBC News",
   "url": "https://www.bbc.com/afrique/institutionelles-49283281",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 3`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Conditions d'utilisation",
   "url": "https://www.bbc.com/afrique/institutionelles-36826639",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 4`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "A propos de la BBC",
   "url": "https://www.bbc.com/afrique/institutionelles-36826641",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 5`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Politique de confidentialité",
   "url": "https://www.bbc.com/afrique/institutionelles-36826642",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 6`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 7`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Contactez la BBC",
   "url": "https://www.bbc.co.uk/send/u50853159",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 8`] = `
+exports[`AMP Feature Index page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "Découvrez notre approche en matière de liens externes.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP Feature Index page Footer Link should match text and url 9`] = `
+exports[`AMP Feature Index page Footer Cookie Settings Button should match text and on handler 1`] = `
 Object {
-  "text": "Découvrez notre approche en matière de liens externes.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "on": "tap:consent.prompt, privacy.hide, cookie.show, AMP.setState({ isManagingSettings: true })",
+  "text": "AdChoices / Do Not Sell My Info",
 }
 `;
+
+exports[`AMP Feature Index page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/afrique"`;
+
+exports[`AMP Feature Index page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. La BBC n'est pas responsable du contenu des sites externes. Découvrez notre approche en matière de liens externes."`;
 
 exports[`AMP Feature Index page Header I can see the branding 1`] = `"BBC News, Afrique"`;
 

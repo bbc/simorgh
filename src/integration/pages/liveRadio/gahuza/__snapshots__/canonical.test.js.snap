@@ -4,72 +4,72 @@ exports[`Canonical Live Radio A11y I can see the skip to content link 1`] = `"Si
 
 exports[`Canonical Live Radio Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=40&amp;p=gahuza.bbc_gahuza_radio.liveradio.page&amp;x1=[urn%3Abbc%3Aares%3Aws_media%3Alive%3Abbc_gahuza_radio]&amp;x2=[responsive]&amp;x3=[news-gahuza]&amp;x4=[rw]&amp;x7=[player-live]&amp;x8=[simorgh-nojs]&amp;x9=[Radio%2BBBC%2BGahuza%2B-%2BBBC%2BNews%2BGahuza]\\"/>"`;
 
-exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
-
-exports[`Canonical Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
-
-exports[`Canonical Live Radio Footer Link should match text and url 1`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Gahuza",
   "url": "/gahuza",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 2`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Igituma ushobora kwizera BBC News",
   "url": "https://www.bbc.com/gahuza/institutional-49283343",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 3`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Ingingo zo gukoresha urubuga",
   "url": "https://www.bbc.com/gahuza/institutional-35754053",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 4`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Ibijanye na BBC",
   "url": "https://www.bbc.com/gahuza/institutional-35754055",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 5`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Ibigenga n'ubuzima bwite",
   "url": "https://www.bbc.com/gahuza/institutional-35754059",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 6`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 7`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 7`] = `
 Object {
   "text": "Vugana na BBC",
   "url": "https://www.bbc.co.uk/send/u50853291",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 8`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical Live Radio Footer Link should match text and url 9`] = `
+exports[`Canonical Live Radio Footer Anchors should match text and url 9`] = `
 Object {
   "text": "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical Live Radio Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/gahuza"`;
+
+exports[`Canonical Live Radio Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC ntibazwa ibivuye ku zindi mbuga. Soma ibijanye n'aho duhagaze ku mihora ijana ahandi"`;
 
 exports[`Canonical Live Radio Header I can see the branding 1`] = `"BBC News, Gahuza"`;
 

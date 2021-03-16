@@ -233,6 +233,7 @@ export const service = {
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
         recentEpisodes: 'प्रसारण का समय',
+        podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
       },
       socialEmbed: {
         caption: {
@@ -288,7 +289,8 @@ export const service = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
@@ -313,6 +315,7 @@ export const service = {
           text: 'बीबीसी से संपर्क करें',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

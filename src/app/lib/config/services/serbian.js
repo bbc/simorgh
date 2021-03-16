@@ -81,7 +81,8 @@ export const service = {
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Pročitajte naša pravila o linkovanju drugih sajtova.',
       },
       links: [
@@ -106,6 +107,7 @@ export const service = {
           text: 'Kontaktirajte BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
@@ -381,7 +383,8 @@ export const service = {
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Прочитајте наша правила о линковању других сајтова.',
       },
       links: [
@@ -406,6 +409,7 @@ export const service = {
           text: 'Контактирајте ББЦ',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

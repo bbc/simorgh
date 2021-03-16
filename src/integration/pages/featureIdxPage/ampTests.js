@@ -1,8 +1,13 @@
 import runCrossPlatformTests from './crossPlatformTests';
-import { runCoreAmpTests, runAmpAnalyticsTests } from '../../common';
+import {
+  runCoreAmpTests,
+  runAmpFooterTests,
+  runAmpAnalyticsTests,
+} from '../../common';
 
 export default service => {
   runCrossPlatformTests(service);
+  runAmpFooterTests();
   runCoreAmpTests();
   runAmpAnalyticsTests();
 };

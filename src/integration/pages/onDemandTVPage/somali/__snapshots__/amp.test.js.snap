@@ -137,72 +137,65 @@ Object {
 }
 `;
 
-exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
-
-exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
-
-exports[`AMP On Demand T V Page Footer Link should match text and url 1`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, Somali",
   "url": "/somali",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 2`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "Sababta aad ku aamini kartid BBC News",
   "url": "https://www.bbc.com/somali/hayadeed-49283375",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 3`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "Shuruucda isticmaalka",
   "url": "https://www.bbc.com/somali/hayadeed-37098011",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 4`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "Ku saabsan BBC",
   "url": "https://www.bbc.com/somali/hayadeed-37098081",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 5`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "Shuruucda xogta gaarka ah",
   "url": "https://www.bbc.com/somali/hayadeed-37098082",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 6`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 7`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "La xiriir BBC",
   "url": "https://www.bbc.co.uk/send/u50853709",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 8`] = `
+exports[`AMP On Demand T V Page Footer Anchors should match text and url 8`] = `
 Object {
-  "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
-exports[`AMP On Demand T V Page Footer Link should match text and url 9`] = `
-Object {
-  "text": "Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
-}
-`;
+exports[`AMP On Demand T V Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/somali"`;
+
+exports[`AMP On Demand T V Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. BBC masuul kama ahan macluumadka bogagga kale ee dibadda. Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda."`;
 
 exports[`AMP On Demand T V Page Header I can see the branding 1`] = `"BBC News, Somali"`;
 

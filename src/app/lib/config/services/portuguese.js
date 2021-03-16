@@ -235,6 +235,7 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
         recentEpisodes: 'Mais',
+        podcastExternalLinks: 'O podcast está disponível em',
       },
       socialEmbed: {
         caption: {
@@ -290,7 +291,8 @@ export const service = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [
@@ -315,6 +317,7 @@ export const service = {
           text: 'Fale com a BBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

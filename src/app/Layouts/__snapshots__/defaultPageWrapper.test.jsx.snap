@@ -710,12 +710,26 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-150 {
-  background-color: #222222;
   font-size: 0.875rem;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #222222;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-150 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-150 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
 }
 
 @media (max-width: 25rem) {
@@ -730,31 +744,19 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-150 {
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-150 {
-    font-size: 0.8125rem;
-  }
-}
-
 .emotion-152 {
   max-width: 80rem;
   margin: 0 auto;
-  padding-top: 0.5rem);
+  padding-top: 0.5rem;
 }
 
 .emotion-154 {
   border-bottom: 0.0625rem solid #3F3F42;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 0 0.5rem;
   -webkit-column-count: 4;
   column-count: 4;
+  margin: 0;
+  list-style-type: none;
+  padding: 0 0 0.5rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
@@ -842,33 +844,43 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 }
 
 .emotion-158 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  display: block;
+  padding: 0.5rem 0 0.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: block;
 }
 
-.emotion-159:hover .emotion-160,
-.emotion-159:focus .emotion-160 {
+.emotion-158:hover,
+.emotion-158:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-204 {
+.emotion-188 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-206 {
-  padding: 0.5rem 0 0.5rem;
-  color: #FFFFFF;
+.emotion-190 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
+  font-style: normal;
+  color: #FFFFFF;
+  display: inline;
+  padding: 0.5rem 0 0.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  display: inline;
+}
+
+.emotion-190:hover,
+.emotion-190:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 <div>
@@ -1366,17 +1378,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           >
             <li
               class="emotion-156 emotion-157"
-              role="listitem"
             >
               <a
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/news/help-41670342"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Why you can trust the BBC
-                </span>
+                Why you can trust the BBC
               </a>
             </li>
             <li
@@ -1387,11 +1394,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/terms"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Terms of Use
-                </span>
+                Terms of Use
               </a>
             </li>
             <li
@@ -1402,11 +1405,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.co.uk/aboutthebbc/"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  About the BBC
-                </span>
+                About the BBC
               </a>
             </li>
             <li
@@ -1417,11 +1416,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/privacy/"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Privacy Policy
-                </span>
+                Privacy Policy
               </a>
             </li>
             <li
@@ -1432,11 +1427,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/usingthebbc/cookies/"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Cookies
-                </span>
+                Cookies
               </a>
             </li>
             <li
@@ -1447,11 +1438,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/accessibility/"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Accessibility Help
-                </span>
+                Accessibility Help
               </a>
             </li>
             <li
@@ -1462,11 +1449,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/contact/"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  Contact the BBC
-                </span>
+                Contact the BBC
               </a>
             </li>
             <li
@@ -1478,16 +1461,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
                 lang="en-GB"
               >
-                <span
-                  class="emotion-160 emotion-161"
-                >
-                  AdChoices / Do Not Sell My Info
-                </span>
+                AdChoices / Do Not Sell My Info
               </a>
             </li>
           </ul>
           <p
-            class="emotion-204 emotion-205"
+            class="emotion-188 emotion-189"
           >
             <span
               lang="en-GB"
@@ -1498,14 +1477,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             2021 BBC. The BBC is not responsible for the content of external sites.
              
             <a
-              class="emotion-206 emotion-159"
-              href="https://www.bbc.co.uk/help/web/links/"
+              class="emotion-190 emotion-159"
+              href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
-              <span
-                class="emotion-160 emotion-161"
-              >
-                Read about our approach to external linking.
-              </span>
+              Read about our approach to external linking.
             </a>
           </p>
         </div>

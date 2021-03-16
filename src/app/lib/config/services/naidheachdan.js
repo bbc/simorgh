@@ -252,7 +252,8 @@ export const service = {
         text: 'Carson as urrainear earbsa a chur sa BhBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text:
           'Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh',
       },
@@ -278,6 +279,7 @@ export const service = {
           text: 'Cuir fios dhan BhBC',
         },
         {
+          id: 'COOKIE_SETTINGS',
           href:
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',

@@ -4,72 +4,72 @@ exports[`Canonical On Demand Audio Page A11y I can see the skip to content link 
 
 exports[`Canonical On Demand Audio Page Analytics ATI 1`] = `"<img height=\\"1px\\" width=\\"1px\\" alt=\\"\\" style=\\"position:absolute\\" src=\\"https://logws1363.ati-host.net?s=598343&amp;s2=68&amp;p=pashto.bbc_pashto_radio.w172xjcjkv7gw1w.page&amp;x1=[urn%3Abbc%3Apips%3Ap0340yr4]&amp;x2=[responsive]&amp;x3=[news-pashto]&amp;x4=[ps]&amp;x7=[player-episode]&amp;x8=[simorgh-nojs]&amp;x9=[%D9%88%D8%B1%D9%88%D8%B3%D8%AA%D9%8A%2B%D8%AE%D8%A8%D8%B1%D9%88%D9%86%D9%87%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]\\"/>"`;
 
-exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
-
-exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
-
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 1`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 1`] = `
 Object {
   "text": "BBC News, پښتو",
   "url": "/pashto",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 2`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 2`] = `
 Object {
   "text": "ولې تاسې پر بي بي سي خبرونو باور کولی شئ",
   "url": "https://www.bbc.com/pashto/institutional-49283007",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 3`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 3`] = `
 Object {
   "text": "د کارولو شرايط",
   "url": "https://www.bbc.com/pashto/institutional-37620701",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 4`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 4`] = `
 Object {
   "text": "د بي بي سي‌ په اړه",
   "url": "https://www.bbc.com/pashto/institutional-37622761",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 5`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 5`] = `
 Object {
   "text": "د محرميت تگلاره",
   "url": "https://www.bbc.com/pashto/institutional-37622762",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 6`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 6`] = `
 Object {
   "text": "Cookies",
   "url": "https://www.bbc.com/usingthebbc/cookies/",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 7`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 7`] = `
 Object {
   "text": "زموږ سره اړیکي",
   "url": "https://www.bbc.co.uk/send/u50853533",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 8`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
   "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
 }
 `;
 
-exports[`Canonical On Demand Audio Page Footer Link should match text and url 9`] = `
+exports[`Canonical On Demand Audio Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
+
+exports[`Canonical On Demand Audio Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pashto"`;
+
+exports[`Canonical On Demand Audio Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي‌ سي‌ د نورو ویبپاڼو د محتوا مسوله نه ده. د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره."`;
 
 exports[`Canonical On Demand Audio Page Header I can see the branding 1`] = `"BBC News, پښتو"`;
 
