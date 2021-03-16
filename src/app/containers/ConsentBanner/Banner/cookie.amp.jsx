@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { bool, string, arrayOf, element, shape } from 'prop-types';
+import {
+  bool,
+  string,
+  arrayOf,
+  element,
+  shape,
+  oneOfType,
+  func,
+  any,
+} from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
@@ -70,7 +79,14 @@ const BannerPage = styled.div`
   }
 `;
 
-const Title = styled.h2`
+// eslint-disable-next-line react/prop-types
+const FocusableH2 = forwardRef(({ className, children }, ref) => (
+  <h2 className={className} tabIndex="-1" ref={ref}>
+    {children}
+  </h2>
+));
+
+const Title = styled(FocusableH2)`
   ${({ script }) => getDoublePica(script)}
   ${COMMON_HEADING_STYLES}
 `;
@@ -190,6 +206,7 @@ const AmpCookieBanner = ({
   hidden,
   script,
   service,
+  headingRef,
 }) => {
   const [initial, manage] = translations;
 
@@ -207,7 +224,9 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script}>{initial.title}</Title>
+          <Title script={script} ref={headingRef}>
+            {initial.title}
+          </Title>
           <Paragraph script={script}>
             {initial.description.first}
             <StyledLink
@@ -285,11 +304,14 @@ AmpCookieBanner.propTypes = {
   hidden: bool,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  headingRef: oneOfType([func, shape({ current: any })]),
 };
 
 AmpCookieBanner.defaultProps = {
   id: null,
   hidden: null,
+  headingRef: null,
 };
 
 export default AmpCookieBanner;

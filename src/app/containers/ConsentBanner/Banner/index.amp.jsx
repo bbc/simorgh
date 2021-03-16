@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import AmpCookieBanner from './cookie.amp';
@@ -29,6 +29,12 @@ const AmpConsentBannerContainer = ({
 
   const dataAttribute = getDataAttribute(type);
 
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+
   return type === 'cookie' ? (
     <AmpCookieBanner
       id={promptId}
@@ -49,6 +55,7 @@ const AmpConsentBannerContainer = ({
       hidden={hidden}
       script={script}
       service={service}
+      headingRef={headingRef}
     />
   ) : (
     <ConsentBanner
@@ -70,6 +77,7 @@ const AmpConsentBannerContainer = ({
       hidden={hidden}
       script={script}
       service={service}
+      headingRef={headingRef}
     />
   );
 };
