@@ -658,6 +658,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           >
             <div
               class="emotion-27 emotion-28"
+              data-e2e="image-placeholder"
             >
               <amp-img
                 alt="BBC News پښتو"
@@ -680,6 +681,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
         >
           <amp-iframe
             allowfullscreen="allowfullscreen"
+            data-e2e="media-player"
             frameborder="0"
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
@@ -690,6 +692,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             <amp-img
               alt=""
               attribution=""
+              data-e2e="media-player__placeholder"
               height="16"
               layout="fill"
               placeholder="true"
@@ -1364,6 +1367,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           >
             <div
               class="emotion-27 emotion-28"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC News پښتو"
@@ -1382,6 +1386,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
       >
         <div
           class="emotion-34 emotion-35"
+          data-e2e="media-player"
         >
           <iframe
             allow="autoplay"
@@ -2084,6 +2089,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
           >
             <div
               class="emotion-27 emotion-28"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC News 코리아"
@@ -2804,6 +2810,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
           >
             <div
               class="emotion-27 emotion-28"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC News 코리아"

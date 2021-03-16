@@ -321,6 +321,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
       >
         <div
           class="emotion-12 emotion-13"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "

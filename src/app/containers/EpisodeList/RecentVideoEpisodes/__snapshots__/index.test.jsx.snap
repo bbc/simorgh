@@ -504,6 +504,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <div
               class="emotion-21 emotion-22"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC Info"
@@ -598,6 +599,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <div
               class="emotion-21 emotion-22"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC Info"
@@ -692,6 +694,7 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
           >
             <div
               class="emotion-21 emotion-22"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="BBC Info"

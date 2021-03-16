@@ -147,6 +147,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
       >
         <amp-iframe
           allowfullscreen="allowfullscreen"
+          data-e2e="media-player"
           frameborder="0"
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
@@ -157,6 +158,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
           <amp-img
             alt=""
             attribution=""
+            data-e2e="media-player__placeholder"
             height="16"
             layout="fill"
             placeholder="true"
@@ -326,6 +328,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
     >
       <div
         class="emotion-5 emotion-6"
+        data-e2e="media-player"
       >
         <iframe
           allow="autoplay"
@@ -489,6 +492,7 @@ exports[`MediaPlayer render the amp player 1`] = `
       >
         <amp-iframe
           allowfullscreen="allowfullscreen"
+          data-e2e="media-player"
           frameborder="0"
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
@@ -499,6 +503,7 @@ exports[`MediaPlayer render the amp player 1`] = `
           <amp-img
             alt=""
             attribution=""
+            data-e2e="media-player__placeholder"
             height="16"
             layout="fill"
             placeholder="true"
@@ -668,6 +673,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
     >
       <div
         class="emotion-5 emotion-6"
+        data-e2e="media-player"
       >
         <iframe
           allow="autoplay"
