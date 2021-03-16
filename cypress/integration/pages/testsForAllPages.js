@@ -25,9 +25,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .find('div[class*="StyledScrollableNav"]')
             .should('be.visible');
 
-          cy.get('nav')
-            .find('ul[class*="DropdownUl"]')
-            .should('not.be.visible');
+          cy.get('nav').find('[role="list"]').should('not.be.visible');
 
           cy.get('nav button').click();
 
@@ -35,7 +33,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .find('div[class*="StyledScrollableNav"]')
             .should('not.be.visible');
 
-          cy.get('nav').find('ul[class*="DropdownUl"]').should('be.visible');
+          cy.get('nav').find('role="list"]').should('be.visible');
         });
       }
     });
