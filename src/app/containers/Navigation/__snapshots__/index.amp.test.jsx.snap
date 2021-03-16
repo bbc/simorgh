@@ -223,6 +223,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       </div>
       <div
         class="emotion-14 emotion-15 emotion-16"
+        data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"
       >

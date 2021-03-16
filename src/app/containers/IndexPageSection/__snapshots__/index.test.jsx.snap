@@ -990,6 +990,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <img
                     alt="Image Alt text 1"
@@ -1050,6 +1051,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -1109,6 +1111,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -1168,6 +1171,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -1227,6 +1231,7 @@ HTMLCollection [
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -2263,6 +2268,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <img
                     alt="Image Alt text 1"
@@ -2323,6 +2329,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -2382,6 +2389,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -2441,6 +2449,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -2500,6 +2509,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
               >
                 <div
                   class="emotion-28 emotion-29"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -3517,6 +3527,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <div
                 class="emotion-36 emotion-37"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -3550,6 +3561,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
             >
               <div
                 class="emotion-36 emotion-37"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -4061,6 +4073,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
           >
             <div
               class="emotion-22 emotion-23"
+              data-e2e="image-placeholder"
             >
               <img
                 alt="Image Alt text 1"
@@ -5045,6 +5058,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24 emotion-25"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -5104,6 +5118,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24 emotion-25"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -5163,6 +5178,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24 emotion-25"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -5222,6 +5238,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24 emotion-25"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "
@@ -5281,6 +5298,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
             >
               <div
                 class="emotion-24 emotion-25"
+                data-e2e="image-placeholder"
               >
                 <div
                   class="lazyload-wrapper "

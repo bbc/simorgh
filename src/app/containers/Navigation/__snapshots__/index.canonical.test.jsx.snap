@@ -185,6 +185,7 @@ exports[`Canonical Navigation snapshots should correctly render Canonical naviga
         </button>
         <div
           class="emotion-12 emotion-13"
+          data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul

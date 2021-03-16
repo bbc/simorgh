@@ -1043,6 +1043,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </button>
             <div
               class="emotion-42 emotion-43"
+              data-e2e="scrollable-nav"
               dir="ltr"
             >
               <ul

@@ -426,6 +426,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
               >
                 <div
                   class="emotion-16 emotion-17"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -496,6 +497,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
               >
                 <div
                   class="emotion-16 emotion-17"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -555,6 +557,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
               >
                 <div
                   class="emotion-16 emotion-17"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "

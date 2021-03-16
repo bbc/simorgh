@@ -832,6 +832,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
@@ -1874,6 +1875,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
@@ -2916,6 +2918,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
