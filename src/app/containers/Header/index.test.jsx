@@ -208,29 +208,5 @@ describe(`Header`, () => {
         document.querySelector(`a[href="${logoHref}"]`),
       );
     });
-
-    it('should focus on the brand link on cookie banner reject', () => {
-      const { getByText } = render(
-        HeaderContainerWithContext({
-          pageType: INDEX_PAGE,
-          service: 'pidgin',
-          serviceContext: pidginServiceConfig,
-        }),
-      );
-
-      const pidginPrivacyAccept =
-        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
-      const pidginCookieReject =
-        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
-          .reject;
-      const logoHref = pidginServiceConfig.default.navigation[0].url;
-
-      getByText(pidginPrivacyAccept).click();
-      getByText(pidginCookieReject).click();
-
-      expect(document.activeElement).toBe(
-        document.querySelector(`a[href="${logoHref}"]`),
-      );
-    });
   });
 });

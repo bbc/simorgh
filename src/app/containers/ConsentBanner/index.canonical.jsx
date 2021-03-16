@@ -23,10 +23,10 @@ const Canonical = ({ onDismissFocusRef }) => {
     if (actionType === 'accept') {
       cookieOnAllow();
       updateCookiePolicy();
+      onDismissFocusRef?.current?.querySelector('a')?.focus();
     } else if (actionType === 'reject') {
       cookieOnReject();
     }
-    onDismissFocusRef?.current?.querySelector('a')?.focus();
   };
 
   return (
