@@ -35,7 +35,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
         it('should have a visible image that is not lazyloaded', () => {
-          cy.get('[data-e2e="image-placeholder"')
+          cy.get('[data-e2e="image-placeholder"]')
             .eq(0)
             .should('be.visible')
             .should('to.have.descendants', 'img')
@@ -45,7 +45,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('[data-e2e="image-placeholder"')
+          cy.get('[data-e2e="image-placeholder"]')
             .eq(1)
             .scrollIntoView()
             .should('be.visible')
