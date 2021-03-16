@@ -1588,10 +1588,10 @@
     "@bbc/psammead-grid" "3.0.19"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-navigation@9.1.0":
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-navigation/-/psammead-navigation-9.1.0.tgz#92b0010b19df9d5d4084d9841ebdf99d2ceb504a"
-  integrity sha512-mDbD7oI0GjumcX4i51/YuiF/5o+yjEFuiLpTx8yAQhEUZpUXgCXLO6Rk382Ir8YzyivZWipeqaayxYc31f71hw==
+"@bbc/psammead-navigation@9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-navigation/-/psammead-navigation-9.1.1.tgz#fac81a5e32fe1ad5fc87ce6e0795de1f32675cc9"
+  integrity sha512-p/LgczZLuR+I76sm1zFrjNZwaKHTc+uWviHdLY/KqIIWCz0m/tT6FcsyB5RA7RvmBCOCkaXogmuTiJtaC3WNWA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-assets" "3.1.8"

@@ -2520,6 +2520,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
       </div>
       <div
         class="emotion-64 emotion-65"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul
@@ -3133,6 +3134,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       </div>
       <div
         class="emotion-60 emotion-61"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul
@@ -3734,6 +3736,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       </div>
       <div
         class="emotion-60 emotion-61"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul

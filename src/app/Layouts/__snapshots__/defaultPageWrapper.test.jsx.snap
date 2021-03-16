@@ -1187,6 +1187,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           </div>
           <div
             class="emotion-90 emotion-91"
+            data-e2e="dropdown-nav"
             height="0"
           >
             <ul

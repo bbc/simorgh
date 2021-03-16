@@ -940,6 +940,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul
@@ -1983,6 +1984,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul
@@ -3026,6 +3028,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul
