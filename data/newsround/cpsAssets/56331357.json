@@ -1,0 +1,376 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:newsround/56331357",
+    "locators": {
+      "assetUri": "/newsround/56331357",
+      "cpsUrn": "urn:bbc:content:assetUri:newsround/56331357",
+      "curie": "http://www.bbc.co.uk/asset/f2c6a4b5-637e-4d58-b53f-62339149fc63",
+      "assetId": "56331357"
+    },
+    "type": "STY",
+    "createdBy": "newsround-v6",
+    "language": "en-gb",
+    "lastUpdated": 1615283973619,
+    "firstPublished": 1615281319000,
+    "lastPublished": 1615283966000,
+    "timestamp": 1615283966000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": true,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": false,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "newsround.home.story.56331357.page",
+      "cps_asset_id": "56331357"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["image", "paragraph", "crosshead", "media", "quote"],
+    "includeComments": true,
+    "atiAnalytics": { "producerName": "NEWSROUND", "producerId": "65" },
+    "readTime": 3,
+    "siteUri": "/newsround"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "117497348",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1499B/production/_117497348_winchcombe-meteorite-credit-trustee-of-the-natural-history-museum.jpg",
+        "path": "/cpsprodpb/1499B/production/_117497348_winchcombe-meteorite-credit-trustee-of-the-natural-history-museum.jpg",
+        "height": 708,
+        "width": 976,
+        "altText": "Winchcombe meteorite",
+        "caption": "Here's what one of the pieces looked like",
+        "copyrightHolder": "NHM",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Pieces of an &quot;astonishingly rare&quot; meteorite, which lit up the sky last week, have been found on someone's driveway! ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "It's the first time in 30 years that a meteorite has been recovered in the UK. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The fragments, which scientists are calling &quot;incredibly exciting&quot;, have been identified as very rare and were discovered in the Winchcombe area of Gloucestershire.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Scientists had calculated where some of the pieces would land and had asked people to look out for them in their gardens.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "What happened?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "117386008",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/138C4/production/_117386008_fireball.jpg",
+        "path": "/cpsprodpb/138C4/production/_117386008_fireball.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Fireball seen in the sky",
+        "caption": "The fireball was seen over western England at around 10pm on 28 February",
+        "copyrightHolder": "UK Fireball Alliance",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "The fireball was spotted by hundreds of people in the sky on the night of 28 February. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "It lasted around six seconds and the bright flash was recorded on doorbell cameras, car dashcams and it was also picked up by a dedicated network of cameras across the UK trained at the sky for this kind of event.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Experts from the Natural History Museum (NHM) are now analysing and studying the fragments. It's hoped they will give the scientists &quot;a glimpse into what the Solar System looked like as it was forming some 4.6 billion years ago&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p098bd5b",
+        "subType": "clip",
+        "format": "video",
+        "title": "Meteor caught on doorbell cameras",
+        "synopses": {
+          "short": "Watch: meteor caught on doorbell cameras",
+          "medium": "A large meteor flew across the UK's skies last night and was caught on doorbell and security cameras across the country"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p098bdf8.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Watch: Meteor caught on doorbell cameras",
+        "versions": [
+          {
+            "versionId": "p098bd5d",
+            "types": ["Original"],
+            "duration": 23,
+            "durationISO8601": "PT23S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1614583215000
+          }
+        ],
+        "imageCopyright": "BBC Sport",
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "What's been discovered?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "117501404",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/9DDA/production/_117501404_uk-meteorite-close-up-full-width.jpg.thumb.1160.1160.jpg",
+        "path": "/cpsprodpb/9DDA/production/_117501404_uk-meteorite-close-up-full-width.jpg.thumb.1160.1160.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "A chunk of the meteorite that has been recovered from Winchcombe",
+        "caption": "This is one of the meteorite pieces which was recovered from Winchcombe",
+        "copyrightHolder": "The Trustees of the Natural History Museum, London",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "This is the first time since 1991 that a piece of space rock has landed and been recovered in the UK.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The scientists have managed to collect between 300-400 grams of material - the pieces are small, about the size of marbles. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "They're made up of something called carbonaceous chondrite - described as the 'building blocks' of our Solar System. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Professor Sara Russell, a researcher at the NHM, said: &quot;Meteorites like this are relics from the early Solar System, which means they can tell us what the planets are made of...But we also we think that meteorites like this may have brought water to the Earth, providing the planet with its oceans.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Carbonaceous chondrites originated from an asteroid that formed when the planets themselves were only just being born - it means they can provide unique information on where water and the building blocks of life were formed and what planets are made from.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The rocks are extremely fragile so it's incredibly rare that they survived falling to earth, and were then recovered. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dr Ashley King, who works at the NHM, said nothing like it had ever been recorded in the UK before.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Many contain simple organics and amino acids; some of them contain minerals formed by water - so, all the ingredients are there for understanding how you make a habitable planet such as the Earth.",
+        "quoteSource": "Dr Ashley King ",
+        "quoteSourceTitle": "London's Natural History Museum",
+        "markupType": "plain_text",
+        "type": "quote"
+      },
+      {
+        "id": "117501401",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/28AA/production/_117501401_meteoriteglasgowuni.jpg",
+        "path": "/cpsprodpb/28AA/production/_117501401_meteoriteglasgowuni.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "researchers look for pieces in field",
+        "caption": "Specialist scientists from the Natural History Museum and universities across the UK have been looking for the meteorite pieces",
+        "copyrightHolder": "University of Glasgow",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "The search for bits of the meteorite has been described as looking for a needle in a haystack. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "This is because scientists couldn't tell the public exactly where to look. Luckily though some of it had fallen onto a person's drive in Winchcombe! ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dr Richard Greenwood was sent to look at the pieces and said his legs went 'wobbly' when he saw the &quot;special meteorite&quot;.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The team think there are more fragments to be discovered and are asking anyone in the area to keep an eye out if they &quot;come across a pile of black dust, piles of tiny black rocks or stones&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The NHM says the best way to protect a sample is to collect it using a gloved hand and store it in a piece of aluminium foil. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Rare meteorite found in UK for the first time in 30 years",
+      "headline": "Space: First UK meteorite find in 30 years"
+    },
+    "locators": {
+      "assetUri": "/newsround/56331357",
+      "cpsUrn": "urn:bbc:content:assetUri:newsround/56331357",
+      "curie": "http://www.bbc.co.uk/asset/f2c6a4b5-637e-4d58-b53f-62339149fc63",
+      "assetId": "56331357"
+    },
+    "summary": "For the first time in 30 years, an \"astonishingly rare\" meteorite has been found in the UK. Pieces of it landed on a driveway in Gloucestershire!",
+    "timestamp": 1615283966000,
+    "language": "en-gb",
+    "indexImage": {
+      "id": "117501734",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/AABE/production/_117501734_meteorite.jpg",
+      "path": "/cpsprodpb/AABE/production/_117501734_meteorite.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Meteorite fragment on a blast background",
+      "copyrightHolder": "Natural History Museum/Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:newsround/56331357",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Newsround",
+      "uri": "/newsround/home",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "CBBC Newsround",
+      "uri": "/newsround",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Fancy a holiday in space? You'll have to wait at least six years!",
+              "headline": "Space tourism: Plans for world's first space hotel to open in 2027"
+            },
+            "locators": {
+              "assetUri": "/newsround/56264491",
+              "cpsUrn": "urn:bbc:content:assetUri:/newsround/56264491"
+            },
+            "summary": "There are plans for the world's first space hotel to open in 2027. It will have artificial gravity but normal toilets!",
+            "timestamp": 1614840607000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117368419",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1655E/production/_117368419_spacehotel.jpg",
+              "path": "/cpsprodpb/1655E/production/_117368419_spacehotel.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Space-hotel.",
+              "copyrightHolder": "OAC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:newsround/56264491",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Meteor filmed shooting across the sky on doorbell cameras",
+              "headline": "Meteor caught shooting across sky on doorbell cameras"
+            },
+            "locators": {
+              "assetUri": "/newsround/56236509",
+              "cpsUrn": "urn:bbc:content:assetUri:/newsround/56236509"
+            },
+            "summary": "A large meteor flew across the sky last night and was caught on doorbell and security cameras across the UK.",
+            "timestamp": 1614586394000,
+            "language": "en-gb",
+            "cpsType": "MAP",
+            "media": {
+              "id": "p098bd5b",
+              "subType": "clip",
+              "format": "video",
+              "title": "Meteor caught on doorbell cameras",
+              "synopses": {
+                "short": "Watch: meteor caught on doorbell cameras",
+                "medium": "A large meteor flew across the UK's skies last night and was caught on doorbell and security cameras across the country"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p098bdf8.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "Watch: Meteor caught on doorbell cameras",
+              "versions": [
+                {
+                  "versionId": "p098bd5d",
+                  "types": ["Original"],
+                  "duration": 23,
+                  "durationISO8601": "PT23S",
+                  "warnings": {},
+                  "availableTerritories": { "uk": true, "nonUk": true },
+                  "availableFrom": 1614583215000
+                }
+              ],
+              "imageCopyright": "BBC Sport",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "117337973",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/9455/production/_117337973_p098bdf8.jpg",
+              "path": "/cpsprodpb/9455/production/_117337973_p098bdf8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "meteor-caught-on-camera",
+              "caption": "Meteor on camera!",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:newsround/56236509",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
