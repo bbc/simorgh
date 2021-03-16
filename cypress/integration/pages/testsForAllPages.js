@@ -22,7 +22,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
         it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
           cy.viewport(320, 480);
           cy.get('nav')
-            .find('div[class*="StyledScrollableNav"]')
+            .find('[data-e2e="scrollable-nav"]')
             .should('be.visible');
 
           cy.get('nav').find('[role="list"]').should('not.be.visible');
@@ -30,7 +30,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
           cy.get('nav button').click();
 
           cy.get('nav')
-            .find('div[class*="StyledScrollableNav"]')
+            .find('[data-e2e="scrollable-nav"]')
             .should('not.be.visible');
 
           cy.get('nav').find('role="list"]').should('be.visible');
