@@ -158,7 +158,7 @@ export default ({ service, pageType, variant, isAmp }) => {
                     else if (expectedNumberOfEpisodes === 1) {
                       cy.get('aside[aria-labelledby=recent-episodes]').within(
                         () => {
-                          cy.get('[data-e2e="recent-episodes-list"').should(
+                          cy.get('[data-e2e="recent-episodes-list"]').should(
                             'not.exist',
                           );
                         },

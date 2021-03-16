@@ -160,7 +160,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           if (media && media.type === 'video') {
             const { lang } = appConfig[service][variant];
             const embedUrl = getVideoEmbedUrl(body, lang);
-            cy.get('data-e2e="media-player" button')
+            cy.get('[data-e2e="media-player"] button')
               .click()
               .then(() => {
                 cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');
