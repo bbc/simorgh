@@ -88,7 +88,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
           if (media) {
             cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('[data-e2e="image-placeholder"] img')
+              cy.get('[data-e2e="media-player__placeholder"] img')
                 .should('be.visible')
                 .should('have.attr', 'src')
                 .should('not.be.empty');
@@ -111,7 +111,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('[data-e2e="image-placeholder"]')
+                  cy.get('[data-e2e="media-player__placeholder"]')
                     .within(() => {
                       cy.get('strong');
                     })
