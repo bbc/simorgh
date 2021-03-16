@@ -26,7 +26,7 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .should('be.visible');
 
           cy.get('nav')
-            .find('[data-e2e="dropdown-nav"]')
+            .find('[data-e2e="dropdown-nav"] ul')
             .should('not.be.visible');
 
           cy.get('nav button').click();
@@ -35,7 +35,9 @@ export const testsThatFollowSmokeTestConfigforAllPages = ({
             .find('[data-e2e="scrollable-nav"]')
             .should('not.be.visible');
 
-          cy.get('nav').find('[data-e2e="dropdown-nav"]').should('be.visible');
+          cy.get('nav')
+            .find('[data-e2e="dropdown-nav"] ul')
+            .should('be.visible');
         });
       }
     });
