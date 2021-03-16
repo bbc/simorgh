@@ -417,6 +417,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -1067,6 +1068,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -1694,6 +1696,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
