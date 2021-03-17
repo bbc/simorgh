@@ -146,16 +146,19 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
-          lang="ru"
         >
           <span
             role="text"
           >
-            Apple
             <span
-              class="emotion-10 emotion-11"
+              lang="ru"
             >
-              , A brand podcast
+              Apple
+              <span
+                class="emotion-10 emotion-11"
+              >
+                , A brand podcast
+              </span>
             </span>
           </span>
         </a>
@@ -168,16 +171,19 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
-          lang="ru"
         >
           <span
             role="text"
           >
-            Spotify
             <span
-              class="emotion-10 emotion-11"
+              lang="ru"
             >
-              , A brand podcast
+              Spotify
+              <span
+                class="emotion-10 emotion-11"
+              >
+                , A brand podcast
+              </span>
             </span>
           </span>
         </a>
@@ -190,16 +196,19 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
-          lang="ru"
         >
           <span
             role="text"
           >
-            RSS
             <span
-              class="emotion-10 emotion-11"
+              lang="ru"
             >
-              , A brand podcast
+              RSS
+              <span
+                class="emotion-10 emotion-11"
+              >
+                , A brand podcast
+              </span>
             </span>
           </span>
         </a>
