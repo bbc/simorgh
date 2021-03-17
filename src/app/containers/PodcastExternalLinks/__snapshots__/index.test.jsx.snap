@@ -21,7 +21,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #222222;
+  color: #3F3F42;
   margin: 0;
   margin-top: 1rem;
 }
@@ -146,6 +146,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
+          lang="ru"
         >
           <span
             role="text"
@@ -167,6 +168,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
+          lang="ru"
         >
           <span
             role="text"
@@ -188,6 +190,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
+          lang="ru"
         >
           <span
             role="text"

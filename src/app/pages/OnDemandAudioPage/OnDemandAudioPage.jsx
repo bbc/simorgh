@@ -236,7 +236,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </GelPageGrid>
       {isPodcast && (
         <PageGrid>
-          <PodcastExternalLinks links={externalLinks} brandTitle={brandTitle} />
+          <PodcastExternalLinks
+            links={externalLinks}
+            brandTitle={brandTitle}
+            lang={lang}
+          />
         </PageGrid>
       )}
       {hasRecentEpisodes && (

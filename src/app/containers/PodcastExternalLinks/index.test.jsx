@@ -6,9 +6,18 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
 /* eslint-disable react/prop-types */
-const Component = ({ links, service = 'russian', variant = null }) => (
+const Component = ({
+  links,
+  service = 'russian',
+  lang = 'ru',
+  variant = null,
+}) => (
   <ServiceContextProvider service={service} variant={variant}>
-    <PodcastExternalLinks links={links} brandTitle="A brand podcast" />
+    <PodcastExternalLinks
+      links={links}
+      brandTitle="A brand podcast"
+      lang={lang}
+    />
   </ServiceContextProvider>
 );
 

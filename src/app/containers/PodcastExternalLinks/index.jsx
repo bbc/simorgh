@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT, C_EBON } from '@bbc/psammead-styles/colours';
+import { C_CLOUD_LIGHT, C_SHADOW } from '@bbc/psammead-styles/colours';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
@@ -32,7 +32,7 @@ const Wrapper = styled.aside`
 const ThirdPartyLinksTitle = styled.h2`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  color: ${C_EBON};
+  color: ${C_SHADOW};
   margin: 0;
   margin-top: 1rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -67,7 +67,7 @@ const StyledListItem = styled.li`
   }
 `;
 
-const PodcastExternalLinks = ({ brandTitle, links }) => {
+const PodcastExternalLinks = ({ brandTitle, links, lang }) => {
   const { translations, service, script, dir } = useContext(ServiceContext);
 
   if (!links.length) return null;
@@ -94,7 +94,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={linkText}>
-              <Link href={linkUrl} service={service} script={script} dir={dir}>
+              <Link
+                href={linkUrl}
+                service={service}
+                script={script}
+                dir={dir}
+                lang={lang}
+              >
                 <span role="text">
                   {linkText}
                   <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
@@ -121,8 +127,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   );
 };
 
+PodcastExternalLinks.defaultProps = {
+  lang: null,
+};
+
 PodcastExternalLinks.propTypes = {
   brandTitle: string.isRequired,
+  lang: string,
   links: arrayOf(
     shape({
       linkText: string.isRequired,
