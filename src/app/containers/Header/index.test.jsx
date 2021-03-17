@@ -181,8 +181,8 @@ describe(`Header`, () => {
       );
       const pidginPrivacyHeading =
         pidginServiceConfig.default.translations.consentBanner.privacy.title;
-      expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
       expect(document.activeElement).not.toBe(initialFocusElement);
+      expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
     });
 
     it('should focus on the brand link on cookie banner accept', () => {
