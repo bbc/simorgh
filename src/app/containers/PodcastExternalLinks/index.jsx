@@ -3,15 +3,16 @@ import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { C_CLOUD_LIGHT } from '@bbc/psammead-styles/colours';
+import { C_CLOUD_LIGHT, C_EBON } from '@bbc/psammead-styles/colours';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import SectionLabel from '@bbc/psammead-section-label';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
@@ -28,7 +29,10 @@ const Wrapper = styled.aside`
   }
 `;
 
-const StyledSectionLabel = styled(SectionLabel)`
+const ThirdPartyLinksTitle = styled.h2`
+  ${({ script }) => getGreatPrimer(script)}
+  ${({ service }) => getSansRegular(service)}
+  color: ${C_EBON};
   margin: 0;
   margin-top: 1rem;
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
@@ -79,15 +83,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
 
   return (
     <Wrapper role="complementary" aria-labelledby="third-party-links">
-      <StyledSectionLabel
+      <ThirdPartyLinksTitle
         script={script}
         service={service}
-        labelId="third-party-links"
-        bar={false}
-        dir={dir}
+        id="third-party-links"
       >
         {title}
-      </StyledSectionLabel>
+      </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
