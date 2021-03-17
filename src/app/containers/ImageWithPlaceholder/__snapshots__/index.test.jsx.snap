@@ -33,6 +33,7 @@ exports[`ImageWithPlaceholder should not provide non-js fallback 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="image-placeholder"
   >
     <div
       class="lazyload-wrapper "
@@ -78,6 +79,7 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="image-placeholder"
   >
     <amp-img
       alt="Pauline Clayton"
@@ -145,6 +147,7 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="image-placeholder"
   >
     <img
       alt="Pauline Clayton"

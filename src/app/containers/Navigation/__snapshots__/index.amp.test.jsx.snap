@@ -210,6 +210,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -223,6 +224,7 @@ exports[`AMP Navigation Snapshots should correctly render AMP navigation 1`] = `
       </div>
       <div
         class="emotion-14 emotion-15 emotion-16"
+        data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"
       >

@@ -521,6 +521,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       >
         <div
           class="emotion-10 emotion-11"
+          data-e2e="media-player"
         >
           <iframe
             allow="autoplay"
@@ -535,6 +536,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
           >
             <div
               class="emotion-16 emotion-17"
+              data-e2e="image-placeholder"
             />
           </div>
           <noscript />

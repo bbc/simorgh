@@ -417,6 +417,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -561,6 +562,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
       </div>
       <div
         class="emotion-64 emotion-65 emotion-66"
+        data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"
       >
@@ -1066,6 +1068,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -1198,6 +1201,7 @@ exports[`Navigation Container should correctly render amp navigation on non-home
       </div>
       <div
         class="emotion-60 emotion-61 emotion-62"
+        data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"
       >
@@ -1692,6 +1696,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
       </button>
       <div
         class="emotion-12 emotion-13"
+        data-e2e="dropdown-nav"
         hidden=""
         id="si-nav-dropdown-menu"
       >
@@ -1824,6 +1829,7 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
       </div>
       <div
         class="emotion-60 emotion-61 emotion-62"
+        data-e2e="scrollable-nav"
         dir="ltr"
         id="si-nav-scrollable"
       >
@@ -2362,6 +2368,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
         </button>
         <div
           class="emotion-12 emotion-13"
+          data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
@@ -2516,6 +2523,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
       </div>
       <div
         class="emotion-64 emotion-65"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul
@@ -2985,6 +2993,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
         </button>
         <div
           class="emotion-12 emotion-13"
+          data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
@@ -3128,6 +3137,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       </div>
       <div
         class="emotion-60 emotion-61"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul
@@ -3585,6 +3595,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
         </button>
         <div
           class="emotion-12 emotion-13"
+          data-e2e="scrollable-nav"
           dir="ltr"
         >
           <ul
@@ -3728,6 +3739,7 @@ exports[`Navigation Container should correctly render canonical navigation on no
       </div>
       <div
         class="emotion-60 emotion-61"
+        data-e2e="dropdown-nav"
         height="0"
       >
         <ul
