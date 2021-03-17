@@ -1455,10 +1455,10 @@
     "@bbc/psammead-image-placeholder" "^3.1.0"
     "@bbc/psammead-styles" "^7.2.2"
 
-"@bbc/psammead-radio-schedule@5.1.31":
-  version "5.1.31"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-radio-schedule/-/psammead-radio-schedule-5.1.31.tgz#b845a48fa6b3276969f537c46a2c8025d3c54931"
-  integrity sha512-8npBcbeiUzEUq8EwTc+mLg7mQUhHUb0Cz7R4XqhD9F9UOK0Xodq25KYWFjYPtBO+b/wGOMrD9LEBetl2tR01Lw==
+"@bbc/psammead-radio-schedule@5.1.32":
+  version "5.1.32"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-radio-schedule/-/psammead-radio-schedule-5.1.32.tgz#10a597de4e448f622a866433ad8e0377015c196b"
+  integrity sha512-WC1tfMOONBc1yUCvDScLlij6prV6YXH4XOeVJ3lyj0n5i2j/BN5uezxak7yfx1N2e3MdjUvDqf9nmXNRmOuZmA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-assets" "3.1.8"
