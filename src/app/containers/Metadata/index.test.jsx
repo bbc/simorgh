@@ -143,7 +143,7 @@ it('should render the canonical link', async () => {
   });
 });
 
-it('should render the alternate links', async () => {
+it('should render the alternate links for article page', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
   const expected = [
@@ -172,6 +172,52 @@ it('should render the alternate links', async () => {
     expect(actual).toEqual(expected);
   });
 });
+
+it.each`
+  service    | pathName
+  ${'news'}  | ${'/news/56427710'}
+  ${'sport'} | ${'/sport/football/56427710'}
+`(
+  'should render the alternate links for $service story page',
+  async ({ service, pathName }) => {
+    render(
+      <MetadataWithContext
+        service={service}
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="56427710"
+        pageType={STORY_PAGE}
+        pathname={pathName}
+      />,
+    );
+
+    const expected = [
+      {
+        href: `https://www.bbc.com${pathName}`,
+        hreflang: 'x-default',
+      },
+      {
+        href: `https://www.bbc.com${pathName}`,
+        hreflang: 'en',
+      },
+      {
+        href: `https://www.bbc.co.uk${pathName}`,
+        hreflang: 'en-gb',
+      },
+    ];
+
+    await waitFor(() => {
+      const actual = Array.from(
+        document.querySelectorAll('head > link[rel="alternate"]'),
+      ).map(tag => ({
+        href: tag.getAttribute('href'),
+        hreflang: tag.getAttribute('hreflang'),
+      }));
+
+      expect(actual).toEqual(expected);
+    });
+  },
+);
 
 it('should render the apple touch icons', async () => {
   render(<CanonicalNewsInternationalOrigin />);
