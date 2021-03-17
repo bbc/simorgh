@@ -118,6 +118,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
       >
         <amp-iframe
           allowfullscreen="allowfullscreen"
+          data-e2e="media-player"
           frameborder="0"
           layout="fill"
           sandbox="allow-scripts allow-same-origin"
@@ -128,6 +129,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
           <amp-img
             alt=""
             attribution=""
+            data-e2e="media-player__placeholder"
             height="16"
             layout="fill"
             placeholder="true"
@@ -406,12 +408,15 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player"
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="media-player__placeholder"
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="media-player__guidance"
           >
             <strong
               aria-hidden="true"

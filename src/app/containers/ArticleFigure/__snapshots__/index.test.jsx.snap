@@ -198,6 +198,7 @@ exports[`ArticleFigure should render a lazyloaded image when lazyLoad set to tru
     >
       <div
         class="emotion-6 emotion-7"
+        data-e2e="image-placeholder"
       >
         <div
           class="lazyload-wrapper "
@@ -2228,6 +2229,7 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -2447,6 +2449,7 @@ exports[`ArticleFigure should render an image and caption for a square with nest
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -2666,6 +2669,7 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -3064,6 +3068,7 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -3477,6 +3482,7 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -3897,6 +3903,7 @@ exports[`ArticleFigure should render an image with caption text with inline link
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"
@@ -4166,6 +4173,7 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <img
             alt="Pauline Clayton"

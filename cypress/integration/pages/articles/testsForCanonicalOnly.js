@@ -44,7 +44,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
     if (serviceHasCaption(service)) {
       describe('Image with placeholder', () => {
         it('should have a visible image that is not lazyloaded', () => {
-          cy.get('div[class*="ImagePlaceholder"]')
+          cy.get('[data-e2e="image-placeholder"]')
             .eq(0)
             .should('be.visible')
             .should('to.have.descendants', 'img')
@@ -54,7 +54,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         });
 
         it('should have a visible image that is lazyloaded and has a noscript fallback image', () => {
-          cy.get('div[class*="ImagePlaceholder"]')
+          cy.get('[data-e2e="image-placeholder"]')
             .eq(1)
             .scrollIntoView()
             .should('be.visible')
@@ -96,8 +96,8 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
         cy.window().then(win => {
           const media = getBlockData('video', win.SIMORGH_DATA.pageData);
           if (media) {
-            cy.get('div[class*="StyledVideoContainer"]').within(() => {
-              cy.get('div[class*="StyledPlaceholder"] > img')
+            cy.get('[data-e2e="media-player"]').within(() => {
+              cy.get('[data-e2e="media-player__placeholder"] img')
                 .should('be.visible')
                 .should('have.attr', 'src')
                 .should('not.be.empty');
@@ -115,12 +115,12 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
               media.model.blocks[1].model.blocks[0].model.versions[0].warnings
                 .long;
 
-            cy.get('div[class*="StyledVideoContainer"]')
+            cy.get('[data-e2e="media-player"]')
               .eq(0)
               .within(() => {
                 // Check for video with guidance message
                 if (longGuidanceWarning) {
-                  cy.get('div[class*="StyledPlaceholder"]')
+                  cy.get('[data-e2e="media-player__placeholder"]')
                     .within(() => {
                       cy.get('strong');
                     })
@@ -128,7 +128,9 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
                     .and('contain', longGuidanceWarning);
                   // Check for video with no guidance message
                 } else {
-                  cy.get('div[class*="StyledGuidance"]').should('not.exist');
+                  cy.get('[data-e2e="media-player__guidance"] strong').should(
+                    'not.exist',
+                  );
                 }
               });
           }
@@ -142,7 +144,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
             const aresMediaBlocks = media.model.blocks[1].model.blocks[0];
             const { durationISO8601 } = aresMediaBlocks.model.versions[0];
 
-            cy.get('div[class*="StyledVideoContainer"]').within(() => {
+            cy.get('[data-e2e="media-player"]').within(() => {
               cy.get('button')
                 .should('be.visible')
                 .within(() => {
@@ -167,9 +169,7 @@ export const testsThatFollowSmokeTestConfigForCanonicalOnly = ({
           if (media && media.type === 'video') {
             const { lang } = appConfig[service][variant];
             const embedUrl = getVideoEmbedUrl(body, lang);
-            cy.get(
-              'div[class*="StyledVideoContainer"] button[class*="StyledPlayButton"]',
-            )
+            cy.get('[data-e2e="media-player"] button')
               .click()
               .then(() => {
                 cy.get(`iframe[src="${embedUrl}"]`).should('be.visible');

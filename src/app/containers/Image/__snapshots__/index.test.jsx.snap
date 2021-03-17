@@ -295,6 +295,7 @@ exports[`Image with data should render a lazyload container and not preload the 
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -627,6 +628,7 @@ exports[`Image with data should render an image with alt text 1`] = `
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="image-placeholder"
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
@@ -1123,6 +1125,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="image-placeholder"
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
@@ -1497,6 +1500,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="image-placeholder"
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
@@ -1864,6 +1868,7 @@ exports[`Image with data should render an image with other originCode - this wou
         >
           <div
             class="emotion-8 emotion-9"
+            data-e2e="image-placeholder"
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."

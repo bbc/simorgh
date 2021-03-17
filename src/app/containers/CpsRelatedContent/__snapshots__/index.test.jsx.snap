@@ -771,6 +771,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-31 emotion-32"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -836,6 +837,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-31 emotion-32"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -890,6 +892,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
               >
                 <div
                   class="emotion-31 emotion-32"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -1657,6 +1660,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
               >
                 <div
                   class="emotion-29 emotion-30"
+                  data-e2e="image-placeholder"
                 >
                   <div
                     class="lazyload-wrapper "

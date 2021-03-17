@@ -57,7 +57,7 @@ const AmpNavigationContainer = ({
     />
     {/* Hidden attribute allows us to toggle visibility on the dropdown
     using AMP actions. */}
-    <AmpDropdown id={DROPDOWN_ID} hidden>
+    <AmpDropdown id={DROPDOWN_ID} data-e2e="dropdown-nav" hidden>
       {dropdownListItems}
     </AmpDropdown>
     <StyledAmpScrollableNavigation

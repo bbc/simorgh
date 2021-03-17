@@ -1425,6 +1425,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-103 emotion-104"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
@@ -1876,6 +1877,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-103 emotion-104"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
@@ -2109,6 +2111,7 @@ exports[`Front Page snapshots should render a pidgin amp frontpage 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-103 emotion-104"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
@@ -3739,6 +3742,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                           >
                             <div
                               class="emotion-26 emotion-27"
+                              data-e2e="image-placeholder"
                             >
                               <img
                                 alt="Senator Ahmad Lawan and Ali Ndume"
@@ -3885,6 +3889,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -3939,6 +3944,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -3954,6 +3960,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-111 emotion-112"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
@@ -4024,6 +4031,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4078,6 +4086,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4132,6 +4141,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4186,6 +4196,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4201,6 +4212,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-111 emotion-112"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
@@ -4263,6 +4275,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4317,6 +4330,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                             >
                               <div
                                 class="emotion-26 emotion-27"
+                                data-e2e="image-placeholder"
                               >
                                 <div
                                   class="lazyload-wrapper "
@@ -4332,6 +4346,7 @@ exports[`Front Page snapshots should render a pidgin frontpage correctly 1`] = `
                                 <div
                                   aria-hidden="true"
                                   class="emotion-111 emotion-112"
+                                  data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div

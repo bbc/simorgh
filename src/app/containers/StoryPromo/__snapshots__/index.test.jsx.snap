@@ -365,6 +365,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -771,6 +772,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -786,6 +788,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
           <div
             aria-hidden="true"
             class="emotion-10 emotion-11"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -1294,6 +1297,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
           <div
             aria-hidden="true"
             class="emotion-22 emotion-23"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -1694,6 +1698,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -2133,6 +2138,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -2524,6 +2530,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -2539,6 +2546,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
           <div
             aria-hidden="true"
             class="emotion-10 emotion-11"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -3027,6 +3035,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
           <div
             aria-hidden="true"
             class="emotion-20 emotion-21"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -3417,6 +3426,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -4084,6 +4094,7 @@ exports[`StoryPromo Container should render featureLink correctly for canonical 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -5428,6 +5439,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
       >
         <div
           class="emotion-7 emotion-8"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -5739,6 +5751,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -6042,6 +6055,7 @@ exports[`StoryPromo Container should render item without an image correctly for 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -6393,6 +6407,7 @@ exports[`StoryPromo Container should render item without an image promoType lead
       >
         <div
           class="emotion-16 emotion-17"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-18 emotion-19"
@@ -6670,6 +6685,7 @@ exports[`StoryPromo Container should render item without an image promoType top 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -7280,6 +7296,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -8381,6 +8398,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -8444,6 +8462,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               <div
                 aria-hidden="true"
                 class="emotion-30 emotion-31"
+                data-e2e="media-indicator"
                 dir="ltr"
               >
                 <div
@@ -8759,6 +8778,7 @@ exports[`StoryPromo Container should render podcastLink correctly for amp 1`] = 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -9032,6 +9052,7 @@ exports[`StoryPromo Container should render podcastLink correctly for canonical 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -9347,6 +9368,7 @@ exports[`StoryPromo Container should render podcastLink promoType leading on amp
       >
         <div
           class="emotion-14 emotion-15"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-16 emotion-17"
@@ -9600,6 +9622,7 @@ exports[`StoryPromo Container should render podcastLink promoType top on amp 1`]
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         />
         <div
           class="emotion-8 emotion-9"
@@ -10230,6 +10253,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -11562,6 +11586,7 @@ exports[`StoryPromo Container should render standardLink correctly for canonical
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -12894,6 +12919,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -13991,6 +14017,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -14394,6 +14421,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -14409,6 +14437,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
           <div
             aria-hidden="true"
             class="emotion-10 emotion-11"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -14914,6 +14943,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
           <div
             aria-hidden="true"
             class="emotion-22 emotion-23"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -15311,6 +15341,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
           <div
             aria-hidden="true"
             class="emotion-8 emotion-9"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
