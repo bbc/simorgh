@@ -188,6 +188,10 @@ it.each`
         id="56427710"
         pageType={STORY_PAGE}
         pathname={pathName}
+        title="A story"
+        description="The story's description"
+        lang="en-GB"
+        openGraphType="article"
       />,
     );
 
