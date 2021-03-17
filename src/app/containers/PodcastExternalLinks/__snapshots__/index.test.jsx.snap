@@ -154,11 +154,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               lang="ru"
             >
               Apple
-              <span
-                class="emotion-10 emotion-11"
-              >
-                , A brand podcast
-              </span>
+            </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , A brand podcast
             </span>
           </span>
         </a>
@@ -179,11 +179,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               lang="ru"
             >
               Spotify
-              <span
-                class="emotion-10 emotion-11"
-              >
-                , A brand podcast
-              </span>
+            </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , A brand podcast
             </span>
           </span>
         </a>
@@ -204,11 +204,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               lang="ru"
             >
               RSS
-              <span
-                class="emotion-10 emotion-11"
-              >
-                , A brand podcast
-              </span>
+            </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , A brand podcast
             </span>
           </span>
         </a>
