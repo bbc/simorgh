@@ -114,7 +114,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           dir={dir}
         >
           <span>
-            {firstLink.linkText}
+            <span lang={lang}>{firstLink.linkText}</span>
             <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
           </span>
         </Link>
