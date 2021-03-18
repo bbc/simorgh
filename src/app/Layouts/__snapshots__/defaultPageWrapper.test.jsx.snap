@@ -96,6 +96,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   }
 }
 
+.emotion-8:focus {
+  outline: none;
+}
+
 .emotion-10 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -911,6 +915,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             <h2
               class="emotion-8 emotion-9"
               dir="ltr"
+              tabindex="-1"
             >
               We've updated our Privacy and Cookies Policy
             </h2>
@@ -1038,6 +1043,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </button>
             <div
               class="emotion-42 emotion-43"
+              data-e2e="scrollable-nav"
               dir="ltr"
             >
               <ul
@@ -1181,6 +1187,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           </div>
           <div
             class="emotion-90 emotion-91"
+            data-e2e="dropdown-nav"
             height="0"
           >
             <ul
@@ -1478,7 +1485,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
              
             <a
               class="emotion-190 emotion-159"
-              href="https://www.bbc.co.uk/help/web/links/"
+              href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
             >
               Read about our approach to external linking.
             </a>

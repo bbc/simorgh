@@ -227,6 +227,7 @@ export const service = {
         listen: 'सुनिए',
         watch: 'देखिए',
         listenLive: 'लाइव सुनें',
+        listenNext: 'इसके बाद सुनिए',
         liveLabel: 'लाइव',
         nextLabel: 'अगला',
         previousRadioShow: 'पिछला रेडियो शो',
@@ -289,7 +290,8 @@ export const service = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [

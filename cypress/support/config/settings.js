@@ -4618,7 +4618,6 @@ module.exports = () => ({
       },
     },
   },
-
   newsround: {
     name: 'newsround',
     font: undefined,

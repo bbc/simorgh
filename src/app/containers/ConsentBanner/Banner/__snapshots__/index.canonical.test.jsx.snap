@@ -81,6 +81,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
+.emotion-6:focus {
+  outline: none;
+}
+
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -243,6 +247,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         <h2
           class="emotion-6 emotion-7"
           dir="ltr"
+          tabindex="-1"
         >
           Let us know you agree to cookies
         </h2>
@@ -375,6 +380,10 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
   }
 }
 
+.emotion-6:focus {
+  outline: none;
+}
+
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
@@ -537,6 +546,7 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
         <h2
           class="emotion-6 emotion-7"
           dir="rtl"
+          tabindex="-1"
         >
           أخبرنا عما إذا كنت توافق على تحميل الكوكيز
         </h2>
@@ -667,6 +677,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
+}
+
+.emotion-6:focus {
+  outline: none;
 }
 
 .emotion-8 {
@@ -831,6 +845,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
         <h2
           class="emotion-6 emotion-7"
           dir="ltr"
+          tabindex="-1"
         >
           We've updated our Privacy and Cookies Policy
         </h2>
@@ -953,6 +968,10 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
     font-size: 1.5rem;
     line-height: 2rem;
   }
+}
+
+.emotion-6:focus {
+  outline: none;
 }
 
 .emotion-8 {
@@ -1117,6 +1136,7 @@ exports[`Canonical Consent Banner Container should correctly render privacy bann
         <h2
           class="emotion-6 emotion-7"
           dir="rtl"
+          tabindex="-1"
         >
           لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies
         </h2>

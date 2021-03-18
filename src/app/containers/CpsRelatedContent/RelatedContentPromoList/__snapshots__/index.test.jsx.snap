@@ -415,6 +415,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13 emotion-14"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "
@@ -480,6 +481,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13 emotion-14"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "
@@ -534,6 +536,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
           >
             <div
               class="emotion-13 emotion-14"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "
@@ -977,6 +980,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12 emotion-13"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "
@@ -1042,6 +1046,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12 emotion-13"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "
@@ -1096,6 +1101,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
           >
             <div
               class="emotion-12 emotion-13"
+              data-e2e="image-placeholder"
             >
               <div
                 class="lazyload-wrapper "

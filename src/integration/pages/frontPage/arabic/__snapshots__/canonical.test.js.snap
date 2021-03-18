@@ -63,7 +63,7 @@ Object {
 exports[`Canonical Front Page Footer Anchors should match text and url 9`] = `
 Object {
   "text": "سياستنا بخصوص الروابط الخارجية.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
@@ -358,7 +358,7 @@ exports[`Story Promo Headline should match text 1`] = `"المجلس العسك�
 exports[`Story Promo Image should match image 1`] = `
 <img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
-  class="bbc-13lcmnl-StyledImg e1enwo3v0"
+  class="bbc-yfiktt e1enwo3v0"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 660w"

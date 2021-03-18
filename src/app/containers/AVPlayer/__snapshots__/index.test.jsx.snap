@@ -43,6 +43,7 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
   >
     <div
       class="emotion-3 emotion-4"
+      data-e2e="media-player"
     >
       <iframe
         allow="autoplay"
@@ -94,6 +95,7 @@ exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`]
     >
       <amp-iframe
         allowfullscreen="allowfullscreen"
+        data-e2e="media-player"
         frameborder="0"
         layout="fill"
         sandbox="allow-scripts allow-same-origin"
@@ -104,6 +106,7 @@ exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`]
         <amp-img
           alt=""
           attribution=""
+          data-e2e="media-player__placeholder"
           height="16"
           layout="fill"
           placeholder="true"
@@ -140,6 +143,7 @@ exports[`AVPlayer for On Demand TV should match snapshot for canonical AVPlayer 
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player"
     >
       <iframe
         allow="autoplay"

@@ -9,7 +9,8 @@ describe('Footer', () => {
       text: 'Por qué puedes confiar en la BBC',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href:
+        'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Lee sobre nuestra postura acerca de enlaces externos.',
     },
     links: [

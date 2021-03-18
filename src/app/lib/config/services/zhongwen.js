@@ -76,7 +76,8 @@ export const service = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -302,6 +303,7 @@ export const service = {
         video: '视频',
         listen: '收听',
         watch: '观看',
+        listenNext: '收听下一个',
         liveLabel: '直播',
         nextLabel: 'NEXT',
         previousRadioShow: '上期广播节目',
@@ -358,7 +360,8 @@ export const service = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
@@ -584,6 +587,7 @@ export const service = {
         video: '視頻',
         listen: '收聽',
         watch: '觀看',
+        listenNext: '收聽下一個',
         liveLabel: '直播',
         nextLabel: 'NEXT',
         previousRadioShow: '上期廣播節目',
