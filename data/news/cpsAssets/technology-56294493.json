@@ -1,0 +1,786 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/technology-56294493",
+    "locators": {
+      "assetUri": "/news/technology-56294493",
+      "cpsUrn": "urn:bbc:content:assetUri:news/technology-56294493",
+      "curie": "http://www.bbc.co.uk/asset/c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46",
+      "assetId": "56294493"
+    },
+    "type": "CSP",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1614952550021,
+    "firstPublished": 1614951470000,
+    "lastPublished": 1614951470000,
+    "timestamp": 1614951470000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "csp",
+      "counterName": "news.technology.correspondent_story.56294493.page",
+      "cps_asset_id": "56294493"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/46dd7a69-ce63-44d4-a5db-382f5c2688e7#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/65ba56b4-3f50-4217-ab8e-b3c1fe890364#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7a48b6e0-9074-4303-ae82-011003058e16#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0d358111-576d-4d61-a7c7-e2e71931b579#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/f7bf39da-286c-4e37-8ee0-a01395f09ac2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b054a2d3-6c1e-44de-b8db-0e2501c035c0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2c493367-e5a2-4c19-be5f-6e9342f5c591#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Intel",
+          "thingUri": "http://www.bbc.co.uk/things/0d358111-576d-4d61-a7c7-e2e71931b579#id",
+          "thingId": "0d358111-576d-4d61-a7c7-e2e71931b579",
+          "thingType": [
+            "tagging:Agent",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "core:Organisation",
+            "core:Thing"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Intel"],
+          "topicName": "Intel",
+          "topicId": "cj5pd6gqk4kt",
+          "curationList": [
+            {
+              "curationId": "857b3b04-b78e-44fe-8b1b-68d21367b949",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Intel"
+        },
+        {
+          "thingLabel": "Technology of business",
+          "thingUri": "http://www.bbc.co.uk/things/2c493367-e5a2-4c19-be5f-6e9342f5c591#id",
+          "thingId": "2c493367-e5a2-4c19-be5f-6e9342f5c591",
+          "thingType": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+          "thingSameAs": [],
+          "thingEnglishLabel": "Technology of business"
+        },
+        {
+          "thingLabel": "Business",
+          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q21857788",
+            "http://dbpedia.org/resource/Business"
+          ],
+          "thingEnglishLabel": "Business"
+        },
+        {
+          "thingLabel": "Technology",
+          "thingUri": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id",
+          "thingId": "31684f19-84d6-41f6-b033-7ae08098572a",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Technology",
+            "http://www.wikidata.org/entity/Q4456888"
+          ],
+          "thingEnglishLabel": "Technology"
+        },
+        {
+          "thingLabel": "Car industry",
+          "thingUri": "http://www.bbc.co.uk/things/65ba56b4-3f50-4217-ab8e-b3c1fe890364#id",
+          "thingId": "65ba56b4-3f50-4217-ab8e-b3c1fe890364",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Automotive_industry"],
+          "topicName": "Car industry",
+          "topicId": "cywd23g0g55t",
+          "curationList": [
+            {
+              "curationId": "65ba56b4-3f50-4217-ab8e-b3c1fe890364",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Car industry"
+        },
+        {
+          "thingLabel": "China",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": [
+            "http://sws.geonames.org/1814991/",
+            "http://dbpedia.org/resource/China",
+            "http://www.wikidata.org/entity/Q148"
+          ],
+          "topicName": "China",
+          "topicId": "cd39m6424jwt",
+          "curationList": [
+            {
+              "curationId": "50a398a3-97ae-48e9-9cd5-c8763ea46169",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "China"
+        },
+        {
+          "thingLabel": "Taiwan",
+          "thingUri": "http://www.bbc.co.uk/things/7a48b6e0-9074-4303-ae82-011003058e16#id",
+          "thingId": "7a48b6e0-9074-4303-ae82-011003058e16",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/1668284/"],
+          "topicName": "Taiwan",
+          "topicId": "cg41ylwvw2qt",
+          "curationList": [
+            {
+              "curationId": "7a48b6e0-9074-4303-ae82-011003058e16",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Taiwan"
+        },
+        {
+          "thingLabel": "Computer chip",
+          "thingUri": "http://www.bbc.co.uk/things/b054a2d3-6c1e-44de-b8db-0e2501c035c0#id",
+          "thingId": "b054a2d3-6c1e-44de-b8db-0e2501c035c0",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Integrated_circuit",
+            "http://www.wikidata.org/entity/Q80831"
+          ],
+          "thingEnglishLabel": "Computer chip"
+        },
+        {
+          "thingLabel": "Semiconductor",
+          "thingUri": "http://www.bbc.co.uk/things/f7bf39da-286c-4e37-8ee0-a01395f09ac2#id",
+          "thingId": "f7bf39da-286c-4e37-8ee0-a01395f09ac2",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Semiconductor",
+            "http://www.wikidata.org/entity/Q11456"
+          ],
+          "thingEnglishLabel": "Semiconductor"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": ["image", "paragraph", "crosshead", "list"],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS",
+      "producerId": "64",
+      "chapter": "technology"
+    },
+    "readTime": 5,
+    "siteUri": "/news",
+    "topics": [
+      {
+        "topicName": "China",
+        "topicId": "cd39m6424jwt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "50a398a3-97ae-48e9-9cd5-c8763ea46169",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Place"]
+      },
+      {
+        "topicName": "Taiwan",
+        "topicId": "cg41ylwvw2qt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/7a48b6e0-9074-4303-ae82-011003058e16#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7a48b6e0-9074-4303-ae82-011003058e16",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Place"]
+      },
+      {
+        "topicName": "Intel",
+        "topicId": "cj5pd6gqk4kt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/0d358111-576d-4d61-a7c7-e2e71931b579#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "857b3b04-b78e-44fe-8b1b-68d21367b949",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:Agent",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept",
+          "core:Organisation",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Car industry",
+        "topicId": "cywd23g0g55t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/65ba56b4-3f50-4217-ab8e-b3c1fe890364#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "65ba56b4-3f50-4217-ab8e-b3c1fe890364",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "tagging:TagConcept", "core:Thing"]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "117412375",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/DFE9/production/_117412375_techtent-chips.jpg",
+        "path": "/cpsprodpb/DFE9/production/_117412375_techtent-chips.jpg",
+        "height": 1080,
+        "width": 1920,
+        "altText": "A computer chip beside the China and US flags",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Silicon chips are at the heart of many of the biggest technology stories of our time.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Without them, car plants around the world have come to a halt. The technology to make them is now seen by the United States as a key weapon in its trade war with China. And access to the latest and most-powerful versions will determine who wins the artificial intelligence race.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "In this week's Tech Tent podcast, we look at the semiconductor industry and try to answer five important questions about chips.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "What's behind the current shortages?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "From Ford and General Motors in the US, to Honda in the UK, and electric car-maker Nio in China: major automotive companies have had to cut back production due to a shortage of chips. Why? ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Well it seems the pandemic is to blame, continually making every prediction about chip demand look out-of-date.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "First, it made demand for gadgets soar, as years of digital transformation happened in weeks. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We've been talking about working from home and 5G and IoT and the cloud for years. And now suddenly it's a reality,&quot; says Jodi Shelton, chief executive of the World Semiconductor Association.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Meanwhile, sales of new cars fell off a cliff and automotive executives cancelled orders for chips. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But then, an unexpected rebound in sales caught them flat-footed, along with their chip suppliers.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111837276",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/106C9/production/_111837276_rory-tech-tent-nc.png",
+        "path": "/cpsprodpb/106C9/production/_111837276_rory-tech-tent-nc.png",
+        "height": 300,
+        "width": 1952,
+        "altText": "Podcast available now",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Listen to the latest Tech Tent podcast</caption><altText>BBC Tech Tent</altText><url href=\"https://www.bbc.co.uk/sounds/play/w3cszhq4\" platform=\"highweb\"/></link> on BBC Sounds",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "107492219",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1645D/production/_107492219_5426c5d7-6c63-401e-b07e-46504c03ba9f.jpg",
+        "path": "/cpsprodpb/1645D/production/_107492219_5426c5d7-6c63-401e-b07e-46504c03ba9f.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "type": "image"
+      },
+      {
+        "text": "Jodi Shelton says car-makers with &quot;just in time&quot; supply chains came up against a semiconductor industry that cannot just quickly turn the tap on or off.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;They're going to have to learn that that's not really the way it works. These are just not products that are off-the-shelf.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Who is making the best chips?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "The shortages have made one thing clear: there is no longer just one kind of chip.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "As demand shifts, so does power in the semiconductor industry. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "For decades, Intel - with its marketing slogan &quot;Intel Inside&quot; - was the only chip-maker in the minds of many. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But that is no longer the case. Analyst Richard Windsor of Radio Free Mobile says the world has moved on.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He outlines two trends: the use of chips for data storage, and the growing importance of graphics chips (GPUs), which aren't just for making games come to life but play a vital role in artificial intelligence applications.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "And he points to new superpowers in this industry, in particular the Taiwanese company TSMC.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;TSMC is by far the world's number one manufacturer of cutting-edge silicon chips at this point in time,&quot; he explains.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;It's very different from Intel. What Intel does is it designs the chips; makes its own chips; and then sells those chips. What TSMC does is make chips for other people.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "And building chip factories - or foundries as they are known - is a hugely expensive business. Richard Windsor tells us that it can cost as much as $25 billion (£18bn) to open a new foundry with state-of-the art equipment.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "What is the most important company in chip-making?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Mr Windsor also talks about the vital role played by ASML, a company that is the only supplier of what is effectively a printing press for the very latest and smallest silicon chips.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<link><caption>&quot;A relatively obscure Dutch company,</caption><altText>BBC News</altText><url href=\"https://www.bbc.co.uk/news/technology-54510363\" platform=\"highweb\"/></link>&quot; is how my colleague Leo Kelion, the BBC's technology desk editor, described the company in an article last year. ",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/technology-54510363",
+        "type": "paragraph"
+      },
+      {
+        "text": "While not a household name, it is has a huge market capitalisation of about 184bn euros ($220bn; £159bn).",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "In any case, ASML liked the description so much that it printed it on hoodies for staff.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We build the tools that the carpenter uses to build your house,&quot; says Jos Benschop of ASML, explaining how the likes of TSMC, Intel and Samsung all need its equipment. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "When the company was founded in 1984 there were 10 big players in the chip lithography market. Now it is the only one left.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;As the technology became progressively more difficult to master, and the investment needed became progressively larger, then you had the survival of the fittest. Fewer and fewer companies were able to keep up.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But that means ASML is caught in the trade war between the US and China. The <link><caption>Trump administration put pressure on the Dutch government</caption><altText>Reuters news</altText><url href=\"https://www.reuters.com/article/us-asml-holding-usa-china-insight-idUSKBN1Z50HN\" platform=\"highweb\"/></link> to halt the sale of ASML technology to a Chinese customer. That seems to have worked - shipment of the equipment has been delayed.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Why do chips play a role in the US-China trade war?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "As China and the United States battle for supremacy in artificial intelligence, access to equipment that builds the latest AI chips is a key weapon. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dr Pippa Malmgren, a former advisor to President George W. Bush, says the stakes are as high as they were in another technological battle: the space race.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;The new space race at the geopolitical level is for computational power. Who can gather the most data and process that data the fastest? That is why both China and the US, frankly the EU as well, are spending a lot of money on quantum computers, incredibly fast supercomputers. And all of these things require chips,&quot; she explains.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Taiwan, home of TSMC, is on the front line of this battle. Given its fight to be independent from China, you might think it would do whatever the US wanted. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But Dr Malmgren warns that things are not so simple :&quot;Chinese money is heavily invested in Taiwan.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;And I think if you were to ask, can you extricate Chinese backing from the Taiwanese economy, the answer is that it would be very difficult.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Is Moore's Law over?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Since the 1960s, the chip industry has been governed by Moore's Law, which predicts that the capability of computers will double every two years as manufacturers cram ever-smaller transistors on to their chips.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But given that the transistors are now so unimaginably small, can we expect this pattern to continue?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "I asked Sophie Wilson, who in the 1980s played a key role in designing what is now the world's most popular chip, the Arm processor.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "She tells us progress is still possible because the industry keeps on finding new ways of cramming more into a smaller space.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We've reached the end of the road many times. And each time we've reached the end of the road, there has been some sort of way out,&quot; she explains.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "And the future may be 3D.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;What you'll see over the next few years is stuff working in three dimensions. We can still up the density in a given volume by building more and more silicon layers on top of each other. The silicon layers are very thin, so you can stack them on top of each other,&quot; she says.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "And don't expect China to opt out of this battle.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "As it is denied access to current chip equipment, the Chinese government will pour huge sums into research into new approaches with the aim of leapfrogging the United States in the next era of the chip economy.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "111837276",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/106C9/production/_111837276_rory-tech-tent-nc.png",
+        "path": "/cpsprodpb/106C9/production/_111837276_rory-tech-tent-nc.png",
+        "height": 300,
+        "width": 1952,
+        "altText": "Podcast available now",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Listen to the latest Tech Tent podcast</caption><altText>BBC Tech Tent</altText><url href=\"https://www.bbc.co.uk/sounds/play/w3cszhq4\" platform=\"highweb\"/></link> on BBC Sounds",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "107492219",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1645D/production/_107492219_5426c5d7-6c63-401e-b07e-46504c03ba9f.jpg",
+        "path": "/cpsprodpb/1645D/production/_107492219_5426c5d7-6c63-401e-b07e-46504c03ba9f.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Tech Tent: The new 'space race' for computer chips",
+      "headline": "Tech Tent: The new 'space race' for computer chips"
+    },
+    "locators": {
+      "assetUri": "/news/technology-56294493",
+      "cpsUrn": "urn:bbc:content:assetUri:news/technology-56294493",
+      "curie": "http://www.bbc.co.uk/asset/c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46",
+      "assetId": "56294493"
+    },
+    "summary": "High-end computer chips might be the key to winning the artificial intelligence arms race.",
+    "timestamp": 1614951470000,
+    "language": "en-gb",
+    "byline": {
+      "name": "By Rory Cellan-Jones",
+      "title": "Technology correspondent",
+      "persons": [
+        {
+          "name": "Rory Cellan-Jones",
+          "function": "Technology correspondent",
+          "url": "/news/correspondents/rorycellanjones",
+          "correspondentId": "rorycellanjones",
+          "thumbnail": "http://c.files.bbci.co.uk/7716/production/_112668403_ba89a5ff-91f0-4451-8b4c-ff0ebb7bc29b.jpg",
+          "correspondentImage": {
+            "height": 200,
+            "width": 200,
+            "href": "http://c.files.bbci.co.uk/12C28/production/_112704867_rorycellanjones.jpg",
+            "originCode": "cpsprodpb",
+            "caption": "Rory Cellan-Jones",
+            "altText": "Rory Cellan-Jones, Technology correspondent",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true
+          },
+          "twitterName": "BBCRoryCJ"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:c1c8b1bf-4c9c-44e8-be0d-c81a2aa59e46",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/46dd7a69-ce63-44d4-a5db-382f5c2688e7#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/65ba56b4-3f50-4217-ab8e-b3c1fe890364#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7a48b6e0-9074-4303-ae82-011003058e16#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/mentions",
+          "value": "http://www.bbc.co.uk/things/31684f19-84d6-41f6-b033-7ae08098572a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0d358111-576d-4d61-a7c7-e2e71931b579#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/f7bf39da-286c-4e37-8ee0-a01395f09ac2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b054a2d3-6c1e-44de-b8db-0e2501c035c0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2c493367-e5a2-4c19-be5f-6e9342f5c591#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "117412372",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/6AB9/production/_117412372_techtent-chips.jpg",
+      "path": "/cpsprodpb/6AB9/production/_117412372_techtent-chips.jpg",
+      "height": 1080,
+      "width": 1920,
+      "altText": "A computer chip beside the China and US flags",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/technology-56294493",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Technology",
+      "uri": "/news/technology",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

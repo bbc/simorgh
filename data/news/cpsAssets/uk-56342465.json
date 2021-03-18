@@ -1,0 +1,789 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/uk-56342465",
+    "locators": {
+      "assetUri": "/news/uk-56342465",
+      "cpsUrn": "urn:bbc:content:assetUri:news/uk-56342465",
+      "curie": "http://www.bbc.co.uk/asset/63667575-5fe0-4eca-9556-3afb34d36e28",
+      "assetId": "56342465"
+    },
+    "type": "STY",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1615387765457,
+    "firstPublished": 1615336020000,
+    "lastPublished": 1615387758000,
+    "timestamp": 1615387758000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "news.england.london.story.56342465.page",
+      "cps_asset_id": "56342465"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:63667575-5fe0-4eca-9556-3afb34d36e28",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/32308873-9c53-4071-97b5-4aa7129a4bc5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/235a251e-f6e8-445c-b802-8253d34f6509#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/8a322569-dc6c-4e68-be62-215addc477ac#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/85ce4f61-9a4d-48ea-a384-3bb289847eb1#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c3a888f0-5cc1-4288-8088-4dbffeecd239#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7fce291d-da82-408a-a5ec-775edd6042dd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/da478d3e-2ee7-4091-bfe4-759dd6f46487#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "London",
+          "thingUri": "http://www.bbc.co.uk/things/235a251e-f6e8-445c-b802-8253d34f6509#id",
+          "thingId": "235a251e-f6e8-445c-b802-8253d34f6509",
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2643743/"],
+          "thingEnglishLabel": "London"
+        },
+        {
+          "thingLabel": "Clapham",
+          "thingUri": "http://www.bbc.co.uk/things/7fce291d-da82-408a-a5ec-775edd6042dd#id",
+          "thingId": "7fce291d-da82-408a-a5ec-775edd6042dd",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": ["http://sws.geonames.org/2652951/"],
+          "topicName": "Clapham",
+          "topicId": "c90ekd98x0wt",
+          "curationList": [
+            { "curationId": "2652951", "curationType": "location-stream" }
+          ],
+          "thingEnglishLabel": "Clapham"
+        },
+        {
+          "thingLabel": "Sarah Everard disappearance",
+          "thingUri": "http://www.bbc.co.uk/things/85ce4f61-9a4d-48ea-a384-3bb289847eb1#id",
+          "thingId": "85ce4f61-9a4d-48ea-a384-3bb289847eb1",
+          "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+          "thingSameAs": [],
+          "thingEnglishLabel": "Sarah Everard disappearance"
+        },
+        {
+          "thingLabel": "Kent",
+          "thingUri": "http://www.bbc.co.uk/things/c3a888f0-5cc1-4288-8088-4dbffeecd239#id",
+          "thingId": "c3a888f0-5cc1-4288-8088-4dbffeecd239",
+          "thingType": [
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Place",
+            "core:CeremonialCounty"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Kent"],
+          "thingEnglishLabel": "Kent"
+        },
+        {
+          "thingLabel": "Brixton",
+          "thingUri": "http://www.bbc.co.uk/things/da478d3e-2ee7-4091-bfe4-759dd6f46487#id",
+          "thingId": "da478d3e-2ee7-4091-bfe4-759dd6f46487",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/6690877/"],
+          "topicName": "Brixton",
+          "topicId": "cn1mzwgll74t",
+          "curationList": [
+            { "curationId": "6690877", "curationType": "location-stream" }
+          ],
+          "thingEnglishLabel": "Brixton"
+        },
+        {
+          "thingLabel": "York",
+          "thingUri": "http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id",
+          "thingId": "dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b",
+          "thingType": ["core:Place", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://sws.geonames.org/2633352/"],
+          "topicName": "York",
+          "topicId": "cp7r8vgl2wgt",
+          "curationList": [
+            { "curationId": "2633352", "curationType": "location-stream" }
+          ],
+          "thingEnglishLabel": "York"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": ["image", "paragraph", "media", "crosshead", "list"],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS_ENGLISH_REGIONS",
+      "producerId": "108",
+      "chapter": "london"
+    },
+    "readTime": 4,
+    "siteUri": "/news",
+    "topics": [
+      {
+        "topicName": "Sarah Everard disappearance",
+        "topicId": "c8657zxk82wt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/85ce4f61-9a4d-48ea-a384-3bb289847eb1#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "fd705698-0380-4251-a554-665ae008a270",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Event", "tagging:TagConcept"]
+      },
+      {
+        "topicName": "Clapham",
+        "topicId": "c90ekd98x0wt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/7fce291d-da82-408a-a5ec-775edd6042dd#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2652951",
+            "curationType": "location-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Place"]
+      },
+      {
+        "topicName": "Brixton",
+        "topicId": "cn1mzwgll74t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/da478d3e-2ee7-4091-bfe4-759dd6f46487#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "6690877",
+            "curationType": "location-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"]
+      },
+      {
+        "topicName": "York",
+        "topicId": "cp7r8vgl2wgt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2633352",
+            "curationType": "location-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "core:Thing", "tagging:TagConcept"]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "117466623",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+        "path": "/cpsprodpb/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Sarah Everard",
+        "caption": "Sarah Everard has been described as \"beautiful, thoughtful and incredibly kind\"",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Police investigating the disappearance of Sarah Everard are searching a home and woodland in Kent following the arrest of a serving Met officer.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The 33-year-old was last seen in Clapham, south London, on 3 March.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The policeman and a woman were arrested at a house in Kent on Tuesday. Searches are being carried out at a building in Deal as well as on land near Ashford.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The Met said it was &quot;shocking and deeply disturbing&quot; that the arrested man was a serving officer.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ms Everard's family have been kept updated, the force added.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "117516367",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/12A49/production/_117516367_mediaitem117516366.jpg",
+        "path": "/cpsprodpb/12A49/production/_117516367_mediaitem117516366.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Police search woodland near to Great Chart Golf and Leisure in Ashford",
+        "caption": "An area of woodland near Ashford is being searched by police",
+        "copyrightHolder": "PA Media",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "117517253",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/89C7/production/_117517253_066154746.jpg",
+        "path": "/cpsprodpb/89C7/production/_117517253_066154746.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Kent search",
+        "caption": "Met Police officers have been searching land near to Great Chart Golf and Leisure in Ashford, Kent",
+        "copyrightHolder": "PA Media",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "A tent has been erected outside a house in Deal and a car was earlier seen being taken away from the property.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Officers have also been carrying out searches on land near to Great Chart Golf and Leisure in Ashford.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Retired farmer Derek Batt, 72, of nearby Fridd Farm, said officers visited his property late on Tuesday.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He said: &quot;They said they were investigating a missing person. I said 'is it Sarah that I have seen on TV?' and she (the officer) said 'yes'.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mr Batt said he had not seen any suspicious activity in the area.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "117517256",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/FEF7/production/_117517256_066156252.jpg",
+        "path": "/cpsprodpb/FEF7/production/_117517256_066156252.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Crime scene",
+        "caption": "Fridd Farm is located almost three miles away from Great Chart Golf and Leisure complex",
+        "copyrightHolder": "PA Media",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "117517412",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/53DF/production/_117517412_missing_woman_south_london_v2_2x640-nc-2x.png",
+        "path": "/cpsprodpb/53DF/production/_117517412_missing_woman_south_london_v2_2x640-nc-2x.png",
+        "height": 1228,
+        "width": 1280,
+        "altText": "map of search areas",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "In a statement, the Met Police said the man and the woman had both been taken into custody at a London police station. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Assistant Commissioner Nick Ephgrave said the arrests were &quot;a serious and significant development&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;We will continue to work with all speed on this investigation but the fact that the arrested man is a serving Metropolitan Police officer is both shocking and deeply disturbing.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "During a later statement, he added the officer &quot;was not on duty at the time&quot; when Ms Everard went missing and would only confirm he had been arrested &quot;in connection&quot; with her disappearance.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He also would not say if the officer was known to the 33-year-old.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p0996z6j",
+        "subType": "clip",
+        "format": "video",
+        "title": "Arrest of officer 'shocking and deeply disturbing'",
+        "synopses": {
+          "short": "Sarah Everard disappearance: Arrest of officer 'shocking and deeply disturbing'",
+          "long": "Met Police Assistant Commissioner Nick Ephgrave has said it's \"shocking and deeply disturbing' that a serving police officer has been arrested in connection with the disappearance of Sarah Everard.\n\nMs Everard, 33, was last seen in Clapham at about 21:30 GMT on 3 March.\n\nThe Met said officers had visited 750 homes in the area as part of the investigation and the force had received more than 120 phone calls from the public.",
+          "medium": "Met Police Assistant Commissioner Nick Ephgrave speaks after a serving officer was arrested in connection with the disappearance of Sarah Everard."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0997j6q.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Met Police Assistant Commissioner Nick Ephgrave: Arrest of officer \"shocking and deeply disturbing\"",
+        "versions": [
+          {
+            "versionId": "p0997d25",
+            "types": ["Editorial"],
+            "duration": 99,
+            "durationISO8601": "PT1M39S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1615367684000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "When asked by reporters if police believed she was still alive, Mr Ephgrave replied: &quot;We are searching as hard as we can to find Sarah, so we really hope that is the case.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;As a father myself of four young women I can only imagine the anguish that Sarah's family are feeling at this very very difficult time.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The arrested woman has been held on suspicion of assisting an offender, the force has confirmed.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "On Tuesday, officers searching for Ms Everard had put up a cordon outside a block of flats in Clapham near to where she was last seen on Poynders Road and sniffer dogs have been used to search the nearby Oaklands Estate and gardens. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "117509078",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/15432/production/_117509078_bor2246-2021saraheverard2.jpg",
+        "path": "/cpsprodpb/15432/production/_117509078_bor2246-2021saraheverard2.jpg",
+        "height": 549,
+        "width": 549,
+        "altText": "Sarah Everard",
+        "caption": "Ms Everard's family said it was out of character for her to disappear",
+        "copyrightHolder": "Met Police",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Officers were also seen searching drains along the street where Ms Everard was last seen.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The Met said officers had visited 750 homes in the area as part of the investigation and the force had received more than 120 phone calls from the public.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Friends and relatives have issued appeals on social media to help find the marketing manager, who vanished on her walk home to Brixton after leaving a friend's flat in Leathwaite Road in Clapham Junction at about 21:00 GMT.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "117517416",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/F01F/production/_117517416_missing_woman_south_london_2x640-nc-2x.png",
+        "path": "/cpsprodpb/F01F/production/_117517416_missing_woman_south_london_2x640-nc-2x.png",
+        "height": 1262,
+        "width": 1280,
+        "altText": "map",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Her family has said it is out of character for her to disappear.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ms Everard, who is originally from York and attended Durham University, was last seen wearing a green rain jacket, navy blue trousers with a white diamond pattern, and turquoise and orange trainers. She is thought to have been wearing green earphones and a white beanie hat.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "She is believed to have walked through Clapham Common towards her home - a journey that should have taken her about 50 minutes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Prime Minister Boris Johnson said his thoughts were &quot;with Sarah and her friends and family&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "117517249",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1703F/production/_117517249_066145610.jpg",
+        "path": "/cpsprodpb/1703F/production/_117517249_066145610.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Forensics",
+        "caption": "Forensics were seen on Tuesday night outside the Poynders Court housing complex in Clapham",
+        "copyrightHolder": "PA Media",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "105914180",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1FCD/production/_105914180_line976-nc.png",
+        "path": "/cpsprodpb/1FCD/production/_105914180_line976-nc.png",
+        "height": 2,
+        "width": 624,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Disappearance timeline:",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<bold>3 March: </bold>Sarah Everard vanishes after leaving a friend's house on Leathwaite Road, Clapham, around 21:00 GMT",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>5 March:</bold> Met Police says it is &quot;increasingly concerned&quot; for <link><caption>Ms Everard and make an appeal on Twitter at 11:30</caption><url href=\"https://twitter.com/LambethMPS/status/1367784499237576704\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>6 March:</bold> Ms Everard's family say her disappearance is <link><caption>&quot;totally out of character&quot;</caption><url href=\"https://www.bbc.co.uk/news/uk-england-london-56307038\" platform=\"highweb\"/></link> as officers search Clapham Common's ponds",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-london-56307038",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>7 March:</bold> Footage taken from a doorbell camera shows <link><caption>Ms Everard walking alone</caption><url href=\"https://www.bbc.co.uk/news/uk-england-london-56315011\" platform=\"highweb\"/></link> along the A205 Poynder Road towards Tulse Hill at 21:30. Police say it is unclear whether or not she reached her house in Brixton",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-london-56315011",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>8 March:</bold> More than 120 calls are made from the public on the case and <link><caption>over 750 homes are visited as part of the investigation</caption><url href=\"https://www.bbc.co.uk/news/uk-england-london-56326187\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/uk-england-london-56326187",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>9 March:</bold> A serving officer is arrested in Kent along with a woman who is held on suspicion of assisting an offender",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<bold>10 March:</bold> Met Police Assistant Commissioner Nick Ephgrave describes the arrest as <link><caption>&quot;shocking and deeply disturbing&quot;</caption><url href=\"https://www.bbc.co.uk/news/av/uk-56344504\" platform=\"highweb\"/></link>. Extensive searches are carried out in parts of Kent",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/news/av/uk-56344504",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "105914180",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1FCD/production/_105914180_line976-nc.png",
+        "path": "/cpsprodpb/1FCD/production/_105914180_line976-nc.png",
+        "height": 2,
+        "width": 624,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "<italic>For more London news follow on </italic><link><caption>Facebook</caption><url href=\"https://www.facebook.com/BBCLondon/\" platform=\"highweb\"/></link><italic>, on </italic><link><caption>Twitter</caption><url href=\"https://twitter.com/BBCLondonNews\" platform=\"highweb\"/></link><italic>, on </italic><link><caption>Instagram</caption><url href=\"https://www.instagram.com/bbclondon/\" platform=\"highweb\"/></link><italic> and subscribe to our </italic><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCBwejc-awS-mANgrkHQ5-6A\" platform=\"highweb\"/></link><italic> channel.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Home and woods searched over missing Sarah Everard",
+      "headline": "Sarah Everard disappearance: House and woods in Kent searched"
+    },
+    "locators": {
+      "assetUri": "/news/uk-56342465",
+      "cpsUrn": "urn:bbc:content:assetUri:news/uk-56342465",
+      "curie": "http://www.bbc.co.uk/asset/63667575-5fe0-4eca-9556-3afb34d36e28",
+      "assetId": "56342465"
+    },
+    "summary": "The search follows the arrests of a serving Met Police officer and a woman in Kent on Tuesday.",
+    "timestamp": 1615387758000,
+    "language": "en-gb",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:63667575-5fe0-4eca-9556-3afb34d36e28",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/32308873-9c53-4071-97b5-4aa7129a4bc5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/235a251e-f6e8-445c-b802-8253d34f6509#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/8a322569-dc6c-4e68-be62-215addc477ac#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/85ce4f61-9a4d-48ea-a384-3bb289847eb1#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c3a888f0-5cc1-4288-8088-4dbffeecd239#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dc84a8e0-e60b-4e69-abf7-6c517dcdaf2b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7fce291d-da82-408a-a5ec-775edd6042dd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/da478d3e-2ee7-4091-bfe4-759dd6f46487#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "117466623",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+      "path": "/cpsprodpb/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Sarah Everard",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/uk-56342465",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "London",
+      "uri": "/news/england/london",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Detectives confirm last sighting of missing woman",
+              "headline": "Sarah Everard: Police confirm last sighting of missing woman"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-london-56315011",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-london-56315011"
+            },
+            "summary": "Sarah Everard has been missing from south London since Wednesday evening.",
+            "timestamp": 1615135756000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117485106",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/EAFE/production/_117485106_mediaitem117485105.jpg",
+              "path": "/cpsprodpb/EAFE/production/_117485106_mediaitem117485105.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Sarah Everard",
+              "copyrightHolder": "Met Police",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-london-56315011",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Family 'desperate for news' about missing woman",
+              "headline": "Sarah Everard: Family 'desperate' to see missing woman"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-london-56307038",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-london-56307038"
+            },
+            "summary": "Sarah Everard is thought to have walked home alone across Clapham Common on Wednesday evening.",
+            "timestamp": 1615048192000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117477074",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/B7E5/production/_117477074_mediaitem117476077.jpg",
+              "path": "/cpsprodpb/B7E5/production/_117477074_mediaitem117476077.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "CCTV image of Sarah Everard the night she went missing",
+              "caption": "Detectives have asked people in the area to check footage on any cameras that might have captured her",
+              "copyrightHolder": "Met Police",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-london-56307038",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Fears grow for woman who vanished on walk home",
+              "headline": "Sarah Everard: 'Increasing concern' for Brixton woman"
+            },
+            "locators": {
+              "assetUri": "/news/uk-england-london-56281473",
+              "cpsUrn": "urn:bbc:content:assetUri:/news/uk-england-london-56281473"
+            },
+            "summary": "Sarah Everard has not been seen or heard from since Wednesday night, her best friend says.",
+            "timestamp": 1614969519000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117466623",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+              "path": "/cpsprodpb/7F9A/production/_117466623_b215a3e4-77f1-470a-b459-512b824e1a1d.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Sarah Everard",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-england-london-56281473",
+            "type": "cps"
+          }
+        ]
+      },
+      {
+        "type": "related-urls",
+        "promos": [
+          {
+            "name": "The Met Police",
+            "uri": "https://www.met.police.uk/",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
