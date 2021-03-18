@@ -56,9 +56,9 @@ const runTestsForPage = ({
             variant: config[service].variant,
           };
 
-          const servicesToNotRunCanonical = ['news', 'sport', 'newsround'];
+          const ampOnlyServices = ['news', 'sport', 'newsround'];
 
-          if (!servicesToNotRunCanonical.includes(service)) {
+          if (!ampOnlyServices.includes(service)) {
             // Enables overriding of the smoke test values in the config/settings.js file
             testsThatAlwaysRunForAllPages(testArgs);
             testsThatAlwaysRunForAllCanonicalPages(testArgs);
