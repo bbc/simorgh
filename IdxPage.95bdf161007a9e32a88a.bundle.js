@@ -1,2 +1,2 @@
 (window.webpackJsonp=window.webpackJsonp||[]).push([[3],{863:function(module,__webpack_exports__,__webpack_require__){"use strict";__webpack_require__.r(__webpack_exports__);var _IdxPage__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__(785),_utils_applyBasicPageHandlers__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__(182);__webpack_exports__.default=Object(_utils_applyBasicPageHandlers__WEBPACK_IMPORTED_MODULE_1__.a)({addVariantHandling:!1})(_IdxPage__WEBPACK_IMPORTED_MODULE_0__.a)}}]);
-//# sourceMappingURL=IdxPage.597567a96ea43ddad563.bundle.js.map
+//# sourceMappingURL=IdxPage.95bdf161007a9e32a88a.bundle.js.map
