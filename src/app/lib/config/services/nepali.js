@@ -220,6 +220,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         listenLive: 'प्रत्यक्ष सुन्नुहोस्',
+        listenNext: 'अर्को सुन्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
         nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
