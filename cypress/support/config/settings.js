@@ -4620,11 +4620,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/newsround/56331357'],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: ['/newsround/23212028'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/newsround/56331357'],
