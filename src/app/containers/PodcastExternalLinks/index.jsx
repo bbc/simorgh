@@ -67,8 +67,10 @@ const StyledListItem = styled.li`
   }
 `;
 
-const PodcastExternalLinks = ({ brandTitle, links, lang }) => {
-  const { translations, service, script, dir } = useContext(ServiceContext);
+const PodcastExternalLinks = ({ brandTitle, links }) => {
+  const { translations, service, script, dir, lang } = useContext(
+    ServiceContext,
+  );
 
   if (!links.length) return null;
 
@@ -121,13 +123,8 @@ const PodcastExternalLinks = ({ brandTitle, links, lang }) => {
   );
 };
 
-PodcastExternalLinks.defaultProps = {
-  lang: null,
-};
-
 PodcastExternalLinks.propTypes = {
   brandTitle: string.isRequired,
-  lang: string,
   links: arrayOf(
     shape({
       linkText: string.isRequired,

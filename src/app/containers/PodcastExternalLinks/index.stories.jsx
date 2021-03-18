@@ -34,6 +34,6 @@ storiesOf('Containers/Podcast', module)
       variant={variant}
       pageLang={pageLang}
     >
-      <PodcastExternalLinks links={links} lang={pageLang} />
+      <PodcastExternalLinks links={links} />
     </ServiceContextProvider>
   ));
