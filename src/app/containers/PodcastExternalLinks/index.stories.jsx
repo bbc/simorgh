@@ -28,12 +28,8 @@ storiesOf('Containers/Podcast', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
-  .add(`default`, ({ service, variant, pageLang }) => (
-    <ServiceContextProvider
-      service={service}
-      variant={variant}
-      pageLang={pageLang}
-    >
+  .add(`default`, ({ service, variant }) => (
+    <ServiceContextProvider service={service} variant={variant}>
       <PodcastExternalLinks links={links} />
     </ServiceContextProvider>
   ));
