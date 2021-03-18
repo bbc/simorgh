@@ -771,6 +771,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
       >
         <div
           class="emotion-7 emotion-8"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -860,6 +861,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
         >
           <div
             class="emotion-34 emotion-8"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -875,6 +877,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             <div
               aria-hidden="true"
               class="emotion-38 emotion-39"
+              data-e2e="media-indicator"
               dir="rtl"
             >
               <div
@@ -1593,6 +1596,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <div
             class="emotion-17 emotion-18"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -1626,6 +1630,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
         >
           <div
             class="emotion-17 emotion-18"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -1641,6 +1646,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
             <div
               aria-hidden="true"
               class="emotion-34 emotion-35"
+              data-e2e="media-indicator"
               dir="ltr"
             >
               <div
@@ -2378,6 +2384,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
       >
         <div
           class="emotion-7 emotion-8"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -2467,6 +2474,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-34 emotion-8"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -2482,6 +2490,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             <div
               aria-hidden="true"
               class="emotion-38 emotion-39"
+              data-e2e="media-indicator"
               dir="rtl"
             >
               <div
@@ -2549,6 +2558,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-34 emotion-8"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -2608,6 +2618,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
         >
           <div
             class="emotion-34 emotion-8"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -3060,6 +3071,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <div
             class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -3114,6 +3126,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <div
             class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -3129,6 +3142,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             <div
               aria-hidden="true"
               class="emotion-34 emotion-35"
+              data-e2e="media-indicator"
               dir="ltr"
             >
               <div
@@ -3199,6 +3213,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <div
             class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -3253,6 +3268,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
         >
           <div
             class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "
@@ -3964,6 +3980,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
       >
         <div
           class="emotion-7 emotion-8"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -4051,6 +4068,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
         <div
           aria-hidden="true"
           class="emotion-32 emotion-33"
+          data-e2e="media-indicator"
           dir="rtl"
         >
           <div
@@ -4580,6 +4598,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
         <div
           aria-hidden="true"
           class="emotion-20 emotion-21"
+          data-e2e="media-indicator"
           dir="ltr"
         >
           <div
@@ -5069,6 +5088,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
       >
         <div
           class="emotion-7 emotion-8"
+          data-e2e="image-placeholder"
         >
           <div
             class="lazyload-wrapper "
@@ -5473,6 +5493,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
         >
           <div
             class="emotion-9 emotion-10"
+            data-e2e="image-placeholder"
           >
             <div
               class="lazyload-wrapper "

@@ -167,12 +167,15 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player"
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player__placeholder"
       >
         <div
           class="emotion-6 emotion-7"
+          data-e2e="media-player__guidance"
         >
           <strong
             aria-hidden="true"
@@ -258,6 +261,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player"
     >
       <iframe
         allow="autoplay"
@@ -295,6 +299,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
     >
       <amp-iframe
         allowfullscreen="allowfullscreen"
+        data-e2e="media-player"
         frameborder="0"
         layout="fill"
         sandbox="allow-scripts allow-same-origin"
@@ -305,6 +310,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
         <amp-img
           alt=""
           attribution=""
+          data-e2e="media-player__placeholder"
           height="16"
           layout="fill"
           placeholder="true"

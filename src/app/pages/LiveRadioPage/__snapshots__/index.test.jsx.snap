@@ -308,6 +308,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
         >
           <amp-iframe
             allowfullscreen="allowfullscreen"
+            data-e2e="media-player"
             frameborder="0"
             layout="fill"
             sandbox="allow-scripts allow-same-origin"
@@ -318,6 +319,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
             <amp-img
               alt=""
               attribution=""
+              data-e2e="media-player__placeholder"
               height="16"
               layout="fill"
               placeholder="true"
@@ -1421,6 +1423,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
       >
         <div
           class="emotion-12 emotion-13"
+          data-e2e="media-player"
         >
           <iframe
             allow="autoplay"

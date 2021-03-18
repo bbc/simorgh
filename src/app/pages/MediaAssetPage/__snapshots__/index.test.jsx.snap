@@ -1076,6 +1076,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 >
                   <div
                     class="emotion-10 emotion-11"
+                    data-e2e="media-player"
                   >
                     <iframe
                       allow="autoplay"
@@ -1090,6 +1091,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     >
                       <div
                         class="emotion-16 emotion-17"
+                        data-e2e="image-placeholder"
                       />
                     </div>
                     <noscript />
@@ -1381,6 +1383,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     >
                       <div
                         class="emotion-16 emotion-17"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3447,6 +3450,7 @@ exports[`Media Asset Page should render component 1`] = `
                 >
                   <div
                     class="emotion-10 emotion-11"
+                    data-e2e="media-player"
                   >
                     <iframe
                       allow="autoplay"
@@ -3461,6 +3465,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="emotion-16 emotion-17"
+                        data-e2e="image-placeholder"
                       />
                     </div>
                     <noscript />
@@ -3896,6 +3901,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="emotion-16 emotion-17"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3960,6 +3966,7 @@ exports[`Media Asset Page should render component 1`] = `
                     >
                       <div
                         class="emotion-16 emotion-17"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -4129,6 +4136,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <div
                             class="emotion-16 emotion-17"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -4183,6 +4191,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <div
                             class="emotion-16 emotion-17"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -4237,6 +4246,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <div
                             class="emotion-16 emotion-17"
+                            data-e2e="image-placeholder"
                           />
                           <div
                             class="emotion-260 emotion-261"
@@ -4244,6 +4254,7 @@ exports[`Media Asset Page should render component 1`] = `
                             <div
                               aria-hidden="true"
                               class="emotion-306 emotion-307"
+                              data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
@@ -4322,6 +4333,7 @@ exports[`Media Asset Page should render component 1`] = `
                         >
                           <div
                             class="emotion-16 emotion-17"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -4337,6 +4349,7 @@ exports[`Media Asset Page should render component 1`] = `
                             <div
                               aria-hidden="true"
                               class="emotion-306 emotion-307"
+                              data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div

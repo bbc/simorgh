@@ -645,6 +645,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                     >
                       <div
                         class="emotion-33 emotion-34"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1455,6 +1456,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-37 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -1514,6 +1516,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-37 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -1573,6 +1576,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-37 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -1632,6 +1636,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-37 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -2472,6 +2477,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-37 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -2531,6 +2537,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-60 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -2590,6 +2597,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-60 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
@@ -2649,6 +2657,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                       >
                         <div
                           class="emotion-60 emotion-38"
+                          data-e2e="image-placeholder"
                         >
                           <div
                             class="lazyload-wrapper "
