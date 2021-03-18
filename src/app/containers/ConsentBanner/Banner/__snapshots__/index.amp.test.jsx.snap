@@ -838,6 +838,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
   }
 }
 
+.emotion-4:focus {
+  outline: none;
+}
+
 .emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -999,6 +1003,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - L
       <h2
         class="emotion-4 emotion-5"
         dir="ltr"
+        tabindex="-1"
       >
         We've updated our Privacy and Cookies Policy
       </h2>
@@ -1114,6 +1119,10 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
     font-size: 1.5rem;
     line-height: 2rem;
   }
+}
+
+.emotion-4:focus {
+  outline: none;
 }
 
 .emotion-6 {
@@ -1277,6 +1286,7 @@ exports[`Amp Consent Banner Container should correctly render privacy banner - R
       <h2
         class="emotion-4 emotion-5"
         dir="rtl"
+        tabindex="-1"
       >
         لقد حدّثنا سياستنا المتعلقة بالخصوصية وبالشروط الخاصة بملفات الارتباط Cookies
       </h2>

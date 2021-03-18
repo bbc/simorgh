@@ -1221,6 +1221,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Masaraa Aaxee Minilik"
@@ -1269,6 +1270,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1318,6 +1320,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-54 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1367,6 +1370,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-70 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1416,6 +1420,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1465,6 +1470,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-70 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1514,6 +1520,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1563,6 +1570,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1612,6 +1620,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1661,6 +1670,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1710,6 +1720,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1759,6 +1770,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1808,6 +1820,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1857,6 +1870,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1906,6 +1920,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3320,6 +3335,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Masaraa Aaxee Minilik"
@@ -3368,6 +3384,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3417,6 +3434,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-59 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3466,6 +3484,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-75 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3515,6 +3534,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3564,6 +3584,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-75 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3613,6 +3634,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3662,6 +3684,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3711,6 +3734,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3760,6 +3784,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3809,6 +3834,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3858,6 +3884,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3907,6 +3934,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3956,6 +3984,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -4005,6 +4034,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5794,6 +5824,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Bole festival for Pitakwa"
@@ -5842,6 +5873,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5891,6 +5923,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5940,6 +5973,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5989,6 +6023,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6038,6 +6073,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6087,6 +6123,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6136,6 +6173,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6185,6 +6223,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6234,6 +6273,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6283,6 +6323,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6375,6 +6416,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="emotion-24 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -6440,6 +6482,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <div
                             class="emotion-24 emotion-25"
+                            data-e2e="image-placeholder"
                           />
                           <div
                             class="emotion-227 emotion-228"
@@ -6447,6 +6490,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             <div
                               aria-hidden="true"
                               class="emotion-252 emotion-253"
+                              data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
@@ -7566,6 +7610,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Bill Clinton"
@@ -7629,6 +7674,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7693,6 +7739,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7757,6 +7804,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7821,6 +7869,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7885,6 +7934,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7949,6 +7999,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10439,6 +10490,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="AXC parlamentinin birinci iclasının açılışı"
@@ -10502,6 +10554,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-47 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10566,6 +10619,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10630,6 +10684,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-89 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10694,6 +10749,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-110 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10758,6 +10814,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10822,6 +10879,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-152 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10886,6 +10944,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-172 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10950,6 +11009,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-192 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11014,6 +11074,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-213 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11078,6 +11139,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-234 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11142,6 +11204,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-254 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11206,6 +11269,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-274 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11270,6 +11334,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-294 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11334,6 +11399,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-314 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11398,6 +11464,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11462,6 +11529,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-354 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11526,6 +11594,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11590,6 +11659,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11697,6 +11767,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -11751,6 +11822,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -11805,6 +11877,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -11859,6 +11932,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -11913,6 +11987,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -11967,6 +12042,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -12032,6 +12108,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -12086,6 +12163,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "
@@ -12140,6 +12218,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <div
                             class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
                               class="lazyload-wrapper "

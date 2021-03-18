@@ -778,6 +778,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26 emotion-27"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -793,6 +794,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         <div
                           aria-hidden="true"
                           class="emotion-30 emotion-31"
+                          data-e2e="media-indicator"
                           dir="ltr"
                         >
                           <div
@@ -867,6 +869,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26 emotion-27"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -882,6 +885,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         <div
                           aria-hidden="true"
                           class="emotion-30 emotion-31"
+                          data-e2e="media-indicator"
                           dir="ltr"
                         >
                           <div
@@ -956,6 +960,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                     >
                       <div
                         class="emotion-26 emotion-27"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -971,6 +976,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                         <div
                           aria-hidden="true"
                           class="emotion-30 emotion-31"
+                          data-e2e="media-indicator"
                           dir="ltr"
                         >
                           <div
