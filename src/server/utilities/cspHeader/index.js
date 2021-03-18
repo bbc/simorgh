@@ -31,7 +31,7 @@ const advertisingDirectives = {
     'https://*.googlesyndication.com',
     'https://*.google.com',
     'https://*.adsafeprotected.com',
-    '*.imrworldwide.com',
+    'https://*.imrworldwide.com',
     'https://collector.effectivemeasure.net',
     'https://csi.gstatic.com',
     'https://sb.scorecardresearch.com',
