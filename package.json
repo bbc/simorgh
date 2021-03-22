@@ -4,7 +4,6 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
-    "immer": "8.0.4",
     "@emotion/serialize": "1.0.1",
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
