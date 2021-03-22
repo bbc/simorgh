@@ -15,145 +15,61 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
   }
 }
 
-.emotion-3 {
-  position: relative;
-  z-index: 0;
-  color: #3F3F42;
-  margin-top: 2rem;
-  margin: 0;
-  margin-top: 1rem;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-3 {
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-3 {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-3 {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-3 {
-    margin-top: 1rem;
-    margin-bottom: 0;
-  }
-}
-
-.emotion-5 {
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  min-height: 2.75rem;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-9 {
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-  }
-}
-
-.emotion-11 {
+.emotion-2 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  color: #3F3F42;
+  margin: 0;
+  margin-top: 1rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-11 {
+  .emotion-2 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-2 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+@media (min-width: 25rem) {
+  .emotion-2 {
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
-    margin: 0;
+  .emotion-2 {
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-11 {
-    padding-right: 1rem;
-  }
-}
-
-.emotion-13 {
+.emotion-4 {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.emotion-15 {
+.emotion-6 {
   display: inline-block;
 }
 
-.emotion-15:not(:first-of-type)>a>span {
+.emotion-6:not(:first-of-type)>a>span {
   padding-left: 1rem;
   border-left: 0.0625rem #BABABA solid;
 }
 
-.emotion-17 {
+.emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -167,35 +83,35 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-8 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-8 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-17>span {
+.emotion-8>span {
   margin: 0.8125rem 0;
   display: inline-block;
 }
 
-.emotion-17:visited {
+.emotion-8:visited {
   color: #6E6E73;
 }
 
-.emotion-17:focus,
-.emotion-17:hover>span {
+.emotion-8:focus,
+.emotion-8:hover>span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-19 {
+.emotion-10 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -212,48 +128,35 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
     class="emotion-0 emotion-1"
     role="complementary"
   >
-    <div
-      class="emotion-2 emotion-3 emotion-4"
+    <h2
+      class="emotion-2 emotion-3"
+      id="third-party-links"
     >
-      <h2
-        class="emotion-5 emotion-6"
-      >
-        <span
-          class="emotion-7 emotion-8"
-        >
-          <span
-            class="emotion-9 emotion-10"
-          >
-            <span
-              class="emotion-11 emotion-12"
-              dir="ltr"
-              id="third-party-links"
-            >
-              Этот подкаст доступен на
-            </span>
-          </span>
-        </span>
-      </h2>
-    </div>
+      Этот подкаст доступен на
+    </h2>
     <ul
-      class="emotion-13 emotion-14"
+      class="emotion-4 emotion-5"
       role="list"
     >
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-6 emotion-7"
         dir="ltr"
       >
         <a
-          class="emotion-17 emotion-18"
+          class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
             role="text"
           >
-            Apple
             <span
-              class="emotion-19 emotion-20"
+              lang="ru"
+            >
+              Apple
+            </span>
+            <span
+              class="emotion-10 emotion-11"
             >
               , A brand podcast
             </span>
@@ -261,20 +164,24 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         </a>
       </li>
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-6 emotion-7"
         dir="ltr"
       >
         <a
-          class="emotion-17 emotion-18"
+          class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
             role="text"
           >
-            Spotify
             <span
-              class="emotion-19 emotion-20"
+              lang="ru"
+            >
+              Spotify
+            </span>
+            <span
+              class="emotion-10 emotion-11"
             >
               , A brand podcast
             </span>
@@ -282,20 +189,24 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         </a>
       </li>
       <li
-        class="emotion-15 emotion-16"
+        class="emotion-6 emotion-7"
         dir="ltr"
       >
         <a
-          class="emotion-17 emotion-18"
+          class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
             role="text"
           >
-            RSS
             <span
-              class="emotion-19 emotion-20"
+              lang="ru"
+            >
+              RSS
+            </span>
+            <span
+              class="emotion-10 emotion-11"
             >
               , A brand podcast
             </span>
