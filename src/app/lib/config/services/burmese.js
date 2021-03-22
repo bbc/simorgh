@@ -225,6 +225,7 @@ export const service = {
         },
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
+        listenLive: 'တိုက်ရိုက်နားဆင်ရန်',
         listenNext: 'နောက်ထပ်နားဆင်ရန်',
         liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
         nextLabel: 'နောက်တစ်ခုသို့',
