@@ -1,15 +1,6 @@
 import React, { forwardRef } from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  bool,
-  string,
-  arrayOf,
-  element,
-  shape,
-  oneOfType,
-  func,
-  any,
-} from 'prop-types';
+import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import {
@@ -80,8 +71,8 @@ const BannerPage = styled.div`
 `;
 
 // eslint-disable-next-line react/prop-types
-const FocusableH2 = forwardRef(({ className, children }, ref) => (
-  <h2 className={className} tabIndex="-1" ref={ref}>
+const FocusableH2 = forwardRef(({ className, children, id }, ref) => (
+  <h2 className={className} tabIndex="-1" ref={ref} id={id}>
     {children}
   </h2>
 ));
@@ -206,7 +197,6 @@ const AmpCookieBanner = ({
   hidden,
   script,
   service,
-  headingRef,
 }) => {
   const [initial, manage] = translations;
 
@@ -224,7 +214,7 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script} ref={headingRef}>
+          <Title script={script} id="cookieHeading">
             {initial.title}
           </Title>
           <Paragraph script={script}>
@@ -242,7 +232,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
-                on="tap:AMP.setState({ isManagingSettings: true })"
+                on="tap:AMP.setState({ isManagingSettings: true }),manageTitle.focus()"
               >
                 {initial.manage}
               </button>
@@ -254,7 +244,9 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >
-          <Title script={script}>{manage.title}</Title>
+          <Title script={script} id="manageTitle">
+            {manage.title}
+          </Title>
           <Paragraph script={script}>{manage.description.para1}</Paragraph>
           <Paragraph script={script}>{manage.description.para2}</Paragraph>
           <Heading>{manage.description.heading2}</Heading>
@@ -304,14 +296,11 @@ AmpCookieBanner.propTypes = {
   hidden: bool,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  headingRef: oneOfType([func, shape({ current: any })]),
 };
 
 AmpCookieBanner.defaultProps = {
   id: null,
   hidden: null,
-  headingRef: null,
 };
 
 export default AmpCookieBanner;
