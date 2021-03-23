@@ -18,6 +18,7 @@ import {
 
 import getPaths from './getPaths';
 import serviceHasPageType from './serviceHasPageType';
+import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
 
@@ -55,8 +56,6 @@ const runTestsForPage = ({
             pageType,
             variant: config[service].variant,
           };
-
-          const ampOnlyServices = ['news', 'sport', 'newsround'];
 
           if (!ampOnlyServices.includes(service)) {
             // Enables overriding of the smoke test values in the config/settings.js file
