@@ -70,12 +70,21 @@ const BannerPage = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
-const FocusableH2 = forwardRef(({ className, children, id }, ref) => (
-  <h2 className={className} tabIndex="-1" ref={ref} id={id}>
-    {children}
-  </h2>
-));
+const FocusableH2 = forwardRef(
+  // eslint-disable-next-line react/prop-types
+  ({ className, children, id, shouldAutoFocus }, ref) => (
+    <h2
+      className={className}
+      tabIndex="-1"
+      ref={ref}
+      id={id}
+      // eslint-disable-next-line jsx-a11y/no-autofocus
+      autoFocus={shouldAutoFocus}
+    >
+      {children}
+    </h2>
+  ),
+);
 
 const Title = styled(FocusableH2)`
   ${({ script }) => getDoublePica(script)}
@@ -214,7 +223,7 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script} id="cookieHeading">
+          <Title script={script} id="cookieHeading" shouldAutoFocus>
             {initial.title}
           </Title>
           <Paragraph script={script}>
