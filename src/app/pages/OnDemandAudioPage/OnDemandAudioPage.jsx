@@ -10,6 +10,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
+import useToggle from '#hooks/useToggle';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -117,8 +118,13 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     service,
     translations,
     serviceName,
+    radioSchedule,
   } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
+
+  const { enabled } = useToggle('radioSchedule');
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   const mediaId = getMediaId({
     assetId: episodeId,
@@ -249,7 +255,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </PageGrid>
       )}
-      {radioScheduleData && (
+      {radioScheduleData && radioScheduleEnabled && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

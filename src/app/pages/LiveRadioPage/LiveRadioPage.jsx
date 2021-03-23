@@ -4,6 +4,7 @@ import { Headline } from '@bbc/psammead-headings';
 import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
+import useToggle from '#hooks/useToggle';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import MetadataContainer from '../../containers/Metadata';
 import RadioScheduleContainer from '#containers/RadioSchedule';
@@ -38,6 +39,7 @@ const LiveRadioPage = ({ pageData }) => {
     lang,
     liveRadioOverrides,
     translations,
+    radioSchedule,
   } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
@@ -60,6 +62,9 @@ const LiveRadioPage = ({ pageData }) => {
     translations,
   );
   const hasRadioScheduleData = Boolean(radioScheduleData);
+  const { enabled } = useToggle('radioSchedule');
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   return (
     <>
@@ -129,7 +134,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
       </GelPageGrid>
-      {hasRadioScheduleData && (
+      {hasRadioScheduleData && radioScheduleEnabled && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

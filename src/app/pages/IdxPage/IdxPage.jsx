@@ -1,5 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
 import {
@@ -15,6 +16,8 @@ import {
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import useToggle from '#hooks/useToggle';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
 import IndexHeading from '#containers/IndexHeading';
@@ -77,6 +80,10 @@ const IdxPage = ({
   radioScheduleEndpointOverride,
 }) => {
   const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
+  const { isAmp } = useContext(RequestContext);
+  const { enabled } = useToggle('radioSchedule');
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
@@ -107,6 +114,7 @@ const IdxPage = ({
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {radioScheduleOnIdxPage &&
+                radioScheduleEnabled &&
                 radioScheduleIdxPosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
                     lang="fa-AF"

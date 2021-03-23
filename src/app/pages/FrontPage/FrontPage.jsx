@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -63,6 +64,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     serviceLocalizedName,
     translations,
     frontPageTitle,
+    radioSchedule,
   } = useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
@@ -75,6 +77,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
+
+  const { enabled } = useToggle('radioSchedule');
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   const offScreenText = (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -114,6 +120,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
               {radioScheduleData &&
+                radioScheduleEnabled &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
                     initialData={radioScheduleData}
