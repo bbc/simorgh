@@ -1,0 +1,584 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/news-56485207",
+    "locators": {
+      "assetUri": "/russian/news-56485207",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-56485207",
+      "curie": "http://www.bbc.co.uk/asset/3b2a9f88-857f-456b-bb4b-8ca1b58a38f5",
+      "assetId": "56485207"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1616422058648,
+    "firstPublished": 1616422051000,
+    "lastPublished": 1616422051000,
+    "timestamp": 1616422051000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "russian.news.story.56485207.page",
+      "cps_asset_id": "56485207"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:3b2a9f88-857f-456b-bb4b-8ca1b58a38f5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a40cd9c2-f5ec-4a9f-a3d2-8375e77c889b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Бизнес",
+          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q21857788",
+            "http://dbpedia.org/resource/Business"
+          ],
+          "topicName": "Бизнес",
+          "topicId": "cr1nyxjd2xrt",
+          "curationList": [
+            {
+              "curationId": "403bd5c0-21a1-4166-90be-c85441240071",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Business"
+        },
+        {
+          "thingLabel": "Турция",
+          "thingUri": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+          "thingId": "a30418d5-3efe-415d-b2d2-1480eaf2eb4a",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/298795/"],
+          "topicName": "Турция",
+          "topicId": "ckedrpn52xmt",
+          "curationList": [
+            {
+              "curationId": "2ac1fb2c-6719-41f8-a374-3ebf5b36b65a",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Turkey"
+        },
+        {
+          "thingLabel": "Реджеп Таийп Эрдоган",
+          "thingUri": "http://www.bbc.co.uk/things/a40cd9c2-f5ec-4a9f-a3d2-8375e77c889b#id",
+          "thingId": "a40cd9c2-f5ec-4a9f-a3d2-8375e77c889b",
+          "thingType": [
+            "tagging:Agent",
+            "tagging:TagConcept",
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "core:Person"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q39259",
+            "http://dbpedia.org/resource/Recep_Tayyip_Erdo%C4%9Fan"
+          ],
+          "topicName": "Реджеп Таийп Эрдоган",
+          "topicId": "c61k92ekk03t",
+          "curationList": [
+            {
+              "curationId": "293f3c82-c1ad-4aec-bb78-44b1ed7af112",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Recep Tayyip Erdogan"
+        },
+        {
+          "thingLabel": "Туризм",
+          "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+          "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q49389",
+            "http://dbpedia.org/resource/Tourism"
+          ],
+          "topicName": "Туризм",
+          "topicId": "cmnq9d1qdz4t",
+          "curationList": [
+            {
+              "curationId": "92167885-4433-476d-a9cc-197fa5d514e6",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Tourism"
+        },
+        {
+          "thingLabel": "Экономика",
+          "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+          "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": ["http://dbpedia.org/resource/Economy"],
+          "topicName": "Экономика",
+          "topicId": "c1nq04y2yvxt",
+          "curationList": [
+            {
+              "curationId": "5b0c45dd-e54d-431f-be22-118a2cbd657c",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Economics"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": ["image", "paragraph", "crosshead", "list"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "RUSSIAN", "producerId": "75" },
+    "readTime": 2,
+    "siteUri": "/russian",
+    "topics": [
+      {
+        "topicName": "Экономика",
+        "topicId": "c1nq04y2yvxt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "5b0c45dd-e54d-431f-be22-118a2cbd657c",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "core:Thing", "tagging:TagConcept"]
+      },
+      {
+        "topicName": "Реджеп Таийп Эрдоган",
+        "topicId": "c61k92ekk03t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/a40cd9c2-f5ec-4a9f-a3d2-8375e77c889b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "293f3c82-c1ad-4aec-bb78-44b1ed7af112",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:Agent",
+          "tagging:TagConcept",
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "core:Person"
+        ]
+      },
+      {
+        "topicName": "Турция",
+        "topicId": "ckedrpn52xmt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2ac1fb2c-6719-41f8-a374-3ebf5b36b65a",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"]
+      },
+      {
+        "topicName": "Туризм",
+        "topicId": "cmnq9d1qdz4t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "92167885-4433-476d-a9cc-197fa5d514e6",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"]
+      },
+      {
+        "topicName": "Бизнес",
+        "topicId": "cr1nyxjd2xrt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "403bd5c0-21a1-4166-90be-c85441240071",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "tagging:TagConcept", "core:Thing"]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "117655981",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/4A0B/production/_117655981_lira.jpg",
+        "path": "/cpsprodpb/4A0B/production/_117655981_lira.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "банкнота",
+        "caption": "Турецкая лира упала на 14% из-а отставки главы Центробанка",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Турецкая лира  упала на 14% после того, как президент Реджеп Тайип Эрдоган уволил главу  центрального банка страны.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Уволенный Наджи Абгал считался ключевым специалистом, который помог поднять курс национальной валюты с исторических минимумов. Его увольнение шокировало как местных, так и иностранных инвесторов, которые высоко ценили проводимую денежно-кредитную политику центрального банка Турции. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Отставка ударила по котировкам Стамбульской фондовой биржи и вызвала опасения по поводу реальной стоимости заимствований Турции.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "На прошлой неделе турецкая валюта сильно выросла после того, как теперь уже бывший глава Центробанка Наджи Агбал повысил ключевую ставку на 2 процентных пункта, до 19%, что вдвое больше, чем ожидали экономисты. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По мнению Эрдогана, такое значимое повышение ставки открывает путь к росту инфляции. Сейчас она составляет более 15%.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Новым главой Центробанка страны стал Шахап Кавджиоглу. Он станет четвертым по счету главой ЦБ за последние два года. Считается, что он разделяет точку зрения Эрдогана на денежно-кредитною политику. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Назначение лояльного Эрдогану главу Центробанка обеспокоило инвесторов. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;По мнению президента Турции, с которым, похоже, согласен и новый глава ЦБ, высокая ключевая ставка вызывает более высокую инфляцию. Но эта теория противоречит общепринятой экономической теории&quot;, - говорит Джеффри Галли, старший аналитик компании OANDA. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По его словам, высокая ставка по займам удерживает потребителей от чрезмерных расходов и одновременно заставляет людей уходить в сбережения. Однако оборотной стороной этого часто становится замедление экономического роста.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Инвесторы опасаются, что следующим шагом турецкого центробанка станет контроль за движением капитала.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Что это значит для россиян?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "117663774",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/BA78/production/_117663774_gettyimages-176903909.jpg",
+        "path": "/cpsprodpb/BA78/production/_117663774_gettyimages-176903909.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Отель в Анталии",
+        "caption": "Первые группы организованных российских туристов ждут на турецких курортах уже с середины апреля",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "В воскресенье Союз туроператоров Турции заявил, что туристическая индустрия страны к началу сезона будет полностью готова к приему гостей из-за рубежа. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Во время пандемии курорты Турции остаются одним из доступных направлений для туристов из России из-за относительно мягких требований ко въезду в страну. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Турецкие туроператоры  рассчитывают, что первые туристические группы из России начнут приезжать с середины апреля. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Турция открывает границы для россиян. Но попасть туда они не смогут</caption><url href=\"https://www.bbc.com/russian/news-52737341\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/front_page-52737341",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>Турецкий кризис: причины и последствия падения лиры в 100 и 500 словах </caption><url href=\"https://www.bbc.com/russian/features-45177644\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/features-45177644",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Падение курса лиры вызвало разговоры о том, что турпакеты станут дешевле. Однако эксперты не разделяют подобного оптимизма. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Вряд ли падение курса турецкой лиры отразится на стоимости туров для россиян, полагает  исполнительный директор Альянса туристических агентств Наталия Осипова. Большинство туроператоров заранее заключают контракт, в основном, в долларах, поэтому мы едва ли увидим удешевление турпакетов, сказала она агентству РИА Новости. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Турецкая лира упала на 14%. Подешевеют ли туры в Анталью?",
+      "headline": "Турецкая лира упала на 14%. Подешевеют ли туры в Анталью?"
+    },
+    "locators": {
+      "assetUri": "/russian/news-56485207",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-56485207",
+      "curie": "http://www.bbc.co.uk/asset/3b2a9f88-857f-456b-bb4b-8ca1b58a38f5",
+      "assetId": "56485207"
+    },
+    "summary": "Неожиданная отставка главы Центробанка Турции привело к резкому падению курса турецкой лиры.",
+    "timestamp": 1616422051000,
+    "language": "ru",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:3b2a9f88-857f-456b-bb4b-8ca1b58a38f5",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a40cd9c2-f5ec-4a9f-a3d2-8375e77c889b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a30418d5-3efe-415d-b2d2-1480eaf2eb4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "117655981",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/4A0B/production/_117655981_lira.jpg",
+      "path": "/cpsprodpb/4A0B/production/_117655981_lira.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "банкнота",
+      "caption": "Турецкая лира упала на 14% из-а отставки главы Центробанка",
+      "copyrightHolder": "Getty Images",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/news-56485207",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Новости",
+      "uri": "/russian/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Турция открывает границы для россиян. Но попасть туда они не смогут",
+              "headline": "Турция открывает границы для россиян. Но попасть туда они не смогут"
+            },
+            "locators": {
+              "assetUri": "/russian/news-52737341",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-52737341"
+            },
+            "summary": "В эту среду, 20 мая, Турция открывает свои границы для граждан 31 страны, включая Россию. Смогут ли теперь россияне поехать туда на отдых?",
+            "timestamp": 1589968751000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "112377670",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1DFD/production/_112377670_gettyimages-1026086006.jpg",
+              "path": "/cpsprodpb/1DFD/production/_112377670_gettyimages-1026086006.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Турция",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-52737341",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Турецкий кризис: причины и последствия падения лиры",
+              "headline": "Турецкий кризис: причины и последствия падения лиры в 100 и 500 словах"
+            },
+            "locators": {
+              "assetUri": "/russian/features-45177644",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-45177644"
+            },
+            "summary": "Турецкая лира свалилась в пике, инвесторы и население скупают на нее доллары, опасаясь полномасштабного финансового кризиса. Президент Реджеп Тайип Эрдоган уверяет, что экономика сильна как никогда, и винит во всех бедах внешних врагов. Почему лихорадит валютный рынок Турции и чем это грозит ей и миру?",
+            "timestamp": 1534192838000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "102959289",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/17FF7/production/_102959289_gettyimages-997200888.jpg",
+              "path": "/cpsprodpb/17FF7/production/_102959289_gettyimages-997200888.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Стамбул",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-45177644",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

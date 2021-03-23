@@ -1,41 +1,45 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::index:portuguese/front_page/desktop/domestic",
+    "id": "urn:bbc:ares::index:portuguese/front_page/mobile/domestic",
     "locators": {
       "assetUri": "/portuguese/front_page",
       "cpsUrn": "urn:bbc:content:assetUri:portuguese/front_page",
-      "curie": "http://www.bbc.co.uk/asset/30d476fb-7a8c-d0ad-e050-380a4e801c9d/desktop/domestic"
+      "curie": "http://www.bbc.co.uk/asset/2bf518d9-3d46-7dbf-e050-a00a7ec04ab1/desktop/domestic",
+      "assetId": "23023174"
     },
     "type": "IDX",
     "createdBy": "brasil-v6",
     "language": "pt-BR",
-    "lastUpdated": 1562931149801,
-    "firstPublished": 1461680407,
-    "lastPublished": 1562931140,
-    "options": {
-      "allowAdvertising": true
-    },
+    "lastUpdated": 1616496434567,
+    "firstPublished": 1455796852000,
+    "lastPublished": 1616496416000,
+    "timestamp": 1616496411000,
+    "options": { "allowAdvertising": true },
     "analyticsLabels": {
+      "cps_asset_type": "idx",
       "counterName": "portuguese.page",
-      "cps_asset_id": "36082418",
-      "cps_asset_type": "idx"
+      "cps_asset_id": "23023174"
     },
     "tags": {},
-    "version": "v1.0.10",
+    "version": "v1.3.11",
     "blockTypes": [
       "top-story",
+      "live-event-now",
       "secondary-top-story",
       "av-stories-now",
       "single-section-digest",
+      "other-top-stories",
       "special-reports",
+      "feature-main",
       "section-digest",
       "featured-site-top-stories",
       "picture-gallery-stories",
-      "feature-main",
+      "programmes-standard",
       "useful-links"
     ],
     "title": "Notícias, vídeos, análise e contexto em português",
-    "summary": "Na BBC Brasil você fica por dentro do que acontece no Brasil e no mundo. Com redações em Londres e São Paulo e mais de 200 repórteres internacionais, nossa cobertura leva a você as principais notícias de política, economia, ciência, saúde e comportamento."
+    "summary": "Na BBC Brasil você fica por dentro do que acontece no Brasil e no mundo. Com redações em Londres e São Paulo e mais de 200 repórteres internacionais, nossa cobertura leva a você as principais notícias de política, economia, ciência, saúde e comportamento.",
+    "atiAnalytics": { "producerName": "BRASIL", "producerId": "33" }
   },
   "content": {
     "groups": [
@@ -46,22 +50,24 @@
         "items": [
           {
             "headlines": {
-              "headline": "Votação da Reforma da Previdência na Câmara se alonga e pode acabar só em agosto",
-              "overtyped": "Reforma da Previdência : voto na Câmara se alonga e pode acabar só em agosto"
+              "headline": "David Beckham,: 'The climate of fear is real in British Athletics'"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48961625",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48961625"
+              "assetUri": "/news/uk-23164532",
+              "cpsUrn": "urn:bbc:content:assetUri:news/uk-23164532",
+              "curie": "http://www.bbc.co.uk/asset/058ac34e-c86b-0b45-bf39-6f331fedc350",
+              "assetId": "23164532"
             },
-            "summary": "Na quinta, deputados barraram aumento do tempo mínimo de contribuição para trabalhadores do setor privado.",
-            "timestamp": 1562923780000,
+            "summary": "Beckham, 40, described retiring in January as a \"relief\", following a decade in elite gymnastics where he won world, European and Commonwealth honours.",
+            "timestamp": 1529414135000,
+            "language": "en-gb",
             "byline": {
-              "name": "Mariana Schreiber ",
-              "title": "Da BBC News Brasil em Brasília",
+              "name": "By Raihan  Masud",
+              "title": "Multimedia Sports Producer",
               "persons": [
                 {
-                  "name": "Mariana Schreiber - @marischreiber",
-                  "function": "Da BBC News Brasil em Brasília"
+                  "name": "Raihan Masud",
+                  "function": "Multimedia Sports Producer"
                 }
               ]
             },
@@ -70,93 +76,297 @@
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
+              "taggings": []
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "107846310",
+              "id": "63600103",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/0554/production/_107846310_previdencia.jpg",
-              "path": "/cpsprodpb/0554/production/_107846310_previdencia.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Sessão para continuação da votação da PEC 6/2019 - Reforma da Previdência",
-              "caption": "Deputados barraram nesta quinta aumento do tempo mínimo de contribuição para trabalhadores do setor privado",
-              "copyrightHolder": "Luis Macedo/Câmara dos Deputados"
+              "href": "http://b.files.bbci.co.uk/7594/test/_63600103_mediaitem63600102.jpg",
+              "path": "/cpsdevpb/7594/test/_63600103_mediaitem63600102.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "gfufu",
+              "copyrightHolder": "BBC",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "prominence": "maximum",
+            "section": {
+              "subType": "IDX",
+              "name": "UK",
+              "uri": "/news/uk",
+              "type": "simple"
             },
-            "prominence": "standard",
             "relatedItems": [
               {
-                "headlines": {
-                  "headline": "O que pode acontecer com os 'rebeldes' da oposição que votaram pela reforma da Previdência",
-                  "overtyped": "O que pode acontecer com os 'rebeldes' da oposição que votaram com o governo"
-                },
+                "headlines": { "headline": "Nigeria anti-fraud agents jailed" },
                 "locators": {
-                  "assetUri": "/portuguese/brasil-48959811",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48959811"
+                  "assetUri": "/news/world-africa-19843161",
+                  "cpsUrn": "urn:bbc:content:assetUri:/news/world-africa-19843161"
                 },
-                "summary": "Contrários à reforma, PDT e PSB viram um terço de suas bancadas votar a favor das mudanças em aposentadorias; deputada Tábata Amaral diz que 'ser de esquerda não pode significar ser contra projeto que pode tornar o Brasil mais inclusivo'.",
-                "timestamp": 1562922839000,
+                "summary": "Two anti-corruption agents in Nigeria are given five-year prison terms by a High Court for accepting bribes during a sting operation.",
+                "timestamp": 1497436654000,
+                "language": "en-gb",
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/brasil-48959811",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Como mercado financeiro, policiais federais e agronegócio conseguiram vantagens na Reforma da Previdência",
-                  "overtyped": "Como mercado financeiro, policiais federais e agronegócio conseguiram vantagens"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/brasil-48931737",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48931737"
-                },
-                "summary": "Ao longo dos últimos meses, setores da economia e categorias profissionais se mobilizaram para conseguir modificações na proposta da reforma da Previdência; vários conseguiram benefícios.",
-                "timestamp": 1562833199000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/brasil-48931737",
+                "id": "urn:bbc:ares::asset:news/world-africa-19843161",
                 "type": "cps"
               }
             ],
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48961625",
+            "site": {
+              "subType": "site",
+              "name": "BBC News",
+              "uri": "/news",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:news/uk-23164532",
             "type": "cps"
           }
         ],
-        "strapline": {
-          "name": "Top story - Brasil"
-        },
+        "strapline": { "name": "top story" },
         "semanticGroupName": "Top story"
+      },
+      {
+        "type": "live-event-now",
+        "title": "Live event 1",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Barrucho abandona a esquerda e apoia governo Temer/ veja a cobertura ao vivo"
+            },
+            "locators": {
+              "assetUri": "/portuguese/live/brasil-23043635",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/live/brasil-23043635",
+              "curie": "http://www.bbc.co.uk/asset/e29d57d3-c8fb-a141-ba1e-b8ee547a6245",
+              "assetId": "23043635"
+            },
+            "summary": "Jornalista diz que na verdade nunca foi petista",
+            "timestamp": 1463163477000,
+            "language": "pt-BR",
+            "cpsType": "LIV",
+            "commentary": {
+              "order": "descending",
+              "assetUUID": "B3D489154958A7438E4E666EB75476EA",
+              "channels": {
+                "enhancedmobile": "bbc.cps.asset.23043636_EnhancedMobile",
+                "desktop": "bbc.cps.asset.23043636_HighWeb",
+                "highweb": "bbc.cps.asset.23043636_HighWeb",
+                "mobile": "bbc.cps.asset.23043636_EnhancedMobile"
+              }
+            },
+            "isLive": true,
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/live/brasil-23043635",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Live event 1"
       },
       {
         "type": "secondary-top-story",
         "title": "More top stories",
-        "maxRelatedLinks": 4,
+        "maxRelatedLinks": 1,
         "items": [
           {
             "headlines": {
-              "headline": "Aceito a missão dada por meu pai, diz Eduardo Bolsonaro sobre embaixada nos EUA"
+              "headline": "Quem é a jovem irmã de Kim Jong-un que acaba de ser promovida a um poderoso cargo na Coreia do Norte"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48959005",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48959005"
+              "assetUri": "/portuguese/23156732",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/23156732",
+              "curie": "http://www.bbc.co.uk/asset/5e887356-f751-a64f-a07f-3563f3ad6a59",
+              "assetId": "23156732"
             },
-            "summary": "Mais cedo, o presidente Jair Bolsonaro afirmou que decidiu escolher o filho para ser embaixador do Brasil nos Estados Unidos, cargo vago desde abril.",
-            "timestamp": 1562886763000,
+            "summary": "No sábado, foi anunciado que Kim Jong-un decidiu promover sua irmã e que ela ocupará um cargo no politburo (mais alto órgão do executivo) do Partido dos Trabalhadores.",
+            "timestamp": 1507549862000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63594800",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/0351/test/_63594800_831b32cb-35c8-4633-b8b5-404637215b2c.jpg",
+              "path": "/cpsdevpb/0351/test/_63594800_831b32cb-35c8-4633-b8b5-404637215b2c.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Kim jong-un em ao lado de integrantes do governo..",
+              "caption": "Kim jong-un em ao lado de integrantes do governo..",
+              "copyrightHolder": "TV/AFP/Getty ",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/23156732",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Novos santos brasileiros: papa canoniza 30 vitimas de massacre no RN"
+            },
+            "locators": {
+              "assetUri": "/portuguese/brasil-23156432",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23156432",
+              "curie": "http://www.bbc.co.uk/asset/d74e7898-928f-c545-867b-47590f52b656",
+              "assetId": "23156432"
+            },
+            "summary": "Mais de 500 fieis sao esperados em cerimonia marcada para as 10h na praca sao pedro. Saiba quem sao os 30 martires que o papa ira canonizar.",
+            "timestamp": 1507545205000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63594698",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/15E31/test/_63594698_000096538-1.jpg",
+              "path": "/cpsdevpb/15E31/test/_63594698_000096538-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "woman talk about trump",
+              "caption": "two woman at trump`s house",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "imageThumbnail": {
+              "id": "63594699",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/18541/test/_63594699_000096538-1.jpg",
+              "path": "/cpsdevpb/18541/test/_63594699_000096538-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "woman talk about trump",
+              "caption": "two woman at trump`s house",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "relatedItems": [
+              {
+                "name": "Europa League - as it happened",
+                "uri": "http://news.bbc.co.uk/sport1/hi/football/scot_prem/8929663.stm",
+                "timestamp": 1282236582000,
+                "type": "link"
+              }
+            ],
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23156432",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Novo estudo anglo-brasileiro reforça relação entre Zika e microcefalia"
+            },
+            "locators": {
+              "assetUri": "/portuguese/brasil-23075123",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23075123",
+              "curie": "http://www.bbc.co.uk/asset/9152c4ba-698c-8d41-9325-21c77ed843cd",
+              "assetId": "23075123"
+            },
+            "summary": "Pesquisadores brasileiros e britânicos conseguiram confirmar a relação de causalidade entre o vírus da Zika e a microcefalia em recém-nascidos e recomendam que as autoridades de saúde em todo mundo se preparem para uma epidemia global de casos de microcefalia e outras complicações ligadas ao vírus.",
+            "timestamp": 1474024478000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63509054",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/B022/test/_63509054_875d1f90-c3b0-46e2-b004-5d249f0ad4ce.jpg",
+              "path": "/cpsdevpb/B022/test/_63509054_875d1f90-c3b0-46e2-b004-5d249f0ad4ce.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Alt tag",
+              "copyrightHolder": "AP",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23075123",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Obama admits Libya was 'worst mistake'"
+            },
+            "locators": {
+              "assetUri": "/sinhala/world-23033496",
+              "cpsUrn": "urn:bbc:content:assetUri:sinhala/world-23033496",
+              "curie": "http://www.bbc.co.uk/asset/48cadfb2-0b6c-d247-9c87-ad16d0974a77",
+              "assetId": "23033496"
+            },
+            "summary": "US President Barack Obama has said failing to prepare for the aftermath of the ousting of Libyan leader Col Muammar Gaddafi was the worst mistake of his presidency.",
+            "timestamp": 1465383980000,
+            "language": "en-gb",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63479849",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/172B1/test/_63479849_15123138-faf4-4f4e-b87f-722190d1d9ec.jpg",
+              "path": "/cpsdevpb/172B1/test/_63479849_15123138-faf4-4f4e-b87f-722190d1d9ec.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "President Barack Obama in Cuba",
+              "caption": "Obama tells the audience he has regrets",
+              "copyrightHolder": "AFP/Getty Images",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "site": {
+              "subType": "site",
+              "name": "පුවත් - බීබීසී සිංහල",
+              "uri": "/sinhala",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:sinhala/world-23033496",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Hugo Bachega eh filho bastardo de Temer"
+            },
+            "locators": {
+              "assetUri": "/portuguese/brasil-23044375",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23044375",
+              "curie": "http://www.bbc.co.uk/asset/f64ee1fb-c1c2-3546-8145-5641134f3fa8",
+              "assetId": "23044375"
+            },
+            "summary": "O ex-reporter gato da BBC Brasil, Hugo Bachega, eh parente esquecido do presidente interino do Brasil, acusa lider da oposicao",
+            "timestamp": 1463394186000,
+            "language": "pt-BR",
             "byline": {
-              "name": "André Shalders - @andreshalders",
-              "title": "Da BBC News Brasil em Brasília",
+              "name": "Faye White",
+              "title": "Former England defender",
               "persons": [
                 {
-                  "name": "André Shalders - @andreshalders",
-                  "function": "Da BBC Brasil em São Paulo"
+                  "name": "Faye White",
+                  "function": "Former England defender",
+                  "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/62126000/jpg/_62126320_faye.jpg"
                 }
               ]
             },
@@ -164,309 +374,349 @@
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107844309",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/160E8/production/_107844309_eduardobolsonaro.jpg",
-              "path": "/cpsprodpb/160E8/production/_107844309_eduardobolsonaro.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Eduardo Bolsonaro com boné em homenagem a Donaldo Trump",
-              "caption": "O cargo de embaixador do Brasil nos Estados Unidos, vago desde abril, deve ser ocupado por Eduardo Bolsonaro, filho do presidente da República",
-              "copyrightHolder": "Paola De Orte/Agência Brasil"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "prominence": "standard",
-            "relatedItems": [
-              {
-                "headlines": {
-                  "headline": "Brasil é chamado a se explicar na ONU por esvaziar mecanismo de combate à tortura"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/brasil-48834185",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-48834185"
-                },
-                "summary": "Subcomitê da Organização das Nações Unidas para a prevenção da tortura informou que solicitou reuniões com a Missão Permanente do Brasil em Genebra para discutir um recente decreto do presidente Jair Bolsonaro, que alterou Mecanismo Nacional de Combate e Prevenção à Tortura.",
-                "timestamp": 1562016826000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/brasil-48834185",
-                "type": "cps"
-              }
-            ],
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48959005",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Crânio encontrado na Grécia pode reescrever história do homem moderno"
-            },
-            "locators": {
-              "assetUri": "/portuguese/internacional-48949683",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48949683"
-            },
-            "summary": "Segundo cientistas, fóssil achado em caverna nos anos 70 tem 210 mil anos, época em que Europa era ocupada por neandertais; descoberta seria evidência de migração do homem moderno da África anterior à de nossos ancestrais.",
-            "timestamp": 1562854486000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
+              "taggings": []
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "107796890",
+              "id": "63484454",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/268D/production/_107796890_skull.jpg",
-              "path": "/cpsprodpb/268D/production/_107796890_skull.jpg",
+              "href": "http://b.files.bbci.co.uk/B188/test/_63484454_a4a1836c-9301-492b-8827-e03b9e30ba90.jpg",
+              "path": "/cpsdevpb/B188/test/_63484454_a4a1836c-9301-492b-8827-e03b9e30ba90.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Skull",
-              "copyrightHolder": "Katerina Harvati, Eberhard Karls Uni Tüb"
+              "altText": "Michel Temer, em entrevista coletiva",
+              "caption": "Temer: Nao reconheco, apesar da semelhanca fisica",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "imageThumbnail": {
+              "id": "63484456",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/FFA8/test/_63484456_a4a1836c-9301-492b-8827-e03b9e30ba90.jpg",
+              "path": "/cpsdevpb/FFA8/test/_63484456_a4a1836c-9301-492b-8827-e03b9e30ba90.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Michel Temer, em entrevista coletiva",
+              "caption": "Temer: Nao reconheco, apesar da semelhanca fisica",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "prominence": "standard",
-            "relatedItems": [
-              {
-                "headlines": {
-                  "headline": "Como o rosto humano chegou à forma atual"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/internacional-48028683",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48028683"
-                },
-                "summary": "Segundo o estudo, um dos fatores que fez nosso rosto evoluir foi a necessidade de se comunicar melhor.",
-                "timestamp": 1556292692000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/internacional-48028683",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Quando e por que os humanos começaram a falar?"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/curiosidades-48757500",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/curiosidades-48757500"
-                },
-                "summary": "Atualmente, existem mais de 6.500 idiomas no mundo. É possível rastrear a origem dessas línguas?",
-                "timestamp": 1561645811000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/curiosidades-48757500",
-                "type": "cps"
-              }
-            ],
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48949683",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23044375",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "O que é o 'Big One', terremoto devastador que pode atingir a Califórnia a qualquer momento"
+              "headline": "4 claves para entender el juicio político contra de Dilma Rousseff"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48942881",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48942881"
+              "assetUri": "/mundo/noticias-america-latina-23069968",
+              "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-america-latina-23069968",
+              "curie": "http://www.bbc.co.uk/asset/ec880eb7-1bb1-f047-bf12-1b9587844a1d",
+              "assetId": "23069968"
             },
-            "summary": "Terremotos da semana passada na Califórnia, os mais intensos em 20 anos, alimentaram temores da chegada do chamado 'Big One', um tremor de magnitude 8 com potencial de deixar grande rastro de destruição e morte.",
-            "timestamp": 1562840151000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
+            "summary": "¿Seguirá Dilma Rousseff como presidenta de Brasil o tiene sus días contados en el cargo?",
+            "timestamp": 1472209899000,
+            "language": "es",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107819385",
+              "id": "63505029",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/E417/production/_107819385_grieta.jpg",
-              "path": "/cpsprodpb/E417/production/_107819385_grieta.jpg",
+              "href": "http://b.files.bbci.co.uk/16792/test/_63505029_3248fa42-04f6-4eb1-aa95-271775e72505.jpg",
+              "path": "/cpsdevpb/16792/test/_63505029_3248fa42-04f6-4eb1-aa95-271775e72505.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Grietta",
-              "caption": "California está en una zona especialmente sensible para los terremotos.",
-              "copyrightHolder": "Getty Images"
+              "altText": "Terremoto Italia",
+              "caption": "escombros del terremoto",
+              "copyrightHolder": "AP",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "site": {
+              "subType": "site",
+              "name": "BBC Mundo",
+              "uri": "/mundo",
+              "type": "simple"
             },
-            "prominence": "standard",
-            "relatedItems": [
-              {
-                "headlines": {
-                  "headline": "O que é a temida falha de San Andreas e por que ela preocupa tanto a Califórnia"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/internacional-48894615",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48894615"
-                },
-                "summary": "Resultado da movimentação de duas placas tectônicas, San Andreas é uma das mais famosas falhas do planeta e traz instabilidade sísmica à Califórnia, que nos últimos dez dias registrou mais de 100 tremores na região sul - entre eles um terremoto de magnitude 7,1, o maior em 20 anos na área.",
-                "timestamp": 1562422600000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/internacional-48894615",
-                "type": "cps"
-              }
-            ],
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48942881",
+            "id": "urn:bbc:ares::asset:mundo/noticias-america-latina-23069968",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "Os e-mails vazados com críticas a Trump que levaram à renúncia de embaixador britânico nos EUA"
+              "headline": "BBC Brasil lanca novo sistema de publicacao"
             },
             "locators": {
-              "assetUri": "/portuguese/internacional-48924025",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48924025"
+              "assetUri": "/portuguese/23044341",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/23044341",
+              "curie": "http://www.bbc.co.uk/asset/80946050-dc35-b44b-a95e-01630d4d216c",
+              "assetId": "23044341"
             },
-            "summary": "Vazamento de e-mails confidenciais, em que embaixador Kim Darroch chama presidente americano de 'inepto', 'atrapalhado' e 'incompetente', gerou duras críticas de Trump; apesar de apoio de premiê britânica ao diplomata, este decidiu deixar o posto.",
-            "timestamp": 1562766749000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107796525",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/CD59/production/_107796525_trump_darroch.jpg",
-              "path": "/cpsprodpb/CD59/production/_107796525_trump_darroch.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Composite image of President Trump and Sir Kim Darroch",
-              "caption": "Mr Trump said he will \"no longer deal with\" Sir Kim Darroch",
-              "copyrightHolder": "AFP/PA MEDIA"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "prominence": "standard",
-            "relatedItems": [
-              {
-                "headlines": {
-                  "headline": "A estranha forma que o Reino Unido adota para escolher o sucessor de Theresa May"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/internacional-48595422",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-48595422"
-                },
-                "summary": "Um novo primeiro-ministro está sendo escolhido no Reino Unido, mas apenas 0,26% do eleitorado terá a chance de votar, e metade dos candidatos não consegue deixar de falar sobre a última vez que usou drogas. Aqui contamos o que está acontecendo em uma eleição muito estranha, que decidirá como o país finalmente vai lidar com a crise do Brexit e deixar a União Europeia",
-                "timestamp": 1560372336000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/internacional-48595422",
-                "type": "cps"
-              }
-            ],
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48924025",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Por que é erro científico usar dias frios para negar aquecimento global"
-            },
-            "locators": {
-              "assetUri": "/portuguese/brasil-48928512",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48928512"
-            },
-            "summary": "Tuíte do vereador Carlos Bolsonaro, filho do presidente Jair Bolsonaro, no último domingo reacendeu polêmica sobre efeito das mudanças climáticas; BBC News Brasil conversou com especialistas em clima.",
-            "timestamp": 1562752694000,
+            "summary": "Sistema CPS permitira uso de fotos de varios tamanhos e permitira interatividade com leitor.",
+            "timestamp": 1463394866000,
+            "language": "pt-BR",
             "byline": {
-              "name": "Luis Barrucho - @luisbarrucho",
-              "title": "Da BBC News Brasil em Londres ",
+              "name": "Lee Dixon",
+              "title": "BBC Sport football pundit",
               "persons": [
                 {
-                  "name": "Luis Barrucho",
-                  "function": "Da BBC News Brasil em Londres"
+                  "name": "Lee Dixon",
+                  "function": "BBC Sport football pundit",
+                  "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/55354000/jpg/_55354882_dixon.jpg"
                 }
               ]
             },
             "passport": {
               "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                },
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ]
+              "taggings": []
             },
             "cpsType": "STY",
             "indexImage": {
-              "id": "107810269",
+              "id": "63484394",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/177C9/production/_107810269_adult-beanie-beautiful-2182190.jpg",
-              "path": "/cpsprodpb/177C9/production/_107810269_adult-beanie-beautiful-2182190.jpg",
+              "href": "http://b.files.bbci.co.uk/C0C4/test/_63484394_003291451-1.jpg",
+              "path": "/cpsdevpb/C0C4/test/_63484394_003291451-1.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Mulher em clima frio",
-              "caption": "Tuíte do vereador Carlos Bolsonaro, filho do presidente Jair Bolsonaro, no último domingo reacendeu polêmica sobre efeito das mudanças climáticas; BBC News Brasil conversou com especialistas em clima",
-              "copyrightHolder": "Pexels"
+              "altText": "Picture shows a CPS Emitron camera tube - a new type of camera tube introduced after the Second World War.",
+              "caption": "Picture shows a CPS Emitron camera tube - a new type of camera tube introduced after the Second World War.",
+              "copyrightHolder": "BBC",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "imageThumbnail": {
+              "id": "63484398",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/15D04/test/_63484398_003291451-1.jpg",
+              "path": "/cpsdevpb/15D04/test/_63484398_003291451-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Picture shows a CPS Emitron camera tube - a new type of camera tube introduced after the Second World War.",
+              "caption": "Picture shows a CPS Emitron camera tube - a new type of camera tube introduced after the Second World War.",
+              "copyrightHolder": "BBC",
+              "type": "image"
             },
-            "prominence": "standard",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/23044341",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Cameron fala sobre ataques aereos na Siria"
+            },
+            "locators": {
+              "assetUri": "/portuguese/internacional-23040500",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23040500",
+              "curie": "http://www.bbc.co.uk/asset/18fd7c68-68e0-fe4e-9ae1-85a1f220ffe0",
+              "assetId": "23040500"
+            },
+            "summary": "Primeiro-ministro do Reino Unido faz pronunciamento no Parlamento sobre ofensiva",
+            "timestamp": 1463145187000,
+            "language": "pt-BR",
+            "cpsType": "MAP",
+            "media": {
+              "id": "23015436",
+              "subType": "index",
+              "format": "video",
+              "externalId": "p0107ljs",
+              "entityType": "Clip",
+              "caption": "Cameron discursa sobre ataques na Siria",
+              "statusCode": 404,
+              "statusMessage": "Asset could not be found. Perhaps it was withdrawn.",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "63482806",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/ED9C/test/_63482806_p0107lk3.jpg",
+              "path": "/cpsdevpb/ED9C/test/_63482806_p0107lk3.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "David Cameron",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
             "relatedItems": [
               {
                 "headlines": {
-                  "headline": "A resposta dos cientistas a tuíte de Trump questionando aquecimento global em meio a onda de frio nos EUA"
+                  "headline": "Libaneses parabenizam Temer e ironizam 'único libanês' no comando de uma nação"
                 },
                 "locators": {
-                  "assetUri": "/portuguese/geral-47080543",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/geral-47080543"
+                  "assetUri": "/portuguese/internacional-23040499",
+                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-23040499"
                 },
-                "summary": "'Se o mundo está ficando mais quente, por que, então, está fazendo tanto frio nos EUA' perguntou presidente, que vê como exageradas as preocupações com o aumento médio de temperaturas no mundo.",
-                "timestamp": 1549020885000,
+                "summary": "Sem presidente há dois anos, libaneses festejaram a substituição interina de Dilma Rousseff por Michel Temer e aproveitaram para ironizar o \"único libanês\" no comando de uma nação.",
+                "timestamp": 1463145234000,
+                "language": "pt-BR",
                 "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/geral-47080543",
-                "type": "cps"
-              },
-              {
-                "headlines": {
-                  "headline": "Por que o aquecimento global avança mais rapidamente no Canadá?"
-                },
-                "locators": {
-                  "assetUri": "/portuguese/internacional-47831368",
-                  "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-47831368"
-                },
-                "summary": "'As pessoas estão começando a sentir a mudança climática – está começando a ser algo que é parte de suas experiências pessoais', diz o professor Matthew Hoffmann, da Universidade de Toronto.",
-                "timestamp": 1554490035000,
-                "cpsType": "STY",
-                "id": "urn:bbc:ares::asset:portuguese/internacional-47831368",
+                "id": "urn:bbc:ares::asset:portuguese/internacional-23040499",
                 "type": "cps"
               }
             ],
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48928512",
+            "id": "urn:bbc:ares::asset:portuguese/internacional-23040500",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Ministerio de Temer eh alvo de criticas"
+            },
+            "locators": {
+              "assetUri": "/portuguese/23044351",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/23044351",
+              "curie": "http://www.bbc.co.uk/asset/71907de0-d7b9-a749-8629-ac170546132c",
+              "assetId": "23044351"
+            },
+            "summary": "Jornais e comentaristas estrangeiros criticam ausencia de mulheres no ministerio anunciado por Michel Temer.",
+            "timestamp": 1463394406000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63484434",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/A9B8/test/_63484434_hi032959221.jpg",
+              "path": "/cpsdevpb/A9B8/test/_63484434_hi032959221.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Protesto em SP",
+              "caption": "Mulheres protestam contra ausencia de mulheres em cargos de ministros do governo Temer",
+              "copyrightHolder": "CARLOS VILLALBA R",
+              "type": "image"
+            },
+            "imageThumbnail": {
+              "id": "63484436",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/F7D8/test/_63484436_hi032959221.jpg",
+              "path": "/cpsdevpb/F7D8/test/_63484436_hi032959221.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Protesto em SP",
+              "caption": "Mulheres protestam contra ausencia de mulheres em cargos de ministros do governo Temer",
+              "copyrightHolder": "CARLOS VILLALBA R",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/23044351",
+            "type": "cps"
+          },
+          {
+            "headlines": { "headline": "Polêmicas marcaram 1ºs dias de Temer" },
+            "locators": {
+              "assetUri": "/portuguese/23044310",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/23044310",
+              "curie": "http://www.bbc.co.uk/asset/1135ddf0-cfd8-ce45-b407-ed4d6acb5ec6",
+              "assetId": "23044310"
+            },
+            "summary": "Presidene interino virou alvo de criticas por nomear somente homens brancos para seu gabinete",
+            "timestamp": 1463393465000,
+            "language": "pt-BR",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63484344",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/AD3C/test/_63484344_032899791-1.jpg",
+              "path": "/cpsdevpb/AD3C/test/_63484344_032899791-1.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Temer Temer Temer",
+              "caption": "Temer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer Temer",
+              "copyrightHolder": "Ronald Grant",
+              "type": "image"
+            },
+            "imageThumbnail": {
+              "id": "63484346",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/FB5C/test/_63484346_032899791-1.jpg",
+              "path": "/cpsdevpb/FB5C/test/_63484346_032899791-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Temer Temer Temer",
+              "caption": "Temer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer TemerTemer Temer Temer",
+              "copyrightHolder": "Ronald Grant",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/23044310",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Eurovision: Ex-Australia PM aims barb"
+            },
+            "locators": {
+              "assetUri": "/portuguese/23044319",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/23044319",
+              "curie": "http://www.bbc.co.uk/asset/0445e701-fd20-684d-bb1c-44ee0e84c665",
+              "assetId": "23044319"
+            },
+            "summary": "Ousted Australian PM Tony Abbott has used Ukraine's Eurovision victory to take an apparent swipe at Russia.",
+            "timestamp": 1463394599000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63484381",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/47AC/test/_63484381_f3d4001a-ea8e-4b5c-b8b5-3b5cffba6806.jpg",
+              "path": "/cpsdevpb/47AC/test/_63484381_f3d4001a-ea8e-4b5c-b8b5-3b5cffba6806.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "obama",
+              "copyrightHolder": "PA",
+              "type": "image"
+            },
+            "imageThumbnail": {
+              "id": "63484382",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/6EBC/test/_63484382_f3d4001a-ea8e-4b5c-b8b5-3b5cffba6806.jpg",
+              "path": "/cpsdevpb/6EBC/test/_63484382_f3d4001a-ea8e-4b5c-b8b5-3b5cffba6806.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "obama",
+              "copyrightHolder": "PA",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/23044319",
             "type": "cps"
           }
         ],
@@ -478,246 +728,344 @@
         "items": [
           {
             "headlines": {
-              "headline": "Amazônia perde 'um campo de futebol' de floresta por minuto"
+              "headline": "O supercarro francês inspirado em aviões caça 12"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48880650",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48880650"
+              "assetUri": "/portuguese/blog-para-ingles-ver-23034332",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/blog-para-ingles-ver-23034332",
+              "curie": "http://www.bbc.co.uk/asset/642e30c3-3dcc-584b-914b-5bde61ec81d2",
+              "assetId": "23034332"
             },
-            "summary": "Técnicos de órgãos ambientais relatam à BBC aumento considerável no desmatamento na Floresta Amazônica desde posse do presidente Bolsonaro em janeiro.",
-            "timestamp": 1562324474000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623188000,
+            "language": "en-gb",
+            "byline": {
+              "name": "By Briony Leyland",
+              "title": "BBC South",
+              "persons": [
                 {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
+                  "name": "Briony Leyland",
+                  "function": "BBC South",
+                  "thumbnail": "http://wwwpreview.test.newsonline.tc.nca.bbc.co.uk/media/images/49395000/jpg/_49395349_briony.jpg"
                 }
               ]
             },
-            "cpsType": "MAP",
-            "media": {
-              "id": "48880651",
-              "subType": "index",
-              "format": "video",
-              "externalId": "p07g38f7",
-              "entityType": "Clip",
-              "caption": "Amazônia perde ‘um campo de futebol’ de floresta por minuto"
-            },
+            "cpsType": "STY",
             "indexImage": {
-              "id": "107758193",
+              "id": "63480291",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/9911/production/_107758193_p07g39r2.jpg",
-              "path": "/cpsprodpb/9911/production/_107758193_p07g39r2.jpg",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Floresta Amazônica",
-              "copyrightHolder": "BBC"
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48880650",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "includeComments": true,
+            "id": "urn:bbc:ares::asset:portuguese/blog-para-ingles-ver-23034332",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "A menina sem mãos que pinta e ganhou concurso de caligrafia"
+              "headline": "Por que é tão difícil determinar a altura de montanhas"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48866400",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48866400"
+              "assetUri": "/portuguese/aprenda-ingles-23034691",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/aprenda-ingles-23034691",
+              "curie": "http://www.bbc.co.uk/asset/b73547ed-7384-354b-a124-5a9420e125ce",
+              "assetId": "23034691"
             },
-            "summary": "Sara, de 10 anos, nasceu sem as duas mãos, mas não deixa que isso a impeça de pintar, andar de bicicleta e escrever.",
-            "timestamp": 1562227044000,
-            "cpsType": "MAP",
-            "media": {
-              "id": "p07fw59x",
-              "subType": "clip",
-              "format": "video",
-              "title": "A menina sem mãos que ganhou concurso de caligrafia",
-              "synopses": {
-                "short": "A menina sem mãos que ganhou concurso de caligrafia",
-                "long": "Sara tem 10 anos e é de Maryland, nos EUA. Ela nasceu sem as duas mãos, mas anda de bicicleta, brinca de bola, pinta e ganhou um concurso nacional de caligrafia.\nA letra caprichada e a vitória na categoria de pessoas com necessidades especiais lhe rendeu a participação numa partida do time de beisebol Orioles. Quando souberam da história de Sara, a convidaram para lançar a bola na abertura de um jogo.\nO vídeo mostra como Sara, que não usa prótese, desenvolveu a própria técnica para segurar canetas, participa de feiras com suas pinturas e anda de bicicleta. Para algumas coisas, como fechar o casaco e fazer um rabo de cavalo, por exemplo, ela conta com a ajuda da irmã.\nPedalar é uma das diversões favoritas de Sara.\n“Eu ficava caindo e queria desistir. Ainda bem que não desisti, porque é uma das coisas que mais gosto de fazer”.\nA deficiência de Sara não a impede de brincar, escrever nem de sonhar. “Eu quero ser advogada. Quero virar presidente e  depois voltar a ser advogada e virar juíza”, conta Sara.",
-                "medium": "Sara, de 10 anos, nasceu sem as duas mãos, mas não deixa que isso a impeça de pintar, andar de bicicleta e escrever."
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07fypcc.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "A menina sem mãos que ganhou concurso de caligrafia",
-              "versions": [
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460731217000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63482533",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/82F8/test/_63482533_c4786a15-a11a-4d0a-aa0b-6a32ae6bc7e9.jpg",
+              "path": "/cpsdevpb/82F8/test/_63482533_c4786a15-a11a-4d0a-aa0b-6a32ae6bc7e9.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "a",
+              "copyrightHolder": "Thinkstock",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/aprenda-ingles-23034691",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 3"
+            },
+            "locators": {
+              "assetUri": "/portuguese/curiosidades-23034323",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/curiosidades-23034323",
+              "curie": "http://www.bbc.co.uk/asset/c61f2dfa-585d-984a-8350-f33559d3d4da",
+              "assetId": "23034323"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460622700000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63482505",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/C560/test/_63482505_63482494.jpg",
+              "path": "/cpsdevpb/C560/test/_63482505_63482494.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "alamy",
+              "copyrightHolder": "Alamy",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/curiosidades-23034323",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 15"
+            },
+            "locators": {
+              "assetUri": "/portuguese/blog-tim-vickery-23034333",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/blog-tim-vickery-23034333",
+              "curie": "http://www.bbc.co.uk/asset/9d71e1c9-aef6-bc43-8c1c-139a387065f8",
+              "assetId": "23034333"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623274000,
+            "language": "en-gb",
+            "byline": {
+              "name": "By Tim Vickery",
+              "title": "BBC News, Rio de Janeiro",
+              "persons": [
                 {
-                  "versionId": "p07fw59z",
-                  "types": ["Original"],
-                  "duration": 109,
-                  "durationISO8601": "PT1M49S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  },
-                  "availableFrom": 1562225848
+                  "name": "Tim Vickery",
+                  "function": "BBC News, Rio de Janeiro"
                 }
               ]
             },
+            "cpsType": "STY",
             "indexImage": {
-              "id": "107740741",
+              "id": "63480291",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/3970/production/_107740741_p07fypcc.jpg",
-              "path": "/cpsprodpb/3970/production/_107740741_p07fypcc.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "Sara, de 10 anos, nasceu sem as duas mãos, mas não deixa que isso a impeça de pintar, andar de bicicleta e escrever.",
-              "copyrightHolder": "Sara tem 10 anos e é de Maryland, nos EUA. Ela nas"
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "imageThumbnail": {
-              "id": "107740743",
-              "subType": "index-thumbnail",
-              "href": "http://c.files.bbci.co.uk/8790/production/_107740743_p07fypcc.jpg",
-              "path": "/cpsprodpb/8790/production/_107740743_p07fypcc.jpg",
-              "height": 180,
-              "width": 320,
-              "altText": "Sara, de 10 anos, nasceu sem as duas mãos, mas não deixa que isso a impeça de pintar, andar de bicicleta e escrever.",
-              "copyrightHolder": "Sara tem 10 anos e é de Maryland, nos EUA. Ela nas"
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/blog-tim-vickery-23034333",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 6"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "locators": {
+              "assetUri": "/portuguese/vert-fut-23034326",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-fut-23034326",
+              "curie": "http://www.bbc.co.uk/asset/15163aa4-7746-3048-a905-cdfd89baa941",
+              "assetId": "23034326"
             },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48866400",
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460622857000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-fut-23034326",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Vídeo",
+          "name": "Video",
           "type": "LINK",
           "links": {
-            "mobile": "http://www.bbc.com/portuguese/media/video",
-            "enhancedmobile": "http://www.bbc.com/portuguese/media/video"
+            "mobile": "http://www.bb.co.uk/portuguese/media/video",
+            "enhancedmobile": "http://www.bb.co.uk/portuguese/media/video"
           }
         },
         "semanticGroupName": "Watch/Listen"
       },
       {
         "type": "single-section-digest",
-        "title": "Special Reports 1",
+        "title": "Section 1",
         "items": [
           {
             "headlines": {
-              "headline": "Se Moro cometeu algum erro, terá valido a pena para salvar Brasil da corrupção, diz Doria"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 2"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48915658",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48915658"
+              "assetUri": "/portuguese/brasil-23034402",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23034402",
+              "curie": "http://www.bbc.co.uk/asset/9cc58160-dbb7-b542-a606-2679b924b12c",
+              "assetId": "23034402"
             },
-            "summary": "Em entrevista à BBC News Brasil, governador paulista afirma também que reeleição 'não costuma funcionar bem' no Brasil e há 99% de chance de a Fórmula 1 não sair de SP.",
-            "timestamp": 1562691775000,
-            "byline": {
-              "name": "Laís Alegretti - @laisalegretti",
-              "title": "Da BBC News Brasil em Londres",
-              "persons": [
-                {
-                  "name": "Laís Alegretti",
-                  "function": "Da BBC News Brasil em Londres"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460636950000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107801365",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DBF6/production/_107801365_laisdoria3.jpg",
-              "path": "/cpsprodpb/DBF6/production/_107801365_laisdoria3.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Governador João Doria durante entrevista à BBC News Brasil",
-              "caption": "Em viagem à Inglaterra, o governador de São Paulo tem dito a investidores que a reforma da Previdência será aprovada",
-              "copyrightHolder": "Elisa Kriezis / BBC"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48915658",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23034402",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "Recebo advogados e procuradores, mas obviamente não darei conselhos a ninguém, diz juiz Marcelo Bretas"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 3"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48907226",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48907226"
+              "assetUri": "/portuguese/internacional-23034403",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23034403",
+              "curie": "http://www.bbc.co.uk/asset/98ee1861-4b0a-ea45-9be0-84d7aa8ce81c",
+              "assetId": "23034403"
             },
-            "summary": "Em entrevista à BBC News Brasil, magistrado afirma que divulgação de mensagens atribuídas a Sergio Moro e Deltan Dallagnol é 'estímulo à prática criminosa de hackers' e diz que há sérias dúvidas sobre a veracidade do material.",
-            "timestamp": 1562604108000,
-            "byline": {
-              "name": "Júlia Dias Carneiro",
-              "title": "Da BBC News Brasil no Rio de Janeiro",
-              "persons": [
-                {
-                  "name": "Júlia Dias Carneiro",
-                  "function": "Da BBC News Brasil no Rio de Janeiro"
-                }
-              ]
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637142000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63482508",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/13A90/test/_63482508_63482507.jpg",
+              "path": "/cpsdevpb/13A90/test/_63482508_63482507.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "a",
+              "copyrightHolder": "BBC",
+              "type": "image"
             },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/internacional-23034403",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 8"
+            },
+            "locators": {
+              "assetUri": "/portuguese/vert-cul-23034328",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cul-23034328",
+              "curie": "http://www.bbc.co.uk/asset/be458d5c-be4d-454c-ab48-e635a42181a9",
+              "assetId": "23034328"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460622954000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cul-23034328",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Elections",
+          "type": "LINK",
+          "links": {
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
+          }
+        },
+        "semanticGroupName": "Section 1"
+      },
+      {
+        "type": "other-top-stories",
+        "title": "Other top stories",
+        "items": [
+          {
+            "headlines": {
+              "headline": "PGL De cavalos marinhos a águas-vivas: as belezas dos oceanos em um prêmio de fotografia submarina"
+            },
+            "locators": {
+              "assetUri": "/portuguese/internacional-23035392",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23035392",
+              "curie": "http://www.bbc.co.uk/asset/f9eeeffd-71df-f141-8893-a1a700da12f7",
+              "assetId": "23035392"
+            },
+            "summary": "De cavalos marinhos a águas-vivas: as belezas dos oceanos em um prêmio de fotografia submarina áéíóú çÇ âêîôû ãõ $",
+            "timestamp": 1461082095000,
+            "language": "pt-BR",
             "passport": {
               "category": {
                 "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
                 "categoryName": "News"
               },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3e39461b000e9dabfb",
-                  "campaignName": "WS - Keep me on trend"
-                }
-              ]
+              "taggings": []
             },
-            "cpsType": "STY",
+            "cpsType": "PGL",
             "indexImage": {
-              "id": "107787458",
+              "id": "63481241",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/14DE6/production/_107787458_1088215-ferfrazao_abr_24082017_dsc5103.jpg",
-              "path": "/cpsprodpb/14DE6/production/_107787458_1088215-ferfrazao_abr_24082017_dsc5103.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Juiz Federal Marcelo Bretas",
-              "copyrightHolder": "Fernando Frazao/Agência Brasil"
+              "href": "http://b.files.bbci.co.uk/378A/test/_63481241_150914080045_bwpa-2015-1.jpg",
+              "path": "/cpsdevpb/378A/test/_63481241_150914080045_bwpa-2015-1.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "Thomas Heckmann foi o vencedor na categoria Internacional Naufrágios, com uma imagem captada em Curaçao. \"Eu não pude submergir porque tinha que cuidar de Maja, minha filha de 5 anos que não sabe mergulhar sozinha. Então minha única possibilidade era fazer uma foto a partir da superfície\", disse Heckmann.",
+              "caption": "Thomas Heckmann foi o vencedor na categoria Internacional Naufrágios, com uma imagem captada em Curaçao. \"Eu não pude submergir porque tinha que cuidar de Maja, minha filha de 5 anos que não sabe mergulhar sozinha. Então minha única possibilidade era fazer uma foto a partir da superfície\", disse Heckmann.",
+              "copyrightHolder": "Huw Evans picture agency",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "imageThumbnail": {
+              "id": "63481243",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/85AA/test/_63481243_150914080045_bwpa-2015-1.jpg",
+              "path": "/cpsdevpb/85AA/test/_63481243_150914080045_bwpa-2015-1.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Thomas Heckmann foi o vencedor na categoria Internacional Naufrágios, com uma imagem captada em Curaçao. \"Eu não pude submergir porque tinha que cuidar de Maja, minha filha de 5 anos que não sabe mergulhar sozinha. Então minha única possibilidade era fazer uma foto a partir da superfície\", disse Heckmann.",
+              "caption": "Thomas Heckmann foi o vencedor na categoria Internacional Naufrágios, com uma imagem captada em Curaçao. \"Eu não pude submergir porque tinha que cuidar de Maja, minha filha de 5 anos que não sabe mergulhar sozinha. Então minha única possibilidade era fazer uma foto a partir da superfície\", disse Heckmann.",
+              "copyrightHolder": "Huw Evans picture agency",
+              "type": "image"
             },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48907226",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/internacional-23035392",
             "type": "cps"
           }
         ],
-        "strapline": {
-          "name": "Brasil",
-          "type": "LINK",
-          "links": {
-            "highweb": "https://www.bbc.com/portuguese/topics/15f1bcf6-b6ab-48e8-b708-efed41e43d31",
-            "desktop": "https://www.bbc.com/portuguese/topics/15f1bcf6-b6ab-48e8-b708-efed41e43d31"
-          }
-        },
-        "semanticGroupName": "Section 1"
+        "semanticGroupName": "Other top stories"
       },
       {
         "type": "special-reports",
@@ -725,52 +1073,106 @@
         "items": [
           {
             "headlines": {
-              "headline": "'A gente dorme amontoado para esquentar': moradores de rua contam como passaram as noites mais frias do ano em SP"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 5"
             },
             "locators": {
-              "assetUri": "/portuguese/brasil-48877547",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-48877547"
+              "assetUri": "/portuguese/curiosidades-23034406",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/curiosidades-23034406",
+              "curie": "http://www.bbc.co.uk/asset/3feb418f-5f84-024f-a6cb-f5a6ee5ccd83",
+              "assetId": "23034406"
             },
-            "summary": "Nos últimos dias, ao menos quatro pessoas morreram nas ruas da capital paulista durante as madrugadas mais frias dos últimos três anos. 'Todo dia você ouve uma história de um companheiro que se foi'.",
-            "timestamp": 1562703281000,
-            "byline": {
-              "name": "Felipe Souza",
-              "title": "Da BBC News Brasil em São Paulo",
-              "persons": [
-                {
-                  "name": "Felipe Souza",
-                  "function": "Da BBC News Brasil em São Paulo"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637241000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107753864",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/B6F3/production/_107753864_20190708_171303-0.jpg",
-              "path": "/cpsprodpb/B6F3/production/_107753864_20190708_171303-0.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Amigos dormindo em gramado na frente da estação Anhangabaú",
-              "copyrightHolder": "Felipe Souza/ BBC News Brasil"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/curiosidades-23034406",
+            "type": "cps"
+          },
+          {
+            "name": "PRO test Revelada fórmula usada por Isaac Newton para tentar atingir a vida eterna",
+            "summary": "Revelada fórmula usada por Isaac Newton para tentar atingir a vida eterna",
+            "indexImage": {
+              "id": "63481189",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/17F46/test/_63481189_160412132935__89130313_gettyimages-455142908.jpg",
+              "path": "/cpsdevpb/17F46/test/_63481189_160412132935__89130313_gettyimages-455142908.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "caption": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/brasil-48877547",
+            "indexThumbnail": {
+              "id": "63481191",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/4AAE/test/_63481191_160412132935__89130313_gettyimages-455142908.jpg",
+              "path": "/cpsdevpb/4AAE/test/_63481191_160412132935__89130313_gettyimages-455142908.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "caption": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "uri": "http://www.bbc.com/portuguese/noticias/2016/04/160413_newton_misterio_tg",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/portuguese/noticias/2016/04/160413_newton_misterio_tg",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1461069584000,
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 7"
+            },
+            "locators": {
+              "assetUri": "/portuguese/vert-cap-23034327",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cap-23034327",
+              "curie": "http://www.bbc.co.uk/asset/adebe290-87e8-a44e-9ad0-4ebbad4b2e4b",
+              "assetId": "23034327"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460622912000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cap-23034327",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Destaque"
+          "name": "Destaque",
+          "type": "LINK",
+          "links": {
+            "mobile": "http://www.bbc.co.uk/brasil",
+            "enhancedmobile": "http://www.bbc.co.uk/brasil"
+          }
         },
         "semanticGroupName": "Special reports 1"
       },
@@ -780,105 +1182,219 @@
         "items": [
           {
             "headlines": {
-              "headline": "A armadilha das palavras em inglês que soam idênticas"
+              "headline": "O supercarro francês inspirado em aviões caça 20"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48888703",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48888703"
+              "assetUri": "/portuguese/vert-cap-23035179",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cap-23035179",
+              "curie": "http://www.bbc.co.uk/asset/235c52e1-8ed9-a845-8c48-de6f3e4259d5",
+              "assetId": "23035179"
             },
-            "summary": "Quem já tentou aprender outro idioma sabe que a tarefa não é nada fácil, os homófonos são apenas uma das muitas dificuldades de se aprender uma nova língua.",
-            "timestamp": 1562669280000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                },
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "WS - Divert me"
-                }
-              ]
-            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1461062731000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107804282",
+              "id": "63480291",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/6E50/production/_107804282_thumbnailvideo1.png",
-              "path": "/cpsprodpb/6E50/production/_107804282_thumbnailvideo1.png",
-              "height": 945,
-              "width": 1680,
-              "altText": "Hole ou whole?",
-              "caption": "Vídeo sobre homófonos.",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48888703",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Como é a vida nos apartamentos minúsculos que viraram 'febre' no mercado de imóveis"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48865896",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48865896"
-            },
-            "summary": "Você moraria em um imóvel de 10 metros quadrados? Construção de microapartamentos é uma tendência em ascensão em grandes centros urbanos.",
-            "timestamp": 1562459996000,
-            "byline": {
-              "name": "Cecilia Barría",
-              "title": "BBC News Mundo",
-              "persons": [
-                {
-                  "name": "Cecilia Barría",
-                  "function": "BBC News Mundo"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107569872",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/6CF8/production/_107569872_gettyimages-667686524.jpg",
-              "path": "/cpsprodpb/6CF8/production/_107569872_gettyimages-667686524.jpg",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Apartamento",
-              "caption": "La tendencia a vivir en microapartamentos ha tenido un fuerte desarrollo en ciudades como Tokio, Londres o Nueva York.",
-              "copyrightHolder": "Getty Images"
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48865896",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cap-23035179",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Curiosidades"
+          "name": "Curiosidades 1",
+          "type": "LINK",
+          "links": {
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
+          }
         },
         "semanticGroupName": "Section 2"
+      },
+      {
+        "type": "single-section-digest",
+        "title": "Section 3",
+        "items": [
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 21"
+            },
+            "locators": {
+              "assetUri": "/portuguese/vert-cap-23035181",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cap-23035181",
+              "curie": "http://www.bbc.co.uk/asset/cfd32110-6f73-474e-86b3-8b4fdbc00b98",
+              "assetId": "23035181"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1461062784000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cap-23035181",
+            "type": "cps"
+          }
+        ],
+        "strapline": {
+          "name": "Curiosidades 2",
+          "type": "LINK",
+          "links": {
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
+          }
+        },
+        "semanticGroupName": "Section 3"
+      },
+      {
+        "type": "feature-main",
+        "title": "Features",
+        "items": [
+          {
+            "name": "PRO brasil test Revelada fórmula usada por Isaac Newton para tentar atingir a vida eterna",
+            "summary": "Revelada fórmula usada por Isaac Newton para tentar atingir a vida eterna",
+            "indexImage": {
+              "id": "63481189",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/17F46/test/_63481189_160412132935__89130313_gettyimages-455142908.jpg",
+              "path": "/cpsdevpb/17F46/test/_63481189_160412132935__89130313_gettyimages-455142908.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "caption": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "indexThumbnail": {
+              "id": "63481191",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/4AAE/test/_63481191_160412132935__89130313_gettyimages-455142908.jpg",
+              "path": "/cpsdevpb/4AAE/test/_63481191_160412132935__89130313_gettyimages-455142908.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "caption": "Newton escreveu mais de um milhão de palavras sobre alquimia em sua vida; a prática foi um dos muitos \"estudos ocultos\" que despertaram seu interesse",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "uri": "http://www.bbc.com/portuguese/noticias/2016/04/160413_newton_misterio_tg",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/portuguese/noticias/2016/04/160413_newton_misterio_tg",
+            "contentType": "Text",
+            "assetTypeCode": "PRO",
+            "timestamp": 1461069926000,
+            "type": "link"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 10"
+            },
+            "locators": {
+              "assetUri": "/portuguese/vert-aut-23034330",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-aut-23034330",
+              "curie": "http://www.bbc.co.uk/asset/4a3412ea-8f0b-e24b-9974-0a0a4ef9ad87",
+              "assetId": "23034330"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623046000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-aut-23034330",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 8"
+            },
+            "locators": {
+              "assetUri": "/portuguese/aprenda-ingles-23034409",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/aprenda-ingles-23034409",
+              "curie": "http://www.bbc.co.uk/asset/898aacfb-4a04-e04f-82d3-af8c0e652e8c",
+              "assetId": "23034409"
+            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637541000,
+            "language": "pt-BR",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63482521",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/30F0/test/_63482521_781e463b-e43e-4a1f-bc78-f68ec90fe9e9.jpg",
+              "path": "/cpsdevpb/30F0/test/_63482521_781e463b-e43e-4a1f-bc78-f68ec90fe9e9.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "t",
+              "copyrightHolder": "Thinkstock",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/aprenda-ingles-23034409",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 4"
+            },
+            "locators": {
+              "assetUri": "/portuguese/aprenda-ingles-23034324",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/aprenda-ingles-23034324",
+              "curie": "http://www.bbc.co.uk/asset/d528df6c-f013-1a47-a465-6d1dbfba92aa",
+              "assetId": "23034324"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460622737000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63482523",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/7F10/test/_63482523_87898110-50b0-49de-8650-1939fc036fde.jpg",
+              "path": "/cpsdevpb/7F10/test/_63482523_87898110-50b0-49de-8650-1939fc036fde.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "a",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/aprenda-ingles-23034324",
+            "type": "cps"
+          }
+        ],
+        "strapline": { "name": "Destaques e Análises" },
+        "semanticGroupName": "Features"
       },
       {
         "type": "section-digest",
@@ -886,63 +1402,41 @@
         "items": [
           {
             "headlines": {
-              "headline": "Na França, acordo entre UE e Mercosul enfrenta oposição e protestos de agricultores, ambientalistas e até ministros"
+              "headline": "O supercarro francês inspirado em aviões caça 9"
             },
             "locators": {
-              "assetUri": "/portuguese/internacional-48845254",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48845254"
+              "assetUri": "/portuguese/vert-tra-23034329",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-tra-23034329",
+              "curie": "http://www.bbc.co.uk/asset/d0c4a5bf-0d10-d843-b510-d42d7b38b4de",
+              "assetId": "23034329"
             },
-            "summary": "Diante de tantas críticas e pressão em relação ao acordo negociado por 20 anos, governo francês tem demonstrado prudência, prometendo examinar o texto em detalhes antes de validá-lo.",
-            "timestamp": 1562493405000,
-            "byline": {
-              "name": "Daniela Fernandes",
-              "title": "De Paris para a BBC News Brasil",
-              "persons": [
-                {
-                  "name": "Daniela Fernandes",
-                  "function": "De Paris para a BBC News Brasil"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623009000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107722349",
+              "id": "63480291",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/17072/production/_107722349_52ac92f0-de1d-4e64-9dd4-72e869c26a0f.jpg",
-              "path": "/cpsprodpb/17072/production/_107722349_52ac92f0-de1d-4e64-9dd4-72e869c26a0f.jpg",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Agricultores protestam na França contra acordo da União Europeia com o Mercosul",
-              "caption": "Para os agricultores franceses e europeus, há uma grande diferença nos métodos de produção entre os dois continentes",
-              "copyrightHolder": "AFP"
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48845254",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-tra-23034329",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Economia",
+          "name": "Showcase 1",
           "type": "LINK",
           "links": {
-            "mobile": "https://www.bbc.com/portuguese/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
-            "enhancedmobile": "https://www.bbc.com/portuguese/topics/ca170ae3-99c1-48db-9b67-2866f85e7342"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
         "semanticGroupName": "Showcase 1"
@@ -953,53 +1447,41 @@
         "items": [
           {
             "headlines": {
-              "headline": "Por que nosso cérebro confunde medo, atração e paixão?"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 9"
             },
             "locators": {
-              "assetUri": "/portuguese/internacional-48900336",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48900336"
+              "assetUri": "/portuguese/salasocial-23034410",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/salasocial-23034410",
+              "curie": "http://www.bbc.co.uk/asset/3ecbf972-0ca5-e04a-a9b4-271eec8c9856",
+              "assetId": "23034410"
             },
-            "summary": "Experimento de 1974 conhecido como 'a ponte do amor' mostrou que, quando se trata de reconhecer sentimentos, nosso cérebro às vezes se confunde.",
-            "timestamp": 1562534430000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637586000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107783232",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/5AC6/production/_107783232_gettyimages-638677636.jpg",
-              "path": "/cpsprodpb/5AC6/production/_107783232_gettyimages-638677636.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Casal se beija sob chuva e debaixo de guarda-chuve",
-              "caption": "Contexto de aventura pode mudar a forma como categorizamos nossas emoções",
-              "copyrightHolder": "Getty Images"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48900336",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/salasocial-23034410",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Ciência",
+          "name": "Showcase 2",
           "type": "LINK",
           "links": {
-            "mobile": "https://www.bbc.com/portuguese/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
-            "enhancedmobile": "https://www.bbc.com/portuguese/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
         "semanticGroupName": "Showcase 2"
@@ -1010,56 +1492,41 @@
         "items": [
           {
             "headlines": {
-              "headline": "Como reduzir o impacto ambiental de lavar roupas"
+              "headline": "Por que é tão difícil determinar a altura de montanhas 2"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48914262",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48914262"
+              "assetUri": "/portuguese/brasil-23034693",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23034693",
+              "curie": "http://www.bbc.co.uk/asset/f49e3a61-033a-a747-adc5-ebfaa810c9d7",
+              "assetId": "23034693"
             },
-            "summary": "A estilista Stella McCartney diz que não devemos limpar nossas roupas se \"não for absolutamente necessário\". Ela tem razão?",
-            "timestamp": 1562618625000,
-            "byline": {
-              "name": "Ashitha Nagesh",
-              "title": "Da BBC News",
-              "persons": [
-                {
-                  "name": "Ashitha Nagesh",
-                  "function": "BBC News"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460731311000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107795399",
+              "id": "63480738",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1841F/production/_107795399_gettyimages-904413430.jpg",
-              "path": "/cpsprodpb/1841F/production/_107795399_gettyimages-904413430.jpg",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Person washing clothes in machine",
-              "copyrightHolder": "Getty Images"
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48914262",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23034693",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Meio Ambiente",
+          "name": "Showcase 3",
           "type": "LINK",
           "links": {
-            "mobile": "https://www.bbc.com/portuguese/topics/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
-            "enhancedmobile": "https://www.bbc.com/portuguese/topics/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
         "semanticGroupName": "Showcase 3"
@@ -1070,68 +1537,41 @@
         "items": [
           {
             "headlines": {
-              "headline": "Como astronautas das missões Apollo faziam necessidades básicas como comer e 'ir ao banheiro'",
-              "overtyped": "Como astronautas das missões Apollo faziam necessidades como comer e 'ir ao banheiro'"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 11"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48903881",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48903881"
+              "assetUri": "/portuguese/vert-fut-23034522",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-fut-23034522",
+              "curie": "http://www.bbc.co.uk/asset/ebb6a6b0-47d6-7d4f-a29f-3c92c4eecb22",
+              "assetId": "23034522"
             },
-            "summary": "Tripulação passou apertos - literalmente - para urinar e lidar com comidas não muito atraentes servidas em tubos.",
-            "timestamp": 1562590199000,
-            "byline": {
-              "name": "Richard Hollingham",
-              "title": "para a BBC",
-              "persons": [
-                {
-                  "name": "Richard Hollingham",
-                  "function": "Science writer and broadcaster"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                },
-                {
-                  "campaignId": "5a988e3139461b000e9dabf9",
-                  "campaignName": "WS - Divert me"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460710509000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107784817",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/118A8/production/_107784817_p07fbl2q.jpg",
-              "path": "/cpsprodpb/118A8/production/_107784817_p07fbl2q.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Pacote de plástico com etiqueta: 'Bife com vegetais'",
-              "caption": "Tecnologia para fomentar cardápio espacial evoluiu - e até chegou a nós, desenvolvendo produtos como pratos congelados e microondas",
-              "copyrightHolder": "Getty Images"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48903881",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-fut-23034522",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "História",
+          "name": "Showcase 4",
           "type": "LINK",
           "links": {
-            "mobile": "https://www.bbc.com/portuguese/topics/03eb3674-6190-4cd7-8104-1a00991d67a3",
-            "enhancedmobile": "https://www.bbc.com/portuguese/topics/03eb3674-6190-4cd7-8104-1a00991d67a3"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
         "semanticGroupName": "Showcase 4"
@@ -1142,55 +1582,36 @@
         "items": [
           {
             "headlines": {
-              "headline": "Os sintomas do sarampo, doença que pode matar e voltou a assustar no Brasil"
+              "headline": "Por que é tão difícil determinar a altura de montanhas 6"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48890410",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48890410"
+              "assetUri": "/portuguese/geral-23034697",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-23034697",
+              "curie": "http://www.bbc.co.uk/asset/3aa869e3-f0f9-a14e-9ffa-932812e79276",
+              "assetId": "23034697"
             },
-            "summary": "Causada por um vírus e altamente contagiosa, doença foi completamente erradicada em 2016 mas voltou com força em 2018 e ainda preocupa, apesar de casos terem caído neste ano.",
-            "timestamp": 1562575186000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460732575000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107768738",
+              "id": "63480738",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1474A/production/_107768738_gettyimages-1007140978.jpg",
-              "path": "/cpsprodpb/1474A/production/_107768738_gettyimages-1007140978.jpg",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Braço de bebê com manchas vermelhas",
-              "caption": "O sarampo pode gerar complicações graves especialmente em crianças",
-              "copyrightHolder": "Getty Images"
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48890410",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/geral-23034697",
             "type": "cps"
           }
         ],
-        "strapline": {
-          "name": "Saúde",
-          "type": "LINK",
-          "links": {
-            "mobile": "http://www.bbc.com/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
-            "enhancedmobile": "http://www.bbc.com/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2"
-          }
-        },
+        "strapline": { "name": "Showcase 5" },
         "semanticGroupName": "Showcase 5"
       },
       {
@@ -1199,120 +1620,82 @@
         "items": [
           {
             "headlines": {
-              "headline": "'Genocídio cultural': o desespero dos pais que tiveram filhos levados pelo governo chinês",
-              "overtyped": "O desespero dos pais que tiveram filhos levados pelo governo chinês para internatos gigantes"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 13"
             },
             "locators": {
-              "assetUri": "/portuguese/internacional-48928952",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48928952"
+              "assetUri": "/portuguese/vert-cap-23034524",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cap-23034524",
+              "curie": "http://www.bbc.co.uk/asset/ba7fb745-e92e-c44c-b13c-1e522f889e3d",
+              "assetId": "23034524"
             },
-            "summary": "Relatórios e testemunhas apontam para uma campanha de afastamento sistemático de crianças de minoria étnica de familiares e crenças religiosas. Autoridades falam em combate a extremismo religioso.",
-            "timestamp": 1562784317000,
-            "byline": {
-              "name": "John Sudworth ",
-              "title": "BBC News, Xinjiang",
-              "persons": [
-                {
-                  "name": "John Sudworth",
-                  "function": "BBC News, Xinjiang",
-                  "thumbnail": "http://news.bbcimg.co.uk/media/images/48473000/jpg/_48473759_003430840-1.jpg"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460710708000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107723628",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/142C8/production/_107723628_60199f93-123a-44d0-b928-48ce6493fa46.jpg",
-              "path": "/cpsprodpb/142C8/production/_107723628_60199f93-123a-44d0-b928-48ce6493fa46.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Abdurahman Tohti",
-              "caption": "China está separando crianças de seus pais e colocando-as em internatos",
-              "copyrightHolder": "BBC"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48928952",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cap-23034524",
             "type": "cps"
           }
         ],
-        "strapline": {
-          "name": "Sociedade",
-          "type": "LINK",
-          "links": {
-            "mobile": "https://www.bbc.com/portuguese/topics/5307a8d9-f620-40f5-92d4-f99c919a6ffa",
-            "enhancedmobile": "https://www.bbc.com/portuguese/topics/5307a8d9-f620-40f5-92d4-f99c919a6ffa"
-          }
-        },
+        "strapline": { "name": "Showcase 6" },
         "semanticGroupName": "Showcase 6"
       },
       {
         "type": "featured-site-top-stories",
-        "title": "Learning English",
+        "title": "Blogs",
         "items": [
           {
             "headlines": {
-              "headline": "O software que 'detecta' traços de personalidade em entrevistas de emprego"
+              "headline": "Por que é tão difícil determinar a altura de montanhas 4"
             },
             "locators": {
-              "assetUri": "/portuguese/aprenda-ingles-48880656",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/aprenda-ingles-48880656"
+              "assetUri": "/portuguese/geral-23034695",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-23034695",
+              "curie": "http://www.bbc.co.uk/asset/5a925c5f-2856-7043-9cb9-65f3a876f93c",
+              "assetId": "23034695"
             },
-            "summary": "Aprenda inglês com reportagem sobre como inteligência artificial está revolucionando técnicas de recrutamento de grandes empresas.",
-            "timestamp": 1562339157000,
-            "cpsType": "MAP",
-            "media": {
-              "id": "48887603",
-              "subType": "index",
-              "format": "video",
-              "externalId": "p07g4btv",
-              "entityType": "Clip",
-              "caption": "O software que 'adivinha' traços de personalidade em entrevistas de emprego"
-            },
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460731345000,
+            "language": "en-gb",
+            "cpsType": "STY",
             "indexImage": {
-              "id": "107758199",
+              "id": "63480738",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/18371/production/_107758199_p07g4cbm.jpg",
-              "path": "/cpsprodpb/18371/production/_107758199_p07g4cbm.jpg",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
               "height": 549,
               "width": 976,
-              "altText": "aprenda inglês",
-              "copyrightHolder": "BBC"
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/aprenda-ingles-48880656",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/geral-23034695",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Aprenda inglês",
+          "name": "Blogs",
           "type": "LINK",
           "links": {
-            "mobile": "http://www.bbc.com/portuguese/aprenda_ingles",
-            "enhancedmobile": "http://www.bbc.com/portuguese/aprenda_ingles"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
-        "semanticGroupName": "Learning English"
+        "semanticGroupName": "Blogs"
       },
       {
         "type": "special-reports",
@@ -1320,60 +1703,35 @@
         "items": [
           {
             "headlines": {
-              "headline": "Filha busca Justiça histórica para pai, que matou Euclides da Cunha"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 4"
             },
             "locators": {
-              "assetUri": "/portuguese/48916568",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/48916568"
+              "assetUri": "/portuguese/internacional-23034404",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-23034404",
+              "curie": "http://www.bbc.co.uk/asset/bc0cd37e-53f0-3d46-8f2f-e94f1a8b09fa",
+              "assetId": "23034404"
             },
-            "summary": "Dirce de Assis Cavalcanti passou a vida ouvindo que era 'filha de assassino'; seu pai, Dilermando de Assis, entrou para a história como o homem que matou o escritor Euclides da Cunha, homenageado deste ano na 17ª Festa Literária Internacional de Paraty (Flip).",
-            "timestamp": 1562672757000,
-            "byline": {
-              "name": "Júlia Dias Carneiro",
-              "title": "Da BBC Brasil no Rio de Janeiro",
-              "persons": [
-                {
-                  "name": "Júlia Dias Carneiro",
-                  "function": "Da BBC Brasil no Rio de Janeiro"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637165000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107798343",
+              "id": "63482531",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/8655/production/_107798343_11931db9-8bbc-4c42-9460-f5850a3e489e.jpg",
-              "path": "/cpsprodpb/8655/production/_107798343_11931db9-8bbc-4c42-9460-f5850a3e489e.jpg",
-              "height": 706,
-              "width": 1256,
-              "altText": "Mulher idosa vendo álbum de fotos",
-              "caption": "\"O que eu mais quero, todo o meu empenho, é tirar essa palavra (assassino) de sua biografia, que é tão pesada, tão feia\", diz Dirce",
-              "copyrightHolder": "BBC NEWS BRASIL / Júlia Carneiro"
+              "href": "http://b.files.bbci.co.uk/34D8/test/_63482531_a0abe36a-71db-4356-93f1-b50c897cf1dc.jpg",
+              "path": "/cpsdevpb/34D8/test/_63482531_a0abe36a-71db-4356-93f1-b50c897cf1dc.jpg",
+              "height": 371,
+              "width": 660,
+              "altText": "tg",
+              "copyrightHolder": "Thinkstock",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/48916568",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/internacional-23034404",
             "type": "cps"
           }
         ],
-        "strapline": {
-          "name": "Destaque"
-        },
+        "strapline": { "name": "Special Features 2" },
         "semanticGroupName": "Special reports 2"
       },
       {
@@ -1382,832 +1740,471 @@
         "items": [
           {
             "headlines": {
-              "headline": "O que revela o mapa alternativo do Brasil feito por cartógrafo húngaro"
+              "headline": "O supercarro francês inspirado em aviões caça 14"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48788024",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48788024"
+              "assetUri": "/portuguese/geral-23034335",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-23034335",
+              "curie": "http://www.bbc.co.uk/asset/5d1a4861-7179-114d-863f-0769a96a6fe5",
+              "assetId": "23034335"
             },
-            "summary": "Mapa 'artístico' de bacias hidrográficas revela perspectiva pouco usual de uma das redes fluviais mais extensas e diversificadas do planeta; cartógrafo-artista criou mapas de 160 regiões do mundo.",
-            "timestamp": 1561978283000,
-            "byline": {
-              "name": "Renata Moura",
-              "title": "Da BBC News Brasil em Londres",
-              "persons": [
-                {
-                  "name": "Renata Moura",
-                  "function": "Da BBC News Brasil em Londres"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623349000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107660011",
+              "id": "63480291",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2AFE/production/_107660011__107561740_global_rivers_bl.jpg",
-              "path": "/cpsprodpb/2AFE/production/_107660011__107561740_global_rivers_bl.jpg",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Mapa mundi",
-              "caption": "Mapa mundi",
-              "copyrightHolder": "www.grasshoppergeography.com "
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48788024",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/geral-23034335",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "Tempestade de granizo 'bizarra' deixa cidade mexicana coberta por 1,5 m de gelo"
+              "headline": "Por que é tão difícil determinar a altura de montanhas 3"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48823840",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48823840"
+              "assetUri": "/portuguese/brasil-23034694",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23034694",
+              "curie": "http://www.bbc.co.uk/asset/650a439c-4034-b54a-8942-5403689c09a1",
+              "assetId": "23034694"
             },
-            "summary": "Carros e caminhões ficaram 'soterrados' em Guadalajara; também foram registradas enchentes e quedas de árvores, mas tudo indica que não houve feridos.",
-            "timestamp": 1561985476000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e4739461b000e9dabfc",
-                  "campaignName": "WS - Update me"
-                }
-              ]
-            },
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460731286000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107651502",
+              "id": "63480738",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/5023/production/_107651502_729d858f-d996-40af-9243-4d3590d96e54.jpg",
-              "path": "/cpsprodpb/5023/production/_107651502_729d858f-d996-40af-9243-4d3590d96e54.jpg",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Aftermath of freak hailstorm in Mexico's Guadalajara, 1 July 2019",
-              "copyrightHolder": "AFP"
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48823840",
-            "type": "cps"
-          },
-          {
-            "name": "Para além das 'fake news' - em busca de soluções",
-            "summary": "",
-            "indexImage": {
-              "id": "105946682",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/6FF8/production/_105946682_fotopoutpourri.jpg",
-              "path": "/cpsprodpb/6FF8/production/_105946682_fotopoutpourri.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "workshop",
-              "copyrightHolder": "BBC"
-            },
-            "uri": "https://www.bbc.com/portuguese/brasil-47536816",
-            "contentType": "Text",
-            "assetTypeCode": "PRO",
-            "timestamp": 1552383566000,
-            "type": "link"
-          },
-          {
-            "headlines": {
-              "headline": "A ponte de capim construída pelos incas que ainda é refeita todos os anos no Peru"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48660670",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48660670"
-            },
-            "summary": "Todos os anos, a última ponte Inca ainda em uso, no Peru, é derrubada e uma nova é erguida sobre o Rio Apurímac, na região de Cusco.",
-            "timestamp": 1560803035000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107403448",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/149CE/production/_107403448_jordibusque-cf1405-dsc_7726-2000pxq85.jpg",
-              "path": "/cpsprodpb/149CE/production/_107403448_jordibusque-cf1405-dsc_7726-2000pxq85.jpg",
-              "height": 421,
-              "width": 749,
-              "altText": "A man ties the ropes that form handrails",
-              "copyrightHolder": "Jordi Busque"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48660670",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23034694",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "A incrível foto de águia que viralizou e surpreendeu fotógrafo amador: 'Senti a brisa das asas'"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 10"
             },
             "locators": {
-              "assetUri": "/portuguese/internacional-48426013",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48426013"
+              "assetUri": "/portuguese/vert-fut-23034521",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-fut-23034521",
+              "curie": "http://www.bbc.co.uk/asset/d7bef830-0b21-3b4d-adb9-ac24e8776577",
+              "assetId": "23034521"
             },
-            "summary": "Steve Biro fez registro de águia-de-cabeça-branca voando sobre rio em santuário de aves de rapina no Canadá.",
-            "timestamp": 1559053383000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5c79366e872a2d00b2342441",
-                  "campaignName": "News - Planet"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460710462000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107101400",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/019A/production/_107101400_eagle.jpg",
-              "path": "/cpsprodpb/019A/production/_107101400_eagle.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Águia-de-cabeça-branca",
-              "caption": "Steve Biro fez registro de águia-de-cabeça-branca em santuário de aves de rapina no Canadá.",
-              "copyrightHolder": "Steve Biro"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48426013",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-fut-23034521",
             "type": "cps"
           },
           {
             "headlines": {
-              "headline": "As armadilhas do espanhol para brasileiros"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 6"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48155457",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48155457"
+              "assetUri": "/portuguese/curiosidades-23034407",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/curiosidades-23034407",
+              "curie": "http://www.bbc.co.uk/asset/4b68e099-c83b-0646-a936-cf9dbd39e205",
+              "assetId": "23034407"
             },
-            "summary": "Confira algumas palavras que soam idênticas em português e espanhol, mas têm significados completamente diferentes.",
-            "timestamp": 1557992923000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460637259000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "106951327",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/11A7B/production/_106951327_maxresdefault.jpg",
-              "path": "/cpsprodpb/11A7B/production/_106951327_maxresdefault.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "Armadilhas do espanhol",
-              "caption": "Armadilhas do espanhol",
-              "copyrightHolder": "BBC"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/curiosidades-23034407",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas"
             },
-            "overtypedSummary": " ",
-            "id": "urn:bbc:ares::asset:portuguese/geral-48155457",
+            "locators": {
+              "assetUri": "/portuguese/brasil-23034401",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/brasil-23034401",
+              "curie": "http://www.bbc.co.uk/asset/c1412796-96ac-e745-be88-3008a6e1f763",
+              "assetId": "23034401"
+            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460636927000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480455",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/brasil-23034401",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Especiais e Galerias",
+          "name": "In pictures",
           "type": "LINK",
           "links": {
-            "highweb": "https://www.bbc.com/portuguese/media/photogalleries",
-            "desktop": "https://www.bbc.com/portuguese/media/photogalleries",
-            "mobile": "https://www.bbc.com/portuguese/media/photogalleries",
-            "enhancedmobile": "https://www.bbc.com/portuguese/media/photogalleries"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
         "semanticGroupName": "Picture galleries"
       },
       {
-        "type": "feature-main",
-        "title": "Features",
-        "maxRelatedLinks": 0,
+        "type": "featured-site-top-stories",
+        "title": "Learning English",
         "items": [
           {
             "headlines": {
-              "headline": "Polícia encontra tumba vazia no Vaticano e mistério sobre garota desaparecida continua"
+              "headline": "Esfera misteriosa encontrada em floresta intriga cientistas 12"
             },
             "locators": {
-              "assetUri": "/portuguese/geral-48945653",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48945653"
+              "assetUri": "/portuguese/vert-cap-23034523",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cap-23034523",
+              "curie": "http://www.bbc.co.uk/asset/6f81d30e-9eef-0a40-a7ac-64149c672947",
+              "assetId": "23034523"
             },
-            "summary": "Abertas na quinta-feira, tumbas de princesas alemãs que apareciam em fotos enviadas anonimamente à família de Emanuela Orlandi, desaparecida misteriosamente nas ruas de Roma em 1983, estavam vazias.",
-            "timestamp": 1562931043000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
+            "summary": "Uma enorme esfera de pedra encontrada em uma floresta da Bósnia-Herzegóvina vem intrigando e dividindo especialistas.",
+            "timestamp": 1460710680000,
+            "language": "en-gb",
             "cpsType": "STY",
             "indexImage": {
-              "id": "107850057",
+              "id": "63480455",
               "subType": "index",
-              "href": "http://c.files.bbci.co.uk/124FD/production/_107850057_tv055227627.jpg",
-              "path": "/cpsprodpb/124FD/production/_107850057_tv055227627.jpg",
+              "href": "http://b.files.bbci.co.uk/D870/test/_63480455_esfera_pedra.jpg",
+              "path": "/cpsdevpb/D870/test/_63480455_esfera_pedra.jpg",
               "height": 549,
               "width": 976,
-              "altText": "tumba no cemitério Teutônico",
-              "caption": "Vaticano ordenou abertura das tumbas de princesas alemãs após petição ser acatada por Justiça de cidade-Estado",
-              "copyrightHolder": "EPA"
+              "altText": "Esfera pedra",
+              "caption": "Esfera pedra",
+              "copyrightHolder": "Reuters",
+              "type": "image"
             },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48945653",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Cereais matinais nos EUA têm níveis de agrotóxico 5 vezes acima do limite considerado seguro, diz entidade"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48959118",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48959118"
-            },
-            "summary": "Entidade analisou níveis do herbicida glifosato em cereais matinais. Fabricante diz que consumo desses produtos é seguro.",
-            "timestamp": 1562876331000,
-            "cpsType": "MAP",
-            "media": {
-              "id": "p07gk75m",
-              "subType": "clip",
-              "format": "video",
-              "title": "Cereais matinais nos EUA têm níveis de agrotóxico 5 vezes acima do limite, diz entidade",
-              "synopses": {
-                "short": "Cereais matinais nos EUA têm níveis de agrotóxico 5 vezes acima do limite, diz entidade",
-                "long": "Um dos herbicidas mais utilizados no mundo, principalmente em plantações de soja, foi encontrado nos cereais matinais que as pessoas consomem no café da manhã.\nUma recente pesquisa feita nos EUA pela entidade Environmental Work Group analisou diferentes marcas de cereais matinais para identificar a presença de agrotóxicos.\nA constatação foi de que em algumas os níveis do herbicida glifosato estavam acima do que é considerado seguro para o consumo de crianças. \nA fabricante General Mills afirmou que os produtos são saudáveis e seguros.",
-                "medium": "Entidade analisou níveis do herbicida glifosato em cereais matinais e encontrou índices 5 vezes acima do limite considerado seguro"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p07gq2jc.jpg",
-              "embedding": true,
-              "advertising": true,
-              "caption": "Sucrilhos nos EUA têm níveis de agrotóxico 5 vezes acima do limite, diz entidade",
-              "versions": [
-                {
-                  "versionId": "p07gk75r",
-                  "types": ["Original"],
-                  "duration": 168,
-                  "durationISO8601": "PT2M48S",
-                  "warnings": {},
-                  "availableTerritories": {
-                    "uk": true,
-                    "nonUk": true
-                  },
-                  "availableFrom": 1562875698
-                }
-              ]
-            },
-            "indexImage": {
-              "id": "107843193",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/98DE/production/_107843193_p07gnt01.jpg",
-              "path": "/cpsprodpb/98DE/production/_107843193_p07gnt01.jpg",
-              "height": 576,
-              "width": 1024,
-              "altText": "café da manhã",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48959118",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Noruega detecta vazamento de radiação de submarino nuclear soviético naufragado há 30 anos"
-            },
-            "locators": {
-              "assetUri": "/portuguese/internacional-48956753",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48956753"
-            },
-            "summary": "Especialistas dizem que não há motivo para alarme, apesar do césio acumulado nos restos do naufrágio.",
-            "timestamp": 1562873761000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107835646",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/FC8D/production/_107835646_norsubcontower.jpg",
-              "path": "/cpsprodpb/FC8D/production/_107835646_norsubcontower.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Komsomolets conning tower, filmed by ROV",
-              "caption": "The Norwegian expedition did a detailed inspection of the submarine wreck",
-              "copyrightHolder": "IMR"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48956753",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "A médica que foi obrigada a se cobrir em avião por causa de 'roupa inapropriada'"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48945656",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48945656"
-            },
-            "summary": "Mulher de 37 anos disse que se sentiu envergonhada e humilhada após o pedido; American Airlines disse que pediu desculpas à passageira e reembolsou o valor da passagem.",
-            "timestamp": 1562871418000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107828915",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/CB0E/production/_107828915_voo.jpg",
-              "path": "/cpsprodpb/CB0E/production/_107828915_voo.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Aviões da copanhia American Airlines",
-              "caption": "Tisha Rowe disse que se sentiu \"vigiada por ser negra\" no voo da American Airlines",
-              "copyrightHolder": "Getty Images"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48945656",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "A ascensão das diretoras no cinema da China"
-            },
-            "locators": {
-              "assetUri": "/portuguese/vert-cul-48436866",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-cul-48436866"
-            },
-            "summary": "Histórias desconhecidas de extraordinárias cineastas do Oriente estão finalmente sendo reveladas. A repórter Harriet Constable foi descobrir como – e por que essa mudança está acontecendo agora",
-            "timestamp": 1562867495000,
-            "byline": {
-              "name": "Harriet Constable",
-              "title": "Da BBC Culture",
-              "persons": [
-                {
-                  "name": "Harriet Constable",
-                  "function": "Da BBC Earth"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107188263",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/8DC0/production/_107188263_abrefemaledirectorsgetty.jpg",
-              "path": "/cpsprodpb/8DC0/production/_107188263_abrefemaledirectorsgetty.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "A dirtora Louisa Wei",
-              "caption": "A dirtora Louisa Wei",
-              "copyrightHolder": "Getty Images"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/vert-cul-48436866",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Por que cada vez mais jovens abandonam família e tecnologia para viverem de esmola como monges"
-            },
-            "locators": {
-              "assetUri": "/portuguese/internacional-48916558",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-48916558"
-            },
-            "summary": "Eles comem apenas o que receberem de esmola, nunca se banham e não usam tecnologias modernas.",
-            "timestamp": 1562859176000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
-                "categoryName": "Feature"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e3739461b000e9dabfa",
-                  "campaignName": "WS - Give me perspective"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107756542",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/5FF5/production/_107756542_pooja.jpg",
-              "path": "/cpsprodpb/5FF5/production/_107756542_pooja.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Jovem garota que resolveu renunciar ao mundo",
-              "caption": "A comunidade Jain é uma minoria religiosa na Índia, com cerca de 4.5 milhões de fieis.",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/internacional-48916558",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "O que pensam os que não acreditam que o homem chegou (12 vezes) à Lua"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48916172",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48916172"
-            },
-            "summary": "Cinquenta anos após Neil Armstrong ter dado um 'pequeno passo para o homem, um grande passo para a humanidade', ainda há muita gente que acredita que a chegada do homem à Lua foi encenada com ajuda de técnicas do cinema.",
-            "timestamp": 1562847007000,
-            "byline": {
-              "name": "Edison Veiga",
-              "title": "De Bled para a BBC News Brasil",
-              "persons": [
-                {
-                  "name": "Jane Wakefield",
-                  "function": "Corresponsal de Tecnología, BBC"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107795275",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DFAB/production/_107795275_07.jpg",
-              "path": "/cpsprodpb/DFAB/production/_107795275_07.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Pegada na Lua",
-              "caption": "Há 50 anos, o astronauta Neil Armstrong (1930-2012) disse ter dado um 'pequeno passo para o homem, grande passo para a humanidade'",
-              "copyrightHolder": "NASA"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48916172",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "'Meus filhos esvaziaram nossa conta bancária jogando Fifa'"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48948143",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48948143"
-            },
-            "summary": "Pai admite que não tomou todas as precauções para limitar o acesso à sua conta - saiba como evitar que isso aconteça.",
-            "timestamp": 1562842065000,
-            "byline": {
-              "name": "Zoe Kleinman",
-              "title": "BBC News",
-              "persons": [
-                {
-                  "name": "Zoe Kleinman",
-                  "function": "Technology reporter, BBC News"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107796268",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/150FD/production/_107796268_mediaitem107790274.jpg",
-              "path": "/cpsprodpb/150FD/production/_107796268_mediaitem107790274.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "footballer in stadium",
-              "copyrightHolder": "EA"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48948143",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "'Me redescobri com o cosplay': a diarista que enfrentou depressão e relação abusiva se fantasiando"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48931224",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48931224"
-            },
-            "summary": "Nos últimos anos, Solange Amorim fez mais de 25 cosplays, como Rita Repulsa, da franquia \"Power Rangers\" e até o Mestre dos Magos, do desenho \"Caverna do Dragão\".",
-            "timestamp": 1562795731000,
-            "byline": {
-              "name": "Vinícius Lemos",
-              "title": "De Cuiabá para BBC News Brasil",
-              "persons": [
-                {
-                  "name": "Vinícius Lemos",
-                  "function": "De Cuiabá para BBC News Brasil"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              }
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107828127",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/119F6/production/_107828127_tiasol1.png",
-              "path": "/cpsprodpb/119F6/production/_107828127_tiasol1.png",
-              "height": 549,
-              "width": 976,
-              "altText": "Solange vestida de Vovó do Piu Piu",
-              "caption": "Solange caracterizada como a personagem Vovó, do desenho \"Piu Piu e Frajola\", seu primeiro cosplay",
-              "copyrightHolder": "Jéssica Nascimento"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48931224",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "Os mitos e verdades sobre traições"
-            },
-            "locators": {
-              "assetUri": "/portuguese/vert-fut-48826552",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-fut-48826552"
-            },
-            "summary": "A maioria das pessoas raramente tem a mesma ideia do que significa ser infiel e subestima a probabilidade de ocorrer algum tipo de traição.",
-            "timestamp": 1562792689000,
-            "byline": {
-              "name": "William Park",
-              "title": "BBC Future",
-              "persons": [
-                {
-                  "name": "William Park",
-                  "function": "Da BBC Future"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107658792",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/7459/production/_107658792_foto_02.jpg",
-              "path": "/cpsprodpb/7459/production/_107658792_foto_02.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Homem tirando a aliança",
-              "caption": "Cerca de 70% das pessoas traem seu parceiro em algum momento de suas vidas",
-              "copyrightHolder": "Getty Images"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/vert-fut-48826552",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "'Como a educação severa de meus pais me tornou uma adulta solitária e tímida'"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48934266",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48934266"
-            },
-            "summary": "Quando uma jovem pediu conselhos em um fórum na internet, recebeu mensagens de apoio do mundo inteiro.",
-            "timestamp": 1562787674000,
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e2939461b000e9dabf8",
-                  "campaignName": "WS - Educate me"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107536645",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/D587/production/_107536645_976xold-photos_promo-pic-co.jpg",
-              "path": "/cpsprodpb/D587/production/_107536645_976xold-photos_promo-pic-co.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "old family photo",
-              "copyrightHolder": "BBC"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48934266",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "headline": "'Fui viciada em drogas, agora, sou viciada em corrida'"
-            },
-            "locators": {
-              "assetUri": "/portuguese/geral-48935135",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-48935135"
-            },
-            "summary": "Seis corredores de ultramaratona de diferentes partes do mundo compartilham suas motivações para percorrer longas distâncias.",
-            "timestamp": 1562774270000,
-            "byline": {
-              "name": "Hannah Price e Sophie Haydock",
-              "title": "BBC News",
-              "persons": [
-                {
-                  "name": "Fernanda Escóssia",
-                  "function": "Especial para a BBC Brasil, do Rio de Janeiro"
-                }
-              ]
-            },
-            "passport": {
-              "category": {
-                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
-                "categoryName": "News"
-              },
-              "campaigns": [
-                {
-                  "campaignId": "5a988e1739461b000e9dabf6",
-                  "campaignName": "WS - CS"
-                }
-              ]
-            },
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "107410465",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/DC51/production/_107410465_mediaitem107410464.jpg",
-              "path": "/cpsprodpb/DC51/production/_107410465_mediaitem107410464.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Catra corre na montanha e posa para foto no deserto",
-              "caption": "Catra em ultramaratonas pelo mundo",
-              "copyrightHolder": "BBC THREE/@DIRTDIVA333"
-            },
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
-            },
-            "id": "urn:bbc:ares::asset:portuguese/geral-48935135",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-cap-23034523",
             "type": "cps"
           }
         ],
         "strapline": {
-          "name": "Destaques e Análises ",
+          "name": "Learning English",
           "type": "LINK",
           "links": {
-            "mobile": "http://www.bbc.com/brasil/brasil",
-            "enhancedmobile": "http://www.bbc.com/brasil/brasil"
+            "mobile": "http://www.bbc.co.uk/portuguese/topicos/saude",
+            "enhancedmobile": "http://www.bbc.co.uk/portuguese/topicos/saude"
           }
         },
-        "semanticGroupName": "Features"
+        "semanticGroupName": "Learning English"
+      },
+      {
+        "type": "programmes-standard",
+        "title": "Programmes",
+        "items": [
+          {
+            "headlines": {
+              "headline": "test brasil fp Comissão aprova Câmara já votação"
+            },
+            "locators": {
+              "assetUri": "/portuguese/noticias-23034083",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/noticias-23034083",
+              "curie": "http://www.bbc.co.uk/asset/b80ed324-482f-704e-9e95-409c43ac5955",
+              "assetId": "23034083"
+            },
+            "summary": "summary Nos EUA, Marina diz que impeachment de Dilma é válido e não é golpe",
+            "timestamp": 1460560521000,
+            "language": "pt-BR",
+            "passport": {
+              "category": {
+                "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                "categoryName": "News"
+              },
+              "taggings": []
+            },
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480269",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/177D0/test/_63480269_160223140119_azam_sabeer_640x360_bbc_nocredit.jpg",
+              "path": "/cpsdevpb/177D0/test/_63480269_160223140119_azam_sabeer_640x360_bbc_nocredit.jpg",
+              "height": 351,
+              "width": 624,
+              "altText": "Deputados na sessão que aprovou",
+              "caption": "Deputados na sessão que aprovou",
+              "copyrightHolder": "ficção",
+              "type": "image"
+            },
+            "imageThumbnail": {
+              "id": "63480271",
+              "subType": "index-thumbnail",
+              "href": "http://b.files.bbci.co.uk/4338/test/_63480271_160223140119_azam_sabeer_640x360_bbc_nocredit.jpg",
+              "path": "/cpsdevpb/4338/test/_63480271_160223140119_azam_sabeer_640x360_bbc_nocredit.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "Deputados na sessão que aprovou",
+              "caption": "Deputados na sessão que aprovou",
+              "copyrightHolder": "ficção",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "section": {
+              "subType": "IDX",
+              "name": "Notícias, vídeos, análise e contexto em português",
+              "uri": "/portuguese/front_page",
+              "type": "simple"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/noticias-23034083",
+            "type": "cps"
+          }
+        ],
+        "semanticGroupName": "Programmes"
+      },
+      {
+        "type": "featured-site-top-stories",
+        "title": "College of journalism",
+        "items": [
+          {
+            "headlines": {
+              "headline": "Por que é tão difícil determinar a altura de montanhas 5"
+            },
+            "locators": {
+              "assetUri": "/portuguese/geral-23034696",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/geral-23034696",
+              "curie": "http://www.bbc.co.uk/asset/3db750df-0a98-134d-9d48-c25affe66bea",
+              "assetId": "23034696"
+            },
+            "summary": "Ao redor do mundo, há várias montanhas que, por conta de acesso mais complicado, nunca foram medidas com GPS. Em s",
+            "timestamp": 1460731376000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480738",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/146FC/test/_63480738_montanha.jpg",
+              "path": "/cpsdevpb/146FC/test/_63480738_montanha.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Montanha",
+              "caption": "Montanha",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/geral-23034696",
+            "type": "cps"
+          }
+        ],
+        "strapline": { "name": "Academy" },
+        "semanticGroupName": "College of journalism"
       },
       {
         "type": "useful-links",
-        "title": "Nossos parceiros",
+        "title": "Useful links",
         "items": [
           {
             "headlines": {
-              "headline": "Parceiros comerciais da BBC Brasil"
+              "headline": "O supercarro francês inspirado em aviões caça 13"
             },
             "locators": {
-              "assetUri": "/portuguese/institutional-41672312",
-              "cpsUrn": "urn:bbc:content:assetUri:portuguese/institutional-41672312"
+              "assetUri": "/portuguese/blog-dos-editores-23034334",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/blog-dos-editores-23034334",
+              "curie": "http://www.bbc.co.uk/asset/4a23fe46-855e-164e-b698-0e60b1f63a2c",
+              "assetId": "23034334"
             },
-            "summary": "Conheça as empresas que têm parcerias com a BBC Brasil e que nos ajudam a levar a um público mais amplo o nosso conteúdo.",
-            "timestamp": 1508343203000,
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623326000,
+            "language": "en-gb",
+            "byline": {
+              "name": "By Tim Vickery",
+              "title": "BBC News, Rio de Janeiro",
+              "persons": [
+                {
+                  "name": "Tim Vickery",
+                  "function": "BBC News, Rio de Janeiro"
+                }
+              ]
+            },
             "cpsType": "STY",
-            "options": {
-              "isBreakingNews": false,
-              "isFactCheck": false
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
             },
-            "id": "urn:bbc:ares::asset:portuguese/institutional-41672312",
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "includeComments": true,
+            "id": "urn:bbc:ares::asset:portuguese/blog-dos-editores-23034334",
             "type": "cps"
+          },
+          {
+            "headlines": {
+              "headline": "O supercarro francês inspirado em aviões caça 11"
+            },
+            "locators": {
+              "assetUri": "/portuguese/vert-earth-23034331",
+              "cpsUrn": "urn:bbc:content:assetUri:portuguese/vert-earth-23034331",
+              "curie": "http://www.bbc.co.uk/asset/888862c7-2275-724c-86c6-e9ecced6b0c5",
+              "assetId": "23034331"
+            },
+            "summary": "A Bell & Ross tem um longo histórico de fabricação de relógios, não tanto de carros.",
+            "timestamp": 1460623077000,
+            "language": "en-gb",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "63480291",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/4B08/test/_63480291_bellross.jpg",
+              "path": "/cpsdevpb/4B08/test/_63480291_bellross.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Bell Ross",
+              "caption": "Bell Ross",
+              "copyrightHolder": "Bell Ross",
+              "type": "image"
+            },
+            "options": { "isBreakingNews": false, "isFactCheck": false },
+            "id": "urn:bbc:ares::asset:portuguese/vert-earth-23034331",
+            "type": "cps"
+          },
+          {
+            "name": "ciência e tecnolgia link",
+            "summary": "Cientistas solucionam um dos maiores mistérios da natureza",
+            "uri": "http://www.bbc.com/portuguese/topicos/ciencia_e_tecnologia",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/portuguese/topicos/ciencia_e_tecnologia",
+            "contentType": "Unknown",
+            "assetTypeCode": "URL",
+            "type": "link"
           }
         ],
-        "strapline": {
-          "name": "Nossos parceiros",
-          "type": "LINK",
-          "links": {
-            "highweb": "http://www.bbc.com/portuguese/institutional/2011/06/000001_parceiros",
-            "desktop": "http://www.bbc.com/portuguese/institutional/2011/06/000001_parceiros"
-          }
-        },
+        "strapline": { "name": "Links" },
         "semanticGroupName": "Useful links"
+      },
+      {
+        "type": "av-stories-now",
+        "title": "Watch/Listen 2",
+        "items": [
+          {
+            "name": "Que História!",
+            "summary": "A vida secreta de meu filho que só conheci quando ele morreu",
+            "indexImage": {
+              "id": "63750109",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "path": "/cpsdevpb/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "test",
+              "caption": "test",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "uri": "https://www.test.bbc.com/portuguese/podcasts/p07r3r3t",
+            "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/asset/portuguese/podcasts/p07r3r3t",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1616496081000,
+            "type": "link"
+          },
+          {
+            "name": "Que História!",
+            "summary": "A vida secreta de meu filho que só conheci quando ele morreu",
+            "indexImage": {
+              "id": "63750109",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "path": "/cpsdevpb/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "test",
+              "caption": "test",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "uri": "https://www.test.bbc.com/portuguese/podcasts/p07r3r3t",
+            "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/asset/portuguese/podcasts/p07r3r3t",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1616496081000,
+            "type": "link"
+          },
+          {
+            "name": "Que História!",
+            "summary": "A vida secreta de meu filho que só conheci quando ele morreu",
+            "indexImage": {
+              "id": "63750109",
+              "subType": "index",
+              "href": "http://b.files.bbci.co.uk/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "path": "/cpsdevpb/15FF9/test/_63750109_mediaitem63750108.jpg",
+              "height": 1152,
+              "width": 2048,
+              "altText": "test",
+              "caption": "test",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "uri": "https://www.test.bbc.com/portuguese/podcasts/p07r3r3t",
+            "aresUrl": "https://ares-api.test.api.bbci.co.uk/api/asset/portuguese/podcasts/p07r3r3t",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1616496081000,
+            "type": "link"
+          }
+        ],
+        "strapline": { "name": "Podcast" },
+        "semanticGroupName": "Watch/Listen 2"
       }
     ]
   },

@@ -56,6 +56,11 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    podcastPromo: {
+      linkLabel: {
+        text: 'Inkurikirane',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Kwamamaza',

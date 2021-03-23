@@ -246,6 +246,11 @@ export const service = {
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
         podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
+        podcastPromo: {
+          linkLabel: {
+            text: 'برنامه ها',
+          },
+        },
       },
       socialEmbed: {
         caption: {

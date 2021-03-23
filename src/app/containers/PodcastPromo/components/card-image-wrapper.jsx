@@ -25,6 +25,7 @@ const CardImageWrapper = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin: 0;
+    flex-basis: 14.5rem;
   }
 `;
 

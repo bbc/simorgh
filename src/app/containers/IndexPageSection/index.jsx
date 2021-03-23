@@ -29,6 +29,7 @@ import {
 import getRows from './utilities/storyRowsSplitter';
 import getRowDetails from './utilities/rowDetails';
 import { TopRow } from '../FrontPageStoryRows';
+import PodcastPromo from '../PodcastPromo';
 
 const StyledSection = styled.section`
   /* To centre page layout for Group 4+ */
@@ -37,6 +38,11 @@ const StyledSection = styled.section`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
   }
+`;
+
+const PodcastPromoWrapper = styled.div`
+  padding: ${GEL_SPACING_DBL} 0;
+  margin: 0 -${GEL_SPACING_DBL};
 `;
 
 // Apply the right margin-top to the first section of the page when there is one or multiple items.
@@ -184,6 +190,7 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   });
 
   const items = removeItemsWithoutUrlOrHeadline(bulletinFilteredItems);
+  const isPodcastSection = items[0].contentType === 'Podcast';
 
   // We have a cap on the number of allowed items per section
   const allowedItems = getAllowedItems({
@@ -207,6 +214,28 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
     return null;
   }
 
+  if (isPodcastSection) {
+    return (
+      <PodcastPromoWrapper>
+        {items.map(item => (
+          <PodcastPromo
+            isHorizontal
+            title={seeAll}
+            brandTitle={item.name}
+            brandDescription={item.summary}
+            image={{
+              path: item.indexImage.path,
+              alt: item.indexImage.altText,
+            }}
+            linkLabel={{
+              href: item.uri,
+            }}
+          />
+        ))}
+      </PodcastPromoWrapper>
+    );
+  }
+
   return (
     // jsx-a11y considers `role="region"` on a <section> to be redundant.
     // (<section> tags *should* imply `role="region"`)
@@ -225,6 +254,7 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
       >
         {strapline}
       </SectionLabel>
+
       {sectionBody({
         group,
         items: allowedItems,

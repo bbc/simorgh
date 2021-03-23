@@ -600,4 +600,78 @@ describe('IndexPageSection Container', () => {
       expect(container.getElementsByTagName('li')).toHaveLength(2);
     });
   });
+
+  describe('podcast promo', () => {
+    let getByTestId;
+    let getByText;
+
+    const podcastPromoData = {
+      type: 'podcast-promotion',
+      title: 'Podcasts',
+      semanticGroupName: 'Podcasts',
+      items: [
+        {
+          name: '《时事一周》（粤语）',
+          summary:
+            '最新节目内容（13-02-2021）：拜登终于与习近平通话：缅甸示威有人中弹：中国敢言女企业家被判刑',
+          indexImage: {
+            id: '116945588',
+            subType: 'index',
+            href:
+              'http://c.files.bbci.co.uk/159EA/production/_116945588_bidenxireuters.jpg',
+            path: '/cpsprodpb/159EA/production/_116945588_bidenxireuters.jpg',
+            height: 1080,
+            width: 1920,
+            altText: '拜登与习近平',
+            copyrightHolder: 'Reuters',
+            type: 'image',
+          },
+          uri: 'http://www.bbc.com/zhongwen/simp/institutional-38228429',
+          aresUrl:
+            'https://ares-api.api.bbci.co.uk/api/asset/zhongwen/simp/institutional-38228429',
+          contentType: 'Podcast',
+          assetTypeCode: 'PRO',
+          timestamp: 1481007686000,
+          type: 'link',
+        },
+      ],
+      strapline: {
+        name: '播客精选',
+      },
+    };
+
+    beforeEach(() => {
+      ({ getByTestId, getByText } = render(
+        <ServiceContextProvider service="zhongwen">
+          <IndexPageSection group={podcastPromoData} />,
+        </ServiceContextProvider>,
+      ));
+    });
+
+    it('should render the podcast promo component', () => {
+      const promoEl = getByTestId('podcast-promo');
+
+      expect(promoEl).toBeInTheDocument();
+    });
+
+    it('should render a title', () => {
+      const headingEl = getByText('《时事一周》（粤语）');
+
+      expect(headingEl.closest('h3')).toBeInTheDocument();
+    });
+
+    it('should render a summary', () => {
+      const summaryEl = getByText(
+        '最新节目内容（13-02-2021）：拜登终于与习近平通话：缅甸示威有人中弹：中国敢言女企业家被判刑',
+      );
+
+      expect(summaryEl.closest('p')).toBeInTheDocument();
+    });
+
+    it('should render episodes text', () => {
+      const episodesText = getByText('分集');
+
+      expect(episodesText.closest('p')).toBeInTheDocument();
+    });
+  });
 });

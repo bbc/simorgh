@@ -57,6 +57,11 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    podcastPromo: {
+      linkLabel: {
+        text: 'Episode', // TODO check this is correct
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Iklan',

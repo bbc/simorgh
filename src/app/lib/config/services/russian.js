@@ -295,7 +295,7 @@ export const service = {
       brandDescription:
         'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        ichefPath: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
         alt: 'Что это было?',
       },
       linkLabel: {

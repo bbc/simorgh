@@ -156,6 +156,12 @@ export const service = {
       text: '繁',
       variant: 'trad',
     },
+    podcastPromo: {
+      // TODO put this in translations
+      linkLabel: {
+        text: '分集',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: '广告',

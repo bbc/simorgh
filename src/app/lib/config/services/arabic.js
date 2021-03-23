@@ -61,6 +61,11 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    podcastPromo: {
+      linkLabel: {
+        text: 'الحلقات',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'إعلان',
@@ -77,6 +82,7 @@ export const service = {
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
       },
+
       error: {
         404: {
           statusCode: '404',

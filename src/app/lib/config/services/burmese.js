@@ -58,6 +58,11 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    podcastPromo: {
+      linkLabel: {
+        text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'ကြော်ငြာ',

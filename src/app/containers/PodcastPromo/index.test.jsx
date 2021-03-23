@@ -6,9 +6,13 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import PodcastPromo from '.';
 
 /* eslint-disable react/prop-types */
-const PromoWithContext = ({ service = 'russian', variant = null }) => (
+const PromoWithContext = ({
+  service = 'russian',
+  variant = null,
+  ...props
+}) => (
   <ServiceContextProvider service={service} variant={variant}>
-    <PodcastPromo />
+    <PodcastPromo {...props} />
   </ServiceContextProvider>
 );
 
@@ -22,6 +26,14 @@ describe('PodcastPromo', () => {
 
     expect(element).toBeInTheDocument();
     expect(section).toBeInTheDocument();
+  });
+
+  it('should override context when props are available', () => {
+    const { getByText } = render(<PromoWithContext brandTitle="Brand Title" />);
+
+    const element = getByText('Brand Title');
+
+    expect(element).toBeInTheDocument();
   });
 
   it('should not show when props are not available', () => {

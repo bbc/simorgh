@@ -7,10 +7,15 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 .emotion-2 {
-  margin: 0 0 1rem;
+  max-width: 63rem;
+  margin: 0 auto;
 }
 
 .emotion-4 {
+  margin: 0 0 1rem;
+}
+
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -21,20 +26,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-4 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-4>svg {
+.emotion-6>svg {
   margin-left: 0;
   width: 1.375rem;
   height: 1.375rem;
@@ -44,7 +49,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-6 {
+.emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -53,7 +58,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-8 {
+.emotion-10 {
   position: relative;
   background-color: #FDFDFD;
   display: -webkit-box;
@@ -64,23 +69,23 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-8 {
+  .emotion-10 {
     display: block;
   }
 }
 
-.emotion-8:hover .podcast-promo--hover {
+.emotion-10:hover .podcast-promo--hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-10 {
+.emotion-12 {
   margin: 0.5rem 0 0.5rem 0.5rem;
   display: none;
 }
 
 @media (min-width: 20rem) {
-  .emotion-10 {
+  .emotion-12 {
     display: block;
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -96,7 +101,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-12 {
     -webkit-flex-basis: 6.8125rem;
     -ms-flex-preferred-size: 6.8125rem;
     flex-basis: 6.8125rem;
@@ -104,7 +109,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-10 {
+  .emotion-12 {
     -webkit-flex-basis: 11.125rem;
     -ms-flex-preferred-size: 11.125rem;
     flex-basis: 11.125rem;
@@ -113,12 +118,15 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-12 {
     margin: 0;
+    -webkit-flex-basis: 14.5rem;
+    -ms-flex-preferred-size: 14.5rem;
+    flex-basis: 14.5rem;
   }
 }
 
-.emotion-12 {
+.emotion-14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -134,20 +142,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-12 {
+  .emotion-14 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-14 {
+.emotion-16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -155,18 +163,18 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding: 0.5rem 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-16 {
     padding: 1rem;
   }
 }
 
-.emotion-16 {
+.emotion-18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -178,26 +186,26 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-16 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-16 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-18 {
+.emotion-20 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-18:before {
+.emotion-20:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -208,16 +216,16 @@ exports[`PodcastPromo Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-18:visited .podcast-promo--visited {
+.emotion-20:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-18:focus .podcast-promo--focus {
+.emotion-20:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-20 {
+.emotion-22 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -229,20 +237,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-22 {
+.emotion-24 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -253,20 +261,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-24 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-22>svg {
+.emotion-24>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -276,7 +284,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-24 {
+.emotion-26 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -289,95 +297,100 @@ exports[`PodcastPromo Should render correctly 1`] = `
   <section
     aria-labelledby="podcast-promo"
     class="emotion-0 emotion-1"
+    data-testid="podcast-promo"
     role="region"
   >
     <div
       class="emotion-2 emotion-3"
     >
-      <h2
+      <div
         class="emotion-4 emotion-5"
-        id="podcast-promo"
       >
-        <svg
-          aria-hidden="true"
+        <h2
           class="emotion-6 emotion-7"
-          focusable="false"
-          height="32"
-          viewBox="0 0 32 32"
-          width="32"
-        >
-          <path
-            d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
-          />
-        </svg>
-        Подкаст
-      </h2>
-    </div>
-    <div
-      class="emotion-8 emotion-9"
-    >
-      <div
-        class="emotion-10 emotion-11"
-      >
-        <div
-          class="emotion-12 emotion-13"
-          data-e2e="image-placeholder"
-        >
-          <div
-            class="lazyload-wrapper "
-          >
-            <div
-              class="lazyload-placeholder"
-            />
-          </div>
-          <noscript />
-        </div>
-      </div>
-      <div
-        class="emotion-14 emotion-15"
-      >
-        <h3
-          class="emotion-16 emotion-17"
-        >
-          <a
-            class="emotion-18 emotion-19"
-            href="https://www.bbc.com/russian/media-47937790"
-          >
-            <span
-              class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
-            >
-              Что это было?
-            </span>
-          </a>
-        </h3>
-        <p
-          class="emotion-20 emotion-21"
-        >
-          Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
-        </p>
-        <p
-          class="emotion-22 emotion-23"
+          id="podcast-promo"
         >
           <svg
             aria-hidden="true"
-            class="emotion-24 emotion-25"
+            class="emotion-8 emotion-9"
             focusable="false"
             height="32"
             viewBox="0 0 32 32"
             width="32"
           >
-            <polygon
-              points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
-            />
-            <polygon
-              points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
-            />
             <path
-              d="M0,32H24V8H0ZM4,12H20V28H4Z"
+              d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
             />
           </svg>
-          эпизоды
-        </p>
+          Подкаст
+        </h2>
+      </div>
+      <div
+        class="emotion-10 emotion-11"
+      >
+        <div
+          class="emotion-12 emotion-13"
+        >
+          <div
+            class="emotion-14 emotion-15"
+            data-e2e="image-placeholder"
+          >
+            <div
+              class="lazyload-wrapper "
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <noscript />
+          </div>
+        </div>
+        <div
+          class="emotion-16 emotion-17"
+        >
+          <h3
+            class="emotion-18 emotion-19"
+          >
+            <a
+              class="emotion-20 emotion-21"
+              href="https://www.bbc.com/russian/media-47937790"
+            >
+              <span
+                class="podcast-promo--hover podcast-promo--focus podcast-promo--visited"
+              >
+                Что это было?
+              </span>
+            </a>
+          </h3>
+          <p
+            class="emotion-22 emotion-23"
+          >
+            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
+          </p>
+          <p
+            class="emotion-24 emotion-25"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-26 emotion-27"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+            >
+              <polygon
+                points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+              />
+              <polygon
+                points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+              />
+              <path
+                d="M0,32H24V8H0ZM4,12H20V28H4Z"
+              />
+            </svg>
+            эпизоды
+          </p>
+        </div>
       </div>
     </div>
   </section>
