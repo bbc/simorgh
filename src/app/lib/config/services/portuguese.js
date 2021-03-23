@@ -228,6 +228,7 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        listenLive: 'Ouça ao vivo',
         listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
         nextLabel: 'NEXT',
