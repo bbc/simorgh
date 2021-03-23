@@ -126,6 +126,7 @@ const List = ({ service, elements, trustProjectLink }) => {
             service={service}
             text={trustProjectLink.text}
             href={trustProjectLink.href}
+            id={trustProjectLink.attrId}
           />
         </StyledListItem>
       )}
@@ -141,6 +142,7 @@ List.propTypes = {
     href: string.isRequired,
     text: string.isRequired,
     lang: string,
+    attrId: string,
   }),
 };
 

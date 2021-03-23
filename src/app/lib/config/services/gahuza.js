@@ -307,6 +307,7 @@ export const service = {
             'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
+          attrId: 'adChoicesLink',
         },
       ],
       copyrightText: 'BBC. BBC ntibazwa ibivuye ku zindi mbuga.',

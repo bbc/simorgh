@@ -72,7 +72,7 @@ const SitewideLinks = ({
   script,
   service,
 }) => {
-  const elements = links.map(({ id, text, href, lang }) => {
+  const elements = links.map(({ id, text, href, lang, attrId }) => {
     if (isAmp && id === 'COOKIE_SETTINGS') {
       return (
         <StyledAmpCookieSettingsButton lang={lang} service={service}>
@@ -80,7 +80,15 @@ const SitewideLinks = ({
         </StyledAmpCookieSettingsButton>
       );
     }
-    return <Link service={service} text={text} href={href} lang={lang} />;
+    return (
+      <Link
+        service={service}
+        text={text}
+        href={href}
+        lang={lang}
+        attrId={attrId}
+      />
+    );
   });
 
   return (

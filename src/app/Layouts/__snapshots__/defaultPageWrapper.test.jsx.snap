@@ -1466,6 +1466,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               <a
                 class="emotion-158 emotion-159"
                 href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"
+                id="adChoicesLink"
                 lang="en-GB"
               >
                 AdChoices / Do Not Sell My Info

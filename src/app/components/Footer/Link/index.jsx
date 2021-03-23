@@ -18,8 +18,14 @@ const StyledLink = styled.a`
   }
 `;
 
-const Link = ({ service, text, href, inline, lang }) => (
-  <StyledLink service={service} lang={lang} inline={inline} href={href}>
+const Link = ({ service, text, href, inline, lang, attrId }) => (
+  <StyledLink
+    service={service}
+    lang={lang}
+    inline={inline}
+    href={href}
+    id={attrId}
+  >
     {text}
   </StyledLink>
 );
@@ -28,6 +34,7 @@ Link.defaultProps = {
   service: null,
   inline: false,
   lang: null,
+  attrId: null,
 };
 
 Link.propTypes = {
@@ -36,6 +43,7 @@ Link.propTypes = {
   text: string.isRequired,
   lang: string,
   inline: bool,
+  attrId: string,
 };
 
 export default Link;
