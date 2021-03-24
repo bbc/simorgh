@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import SkipLink from '@bbc/psammead-brand/skip-link';
+import AmpHeader from './index.amp';
 import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -11,7 +12,7 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const HeaderContainer = () => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType, isAmp } = useContext(RequestContext);
   const {
     service,
     script,
@@ -49,8 +50,14 @@ const HeaderContainer = () => {
     </SkipLink>
   );
 
-  return (
-    <header role="banner" lang={serviceLang}>
+  if (isAmp) {
+    console.log('YEEEEEEET');
+  } else {
+    console.log('FUUUUUUUUUCK');
+  }
+
+  const Header = () => (
+    <>
       <ConsentBanner onDismissFocusRef={brandRef} />
       <BrandContainer
         borderBottom={borderBottom}
@@ -58,6 +65,20 @@ const HeaderContainer = () => {
         scriptLink={scriptLink && <ScriptLink />}
         brandRef={brandRef}
       />
+    </>
+  );
+
+  return (
+    <header role="banner" lang={serviceLang}>
+      {isAmp ? (
+        <AmpHeader
+          borderBottom={borderBottom}
+          skipLink={skipLink}
+          scriptLink={scriptLink && <ScriptLink />}
+        />
+      ) : (
+        <Header />
+      )}
       {showNav && <NavigationContainer />}
     </header>
   );
