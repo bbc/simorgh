@@ -40,7 +40,7 @@ export default ({ service, variant, pageType, path }) => {
     visitPage(path, pageType);
 
     getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBannerCanonical(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.exist');
 
     assertCookieValues({
       ckns_privacy: 'july2019',
@@ -50,7 +50,7 @@ export default ({ service, variant, pageType, path }) => {
     getPrivacyBannerAccept(service, variant).click();
 
     getCookieBannerCanonical(service, variant).should('be.visible');
-    getPrivacyBanner(service, variant).should('not.be.visible');
+    getPrivacyBanner(service, variant).should('not.exist');
 
     getCookieBannerAcceptCanonical(service, variant).click();
 
@@ -60,8 +60,8 @@ export default ({ service, variant, pageType, path }) => {
       ckns_policy: '111',
     });
 
-    getCookieBannerCanonical(service, variant).should('not.be.visible');
-    getPrivacyBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.exist');
+    getPrivacyBanner(service, variant).should('not.exist');
 
     ensureCookieExpiryDates();
   });
@@ -71,7 +71,7 @@ export default ({ service, variant, pageType, path }) => {
     visitPage(path, pageType);
 
     getPrivacyBanner(service, variant).should('be.visible');
-    getCookieBannerCanonical(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.exist');
 
     assertCookieValues({
       ckns_privacy: 'july2019',
@@ -89,8 +89,8 @@ export default ({ service, variant, pageType, path }) => {
       ckns_policy: '000',
     });
 
-    getCookieBannerCanonical(service, variant).should('not.be.visible');
-    getPrivacyBanner(service, variant).should('not.be.visible');
+    getCookieBannerCanonical(service, variant).should('not.exist');
+    getPrivacyBanner(service, variant).should('not.exist');
 
     ensureCookieExpiryDates();
   });
@@ -100,7 +100,7 @@ export default ({ service, variant, pageType, path }) => {
     cy.setCookie('ckns_privacy', 'july2019');
     visitPage(path, pageType);
 
-    getPrivacyBanner(service, variant).should('not.be.visible');
+    getPrivacyBanner(service, variant).should('not.exist');
     getCookieBannerCanonical(service, variant).should('be.visible');
   });
 
