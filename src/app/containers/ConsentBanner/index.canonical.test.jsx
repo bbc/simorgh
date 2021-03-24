@@ -128,7 +128,7 @@ describe('Canonical Consent Banner Container', () => {
     expect(Banner).toHaveBeenCalledWith(
       {
         onAccept: expect.any(Function),
-        onReject: cookieOnReject,
+        onReject: expect.any(Function),
         type: 'cookie',
       },
       {},
