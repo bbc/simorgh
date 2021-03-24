@@ -12,7 +12,7 @@ import {
   renderAppleItunesApp,
 } from './utils';
 
-const ENGLISH_SERVICES = ['news'];
+const ENGLISH_SERVICES = ['news', 'sport'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
 const FACEBOOK_APP_ID = 1609039196070050;
 const FACEBOOK_PAGES =

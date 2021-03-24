@@ -219,6 +219,7 @@ export const service = {
         watch: 'पाहा',
         liveLabel: 'LIVE',
         nextLabel: 'पुढचे',
+        listenLive: 'ऐका',
         listenNext: 'पुढचा ऐका',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',

@@ -4568,7 +4568,23 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
@@ -6962,7 +6978,23 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/sport/formula1/23355387', '/sport/tennis/23372108'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
