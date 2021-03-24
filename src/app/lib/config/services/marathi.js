@@ -225,6 +225,7 @@ export const service = {
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
         recentEpisodes: 'ताजे एपिसोड',
+        podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
       },
       socialEmbed: {
         caption: {
