@@ -7,7 +7,7 @@ import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
 const Button = (message, onClick, dataAttribute) => (
-  <button type="button" on={onClick} {...dataAttribute}>
+  <button type="button" on={onClick} {...dataAttribute} id="cookieAccept">
     {message}
   </button>
 );
