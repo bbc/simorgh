@@ -11,7 +11,7 @@ import {
   SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
 } from './analytics.const';
 
-export const getDestination = statsDestination => {
+export const getDestination = (platform, statsDestination) => {
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_LANGUAGES_PS: 598291,
@@ -35,7 +35,14 @@ export const getDestination = statsDestination => {
     SPORT_PS_TEST: 598311,
   };
 
-  return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
+  //return "$REPLACE('${ampGeo}', 'eea,gbOrUnknown', '598310')";
+  return "$REPLACE('eeahello', 'eea', '123')";
+  // return "$IF('${ampGeo}', 'eeagbOrUnknown', 'blah')";
+  return '${resolveDest($ampGeo)}';
+
+  return platform === 'amp'
+    ? '${ampGeo}'
+    : destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
 export const getAppType = platform =>
