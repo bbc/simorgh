@@ -74,6 +74,7 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://*.safeframe.googlesyndication.com',
   ],
+  styleSrc: ['https://fonts.googleapis.com/css?family=*'],
 };
 
 const directives = {
@@ -263,6 +264,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
     ampNonLive: [...bbcDomains, "'unsafe-inline'"],
@@ -270,6 +272,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
   },
