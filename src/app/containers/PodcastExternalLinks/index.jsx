@@ -15,6 +15,7 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 
 import { ServiceContext } from '#contexts/ServiceContext';
+import getExternalLinkLang from '#lib/utilities/getExternalLinkLang';
 import Link from './Link';
 
 const Wrapper = styled.aside`
@@ -98,7 +99,14 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             <StyledListItem dir={dir} key={linkText}>
               <Link href={linkUrl} service={service} script={script} dir={dir}>
                 <span role="text">
-                  <span lang={lang}>{linkText}</span>
+                  <span
+                    lang={getExternalLinkLang({
+                      podcastService: linkText,
+                      serviceLang: lang,
+                    })}
+                  >
+                    {linkText}
+                  </span>
                   <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
                 </span>
               </Link>
@@ -114,7 +122,14 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           dir={dir}
         >
           <span>
-            <span lang={lang}>{firstLink.linkText}</span>
+            <span
+              lang={getExternalLinkLang({
+                podcastService: firstLink.linkText,
+                serviceLang: lang,
+              })}
+            >
+              {firstLink.linkText}
+            </span>
             <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
           </span>
         </Link>
