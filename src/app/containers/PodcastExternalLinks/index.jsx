@@ -17,6 +17,14 @@ import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
+const ExternalLinkTextLangs = {
+  Spotify: 'en-GB',
+  Apple: 'en-GB',
+  RSS: 'en-GB',
+  Yandex: 'en-GB',
+  Castbox: 'en-GB',
+};
+
 const Wrapper = styled.aside`
   border-top: 0.0625rem ${C_CLOUD_LIGHT} solid;
   border-bottom: 0.0625rem ${C_CLOUD_LIGHT} solid;
@@ -82,14 +90,6 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   );
   const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
-
-  const ExternalLinkTextLangs = {
-    Spotify: 'en-GB',
-    Apple: 'en-GB',
-    RSS: 'en-GB',
-    Yandex: 'en-GB',
-    Castbox: 'en-GB',
-  };
 
   return (
     <Wrapper role="complementary" aria-labelledby="third-party-links">
