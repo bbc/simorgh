@@ -55,6 +55,7 @@ exports[`Media Player: Guidance should render Guidance 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"
@@ -137,6 +138,7 @@ exports[`Media Player: Guidance should render no-js styles when noJsClassName pr
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__guidance"
   >
     <strong
       aria-hidden="true"

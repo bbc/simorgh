@@ -13,6 +13,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
   >
     <amp-iframe
       allowfullscreen="allowfullscreen"
+      data-e2e="media-player"
       frameborder="0"
       layout="fill"
       sandbox="allow-scripts allow-same-origin"
@@ -23,6 +24,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
       <amp-img
         alt=""
         attribution=""
+        data-e2e="media-player__placeholder"
         height="16"
         layout="fill"
         placeholder="true"
@@ -48,6 +50,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
   >
     <amp-iframe
       allowfullscreen="allowfullscreen"
+      data-e2e="media-player"
       frameborder="0"
       layout="fill"
       sandbox="allow-scripts allow-same-origin"
@@ -58,6 +61,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
       <amp-img
         alt=""
         attribution=""
+        data-e2e="media-player__placeholder"
         height="9"
         layout="fill"
         placeholder="true"
@@ -89,6 +93,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
   >
     <amp-iframe
       allowfullscreen="allowfullscreen"
+      data-e2e="media-player"
       frameborder="0"
       layout="fill"
       sandbox="allow-scripts allow-same-origin"
@@ -99,6 +104,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
       <amp-img
         alt=""
         attribution=""
+        data-e2e="media-player__placeholder"
         height="16"
         layout="fill"
         placeholder="true"
@@ -226,12 +232,15 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__placeholder"
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player__guidance"
       >
         <noscript
           class="emotion-6 emotion-7"
@@ -421,12 +430,15 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__placeholder"
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player__guidance"
       >
         <strong
           aria-hidden="true"
@@ -596,12 +608,15 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__placeholder"
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player__guidance"
       >
         <noscript
           class="emotion-6 emotion-7"
@@ -670,6 +685,7 @@ exports[`Media Player: Canonical Entry renders an iframe when showPlaceholder is
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <iframe
       allow="autoplay"
@@ -710,6 +726,7 @@ exports[`Media Player: Canonical Entry renders the audio skin 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <iframe
       allow="autoplay"
@@ -882,12 +899,15 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__placeholder"
     >
       <div
         class="emotion-4 emotion-5"
+        data-e2e="media-player__guidance"
       >
         <strong
           aria-hidden="true"
@@ -1000,6 +1020,7 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player"
   >
     <iframe
       allow="autoplay"
@@ -1014,6 +1035,7 @@ exports[`Media Player: Canonical Entry shows a loading image before the player i
     >
       <div
         class="emotion-6 emotion-7"
+        data-e2e="image-placeholder"
       />
     </div>
     <noscript />

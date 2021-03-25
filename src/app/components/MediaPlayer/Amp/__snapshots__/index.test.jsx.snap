@@ -4,6 +4,7 @@ exports[`Media Player: Amp should render an amp-iframe with an amp-img nested in
 <div>
   <amp-iframe
     allowfullscreen="allowfullscreen"
+    data-e2e="media-player"
     frameborder="0"
     layout="fill"
     sandbox="allow-scripts allow-same-origin"
@@ -14,6 +15,7 @@ exports[`Media Player: Amp should render an amp-iframe with an amp-img nested in
     <amp-img
       alt=""
       attribution=""
+      data-e2e="media-player__placeholder"
       height="9"
       layout="fill"
       placeholder="true"

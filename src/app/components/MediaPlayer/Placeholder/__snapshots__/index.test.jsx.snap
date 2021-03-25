@@ -109,9 +109,11 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <noscript
         class="emotion-4 emotion-5"
@@ -294,9 +296,11 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
@@ -453,9 +457,11 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <noscript
         class="emotion-4 emotion-5"
@@ -605,9 +611,11 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <noscript
         class="emotion-4 emotion-5"
@@ -761,9 +769,11 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <noscript
         class="emotion-4 emotion-5"
@@ -959,9 +969,11 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-e2e="media-player__placeholder"
   >
     <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player__guidance"
     >
       <strong
         aria-hidden="true"
