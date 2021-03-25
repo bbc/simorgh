@@ -11,11 +11,9 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import {
-  CanonicalMediaPlayer,
-  AmpMediaPlayer,
-} from '@bbc/psammead-media-player';
 import pathOr from 'ramda/src/pathOr';
+
+import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 

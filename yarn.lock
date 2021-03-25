@@ -1610,16 +1610,6 @@
     "@bbc/psammead-assets" "3.1.8"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-media-player@5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-media-player/-/psammead-media-player-5.1.0.tgz#eb272cad35f5468b7491f62c12ac64998b674e0d"
-  integrity sha512-Fw6vGRMdBTe1iI3MfI0TyDobhJ+ofUVscCpnOnoIV7o8YobOBZ3NcFp3oNGl1zoR8gJwY31JolLMuHe4s66Biw==
-  dependencies:
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-image" "2.0.7"
-    "@bbc/psammead-image-placeholder" "3.2.0"
-    "@bbc/psammead-play-button" "3.0.20"
-
 "@bbc/psammead-most-read@6.0.28":
   version "6.0.28"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.28.tgz#4675583f2b459ec2c5cf386e3d86a02547527f18"
@@ -1647,7 +1637,7 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-play-button@3.0.20":
+"@bbc/psammead-play-button@^3.0.20":
   version "3.0.20"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-play-button/-/psammead-play-button-3.0.20.tgz#6d95e11156ccc6656d2bc9f5eea3faf1d7070a74"
   integrity sha512-UKpd+QL1CI3uPpByaTyWLgig20hHCJpckGygD7E0bMG6a5wm6Pte7EuhpzVPjWsYghG7U5cd9cLEPywgVZJOPA==
