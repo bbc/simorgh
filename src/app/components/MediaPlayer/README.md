@@ -2,7 +2,7 @@
 
 ## Description
 
-The `media-player` component exports two versions of our media player: an AMP version, and an Canonical version.
+The `media-player` component exports two versions of our media player: an AMP version, and a Canonical version.
 
 At its core, this component returns an `iframe` that is designed to frame a media asset.
 The AMP variant will render an `amp-iframe` with a nested `amp-img` to use as a placeholder.
