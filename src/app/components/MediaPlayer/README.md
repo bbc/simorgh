@@ -10,7 +10,7 @@ The Canonical variant will render a placeholder, that when clicked will load the
 
 ## When to use this component
 
-This component to be used at any point on the page, specifically when a media player is needed.
+This component is to be used at any point on the page, specifically when a media player is needed.
 
 ## Props
 
