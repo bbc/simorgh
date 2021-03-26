@@ -9,7 +9,9 @@
     "@emotion/utils": "1.0.0",
     "lodash": "4.17.21",
     "elliptic": "6.5.4",
-    "moment": "2.29.1"
+    "moment": "2.29.1",
+    "color-string": "1.5.4",
+    "ssri": "8.0.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
