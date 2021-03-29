@@ -4599,7 +4599,7 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            paths: ['/news/23393110'],
             enabled: true,
           },
           local: {
