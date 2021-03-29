@@ -3843,7 +3843,31 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+      },
       onDemandTV: {
         environments: {
           live: {
@@ -4568,7 +4592,23 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/news/23393110'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {
@@ -4599,6 +4639,64 @@ module.exports = () => ({
           },
         },
         smoke: true,
+      },
+    },
+  },
+  newsround: {
+    name: 'newsround',
+    font: undefined,
+    variant: 'default',
+    pageTypes: {
+      articles: { environments: undefined, smoke: false },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/newsround/56331357'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/newsround/23212028'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/newsround/56331357'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
       },
     },
   },
@@ -5476,7 +5574,32 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6904,7 +7027,23 @@ module.exports = () => ({
       mediaAssetPage: { environments: undefined, smoke: false },
       mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/sport/formula1/23355387', '/sport/tennis/23372108'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
       featureIndexPage: {

@@ -70,7 +70,7 @@ Object {
 exports[`Canonical Articles Footer Anchors should match text and url 10`] = `
 Object {
   "text": "Read about our approach to external linking.",
-  "url": "https://www.bbc.co.uk/help/web/links/",
+  "url": "https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links",
 }
 `;
 
@@ -162,7 +162,7 @@ exports[`Canonical Articles Image Caption should match text 1`] = `"Image captio
 exports[`Canonical Articles Image should match snapshot 1`] = `
 <img
   alt="group of residents"
-  class="bbc-1suxhxy-StyledImg e1enwo3v0"
+  class="bbc-fat2bc e1enwo3v0"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 800w"
   width="976"

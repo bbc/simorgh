@@ -81,6 +81,10 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   }
 }
 
+.emotion-6:focus {
+  outline: none;
+}
+
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -689,6 +693,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           <h2
             class="emotion-6 emotion-7"
             dir="ltr"
+            tabindex="-1"
           >
             We don update our Privacy and Cookies Policy
           </h2>
@@ -827,6 +832,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
@@ -934,6 +940,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul
@@ -1117,6 +1124,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   }
 }
 
+.emotion-6:focus {
+  outline: none;
+}
+
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -1726,6 +1737,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           <h2
             class="emotion-6 emotion-7"
             dir="ltr"
+            tabindex="-1"
           >
             We don update our Privacy and Cookies Policy
           </h2>
@@ -1864,6 +1876,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
@@ -1971,6 +1984,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul
@@ -2154,6 +2168,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   }
 }
 
+.emotion-6:focus {
+  outline: none;
+}
+
 .emotion-8 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -2763,6 +2781,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           <h2
             class="emotion-6 emotion-7"
             dir="ltr"
+            tabindex="-1"
           >
             We don update our Privacy and Cookies Policy
           </h2>
@@ -2901,6 +2920,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </button>
           <div
             class="emotion-40 emotion-41"
+            data-e2e="scrollable-nav"
             dir="ltr"
           >
             <ul
@@ -3008,6 +3028,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         </div>
         <div
           class="emotion-76 emotion-77"
+          data-e2e="dropdown-nav"
           height="0"
         >
           <ul

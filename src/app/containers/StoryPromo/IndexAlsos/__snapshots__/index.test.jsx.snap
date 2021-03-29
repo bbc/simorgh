@@ -146,6 +146,7 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
           <div
             aria-hidden="true"
             class="emotion-10 emotion-11"
+            data-e2e="media-indicator"
             dir="ltr"
           >
             <div
@@ -351,6 +352,7 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
         <div
           aria-hidden="true"
           class="emotion-8 emotion-9"
+          data-e2e="media-indicator"
           dir="ltr"
         >
           <div

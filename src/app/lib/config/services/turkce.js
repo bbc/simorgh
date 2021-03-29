@@ -283,7 +283,8 @@ export const service = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [

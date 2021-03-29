@@ -1221,6 +1221,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Masaraa Aaxee Minilik"
@@ -1269,6 +1270,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1318,6 +1320,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-54 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1367,6 +1370,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-70 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1416,6 +1420,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1465,6 +1470,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-70 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1514,6 +1520,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1563,6 +1570,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1612,6 +1620,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1661,6 +1670,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1710,6 +1720,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1759,6 +1770,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1808,6 +1820,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1857,6 +1870,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -1906,6 +1920,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                     >
                       <div
                         class="emotion-19 emotion-20"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3320,6 +3335,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Masaraa Aaxee Minilik"
@@ -3368,6 +3384,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3417,6 +3434,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-59 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3466,6 +3484,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-75 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3515,6 +3534,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3564,6 +3584,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-75 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3613,6 +3634,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3662,6 +3684,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3711,6 +3734,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3760,6 +3784,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3809,6 +3834,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3858,6 +3884,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3907,6 +3934,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -3956,6 +3984,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -4005,6 +4034,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5794,6 +5824,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Bole festival for Pitakwa"
@@ -5842,6 +5873,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5891,6 +5923,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5940,6 +5973,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -5989,6 +6023,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6038,6 +6073,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6087,6 +6123,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6136,6 +6173,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6185,6 +6223,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6234,6 +6273,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6283,6 +6323,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -6315,203 +6356,206 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                   </div>
                 </figure>
               </div>
-              <section
-                aria-labelledby="related-content-heading"
-                class="emotion-194 emotion-195 emotion-2"
-                data-e2e="related-content-heading"
+            </main>
+            <section
+              aria-labelledby="related-content-heading"
+              class="emotion-194 emotion-195 emotion-2"
+              data-e2e="related-content-heading"
+              dir="ltr"
+              role="region"
+            >
+              <div
+                class="emotion-197 emotion-198 emotion-2"
                 dir="ltr"
-                role="region"
               >
                 <div
-                  class="emotion-197 emotion-198 emotion-2"
-                  dir="ltr"
+                  class="emotion-200 emotion-201 emotion-202"
                 >
                   <div
-                    class="emotion-200 emotion-201 emotion-202"
+                    class="emotion-203 emotion-204"
+                  />
+                  <h2
+                    class="emotion-205 emotion-206"
                   >
-                    <div
-                      class="emotion-203 emotion-204"
-                    />
-                    <h2
-                      class="emotion-205 emotion-206"
+                    <span
+                      class="emotion-207 emotion-208"
                     >
                       <span
-                        class="emotion-207 emotion-208"
+                        class="emotion-209 emotion-210"
                       >
                         <span
-                          class="emotion-209 emotion-210"
+                          class="emotion-211 emotion-212"
+                          dir="ltr"
+                          id="related-content-heading"
                         >
-                          <span
-                            class="emotion-211 emotion-212"
-                            dir="ltr"
-                            id="related-content-heading"
-                          >
-                            Another thing we de for inside dis tori
-                          </span>
+                          Another thing we de for inside dis tori
                         </span>
                       </span>
-                    </h2>
-                  </div>
-                  <ul
-                    class="emotion-2 emotion-214 emotion-215"
-                    dir="ltr"
-                    role="list"
-                  >
-                    <li
-                      class="emotion-2 emotion-217 emotion-218"
-                      dir="ltr"
-                    >
-                      <div
-                        class="emotion-219 emotion-220"
-                        data-e2e="story-promo"
-                      >
-                        <div
-                          class="emotion-221 emotion-222"
-                          dir="ltr"
-                        >
-                          <div
-                            class="emotion-223 emotion-224"
-                          >
-                            <div
-                              class="emotion-24 emotion-25"
-                            >
-                              <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
-                            </div>
-                            <div
-                              class="emotion-227 emotion-228"
-                            />
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-229 emotion-230"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-231 emotion-232"
-                          >
-                            <a
-                              class="emotion-233 emotion-234"
-                              href="/pidgin/media-45132087"
-                            >
-                              <span
-                                role="text"
-                              >
-                                <span
-                                  class="emotion-32 emotion-33"
-                                >
-                                  , 
-                                </span>
-                                <span>
-                                  Bole na correct Port Harcourt food.
-                                </span>
-                              </span>
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-237 emotion-11"
-                            datetime="2018-08-09"
-                          >
-                            9th August 2018
-                          </time>
-                        </div>
-                      </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-217 emotion-218"
-                      dir="ltr"
-                    >
-                      <div
-                        class="emotion-219 emotion-220"
-                        data-e2e="story-promo"
-                      >
-                        <div
-                          class="emotion-221 emotion-222"
-                          dir="ltr"
-                        >
-                          <div
-                            class="emotion-223 emotion-224"
-                          >
-                            <div
-                              class="emotion-24 emotion-25"
-                            />
-                            <div
-                              class="emotion-227 emotion-228"
-                            >
-                              <div
-                                aria-hidden="true"
-                                class="emotion-252 emotion-253"
-                                dir="ltr"
-                              >
-                                <div
-                                  class="emotion-254 emotion-255"
-                                >
-                                  <svg
-                                    aria-hidden="true"
-                                    class="emotion-256 emotion-257"
-                                    focusable="false"
-                                    height="13px"
-                                    viewBox="0 0 32 26"
-                                    width="16px"
-                                  >
-                                    <path
-                                      d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
-                                    />
-                                    <circle
-                                      cx="20"
-                                      cy="14.02"
-                                      r="5.5"
-                                    />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          class="emotion-229 emotion-230"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-231 emotion-232"
-                          >
-                            <a
-                              class="emotion-233 emotion-234"
-                              href="/pidgin/tori-45242255"
-                            >
-                              <span
-                                role="text"
-                              >
-                                <span
-                                  class="emotion-32 emotion-33"
-                                >
-                                  Image gallery
-                                  , 
-                                </span>
-                                <span>
-                                  Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
-                                </span>
-                              </span>
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-237 emotion-11"
-                            datetime="2018-08-19"
-                          >
-                            19th August 2018
-                          </time>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                    </span>
+                  </h2>
                 </div>
-              </section>
-            </main>
+                <ul
+                  class="emotion-2 emotion-214 emotion-215"
+                  dir="ltr"
+                  role="list"
+                >
+                  <li
+                    class="emotion-2 emotion-217 emotion-218"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-219 emotion-220"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-221 emotion-222"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-223 emotion-224"
+                        >
+                          <div
+                            class="emotion-24 emotion-25"
+                            data-e2e="image-placeholder"
+                          >
+                            <div
+                              class="lazyload-wrapper "
+                            >
+                              <div
+                                class="lazyload-placeholder"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="emotion-227 emotion-228"
+                          />
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-229 emotion-230"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-231 emotion-232"
+                        >
+                          <a
+                            class="emotion-233 emotion-234"
+                            href="/pidgin/media-45132087"
+                          >
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="emotion-32 emotion-33"
+                              >
+                                , 
+                              </span>
+                              <span>
+                                Bole na correct Port Harcourt food.
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-237 emotion-11"
+                          datetime="2018-08-09"
+                        >
+                          9th August 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-217 emotion-218"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-219 emotion-220"
+                      data-e2e="story-promo"
+                    >
+                      <div
+                        class="emotion-221 emotion-222"
+                        dir="ltr"
+                      >
+                        <div
+                          class="emotion-223 emotion-224"
+                        >
+                          <div
+                            class="emotion-24 emotion-25"
+                            data-e2e="image-placeholder"
+                          />
+                          <div
+                            class="emotion-227 emotion-228"
+                          >
+                            <div
+                              aria-hidden="true"
+                              class="emotion-252 emotion-253"
+                              data-e2e="media-indicator"
+                              dir="ltr"
+                            >
+                              <div
+                                class="emotion-254 emotion-255"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  class="emotion-256 emotion-257"
+                                  focusable="false"
+                                  height="13px"
+                                  viewBox="0 0 32 26"
+                                  width="16px"
+                                >
+                                  <path
+                                    d="M9,2V0H4V2H0V26H32V2ZM6.5,10A2.5,2.5,0,1,1,9,7.52,2.5,2.5,0,0,1,6.5,10ZM20,23a9,9,0,1,1,9-9A9,9,0,0,1,20,23Z"
+                                  />
+                                  <circle
+                                    cx="20"
+                                    cy="14.02"
+                                    r="5.5"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="emotion-229 emotion-230"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-231 emotion-232"
+                        >
+                          <a
+                            class="emotion-233 emotion-234"
+                            href="/pidgin/tori-45242255"
+                          >
+                            <span
+                              role="text"
+                            >
+                              <span
+                                class="emotion-32 emotion-33"
+                              >
+                                Image gallery
+                                , 
+                              </span>
+                              <span>
+                                Jollof Festival: West Africa no wan kwanta again unto which pesin jollof sweet pass
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-237 emotion-11"
+                          datetime="2018-08-19"
+                        >
+                          19th August 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -7566,6 +7610,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="Bill Clinton"
@@ -7629,6 +7674,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7693,6 +7739,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7757,6 +7804,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7821,6 +7869,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7885,6 +7934,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -7949,6 +7999,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10439,6 +10490,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <img
                           alt="AXC parlamentinin birinci iclasının açılışı"
@@ -10502,6 +10554,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-47 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10566,6 +10619,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10630,6 +10684,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-89 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10694,6 +10749,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-110 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10758,6 +10814,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10822,6 +10879,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-152 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10886,6 +10944,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-172 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -10950,6 +11009,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-192 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11014,6 +11074,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-213 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11078,6 +11139,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-234 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11142,6 +11204,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-254 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11206,6 +11269,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-274 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11270,6 +11334,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-294 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11334,6 +11399,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-314 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11398,6 +11464,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-24 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11462,6 +11529,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-354 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11526,6 +11594,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11590,6 +11659,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                     >
                       <div
                         class="emotion-68 emotion-25"
+                        data-e2e="image-placeholder"
                       >
                         <div
                           class="lazyload-wrapper "
@@ -11637,549 +11707,558 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                   </div>
                 </figure>
               </div>
-              <section
-                aria-labelledby="related-content-heading"
-                class="emotion-408 emotion-409 emotion-2"
-                data-e2e="related-content-heading"
+            </main>
+            <section
+              aria-labelledby="related-content-heading"
+              class="emotion-408 emotion-409 emotion-2"
+              data-e2e="related-content-heading"
+              dir="ltr"
+              role="region"
+            >
+              <div
+                class="emotion-411 emotion-412 emotion-2"
                 dir="ltr"
-                role="region"
               >
                 <div
-                  class="emotion-411 emotion-412 emotion-2"
-                  dir="ltr"
+                  class="emotion-414 emotion-415 emotion-416"
                 >
                   <div
-                    class="emotion-414 emotion-415 emotion-416"
+                    class="emotion-417 emotion-418"
+                  />
+                  <h2
+                    class="emotion-419 emotion-420"
                   >
-                    <div
-                      class="emotion-417 emotion-418"
-                    />
-                    <h2
-                      class="emotion-419 emotion-420"
+                    <span
+                      class="emotion-421 emotion-422"
                     >
                       <span
-                        class="emotion-421 emotion-422"
+                        class="emotion-423 emotion-424"
                       >
                         <span
-                          class="emotion-423 emotion-424"
+                          class="emotion-425 emotion-426"
+                          dir="ltr"
+                          id="related-content-heading"
                         >
-                          <span
-                            class="emotion-425 emotion-426"
-                            dir="ltr"
-                            id="related-content-heading"
-                          >
-                            Bu barədə daha geniş
-                          </span>
+                          Bu barədə daha geniş
                         </span>
                       </span>
-                    </h2>
-                  </div>
-                  <ul
-                    class="emotion-2 emotion-428 emotion-429"
+                    </span>
+                  </h2>
+                </div>
+                <ul
+                  class="emotion-2 emotion-428 emotion-429"
+                  dir="ltr"
+                  role="list"
+                >
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
                     dir="ltr"
-                    role="list"
                   >
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-44124647"
-                            >
-                              ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-05-17"
-                          >
-                            17 May 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-44124647"
+                          >
+                            ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-05-17"
+                        >
+                          17 May 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-43540056"
-                            >
-                              ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-03-27"
-                          >
-                            27 Mart 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-43540056"
+                          >
+                            ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-03-27"
+                        >
+                          27 Mart 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-44022776"
-                            >
-                              Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-05-10"
-                          >
-                            10 May 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-44022776"
+                          >
+                            Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-05-10"
+                        >
+                          10 May 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-43713137"
-                            >
-                              Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-04-10"
-                          >
-                            10 Aprel 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-43713137"
+                          >
+                            Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-04-10"
+                        >
+                          10 Aprel 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-37688691"
-                            >
-                              1918-1991: Bir müstəqilliyin iki bəyanı
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2016-10-18"
-                          >
-                            18 Oktyabr 2016
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-37688691"
+                          >
+                            1918-1991: Bir müstəqilliyin iki bəyanı
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2016-10-18"
+                        >
+                          18 Oktyabr 2016
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
+                      </div>
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
                         >
-                          <h3
-                            class="emotion-445 emotion-446"
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-37691096"
                           >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-37691096"
+                            <span
+                              role="text"
                             >
                               <span
-                                role="text"
+                                class="emotion-30 emotion-31"
                               >
-                                <span
-                                  class="emotion-30 emotion-31"
-                                >
-                                  , 
-                                </span>
-                                <span>
-                                  Bakı sakinləri müstəqillik barədə danışır
-                                </span>
+                                , 
                               </span>
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2016-10-18"
-                          >
-                            18 Oktyabr 2016
-                          </time>
-                        </div>
+                              <span>
+                                Bakı sakinləri müstəqillik barədə danışır
+                              </span>
+                            </span>
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2016-10-18"
+                        >
+                          18 Oktyabr 2016
+                        </time>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-43499221"
-                            >
-                              1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-03-22"
-                          >
-                            22 Mart 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-43499221"
+                          >
+                            1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-03-22"
+                        >
+                          22 Mart 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-44004471"
-                            >
-                              #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-05-04"
-                          >
-                            4 May 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                    <li
-                      class="emotion-2 emotion-431 emotion-432"
-                      dir="ltr"
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-44004471"
+                          >
+                            #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-05-04"
+                        >
+                          4 May 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="emotion-2 emotion-431 emotion-432"
+                    dir="ltr"
+                  >
+                    <div
+                      class="emotion-433 emotion-434"
+                      data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-433 emotion-434"
-                        data-e2e="story-promo"
+                        class="emotion-435 emotion-436"
+                        dir="ltr"
                       >
                         <div
-                          class="emotion-435 emotion-436"
-                          dir="ltr"
+                          class="emotion-437 emotion-438"
                         >
                           <div
-                            class="emotion-437 emotion-438"
+                            class="emotion-439 emotion-25"
+                            data-e2e="image-placeholder"
                           >
                             <div
-                              class="emotion-439 emotion-25"
+                              class="lazyload-wrapper "
                             >
                               <div
-                                class="lazyload-wrapper "
-                              >
-                                <div
-                                  class="lazyload-placeholder"
-                                />
-                              </div>
+                                class="lazyload-placeholder"
+                              />
                             </div>
-                            <div
-                              class="emotion-441 emotion-442"
-                            />
                           </div>
-                        </div>
-                        <div
-                          class="emotion-443 emotion-444"
-                          dir="ltr"
-                        >
-                          <h3
-                            class="emotion-445 emotion-446"
-                          >
-                            <a
-                              class="emotion-447 emotion-448"
-                              href="/azeri/azerbaijan-43870815"
-                            >
-                              Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
-                            </a>
-                          </h3>
-                          <time
-                            class="emotion-449 emotion-11"
-                            datetime="2018-04-29"
-                          >
-                            29 Aprel 2018
-                          </time>
+                          <div
+                            class="emotion-441 emotion-442"
+                          />
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </main>
+                      <div
+                        class="emotion-443 emotion-444"
+                        dir="ltr"
+                      >
+                        <h3
+                          class="emotion-445 emotion-446"
+                        >
+                          <a
+                            class="emotion-447 emotion-448"
+                            href="/azeri/azerbaijan-43870815"
+                          >
+                            Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                          </a>
+                        </h3>
+                        <time
+                          class="emotion-449 emotion-11"
+                          datetime="2018-04-29"
+                        >
+                          29 Aprel 2018
+                        </time>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </div>
         </div>
       </div>

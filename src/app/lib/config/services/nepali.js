@@ -220,6 +220,7 @@ export const service = {
         listen: 'सुन्नुहोस्',
         watch: 'हेर्नुहोस्',
         listenLive: 'प्रत्यक्ष सुन्नुहोस्',
+        listenNext: 'अर्को सुन्नुहोस्',
         liveLabel: 'प्रत्यक्ष प्रसारण',
         nextLabel: 'अर्को',
         previousRadioShow: 'पछिल्लो रेडिओ कार्यक्रम',
@@ -277,7 +278,8 @@ export const service = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [

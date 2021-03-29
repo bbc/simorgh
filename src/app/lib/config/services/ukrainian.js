@@ -217,6 +217,7 @@ const baseServiceConfig = {
       },
       listen: 'Прослухати',
       watch: 'Дивитися',
+      listenLive: 'Слухати наживо',
       listenNext: 'Слухати наступний',
       liveLabel: 'LIVE',
       nextLabel: 'NEXT',
@@ -277,7 +278,8 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href:
+        'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [

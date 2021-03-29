@@ -219,11 +219,13 @@ export const service = {
         watch: 'पाहा',
         liveLabel: 'LIVE',
         nextLabel: 'पुढचे',
+        listenLive: 'ऐका',
         listenNext: 'पुढचा ऐका',
         previousRadioShow: 'यापूर्वीचा रेडिओ शो',
         nextRadioShow: 'पुढचा रेडिओ शो',
         duration: 'वेळ',
         recentEpisodes: 'ताजे एपिसोड',
+        podcastExternalLinks: 'हे पॉडकास्ट तुम्ही इथे ऐकू शकता',
       },
       socialEmbed: {
         caption: {
@@ -274,7 +276,8 @@ export const service = {
         text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [

@@ -228,6 +228,7 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        listenLive: 'Ouça ao vivo',
         listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
         nextLabel: 'NEXT',
@@ -291,7 +292,8 @@ export const service = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [

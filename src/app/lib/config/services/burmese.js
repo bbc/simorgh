@@ -225,6 +225,7 @@ export const service = {
         },
         listen: 'နားဆငျရနျ',
         watch: 'ကြည့်ရှုရန်',
+        listenLive: 'တိုက်ရိုက်နားဆင်ရန်',
         listenNext: 'နောက်ထပ်နားဆင်ရန်',
         liveLabel: 'တိုက်ရိုက်ထုတ်လွှင့်မှု',
         nextLabel: 'နောက်တစ်ခုသို့',
@@ -286,7 +287,8 @@ export const service = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href:
+          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text:
           'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
