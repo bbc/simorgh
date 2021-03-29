@@ -35,14 +35,17 @@ export const getDestination = (platform, statsDestination) => {
     SPORT_PS_TEST: 598311,
   };
 
-  //return "$REPLACE('${ampGeo}', 'eea,gbOrUnknown', '598310')";
-  return "$REPLACE('eeahello', 'eea', '123')";
-  // return "$IF('${ampGeo}', 'eeagbOrUnknown', 'blah')";
-  return '${resolveDest($ampGeo)}';
+  if (platform === 'amp' && statsDestination === 'SPORT_PS_TEST') {
+    // eslint-disable-next-line no-template-curly-in-string
+    const ampGeo = '${ampGeo}';
+    const withUrlFormattingRemoved = `$REPLACE(${ampGeo}, %2C, )`; // Don't think this is actually necessary
+    const withGbOrUnknownMatched = `$MATCH(${withUrlFormattingRemoved}, gbOrUnknown, 0)`;
+    const equalsgbOrUnknown = `$EQUALS(${withGbOrUnknownMatched}, gbOrUnknown)`;
+    const ifInGb = `$IF(${equalsgbOrUnknown}, ${destinationIDs.SPORT_PS_TEST}, ${destinationIDs.SPORT_GNL_TEST})`;
+    return ifInGb;
+  }
 
-  return platform === 'amp'
-    ? '${ampGeo}'
-    : destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
+  return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
 
 export const getAppType = platform =>
