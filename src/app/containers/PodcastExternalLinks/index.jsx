@@ -17,12 +17,14 @@ import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
+const EN_GB_LANG = 'en-GB';
+
 const ExternalLinkTextLangs = {
-  Spotify: 'en-GB',
-  Apple: 'en-GB',
-  RSS: 'en-GB',
-  Yandex: 'en-GB',
-  Castbox: 'en-GB',
+  Spotify: EN_GB_LANG,
+  Apple: EN_GB_LANG,
+  RSS: EN_GB_LANG,
+  Yandex: EN_GB_LANG,
+  Castbox: EN_GB_LANG,
 };
 
 const Wrapper = styled.aside`
