@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
 import { func, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
@@ -45,6 +45,12 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
 
   const dataAttribute = getDataAttribute(type);
 
+  const headingRef = useRef(null);
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+
   return (
     <ConsentBannerWrapper>
       <ConsentBanner
@@ -64,6 +70,7 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
         )}
         script={script}
         service={service}
+        headingRef={headingRef}
       />
     </ConsentBannerWrapper>
   );

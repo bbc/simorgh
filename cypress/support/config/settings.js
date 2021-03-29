@@ -3843,7 +3843,31 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+      },
       onDemandTV: {
         environments: {
           live: {
@@ -4575,7 +4599,7 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            paths: ['/news/23393110'],
             enabled: true,
           },
           local: {
@@ -5550,7 +5574,32 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
