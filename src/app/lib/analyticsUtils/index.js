@@ -11,7 +11,7 @@ import {
   SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
 } from './analytics.const';
 
-export const getAmpDestination = (psDestination, gnlDestination) => {
+export const getAmpDestination = ({ PS, GNL }) => {
   /*
    ** AMP Variable substitution is used here to construct a string that
    ** will get the correct destination according to the client's geolocation,
@@ -24,10 +24,37 @@ export const getAmpDestination = (psDestination, gnlDestination) => {
   const ampGeo = '${ampGeo}'; // String representing the list of matched groups (comma delimited) e.g. eea,gbOrUnknown
   const withGbOrUnknownMatched = `$MATCH(${ampGeo}, gbOrUnknown, 0)`; // Checks for presence of 'gbOrUnknown' and returns 'gbOrUnknown' if found
   const equalsgbOrUnknown = `$EQUALS(${withGbOrUnknownMatched}, gbOrUnknown)`; // Returns 'true' if the result of the $MATCH was 'gbOrUnknown'
-  return `$IF(${equalsgbOrUnknown}, ${psDestination}, ${gnlDestination})`; // If 'true', use PS destination, otherwise use GNL
+  return `$IF(${equalsgbOrUnknown}, ${PS}, ${GNL})`; // If 'true', use PS destination, otherwise use GNL
 };
 
 export const getDestination = (platform, statsDestination) => {
+  const geoVariants = {
+    NEWS_PS: {
+      PS: 598285,
+      GNL: 598287,
+    },
+    NEWS_PS_TEST: {
+      PS: 598286,
+      GNL: 598288,
+    },
+    SPORT_PS: {
+      PS: 598310,
+      GNL: 598308,
+    },
+    SPORT_PS_TEST: {
+      PS: 598311,
+      GNL: 598309,
+    },
+    NEWS_LANGUAGES_PS: {
+      PS: 598291,
+      GNL: 598289,
+    },
+    NEWS_LANGUAGES_PS_TEST: {
+      PS: 598292,
+      GNL: 598290,
+    },
+  };
+
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_LANGUAGES_PS: 598291,
@@ -51,47 +78,8 @@ export const getDestination = (platform, statsDestination) => {
     SPORT_PS_TEST: 598311,
   };
 
-  if (platform === 'amp') {
-    switch (statsDestination) {
-      case 'NEWS_PS': {
-        return getAmpDestination(
-          destinationIDs.NEWS_PS,
-          destinationIDs.NEWS_GNL,
-        );
-      }
-      case 'NEWS_PS_TEST': {
-        return getAmpDestination(
-          destinationIDs.NEWS_PS_TEST,
-          destinationIDs.NEWS_GNL_TEST,
-        );
-      }
-      case 'SPORT_PS_TEST': {
-        return getAmpDestination(
-          destinationIDs.SPORT_PS_TEST,
-          destinationIDs.SPORT_GNL_TEST,
-        );
-      }
-      case 'SPORT_PS': {
-        return getAmpDestination(
-          destinationIDs.SPORT_PS,
-          destinationIDs.SPORT_GNL,
-        );
-      }
-      case 'NEWS_LANGUAGES_PS': {
-        return getAmpDestination(
-          destinationIDs.NEWS_LANGUAGES_PS,
-          destinationIDs.NEWS_LANGUAGES_GNL,
-        );
-      }
-      case 'NEWS_LANGUAGES_PS_TEST': {
-        return getAmpDestination(
-          destinationIDs.NEWS_LANGUAGES_PS_TEST,
-          destinationIDs.NEWS_LANGUAGES_GNL_TEST,
-        );
-      }
-      default:
-        return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
-    }
+  if (platform === 'amp' && geoVariants[statsDestination]) {
+    return getAmpDestination(geoVariants[statsDestination]);
   }
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;

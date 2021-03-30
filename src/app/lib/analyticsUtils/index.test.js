@@ -1,7 +1,7 @@
+/* eslint-disable no-template-curly-in-string */
 import Cookie from 'js-cookie';
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import onClient from '../utilities/onClient';
-import { getAmpDestination } from './index';
 
 let isOnClient = true;
 
@@ -58,37 +58,43 @@ describe('getDestination', () => {
     {
       platform: 'amp',
       statsDestination: 'NEWS_PS',
-      expected: getAmpDestination(598285, 598287),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
       summary: 'should return for live for News on amp',
     },
     {
       platform: 'amp',
       statsDestination: 'NEWS_PS_TEST',
-      expected: getAmpDestination(598286, 598288),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
       summary: 'should return for test for News on amp',
     },
     {
       platform: 'amp',
       statsDestination: 'SPORT_PS',
-      expected: getAmpDestination(598310, 598308),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
       summary: 'should return for live for Sport on amp',
     },
     {
       platform: 'amp',
       statsDestination: 'SPORT_PS_TEST',
-      expected: getAmpDestination(598311, 598309),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
       summary: 'should return for test for Sport on amp',
     },
     {
       platform: 'amp',
       statsDestination: 'NEWS_LANGUAGES_PS',
-      expected: getAmpDestination(598291, 598289),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
       summary: 'should return for live for Sport on amp',
     },
     {
       platform: 'amp',
       statsDestination: 'NEWS_LANGUAGES_PS_TEST',
-      expected: getAmpDestination(598292, 598290),
+      expected:
+        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
       summary: 'should return for test for Sport on amp',
     },
     {
