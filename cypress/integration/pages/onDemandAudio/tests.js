@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
 import path from 'ramda/src/path';
 import {
@@ -52,7 +53,8 @@ export default ({ service, pageType, variant, isAmp }) => {
         },
         () => {
           it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
-            // Reload for retry if data didn't update on page
+            // Reload for retry if data didn't update on page, after a wait for next load to have warmed cache
+            cy.wait(5000);
             cy.reload();
             let toggleName;
 
