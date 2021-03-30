@@ -11,6 +11,22 @@ import {
   SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
 } from './analytics.const';
 
+export const getAmpDestination = (psDestination, gnlDestination) => {
+  /*
+   ** AMP Variable substitution is used here to construct a string that
+   ** will get the correct destination according to the client's geolocation,
+   ** found using <amp-geo>.
+   ** https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
+   ** https://amp.dev/documentation/components/amp-geo/
+   */
+
+  // eslint-disable-next-line no-template-curly-in-string
+  const ampGeo = '${ampGeo}'; // String representing the list of matched groups (comma delimited) e.g. eea,gbOrUnknown
+  const withGbOrUnknownMatched = `$MATCH(${ampGeo}, gbOrUnknown, 0)`; // Checks for presence of 'gbOrUnknown' and returns 'gbOrUnknown' if found
+  const equalsgbOrUnknown = `$EQUALS(${withGbOrUnknownMatched}, gbOrUnknown)`; // Returns 'true' if the result of the $MATCH was 'gbOrUnknown'
+  return `$IF(${equalsgbOrUnknown}, ${psDestination}, ${gnlDestination})`; // If 'true', use PS destination, otherwise use GNL
+};
+
 export const getDestination = (platform, statsDestination) => {
   const destinationIDs = {
     NEWS_PS: 598285,
@@ -35,14 +51,47 @@ export const getDestination = (platform, statsDestination) => {
     SPORT_PS_TEST: 598311,
   };
 
-  if (platform === 'amp' && statsDestination === 'SPORT_PS_TEST') {
-    // eslint-disable-next-line no-template-curly-in-string
-    const ampGeo = '${ampGeo}';
-    const withUrlFormattingRemoved = `$REPLACE(${ampGeo}, %2C, )`; // Don't think this is actually necessary
-    const withGbOrUnknownMatched = `$MATCH(${withUrlFormattingRemoved}, gbOrUnknown, 0)`;
-    const equalsgbOrUnknown = `$EQUALS(${withGbOrUnknownMatched}, gbOrUnknown)`;
-    const ifInGb = `$IF(${equalsgbOrUnknown}, ${destinationIDs.SPORT_PS_TEST}, ${destinationIDs.SPORT_GNL_TEST})`;
-    return ifInGb;
+  if (platform === 'amp') {
+    switch (statsDestination) {
+      case 'NEWS_PS': {
+        return getAmpDestination(
+          destinationIDs.NEWS_PS,
+          destinationIDs.NEWS_GNL,
+        );
+      }
+      case 'NEWS_PS_TEST': {
+        return getAmpDestination(
+          destinationIDs.NEWS_PS_TEST,
+          destinationIDs.NEWS_GNL_TEST,
+        );
+      }
+      case 'SPORT_PS_TEST': {
+        return getAmpDestination(
+          destinationIDs.SPORT_PS_TEST,
+          destinationIDs.SPORT_GNL_TEST,
+        );
+      }
+      case 'SPORT_PS': {
+        return getAmpDestination(
+          destinationIDs.SPORT_PS,
+          destinationIDs.SPORT_GNL,
+        );
+      }
+      case 'NEWS_LANGUAGES_PS': {
+        return getAmpDestination(
+          destinationIDs.NEWS_LANGUAGES_PS,
+          destinationIDs.NEWS_LANGUAGES_GNL,
+        );
+      }
+      case 'NEWS_LANGUAGES_PS_TEST': {
+        return getAmpDestination(
+          destinationIDs.NEWS_LANGUAGES_PS_TEST,
+          destinationIDs.NEWS_LANGUAGES_GNL_TEST,
+        );
+      }
+      default:
+        return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
+    }
   }
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
