@@ -12,22 +12,14 @@ const JsonInlinedScript = data => (
 
 const AmpATIAnalytics = ({ pageviewParams }) => {
   return (
-    <>
-      <amp-bind-macro
-        id="resolveDest"
-        arguments="group"
-        expression="group.contains('gbUnknown') ? 123 : 456"
-      >
-        <amp-analytics>
-          {JsonInlinedScript(
-            getAmpAnalyticsJson({
-              baseUrl: process.env.SIMORGH_ATI_BASE_URL,
-              pageviewParams,
-            }),
-          )}
-        </amp-analytics>
-      </amp-bind-macro>
-    </>
+    <amp-analytics>
+      {JsonInlinedScript(
+        getAmpAnalyticsJson({
+          baseUrl: process.env.SIMORGH_ATI_BASE_URL,
+          pageviewParams,
+        }),
+      )}
+    </amp-analytics>
   );
 };
 

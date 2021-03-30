@@ -231,8 +231,6 @@ export const buildATIEventTrackUrl = ({
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
   const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
-  console.log('platform!: ' + platform);
-
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {

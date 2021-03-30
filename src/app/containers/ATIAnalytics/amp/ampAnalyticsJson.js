@@ -3,10 +3,6 @@
 /* eslint-disable prefer-template */
 
 const ampAnalyticsJson = ({ baseUrl, pageviewParams }) => ({
-  vars: {
-    // dest: "$MATCH('gbOrUnknown', 'gbOrUnknown', 0)",
-    dest: '',
-  },
   transport: {
     beacon: false,
     xhrpost: false,
