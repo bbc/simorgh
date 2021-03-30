@@ -142,6 +142,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         ...bbcDomains,
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff',
+        'https://fonts.gstatic.com',
       ],
       frameSrcExpectation: [
         ...bbcDomains,
@@ -219,6 +220,7 @@ describe('cspHeader', () => {
         ...bbcDomains,
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://fonts.googleapis.com',
         "'unsafe-inline'",
       ],
       mediaSrcExpectation: [...bbcDomains],
@@ -349,6 +351,7 @@ describe('cspHeader', () => {
       fontSrcExpectation: [
         ...bbcDomains,
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff',
+        'https://fonts.gstatic.com',
       ],
       frameSrcExpectation: [
         ...bbcDomains,
@@ -430,6 +433,7 @@ describe('cspHeader', () => {
         ...bbcDomains,
         'https://platform.twitter.com',
         'https://ton.twimg.com',
+        'https://fonts.googleapis.com',
         "'unsafe-inline'",
       ],
       mediaSrcExpectation: [...bbcDomains],
