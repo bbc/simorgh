@@ -190,10 +190,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'We and our partners use technologies, like ',
+                first: 'We use ',
                 linkText: 'cookies',
                 last:
-                  ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
+                  ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
