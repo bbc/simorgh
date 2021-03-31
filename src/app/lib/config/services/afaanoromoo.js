@@ -191,10 +191,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
-                linkText: 'kuus-yaadannoo',
+                first: 'Kan nuti ',
+                linkText: 'kuus-yaadannoo fayyadamnu',
                 last:
-                  ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
+                  ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
