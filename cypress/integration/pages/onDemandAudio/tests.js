@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 /* eslint-disable consistent-return */
 import path from 'ramda/src/path';
 import {
@@ -144,7 +145,18 @@ export default ({ service, pageType, variant, isAmp }) => {
                       /* eslint-enable no-console */
                     }
 
+                    // get length and wait if the assertion fails
+                    cy.get('[data-e2e=recent-episodes-list-item]')
+                      .its('length')
+                      .then(length => {
+                        if (length !== expectedNumberOfEpisodes) {
+                          cy.wait(5000);
+                        }
+                      });
+
                     // More than one episode expected
+                    // If this test fails the next retry should pass
+                    // as time has been allowed for the upstream cache to populate
                     if (expectedNumberOfEpisodes > 1) {
                       cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
