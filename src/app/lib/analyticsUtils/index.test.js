@@ -93,7 +93,7 @@ describe('getDestination', () => {
     },
   );
 
-  it('should return the correct destination id for News Languages on amp ', () => {
+  it('should return the correct destination id for News Languages on amp', () => {
     expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
     );
