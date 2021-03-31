@@ -193,11 +193,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/cy/',
               },
               international: {
-                first:
-                  "Rydyn ni a'n partneriaid yn defnyddio dyfeisiau technolegol, fel ",
+                first: "Rydyn ni'n defnyddio ",
                 linkText: 'cwcis',
                 last:
-                  ", ac yn casglu data pori er mwyn rhoi'r profiad ar-lein gorau posib i chi, ac er mwyn personoleiddio’r cynnwys a'r hysbysebion sy’n cael eu cynnig i chi. Rhowch wybod os ydych yn cytuno.",
+                  " i roi'r profiad ar-lein gorau posib i chi. Gadewch i ni wybod os ydych chi'n cytuno i'r cwcis yma",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/cy/',
               },
