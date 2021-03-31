@@ -54,195 +54,50 @@ const returnsNullWhenOffClient = func => {
 };
 
 describe('getDestination', () => {
-  const getDestinationTestScenarios = [
-    {
-      platform: 'amp',
-      statsDestination: 'NEWS_PS',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598285, 598287)',
-      summary: 'should return for live for News on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: 'NEWS_PS_TEST',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)',
-      summary: 'should return for test for News on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: 'SPORT_PS',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598310, 598308)',
-      summary: 'should return for live for Sport on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: 'SPORT_PS_TEST',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598311, 598309)',
-      summary: 'should return for test for Sport on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: 'NEWS_LANGUAGES_PS',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
-      summary: 'should return for live for Sport on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: 'NEWS_LANGUAGES_PS_TEST',
-      expected:
-        '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598292, 598290)',
-      summary: 'should return for test for Sport on amp',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWS_PS',
-      expected: 598285,
-      summary: 'should return for live uk for News on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWS_GNL',
-      expected: 598287,
-      summary: 'should return for live international for News on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWS_PS_TEST',
-      expected: 598286,
-      summary: 'should return for test uk for News on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWS_GNL_TEST',
-      expected: 598288,
-      summary: 'should return for test international for News on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'WS_NEWS_LANGUAGES',
-      expected: 598342,
-      summary: 'should return for live WS on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      expected: 598343,
-      summary: 'should return for test WS on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'PS_HOMEPAGE',
-      expected: 598273,
-      summary: 'should return for live Scotland on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'PS_HOMEPAGE_TEST',
-      expected: 598274,
-      summary: 'should return for test Scotland on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'BBC_ARCHIVE_PS',
-      expected: 605565,
-      summary: 'should return for live Archive on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'BBC_ARCHIVE_PS_TEST',
-      expected: 605566,
-      summary: 'should return for test Archive on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWSROUND',
-      expected: 598293,
-      summary: 'should return for live Newsround on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'NEWSROUND_TEST',
-      expected: 598294,
-      summary: 'should return for test Newsround on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'SPORT_PS',
-      expected: 598310,
-      summary: 'should return for live uk for Sport on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'SPORT_GNL',
-      expected: 598308,
-      summary: 'should return for live international for Sport on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'SPORT_PS_TEST',
-      expected: 598311,
-      summary: 'should return for test uk for Sport on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: 'SPORT_GNL_TEST',
-      expected: 598309,
-      summary: 'should return for test international for Sport on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: undefined,
-      expected: 598285,
-      summary:
-        'should return for live uk statsDestination is undefined on canonical',
-    },
-    {
-      platform: 'canonical',
-      statsDestination: null,
-      expected: 598285,
-      summary:
-        'should return for live uk statsDestination is null on canonical',
-    },
-    {
-      platform: 'amp',
-      statsDestination: undefined,
-      expected: 598285,
-      summary: 'should return for live uk statsDestination is undefined on amp',
-    },
-    {
-      platform: 'amp',
-      statsDestination: null,
-      expected: 598285,
-      summary: 'should return for live uk statsDestination is null on amp',
-    },
-    {
-      platform: undefined,
-      statsDestination: undefined,
-      expected: 598285,
-      summary:
-        'should return for live uk statsDestination and platform are undefined',
-    },
-    {
-      platform: null,
-      statsDestination: null,
-      expected: 598285,
-      summary:
-        'should return for live uk statsDestination and platform are null',
-    },
-  ];
-
-  getDestinationTestScenarios.forEach(
-    ({ platform, statsDestination, expected, summary }) => {
-      it(summary, () => {
-        const destination = getDestination(platform, statsDestination);
-        expect(destination).toEqual(expected);
-      });
+  it.each`
+    platform       | statsDestination
+    ${'amp'}       | ${null}
+    ${'canonical'} | ${null}
+    ${null}        | ${null}
+    ${'amp'}       | ${undefined}
+    ${'canonical'} | ${undefined}
+    ${undefined}   | ${undefined}
+  `(
+    'should return the NEWS_PS id where statsDestination is nullish',
+    ({ platform, statsDestination }) => {
+      expect(getDestination(platform, statsDestination)).toBe(598285);
     },
   );
+
+  it.each`
+    platform     | statsDestination   | expected
+    ${null}      | ${'SPORT_PS_TEST'} | ${598311}
+    ${undefined} | ${'PS_HOMEPAGE'}   | ${598273}
+  `(
+    'should return the correct destination id if platform is nullish',
+    ({ platform, statsDestination, expected }) => {
+      expect(getDestination(platform, statsDestination)).toBe(expected);
+    },
+  );
+
+  it.each`
+    statsDestination   | expected
+    ${'NEWS_PS'}       | ${598285}
+    ${'NEWS_GNL_TEST'} | ${598288}
+    ${'NEWSROUND'}     | ${598293}
+    ${'SPORT_PS_TEST'} | ${598311}
+  `(
+    'should return the correct destination id for $statsDestination on canonical',
+    ({ statsDestination, expected }) => {
+      expect(getDestination('canonical', statsDestination)).toBe(expected);
+    },
+  );
+
+  it('should return the correct destination id for News Languages on amp ', () => {
+    expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+    );
+  });
 });
 
 describe('getAppType', () => {
