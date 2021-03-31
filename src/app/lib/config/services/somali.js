@@ -191,11 +191,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
+                first: 'Waxaan isticmaaleynaa lifaaq ',
                 linkText: 'cookies',
                 last:
-                  ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
+                  ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
