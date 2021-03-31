@@ -53,8 +53,7 @@ export default ({ service, pageType, variant, isAmp }) => {
         },
         () => {
           it('should be displayed if the toggle is on, and shows the expected number of items', function test() {
-            // Reload for retry if data didn't update on page, after a wait for next load to have warmed cache
-            cy.wait(5000);
+            // Reload for retry if data didn't update on page
             cy.reload();
             let toggleName;
 
@@ -146,7 +145,18 @@ export default ({ service, pageType, variant, isAmp }) => {
                       /* eslint-enable no-console */
                     }
 
+                    // get length and wait if the assertion fails
+                    cy.get('[data-e2e=recent-episodes-list-item]')
+                      .its('length')
+                      .then(length => {
+                        if (length !== expectedNumberOfEpisodes) {
+                          cy.wait(5000);
+                        }
+                      });
+
                     // More than one episode expected
+                    // If this test fails the next retry should pass
+                    // as time has been allowed for the upstream cache to populate
                     if (expectedNumberOfEpisodes > 1) {
                       cy.get('[data-e2e=recent-episodes-list]').should('exist');
 
