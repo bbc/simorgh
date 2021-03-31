@@ -14,13 +14,33 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         const descriptionBlock = body.content.blocks.find(
           block => block.role === 'introduction',
         );
-        const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
+        // Condition added because introduction is non-mandatory
+        if (descriptionBlock) {
+          const descriptionHtml = pathOr({}, ['text'], descriptionBlock);
+          // strip html from the description, so we get description as plain text
+          const elem = document.createElement('div');
+          elem.innerHTML = descriptionHtml;
+          const description = elem.innerText;
+          cy.get('main p').should('contain', description);
+        }
+      });
+    });
 
-        // strip html from the description, so we get description as plain text
-        const elem = document.createElement('div');
-        elem.innerHTML = descriptionHtml;
-        const description = elem.innerText;
-        cy.get('main p').should('contain', description);
+    it('should render paragraph text for the page', () => {
+      cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
+        const paragraphBlock = body.content.blocks.find(
+          block => block.type === 'paragraph',
+        );
+        // Conditional because in test assets the data model structure is sometimes variable and unusual
+        // so cannot be accessed in the same way across assets
+        if (paragraphBlock) {
+          const descriptionHtml = pathOr({}, ['text'], paragraphBlock);
+          // strip html from the description, so we get description as plain text
+          const elem = document.createElement('div');
+          elem.innerHTML = descriptionHtml;
+          const paragraph = elem.innerText;
+          cy.get('main p').should('contain', paragraph);
+        }
       });
     });
   });
