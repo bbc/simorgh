@@ -285,8 +285,12 @@ export const service = {
         url: '/thai/topics/cyx5kz25zxdt',
       },
       {
+        title: 'โควิด-19',
+        url: '/thai/other-news-56319853',
+      },
+      {
         title: 'วิดีโอ',
-        url: '/thai/media/video',
+        url: '/thai/other-news-56317806',
       },
       {
         title: 'ยอดนิยม',
