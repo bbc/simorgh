@@ -63,7 +63,7 @@ describe('getDestination', () => {
     ${'canonical'} | ${undefined}
     ${undefined}   | ${undefined}
   `(
-    'should return the NEWS_PS id where statsDestination is nullish',
+    'should return the safe default (NEWS_PS) where statsDestination is nullish',
     ({ platform, statsDestination }) => {
       expect(getDestination(platform, statsDestination)).toBe(598285);
     },
@@ -93,7 +93,7 @@ describe('getDestination', () => {
     },
   );
 
-  it('should return the correct destination id for News Languages on amp', () => {
+  it('should return amp substitution expression for destination with GNL and PS destinations defined', () => {
     expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
       '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
     );
