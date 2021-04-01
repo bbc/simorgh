@@ -350,8 +350,8 @@ export const service = {
         url: '/mundo/internacional',
       },
       {
-        title: 'EE.UU. 2020',
-        url: '/mundo/noticias-internacional-53826365',
+        title: 'Coronavirus',
+        url: '/mundo/topics/c67q9nnn8z7t',
       },
       {
         title: 'Hay Festival',
