@@ -48,6 +48,7 @@ describe('cspHeader', () => {
         'https://secure-dcr-cert.imrworldwide.com',
         'https://pixel.adsafeprotected.com',
         'https://cdn.adsafeprotected.com',
+        'https://*.safeframe.googlesyndication.com',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -131,6 +132,7 @@ describe('cspHeader', () => {
         'https://secure-dcr-cert.imrworldwide.com',
         'https://pixel.adsafeprotected.com',
         'https://cdn.adsafeprotected.com',
+        'https://*.safeframe.googlesyndication.com',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -254,6 +256,7 @@ describe('cspHeader', () => {
         'https://secure-dcr-cert.imrworldwide.com',
         'https://pixel.adsafeprotected.com',
         'https://cdn.adsafeprotected.com',
+        'https://*.safeframe.googlesyndication.com',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -340,6 +343,7 @@ describe('cspHeader', () => {
         'https://secure-dcr-cert.imrworldwide.com',
         'https://pixel.adsafeprotected.com',
         'https://cdn.adsafeprotected.com',
+        'https://*.safeframe.googlesyndication.com',
         "'self'",
       ],
       defaultSrcExpectation: [
