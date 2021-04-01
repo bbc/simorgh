@@ -386,7 +386,7 @@ export const service = {
       },
       {
         title: 'دانش',
-        url: '/persian/topics/cp0e57wejkzt',
+        url: '/persian/topics/ckdxnwr4r1yt',
       },
       {
         title: 'ناظران می‌گویند',
