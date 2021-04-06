@@ -78,4 +78,10 @@ describe('PodcastExternalLinks', () => {
     const visuallyHiddenText = getAllByText(', A brand podcast');
     expect(visuallyHiddenText.length).toEqual(3);
   });
+
+  it('should contain the correct lang attribute', async () => {
+    const { getByText } = render(<Component links={links} />);
+    const linkText = getByText('Spotify');
+    expect(linkText.getAttribute('lang')).toEqual('en-GB');
+  });
 });

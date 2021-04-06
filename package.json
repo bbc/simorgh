@@ -9,7 +9,9 @@
     "@emotion/utils": "1.0.0",
     "lodash": "4.17.21",
     "elliptic": "6.5.4",
-    "moment": "2.29.1"
+    "moment": "2.29.1",
+    "color-string": "1.5.5",
+    "ssri": "8.0.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -189,7 +191,7 @@
     "compression-webpack-plugin": "6.1.1",
     "copy-webpack-plugin": "6.4.1",
     "crypto": "1.0.1",
-    "cypress": "5.6.0",
+    "cypress": "6.8.0",
     "cypress-multi-reporters": "1.4.0",
     "depcheck": "1.4.0",
     "eslint": "7.22.0",
