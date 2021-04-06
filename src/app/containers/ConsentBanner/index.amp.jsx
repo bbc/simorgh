@@ -55,8 +55,8 @@ const Amp = () => (
         />
         <Banner
           type="cookie"
-          acceptAction="tap:content.focus(), consent.accept"
-          rejectAction="tap:content.focus(), consent.reject"
+          acceptAction="tap:brandLink.focus(), consent.accept"
+          rejectAction="tap:brandLink.focus(), consent.reject"
           promptId="cookie"
           hidden
         />

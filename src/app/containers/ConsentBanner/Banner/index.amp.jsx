@@ -6,8 +6,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
-const Button = (message, onClick, dataAttribute, className) => (
-  <button type="button" on={onClick} {...dataAttribute} className={className}>
+const Button = (message, onClick, dataAttribute) => (
+  <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
@@ -60,7 +60,6 @@ const AmpConsentBannerContainer = ({
         translations.consentBanner[type].accept,
         acceptAction,
         dataAttribute('accept'),
-        'privacyAccept',
       )}
       reject={Anchor(
         translations.consentBanner[type].reject,
