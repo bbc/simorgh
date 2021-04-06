@@ -10,7 +10,7 @@
     "lodash": "4.17.21",
     "elliptic": "6.5.4",
     "moment": "2.29.1",
-    "color-string": "1.5.4",
+    "color-string": "1.5.5",
     "ssri": "8.0.1"
   },
   "scripts": {
