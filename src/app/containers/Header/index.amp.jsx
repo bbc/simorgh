@@ -11,6 +11,17 @@ const AmpScriptWrapper = styled.div`
 `;
 
 const AmpHeader = ({ borderBottom, skipLink, scriptLink }) => {
+  const script = `
+    const accept = document.querySelector('button[on*="tap:cookie.show, privacy.hide"]');
+    console.log(accept);
+    const brandContainer = document.querySelector('#brandContainer');
+    console.log(brandContainer);
+    const brandLink = brandContainer.querySelector('a');
+    accept.addEventListener('click', () => {
+      brandLink.focus();
+    });
+  `;
+
   return (
     <>
       <Helmet>
@@ -23,15 +34,15 @@ const AmpHeader = ({ borderBottom, skipLink, scriptLink }) => {
           custom-element="amp-script"
           src="https://cdn.ampproject.org/v0/amp-script-0.1.js"
         />
-        <script id="focus-management" type="text/plain" target="amp-script">
-          const accept = document.querySelector('button[data-cookie-banner="accept"]');
-          const reject = document.querySelector('button[data-cookie-banner="reject"]');
-          accept.addEventListener('click', () => {
-            document.querySelector('#brandContainer a').focus();
-          });
-        </script>
       </Helmet>
       <AmpScriptWrapper>
+        <script
+          id="focus-management"
+          type="text/plain"
+          target="amp-script"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: script }}
+        />
         <amp-script
           script="focus-management"
           layout="container"

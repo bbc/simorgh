@@ -50,12 +50,6 @@ const HeaderContainer = () => {
     </SkipLink>
   );
 
-  if (isAmp) {
-    console.log('YEEEEEEET');
-  } else {
-    console.log('FUUUUUUUUUCK');
-  }
-
   const Header = () => (
     <>
       <ConsentBanner onDismissFocusRef={brandRef} />
