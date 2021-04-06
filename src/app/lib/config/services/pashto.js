@@ -193,10 +193,9 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'زموږ ملګري د ',
+                first: 'موږ ستاسې د اسانۍ لپاره ',
                 linkText: 'کوکیز',
-                last:
-                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                last: ' کاروو. راته ووایاست چې ایا ډېټا در لېږلی شو',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

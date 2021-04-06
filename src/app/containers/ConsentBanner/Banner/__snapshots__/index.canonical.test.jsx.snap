@@ -255,13 +255,13 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
           class="emotion-8 emotion-9"
           dir="ltr"
         >
-          We and our partners use technologies, such as 
+          We use 
           <a
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
             cookies
           </a>
-          , and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.
+           to give you the best online experience. Please let us know if you agree to all of these cookies.
         </p>
         <ul
           class="emotion-10 emotion-11"
@@ -554,13 +554,13 @@ exports[`Canonical Consent Banner Container should correctly render cookie banne
           class="emotion-8 emotion-9"
           dir="rtl"
         >
-          نستخدم نحن وشركاؤنا تقنيات مثل 
+          نستخدم 
           <a
             href="https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/"
           >
-            ملفات الارتباط
+            ملفات ارتباط
           </a>
-          ، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.
+           لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .
         </p>
         <ul
           class="emotion-10 emotion-11"
