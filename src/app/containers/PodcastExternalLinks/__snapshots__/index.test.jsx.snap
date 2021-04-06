@@ -151,7 +151,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             role="text"
           >
             <span
-              lang="ru"
+              lang="en-GB"
             >
               Apple
             </span>
@@ -176,7 +176,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             role="text"
           >
             <span
-              lang="ru"
+              lang="en-GB"
             >
               Spotify
             </span>
@@ -201,7 +201,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             role="text"
           >
             <span
-              lang="ru"
+              lang="en-GB"
             >
               RSS
             </span>
