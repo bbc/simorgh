@@ -248,7 +248,7 @@ describe('StoryPromo Container', () => {
         <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
-      expect(container.getElementsByTagName('amp-img').length).toEqual(1);
+      expect(container.getElementsByTagName('amp-img').length).toEqual(7);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
