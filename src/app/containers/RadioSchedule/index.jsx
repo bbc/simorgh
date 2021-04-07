@@ -88,7 +88,6 @@ const RadioScheduleContainer = ({
     service,
     script,
     dir,
-    timezone,
     radioSchedule: radioScheduleConfig = {},
   } = useContext(ServiceContext);
   const location = useLocation();
@@ -174,8 +173,7 @@ const RadioScheduleContainer = ({
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper data-e2e="radio-schedule">
         <RadioScheduleItems
-          schedules={radioSchedule}
-          timezone={timezone}
+          schedule={radioSchedule}
           durationLabel={durationLabel}
         />
         {frequenciesPageUrl && (
