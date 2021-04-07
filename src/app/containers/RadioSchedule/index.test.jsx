@@ -50,7 +50,7 @@ const RadioScheduleWithContext = ({
     </RequestContextProvider>
   </ToggleContext.Provider>
 );
-describe('RadioScheduleData', () => {
+describe('Radio Schedule', () => {
   beforeEach(() => {
     fetchMock.restore();
   });
