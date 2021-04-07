@@ -17,6 +17,9 @@ const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',
 };
 
+const imageUrl =
+  'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg';
+
 const WrappedImageWithPlaceholder = ({ isAmp, ...otherProps }) => (
   <ServiceContext.Provider value={serviceContextStubNews}>
     <RequestContextProvider
@@ -58,7 +61,7 @@ WrappedImageWithPlaceholder.defaultProps = {
   width: null,
 };
 
-const baseFixture = {
+const baseFixture = (src = imageUrl) => ({
   alt: 'Pauline Clayton',
   children: null,
   copyright: 'Getty Images',
@@ -67,17 +70,15 @@ const baseFixture = {
   lazyLoad: false,
   isAmp: false,
   ratio: 56.25,
-  src:
-    'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
-  srcset:
-    'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w',
+  src,
+  srcset: `${src} 640w`,
   width: 640,
-};
+});
 
 // eslint-disable-next-line react/prop-types
 export const ImageWithPlaceholder = ({ preload = false }) => {
   const props = {
-    ...baseFixture,
+    ...baseFixture(),
     preload,
   };
   return <WrappedImageWithPlaceholder {...props} />;
@@ -85,7 +86,16 @@ export const ImageWithPlaceholder = ({ preload = false }) => {
 
 export const AmpImageWithPlaceholder = () => {
   const props = {
-    ...baseFixture,
+    ...baseFixture(),
+    isAmp: true,
+  };
+
+  return <WrappedImageWithPlaceholder {...props} />;
+};
+
+export const AmpImageWithPlaceholderFallback = () => {
+  const props = {
+    ...baseFixture('foo'),
     isAmp: true,
   };
 
@@ -95,7 +105,7 @@ export const AmpImageWithPlaceholder = () => {
 // eslint-disable-next-line react/prop-types
 export const LazyLoadImageWithPlaceholder = ({ fallback, lazyLoad = true }) => {
   const props = {
-    ...baseFixture,
+    ...baseFixture(),
     fallback,
     lazyLoad,
   };
