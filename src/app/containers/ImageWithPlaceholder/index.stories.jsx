@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
-  AmpImageWithPlaceholderFallback,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
@@ -16,5 +15,4 @@ storiesOf('Containers/Image with Placeholder/Canonical', module)
 storiesOf('Containers/Image with Placeholder/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(AmpDecorator)
-  .add('default', () => <AmpImageWithPlaceholder />)
-  .add('with an invalid img src', () => <AmpImageWithPlaceholderFallback />);
+  .add('default', () => <AmpImageWithPlaceholder />);

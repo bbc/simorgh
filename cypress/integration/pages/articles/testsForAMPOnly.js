@@ -18,21 +18,16 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
   variant,
 }) =>
   describe(`Running testsForAMPOnly for ${service} ${pageType}`, () => {
-    if (serviceHasFigure(service)) {
-      it('should contain an amp-img', () => {
+    it('should contain an amp-img', () => {
+      if (serviceHasFigure(service)) {
         cy.get('figure')
           .eq(0)
           .should('be.visible')
           .within(() => {
             cy.get('amp-img').should('be.visible');
           });
-      });
-
-      it('should have a placeholder and fallback for amp-image', () => {
-        cy.get('div[placeholder]').eq(0).should('be.hidden');
-        cy.get('div[fallback]').eq(0).should('be.hidden');
-      });
-    }
+      }
+    });
 
     describe('Media Player: AMP', () => {
       it('should render a placeholder image', () => {
