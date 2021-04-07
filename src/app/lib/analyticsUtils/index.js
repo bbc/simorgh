@@ -10,8 +10,9 @@ import {
   XTOR_CAMPAIGN_IDENTIFIER,
   SUPPORTED_MEDIUM_CAMPAIGN_TYPES,
 } from './analytics.const';
+import getAmpDestination from './getAmpDestination';
 
-export const getDestination = statsDestination => {
+export const getDestination = (platform, statsDestination) => {
   const destinationIDs = {
     NEWS_PS: 598285,
     NEWS_LANGUAGES_PS: 598291,
@@ -34,6 +35,37 @@ export const getDestination = statsDestination => {
     SPORT_PS: 598310,
     SPORT_PS_TEST: 598311,
   };
+
+  const geoVariants = {
+    NEWS_PS: {
+      PS: destinationIDs.NEWS_PS,
+      GNL: destinationIDs.NEWS_GNL,
+    },
+    NEWS_PS_TEST: {
+      PS: destinationIDs.NEWS_PS_TEST,
+      GNL: destinationIDs.NEWS_GNL_TEST,
+    },
+    SPORT_PS: {
+      PS: destinationIDs.SPORT_PS,
+      GNL: destinationIDs.SPORT_GNL,
+    },
+    SPORT_PS_TEST: {
+      PS: destinationIDs.SPORT_PS_TEST,
+      GNL: destinationIDs.SPORT_GNL_TEST,
+    },
+    NEWS_LANGUAGES_PS: {
+      PS: destinationIDs.NEWS_LANGUAGES_PS,
+      GNL: destinationIDs.NEWS_LANGUAGES_GNL,
+    },
+    NEWS_LANGUAGES_PS_TEST: {
+      PS: destinationIDs.NEWS_LANGUAGES_PS_TEST,
+      GNL: destinationIDs.NEWS_LANGUAGES_GNL_TEST,
+    },
+  };
+
+  if (platform === 'amp' && geoVariants[statsDestination]) {
+    return getAmpDestination(geoVariants[statsDestination]);
+  }
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
 };
