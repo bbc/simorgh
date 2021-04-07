@@ -80,11 +80,11 @@ const programGridProps = {
   },
 };
 
-const RadioScheduleItems = ({ schedules, ...props }) => {
+const RadioScheduleItems = ({ schedule, ...props }) => {
   const { dir } = useContext(ServiceContext);
   return (
     <StyledGrid forwardedAs="ul" dir={dir} {...schedulesGridProps} role="list">
-      {schedules.map(({ id, ...program }) => (
+      {schedule.map(({ id, ...program }) => (
         <StyledFlexGrid
           dir={dir}
           parentColumns={schedulesGridProps.columns}
@@ -124,17 +124,13 @@ renderScheduleItem.defaultProps = {
 };
 
 RadioScheduleItems.propTypes = {
-  schedules: arrayOf(programPropTypes).isRequired,
+  schedule: arrayOf(programPropTypes).isRequired,
   durationLabel: string.isRequired,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
 
-/* eslint-disable react/default-props-match-prop-types */
 RadioScheduleItems.defaultProps = {
-  dir: 'ltr',
-  timezone: 'Europe/London',
-  locale: 'en-gb',
   linkComponent: 'a',
   linkComponentAttr: 'href',
 };
