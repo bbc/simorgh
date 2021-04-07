@@ -98,7 +98,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Ac0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Article%2BHeadline%2Bfor%2BSEO]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Royal%2BWedding%2B2018~Duchess%2Bof%2BSussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]&ref=\${documentReferrer}",
+          "pageviewParams": "s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)&s2=64&p=news.articles.c0000000001o.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x1=[urn%3Abbc%3Aoptimo%3Ac0000000001o]&x2=[amp]&x3=[news]&x4=[en-gb]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article]&x8=[simorgh]&x9=[Article%2BHeadline%2Bfor%2BSEO]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[Royal%2BWedding%2B2018~Duchess%2Bof%2BSussex]&x14=[2351f2b2-ce36-4f44-996d-c3c4f7f90eaa~803eaeb9-c0c3-4f1b-9a66-90efac3df2dc]&ref=\${documentReferrer}",
         }
       `);
     });
@@ -137,7 +137,7 @@ describe('ATI Analytics Container', () => {
 
       expect(mockAmp.mock.calls[0][0]).toMatchInlineSnapshot(`
         Object {
-          "pageviewParams": "s=598286&s2=64&p=news.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&ref=\${documentReferrer}",
+          "pageviewParams": "s=$IF($EQUALS($MATCH(\${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598286, 598288)&s2=64&p=news.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=00-00-00&lng=\${browserLanguage}&x2=[amp]&x3=[news]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[index-home]&x8=[simorgh]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&ref=\${documentReferrer}",
         }
       `);
     });
