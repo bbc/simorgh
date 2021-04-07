@@ -196,11 +196,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
-                linkText: 'کوکی ها',
+                first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
+                linkText: 'کوکی',
                 last:
-                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                  ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -387,7 +386,7 @@ export const service = {
       },
       {
         title: 'دانش',
-        url: '/persian/topics/cp0e57wejkzt',
+        url: '/persian/topics/ckdxnwr4r1yt',
       },
       {
         title: 'ناظران می‌گویند',
