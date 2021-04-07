@@ -26,6 +26,7 @@ Object {
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page AMP Geo config 1`] = `
 Object {
+  "AmpBind": true,
   "ISOCountryGroups": Object {
     "eea": Array [
       "at",
