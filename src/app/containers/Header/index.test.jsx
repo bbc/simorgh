@@ -6,6 +6,7 @@ import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
@@ -55,7 +56,9 @@ const HeaderContainerWithContext = ({
         pathname="/pathname"
         variant={variant}
       >
-        <HeaderContainer />
+        <UserContextProvider>
+          <HeaderContainer />
+        </UserContextProvider>
       </RequestContextProvider>
     </ServiceContext.Provider>
   </ToggleContext.Provider>
@@ -165,6 +168,45 @@ describe(`Header`, () => {
 
       const skipLink = document.querySelector("a[href$='#content']");
       expect(skipLink).toHaveAttribute('lang', 'ru-UA');
+    });
+
+    it('should focus on consent banner heading on mount', () => {
+      const initialFocusElement = document.activeElement;
+      const { getByText } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+      const pidginPrivacyHeading =
+        pidginServiceConfig.default.translations.consentBanner.privacy.title;
+      expect(document.activeElement).not.toBe(initialFocusElement);
+      expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
+    });
+
+    it('should focus on the brand link on cookie banner accept', () => {
+      const { getByText } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      const pidginPrivacyAccept =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieAccept =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .accept;
+      const logoHref = pidginServiceConfig.default.navigation[0].url;
+
+      getByText(pidginPrivacyAccept).click();
+      getByText(pidginCookieAccept).click();
+
+      expect(document.activeElement).toBe(
+        document.querySelector(`a[href="${logoHref}"]`),
+      );
     });
   });
 });

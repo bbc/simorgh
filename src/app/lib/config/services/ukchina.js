@@ -255,10 +255,9 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: '我们及合作伙伴使用例如',
+                first: '我们使用',
                 linkText: 'cookies',
-                last:
-                  '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
+                last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

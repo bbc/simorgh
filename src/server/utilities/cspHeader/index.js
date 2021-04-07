@@ -12,7 +12,6 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 const advertisingDirectives = {
   connectSrc: [
     'https://csi.gstatic.com',
-    'https://experience.tinypass.com',
     'https://pagead2.googlesyndication.com',
     'https://*.g.doubleclick.net',
     'https://survey.effectivemeasure.net',
@@ -21,13 +20,15 @@ const advertisingDirectives = {
     'https://adservice.google.com',
     'https://tpc.googlesyndication.com',
     'https://ad.doubleclick.net',
-    'https://googleads.g.doubleclick.net',
-    'https://securepubads.g.doubleclick.net',
+    'https://fundingchoicesmessages.google.com',
+    'https://secure-dcr-cert.imrworldwide.com',
+    'https://pixel.adsafeprotected.com',
+    'https://cdn.adsafeprotected.com',
+    'https://*.safeframe.googlesyndication.com',
   ],
   frameSrc: [
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
-    'https://bcp.crwdcntrl.net',
     'https://edigitalsurvey.com',
     'https://*.safeframe.googlesyndication.com',
     'https://ad.doubleclick.net',
@@ -47,30 +48,25 @@ const advertisingDirectives = {
     'https://fwvc.adsafeprotected.com',
     'https://pixel.adsafeprotected.com',
     'https://ad.doubleclick.net',
-    'https://googleads.g.doubleclick.net',
     'https://static.doubleclick.net',
     'https://www.gstatic.com',
-    'https://securepubads.g.doubleclick.net',
   ],
   scriptSrc: [
-    'https://ad.crwdcntrl.net',
     'https://adservice.google.co.uk',
     'https://adservice.google.com',
-    'https://bcp.crwdcntrl.net',
     'https://cdn.ampproject.org',
     'https://collector.effectivemeasure.net',
     'https://me-ssl.effectivemeasure.net',
     'https://pixel.adsafeprotected.com',
-    'https://privacy.crwdcntrl.net',
     'https://sb.scorecardresearch.com',
     'https://static.adsafeprotected.com',
     'https://*.g.doubleclick.net',
     'https://t.effectivemeasure.net',
-    'https://tags.crwdcntrl.net',
     'https://tpc.googlesyndication.com',
     'https://www.googletagservices.com',
-    'https://securepubads.g.doubleclick.net',
     'https://bbc.gscontxt.net',
+    'https://secure-us.imrworldwide.com/',
+    'https://fundingchoicesmessages.google.com',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
@@ -79,6 +75,8 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://*.safeframe.googlesyndication.com',
   ],
+  styleSrc: ['https://fonts.googleapis.com'],
+  fontSrc: ['https://fonts.gstatic.com'],
 };
 
 const directives = {
@@ -268,6 +266,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
     ampNonLive: [...bbcDomains, "'unsafe-inline'"],
@@ -275,6 +274,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
   },
@@ -283,11 +283,13 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      ...advertisingDirectives.fontSrc,
     ],
   },
   mediaSrc: {

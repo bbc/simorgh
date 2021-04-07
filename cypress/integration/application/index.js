@@ -1,6 +1,7 @@
 import config from '../../support/config/services';
 import appConfig from '../../../src/server/utilities/serviceConfigs';
 import serviceHasPageType from '../../support/helpers/serviceHasPageType';
+import ampOnlyServices from '../../support/helpers/ampOnlyServices';
 
 const servicesUsingArticlePaths = ['news', 'scotland'];
 
@@ -13,26 +14,27 @@ describe('Application', () => {
     )
     .forEach(service => {
       const usesArticlePath = servicesUsingArticlePaths.includes(service);
-
-      it(`should return a 200 status code for ${service}'s service worker`, () => {
-        cy.testResponseCodeAndType({
-          path: usesArticlePath
-            ? `/${config[service].name}/articles/sw.js`
-            : `/${config[service].name}/sw.js`,
-          responseCode: 200,
-          type: 'application/javascript',
+      if (!ampOnlyServices.includes(service)) {
+        it(`should return a 200 status code for ${service}'s service worker`, () => {
+          cy.testResponseCodeAndType({
+            path: usesArticlePath
+              ? `/${config[service].name}/articles/sw.js`
+              : `/${config[service].name}/sw.js`,
+            responseCode: 200,
+            type: 'application/javascript',
+          });
         });
-      });
 
-      it(`should return a 200 status code for ${service} manifest file`, () => {
-        cy.testResponseCodeAndType({
-          path: usesArticlePath
-            ? `/${config[service].name}/articles/manifest.json`
-            : `/${config[service].name}/manifest.json`,
-          responseCode: 200,
-          type: 'application/json',
+        it(`should return a 200 status code for ${service} manifest file`, () => {
+          cy.testResponseCodeAndType({
+            path: usesArticlePath
+              ? `/${config[service].name}/articles/manifest.json`
+              : `/${config[service].name}/manifest.json`,
+            responseCode: 200,
+            type: 'application/json',
+          });
         });
-      });
+      }
     });
 });
 

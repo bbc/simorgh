@@ -186,10 +186,9 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'BBC와 파트너사는 ',
+                first: 'BBC는 이용자에게 최적의 온라인 경험을 제공하기 위해 ',
                 linkText: '쿠키',
-                last:
-                  ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
+                last: ' 정보를 이용합니다. 쿠키 수집에 동의하십니까?',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

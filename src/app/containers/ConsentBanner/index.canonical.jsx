@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { oneOfType, func, shape, any } from 'prop-types';
 import Banner from './Banner/index.canonical';
 import consentBannerUtilities from './CanonicalLogic';
 import { UserContext } from '#contexts/UserContext';
 
-const Canonical = () => {
+const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
   const [showPrivacy, setShowPrivacyBanner] = useState(false);
   const [showCookie, setShowCookieBanner] = useState(false);
@@ -18,9 +19,14 @@ const Canonical = () => {
 
   useEffect(runInitial, []);
 
-  const onCookieAccept = () => {
-    cookieOnAllow();
-    updateCookiePolicy();
+  const onCookieAction = actionType => {
+    if (actionType === 'accept') {
+      cookieOnAllow();
+      updateCookiePolicy();
+      onDismissFocusRef?.current?.querySelector('a')?.focus();
+    } else if (actionType === 'reject') {
+      cookieOnReject();
+    }
   };
 
   return (
@@ -35,12 +41,21 @@ const Canonical = () => {
       {!showPrivacy && showCookie ? (
         <Banner
           type="cookie"
-          onAccept={onCookieAccept}
-          onReject={cookieOnReject}
+          onAccept={() => onCookieAction('accept')}
+          onReject={() => onCookieAction('reject')}
         />
       ) : null}
     </>
   );
+};
+
+Canonical.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  onDismissFocusRef: oneOfType([func, shape({ current: any })]),
+};
+
+Canonical.defaultProps = {
+  onDismissFocusRef: null,
 };
 
 export default Canonical;
