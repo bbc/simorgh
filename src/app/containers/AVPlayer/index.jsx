@@ -13,6 +13,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 
+import AudioLoader from '#components/MediaPlayer/AudioLoader';
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -100,7 +101,9 @@ export default props => {
   // eslint-disable-next-line react/prop-types
   const { skin } = props;
   return skin === 'audio' ? (
-    <AudioPlayer {...props} />
+    <AudioLoader>
+      <AudioPlayer {...props} />
+    </AudioLoader>
   ) : (
     <AVPlayer {...props} />
   );
