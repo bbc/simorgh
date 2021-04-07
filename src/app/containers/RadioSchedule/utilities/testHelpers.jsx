@@ -16,6 +16,8 @@ const RadioSchedulesWithContext = ({
   radioScheduleToggle = false,
   isAmp = false,
   initialData,
+  script,
+  dir,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -30,7 +32,7 @@ const RadioSchedulesWithContext = ({
       pathname={`/${service}`}
       timeOnServer={Date.now()}
     >
-      <ServiceContextProvider service={service}>
+      <ServiceContextProvider service={service} script={script} dir={dir}>
         <BrowserRouter>
           <RadioScheduleContainer initialData={initialData} />
         </BrowserRouter>
