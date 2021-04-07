@@ -4,14 +4,7 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { grid } from '@bbc/psammead-styles/detection';
 import Grid from '@bbc/psammead-grid';
-import {
-  arrayOf,
-  elementType,
-  number,
-  shape,
-  string,
-  oneOfType,
-} from 'prop-types';
+import { arrayOf, number, shape, string } from 'prop-types';
 import ProgramCard from '../ProgramCard';
 import StartTime from '../StartTime';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -38,18 +31,6 @@ const StyledFlexGrid = styled(Grid)`
   position: relative;
   padding-bottom: ${GEL_SPACING_DBL};
 `;
-
-const renderScheduleItem = ({ program, ...props }) => {
-  const { startTime } = program;
-  return (
-    <>
-      <StartTimeWrapper>
-        <StartTime timestamp={startTime} />
-      </StartTimeWrapper>
-      <ProgramCard {...props} program={program} />
-    </>
-  );
-};
 
 const schedulesGridProps = {
   enableGelGutters: true,
@@ -95,7 +76,10 @@ const RadioScheduleItems = ({ schedule, ...props }) => {
           data-e2e={program.state}
           role="listitem"
         >
-          {renderScheduleItem({ ...props, program })}
+          <StartTimeWrapper>
+            <StartTime timestamp={program.startTime} />
+          </StartTimeWrapper>
+          <ProgramCard {...props} program={program} />
         </StyledFlexGrid>
       ))}
     </StyledGrid>
@@ -111,28 +95,8 @@ const programPropTypes = shape({
   duration: string.isRequired,
 });
 
-renderScheduleItem.propTypes = {
-  program: programPropTypes.isRequired,
-  durationLabel: string.isRequired,
-  linkComponent: oneOfType([elementType, string]),
-  linkComponentAttr: string,
-};
-
-renderScheduleItem.defaultProps = {
-  linkComponent: 'a',
-  linkComponentAttr: 'href',
-};
-
 RadioScheduleItems.propTypes = {
   schedule: arrayOf(programPropTypes).isRequired,
-  durationLabel: string.isRequired,
-  linkComponent: oneOfType([elementType, string]),
-  linkComponentAttr: string,
-};
-
-RadioScheduleItems.defaultProps = {
-  linkComponent: 'a',
-  linkComponentAttr: 'href',
 };
 
 export default RadioScheduleItems;
