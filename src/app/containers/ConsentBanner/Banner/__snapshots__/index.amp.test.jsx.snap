@@ -225,7 +225,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       >
         <h2
           class="emotion-4 emotion-5"
-          id="cookieHeading"
           tabindex="-1"
         >
           Let us know you agree to data collection on AMP
@@ -611,7 +610,6 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       >
         <h2
           class="emotion-4 emotion-5"
-          id="cookieHeading"
           tabindex="-1"
         >
           أعلمونا بموافقتكم على جمع المعلومات من خلال AMP
