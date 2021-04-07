@@ -1,7 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { string, number, bool, node } from 'prop-types';
 import LazyLoad from 'react-lazyload';
-import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import styled from '@emotion/styled';
+import ImagePlaceholder, {
+  ImagePlaceholderAmp,
+} from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
 import { Helmet } from 'react-helmet';
 import { RequestContext } from '#contexts/RequestContext';
@@ -42,6 +45,10 @@ const ImageWithPlaceholder = ({
     <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
 
+  const AmpImgWrapper = styled.div`
+    position: relative;
+  `;
+
   const shouldPreload = !isAmp && preload;
 
   return (
@@ -57,11 +64,8 @@ const ImageWithPlaceholder = ({
           />
         </Helmet>
       )}
-      <ImagePlaceholder
-        style={isLoaded ? { background: 'none' } : null}
-        ratio={ratio}
-      >
-        {isAmp ? (
+      {isAmp ? (
+        <AmpImgWrapper>
           <AmpImg
             alt={alt}
             attribution={copyright || ''}
@@ -70,12 +74,20 @@ const ImageWithPlaceholder = ({
             srcset={srcset}
             height={height}
             width={width}
-          />
-        ) : (
-          renderImage(imageToRender, lazyLoad, fallback)
-        )}
-        {children}
-      </ImagePlaceholder>
+          >
+            <ImagePlaceholderAmp />
+          </AmpImg>
+          {children}
+        </AmpImgWrapper>
+      ) : (
+        <ImagePlaceholder
+          style={isLoaded ? { background: 'none' } : null}
+          ratio={ratio}
+        >
+          {renderImage(imageToRender, lazyLoad, fallback)}
+          {children}
+        </ImagePlaceholder>
+      )}
     </>
   );
 };
