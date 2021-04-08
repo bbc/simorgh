@@ -198,10 +198,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'Biz ve ortaklarımız ',
-                linkText: 'çerezleri gibi',
+                first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
+                linkText: 'çerezler',
                 last:
-                  ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
+                  ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

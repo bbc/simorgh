@@ -192,10 +192,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first: 'අප සහ අපේ හවුල්කරුවන් කුකීස් ',
-                linkText: 'වැනි තාක්ෂණය',
+                first: 'අප කුකීස් ',
+                linkText: 'භාවිත කරන්නේ',
                 last:
-                  ' භාවිත කරමින් බ්‍රවුසිං දත්ත රැස්කරන්නේ ඔබට හොඳම ඔන්ලයින් අත්දැකීම ලබාදීම සහ ඔබට පෙනෙන අන්තර්ගතය හා වෙළෙඳ ප්‍රචාරණ ඔබටම සමීප කිරීම සඳහාය. මීට ඔබ එකඟ නම් කරුණාකර ඒ බව අපට දන්වන්න.',
+                  ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

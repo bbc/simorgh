@@ -201,11 +201,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'Nosotros y nuestros socios usamos tecnologías, como las ',
+                first: 'Usamos ',
                 linkText: 'cookies',
                 last:
-                  ', y recogemos datos de búsqueda para ofrecerte la mejor experiencia online y personalizar el contenido y la publicidad que se te muestra. Por favor, déjanos saber si estás de acuerdo.',
+                  ' para ofrecerte la mejor experiencia online. Déjanos saber si aceptas todas estas cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -351,8 +350,8 @@ export const service = {
         url: '/mundo/internacional',
       },
       {
-        title: 'EE.UU. 2020',
-        url: '/mundo/noticias-internacional-53826365',
+        title: 'Coronavirus',
+        url: '/mundo/topics/c67q9nnn8z7t',
       },
       {
         title: 'Hay Festival',

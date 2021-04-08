@@ -1,0 +1,444 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09bplch",
+    "locators": { "pid": "p09bplch", "brandPid": "p09431p4" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_marathi_audio",
+    "language": "mr",
+    "lastUpdated": 1616674396776,
+    "firstPublished": 1616601119000,
+    "lastPublished": 1616601119000,
+    "timestamp": 1616601119000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "तीन गोष्टी - BBC News मराठी",
+      "pageIdentifier": "marathi.bbc_marathi_audio.p09bplch.page",
+      "producerId": "59",
+      "contentType": "player-episode",
+      "producer": "MARATHI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "तीन गोष्टी",
+    "releaseDateTimeStamp": 1616544000000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p09bplch",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "24 तासांत एकट्या मुंबईत पाच हजार रुग्ण सापडलेत",
+          "long": "राज्यात गेल्या 24 तासांत 31 हजारांवर रुग्ण सापडलेत तर एकट्या मुंबईत हा आकडा पाच हजारापार गेलेला पाहायला मिळाला. तज्ज्ञ म्हणतात की लॉकडाऊनशिवाय पर्याय नाही. पण प्रशासन काय निर्णय घेणार?\nमहाराष्ट्रात कोरोनाचं दुहेरी म्युटेशन पाहायला मिळतंय. याचा अर्थ काय होतो? यामुळे महाराष्ट्रात रुग्णसंख्या खूप वाढत आहे का?\nमुख्यमंत्री उद्धव ठाकरे आणि गृहमंत्री अनिल देशमुख यांच्या अडचणींमध्ये वाढ होतोना दिसतेय. विरोधक आक्रमक होतायत, महाविकास आघाडी अशावेळी काय पवित्रा घेतेय? \nऐका या सगळ्याबद्दल आजच्या तीन गोष्टींमध्ये."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09bplkg.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09bphm6",
+            "types": ["Podcast"],
+            "duration": 1889,
+            "durationISO8601": "PT31M29S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1617202020000,
+            "availableFrom": 1616600820000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "कोरोना लॉकडाऊन मुंबई, महाराष्ट्रात लागेल? | राज्यात दुहेरी म्युटेशन | उद्धव ठाकरेंच्या अडचणी वाढल्या (BBC News Marathi)",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "तीन गोष्टी" },
+    "locators": { "pid": "p09bplch", "brandPid": "p09431p4" },
+    "media": {
+      "id": "p09bplch",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "24 तासांत एकट्या मुंबईत पाच हजार रुग्ण सापडलेत",
+        "long": "राज्यात गेल्या 24 तासांत 31 हजारांवर रुग्ण सापडलेत तर एकट्या मुंबईत हा आकडा पाच हजारापार गेलेला पाहायला मिळाला. तज्ज्ञ म्हणतात की लॉकडाऊनशिवाय पर्याय नाही. पण प्रशासन काय निर्णय घेणार?\nमहाराष्ट्रात कोरोनाचं दुहेरी म्युटेशन पाहायला मिळतंय. याचा अर्थ काय होतो? यामुळे महाराष्ट्रात रुग्णसंख्या खूप वाढत आहे का?\nमुख्यमंत्री उद्धव ठाकरे आणि गृहमंत्री अनिल देशमुख यांच्या अडचणींमध्ये वाढ होतोना दिसतेय. विरोधक आक्रमक होतायत, महाविकास आघाडी अशावेळी काय पवित्रा घेतेय? \nऐका या सगळ्याबद्दल आजच्या तीन गोष्टींमध्ये."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09bplkg.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p09bphm6",
+          "types": ["Podcast"],
+          "duration": 1889,
+          "durationISO8601": "PT31M29S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1617202020000,
+          "availableFrom": 1616600820000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "कोरोना लॉकडाऊन मुंबई, महाराष्ट्रात लागेल? | राज्यात दुहेरी म्युटेशन | उद्धव ठाकरेंच्या अडचणी वाढल्या (BBC News Marathi)",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p09bplkg.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p09bplkg.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1616544000000,
+    "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09bplch",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Marathi",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p09bld3r", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p09bld3r",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "मुंबई, पुणे यांसह अनेक शहरांमध्ये नियम कठोर केले गेले आहेत.",
+                "long": "होळी आणि धुळवडीच्या पार्श्वभूमीवर मुंबईत नियम कडक करण्यात आले आहेत. \n1 एप्रिलपासून 45 वर्षांवरील सर्व व्यक्तींना मिळणार कोरोनाची लस.\nदेवेंद्र फडणवीस दिल्लीत गृहसचिवांच्या भेटीला. राज्य सरकारवर गंभीर आरोप.\n\nऐका हे सर्व आजच्या तीन गोष्टींमध्ये."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09bld48.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09blcr6",
+                  "types": ["Podcast"],
+                  "duration": 1882,
+                  "durationISO8601": "PT31M22S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1617118320000,
+                  "availableFrom": 1616517120000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "कोरोना महाराष्ट्र लॉकडाऊन: होळीसाठी कडक नियम | लसीकरण 1 एप्रिलपासून 45 वर्षांवरील सर्वांना (BBC News Marathi)",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09bld48.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09bld48.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1616457600000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09bld3r",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p09bh5fl", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p09bh5fl",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "कोव्हिशील्ड लशीचा दुसरा डोस आता 6-8 आठवड्यांनी का देणार?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09bh5gq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09bh4tq",
+                  "types": ["Podcast"],
+                  "duration": 1753,
+                  "durationISO8601": "PT29M13S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1617030060000,
+                  "availableFrom": 1616428860000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "कोरोना लस कोव्हिशील्ड दुसरा डोस | लॉकडाऊन निर्णय, नरेंद्र मोदी | अनिल देशमुख राजीनाम्याचा शरद पवारांवर दबाव?",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09bh5gq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09bh5gq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1616371200000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09bh5fl",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p09bbxjg", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p09bbxjg",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "महाराष्ट्रात का वाढत आहेत कोरोनाचे आकडे? अनिल देशमुख यांच्या राजीनाम्याची मागणी का होतेय?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09bbx14",
+                  "types": ["Podcast"],
+                  "duration": 1871,
+                  "durationISO8601": "PT31M11S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1616860260000,
+                  "availableFrom": 1616255460000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "महाराष्ट्रात कोरोनावरची लस मुंबईत बोलणार? | अनिल देशमुख यांच्यावर परमबीर सिंह यांचा लेटरबाँब (3 गोष्टी पॉडकास्ट)",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1616198400000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09bbxjg",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p09b85l4", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p09b85l4",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "महाराष्ट्रात नेमक्या कोणत्या जिल्ह्यांमध्ये आकडे वाढले? मुख्यमंत्र्यांचे लॉकडाऊनचे संकेत?",
+                "medium": "महाराष्ट्रात नेमक्या कोणत्या जिल्ह्यांमध्ये आकडे वाढले? मुख्यमंत्र्यांचे पुन्हा लॉकडाऊनचे संकेत?",
+                "long": "महाराष्ट्रात कोरोनाच्या दुसऱ्या लाटेत नेमक्या कोणत्या शहरांमध्ये किती आकडे वाढत आहेत? पाहा बीबीसी मराठीचं सखोल विश्लेषण.\nआणि महाराष्ट्र खरंच लॉकडाऊनच्या दिशेने वाटचाल करतोय का? उद्धव ठाकरे लॉकडाऊनवर काय म्हणाले?\nउत्तराखंडचे नवे मुख्यमंत्री तीरथ सिंह रावत यांच्या जीन्सच्या वक्तव्यावर कोण काय म्हणालं? \nऐकू या हे सगळं आजच्या तीन गोष्टींमध्ये"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09b85m9.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09b8490",
+                  "types": ["Podcast"],
+                  "duration": 1919,
+                  "durationISO8601": "PT31M59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1618757400000,
+                  "availableFrom": 1616169000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "महाराष्ट्रात कोरोना रुग्ण कुठे आणि कसे वाढले? | उद्धव ठाकरे लॉकडाऊनवर काय म्हणाले? (3 गोष्टी पॉडकास्ट) (BBC News Marathi)",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09b85m9.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09b85m9.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1616112000000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09b85l4",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p09b3hqh", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p09b3hqh",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "महाराष्ट्रात कोरोनाच्या आकड्यांमध्ये विक्रमी वाढ का होतेय?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09b3hbs",
+                  "types": ["Podcast"],
+                  "duration": 1828,
+                  "durationISO8601": "PT30M28S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1616687340000,
+                  "availableFrom": 1616082540000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "कोरोना महाराष्ट्र: पुणे, नागपूर नवे हॉटस्पॉट? | लशीचे दोन डोस का? | सचिन वाझे प्रकरण (BBC News Marathi)",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1616025600000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p09b3hqh",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "तीन गोष्टी" },
+            "locators": { "pid": "p094nsrm", "brandPid": "p09431p4" },
+            "media": {
+              "id": "p094nsrm",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "दिवसभरातल्या कोरोना आणि इतर घडामोडींचा आढावा",
+                "medium": "दिवसभरातल्या कोरोना आणि इतर सर्व महत्त्वाच्या घडामोडींचा आढावा घेणारं मराठीतलं पहिलं पॉडकास्ट."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p094nsgq",
+                  "types": ["Podcast"],
+                  "duration": 60,
+                  "durationISO8601": "PT1M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1611227580000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Welcome",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0940n97.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611187200000,
+            "brand": { "pid": "p09431p4", "title": "तीन गोष्टी" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p094nsrm",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

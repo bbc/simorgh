@@ -24,6 +24,7 @@ const advertisingDirectives = {
     'https://secure-dcr-cert.imrworldwide.com',
     'https://pixel.adsafeprotected.com',
     'https://cdn.adsafeprotected.com',
+    'https://*.safeframe.googlesyndication.com',
   ],
   frameSrc: [
     'https://*.g.doubleclick.net',
@@ -74,6 +75,8 @@ const advertisingDirectives = {
     'https://tpc.googlesyndication.com',
     'https://*.safeframe.googlesyndication.com',
   ],
+  styleSrc: ['https://fonts.googleapis.com'],
+  fontSrc: ['https://fonts.gstatic.com'],
 };
 
 const directives = {
@@ -263,6 +266,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
     ampNonLive: [...bbcDomains, "'unsafe-inline'"],
@@ -270,6 +274,7 @@ const directives = {
       ...bbcDomains,
       'https://platform.twitter.com', // Social Embeds
       'https://ton.twimg.com', // Social Embeds
+      ...advertisingDirectives.styleSrc,
       "'unsafe-inline'",
     ],
   },
@@ -278,11 +283,13 @@ const directives = {
     canonicalLive: [
       ...bbcDomains,
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      ...advertisingDirectives.fontSrc,
     ],
     ampNonLive: [...bbcDomains],
     canonicalNonLive: [
       ...bbcDomains,
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      ...advertisingDirectives.fontSrc,
     ],
   },
   mediaSrc: {

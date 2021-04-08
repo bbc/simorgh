@@ -26,6 +26,7 @@ Object {
 
 exports[`AMP Story Page AMP Geo config 1`] = `
 Object {
+  "AmpBind": true,
   "ISOCountryGroups": Object {
     "eea": Array [
       "at",
@@ -229,8 +230,8 @@ Object {
 
 exports[`AMP Story Page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "EE.UU. 2020",
-  "url": "/mundo/noticias-internacional-53826365",
+  "text": "Coronavirus",
+  "url": "/mundo/topics/c67q9nnn8z7t",
 }
 `;
 

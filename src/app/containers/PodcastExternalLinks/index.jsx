@@ -17,6 +17,16 @@ import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
+const EN_GB_LANG = 'en-GB';
+
+const ExternalLinkTextLangs = {
+  Spotify: EN_GB_LANG,
+  Apple: EN_GB_LANG,
+  RSS: EN_GB_LANG,
+  Yandex: EN_GB_LANG,
+  Castbox: EN_GB_LANG,
+};
+
 const Wrapper = styled.aside`
   border-top: 0.0625rem ${C_CLOUD_LIGHT} solid;
   border-bottom: 0.0625rem ${C_CLOUD_LIGHT} solid;
@@ -98,7 +108,9 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             <StyledListItem dir={dir} key={linkText}>
               <Link href={linkUrl} service={service} script={script} dir={dir}>
                 <span role="text">
-                  <span lang={lang}>{linkText}</span>
+                  <span lang={ExternalLinkTextLangs[linkText] || lang}>
+                    {linkText}
+                  </span>
                   <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
                 </span>
               </Link>
@@ -114,7 +126,9 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           dir={dir}
         >
           <span>
-            <span lang={lang}>{firstLink.linkText}</span>
+            <span lang={ExternalLinkTextLangs[firstLink.linkText] || lang}>
+              {firstLink.linkText}
+            </span>
             <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
           </span>
         </Link>
