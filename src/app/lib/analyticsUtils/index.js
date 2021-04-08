@@ -63,8 +63,36 @@ export const getDestination = (platform, statsDestination) => {
     },
   };
 
-  if (platform === 'amp' && geoVariants[statsDestination]) {
-    return getAmpDestination(geoVariants[statsDestination]);
+  if (platform === 'amp') {
+    switch (statsDestination) {
+      case 'NEWS_PS':
+      case 'NEWS_GNL': {
+        return getAmpDestination(geoVariants.NEWS);
+      }
+      case 'NEWS_PS_TEST':
+      case 'NEWS_GNL_TEST': {
+        return getAmpDestination(geoVariants.NEWS_TEST);
+      }
+      case 'SPORT_PS':
+      case 'SPORT_GNL': {
+        return getAmpDestination(geoVariants.SPORT);
+      }
+      case 'SPORT_PS_TEST':
+      case 'SPORT_GNL_TEST': {
+        return getAmpDestination(geoVariants.SPORT_TEST);
+      }
+      case 'NEWS_LANGUAGES_PS':
+      case 'NEWS_LANGUAGES_GNL': {
+        return getAmpDestination(geoVariants.NEWS_LANGUAGES);
+      }
+      case 'NEWS_LANGUAGES_PS_TEST':
+      case 'NEWS_LANGUAGES_GNL_TEST': {
+        return getAmpDestination(geoVariants.NEWS_LANGUAGES_TEST);
+      }
+      default: {
+        return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
+      }
+    }
   }
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
