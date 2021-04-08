@@ -35,25 +35,44 @@ const englishTranslations = {
   },
 };
 
+/* eslint-disable react/prop-types */
+const HeaderWithContext = ({
+  service,
+  script,
+  locale,
+  dir,
+  translations,
+  ...props
+}) => (
+  <ServiceContextProvider
+    script={script}
+    service={service}
+    locale={locale}
+    dir={dir}
+    timezone="GMT"
+    translations={translations}
+  >
+    <ScheduleItemHeader
+      {...props}
+      state={state}
+      link={link}
+      brandTitle={brandTitle}
+      startTime={startTime}
+      duration={duration}
+    />
+  </ServiceContextProvider>
+);
+
 it('should render the title', () => {
   const { getByText } = render(
-    <ServiceContextProvider
-      script={scripts.arabic}
+    <HeaderWithContext
       service="arabic"
+      script={scripts.arabic}
       locale="ar"
       dir="rtl"
-      timezone="GMT"
       translations={arabicTranslations}
-    >
-      <ScheduleItemHeader
-        {...arabicProps}
-        state={state}
-        link={link}
-        brandTitle={brandTitle}
-        startTime={startTime}
-        duration={duration}
-      />
-    </ServiceContextProvider>,
+      {...arabicProps}
+    />,
   );
 
   expect(getByText('BBC Xtra')).toBeInTheDocument();
@@ -61,23 +80,14 @@ it('should render the title', () => {
 
 it('should render the formatted duration for screenreaders', () => {
   const { getByText } = render(
-    <ServiceContextProvider
-      script={scripts.latin}
+    <HeaderWithContext
       service="news"
+      script={scripts.latin}
       locale="en_GB"
       dir="ltr"
-      timezone="Europe/London"
       translations={englishTranslations}
-    >
-      <ScheduleItemHeader
-        {...englishProps}
-        state={state}
-        link={link}
-        brandTitle={brandTitle}
-        startTime={startTime}
-        duration={duration}
-      />
-    </ServiceContextProvider>,
+      {...englishProps}
+    />,
   );
 
   expect(getByText(', Duration 30,00')).toBeInTheDocument();
@@ -85,23 +95,14 @@ it('should render the formatted duration for screenreaders', () => {
 
 it('should aria-hide the Live label', () => {
   const { container } = render(
-    <ServiceContextProvider
-      script={scripts.arabic}
+    <HeaderWithContext
       service="arabic"
+      script={scripts.arabic}
       locale="ar"
       dir="rtl"
-      timezone="GMT"
       translations={arabicTranslations}
-    >
-      <ScheduleItemHeader
-        {...arabicProps}
-        state={state}
-        link={link}
-        brandTitle={brandTitle}
-        startTime={startTime}
-        duration={duration}
-      />
-    </ServiceContextProvider>,
+      {...arabicProps}
+    />,
   );
 
   const hiddenDuration = container.querySelector('span[aria-hidden=true]');
@@ -110,23 +111,14 @@ it('should aria-hide the Live label', () => {
 
 it('should render a span with role=text so content is read out in single swipe', () => {
   const { container } = render(
-    <ServiceContextProvider
-      script={scripts.arabic}
+    <HeaderWithContext
       service="arabic"
+      script={scripts.arabic}
       locale="ar"
       dir="rtl"
-      timezone="GMT"
       translations={arabicTranslations}
-    >
-      <ScheduleItemHeader
-        {...arabicProps}
-        state={state}
-        link={link}
-        brandTitle={brandTitle}
-        startTime={startTime}
-        duration={duration}
-      />
-    </ServiceContextProvider>,
+      {...arabicProps}
+    />,
   );
 
   expect(container.querySelector('span[role=text]')).toBeInTheDocument();
