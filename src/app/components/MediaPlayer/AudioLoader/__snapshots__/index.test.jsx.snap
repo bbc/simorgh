@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Audio Loader should match snapshot 1`] = `
+@keyframes animation-0 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.emotion-4 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.3rem solid rgba(0, 0, 0, 0.2);
+  border-left-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: animation-0 1.1s infinite linear;
+  animation: animation-0 1.1s infinite linear;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      aria-hidden="true"
+      class="emotion-2 emotion-3"
+      data-testid="audio-loader-overlay"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      />
+    </div>
+    Content
+  </div>
+</div>
+`;
