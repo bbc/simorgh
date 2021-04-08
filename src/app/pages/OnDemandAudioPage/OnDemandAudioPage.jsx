@@ -122,9 +122,11 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
   } = useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
+  const hasRadioScheduleData = Boolean(radioScheduleData);
   const { enabled } = useToggle('radioSchedule');
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
-  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
+  const displayRadioSchedule =
+    !isAmp && enabled && hasRadioScheduleData && hasRadioSchedule;
 
   const mediaId = getMediaId({
     assetId: episodeId,
@@ -255,7 +257,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           />
         </PageGrid>
       )}
-      {radioScheduleData && radioScheduleEnabled && (
+      {displayRadioSchedule && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

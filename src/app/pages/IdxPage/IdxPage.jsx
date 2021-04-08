@@ -80,10 +80,6 @@ const IdxPage = ({
   radioScheduleEndpointOverride,
 }) => {
   const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
-  const { isAmp } = useContext(RequestContext);
-  const { enabled } = useToggle('radioSchedule');
-  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
-  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   const groups = path(['content', 'groups'], pageData);
   const title = path(['metadata', 'title'], pageData);
@@ -93,6 +89,12 @@ const IdxPage = ({
   const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
   const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
   const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
+
+  const { isAmp } = useContext(RequestContext);
+  const { enabled } = useToggle('radioSchedule');
+  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const displayRadioSchedule =
+    !isAmp && enabled && radioScheduleOnIdxPage && hasRadioSchedule;
 
   return (
     <>
@@ -113,8 +115,7 @@ const IdxPage = ({
           </IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
-              {radioScheduleOnIdxPage &&
-                radioScheduleEnabled &&
+              {displayRadioSchedule &&
                 radioScheduleIdxPosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
                     lang="fa-AF"

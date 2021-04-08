@@ -64,7 +64,8 @@ const LiveRadioPage = ({ pageData }) => {
   const hasRadioScheduleData = Boolean(radioScheduleData);
   const { enabled } = useToggle('radioSchedule');
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
-  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
+  const displayRadioSchedule =
+    !isAmp && enabled && hasRadioScheduleData && hasRadioSchedule;
 
   return (
     <>
@@ -134,7 +135,7 @@ const LiveRadioPage = ({ pageData }) => {
           />
         </Grid>
       </GelPageGrid>
-      {hasRadioScheduleData && radioScheduleEnabled && (
+      {displayRadioSchedule && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
     </>

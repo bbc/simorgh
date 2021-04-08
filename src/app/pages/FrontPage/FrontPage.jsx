@@ -80,7 +80,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const { enabled } = useToggle('radioSchedule');
   const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
-  const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
+  const displayRadioSchedule =
+    !isAmp && enabled && radioScheduleData && hasRadioSchedule;
 
   const offScreenText = (
     // eslint-disable-next-line jsx-a11y/aria-role
@@ -119,8 +120,7 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {group.type === 'useful-links' && renderMostRead()}
-              {radioScheduleData &&
-                radioScheduleEnabled &&
+              {displayRadioSchedule &&
                 radioSchedulePosition === group.semanticGroupName && (
                   <StyledRadioScheduleContainer
                     initialData={radioScheduleData}
