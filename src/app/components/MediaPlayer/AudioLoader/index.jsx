@@ -8,6 +8,9 @@ const Wrapper = styled.div`
 `;
 
 const Overlay = styled.div`
+  .no-js & {
+    display: none;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
