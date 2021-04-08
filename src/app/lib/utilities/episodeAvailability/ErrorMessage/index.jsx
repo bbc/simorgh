@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import { MediaMessage } from '@bbc/psammead-media-player';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -16,6 +15,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 
+import { MediaMessage } from '#components/MediaPlayer';
 import { EPISODE_STATUS } from '..';
 import { ServiceContext } from '../../../../contexts/ServiceContext';
 
