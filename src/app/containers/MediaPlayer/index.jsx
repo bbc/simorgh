@@ -10,12 +10,13 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+
 import {
   CanonicalMediaPlayer,
   AmpMediaPlayer,
   MediaMessage,
-} from '@bbc/psammead-media-player';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+} from '#components/MediaPlayer';
 import Caption from '../Caption';
 import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
