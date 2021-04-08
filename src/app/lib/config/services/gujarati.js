@@ -189,11 +189,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'અમે અને અમારા પાર્ટનર આ પ્રકારની કેટલીક ટેકનિકનો ઉપયોગ કરીએ છીએ ',
+                first: 'તમને સારી ઑનલાઇન સેવાઓ આપવા માટે અમે ',
                 linkText: 'કુકીઝ',
                 last:
-                  ' નો ઉપયોગ કરીને અમે બ્રાઉઝિંગ ડેટા દ્વારા તમને સારી અને ખાસ પ્રકારની સેવાઓ આપીએ છીએ. જેનાથી અમને તમારા માટે ખાસ કન્ટેન્ટ અને યોગ્ય જાહેરાત દર્શાવવામાં મદદ મળે છે. અમને જણાવો કે તમે આ અંગે સહમત છો.',
+                  ' નો ઉપયોગ કરીએ છીએ. અમને જણાવો કે તમે આ તમામ કુકીઝથી સહમત છો.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import Cookie from 'js-cookie';
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import onClient from '../utilities/onClient';
@@ -53,107 +54,50 @@ const returnsNullWhenOffClient = func => {
 };
 
 describe('getDestination', () => {
-  const getDestinationTestScenarios = [
-    {
-      statsDestination: 'NEWS_PS',
-      expected: 598285,
-      summary: 'should return for live uk for News',
-    },
-    {
-      statsDestination: 'NEWS_GNL',
-      expected: 598287,
-      summary: 'should return for live international for News',
-    },
-    {
-      statsDestination: 'NEWS_PS_TEST',
-      expected: 598286,
-      summary: 'should return for test uk for News',
-    },
-    {
-      statsDestination: 'NEWS_GNL_TEST',
-      expected: 598288,
-      summary: 'should return for test international for News',
-    },
-    {
-      statsDestination: 'WS_NEWS_LANGUAGES',
-      expected: 598342,
-      summary: 'should return for live WS',
-    },
-    {
-      statsDestination: 'WS_NEWS_LANGUAGES_TEST',
-      expected: 598343,
-      summary: 'should return for test WS',
-    },
-    {
-      statsDestination: 'PS_HOMEPAGE',
-      expected: 598273,
-      summary: 'should return for live Scotland',
-    },
-    {
-      statsDestination: 'PS_HOMEPAGE_TEST',
-      expected: 598274,
-      summary: 'should return for test Scotland',
-    },
-    {
-      statsDestination: 'BBC_ARCHIVE_PS',
-      expected: 605565,
-      summary: 'should return for live Archive',
-    },
-    {
-      statsDestination: 'BBC_ARCHIVE_PS_TEST',
-      expected: 605566,
-      summary: 'should return for test Archive',
-    },
-    {
-      statsDestination: 'NEWSROUND',
-      expected: 598293,
-      summary: 'should return for live Newsround',
-    },
-    {
-      statsDestination: 'NEWSROUND_TEST',
-      expected: 598294,
-      summary: 'should return for test Newsround',
-    },
-    {
-      statsDestination: 'SPORT_PS',
-      expected: 598310,
-      summary: 'should return for live uk for Sport',
-    },
-    {
-      statsDestination: 'SPORT_GNL',
-      expected: 598308,
-      summary: 'should return for live international for Sport',
-    },
-    {
-      statsDestination: 'SPORT_PS_TEST',
-      expected: 598311,
-      summary: 'should return for test uk for Sport',
-    },
-    {
-      statsDestination: 'SPORT_GNL_TEST',
-      expected: 598309,
-      summary: 'should return for test international for Sport',
-    },
-    {
-      statsDestination: undefined,
-      expected: 598285,
-      summary: 'should return for live uk statsDestination is undefined',
-    },
-    {
-      statsDestination: null,
-      expected: 598285,
-      summary: 'should return for live uk statsDestination is null',
-    },
-  ];
-
-  getDestinationTestScenarios.forEach(
-    ({ statsDestination, expected, summary }) => {
-      it(summary, () => {
-        const destination = getDestination(statsDestination);
-        expect(destination).toEqual(expected);
-      });
+  it.each`
+    platform       | statsDestination
+    ${'amp'}       | ${null}
+    ${'canonical'} | ${null}
+    ${null}        | ${null}
+    ${'amp'}       | ${undefined}
+    ${'canonical'} | ${undefined}
+    ${undefined}   | ${undefined}
+  `(
+    'should return the safe default (NEWS_PS) where statsDestination is nullish',
+    ({ platform, statsDestination }) => {
+      expect(getDestination(platform, statsDestination)).toBe(598285);
     },
   );
+
+  it.each`
+    platform     | statsDestination   | expected
+    ${null}      | ${'SPORT_PS_TEST'} | ${598311}
+    ${undefined} | ${'PS_HOMEPAGE'}   | ${598273}
+  `(
+    'should return the correct destination id if platform is nullish',
+    ({ platform, statsDestination, expected }) => {
+      expect(getDestination(platform, statsDestination)).toBe(expected);
+    },
+  );
+
+  it.each`
+    statsDestination   | expected
+    ${'NEWS_PS'}       | ${598285}
+    ${'NEWS_GNL_TEST'} | ${598288}
+    ${'NEWSROUND'}     | ${598293}
+    ${'SPORT_PS_TEST'} | ${598311}
+  `(
+    'should return the correct destination id for $statsDestination on canonical',
+    ({ statsDestination, expected }) => {
+      expect(getDestination('canonical', statsDestination)).toBe(expected);
+    },
+  );
+
+  it('should return amp substitution expression for destination with GNL and PS destinations defined', () => {
+    expect(getDestination('amp', 'NEWS_LANGUAGES_PS')).toBe(
+      '$IF($EQUALS($MATCH(${ampGeo}, gbOrUnknown, 0), gbOrUnknown), 598291, 598289)',
+    );
+  });
 });
 
 describe('getAppType', () => {

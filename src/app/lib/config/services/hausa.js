@@ -185,10 +185,10 @@ export const service = {
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
-                first:
-                  'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu tattara wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
-                linkText: '',
-                last: '',
+                first: 'Muna amfani da ',
+                linkText: "ka'idoji",
+                last:
+                  " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
