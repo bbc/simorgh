@@ -37,27 +37,27 @@ export const getDestination = (platform, statsDestination) => {
   };
 
   const geoVariants = {
-    NEWS_PS: {
+    NEWS: {
       PS: destinationIDs.NEWS_PS,
       GNL: destinationIDs.NEWS_GNL,
     },
-    NEWS_PS_TEST: {
+    NEWS_TEST: {
       PS: destinationIDs.NEWS_PS_TEST,
       GNL: destinationIDs.NEWS_GNL_TEST,
     },
-    SPORT_PS: {
+    SPORT: {
       PS: destinationIDs.SPORT_PS,
       GNL: destinationIDs.SPORT_GNL,
     },
-    SPORT_PS_TEST: {
+    SPORT_TEST: {
       PS: destinationIDs.SPORT_PS_TEST,
       GNL: destinationIDs.SPORT_GNL_TEST,
     },
-    NEWS_LANGUAGES_PS: {
+    NEWS_LANGUAGES: {
       PS: destinationIDs.NEWS_LANGUAGES_PS,
       GNL: destinationIDs.NEWS_LANGUAGES_GNL,
     },
-    NEWS_LANGUAGES_PS_TEST: {
+    NEWS_LANGUAGES_TEST: {
       PS: destinationIDs.NEWS_LANGUAGES_PS_TEST,
       GNL: destinationIDs.NEWS_LANGUAGES_GNL_TEST,
     },
