@@ -4941,43 +4941,43 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/pashto/articles/c70970g2251o', // Article
-              '/pashto', // Front Page
+              // '/pashto/articles/c70970g2251o', // Article
+              // '/pashto', // Front Page
               '/pashto/bbc_pashto_radio/liveradio', // Live Radio
-              '/pashto/arts-and-literature-46787030', // CPS MAP
+              // '/pashto/arts-and-literature-46787030', // CPS MAP
               '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP
               '/pashto/world-52873295', // CPS STY
               '/pashto/arts-and-literature-50230813', // PGL
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
-              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              // '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
               // '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
-              '/pashto/popular/read', // Most Read
+              // '/pashto/popular/read', // Most Read
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/pashto/articles/cyjmdl92z3ro', // Article
-              '/pashto', // Front Page
+              // '/pashto/articles/cyjmdl92z3ro', // Article
+              // '/pashto', // Front Page
               '/pashto/bbc_pashto_radio/liveradio', // Live Radio
-              '/pashto/media-23257523', // CPS MAP
+              // '/pashto/media-23257523', // CPS MAP
               '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
               '/pashto/23289748', // CPS STY
               '/pashto/23092924', // CPS PGL
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
-              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              // '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
               // '', // On Demand TV Episode
-              '/pashto/popular/read', // Most Read
+              // '/pashto/popular/read', // Most Read
             ],
             enabled: true,
           },
           local: {
             paths: [
-              '/pashto/articles/c70970g2251o', // Article
-              '/pashto', // Front Page
+              // '/pashto/articles/c70970g2251o', // Article
+              // '/pashto', // Front Page
               '/pashto/bbc_pashto_radio/liveradio', // Live Radio
-              '/pashto/media-23257523', // CPS MAP
+              // '/pashto/media-23257523', // CPS MAP
               '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
               '/pashto/23289748', // CPS STY
               '/pashto/arts-and-literature-50230813', // CPS PGL
@@ -4985,7 +4985,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_radio/w3ct0lz1', // On Demand Radio Episode
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
               // '', // On Demand TV Episode
-              '/pashto/popular/read', // Most Read
+              // '/pashto/popular/read', // Most Read
             ],
             enabled: true,
           },
@@ -5274,58 +5274,58 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/persian/articles/c7eel0lmr4do', // Article
-              '/persian/afghanistan', // IDX
-              '/persian/popular/read', // Most Read
-              '/persian/magazine-49281981', // CPS PGL
-              '/persian/world-51497110', // CPS MAP
-              '/persian/media-49522521', // CPS MAP with live stream
-              '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
-              '/persian/bbc_persian_radio/liveradio', // Live Radio
-              '/persian/bbc_dari_radio/liveradio', // Live Radio
-              '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
-              '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
-              '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
-              '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
+              // '/persian/articles/c7eel0lmr4do', // Article
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/magazine-49281981', // CPS PGL
+              // '/persian/world-51497110', // CPS MAP
+              // '/persian/media-49522521', // CPS MAP with live stream
+              // '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
+              // '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
+              // '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/persian/articles/cej3lzd5e0go', // Article
-              '/persian', // Front Page
-              '/persian/afghanistan', // IDX
-              '/persian/popular/read', // Most Read
-              '/persian/iran-23231114', // CPS MAP
-              '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
-              '/persian/23104784', // CPS PGL
-              '/persian/bbc_persian_radio/liveradio', // Live Radio
-              '/persian/bbc_dari_radio/liveradio', // Live Radio
-              '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
-              '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
-              '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
-              '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
+              // '/persian/articles/cej3lzd5e0go', // Article
+              // '/persian', // Front Page
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/iran-23231114', // CPS MAP
+              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+              // '/persian/23104784', // CPS PGL
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
+              // '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
+              // '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
-              '/persian/articles/cej3lzd5e0go', // Article
-              '/persian', // Front Page
-              '/persian/afghanistan', // IDX
-              '/persian/popular/read', // Most Read
-              '/persian/iran-23231114', // CPS MAP
-              '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
-              '/persian/magazine-49281981', // CPS PGL
-              '/persian/arts-52166891', // CPS STY
-              '/persian/bbc_persian_radio/liveradio', // Live Radio
-              '/persian/bbc_dari_radio/liveradio', // Live Radio
-              // '', // On Demand Radio Brand
-              // '', // On Demand Radio Brand
-              '/persian/bbc_persian_radio/w172x32355t5635', // On Demand Radio Episode
-              '/persian/bbc_dari_radio/w3csz7mf', // On Demand Radio Episode
+              // '/persian/articles/cej3lzd5e0go', // Article
+              // '/persian', // Front Page
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/iran-23231114', // CPS MAP
+              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+              // '/persian/magazine-49281981', // CPS PGL
+              // '/persian/arts-52166891', // CPS STY
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // // '', // On Demand Radio Brand
+              // // '', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/w172x32355t5635', // On Demand Radio Episode
+              // '/persian/bbc_dari_radio/w3csz7mf', // On Demand Radio Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
