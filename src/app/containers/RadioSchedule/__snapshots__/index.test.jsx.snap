@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RadioScheduleData With initial data renders correctly for a service 1`] = `
+exports[`Radio Schedule With initial data renders correctly for a service 1`] = `
 .emotion-0 {
   background-color: #F2F2F2;
   padding: 0 1rem;
