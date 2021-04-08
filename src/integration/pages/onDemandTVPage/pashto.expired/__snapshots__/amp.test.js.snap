@@ -24,6 +24,7 @@ Object {
 
 exports[`AMP Pashto On Demand TV Page AMP Geo config 1`] = `
 Object {
+  "AmpBind": true,
   "ISOCountryGroups": Object {
     "eea": Array [
       "at",

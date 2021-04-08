@@ -63,8 +63,9 @@ export const buildATIPageTrackPath = ({
     {
       key: 's',
       description: 'destination',
-      value: getDestination(statsDestination),
+      value: getDestination(platform, statsDestination),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'idclient',
@@ -235,8 +236,9 @@ export const buildATIEventTrackUrl = ({
     {
       key: 's',
       description: 'destination',
-      value: getDestination(statsDestination),
+      value: getDestination(platform, statsDestination),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 's2',
