@@ -37,62 +37,34 @@ export const getDestination = (platform, statsDestination) => {
   };
 
   const geoVariants = {
-    NEWS: {
+    NEWS_PS: {
       PS: destinationIDs.NEWS_PS,
       GNL: destinationIDs.NEWS_GNL,
     },
-    NEWS_TEST: {
+    NEWS_PS_TEST: {
       PS: destinationIDs.NEWS_PS_TEST,
       GNL: destinationIDs.NEWS_GNL_TEST,
     },
-    SPORT: {
+    SPORT_PS: {
       PS: destinationIDs.SPORT_PS,
       GNL: destinationIDs.SPORT_GNL,
     },
-    SPORT_TEST: {
+    SPORT_PS_TEST: {
       PS: destinationIDs.SPORT_PS_TEST,
       GNL: destinationIDs.SPORT_GNL_TEST,
     },
-    NEWS_LANGUAGES: {
+    NEWS_LANGUAGES_PS: {
       PS: destinationIDs.NEWS_LANGUAGES_PS,
       GNL: destinationIDs.NEWS_LANGUAGES_GNL,
     },
-    NEWS_LANGUAGES_TEST: {
+    NEWS_LANGUAGES_PS_TEST: {
       PS: destinationIDs.NEWS_LANGUAGES_PS_TEST,
       GNL: destinationIDs.NEWS_LANGUAGES_GNL_TEST,
     },
   };
 
-  if (platform === 'amp') {
-    switch (statsDestination) {
-      case 'NEWS_PS':
-      case 'NEWS_GNL': {
-        return getAmpDestination(geoVariants.NEWS);
-      }
-      case 'NEWS_PS_TEST':
-      case 'NEWS_GNL_TEST': {
-        return getAmpDestination(geoVariants.NEWS_TEST);
-      }
-      case 'SPORT_PS':
-      case 'SPORT_GNL': {
-        return getAmpDestination(geoVariants.SPORT);
-      }
-      case 'SPORT_PS_TEST':
-      case 'SPORT_GNL_TEST': {
-        return getAmpDestination(geoVariants.SPORT_TEST);
-      }
-      case 'NEWS_LANGUAGES_PS':
-      case 'NEWS_LANGUAGES_GNL': {
-        return getAmpDestination(geoVariants.NEWS_LANGUAGES);
-      }
-      case 'NEWS_LANGUAGES_PS_TEST':
-      case 'NEWS_LANGUAGES_GNL_TEST': {
-        return getAmpDestination(geoVariants.NEWS_LANGUAGES_TEST);
-      }
-      default: {
-        return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
-      }
-    }
+  if (platform === 'amp' && geoVariants[statsDestination]) {
+    return getAmpDestination(geoVariants[statsDestination]);
   }
 
   return destinationIDs[statsDestination] || destinationIDs.NEWS_PS;
