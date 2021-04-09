@@ -743,7 +743,6 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         <a
           class="emotion-20 emotion-21"
           href="/pidgin"
-          id="brandLink"
         >
           <svg
             aria-hidden="true"
@@ -1788,7 +1787,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         <a
           class="emotion-20 emotion-21"
           href="/pidgin"
-          id="brandLink"
         >
           <svg
             aria-hidden="true"
@@ -2833,7 +2831,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         <a
           class="emotion-20 emotion-21"
           href="/pidgin"
-          id="brandLink"
         >
           <svg
             aria-hidden="true"
