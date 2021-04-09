@@ -965,6 +965,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           <a
             class="emotion-22 emotion-23"
             href="/news"
+            id="brandLink"
           >
             <svg
               aria-hidden="true"
