@@ -67,6 +67,7 @@ const advertisingDirectives = {
     'https://bbc.gscontxt.net',
     'https://secure-us.imrworldwide.com/',
     'https://fundingchoicesmessages.google.com',
+    'https://pagead2.googlesyndication.com/',
     ...advertisingServiceCountryDomains,
   ],
   prefetchSrc: ['https://*.safeframe.googlesyndication.com'],
