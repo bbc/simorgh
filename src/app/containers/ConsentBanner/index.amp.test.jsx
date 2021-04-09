@@ -45,10 +45,10 @@ describe('Amp Consent Banner Container', () => {
 
     expect(Banner).toHaveBeenCalledWith(
       {
-        acceptAction: 'tap:brandLink.focus(), consent.accept',
+        acceptAction: 'tap:brandLink.focus, consent.accept',
         hidden: true,
         promptId: 'cookie',
-        rejectAction: 'tap:brandLink.focus(), consent.reject',
+        rejectAction: 'tap:brandLink.focus, consent.reject',
         type: 'cookie',
       },
       {},

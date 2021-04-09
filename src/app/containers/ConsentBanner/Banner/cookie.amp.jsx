@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { bool, string, arrayOf, element, shape } from 'prop-types';
 import styled from '@emotion/styled';
@@ -70,23 +70,7 @@ const BannerPage = styled.div`
   }
 `;
 
-const FocusableH2 = forwardRef(
-  // eslint-disable-next-line react/prop-types
-  ({ className, children, id, shouldAutoFocus }, ref) => (
-    <h2
-      className={className}
-      tabIndex="-1"
-      ref={ref}
-      id={id}
-      // eslint-disable-next-line jsx-a11y/no-autofocus
-      autoFocus={shouldAutoFocus}
-    >
-      {children}
-    </h2>
-  ),
-);
-
-const Title = styled(FocusableH2)`
+const Title = styled.h2`
   ${({ script }) => getDoublePica(script)}
   ${COMMON_HEADING_STYLES}
 `;
@@ -223,7 +207,7 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script} shouldAutoFocus>
+          <Title script={script} tabIndex="-1" autoFocus>
             {initial.title}
           </Title>
           <Paragraph script={script}>
@@ -241,7 +225,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
-                on="tap:AMP.setState({ isManagingSettings: true }),manageTitle.focus()"
+                on="tap:AMP.setState({ isManagingSettings: true }), manageHeading.focus()"
               >
                 {initial.manage}
               </button>
@@ -253,7 +237,7 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >
-          <Title script={script} id="manageTitle">
+          <Title script={script} tabIndex="-1" id="manageHeading">
             {manage.title}
           </Title>
           <Paragraph script={script}>{manage.description.para1}</Paragraph>
