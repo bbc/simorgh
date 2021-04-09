@@ -41,7 +41,7 @@ export const RequestContextProvider = ({
   const env = getEnv(origin);
   const platform = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
-    isUk: platform === 'amp' ? true : isUK,
+    isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
   });
