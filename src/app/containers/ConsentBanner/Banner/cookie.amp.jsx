@@ -225,7 +225,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
-                on="tap:AMP.setState({ isManagingSettings: true }), manageHeading.focus()"
+                on="tap:AMP.setState({ isManagingSettings: true }), manageHeading.focus"
               >
                 {initial.manage}
               </button>
