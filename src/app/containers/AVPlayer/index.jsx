@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { string, bool } from 'prop-types';
+import React, { useState, useContext } from 'react';
+import { string, bool, func, oneOf } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -14,6 +14,7 @@ import {
 import pathOr from 'ramda/src/pathOr';
 
 import AudioLoader from '#components/MediaPlayer/AudioLoader';
+
 import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -39,6 +40,7 @@ const AVPlayer = ({
   hasBottomPadding,
   showLoadingImage,
   darkMode,
+  onMediaInitialised,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -79,6 +81,7 @@ const AVPlayer = ({
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
           noJsClassName="no-js"
+          onMediaInitialised={onMediaInitialised}
         />
       )}
     </Wrapper>
@@ -97,18 +100,6 @@ const AudioPlayer = styled(AVPlayer)`
   }
 `;
 
-export default props => {
-  // eslint-disable-next-line react/prop-types
-  const { skin } = props;
-  return skin === 'audio' ? (
-    <AudioLoader>
-      <AudioPlayer {...props} />
-    </AudioLoader>
-  ) : (
-    <AVPlayer {...props} />
-  );
-};
-
 AVPlayer.propTypes = {
   embedUrl: string,
   assetId: string,
@@ -121,6 +112,7 @@ AVPlayer.propTypes = {
   hasBottomPadding: bool,
   showLoadingImage: bool,
   darkMode: bool,
+  onMediaInitialised: func,
 };
 
 AVPlayer.defaultProps = {
@@ -135,4 +127,27 @@ AVPlayer.defaultProps = {
   hasBottomPadding: true,
   showLoadingImage: false,
   darkMode: false,
+  onMediaInitialised: () => {},
 };
+
+const AVSelector = props => {
+  const { skin } = props;
+  const [isLoading, setIsLoading] = useState(true);
+  return skin === 'audio' ? (
+    <AudioLoader isLoading={isLoading}>
+      <AudioPlayer {...props} onMediaInitialised={() => setIsLoading(false)} />
+    </AudioLoader>
+  ) : (
+    <AVPlayer {...props} />
+  );
+};
+
+AVSelector.propTypes = {
+  skin: oneOf(['classic', 'audio']),
+};
+
+AVSelector.defaultProps = {
+  skin: 'classic',
+};
+
+export default AVSelector;

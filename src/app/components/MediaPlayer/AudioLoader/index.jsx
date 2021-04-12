@@ -1,6 +1,7 @@
 import React from 'react';
-import { node } from 'prop-types';
+import { bool, element } from 'prop-types';
 import styled from '@emotion/styled';
+
 import { keyframes } from '@emotion/react';
 
 const Wrapper = styled.div`
@@ -11,47 +12,60 @@ const Overlay = styled.div`
   .no-js & {
     display: none;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  text-align: center;
 `;
 
 const spin = keyframes`
-0% {
-  transform: rotate(0deg);
-}
-100% {
-  transform: rotate(360deg);
-}
+  to {
+    transform: rotate(360deg);
+  }
 `;
 
-const Spinner = styled.div`
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: 0.3rem solid rgba(0, 0, 0, 0.2);
-  border-left-color: rgba(0, 0, 0, 0.8);
-  animation: ${spin} 1.1s infinite linear;
+const Spinner = styled.svg`
+  width: 4rem;
+  height: 4rem;
+  margin-top: 5rem;
+  stroke: currentColor;
+  will-change: transform;
+  @media (prefers-reduced-motion: no-preference) {
+    animation: ${spin} 1.1s 3 linear;
+  }
 `;
 
-const AudioLoader = ({ children }) => {
-  return (
-    <Wrapper>
+const AudioLoader = ({ children, isLoading }) => (
+  <Wrapper>
+    {isLoading && (
       <Overlay data-testid="audio-loader-overlay" aria-hidden="true">
-        <Spinner />
+        <Spinner
+          xmlns="http://www.w3.org/2000/svg"
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          focusable="false"
+        >
+          <g fill="none" strokeWidth="2" transform="translate(1 1)">
+            <circle strokeOpacity="0.2" cx="18" cy="18" r="18" />
+            <path d="M36 18c0-9.94-8.06-18-18-18" />
+          </g>
+        </Spinner>
       </Overlay>
-      {children}
-    </Wrapper>
-  );
-};
+    )}
+    {children}
+  </Wrapper>
+);
 
 AudioLoader.propTypes = {
-  children: node.isRequired,
+  children: element.isRequired,
+  isLoading: bool,
+};
+
+AudioLoader.defaultProps = {
+  isLoading: false,
 };
 
 export default AudioLoader;
