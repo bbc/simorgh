@@ -4,11 +4,15 @@ import styled from '@emotion/styled';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Message from '../Message';
 
+const escapeRegex = token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 // XSS protection to ensure we only react to events sent from recognised origins
-const isValidEvent = ({ origin }, acceptableEventOrigins) =>
-  RegExp(`^https?://(${acceptableEventOrigins.join('|')})(:|/|$)`, 'i').test(
+const isValidEvent = ({ origin }, acceptableEventOrigins) => {
+  const escapedOrigins = acceptableEventOrigins.map(escapeRegex);
+  return RegExp(`^https?://(${escapedOrigins.join('|')})(:|/|$)`, 'i').test(
     origin,
   );
+};
 
 const Canonical = ({
   src,
