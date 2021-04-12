@@ -17,7 +17,9 @@ const Overlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const spin = keyframes`
@@ -30,7 +32,6 @@ const spin = keyframes`
 const Spinner = styled.svg`
   width: 64px;
   height: 64px;
-  margin-top: 80px;
   stroke: currentColor;
   will-change: transform;
   @media (prefers-reduced-motion: no-preference) {
