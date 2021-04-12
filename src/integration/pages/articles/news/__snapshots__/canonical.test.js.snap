@@ -63,7 +63,7 @@ Object {
 exports[`Canonical Articles Footer Anchors should match text and url 9`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
 }
 `;
 

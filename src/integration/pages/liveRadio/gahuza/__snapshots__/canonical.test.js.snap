@@ -56,7 +56,7 @@ Object {
 exports[`Canonical Live Radio Footer Anchors should match text and url 8`] = `
 Object {
   "text": "AdChoices / Do Not Sell My Info",
-  "url": "https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+  "url": "https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/",
 }
 `;
 
