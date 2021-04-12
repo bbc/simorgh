@@ -26,10 +26,11 @@ const spin = keyframes`
   }
 `;
 
+// Using pixels here as SMP does not change size based on user's font size
 const Spinner = styled.svg`
-  width: 4rem;
-  height: 4rem;
-  margin-top: 5rem;
+  width: 64px;
+  height: 64px;
+  margin-top: 80px;
   stroke: currentColor;
   will-change: transform;
   @media (prefers-reduced-motion: no-preference) {
