@@ -18,6 +18,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
 const EN_GB_LANG = 'en-GB';
+const HINDI_LANG = 'hi';
 
 const ExternalLinkTextLangs = {
   Spotify: EN_GB_LANG,
@@ -25,6 +26,8 @@ const ExternalLinkTextLangs = {
   RSS: EN_GB_LANG,
   Yandex: EN_GB_LANG,
   Castbox: EN_GB_LANG,
+  'Jio Saavn': HINDI_LANG,
+  Gaana: HINDI_LANG,
 };
 
 const Wrapper = styled.aside`
