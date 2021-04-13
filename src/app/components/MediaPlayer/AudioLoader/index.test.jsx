@@ -17,8 +17,19 @@ describe('Audio Loader', () => {
     expect(getByText('Test Content')).toBeInTheDocument();
   });
 
-  it('should render an aria-hidden overlay', () => {
+  it('should NOT render an overlay by default', () => {
     const { container } = render(<AudioLoader>Test Content</AudioLoader>);
+
+    const overlay = container.querySelector(
+      '[data-testid=audio-loader-overlay]',
+    );
+    expect(overlay).not.toBeInTheDocument();
+  });
+
+  it('should render an aria-hidden overlay when isLoading is true', () => {
+    const { container } = render(
+      <AudioLoader isLoading>Test Content</AudioLoader>,
+    );
 
     const overlay = container.querySelector(
       '[data-testid=audio-loader-overlay]',
