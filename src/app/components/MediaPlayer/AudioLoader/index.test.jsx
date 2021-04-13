@@ -8,7 +8,7 @@ import AudioLoader from '.';
 describe('Audio Loader', () => {
   shouldMatchSnapshot(
     'should match snapshot',
-    <AudioLoader>Content</AudioLoader>,
+    <AudioLoader isLoading>Content</AudioLoader>,
   );
 
   it('should transclude the children', () => {

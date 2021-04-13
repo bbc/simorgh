@@ -1,33 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`] = `
-.emotion-1 amp-iframe,
-.emotion-1 div>iframe {
+@keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.no-js .emotion-2 {
+  display: none;
+}
+
+.emotion-4 {
+  width: 64px;
+  height: 64px;
+  stroke: currentColor;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-4 {
+    -webkit-animation: animation-0 1.1s 3 linear;
+    animation: animation-0 1.1s 3 linear;
+  }
+}
+
+.emotion-7 amp-iframe,
+.emotion-7 div>iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
 @media (min-width: 25rem) {
-  .emotion-1 amp-iframe,
-  .emotion-1 div>iframe {
+  .emotion-7 amp-iframe,
+  .emotion-7 div>iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
-.emotion-3 {
+.emotion-9 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-3 {
+  .emotion-9 {
     margin-bottom: 2rem;
   }
 }
 
-.emotion-5 {
+.emotion-11 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -39,82 +90,201 @@ exports[`AVPlayer for Live Radio should match snapshot for canonical AVPlayer 1`
 
 <div>
   <div
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-3 emotion-4"
-      data-e2e="media-player"
+      aria-hidden="true"
+      class="emotion-2 emotion-3"
+      data-testid="audio-loader-overlay"
     >
-      <iframe
-        allow="autoplay"
-        allowfullscreen=""
-        class="emotion-5 emotion-6"
-        scrolling="no"
-        src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
-        title="오디오 플레이어"
-      />
-      <noscript />
+      <svg
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="38"
+        viewBox="0 0 38 38"
+        width="38"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          stroke-width="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="18"
+            cy="18"
+            r="18"
+            stroke-opacity="0.2"
+          />
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      class="emotion-6 emotion-7 emotion-8"
+    >
+      <div
+        class="emotion-9 emotion-10"
+        data-e2e="media-player"
+      >
+        <iframe
+          allow="autoplay"
+          allowfullscreen=""
+          class="emotion-11 emotion-12"
+          scrolling="no"
+          src="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+          title="오디오 플레이어"
+        />
+        <noscript />
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`] = `
-.emotion-1 amp-iframe,
-.emotion-1 div>iframe {
+@keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.no-js .emotion-2 {
+  display: none;
+}
+
+.emotion-4 {
+  width: 64px;
+  height: 64px;
+  stroke: currentColor;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emotion-4 {
+    -webkit-animation: animation-0 1.1s 3 linear;
+    animation: animation-0 1.1s 3 linear;
+  }
+}
+
+.emotion-7 amp-iframe,
+.emotion-7 div>iframe {
   width: calc(100% + 1rem);
   margin: 0 -0.5rem;
 }
 
 @media (min-width: 25rem) {
-  .emotion-1 amp-iframe,
-  .emotion-1 div>iframe {
+  .emotion-7 amp-iframe,
+  .emotion-7 div>iframe {
     width: calc(100% + 2rem);
     margin: 0 -1rem;
   }
 }
 
-.emotion-3 {
+.emotion-9 {
   height: 165px;
   position: relative;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-3 {
+  .emotion-9 {
     margin-bottom: 2rem;
   }
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1 emotion-2"
+    class="emotion-0 emotion-1"
   >
     <div
-      class="emotion-3 emotion-4"
+      aria-hidden="true"
+      class="emotion-2 emotion-3"
+      data-testid="audio-loader-overlay"
     >
-      <amp-iframe
-        allowfullscreen="allowfullscreen"
-        data-e2e="media-player"
-        frameborder="0"
-        layout="fill"
-        sandbox="allow-scripts allow-same-origin"
-        scrolling="no"
-        src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
-        title="Audio player"
+      <svg
+        class="emotion-4 emotion-5"
+        focusable="false"
+        height="38"
+        viewBox="0 0 38 38"
+        width="38"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <amp-img
-          alt=""
-          attribution=""
-          data-e2e="media-player__placeholder"
-          height="16"
+        <g
+          fill="none"
+          stroke-width="2"
+          transform="translate(1 1)"
+        >
+          <circle
+            cx="18"
+            cy="18"
+            r="18"
+            stroke-opacity="0.2"
+          />
+          <path
+            d="M36 18c0-9.94-8.06-18-18-18"
+          />
+        </g>
+      </svg>
+    </div>
+    <div
+      class="emotion-6 emotion-7 emotion-8"
+    >
+      <div
+        class="emotion-9 emotion-10"
+      >
+        <amp-iframe
+          allowfullscreen="allowfullscreen"
+          data-e2e="media-player"
+          frameborder="0"
           layout="fill"
-          placeholder="true"
-          src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
-          width="9"
-        />
-        <noscript />
-      </amp-iframe>
+          sandbox="allow-scripts allow-same-origin"
+          scrolling="no"
+          src="https://polling.test.bbc.co.uk/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om/amp"
+          title="Audio player"
+        >
+          <amp-img
+            alt=""
+            attribution=""
+            data-e2e="media-player__placeholder"
+            height="16"
+            layout="fill"
+            placeholder="true"
+            src="https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg"
+            width="9"
+          />
+          <noscript />
+        </amp-iframe>
+      </div>
     </div>
   </div>
 </div>
