@@ -13,7 +13,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
-import { MediaMessage } from '@bbc/psammead-media-player';
+import { MediaMessage } from '#components/MediaPlayer';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemLarge } from '#app/components/Grid';
 import nodeLogger from '#lib/logger.node';
