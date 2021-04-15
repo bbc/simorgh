@@ -42,10 +42,22 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/13CDE/production/_117481118_whatsappimage2021-03-06at1.19.03am.jpg",
+        "title": "विश्व महिला दिवस: वे काम जिनसे महिलाएं बनीं सशक्त",
+        "description": "अंतरराष्ट्रीय महिला दिवस के मौक़े पर पढ़िए उन महिलाओं के अनुभव जिन्होंने ख़ुद को यूं बनाया मज़बूत.",
+        "href": "https://www.bbc.com/hindi/india-56310860"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/128C4/production/_114227957_gettyimages-1231272762.jpg",
+        "title": "सहारा रेगिस्तान में लाइब्रेरी वाला शहर आपने देखा है",
+        "description": "मौरितानिया का चिंगुएटी एक जमाने में बड़ा बौद्धिक केंद्र था. यहां के पुस्तकालयों में मध्यकालीन पांडुलिपियां मौजूद हैं.",
+        "href": "https://www.bbc.com/hindi/vert-tra-54011629"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/C03B/production/_113611294_p0791hcn.jpg",
+        "title": "सपनों का मॉडर्न आशियाना! ऐसे भी होते हैं घर",
+        "description": "तपते रेगिस्तान से लेकर पहाड़ की ठंडी ढलानों तक पर बने ये घर हैरान कर देते हैं.",
+        "href": "https://www.bbc.com/hindi/magazine-53528741"
       }
     ]
   },
