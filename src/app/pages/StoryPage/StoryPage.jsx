@@ -51,6 +51,9 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import StoryList from '#containers/TeamJellyHack/StoryList';
+
+import storyData from '#containers/TeamJellyHack/StoryList/stories.json';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -324,6 +327,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           parentColumns={gridColumns}
         >
           <main role="main">
+            <StoryList data={storyData} />
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
           <CpsRelatedContent
