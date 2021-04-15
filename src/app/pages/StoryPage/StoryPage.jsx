@@ -51,6 +51,7 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import ArticleReader from '#components/ArticleReader';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -312,6 +313,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
+      <ArticleReader />
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters
