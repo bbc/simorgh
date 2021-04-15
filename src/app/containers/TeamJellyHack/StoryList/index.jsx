@@ -45,7 +45,7 @@ const StoryList = () => {
 
   return (
     <>
-      {isStoryOverlayVisible && <StoryPlayer stories={storiesState.activeStoryId}/>}
+      {isStoryOverlayVisible && <StoryPlayer stories={storiesState[activeStoryId]}/>}
       <ol>{topics}</ol>
     </>
   );
