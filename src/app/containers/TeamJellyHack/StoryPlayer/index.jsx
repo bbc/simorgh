@@ -8,9 +8,7 @@ const StoryPlayer = ({ data }) => {
   // close button
   // nav
   // StoryPromo - data.stories[currentPage]
-  return (
-    <StoryPromo {...data.stories[currentPage]} />
-  );
+  return null;
 };
 
 export default StoryPlayer;
