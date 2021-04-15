@@ -95,10 +95,22 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/0C44/production/_117704130_gettyimages-614403620.jpg",
+        "title": "तेज़ी से झूला झूलते वक़्त हम चीखते क्यों हैं?",
+        "description": "मैं बहुत डरी हुई थी लेकिन मैं उस अनुभव को हाथ से जाने भी नहीं देना चाहती थी. मैं वहां रही भले ही मैंने ज़्यादातर समय अपनी आंखें बंद ही रखीं. मैं ये भी सोच रही थी कि मैं ये दोबारा नहीं करने वाली हूं.",
+        "href": "https://www.bbc.com/hindi/science-56737064"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/5FEA/production/_93645542_d0afe94b-93f1-49aa-b1f6-a3a0d89c4480.jpg",
+        "title": "आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं",
+        "description": "आपकी आवाज़ बता सकती है कि आप बीमार पड़ने वाले हैं. इसका अध्ययन करने से यह भी पता चल सकता है कि आपको कौन सा रोग होने वाला है.",
+        "href": "https://www.bbc.com/hindi/science-38662781"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/10DE2/production/_114509096_1f572bae-ee2b-41d4-ac35-7b7e229384af.jpg",
+        "title": "राज्यसभा: ध्वनि मत की प्रक्रिया क्या है और कैसे होती है वोटिंग",
+        "description": "सोमवार को राज्यसभा की कार्यवाही शुरू होने के साथ जो ख़बर सबसे पहले सामने आई वो ये थी कि राज्यसभा के सभापति वेंकैया नायडू ने नियमों का हवाला देते हुए उपसभापति हरिवंश के ख़िलाफ़ लाया गया अविश्वास प्रस्ताव ख़ारिज कर दिया.",
+        "href": "https://www.bbc.com/hindi/india-54233906"
       }
     ]
   },
@@ -106,10 +118,22 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/2566/production/_118047590_whatsubject.jpg",
+        "title": "कोरोना: श्मशान कर्मचारियों का बुरा हाल, शवदाह के लिए लंबा इंतज़ार",
+        "description": "भारत के कई राज्यों में कोरोना के मरीज़ अस्पताल में अपने इलाज का इंतज़ार कर रहे हैं और जिनकी मौत हो गई है, उनका दाह संस्कार समय पर नहीं हो पा रहा है.",
+        "href": "https://www.bbc.com/hindi/india-56742892"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/E890/production/_118063595_01b07491-a185-437e-8715-422d7f9f6ab7.jpg",
+        "title": "ब्राज़ील में कोविड-19 की वजह से बच्चों की इतनी मौतें क्यों हो रही हैं?",
+        "description": "कोरोना वायरस संक्रमण से अब तक बच्चों को सुरक्षित समझा जा रहा था लेकिन ब्राज़ील के आंकड़े कुछ और ही कहानी कह रहे हैं.",
+        "href": "https://www.bbc.com/hindi/international-56757746"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/DC76/production/_117083465_5fac7217-6896-4b51-bb66-53ee99cdd26e.jpg",
+        "title": "कोरोना वायरस: स्वाद और गंध महसूस न होना भी है लक्षण?",
+        "description": "कुछ खाने पर स्वाद महसूस न होना और किसी चीज़ की गंध का महसूस न होना भी कोरोना वायरस का लक्षण हो सकता है. ब्रिटेन के शोधकर्ताओं ने कोरोना महामारी के दुनियाभर में फैलने के कुछ महीनों बाद ही ये पता लगा लिया था.",
+        "href": "https://www.bbc.com/hindi/science-52126017"
       }
     ]
   },
@@ -117,11 +141,23 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/508F/production/_114032602_0d7aff64-7aba-45ed-a12f-22333cda8add.jpg",
+        "title": "कैलिफ़ोर्निया की डेथ वैली: एक तपते शहर में रहना कितना मुश्किल",
+        "description": "कैलिफोर्निया में डेथ वैली (मौत की घाटी) नेशनल पार्क में काम करने वाली ब्रैंडी स्टीवर्ट कहती हैं, मुझे लगता है कि यहाँ इतनी गर्मी है कि हम सब अपना सब्र खो देंगे.",
+        "href": "https://www.bbc.com/hindi/international-53842768"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/1839F/production/_111213299_3d02113c-7e07-4090-a7a4-de650c62110d.jpg",
+        "title": "#Corona: अमरीका में कोरोना से दहशत की आंखोंदेखी",
+        "description": "तेज़ी से ग़ायब होतीं पानी की बोतलें. दुकानों के बाहर ग्राहकों की लंबी क़तारें. हैंड सेनीटाइज़र और टॉयलेट पेपर जैसी चीज़ों की कमी.",
+        "href": "https://www.bbc.com/hindi/international-51824995"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/FA25/production/_113973046_781c966a-37bc-49d1-8d60-fe8370f71f15.jpg",
+        "title": "US Election 2020: कैसे होता है अमरीका के राष्ट्रपति का चुनाव",
+        "description": "दुनिया युद्ध, वैश्विक महामारी और जलवायु परिवर्तन जैसे अंतरराष्ट्रीय संकटों से कैसे निपटती है, इसमें अमरीका के राष्ट्रपति की बड़ी भूमिका है.",
+        "href": "https://www.bbc.com/hindi/international-53811796"
       }
     ]
-  },
+  }
 }
