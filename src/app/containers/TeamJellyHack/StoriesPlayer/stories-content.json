@@ -4,15 +4,21 @@
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/E890/production/_118063595_01b07491-a185-437e-8715-422d7f9f6ab7.jpg",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "title": "लिंक्डइन पर आए इस नए फ़ीचर से महिलाओं की ज़िंदगी में क्या बदलेगा",
+        "description": "लिंक्डइन ने उन माता-पिता के लिए एक नया जॉब टाइटल बनाया है जो बच्चों की देखभाल के लिए करियर ब्रेक लेते हैं",
+        "href": "https://www.bbc.com/hindi/international-56757746"
       },
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/0C44/production/_117704130_gettyimages-614403620.jpg",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "title": "हम खुशी में भी चीखने क्यों लगते हैं?",
+        "description": "अमेरिका में थीम पार्क खुलने वाले हैं. कोरोना की वजह से लोगों को सलाह दी गई है कि वो कम चिल्लाएँ. पर क्या आप चिल्लाने पर काबू पा सकते हैं?",
+        "href": "https://www.bbc.com/hindi/science-56737064"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/DC76/production/_117083465_5fac7217-6896-4b51-bb66-53ee99cdd26e.jpg",
+        "title": "स्वाद और गंध महसूस न होना भी है कोरोना का लक्षण",
+        "description": "विशेषज्ञों का कहना है कि बुख़ार और खांसी ऐसे महत्वपूर्ण लक्षण हैं जिन्हें नज़रअंदाज़ नहीं करना चाहिए.",
+        "href": "https://www.bbc.com/hindi/science-52126017"
       }
     ]
   },
@@ -20,10 +26,22 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/D0D3/production/_100695435_parveenbobby5.jpg",
+        "title": "स्टारडम, तीन आशिक़ और तन्हाई में मौत...कहानी परवीन बाबी की",
+        "description": "परवीन बाबी बॉलीवुड में हवा के तेज़ झोंके की तरह आईं और छा गईं. उनके जन्मदिन पर विशेष.",
+        "href": "https://www.bbc.com/hindi/entertainment-43637964"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/954F/production/_117732283_0958ced1-9e1b-4d8f-92f1-15623b984a2b.jpg",
+        "title": "कमल हासनः अभिनेता से राजनेता तक एक असली 'दशावतारम'",
+        "description": "कोयम्बटूर विधानसभा सीट से चुनाव लड़ रहे कमल हासन का राजनीति में सफ़र भले ही छोटा है लेकिन फ़िल्मी दुनिया में उनका सफर लंबा रहा है.",
+        "href": "https://www.bbc.com/hindi/india-56551209"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/2353/production/_117734090_227701a1-34f8-4f10-bab2-7d16c9a350cb.jpg",
+        "title": "दाऊद और अंडरवर्ल्ड के पीछे इस कदर क्यों भागता है बॉलीवुड?",
+        "description": "रामगोपाल वर्मा की नई फ़िल्म 'डी कंपनी' दाऊद इब्राहिम के डॉन बनने की कहानी है. बॉलीवुड दाऊद की ज़िंदगी को बड़े पर्दे पर दिखाने के लिए इतना उतावला क्यों रहता है?",
+        "href": "https://www.bbc.com/hindi/entertainment-56552604"
       }
     ]
   },
@@ -31,10 +49,22 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
-        "title": "Heading",
-        "description": "Lorem ipsom",
-        "href": "https://link-to-article"
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/22DE/production/_117362980_gettyimages-612635954.jpg",
+        "title": "चीन की ओर से साइबर हमला हुआ, तो क्या कर सकता है भारत?",
+        "description": "जनरल बिपिन रावत ने हाल में कहा था कि चीन के पास भारत के ख़िलाफ़ साइबर हमले करने की क्षमता है. कितना गंभीर हो सकता है ये ख़तरा?",
+        "href": "https://www.bbc.com/hindi/india-56714898"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/13F55/production/_117894718_mediaitem117894717.jpg",
+        "title": "अमेरिका ने की चीन पर कार्रवाई, सात सुपरकम्प्यूटर ग्रुप को किया ब्लैकलिस्ट",
+        "description": "गुरुवार को तीन कंपनियों और चीन के नेशनल सुपरकम्प्यूटिंग सेंटर की चार शाखाओं को अमेरिका ने ब्लैकलिस्ट करने का फ़ैसला लिया. अमेरिका का आरोप है कि ये समूह चीन की सेना के लिए सुपरकम्प्यूटर बनाते हैं.",
+        "href": "https://www.bbc.com/hindi/international-56687331"
+      },
+      {
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/7D6F/production/_117511123_udupoi.gif",
+        "title": "प्रोफ़ेसर उडुपी रामचंद्र राव: 'सैटेलाइट मैन ऑफ़ इंडिया' पर गूगल ने बनाया डूडल",
+        "description": "भारत के सैटेलाइट प्रोग्राम को नई दिशा देने के कारण डॉक्टर यूआर राव को 'सैटेलाइट मैन ऑफ़ इंडिया' के नाम से भी जाना जाता है. भारत ने उनके नेतृत्व में ही साल 1975 में अपने पहले उपग्रह 'आर्यभट्ट' का अंतरिक्ष में सफल प्रक्षेपण किया था.",
+        "href": "https://www.bbc.com/hindi/india-56342074"
       }
     ]
   },
