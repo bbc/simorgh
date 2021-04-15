@@ -1,34 +1,61 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 
 import StoryPlayer from '#containers/TeamJellyHack/StoryPlayer';
 import StoryItem from '#components/TeamJellyHack/StoryItem';
 import storiesData from './stories.json';
 
-const StoryList = () => {
-  const [isStoryOverlayVisible, setStoryOverlayVisible] = useState(false);
-  const [activeStoryId, setActiveStoryId] = useState(null);
-  const [stories, setStories] = useState(storiesData);
+const storiesReducer = (state, action) => {
+  switch (action.type) {
+    case 'VIEWED':
+      return {
+        ...state,
+        [action.storyId]: {
+          ...state[action.storyId],
+          hasViewed: true,
+        },
+      };
 
-  const showStory = id => {
-    setStoryOverlayVisible(true);
+    default:
+      throw new Error(`Unhandled action type: ${action.type}.`);
+  }
+};
+const StoryList = () => {
+  const [isStoryPlayerVisible, setIsStoryPlayerVisible] = useState(false);
+  const [activeStoryId, setActiveStoryId] = useState(null);
+  const [stories, dispatch] = useReducer(storiesReducer, storiesData);
+
+  const handleStoryClick = id => {
     setActiveStoryId(id);
+    setIsStoryPlayerVisible(true);
+    dispatch({ type: 'VIEWED', storyId: id });
+  };
+
+  const hideStoryPlayer = () => {
+    setIsStoryPlayerVisible(isVisible => !isVisible);
   };
 
   return (
     <>
-      {isStoryOverlayVisible && (
-        <StoryPlayer stories={stories[activeStoryId]} />
+      {isStoryPlayerVisible && (
+        <StoryPlayer
+          stories={stories[activeStoryId]}
+          onClose={hideStoryPlayer}
+        />
       )}
-      {/* <StoryItem
-        key={id}
-        id={id}
-        name={name}
-        src={src}
-        hasViewed={hasViewed}
-        handleClick={showStory}
-      /> */}
+      <ol>
+        {Object.entries(stories).map(([id, { hasViewed, name, src }]) => (
+          <StoryItem
+            key={id}
+            id={id}
+            hasViewed={hasViewed}
+            name={name}
+            src={src}
+            onClick={handleStoryClick}
+          />
+        ))}
+      </ol>
     </>
   );
 };
