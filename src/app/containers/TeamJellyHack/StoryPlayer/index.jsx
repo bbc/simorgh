@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { arrayOf, shape, func } from 'prop-types';
 import StoryPromo from '#components/TeamJellyHack/StoryPromo';
 import StoryNav from '#components/TeamJellyHack/StoryNav';
 
@@ -14,21 +15,26 @@ const CloseButton = styled.button`
   /* styles */
 `;
 
-const StoryPlayer = ({ data, onClose }) => {
+const StoryPlayer = ({ stories, onClose }) => {
   const [currentPage, setCurrentPage] = useState(0);
   return (
     <>
       <StoryPlayerOverlay>
         <StoryNav
-          numStories={data.stories.length}
+          numStories={stories.length}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
         <CloseButton onClick={onClose} />
-        <StoryPromo {...data.stories[currentPage]} />
+        <StoryPromo {...stories[currentPage]} />
       </StoryPlayerOverlay>
     </>
   );
+};
+
+StoryPlayer.propTypes = {
+  stories: arrayOf(shape({})).isRequired,
+  onClose: func.isRequired,
 };
 
 export default StoryPlayer;

@@ -4,7 +4,7 @@ import React, { useReducer, useState } from 'react';
 
 import StoryPlayer from '#containers/TeamJellyHack/StoryPlayer';
 import StoryItem from '#components/TeamJellyHack/StoryItem';
-import storiesData from './stories.json';
+import storiesInitialData from './stories.json';
 
 const storiesReducer = (state, action) => {
   switch (action.type) {
@@ -24,7 +24,10 @@ const storiesReducer = (state, action) => {
 const StoryList = () => {
   const [isStoryPlayerVisible, setIsStoryPlayerVisible] = useState(false);
   const [activeStoryId, setActiveStoryId] = useState(null);
-  const [stories, dispatch] = useReducer(storiesReducer, storiesData);
+  const [storiesData, dispatch] = useReducer(
+    storiesReducer,
+    storiesInitialData,
+  );
 
   const handleStoryClick = id => {
     setActiveStoryId(id);
@@ -40,12 +43,12 @@ const StoryList = () => {
     <>
       {isStoryPlayerVisible && (
         <StoryPlayer
-          stories={stories[activeStoryId]}
+          stories={storiesData[activeStoryId].stories}
           onClose={hideStoryPlayer}
         />
       )}
       <ol>
-        {Object.entries(stories).map(([id, { hasViewed, name, src }]) => (
+        {Object.entries(storiesData).map(([id, { hasViewed, name, src }]) => (
           <StoryItem
             key={id}
             id={id}
