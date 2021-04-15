@@ -1,0 +1,711 @@
+{
+  "metadata":{
+    "id":"urn:bbc:ares::asset:hindi/science-56737064",
+    "locators":{
+      "assetUri":"/hindi/science-56737064",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/science-56737064",
+      "curie":"http://www.bbc.co.uk/asset/2bd9ff8d-bda2-434d-834e-bec5d7759975",
+      "assetId":"56737064"
+    },
+    "type":"STY",
+    "createdBy":"hindi-v6",
+    "language":"hi",
+    "lastUpdated":1618454712264,
+    "firstPublished":1618454703000,
+    "lastPublished":1618454703000,
+    "timestamp":1618454703000,
+    "options":{
+      "isIgorSeoTagsEnabled":false,
+      "includeComments":false,
+      "allowRightHandSide":true,
+      "isFactCheck":false,
+      "allowDateStamp":true,
+      "suitableForSyndication":true,
+      "hasNewsTracker":false,
+      "allowRelatedStoriesBox":true,
+      "isKeyContent":false,
+      "allowHeadline":true,
+      "allowAdvertising":true,
+      "hasContentWarning":false,
+      "isBreakingNews":false,
+      "allowPrintingSharingLinks":true
+    },
+    "analyticsLabels":{
+      "cps_asset_type":"sty",
+      "counterName":"hindi.science.story.56737064.page",
+      "cps_asset_id":"56737064"
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName":"Feature"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3139461b000e9dabf9",
+          "campaignName":"WS - Divert me"
+        }
+      ],
+      "language":"hi",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator":"urn:bbc:cps:curie:asset:2bd9ff8d-bda2-434d-834e-bec5d7759975",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "tags":{
+      "about":[
+        {
+          "thingLabel":"विज्ञान",
+          "thingUri":"http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+          "thingId":"0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          "thingType":[
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Theme"
+          ],
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q336",
+            "http://dbpedia.org/resource/Science"
+          ],
+          "topicName":"विज्ञान",
+          "topicId":"ckdxnkg0r93t",
+          "curationList":[
+            {
+              "curationId":"a3160ac8-a31e-4b2b-9b8d-4322107bd356",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Science"
+        }
+      ]
+    },
+    "version":"v1.3.11",
+    "blockTypes":[
+      "image",
+      "paragraph",
+      "crosshead",
+      "list"
+    ],
+    "includeComments":false,
+    "atiAnalytics":{
+      "producerName":"HINDI",
+      "producerId":"52"
+    },
+    "readTime":5,
+    "siteUri":"/hindi",
+    "topics":[
+      {
+        "topicName":"विज्ञान",
+        "topicId":"ckdxnkg0r93t",
+        "subjectList":[
+          {
+            "subjectId":"http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "subjectType":"tag"
+          }
+        ],
+        "curationList":[
+          {
+            "curationId":"a3160ac8-a31e-4b2b-9b8d-4322107bd356",
+            "curationType":"vivo-stream",
+            "visualProminence":"NORMAL"
+          }
+        ],
+        "types":[
+          "core:Thing",
+          "tagging:TagConcept",
+          "core:Theme"
+        ]
+      }
+    ]
+  },
+  "content":{
+    "blocks":[
+      {
+        "id":"117704130",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/0C44/production/_117704130_gettyimages-614403620.jpg",
+        "path":"/cpsprodpb/0C44/production/_117704130_gettyimages-614403620.jpg",
+        "height":549,
+        "width":976,
+        "altText":"हम चीखते क्यों हैं",
+        "copyrightHolder":"Getty Images",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"&quot;मैं बहुत डरी हुई थी लेकिन मैं उस अनुभव को हाथ से जाने भी नहीं देना चाहती थी. मैं वहां रही भले ही मैंने ज़्यादातर समय अपनी आंखें बंद ही रखीं. मैं ये भी सोच रही थी कि मैं ये दोबारा नहीं करने वाली हूं.&quot;",
+        "role":"introduction",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"आठ साल की एलेक्ज़ेन्ड्रा मेंडोज़ा ने रोलरकोस्टर की सवारी करते हुए ये कसम खाई थी. लेकिन, बाद में वो इस कसम पर कायम नहीं रह सकीं और वो भी एक बार नहीं बल्कि बार-बार.",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"उनके रोलरकोस्टर के अनुभव ने उनमें आढ़े-टेढ़े रास्तों की सवारी, सांसें थामने वाली ऊंचाई और झटका देने वाली ढलानों के लिए ज़बरदस्त जुनून पैदा कर दिया. रोलरकोस्टर पर सवार  एलेक्ज़ेन्ड्रा इसका मज़ा तो उठाती हैं लेकिन ज़ोर से चीखती भी हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"अमेरिका के बड़े थीम पार्क इस महीने के अंत में खुलने वाले हैं. कैलिफॉर्निया में रोलरकोस्टर पर झूलने वालों को अपने उत्साह पर काबू रखने और कम चीखने-चिल्लाने के लिए कहा गया है ताकि इससे कोविड-19 वायरस फैलने के जोखिम को कम किया जा सके. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"लेकिन, क्या कोई अपने चीखने पर काबू कर सकता है, क्या रोमांच चाहने वाले चीखे बिना रह सकते हैं और हम बेहद मज़ेदार पलों में चीखते क्यों हैं?  ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"117704136",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/F6A4/production/_117704136_gettyimages-1032270620.jpg",
+        "path":"/cpsprodpb/F6A4/production/_117704136_gettyimages-1032270620.jpg",
+        "height":549,
+        "width":976,
+        "altText":"रोलरकोस्टर राइड",
+        "copyrightHolder":"Getty Images",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"चीख क्या होती है?",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"इमोरी कॉलेज में मनोविज्ञान के प्रोफ़ेसक हेरॉल्ड गुज़ूल बताते हैं कि चीखने की क्रिया को &quot;पूरी तरह से गैर-मौखिक&quot; ज़बानी हैरानी दिखाने के तौर पर वर्गीकृत किया गया है. जैसे कि लिखित विस्मयादिबोधक चिन्ह (!) होते हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"वह कहते हैं, ''चिल्लाने का मतलब है कि आप अपनी आवाज़ निकाल रहे हैं लेकिन बोल नहीं रहे हैं.''",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"&quot;चीख एक विशिष्ट स्वर है. इसके ध्वनि संबंधी कुछ विशिष्ट गुण होते हैं; चीख एक सैकेंड के लगभग तीन चौथाई से लेकर डेढ़ सेकेंड तक हो सकती है. ये तेज़ आवाज़ में शुरू होती है और तेज़ ही बनी रहती है.&quot; ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"प्रोफ़ेसर हेरॉल्ड कहते हैं, &quot;तो चीख अपेक्षाकृत छोटी होती है, उसमें चौंकाने की क्षमता होती है, पिच ऊंची होती है और ये थोड़ी दूर तक जाती है.&quot; ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "numbered":false,
+        "items":[
+          {
+            "text":"<itemMeta>hindi/science-38662781</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं",
+                  "headline":"आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं",
+                  "overtyped":"आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं"
+                },
+                "locators":{
+                  "href":"https://www.bbc.com/hindi/science-38662781"
+                },
+                "summary":"आवाज़ से कैसे पता चलता है कि आपको कोई बीमारी होने वाली है.",
+                "timestamp":1484742232000,
+                "language":"hi",
+                "passport":{
+                  "category":{
+                    "categoryId":"",
+                    "categoryName":""
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:hindi/science-38662781",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          },
+          {
+            "text":"<link><caption>कैसे रहें मन के अंदर की आवाज़ों के साथ?</caption><url href=\"https://www.bbc.com/hindi/science/2016/05/160521_vert_fut_how_live_with_voices_inside_head_sh\" platform=\"highweb\"/><url href=\"https://www.bbc.com/hindi/science/2016/05/160521_vert_fut_how_live_with_voices_inside_head_sh\" platform=\"enhancedmobile\"/></link>",
+            "markupType":"candy_xml",
+            "type":"listItem"
+          }
+        ],
+        "type":"list"
+      },
+      {
+        "id":"117704260",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/1860/production/_117704260_gettyimages-200131384-001.jpg",
+        "path":"/cpsprodpb/1860/production/_117704260_gettyimages-200131384-001.jpg",
+        "height":549,
+        "width":976,
+        "altText":"रोलरकोस्टर राइड",
+        "copyrightHolder":"Getty Images",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"हम चीखते क्यों हैं? ",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"प्रोफ़ेसर हेरॉल्ड का कहना है, &quot;ऐसा विचार है कि चीख की शुरुआत ऐसे तरीक़े के तौर पर हुई थी जिससे किसी जंगली जानवर को चौंका दिया जाए और आपको बचने का एक छोटा-सा मौका मिल जाए.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"हमारे पूर्वज चीख का इस्तेमाल आसपास मौजूद परिवार के सदस्यों को मदद के लिए बुलाने के लिए भी करते थे. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"प्रोफ़ेसर बताते हैं, &quot;लेकिन, मौजूदा वक़्त में अगर चीखें मौखिक हथियार बनती हैं तो वो किस व्यक्ति की हैं आपको ये पहचानना आना चाहिए.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"उनका सुझाव है कि ऐसा होना इंसान को चीखने और चीख को पहचानने का अभ्यास करने के लिए प्रेरित कर सकता है. वो कम ख़तरे वाले माहौल में इसका अभ्यास कर सकते हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"117704266",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/102C0/production/_117704266_gettyimages-157696973.jpg",
+        "path":"/cpsprodpb/102C0/production/_117704266_gettyimages-157696973.jpg",
+        "height":549,
+        "width":976,
+        "altText":"रोलरकोस्टर राइड",
+        "copyrightHolder":"Getty Images",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"रोलकोस्टर पर क्या हो जाता है?",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"प्रोफ़ेसर हेरॉल्ड बताते हैं, &quot;हमारा दिमाग़ उन चीज़ों में हमें आनंद प्रदान करता है जिनसे जीवित बच जाने का अहसास होता है. हम काफ़ी सभ्य समाज में रह रहे हैं जहां हमें रोज़ चिल्लाना नहीं पड़ता लेकिन इसका मतलब ये भी नहीं है कि कुछ मौकों पर हमें डर नहीं लगता. ऐसे मौकों पर हम उसी तरह चीखेंगे जैसे हमारे पूर्वज चीखते थे.&quot; ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"वह कहते हैं, &quot;हमारे पूर्वजों के लिए चीख के अभ्यास की जगह झरना या ज्वालामुखी के आसपास का इलाक़ा रहा होगा और आधुनिक समाज के इंसान के लिए वो जगह रोलरकोस्टर और थीम पार्क हैं.&quot;",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"प्रोफ़ेसर हेरॉल्ड कहते हैं, ''आपका दिल तेज़ी से धड़कने लगता है, ब्लड प्रेशर बढ़ जाता है, इसलिए आप डरने के वही शारीरिक प्रभाव महसूस करते हैं जैसे कि वास्तविक ख़तरे में होते हैं जबकि इसमें आप जानते हैं कि आप सुरक्षित हैं. ये जो तनाव आपके अंदर बनता है आप चीखकर उसे बाहर निकाल देते हैं.''",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"इसलिए एलेजेन्ड्रा के रोलरकोस्टर पर चिल्लाने से लगता है कि जैसे उन्हें डर लग रहा है लेकिन असल में तो उन्हें मज़ा आ रहा होता है.   ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"25 साल के इक्वोडोर कहते हैं, &quot;मैं कहूंगा कि ये एक तरह से तनाव को दूर करने वाला है क्योंकि चीखते वक़्त आप सबकुछ भूल जाते हैं. आप सिर्फ़ उस पल में होते हैं.&quot; ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "numbered":false,
+        "items":[
+          {
+            "text":"<itemMeta>hindi/vert-fut-37441332</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"कहां से आए ये 'शब्द'?",
+                  "headline":"कहां से आए ये 'शब्द'?",
+                  "overtyped":"कहां से आए ये 'शब्द'?"
+                },
+                "locators":{
+                  "href":"https://www.bbc.com/hindi/vert-fut-37441332"
+                },
+                "summary":"जानिए तरह-तरह की आवाज़ें अलग-अलग शब्दों में कैसे तब्दील हो गए.",
+                "timestamp":1474612724000,
+                "language":"hi",
+                "passport":{
+                  "category":{
+                    "categoryId":"",
+                    "categoryName":""
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:hindi/vert-fut-37441332",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          },
+          {
+            "text":"<itemMeta>hindi/science-42889103</itemMeta>",
+            "meta":[
+              {
+                "headlines":{
+                  "shortHeadline":"इंसानी बोली कैसे बोलने लगी है ये व्हेल?",
+                  "headline":"इंसानी बोली कैसे बोलने लगी है ये व्हेल?",
+                  "overtyped":"इंसानी बोली कैसे बोलने लगी है ये व्हेल? "
+                },
+                "locators":{
+                  "href":"https://www.bbc.com/hindi/science-42889103"
+                },
+                "summary":"पक्षियों को आपने इंसानों से बात करते सुना होगा, पर कभी एक व्हेल को ऐसा करते सुना है?",
+                "timestamp":1517411489000,
+                "language":"hi",
+                "passport":{
+                  "category":{
+                    "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName":"News"
+                  },
+                  "taggings":[
+
+                  ]
+                },
+                "id":"urn:bbc:ares::asset:hindi/science-42889103",
+                "type":"cps"
+              }
+            ],
+            "markupType":"candy_xml",
+            "type":"listItem"
+          }
+        ],
+        "type":"list"
+      },
+      {
+        "id":"117700246",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/FAC8/production/_117700246_alejandraride3.jpg",
+        "path":"/cpsprodpb/FAC8/production/_117700246_alejandraride3.jpg",
+        "height":549,
+        "width":976,
+        "altText":"एलेजेन्ड्रा मेनडोज़",
+        "caption":"एलेजेन्ड्रा मेनडोज़ा",
+        "copyrightHolder":"Alejandra Mendoza",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"बेहद रोमांच का अनुभव ",
+        "markupType":"plain_text",
+        "type":"crosshead"
+      },
+      {
+        "text":"23 साल की ट्रैवल ब्लॉगर डिंफ मेनसिंक इस बात से सहमति जताती हैं कि वो बचपन से रोलकोस्टर पर झूलने का मज़ा उठा रही हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"वह बताती हैं, ''मैं शहरों में हमेशा थीम पार्क्स में जाना पसंद करती हूं क्योंकि ये मुझे बहुत रोमांचित करने वाला लगता है.&quot; ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"&quot;जब आप रोलरकोस्टर के लिए लाइन लगी हुई देखते हैं और बार-बार वो घूमता है तो आप खुश होते हैं कि अच्छा है कि आप उस पर नहीं हैं. वो उसे और डरावना बना देता है. लेकिन, जब मैं उस पर सवार होती हूं, वो धीरे-धीरे ऊपर जाता है तो मुझे बहुत डर लगता है लेकिन जब वो नीचे उतरता है तो मुझे बहुत रोमांच और खुशी का अनुभव होता है और मैं चीखना चाहती हूं.''",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"एम्सटर्डम में रहने वाली डिंफ मेनसिंक कहती हैं कि इस तरह चीखने से वो अपनी भावनाओं को ज़ाहिर कर पाती हैं. ये कुछ ऐसा है जो आप सामान्य ज़िंदगी में महसूस नहीं करेंगे. चीखने से और रोमांच का अनुभव होता है. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"117673774",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/BA79/production/_117673774_1.jpg",
+        "path":"/cpsprodpb/BA79/production/_117673774_1.jpg",
+        "height":549,
+        "width":976,
+        "altText":"ट्रैवल ब्लॉगर डिंफ मेनसिंक",
+        "caption":"ट्रैवल ब्लॉगर डिंफ मेनसिंक",
+        "copyrightHolder":"Dymphe Mensink",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"जापान के उरायासु शहर में रहने वाले आकी हयाशी कहते हैं कि दुनियाभर के रोलरकोस्टर का अनुभव लेना उनकी जीवनभर की प्रेरणा बन गई है. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"वह कहते हैं, ''मैं रोलरकोस्टर के बिना अपनी ज़िंदगी का मज़ा नहीं ले सकता.''",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"27 साल के हयाशी 'कोस्टर राइडर्स जापान' ग्रुप के प्रमुख भी हैं. ये रोलरकोस्टर राइड के दीवानों का एक समूह है जो मिलकर थीम पार्क जाते हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "id":"117673770",
+        "subType":"body",
+        "href":"http://c.files.bbci.co.uk/1E39/production/_117673770_aki.png",
+        "path":"/cpsprodpb/1E39/production/_117673770_aki.png",
+        "height":549,
+        "width":976,
+        "altText":"जापान के उरायासु शहर में रहने वाले आकी हयाशी",
+        "caption":"जापान के उरायासु शहर में रहने वाले आकी हयाशी",
+        "copyrightHolder":"Aki Hayashi",
+        "positionHint":"full-width",
+        "type":"image"
+      },
+      {
+        "text":"वह कहते हैं कि 350 रोलरकोस्टर पर झूलने के बाद वो अब अपनी चीख पर काबू कर सकते हैं. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"हयाशी बताते हैं, ''अगर मैं अकेले झूल रहा हूं तो मैं दिखाता हूं कि जैसे मैं उत्साहित ही नहीं हूं क्योंकि जब मैं अकेले चीखूंगा तो सब मुझे ही देखते हैं. लेकिन, जब हम साथ मिलकर झूलते हैं तो वो एक पार्टी करने जैसा होता है जिसमें हम साथ में खूब चिल्लाते हैं और शोर मचाते हैं. जब हम चिल्लाते हैं तब मुझे बहुत अच्छा लगता है.''",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"प्रोफ़ेसर हेरॉल्ड  कहते हैं कि चीख पर नियंत्रण पाने की क्षमता होना संभव है लेकिन ये एक चुनौती है. कुछ लोग ऐसा कर भी सकते हैं और कुछ नहीं भी. ",
+        "markupType":"plain_text",
+        "type":"paragraph"
+      },
+      {
+        "text":"<bold>(बीबीसी हिन्दी के एंड्रॉएड ऐप के लिए आप </bold><link><caption>यहां क्लिक</caption><altText>यहां क्लिक</altText><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"highweb\"/><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"enhancedmobile\"/></link><bold> कर सकते हैं. आप हमें </bold><link><caption>फ़ेसबुक</caption><altText>फ़ेसबुक</altText><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर</caption><altText>ट्विटर</altText><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इंस्टाग्राम </caption><url href=\"https://www.instagram.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.instagram.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold>और </bold><link><caption>यूट्यूब</caption><url href=\"https://www.youtube.com/user/bbchindi\" platform=\"highweb\"/><url href=\"https://www.youtube.com/user/bbchindi\" platform=\"enhancedmobile\"/></link><bold>पर फ़ॉलो भी कर सकते हैं.)</bold>",
+        "markupType":"candy_xml",
+        "type":"paragraph"
+      }
+    ]
+  },
+  "promo":{
+    "headlines":{
+      "shortHeadline":"हम खुशी में भी चीखने क्यों लगते हैं?",
+      "headline":"तेज़ी से झूला झूलते वक़्त हम चीखते क्यों हैं?"
+    },
+    "locators":{
+      "assetUri":"/hindi/science-56737064",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/science-56737064",
+      "curie":"http://www.bbc.co.uk/asset/2bd9ff8d-bda2-434d-834e-bec5d7759975",
+      "assetId":"56737064"
+    },
+    "summary":"अमेरिका में थीम पार्क खुलने वाले हैं. कोरोना की वजह से लोगों को सलाह दी गई है कि वो कम चिल्लाएँ. पर क्या आप चिल्लाने पर काबू पा सकते हैं?",
+    "timestamp":1618454703000,
+    "language":"hi",
+    "byline":{
+      "name":"रेबेका थॉर्न",
+      "title":"बीबीसी वर्ल्ड सर्विस  ",
+      "persons":[
+        {
+          "name":"Jenny Hill",
+          "function":"Corresponsal en Berlín"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName":"Feature"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3139461b000e9dabf9",
+          "campaignName":"WS - Divert me"
+        }
+      ],
+      "language":"hi",
+      "home":"http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator":"urn:bbc:cps:curie:asset:2bd9ff8d-bda2-434d-834e-bec5d7759975",
+      "availability":"AVAILABLE",
+      "taggings":[
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
+          "value":"http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+          "value":"http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value":"http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate":"http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value":"http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion":"1.2.0",
+      "publishedState":"PUBLISHED"
+    },
+    "indexImage":{
+      "id":"118061515",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/C93C/production/_118061515_gettyimages-614403620.jpg",
+      "path":"/cpsprodpb/C93C/production/_118061515_gettyimages-614403620.jpg",
+      "height":549,
+      "width":976,
+      "altText":"हम चीखते क्यों हैं",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:hindi/science-56737064",
+    "type":"cps"
+  },
+  "relatedContent":{
+    "section":{
+      "subType":"index",
+      "name":"विज्ञान-टेक्नॉलॉजी",
+      "uri":"/hindi/science",
+      "type":"simple"
+    },
+    "site":{
+      "subType":"site",
+      "name":"BBC Hindi",
+      "uri":"/hindi",
+      "type":"simple"
+    },
+    "groups":[
+      {
+        "type":"see-alsos",
+        "promos":[
+          {
+            "headlines":{
+              "shortHeadline":"आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं",
+              "headline":"आवाज़ बता सकती है, आप बीमार पड़ने वाले हैं"
+            },
+            "locators":{
+              "assetUri":"/hindi/science-38662781",
+              "cpsUrn":"urn:bbc:content:assetUri:/hindi/science-38662781"
+            },
+            "summary":"आवाज़ से कैसे पता चलता है कि आपको कोई बीमारी होने वाली है.",
+            "timestamp":1484742232000,
+            "language":"hi",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"93645542",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/5FEA/production/_93645542_d0afe94b-93f1-49aa-b1f6-a3a0d89c4480.jpg",
+              "path":"/cpsprodpb/5FEA/production/_93645542_d0afe94b-93f1-49aa-b1f6-a3a0d89c4480.jpg",
+              "height":549,
+              "width":976,
+              "altText":"आवाज़ निकालती महिला",
+              "caption":"आवाज़ के विश्लेषण से रोग का समय से पहले पता चल सकता है",
+              "copyrightHolder":"Thinkstock",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:hindi/science-38662781",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"कहां से आए ये 'शब्द'?",
+              "headline":"कहां से आए ये 'शब्द'?"
+            },
+            "locators":{
+              "assetUri":"/hindi/vert-fut-37441332",
+              "cpsUrn":"urn:bbc:content:assetUri:/hindi/vert-fut-37441332"
+            },
+            "summary":"जानिए तरह-तरह की आवाज़ें अलग-अलग शब्दों में कैसे तब्दील हो गए.",
+            "timestamp":1474612724000,
+            "language":"hi",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"91344073",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/90B4/production/_91344073_thinkstockphotos-83454817.jpg",
+              "path":"/cpsprodpb/90B4/production/_91344073_thinkstockphotos-83454817.jpg",
+              "height":549,
+              "width":976,
+              "altText":"भाषा की ईज़ाद",
+              "copyrightHolder":"Thinkstock",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:hindi/vert-fut-37441332",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"इंसानी बोली कैसे बोलने लगी है ये व्हेल?",
+              "headline":"इंसानी बोली कैसे बोलने लगी है ये व्हेल?"
+            },
+            "locators":{
+              "assetUri":"/hindi/science-42889103",
+              "cpsUrn":"urn:bbc:content:assetUri:/hindi/science-42889103"
+            },
+            "summary":"पक्षियों को आपने इंसानों से बात करते सुना होगा, पर कभी एक व्हेल को ऐसा करते सुना है?",
+            "timestamp":1517411489000,
+            "language":"hi",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"99824852",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/64F2/production/_99824852_gettyimages-516150278.jpg",
+              "path":"/cpsprodpb/64F2/production/_99824852_gettyimages-516150278.jpg",
+              "height":549,
+              "width":976,
+              "altText":"कीलर व्हेल",
+              "copyrightHolder":"Getty Images",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:hindi/science-42889103",
+            "type":"cps"
+          },
+          {
+            "headlines":{
+              "shortHeadline":"वो पांच नुस्खे जिनसे हर बात याद रह जाएगी",
+              "headline":"वो पांच नुस्खे जिनसे हर बात याद रह जाएगी"
+            },
+            "locators":{
+              "assetUri":"/hindi/vert-fut-45659996",
+              "cpsUrn":"urn:bbc:content:assetUri:/hindi/vert-fut-45659996"
+            },
+            "summary":"ज़्यादातर छात्र याद करने के लिए ऐसे नुस्खों पर अमल करते रहते हैं, जो काम के नहीं हैं.",
+            "timestamp":1538011606000,
+            "language":"hi",
+            "cpsType":"STY",
+            "indexImage":{
+              "id":"103594812",
+              "subType":"index",
+              "href":"http://c.files.bbci.co.uk/5559/production/_103594812_040889375-1.jpg",
+              "path":"/cpsprodpb/5559/production/_103594812_040889375-1.jpg",
+              "height":549,
+              "width":976,
+              "altText":"याददाश्त बढ़ाने का तरीका",
+              "copyrightHolder":"Getty Images",
+              "type":"image"
+            },
+            "id":"urn:bbc:ares::asset:hindi/vert-fut-45659996",
+            "type":"cps"
+          }
+        ]
+      }
+    ]
+  }
+}
