@@ -3,13 +3,13 @@
     "hasViewed": false,
     "stories": [
       {
-        "src": "LEAD IMAGE SRC",
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/E890/production/_118063595_01b07491-a185-437e-8715-422d7f9f6ab7.jpg",
         "title": "Heading",
         "description": "Lorem ipsom",
         "href": "https://link-to-article"
       },
       {
-        "src": "LEAD IMAGE SRC",
+        "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/0C44/production/_117704130_gettyimages-614403620.jpg",
         "title": "Heading",
         "description": "Lorem ipsom",
         "href": "https://link-to-article"
@@ -26,5 +26,60 @@
         "href": "https://link-to-article"
       }
     ]
-  }
+  },
+  "technology": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
+  "travel": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
+  "voice": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
+  "health": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
+  "california": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
 }
