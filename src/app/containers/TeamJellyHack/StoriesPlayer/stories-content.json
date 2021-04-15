@@ -1,1 +1,30 @@
-{}
+{
+  "science": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      },
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  },
+  "entertainment": {
+    "hasViewed": false,
+    "stories": [
+      {
+        "src": "LEAD IMAGE SRC",
+        "title": "Heading",
+        "description": "Lorem ipsom",
+        "href": "https://link-to-article"
+      }
+    ]
+  }
+}

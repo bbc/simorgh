@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "science",
+    "name": "Science",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
+    "hasViewed": false
+  },
+  {
+    "id": "entertainment",
+    "name": "Entertainment",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
+    "hasViewed": false
+  }
+]
