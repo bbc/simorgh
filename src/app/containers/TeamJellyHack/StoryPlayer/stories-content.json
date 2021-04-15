@@ -1,6 +1,8 @@
 {
   "science": {
     "hasViewed": false,
+    "name": "Science",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/E890/production/_118063595_01b07491-a185-437e-8715-422d7f9f6ab7.jpg",
@@ -24,6 +26,8 @@
   },
   "entertainment": {
     "hasViewed": false,
+    "name": "Entertainment",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/D0D3/production/_100695435_parveenbobby5.jpg",
@@ -47,6 +51,8 @@
   },
   "technology": {
     "hasViewed": false,
+    "name": "Technology",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/22DE/production/_117362980_gettyimages-612635954.jpg",
@@ -70,6 +76,8 @@
   },
   "travel": {
     "hasViewed": false,
+    "name": "Travel",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/13CDE/production/_117481118_whatsappimage2021-03-06at1.19.03am.jpg",
@@ -93,6 +101,8 @@
   },
   "voice": {
     "hasViewed": false,
+    "name": "Voice",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/0C44/production/_117704130_gettyimages-614403620.jpg",
@@ -116,6 +126,8 @@
   },
   "health": {
     "hasViewed": false,
+    "name": "Health",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/2566/production/_118047590_whatsubject.jpg",
@@ -139,6 +151,8 @@
   },
   "california": {
     "hasViewed": false,
+    "name": "California",
+    "src": "https://ux-chosen-image-somwhere-online.com/image.jpg",
     "stories": [
       {
         "src": "https://ichef.bbci.co.uk/news/800/cpsprodpb/508F/production/_114032602_0d7aff64-7aba-45ed-a12f-22333cda8add.jpg",
