@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import StoryPromo from '#components/TeamJellyHack/StoryPromo';
+import StoryNav from '#components/TeamJellyHack/StoryNav';
 
 const StoryPlayer = ({ data }) => {
   const currentPage = useState(0);
@@ -6,7 +8,9 @@ const StoryPlayer = ({ data }) => {
   // close button
   // nav
   // StoryPromo - data.stories[currentPage]
-  return ()
+  return (
+    <StoryPromo {...data.stories[currentPage]} />
+  );
 };
 
 export default StoryPlayer;
