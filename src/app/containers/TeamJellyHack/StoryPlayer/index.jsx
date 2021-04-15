@@ -1,15 +1,33 @@
 import React, { useState } from 'react';
+import styled from '@emotion/styled';
 import StoryPromo from '#components/TeamJellyHack/StoryPromo';
 import StoryNav from '#components/TeamJellyHack/StoryNav';
 
-const StoryPlayer = ({ data }) => {
-  const currentPage = useState(0);
-  // container
-  // close button
-  // nav
-  // StoryPromo - data.stories[currentPage]
+const StoryPlayerOverlay = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+`;
+
+const CloseButton = styled.button`
+  /* styles */
+`;
+
+const StoryPlayer = ({ data, onClose }) => {
+  const [currentPage, setCurrentPage] = useState(0);
   return (
-    <StoryPromo {...data.stories[currentPage]} />
+    <>
+      <StoryPlayerOverlay>
+        <StoryNav
+          numStories={data.stories.length}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
+        <CloseButton onClick={onClose} />
+        <StoryPromo {...data.stories[currentPage]} />
+      </StoryPlayerOverlay>
+    </>
   );
 };
 
