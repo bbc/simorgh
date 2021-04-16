@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
 import { C_BLACK, C_WHITE } from '@bbc/psammead-styles/dist/colours';
@@ -6,10 +6,13 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/dist/spacings';
-import { getSansRegular } from '@bbc/psammead-styles/dist/font-styles';
+import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const Container = styled.div`
-  ${getSansRegular('hindi')}
+  ${({ service }) => getSansRegular(service)}
+  ${({ script }) => getGreatPrimer(script)}
   color: ${C_WHITE};
 `;
 
@@ -38,8 +41,10 @@ const Anchor = styled.a`
 `;
 
 const StoryPromo = ({ src, title, description, href }) => {
+  const ctx = useContext(ServiceContext);
+  const { service, script } = ctx;
   return (
-    <Container>
+    <Container service={service} script={script}>
       <Picture>
         <Image src={src} alt={title} />
       </Picture>
