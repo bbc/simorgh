@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, func } from 'prop-types';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/dist/spacings';
@@ -22,15 +21,15 @@ const Overlay = styled.div`
 `;
 
 const Container = styled.div`
-  margin-right: auto;
-  margin-left: auto;
   max-width: ${MAX_WIDTH};
+  padding: 0 ${GEL_SPACING_DBL};
+  margin: 0 auto;
 `;
 
 const Header = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  padding-bottom: ${GEL_SPACING_DBL};
 
   svg {
     width: ${GEL_SPACING_QUAD};
@@ -42,6 +41,7 @@ const CloseButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 `;
 
 const StoryPlayer = ({ stories, onClose }) => {

@@ -1,14 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
-import { C_WHITE } from '@bbc/psammead-styles/dist/colours';
+import { C_BLACK, C_WHITE } from '@bbc/psammead-styles/dist/colours';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/dist/spacings';
+import { getSansRegular } from '@bbc/psammead-styles/dist/font-styles';
 
 const Container = styled.div`
+  ${getSansRegular('hindi')}
   color: ${C_WHITE};
 `;
 
+const Picture = styled.div`
+  margin: 0 -${GEL_SPACING_DBL};
+`;
+
 const Image = styled.img`
-  max-width: 100%;
+  display: block;
+  width: 100%;
 `;
 
 const Title = styled.h2`
@@ -20,17 +31,24 @@ const Description = styled.p`
 `;
 
 const Anchor = styled.a`
-  /* Anchor styles */
+  background: ${C_WHITE};
+  padding: ${GEL_SPACING} ${GEL_SPACING_DBL};
+  color: ${C_BLACK};
+  text-decoration: none;
 `;
 
-const StoryPromo = ({ src, title, description, href }) => (
-  <Container>
-    <Image src={src} alt={title} />
-    <Title>{title}</Title>
-    <Description>{description}</Description>
-    <Anchor href={href}>Full story</Anchor>
-  </Container>
-);
+const StoryPromo = ({ src, title, description, href }) => {
+  return (
+    <Container>
+      <Picture>
+        <Image src={src} alt={title} />
+      </Picture>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      <Anchor href={href}>पूरा लेख</Anchor>
+    </Container>
+  );
+};
 
 StoryPromo.propTypes = {
   src: string.isRequired,
