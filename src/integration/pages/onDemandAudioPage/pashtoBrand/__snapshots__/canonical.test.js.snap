@@ -148,7 +148,7 @@ exports[`Canonical On Demand Audio Page Main heading should match text 1`] = `"�
 
 exports[`Canonical On Demand Audio Page Media Player a11y assistive technology can read the media player title 1`] = `"اډیو پلیئر"`;
 
-exports[`Canonical On Demand Audio Page Media Player iframe with valid URL should be rendered 1`] = `"https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live"`;
+exports[`Canonical On Demand Audio Page Media Player iframe with valid URL should be rendered 1`] = `"https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live"`;
 
 exports[`Canonical On Demand Audio Page Recent Episodes List items should match text and url 1`] = `
 Object {
@@ -300,7 +300,7 @@ Object {
       "@type": "AudioObject",
       "description": "د نړۍ وروستي خبرونه",
       "duration": "PT3M",
-      "embedURL": "https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live",
+      "embedURL": "https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_radio/w172xjcjkv7gw1w/ps?morph_env=live",
       "name": "وروستي خبرونه",
       "thumbnailUrl": "https://ichef.bbci.co.uk/images/ic/1024x576/p08b23c8.png",
       "uploadDate": "2020-05-18T00:00:00.000Z",
