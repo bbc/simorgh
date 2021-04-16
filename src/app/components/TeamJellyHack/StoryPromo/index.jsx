@@ -1,29 +1,36 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { string } from 'prop-types';
+import { C_WHITE } from '@bbc/psammead-styles/dist/colours';
 
-const PromoTitle = styled.h2`
+const Container = styled.div`
+  color: ${C_WHITE};
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+`;
+
+const Title = styled.h2`
   /* Title styles */
 `;
 
-const PromoDescription = styled.h4`
+const Description = styled.p`
   /* Description styles */
 `;
 
-const OnwardLink = styled.a`
-  /* Anchorgit  styles */
+const Anchor = styled.a`
+  /* Anchor styles */
 `;
 
-const StoryPromo = ({ src, title, description, href }) => {
-  return (
-    <>
-      <img src={src} alt={title} />
-      <PromoTitle>{title}</PromoTitle>
-      <PromoDescription>{description}</PromoDescription>
-      <OnwardLink href={href}>Full story</OnwardLink>
-    </>
-  );
-};
+const StoryPromo = ({ src, title, description, href }) => (
+  <Container>
+    <Image src={src} alt={title} />
+    <Title>{title}</Title>
+    <Description>{description}</Description>
+    <Anchor href={href}>Full story</Anchor>
+  </Container>
+);
 
 StoryPromo.propTypes = {
   src: string.isRequired,

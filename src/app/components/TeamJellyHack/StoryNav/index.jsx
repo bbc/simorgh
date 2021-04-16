@@ -1,34 +1,32 @@
 import React from 'react';
+import styled from '@emotion/styled';
+import { number, func } from 'prop-types';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 
-const NavButton = ({ isCurrentPage, index, setCurrentPage }) => {
-  return <button onClick={() => setCurrentPage(index)} />;
+const StyledButton = styled.button`
+  padding: ${GEL_SPACING};
+`;
+
+const StoryNav = ({ numStories, currentStoryNum, setCurrentStoryNum }) => {
+  const navButtons = new Array(numStories).fill(null).map((_, index) => (
+    <li>
+      <StyledButton
+        type="button"
+        isCurrentPage={index === currentStoryNum}
+        index={index}
+        setCurrentStoryNum={setCurrentStoryNum}
+        onClick={() => setCurrentStoryNum(index)}
+      />
+    </li>
+  ));
+
+  return <ol>{navButtons}</ol>;
 };
 
-const StoryNav = ({ numStories, currentPage, setCurrentPage }) => {
-  const navButtons = new Array(numStories).map((_, index) => {
-    return (
-      <li>
-        <NavButton
-          isCurrentPage={index === currentPage}
-          index={index}
-          setCurrentPage={setCurrentPage}
-        />
-      </li>
-    );
-  });
-  console.log(navButtons);
-  // for (let i = 0; i < numStories; i++) {
-  //   navButtons.push(
-  // <li>
-  //   <NavButton
-  //     isCurrentPage={i === currentPage}
-  //     index={i}
-  //     setCurrentPage={setCurrentPage}
-  //   />
-  // </li>,
-  //   );
-  // }
-  return <ol>{navButtons}</ol>;
+StoryNav.propTypes = {
+  numStories: number.isRequired,
+  currentStoryNum: number.isRequired,
+  setCurrentStoryNum: func.isRequired,
 };
 
 export default StoryNav;

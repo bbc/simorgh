@@ -1,22 +1,39 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { bool, func, string } from 'prop-types';
+import { GEL_SPACING } from '@bbc/gel-foundations/dist/spacings';
+import { C_EBON, C_POSTBOX } from '@bbc/psammead-styles/dist/colours';
+import { getSansBold } from '@bbc/psammead-styles/dist/font-styles';
 
-// ${({ hasViewed }) => /* hasViewed styles */}
-const HAS_VIEWED_STYLES = `
-  opacity: 50%;
-`;
+const THUMBNAIL_DIAMETER = '5rem';
 
 const StyledStoryItem = styled.li`
   cursor: pointer;
-  ${({ hasViewed }) => (hasViewed ? HAS_VIEWED_STYLES : '')}
+  margin-right: ${GEL_SPACING};
+  margin-left: ${GEL_SPACING};
+  ${({ hasViewed }) => (hasViewed ? 'opacity: 50%;' : '')}
+`;
+
+const TopicImage = styled.img`
+  border-radius: 50%;
+  width: ${THUMBNAIL_DIAMETER};
+  height: ${THUMBNAIL_DIAMETER};
+  border: 0.1875rem solid ${C_POSTBOX};
+  ${({ hasViewed }) => (hasViewed ? `border-color: ${C_EBON};` : '')}
+`;
+
+const TopicName = styled.strong`
+  ${getSansBold('hindi')}
+  display: block;
+  margin-top: ${GEL_SPACING};
+  text-align: center;
 `;
 
 const StoryItem = ({ onClick, id, hasViewed, name, src }) => {
   return (
     <StyledStoryItem hasViewed={hasViewed} onClick={() => onClick(id)}>
-      <img src={src} alt={name} />
-      <h4>{name}</h4>
+      <TopicImage hasViewed={hasViewed} src={src} alt={name} />
+      <TopicName>{name}</TopicName>
     </StyledStoryItem>
   );
 };

@@ -4,34 +4,56 @@ import { arrayOf, shape, func } from 'prop-types';
 import StoryPromo from '#components/TeamJellyHack/StoryPromo';
 import StoryNav from '#components/TeamJellyHack/StoryNav';
 
-const StoryPlayerOverlay = styled.div`
-  position: fixed;
-  width: 100vw;
+const MAX_WIDTH = '30rem';
+
+const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.9);
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.75);
-  z-index: 100;
-  top: 0;
   left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+`;
+
+const Container = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  max-width: ${MAX_WIDTH};
 `;
 
 const CloseButton = styled.button`
-  /* styles */
+  background: none;
+  border: none;
+  cursor: pointer;
 `;
 
 const StoryPlayer = ({ stories, onClose }) => {
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentStoryNum, setCurrentStoryNum] = useState(0);
+
   return (
-    <>
-      <StoryPlayerOverlay>
+    <Overlay>
+      <Container>
         <StoryNav
           numStories={stories.length}
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
+          currentStoryNum={currentStoryNum}
+          setCurrentStoryNum={setCurrentStoryNum}
         />
-        <CloseButton onClick={onClose} />
-        <StoryPromo {...stories[currentPage]} />
-      </StoryPlayerOverlay>
-    </>
+        <CloseButton onClick={onClose}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="#FFFFFF"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </CloseButton>
+        <StoryPromo {...stories[currentStoryNum]} />
+      </Container>
+    </Overlay>
   );
 };
 

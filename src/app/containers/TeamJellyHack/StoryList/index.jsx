@@ -1,6 +1,9 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useReducer, useState } from 'react';
+import styled from '@emotion/styled';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/dist/spacings';
 
 import StoryPlayer from '#containers/TeamJellyHack/StoryPlayer';
 import StoryItem from '#components/TeamJellyHack/StoryItem';
@@ -21,6 +24,20 @@ const storiesReducer = (state, action) => {
       throw new Error(`Unhandled action type: ${action.type}.`);
   }
 };
+
+const Container = styled.div`
+  margin-top: ${GEL_SPACING_DBL};
+`;
+
+const StoryItems = styled.ol`
+  display: flex;
+  list-style: none;
+  margin: 0 ${GEL_SPACING};
+  overflow-x: auto;
+  padding-bottom: ${GEL_SPACING};
+  padding-left: 0;
+`;
+
 const StoryList = () => {
   const [isStoryPlayerVisible, setIsStoryPlayerVisible] = useState(false);
   const [activeStoryId, setActiveStoryId] = useState(null);
@@ -40,14 +57,14 @@ const StoryList = () => {
   };
 
   return (
-    <>
+    <Container>
       {isStoryPlayerVisible && (
         <StoryPlayer
           stories={storiesData[activeStoryId].stories}
           onClose={hideStoryPlayer}
         />
       )}
-      <ol>
+      <StoryItems>
         {Object.entries(storiesData).map(([id, { hasViewed, name, src }]) => (
           <StoryItem
             key={id}
@@ -58,8 +75,8 @@ const StoryList = () => {
             onClick={handleStoryClick}
           />
         ))}
-      </ol>
-    </>
+      </StoryItems>
+    </Container>
   );
 };
 
