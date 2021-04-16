@@ -1,7 +1,7 @@
 {
   "science": {
     "hasViewed": false,
-    "name": "Science",
+    "name": "विज्ञान",
     "src": "https://i.imgur.com/7PYJHnl.jpg",
     "stories": [
       {
@@ -26,7 +26,7 @@
   },
   "entertainment": {
     "hasViewed": false,
-    "name": "Entertainment",
+    "name": "मनोरंजन",
     "src": "https://i.imgur.com/Vmekkac.jpg",
     "stories": [
       {
@@ -51,7 +51,7 @@
   },
   "technology": {
     "hasViewed": false,
-    "name": "Technology",
+    "name": "प्रौद्योगिकी",
     "src": "https://i.imgur.com/2alf0sf.jpg",
     "stories": [
       {
@@ -76,7 +76,7 @@
   },
   "travel": {
     "hasViewed": false,
-    "name": "Travel",
+    "name": "यात्रा करना",
     "src": "https://i.imgur.com/ubpRP3p.jpg",
     "stories": [
       {
@@ -101,7 +101,7 @@
   },
   "voice": {
     "hasViewed": false,
-    "name": "Voice",
+    "name": "आवाज़",
     "src": "https://i.imgur.com/dZYYyVS.jpg",
     "stories": [
       {
@@ -126,7 +126,7 @@
   },
   "health": {
     "hasViewed": false,
-    "name": "Health",
+    "name": "स्वास्थ्य",
     "src": "https://i.imgur.com/Hovbrrp.jpg",
     "stories": [
       {
@@ -151,7 +151,7 @@
   },
   "california": {
     "hasViewed": false,
-    "name": "California",
+    "name": "कैलिफोर्निया",
     "src": "https://i.imgur.com/DlNzlyf.jpg",
     "stories": [
       {
