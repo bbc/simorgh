@@ -187,6 +187,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         items={recommendationsInitialData}
       />
     ),
+    articleReader: () => <ArticleReader/>
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -313,7 +314,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
       )}
       {isAdsEnabled && <AdContainer slotType="leaderboard" />}
-      <ArticleReader />
       <StoryPageGrid
         columns={gridColumns}
         enableGelGutters

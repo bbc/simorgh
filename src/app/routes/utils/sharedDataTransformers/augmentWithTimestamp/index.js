@@ -2,6 +2,10 @@
 import pathOr from 'ramda/src/pathOr';
 import deepClone from '../../jsonClone';
 
+const articleReaderBlock = {
+  type: 'articleReader'
+};
+
 const augmentWithTimestamp = jsonRaw => {
   // safely get deeply nested JSON values
   const firstPublished = pathOr(null, ['metadata', 'firstPublished'], jsonRaw);
@@ -43,6 +47,7 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
       json.content.model.blocks = [
         ...headlineBlocks,
         timestampBlock,
+        articleReaderBlock,
         mainBlocks[0],
         ...mainBlocks.slice(1),
       ];
@@ -51,18 +56,20 @@ const insertTimestampBlock = (originalJson, timestampBlock) => {
         ...headlineBlocks,
         mainBlocks[0],
         timestampBlock,
+        articleReaderBlock,
         ...mainBlocks.slice(1),
       ];
     } else {
       json.content.model.blocks = [
         ...headlineBlocks,
         timestampBlock,
+        articleReaderBlock,
         ...mainBlocks,
       ];
     }
   } else {
     // put timestamp block in as the first element
-    json.content.model.blocks.unshift(timestampBlock);
+    json.content.model.blocks.unshift([timestampBlock, articleReaderBlock ]);
   }
   return json;
 };
