@@ -37,25 +37,25 @@ const StyledProgressBar = styled.div`
 `;
 
 const StyledProgressBarIndicator = styled.div`
-  width: ${({ isCurrentPage }) => (isCurrentPage ? '100%' : '0%')};
+  width: ${({ isActiveStory }) => (isActiveStory ? '100%' : '0%')};
   height: 3px;
   background: ${C_WHITE};
 `;
 
-const StoryNav = ({ numStories, currentStoryNum, setCurrentStoryNum }) => {
+const StoryNav = ({ numStories, currentStoryIndex, setCurrentStoryIndex }) => {
   const navButtons = new Array(numStories).fill(null).map((_, index) => {
-    const isCurrentPage = index === currentStoryNum;
+    const isActiveStory = index === currentStoryIndex;
     return (
       <StyledButtonWrapper>
         <StyledButton
           type="button"
-          isCurrentPage={isCurrentPage}
+          isActiveStory={isActiveStory}
           index={index}
-          setCurrentStoryNum={setCurrentStoryNum}
-          onClick={() => setCurrentStoryNum(index)}
+          setCurrentStoryIndex={setCurrentStoryIndex}
+          onClick={() => setCurrentStoryIndex(index)}
         >
           <StyledProgressBar>
-            <StyledProgressBarIndicator isCurrentPage={isCurrentPage} />
+            <StyledProgressBarIndicator isActiveStory={isActiveStory} />
           </StyledProgressBar>
         </StyledButton>
       </StyledButtonWrapper>
@@ -67,8 +67,8 @@ const StoryNav = ({ numStories, currentStoryNum, setCurrentStoryNum }) => {
 
 StoryNav.propTypes = {
   numStories: number.isRequired,
-  currentStoryNum: number.isRequired,
-  setCurrentStoryNum: func.isRequired,
+  currentStoryIndex: number.isRequired,
+  setCurrentStoryIndex: func.isRequired,
 };
 
 export default StoryNav;

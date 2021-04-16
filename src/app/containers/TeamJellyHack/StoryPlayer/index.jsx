@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, shape, func } from 'prop-types';
 import {
@@ -45,15 +45,24 @@ const CloseButton = styled.button`
 `;
 
 const StoryPlayer = ({ stories, onClose }) => {
-  const [currentStoryNum, setCurrentStoryNum] = useState(0);
+  const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      if (currentStoryIndex < stories.length - 1) {
+        setCurrentStoryIndex(s => s + 1);
+      }
+    }, 3000);
+    return () => clearTimeout(timerId);
+  }, [currentStoryIndex, stories.length]);
 
   return (
     <Overlay>
       <Container>
         <StoryNav
           numStories={stories.length}
-          currentStoryNum={currentStoryNum}
-          setCurrentStoryNum={setCurrentStoryNum}
+          currentStoryIndex={currentStoryIndex}
+          setCurrentStoryIndex={setCurrentStoryIndex}
         />
         <Header>
           <CloseButton onClick={onClose}>
@@ -69,7 +78,7 @@ const StoryPlayer = ({ stories, onClose }) => {
             </svg>
           </CloseButton>
         </Header>
-        <StoryPromo {...stories[currentStoryNum]} />
+        <StoryPromo {...stories[currentStoryIndex]} />
       </Container>
     </Overlay>
   );
