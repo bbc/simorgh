@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { bool, func, string } from 'prop-types';
 import { GEL_SPACING } from '@bbc/gel-foundations/dist/spacings';
 import { C_EBON, C_POSTBOX } from '@bbc/psammead-styles/dist/colours';
-import { getSansBold } from '@bbc/psammead-styles/dist/font-styles';
+import { getSansRegular } from '@bbc/psammead-styles/dist/font-styles';
 
 const THUMBNAIL_DIAMETER = '5rem';
 
@@ -23,7 +23,7 @@ const TopicImage = styled.img`
 `;
 
 const TopicName = styled.strong`
-  ${getSansBold('hindi')}
+  ${getSansRegular('hindi')}
   display: block;
   margin-top: ${GEL_SPACING};
   text-align: center;
