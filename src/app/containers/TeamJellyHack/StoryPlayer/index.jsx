@@ -52,7 +52,7 @@ const StoryPlayer = ({ stories, onClose }) => {
       if (currentStoryIndex < stories.length - 1) {
         setCurrentStoryIndex(s => s + 1);
       }
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(timerId);
   }, [currentStoryIndex, stories.length]);
 

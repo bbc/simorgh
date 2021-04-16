@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { number, func } from 'prop-types';
 import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
@@ -40,29 +40,45 @@ const StyledProgressBarIndicator = styled.div`
   width: ${({ isActiveStory }) => (isActiveStory ? '100%' : '0%')};
   height: 3px;
   background: ${C_WHITE};
+  transition: ${({ isActiveStory }) =>
+    isActiveStory ? 'width 5s linear' : 'none 3s linear'};
 `;
 
 const StoryNav = ({ numStories, currentStoryIndex, setCurrentStoryIndex }) => {
-  const navButtons = new Array(numStories).fill(null).map((_, index) => {
-    const isActiveStory = index === currentStoryIndex;
-    return (
-      <StyledButtonWrapper>
-        <StyledButton
-          type="button"
-          isActiveStory={isActiveStory}
-          index={index}
-          setCurrentStoryIndex={setCurrentStoryIndex}
-          onClick={() => setCurrentStoryIndex(index)}
-        >
-          <StyledProgressBar>
-            <StyledProgressBarIndicator isActiveStory={isActiveStory} />
-          </StyledProgressBar>
-        </StyledButton>
-      </StyledButtonWrapper>
-    );
-  });
+  const [activeButtons, setActiveButtons] = useState(
+    new Array(numStories).fill(false),
+  );
 
-  return <StyledNav columns={numStories}>{navButtons}</StyledNav>;
+  useEffect(() => {
+    setActiveButtons(currentButtonState =>
+      currentButtonState.map((_, index) => {
+        if (index === currentStoryIndex) return true;
+        return false;
+      }),
+    );
+  }, [currentStoryIndex]);
+
+  return (
+    <StyledNav columns={numStories}>
+      {activeButtons.map((isActiveStory, index) => {
+        return (
+          <StyledButtonWrapper>
+            <StyledButton
+              type="button"
+              isActiveStory={isActiveStory}
+              index={index}
+              setCurrentStoryIndex={setCurrentStoryIndex}
+              onClick={() => setCurrentStoryIndex(index)}
+            >
+              <StyledProgressBar>
+                <StyledProgressBarIndicator isActiveStory={isActiveStory} />
+              </StyledProgressBar>
+            </StyledButton>
+          </StyledButtonWrapper>
+        );
+      })}
+    </StyledNav>
+  );
 };
 
 StoryNav.propTypes = {
