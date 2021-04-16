@@ -1,11 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { number, func } from 'prop-types';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 
 import { C_RHINO, C_WHITE } from '@bbc/psammead-styles/colours';
 
@@ -15,7 +11,7 @@ const StyledNav = styled.ol`
   gap: ${GEL_SPACING};
   list-style: none;
   padding: 0;
-  margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL};
+  margin-top: ${GEL_SPACING_TRPL};
 `;
 
 const StyledButtonWrapper = styled.li`
@@ -29,7 +25,7 @@ const StyledButton = styled.button`
   border: none;
   margin: 0;
   background: none;
-  padding: ${GEL_SPACING};
+  padding: ${GEL_SPACING} 0;
   outline: none;
   cursor: pointer;
 `;
