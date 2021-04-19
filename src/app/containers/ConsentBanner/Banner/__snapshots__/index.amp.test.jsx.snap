@@ -55,6 +55,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
+.emotion-4:focus {
+  outline: none;
+}
+
 .emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -208,6 +212,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   .emotion-24 {
     margin-top: 2rem;
   }
+}
+
+.emotion-24:focus {
+  outline: none;
 }
 
 <div>
@@ -440,6 +448,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
+.emotion-4:focus {
+  outline: none;
+}
+
 .emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
@@ -593,6 +605,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   .emotion-24 {
     margin-top: 2rem;
   }
+}
+
+.emotion-24:focus {
+  outline: none;
 }
 
 <div>
