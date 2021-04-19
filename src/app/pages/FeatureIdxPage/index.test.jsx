@@ -150,42 +150,6 @@ describe('Feature Idx Page', () => {
     jest.clearAllMocks();
   });
 
-  describe('snapshots', () => {
-    it.each`
-      platform       | withAds
-      ${'amp'}       | ${true}
-      ${'amp'}       | ${false}
-      ${'canonical'} | ${true}
-      ${'canonical'} | ${false}
-    `(
-      'should render correctly on $platform when withAds is $withAds',
-      async ({ platform, withAds }) => {
-        const isAmp = platform === 'amp';
-
-        const toggles = {
-          ads: {
-            enabled: withAds,
-          },
-        };
-
-        const showAdsBasedOnLocation = withAds;
-
-        let container;
-        await act(async () => {
-          ({ container } = render(
-            <FeatureIdxPageWithContext
-              pageData={pageData}
-              isAmp={isAmp}
-              showAdsBasedOnLocation={showAdsBasedOnLocation}
-              toggles={toggles}
-            />,
-          ));
-          expect(container).toMatchSnapshot();
-        });
-      },
-    );
-  });
-
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
       let container;
