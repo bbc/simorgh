@@ -180,8 +180,10 @@ CanonicalMediaPlayerComponent.defaultProps = {
   onMediaError: noop,
   acceptableEventOrigins: [
     'www.test.bbc.com',
+    'test.bbc.com',
     'polling.test.bbc.com',
     'www.bbc.com',
+    'bbc.com',
     'polling.bbc.com',
     'localhost.bbc.com',
     'localhost',
