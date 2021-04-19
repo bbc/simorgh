@@ -75,7 +75,7 @@ describe(`BrandContainer`, () => {
       expect(scriptLink).toBeNull();
     });
 
-    it('should render a linkId if provided', () => {
+    it('should render a focussable linkId if provided', () => {
       const { container } = render(
         BrandContainerWithContext(
           newsServiceContextStub,
