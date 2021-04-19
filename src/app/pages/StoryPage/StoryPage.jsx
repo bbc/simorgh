@@ -187,7 +187,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         items={recommendationsInitialData}
       />
     ),
-    articleReader: () => <ArticleReader/>
+    articleReader: () => (
+      <ArticleReader service={service} assetUri={assetUri} />
+    ),
   };
 
   const StyledTimestamp = styled(Timestamp)`
