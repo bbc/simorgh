@@ -1083,7 +1083,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       allowfullscreen=""
                       class="emotion-12 emotion-13"
                       scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                      src="https://www.test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
                     <div
@@ -3457,7 +3457,7 @@ exports[`Media Asset Page should render component 1`] = `
                       allowfullscreen=""
                       class="emotion-12 emotion-13"
                       scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                      src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
                     <div

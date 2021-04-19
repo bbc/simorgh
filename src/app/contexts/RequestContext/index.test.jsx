@@ -138,5 +138,23 @@ describe('RequestContext', () => {
         platform: 'canonical',
       });
     });
+
+    it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
+      getOriginContext.default.mockReturnValue({
+        isUK: false,
+        origin: 'origin',
+      });
+      render(
+        <RequestContextProvider {...input}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(getStatsDestination.default).toHaveBeenCalledWith({
+        env: 'getEnv',
+        isUK: true,
+        service: 'service',
+      });
+    });
   });
 });

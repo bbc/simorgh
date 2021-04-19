@@ -131,52 +131,6 @@ describe('Front Page', () => {
     fetchMock.restore();
   });
 
-  describe('snapshots', () => {
-    it('should render a pidgin frontpage correctly', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
-      );
-      fetchMock.mock(
-        ' /pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
-      });
-
-      let container;
-      await act(async () => {
-        container = render(<FrontPageWithContext pageData={pageData} />)
-          .container;
-      });
-      expect(container).toMatchSnapshot();
-    });
-
-    it('should render a pidgin amp frontpage', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
-      );
-      fetchMock.mock(
-        '/pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
-      });
-
-      let container;
-      await act(async () => {
-        container = render(<FrontPageWithContext pageData={pageData} isAmp />)
-          .container;
-      });
-      expect(container).toMatchSnapshot();
-    });
-  });
-
   describe('Assertions', () => {
     it('should render visually hidden text as h1', async () => {
       fetchMock.mock(
