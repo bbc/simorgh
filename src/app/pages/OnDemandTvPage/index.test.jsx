@@ -253,7 +253,7 @@ it('should show the video player on canonical with live override', async () => {
     .getAttribute('src');
 
   expect(videoPlayerIframeSrc).toEqual(
-    'https://www.test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
+    'https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live',
   );
 });
 
