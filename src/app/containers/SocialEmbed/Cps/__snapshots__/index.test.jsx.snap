@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocialEmbedContainer AMP should render correctly 1`] = `
+exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;
@@ -204,7 +204,7 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 </div>
 `;
 
-exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] = `
+exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;
@@ -438,7 +438,7 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 </div>
 `;
 
-exports[`SocialEmbedContainer Canonical should render correctly without an embed block 1`] = `
+exports[`CpsSocialEmbedContainer Canonical should render correctly without an embed block 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;
