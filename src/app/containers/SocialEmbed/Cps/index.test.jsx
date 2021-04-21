@@ -4,8 +4,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import CpsSocialEmbedContainer from '.';
-import withContexts from '../utilities/testHelper';
-import { twitterBlock, twitterBlockNoEmbed } from '../utilities/fixtures';
+import withContexts from '../common/testHelper';
+import { twitterBlock, twitterBlockNoEmbed } from '../common/fixtures';
 
 /* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {

@@ -14,8 +14,8 @@ import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#app/components/Grid';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import createTranslations from './utilities/translations';
-import { LAZYLOAD_OFFSET, Wrapper } from './utilities/styles';
+import createTranslations from './common/translations';
+import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
 import { getProviderFromSource, getIdFromSource } from './sourceHelper';
 
 const logger = nodeLogger(__filename);

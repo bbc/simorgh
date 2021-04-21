@@ -3,8 +3,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-import { twitterBlock, twitterBlockNoEmbed } from './utilities/fixtures';
-import withContexts from './utilities/testHelper';
+import { twitterBlock, twitterBlockNoEmbed } from './common/fixtures';
+import withContexts from './common/testHelper';
 import CpsSocialEmbedContainer from '.';
 
 storiesOf('Containers/Social Embed/Canonical', module)
