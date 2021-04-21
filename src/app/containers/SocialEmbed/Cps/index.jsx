@@ -49,7 +49,7 @@ const Wrapper = styled.div`
 const CpsSocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
+  const { enabled } = useToggle('cpsSocialEmbed');
 
   if (!blocks || !enabled) return null;
 
