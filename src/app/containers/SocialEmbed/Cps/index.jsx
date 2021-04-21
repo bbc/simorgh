@@ -12,8 +12,8 @@ import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemMedium } from '#app/components/Grid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
-import createTranslations from '../utilities/translations';
-import { LAZYLOAD_OFFSET, Wrapper } from '../utilities/styles';
+import createTranslations from '../common/translations';
+import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
 
 const logger = nodeLogger(__filename);
 
