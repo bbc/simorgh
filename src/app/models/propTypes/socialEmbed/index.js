@@ -1,6 +1,6 @@
 import { string, shape, arrayOf, number } from 'prop-types';
 
-const socialEmbedBlockPropTypes = {
+export const cpsSocialEmbedBlockPropTypes = {
   blocks: arrayOf(
     shape({
       type: string.isRequired,
@@ -23,4 +23,24 @@ const socialEmbedBlockPropTypes = {
   ),
 };
 
-export default socialEmbedBlockPropTypes;
+export const socialEmbedBlockPropTypes = {
+  source: string.isRequired,
+  // 'blocks' can contain 'renditions' blocks, whose blocks can contain
+  // 'aresOEmbed' blocks. When an 'aresOEmbed' block exists, we expect to
+  // find an 'oembed' object with an 'html' property.
+  blocks: arrayOf(
+    shape({
+      model: shape({
+        blocks: arrayOf(
+          shape({
+            model: shape({
+              oembed: shape({
+                html: string.isRequired,
+              }),
+            }),
+          }),
+        ),
+      }),
+    }),
+  ),
+};
