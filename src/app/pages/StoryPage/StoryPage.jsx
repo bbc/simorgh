@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -51,12 +51,17 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import sendEventBeacon from '#containers/ATIAnalytics/beacon/index';
+import buildATIClickParams from '#containers/ATIAnalytics/params';
+import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
   const {
     dir,
     mostRead: { header },
@@ -64,7 +69,32 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     service,
     serviceLang,
     lang,
-  } = useContext(ServiceContext);
+  } = serviceContext;
+
+  useEffect(async () => {
+    const eventTrackingProps = buildATIClickParams(
+      {},
+      requestContext,
+      serviceContext,
+    );
+
+    const componentInfo = getComponentInfo({
+      result: 'https://www.bbc.com/mundo/something',
+      name: 'mostRead',
+      componentData: {
+        actionLabel: 'most-read-navigate',
+        child: 'link',
+      },
+    });
+
+    await sendEventBeacon({
+      type: 'click',
+      service,
+      componentInfo,
+      ...eventTrackingProps,
+    });
+  }, []);
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
