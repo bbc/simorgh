@@ -1,4 +1,4 @@
-export const twitterBlockNoEmbed = {
+export const cpsTwitterBlockNoEmbed = {
   type: 'twitter',
   indexOfType: 0,
   model: {
@@ -9,7 +9,7 @@ export const twitterBlockNoEmbed = {
   position: [27, 1],
 };
 
-export const twitterBlock = {
+export const cpsTwitterBlock = {
   type: 'twitter',
   indexOfType: 1,
   model: {

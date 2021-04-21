@@ -5,7 +5,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../common/testHelper';
-import { twitterBlock, twitterBlockNoEmbed } from '../common/fixtures';
+import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 
 /* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {
@@ -25,7 +25,7 @@ describe('CpsSocialEmbedContainer', () => {
         withContexts(CpsSocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
-        })({ blocks: [twitterBlock] }),
+        })({ blocks: [cpsTwitterBlock] }),
       );
       expect(container.firstChild).toMatchSnapshot();
       expect(
@@ -51,7 +51,7 @@ describe('CpsSocialEmbedContainer', () => {
         withContexts(CpsSocialEmbedContainer, {
           isAmp: false,
           isEnabled: false,
-        })({ blocks: [twitterBlock] }),
+        })({ blocks: [cpsTwitterBlock] }),
       );
       expect(container.firstChild).toBeNull();
       expect(loggerMock.info).not.toHaveBeenCalled();
@@ -62,7 +62,7 @@ describe('CpsSocialEmbedContainer', () => {
       withContexts(CpsSocialEmbedContainer, {
         isAmp: false,
         isEnabled: true,
-      })({ blocks: [twitterBlockNoEmbed] }),
+      })({ blocks: [cpsTwitterBlockNoEmbed] }),
     );
   });
 
@@ -72,7 +72,7 @@ describe('CpsSocialEmbedContainer', () => {
       withContexts(CpsSocialEmbedContainer, {
         isAmp: true,
         isEnabled: true,
-      })({ blocks: [twitterBlock] }),
+      })({ blocks: [cpsTwitterBlock] }),
     );
   });
 });
