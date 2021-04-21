@@ -561,6 +561,32 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             د بي بي سي ورلډ سروس څخه پروګرام کول
           </p>
         </div>
+        <div
+          class="emotion-22 emotion-23 emotion-2"
+          dir="rtl"
+        >
+          <div
+            class="emotion-25 emotion-26"
+            data-e2e="on-demand-image"
+            dir="ltr"
+          >
+            <div
+              class="emotion-27 emotion-28"
+              data-e2e="image-placeholder"
+            >
+              <amp-img
+                alt="BBC News پښتو"
+                attribution=""
+                height="240"
+                layout="responsive"
+                src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
+                srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
+                style="background-color: rgb(253, 253, 253);"
+                width="240"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <div
         class="emotion-26 emotion-27"
