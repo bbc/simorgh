@@ -1,4 +1,3 @@
-import { arrayOf, shape, string } from 'prop-types';
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import Lazyload from 'react-lazyload';
@@ -12,6 +11,7 @@ import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#app/components/Grid';
+import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import createTranslations from './common/translations';
@@ -27,13 +27,13 @@ const SocialEmbed = ({ blocks, source }) => {
 
   if (!blocks || !source || !enabled) return null;
 
-  const { model } = blocks[0];
-  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const provider = getProviderFromSource(source);
   const id = getIdFromSource(source);
 
-  const indexOfType = 0;
-  const index = indexOfType + 1;
+  const { model } = blocks[0];
+  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
+
+  const index = id;
 
   const {
     fallback: fallbackTranslations,
@@ -91,13 +91,6 @@ const SocialEmbed = ({ blocks, source }) => {
   );
 };
 
-SocialEmbed.defaultProps = {
-  blocks: [],
-};
-
-SocialEmbed.propTypes = {
-  blocks: arrayOf(shape({})),
-  source: string.isRequired,
-};
+SocialEmbed.propTypes = socialEmbedBlockPropTypes;
 
 export { CpsSocialEmbed, SocialEmbed };

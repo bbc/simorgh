@@ -11,7 +11,7 @@ import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import { GridItemMedium } from '#app/components/Grid';
 import useToggle from '#hooks/useToggle';
-import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
+import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import createTranslations from '../common/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
 
@@ -89,6 +89,6 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
   );
 };
 
-CpsSocialEmbedContainer.propTypes = socialEmbedBlockPropTypes;
+CpsSocialEmbedContainer.propTypes = cpsSocialEmbedBlockPropTypes;
 
 export default CpsSocialEmbedContainer;
