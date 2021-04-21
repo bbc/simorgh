@@ -1,12 +1,10 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from '@emotion/styled';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '@bbc/psammead-social-embed';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
@@ -15,36 +13,9 @@ import { GridItemMedium } from '#app/components/Grid';
 import useToggle from '#hooks/useToggle';
 import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
 import createTranslations from '../utilities/translations';
+import { LAZYLOAD_OFFSET, Wrapper } from '../utilities/styles';
 
 const logger = nodeLogger(__filename);
-
-/**
- * MAX_WIDTH        Ensures all embeds assume the same width. (Tweets max-out
- *                  at 500px, which is why this is set to 31.25rem.)
- * LAZYLOAD_OFFSET  The distance in pixels above or below the viewport before
- *                  an embed is allowed to load.
- */
-const MAX_WIDTH = '31.25rem';
-const LAZYLOAD_OFFSET = 250;
-
-const getWrapperHeightStyles = oEmbed => {
-  /**
-   * Adjust MIN_HEIGHT to configure the default minimum height of Social Embed
-   * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
-   */
-  const MIN_HEIGHT = '18.75rem';
-  if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
-  if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
-  return '';
-};
-
-const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
-`;
 
 const CpsSocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
