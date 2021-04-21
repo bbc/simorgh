@@ -1,0 +1,444 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialEmbedContainer AMP should render correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+  min-height: 18.75rem;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-e2e="twitter-embed-https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          href="#skip-twitter-content-1384138850478346243"
+        >
+          Skip Twitter content, 1384138850478346243
+        </a>
+        <amp-twitter
+          data-tweetid="1384138850478346243"
+          height="9"
+          layout="responsive"
+          width="16"
+        />
+        <p
+          class="emotion-8 emotion-9"
+          id="skip-twitter-content-1384138850478346243"
+          tabindex="-1"
+        >
+          End of Twitter content, 1384138850478346243
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  max-width: 31.25rem;
+  min-height: 18.75rem;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-6 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-6:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 .twitter-tweet {
+  margin-top: 0!important;
+  margin-bottom: 0!important;
+}
+
+.emotion-10 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+<div
+  class="emotion-0 emotion-1"
+  dir="ltr"
+>
+  <div
+    class="emotion-2 emotion-3"
+    data-e2e="twitter-embed-https://twitter.com/BBCNews/status/1384138850478346243?s=20"
+  >
+    <div
+      class="emotion-4 emotion-5"
+    >
+      <a
+        class="emotion-6 emotion-7"
+        href="#skip-twitter-content-1384138850478346243"
+      >
+        Skip Twitter content, 1384138850478346243
+      </a>
+      <div
+        class="emotion-8 emotion-9"
+      >
+        <blockquote
+          class="twitter-tweet"
+        >
+          <p
+            dir="ltr"
+            lang="en"
+          >
+            Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was "indescribable" 
+            <a
+              href="https://t.co/xz93WmAdfR"
+            >
+              https://t.co/xz93WmAdfR
+            </a>
+          </p>
+          — BBC News (UK) (@BBCNews) 
+          <a
+            href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw"
+          >
+            April 19, 2021
+          </a>
+        </blockquote>
+        
+
+      </div>
+      <p
+        class="emotion-10 emotion-11"
+        id="skip-twitter-content-1384138850478346243"
+        tabindex="-1"
+      >
+        End of Twitter content, 1384138850478346243
+      </p>
+    </div>
+  </div>
+</div>
+`;
