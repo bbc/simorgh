@@ -8,6 +8,7 @@ import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
+import useClickTracking from '#app/hooks/useClickTracking';
 
 const componentsToRender = {
   fragment: Fragment,
@@ -47,8 +48,9 @@ const renderCaption = (
   script,
   service,
   dir,
+  clickRef,
 ) => (
-  <Caption script={script} service={service} dir={dir}>
+  <Caption ref={clickRef} script={script} service={service} dir={dir}>
     {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
     {paragraphBlocks.map(block => renderParagraph(block))}
   </Caption>
@@ -64,6 +66,9 @@ const CaptionContainer = ({ block, type }) => {
     audioCaptionOffscreenText,
     dir,
   } = useContext(ServiceContext);
+
+  const clickRef = useClickTracking();
+
   const offscreenText = chooseOffscreenText(
     type,
     videoCaptionOffscreenText,
@@ -78,7 +83,14 @@ const CaptionContainer = ({ block, type }) => {
     block,
   );
 
-  return renderCaption(paragraphBlocks, offscreenText, script, service, dir);
+  return renderCaption(
+    paragraphBlocks,
+    offscreenText,
+    script,
+    service,
+    dir,
+    clickRef,
+  );
 };
 
 CaptionContainer.propTypes = {
