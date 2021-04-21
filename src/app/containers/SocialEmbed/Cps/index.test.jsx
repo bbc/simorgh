@@ -5,7 +5,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import CpsSocialEmbedContainer from '.';
 import withContexts from '../utilities/testHelper';
-import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
+import { twitterBlock, twitterBlockNoEmbed } from '../utilities/fixtures';
 
 /* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {
