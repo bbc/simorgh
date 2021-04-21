@@ -16,16 +16,7 @@ import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import createTranslations from './utilities/translations';
 import { LAZYLOAD_OFFSET, Wrapper } from './utilities/styles';
-
-const getProviderFromSource = source => {
-  console.log('SOCIAL_EMBED_SOURCE', source);
-  return 'twitter';
-};
-
-const getIdFromSource = source => {
-  console.log('SOCIAL_EMBED_SOURCE', source);
-  return '1384138850478346243';
-};
+import { getProviderFromSource, getIdFromSource } from './sourceHelper';
 
 const logger = nodeLogger(__filename);
 
