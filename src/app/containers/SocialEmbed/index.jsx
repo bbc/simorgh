@@ -6,7 +6,6 @@ import {
   CanonicalSocialEmbed,
 } from '@bbc/psammead-social-embed';
 
-import CpsSocialEmbed from './Cps';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
@@ -20,7 +19,7 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
-const SocialEmbed = ({ blocks, source }) => {
+const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('socialEmbed');
@@ -91,6 +90,6 @@ const SocialEmbed = ({ blocks, source }) => {
   );
 };
 
-SocialEmbed.propTypes = socialEmbedBlockPropTypes;
+SocialEmbedContainer.propTypes = socialEmbedBlockPropTypes;
 
-export { CpsSocialEmbed, SocialEmbed };
+export default SocialEmbedContainer;
