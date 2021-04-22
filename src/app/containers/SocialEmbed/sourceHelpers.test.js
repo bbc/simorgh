@@ -20,8 +20,9 @@ describe('sourceHelpers', () => {
       expect(getIdFromSource(TWITTER_SOURCE)).toEqual('1384138850478346243');
     });
 
-    it('should return an empty string for an unknown source', () => {
+    it('should return an empty string for an unknown or invalid source', () => {
       expect(getIdFromSource(UNKNOWN_SOURCE)).toEqual('');
+      expect(getIdFromSource('https://twitter.com/BBCNews')).toEqual('');
     });
   });
 });
