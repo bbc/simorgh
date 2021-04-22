@@ -25,6 +25,9 @@ const withContexts = (
       <ToggleContext.Provider
         value={{
           toggleState: {
+            cpsSocialEmbed: {
+              enabled: isEnabled,
+            },
             socialEmbed: {
               enabled: isEnabled,
             },
