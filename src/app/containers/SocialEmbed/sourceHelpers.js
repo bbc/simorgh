@@ -6,7 +6,7 @@ const PROVIDERS = {
 /**
  * Determine the name of a supported provider from a social embed source URL.
  * @param {string} source The source URL of a social embed.
- * @returns {string} Provider name.
+ * @returns {string}
  */
 export const getProviderFromSource = source => {
   if (source.match(/^https:\/\/twitter\.com/)) {
@@ -19,12 +19,14 @@ export const getProviderFromSource = source => {
  * Extract the social media embed ID from a supported provider's social embed
  * source URL.
  * @param {string} source The source URL of a social embed.
- * @returns {string} Social embed ID.
+ * @returns {string}
  */
 export const getIdFromSource = source => {
+  const NO_ID = '';
   const provider = getProviderFromSource(source);
   if (provider === PROVIDERS.TWITTER) {
-    return source.match(/\/status\/([0-9]+)/)[1];
+    const match = source.match(/\/status\/([0-9]+)/);
+    return match ? match[1] : NO_ID;
   }
-  return '';
+  return NO_ID;
 };
