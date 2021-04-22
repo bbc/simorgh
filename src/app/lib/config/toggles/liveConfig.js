@@ -38,8 +38,11 @@ export default {
   scriptLink: {
     enabled: true,
   },
-  socialEmbed: {
+  cpsSocialEmbed: {
     enabled: true,
+  },
+  socialEmbed: {
+    enabled: false,
   },
   variantCookie: {
     enabled: true,

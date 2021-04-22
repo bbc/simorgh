@@ -1,6 +1,6 @@
 import createTranslations from './translations';
 
-describe('SocialEmbedContainer – createTranslations', () => {
+describe('createTranslations', () => {
   const translations = {
     socialEmbed: {
       caption: {

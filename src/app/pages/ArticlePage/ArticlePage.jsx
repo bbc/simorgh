@@ -36,6 +36,7 @@ import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
+import SocialEmbedContainer from '#containers/SocialEmbed';
 import {
   getArticleId,
   getHeadline,
@@ -57,6 +58,7 @@ const componentsToRender = {
   text,
   image,
   timestamp,
+  social: SocialEmbedContainer,
 };
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
