@@ -8,11 +8,7 @@ import withContexts from '../common/testHelper';
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 
 /* eslint-disable react/prop-types */
-jest.mock('react-lazyload', () => {
-  return function MockedLazyload({ children }) {
-    return <>{children}</>;
-  };
-});
+jest.mock('react-lazyload', () => React.Fragment)
 
 describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {
