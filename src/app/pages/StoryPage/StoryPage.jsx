@@ -51,8 +51,8 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import sendEventBeacon from '#containers/ATIAnalytics/beacon/index';
-import buildATIClickParams from '#containers/ATIAnalytics/params';
+import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
+import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 
 const MpuContainer = styled(AdContainer)`
@@ -73,14 +73,14 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
   useEffect(async () => {
     const eventTrackingProps = buildATIClickParams(
-      {},
+      pageData,
       requestContext,
       serviceContext,
     );
 
     const componentInfo = getComponentInfo({
       result: 'https://www.bbc.com/mundo/something',
-      name: 'mostRead',
+      componentName: 'mostRead',
       componentData: {
         actionLabel: 'most-read-navigate',
         child: 'link',
@@ -89,6 +89,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
     await sendEventBeacon({
       type: 'click',
+      componentName: 'mostRead',
       service,
       componentInfo,
       ...eventTrackingProps,

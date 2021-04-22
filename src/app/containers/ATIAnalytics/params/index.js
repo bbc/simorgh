@@ -24,7 +24,8 @@ const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
 const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 
 const pageTypeUrlBuilders = {
-  STY: buildArticleATIUrl,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   article: buildArticleATIUrl,
   frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
@@ -80,11 +81,12 @@ const pageTypeParamBuilders = {
       serviceContext,
       ARTICLE_CORRESPONDENT_PIECE,
     ),
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers) => {
   const { pageType } = requestContext;
-  console.log(pageType);
 
   return pageTypeHandlers[pageType];
 };
