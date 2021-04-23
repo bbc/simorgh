@@ -17,11 +17,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import RadioSchedule from '#components/RadioSchedule';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
