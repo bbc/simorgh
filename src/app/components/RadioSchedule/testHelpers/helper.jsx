@@ -5,6 +5,7 @@ import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];
@@ -47,19 +48,12 @@ export const renderProgramCard = ({
   linkComponent = 'a',
   linkComponentAttr = 'href',
 }) => {
-  const { text, articlePath, longText, dir, locale, timezone } = TEXT_VARIANTS[
-    service
-  ];
+  const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
+
+  const script = dir === 'rtl' ? arabic : latin;
 
   const props = {
-    service,
-    script: dir === 'rtl' ? arabic : latin,
     durationLabel: dir === 'rtl' ? 'المدة الزمنية %duration%' : durationLabel,
-    nextLabel: dir === 'rtl' ? 'مباشر' : 'NEXT',
-    liveLabel: dir === 'rtl' ? 'مباشر' : 'LIVE',
-    listenLabelTranslations,
-    timezone,
-    locale,
     linkComponent,
     linkComponentAttr,
   };
@@ -73,7 +67,17 @@ export const renderProgramCard = ({
     duration,
   };
 
-  return <ProgramCard dir={dir} program={program} {...props} />;
+  return (
+    <ServiceContextProvider
+      dir={dir}
+      service={service}
+      script={script}
+      locale="ar"
+      timezone={timezone}
+    >
+      <ProgramCard program={program} {...props} />
+    </ServiceContextProvider>
+  );
 };
 
 export const renderRadioSchedule = ({
@@ -93,19 +97,21 @@ export const renderRadioSchedule = ({
     dir === 'rtl' ? 'المدة الزمنية %duration%' : 'Duration %duration%';
 
   return (
-    <RadioSchedule
-      schedules={getSchedule(selectedService, withLongSummary)}
-      locale={locale}
-      timezone={timezone}
-      script={script}
-      service={service}
-      nextLabel={nextLabel}
-      liveLabel={liveLabel}
-      listenLabelTranslations={listenLabelTranslations}
-      durationLabel={durationLabel}
-      dir={dir}
-      linkComponent={linkComponent}
-      linkComponentAttr={linkComponentAttr}
-    />
+    <ServiceContextProvider service={service} dir={dir} pageLang="ar">
+      <RadioSchedule
+        schedule={getSchedule(selectedService, withLongSummary)}
+        locale={locale}
+        timezone={timezone}
+        script={script}
+        service={service}
+        nextLabel={nextLabel}
+        liveLabel={liveLabel}
+        listenLabelTranslations={listenLabelTranslations}
+        durationLabel={durationLabel}
+        dir={dir}
+        linkComponent={linkComponent}
+        linkComponentAttr={linkComponentAttr}
+      />
+    </ServiceContextProvider>
   );
 };

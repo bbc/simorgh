@@ -291,7 +291,7 @@ exports[`StartTime should render RTL correctly 1`] = `
         class="emotion-8 emotion-9"
         datetime="2019-08-27"
       >
-        ۱۴:۵۴
+        ۱۳:۵۴
       </time>
     </span>
   </div>

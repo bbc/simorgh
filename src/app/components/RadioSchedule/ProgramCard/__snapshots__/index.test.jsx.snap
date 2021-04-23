@@ -256,7 +256,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
             <span
               class="emotion-14 emotion-15"
             >
-              August 27, 2019
+              27 August 2019
             </span>
             <span
               class="emotion-8 emotion-9"
@@ -534,7 +534,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
           <span
             class="emotion-12 emotion-13"
           >
-            August 27, 2019
+            27 August 2019
           </span>
           <span
             class="emotion-6 emotion-7"
@@ -823,7 +823,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
             <span
               class="emotion-12 emotion-13"
             >
-              August 27, 2019
+              27 August 2019
             </span>
             <span
               class="emotion-8 emotion-9"
@@ -1100,25 +1100,25 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              Listen, 
+              استمع, 
             </span>
             لماذا يخجل البعض من اسم قريته في مصر؟
             <span
               class="emotion-8 emotion-9"
             >
               , 
-              ١٣:٥٤
+              13:54
               , 
             </span>
             <span
               class="emotion-12 emotion-13"
             >
-              ٢٧ أغسطس ٢٠١٩
+              27 أغسطس/ آب 2019
             </span>
             <span
               class="emotion-8 emotion-9"
             >
-              , المدة الزمنية ٣٠،٠٠ 
+              , المدة الزمنية 30،00 
             </span>
           </span>
         </a>
@@ -1159,7 +1159,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
         <span
           aria-hidden="true"
         >
-          ٣٠:٠٠
+          30:00
         </span>
       </time>
     </div>
@@ -1398,7 +1398,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
             <span
               class="emotion-14 emotion-15"
             >
-              August 27, 2019
+              27 August 2019
             </span>
             <span
               class="emotion-8 emotion-9"
