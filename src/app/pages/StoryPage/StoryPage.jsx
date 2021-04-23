@@ -36,7 +36,7 @@ import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import Byline from '#containers/Byline';
-import SocialEmbed from '#containers/SocialEmbed';
+import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
 import {
@@ -176,7 +176,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
-    social_embed: props => <SocialEmbed {...props} />,
+    social_embed: props => <CpsSocialEmbedContainer {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (

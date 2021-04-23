@@ -38,6 +38,9 @@ export default {
   scriptLink: {
     enabled: true,
   },
+  cpsSocialEmbed: {
+    enabled: true,
+  },
   socialEmbed: {
     enabled: true,
   },

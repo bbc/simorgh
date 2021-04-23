@@ -1,4 +1,4 @@
-# Simorgh Application Toggles 
+# Simorgh Application Toggles
 
 | Toggle Name             | Description | Toggle Value | Example |
 | ----------------------- | ----------- | --------------------- |--------------------- |
@@ -16,7 +16,8 @@
 | `preloadLeadImage`      | Display preload image tag on Story (STY) Pages | | |
 | `preroll`               | Display Preroll Advertisements on Media Asset (MAP) Pages | | |
 | `scriptLink`            | Display Script Switching link for services with variants | | |
-| `socialEmbed`           | Display Social Embeds on Story (STY) Pages | | |
+| `cpsSocialEmbed`        | Display Social Embeds on Story (STY) Pages | | |
+| `socialEmbed`           | Display Social Embeds on Article Pages | | |
 | `variantCookie`         | Set variant cookie for services with variants | | |
 
 ## Default (Fallback) Values
