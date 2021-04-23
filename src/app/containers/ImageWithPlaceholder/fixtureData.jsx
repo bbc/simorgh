@@ -74,6 +74,22 @@ const baseFixture = {
   width: 640,
 };
 
+const baseFixturePng = {
+  alt: 'Nick Triggle',
+  children: null,
+  copyright: 'Getty Images',
+  fade: true,
+  height: 360,
+  lazyLoad: false,
+  isAmp: false,
+  ratio: 56.25,
+  src:
+    'https://ichef.bbci.co.uk/news/640/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png',
+  srcset:
+    'https://ichef.bbci.co.uk/news/640/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png 640w',
+  width: 640,
+};
+
 // eslint-disable-next-line react/prop-types
 export const ImageWithPlaceholder = ({ preload = false }) => {
   const props = {
@@ -86,6 +102,15 @@ export const ImageWithPlaceholder = ({ preload = false }) => {
 export const AmpImageWithPlaceholder = () => {
   const props = {
     ...baseFixture,
+    isAmp: true,
+  };
+
+  return <WrappedImageWithPlaceholder {...props} />;
+};
+
+export const AmpImageWithPlaceholderPng = () => {
+  const props = {
+    ...baseFixturePng,
     isAmp: true,
   };
 
