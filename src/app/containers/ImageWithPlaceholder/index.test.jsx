@@ -1,9 +1,11 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
+  AmpImageWithPlaceholderPng,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 
@@ -51,6 +53,26 @@ describe('ImageWithPlaceholder', () => {
 
     await waitFor(() => {
       expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
+  });
+
+  it('should add a background color if image is not a jpg/jpeg AMP image', async () => {
+    render(<AmpImageWithPlaceholderPng />);
+
+    await waitFor(() => {
+      expect(document.querySelector('amp-img')).toHaveStyle({
+        backgroundColor: `${C_GHOST}`,
+      });
+    });
+  });
+
+  it('should not add a backgroundColor if image is a jpg/jpeg AMP image', async () => {
+    render(<AmpImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('amp-img')).not.toHaveStyle({
+        backgroundColor: `${C_GHOST}`,
+      });
     });
   });
 
