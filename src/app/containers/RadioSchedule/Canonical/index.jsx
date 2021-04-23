@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import moment from 'moment';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -82,10 +81,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
     service,
     script,
     dir,
-    timezone,
-    locale,
     radioSchedule: radioScheduleConfig = {},
-    translations,
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
@@ -98,27 +94,6 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
     frequenciesPageLabel,
     durationLabel,
   } = radioScheduleConfig;
-
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-  const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
-
-  const listenLive = pathOr(
-    'Listen Live',
-    ['media', 'listenLive'],
-    translations,
-  );
-  const listen = pathOr('Listen', ['media', 'listen'], translations);
-  const listenNext = pathOr(
-    'Listen Next',
-    ['media', 'listenNext'],
-    translations,
-  );
-
-  const listenLabelTranslations = {
-    live: listenLive,
-    next: listenNext,
-    onDemand: listen,
-  };
 
   useEffect(() => {
     if (!radioSchedule) {
@@ -181,18 +156,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
         {header}
       </RadioScheduleSectionLabel>
       <RadioScheduleWrapper data-e2e="radio-schedule">
-        <RadioSchedule
-          schedules={radioSchedule}
-          locale={locale}
-          timezone={timezone}
-          script={script}
-          service={service}
-          dir={dir}
-          liveLabel={liveLabel}
-          nextLabel={nextLabel}
-          durationLabel={durationLabel}
-          listenLabelTranslations={listenLabelTranslations}
-        />
+        <RadioSchedule schedule={radioSchedule} durationLabel={durationLabel} />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
             href={frequenciesPageUrl}
