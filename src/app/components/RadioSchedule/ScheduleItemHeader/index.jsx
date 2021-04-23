@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { oneOfType, elementType, shape, string, number } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
+import { oneOfType, elementType, string, number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import detokenise from '@bbc/psammead-detokeniser';
 import LiveLabel from '@bbc/psammead-live-label';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { Link } from '@bbc/psammead-story-promo';
 import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_KINGFISHER } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import durationDictionary, { programStateConfig } from '../utilities';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const TitleWrapper = styled.span`
   color: ${({ titleColor }) => titleColor};
@@ -45,7 +46,6 @@ const NextLabel = styled.span`
 `;
 
 const ScheduleItemHeader = ({
-  dir,
   state,
   link,
   brandTitle,
@@ -53,21 +53,35 @@ const ScheduleItemHeader = ({
   duration,
   ...props
 }) => {
-  const {
-    nextLabel,
-    liveLabel,
-    listenLabelTranslations,
-    service,
-    script,
-    timezone,
-    locale,
-    linkComponent,
-    linkComponentAttr,
-    durationLabel,
-  } = props;
+  const { linkComponent, linkComponentAttr, durationLabel } = props;
+
+  const { script, locale, service, timezone, dir, translations } = useContext(
+    ServiceContext,
+  );
+
+  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
 
   const isLive = state === 'live';
   const isNext = state === 'next';
+
+  const listenLive = pathOr(
+    'Listen Live',
+    ['media', 'listenLive'],
+    translations,
+  );
+  const listen = pathOr('Listen', ['media', 'listen'], translations);
+  const listenNext = pathOr(
+    'Listen Next',
+    ['media', 'listenNext'],
+    translations,
+  );
+
+  const listenLabelTranslations = {
+    live: listenLive,
+    next: listenNext,
+    onDemand: listen,
+  };
 
   const formattedStartTime = formatUnixTimestamp({
     timestamp: startTime,
@@ -137,31 +151,17 @@ const ScheduleItemHeader = ({
 };
 
 ScheduleItemHeader.propTypes = {
-  service: string.isRequired,
-  dir: string.isRequired,
-  script: shape(scriptPropType).isRequired,
   brandTitle: string.isRequired,
   link: string.isRequired,
   state: string.isRequired,
-  nextLabel: string.isRequired,
-  liveLabel: string.isRequired,
-  listenLabelTranslations: shape({
-    live: string.isRequired,
-    next: string.isRequired,
-    onDemand: string.isRequired,
-  }).isRequired,
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
-  timezone: string,
-  locale: string,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
 
 ScheduleItemHeader.defaultProps = {
-  timezone: 'Europe/London',
-  locale: 'en-gb',
   linkComponent: 'a',
   linkComponentAttr: 'href',
 };

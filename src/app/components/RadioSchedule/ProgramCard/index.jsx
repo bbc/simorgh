@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -12,11 +12,11 @@ import {
   getMinion,
   getPica,
 } from '@bbc/gel-foundations/typography';
-import { oneOf, shape, string, number } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { shape, string, number } from 'prop-types';
 import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const CardWrapper = styled.div`
   padding-top: ${GEL_SPACING};
@@ -77,8 +77,8 @@ const DurationWrapper = styled.time`
       : `padding-right: ${GEL_SPACING};`}
 `;
 
-const ProgramCard = ({ dir, program, ...props }) => {
-  const { service, script, locale } = props;
+const ProgramCard = ({ program, ...props }) => {
+  const { service, script, locale, dir } = useContext(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
     <CardWrapper>
@@ -90,7 +90,6 @@ const ProgramCard = ({ dir, program, ...props }) => {
         >
           <ScheduleItemHeader
             {...props}
-            dir={dir}
             state={state}
             link={link}
             brandTitle={brandTitle}
@@ -121,7 +120,6 @@ const ProgramCard = ({ dir, program, ...props }) => {
 };
 
 ProgramCard.propTypes = {
-  dir: oneOf(['rtl', 'ltr']),
   program: shape({
     state: string.isRequired,
     duration: string.isRequired,
@@ -130,14 +128,6 @@ ProgramCard.propTypes = {
     link: string.isRequired,
     brandTitle: string.isRequired,
   }).isRequired,
-  service: string.isRequired,
-  script: shape(scriptPropType).isRequired,
-  locale: string,
-};
-
-ProgramCard.defaultProps = {
-  dir: 'ltr',
-  locale: 'en-gb',
 };
 
 export default ProgramCard;
