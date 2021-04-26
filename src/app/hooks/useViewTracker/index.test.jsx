@@ -29,7 +29,7 @@ it('should return a ref used for tracking if an element is in view', async () =>
   expect(result.current.trackRef).toEqual('mock-ref');
 });
 
-it(`should call sendEventBeacon when is in view for more than ${
+it(`should call sendEventBeacon when element is 50% or more in view for more than ${
   REQUIRED_TIME_IN_VIEW / 1000
 } seconds`, async () => {
   useInView.mockImplementation(() => ({
@@ -49,5 +49,6 @@ it(`should call sendEventBeacon when is in view for more than ${
     await wait(REQUIRED_TIME_IN_VIEW + 100);
   });
 
+  expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(sendEventBeacon).toBeCalledWith({ blah: 'foo' });
 });
