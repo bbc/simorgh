@@ -24,10 +24,6 @@ it('should return a tracking ref', async () => {
   const data = { blah: 'foo' };
   const { result } = renderHook(() => useViewTracker(data));
 
-  act(() => {
-    useInView({ inView: true, ref: 'mock-ref' });
-  });
-
   expect(result.current.trackRef).toEqual('mock-ref');
 });
 
