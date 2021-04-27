@@ -55,6 +55,7 @@ const validate = async ({ validator, url }) => {
   const pageString = await getPageString(`${baseUrl}${url}.amp`);
   const result = validator.validateString(pageString);
   result.url = url;
+  if (result.status === 'FAIL') throw new Error();
   return result;
 };
 
