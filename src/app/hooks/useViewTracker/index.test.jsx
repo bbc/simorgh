@@ -26,8 +26,7 @@ const setIntersectionObserved = () =>
   useInView.mockReturnValue([elementRefFn, true]);
 const setIntersectionNotObserved = () =>
   useInView.mockReturnValue([elementRefFn, false]);
-const REQUIRED_TIME_IN_VIEW = 1000;
-const getUrlParams = url => {
+const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
 
   return {
@@ -58,9 +57,7 @@ it('should return a ref used for tracking', async () => {
   expect(result.current.trackRef).toBe(elementRefFn);
 });
 
-it.only(`should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than ${
-  REQUIRED_TIME_IN_VIEW / 1000
-} seconds`, async () => {
+it.only('should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
   setIntersectionNotObserved();
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
@@ -69,14 +66,14 @@ it.only(`should call buildATIEventTrackUrl and return correct tracking url when 
   setIntersectionObserved();
   rerender();
 
-  await act(() => wait(REQUIRED_TIME_IN_VIEW + 100));
+  await act(() => wait(1100));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(spy).toHaveBeenCalledTimes(2);
 
   const [componentViewEvent, pageViewEvent] = spy.mock.results;
 
-  expect(getUrlParams(componentViewEvent.value)).toEqual({
+  expect(urlToObject(componentViewEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
     pathname: '/',
     searchParams: {
@@ -93,7 +90,7 @@ it.only(`should call buildATIEventTrackUrl and return correct tracking url when 
     },
   });
 
-  expect(getUrlParams(pageViewEvent.value)).toEqual({
+  expect(urlToObject(pageViewEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
     pathname: '/',
     searchParams: {
@@ -111,9 +108,7 @@ it.only(`should call buildATIEventTrackUrl and return correct tracking url when 
   });
 });
 
-it(`should not call buildATIEventTrackUrl when element is 50% or more in view for less than ${
-  REQUIRED_TIME_IN_VIEW / 1000
-} seconds`, async () => {
+it(`should not call buildATIEventTrackUrl when element is 50% or more in view for less than 1 second`, async () => {
   setIntersectionNotObserved();
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
@@ -123,7 +118,7 @@ it(`should not call buildATIEventTrackUrl when element is 50% or more in view fo
   setIntersectionObserved();
   rerender();
 
-  await act(() => wait(REQUIRED_TIME_IN_VIEW - 100));
+  await act(() => wait(900));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(spy).not.toHaveBeenCalledWith();
@@ -137,14 +132,14 @@ it('should not call buildATIEventTrackUrl more than once', async () => {
 
   setIntersectionObserved();
   rerender();
-
-  await act(() => wait(REQUIRED_TIME_IN_VIEW + 100));
+  await act(() => wait(1100));
 
   setIntersectionNotObserved();
   rerender();
+
   setIntersectionObserved();
   rerender();
-  await act(() => wait(REQUIRED_TIME_IN_VIEW + 100));
+  await act(() => wait(1100));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(spy.mock.results[0].value).toHaveBeenCalledWith({ blah: 'foo' });
