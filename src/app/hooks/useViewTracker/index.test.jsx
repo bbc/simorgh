@@ -28,19 +28,32 @@ const setIntersectionNotObserved = () =>
   useInView.mockReturnValue([elementRefFn, false]);
 const REQUIRED_TIME_IN_VIEW = 1000;
 const getUrlParams = url => {
-  const { origin, searchParams } = new URL(url);
+  const { origin, pathname, searchParams } = new URL(url);
 
   return {
     origin,
+    pathname,
     searchParams: Object.fromEntries(searchParams),
   };
 };
+
+const wrapper = ({ children }) => (
+  <RequestContextProvider
+    bbcOrigin="https://www.test.bbc.com"
+    isAmp
+    pageType={CORRESPONDENT_STORY_PAGE}
+    service="pidgin"
+    pathname="/pidgin/tori-51745682"
+  >
+    <ServiceContextProvider service="pidgin">{children}</ServiceContextProvider>
+  </RequestContextProvider>
+);
 
 it('should return a ref used for tracking', async () => {
   setIntersectionNotObserved();
 
   const data = { componentName: 'mostRead', pageData };
-  const { result } = renderHook(() => useViewTracker(data));
+  const { result } = renderHook(() => useViewTracker(data), { wrapper });
 
   expect(result.current.trackRef).toBe(elementRefFn);
 });
@@ -51,19 +64,6 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
   setIntersectionNotObserved();
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
-  const wrapper = ({ children }) => (
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp
-      pageType={CORRESPONDENT_STORY_PAGE}
-      service="afrique"
-      pathname="/blah"
-    >
-      <ServiceContextProvider service="afrique">
-        {children}
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  );
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
   setIntersectionObserved();
@@ -74,34 +74,38 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(spy).toHaveBeenCalledTimes(2);
 
-  const [event, view] = spy.mock.results;
+  const [componentViewEvent, pageViewEvent] = spy.mock.results;
 
-  expect(getUrlParams(event.value)).toEqual({
+  expect(getUrlParams(componentViewEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
+    pathname: '/',
     searchParams: {
       ati:
-        'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+        'PUB-[pidgin-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
       hl: '${timestamp}',
       lng: '${browserLanguage}',
       p: 'news::pidgin.news.story.51745682.page',
       r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
       re: '${availableScreenWidth}x${availableScreenHeight}',
       s: '598343',
+      s2: '70',
       type: 'AT',
     },
   });
 
-  expect(getUrlParams(view.value)).toEqual({
+  expect(getUrlParams(pageViewEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
+    pathname: '/',
     searchParams: {
       ati:
-        'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+        'PUB-[pidgin-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
       hl: '${timestamp}',
       lng: '${browserLanguage}',
       p: 'news::pidgin.news.story.51745682.page',
       r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
       re: '${availableScreenWidth}x${availableScreenHeight}',
       s: '598343',
+      s2: '70',
       type: 'AT',
     },
   });
@@ -113,19 +117,7 @@ it(`should not call buildATIEventTrackUrl when element is 50% or more in view fo
   setIntersectionNotObserved();
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
-  const wrapper = ({ children }) => (
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp
-      pageType={CORRESPONDENT_STORY_PAGE}
-      service="afrique"
-      pathname="/blah"
-    >
-      <ServiceContextProvider service="afrique">
-        {children}
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  );
+
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
   setIntersectionObserved();
@@ -141,19 +133,6 @@ it('should not call buildATIEventTrackUrl more than once', async () => {
   setIntersectionNotObserved();
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
-  const wrapper = ({ children }) => (
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.com"
-      isAmp
-      pageType={CORRESPONDENT_STORY_PAGE}
-      service="afrique"
-      pathname="/blah"
-    >
-      <ServiceContextProvider service="afrique">
-        {children}
-      </ServiceContextProvider>
-    </RequestContextProvider>
-  );
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
   setIntersectionObserved();
