@@ -11,7 +11,7 @@ import useViewTracker from '.';
 import { CORRESPONDENT_STORY_PAGE } from '#app/routes/utils/pageTypes';
 import pageData from './pageData.json';
 
-const getUrlParamsObject = url => Object.fromEntries(new URLSearchParams(url));
+process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
 const wait = duration => new Promise(resolve => setTimeout(resolve, duration));
@@ -21,12 +21,20 @@ beforeEach(() => {
   jest.clearAllTimers();
 });
 
-const REQUIRED_TIME_IN_VIEW = 1000;
 const elementRefFn = jest.fn();
 const setIntersectionObserved = () =>
   useInView.mockReturnValue([elementRefFn, true]);
 const setIntersectionNotObserved = () =>
   useInView.mockReturnValue([elementRefFn, false]);
+const REQUIRED_TIME_IN_VIEW = 1000;
+const getUrlParams = url => {
+  const { origin, searchParams } = new URL(url);
+
+  return {
+    origin,
+    searchParams: Object.fromEntries(searchParams),
+  };
+};
 
 it('should return a ref used for tracking', async () => {
   setIntersectionNotObserved();
@@ -68,28 +76,34 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
 
   const [event, view] = spy.mock.results;
 
-  expect(getUrlParamsObject(event.value)).toEqual({
-    ati:
-      'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
-    hl: '${timestamp}',
-    lng: '${browserLanguage}',
-    p: 'news::pidgin.news.story.51745682.page',
-    r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
-    re: '${availableScreenWidth}x${availableScreenHeight}',
-    type: 'AT',
-    undefineds: '598343',
+  expect(getUrlParams(event.value)).toEqual({
+    origin: 'https://logws1363.ati-host.net',
+    searchParams: {
+      ati:
+        'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+      hl: '${timestamp}',
+      lng: '${browserLanguage}',
+      p: 'news::pidgin.news.story.51745682.page',
+      r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+      re: '${availableScreenWidth}x${availableScreenHeight}',
+      s: '598343',
+      type: 'AT',
+    },
   });
 
-  expect(getUrlParamsObject(view.value)).toEqual({
-    ati:
-      'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
-    hl: '${timestamp}',
-    lng: '${browserLanguage}',
-    p: 'news::pidgin.news.story.51745682.page',
-    r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
-    re: '${availableScreenWidth}x${availableScreenHeight}',
-    type: 'AT',
-    undefineds: '598343',
+  expect(getUrlParams(view.value)).toEqual({
+    origin: 'https://logws1363.ati-host.net',
+    searchParams: {
+      ati:
+        'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+      hl: '${timestamp}',
+      lng: '${browserLanguage}',
+      p: 'news::pidgin.news.story.51745682.page',
+      r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+      re: '${availableScreenWidth}x${availableScreenHeight}',
+      s: '598343',
+      type: 'AT',
+    },
   });
 });
 
