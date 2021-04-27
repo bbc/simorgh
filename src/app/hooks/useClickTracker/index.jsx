@@ -1,4 +1,4 @@
-import { useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef, useContext, useState } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -8,6 +8,8 @@ import pageData from './fixtureData.json';
 
 // May need to add pageData as a prop
 const useClickTracker = ({ componentName }) => {
+  const [hasBeenClicked, setHasBeenClicked] = useState(false);
+
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const { service } = serviceContext;
@@ -25,25 +27,28 @@ const useClickTracker = ({ componentName }) => {
     // eslint-disable-next-line no-console
     console.log(`${componentName} Clicked!`);
 
-    const componentInfo = getComponentInfo({
-      result: event.target.href || window.location.href,
-      componentName,
-      componentData: {
-        actionLabel: 'click',
-        child: event.target.tagName,
-      },
-    });
+    if (!hasBeenClicked) {
+      setHasBeenClicked(true);
+      const componentInfo = getComponentInfo({
+        result: event.target.href || window.location.href,
+        componentName,
+        componentData: {
+          actionLabel: 'click',
+          child: event.target.tagName,
+        },
+      });
 
-    sendEventBeacon({
-      type: 'click',
-      componentName,
-      service,
-      componentInfo,
-      ...eventTrackingProps,
-    }).then(() => {
-      // eslint-disable-next-line no-console
-      console.log('Sent!');
-    });
+      sendEventBeacon({
+        type: 'click',
+        componentName,
+        service,
+        componentInfo,
+        ...eventTrackingProps,
+      }).then(() => {
+        // eslint-disable-next-line no-console
+        console.log('Sent!');
+      });
+    }
   };
 
   useEffect(() => {
