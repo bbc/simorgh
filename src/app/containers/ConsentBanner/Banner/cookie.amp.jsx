@@ -235,7 +235,9 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >
-          <Title script={script}>{manage.title}</Title>
+          <Title script={script} autoFocus>
+            {manage.title}
+          </Title>
           <Paragraph script={script}>{manage.description.para1}</Paragraph>
           <Paragraph script={script}>{manage.description.para2}</Paragraph>
           <Heading>{manage.description.heading2}</Heading>

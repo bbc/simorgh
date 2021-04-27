@@ -23,6 +23,7 @@ const pageTypes = [
 // list of urls we have decided are acceptable to fail amp validation
 const excludedUrls = [
   '/mundo/23263889' /* https://github.com/bbc/simorgh/issues/8104 */,
+  '/mundo/noticias-internacional-51266689',
 ];
 
 const getPageString = async url => {
@@ -55,8 +56,18 @@ const validate = async ({ validator, url }) => {
   const pageString = await getPageString(`${baseUrl}${url}.amp`);
   const result = validator.validateString(pageString);
   result.url = url;
-  if (result.status === 'FAIL') throw new Error();
   return result;
+};
+
+const getErrorMessage = errors => {
+  let msg = '';
+  errors.forEach(error => {
+    msg += `line ${error.line}, col ${error.col}: ${error.message}`;
+    if (error.specUrl !== null && error.specUrl !== '') {
+      msg += ` (see ${error.specUrl})`;
+    }
+  });
+  return `${msg}\n`;
 };
 
 const runValidator = async verbose => {
@@ -73,7 +84,7 @@ const runValidator = async verbose => {
         if (result.status === 'PASS') {
           if (verbose) printResult(result);
         } else {
-          printResult(result);
+          throw new Error(getErrorMessage(result.errors));
         }
       });
 
