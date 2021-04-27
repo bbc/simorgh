@@ -17,8 +17,7 @@ jest.mock('react-intersection-observer');
 const wait = duration => new Promise(resolve => setTimeout(resolve, duration));
 
 beforeEach(() => {
-  jest.resetAllMocks();
-  jest.clearAllTimers();
+  jest.clearAllMocks();
 });
 
 const elementRefFn = jest.fn();
@@ -57,8 +56,20 @@ it('should return a ref used for tracking', async () => {
   expect(result.current.trackRef).toBe(elementRefFn);
 });
 
-it.only('should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+it('should not call buildATIEventTrackUrl when element is not in view', async () => {
   setIntersectionNotObserved();
+
+  const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
+  const data = { componentName: 'mostRead', pageData };
+
+  renderHook(() => useViewTracker(data), { wrapper });
+
+  expect(spy).not.toHaveBeenCalled();
+});
+
+it('should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+  setIntersectionNotObserved();
+
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
@@ -108,8 +119,9 @@ it.only('should call buildATIEventTrackUrl and return correct tracking url when 
   });
 });
 
-it(`should not call buildATIEventTrackUrl when element is 50% or more in view for less than 1 second`, async () => {
+it('should not call buildATIEventTrackUrl when element is in view for less than 1 second', async () => {
   setIntersectionNotObserved();
+
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
 
@@ -120,12 +132,12 @@ it(`should not call buildATIEventTrackUrl when element is 50% or more in view fo
 
   await act(() => wait(900));
 
-  expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
-  expect(spy).not.toHaveBeenCalledWith();
+  expect(spy).not.toHaveBeenCalled();
 });
 
-it('should not call buildATIEventTrackUrl more than once', async () => {
+it('should not call buildATIEventTrackUrl more than twice (once for component view and once for page view)', async () => {
   setIntersectionNotObserved();
+
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = { componentName: 'mostRead', pageData };
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
@@ -141,7 +153,5 @@ it('should not call buildATIEventTrackUrl more than once', async () => {
   rerender();
   await act(() => wait(1100));
 
-  expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
-  expect(spy.mock.results[0].value).toHaveBeenCalledWith({ blah: 'foo' });
-  expect(spy).toHaveBeenCalledTimes(1);
+  expect(spy).toHaveBeenCalledTimes(2);
 });
