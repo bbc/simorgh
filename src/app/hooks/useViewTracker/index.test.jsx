@@ -14,8 +14,6 @@ import pageData from './pageData.json';
 const getUrlParamsObject = url => Object.fromEntries(new URLSearchParams(url));
 
 jest.mock('react-intersection-observer');
-// jest.mock('#containers/ATIAnalytics/atiUrl');
-// jest.useFakeTimers();
 const wait = duration => new Promise(resolve => setTimeout(resolve, duration));
 
 beforeEach(() => {
