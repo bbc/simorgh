@@ -67,12 +67,29 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
 
   const [event, view] = spy.mock.results;
 
-  expect(event.value).toMatchInlineSnapshot(
-    `"undefineds=598343&p=news%3A%3Apidgin.news.story.51745682.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-%5Bafrique-mostRead%5D-%5BmostRead-most-read-navigate~view%5D-%5B%5D-%5BPAR%3Dcontainer-mostRead~CHD%3Dlink%5D-%5Bnews%3A%3Apidgin.news.story.51745682.page%5D-%5B%5D-%5B%5D-%5Bhttps%3A%2F%2Fwww.bbc.com%2Fmundo%2Fsomething%5D&type=AT"`,
-  );
-  expect(view.value).toMatchInlineSnapshot(
-    `"undefineds=598343&p=news%3A%3Apidgin.news.story.51745682.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&ati=PUB-%5Bafrique-mostRead%5D-%5BmostRead-most-read-navigate~view%5D-%5B%5D-%5BPAR%3Dcontainer-mostRead~CHD%3Dlink%5D-%5Bnews%3A%3Apidgin.news.story.51745682.page%5D-%5B%5D-%5B%5D-%5Bhttps%3A%2F%2Fwww.bbc.com%2Fmundo%2Fsomething%5D&type=AT"`,
-  );
+  expect(Object.fromEntries(new URLSearchParams(event.value))).toEqual({
+    ati:
+      'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+    hl: '${timestamp}',
+    lng: '${browserLanguage}',
+    p: 'news::pidgin.news.story.51745682.page',
+    r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+    re: '${availableScreenWidth}x${availableScreenHeight}',
+    type: 'AT',
+    undefineds: '598343',
+  });
+
+  expect(Object.fromEntries(new URLSearchParams(view.value))).toEqual({
+    ati:
+      'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+    hl: '${timestamp}',
+    lng: '${browserLanguage}',
+    p: 'news::pidgin.news.story.51745682.page',
+    r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
+    re: '${availableScreenWidth}x${availableScreenHeight}',
+    type: 'AT',
+    undefineds: '598343',
+  });
 });
 
 it(`should not call buildATIEventTrackUrl when element is 50% or more in view for less than ${
