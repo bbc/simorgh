@@ -58,7 +58,7 @@ it('should return a ref used for tracking', async () => {
   expect(result.current.trackRef).toBe(elementRefFn);
 });
 
-it.only(`should call buildATIEventTrackUrl when element is 50% or more in view for more than ${
+it.only(`should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than ${
   REQUIRED_TIME_IN_VIEW / 1000
 } seconds`, async () => {
   setIntersectionNotObserved();
