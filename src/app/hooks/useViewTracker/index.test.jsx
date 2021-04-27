@@ -164,13 +164,16 @@ it('should not call buildATIEventTrackUrl more than twice (once for component vi
   };
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
+  // scroll element into view
   setIntersectionObserved();
   rerender();
   await act(() => wait(1100));
 
+  // scroll element out of view
   setIntersectionNotObserved();
   rerender();
 
+  // scroll element into view again
   setIntersectionObserved();
   rerender();
   await act(() => wait(1100));
