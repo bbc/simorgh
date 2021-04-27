@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useInView } from 'react-intersection-observer';
@@ -9,6 +10,8 @@ import useViewTracker from '.';
 
 import { CORRESPONDENT_STORY_PAGE } from '#app/routes/utils/pageTypes';
 import pageData from './pageData.json';
+
+const getUrlParamsObject = url => Object.fromEntries(new URLSearchParams(url));
 
 jest.mock('react-intersection-observer');
 // jest.mock('#containers/ATIAnalytics/atiUrl');
@@ -67,7 +70,7 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
 
   const [event, view] = spy.mock.results;
 
-  expect(Object.fromEntries(new URLSearchParams(event.value))).toEqual({
+  expect(getUrlParamsObject(event.value)).toEqual({
     ati:
       'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
     hl: '${timestamp}',
@@ -79,7 +82,7 @@ it.only(`should call buildATIEventTrackUrl when element is 50% or more in view f
     undefineds: '598343',
   });
 
-  expect(Object.fromEntries(new URLSearchParams(view.value))).toEqual({
+  expect(getUrlParamsObject(view.value)).toEqual({
     ati:
       'PUB-[afrique-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
     hl: '${timestamp}',
