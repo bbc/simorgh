@@ -11,7 +11,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 
 const VIEWED_DURATION_MS = 1000;
 
-const useImpression = ({ pageData, componentName, actionLabel }) => {
+const useViewTracker = ({ pageData, componentName, actionLabel }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const [viewSent, setViewSent] = useState(false);
@@ -65,4 +65,4 @@ const useImpression = ({ pageData, componentName, actionLabel }) => {
   return { trackRef: ref };
 };
 
-export default useImpression;
+export default useViewTracker;
