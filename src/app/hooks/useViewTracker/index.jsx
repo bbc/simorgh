@@ -11,9 +11,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 
 const VIEWED_DURATION_MS = 1000;
 
-// const {trackRef} = useImpression(data)
-
-const useImpression = ({ pageData, componentName }) => {
+const useImpression = ({ pageData, componentName, actionLabel }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const [viewSent, setViewSent] = useState(false);
@@ -25,17 +23,17 @@ const useImpression = ({ pageData, componentName }) => {
     requestContext,
     serviceContext,
   );
-  const componentInfo = getComponentInfo({
-    result: 'https://www.bbc.com/mundo/something',
-    componentName: 'mostRead',
-    componentData: {
-      actionLabel: 'most-read-navigate',
-      child: 'link',
-    },
-  });
 
   useEffect(() => {
     let timeout;
+    const componentInfo = getComponentInfo({
+      result: window.location.href,
+      componentName,
+      componentData: {
+        actionLabel,
+        child: 'link', // TODO ask Jon B what this should be
+      },
+    });
 
     if (inView) {
       timeout = setTimeout(() => {
@@ -59,9 +57,9 @@ const useImpression = ({ pageData, componentName }) => {
     inView,
     viewSent,
     componentName,
-    componentInfo,
     eventTrackingProps,
     serviceContext.service,
+    actionLabel,
   ]);
 
   return { trackRef: ref };

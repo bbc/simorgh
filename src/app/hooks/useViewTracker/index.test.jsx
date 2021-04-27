@@ -11,6 +11,8 @@ import useViewTracker from '.';
 import { CORRESPONDENT_STORY_PAGE } from '#app/routes/utils/pageTypes';
 import pageData from './pageData.json';
 
+delete window.location;
+window.location = { href: 'http://bbc.com/pidgin/tori-51745682' };
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
@@ -50,7 +52,11 @@ const wrapper = ({ children }) => (
 it('should return a ref used for tracking', async () => {
   setIntersectionNotObserved();
 
-  const data = { componentName: 'mostRead', pageData };
+  const data = {
+    pageData,
+    componentName: 'mostRead',
+    actionLabel: 'most-read-view',
+  };
   const { result } = renderHook(() => useViewTracker(data), { wrapper });
 
   expect(result.current.trackRef).toBe(elementRefFn);
@@ -60,7 +66,11 @@ it('should not call buildATIEventTrackUrl when element is not in view', async ()
   setIntersectionNotObserved();
 
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
-  const data = { componentName: 'mostRead', pageData };
+  const data = {
+    pageData,
+    componentName: 'mostRead',
+    actionLabel: 'most-read-view',
+  };
 
   renderHook(() => useViewTracker(data), { wrapper });
 
@@ -71,7 +81,11 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
   setIntersectionNotObserved();
 
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
-  const data = { componentName: 'mostRead', pageData };
+  const data = {
+    pageData,
+    componentName: 'mostRead',
+    actionLabel: 'most-read-view',
+  };
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
   setIntersectionObserved();
@@ -89,7 +103,7 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
     pathname: '/',
     searchParams: {
       ati:
-        'PUB-[pidgin-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+        'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
       hl: '${timestamp}',
       lng: '${browserLanguage}',
       p: 'news::pidgin.news.story.51745682.page',
@@ -106,7 +120,7 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
     pathname: '/',
     searchParams: {
       ati:
-        'PUB-[pidgin-mostRead]-[mostRead-most-read-navigate~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[https://www.bbc.com/mundo/something]',
+        'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
       hl: '${timestamp}',
       lng: '${browserLanguage}',
       p: 'news::pidgin.news.story.51745682.page',
@@ -123,7 +137,11 @@ it('should not call buildATIEventTrackUrl when element is in view for less than 
   setIntersectionNotObserved();
 
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
-  const data = { componentName: 'mostRead', pageData };
+  const data = {
+    pageData,
+    componentName: 'mostRead',
+    actionLabel: 'most-read-view',
+  };
 
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
@@ -135,11 +153,15 @@ it('should not call buildATIEventTrackUrl when element is in view for less than 
   expect(spy).not.toHaveBeenCalled();
 });
 
-it('should not call buildATIEventTrackUrl more than twice (once for component view and once for page view)', async () => {
+it('should not call buildATIEventTrackUrl more than twice (once for component view and once for page view) when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
-  const data = { componentName: 'mostRead', pageData };
+  const data = {
+    pageData,
+    componentName: 'mostRead',
+    actionLabel: 'most-read-view',
+  };
   const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
 
   setIntersectionObserved();
