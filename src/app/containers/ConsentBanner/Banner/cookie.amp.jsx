@@ -46,6 +46,10 @@ const COMMON_HEADING_STYLES = `
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin-top: ${GEL_SPACING_QUAD};
   }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -207,7 +211,9 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script}>{initial.title}</Title>
+          <Title script={script} tabIndex="-1" autoFocus>
+            {initial.title}
+          </Title>
           <Paragraph script={script}>
             {initial.description.first}
             <StyledLink
@@ -223,7 +229,7 @@ const AmpCookieBanner = ({
             <OptionsItem script={script} service={service}>
               <button
                 type="button"
-                on="tap:AMP.setState({ isManagingSettings: true })"
+                on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
               >
                 {initial.manage}
               </button>
@@ -235,7 +241,9 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="!isManagingSettings"
           data-testid="amp-cookie-banner-manage-settings"
         >
-          <Title script={script}>{manage.title}</Title>
+          <Title script={script} tabIndex="-1" id="manageCookiesHeading">
+            {manage.title}
+          </Title>
           <Paragraph script={script}>{manage.description.para1}</Paragraph>
           <Paragraph script={script}>{manage.description.para2}</Paragraph>
           <Heading>{manage.description.heading2}</Heading>

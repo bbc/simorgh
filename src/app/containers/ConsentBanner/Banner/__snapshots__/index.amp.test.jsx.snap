@@ -55,6 +55,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
+.emotion-4:focus {
+  outline: none;
+}
+
 .emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -210,6 +214,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
   }
 }
 
+.emotion-24:focus {
+  outline: none;
+}
+
 <div>
   <div
     hidden=""
@@ -225,6 +233,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       >
         <h2
           class="emotion-4 emotion-5"
+          tabindex="-1"
         >
           Let us know you agree to data collection on AMP
         </h2>
@@ -261,7 +270,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
             class="emotion-12 emotion-13"
           >
             <button
-              on="tap:AMP.setState({ isManagingSettings: true })"
+              on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
               type="button"
             >
               Manage my settings
@@ -277,6 +286,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - LT
       >
         <h2
           class="emotion-4 emotion-5"
+          id="manageCookiesHeading"
+          tabindex="-1"
         >
           Manage consent settings on AMP pages
         </h2>
@@ -437,6 +448,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
+.emotion-4:focus {
+  outline: none;
+}
+
 .emotion-6 {
   font-size: 0.9375rem;
   line-height: 1.5rem;
@@ -592,6 +607,10 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
   }
 }
 
+.emotion-24:focus {
+  outline: none;
+}
+
 <div>
   <div
     hidden=""
@@ -607,6 +626,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       >
         <h2
           class="emotion-4 emotion-5"
+          tabindex="-1"
         >
           أعلمونا بموافقتكم على جمع المعلومات من خلال AMP
         </h2>
@@ -643,7 +663,7 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
             class="emotion-12 emotion-13"
           >
             <button
-              on="tap:AMP.setState({ isManagingSettings: true })"
+              on="tap:AMP.setState({ isManagingSettings: true }), manageCookiesHeading.focus"
               type="button"
             >
               ادارة خياراتي
@@ -659,6 +679,8 @@ exports[`Amp Consent Banner Container should correctly render cookie banner - RT
       >
         <h2
           class="emotion-4 emotion-5"
+          id="manageCookiesHeading"
+          tabindex="-1"
         >
           ادارة خيارات الموافقة في صفحات AMP
         </h2>
