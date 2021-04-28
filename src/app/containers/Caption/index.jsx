@@ -74,11 +74,7 @@ const CaptionContainer = ({ block, type }) => {
     defaultCaptionOffscreenText,
   );
 
-  const clickRef = useClickTracker({
-    pageData: 'asdasd',
-    componentName: 'caption',
-    action: 'action',
-  });
+  const clickRef = useClickTracker({ componentName: 'caption' });
 
   const paragraphBlocks = pathOr(
     null,
