@@ -39,8 +39,8 @@ const urlToObject = url => {
 const wrapper = ({ children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
-    isAmp
     pageType={STORY_PAGE}
+    isAmp={false}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
@@ -105,11 +105,11 @@ it('should send event to ATI and return correct tracking url when element is 50%
     searchParams: {
       ati:
         'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
-      hl: '${timestamp}',
-      lng: '${browserLanguage}',
+      hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
+      lng: 'en-US',
       p: 'news::pidgin.news.story.51745682.page',
-      r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
-      re: '${availableScreenWidth}x${availableScreenHeight}',
+      r: '0x0x24x24',
+      re: '1024x768',
       s: '598343',
       s2: '70',
       type: 'AT',
@@ -122,11 +122,11 @@ it('should send event to ATI and return correct tracking url when element is 50%
     searchParams: {
       ati:
         'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
-      hl: '${timestamp}',
-      lng: '${browserLanguage}',
+      hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
+      lng: 'en-US',
       p: 'news::pidgin.news.story.51745682.page',
-      r: '${screenWidth}x${screenHeight}x${screenColorDepth}',
-      re: '${availableScreenWidth}x${availableScreenHeight}',
+      r: '0x0x24x24',
+      re: '1024x768',
       s: '598343',
       s2: '70',
       type: 'AT',
