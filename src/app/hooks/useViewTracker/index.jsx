@@ -49,8 +49,11 @@ const useViewTracker = ({ pageData, componentName, actionLabel } = {}) => {
 
     if (inView && !timer.current) {
       timer.current = setTimeout(() => {
-        const shouldSendEvent =
-          !viewSent && eventTrackingProps && componentInfo;
+        const shouldSendEvent = [
+          !viewSent,
+          eventTrackingProps,
+          componentInfo,
+        ].every(Boolean);
 
         if (shouldSendEvent) {
           sendEventBeacon({
