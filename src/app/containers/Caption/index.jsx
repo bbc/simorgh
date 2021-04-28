@@ -8,7 +8,6 @@ import Blocks from '../Blocks';
 import Fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
-import useClickTracker from '#hooks/useClickTracker';
 
 const componentsToRender = {
   fragment: Fragment,
@@ -48,9 +47,8 @@ const renderCaption = (
   script,
   service,
   dir,
-  clickRef,
 ) => (
-  <Caption ref={clickRef} script={script} service={service} dir={dir}>
+  <Caption script={script} service={service} dir={dir}>
     {offscreenText && <VisuallyHiddenText>{offscreenText}</VisuallyHiddenText>}
     {paragraphBlocks.map(block => renderParagraph(block))}
   </Caption>
@@ -74,22 +72,13 @@ const CaptionContainer = ({ block, type }) => {
     defaultCaptionOffscreenText,
   );
 
-  const clickRef = useClickTracker({ componentName: 'caption' });
-
   const paragraphBlocks = pathOr(
     null,
     ['model', 'blocks', 0, 'model', 'blocks'],
     block,
   );
 
-  return renderCaption(
-    paragraphBlocks,
-    offscreenText,
-    script,
-    service,
-    dir,
-    clickRef,
-  );
+  return renderCaption(paragraphBlocks, offscreenText, script, service, dir);
 };
 
 CaptionContainer.propTypes = {

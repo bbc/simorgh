@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import Brand from '@bbc/psammead-brand';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useClickTracker from '#hooks/useClickTracker';
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const {
@@ -12,8 +11,6 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
     service,
     theming,
   } = useContext(ServiceContext);
-
-  const clickRef = useClickTracker({ componentName: 'brand' });
 
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -35,7 +32,7 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}
-      ref={clickRef}
+      ref={brandRef}
       {...props}
     />
   );
