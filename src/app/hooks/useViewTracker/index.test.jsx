@@ -100,9 +100,9 @@ it('should send event to ATI and return correct tracking url when element is 50%
   act(() => jest.advanceTimersByTime(1100));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
-  expect(global.fetch).toHaveBeenCalledTimes(2);
+  expect(global.fetch).toHaveBeenCalledTimes(1);
 
-  const [[viewEventUrl], [backgroundEventUrl]] = global.fetch.mock.calls;
+  const [[viewEventUrl]] = global.fetch.mock.calls;
 
   expect(urlToObject(viewEventUrl)).toEqual({
     origin: 'https://logws1363.ati-host.net',
@@ -111,23 +111,7 @@ it('should send event to ATI and return correct tracking url when element is 50%
       ati:
         'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
       hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
-      lng: 'en-US',
-      p: 'news::pidgin.news.story.51745682.page',
-      r: '0x0x24x24',
-      re: '1024x768',
-      s: '598343',
-      s2: '70',
-      type: 'AT',
-    },
-  });
-
-  expect(urlToObject(backgroundEventUrl)).toEqual({
-    origin: 'https://logws1363.ati-host.net',
-    pathname: '/',
-    searchParams: {
-      ati:
-        'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
-      hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
+      idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
       lng: 'en-US',
       p: 'news::pidgin.news.story.51745682.page',
       r: '0x0x24x24',
@@ -167,7 +151,7 @@ it('should not send event to ATI when element is in view for less than 1 second'
   expect(global.fetch).not.toHaveBeenCalled();
 });
 
-it('should not send event to ATI more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
+it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
   const trackingData = {
@@ -193,9 +177,8 @@ it('should not send event to ATI more than twice (once for component view event 
   rerender();
   act(() => jest.advanceTimersByTime(1100));
 
-  const [[viewEventUrl], [backgroundEventUrl]] = global.fetch.mock.calls;
+  const [[viewEventUrl]] = global.fetch.mock.calls;
 
   expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
-  expect(backgroundEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
-  expect(global.fetch).toHaveBeenCalledTimes(2);
+  expect(global.fetch).toHaveBeenCalledTimes(1);
 });
