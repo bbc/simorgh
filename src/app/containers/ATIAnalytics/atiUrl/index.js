@@ -234,6 +234,12 @@ export const buildATIEventTrackUrl = ({
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
+      wrap: false,
+    },
+    {
       key: 's',
       description: 'destination',
       value: getDestination(platform, statsDestination),
