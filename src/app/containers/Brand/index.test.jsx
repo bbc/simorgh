@@ -19,13 +19,9 @@ const newsServiceContextStub = {
   },
 };
 
-const BrandContainerWithContext = (context, skipLink, scriptLink, linkId) => (
+const BrandContainerWithContext = (context, skipLink, scriptLink) => (
   <ServiceContext.Provider value={context}>
-    <BrandContainer
-      skipLink={skipLink}
-      scriptLink={scriptLink}
-      linkId={linkId}
-    />
+    <BrandContainer skipLink={skipLink} scriptLink={scriptLink} />
   </ServiceContext.Provider>
 );
 
@@ -73,21 +69,6 @@ describe(`BrandContainer`, () => {
 
       const scriptLink = queryByTestId('script-link');
       expect(scriptLink).toBeNull();
-    });
-
-    it('should render a focussable linkId if provided', () => {
-      const { container } = render(
-        BrandContainerWithContext(
-          newsServiceContextStub,
-          mockSkipLink,
-          mockScriptLink,
-          'brandLink',
-        ),
-      );
-
-      expect(container.querySelector('#brandLink')).toBe(
-        container.querySelector('a[href="/news"]'),
-      );
     });
   });
 });
