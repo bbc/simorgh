@@ -52,132 +52,164 @@ const wrapper = ({ children }) => (
   </RequestContextProvider>
 );
 
-it('should return a ref used for tracking', async () => {
-  setIntersectionNotObserved();
+describe('Expected use', () => {
+  it('should return a ref used for tracking', async () => {
+    setIntersectionNotObserved();
 
-  const trackingData = {
-    pageData,
-    componentName: 'mostRead',
-    actionLabel: 'most-read-view',
-  };
-  const { result } = renderHook(() => useViewTracker(trackingData), {
-    wrapper,
+    const trackingData = {
+      pageData,
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    expect(result.current.trackRef).toBe(elementRefFn);
   });
 
-  expect(result.current.trackRef).toBe(elementRefFn);
+  it('should not send event to ATI when element is not in view', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = {
+      pageData,
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+
+    renderHook(() => useViewTracker(trackingData), { wrapper });
+
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = {
+      pageData,
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        ati:
+          'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+  });
+
+  it('should not send event to ATI when element is in view for less than 1 second', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = {
+      pageData,
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    // scroll into view
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(900));
+
+    // scroll out of view
+    setIntersectionNotObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1000));
+
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = {
+      pageData,
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    // scroll element into view
+    setIntersectionObserved();
+    rerender();
+    act(() => jest.advanceTimersByTime(1100));
+
+    // scroll element out of view
+    setIntersectionNotObserved();
+    rerender();
+
+    // scroll element into view again
+    setIntersectionObserved();
+    rerender();
+    act(() => jest.advanceTimersByTime(1100));
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
 });
 
-it('should not send event to ATI when element is not in view', async () => {
-  setIntersectionNotObserved();
+describe('Error handling', () => {
+  it('should not throw error when no tracking data passed into hook', async () => {
+    setIntersectionNotObserved();
 
-  const trackingData = {
-    pageData,
-    componentName: 'mostRead',
-    actionLabel: 'most-read-view',
-  };
+    const trackingData = undefined;
 
-  renderHook(() => useViewTracker(trackingData), { wrapper });
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
 
-  expect(global.fetch).not.toHaveBeenCalled();
-});
-
-it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
-  setIntersectionNotObserved();
-
-  const trackingData = {
-    pageData,
-    componentName: 'mostRead',
-    actionLabel: 'most-read-view',
-  };
-  const { rerender } = renderHook(() => useViewTracker(trackingData), {
-    wrapper,
+    expect(result.error).toBeUndefined();
   });
 
-  setIntersectionObserved();
-  rerender();
+  it('should not throw error when no pageData passed into hook', async () => {
+    setIntersectionNotObserved();
 
-  act(() => jest.advanceTimersByTime(1100));
+    const trackingData = {
+      pageData: {},
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
 
-  expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
-  expect(global.fetch).toHaveBeenCalledTimes(1);
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
 
-  const [[viewEventUrl]] = global.fetch.mock.calls;
-
-  expect(urlToObject(viewEventUrl)).toEqual({
-    origin: 'https://logws1363.ati-host.net',
-    pathname: '/',
-    searchParams: {
-      ati:
-        'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
-      hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
-      idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-      lng: 'en-US',
-      p: 'news::pidgin.news.story.51745682.page',
-      r: '0x0x24x24',
-      re: '1024x768',
-      s: '598343',
-      s2: '70',
-      type: 'AT',
-    },
+    expect(result.error).toBeUndefined();
   });
-});
-
-it('should not send event to ATI when element is in view for less than 1 second', async () => {
-  setIntersectionNotObserved();
-
-  const trackingData = {
-    pageData,
-    componentName: 'mostRead',
-    actionLabel: 'most-read-view',
-  };
-
-  const { rerender } = renderHook(() => useViewTracker(trackingData), {
-    wrapper,
-  });
-
-  // scroll into view
-  setIntersectionObserved();
-  rerender();
-
-  act(() => jest.advanceTimersByTime(900));
-
-  // scroll out of view
-  setIntersectionNotObserved();
-  rerender();
-
-  act(() => jest.advanceTimersByTime(1000));
-
-  expect(global.fetch).not.toHaveBeenCalled();
-});
-
-it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
-  setIntersectionNotObserved();
-
-  const trackingData = {
-    pageData,
-    componentName: 'mostRead',
-    actionLabel: 'most-read-view',
-  };
-  const { rerender } = renderHook(() => useViewTracker(trackingData), {
-    wrapper,
-  });
-
-  // scroll element into view
-  setIntersectionObserved();
-  rerender();
-  act(() => jest.advanceTimersByTime(1100));
-
-  // scroll element out of view
-  setIntersectionNotObserved();
-  rerender();
-
-  // scroll element into view again
-  setIntersectionObserved();
-  rerender();
-  act(() => jest.advanceTimersByTime(1100));
-
-  const [[viewEventUrl]] = global.fetch.mock.calls;
-
-  expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
-  expect(global.fetch).toHaveBeenCalledTimes(1);
 });

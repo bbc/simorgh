@@ -11,7 +11,8 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 
 const VIEWED_DURATION_MS = 1000;
 
-const useViewTracker = ({ pageData, componentName, actionLabel }) => {
+const useViewTracker = ({ pageData, componentName, actionLabel } = {}) => {
+  let eventTrackingProps;
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
   const timer = useRef(null);
@@ -19,26 +20,39 @@ const useViewTracker = ({ pageData, componentName, actionLabel }) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
-  const eventTrackingProps = buildATIClickParams(
-    pageData,
-    requestContext,
-    serviceContext,
-  );
+
+  try {
+    eventTrackingProps = buildATIClickParams(
+      pageData,
+      requestContext,
+      serviceContext,
+    );
+  } catch (error) {
+    eventTrackingProps = null;
+  }
 
   useEffect(() => {
-    const componentInfo = getComponentInfo({
-      result: window.location.href,
-      componentName,
-      componentData: {
-        actionLabel,
-        child: 'link', // TODO ask Jon B what this should be
-      },
-    });
+    let componentInfo;
+
+    try {
+      componentInfo = getComponentInfo({
+        result: window.location.href,
+        componentName,
+        componentData: {
+          actionLabel,
+          child: 'link', // TODO ask Jon B what this should be
+        },
+      });
+    } catch (error) {
+      componentInfo = null;
+    }
 
     if (inView && !timer.current) {
       timer.current = setTimeout(() => {
-        if (!viewSent) {
-          setViewSent(true);
+        const shouldSendEvent =
+          !viewSent && eventTrackingProps && componentInfo;
+
+        if (shouldSendEvent) {
           sendEventBeacon({
             type: 'view',
             componentName,
@@ -46,6 +60,7 @@ const useViewTracker = ({ pageData, componentName, actionLabel }) => {
             componentInfo,
             ...eventTrackingProps,
           });
+          setViewSent(true);
         }
       }, VIEWED_DURATION_MS);
     } else {
