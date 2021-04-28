@@ -4,6 +4,8 @@ import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
+import { isValidClick } from './helpers';
+
 import pageData from './fixtureData.json';
 import pidginData from './fixtureData/sport-23252855.json';
 import zhongwenDataSimp from './fixtureData/chinese-news-49065935-simp.json';
@@ -30,7 +32,7 @@ const useClickTracker = ({ componentName }) => {
     // eslint-disable-next-line no-console
     console.log(`${componentName} Clicked!`);
 
-    if (!hasBeenClicked) {
+    if (!hasBeenClicked && isValidClick(event)) {
       setHasBeenClicked(true);
       const componentInfo = getComponentInfo({
         result: event.target.href || window.location.href,
@@ -57,7 +59,7 @@ const useClickTracker = ({ componentName }) => {
 
   useEffect(() => {
     const trackedComponent = clickRef.current;
-    trackedComponent?.addEventListener('click', handleClick); // Does 'click' cover enter keypress all the time?
+    trackedComponent?.addEventListener('click', handleClick);
 
     return () => trackedComponent?.removeEventListener('click', handleClick);
   }, [handleClick]);
