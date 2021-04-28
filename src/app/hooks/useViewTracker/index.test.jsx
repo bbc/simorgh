@@ -185,7 +185,7 @@ describe('Expected use', () => {
 });
 
 describe('Error handling', () => {
-  it('should not throw error when no tracking data passed into hook', async () => {
+  it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
     setIntersectionObserved();
 
     const trackingData = undefined;
@@ -200,7 +200,7 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error when no pageData passed into hook', async () => {
+  it('should not throw error and not send event to ATI when no pageData passed into hook', async () => {
     setIntersectionObserved();
 
     const trackingData = {
@@ -219,7 +219,7 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error when unexpected data passed into hook', async () => {
+  it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
     setIntersectionObserved();
 
     const trackingData = {
@@ -236,7 +236,7 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error when unexpected data type passed into hook', async () => {
+  it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
     setIntersectionObserved();
 
     const trackingData = ['unexpected data type'];
