@@ -50,7 +50,6 @@ const COMMON_HEADING_STYLES = `
   &:focus {
     outline: none;
   }
-
 `;
 
 const Wrapper = styled.div`
