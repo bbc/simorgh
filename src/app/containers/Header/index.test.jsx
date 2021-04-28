@@ -39,7 +39,6 @@ const HeaderContainerWithContext = ({
   serviceContext = pidginServiceConfig,
   bbcOrigin = 'https://www.test.bbc.com',
   variant = 'default',
-  isAmp = false,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -49,7 +48,7 @@ const HeaderContainerWithContext = ({
   >
     <ServiceContext.Provider value={serviceContext[variant]}>
       <RequestContextProvider
-        isAmp={isAmp}
+        isAmp={false}
         pageType={pageType}
         service={service}
         statusCode={200}
@@ -207,21 +206,6 @@ describe(`Header`, () => {
 
       expect(document.activeElement).toBe(
         document.querySelector(`a[href="${logoHref}"]`),
-      );
-    });
-
-    it("should render the brand link with an id of 'brandLink' on AMP", () => {
-      const { container } = render(
-        HeaderContainerWithContext({
-          isAmp: true,
-          pageType: INDEX_PAGE,
-          service: 'pidgin',
-          serviceContext: pidginServiceConfig,
-        }),
-      );
-
-      expect(container.querySelector('#brandLink')).toBe(
-        container.querySelector('a[href="/pidgin"]'),
       );
     });
   });
