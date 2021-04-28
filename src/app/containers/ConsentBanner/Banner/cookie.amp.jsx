@@ -48,7 +48,7 @@ const COMMON_HEADING_STYLES = `
   }
 
   &:focus {
-    outline: 2px solid blue;
+    outline: none;
   }
 
 `;
