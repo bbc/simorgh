@@ -29,6 +29,8 @@ const pageTypeUrlBuilders = {
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   IDX: buildIndexPageATIUrl,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -58,6 +60,8 @@ const pageTypeParamBuilders = {
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   IDX: buildIndexPageATIParams,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,

@@ -14,14 +14,7 @@ export const sendEventBeacon = async ({
     type,
   };
 
-  const viewProps = {
-    ...eventProps,
-    type: 'view',
-  };
-  await Promise.all([
-    sendBeacon(buildATIEventTrackUrl(eventProps)), // event, e.g. click
-    sendBeacon(buildATIEventTrackUrl(viewProps)), // background event
-  ]);
+  await sendBeacon(buildATIEventTrackUrl(eventProps));
 };
 
 export default sendEventBeacon;
