@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import useViewTracker from '.';
 
-import { CORRESPONDENT_STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import pageData from './pageData.json';
 
 delete window.location;
@@ -40,7 +40,7 @@ const wrapper = ({ children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
-    pageType={CORRESPONDENT_STORY_PAGE}
+    pageType={STORY_PAGE}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
