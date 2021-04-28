@@ -212,4 +212,30 @@ describe('Error handling', () => {
 
     expect(result.error).toBeUndefined();
   });
+
+  it('should not throw error when unexpected data passed into hook', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = {
+      foo: 'bar',
+    };
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    expect(result.error).toBeUndefined();
+  });
+
+  it('should not throw error when unexpected data type passed into hook', async () => {
+    setIntersectionNotObserved();
+
+    const trackingData = ['unexpected data type'];
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+    });
+
+    expect(result.error).toBeUndefined();
+  });
 });
