@@ -186,7 +186,7 @@ describe('Expected use', () => {
 
 describe('Error handling', () => {
   it('should not throw error when no tracking data passed into hook', async () => {
-    setIntersectionNotObserved();
+    setIntersectionObserved();
 
     const trackingData = undefined;
 
@@ -194,11 +194,14 @@ describe('Error handling', () => {
       wrapper,
     });
 
+    act(() => jest.advanceTimersByTime(1100));
+
     expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('should not throw error when no pageData passed into hook', async () => {
-    setIntersectionNotObserved();
+    setIntersectionObserved();
 
     const trackingData = {
       pageData: {},
@@ -210,11 +213,14 @@ describe('Error handling', () => {
       wrapper,
     });
 
+    act(() => jest.advanceTimersByTime(1100));
+
     expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('should not throw error when unexpected data passed into hook', async () => {
-    setIntersectionNotObserved();
+    setIntersectionObserved();
 
     const trackingData = {
       foo: 'bar',
@@ -224,11 +230,14 @@ describe('Error handling', () => {
       wrapper,
     });
 
+    act(() => jest.advanceTimersByTime(1100));
+
     expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('should not throw error when unexpected data type passed into hook', async () => {
-    setIntersectionNotObserved();
+    setIntersectionObserved();
 
     const trackingData = ['unexpected data type'];
 
@@ -236,6 +245,9 @@ describe('Error handling', () => {
       wrapper,
     });
 
+    act(() => jest.advanceTimersByTime(1100));
+
     expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 });
