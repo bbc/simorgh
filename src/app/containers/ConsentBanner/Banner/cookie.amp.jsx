@@ -48,8 +48,9 @@ const COMMON_HEADING_STYLES = `
   }
 
   &:focus {
-    outline: none;
+    outline: 2px solid blue;
   }
+
 `;
 
 const Wrapper = styled.div`
@@ -211,7 +212,7 @@ const AmpCookieBanner = ({
           data-amp-bind-hidden="isManagingSettings"
           data-testid="amp-cookie-banner"
         >
-          <Title script={script} tabIndex="-1" autoFocus>
+          <Title script={script} tabIndex="-1" id="dataCollectionHeading">
             {initial.title}
           </Title>
           <Paragraph script={script}>
