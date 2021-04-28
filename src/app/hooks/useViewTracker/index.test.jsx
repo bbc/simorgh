@@ -153,7 +153,7 @@ it('should not call buildATIEventTrackUrl when element is in view for less than 
   expect(spy).not.toHaveBeenCalled();
 });
 
-it('should not call buildATIEventTrackUrl more than twice (once for component view and once for page view) when element is scrolled in and out of view', async () => {
+it('should not call buildATIEventTrackUrl more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
   const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
