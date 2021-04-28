@@ -162,6 +162,8 @@ it('should not send event to ATI when element is in view for less than 1 second'
   setIntersectionNotObserved();
   rerender();
 
+  act(() => jest.advanceTimersByTime(1000));
+
   expect(global.fetch).not.toHaveBeenCalled();
 });
 
