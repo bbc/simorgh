@@ -1,4 +1,3 @@
-/* eslint-disable no-template-curly-in-string */
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useInView } from 'react-intersection-observer';
