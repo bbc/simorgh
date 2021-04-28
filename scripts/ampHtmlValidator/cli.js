@@ -1,3 +1,7 @@
 const { runValidator } = require('.');
 
-runValidator();
+try {
+  runValidator();
+} catch (e) {
+  process.exitCode = 1;
+}

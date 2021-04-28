@@ -59,17 +59,6 @@ const validate = async ({ validator, url }) => {
   return result;
 };
 
-const getErrorMessage = errors => {
-  let msg = '';
-  errors.forEach(error => {
-    msg += `line ${error.line}, col ${error.col}: ${error.message}`;
-    if (error.specUrl !== null && error.specUrl !== '') {
-      msg += ` (see ${error.specUrl})`;
-    }
-  });
-  return `${msg}\n`;
-};
-
 const runValidator = async verbose => {
   const validator = await amphtmlValidator.getInstance();
 
@@ -84,7 +73,8 @@ const runValidator = async verbose => {
         if (result.status === 'PASS') {
           if (verbose) printResult(result);
         } else {
-          throw new Error(getErrorMessage(result.errors));
+          printResult(result);
+          process.exitCode = 1;
         }
       });
 
