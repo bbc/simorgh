@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 // Polyfill IntersectionObsesrver, e.g. for IE11
 import 'intersection-observer';
@@ -14,6 +14,7 @@ const VIEWED_DURATION_MS = 1000;
 const useViewTracker = ({ pageData, componentName, actionLabel }) => {
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
+  const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.5,
@@ -25,7 +26,6 @@ const useViewTracker = ({ pageData, componentName, actionLabel }) => {
   );
 
   useEffect(() => {
-    let timeout;
     const componentInfo = getComponentInfo({
       result: window.location.href,
       componentName,
@@ -35,8 +35,8 @@ const useViewTracker = ({ pageData, componentName, actionLabel }) => {
       },
     });
 
-    if (inView) {
-      timeout = setTimeout(() => {
+    if (inView && !timer.current) {
+      timer.current = setTimeout(() => {
         if (!viewSent) {
           setViewSent(true);
           sendEventBeacon({
@@ -49,10 +49,11 @@ const useViewTracker = ({ pageData, componentName, actionLabel }) => {
         }
       }, VIEWED_DURATION_MS);
     } else {
-      clearTimeout(timeout);
+      clearTimeout(timer.current);
+      timer.current = null;
     }
 
-    return () => clearTimeout(timeout);
+    return () => clearTimeout(timer.current);
   }, [
     inView,
     viewSent,
