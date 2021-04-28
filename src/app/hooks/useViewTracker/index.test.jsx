@@ -61,7 +61,7 @@ it('should return a ref used for tracking', async () => {
   expect(result.current.trackRef).toBe(elementRefFn);
 });
 
-it('should not call send event to ATI when element is not in view', async () => {
+it('should not send event to ATI when element is not in view', async () => {
   setIntersectionNotObserved();
 
   const data = {
@@ -75,7 +75,7 @@ it('should not call send event to ATI when element is not in view', async () => 
   expect(global.fetch).not.toHaveBeenCalled();
 });
 
-it('should call send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
   setIntersectionNotObserved();
 
   const data = {
@@ -130,7 +130,7 @@ it('should call send event to ATI and return correct tracking url when element i
   });
 });
 
-it('should not call send event to ATI when element is in view for less than 1 second', async () => {
+it('should not send event to ATI when element is in view for less than 1 second', async () => {
   setIntersectionNotObserved();
 
   const data = {
@@ -149,7 +149,7 @@ it('should not call send event to ATI when element is in view for less than 1 se
   expect(global.fetch).not.toHaveBeenCalled();
 });
 
-it('should not call send event to ATI more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
+it('should not send event to ATI more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
   const data = {
