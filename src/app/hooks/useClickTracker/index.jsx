@@ -5,6 +5,9 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import pageData from './fixtureData.json';
+import pidginData from './fixtureData/sport-23252855.json';
+import zhongwenDataSimp from './fixtureData/chinese-news-49065935-simp.json';
+import zhongwenDataTrad from './fixtureData/chinese-news-49065935-trad.json';
 
 // May need to add pageData as a prop
 const useClickTracker = ({ componentName }) => {
@@ -16,7 +19,7 @@ const useClickTracker = ({ componentName }) => {
   const clickRef = useRef(null);
 
   const eventTrackingProps = buildATIClickParams(
-    pageData,
+    zhongwenDataTrad,
     requestContext,
     serviceContext,
   );
@@ -42,6 +45,7 @@ const useClickTracker = ({ componentName }) => {
         type: 'click',
         componentName,
         service,
+        variant: requestContext.variant || '',
         componentInfo,
         ...eventTrackingProps,
       }).then(() => {
