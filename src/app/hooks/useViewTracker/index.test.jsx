@@ -51,12 +51,14 @@ const wrapper = ({ children }) => (
 it('should return a ref used for tracking', async () => {
   setIntersectionNotObserved();
 
-  const data = {
+  const trackingData = {
     pageData,
     componentName: 'mostRead',
     actionLabel: 'most-read-view',
   };
-  const { result } = renderHook(() => useViewTracker(data), { wrapper });
+  const { result } = renderHook(() => useViewTracker(trackingData), {
+    wrapper,
+  });
 
   expect(result.current.trackRef).toBe(elementRefFn);
 });
@@ -64,13 +66,13 @@ it('should return a ref used for tracking', async () => {
 it('should not send event to ATI when element is not in view', async () => {
   setIntersectionNotObserved();
 
-  const data = {
+  const trackingData = {
     pageData,
     componentName: 'mostRead',
     actionLabel: 'most-read-view',
   };
 
-  renderHook(() => useViewTracker(data), { wrapper });
+  renderHook(() => useViewTracker(trackingData), { wrapper });
 
   expect(global.fetch).not.toHaveBeenCalled();
 });
@@ -78,12 +80,14 @@ it('should not send event to ATI when element is not in view', async () => {
 it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
   setIntersectionNotObserved();
 
-  const data = {
+  const trackingData = {
     pageData,
     componentName: 'mostRead',
     actionLabel: 'most-read-view',
   };
-  const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
+  const { rerender } = renderHook(() => useViewTracker(trackingData), {
+    wrapper,
+  });
 
   setIntersectionObserved();
   rerender();
@@ -133,13 +137,15 @@ it('should send event to ATI and return correct tracking url when element is 50%
 it('should not send event to ATI when element is in view for less than 1 second', async () => {
   setIntersectionNotObserved();
 
-  const data = {
+  const trackingData = {
     pageData,
     componentName: 'mostRead',
     actionLabel: 'most-read-view',
   };
 
-  const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
+  const { rerender } = renderHook(() => useViewTracker(trackingData), {
+    wrapper,
+  });
 
   setIntersectionObserved();
   rerender();
@@ -152,12 +158,14 @@ it('should not send event to ATI when element is in view for less than 1 second'
 it('should not send event to ATI more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
-  const data = {
+  const trackingData = {
     pageData,
     componentName: 'mostRead',
     actionLabel: 'most-read-view',
   };
-  const { rerender } = renderHook(() => useViewTracker(data), { wrapper });
+  const { rerender } = renderHook(() => useViewTracker(trackingData), {
+    wrapper,
+  });
 
   // scroll element into view
   setIntersectionObserved();
