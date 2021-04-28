@@ -290,6 +290,7 @@ export const buildATIEventTrackUrl = ({
         type: type || '',
       }),
       wrap: false,
+      disableEncoding: true,
     },
   ];
 
