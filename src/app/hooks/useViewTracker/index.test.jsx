@@ -96,7 +96,7 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(spy).toHaveBeenCalledTimes(2);
 
-  const [componentViewEvent, pageViewEvent] = spy.mock.results;
+  const [componentViewEvent, backgroundEvent] = spy.mock.results;
 
   expect(urlToObject(componentViewEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
@@ -115,7 +115,7 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
     },
   });
 
-  expect(urlToObject(pageViewEvent.value)).toEqual({
+  expect(urlToObject(backgroundEvent.value)).toEqual({
     origin: 'https://logws1363.ati-host.net',
     pathname: '/',
     searchParams: {
