@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import * as atiUrl from '#containers/ATIAnalytics/atiUrl';
 import useViewTracker from '.';
 
 import { CORRESPONDENT_STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -62,10 +61,9 @@ it('should return a ref used for tracking', async () => {
   expect(result.current.trackRef).toBe(elementRefFn);
 });
 
-it('should not call buildATIEventTrackUrl when element is not in view', async () => {
+it('should not call send event to ATI when element is not in view', async () => {
   setIntersectionNotObserved();
 
-  const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = {
     pageData,
     componentName: 'mostRead',
@@ -74,13 +72,12 @@ it('should not call buildATIEventTrackUrl when element is not in view', async ()
 
   renderHook(() => useViewTracker(data), { wrapper });
 
-  expect(spy).not.toHaveBeenCalled();
+  expect(global.fetch).not.toHaveBeenCalled();
 });
 
-it('should call buildATIEventTrackUrl and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
+it('should call send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
   setIntersectionNotObserved();
 
-  const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = {
     pageData,
     componentName: 'mostRead',
@@ -94,11 +91,11 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
   await act(() => wait(1100));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
-  expect(spy).toHaveBeenCalledTimes(2);
+  expect(global.fetch).toHaveBeenCalledTimes(2);
 
-  const [componentViewEvent, backgroundEvent] = spy.mock.results;
+  const [[viewEventUrl], [backgroundEventUrl]] = global.fetch.mock.calls;
 
-  expect(urlToObject(componentViewEvent.value)).toEqual({
+  expect(urlToObject(viewEventUrl)).toEqual({
     origin: 'https://logws1363.ati-host.net',
     pathname: '/',
     searchParams: {
@@ -115,7 +112,7 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
     },
   });
 
-  expect(urlToObject(backgroundEvent.value)).toEqual({
+  expect(urlToObject(backgroundEventUrl)).toEqual({
     origin: 'https://logws1363.ati-host.net',
     pathname: '/',
     searchParams: {
@@ -133,10 +130,9 @@ it('should call buildATIEventTrackUrl and return correct tracking url when eleme
   });
 });
 
-it('should not call buildATIEventTrackUrl when element is in view for less than 1 second', async () => {
+it('should not call send event to ATI when element is in view for less than 1 second', async () => {
   setIntersectionNotObserved();
 
-  const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = {
     pageData,
     componentName: 'mostRead',
@@ -150,13 +146,12 @@ it('should not call buildATIEventTrackUrl when element is in view for less than 
 
   await act(() => wait(900));
 
-  expect(spy).not.toHaveBeenCalled();
+  expect(global.fetch).not.toHaveBeenCalled();
 });
 
-it('should not call buildATIEventTrackUrl more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
+it('should not call send event to ATI more than twice (once for component view event and once for the background event) when element is scrolled in and out of view', async () => {
   setIntersectionNotObserved();
 
-  const spy = jest.spyOn(atiUrl, 'buildATIEventTrackUrl');
   const data = {
     pageData,
     componentName: 'mostRead',
@@ -178,5 +173,9 @@ it('should not call buildATIEventTrackUrl more than twice (once for component vi
   rerender();
   await act(() => wait(1100));
 
-  expect(spy).toHaveBeenCalledTimes(2);
+  const [[viewEventUrl], [backgroundEventUrl]] = global.fetch.mock.calls;
+
+  expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
+  expect(backgroundEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
+  expect(global.fetch).toHaveBeenCalledTimes(2);
 });
