@@ -15,10 +15,15 @@ window.location = { href: 'http://bbc.com/pidgin/tori-51745682' };
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
-const wait = duration => new Promise(resolve => setTimeout(resolve, duration));
 
 beforeEach(() => {
   jest.clearAllMocks();
+  jest.useFakeTimers();
+});
+
+afterEach(() => {
+  jest.runOnlyPendingTimers();
+  jest.useRealTimers();
 });
 
 const elementRefFn = jest.fn();
@@ -92,7 +97,7 @@ it('should send event to ATI and return correct tracking url when element is 50%
   setIntersectionObserved();
   rerender();
 
-  await act(() => wait(1100));
+  act(() => jest.advanceTimersByTime(1100));
 
   expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
   expect(global.fetch).toHaveBeenCalledTimes(2);
@@ -147,10 +152,15 @@ it('should not send event to ATI when element is in view for less than 1 second'
     wrapper,
   });
 
+  // scroll into view
   setIntersectionObserved();
   rerender();
 
-  await act(() => wait(900));
+  act(() => jest.advanceTimersByTime(900));
+
+  // scroll out of view
+  setIntersectionNotObserved();
+  rerender();
 
   expect(global.fetch).not.toHaveBeenCalled();
 });
@@ -170,7 +180,7 @@ it('should not send event to ATI more than twice (once for component view event 
   // scroll element into view
   setIntersectionObserved();
   rerender();
-  await act(() => wait(1100));
+  act(() => jest.advanceTimersByTime(1100));
 
   // scroll element out of view
   setIntersectionNotObserved();
@@ -179,7 +189,7 @@ it('should not send event to ATI more than twice (once for component view event 
   // scroll element into view again
   setIntersectionObserved();
   rerender();
-  await act(() => wait(1100));
+  act(() => jest.advanceTimersByTime(1100));
 
   const [[viewEventUrl], [backgroundEventUrl]] = global.fetch.mock.calls;
 
