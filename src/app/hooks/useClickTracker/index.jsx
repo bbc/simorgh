@@ -7,12 +7,12 @@ import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { isValidClick } from './helpers';
 
 // import pageData from './fixtureData.json';
-import pidginData from './fixtureData/sport-23252855.json';
+// import pidginData from './fixtureData/sport-23252855.json';
 // import zhongwenDataSimp from './fixtureData/chinese-news-49065935-simp.json';
 // import zhongwenDataTrad from './fixtureData/chinese-news-49065935-trad.json';
 
 // May need to add pageData as a prop
-const useClickTracker = ({ componentName }) => {
+const useClickTracker = ({ pageData, componentName }) => {
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
 
   const requestContext = useContext(RequestContext);
@@ -21,7 +21,7 @@ const useClickTracker = ({ componentName }) => {
   const clickRef = useRef(null);
 
   const eventTrackingProps = buildATIClickParams(
-    pidginData,
+    pageData,
     requestContext,
     serviceContext,
   );
