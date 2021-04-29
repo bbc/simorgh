@@ -3,44 +3,44 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
-import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
-import withContexts from './testHelper';
-import SocialEmbedContainer from '.';
+import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from './common/fixtures';
+import withContexts from './common/testHelper';
+import CpsSocialEmbedContainer from '.';
 
-storiesOf('Containers/Social Embed/Canonical', module)
+storiesOf('Containers/CPS Social Embed/Canonical', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
   .add('default', ({ service }) =>
-    withContexts(SocialEmbedContainer, {
+    withContexts(CpsSocialEmbedContainer, {
       isAmp: false,
       isEnabled: true,
       service,
     })({
-      blocks: [twitterBlock],
+      blocks: [cpsTwitterBlock],
     }),
   )
   .add('no embed', ({ service }) =>
-    withContexts(SocialEmbedContainer, {
+    withContexts(CpsSocialEmbedContainer, {
       isAmp: false,
       isEnabled: true,
       service,
     })({
-      blocks: [twitterBlockNoEmbed],
+      blocks: [cpsTwitterBlockNoEmbed],
     }),
   );
 
-storiesOf('Containers/Social Embed/AMP', module)
+storiesOf('Containers/CPS Social Embed/AMP', module)
   .addParameters({ chromatic: { disable: true } })
   .addDecorator(withKnobs)
   .addDecorator(withServicesKnob())
   .addDecorator(AmpDecorator)
   .add('default', ({ service }) =>
-    withContexts(SocialEmbedContainer, {
+    withContexts(CpsSocialEmbedContainer, {
       isAmp: true,
       isEnabled: true,
       service,
     })({
-      blocks: [twitterBlock],
+      blocks: [cpsTwitterBlock],
     }),
   );

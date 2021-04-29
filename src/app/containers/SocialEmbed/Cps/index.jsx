@@ -5,34 +5,33 @@ import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '@bbc/psammead-social-embed';
-
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
-import { GridItemMedium } from '#app/components/Grid';
-import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import createTranslations from './common/translations';
-import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
-import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
+import { GridItemMedium } from '#app/components/Grid';
+import useToggle from '#hooks/useToggle';
+import { cpsSocialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
+import createTranslations from '../common/translations';
+import { LAZYLOAD_OFFSET, Wrapper } from '../common/styles';
 
 const logger = nodeLogger(__filename);
 
-const SocialEmbedContainer = ({ blocks, source }) => {
+const CpsSocialEmbedContainer = ({ blocks }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
+  const { enabled } = useToggle('cpsSocialEmbed');
 
-  if (!blocks || !source || !enabled) return null;
+  if (!blocks || !enabled) return null;
 
-  const provider = getProviderFromSource(source);
-  const id = getIdFromSource(source);
+  const { type: provider, indexOfType, model } = blocks[0];
+  const index = indexOfType + 1;
 
-  const { model } = blocks[0];
-  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
+  const id = path(['id'], model);
+  const href = path(['href'], model);
+  if (!href) return null;
 
-  const index = id;
+  const oEmbed = path(['embed', 'oembed'], model);
 
   const {
     fallback: fallbackTranslations,
@@ -42,7 +41,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const fallback = {
     ...fallbackTranslations,
-    linkHref: source,
+    linkHref: href,
   };
 
   const skipLink = {
@@ -54,14 +53,14 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   logger.info(SOCIAL_EMBED_RENDERED, {
     provider,
-    href: source,
+    href,
   });
 
   return (
     <GridItemMedium>
       <Wrapper
         provider={provider}
-        data-e2e={`${provider}-embed-${source}`}
+        data-e2e={`${provider}-embed-${href}`}
         oEmbed={oEmbed}
       >
         {isAmp ? (
@@ -90,6 +89,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   );
 };
 
-SocialEmbedContainer.propTypes = socialEmbedBlockPropTypes;
+CpsSocialEmbedContainer.propTypes = cpsSocialEmbedBlockPropTypes;
 
-export default SocialEmbedContainer;
+export default CpsSocialEmbedContainer;

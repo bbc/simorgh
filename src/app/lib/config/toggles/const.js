@@ -14,5 +14,6 @@ export default {
   RADIO_SCHEDULE: 'radioSchedule',
   SCRIPT_SWITCH_LINK: 'scriptLink',
   SOCIAL_EMBED: 'socialEmbed',
+  CPS_SOCIAL_EMBED: 'cpsSocialEmbed',
   VARIANT_COOKIE: 'variantCookie',
 };

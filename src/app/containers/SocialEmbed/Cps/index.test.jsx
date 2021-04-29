@@ -3,9 +3,9 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import SocialEmbedContainer from '.';
-import withContexts from './common/testHelper';
-import { twitterBlock } from './common/fixtures';
+import CpsSocialEmbedContainer from '.';
+import withContexts from '../common/testHelper';
+import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from '../common/fixtures';
 
 /* eslint-disable react/prop-types */
 jest.mock('react-lazyload', () => {
@@ -14,7 +14,7 @@ jest.mock('react-lazyload', () => {
   };
 });
 
-describe('SocialEmbedContainer', () => {
+describe('CpsSocialEmbedContainer', () => {
   afterEach(() => {
     loggerMock.info.mockClear();
   });
@@ -22,10 +22,10 @@ describe('SocialEmbedContainer', () => {
   describe('Canonical', () => {
     it('should render and unmount correctly', () => {
       const { container, unmount } = render(
-        withContexts(SocialEmbedContainer, {
+        withContexts(CpsSocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
-        })(twitterBlock),
+        })({ blocks: [cpsTwitterBlock] }),
       );
       expect(container.firstChild).toMatchSnapshot();
       expect(
@@ -36,7 +36,7 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'twitter',
-        href: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
+        href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
       });
       unmount();
       expect(
@@ -48,23 +48,31 @@ describe('SocialEmbedContainer', () => {
 
     it('should not render when disabled', () => {
       const { container } = render(
-        withContexts(SocialEmbedContainer, {
+        withContexts(CpsSocialEmbedContainer, {
           isAmp: false,
           isEnabled: false,
-        })(twitterBlock),
+        })({ blocks: [cpsTwitterBlock] }),
       );
       expect(container.firstChild).toBeNull();
       expect(loggerMock.info).not.toHaveBeenCalled();
     });
+
+    shouldMatchSnapshot(
+      'should render correctly without an embed block',
+      withContexts(CpsSocialEmbedContainer, {
+        isAmp: false,
+        isEnabled: true,
+      })({ blocks: [cpsTwitterBlockNoEmbed] }),
+    );
   });
 
   describe('AMP', () => {
     shouldMatchSnapshot(
       'should render correctly',
-      withContexts(SocialEmbedContainer, {
+      withContexts(CpsSocialEmbedContainer, {
         isAmp: true,
         isEnabled: true,
-      })(twitterBlock),
+      })({ blocks: [cpsTwitterBlock] }),
     );
   });
 });

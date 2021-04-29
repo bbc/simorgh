@@ -1542,10 +1542,10 @@
   resolved "https://registry.yarnpkg.com/@bbc/psammead-assets/-/psammead-assets-3.1.8.tgz#40a2128a6256f96df90105d63dbdaad8d4ba3101"
   integrity sha512-Va5uq9/KWgkQEnlmXKCOGPGWs/CnRc2DlEk5bhElVPt58V52hW1EndUmiQUn4la2jmx5KSYhEbf0h/uqw/Yjgw==
 
-"@bbc/psammead-brand@7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-brand/-/psammead-brand-7.2.1.tgz#992be4dc6687ebeded97e4b883b4e244993b4195"
-  integrity sha512-Nb7wPA4aCGAiHGE/62q/H4QaKsVm00rkyZL9eChle3UTsZJO+vcCCnulSt6WRcSkZepZiBDDZpnJhVLFGQTdtw==
+"@bbc/psammead-brand@7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-brand/-/psammead-brand-7.3.0.tgz#f2efcd0b8a0de8c87c5b022880d9284bbc7b6186"
+  integrity sha512-Q7mJe1wfCNox/E+Jt9UO8PN3uNbXXtcaWGvziSMSAPqNcfMfiZXXAt5uQifiYnzzmUNSF6O1ByQ4yAcOCQfRuA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-visually-hidden-text" "2.0.6"
@@ -1602,10 +1602,10 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-copyright@3.0.16":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-copyright/-/psammead-copyright-3.0.16.tgz#4e8c1169e32c8af98098d4ddc92e5a8d77b6c831"
-  integrity sha512-wDZ4NBOwmixn8IvL5C1sGNxTJMGdeLmceYK10mbltwpBYMEvJz9Oy+Q/BOkxQXjIs1nXEHUcCdLdoxZwdeQtjw==
+"@bbc/psammead-copyright@3.0.17":
+  version "3.0.17"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-copyright/-/psammead-copyright-3.0.17.tgz#7838b1d6a56012fa3d3e9fde2119da71a71237c2"
+  integrity sha512-TLATlLIcFSAvyEg2P3JVLVmWTiDB46uVZDxgDCCSMAT94WJvzf0rKYMK41o0NDeq5bq/E98KtxqixRO0WoeA1Q==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.5"
@@ -1848,14 +1848,14 @@
   resolved "https://registry.yarnpkg.com/@bbc/psammead-visually-hidden-text/-/psammead-visually-hidden-text-2.0.6.tgz#c67ebc5a4a739043f42c632bee90368eb8dabeb2"
   integrity sha512-QoRs//2m9ukQeFoX2rmLu+LdezjeFDmCGDg9WKa8tewcwzEW5vbpDQXOl4BqH8CVAAj5D7E8m1Na8q0K24mggA==
 
-"@bbc/web-vitals@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.6.tgz#882fd65eb2d06f728d925a524b1cffd1769a9877"
-  integrity sha512-0CAMwY8lnGpX/3sADKx6ffX3eEsguDhCFgUB9vghCDAXYAyrKVX3buJydlFtXCbi0GrK6Q32v3g52uiqcYzHrQ==
+"@bbc/web-vitals@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.7.tgz#4506e0da242018a589871d4ba89cff0137fc9972"
+  integrity sha512-c7o4AquhP3A5UnK2469VqaVMk+DIXORp2w6+Ll2+JfCDXHGCPDOHXRZZX9O/a+EZ5useIa5gH/nUrGVDlPwXBA==
   dependencies:
-    cross-fetch "^3.0.6"
+    cross-fetch "^3.1.4"
     react-adaptive-hooks "0.0.8"
-    web-vitals "^0.2.4"
+    web-vitals "^1.1.1"
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -5879,10 +5879,17 @@ create-react-context@0.3.0:
     gud "^1.0.0"
     warning "^4.0.3"
 
-cross-fetch@^3.0.4, cross-fetch@^3.0.6:
+cross-fetch@^3.0.4:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
+  dependencies:
+    node-fetch "2.6.1"
+
+cross-fetch@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
   dependencies:
     node-fetch "2.6.1"
 
@@ -15807,10 +15814,10 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-web-vitals@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-0.2.4.tgz#ec3df43c834a207fd7cdefd732b2987896e08511"
-  integrity sha512-6BjspCO9VriYy12z356nL6JBS0GYeEcA457YyRzD+dD6XYCQ75NKhcOHUMHentOE7OcVCIXXDvOm0jKFfQG2Gg==
+web-vitals@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.1.tgz#2df535e3355fb7fbe34787b44b736e270e539377"
+  integrity sha512-jYOaqu01Ny1NvMwJ3dBJDUOJ2PGWknZWH4AUnvFOscvbdHMERIKT2TlgiAey5rVyfOePG7so2JcXXZdSnBvioQ==
 
 webidl-conversions@^4.0.2:
   version "4.0.2"
