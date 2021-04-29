@@ -23,6 +23,7 @@ const pageTypes = [
 // list of urls we have decided are acceptable to fail amp validation
 const excludedUrls = [
   '/mundo/23263889' /* https://github.com/bbc/simorgh/issues/8104 */,
+  '/mundo/noticias-internacional-51266689',
 ];
 
 const getPageString = async url => {
@@ -73,6 +74,7 @@ const runValidator = async verbose => {
           if (verbose) printResult(result);
         } else {
           printResult(result);
+          process.exitCode = 1;
         }
       });
 
