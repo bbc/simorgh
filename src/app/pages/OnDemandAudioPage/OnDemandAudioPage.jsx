@@ -3,13 +3,12 @@ import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func, node } from 'prop-types';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import {
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
@@ -48,27 +47,31 @@ const getGroups = (zero, one, two, three, four, five) => ({
   group5: five,
 });
 
-const StyledGelWrapperGrid = styled.div`
-  display: grid;
-  display: -ms-grid;
-  -ms-grid-columns: 1fr 2fr;
-  grid-template-columns: 1fr 2fr;
+const StyledGelWrapperGrid = styled(GelPageGrid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding-top: ${GEL_SPACING_TRPL};
   }
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: flex;
+    flex-direction: row;
   }
 `;
 
-const StyledGridItemParagraph = styled.div`
-  -ms-grid-column: 2;
-  margin-bottom: ${GEL_SPACING_DBL};
+const StyledGridItemParagraph = styled(Grid)`
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN} and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-end: span 4;
+  }
 `;
 
-const StyledGridItemImage = styled.div`
-  -ms-grid-column: 1;
+const StyledGridItemImage = styled(Grid)`
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-end: span 2;
+  }
+  @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    flex-basis: 33.33%;
+  }
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
     display: none;
   }
@@ -127,6 +130,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     translations,
     serviceName,
   } = useContext(ServiceContext);
+  const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({
     assetId: episodeId,
@@ -187,13 +191,10 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           margins={getGroups(true, true, true, true, false, false)}
         >
           <StyledGelWrapperGrid
-            dir={dir}
+            dir={oppDir}
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
-              <EpisodeImage dir={dir} imageUrl={imageUrl} alt={imageAltText} />
-            </StyledGridItemImage>
             <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
@@ -206,6 +207,9 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
             </StyledGridItemParagraph>
+            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+              <EpisodeImage dir={dir} imageUrl={imageUrl} alt={imageAltText} />
+            </StyledGridItemImage>
           </StyledGelWrapperGrid>
           {mediaIsAvailable ? (
             <AVPlayer
