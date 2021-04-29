@@ -1,4 +1,4 @@
-import { useEffect, useRef, useContext, useState } from 'react';
+import { useEffect, useRef, useContext, useState, useCallback } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -6,12 +6,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { isValidClick } from './helpers';
 
-// import pageData from './fixtureData.json';
-// import pidginData from './fixtureData/sport-23252855.json';
-// import zhongwenDataSimp from './fixtureData/chinese-news-49065935-simp.json';
-// import zhongwenDataTrad from './fixtureData/chinese-news-49065935-trad.json';
-
-// May need to add pageData as a prop
 const useClickTracker = ({ pageData, componentName }) => {
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
 
@@ -26,36 +20,37 @@ const useClickTracker = ({ pageData, componentName }) => {
     serviceContext,
   );
 
-  // Create click type utility and ignore double click if click is unmodified double click etc
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const handleClick = event => {
-    // eslint-disable-next-line no-console
-    console.log(`${componentName} Clicked!`);
+  const handleClick = useCallback(
+    event => {
+      if (!hasBeenClicked && isValidClick(event)) {
+        setHasBeenClicked(true);
+        const componentInfo = getComponentInfo({
+          result: event.target.href || window.location.href,
+          componentName,
+          componentData: {
+            actionLabel: 'click',
+            child: event.target.tagName,
+          },
+        });
 
-    if (!hasBeenClicked && isValidClick(event)) {
-      setHasBeenClicked(true);
-      const componentInfo = getComponentInfo({
-        result: event.target.href || window.location.href,
-        componentName,
-        componentData: {
-          actionLabel: 'click',
-          child: event.target.tagName,
-        },
-      });
-
-      sendEventBeacon({
-        type: 'click',
-        componentName,
-        service,
-        variant: requestContext.variant || '',
-        componentInfo,
-        ...eventTrackingProps,
-      }).then(() => {
-        // eslint-disable-next-line no-console
-        console.log('Sent!');
-      });
-    }
-  };
+        sendEventBeacon({
+          type: 'click',
+          componentName,
+          service,
+          variant: requestContext.variant || '',
+          componentInfo,
+          ...eventTrackingProps,
+        });
+      }
+    },
+    [
+      componentName,
+      eventTrackingProps,
+      hasBeenClicked,
+      requestContext.variant,
+      service,
+    ],
+  );
 
   useEffect(() => {
     const trackedComponent = clickRef.current;
