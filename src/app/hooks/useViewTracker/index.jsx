@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-// Polyfill IntersectionObsesrver, e.g. for IE11
+// Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
 
 import { ServiceContext } from '#contexts/ServiceContext';
