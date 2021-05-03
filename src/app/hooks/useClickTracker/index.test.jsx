@@ -52,6 +52,19 @@ const WithContexts = ({
   </RequestContextProvider>
 );
 
+const TestComponentContainerContainer = () => {
+  const clickRef = useClickTracker({
+    pageData: pidginData,
+    componentName: 'header',
+  });
+
+  return (
+    <div ref={clickRef}>
+      <TestComponentContainer />
+    </div>
+  );
+};
+
 const TestComponentContainer = ({ hookProps = defaultProps }) => {
   const clickRef = useClickTracker(hookProps);
   return (
@@ -129,8 +142,6 @@ describe('Click tracking', () => {
         type: 'AT',
       },
     });
-
-    jest.restoreAllMocks();
   });
 
   it('should send tracking request on click of child element (button)', async () => {
@@ -141,6 +152,40 @@ describe('Click tracking', () => {
     );
 
     act(() => container.querySelector('#test-button').click());
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=BUTTON]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+
+    jest.restoreAllMocks();
+  });
+
+  it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
+    const { container } = render(
+      <WithContexts>
+        <TestComponentContainerContainer />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-button').click());
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
