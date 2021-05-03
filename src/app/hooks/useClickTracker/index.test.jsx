@@ -13,6 +13,8 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 
+jest.useFakeTimers();
+
 const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
 
@@ -60,12 +62,12 @@ const TestComponentContainerContainer = () => {
 
   return (
     <div ref={clickRef}>
-      <TestComponentContainer />
+      <TestComponentContainer hookProps={defaultProps} />
     </div>
   );
 };
 
-const TestComponentContainer = ({ hookProps = defaultProps }) => {
+const TestComponentContainer = ({ hookProps }) => {
   const clickRef = useClickTracker(hookProps);
   return (
     <div>
@@ -109,7 +111,7 @@ describe('Click tracking', () => {
     const spyFetch = jest.spyOn(global, 'fetch');
     const { container } = render(
       <WithContexts>
-        <TestComponentContainer />
+        <TestComponentContainer hookProps={defaultProps} />
       </WithContexts>,
     );
 
@@ -147,7 +149,7 @@ describe('Click tracking', () => {
   it('should send tracking request on click of child element (button)', async () => {
     const { container } = render(
       <WithContexts>
-        <TestComponentContainer />
+        <TestComponentContainer hookProps={defaultProps} />
       </WithContexts>,
     );
 
@@ -248,5 +250,73 @@ describe('Click tracking', () => {
         type: 'AT',
       },
     });
+  });
+});
+
+describe('Error handling', () => {
+  it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
+    const trackingData = undefined;
+
+    const { container } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={trackingData} />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-button').click());
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when no pageData passed into hook', async () => {
+    const trackingData = {
+      pageData: {},
+      componentName: 'mostRead',
+      actionLabel: 'most-read-view',
+    };
+
+    const { container } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={trackingData} />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-button').click());
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
+    const trackingData = {
+      foo: 'bar',
+    };
+
+    const { container } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={trackingData} />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-button').click());
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
+    const trackingData = ['unexpected data type'];
+
+    const { container } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={trackingData} />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-button').click());
+
+    expect(container.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 });

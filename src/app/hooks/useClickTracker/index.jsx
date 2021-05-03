@@ -6,7 +6,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { isValidClick } from './helpers';
 
-const useClickTracker = ({ pageData, componentName }) => {
+const useClickTracker = ({ pageData, componentName } = {}) => {
+  let eventTrackingProps;
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
 
   const requestContext = useContext(RequestContext);
@@ -14,34 +15,47 @@ const useClickTracker = ({ pageData, componentName }) => {
   const { service } = serviceContext;
   const clickRef = useRef(null);
 
-  const eventTrackingProps = buildATIClickParams(
-    pageData,
-    requestContext,
-    serviceContext,
-  );
+  try {
+    eventTrackingProps = buildATIClickParams(
+      pageData,
+      requestContext,
+      serviceContext,
+    );
+  } catch (e) {
+    eventTrackingProps = null;
+  }
 
   const handleClick = useCallback(
     event => {
+      let componentInfo;
       event.stopPropagation();
+
       if (!hasBeenClicked && isValidClick(event)) {
         setHasBeenClicked(true);
-        const componentInfo = getComponentInfo({
-          result: event.target.href || window.location.href,
-          componentName,
-          componentData: {
-            actionLabel: 'click',
-            child: event.target.tagName,
-          },
-        });
 
-        sendEventBeacon({
-          type: 'click',
-          componentName,
-          service,
-          variant: requestContext.variant || '',
-          componentInfo,
-          ...eventTrackingProps,
-        });
+        try {
+          componentInfo = getComponentInfo({
+            result: event.target.href || window.location.href,
+            componentName,
+            componentData: {
+              actionLabel: 'click',
+              child: event.target.tagName,
+            },
+          });
+        } catch (e) {
+          componentInfo = null;
+        }
+
+        if (eventTrackingProps && componentInfo) {
+          sendEventBeacon({
+            type: 'click',
+            componentName,
+            service,
+            variant: requestContext.variant || '',
+            componentInfo,
+            ...eventTrackingProps,
+          });
+        }
       }
     },
     [
