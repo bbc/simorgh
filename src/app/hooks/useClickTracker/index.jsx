@@ -22,6 +22,7 @@ const useClickTracker = ({ pageData, componentName }) => {
 
   const handleClick = useCallback(
     event => {
+      event.stopPropagation();
       if (!hasBeenClicked && isValidClick(event)) {
         setHasBeenClicked(true);
         const componentInfo = getComponentInfo({

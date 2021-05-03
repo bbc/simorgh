@@ -1,20 +1,13 @@
 /* eslint-disable react/prop-types */
-import React, { useContext } from 'react';
+import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render, act } from '@testing-library/react';
 import useClickTracker from '.';
 import pidginData from './fixtureData/tori-51745682.json';
-import {
-  RequestContext,
-  RequestContextProvider,
-} from '#contexts/RequestContext';
-import {
-  ServiceContext,
-  ServiceContextProvider,
-} from '#contexts/ServiceContext';
+import zhongwenData from './fixtureData/chinese-news-49631219-trad.json';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import * as params from '#containers/ATIAnalytics/params';
-import * as beacon from '#containers/ATIAnalytics/beacon';
 
 beforeEach(() => {
   jest.clearAllMocks();
@@ -39,20 +32,28 @@ const defaultProps = {
   componentName: 'brand',
 };
 
-const WithContexts = ({ children }) => (
+const WithContexts = ({
+  children,
+  variant,
+  service = 'pidgin',
+  pathname = '/pidgin/tori-51745682',
+}) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
     isAmp={false}
-    service="pidgin"
-    pathname="/pidgin/tori-51745682"
+    pathname={pathname}
+    service={service}
+    variant={variant}
   >
-    <ServiceContextProvider service="pidgin">{children}</ServiceContextProvider>
+    <ServiceContextProvider service={service}>
+      {children}
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 
-const TestComponentContainer = () => {
-  const clickRef = useClickTracker(defaultProps);
+const TestComponentContainer = ({ hookProps = defaultProps }) => {
+  const clickRef = useClickTracker(hookProps);
   return (
     <div>
       <TestComponent ref={clickRef} />
@@ -91,59 +92,48 @@ describe('Click tracking', () => {
     );
   });
 
-  it('should call buildATIClickParams with page data, requestContext, serviceContext', () => {
-    params.buildATIClickParams = jest.fn();
-
-    renderHook(() => useClickTracker(defaultProps), {
-      wrapper,
-    });
-
-    const requestContext = renderHook(() => useContext(RequestContext), {
-      wrapper,
-    });
-
-    const serviceContext = renderHook(() => useContext(ServiceContext), {
-      wrapper,
-    });
-
-    expect(params.buildATIClickParams).toHaveBeenCalledWith(
-      defaultProps.pageData,
-      requestContext.result.current,
-      serviceContext.result.current,
-    );
-  });
-
-  it('should call sendEventBeacon on click', async () => {
-    const spyBeacon = jest.spyOn(beacon, 'sendEventBeacon');
-
+  it('should send a single tracking request on click', async () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
     const { container } = render(
       <WithContexts>
         <TestComponentContainer />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-component').click());
+    expect(spyFetch).toHaveBeenCalledTimes(0);
+
     act(() => container.querySelector('#test-component').click());
 
-    expect(spyBeacon).toHaveBeenCalledTimes(1); // Should not track more than 1 click on same component
-    expect(spyBeacon).toHaveBeenCalledWith({
-      componentInfo: {
-        actionLabel: 'brand-click',
-        positioning: { child: 'DIV', parent: 'container-brand' },
-        result: 'http://bbc.com/pidgin/tori-51745682',
-        source: '',
+    expect(spyFetch).toHaveBeenCalledTimes(1);
+
+    act(() => container.querySelector('#test-component').click());
+
+    expect(spyFetch).toHaveBeenCalledTimes(1);
+
+    const [[viewEventUrl]] = spyFetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=DIV]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
       },
-      componentName: 'brand',
-      service: 'pidgin',
-      type: 'click',
-      variant: '',
     });
+
     jest.restoreAllMocks();
   });
 
   it('should send tracking request on click of child element (button)', async () => {
-    global.fetch = jest.fn();
-
     const { container } = render(
       <WithContexts>
         <TestComponentContainer />
@@ -159,14 +149,57 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=BUTTON]-[undefined]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=BUTTON]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
         r: '0x0x24x24',
         re: '1024x768',
-        s: '598285',
+        s: '598343',
         s2: '70',
+        type: 'AT',
+      },
+    });
+
+    jest.restoreAllMocks();
+  });
+
+  it('should include the variant in the request params when necessary', () => {
+    window.location = { href: 'http://bbc.com/zhongwen/chinese-news-49631219' };
+
+    const hookProps = {
+      pageData: zhongwenData,
+      componentName: 'ad',
+    };
+
+    const { container } = render(
+      <WithContexts
+        service="zhongwen"
+        pathname="/zhongwen/chinese-news-49631219"
+        variant="trad"
+      >
+        <TestComponentContainer hookProps={hookProps} />
+      </WithContexts>,
+    );
+
+    act(() => container.querySelector('#test-component').click());
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[zhongwen-ad]-[ad-click~click]-[trad]-[PAR=container-ad~CHD=DIV]-[chinese_news::zhongwentrad.chinese_news.media_asset.49631219.page]-[]-[]-[http://bbc.com/zhongwen/chinese-news-49631219]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'chinese_news::zhongwentrad.chinese_news.media_asset.49631219.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
         type: 'AT',
       },
     });
