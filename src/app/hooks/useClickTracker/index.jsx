@@ -1,4 +1,4 @@
-import { useEffect, useRef, useContext, useState, useCallback } from 'react';
+import { useEffect, useRef, useContext, useCallback } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -8,7 +8,6 @@ import { isValidClick } from './helpers';
 
 const useClickTracker = ({ pageData, componentName } = {}) => {
   let eventTrackingProps;
-  const [hasBeenClicked, setHasBeenClicked] = useState(false);
 
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
@@ -30,8 +29,8 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
       let componentInfo;
       event.stopPropagation();
 
-      if (!hasBeenClicked && isValidClick(event)) {
-        setHasBeenClicked(true);
+      if (isValidClick(event)) {
+        clickRef.current?.removeEventListener('click', handleClick);
 
         try {
           componentInfo = getComponentInfo({
@@ -58,13 +57,7 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
         }
       }
     },
-    [
-      componentName,
-      eventTrackingProps,
-      hasBeenClicked,
-      requestContext.variant,
-      service,
-    ],
+    [componentName, eventTrackingProps, requestContext.variant, service],
   );
 
   useEffect(() => {
