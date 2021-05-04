@@ -121,6 +121,7 @@
     "@emotion/styled": "11.3.0",
     "@loadable/component": "5.14.1",
     "@loadable/server": "5.14.2",
+    "@testing-library/user-event": "^13.1.8",
     "aws-embedded-metrics": "2.0.4",
     "compression": "1.7.4",
     "core-js": "3.11.1",

@@ -2,6 +2,7 @@
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import useClickTracker from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import zhongwenData from './fixtureData/chinese-news-49631219-trad.json';
@@ -12,8 +13,6 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 beforeEach(() => {
   jest.clearAllMocks();
 });
-
-jest.useFakeTimers();
 
 const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
@@ -79,9 +78,10 @@ const TestComponentContainer = ({ hookProps }) => {
 const TestComponent = React.forwardRef((_, ref) => {
   return (
     <div id="test-component" ref={ref}>
+      Containing Div
       <a href="https://www.test.bbc.com">Testing Link</a>
       <button type="button" id="test-button">
-        Testing Button
+        Button
       </button>
     </div>
   );
@@ -109,7 +109,7 @@ describe('Click tracking', () => {
 
   it('should send a single tracking request on click', async () => {
     const spyFetch = jest.spyOn(global, 'fetch');
-    const { container } = render(
+    const { getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={defaultProps} />
       </WithContexts>,
@@ -117,11 +117,11 @@ describe('Click tracking', () => {
 
     expect(spyFetch).toHaveBeenCalledTimes(0);
 
-    act(() => container.querySelector('#test-component').click());
+    act(() => userEvent.click(getByText('Containing Div')));
 
     expect(spyFetch).toHaveBeenCalledTimes(1);
 
-    act(() => container.querySelector('#test-component').click());
+    act(() => userEvent.click(getByText('Containing Div')));
 
     expect(spyFetch).toHaveBeenCalledTimes(1);
 
@@ -147,13 +147,13 @@ describe('Click tracking', () => {
   });
 
   it('should send tracking request on click of child element (button)', async () => {
-    const { container } = render(
+    const { getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={defaultProps} />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
@@ -179,13 +179,13 @@ describe('Click tracking', () => {
   });
 
   it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
-    const { container } = render(
+    const { getByText } = render(
       <WithContexts>
         <TestComponentContainerContainer />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
@@ -220,7 +220,7 @@ describe('Click tracking', () => {
       componentName: 'ad',
     };
 
-    const { container } = render(
+    const { getByText } = render(
       <WithContexts
         service="zhongwen"
         pathname="/zhongwen/chinese-news-49631219"
@@ -230,7 +230,7 @@ describe('Click tracking', () => {
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-component').click());
+    act(() => userEvent.click(getByText('Containing Div')));
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
@@ -257,13 +257,13 @@ describe('Error handling', () => {
   it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
     const trackingData = undefined;
 
-    const { container } = render(
+    const { container, getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={trackingData} />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
@@ -276,13 +276,13 @@ describe('Error handling', () => {
       actionLabel: 'most-read-view',
     };
 
-    const { container } = render(
+    const { container, getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={trackingData} />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
@@ -293,13 +293,13 @@ describe('Error handling', () => {
       foo: 'bar',
     };
 
-    const { container } = render(
+    const { container, getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={trackingData} />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
@@ -308,13 +308,13 @@ describe('Error handling', () => {
   it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
     const trackingData = ['unexpected data type'];
 
-    const { container } = render(
+    const { container, getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={trackingData} />
       </WithContexts>,
     );
 
-    act(() => container.querySelector('#test-button').click());
+    act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
