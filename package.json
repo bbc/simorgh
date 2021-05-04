@@ -191,6 +191,7 @@
     "copy-webpack-plugin": "6.4.1",
     "crypto": "1.0.1",
     "cypress": "6.9.1",
+    "cypress-log-to-output": "^1.1.2",
     "cypress-multi-reporters": "1.5.0",
     "depcheck": "1.4.0",
     "eslint": "7.25.0",
