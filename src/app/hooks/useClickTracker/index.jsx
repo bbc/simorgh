@@ -50,14 +50,13 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
             type: 'click',
             componentName,
             service,
-            variant: requestContext.variant || '',
             componentInfo,
             ...eventTrackingProps,
           });
         }
       }
     },
-    [componentName, eventTrackingProps, requestContext.variant, service],
+    [componentName, eventTrackingProps, service],
   );
 
   useEffect(() => {

@@ -221,7 +221,6 @@ export const buildATIPageTrackPath = ({
 export const buildATIEventTrackUrl = ({
   pageIdentifier,
   service,
-  variant,
   platform,
   statsDestination,
   componentName,
@@ -293,7 +292,6 @@ export const buildATIEventTrackUrl = ({
       value: getEventInfo(pageIdentifier, {
         service,
         componentName,
-        personalisation: variant,
         componentInfo,
         type: type || '',
       }),

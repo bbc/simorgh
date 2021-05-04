@@ -5,7 +5,6 @@ import { render, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import useClickTracker from '.';
 import pidginData from './fixtureData/tori-51745682.json';
-import zhongwenData from './fixtureData/chinese-news-49631219-trad.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -35,7 +34,6 @@ const defaultProps = {
 
 const WithContexts = ({
   children,
-  variant,
   service = 'pidgin',
   pathname = '/pidgin/tori-51745682',
 }) => (
@@ -45,7 +43,6 @@ const WithContexts = ({
     isAmp={false}
     pathname={pathname}
     service={service}
-    variant={variant}
   >
     <ServiceContextProvider service={service}>
       {children}
@@ -204,46 +201,6 @@ describe('Click tracking', () => {
     });
 
     jest.restoreAllMocks();
-  });
-
-  it('should include the variant in the request params when necessary', () => {
-    window.location = { href: 'http://bbc.com/zhongwen/chinese-news-49631219' };
-
-    const hookProps = {
-      pageData: zhongwenData,
-      componentName: 'ad',
-    };
-
-    const { getByTestId } = render(
-      <WithContexts
-        service="zhongwen"
-        pathname="/zhongwen/chinese-news-49631219"
-        variant="trad"
-      >
-        <TestComponentContainer hookProps={hookProps} />
-      </WithContexts>,
-    );
-
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    const [[viewEventUrl]] = global.fetch.mock.calls;
-
-    expect(urlToObject(viewEventUrl)).toEqual({
-      origin: 'https://logws1363.ati-host.net',
-      pathname: '/',
-      searchParams: {
-        atc:
-          'PUB-[zhongwen-ad]-[ad-click~click]-[trad]-[PAR=container-ad~CHD=DIV]-[chinese_news::zhongwentrad.chinese_news.media_asset.49631219.page]-[]-[]-[http://bbc.com/zhongwen/chinese-news-49631219]',
-        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
-        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
-        lng: 'en-US',
-        p: 'chinese_news::zhongwentrad.chinese_news.media_asset.49631219.page',
-        r: '0x0x24x24',
-        re: '1024x768',
-        s: '598343',
-        type: 'AT',
-      },
-    });
   });
 });
 
