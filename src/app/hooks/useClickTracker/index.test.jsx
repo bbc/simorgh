@@ -96,15 +96,13 @@ describe('Click tracking', () => {
       wrapper,
     });
 
-    const { container } = render(
+    const { getByText } = render(
       <WithContexts>
         <TestComponent ref={result.current} />
       </WithContexts>,
     );
 
-    expect(result.current.current).toBe(
-      container.querySelector('#test-component'),
-    );
+    expect(result.current.current).toBe(getByText('Containing Div'));
   });
 
   it('should send a single tracking request on click', async () => {
