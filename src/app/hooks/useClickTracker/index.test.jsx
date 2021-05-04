@@ -77,12 +77,8 @@ const TestComponentContainer = ({ hookProps }) => {
 
 const TestComponent = React.forwardRef((_, ref) => {
   return (
-    <div id="test-component" ref={ref}>
-      Containing Div
-      <a href="https://www.test.bbc.com">Testing Link</a>
-      <button type="button" id="test-button">
-        Button
-      </button>
+    <div data-testid="test-component" ref={ref}>
+      <button type="button">Button</button>
     </div>
   );
 });
@@ -96,18 +92,18 @@ describe('Click tracking', () => {
       wrapper,
     });
 
-    const { getByText } = render(
+    const { getByTestId } = render(
       <WithContexts>
         <TestComponent ref={result.current} />
       </WithContexts>,
     );
 
-    expect(result.current.current).toBe(getByText('Containing Div'));
+    expect(result.current.current).toBe(getByTestId('test-component'));
   });
 
   it('should send a single tracking request on click', async () => {
     const spyFetch = jest.spyOn(global, 'fetch');
-    const { getByText } = render(
+    const { getByTestId } = render(
       <WithContexts>
         <TestComponentContainer hookProps={defaultProps} />
       </WithContexts>,
@@ -115,11 +111,11 @@ describe('Click tracking', () => {
 
     expect(spyFetch).toHaveBeenCalledTimes(0);
 
-    act(() => userEvent.click(getByText('Containing Div')));
+    act(() => userEvent.click(getByTestId('test-component')));
 
     expect(spyFetch).toHaveBeenCalledTimes(1);
 
-    act(() => userEvent.click(getByText('Containing Div')));
+    act(() => userEvent.click(getByTestId('test-component')));
 
     expect(spyFetch).toHaveBeenCalledTimes(1);
 
@@ -218,7 +214,7 @@ describe('Click tracking', () => {
       componentName: 'ad',
     };
 
-    const { getByText } = render(
+    const { getByTestId } = render(
       <WithContexts
         service="zhongwen"
         pathname="/zhongwen/chinese-news-49631219"
@@ -228,7 +224,7 @@ describe('Click tracking', () => {
       </WithContexts>,
     );
 
-    act(() => userEvent.click(getByText('Containing Div')));
+    act(() => userEvent.click(getByTestId('test-component')));
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
