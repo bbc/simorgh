@@ -11,8 +11,9 @@ const serviceHasCorrectlyRenderedParagraphs = service => service !== 'sinhala';
 
 const serviceHasTimestamp = service => ['news', 'urdu'].includes(service);
 
-// TODO: Remove once we have inline link on article pages linking to another article page
-const serviceHasInlineLink = service => service === 'news';
+// These services have inline links to other article pages (the one on news was 404ing so was replaced)
+const serviceHasInlineLink = service =>
+  service === 'news' || service === 'afaanoromoo';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -130,10 +131,9 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
 
-      if (serviceHasInlineLink(service)) {
-        it('should have an inlink link to an article page', () => {
-          cy.get('main a')
-            .eq(1)
+      if (serviceHasInlineLink(service) && Cypress.env('APP_ENV') !== 'live') {
+        it('should have an inline link to an article page', () => {
+          cy.get('a[href*="/articles/"]')
             .should('have.attr', 'href')
             .then(href => {
               cy.request({
