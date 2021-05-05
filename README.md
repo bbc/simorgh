@@ -238,6 +238,10 @@ We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser t
 
 Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
 
+### Configuring the application to run on a local network
+
+If you want to host the application to be accesible through your local network follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.md).
+
 ## Production build locally
 
 To run this application locally with a production build, run:
