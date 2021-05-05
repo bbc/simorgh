@@ -13,7 +13,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
