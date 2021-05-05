@@ -49,14 +49,14 @@ const Amp = () => (
       <div id="consent-prompt">
         <Banner
           type="privacy"
-          acceptAction="tap:cookie.show, privacy.hide"
+          acceptAction="tap:cookie.show, privacy.hide, AMP.setState({ isManagingSettings: false }), dataCollectionHeading.focus"
           rejectAction="tap:cookie.show, privacy.hide"
           promptId="privacy"
         />
         <Banner
           type="cookie"
-          acceptAction="tap:consent.accept"
-          rejectAction="tap:consent.reject"
+          acceptAction="tap:brandLink.focus, consent.accept"
+          rejectAction="tap:brandLink.focus, consent.reject"
           promptId="cookie"
           hidden
         />
