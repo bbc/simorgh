@@ -28,11 +28,11 @@ afterEach(() => {
   jest.useRealTimers();
 });
 
-const elementRefFn = jest.fn();
+const elementRef = jest.fn();
 const setIntersectionObserved = () =>
-  useInView.mockReturnValue([elementRefFn, true]);
+  useInView.mockReturnValue([elementRef, true]);
 const setIntersectionNotObserved = () =>
-  useInView.mockReturnValue([elementRefFn, false]);
+  useInView.mockReturnValue([elementRef, false]);
 const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
 
@@ -70,7 +70,7 @@ describe('Expected use', () => {
       wrapper,
     });
 
-    expect(result.current.trackRef).toBe(elementRefFn);
+    expect(result.current.trackRef).toBe(elementRef);
   });
 
   it('should not send event to ATI when element is not in view', async () => {
