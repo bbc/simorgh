@@ -51,6 +51,9 @@
     "type-fest@*": {
       "reason": "Dual-licensed under MIT or CC0-1.0; https://github.com/sindresorhus/type-fest#license"
     },
+    "tv4@*": {
+      "reason": "Licensed under MIT; https://github.com/geraintluff/tv4/blob/master/LICENSE.txt"
+    },
     "ua-parser-js@*": {
       "reason": "Dual license under GPL or MIT; https://github.com/faisalman/ua-parser-js#license"
     },
