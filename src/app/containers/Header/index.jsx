@@ -10,8 +10,24 @@ import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
+// eslint-disable-next-line react/prop-types
+const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+  return (
+    <>
+      <ConsentBanner onDismissFocusRef={brandRef} />
+      <BrandContainer
+        borderBottom={borderBottom}
+        skipLink={skipLink}
+        scriptLink={scriptLink}
+        brandRef={brandRef}
+        linkId={linkId}
+      />
+    </>
+  );
+};
+
 const HeaderContainer = () => {
-  const { pageType } = useContext(RequestContext);
+  const { pageType, isAmp } = useContext(RequestContext);
   const {
     service,
     script,
@@ -51,13 +67,21 @@ const HeaderContainer = () => {
 
   return (
     <header role="banner" lang={serviceLang}>
-      <ConsentBanner onDismissFocusRef={brandRef} />
-      <BrandContainer
-        borderBottom={borderBottom}
-        skipLink={skipLink}
-        scriptLink={scriptLink && <ScriptLink />}
-        brandRef={brandRef}
-      />
+      {isAmp ? (
+        <Header
+          linkId="brandLink"
+          borderBottom={borderBottom}
+          skipLink={skipLink}
+          scriptLink={scriptLink && <ScriptLink />}
+        />
+      ) : (
+        <Header
+          brandRef={brandRef}
+          borderBottom={borderBottom}
+          skipLink={skipLink}
+          scriptLink={scriptLink && <ScriptLink />}
+        />
+      )}
       {showNav && <NavigationContainer />}
     </header>
   );
