@@ -10,6 +10,28 @@ A view/impression event is triggered when:
 - 50% of the element is in the viewport for more than 1 second
 - only once per element per page view
 
+The hook returns an object containing a property called `trackRef` that you need to attach to the element you want to track.
+
+### Usage
+
+```jsx
+import useViewTracker from '#hooks/useViewTracker';
+
+const MostRead = ({ pageData }) => {
+  const { trackRef } = useViewTracker({
+    pageData,
+    componentName: 'most-read',
+    campaignName: 'cps_wsoj',
+  });
+
+  return (
+    <div ref={trackRef}>
+      <h2>This is the most read component</h2>
+    </div>
+  );
+};
+```
+
 ### Props
 
 | Argument      | Type   | Required | Example                                                                                                          |
