@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { useEffect, useRef, useContext, useCallback } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { getComponentInfo } from '#app/lib/analyticsUtils/index';
@@ -21,7 +22,7 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
       serviceContext,
     );
   } catch (e) {
-    console.error('Failed to build ATI tracking params.');
+    console.error(`Failed to build ATI tracking params: ${e}`);
     eventTrackingProps = null;
   }
 
@@ -44,7 +45,7 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
             },
           });
         } catch (e) {
-          console.error('Error getting component info for .');
+          console.error(`Error getting component info for ATI Tracking: ${e}`);
           componentInfo = null;
         }
 
@@ -62,7 +63,6 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
               }
             })
             .catch(e => {
-              // eslint-disable-next-line no-console
               console.error(`Error sending ATI click tracking request: ${e}`);
               if (href || event.target.href) {
                 window.location.href = href || event.target.href;
