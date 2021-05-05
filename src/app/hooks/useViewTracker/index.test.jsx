@@ -11,8 +11,6 @@ import useViewTracker from '.';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import pageData from './pageData.json';
 
-delete window.location;
-window.location = { href: 'http://bbc.com/pidgin/tori-51745682' };
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
