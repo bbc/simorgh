@@ -8,9 +8,9 @@
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
 BBC World Service News websites are rendered using Simorgh, a ReactJS based Single Page Application which also builds Accelerated Mobile Pages (AMP) for every regular HTML page that it renders. Simorgh also renders AMP pages for BBC Public Service News and BBC Sport.
- 
+
 Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.md)). It is regularly maintained and well documented, and we welcome open source contributors.
- 
+
 Simorgh is primarily maintained by BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
 
 We use an open source component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain.
@@ -240,7 +240,7 @@ Please also note that if you would like to see the components rendered with our 
 
 ### Configuring the application to run on a local network
 
-If you want to host the application to be accesible through your local network follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.md).
+If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.md).
 
 ## Production build locally
 
