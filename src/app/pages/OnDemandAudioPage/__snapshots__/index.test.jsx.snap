@@ -597,6 +597,12 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   will-change: transform;
 }
 
+@media screen and (-ms-high-contrast: active) {
+  .emotion-33 {
+    stroke: windowText;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .emotion-33 {
     -webkit-animation: animation-0 1.1s 3 linear;
@@ -737,6 +743,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
             class="emotion-33 emotion-34"
             focusable="false"
             height="38"
+            stroke="black"
             viewBox="0 0 38 38"
             width="38"
             xmlns="http://www.w3.org/2000/svg"
@@ -1397,6 +1404,12 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   will-change: transform;
 }
 
+@media screen and (-ms-high-contrast: active) {
+  .emotion-35 {
+    stroke: windowText;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .emotion-35 {
     -webkit-animation: animation-0 1.1s 3 linear;
@@ -1530,6 +1543,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
             class="emotion-35 emotion-36"
             focusable="false"
             height="38"
+            stroke="black"
             viewBox="0 0 38 38"
             width="38"
             xmlns="http://www.w3.org/2000/svg"
