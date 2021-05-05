@@ -35,7 +35,7 @@ describe('beacon', () => {
       expect(sendBeaconSpy).toHaveBeenCalledTimes(1);
       expect(sendBeaconSpy.mock.calls[0]).toMatchInlineSnapshot(`
         Array [
-          "https://foobar.com?idclient=123-456-789&s=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[service-component]-[creation-label~click]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://bbc.com]&type=AT",
+          "https://foobar.com?idclient=123-456-789&s=598285&p=pageIdentifier&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&atc=PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]&type=AT",
         ]
       `);
     });

@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useInView } from 'react-intersection-observer';
@@ -16,6 +18,7 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 jest.mock('react-intersection-observer');
 
 beforeEach(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => jest.fn());
   jest.clearAllMocks();
   jest.useFakeTimers();
 });
@@ -58,8 +61,10 @@ describe('Expected use', () => {
 
     const trackingData = {
       pageData,
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
@@ -73,8 +78,10 @@ describe('Expected use', () => {
 
     const trackingData = {
       pageData,
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     renderHook(() => useViewTracker(trackingData), { wrapper });
@@ -87,8 +94,10 @@ describe('Expected use', () => {
 
     const trackingData = {
       pageData,
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
@@ -109,7 +118,7 @@ describe('Expected use', () => {
       pathname: '/',
       searchParams: {
         ati:
-          'PUB-[pidgin-mostRead]-[mostRead-most-read-view~view]-[]-[PAR=container-mostRead~CHD=link]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -128,8 +137,10 @@ describe('Expected use', () => {
 
     const trackingData = {
       pageData,
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
@@ -156,8 +167,10 @@ describe('Expected use', () => {
 
     const trackingData = {
       pageData,
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
@@ -197,6 +210,11 @@ describe('Error handling', () => {
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -205,8 +223,10 @@ describe('Error handling', () => {
 
     const trackingData = {
       pageData: {},
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
@@ -216,6 +236,11 @@ describe('Error handling', () => {
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -233,6 +258,11 @@ describe('Error handling', () => {
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -248,6 +278,11 @@ describe('Error handling', () => {
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringContaining(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });

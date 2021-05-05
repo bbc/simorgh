@@ -142,7 +142,7 @@ describe('buildATIEventTrackUrl', () => {
         type: 'type',
       }),
     ).toMatchInlineSnapshot(
-      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[service-component]-[creation-label~type]-[]-[PAR=container-component~CHD=child]-[pageIdentifier]-[]-[responsive_web~news-simorgh]-[https://foobar.com]&type=AT"`,
+      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]&type=AT"`,
     );
   });
 });

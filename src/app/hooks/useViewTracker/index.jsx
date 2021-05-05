@@ -6,15 +6,24 @@ import 'intersection-observer';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
-import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 
+const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 
-const useViewTracker = ({ pageData, componentName, actionLabel } = {}) => {
-  let eventTrackingProps;
+const useViewTracker = ({
+  pageData,
+  componentName,
+  campaignName,
+  format = '',
+  url = '',
+} = {}) => {
+  let pageIdentifier;
+  let platform;
+  let statsDestination;
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
+  const { service } = serviceContext;
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
@@ -22,46 +31,42 @@ const useViewTracker = ({ pageData, componentName, actionLabel } = {}) => {
   });
 
   try {
-    eventTrackingProps = buildATIClickParams(
+    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
       pageData,
       requestContext,
       serviceContext,
-    );
+    ));
   } catch (error) {
-    eventTrackingProps = null;
+    // eslint-disable-next-line no-console
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
   }
 
   useEffect(() => {
-    let componentInfo;
-
-    try {
-      componentInfo = getComponentInfo({
-        result: window.location.href,
-        componentName,
-        componentData: {
-          actionLabel,
-          child: 'link', // TODO ask Jon B what this should be
-        },
-      });
-    } catch (error) {
-      componentInfo = null;
-    }
-
     if (inView && !timer.current) {
       timer.current = setTimeout(() => {
         const shouldSendEvent = [
           !viewSent,
-          eventTrackingProps,
-          componentInfo,
+          campaignName,
+          componentName,
+          pageIdentifier,
+          platform,
+          service,
+          statsDestination,
         ].every(Boolean);
 
         if (shouldSendEvent) {
           sendEventBeacon({
-            type: 'view',
+            campaignName,
             componentName,
-            service: serviceContext.service,
-            componentInfo,
-            ...eventTrackingProps,
+            format,
+            pageIdentifier,
+            platform,
+            service,
+            statsDestination,
+            type: EVENT_TYPE,
+            url,
           });
           setViewSent(true);
         }
@@ -73,12 +78,16 @@ const useViewTracker = ({ pageData, componentName, actionLabel } = {}) => {
 
     return () => clearTimeout(timer.current);
   }, [
-    inView,
-    viewSent,
+    campaignName,
     componentName,
-    eventTrackingProps,
-    serviceContext.service,
-    actionLabel,
+    format,
+    inView,
+    pageIdentifier,
+    platform,
+    service,
+    statsDestination,
+    viewSent,
+    url,
   ]);
 
   return { trackRef: ref };
