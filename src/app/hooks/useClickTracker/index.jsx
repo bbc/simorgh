@@ -4,9 +4,9 @@ import { getComponentInfo } from '#app/lib/analyticsUtils/index';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
-import { isValidClick } from './helpers';
+import { isValidClick } from './clickTypes';
 
-const useClickTracker = ({ pageData, componentName } = {}) => {
+const useClickTracker = ({ pageData, componentName, href } = {}) => {
   let eventTrackingProps;
 
   const requestContext = useContext(RequestContext);
@@ -21,6 +21,7 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
       serviceContext,
     );
   } catch (e) {
+    console.error('Failed to build ATI tracking params.');
     eventTrackingProps = null;
   }
 
@@ -28,13 +29,14 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
     event => {
       let componentInfo;
       event.stopPropagation();
+      event.preventDefault();
 
       if (isValidClick(event)) {
         clickRef.current?.removeEventListener('click', handleClick);
 
         try {
           componentInfo = getComponentInfo({
-            result: event.target.href || window.location.href,
+            result: href || event.target.href || window.location.href,
             componentName,
             componentData: {
               actionLabel: 'click',
@@ -42,6 +44,7 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
             },
           });
         } catch (e) {
+          console.error('Error getting component info for .');
           componentInfo = null;
         }
 
@@ -52,11 +55,23 @@ const useClickTracker = ({ pageData, componentName } = {}) => {
             service,
             componentInfo,
             ...eventTrackingProps,
-          });
+          })
+            .then(() => {
+              if (href || event.target.href) {
+                window.location.href = href || event.target.href;
+              }
+            })
+            .catch(e => {
+              // eslint-disable-next-line no-console
+              console.error(`Error sending ATI click tracking request: ${e}`);
+              if (href || event.target.href) {
+                window.location.href = href || event.target.href;
+              }
+            });
         }
       }
     },
-    [componentName, eventTrackingProps, service],
+    [componentName, eventTrackingProps, href, service],
   );
 
   useEffect(() => {
