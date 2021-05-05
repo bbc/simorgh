@@ -18,12 +18,12 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 jest.mock('react-intersection-observer');
 
 beforeEach(() => {
-  jest.spyOn(console, 'error').mockImplementation(() => jest.fn());
-  jest.clearAllMocks();
   jest.useFakeTimers();
+  console.error = jest.fn();
 });
 
 afterEach(() => {
+  jest.clearAllMocks();
   jest.runOnlyPendingTimers();
   jest.useRealTimers();
 });
