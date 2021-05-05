@@ -131,18 +131,13 @@ describe('buildATIEventTrackUrl', () => {
         platform: 'platform',
         statsDestination: 'statsDestination',
         componentName: 'component',
-        componentInfo: {
-          actionLabel: 'creation-label',
-          result: 'https://foobar.com',
-          positioning: {
-            parent: 'container-component',
-            child: 'child',
-          },
-        },
         type: 'type',
+        campaignName: 'campaignName',
+        format: 'format',
+        url: 'url',
       }),
     ).toMatchInlineSnapshot(
-      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[]-[component]-[]-[]-[pageIdentifier]-[]-[]-[]&type=AT"`,
+      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignName]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
     );
   });
 });
