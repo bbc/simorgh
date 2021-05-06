@@ -26,7 +26,6 @@ export const sendEventBeacon = async ({
     }),
   );
 
-  return Promise.resolve();
 };
 
 export default sendEventBeacon;
