@@ -25,7 +25,6 @@ export const sendEventBeacon = async ({
       url,
     }),
   );
-
 };
 
 export default sendEventBeacon;
