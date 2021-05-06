@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
@@ -11,6 +12,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 beforeEach(() => {
   jest.clearAllMocks();
+  console.error = jest.fn();
 });
 
 const urlToObject = url => {
@@ -75,6 +77,7 @@ const TestComponentContainer = ({ hookProps }) => {
 const TestComponent = React.forwardRef((_, ref) => {
   return (
     <div data-testid="test-component" ref={ref}>
+      <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
   );
@@ -202,6 +205,38 @@ describe('Click tracking', () => {
 
     jest.restoreAllMocks();
   });
+
+  it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', done => {
+    const hookProps = {
+      componentName: 'brand',
+      pageData: pidginData,
+      href: 'https://bbc.com/pidgin',
+    };
+
+    const spyFetch = jest.spyOn(global, 'fetch').mockImplementation(() => {
+      throw new Error('Failed to fetch');
+    });
+
+    window.location.assign = jest.fn(href => {
+      try {
+        expect(href).toBe(hookProps.href);
+        done();
+      } catch (error) {
+        done(error);
+      }
+    });
+
+    const { getByText } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={hookProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByText('Link')));
+
+    expect(spyFetch).toHaveBeenCalledTimes(1);
+    expect(spyFetch).toThrow('Failed to fetch');
+  });
 });
 
 describe('Error handling', () => {
@@ -217,6 +252,11 @@ describe('Error handling', () => {
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -236,6 +276,11 @@ describe('Error handling', () => {
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -253,6 +298,11 @@ describe('Error handling', () => {
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -268,6 +318,11 @@ describe('Error handling', () => {
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringMatching(
+        'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });

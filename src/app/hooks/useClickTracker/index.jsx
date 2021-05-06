@@ -21,8 +21,10 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
       requestContext,
       serviceContext,
     );
-  } catch (e) {
-    console.error(`Failed to build ATI tracking params: ${e}`);
+  } catch (error) {
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
     eventTrackingProps = null;
   }
 
@@ -44,8 +46,10 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
               child: event.target.tagName,
             },
           });
-        } catch (e) {
-          console.error(`Error getting component info for ATI Tracking: ${e}`);
+        } catch (error) {
+          console.error(
+            `Error getting component info for ATI Tracking: ${error.message}`,
+          );
           componentInfo = null;
         }
 
@@ -59,13 +63,15 @@ const useClickTracker = ({ pageData, componentName, href } = {}) => {
           })
             .then(() => {
               if (href || event.target.href) {
-                window.location.href = href || event.target.href;
+                window.location.assign(href || event.target.href);
               }
             })
-            .catch(e => {
-              console.error(`Error sending ATI click tracking request: ${e}`);
+            .catch(error => {
+              console.error(
+                `Error sending ATI click tracking request: ${error.message}`,
+              );
               if (href || event.target.href) {
-                window.location.href = href || event.target.href;
+                window.location.assign(href || event.target.href);
               }
             });
         }
