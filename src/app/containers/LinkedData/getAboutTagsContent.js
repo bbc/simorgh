@@ -26,7 +26,7 @@ const checkType = types => {
 };
 
 const checkSameAs = uris => {
-  const sameAs = uris.filter(uri => uri.includes('http://dbpedia.org'));
+  const sameAs = uris.filter(uri => uri.startsWith('http://dbpedia.org/'));
   return sameAs.length ? sameAs : undefined;
 };
 
