@@ -193,6 +193,7 @@
     "crypto": "1.0.1",
     "cypress": "6.9.1",
     "cypress-multi-reporters": "1.5.0",
+    "cypress-terminal-report": "^3.1.1",
     "depcheck": "1.4.0",
     "eslint": "7.25.0",
     "eslint-config-airbnb": "18.2.1",
