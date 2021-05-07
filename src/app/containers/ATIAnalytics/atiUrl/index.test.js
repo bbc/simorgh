@@ -131,18 +131,13 @@ describe('buildATIEventTrackUrl', () => {
         platform: 'platform',
         statsDestination: 'statsDestination',
         componentName: 'component',
-        componentInfo: {
-          actionLabel: 'creation-label',
-          result: 'https://foobar.com',
-          positioning: {
-            parent: 'container-component',
-            child: 'child',
-          },
-        },
         type: 'type',
+        campaignName: 'campaignName',
+        format: 'format',
+        url: 'url',
       }),
     ).toMatchInlineSnapshot(
-      `"http://foobar.com?s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-%5Bservice-component%5D-%5Bcreation-label~type%5D-%5B%5D-%5BPAR%3Dcontainer-component~CHD%3Dchild%5D-%5BpageIdentifier%5D-%5B%5D-%5Bresponsive_web~news-simorgh%5D-%5Bhttps%3A%2F%2Ffoobar.com%5D&type=AT"`,
+      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignName]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
     );
   });
 });

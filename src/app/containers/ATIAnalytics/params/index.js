@@ -25,6 +25,8 @@ const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
@@ -79,6 +81,8 @@ const pageTypeParamBuilders = {
       serviceContext,
       ARTICLE_CORRESPONDENT_PIECE,
     ),
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers) => {
