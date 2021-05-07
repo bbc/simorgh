@@ -224,8 +224,10 @@ export const buildATIEventTrackUrl = ({
   platform,
   statsDestination,
   componentName,
-  componentInfo,
+  campaignName,
+  format,
   type,
+  url,
 }) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -289,11 +291,12 @@ export const buildATIEventTrackUrl = ({
     {
       key: eventPublisher,
       description: 'event publisher',
-      value: getEventInfo(pageIdentifier, {
-        service,
+      value: getEventInfo({
+        campaignName,
         componentName,
-        componentInfo,
-        type: type || '',
+        format,
+        pageIdentifier,
+        url,
       }),
       wrap: false,
       disableEncoding: true,

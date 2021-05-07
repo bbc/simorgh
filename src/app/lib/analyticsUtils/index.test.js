@@ -23,7 +23,6 @@ const {
   getProducer,
   getAtiUrl,
   getEventInfo,
-  getComponentInfo,
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
@@ -422,75 +421,24 @@ describe('getAtiUrl', () => {
 
 describe('getEventInfo', () => {
   const params = {
-    service: 'service',
-    componentName: 'component',
-    componentInfo: {
-      actionLabel: 'actionLabel',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'child',
-      },
-    },
-    type: 'type',
+    pageIdentifier: 'page-identifier',
+    componentName: 'component-name',
+    campaignName: 'campaign-name',
+    url: 'url',
+    format: 'format',
+    detailedPlacement: 'detailed-placement',
+    advertiserID: 'mundo',
+    variant: 'a/b-test',
   };
-  const pageIdentifier = 'page';
 
   it('should return url section', () => {
-    expect(getEventInfo(pageIdentifier, params)).toEqual(
-      'PUB-[service-component]-[actionLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
+    expect(getEventInfo(params)).toEqual(
+      'PUB-[campaign-name]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
     );
   });
 
-  it('should include elem.href in output', () => {
-    expect(getEventInfo(pageIdentifier, params)).toContain('[url.com]');
-  });
-});
-
-describe('getComponentInfo', () => {
-  const event = { target: { href: 'url.com' } };
-  const props = { actionLabel: 'prop1', child: 'prop2' };
-
-  it('should return a componentInfo object', () => {
-    const result = {
-      actionLabel: 'component-prop1',
-      source: '',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'prop2',
-      },
-    };
-
-    expect(
-      getComponentInfo({
-        result: event.target.href,
-        componentName: 'component',
-        componentData: props,
-      }),
-    ).toEqual(result);
-  });
-
-  it('should return an object with adId if value included in props', () => {
-    props.source = 'source';
-
-    const result = {
-      actionLabel: 'component-prop1',
-      source: 'source',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'prop2',
-      },
-    };
-
-    expect(
-      getComponentInfo({
-        result: event.target.href,
-        componentName: 'component',
-        componentData: props,
-      }),
-    ).toEqual(result);
+  it('should allow empty values', () => {
+    expect(getEventInfo()).toContain('PUB-[]-[]-[]-[]-[]-[]-[]-[]');
   });
 });
 

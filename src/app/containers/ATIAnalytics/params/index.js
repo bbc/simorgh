@@ -25,12 +25,12 @@ const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   IDX: buildIndexPageATIUrl,
-  STY: (data, requestContext, serviceContext) =>
-    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -60,8 +60,6 @@ const pageTypeParamBuilders = {
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   IDX: buildIndexPageATIParams,
-  STY: (data, requestContext, serviceContext) =>
-    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
@@ -83,6 +81,8 @@ const pageTypeParamBuilders = {
       serviceContext,
       ARTICLE_CORRESPONDENT_PIECE,
     ),
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers) => {
