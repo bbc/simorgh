@@ -36,7 +36,7 @@
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "license-checker": "apache2-license-checker",
     "lighthouse": "./scripts/lighthouseRun.sh",
-    "line-staged": "lint-staged",
+    "lint-staged": "lint-staged",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
     "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
