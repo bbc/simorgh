@@ -32,6 +32,8 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 const defaultProps = {
   pageData: pidginData,
   componentName: 'brand',
+  campaignName: 'cps_wsoj',
+  format: 'CHD=promo::2',
 };
 
 const WithContexts = ({
@@ -126,7 +128,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=DIV]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -156,7 +158,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=BUTTON]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -190,7 +192,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[pidgin-brand]-[brand-click~click]-[]-[PAR=container-brand~CHD=BUTTON]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -207,11 +209,7 @@ describe('Click tracking', () => {
   });
 
   it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', done => {
-    const hookProps = {
-      componentName: 'brand',
-      pageData: pidginData,
-      href: 'https://bbc.com/pidgin',
-    };
+    const url = 'https://bbc.com/pidgin';
 
     const spyFetch = jest.spyOn(global, 'fetch').mockImplementation(() => {
       throw new Error('Failed to fetch');
@@ -219,7 +217,7 @@ describe('Click tracking', () => {
 
     window.location.assign = jest.fn(href => {
       try {
-        expect(href).toBe(hookProps.href);
+        expect(href).toBe(url);
         done();
       } catch (error) {
         done(error);
@@ -228,7 +226,7 @@ describe('Click tracking', () => {
 
     const { getByText } = render(
       <WithContexts>
-        <TestComponentContainer hookProps={hookProps} />
+        <TestComponentContainer hookProps={{ ...defaultProps, href: url }} />
       </WithContexts>,
     );
 
