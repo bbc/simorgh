@@ -38,5 +38,8 @@ If applicable, add screenshots to help explain your problem.
 
 - [ ] This bug fix is expected to need manual testing.
 
+**Checklist**
+- [ ] (BBC contributors only) This issue follows the [repository use guidelines](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/repository-guidelines.md)
+
 **Additional context**
 Add any other context about the problem here.
