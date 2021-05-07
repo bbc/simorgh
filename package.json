@@ -34,8 +34,11 @@
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/.",
     "cypress:adhoc": "yarn cypress:interactive -- --project ./AdHocCypress/.",
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
+    "license-checker": "apache2-license-checker",
     "lighthouse": "./scripts/lighthouseRun.sh",
+    "line-staged": "lint-staged",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
+    "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node build/server.js",
     "stop": "./scripts/killApp.sh",
@@ -55,8 +58,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'",
-    "prepare": "husky install"
+    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'"
   },
   "repository": {
     "type": "git",
