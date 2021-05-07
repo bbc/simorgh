@@ -68,6 +68,9 @@
     },
     "scss-parser@*": {
       "reason": "Licenced under BSD 3 Clause license; https://github.com/salesforce-ux/scss-parser/blob/master/LICENSE"
+    },
+    "intersection-observer@*": {
+      "reason": "Licenced under W3C-20150513; https://spdx.org/licenses/W3C-20150513.html"
     }
   }
 }
