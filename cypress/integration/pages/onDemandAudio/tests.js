@@ -131,15 +131,17 @@ export default ({ service, pageType, variant, isAmp }) => {
                       cypressJsonResWithLocaleStringTimestamp.length
                     ) {
                       /* eslint-disable no-console */
-                      console.log(
+                      cy.log(
                         'Cypress json response - ',
-                        cypressJsonResWithLocaleStringTimestamp,
+                        JSON.stringify(cypressJsonResWithLocaleStringTimestamp),
                       );
-                      console.log('HTML on page - ', renderedEpisodesInnerText);
+                      cy.log('HTML on page - ', renderedEpisodesInnerText);
                       if (!isAmp) {
-                        console.log(
+                        cy.log(
                           'Simorgh json response - ',
-                          simorghJsonResWithLocaleStringTimestamp,
+                          JSON.stringify(
+                            simorghJsonResWithLocaleStringTimestamp,
+                          ),
                         );
                       }
                       /* eslint-enable no-console */
