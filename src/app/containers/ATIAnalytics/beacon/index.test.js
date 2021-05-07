@@ -5,7 +5,6 @@ import * as analyticsUtils from '#lib/analyticsUtils';
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
-analyticsUtils.getAtUserId = jest.fn().mockReturnValue('user-id');
 
 describe('beacon', () => {
   const atiBaseUrl = 'https://foobar.com?';
