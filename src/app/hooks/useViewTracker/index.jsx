@@ -90,7 +90,7 @@ const useViewTracker = ({
     url,
   ]);
 
-  return { trackRef: ref };
+  return ref;
 };
 
 export default useViewTracker;

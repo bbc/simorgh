@@ -68,7 +68,7 @@ describe('Expected use', () => {
       wrapper,
     });
 
-    expect(result.current.trackRef).toBe(elementRef);
+    expect(result.current).toBe(elementRef);
   });
 
   it('should not send event to ATI when element is not in view', async () => {
