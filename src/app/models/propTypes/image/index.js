@@ -1,4 +1,4 @@
-import { arrayOf, number, string } from 'prop-types';
+import { number, string } from 'prop-types';
 import {
   blockOfTypesAndModel,
   blockObjectOfTypesAndModel,
@@ -43,7 +43,7 @@ const blockProps = [
 ];
 
 export const imageModelPropTypes = {
-  blocks: arrayOfSpecificBlocks(blockProps, { position: arrayOf(number) }),
+  blocks: arrayOfSpecificBlocks(blockProps),
 };
 
 export const imageBlockPropTypes = blockOfTypesAndModel(
