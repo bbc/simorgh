@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && yarn test:unit -- --changedSince=latest && yarn test:integration && yarn license-checker
+sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && yarn test:unit -- --changedSince=latest && yarn test:integration && yarn apache2-license-checker
