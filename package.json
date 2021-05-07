@@ -11,7 +11,10 @@
     "elliptic": "6.5.4",
     "moment": "2.29.1",
     "color-string": "1.5.5",
-    "ssri": "8.0.1"
+    "ssri": "8.0.1",
+    "underscore": "1.12.1",
+    "hosted-git-info": "3.0.8",
+    "url-parse": "1.5.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
