@@ -58,6 +58,8 @@ const TestComponentContainerContainer = () => {
   const clickRef = useClickTracker({
     pageData: pidginData,
     componentName: 'header',
+    campaignName: 'cps_wsoj',
+    format: 'CHD=promo::1',
   });
 
   return (
@@ -259,15 +261,9 @@ describe('Error handling', () => {
   });
 
   it('should not throw error and not send event to ATI when no pageData passed into hook', async () => {
-    const trackingData = {
-      pageData: {},
-      componentName: 'mostRead',
-      actionLabel: 'most-read-view',
-    };
-
     const { container, getByText } = render(
       <WithContexts>
-        <TestComponentContainer hookProps={trackingData} />
+        <TestComponentContainer hookProps={{ ...defaultProps, pageData: {} }} />
       </WithContexts>,
     );
 
