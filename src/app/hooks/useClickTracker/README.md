@@ -5,7 +5,7 @@ The `useClickTracker` hook handles:
 - Tracking when an element has been clicked
 - Sending the event to ATI
 
-A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked component. Specificially the following are valid clicks:
+A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked component. Specifically the following are valid clicks:
 
 - ### General
   - Middle Click
