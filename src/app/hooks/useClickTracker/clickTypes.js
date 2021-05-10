@@ -26,7 +26,9 @@ const isMacOs = () =>
   window && window.navigator && window.navigator.platform.startsWith('Mac');
 
 export const isSafari = () =>
-  window.navigator.vendor && window.navigator.vendor.startsWith('Apple');
+  window &&
+  window.navigator.vendor &&
+  window.navigator.vendor.startsWith('Apple');
 
 export const isOpenClicked = event =>
   (isMacOs() ? isMacOsOpenClicked(event) : isWindowsOpenClicked(event)) ||
