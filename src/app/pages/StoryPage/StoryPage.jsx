@@ -342,6 +342,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           {topStoriesInitialData && (
             <ResponsiveComponentWrapper>
               <TopStories
+                pageData={pageData}
                 content={topStoriesInitialData}
                 parentColumns={gridColsSecondary}
               />
