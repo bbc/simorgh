@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
-import { render, act } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
 import useClickTracker from '.';
@@ -227,8 +227,6 @@ describe('Click tracking', () => {
       throw new Error('Failed to fetch');
     });
 
-    window.location.assign = jest.fn();
-
     const { getByText } = render(
       <WithContexts>
         <TestComponentContainer hookProps={{ ...defaultProps, href: url }} />
@@ -244,6 +242,18 @@ describe('Click tracking', () => {
       expect(window.location.assign).toHaveBeenCalledTimes(1);
       expect(window.location.assign).toHaveBeenCalledWith(url);
     });
+  });
+
+  it('should not send tracking request on right click', () => {
+    const { getByText } = render(
+      <WithContexts>
+        <TestComponentContainer hookProps={defaultProps} />
+      </WithContexts>,
+    );
+
+    act(() => fireEvent.contextMenu(getByText('Button')));
+
+    expect(global.fetch).toHaveBeenCalledTimes(0);
   });
 });
 
