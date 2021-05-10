@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { useInView } from 'react-intersection-observer';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -9,6 +10,8 @@ import useClickViewHook from '.';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
+
+jest.mock('react-intersection-observer');
 
 const { location } = window;
 
@@ -22,15 +25,25 @@ const urlToObject = url => {
   };
 };
 
-beforeAll(() => {
+const elementRef = jest.fn();
+const setIntersectionObserved = () =>
+  useInView.mockReturnValue([elementRef, true]);
+const setIntersectionNotObserved = () =>
+  useInView.mockReturnValue([elementRef, false]);
+
+beforeEach(() => {
   jest.clearAllMocks();
+  jest.useFakeTimers();
   delete window.location;
   window.location = {
-    href: 'http://bbc.com/pidgin/tori-51745682',
+    href: 'http://www.bbc.com/pidgin/tori-51745682',
+    assign: jest.fn(),
   };
 });
 
-afterAll(() => {
+afterEach(() => {
+  jest.runOnlyPendingTimers();
+  jest.useRealTimers();
   window.location = location;
 });
 
@@ -89,14 +102,16 @@ const expected = {
 };
 
 describe('useClickViewHook', () => {
-  const { getByText } = render(
-    <WithContexts>
-      <TestComponent trackingData={trackingData} />
-    </WithContexts>,
-  );
-  act(() => userEvent.click(getByText('Hello')));
+  setIntersectionNotObserved();
 
   it('should send tracking data to ATI on click event', () => {
+    const { getByText } = render(
+      <WithContexts>
+        <TestComponent trackingData={trackingData} />
+      </WithContexts>,
+    );
+    act(() => userEvent.click(getByText('Hello')));
+
     const [[atiUrl]] = fetch.mock.calls;
 
     expect(urlToObject(atiUrl)).toEqual({
@@ -104,20 +119,30 @@ describe('useClickViewHook', () => {
       searchParams: {
         ...expected.searchParams,
         atc:
-          'PUB-[cps_wsoj]-[top-stories]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[top-stories]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
       },
     });
   });
 
   it('should send tracking data to ATI on view event', () => {
-    const [, [atiUrl]] = fetch.mock.calls;
+    setIntersectionObserved();
+
+    render(
+      <WithContexts>
+        <TestComponent trackingData={trackingData} />
+      </WithContexts>,
+    );
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    const [[atiUrl]] = fetch.mock.calls;
 
     expect(urlToObject(atiUrl)).toEqual({
       ...expected,
       searchParams: {
         ...expected.searchParams,
         ati:
-          'PUB-[cps_wsoj]-[top-stories]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://bbc.com/pidgin/tori-51745682]',
+          'PUB-[cps_wsoj]-[top-stories]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
       },
     });
   });
