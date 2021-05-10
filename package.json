@@ -36,6 +36,7 @@
     "dev": "rm -rf build && cp envConfig/local.env .env && run-p webpack:dev:client webpack:dev:server",
     "lighthouse": "./scripts/lighthouseRun.sh",
     "postshrinkwrap": "test -z $CI && ./scripts/packagelockHttps.sh; git update-index --assume-unchanged .env",
+    "prepare": "husky install",
     "preinstall": "node scripts/check-package-manager.js",
     "start": "NODE_ENV=production node build/server.js",
     "stop": "./scripts/killApp.sh",
@@ -56,13 +57,6 @@
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development webpack-dev-server --inline --hot --env.config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env.config='server'"
-  },
-  "husky": {
-    "hooks": {
-      "post-merge": "sh scripts/dependencyUpdateCheck.sh",
-      "pre-commit": "lint-staged",
-      "pre-push": "sh scripts/stopPushOnLatest.sh && sh scripts/upToDateWithLatest.sh && sh scripts/enforceVersions.sh && yarn test:unit -- --changedSince=latest && yarn test:integration && apache2-license-checker"
-    }
   },
   "repository": {
     "type": "git",
@@ -213,7 +207,7 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "fetch-mock": "9.11.0",
     "history": "4.10.1",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "inspectpack": "4.7.1",
     "jest": "26.6.3",
     "jest-fetch-mock": "3.0.3",
