@@ -4,6 +4,7 @@ import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { waitFor } from '@testing-library/dom';
 import useClickTracker from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -26,7 +27,10 @@ const urlToObject = url => {
 };
 
 delete window.location;
-window.location = { href: 'http://bbc.com/pidgin/tori-51745682' };
+window.location = {
+  href: 'http://bbc.com/pidgin/tori-51745682',
+  assign: jest.fn(),
+};
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 const defaultProps = {
@@ -210,21 +214,14 @@ describe('Click tracking', () => {
     jest.restoreAllMocks();
   });
 
-  it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', done => {
+  it('should allow the user to navigate after clicking on a tracked link even if the tracking request fails', async () => {
     const url = 'https://bbc.com/pidgin';
 
-    const spyFetch = jest.spyOn(global, 'fetch').mockImplementation(() => {
+    global.fetch = jest.fn(() => {
       throw new Error('Failed to fetch');
     });
 
-    window.location.assign = jest.fn(href => {
-      try {
-        expect(href).toBe(url);
-        done();
-      } catch (error) {
-        done(error);
-      }
-    });
+    window.location.assign = jest.fn();
 
     const { getByText } = render(
       <WithContexts>
@@ -234,8 +231,13 @@ describe('Click tracking', () => {
 
     act(() => userEvent.click(getByText('Link')));
 
-    expect(spyFetch).toHaveBeenCalledTimes(1);
-    expect(spyFetch).toThrow('Failed to fetch');
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+    expect(global.fetch).toThrow('Failed to fetch');
+
+    await waitFor(() => {
+      expect(window.location.assign).toHaveBeenCalledTimes(1);
+      expect(window.location.assign).toHaveBeenCalledWith(url);
+    });
   });
 });
 

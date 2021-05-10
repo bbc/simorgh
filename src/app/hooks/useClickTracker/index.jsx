@@ -8,12 +8,6 @@ import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';
 
-const changeUserLocationIfDefined = url => {
-  if (url) {
-    window.location.assign(url);
-  }
-};
-
 const useClickTracker = ({
   pageData,
   componentName,
@@ -30,6 +24,12 @@ const useClickTracker = ({
   const { service } = serviceContext;
 
   const clickRef = useRef(null);
+
+  const changeUserLocationIfDefined = useCallback(url => {
+    if (url) {
+      window.location.assign(url);
+    }
+  }, []);
 
   try {
     ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
@@ -49,6 +49,7 @@ const useClickTracker = ({
       event.preventDefault();
 
       if (isValidClick(event)) {
+        const nextPageUrl = href || event.target.href;
         clickRef.current?.removeEventListener('click', handleClick);
 
         const shouldSendEvent = [
@@ -61,9 +62,9 @@ const useClickTracker = ({
           statsDestination,
         ].every(Boolean);
 
-        if (shouldSendEvent) {
-          const nextPageUrl = href || event.target.href;
+        console.log(`SHOULD SEND EVENT: ${shouldSendEvent}`);
 
+        if (shouldSendEvent) {
           sendEventBeacon({
             type: EVENT_TYPE,
             campaignName,
@@ -75,20 +76,22 @@ const useClickTracker = ({
             statsDestination,
             url: window.location.href,
           })
-            .then(() => {
-              changeUserLocationIfDefined(nextPageUrl);
-            })
             .catch(error => {
               console.error(
                 `Error sending ATI click tracking request: ${error.message}`,
               );
+            })
+            .finally(() => {
               changeUserLocationIfDefined(nextPageUrl);
             });
+        } else {
+          changeUserLocationIfDefined(nextPageUrl);
         }
       }
     },
     [
       campaignName,
+      changeUserLocationIfDefined,
       componentName,
       format,
       href,
