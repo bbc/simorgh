@@ -1,3 +1,6 @@
+import pathSatisfies from 'ramda/src/pathSatisfies';
+import startsWith from 'ramda/src/startsWith';
+
 const isLeftClick = button => button === 0;
 const isMiddleClick = button => button === 1 || button === 4; // middle click for IE is 4
 
@@ -23,12 +26,10 @@ const isWindowsOpenClicked = event =>
   isLeftClick(event.button) && isSupportedClickModifier(event, event.ctrlKey); // ctrl
 
 const isMacOs = () =>
-  window && window.navigator && window.navigator.platform.startsWith('Mac');
+  pathSatisfies(startsWith('Mac'), ['navigator', 'platform'], window);
 
 export const isSafari = () =>
-  window &&
-  window.navigator.vendor &&
-  window.navigator.vendor.startsWith('Apple');
+  pathSatisfies(startsWith('Apple'), ['navigator', 'vendor'], window);
 
 export const isOpenClicked = event =>
   (isMacOs() ? isMacOsOpenClicked(event) : isWindowsOpenClicked(event)) ||
