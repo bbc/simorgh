@@ -52,6 +52,6 @@ const MostRead = ({ pageData }) => {
 | ------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | pageData      | object | yes      | The page data used to hydrate the page.                                                                                              |
 | componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                    |
-| campaignName  | string | yes      | The name of the campaign e.g. `cps_wsoj` typically defined by Business Analyists or Product Owners in the analytics interface |
+| campaignName  | string | yes      | The name of the campaign e.g. `cps_wsoj` typically defined by Business Analysts or Product Owners in the analytics interface |
 | format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                       |
 | href          | string | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop. |
