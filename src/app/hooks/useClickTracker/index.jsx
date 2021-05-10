@@ -62,8 +62,6 @@ const useClickTracker = ({
           statsDestination,
         ].every(Boolean);
 
-        console.log(`SHOULD SEND EVENT: ${shouldSendEvent}`);
-
         if (shouldSendEvent) {
           sendEventBeacon({
             type: EVENT_TYPE,

@@ -11,9 +11,20 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
+const { location } = window;
+
 beforeEach(() => {
   jest.clearAllMocks();
+  delete window.location;
+  window.location = {
+    href: 'http://bbc.com/pidgin/tori-51745682',
+    assign: jest.fn(),
+  };
   console.error = jest.fn();
+});
+
+afterEach(() => {
+  window.location = location;
 });
 
 const urlToObject = url => {
@@ -26,11 +37,6 @@ const urlToObject = url => {
   };
 };
 
-delete window.location;
-window.location = {
-  href: 'http://bbc.com/pidgin/tori-51745682',
-  assign: jest.fn(),
-};
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 const defaultProps = {
