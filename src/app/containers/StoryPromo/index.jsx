@@ -208,7 +208,7 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink href={url}>
+        <StyledLink href={url} ref={clickRef}>
           {isLive ? (
             <LiveLabel
               service={service}

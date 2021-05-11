@@ -165,8 +165,8 @@ const CpsOnwardJourney = ({
   content,
   isMediaContent,
   parentColumns,
-  promoListComponent,
-  promoComponent,
+  promoListComponent: PromoListComponent,
+  promoComponent: PromoComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -221,10 +221,14 @@ const CpsOnwardJourney = ({
         ) : null}
         {hasSingleContent ? (
           <SingleContentWrapper columnType={columnType}>
-            {promoComponent({ promo: singleContent, dir })}
+            <PromoComponent promo={singleContent} dir={dir} />
           </SingleContentWrapper>
         ) : (
-          promoListComponent({ promoItems: content, dir, isMediaContent })
+          <PromoListComponent
+            promoItems={content}
+            dir={dir}
+            isMediaContent={isMediaContent}
+          />
         )}
       </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>

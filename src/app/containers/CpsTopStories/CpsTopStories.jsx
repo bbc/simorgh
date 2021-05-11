@@ -6,47 +6,65 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { EventTrackingContext } from '#contexts/EventTrackingContext';
+// import useViewTracker from '#hooks/useViewTracker';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 
-const TopStories = ({ content, parentColumns }) => {
-  const { translations, serviceDatetimeLocale } = useContext(ServiceContext);
+const PromoComponent = ({ promo, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+
+  return (
+    <StoryPromo
+      item={promo}
+      dir={dir}
+      displayImage={false}
+      displaySummary={false}
+      serviceDatetimeLocale={serviceDatetimeLocale}
+    />
+  );
+};
+
+const PromoListComponent = ({ promoItems, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { viewRef } = useContext(EventTrackingContext);
+
+  return (
+    <StoryPromoUl>
+      {promoItems.map((item, index) => (
+        <StoryPromoLi
+          key={item.id || item.uri}
+          ref={index === 0 ? viewRef : null}
+        >
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displayImage={false}
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+          />
+        </StoryPromoLi>
+      ))}
+    </StoryPromoUl>
+  );
+};
+
+const TopStories = ({ content, parentColumns }) => {
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   return (
-    <CpsOnwardJourney
-      labelId="top-stories-heading"
-      title={title}
-      content={content}
-      parentColumns={parentColumns}
-      promoComponent={({ promo, dir }) => (
-        <StoryPromo
-          item={promo}
-          dir={dir}
-          displayImage={false}
-          displaySummary={false}
-          serviceDatetimeLocale={serviceDatetimeLocale}
-        />
-      )}
-      promoListComponent={({ promoItems, dir }) => (
-        <StoryPromoUl ref={viewRef}>
-          {promoItems.map((item, index) => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo
-                item={item}
-                dir={dir}
-                displayImage={false}
-                displaySummary={false}
-                serviceDatetimeLocale={serviceDatetimeLocale}
-              />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
-      )}
-      columnType="secondary"
-    />
+    <div>
+      <CpsOnwardJourney
+        labelId="top-stories-heading"
+        title={title}
+        content={content}
+        parentColumns={parentColumns}
+        promoComponent={PromoComponent}
+        promoListComponent={PromoListComponent}
+        columnType="secondary"
+      />
+    </div>
   );
 };
 
