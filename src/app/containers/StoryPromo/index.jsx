@@ -27,7 +27,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import { EventTrackingContext } from '#contexts/EventTrackingContext';
+import useClickTracker from '#hooks/useClickTracker';
 
 const logger = loggerNode(__filename);
 
@@ -99,6 +99,7 @@ const StoryPromoContainer = ({
   isRecommendation,
   isSingleColumnLayout,
   serviceDatetimeLocale,
+  trackingData,
 }) => {
   const {
     altCalendar,
@@ -109,7 +110,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const { clickRef } = useContext(EventTrackingContext);
+  const handleClickTracking = useClickTracker(trackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -208,7 +209,7 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink href={url} ref={clickRef}>
+        <StyledLink href={url} onClick={trackingData && handleClickTracking}>
           {isLive ? (
             <LiveLabel
               service={service}

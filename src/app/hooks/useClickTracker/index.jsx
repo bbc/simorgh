@@ -1,29 +1,21 @@
 /* eslint-disable no-console */
-import { useEffect, useRef, useContext, useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';
 
-const useClickTracker = ({
-  pageData,
+const useClickTrackingHandler = ({
+  service,
   componentName,
   campaignName,
   format = '',
   href,
+  pageIdentifier,
+  platform,
+  statsDestination,
 } = {}) => {
-  let pageIdentifier;
-  let platform;
-  let statsDestination;
-
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
-  const { service } = serviceContext;
-
-  const clickRef = useRef(null);
+  const [clicked, setClicked] = useState(false);
 
   const changeUserLocationIfDefined = useCallback(url => {
     if (url) {
@@ -31,26 +23,14 @@ const useClickTracker = ({
     }
   }, []);
 
-  try {
-    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
-      pageData,
-      requestContext,
-      serviceContext,
-    ));
-  } catch (error) {
-    console.error(
-      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
-    );
-  }
-
-  const handleClick = useCallback(
-    event => {
+  return event => {
+    if (!clicked) {
       event.stopPropagation();
       event.preventDefault();
 
       if (isValidClick(event)) {
+        setClicked(true);
         const nextPageUrl = href || event.target.href;
-        clickRef.current?.removeEventListener('click', handleClick);
 
         const shouldSendEvent = [
           campaignName,
@@ -86,28 +66,8 @@ const useClickTracker = ({
           changeUserLocationIfDefined(nextPageUrl);
         }
       }
-    },
-    [
-      campaignName,
-      changeUserLocationIfDefined,
-      componentName,
-      format,
-      href,
-      pageIdentifier,
-      platform,
-      service,
-      statsDestination,
-    ],
-  );
-
-  useEffect(() => {
-    const trackedComponent = clickRef.current;
-    trackedComponent?.addEventListener('click', handleClick);
-
-    return () => trackedComponent?.removeEventListener('click', handleClick);
-  }, [handleClick]);
-
-  return clickRef;
+    }
+  };
 };
 
-export default useClickTracker;
+export default useClickTrackingHandler;

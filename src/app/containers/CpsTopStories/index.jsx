@@ -1,23 +1,46 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import EventTrackingContextProvider from '#contexts/EventTrackingContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
+import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import CpsTopStories from './CpsTopStories';
+import EventTrackingContext from './EventTrackingContext';
 
-const CpsTopStoriesWrapper = props => {
-  const { pageData } = props;
+const CpsTopStoriesWithEventTrackingContext = ({ pageData, ...rest }) => {
+  let pageIdentifier;
+  let platform;
+  let statsDestination;
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
+  const { service } = serviceContext;
 
+  try {
+    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
+      pageData,
+      requestContext,
+      serviceContext,
+    ));
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
+  }
   return (
-    <EventTrackingContextProvider
-      trackingData={{
-        pageData,
+    <EventTrackingContext.Provider
+      value={{
         componentName: 'top-stories',
         campaignName: 'ws_oj',
         format: 'blah',
+        service,
+        pageIdentifier,
+        platform,
+        statsDestination,
       }}
     >
-      <CpsTopStories {...props} />
-    </EventTrackingContextProvider>
+      <CpsTopStories {...rest} />
+    </EventTrackingContext.Provider>
   );
 };
 
-export default CpsTopStoriesWrapper;
+export default CpsTopStoriesWithEventTrackingContext;

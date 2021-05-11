@@ -1,47 +1,28 @@
-import { useEffect, useState, useContext, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 // Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
 
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 
 const useViewTracker = ({
-  pageData,
+  service,
   componentName,
   campaignName,
   format = '',
   url = '',
+  pageIdentifier,
+  platform,
+  statsDestination,
 } = {}) => {
-  let pageIdentifier;
-  let platform;
-  let statsDestination;
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
-  const { service } = serviceContext;
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
-
-  try {
-    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
-      pageData,
-      requestContext,
-      serviceContext,
-    ));
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
-    );
-  }
 
   useEffect(() => {
     if (inView && !timer.current) {

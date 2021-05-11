@@ -5,10 +5,10 @@ import { pathOr } from 'ramda';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { EventTrackingContext } from '#contexts/EventTrackingContext';
-// import useViewTracker from '#hooks/useViewTracker';
+import useViewTracker from '#hooks/useViewTracker';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
+import EventTrackingContext from './EventTrackingContext';
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
@@ -26,7 +26,8 @@ const PromoComponent = ({ promo, dir }) => {
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { viewRef } = useContext(EventTrackingContext);
+  const trackingData = useContext(EventTrackingContext);
+  const viewRef = useViewTracker(trackingData);
 
   return (
     <StoryPromoUl>
@@ -41,6 +42,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displayImage={false}
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
+            trackingData={trackingData}
           />
         </StoryPromoLi>
       ))}
@@ -50,7 +52,6 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
 const TopStories = ({ content, parentColumns }) => {
   const { translations } = useContext(ServiceContext);
-
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   return (
