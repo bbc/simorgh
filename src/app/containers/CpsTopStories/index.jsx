@@ -29,9 +29,8 @@ const CpsTopStoriesWithEventTrackingContext = ({ pageData, ...rest }) => {
   return (
     <EventTrackingContext.Provider
       value={{
-        componentName: 'top-stories',
-        campaignName: 'ws_oj',
-        format: 'blah',
+        componentName: 'topStories',
+        campaignName: 'sty',
         service,
         pageIdentifier,
         platform,

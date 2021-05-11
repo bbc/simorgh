@@ -35,7 +35,6 @@ const useClickTrackingHandler = ({
         const shouldSendEvent = [
           campaignName,
           componentName,
-          format,
           pageIdentifier,
           platform,
           service,
