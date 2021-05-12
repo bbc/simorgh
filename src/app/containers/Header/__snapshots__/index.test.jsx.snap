@@ -1280,7 +1280,6 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 @media (min-width: 25rem) {
@@ -2324,7 +2323,6 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
-  border-bottom: 0.0625rem solid transparent;
 }
 
 @media (min-width: 25rem) {

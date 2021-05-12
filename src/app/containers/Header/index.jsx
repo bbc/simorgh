@@ -8,7 +8,7 @@ import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
-import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
@@ -38,7 +38,6 @@ const HeaderContainer = () => {
     serviceLang,
   } = useContext(ServiceContext);
   const { skipLinkText } = translations;
-  const borderBottom = pageType !== FRONT_PAGE;
 
   // The article page toggles the nav bar based on environment
   const showNavOnArticles = useToggle('navOnArticles').enabled;
@@ -70,14 +69,12 @@ const HeaderContainer = () => {
       {isAmp ? (
         <Header
           linkId="brandLink"
-          borderBottom={borderBottom}
           skipLink={skipLink}
           scriptLink={scriptLink && <ScriptLink />}
         />
       ) : (
         <Header
           brandRef={brandRef}
-          borderBottom={borderBottom}
           skipLink={skipLink}
           scriptLink={scriptLink && <ScriptLink />}
         />
