@@ -35,7 +35,7 @@ describe('Click Types', () => {
     ${'Mac'}     | ${true}     | ${true}  | ${false} | ${true}
     ${'Mac'}     | ${true}     | ${true}  | ${true}  | ${true}
   `(
-    'should return true for permitted modified clicks on mac',
+    'should return correct boolean value depending on whether a click is valid or not',
     ({ platform, functionKey, shiftKey, altKey, expected }) => {
       window.navigator.platform = platform;
 
