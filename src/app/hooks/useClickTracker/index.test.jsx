@@ -1,31 +1,19 @@
-/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import useClickTracker from '.';
+import useClickTrackingHandler from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const { location } = window;
-
-beforeEach(() => {
-  jest.clearAllMocks();
-  delete window.location;
-  window.location = {
-    href: 'http://bbc.com/pidgin/tori-51745682',
-    assign: jest.fn(),
-  };
-  console.error = jest.fn();
-});
-
-afterEach(() => {
-  window.location = location;
-});
 
 const urlToObject = url => {
   const { origin, pathname, searchParams } = new URL(url);
@@ -46,80 +34,64 @@ const defaultProps = {
   format: 'CHD=promo::2',
 };
 
-const WithContexts = ({
-  children,
-  service = 'pidgin',
-  pathname = '/pidgin/tori-51745682',
-}) => (
+const WithContexts = ({ pageData, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
     isAmp={false}
-    pathname={pathname}
-    service={service}
+    service="pidgin"
+    pathname="/pidgin/tori-51745682"
   >
-    <ServiceContextProvider service={service}>
-      {children}
+    <ServiceContextProvider service="pidgin">
+      <EventTrackingContextProvider pageData={pageData}>
+        {children}
+      </EventTrackingContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
 
-const TestComponentContainerContainer = () => {
-  const clickRef = useClickTracker({
-    pageData: pidginData,
-    componentName: 'header',
-    campaignName: 'cps_wsoj',
-    format: 'CHD=promo::1',
-  });
+const wrapper = ({ children }) => (
+  <WithContexts pageData={pidginData}>{children}</WithContexts>
+);
+
+const TestComponent = ({ hookProps }) => {
+  const handleClick = useClickTrackingHandler(hookProps);
 
   return (
-    <div ref={clickRef}>
-      <TestComponentContainer hookProps={defaultProps} />
-    </div>
-  );
-};
-
-const TestComponentContainer = ({ hookProps }) => {
-  const clickRef = useClickTracker(hookProps);
-  return (
-    <div>
-      <TestComponent ref={clickRef} />
-    </div>
-  );
-};
-
-const TestComponent = React.forwardRef((_, ref) => {
-  return (
-    <div data-testid="test-component" ref={ref}>
+    <div data-testid="test-component" onClick={handleClick}>
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
   );
+};
+
+beforeEach(() => {
+  jest.clearAllMocks();
+  delete window.location;
+  window.location = {
+    href: 'http://bbc.com/pidgin/tori-51745682',
+    assign: jest.fn(),
+  };
 });
 
-// eslint-disable-next-line react/prop-types
-const wrapper = ({ children }) => <WithContexts>{children}</WithContexts>;
+afterEach(() => {
+  window.location = location;
+});
 
 describe('Click tracking', () => {
-  it('should return a ref', () => {
-    const { result } = renderHook(() => useClickTracker(defaultProps), {
+  it('should return a function', () => {
+    const { result } = renderHook(() => useClickTrackingHandler(defaultProps), {
       wrapper,
     });
 
-    const { getByTestId } = render(
-      <WithContexts>
-        <TestComponent ref={result.current} />
-      </WithContexts>,
-    );
-
-    expect(result.current.current).toBe(getByTestId('test-component'));
+    expect(result.current).toBeInstanceOf(Function);
   });
 
   it('should send a single tracking request on click', async () => {
     const spyFetch = jest.spyOn(global, 'fetch');
     const { getByTestId } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={defaultProps} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
@@ -156,8 +128,8 @@ describe('Click tracking', () => {
 
   it('should send tracking request on click of child element (button)', async () => {
     const { getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={defaultProps} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
@@ -187,11 +159,25 @@ describe('Click tracking', () => {
   });
 
   it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
-    const { getByText } = render(
-      <WithContexts>
-        <TestComponentContainerContainer />
-      </WithContexts>,
-    );
+    const parentHookProps = {
+      componentName: 'header',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::1',
+    };
+
+    const TestComponentContainer = () => {
+      const handleClick = useClickTrackingHandler(parentHookProps);
+
+      return (
+        <WithContexts pageData={pidginData}>
+          <div onClick={handleClick}>
+            <TestComponent hookProps={defaultProps} />
+          </div>
+        </WithContexts>
+      );
+    };
+
+    const { getByText } = render(<TestComponentContainer />);
 
     act(() => userEvent.click(getByText('Button')));
 
@@ -228,8 +214,8 @@ describe('Click tracking', () => {
     });
 
     const { getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={{ ...defaultProps, href: url }} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, href: url }} />
       </WithContexts>,
     );
 
@@ -246,12 +232,14 @@ describe('Click tracking', () => {
 
   it('should not send tracking request on right click', () => {
     const { getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={defaultProps} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
-    act(() => fireEvent.contextMenu(getByText('Button')));
+    act(() => {
+      fireEvent.contextMenu(getByText('Button'));
+    });
 
     expect(global.fetch).toHaveBeenCalledTimes(0);
   });
@@ -259,40 +247,28 @@ describe('Click tracking', () => {
 
 describe('Error handling', () => {
   it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
-    const trackingData = undefined;
-
     const { container, getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={trackingData} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={undefined} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringMatching(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error and not send event to ATI when no pageData passed into hook', async () => {
+  it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
     const { container, getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={{ ...defaultProps, pageData: {} }} />
+      <WithContexts pageData={undefined}>
+        <TestComponent hookProps={{ ...defaultProps, pageData: {} }} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringMatching(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -302,19 +278,14 @@ describe('Error handling', () => {
     };
 
     const { container, getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={trackingData} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={trackingData} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringMatching(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -322,19 +293,14 @@ describe('Error handling', () => {
     const trackingData = ['unexpected data type'];
 
     const { container, getByText } = render(
-      <WithContexts>
-        <TestComponentContainer hookProps={trackingData} />
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={trackingData} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByText('Button')));
 
     expect(container.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringMatching(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });

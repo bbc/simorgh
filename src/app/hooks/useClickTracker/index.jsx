@@ -56,15 +56,9 @@ const useClickTrackingHandler = (props = {}) => {
               service,
               statsDestination,
               url: window.location.href,
-            })
-              .catch(error => {
-                console.error(
-                  `Error sending ATI click tracking request: ${error.message}`,
-                );
-              })
-              .finally(() => {
-                changeUserLocationIfDefined(nextPageUrl);
-              });
+            }).finally(() => {
+              changeUserLocationIfDefined(nextPageUrl);
+            });
           } else {
             changeUserLocationIfDefined(nextPageUrl);
           }
