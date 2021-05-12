@@ -14,7 +14,8 @@
     "ssri": "8.0.1",
     "underscore": "1.12.1",
     "hosted-git-info": "3.0.8",
-    "url-parse": "1.5.1"
+    "url-parse": "1.5.1",
+    "postcss": "8.2.10"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -96,7 +97,7 @@
     "@bbc/psammead-live-label": "2.0.19",
     "@bbc/psammead-locales": "5.0.6",
     "@bbc/psammead-media-indicator": "6.1.0",
-    "@bbc/psammead-most-read": "6.0.28",
+    "@bbc/psammead-most-read": "6.0.29",
     "@bbc/psammead-navigation": "9.1.1",
     "@bbc/psammead-paragraph": "4.0.16",
     "@bbc/psammead-play-button": "3.0.20",
