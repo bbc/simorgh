@@ -16,14 +16,18 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
 
+const { error } = console;
+
 beforeEach(() => {
   jest.useFakeTimers();
+  console.error = jest.fn();
 });
 
 afterEach(() => {
   jest.clearAllMocks();
   jest.runOnlyPendingTimers();
   jest.useRealTimers();
+  console.error = error;
 });
 
 const elementRef = jest.fn();
@@ -181,4 +185,83 @@ describe('Expected use', () => {
   });
 });
 
-describe('Error handling', () => {});
+describe('Error handling', () => {
+  it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
+    setIntersectionObserved();
+
+    const trackingData = undefined;
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when no tracking data from the event context provider is passed into hook', async () => {
+    setIntersectionObserved();
+
+    const trackingData = {
+      componentName: 'most-read',
+      campaignName: 'cps_wsoj',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
+    };
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: undefined,
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data passed into hook', async () => {
+    setIntersectionObserved();
+
+    const trackingData = {
+      foo: 'bar',
+    };
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and not send event to ATI when unexpected data type passed into hook', async () => {
+    setIntersectionObserved();
+
+    const trackingData = ['unexpected data type'];
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+});
