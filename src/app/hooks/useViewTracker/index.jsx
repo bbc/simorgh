@@ -15,7 +15,7 @@ const useViewTracker = (props = {}) => {
   const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
   const format = pathOr('', ['format'], props);
-  const url = path(['url'], props);
+  const url = pathOr('', ['url'], props);
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
