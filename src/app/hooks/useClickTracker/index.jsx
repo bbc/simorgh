@@ -1,21 +1,22 @@
 /* eslint-disable no-console */
-import { useCallback, useState } from 'react';
+import { useContext, useCallback, useState } from 'react';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 
 const EVENT_TYPE = 'click';
 
 const useClickTrackingHandler = ({
-  service,
-  componentName,
   campaignName,
-  format = '',
+  componentName,
   href,
-  pageIdentifier,
-  platform,
-  statsDestination,
+  format = '',
+  // url = '',
 } = {}) => {
   const [clicked, setClicked] = useState(false);
+  const { pageIdentifier, platform, service, statsDestination } = useContext(
+    EventTrackingContext,
+  );
 
   const changeUserLocationIfDefined = useCallback(url => {
     if (url) {
@@ -23,50 +24,64 @@ const useClickTrackingHandler = ({
     }
   }, []);
 
-  return event => {
-    if (!clicked) {
-      event.stopPropagation();
-      event.preventDefault();
+  return useCallback(
+    event => {
+      if (!clicked) {
+        event.stopPropagation();
+        event.preventDefault();
 
-      if (isValidClick(event)) {
-        setClicked(true);
-        const nextPageUrl = href || event.target.href;
+        if (isValidClick(event)) {
+          setClicked(true);
+          const nextPageUrl = href || event.target.href;
 
-        const shouldSendEvent = [
-          campaignName,
-          componentName,
-          pageIdentifier,
-          platform,
-          service,
-          statsDestination,
-        ].every(Boolean);
-
-        if (shouldSendEvent) {
-          sendEventBeacon({
-            type: EVENT_TYPE,
+          const shouldSendEvent = [
             campaignName,
             componentName,
-            format,
             pageIdentifier,
             platform,
             service,
             statsDestination,
-            url: window.location.href,
-          })
-            .catch(error => {
-              console.error(
-                `Error sending ATI click tracking request: ${error.message}`,
-              );
+          ].every(Boolean);
+
+          if (shouldSendEvent) {
+            sendEventBeacon({
+              type: EVENT_TYPE,
+              campaignName,
+              componentName,
+              format,
+              pageIdentifier,
+              platform,
+              service,
+              statsDestination,
+              url: window.location.href,
             })
-            .finally(() => {
-              changeUserLocationIfDefined(nextPageUrl);
-            });
-        } else {
-          changeUserLocationIfDefined(nextPageUrl);
+              .catch(error => {
+                console.error(
+                  `Error sending ATI click tracking request: ${error.message}`,
+                );
+              })
+              .finally(() => {
+                changeUserLocationIfDefined(nextPageUrl);
+              });
+          } else {
+            changeUserLocationIfDefined(nextPageUrl);
+          }
         }
       }
-    }
-  };
+    },
+    [
+      campaignName,
+      componentName,
+      changeUserLocationIfDefined,
+      clicked,
+      format,
+      href,
+      pageIdentifier,
+      platform,
+      service,
+      statsDestination,
+    ],
+  );
 };
 
 export default useClickTrackingHandler;

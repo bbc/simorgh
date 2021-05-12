@@ -1,45 +1,94 @@
 import React, { useContext } from 'react';
+import { arrayOf, shape, number } from 'prop-types';
+import { pathOr } from 'ramda';
 
+import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { buildATIClickParams } from '#containers/ATIAnalytics/params';
-import CpsTopStories from './CpsTopStories';
-import EventTrackingContext from './EventTrackingContext';
+import useViewTracker from '#hooks/useViewTracker';
+import CpsOnwardJourney from '../CpsOnwardJourney';
+import StoryPromo from '../StoryPromo';
 
-const CpsTopStoriesWithEventTrackingContext = ({ pageData, ...rest }) => {
-  let pageIdentifier;
-  let platform;
-  let statsDestination;
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
-  const { service } = serviceContext;
+const EVENT_TRACKING_DATA = {
+  campaignName: 'sty', // TODO make this dynamic
+  componentName: 'topStories',
+};
 
-  try {
-    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
-      pageData,
-      requestContext,
-      serviceContext,
-    ));
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
-    );
-  }
+const isFirstItem = index => index === 0;
+
+const PromoComponent = ({ promo, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+
   return (
-    <EventTrackingContext.Provider
-      value={{
-        componentName: 'topStories',
-        campaignName: 'sty',
-        service,
-        pageIdentifier,
-        platform,
-        statsDestination,
-      }}
-    >
-      <CpsTopStories {...rest} />
-    </EventTrackingContext.Provider>
+    <StoryPromo
+      item={promo}
+      dir={dir}
+      displayImage={false}
+      displaySummary={false}
+      serviceDatetimeLocale={serviceDatetimeLocale}
+    />
   );
 };
 
-export default CpsTopStoriesWithEventTrackingContext;
+const PromoListComponent = ({ promoItems, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
+
+  return (
+    <StoryPromoUl>
+      {promoItems.map((item, index) => (
+        <StoryPromoLi
+          key={item.id || item.uri}
+          ref={isFirstItem(index) ? viewRef : null}
+        >
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displayImage={false}
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            trackingData={EVENT_TRACKING_DATA}
+          />
+        </StoryPromoLi>
+      ))}
+    </StoryPromoUl>
+  );
+};
+
+const TopStories = ({ content, parentColumns }) => {
+  const { translations } = useContext(ServiceContext);
+  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
+
+  return (
+    <div>
+      <CpsOnwardJourney
+        labelId="top-stories-heading"
+        title={title}
+        content={content}
+        parentColumns={parentColumns}
+        promoComponent={PromoComponent}
+        promoListComponent={PromoListComponent}
+        columnType="secondary"
+      />
+    </div>
+  );
+};
+
+TopStories.propTypes = {
+  content: arrayOf(shape(storyItem)),
+  parentColumns: shape({
+    group0: number,
+    group1: number,
+    group2: number,
+    group3: number,
+    group4: number,
+    group5: number,
+  }),
+};
+
+TopStories.defaultProps = {
+  content: [],
+  parentColumns: null,
+};
+
+export default TopStories;

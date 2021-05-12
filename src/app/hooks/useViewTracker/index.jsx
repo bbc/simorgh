@@ -1,28 +1,30 @@
-import { useEffect, useState, useRef } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 // Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 
 const useViewTracker = ({
-  service,
-  componentName,
   campaignName,
+  componentName,
   format = '',
   url = '',
-  pageIdentifier,
-  platform,
-  statsDestination,
 } = {}) => {
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
+  const { pageIdentifier, platform, service, statsDestination } = useContext(
+    EventTrackingContext,
+  );
+
+  debugger;
 
   useEffect(() => {
     if (inView && !timer.current) {
@@ -67,8 +69,8 @@ const useViewTracker = ({
     platform,
     service,
     statsDestination,
-    viewSent,
     url,
+    viewSent,
   ]);
 
   return ref;
