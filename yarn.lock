@@ -1779,10 +1779,10 @@
     "@bbc/psammead-assets" "3.1.8"
     "@bbc/psammead-styles" "7.2.5"
 
-"@bbc/psammead-most-read@6.0.28":
-  version "6.0.28"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.28.tgz#4675583f2b459ec2c5cf386e3d86a02547527f18"
-  integrity sha512-mKa+I2Dv/oczpWqmbV+F4hLiVwL3q0HOTfHQZGJEUr/U2quWiMzBTVw9o7IoBV0MFeYZXMilKdJ9f0NeiUltmQ==
+"@bbc/psammead-most-read@6.0.29":
+  version "6.0.29"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.29.tgz#350f0419a2a79360973012b86df16c2e5fef5549"
+  integrity sha512-nspdzrdZ3yB+i8vJbXqCq4KeYnCxeFUqLHM2aWugUbNMl6idKpuTlVEkYFfgsD7b90iboovOV/6qqUDqHJ2G8Q==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-grid" "3.0.19"
