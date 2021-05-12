@@ -20,18 +20,9 @@ const useClickTrackerHandler = (props = {}) => {
     EventTrackingContext,
   );
 
-  const changeUserLocationIfDefined = useCallback(url => {
-    if (url) {
-      window.location.assign(url);
-    }
-  }, []);
-
   return useCallback(
     event => {
       if (!clicked) {
-        event.stopPropagation();
-        event.preventDefault();
-
         if (isValidClick(event)) {
           setClicked(true);
           const nextPageUrl = href || event.target.href;
@@ -46,6 +37,9 @@ const useClickTrackerHandler = (props = {}) => {
           ].every(Boolean);
 
           if (shouldSendEvent) {
+            event.stopPropagation();
+            event.preventDefault();
+
             sendEventBeacon({
               type: EVENT_TYPE,
               campaignName,
@@ -57,10 +51,10 @@ const useClickTrackerHandler = (props = {}) => {
               statsDestination,
               url: window.location.href,
             }).finally(() => {
-              changeUserLocationIfDefined(nextPageUrl);
+              if (nextPageUrl) {
+                window.location.assign(nextPageUrl);
+              }
             });
-          } else {
-            changeUserLocationIfDefined(nextPageUrl);
           }
         }
       }
@@ -68,7 +62,6 @@ const useClickTrackerHandler = (props = {}) => {
     [
       campaignName,
       componentName,
-      changeUserLocationIfDefined,
       clicked,
       format,
       href,
