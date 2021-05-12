@@ -24,8 +24,6 @@ const useViewTracker = ({
     EventTrackingContext,
   );
 
-  debugger;
-
   useEffect(() => {
     if (inView && !timer.current) {
       timer.current = setTimeout(() => {
