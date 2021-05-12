@@ -209,7 +209,10 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink href={url} onClick={trackingData && handleClickTracking}>
+        <StyledLink
+          href={url}
+          onClick={trackingData ? handleClickTracking : null}
+        >
           {isLive ? (
             <LiveLabel
               service={service}
@@ -306,6 +309,12 @@ StoryPromoContainer.propTypes = {
   isRecommendation: bool,
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
+  trackingData: shape({
+    pageIdentifier: string,
+    platform: string,
+    service: string,
+    statsDestination: string,
+  }),
 };
 
 StoryPromoContainer.defaultProps = {
@@ -317,6 +326,7 @@ StoryPromoContainer.defaultProps = {
   isRecommendation: false,
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
+  trackingData: null,
 };
 
 export default StoryPromoContainer;
