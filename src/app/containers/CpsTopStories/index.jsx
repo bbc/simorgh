@@ -47,7 +47,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displayImage={false}
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
-            trackingData={EVENT_TRACKING_DATA}
+            eventTrackingData={EVENT_TRACKING_DATA}
           />
         </StoryPromoLi>
       ))}

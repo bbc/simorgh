@@ -99,7 +99,7 @@ const StoryPromoContainer = ({
   isRecommendation,
   isSingleColumnLayout,
   serviceDatetimeLocale,
-  trackingData,
+  eventTrackingData,
 }) => {
   const {
     altCalendar,
@@ -110,7 +110,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useClickTrackerHandler(trackingData);
+  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -211,7 +211,7 @@ const StoryPromoContainer = ({
       >
         <StyledLink
           href={url}
-          onClick={trackingData ? handleClickTracking : null}
+          onClick={eventTrackingData ? handleClickTracking : null}
         >
           {isLive ? (
             <LiveLabel
@@ -309,7 +309,7 @@ StoryPromoContainer.propTypes = {
   isRecommendation: bool,
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
-  trackingData: shape({
+  eventTrackingData: shape({
     pageIdentifier: string,
     platform: string,
     service: string,
@@ -326,7 +326,7 @@ StoryPromoContainer.defaultProps = {
   isRecommendation: false,
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
-  trackingData: null,
+  eventTrackingData: null,
 };
 
 export default StoryPromoContainer;
