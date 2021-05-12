@@ -8,6 +8,7 @@ import { EventTrackingContextProvider, EventTrackingContext } from '.';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import fixtureData from './fixtureData.json';
 
+// eslint-disable-next-line react/prop-types
 const Wrapper = ({ pageData, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
