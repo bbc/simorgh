@@ -67,13 +67,14 @@ describe('Error handling', () => {
     try {
       render(
         <Wrapper>
-          <TestComponent />
+          <div>children</div>
         </Wrapper>,
       );
     } catch ({ message }) {
       errorMessage = message;
     }
 
+    expect(screen.getByText('children')).toBeInTheDocument();
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
@@ -89,13 +90,14 @@ describe('Error handling', () => {
     try {
       render(
         <Wrapper pageData={['unexpected data']}>
-          <TestComponent />
+          <div>children</div>
         </Wrapper>,
       );
     } catch ({ message }) {
       errorMessage = message;
     }
 
+    expect(screen.getByText('children')).toBeInTheDocument();
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
