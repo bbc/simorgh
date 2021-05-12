@@ -68,14 +68,19 @@ describe('Error handling', () => {
     try {
       render(
         <Wrapper>
-          <div>children</div>
+          <TestComponent />
         </Wrapper>,
       );
     } catch ({ message }) {
       errorMessage = message;
     }
 
-    expect(screen.getByText('children')).toBeInTheDocument();
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent);
+
+    expect(trackingData).toEqual({
+      service: 'pidgin',
+    });
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
@@ -91,14 +96,19 @@ describe('Error handling', () => {
     try {
       render(
         <Wrapper pageData={['unexpected data']}>
-          <div>children</div>
+          <TestComponent />
         </Wrapper>,
       );
     } catch ({ message }) {
       errorMessage = message;
     }
 
-    expect(screen.getByText('children')).toBeInTheDocument();
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent);
+
+    expect(trackingData).toEqual({
+      service: 'pidgin',
+    });
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
