@@ -18,7 +18,6 @@ jest.mock('react-intersection-observer');
 
 beforeEach(() => {
   jest.useFakeTimers();
-  console.error = jest.fn();
 });
 
 afterEach(() => {
