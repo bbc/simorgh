@@ -6,7 +6,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import useClickTrackingHandler from '.';
+import useClickTrackerHandler from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -55,7 +55,7 @@ const wrapper = ({ children }) => (
 );
 
 const TestComponent = ({ hookProps }) => {
-  const handleClick = useClickTrackingHandler(hookProps);
+  const handleClick = useClickTrackerHandler(hookProps);
 
   return (
     <div data-testid="test-component" onClick={handleClick}>
@@ -80,7 +80,7 @@ afterEach(() => {
 
 describe('Click tracking', () => {
   it('should return a function', () => {
-    const { result } = renderHook(() => useClickTrackingHandler(defaultProps), {
+    const { result } = renderHook(() => useClickTrackerHandler(defaultProps), {
       wrapper,
     });
 
@@ -166,7 +166,7 @@ describe('Click tracking', () => {
     };
 
     const TestComponentContainer = () => {
-      const handleClick = useClickTrackingHandler(parentHookProps);
+      const handleClick = useClickTrackerHandler(parentHookProps);
 
       return (
         <WithContexts pageData={pidginData}>

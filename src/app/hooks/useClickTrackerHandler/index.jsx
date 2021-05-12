@@ -9,7 +9,7 @@ import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 
 const EVENT_TYPE = 'click';
 
-const useClickTrackingHandler = (props = {}) => {
+const useClickTrackerHandler = (props = {}) => {
   const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
   const href = path(['href'], props);
@@ -80,4 +80,4 @@ const useClickTrackingHandler = (props = {}) => {
   );
 };
 
-export default useClickTrackingHandler;
+export default useClickTrackerHandler;

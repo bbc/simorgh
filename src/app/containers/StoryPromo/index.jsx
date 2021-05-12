@@ -27,7 +27,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import useClickTracker from '#hooks/useClickTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
@@ -110,7 +110,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useClickTracker(trackingData);
+  const handleClickTracking = useClickTrackerHandler(trackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
