@@ -4,12 +4,19 @@ import { render, screen } from '@testing-library/react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider, EventTrackingContext } from '.';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import fixtureData from './fixtureData.json';
 
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
-const Wrapper = ({ pageData, children }) => (
+const Wrapper = ({ pageData, children, toggles = defaultToggles }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -18,9 +25,11 @@ const Wrapper = ({ pageData, children }) => (
     pathname="/pidgin/tori-51745682"
   >
     <ServiceContextProvider service="pidgin">
-      <EventTrackingContextProvider pageData={pageData}>
-        {children}
-      </EventTrackingContextProvider>
+      <ToggleContextProvider toggles={toggles}>
+        <EventTrackingContextProvider pageData={pageData}>
+          {children}
+        </EventTrackingContextProvider>
+      </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -57,6 +66,25 @@ describe('Expected use', () => {
       platform: 'canonical',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
+  });
+
+  it('should provide an empty object if the eventTracking toggle is disabled', () => {
+    const eventTrackingToggle = {
+      eventTracking: {
+        enabled: false,
+      },
+    };
+
+    render(
+      <Wrapper pageData={fixtureData} toggles={eventTrackingToggle}>
+        <TestComponent />
+      </Wrapper>,
+    );
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent);
+
+    expect(trackingData).toEqual({});
   });
 });
 
