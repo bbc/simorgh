@@ -154,7 +154,7 @@ describe('Expected use', () => {
     });
   });
 
-  it('should send not event to ATI when eventTracking toggle is disabled', async () => {
+  it('should not send event to ATI when eventTracking toggle is disabled', async () => {
     setIntersectionNotObserved();
 
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
