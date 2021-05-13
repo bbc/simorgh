@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
@@ -14,7 +13,7 @@ const useClickTrackerHandler = (props = {}) => {
   const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
   const href = path(['href'], props);
-  const format = pathOr('', ['format'], props);
+  const format = path(['format'], props);
 
   const [clicked, setClicked] = useState(false);
   const { pageIdentifier, platform, statsDestination } = useContext(

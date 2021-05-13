@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import { useInView } from 'react-intersection-observer';
 // Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
@@ -15,8 +14,8 @@ const VIEWED_DURATION_MS = 1000;
 const useViewTracker = (props = {}) => {
   const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
-  const format = pathOr('', ['format'], props);
-  const url = pathOr('', ['url'], props);
+  const format = path(['format'], props);
+  const url = path(['url'], props);
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
   const [ref, inView] = useInView({
