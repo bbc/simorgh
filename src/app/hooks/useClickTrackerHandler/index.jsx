@@ -49,7 +49,6 @@ const useClickTrackerHandler = (props = {}) => {
             platform,
             service,
             statsDestination,
-            url: window.location.href,
           }).finally(() => {
             if (nextPageUrl) {
               window.location.assign(nextPageUrl);
