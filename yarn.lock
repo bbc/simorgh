@@ -3246,7 +3246,7 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^7.28.1"
 
-"@testing-library/user-event@^13.1.8":
+"@testing-library/user-event@13.1.8":
   version "13.1.8"
   resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.1.8.tgz#9cbf342b88d837ee188f9f9f4df6d1beaaf179c2"
   integrity sha512-M04HgOlJvxILf5xyrkJaEQfFOtcvhy3usLldQIEg9zgFIYQofSmFGVfFlS7BWowqlBGLrItwGMlPXCoBgoHSiw==
@@ -6162,7 +6162,7 @@ cypress-multi-reporters@1.5.0:
     debug "^4.1.1"
     lodash "^4.17.15"
 
-cypress-terminal-report@^3.1.1:
+cypress-terminal-report@3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/cypress-terminal-report/-/cypress-terminal-report-3.1.1.tgz#c2d9b3cc02a2ee11ca57570f260502739c22646f"
   integrity sha512-1Zxu0oCBRtnah+M5qNrxIeQQkxH6uJtlVgaaXJTVseMRG18SKODYOzlgWeBTVVPqCymQ8y+NAehQ+zjZhfrRSQ==
