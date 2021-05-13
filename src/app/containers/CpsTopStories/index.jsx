@@ -14,8 +14,6 @@ const EVENT_TRACKING_DATA = {
   componentName: 'top-stories',
 };
 
-const isFirstItem = index => index === 0;
-
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
 
@@ -36,11 +34,8 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   return (
     <StoryPromoUl>
-      {promoItems.map((item, index) => (
-        <StoryPromoLi
-          key={item.id || item.uri}
-          ref={isFirstItem(index) ? viewRef : null}
-        >
+      {promoItems.map(item => (
+        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
           <StoryPromo
             item={item}
             dir={dir}
