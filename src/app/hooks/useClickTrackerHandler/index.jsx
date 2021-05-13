@@ -40,20 +40,22 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          sendEventBeacon({
-            type: EVENT_TYPE,
-            campaignName,
-            componentName,
-            format,
-            pageIdentifier,
-            platform,
-            service,
-            statsDestination,
-          }).finally(() => {
+          try {
+            sendEventBeacon({
+              type: EVENT_TYPE,
+              campaignName,
+              componentName,
+              format,
+              pageIdentifier,
+              platform,
+              service,
+              statsDestination,
+            });
+          } finally {
             if (nextPageUrl) {
               window.location.assign(nextPageUrl);
             }
-          });
+          }
         }
       }
     },
