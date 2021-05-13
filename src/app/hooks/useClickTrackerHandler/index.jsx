@@ -23,40 +23,38 @@ const useClickTrackerHandler = (props = {}) => {
 
   return useCallback(
     event => {
-      if (!clicked) {
-        if (isValidClick(event)) {
-          setClicked(true);
-          const nextPageUrl = href || event.target.href;
+      if (!clicked && isValidClick(event)) {
+        setClicked(true);
+        const nextPageUrl = href || event.target.href;
 
-          const shouldSendEvent = [
+        const shouldSendEvent = [
+          campaignName,
+          componentName,
+          pageIdentifier,
+          platform,
+          service,
+          statsDestination,
+        ].every(Boolean);
+
+        if (shouldSendEvent) {
+          event.stopPropagation();
+          event.preventDefault();
+
+          sendEventBeacon({
+            type: EVENT_TYPE,
             campaignName,
             componentName,
+            format,
             pageIdentifier,
             platform,
             service,
             statsDestination,
-          ].every(Boolean);
-
-          if (shouldSendEvent) {
-            event.stopPropagation();
-            event.preventDefault();
-
-            sendEventBeacon({
-              type: EVENT_TYPE,
-              campaignName,
-              componentName,
-              format,
-              pageIdentifier,
-              platform,
-              service,
-              statsDestination,
-              url: window.location.href,
-            }).finally(() => {
-              if (nextPageUrl) {
-                window.location.assign(nextPageUrl);
-              }
-            });
-          }
+            url: window.location.href,
+          }).finally(() => {
+            if (nextPageUrl) {
+              window.location.assign(nextPageUrl);
+            }
+          });
         }
       }
     },
