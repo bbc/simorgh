@@ -1,5 +1,7 @@
 import React, { createContext, useContext } from 'react';
+import { node } from 'prop-types';
 
+import { pageDataPropType } from '#models/propTypes/data';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { buildATIClickParams } from '#containers/ATIAnalytics/params';
@@ -38,4 +40,9 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
       {children}
     </EventTrackingContext.Provider>
   );
+};
+
+EventTrackingContextProvider.propTypes = {
+  children: node.isRequired,
+  pageData: pageDataPropType.isRequired,
 };
