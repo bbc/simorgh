@@ -6,6 +6,7 @@ import pathOr from 'ramda/src/pathOr';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const EVENT_TYPE = 'click';
 
@@ -16,9 +17,10 @@ const useClickTrackerHandler = (props = {}) => {
   const format = pathOr('', ['format'], props);
 
   const [clicked, setClicked] = useState(false);
-  const { pageIdentifier, platform, service, statsDestination } = useContext(
+  const { pageIdentifier, platform, statsDestination } = useContext(
     EventTrackingContext,
   );
+  const { service } = useContext(ServiceContext);
 
   return useCallback(
     event => {

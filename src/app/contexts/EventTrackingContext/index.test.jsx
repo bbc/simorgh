@@ -55,7 +55,6 @@ describe('Expected use', () => {
     expect(trackingData).toEqual({
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
-      service: 'pidgin',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
   });
@@ -78,9 +77,7 @@ describe('Error handling', () => {
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent);
 
-    expect(trackingData).toEqual({
-      service: 'pidgin',
-    });
+    expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
@@ -106,9 +103,7 @@ describe('Error handling', () => {
     const testEl = screen.getByTestId('test-component');
     const trackingData = JSON.parse(testEl.textContent);
 
-    expect(trackingData).toEqual({
-      service: 'pidgin',
-    });
+    expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(

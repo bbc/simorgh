@@ -7,6 +7,7 @@ import 'intersection-observer';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
@@ -21,9 +22,10 @@ const useViewTracker = (props = {}) => {
   const [ref, inView] = useInView({
     threshold: 0.5,
   });
-  const { pageIdentifier, platform, service, statsDestination } = useContext(
+  const { pageIdentifier, platform, statsDestination } = useContext(
     EventTrackingContext,
   );
+  const { service } = useContext(ServiceContext);
 
   useEffect(() => {
     if (inView && !timer.current) {

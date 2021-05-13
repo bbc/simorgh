@@ -13,7 +13,6 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
 
   const requestContext = useContext(RequestContext);
   const serviceContext = useContext(ServiceContext);
-  const { service } = serviceContext;
 
   try {
     ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
@@ -31,7 +30,6 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   const trackingData = {
     pageIdentifier,
     platform,
-    service,
     statsDestination,
   };
 
