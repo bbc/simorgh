@@ -27,7 +27,6 @@ const useClickTrackerHandler = (props = {}) => {
     event => {
       if (eventTrackingIsEnabled && !clicked && isValidClick(event)) {
         setClicked(true);
-        const nextPageUrl = href || event.target.href;
 
         const shouldSendEvent = [
           campaignName,
@@ -39,6 +38,8 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
+          const nextPageUrl = href || event.target.href;
+
           event.stopPropagation();
           event.preventDefault();
 

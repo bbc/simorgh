@@ -135,6 +135,25 @@ describe('Click tracking', () => {
     });
   });
 
+  it('should not send a tracking request on click if the toggle is disabled', () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const disabledToggle = {
+      eventTracking: {
+        enabled: false,
+      },
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={disabledToggle}>
+        <TestComponent hookProps={defaultProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(spyFetch).not.toHaveBeenCalled();
+  });
+
   it('should send tracking request on click of child element (button)', async () => {
     const { getByText } = render(
       <WithContexts pageData={pidginData}>
