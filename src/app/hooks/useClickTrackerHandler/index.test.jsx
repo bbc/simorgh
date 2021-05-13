@@ -10,7 +10,8 @@ import useClickTrackerHandler from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { EventTrackingContextProvider } from '#app/contexts/EventTrackingContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const { location } = window;
@@ -34,7 +35,13 @@ const defaultProps = {
   format: 'CHD=promo::2',
 };
 
-const WithContexts = ({ pageData, children }) => (
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
+
+const WithContexts = ({ pageData, children, toggles = defaultToggles }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -43,9 +50,11 @@ const WithContexts = ({ pageData, children }) => (
     pathname="/pidgin/tori-51745682"
   >
     <ServiceContextProvider service="pidgin">
-      <EventTrackingContextProvider pageData={pageData}>
-        {children}
-      </EventTrackingContextProvider>
+      <ToggleContextProvider toggles={toggles}>
+        <EventTrackingContextProvider pageData={pageData}>
+          {children}
+        </EventTrackingContextProvider>
+      </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -169,15 +178,17 @@ describe('Click tracking', () => {
       const handleClick = useClickTrackerHandler(parentHookProps);
 
       return (
-        <WithContexts pageData={pidginData}>
-          <div onClick={handleClick}>
-            <TestComponent hookProps={defaultProps} />
-          </div>
-        </WithContexts>
+        <div onClick={handleClick}>
+          <TestComponent hookProps={defaultProps} />
+        </div>
       );
     };
 
-    const { getByText } = render(<TestComponentContainer />);
+    const { getByText } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponentContainer />
+      </WithContexts>,
+    );
 
     act(() => userEvent.click(getByText('Button')));
 

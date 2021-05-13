@@ -6,6 +6,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '#hooks/useToggle';
 
 const EVENT_TYPE = 'click';
 
@@ -15,6 +16,7 @@ const useClickTrackerHandler = (props = {}) => {
   const href = path(['href'], props);
   const format = path(['format'], props);
 
+  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [clicked, setClicked] = useState(false);
   const { pageIdentifier, platform, statsDestination } = useContext(
     EventTrackingContext,
@@ -23,7 +25,7 @@ const useClickTrackerHandler = (props = {}) => {
 
   return useCallback(
     event => {
-      if (!clicked && isValidClick(event)) {
+      if (eventTrackingIsEnabled && !clicked && isValidClick(event)) {
         setClicked(true);
         const nextPageUrl = href || event.target.href;
 
