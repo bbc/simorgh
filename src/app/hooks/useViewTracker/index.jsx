@@ -7,6 +7,7 @@ import 'intersection-observer';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '../useToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
@@ -18,8 +19,10 @@ const useViewTracker = (props = {}) => {
   const url = path(['url'], props);
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
+  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [ref, inView] = useInView({
     threshold: 0.5,
+    skip: !eventTrackingIsEnabled,
   });
   const { pageIdentifier, platform, statsDestination } = useContext(
     EventTrackingContext,
@@ -27,7 +30,7 @@ const useViewTracker = (props = {}) => {
   const { service } = useContext(ServiceContext);
 
   useEffect(() => {
-    if (inView && !timer.current) {
+    if (eventTrackingIsEnabled && inView && !timer.current) {
       timer.current = setTimeout(() => {
         const shouldSendEvent = [
           !viewSent,
@@ -63,6 +66,7 @@ const useViewTracker = (props = {}) => {
   }, [
     campaignName,
     componentName,
+    eventTrackingIsEnabled,
     format,
     inView,
     pageIdentifier,

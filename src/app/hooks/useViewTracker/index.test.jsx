@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useViewTracker from '.';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -45,7 +46,13 @@ const urlToObject = url => {
   };
 };
 
-const wrapper = ({ pageData, children }) => (
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
+
+const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -54,9 +61,11 @@ const wrapper = ({ pageData, children }) => (
     pathname="/pidgin/tori-51745682"
   >
     <ServiceContextProvider service="pidgin">
-      <EventTrackingContextProvider pageData={pageData}>
-        {children}
-      </EventTrackingContextProvider>
+      <ToggleContextProvider toggles={toggles}>
+        <EventTrackingContextProvider pageData={pageData}>
+          {children}
+        </EventTrackingContextProvider>
+      </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -90,6 +99,22 @@ describe('Expected use', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
+  it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', () => {
+    renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
+      },
+    });
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+  });
+
   it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
     setIntersectionNotObserved();
 
@@ -105,7 +130,7 @@ describe('Expected use', () => {
 
     act(() => jest.advanceTimersByTime(1100));
 
-    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: false });
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
@@ -127,6 +152,30 @@ describe('Expected use', () => {
         type: 'AT',
       },
     });
+  });
+
+  it('should send not event to ATI when eventTracking toggle is disabled', async () => {
+    setIntersectionNotObserved();
+
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
+      },
+    });
+
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('should not send event to ATI when element is in view for less than 1 second', async () => {
@@ -180,7 +229,7 @@ describe('Expected use', () => {
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
-    expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
+    expect(viewEventUrl).toMatch('https://logws1363.ati-host.net');
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 });
@@ -256,6 +305,11 @@ describe('Error handling', () => {
       wrapper,
       initialProps: {
         pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
       },
     });
 
