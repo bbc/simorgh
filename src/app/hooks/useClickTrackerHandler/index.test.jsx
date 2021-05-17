@@ -29,10 +29,8 @@ const urlToObject = url => {
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 const defaultProps = {
-  pageData: pidginData,
   componentName: 'brand',
   campaignName: 'cps_wsoj',
-  format: 'CHD=promo::2',
 };
 
 const defaultToggles = {
@@ -67,7 +65,10 @@ const TestComponent = ({ hookProps }) => {
   const handleClick = useClickTrackerHandler(hookProps);
 
   return (
-    <div data-testid="test-component" onClick={handleClick}>
+    <div
+      data-testid="test-component"
+      onClick={handleClick({ format: 'CHD=promo::2' })}
+    >
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
     </div>
@@ -190,14 +191,13 @@ describe('Click tracking', () => {
     const parentHookProps = {
       componentName: 'header',
       campaignName: 'cps_wsoj',
-      format: 'CHD=promo::1',
     };
 
     const TestComponentContainer = () => {
       const handleClick = useClickTrackerHandler(parentHookProps);
 
       return (
-        <div onClick={handleClick}>
+        <div onClick={handleClick({ format: 'CHD=promo::1' })}>
           <TestComponent hookProps={defaultProps} />
         </div>
       );

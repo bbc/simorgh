@@ -13,8 +13,6 @@ const EVENT_TYPE = 'click';
 const useClickTrackerHandler = (props = {}) => {
   const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
-  const href = path(['href'], props);
-  const format = path(['format'], props);
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [clicked, setClicked] = useState(false);
@@ -24,7 +22,10 @@ const useClickTrackerHandler = (props = {}) => {
   const { service } = useContext(ServiceContext);
 
   return useCallback(
-    event => {
+    (instanceProps = {}) => event => {
+      const href = path(['href'], instanceProps);
+      const format = path(['format'], instanceProps);
+
       if (eventTrackingIsEnabled && !clicked && isValidClick(event)) {
         setClicked(true);
 
@@ -63,11 +64,10 @@ const useClickTrackerHandler = (props = {}) => {
       }
     },
     [
+      eventTrackingIsEnabled,
+      clicked,
       campaignName,
       componentName,
-      clicked,
-      format,
-      href,
       pageIdentifier,
       platform,
       service,
