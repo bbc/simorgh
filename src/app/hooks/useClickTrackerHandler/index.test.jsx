@@ -61,13 +61,13 @@ const wrapper = ({ children }) => (
   <WithContexts pageData={pidginData}>{children}</WithContexts>
 );
 
-const TestComponent = ({ hookProps }) => {
+const TestComponent = ({ hookProps, href }) => {
   const handleClick = useClickTrackerHandler(hookProps);
 
   return (
     <div
       data-testid="test-component"
-      onClick={handleClick({ format: 'CHD=promo::2' })}
+      onClick={handleClick({ href, format: 'CHD=promo::2' })}
     >
       <a href="https://bbc.com/pidgin">Link</a>
       <button type="button">Button</button>
@@ -273,6 +273,22 @@ describe('Click tracking', () => {
 
     expect(global.fetch).toHaveBeenCalledTimes(0);
   });
+
+  it('should send user to the specified href when click target is non-navigational', async () => {
+    const url = 'https://bbc.com/sport';
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={defaultProps} href={url} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    await waitFor(() => {
+      expect(window.location.assign).toHaveBeenCalledTimes(1);
+      expect(window.location.assign).toHaveBeenCalledWith(url);
+    });
+  });
 });
 
 describe('Error handling', () => {
@@ -292,7 +308,7 @@ describe('Error handling', () => {
   it('should not throw error and not send event to ATI when no pageData is provided from context providers', async () => {
     const { container, getByText } = render(
       <WithContexts pageData={undefined}>
-        <TestComponent hookProps={{ ...defaultProps, pageData: {} }} />
+        <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
