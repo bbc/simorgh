@@ -211,7 +211,11 @@ const StoryPromoContainer = ({
       >
         <StyledLink
           href={url}
-          onClick={eventTrackingData ? handleClickTracking : null}
+          onClick={
+            eventTrackingData
+              ? handleClickTracking({ href: url, format: 'CHD::promo:2' })
+              : null
+          }
         >
           {isLive ? (
             <LiveLabel
