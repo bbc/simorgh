@@ -105,7 +105,7 @@ describe('Click tracking', () => {
       </WithContexts>,
     );
 
-    expect(spyFetch).toHaveBeenCalledTimes(0);
+    expect(spyFetch).not.toHaveBeenCalled();
 
     act(() => userEvent.click(getByTestId('test-component')));
 
@@ -271,7 +271,7 @@ describe('Click tracking', () => {
       fireEvent.contextMenu(getByText('Button'));
     });
 
-    expect(global.fetch).toHaveBeenCalledTimes(0);
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('should send user to the specified href when click target is non-navigational', async () => {
