@@ -42,7 +42,6 @@ const Promo = () => {
    */
   const ref = useViewTracker({
     componentName: 'promo',
-    campaignName: 'cool-promo',
   });
 
   return (
@@ -61,7 +60,6 @@ const TopStories = () => {
    */
   const ref = useViewTracker({
     componentName: 'top-stories',
-    campaignName: 'article-sty',
   });
   const topStories = [
     {
@@ -119,8 +117,7 @@ const Recommendations = () => {
   ];
   const Recommendation = ({ title, link }) => {
     const ref = useViewTracker({
-      componentName: 'recomm',
-      campaignName: 'cps_wsoj',
+      componentName: 'recommendations',
     });
 
     return (
