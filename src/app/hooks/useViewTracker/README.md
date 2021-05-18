@@ -41,7 +41,7 @@ const Promo = () => {
    * In this example, one view event is triggered when the component is viewed.
    */
   const ref = useViewTracker({
-    campaignName: 'cool-promo',
+    componentName: 'promo',
   });
 
   return (
@@ -59,7 +59,7 @@ const TopStories = () => {
    * one view event is logged even if all 3 story items are viewed.
    */
   const ref = useViewTracker({
-    campaignName: 'article-sty',
+    componentName: 'top-stories',
   });
   const topStories = [
     {
@@ -117,7 +117,7 @@ const Recommendations = () => {
   ];
   const Recommendation = ({ title, link }) => {
     const ref = useViewTracker({
-      campaignName: 'cps_wsoj',
+      componentName: 'recomm',
     });
 
     return (
