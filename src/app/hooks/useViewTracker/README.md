@@ -14,12 +14,11 @@ A view event is triggered when:
 
 ### Props
 
-| Argument      | Type   | Required | Example                                                                                                                       |
-| ------------- | ------ | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`              |
-| campaignName  | string | yes      | The name of the campaign e.g. `cps_wsoj` typically defined by Business Analyists or Product Owners in the analytics interface |
-| format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                |
-| url           | string | no       | The url of the page e.g. `https://www.bbc.com/mundo/noticias-america-latina-56989232`                                         |
+| Argument      | Type   | Required | Example                                                                                                          |
+| ------------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title` |
+| format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                   |
+| url           | string | no       | The url of the page e.g. `https://www.bbc.com/mundo/noticias-america-latina-56989232`                            |
 
 ### Usage
 
