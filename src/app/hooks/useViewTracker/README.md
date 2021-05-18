@@ -5,12 +5,12 @@ The `useViewTracker` hook handles:
 - tracking when an element is in view
 - sending the event to ATI
 
-A view/impression event is triggered when:
+A view event is triggered when:
 
 - 50% of the element is in the viewport for more than 1 second
 - only once per element per page view
 
-`useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view/impression event that will be sent to ATI.
+`useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event that will be sent to ATI.
 
 ### Props
 
