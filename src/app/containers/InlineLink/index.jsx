@@ -21,6 +21,23 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   });
 
   const result = regexp.exec(locator);
+  const anchor = locator.split('#')[1];
+
+  if (result && anchor) {
+    const handleClick = () => {
+      if (document && anchor) {
+        document.getElementById(anchor)?.scrollIntoView();
+        document.getElementById(anchor)?.focus();
+      }
+    };
+    const path = `${result[0]}${anchor ? `#${anchor}` : ''}`;
+    return (
+      <InternalInlineLink to={path} onClick={handleClick}>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </InternalInlineLink>
+    );
+  }
+
   // if URL matches a valid route, use a react-router link
   if (result) {
     // the path is the first item in the array

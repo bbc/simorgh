@@ -4030,11 +4030,17 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/mundo/articles/ce42wzqr2mko'],
+            paths: [
+              '/mundo/articles/ce42wzqr2mko',
+              '/mundo/articles/ce4krqk1334o',
+            ],
             enabled: false,
           },
           local: {
-            paths: ['/mundo/articles/ce42wzqr2mko'],
+            paths: [
+              '/mundo/articles/ce42wzqr2mko',
+              '/mundo/articles/ce4krqk1334o',
+            ],
             enabled: false,
           },
         },
@@ -4218,6 +4224,7 @@ module.exports = () => ({
           },
           local: {
             paths: [
+              '/mundo/articles/ce4krqk1334o',
               '/mundo/articles/ce42wzqr2mko',
               '/mundo',
               '/mundo/noticias-internacional-53826365',
