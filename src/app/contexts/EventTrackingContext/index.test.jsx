@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-console */
 import React, { useContext } from 'react';
 import { render, screen } from '@testing-library/react';
@@ -16,10 +17,15 @@ const defaultToggles = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Wrapper = ({ pageData, children, toggles = defaultToggles }) => (
+const Wrapper = ({
+  children,
+  pageData = fixtureData,
+  pageType = STORY_PAGE,
+  toggles = defaultToggles,
+}) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
-    pageType={STORY_PAGE}
+    pageType={pageType}
     isAmp={false}
     service="pidgin"
     pathname="/pidgin/tori-51745682"
@@ -53,7 +59,7 @@ const TestComponent = () => {
 describe('Expected use', () => {
   it('should provide tracking data to all child component', () => {
     render(
-      <Wrapper pageData={fixtureData}>
+      <Wrapper>
         <TestComponent />
       </Wrapper>,
     );
@@ -77,7 +83,7 @@ describe('Expected use', () => {
     };
 
     render(
-      <Wrapper pageData={fixtureData} toggles={eventTrackingToggle}>
+      <Wrapper toggles={eventTrackingToggle}>
         <TestComponent />
       </Wrapper>,
     );
@@ -95,7 +101,7 @@ describe('Error handling', () => {
 
     try {
       render(
-        <Wrapper>
+        <Wrapper pageData={{}}>
           <TestComponent />
         </Wrapper>,
       );
@@ -137,6 +143,32 @@ describe('Error handling', () => {
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
         'ATI Event Tracking Error: Could not parse tracking values from page data:',
+      ),
+    );
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not provide tracking props when there is no page type campaign ID', async () => {
+    let errorMessage;
+
+    try {
+      render(
+        <Wrapper pageType="funky-page-type">
+          <TestComponent />
+        </Wrapper>,
+      );
+    } catch ({ message }) {
+      errorMessage = message;
+    }
+
+    const testEl = screen.getByTestId('test-component');
+    const trackingData = JSON.parse(testEl.textContent);
+
+    expect(trackingData).toEqual({});
+    expect(errorMessage).toBeUndefined();
+    expect(console.error).toHaveBeenCalledWith(
+      expect.stringContaining(
+        "ATI Event Tracking Error: Could not get the page type's campaign name",
       ),
     );
     expect(global.fetch).not.toHaveBeenCalled();
