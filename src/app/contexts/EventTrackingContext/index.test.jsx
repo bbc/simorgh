@@ -122,7 +122,7 @@ describe('Error handling', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error when unexpected data is passed into contect provider', async () => {
+  it('should not throw error when unexpected data is passed into context provider', async () => {
     let errorMessage;
 
     try {
