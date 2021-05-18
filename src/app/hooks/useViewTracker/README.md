@@ -10,7 +10,9 @@ A view event is triggered when:
 - 50% of the element is in the viewport for more than 1 second
 - only once per element per page view
 
-`useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event that will be sent to ATI.
+`useViewTracker` returns a ref that can be assigned to the DOM element you want to monitor for a view event. When a view event is triggered then the hook will send the event data to ATI.
+
+`useViewTracker` will only send 1 view event per hook initialisation. In other words, when visiting a page containing a component that is tracking views and a view event is logged, then it is only logged once (per page visit) no matter how many times the user scrolls the component in and out of view.
 
 ### Props
 
