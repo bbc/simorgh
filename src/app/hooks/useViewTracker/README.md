@@ -117,7 +117,7 @@ const Recommendations = () => {
   ];
   const Recommendation = ({ title, link }) => {
     const ref = useViewTracker({
-      componentName: 'recomm',
+      componentName: 'recommendations',
     });
 
     return (
