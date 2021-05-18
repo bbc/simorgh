@@ -13,7 +13,6 @@ const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 
 const useViewTracker = (props = {}) => {
-  const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
   const url = path(['url'], props);
@@ -22,11 +21,14 @@ const useViewTracker = (props = {}) => {
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [ref, inView] = useInView({
     threshold: 0.5,
-    skip: !eventTrackingIsEnabled,
+    skip: !eventTrackingIsEnabled || viewSent,
   });
-  const { pageIdentifier, platform, statsDestination } = useContext(
-    EventTrackingContext,
-  );
+  const {
+    campaignName,
+    pageIdentifier,
+    platform,
+    statsDestination,
+  } = useContext(EventTrackingContext);
   const { service } = useContext(ServiceContext);
 
   useEffect(() => {
