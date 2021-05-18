@@ -10,7 +10,6 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 
 const EVENT_TRACKING_DATA = {
-  campaignName: 'article-sty', // TODO make this dynamic
   componentName: 'top-stories',
 };
 

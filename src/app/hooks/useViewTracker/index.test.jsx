@@ -258,7 +258,6 @@ describe('Error handling', () => {
 
     const trackingData = {
       componentName: 'most-read',
-      campaignName: 'cps_wsoj',
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
