@@ -11,16 +11,18 @@ import useToggle from '#hooks/useToggle';
 const EVENT_TYPE = 'click';
 
 const useClickTrackerHandler = (props = {}) => {
-  const campaignName = path(['campaignName'], props);
   const componentName = path(['componentName'], props);
   const href = path(['href'], props);
   const format = path(['format'], props);
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [clicked, setClicked] = useState(false);
-  const { pageIdentifier, platform, statsDestination } = useContext(
-    EventTrackingContext,
-  );
+  const {
+    campaignName,
+    pageIdentifier,
+    platform,
+    statsDestination,
+  } = useContext(EventTrackingContext);
   const { service } = useContext(ServiceContext);
 
   return useCallback(

@@ -30,7 +30,6 @@ process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 const defaultProps = {
   componentName: 'brand',
-  campaignName: 'cps_wsoj',
   format: 'CHD=promo::2',
 };
 
@@ -188,7 +187,6 @@ describe('Click tracking', () => {
   it('should only track clicks on the child component if clicks are tracked on both a parent and child', async () => {
     const parentHookProps = {
       componentName: 'header',
-      campaignName: 'cps_wsoj',
     };
 
     const TestComponentContainer = () => {
