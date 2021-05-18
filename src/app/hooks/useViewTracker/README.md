@@ -102,7 +102,7 @@ const Recommendations = () => {
    * By initialising the hook INSIDE of the `recommendations` map
    * callback function and assigning each ref to each DOM element,
    * a view event is logged for each recommendation item viewed,
-   * which is 3 view events in this example.
+   * which totals 3 view events in this example.
    */
   const recommendations = [
     {
