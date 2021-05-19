@@ -73,7 +73,6 @@ const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
 describe('Expected use', () => {
   const trackingData = {
     componentName: 'most-read',
-    campaignName: 'cps_wsoj',
     format: 'CHD=promo::2',
     url: 'http://www.bbc.com/pidgin/tori-51745682',
   };
@@ -140,7 +139,7 @@ describe('Expected use', () => {
       pathname: '/',
       searchParams: {
         ati:
-          'PUB-[cps_wsoj]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
+          'PUB-[article-sty]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
