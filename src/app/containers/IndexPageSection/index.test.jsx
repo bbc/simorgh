@@ -4,6 +4,7 @@ import * as SectionLabel from '@bbc/psammead-section-label';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import IndexPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 const group = {
   type: 'responsive-top-stories',
@@ -363,36 +364,47 @@ const startsWithRadioBulletins = {
   },
 };
 
-const withServiceContext = component => (
-  <ServiceContextProvider service="news">{component}</ServiceContextProvider>
+// eslint-disable-next-line react/prop-types
+const Wrapper = ({ service = 'igbo', children }) => (
+  <ServiceContextProvider service={service}>
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: { enabled: true },
+      }}
+    >
+      {children}
+    </ToggleContextProvider>
+  </ServiceContextProvider>
 );
 
 describe('IndexPageSection Container', () => {
   describe('snapshots', () => {
     shouldMatchSnapshot(
       'should render correctly for canonical',
-      withServiceContext(<IndexPageSection group={group} sectionNumber={0} />),
+      <Wrapper service="news">
+        <IndexPageSection group={group} sectionNumber={0} />
+      </Wrapper>,
     );
 
     shouldMatchSnapshot(
       'should render correctly with a linking strapline',
-      withServiceContext(
-        <IndexPageSection group={groupWithLink} sectionNumber={2} />,
-      ),
+      <Wrapper service="news">
+        <IndexPageSection group={groupWithLink} sectionNumber={2} />
+      </Wrapper>,
     );
 
     shouldMatchSnapshot(
       'should render without a bar',
-      withServiceContext(
-        <IndexPageSection group={group} bar={false} sectionNumber={1} />,
-      ),
+      <Wrapper service="news">
+        <IndexPageSection group={group} bar={false} sectionNumber={1} />
+      </Wrapper>,
     );
 
     shouldMatchSnapshot(
       'should render with only one item',
-      withServiceContext(
-        <IndexPageSection group={hasOneItem} sectionNumber={0} />,
-      ),
+      <Wrapper service="news">
+        <IndexPageSection group={hasOneItem} sectionNumber={0} />
+      </Wrapper>,
     );
   });
 
@@ -407,9 +419,9 @@ describe('IndexPageSection Container', () => {
 
     it('should be called with true when sectionNumber === 0', () => {
       render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasOneItem} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
@@ -419,9 +431,9 @@ describe('IndexPageSection Container', () => {
 
     it('should be called with false when sectionNumber !== 0', () => {
       render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasOneItem} sectionNumber={1} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(SectionLabel.default.mock.calls[0][0].visuallyHidden).toEqual(
@@ -433,9 +445,9 @@ describe('IndexPageSection Container', () => {
   describe('assertions', () => {
     it('should render 1 section, 1 h2, 1 ul, and an li and an h3 for EACH item', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={group} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(container.getElementsByTagName('section')).toHaveLength(1);
@@ -448,9 +460,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render with a link when is a linking group', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={groupWithLink} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(
@@ -460,9 +472,9 @@ describe('IndexPageSection Container', () => {
 
     it('section should have aria-labelledby attribute referring to the id of the label element', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={group} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
       const section = container.getElementsByTagName('section')[0];
       const label = container.querySelector('span[class*=Title]');
@@ -474,9 +486,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render null when there are no items', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasNoItems} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       // container is a <div> which would contain the rendered elements...
@@ -486,9 +498,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render null when there is no strapline and is not the 1st section', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasNoStrapline} sectionNumber={1} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       // container is a <div> which would contain the rendered elements...
@@ -498,9 +510,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render when there is no strapline but is the 1st section', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasNoStrapline} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       // container is a <div> which would contain the rendered elements...
@@ -510,9 +522,9 @@ describe('IndexPageSection Container', () => {
 
     it('should not render the story promo inside a list when only one item exists', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasOneItem} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(container.getElementsByTagName('ul')).toHaveLength(0);
@@ -521,9 +533,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render text if the strapline is empty and is the 1st section ', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={group} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       // container is a <div> which would contain the rendered elements...
@@ -534,9 +546,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render empty text if the strapline is empty and is not the 1st section ', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasNoStrapline} sectionNumber={1} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       // container is a <div> which would contain the rendered elements...
@@ -547,9 +559,9 @@ describe('IndexPageSection Container', () => {
 
     it('should not lazyload the story promo image if it is a top story', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={group} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       const images = container.getElementsByTagName('img');
@@ -566,9 +578,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render useful links when the semantic group name is "Useful links"', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={usefulLinks} sectionNumber={1} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
@@ -577,9 +589,9 @@ describe('IndexPageSection Container', () => {
 
     it('should render null when there are only radio bulletins', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection group={hasOnlyRadioBulletins} sectionNumber={0} />
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(container.children).toHaveLength(0);
@@ -587,13 +599,12 @@ describe('IndexPageSection Container', () => {
 
     it('should render everything after the first non-radio bulletin', () => {
       const { container } = render(
-        <ServiceContextProvider service="igbo">
+        <Wrapper>
           <IndexPageSection
             group={startsWithRadioBulletins}
             sectionNumber={1}
           />
-          ,
-        </ServiceContextProvider>,
+        </Wrapper>,
       );
 
       expect(container.getElementsByTagName('ul')).toHaveLength(1);
