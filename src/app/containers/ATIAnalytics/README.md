@@ -4,7 +4,7 @@ This directory contains code for logging events to ATI Analytics.
 
 ## Logging Click Events
 
-There is a custom within Simorgh that handles logging click events.
+There is a custom hook within Simorgh that handles logging click events.
 
 - [useClickTrackerHandler](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useClickTrackerHandler/index.jsx) is a custom hook that returns a click event handler that you can assign to the `onClick` attribute of the DOM element you'd like to click track.
 
