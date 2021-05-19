@@ -29,7 +29,7 @@ A view event is triggered when:
 With this in mind, here are some examples of how you could setup view tracking for a component:
 
 1. Log 1 view event when a component is viewed. Refer to the `Promo` component in the example below.
-2. Log 1 view event when any of the the component's containing items are viewed. Refer to the `TopStories` component in the example below.
+2. Log 1 view event when any of the component's containing items are viewed. Refer to the `TopStories` component in the example below.
 3. Log separate view events per component item viewed. Refer to the `Recommendations` component in the example below.
 
 ```jsx
