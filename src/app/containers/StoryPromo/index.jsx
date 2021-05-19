@@ -211,7 +211,7 @@ const StoryPromoContainer = ({
       >
         <StyledLink
           href={url}
-          onClick={eventTrackingData ? handleClickTracking() : null}
+          onClick={eventTrackingData ? handleClickTracking : null}
         >
           {isLive ? (
             <LiveLabel
