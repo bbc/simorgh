@@ -119,7 +119,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -168,7 +168,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -216,7 +216,7 @@ describe('Click tracking', () => {
       pathname: '/',
       searchParams: {
         atc:
-          'PUB-[cps_wsoj]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
