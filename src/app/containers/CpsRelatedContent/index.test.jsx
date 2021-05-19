@@ -4,6 +4,7 @@ import path from 'ramda/src/path';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import CpsRelatedContent from '.';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
@@ -28,7 +29,13 @@ const renderRelatedContent = ({
         service="pidgin"
         statusCode={200}
       >
-        <CpsRelatedContent content={content} enableGridWrapper />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: true },
+          }}
+        >
+          <CpsRelatedContent content={content} enableGridWrapper />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -48,7 +55,13 @@ const renderRelatedContentNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <CpsRelatedContent content={content} enableGridWrapper />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: true },
+          }}
+        >
+          <CpsRelatedContent content={content} enableGridWrapper />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
