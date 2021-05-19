@@ -31,6 +31,7 @@ const pageTypeUrlBuilders = {
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   IDX: buildIndexPageATIUrl,
+  FIX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -60,6 +61,7 @@ const pageTypeParamBuilders = {
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   IDX: buildIndexPageATIParams,
+  FIX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
