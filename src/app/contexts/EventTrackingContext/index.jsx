@@ -31,7 +31,7 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   const serviceContext = useContext(ServiceContext);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
 
-  if (eventTrackingIsEnabled) {
+  if (pageData && eventTrackingIsEnabled) {
     try {
       ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
         pageData,
@@ -61,7 +61,7 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
   }[pageType];
 
-  if (!campaignName) {
+  if (!campaignName && pageData) {
     // eslint-disable-next-line no-console
     console.error(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
@@ -92,5 +92,9 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
 
 EventTrackingContextProvider.propTypes = {
   children: node.isRequired,
-  pageData: pageDataPropType.isRequired,
+  pageData: pageDataPropType,
+};
+
+EventTrackingContextProvider.defaultProps = {
+  pageData: null,
 };

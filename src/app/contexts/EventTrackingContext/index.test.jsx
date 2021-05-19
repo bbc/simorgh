@@ -96,12 +96,12 @@ describe('Expected use', () => {
 });
 
 describe('Error handling', () => {
-  it('should not throw error when no pageData is passed into context provider', async () => {
+  it('should not throw error and not log error when no pageData is passed into context provider', async () => {
     let errorMessage;
 
     try {
       render(
-        <Wrapper pageData={{}}>
+        <Wrapper pageData={null}>
           <TestComponent />
         </Wrapper>,
       );
@@ -114,11 +114,6 @@ describe('Error handling', () => {
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
