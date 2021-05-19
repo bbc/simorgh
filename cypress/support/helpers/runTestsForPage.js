@@ -48,6 +48,7 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
+
             visitPage(currentPath, pageType);
           });
 
@@ -89,6 +90,10 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
+            if (pageType === 'frontPage') {
+              // eslint-disable-next-line no-param-reassign
+              currentPath += '?site=test';
+            }
             visitPage(getAmpUrl(currentPath), pageType);
           });
 
