@@ -21,7 +21,6 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   });
 
   const result = regexp.exec(locator);
-
   // if URL matches a valid route, use a react-router link
   if (result) {
     // the path is the first item in the array
@@ -29,7 +28,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
     const anchor = locator.split('#')[1];
     const handleClick = () => {
       // if there is an anchor,
-      // scroll to the anchored element with the id and focus on it for screen readers
+      // scroll to the anchored element and focus on it (for the screen readers)
       if (anchor) {
         document.getElementById(anchor)?.scrollIntoView();
         document.getElementById(anchor)?.focus();
