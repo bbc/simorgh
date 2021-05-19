@@ -1,7 +1,11 @@
 import { isValidClick } from './clickTypes';
 
 const { navigator } = window;
-delete window.navigator;
+
+beforeAll(() => {
+  delete window.navigator;
+  window.navigator = {};
+});
 
 afterAll(() => {
   window.navigator = navigator;
