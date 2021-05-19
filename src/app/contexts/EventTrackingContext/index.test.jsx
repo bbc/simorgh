@@ -57,7 +57,7 @@ const TestComponent = () => {
 };
 
 describe('Expected use', () => {
-  it('should provide tracking data to all child component', () => {
+  it('should provide tracking data to all child components', () => {
     render(
       <Wrapper>
         <TestComponent />
