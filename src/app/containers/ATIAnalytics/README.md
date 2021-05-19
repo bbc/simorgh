@@ -12,7 +12,7 @@ You can find instructions and examples on how to set up and use this custom hook
 
 ## Logging View Events
 
-There is a custom within Simorgh that handles logging view events.
+There is a custom hook within Simorgh that handles logging view events.
 
 - [useClickTrackerHandler](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) is a custom hook used that returns a `ref` that you can assign to DOM elements you'd like to view track.
 
