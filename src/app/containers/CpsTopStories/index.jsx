@@ -73,17 +73,15 @@ const TopStories = ({ content, parentColumns }) => {
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
   return (
-    <div>
-      <CpsOnwardJourney
-        labelId="top-stories-heading"
-        title={title}
-        content={content}
-        parentColumns={parentColumns}
-        promoComponent={PromoComponent}
-        promoListComponent={PromoListComponent}
-        columnType="secondary"
-      />
-    </div>
+    <CpsOnwardJourney
+      labelId="top-stories-heading"
+      title={title}
+      content={content}
+      parentColumns={parentColumns}
+      promoComponent={PromoComponent}
+      promoListComponent={PromoListComponent}
+      columnType="secondary"
+    />
   );
 };
 
