@@ -48,7 +48,6 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
-
             visitPage(currentPath, pageType);
           });
 
