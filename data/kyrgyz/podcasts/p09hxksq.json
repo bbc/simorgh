@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_kyrgyz_radio/p09hxksq",
+    "locators": {
+      "pid": "p09hxm9r",
+      "brandPid": "p09hxksq"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_kyrgyz_radio",
+    "language": "ky",
+    "lastUpdated": 1621510713720,
+    "firstPublished": 1621344723000,
+    "lastPublished": 1621344723000,
+    "timestamp": 1621344723000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "25 жыл ободо - BBC News Кыргыз КызMATы",
+      "pageIdentifier": "kyrgyz.bbc_kyrgyz_radio.programmes.p09hxksq.page",
+      "producerId": "58",
+      "contentType": "player-episode",
+      "producer": "KYRGYZ"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": ["media"],
+    "title": "25 жыл ободо",
+    "releaseDateTimeStamp": 1621296000000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p09hxm9r",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып.",
+          "medium": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып, ал 2010-жылдагы революциянын башталышы болуп калды.",
+          "long": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып, ал 2010-жылдагы революциянын башталышы болуп калды. Би-Би-Си Кыргыз кызматы ошол окуяларга токтолот."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09hxk6g.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09hxjwp",
+            "types": ["Podcast"],
+            "duration": 499,
+            "durationISO8601": "PT8M19S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1621344660000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Революцияга түрткү болгон айылдагы демонстрация",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "25 жыл ободо"
+    },
+    "locators": {
+      "pid": "p09hxm9r",
+      "brandPid": "p09hxksq"
+    },
+    "media": {
+      "id": "p09hxm9r",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып.",
+        "medium": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып, ал 2010-жылдагы революциянын башталышы болуп калды.",
+        "long": "Алайдагы айылдардын биринде жергиликтүү тургундар нааразылык акцияга чыгып, ал 2010-жылдагы революциянын башталышы болуп калды. Би-Би-Си Кыргыз кызматы ошол окуяларга токтолот."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09hxk6g.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p09hxjwp",
+          "types": ["Podcast"],
+          "duration": 499,
+          "durationISO8601": "PT8M19S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1621344660000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "Революцияга түрткү болгон айылдагы демонстрация",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p09hxk6g.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p09hxk6g.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1621296000000,
+    "brand": {
+      "pid": "p09hxksq",
+      "title": "25 жыл ободо"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_kyrgyz_radio/p09hxm9r",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Kyrgyz",
+      "uri": "/kyrgyz",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": []
+      }
+    ]
+  }
+}
