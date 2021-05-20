@@ -148,6 +148,7 @@
     "react-router": "5.2.0",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.2.0",
+    "react-router-hash-link": "^2.4.3",
     "url-parse": "1.5.1",
     "uuid": "8.3.2",
     "winston": "3.3.3"

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { pathToRegexp } from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
@@ -10,6 +11,7 @@ import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import { articlePath } from '../../routes/utils/regex';
 
 const InternalInlineLink = InlineLink.withComponent(Link);
+const InternalInlineAnchorLink = InlineLink.withComponent(HashLink);
 
 const componentsToRender = { fragment };
 
@@ -25,20 +27,16 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   if (result) {
     // the path is the first item in the array
     const path = result[0];
-    const anchor = locator.split('#')[1];
-    const handleClick = () => {
-      // if there is an anchor,
-      // scroll to the anchored element and focus on it (for the screen readers)
-      if (anchor) {
-        document.getElementById(anchor)?.scrollIntoView();
-        document.getElementById(anchor)?.focus();
-      }
-    };
+    const { hash } = new URL(locator);
+    if (hash) {
+      return (
+        <InternalInlineAnchorLink to={{ pathname: path, hash }}>
+          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        </InternalInlineAnchorLink>
+      );
+    }
     return (
-      <InternalInlineLink
-        to={{ pathname: path, hash: anchor || null }}
-        onClick={handleClick}
-      >
+      <InternalInlineLink to={path}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );
