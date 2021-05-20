@@ -99,7 +99,11 @@ export const buildATIUrl = (data, requestContext, serviceContext) => {
   return buildUrl(data, requestContext, serviceContext);
 };
 
-export const buildATIClickParams = (data, requestContext, serviceContext) => {
+export const buildATIEventTrackingParams = (
+  data,
+  requestContext,
+  serviceContext,
+) => {
   try {
     const buildParams = createBuilderFactory(
       requestContext,

@@ -4,7 +4,7 @@ import { node } from 'prop-types';
 import { pageDataPropType } from '#models/propTypes/data';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { buildATIClickParams } from '#containers/ATIAnalytics/params';
+import { buildATIEventTrackingParams } from '#containers/ATIAnalytics/params';
 import useToggle from '#hooks/useToggle';
 import {
   ARTICLE_PAGE,
@@ -63,11 +63,11 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   }
 
   const campaignID = getCampaignID(requestContext.pageType);
-  const { pageIdentifier, platform, statsDestination } = buildATIClickParams(
-    pageData,
-    requestContext,
-    serviceContext,
-  );
+  const {
+    pageIdentifier,
+    platform,
+    statsDestination,
+  } = buildATIEventTrackingParams(pageData, requestContext, serviceContext);
   const trackingProps = {
     campaignID,
     pageIdentifier,

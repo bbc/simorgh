@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { buildATIUrl, buildATIClickParams } from '.';
+import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -259,9 +259,9 @@ describe('ATIAnalytics params', () => {
     });
   });
 
-  describe('buildATIClickParams', () => {
+  describe('buildATIEventTrackingParams', () => {
     it('should return the right article params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
@@ -289,7 +289,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right frontPage params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
@@ -312,7 +312,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right IDX page params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
@@ -335,7 +335,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right media params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         media,
         { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
@@ -356,7 +356,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right MAP params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
@@ -386,7 +386,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right PGL params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
@@ -415,7 +415,7 @@ describe('ATIAnalytics params', () => {
       console.error = jest.fn();
 
       const pageData = null;
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         pageData,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
