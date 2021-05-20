@@ -5,6 +5,8 @@ The `useClickTracker` hook handles:
 - Tracking when an element has been clicked
 - Sending the event to ATI
 
+`useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
+
 A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked component. Specifically the following are valid clicks:
 
 - ### General
@@ -28,9 +30,13 @@ The hook returns an event handler which can be given to a component's `onClick` 
 
 ### Usage
 
-- Log a single click event for a single component on click.
-- Log a single click event whenever one of the child elements is clicked.
-- Log separate click events for each of a number of components on click.
+Here are some examples of how you could setup click tracking for a component.
+
+⚠️ Remember to also implement [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
+
+1. Log a single click event for a single component on click.
+2. Log a single click event whenever one of the child elements is clicked.
+3. Log separate click events for each of a number of components on click.
 
 ```jsx
 const Promo = () => {
@@ -38,7 +44,7 @@ const Promo = () => {
    * Example 1 - Log 1 click event when a component is clicked.
    * In this example, one click event is triggered when the component is clicked.
    */
-  const clickTrackerHandler = userClickTrackerHandler({
+  const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
     href: 'promo-link',
   });
@@ -59,7 +65,7 @@ const Promo = () => {
    * Note: If 'Button 1' is clicked and then 'Button 2' is clicked afterwards, only
    * one click event will be logged.
    */
-  const clickTrackerHandler = userClickTrackerHandler({
+  const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
   });
 
@@ -103,7 +109,7 @@ const TopStories = () => {
       ...eventTrackingData,
       href: link,
     });
-    
+
     return (
       <li onClick={clickTrackerHandler}>
         <a href={link}>{title}</a>
