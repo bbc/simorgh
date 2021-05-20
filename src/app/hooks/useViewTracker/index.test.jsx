@@ -4,16 +4,20 @@ import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useInView } from 'react-intersection-observer';
 
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useViewTracker from '.';
 
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
-import pageData from './pageData.json';
+import fixtureData from './fixtureData.json';
 
 process.env.SIMORGH_ATI_BASE_URL = 'https://logws1363.ati-host.net?';
 
 jest.mock('react-intersection-observer');
+
+const { error } = console;
 
 beforeEach(() => {
   jest.useFakeTimers();
@@ -24,6 +28,7 @@ afterEach(() => {
   jest.clearAllMocks();
   jest.runOnlyPendingTimers();
   jest.useRealTimers();
+  console.error = error;
 });
 
 const elementRef = jest.fn();
@@ -41,7 +46,13 @@ const urlToObject = url => {
   };
 };
 
-const wrapper = ({ children }) => (
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
+
+const wrapper = ({ pageData, children, toggles = defaultToggles }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     pageType={STORY_PAGE}
@@ -49,23 +60,31 @@ const wrapper = ({ children }) => (
     service="pidgin"
     pathname="/pidgin/tori-51745682"
   >
-    <ServiceContextProvider service="pidgin">{children}</ServiceContextProvider>
+    <ServiceContextProvider service="pidgin">
+      <ToggleContextProvider toggles={toggles}>
+        <EventTrackingContextProvider pageData={pageData}>
+          {children}
+        </EventTrackingContextProvider>
+      </ToggleContextProvider>
+    </ServiceContextProvider>
   </RequestContextProvider>
 );
 
 describe('Expected use', () => {
+  const trackingData = {
+    componentName: 'most-read',
+    format: 'CHD=promo::2',
+    url: 'http://www.bbc.com/pidgin/tori-51745682',
+  };
+
   it('should return a ref used for tracking', async () => {
     setIntersectionNotObserved();
 
-    const trackingData = {
-      pageData,
-      componentName: 'most-read',
-      campaignName: 'cps_wsoj',
-      format: 'CHD=promo::2',
-      url: 'http://www.bbc.com/pidgin/tori-51745682',
-    };
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     expect(result.current).toBe(elementRef);
@@ -74,31 +93,35 @@ describe('Expected use', () => {
   it('should not send event to ATI when element is not in view', async () => {
     setIntersectionNotObserved();
 
-    const trackingData = {
-      pageData,
-      componentName: 'most-read',
-      campaignName: 'cps_wsoj',
-      format: 'CHD=promo::2',
-      url: 'http://www.bbc.com/pidgin/tori-51745682',
-    };
-
     renderHook(() => useViewTracker(trackingData), { wrapper });
 
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
+  it('should skip initialising IntersectionObserver when eventTracking toggle is disabled', () => {
+    renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
+      },
+    });
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+  });
+
   it('should send event to ATI and return correct tracking url when element is 50% or more in view for more than 1 second', async () => {
     setIntersectionNotObserved();
 
-    const trackingData = {
-      pageData,
-      componentName: 'most-read',
-      campaignName: 'cps_wsoj',
-      format: 'CHD=promo::2',
-      url: 'http://www.bbc.com/pidgin/tori-51745682',
-    };
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     setIntersectionObserved();
@@ -106,7 +129,7 @@ describe('Expected use', () => {
 
     act(() => jest.advanceTimersByTime(1100));
 
-    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5 });
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: false });
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
@@ -116,7 +139,7 @@ describe('Expected use', () => {
       pathname: '/',
       searchParams: {
         ati:
-          'PUB-[cps_wsoj]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
+          'PUB-[article-sty]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -130,19 +153,38 @@ describe('Expected use', () => {
     });
   });
 
-  it('should not send event to ATI when element is in view for less than 1 second', async () => {
+  it('should not send event to ATI when eventTracking toggle is disabled', async () => {
     setIntersectionNotObserved();
-
-    const trackingData = {
-      pageData,
-      componentName: 'most-read',
-      campaignName: 'cps_wsoj',
-      format: 'CHD=promo::2',
-      url: 'http://www.bbc.com/pidgin/tori-51745682',
-    };
 
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
+      },
+    });
+
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not send event to ATI when element is in view for less than 1 second', async () => {
+    setIntersectionNotObserved();
+
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     // scroll into view
@@ -163,15 +205,11 @@ describe('Expected use', () => {
   it('should not send event to ATI more than once when element is scrolled in and out of view', async () => {
     setIntersectionNotObserved();
 
-    const trackingData = {
-      pageData,
-      componentName: 'most-read',
-      campaignName: 'cps_wsoj',
-      format: 'CHD=promo::2',
-      url: 'http://www.bbc.com/pidgin/tori-51745682',
-    };
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     // scroll element into view
@@ -190,7 +228,7 @@ describe('Expected use', () => {
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
 
-    expect(viewEventUrl).toMatch(process.env.SIMORGH_ATI_BASE_URL);
+    expect(viewEventUrl).toMatch('https://logws1363.ati-host.net');
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 });
@@ -203,42 +241,36 @@ describe('Error handling', () => {
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringMatching(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should not throw error and not send event to ATI when no pageData passed into hook', async () => {
+  it('should not throw error and not send event to ATI when no tracking data from the event context provider is passed into hook', async () => {
     setIntersectionObserved();
 
     const trackingData = {
-      pageData: {},
       componentName: 'most-read',
-      campaignName: 'cps_wsoj',
       format: 'CHD=promo::2',
       url: 'http://www.bbc.com/pidgin/tori-51745682',
     };
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: undefined,
+      },
     });
 
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -251,16 +283,14 @@ describe('Error handling', () => {
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
     });
 
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
@@ -271,16 +301,19 @@ describe('Error handling', () => {
 
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+          },
+        },
+      },
     });
 
     act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 });

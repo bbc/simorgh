@@ -3,6 +3,7 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getNumberPromoFixtures from './testHelpers';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
@@ -19,7 +20,13 @@ const getRow = (Type, service, dir, number) => (
       isAmp={false}
       service={service}
     >
-      <Type dir={dir} stories={getNumberPromoFixtures(dir, number)} />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: true },
+        }}
+      >
+        <Type dir={dir} stories={getNumberPromoFixtures(dir, number)} />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );

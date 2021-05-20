@@ -259,7 +259,7 @@ export const getAtiUrl = (data = []) => {
 export const getEventInfo = ({
   pageIdentifier = '',
   componentName = '',
-  campaignName = '',
+  campaignID = '',
   variant = '', // not a service variant - used for A/B testing
   format = '',
   detailedPlacement = '',
@@ -269,7 +269,7 @@ export const getEventInfo = ({
   const generalPlacement = pageIdentifier;
   const creation = componentName;
 
-  return `PUB-[${campaignName}]-[${creation}]-[${variant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
+  return `PUB-[${campaignID}]-[${creation}]-[${variant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
 };
 
 export const getThingAttributes = (attribute, articleData) => {

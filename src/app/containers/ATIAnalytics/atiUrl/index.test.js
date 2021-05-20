@@ -132,12 +132,12 @@ describe('buildATIEventTrackUrl', () => {
         statsDestination: 'statsDestination',
         componentName: 'component',
         type: 'type',
-        campaignName: 'campaignName',
+        campaignID: 'campaignID',
         format: 'format',
         url: 'url',
       }),
     ).toMatchInlineSnapshot(
-      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignName]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
+      `"http://foobar.com?idclient=getAtUserId&s=getDestination&p=pageIdentifier&r=getScreenInfo&re=getBrowserViewPort&hl=getCurrentTime&lng=getDeviceLanguage&atc=PUB-[campaignID]-[component]-[]-[format]-[pageIdentifier]-[]-[]-[url]&type=AT"`,
     );
   });
 });

@@ -6,6 +6,7 @@ import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -55,7 +56,15 @@ const WrappedStoryPromo = ({ service, platform, ...props }) => (
       statusCode={200}
       pathname="/pathname"
     >
-      <StoryPromoContainer {...props} />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+        }}
+      >
+        <StoryPromoContainer {...props} />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );
