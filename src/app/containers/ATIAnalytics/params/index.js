@@ -31,6 +31,7 @@ const pageTypeUrlBuilders = {
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
   IDX: buildIndexPageATIUrl,
+  FIX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -60,6 +61,7 @@ const pageTypeParamBuilders = {
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
   IDX: buildIndexPageATIParams,
+  FIX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
@@ -97,13 +99,26 @@ export const buildATIUrl = (data, requestContext, serviceContext) => {
   return buildUrl(data, requestContext, serviceContext);
 };
 
-export const buildATIClickParams = (data, requestContext, serviceContext) => {
-  const buildParams = createBuilderFactory(
-    requestContext,
-    pageTypeParamBuilders,
-  );
+export const buildATIEventTrackingParams = (
+  data,
+  requestContext,
+  serviceContext,
+) => {
+  try {
+    const buildParams = createBuilderFactory(
+      requestContext,
+      pageTypeParamBuilders,
+    );
 
-  return buildParams(data, requestContext, serviceContext);
+    return buildParams(data, requestContext, serviceContext);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
+
+    return {};
+  }
 };
 
 export default buildATIUrl;

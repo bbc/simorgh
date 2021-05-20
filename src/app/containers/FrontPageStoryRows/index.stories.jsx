@@ -4,6 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import Grid from '#app/components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';
@@ -47,9 +48,15 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
         pageType={ARTICLE_PAGE}
         service="news"
       >
-        <Grid enableGelGutters columns={topStoryColumns}>
-          <RowType dir={dir} displayImages={displayImages} />
-        </Grid>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <Grid enableGelGutters columns={topStoryColumns}>
+            <RowType dir={dir} displayImages={displayImages} />
+          </Grid>
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );
