@@ -22,32 +22,8 @@ import {
 
 export const EventTrackingContext = createContext({});
 
-export const EventTrackingContextProvider = ({ children, pageData }) => {
-  let pageIdentifier;
-  let platform;
-  let statsDestination;
-
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
-  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
-
-  if (pageData && eventTrackingIsEnabled) {
-    try {
-      ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
-        pageData,
-        requestContext,
-        serviceContext,
-      ));
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(
-        `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
-      );
-    }
-  }
-
-  const { pageType } = requestContext;
-  const campaignName = {
+const getCampaignID = pageType => {
+  const campaignID = {
     [ARTICLE_PAGE]: 'article',
     [FRONT_PAGE]: 'index-home',
     [MEDIA_PAGE]: 'player-episode-tv',
@@ -61,30 +37,49 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
     [CORRESPONDENT_STORY_PAGE]: 'article-csp',
   }[pageType];
 
-  if (!campaignName && pageData) {
+  if (!campaignID) {
     // eslint-disable-next-line no-console
     console.error(
       `ATI Event Tracking Error: Could not get the page type's campaign name`,
     );
   }
 
-  const hasRequiredProps = [
-    campaignName,
+  return campaignID;
+};
+
+const NO_TRACKING_PROPS = {};
+
+export const EventTrackingContextProvider = ({ children, pageData }) => {
+  const requestContext = useContext(RequestContext);
+  const serviceContext = useContext(ServiceContext);
+  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
+
+  if (!eventTrackingIsEnabled || !pageData) {
+    return (
+      <EventTrackingContext.Provider value={NO_TRACKING_PROPS}>
+        {children}
+      </EventTrackingContext.Provider>
+    );
+  }
+
+  const campaignID = getCampaignID(requestContext.pageType);
+  const { pageIdentifier, platform, statsDestination } = buildATIClickParams(
+    pageData,
+    requestContext,
+    serviceContext,
+  );
+  const trackingProps = {
+    campaignID,
     pageIdentifier,
     platform,
     statsDestination,
-  ].every(Boolean);
-  const trackingData = hasRequiredProps
-    ? {
-        campaignName,
-        pageIdentifier,
-        platform,
-        statsDestination,
-      }
-    : {};
+  };
+  const hasRequiredProps = Object.values(trackingProps).every(Boolean);
 
   return (
-    <EventTrackingContext.Provider value={trackingData}>
+    <EventTrackingContext.Provider
+      value={hasRequiredProps ? trackingProps : NO_TRACKING_PROPS}
+    >
       {children}
     </EventTrackingContext.Provider>
   );
