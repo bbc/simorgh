@@ -18,7 +18,7 @@ A view event is triggered when:
 
 | Argument      | Type   | Required | Example                                                                                                          |
 | ------------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
-| componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title` |
+| componentName | string | yes      | The name of the component or a url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title` |
 | format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                   |
 | url           | string | no       | The url of the page e.g. `https://www.bbc.com/mundo/noticias-america-latina-56989232`                            |
 
@@ -29,7 +29,7 @@ A view event is triggered when:
 With this in mind, here are some examples of how you could setup view tracking for a component:
 
 1. Log 1 view event when a component is viewed. Refer to the `Promo` component in the example below.
-2. Log 1 view event when any of the the component's containing items are viewed. Refer to the `TopStories` component in the example below.
+2. Log 1 view event when any of the component's containing items are viewed. Refer to the `TopStories` component in the example below.
 3. Log separate view events per component item viewed. Refer to the `Recommendations` component in the example below.
 
 ```jsx
