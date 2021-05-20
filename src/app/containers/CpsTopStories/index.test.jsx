@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
@@ -23,7 +24,15 @@ const renderTopStories = ({
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={content} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={content} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -42,7 +51,15 @@ const renderTopStoriesNull = ({
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={[]} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={[]} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -62,7 +79,15 @@ const renderTopStoriesNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={content} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={content} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );

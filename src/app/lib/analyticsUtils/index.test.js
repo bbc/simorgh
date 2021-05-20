@@ -423,7 +423,7 @@ describe('getEventInfo', () => {
   const params = {
     pageIdentifier: 'page-identifier',
     componentName: 'component-name',
-    campaignName: 'campaign-name',
+    campaignID: 'campaign-id',
     url: 'url',
     format: 'format',
     detailedPlacement: 'detailed-placement',
@@ -433,7 +433,7 @@ describe('getEventInfo', () => {
 
   it('should return url section', () => {
     expect(getEventInfo(params)).toEqual(
-      'PUB-[campaign-name]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
+      'PUB-[campaign-id]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
     );
   });
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
@@ -22,7 +23,13 @@ const renderFeaturesAnalysis = ({
         service="pidgin"
         statusCode={200}
       >
-        <FeaturesAnalysis content={content} enableGridWrapper />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: true },
+          }}
+        >
+          <FeaturesAnalysis content={content} enableGridWrapper />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -41,7 +48,13 @@ const renderFeaturesAnalysisNull = ({
         service="pidgin"
         statusCode={200}
       >
-        <FeaturesAnalysis content={[]} enableGridWrapper />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: true },
+          }}
+        >
+          <FeaturesAnalysis content={[]} enableGridWrapper />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -61,7 +74,13 @@ const renderFeaturesAnalysisNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <FeaturesAnalysis content={content} enableGridWrapper />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: true },
+          }}
+        >
+          <FeaturesAnalysis content={content} enableGridWrapper />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
