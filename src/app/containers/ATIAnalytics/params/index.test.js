@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { buildATIUrl, buildATIClickParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
@@ -407,6 +408,26 @@ describe('ATIAnalytics params', () => {
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
+    });
+
+    it('should not throw exception and return empty object if no pageData is passed in', () => {
+      const { error } = console;
+      console.error = jest.fn();
+
+      const pageData = null;
+      const params = buildATIClickParams(
+        pageData,
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        serviceContext,
+      );
+
+      expect(params).toEqual({});
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'ATI Event Tracking Error: Could not parse tracking values from page data:',
+        ),
+      );
+      console.error = error;
     });
   });
 });

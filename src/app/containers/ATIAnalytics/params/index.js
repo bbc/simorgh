@@ -100,12 +100,21 @@ export const buildATIUrl = (data, requestContext, serviceContext) => {
 };
 
 export const buildATIClickParams = (data, requestContext, serviceContext) => {
-  const buildParams = createBuilderFactory(
-    requestContext,
-    pageTypeParamBuilders,
-  );
+  try {
+    const buildParams = createBuilderFactory(
+      requestContext,
+      pageTypeParamBuilders,
+    );
 
-  return buildParams(data, requestContext, serviceContext);
+    return buildParams(data, requestContext, serviceContext);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
+
+    return {};
+  }
 };
 
 export default buildATIUrl;
