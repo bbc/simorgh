@@ -310,7 +310,6 @@ StoryPromoContainer.propTypes = {
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
   eventTrackingData: shape({
-    campaignName: string,
     componentName: string,
   }),
 };

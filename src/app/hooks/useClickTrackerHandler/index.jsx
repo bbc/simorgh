@@ -17,12 +17,9 @@ const useClickTrackerHandler = (props = {}) => {
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [clicked, setClicked] = useState(false);
-  const {
-    campaignName,
-    pageIdentifier,
-    platform,
-    statsDestination,
-  } = useContext(EventTrackingContext);
+  const { campaignID, pageIdentifier, platform, statsDestination } = useContext(
+    EventTrackingContext,
+  );
   const { service } = useContext(ServiceContext);
 
   return useCallback(
@@ -31,7 +28,7 @@ const useClickTrackerHandler = (props = {}) => {
         setClicked(true);
 
         const shouldSendEvent = [
-          campaignName,
+          campaignID,
           componentName,
           pageIdentifier,
           platform,
@@ -48,7 +45,7 @@ const useClickTrackerHandler = (props = {}) => {
           try {
             sendEventBeacon({
               type: EVENT_TYPE,
-              campaignName,
+              campaignID,
               componentName,
               format,
               pageIdentifier,
@@ -67,7 +64,7 @@ const useClickTrackerHandler = (props = {}) => {
     [
       eventTrackingIsEnabled,
       clicked,
-      campaignName,
+      campaignID,
       componentName,
       pageIdentifier,
       platform,

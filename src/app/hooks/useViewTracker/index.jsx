@@ -23,12 +23,9 @@ const useViewTracker = (props = {}) => {
     threshold: 0.5,
     skip: !eventTrackingIsEnabled || viewSent,
   });
-  const {
-    campaignName,
-    pageIdentifier,
-    platform,
-    statsDestination,
-  } = useContext(EventTrackingContext);
+  const { campaignID, pageIdentifier, platform, statsDestination } = useContext(
+    EventTrackingContext,
+  );
   const { service } = useContext(ServiceContext);
 
   useEffect(() => {
@@ -36,7 +33,7 @@ const useViewTracker = (props = {}) => {
       timer.current = setTimeout(() => {
         const shouldSendEvent = [
           !viewSent,
-          campaignName,
+          campaignID,
           componentName,
           pageIdentifier,
           platform,
@@ -46,7 +43,7 @@ const useViewTracker = (props = {}) => {
 
         if (shouldSendEvent) {
           sendEventBeacon({
-            campaignName,
+            campaignID,
             componentName,
             format,
             pageIdentifier,
@@ -66,7 +63,7 @@ const useViewTracker = (props = {}) => {
 
     return () => clearTimeout(timer.current);
   }, [
-    campaignName,
+    campaignID,
     componentName,
     eventTrackingIsEnabled,
     format,

@@ -224,7 +224,7 @@ export const buildATIEventTrackUrl = ({
   platform,
   statsDestination,
   componentName,
-  campaignName,
+  campaignID,
   format,
   type,
   url,
@@ -292,7 +292,7 @@ export const buildATIEventTrackUrl = ({
       key: eventPublisher,
       description: 'event publisher',
       value: getEventInfo({
-        campaignName,
+        campaignID,
         componentName,
         format,
         pageIdentifier,

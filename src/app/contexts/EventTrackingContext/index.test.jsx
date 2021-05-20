@@ -68,7 +68,7 @@ describe('Expected use', () => {
     const trackingData = JSON.parse(testEl.textContent);
 
     expect(trackingData).toEqual({
-      campaignName: 'article-sty',
+      campaignID: 'article-sty',
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
