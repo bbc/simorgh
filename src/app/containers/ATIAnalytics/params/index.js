@@ -15,6 +15,10 @@ import {
   buildMostReadATIUrl,
 } from './mostReadPage/buildParams';
 import {
+  buildMostWatchedATIParams,
+  buildMostWatchedATIUrl,
+} from './mostWatchedPage/buildParams';
+import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
@@ -30,6 +34,7 @@ const pageTypeUrlBuilders = {
   frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
+  mostWatched: buildMostWatchedATIUrl,
   IDX: buildIndexPageATIUrl,
   FIX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
@@ -60,6 +65,7 @@ const pageTypeParamBuilders = {
   frontPage: buildIndexPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
+  mostWatched: buildMostWatchedATIParams,
   IDX: buildIndexPageATIParams,
   FIX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
