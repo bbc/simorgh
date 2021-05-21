@@ -23,9 +23,13 @@ const useViewTracker = (props = {}) => {
     threshold: 0.5,
     skip: !eventTrackingIsEnabled || viewSent,
   });
-  const { campaignID, pageIdentifier, platform, statsDestination } = useContext(
-    EventTrackingContext,
-  );
+  const {
+    campaignID,
+    pageIdentifier,
+    platform,
+    producerId,
+    statsDestination,
+  } = useContext(EventTrackingContext);
   const { service } = useContext(ServiceContext);
 
   useEffect(() => {
@@ -37,6 +41,7 @@ const useViewTracker = (props = {}) => {
           componentName,
           pageIdentifier,
           platform,
+          producerId,
           service,
           statsDestination,
         ].every(Boolean);
@@ -48,6 +53,7 @@ const useViewTracker = (props = {}) => {
             format,
             pageIdentifier,
             platform,
+            producerId,
             service,
             statsDestination,
             type: EVENT_TYPE,
@@ -70,6 +76,7 @@ const useViewTracker = (props = {}) => {
     inView,
     pageIdentifier,
     platform,
+    producerId,
     service,
     statsDestination,
     url,
