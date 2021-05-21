@@ -71,6 +71,7 @@ describe('Expected use', () => {
       campaignID: 'article-sty',
       pageIdentifier: 'news::pidgin.news.story.51745682.page',
       platform: 'canonical',
+      producerId: '70',
       statsDestination: 'WS_NEWS_LANGUAGES_TEST',
     });
   });

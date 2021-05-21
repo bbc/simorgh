@@ -17,9 +17,13 @@ const useClickTrackerHandler = (props = {}) => {
 
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [clicked, setClicked] = useState(false);
-  const { campaignID, pageIdentifier, platform, statsDestination } = useContext(
-    EventTrackingContext,
-  );
+  const {
+    campaignID,
+    pageIdentifier,
+    platform,
+    producerId,
+    statsDestination,
+  } = useContext(EventTrackingContext);
   const { service } = useContext(ServiceContext);
 
   return useCallback(
@@ -32,6 +36,7 @@ const useClickTrackerHandler = (props = {}) => {
           componentName,
           pageIdentifier,
           platform,
+          producerId,
           service,
           statsDestination,
         ].every(Boolean);
@@ -50,6 +55,7 @@ const useClickTrackerHandler = (props = {}) => {
               format,
               pageIdentifier,
               platform,
+              producerId,
               service,
               statsDestination,
             });
