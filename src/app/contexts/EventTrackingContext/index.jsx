@@ -72,6 +72,7 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
     campaignID,
     pageIdentifier,
     platform,
+    producerId: serviceContext.atiAnalyticsProducerId,
     statsDestination,
   };
   const hasRequiredProps = Object.values(trackingProps).every(Boolean);

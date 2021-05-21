@@ -20,7 +20,6 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getProducer,
   getAtiUrl,
   getEventInfo,
   getThingAttributes,
@@ -382,12 +381,6 @@ describe('getPublishedDatetime', () => {
     const publishedTime = getPublishedDatetime('invalidDate', data);
 
     expect(publishedTime).toEqual(null);
-  });
-});
-
-describe('getProducer', () => {
-  it('should return a number', () => {
-    expect(typeof Number(getProducer('news'))).toEqual('number');
   });
 });
 
