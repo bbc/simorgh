@@ -12,7 +12,6 @@ import {
   sanitise,
   getAtiUrl,
   getEventInfo,
-  getProducer,
   getCampaignType,
   getATIMarketingString,
 } from '#lib/analyticsUtils';
@@ -220,7 +219,7 @@ export const buildATIPageTrackPath = ({
 
 export const buildATIEventTrackUrl = ({
   pageIdentifier,
-  service,
+  producerId,
   platform,
   statsDestination,
   componentName,
@@ -251,7 +250,7 @@ export const buildATIEventTrackUrl = ({
     {
       key: 's2',
       description: 'producer',
-      value: getProducer(service),
+      value: producerId,
       wrap: false,
     },
     {
