@@ -7,6 +7,15 @@ const fonts = glob
   .filter(font => font.match(/(eot|ttf|woff|woff2)/))
   .map(font => font.split('static/')[1]);
 
+const clearBrowserStorageScript = `
+<script>
+  window.localStorage.removeItem('amp-store:' + window.location.origin);
+  document.cookie = 'ckns_policy' + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  document.cookie = 'ckns_explicit' + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  document.cookie = 'ckns_privacy' + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+</script>
+`;
+
 const preloadLinks = fonts
   .map(
     font => `
@@ -21,4 +30,7 @@ const preloadLinks = fonts
   )
   .join('');
 
-fs.writeFileSync(path.resolve(__dirname, 'preview-head.html'), preloadLinks);
+fs.writeFileSync(
+  path.resolve(__dirname, 'preview-head.html'),
+  clearBrowserStorageScript.concat(preloadLinks),
+);

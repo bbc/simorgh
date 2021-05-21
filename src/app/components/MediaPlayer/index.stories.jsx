@@ -23,6 +23,7 @@ const StyledMessageContainer = styled.div`
 
 storiesOf('Components/Media Player', module)
   .addDecorator(withKnobs)
+  .addParameters({ chromatic: { diffThreshold: 0.2 } })
   .add(
     'Articles Canonical',
     () => (
