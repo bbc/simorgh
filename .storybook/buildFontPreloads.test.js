@@ -17,6 +17,7 @@ jest.mock('glob', () => ({
 }));
 
 it('should build the font preloads', () => {
+  // eslint-disable-next-line global-require
   require('./buildFontPreloads.js');
   const [[fileName, content]] = fs.writeFileSync.mock.calls;
 
