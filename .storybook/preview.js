@@ -5,6 +5,7 @@ import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import isChromatic from 'chromatic/isChromatic';
 
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
@@ -21,14 +22,18 @@ const fontPathMap = [
 addDecorator(story => (
   /* eslint-disable react/jsx-filename-extension */
   <>
-    <GlobalStyles
-      fonts={Object.values(fontFaces).map(fontFace => {
-        const fontMap =
-          fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
-          fontPathMap[0];
-        return fontFace(fontMap.path);
-      })}
-    />
+    {isChromatic() ? (
+      <GlobalStyles />
+    ) : (
+      <GlobalStyles
+        fonts={Object.values(fontFaces).map(fontFace => {
+          const fontMap =
+            fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
+            fontPathMap[0];
+          return fontFace(fontMap.path);
+        })}
+      />
+    )}
     {story()}
   </>
   /* eslint-enable react/jsx-filename-extension */
