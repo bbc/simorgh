@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import ArticlePage from './ArticlePage';
@@ -38,7 +39,7 @@ const Context = ({ service, children }) => (
         service={service}
         statusCode={200}
       >
-        {children}
+        <MemoryRouter>{children}</MemoryRouter>
       </RequestContextProvider>
     </ServiceContextProvider>
   </ToggleContextProvider>

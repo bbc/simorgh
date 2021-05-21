@@ -25,22 +25,10 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   if (result) {
     // the path is the first item in the array
     const path = result[0];
-    const { hash = null } = new URL(locator);
-    const anchor = hash ? hash.replace('#', '') : null;
-    const handleClick = () => {
-      // if there is an anchor,
-      // scroll to the anchored element with the id and focus on it for screen readers
-      if (hash) {
-        document.querySelector(hash)?.scrollIntoView({
-          behavior: 'smooth',
-        });
-        document.querySelector(hash)?.focus();
-      }
-    };
+    const anchor = locator.split('#')[1] || null;
     return (
       <InternalInlineLink
-        to={{ pathname: path, hash }}
-        onClick={handleClick}
+        to={{ pathname: path, hash: anchor, state: { anchor } }}
         aria-describedby={anchor}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
