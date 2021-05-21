@@ -17,7 +17,7 @@ const isSupportedClickModifier = (event, functionKey) =>
   (event.shiftKey && functionKey && !event.altKey) || // shift + functionKey
   (event.shiftKey && functionKey && event.altKey) || // shift + functionKey + option/alt
   (event.shiftKey && event.altKey && !functionKey) || // shift + option/alt
-  (event.altKey && functionKey && !event.shiftKey); // option/alt + cmd
+  (event.altKey && functionKey && !event.shiftKey); // option/alt + functionKey
 
 const isMacOsOpenClicked = event =>
   isLeftClick(event.button) && isSupportedClickModifier(event, event.metaKey); // cmd

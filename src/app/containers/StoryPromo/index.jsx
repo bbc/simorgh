@@ -27,6 +27,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
@@ -98,6 +99,7 @@ const StoryPromoContainer = ({
   isRecommendation,
   isSingleColumnLayout,
   serviceDatetimeLocale,
+  eventTrackingData,
 }) => {
   const {
     altCalendar,
@@ -108,6 +110,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
+  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -206,7 +209,10 @@ const StoryPromoContainer = ({
         promoHasImage={displayImage}
         as={headingTagOverride}
       >
-        <StyledLink href={url}>
+        <StyledLink
+          href={url}
+          onClick={eventTrackingData ? handleClickTracking : null}
+        >
           {isLive ? (
             <LiveLabel
               service={service}
@@ -303,6 +309,9 @@ StoryPromoContainer.propTypes = {
   isRecommendation: bool,
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 StoryPromoContainer.defaultProps = {
@@ -314,6 +323,7 @@ StoryPromoContainer.defaultProps = {
   isRecommendation: false,
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
+  eventTrackingData: null,
 };
 
 export default StoryPromoContainer;

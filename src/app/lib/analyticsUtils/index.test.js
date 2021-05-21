@@ -20,7 +20,6 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getProducer,
   getAtiUrl,
   getEventInfo,
   getThingAttributes,
@@ -385,12 +384,6 @@ describe('getPublishedDatetime', () => {
   });
 });
 
-describe('getProducer', () => {
-  it('should return a number', () => {
-    expect(typeof Number(getProducer('news'))).toEqual('number');
-  });
-});
-
 describe('getAtiUrl', () => {
   it('should return url', () => {
     const data = [
@@ -423,7 +416,7 @@ describe('getEventInfo', () => {
   const params = {
     pageIdentifier: 'page-identifier',
     componentName: 'component-name',
-    campaignName: 'campaign-name',
+    campaignID: 'campaign-id',
     url: 'url',
     format: 'format',
     detailedPlacement: 'detailed-placement',
@@ -433,7 +426,7 @@ describe('getEventInfo', () => {
 
   it('should return url section', () => {
     expect(getEventInfo(params)).toEqual(
-      'PUB-[campaign-name]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
+      'PUB-[campaign-id]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
     );
   });
 

@@ -1187,30 +1187,32 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
       <div
         class="emotion-19 emotion-20"
       >
-        <div
-          class="emotion-21 emotion-22"
-          data-e2e="story-promo"
-        >
+        <div>
           <div
-            class="emotion-23 emotion-24"
-            dir="ltr"
+            class="emotion-21 emotion-22"
+            data-e2e="story-promo"
           >
-            <h3
-              class="emotion-25 emotion-26"
+            <div
+              class="emotion-23 emotion-24"
+              dir="ltr"
             >
-              <a
-                class="emotion-27 emotion-28"
-                href="/mundo/noticias-internacional-51939501"
+              <h3
+                class="emotion-25 emotion-26"
               >
-                China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
-              </a>
-            </h3>
-            <time
-              class="emotion-29 emotion-30"
-              datetime="2020-02-03"
-            >
-              3rd February 2020
-            </time>
+                <a
+                  class="emotion-27 emotion-28"
+                  href="/mundo/noticias-internacional-51939501"
+                >
+                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                </a>
+              </h3>
+              <time
+                class="emotion-29 emotion-30"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
+            </div>
           </div>
         </div>
       </div>

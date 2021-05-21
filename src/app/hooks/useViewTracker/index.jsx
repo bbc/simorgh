@@ -1,68 +1,59 @@
-import { useEffect, useState, useContext, useRef } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
+import path from 'ramda/src/path';
 import { useInView } from 'react-intersection-observer';
 // Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
 
-import { ServiceContext } from '#contexts/ServiceContext';
-import { RequestContext } from '#contexts/RequestContext';
-import { buildATIClickParams } from '#containers/ATIAnalytics/params';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
+import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
+import { ServiceContext } from '#contexts/ServiceContext';
+import useToggle from '../useToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 
-const useViewTracker = ({
-  pageData,
-  componentName,
-  campaignName,
-  format = '',
-  url = '',
-} = {}) => {
-  let pageIdentifier;
-  let platform;
-  let statsDestination;
-  const requestContext = useContext(RequestContext);
-  const serviceContext = useContext(ServiceContext);
-  const { service } = serviceContext;
+const useViewTracker = (props = {}) => {
+  const componentName = path(['componentName'], props);
+  const format = path(['format'], props);
+  const url = path(['url'], props);
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
+  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
   const [ref, inView] = useInView({
     threshold: 0.5,
+    skip: !eventTrackingIsEnabled || viewSent,
   });
-
-  try {
-    ({ pageIdentifier, platform, statsDestination } = buildATIClickParams(
-      pageData,
-      requestContext,
-      serviceContext,
-    ));
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error(
-      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
-    );
-  }
+  const {
+    campaignID,
+    pageIdentifier,
+    platform,
+    producerId,
+    statsDestination,
+  } = useContext(EventTrackingContext);
+  const { service } = useContext(ServiceContext);
 
   useEffect(() => {
-    if (inView && !timer.current) {
+    if (eventTrackingIsEnabled && inView && !timer.current) {
       timer.current = setTimeout(() => {
         const shouldSendEvent = [
           !viewSent,
-          campaignName,
+          campaignID,
           componentName,
           pageIdentifier,
           platform,
+          producerId,
           service,
           statsDestination,
         ].every(Boolean);
 
         if (shouldSendEvent) {
           sendEventBeacon({
-            campaignName,
+            campaignID,
             componentName,
             format,
             pageIdentifier,
             platform,
+            producerId,
             service,
             statsDestination,
             type: EVENT_TYPE,
@@ -78,16 +69,18 @@ const useViewTracker = ({
 
     return () => clearTimeout(timer.current);
   }, [
-    campaignName,
+    campaignID,
     componentName,
+    eventTrackingIsEnabled,
     format,
     inView,
     pageIdentifier,
     platform,
+    producerId,
     service,
     statsDestination,
-    viewSent,
     url,
+    viewSent,
   ]);
 
   return ref;

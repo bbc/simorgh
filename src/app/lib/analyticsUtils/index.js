@@ -227,19 +227,6 @@ export const getContentId = (assetType, pageData) => {
   return contentId;
 };
 
-export const getProducer = service => {
-  const producers = {
-    igbo: '53',
-    news: '64',
-    persian: '69',
-    pidgin: '70',
-    thai: '90',
-    yoruba: '107',
-  };
-
-  return producers[service] || 0;
-};
-
 export const getAtiUrl = (data = []) => {
   const cleanedValues = data
     .filter(({ value }) => value)
@@ -259,7 +246,7 @@ export const getAtiUrl = (data = []) => {
 export const getEventInfo = ({
   pageIdentifier = '',
   componentName = '',
-  campaignName = '',
+  campaignID = '',
   variant = '', // not a service variant - used for A/B testing
   format = '',
   detailedPlacement = '',
@@ -269,7 +256,7 @@ export const getEventInfo = ({
   const generalPlacement = pageIdentifier;
   const creation = componentName;
 
-  return `PUB-[${campaignName}]-[${creation}]-[${variant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
+  return `PUB-[${campaignID}]-[${creation}]-[${variant}]-[${format}]-[${generalPlacement}]-[${detailedPlacement}]-[${advertiserID}]-[${url}]`;
 };
 
 export const getThingAttributes = (attribute, articleData) => {
