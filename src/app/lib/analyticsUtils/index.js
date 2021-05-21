@@ -227,19 +227,6 @@ export const getContentId = (assetType, pageData) => {
   return contentId;
 };
 
-export const getProducer = service => {
-  const producers = {
-    igbo: '53',
-    news: '64',
-    persian: '69',
-    pidgin: '70',
-    thai: '90',
-    yoruba: '107',
-  };
-
-  return producers[service] || 0;
-};
-
 export const getAtiUrl = (data = []) => {
   const cleanedValues = data
     .filter(({ value }) => value)
