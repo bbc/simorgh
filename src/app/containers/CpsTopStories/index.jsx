@@ -15,15 +15,19 @@ const EVENT_TRACKING_DATA = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   return (
-    <StoryPromo
-      item={promo}
-      dir={dir}
-      displayImage={false}
-      displaySummary={false}
-      serviceDatetimeLocale={serviceDatetimeLocale}
-    />
+    <div ref={viewRef}>
+      <StoryPromo
+        item={promo}
+        dir={dir}
+        displayImage={false}
+        displaySummary={false}
+        serviceDatetimeLocale={serviceDatetimeLocale}
+        eventTrackingData={EVENT_TRACKING_DATA}
+      />
+    </div>
   );
 };
 
