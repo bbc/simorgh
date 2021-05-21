@@ -166,6 +166,7 @@ storiesOf('Components/Media Player', module)
     ),
     { notes, knobs: { escapeHTML: false } },
   )
+  .addParameters({ chromatic: { diffThreshold: 0.2 } })
   .add(
     'Audio Skin AMP',
     () => (
