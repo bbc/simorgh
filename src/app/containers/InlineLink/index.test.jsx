@@ -84,4 +84,13 @@ describe('InlineLinkContainer', () => {
       </ServiceContextProvider>,
     );
   });
+
+  describe('internal link accessibility', () => {
+    testInternalInlineLink(
+      'should contain an anchor',
+      'https://www.test.bbc.com/news/articles/c0g992jmmkko#1234',
+      [fragmentBlock('This is text for an internal link with an anchor')],
+      false,
+    );
+  });
 });
