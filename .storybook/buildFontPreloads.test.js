@@ -12,7 +12,6 @@ jest.mock('glob', () => ({
     '/some-path/.storybook/static/fonts/IskoolaPota/bold.woff',
     '/some-path/.storybook/static/fonts/IskoolaPota/normal.eot',
     '/some-path/.storybook/static/fonts/IskoolaPota/normal.ttf',
-    '/some-path/.storybook/static/fonts/IskoolaPota/normal.woff',
   ],
 }));
 
@@ -63,14 +62,6 @@ it('should build the font preloads', () => {
       href=\\"fonts/IskoolaPota/normal.ttf\\"
       as=\\"font\\"
       type=\\"font/ttf\\"
-      crossorigin=\\"anonymous\\"
-    />
-
-    <link
-      rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/normal.woff\\"
-      as=\\"font\\"
-      type=\\"font/woff\\"
       crossorigin=\\"anonymous\\"
     />
     "
