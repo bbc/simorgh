@@ -3,20 +3,30 @@
 import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic/isChromatic';
+import GlobalStyles from '@bbc/psammead-styles/global-styles';
 
 import clearBrowserStorage from './helpers/clearBrowserStorage';
-import loadFonts from './helpers/loadFonts';
 
-// loadFonts();
 clearBrowserStorage();
 
 addDecorator(story => {
-  if (isChromatic()) {
-    // loadFonts();
-    clearBrowserStorage();
-  }
+  clearBrowserStorage();
 
-  return story();
+  return (
+    /* eslint-disable react/jsx-filename-extension */
+    <>
+      <GlobalStyles
+        fonts={Object.values(fontFaces).map(fontFace => {
+          const fontMap =
+            fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
+            fontPathMap[0];
+          return fontFace(fontMap.path);
+        })}
+      />
+      {story()}
+    </>
+    /* eslint-enable react/jsx-filename-extension */
+  );
 });
 
 const theme = create({
