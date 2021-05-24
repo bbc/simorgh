@@ -1,11 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
+import isChromatic from 'chromatic/isChromatic';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-import Cookies from 'js-cookie';
+
+import clearAppStorage from './helpers/clearAppStorage';
 
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
@@ -19,15 +21,13 @@ const fontPathMap = [
   { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
-const clearBrowserStorage = () => {
-  Cookies.remove('ckns_policy');
-  Cookies.remove('ckns_explicit');
-  Cookies.remove('ckns_privacy');
-  window.localStorage.removeItem(`amp-store:${window.location.origin}`);
-};
-
 addDecorator(story => {
-  clearBrowserStorage();
+  useEffect(() => {
+    if (isChromatic()) {
+      // prevent the consent banner introducing inconsistent Chromatic snapshots
+      clearAppStorage();
+    }
+  }, []);
 
   return (
     /* eslint-disable react/jsx-filename-extension */
