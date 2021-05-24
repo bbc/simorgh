@@ -4,6 +4,7 @@ import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic/isChromatic';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
+import * as fontFaces from '@bbc/psammead-styles/fonts';
 
 import clearBrowserStorage from './helpers/clearBrowserStorage';
 
