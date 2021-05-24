@@ -255,8 +255,6 @@
     ],
     "prune": false,
     "requires": [
-      "td-agent",
-      "cloudteam-td-agent-setup",
       "cloud-init"
     ]
   },
