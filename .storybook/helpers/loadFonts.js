@@ -85,8 +85,12 @@ export default () => {
   // Taken from: https://github.com/storybookjs/design-system/blob/master/src/utils/loadFontsForStorybook.js
   fontPaths.forEach(fontPath => {
     const fontLink = document.createElement('link');
-    fontLink.rel = 'stylesheet';
+
+    fontLink.rel = 'preload';
     fontLink.href = fontPath;
+    fontLink.as = 'font';
+    fontLink.type = `font/${fontPath.split('.')[1]}`;
+    fontLink.crossOrigin = 'anonymous';
     document.head.appendChild(fontLink);
   });
 };
