@@ -7,12 +7,12 @@ import isChromatic from 'chromatic/isChromatic';
 import clearBrowserStorage from './helpers/clearBrowserStorage';
 import loadFonts from './helpers/loadFonts';
 
-loadFonts();
+// loadFonts();
 clearBrowserStorage();
 
 addDecorator(story => {
   if (isChromatic()) {
-    loadFonts();
+    // loadFonts();
     clearBrowserStorage();
   }
 
