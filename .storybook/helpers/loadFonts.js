@@ -1,32 +1,92 @@
-// Load the font and avoid re-loading it when components change
-import * as fontFaces from '@bbc/psammead-styles/fonts';
-
-const fontPathMap = [
-  { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
-  { prefix: 'F_LATHA', path: 'fonts/Latha/' },
-  { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
-  { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
-  { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
-  { prefix: 'F_REITH_QALAM', path: 'fonts/ReithQalam/' },
-  { prefix: 'F_REITH_SANS', path: 'fonts/Reith/' },
-  { prefix: 'F_REITH_SERIF', path: 'fonts/Reith/' },
-  { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
+const fontPaths = [
+  'fonts/IskoolaPota/bold.eot',
+  'fonts/IskoolaPota/bold.ttf',
+  'fonts/IskoolaPota/bold.woff',
+  'fonts/IskoolaPota/normal.eot',
+  'fonts/IskoolaPota/normal.ttf',
+  'fonts/IskoolaPota/normal.woff',
+  'fonts/Latha/bold.eot',
+  'fonts/Latha/bold.ttf',
+  'fonts/Latha/bold.woff',
+  'fonts/Latha/normal.eot',
+  'fonts/Latha/normal.ttf',
+  'fonts/Latha/normal.woff',
+  'fonts/Mallanna/normal.eot',
+  'fonts/Mallanna/normal.ttf',
+  'fonts/Mallanna/normal.woff',
+  'fonts/NotoSansEthiopic/bold.eot',
+  'fonts/NotoSansEthiopic/bold.ttf',
+  'fonts/NotoSansEthiopic/bold.woff',
+  'fonts/NotoSansEthiopic/normal.eot',
+  'fonts/NotoSansEthiopic/normal.ttf',
+  'fonts/NotoSansEthiopic/normal.woff',
+  'fonts/Padauk/bold.eot',
+  'fonts/Padauk/bold.ttf',
+  'fonts/Padauk/bold.woff',
+  'fonts/Padauk/normal.eot',
+  'fonts/Padauk/normal.ttf',
+  'fonts/Padauk/normal.woff',
+  'fonts/Reith/BBCReithSans_W_Bd.woff',
+  'fonts/Reith/BBCReithSans_W_Bd.woff2',
+  'fonts/Reith/BBCReithSans_W_BdIt.woff',
+  'fonts/Reith/BBCReithSans_W_BdIt.woff2',
+  'fonts/Reith/BBCReithSans_W_ExBd.woff',
+  'fonts/Reith/BBCReithSans_W_ExBd.woff2',
+  'fonts/Reith/BBCReithSans_W_ExBdIt.woff',
+  'fonts/Reith/BBCReithSans_W_ExBdIt.woff2',
+  'fonts/Reith/BBCReithSans_W_It.woff',
+  'fonts/Reith/BBCReithSans_W_It.woff2',
+  'fonts/Reith/BBCReithSans_W_Lt.woff',
+  'fonts/Reith/BBCReithSans_W_LtIt.woff',
+  'fonts/Reith/BBCReithSans_W_Md.woff',
+  'fonts/Reith/BBCReithSans_W_Md.woff2',
+  'fonts/Reith/BBCReithSans_W_MdIt.woff',
+  'fonts/Reith/BBCReithSans_W_MdIt.woff2',
+  'fonts/Reith/BBCReithSans_W_Rg.woff',
+  'fonts/Reith/BBCReithSans_W_Rg.woff2',
+  'fonts/Reith/BBCReithSansCd_W_Bd.woff',
+  'fonts/Reith/BBCReithSansCd_W_Bd.woff2',
+  'fonts/Reith/BBCReithSansCd_W_Rg.woff',
+  'fonts/Reith/BBCReithSansCd_W_Rg.woff2',
+  'fonts/Reith/BBCReithSerif_W_Bd.woff',
+  'fonts/Reith/BBCReithSerif_W_Bd.woff2',
+  'fonts/Reith/BBCReithSerif_W_BdIt.woff',
+  'fonts/Reith/BBCReithSerif_W_BdIt.woff2',
+  'fonts/Reith/BBCReithSerif_W_ExBd.woff',
+  'fonts/Reith/BBCReithSerif_W_ExBdIt.woff',
+  'fonts/Reith/BBCReithSerif_W_It.woff',
+  'fonts/Reith/BBCReithSerif_W_It.woff2',
+  'fonts/Reith/BBCReithSerif_W_Lt.woff',
+  'fonts/Reith/BBCReithSerif_W_Lt.woff2',
+  'fonts/Reith/BBCReithSerif_W_LtIt.woff',
+  'fonts/Reith/BBCReithSerif_W_LtIt.woff2',
+  'fonts/Reith/BBCReithSerif_W_Md.woff',
+  'fonts/Reith/BBCReithSerif_W_Md.woff2',
+  'fonts/Reith/BBCReithSerif_W_MdIt.woff',
+  'fonts/Reith/BBCReithSerif_W_Rg.woff',
+  'fonts/Reith/BBCReithSerif_W_Rg.woff2',
+  'fonts/ReithQalam/bold.woff',
+  'fonts/ReithQalam/bold.woff2',
+  'fonts/ReithQalam/extrabold.woff',
+  'fonts/ReithQalam/extrabold.woff2',
+  'fonts/ReithQalam/light.woff',
+  'fonts/ReithQalam/light.woff2',
+  'fonts/ReithQalam/normal.woff',
+  'fonts/ReithQalam/normal.woff2',
+  'fonts/ShonarBangla/bold.eot',
+  'fonts/ShonarBangla/bold.ttf',
+  'fonts/ShonarBangla/bold.woff',
+  'fonts/ShonarBangla/normal.eot',
+  'fonts/ShonarBangla/normal.ttf',
+  'fonts/ShonarBangla/normal.woff',
 ];
-const fontLinkId = 'storybook-font-definitions';
-const fonts = Object.values(fontFaces).map(fontFace => {
-  const fontMap =
-    fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
-    fontPathMap[0];
-  return fontFace(fontMap.path);
-});
 
 export default () => {
-  if (!document.getElementById(fontLinkId)) {
-    const fontStyle = document.createElement('style');
-
-    fontStyle.id = fontLinkId;
-    fontStyle.innerHTML = fonts.join('');
-
-    document.head.appendChild(fontStyle);
-  }
+  // Taken from: https://github.com/storybookjs/design-system/blob/master/src/utils/loadFontsForStorybook.js
+  fontPaths.forEach(fontPath => {
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'stylesheet';
+    fontLink.href = fontPath;
+    document.head.appendChild(fontLink);
+  });
 };
