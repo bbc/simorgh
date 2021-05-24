@@ -12,6 +12,7 @@ clearBrowserStorage();
 
 addDecorator(story => {
   if (isChromatic()) {
+    loadFonts();
     clearBrowserStorage();
   }
 
