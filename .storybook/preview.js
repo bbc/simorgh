@@ -7,13 +7,13 @@ import Fonts from './Fonts';
 
 import clearBrowserStorage from './helpers/clearBrowserStorage';
 
-addDecorator(Story => {
+addDecorator(story => {
   useEffect(clearBrowserStorage, []);
 
   return (
     <>
       <Fonts />
-      <Story />
+      {story()}
     </>
   );
 });
