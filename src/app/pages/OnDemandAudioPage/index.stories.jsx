@@ -35,6 +35,7 @@ storiesOf('Pages/OnDemand Radio Page', module)
       services: Object.keys(onDemandRadioFixtures),
     }),
   )
+  .addParameters({ chromatic: { diffThreshold: 0.2 } })
   .add('default', ({ service }) => (
     <BrowserRouter>
       <OnDemandAudioPage
