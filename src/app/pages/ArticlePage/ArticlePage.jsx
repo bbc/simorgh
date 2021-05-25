@@ -83,6 +83,7 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor } = useContext(ServiceContext);
   const { state } = useLocation();
+  const anchor = state?.anchor;
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -90,11 +91,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
 
   useEffect(() => {
-    if (state?.anchor) {
-      document.getElementById(state.anchor)?.scrollIntoView();
-      document.getElementById(state.anchor)?.focus();
+    if (anchor) {
+      document.getElementById(anchor)?.scrollIntoView();
+      document.getElementById(anchor)?.focus();
     }
-  }, [state]);
+  }, [anchor]);
 
   const promoImageBlocks = pathOr(
     [],
