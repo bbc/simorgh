@@ -241,13 +241,13 @@ it('should focus on id when anchor link is clicked', async () => {
                           id: '3',
                           type: 'urlLink',
                           model: {
-                            text: 'Anchor 1',
+                            text: 'Anchor 1 link',
                             blocks: [
                               {
                                 id: '4',
                                 type: 'fragment',
                                 model: {
-                                  text: 'Anchor 1',
+                                  text: 'Anchor 1 link',
                                   attributes: ['bold'],
                                 },
                               },
@@ -283,7 +283,7 @@ it('should focus on id when anchor link is clicked', async () => {
                                 id: '8',
                                 type: 'fragment',
                                 model: {
-                                  text: 'Anchor 1',
+                                  text: 'Anchor 1 heading',
                                   attributes: [],
                                 },
                               },
@@ -302,13 +302,13 @@ it('should focus on id when anchor link is clicked', async () => {
     },
     articleDataNews,
   );
-  const { container } = render(
+  const { getByText } = render(
     <Context service="news">
       <ArticlePage pageData={articleDataNewsWithSummary} />
     </Context>,
   );
-  const link = container.querySelector('a');
-  const element = container.querySelector('h2');
+  const link = getByText('Anchor 1 link').closest('a');
+  const element = getByText('Anchor 1 heading');
   window.HTMLElement.prototype.scrollIntoView = jest.fn();
   expect(link.href).toContain(element.id);
   act(() => userEvent.click(link));

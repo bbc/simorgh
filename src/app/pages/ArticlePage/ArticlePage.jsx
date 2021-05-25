@@ -92,8 +92,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   useEffect(() => {
     if (anchor) {
-      document.getElementById(anchor)?.scrollIntoView();
-      document.getElementById(anchor)?.focus();
+      const element = document.getElementById(anchor);
+      element?.scrollIntoView();
+      element?.focus();
     }
   }, [anchor]);
 
