@@ -8,7 +8,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
 import RelatedContentPromoList from './RelatedContentPromoList';
-import useViewTracker from '#hooks/useViewTracker';
 
 const EVENT_TRACKING_DATA = {
   componentName: 'related-content',
@@ -20,7 +19,6 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 
 const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
   const { translations } = useContext(ServiceContext);
-  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
 
@@ -34,7 +32,6 @@ const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
       promoComponent={RelatedContentPromo}
       promoListComponent={RelatedContentPromoList}
       columnType="secondary"
-      ref={viewRef}
       eventTrackingData={EVENT_TRACKING_DATA}
     />
   );
