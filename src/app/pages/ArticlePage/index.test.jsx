@@ -313,4 +313,5 @@ it('should focus on id when anchor link is clicked', async () => {
   expect(link.href).toContain(element.id);
   act(() => userEvent.click(link));
   expect(document.activeElement).toEqual(element);
+  expect(window.HTMLElement.prototype.scrollIntoView).toHaveBeenCalledTimes(1);
 });

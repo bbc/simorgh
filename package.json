@@ -16,7 +16,7 @@
     "hosted-git-info": "3.0.8",
     "url-parse": "1.5.1",
     "postcss": "8.2.10",
-    "browserslist": "^4.16.6",
+    "browserslist": "4.16.6",
     "dns-packet": "5.2.2"
   },
   "scripts": {
