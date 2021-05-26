@@ -172,6 +172,7 @@ const CpsOnwardJourney = ({
   sectionLabelBackground,
   columnType,
   skipLink,
+  eventTrackingData,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
@@ -221,13 +222,18 @@ const CpsOnwardJourney = ({
         ) : null}
         {hasSingleContent ? (
           <SingleContentWrapper columnType={columnType}>
-            <PromoComponent promo={singleContent} dir={dir} />
+            <PromoComponent
+              promo={singleContent}
+              dir={dir}
+              eventTrackingData={eventTrackingData}
+            />
           </SingleContentWrapper>
         ) : (
           <PromoListComponent
             promoItems={content}
             dir={dir}
             isMediaContent={isMediaContent}
+            eventTrackingData={eventTrackingData}
           />
         )}
       </OptionallyRenderedSkipWrapper>

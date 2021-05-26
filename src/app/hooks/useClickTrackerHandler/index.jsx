@@ -74,6 +74,7 @@ const useClickTrackerHandler = (props = {}) => {
       componentName,
       pageIdentifier,
       platform,
+      producerId,
       service,
       statsDestination,
       href,
