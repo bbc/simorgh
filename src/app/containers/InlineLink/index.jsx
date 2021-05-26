@@ -27,10 +27,7 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
     const path = result[0];
     const hash = locator.split('#')[1] || null;
     return (
-      <InternalInlineLink
-        to={{ pathname: path, hash, state: { hash } }}
-        aria-describedby={hash}
-      >
+      <InternalInlineLink to={{ pathname: path, hash, state: { hash } }}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );
