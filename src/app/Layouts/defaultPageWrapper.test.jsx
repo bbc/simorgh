@@ -13,6 +13,8 @@ jest.mock('../containers/ServiceWorker', () => () => (
   <p>I am the ServiceWorker component</p>
 ));
 
+global.performance.getEntriesByName = jest.fn(() => []);
+
 describe('defaultPageWrapper', () => {
   const propsWithChildren = {
     children: <h2>Child element</h2>,
