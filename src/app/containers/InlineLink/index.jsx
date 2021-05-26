@@ -25,11 +25,11 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   if (result) {
     // the path is the first item in the array
     const path = result[0];
-    const anchor = locator.split('#')[1] || null;
+    const hash = locator.split('#')[1] || null;
     return (
       <InternalInlineLink
-        to={{ pathname: path, hash: anchor, state: { anchor } }}
-        aria-describedby={anchor}
+        to={{ pathname: path, hash, state: { hash } }}
+        aria-describedby={hash}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
