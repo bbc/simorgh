@@ -19,14 +19,13 @@ const RelatedContentPromo = ({ promo, dir, eventTrackingData }) => {
         group5: 2,
       }}
       enableGelGutters
+      ref={viewRef}
     >
-      <div ref={viewRef}>
-        <StoryPromo
-          item={promo}
-          dir={dir}
-          eventTrackingData={eventTrackingData}
-        />
-      </div>
+      <StoryPromo
+        item={promo}
+        dir={dir}
+        eventTrackingData={eventTrackingData}
+      />
     </Grid>
   );
 };

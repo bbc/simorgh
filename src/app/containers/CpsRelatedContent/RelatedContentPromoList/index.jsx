@@ -34,7 +34,6 @@ const RelatedContentPromoList = ({
   isMediaContent,
   eventTrackingData,
 }) => {
-
   const viewRef = useViewTracker(eventTrackingData);
 
   return (
@@ -51,29 +50,28 @@ const RelatedContentPromoList = ({
       enableGelGutters
     >
       {promoItems.map(item => (
-        <div ref={viewRef}>
-          <Grid
-            item
-            columns={{
-              group0: 6,
-              group1: 6,
-              group2: 6,
-              group3: 6,
-              group4: isMediaContent ? 8 : 4,
-              group5: isMediaContent ? 8 : 4,
-            }}
-            as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
-            key={item.id || item.uri}
-          >
-            <StoryPromo
-              item={item}
-              dir={dir}
-              displaySummary={false}
-              isSingleColumnLayout={isMediaContent}
-              eventTrackingData={eventTrackingData}
-            />
-          </Grid>
-        </div>
+        <Grid
+          item
+          columns={{
+            group0: 6,
+            group1: 6,
+            group2: 6,
+            group3: 6,
+            group4: isMediaContent ? 8 : 4,
+            group5: isMediaContent ? 8 : 4,
+          }}
+          as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
+          key={item.id || item.uri}
+          ref={viewRef}
+        >
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displaySummary={false}
+            isSingleColumnLayout={isMediaContent}
+            eventTrackingData={eventTrackingData}
+          />
+        </Grid>
       ))}
     </Grid>
   );
