@@ -59,7 +59,6 @@ const useViewTracker = (props = {}) => {
             type: EVENT_TYPE,
             url,
           });
-          debugger;
           setViewSent(true);
         }
       }, VIEWED_DURATION_MS);

@@ -59,7 +59,6 @@ const useClickTrackerHandler = (props = {}) => {
               service,
               statsDestination,
             });
-            debugger;
           } finally {
             if (nextPageUrl) {
               window.location.assign(nextPageUrl);
