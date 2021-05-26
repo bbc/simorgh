@@ -267,6 +267,9 @@ CpsOnwardJourney.propTypes = {
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
   skipLink: shape(skipLinkProps),
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -280,6 +283,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
   skipLink: null,
+  eventTrackingData: null,
 };
 
 export default CpsOnwardJourney;

@@ -33,6 +33,13 @@ const RelatedContentPromo = ({ promo, dir, eventTrackingData }) => {
 RelatedContentPromo.propTypes = {
   dir: string.isRequired,
   promo: oneOfType([shape(storyItem)]).isRequired,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
+};
+
+RelatedContentPromo.defaultProps = {
+  eventTrackingData: null,
 };
 
 export default RelatedContentPromo;

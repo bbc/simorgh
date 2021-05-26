@@ -81,10 +81,14 @@ RelatedContentPromoList.propTypes = {
   dir: string.isRequired,
   isMediaContent: bool,
   promoItems: arrayOf(shape(storyItem)).isRequired,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 RelatedContentPromoList.defaultProps = {
   isMediaContent: false,
+  eventTrackingData: null,
 };
 
 export default RelatedContentPromoList;
