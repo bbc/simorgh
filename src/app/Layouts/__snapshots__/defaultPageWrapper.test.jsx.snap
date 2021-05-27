@@ -423,6 +423,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   border-top: 0.0625rem solid #FFFFFF;
 }
 
+.emotion-30::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-30 .emotion-47::after {
   left: 0;
 }
