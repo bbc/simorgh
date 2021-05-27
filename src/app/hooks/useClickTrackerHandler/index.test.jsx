@@ -324,7 +324,7 @@ describe('Error handling', () => {
       format: 'CHD=promo::1',
     };
 
-    const { getByTestId } = render(
+    const { getByTestId, container } = render(
       <WithContexts pageData={pidginData} toggles={customToggle}>
         <TestComponent hookProps={customHookProps} />
       </WithContexts>,
@@ -332,6 +332,7 @@ describe('Error handling', () => {
 
     act(() => userEvent.click(getByTestId('test-component')));
 
+    expect(container.error).toBeUndefined();
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
@@ -367,7 +368,7 @@ describe('Error handling', () => {
       format: 'CHD=promo::1',
     };
 
-    const { getByTestId } = render(
+    const { getByTestId, container } = render(
       <WithContexts pageData={pidginData} toggles={customToggle}>
         <TestComponent hookProps={customHookProps} />
       </WithContexts>,
@@ -375,6 +376,7 @@ describe('Error handling', () => {
 
     act(() => userEvent.click(getByTestId('test-component')));
 
+    expect(container.error).toBeUndefined();
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
@@ -410,7 +412,7 @@ describe('Error handling', () => {
       format: 'CHD=promo::1',
     };
 
-    const { getByTestId } = render(
+    const { getByTestId, container } = render(
       <WithContexts pageData={pidginData} toggles={customToggle}>
         <TestComponent hookProps={customHookProps} />
       </WithContexts>,
@@ -418,6 +420,7 @@ describe('Error handling', () => {
 
     act(() => userEvent.click(getByTestId('test-component')));
 
+    expect(container.error).toBeUndefined();
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;
@@ -453,7 +456,7 @@ describe('Error handling', () => {
       format: 'CHD=promo::1',
     };
 
-    const { getByTestId } = render(
+    const { getByTestId, container } = render(
       <WithContexts pageData={pidginData} toggles={customToggle}>
         <TestComponent hookProps={customHookProps} />
       </WithContexts>,
@@ -461,6 +464,7 @@ describe('Error handling', () => {
 
     act(() => userEvent.click(getByTestId('test-component')));
 
+    expect(container.error).toBeUndefined();
     expect(global.fetch).toHaveBeenCalledTimes(1);
 
     const [[viewEventUrl]] = global.fetch.mock.calls;

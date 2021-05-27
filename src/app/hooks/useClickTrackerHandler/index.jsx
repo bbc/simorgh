@@ -80,6 +80,7 @@ const useClickTrackerHandler = (props = {}) => {
     },
     [
       eventTrackingIsEnabled,
+      isExcluded,
       clicked,
       campaignID,
       componentName,
