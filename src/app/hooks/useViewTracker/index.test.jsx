@@ -177,6 +177,56 @@ describe('Expected use', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
+  it('should not send event to ATI when eventTracking toggle is enabled but the component name is on the exclusion list', async () => {
+    setIntersectionNotObserved();
+
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: false,
+            value: 'most-read,other-component',
+          },
+        },
+      },
+    });
+
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should send event to ATI when eventTracking toggle is enabled and different components name is on the exclusion list', async () => {
+    setIntersectionNotObserved();
+
+    const { rerender } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: true,
+            value: 'other-component',
+          },
+        },
+      },
+    });
+
+    setIntersectionObserved();
+    rerender();
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
   it('should not send event to ATI when element is in view for less than 1 second', async () => {
     setIntersectionNotObserved();
 
