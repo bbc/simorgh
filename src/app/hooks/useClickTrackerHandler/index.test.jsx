@@ -133,7 +133,7 @@ describe('Click tracking', () => {
     });
   });
 
-  it('should not send a tracking request on click if the toggle is disabled', () => {
+  it('should not send a tracking request on click if the toggle is disabled and the component is not on the exclusion list', () => {
     const spyFetch = jest.spyOn(global, 'fetch');
     const disabledToggle = {
       eventTracking: {
@@ -144,6 +144,30 @@ describe('Click tracking', () => {
     const { getByTestId } = render(
       <WithContexts pageData={pidginData} toggles={disabledToggle}>
         <TestComponent hookProps={defaultProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(spyFetch).not.toHaveBeenCalled();
+  });
+
+  it('should not send a tracking request on click if the toggle is enabled but the component is on the exclusion list', () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const customToggle = {
+      eventTracking: {
+        enabled: true,
+        value: 'component-name,other-component',
+      },
+    };
+    const customHookProps = {
+      componentName: 'component-name',
+      format: 'CHD=promo::1',
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={customToggle}>
+        <TestComponent hookProps={customHookProps} />
       </WithContexts>,
     );
 
@@ -285,13 +309,14 @@ describe('Click tracking', () => {
       expect(window.location.assign).toHaveBeenCalledWith(url);
     });
   });
+});
 
-  it('should disable click tracking if the toggle is enabled but the component is on the exclusion list', () => {
-    const spyFetch = jest.spyOn(global, 'fetch');
+describe('Error handling', () => {
+  it('should not throw error and should send event to ATI when the exclusion list is undefined', () => {
     const customToggle = {
       eventTracking: {
         enabled: true,
-        value: 'component-name,other-component',
+        value: undefined,
       },
     };
     const customHookProps = {
@@ -307,11 +332,158 @@ describe('Click tracking', () => {
 
     act(() => userEvent.click(getByTestId('test-component')));
 
-    expect(spyFetch).not.toHaveBeenCalled();
-  });
-});
+    expect(global.fetch).toHaveBeenCalledTimes(1);
 
-describe('Error handling', () => {
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[article-sty]-[component-name]-[]-[CHD=promo::1]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+  });
+
+  it('should not throw error and should send event to ATI when the exclusion list is empty', () => {
+    const customToggle = {
+      eventTracking: {
+        enabled: true,
+        value: '',
+      },
+    };
+    const customHookProps = {
+      componentName: 'component-name',
+      format: 'CHD=promo::1',
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={customToggle}>
+        <TestComponent hookProps={customHookProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[article-sty]-[component-name]-[]-[CHD=promo::1]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+  });
+
+  it('should event to ATI when the exclusion list contains a different component name', () => {
+    const customToggle = {
+      eventTracking: {
+        enabled: true,
+        value: 'other-component',
+      },
+    };
+    const customHookProps = {
+      componentName: 'component-name',
+      format: 'CHD=promo::1',
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={customToggle}>
+        <TestComponent hookProps={customHookProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[article-sty]-[component-name]-[]-[CHD=promo::1]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+  });
+
+  it('should not throw error and should send event to ATI when the exclusion list is an unexpected data type', () => {
+    const customToggle = {
+      eventTracking: {
+        enabled: true,
+        value: ['component-name'],
+      },
+    };
+    const customHookProps = {
+      componentName: 'component-name',
+      format: 'CHD=promo::1',
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={customToggle}>
+        <TestComponent hookProps={customHookProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl)).toEqual({
+      origin: 'https://logws1363.ati-host.net',
+      pathname: '/',
+      searchParams: {
+        atc:
+          'PUB-[article-sty]-[component-name]-[]-[CHD=promo::1]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        hl: expect.stringMatching(/^.+?x.+?x.+?$/),
+        idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
+        lng: 'en-US',
+        p: 'news::pidgin.news.story.51745682.page',
+        r: '0x0x24x24',
+        re: '1024x768',
+        s: '598343',
+        s2: '70',
+        type: 'AT',
+      },
+    });
+  });
+
   it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
     const { container, getByText } = render(
       <WithContexts pageData={pidginData}>

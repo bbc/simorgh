@@ -16,7 +16,10 @@ const useClickTrackerHandler = (props = {}) => {
   const format = path(['format'], props);
 
   const { enabled: eventTrackingIsEnabled, value } = useToggle('eventTracking');
-  const isExcluded = value?.trim().split(',').includes(componentName);
+  const isExcluded =
+    typeof value === 'string'
+      ? value?.trim().split(',').includes(componentName)
+      : false;
   const [clicked, setClicked] = useState(false);
   const {
     campaignID,
