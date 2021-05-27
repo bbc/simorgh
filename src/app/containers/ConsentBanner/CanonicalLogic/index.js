@@ -57,7 +57,7 @@ const consentBannerUtilities = ({
     if (onClient) {
       if (showPrivacyBanner()) {
         setShowPrivacyBanner(true);
-        setSeenPrivacyBanner();
+        // setSeenPrivacyBanner();
       }
 
       if (showCookieBanner()) {

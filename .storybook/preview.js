@@ -8,7 +8,7 @@ import { create } from '@storybook/theming';
 import Fonts from './Fonts';
 import clearAppStorage from './helpers/clearAppStorage';
 
-addDecorator(story => {
+addDecorator(Story => {
   useEffect(() => {
     if (isChromatic()) {
       // prevent the consent banner introducing inconsistent Chromatic snapshots
@@ -20,7 +20,7 @@ addDecorator(story => {
     /* eslint-disable react/jsx-filename-extension */
     <>
       <Fonts />
-      {story()}
+      <Story />
     </>
     /* eslint-enable react/jsx-filename-extension */
   );
