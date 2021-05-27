@@ -408,6 +408,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
+.emotion-28::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-28 .emotion-45::after {
   left: 0;
 }
@@ -1451,6 +1460,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   border-top: 0.0625rem solid #FFFFFF;
 }
 
+.emotion-28::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-28 .emotion-45::after {
   left: 0;
 }
@@ -2492,6 +2510,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-28::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-28 .emotion-45::after {
