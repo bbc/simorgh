@@ -1182,220 +1182,220 @@
     moment-timezone "^0.5.26"
     object-hash "^2.0.0"
 
-"@bbc/psammead-assets@3.1.8":
-  version "3.1.8"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-assets/-/psammead-assets-3.1.8.tgz#40a2128a6256f96df90105d63dbdaad8d4ba3101"
-  integrity sha512-Va5uq9/KWgkQEnlmXKCOGPGWs/CnRc2DlEk5bhElVPt58V52hW1EndUmiQUn4la2jmx5KSYhEbf0h/uqw/Yjgw==
+"@bbc/psammead-assets@3.1.9":
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-assets/-/psammead-assets-3.1.9.tgz#f5ae498eae12705365f2915b6d986943853967e1"
+  integrity sha512-+8mCYsTmbIx9ZfubK/ONSjSNKg8QX7cjT0pUEMDh+VJwXiCT/4aEIfQ8ZpiVcpKh2gLK8vF9rqveA1D0r9Rkjg==
 
-"@bbc/psammead-brand@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-brand/-/psammead-brand-7.3.0.tgz#f2efcd0b8a0de8c87c5b022880d9284bbc7b6186"
-  integrity sha512-Q7mJe1wfCNox/E+Jt9UO8PN3uNbXXtcaWGvziSMSAPqNcfMfiZXXAt5uQifiYnzzmUNSF6O1ByQ4yAcOCQfRuA==
+"@bbc/psammead-brand@7.3.1":
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-brand/-/psammead-brand-7.3.1.tgz#fc4cecfed8aa0fcfc481142b4ec0e1b07abe681e"
+  integrity sha512-QpiOZmsvIPBAcedPzEYVadSOcGtQZlOuXiL5k7nUgNuGaWDD+XroSEChip1QrYKON7uIAMSl4ndEiYUP4n+Pag==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-visually-hidden-text" "2.0.6"
+    "@bbc/psammead-visually-hidden-text" "2.0.7"
 
-"@bbc/psammead-bulleted-list@3.0.16":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-bulleted-list/-/psammead-bulleted-list-3.0.16.tgz#adbc558c5b6834287e39621ccd7e77499eea0876"
-  integrity sha512-6nUciCxO0nCNadEJC4frjCm6mdj3SavqvWKbWK5EtRpvaexUPFWq3Q04pVEQwVOEtS8iWleRm2xSfmHZ8I2qxQ==
-  dependencies:
-    "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
-
-"@bbc/psammead-bulletin@5.0.34":
-  version "5.0.34"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-bulletin/-/psammead-bulletin-5.0.34.tgz#54fc8a5511741a9f903b9ddb04a1a4b96b8bbd2d"
-  integrity sha512-FrBTlNOrULk7HTW5jos85QiG7Ngy4p0iJDFk9KOJkvMluocKEs8tXMSy5HVHZ93OUAnBgqh0wrc+C+67LTpneg==
-  dependencies:
-    "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-live-label" "2.0.19"
-    "@bbc/psammead-story-promo" "8.0.19"
-    "@bbc/psammead-styles" "7.2.5"
-    "@bbc/psammead-visually-hidden-text" "2.0.6"
-
-"@bbc/psammead-byline@3.0.17":
+"@bbc/psammead-bulleted-list@3.0.17":
   version "3.0.17"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-byline/-/psammead-byline-3.0.17.tgz#d3285b75dbd262a27ab2b8b262e16d5a0ec1e06a"
-  integrity sha512-nCsevNb2x4KKeejDkK64EoHdnymxaSPD34Yofd58dfhw7bp8Iva4G8XSvsA0UxOY9Wawq9bxc6ZjnUGJRf/9sg==
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-bulleted-list/-/psammead-bulleted-list-3.0.17.tgz#675d29e640f4a06982686dc3cf94b5cc9b6053fb"
+  integrity sha512-jjkX3Agh2LesN/+Nj+ZDS4nxIFQApjWhXBFwvZpH2DWB9d3mi2/cEKWLVqdp25MX9lNCSYxy/CEqaBiH8Jnbug==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-calendars@2.0.26":
-  version "2.0.26"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-calendars/-/psammead-calendars-2.0.26.tgz#fcd43851e39215c31bf7f4dc353d447d87d0943e"
-  integrity sha512-VwnpWiDwbrz44s8GN1ELGWci9d4FKK11Wrn/Dhcqo+IlaIBFPEjMgINo8kVUzjVBx8X51GFWztwEfI6ILc9Ddg==
+"@bbc/psammead-bulletin@5.0.35":
+  version "5.0.35"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-bulletin/-/psammead-bulletin-5.0.35.tgz#ae66895824e89582720e9f76e536dc4381923502"
+  integrity sha512-yJ8eWv28aWinwIPJVXBDRdCTMsE0IfENlGBdUhWpF30i6hU230ByBIK0xfvbh9/OKWaA71denODrjqz2DKzBXQ==
   dependencies:
-    "@bbc/psammead-locales" "5.0.6"
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-live-label" "2.0.20"
+    "@bbc/psammead-story-promo" "8.0.20"
+    "@bbc/psammead-styles" "7.2.6"
+    "@bbc/psammead-visually-hidden-text" "2.0.7"
+
+"@bbc/psammead-byline@3.0.18":
+  version "3.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-byline/-/psammead-byline-3.0.18.tgz#b5c704ecaee3e4377a024120373e635b06452abb"
+  integrity sha512-B87U38FRWbJeai8Fw0xBhXWwulFJSlO/mu0nY20hDvSleQC3wMwNQtES6cTj43C+Q5ztj3oEynA+dVPIo3mzng==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.6"
+
+"@bbc/psammead-calendars@2.0.27":
+  version "2.0.27"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-calendars/-/psammead-calendars-2.0.27.tgz#118d7ae6e59fbe3fa5f58dfa492e3207b67e8381"
+  integrity sha512-FXrV2H1XNGJWTEtEEUt/pcpdg4Sez+MXkhZgsf1iZh3s23U7zclzGJxcY+tJn6ydFHX3gKTa65eNr87bgikAdQ==
+  dependencies:
+    "@bbc/psammead-locales" "5.0.7"
     jalaali-js "1.1.5"
 
-"@bbc/psammead-caption@4.1.12":
-  version "4.1.12"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-caption/-/psammead-caption-4.1.12.tgz#989dd897edcde2bd3596eb0dc136a3c21b3edadb"
-  integrity sha512-NCFJY09TUEB0QjdS0iWesMBZqI1QNTV/1bKJneHfrlDwlU7GIrVlZUAXKvaV3NN/vap2ghcC3Jb7aeLaPvgTVA==
+"@bbc/psammead-caption@4.1.13":
+  version "4.1.13"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-caption/-/psammead-caption-4.1.13.tgz#eb0a85dfa389a1c6f3f1f251d4d6077a5a42aec7"
+  integrity sha512-qgM/De2nwYB8l3GCzlndcbWvBFCi9TPFMOl52WAGt9LWruJ/f0TpEpSWHcGhatwPxUqFUowbPtu6lU1CL1a4Jw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-consent-banner@5.5.1":
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-consent-banner/-/psammead-consent-banner-5.5.1.tgz#a1eb561951f880a92768eafeae2e65cf7219fdd9"
-  integrity sha512-mW+lZpScIX6PJkRcahSY4dRjmm16QpN70V/Kg0x/yh5zpMF/2y+tvnsFNdWdambbtfKYfnZULMVpkQTWVsj8Mw==
+"@bbc/psammead-consent-banner@5.5.2":
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-consent-banner/-/psammead-consent-banner-5.5.2.tgz#c2afd224d1e4f436f39c35bc15de682b8611d808"
+  integrity sha512-ArlxgAiY+o2KRVQZoLrSGHcf+M9bxRvD5xT25j/jeeDMZcKhpcvfXhabsXje7nrnbnogc3QeXy657NOcH/XyOw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-copyright@3.0.17":
+"@bbc/psammead-copyright@3.0.18":
+  version "3.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-copyright/-/psammead-copyright-3.0.18.tgz#6bfde1dfbb580563487b9488ff92fea330e7cb27"
+  integrity sha512-G0rnRyVCwTzZUpNwVd16cc3wrxV28LVGLHWbSlO9qFkDOUfZXO/z40BllR9s+mNE72dFdBIRY9Fknk6g+lzvxA==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.6"
+
+"@bbc/psammead-detokeniser@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-detokeniser/-/psammead-detokeniser-1.0.6.tgz#7c41a005837f496accb9a8cc210398a16fe45678"
+  integrity sha512-A/JQlQKMQjJmXeSxtTpmOo0XmWj5PmZ9ceKmXaobJ1G5WOQtR9ja9OLEhzs1gKYjS7EQlW+5u8CZOywMCjMLCQ==
+
+"@bbc/psammead-embed-error@3.0.21":
+  version "3.0.21"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-embed-error/-/psammead-embed-error-3.0.21.tgz#213746065d693a4c7fa89bc0a40fd3b07fc83d2d"
+  integrity sha512-I9EMVOk37NvROWN41oDU/zVGd49fJTibZISud8kUiPTPWmMz9iptLVBBldA5TpF6WjQM+sz7a5XDXA4IhXQqGw==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-styles" "7.2.6"
+
+"@bbc/psammead-figure@2.0.10":
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-figure/-/psammead-figure-2.0.10.tgz#a63c18974e352400f3103995ffc62d107d75954c"
+  integrity sha512-vvHStKRlsaLAeXALE8De+uKfXfEmG++2hMuCXEO+2JVBJQLMmIwISCk2cLeG2tFEwbwQ5/3L6vc8JDSbY21lRg==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+
+"@bbc/psammead-grid@3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-grid/-/psammead-grid-3.1.1.tgz#53a98bcfc1398fde81450d252725b505aabf54c5"
+  integrity sha512-gDV+VvgVVHqFZT4KHWtAoVvKPqqDyg58UlTf4xBpfvPwgPxtePb5xE5JD5WLpcsIi/HIyo00leMMNiojIPXfvA==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.6"
+
+"@bbc/psammead-heading-index@3.0.17":
   version "3.0.17"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-copyright/-/psammead-copyright-3.0.17.tgz#7838b1d6a56012fa3d3e9fde2119da71a71237c2"
-  integrity sha512-TLATlLIcFSAvyEg2P3JVLVmWTiDB46uVZDxgDCCSMAT94WJvzf0rKYMK41o0NDeq5bq/E98KtxqixRO0WoeA1Q==
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-heading-index/-/psammead-heading-index-3.0.17.tgz#ae231e54471a2dd479f3874ee5510d524117816c"
+  integrity sha512-sK5fgMMDU4VAHEti7pECIxxRJFahrZO3BMI2zZAsczHi42f6N7SXlXd8wxAzdSH+pLHPG7K9eocJnKuWH5IO6g==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-detokeniser@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-detokeniser/-/psammead-detokeniser-1.0.5.tgz#c5ab7e9151daa6fb5a30173283fce2ee86ab3eb3"
-  integrity sha512-OfW6ATkdGoyfIeAasn/SuRQ25ctSndDmzRnCQKB3CtjbHs+e0e1rJ3XxeTGh95mLu5p7HMwqVBIxL11RiqsjHg==
-
-"@bbc/psammead-embed-error@3.0.20":
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-embed-error/-/psammead-embed-error-3.0.20.tgz#7f28ca2e4bd685b88c4db2d1229666f777d04007"
-  integrity sha512-75brr4LiqdTJTaGGKzCenOX8YF1S4UDEwtwAz1qUWfpBaJ/l6T2aDCOjQcn+K7I+0XWr0Rn9rkmAQm8KFttfFw==
+"@bbc/psammead-headings@5.0.17":
+  version "5.0.17"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-headings/-/psammead-headings-5.0.17.tgz#a1932daf66c4553566d5265b32d30d9dde46cb2b"
+  integrity sha512-iLwQu08zVCoCqx7U4G7CmPCkJBtKKZm/wRhJ8kGzNgfgsIQTAwCBN1UKKJPimQa704CEqJX7TG7jCqtxNIUJtg==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-figure@2.0.9":
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-figure/-/psammead-figure-2.0.9.tgz#a72d0a7afa6e34188082cf8f96ca9a6c2e2d3f8c"
-  integrity sha512-G4OQc3HclHs9KOxpQ3kHsSoKGoVw3Ua3XIqrC86QH16I8y5vUHGygI+q5QZphjJ24QTb+nhDCY4u7jQD/xcPww==
+"@bbc/psammead-image-placeholder@3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-image-placeholder/-/psammead-image-placeholder-3.2.1.tgz#c80a57741ac7320e57f4317b1d58b310280cc6b9"
+  integrity sha512-xDp/Gwn7JLnByW3qd4BTdGA+YCGb//B1c4aXh53Uw4XP1wOsEAGLcZy15ehWQupkzE8ru+xobfDtuHDkjpM7Bg==
   dependencies:
-    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-grid@3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-grid/-/psammead-grid-3.1.0.tgz#1cf9ee0755fc16fbbf143dedaedcdbfa9df8a5a7"
-  integrity sha512-pE3V73YBxxD0yHKbBCRRPStAt8CdMPT+gF2moqc4+dmpLXKFFcXPFjFdM1S4U54kkTFUCC7o85hPoRN7WD+F5Q==
-  dependencies:
-    "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
-
-"@bbc/psammead-heading-index@3.0.16":
-  version "3.0.16"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-heading-index/-/psammead-heading-index-3.0.16.tgz#b246183a1480d0dd341cd7aa959e2f4c2641c413"
-  integrity sha512-PVdwRMDuOHgLCeqiz2EruFvImxVqI/UA4r9o+hy/WEv6Aawxu4dnqJ/UcL8z7fFZA3SQQ/VFG57eXSB5z7s7+A==
-  dependencies:
-    "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
-
-"@bbc/psammead-headings@5.0.16":
-  version "5.0.16"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-headings/-/psammead-headings-5.0.16.tgz#6db1f3cce1727f9c17d4c375dd64df88bc42acb6"
-  integrity sha512-oiEaE+1YBpQMFA7VGNoW0kGjUirrGFxB35gg6ZKM2x+IFKY3Sq4NghRrtsC/XBFuTM0WHUXstYXGe+jsbjZldA==
-  dependencies:
-    "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
-
-"@bbc/psammead-image-placeholder@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-image-placeholder/-/psammead-image-placeholder-3.2.0.tgz#babb302f6999ac4afe954aede282da91d2fb3414"
-  integrity sha512-ufZ/cpr7pdCK975wYeEG5Ly5CS17I/LWJAuwiBIHydDoa5T7qzunLlfT/Spy0zaxQLFI2E/RtFaBLTVrbJgMyA==
-  dependencies:
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-styles" "7.2.5"
-
-"@bbc/psammead-image@2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-image/-/psammead-image-2.0.7.tgz#ea70239ea409e137e6c6e58063876fd7a282da58"
-  integrity sha512-7P0q2OU33LPOqRrdSyn7sRJLrhPJX2tkH/dOhXJruEyTh+orbanK0X+3qMtHedgMR7ZNF5iUcL82AdcA5J5TXQ==
+"@bbc/psammead-image@2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-image/-/psammead-image-2.0.8.tgz#47667e89b74eab0c2c8c2211213e36bcc6763cf6"
+  integrity sha512-XOCl+V1lLciXItNMmmB+MWy8p8PJ6ngwwdoIw6MfNbJwey5V34mGA/jtfn4dUOq93Y9W4i9VSMeibQrGqlu3XQ==
   dependencies:
     ramda "^0.27.1"
 
-"@bbc/psammead-inline-link@3.0.14":
-  version "3.0.14"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-inline-link/-/psammead-inline-link-3.0.14.tgz#5cbe02edcedc7f7b2097eaa6d7a0744040631ac4"
-  integrity sha512-uOvItxTUhskiGs6DeqsRsyKesyH7LkIbICw+JIGxAUVWy9IgKPCq/SPjJTwKRa0p1e0/eT2qd+fuMOFLx1J2sg==
+"@bbc/psammead-inline-link@3.0.15":
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-inline-link/-/psammead-inline-link-3.0.15.tgz#52758495d916bb5b7ecbfeaa33b4b01803c6d70e"
+  integrity sha512-YTsZHEtiFnK6mkaBraDKAKyXQBkckXdYI6D2i0UMXjpCB9MWJauQ4lXbSzzu+UCpQzu2hfk0dnIs3K/pmHnWOw==
   dependencies:
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-live-label@2.0.19":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-live-label/-/psammead-live-label-2.0.19.tgz#204d39873d25857c263a8c5badd82bc2c6f771ea"
-  integrity sha512-Fqk27MaVCOvHV6OHfeCxNq7sGE72wh0lnptSBdYNYL90kalMpXw5HtW68EEXq7Bas2g28TxCOraKgoQLNVtY7g==
+"@bbc/psammead-live-label@2.0.20":
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-live-label/-/psammead-live-label-2.0.20.tgz#1514318c2c29edcce9c81c188ad176d63874d2be"
+  integrity sha512-e5XPRGRQse+Oc4J9pPOcdj0hwubyT2/nUaFq9GPcFlJd6nh0kJD5VasGsR/TCfzaIwBMf279F+oWlmtKDimTdQ==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
-    "@bbc/psammead-visually-hidden-text" "2.0.6"
+    "@bbc/psammead-styles" "7.2.6"
+    "@bbc/psammead-visually-hidden-text" "2.0.7"
 
-"@bbc/psammead-locales@5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-locales/-/psammead-locales-5.0.6.tgz#34f9d9c71f18558ffdcd85dc9ad66aa564904e9a"
-  integrity sha512-KRXG4vXtlV7B39C/H9MWXeFzEcBOmskYAu6GquUa8MlEr3kYjhOIjo/lIq5erdPhwvn/3wZIW0sgEXXDxaun4w==
+"@bbc/psammead-locales@5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-locales/-/psammead-locales-5.0.7.tgz#761654c582c1c4376609c636fd5a0e46a428b3a1"
+  integrity sha512-ffLJKPHpJLXyf5BUeKv4mDlqHa5kGPpbhuqStscZMS/EcXjAz+wgPYhOOuxTWNlgc7cgTsSmSMk3UlTbyfCm+Q==
   dependencies:
     jalaali-js "1.1.5"
     moment "2.24.0"
 
-"@bbc/psammead-media-indicator@6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-media-indicator/-/psammead-media-indicator-6.1.0.tgz#7a0d8775265db9d3bb39831354711043bd8fecd4"
-  integrity sha512-cMpwQkIF3vbsyY8vAO4Npv07RnS9saJwqLw2ueS1y2Qop5uzHUhVdcoAj8F4h0Jd44fJDsyVdnP922WvohKJfw==
+"@bbc/psammead-media-indicator@6.1.1":
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-media-indicator/-/psammead-media-indicator-6.1.1.tgz#d4cffcc855964205936d2123119e86a0c9e51d93"
+  integrity sha512-ap8zpjcv/UWlzxNSUWoe7tHz/9H5d0mv/jKfh8Owae1MgHWTom8eqvla4yfKlY4hdNbGmblaTgzgVCirUrZ8Gg==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-most-read@6.0.30":
-  version "6.0.30"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.30.tgz#2322184387c2941f316de80b41c3664294de5c32"
-  integrity sha512-2zZng7vXNZscQfyBinH2nw4IlgG/48helhax/Dt5qICOpq/akokjrTxUVVueOacA5hh+U+7XdlCQRVfvTUyk/A==
+"@bbc/psammead-most-read@6.0.31":
+  version "6.0.31"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.31.tgz#aff0d2366fe636029df807ac132043d3f49cd806"
+  integrity sha512-310xj4+ImU+LPoTAMVhdMzUZsVDIutenZV+0dT+A8HZdoRQuife1vMbobTF+nIxwSa0RtgGN39invkizNcitNw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-grid" "3.1.0"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-grid" "3.1.1"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-navigation@9.1.1":
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-navigation/-/psammead-navigation-9.1.1.tgz#fac81a5e32fe1ad5fc87ce6e0795de1f32675cc9"
-  integrity sha512-p/LgczZLuR+I76sm1zFrjNZwaKHTc+uWviHdLY/KqIIWCz0m/tT6FcsyB5RA7RvmBCOCkaXogmuTiJtaC3WNWA==
+"@bbc/psammead-navigation@9.2.1":
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-navigation/-/psammead-navigation-9.2.1.tgz#0fa4d1d44dcb4557842edd225dbd736f1fe3170f"
+  integrity sha512-HrVQ0vGHrlcXornApRMju6NwgfvPJW6R6IuPibSPjatRYjNnQluspVe1gutzrLv9su+7yAZNoNS20We0+DymhQ==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-styles" "7.2.5"
-    "@bbc/psammead-visually-hidden-text" "2.0.6"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-styles" "7.2.6"
+    "@bbc/psammead-visually-hidden-text" "2.0.7"
 
-"@bbc/psammead-paragraph@4.0.16":
-  version "4.0.16"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-paragraph/-/psammead-paragraph-4.0.16.tgz#d18e6de9aeb8ba9bd0a2c2fb543c09b94589e3d3"
-  integrity sha512-Ha68VSpB9uHR2332HOAHVZVHWlBD+BBak2Hv/Zlxf6pAqwL2OX/q3gfvLRfVTqiYdfwv08ud26IKx0Ev4U/pUA==
+"@bbc/psammead-paragraph@4.0.17":
+  version "4.0.17"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-paragraph/-/psammead-paragraph-4.0.17.tgz#f94175e01bb91dce7815468d8ea8dff59ed2830a"
+  integrity sha512-bUTaemNlWgfpF0JoaCsEC2yWjPmXS9jX1vh8wQoay8+L4wtyhmzF2Cj/3cWPxhTmd0IMx82sv7SMnxhT7Br8RQ==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-play-button@3.0.20":
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-play-button/-/psammead-play-button-3.0.20.tgz#6d95e11156ccc6656d2bc9f5eea3faf1d7070a74"
-  integrity sha512-UKpd+QL1CI3uPpByaTyWLgig20hHCJpckGygD7E0bMG6a5wm6Pte7EuhpzVPjWsYghG7U5cd9cLEPywgVZJOPA==
+"@bbc/psammead-play-button@3.0.21":
+  version "3.0.21"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-play-button/-/psammead-play-button-3.0.21.tgz#f3366bdba88b8eaf9708ccd892d25c2a9f9d6c5c"
+  integrity sha512-ER0brH4cmHxtjn6JPXin30f7o6iyHN5mvflQEZufrc72cclGbAqRcFfg7FvokAwt1JlmLz+xCGzJhM2ujBR7VA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-radio-schedule@5.1.33":
-  version "5.1.33"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-radio-schedule/-/psammead-radio-schedule-5.1.33.tgz#91cdd8391d2d17165f4fdce3a9bd5ae576956040"
-  integrity sha512-EVUdvkuGw+EB8LNoPn3hYsDDCP+MjBjgc5+DGfl1pQM1ZpjF96YbVgDG+mPPB3YG39BLIy76bWkeYuLDbnh0Ww==
+"@bbc/psammead-radio-schedule@5.1.34":
+  version "5.1.34"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-radio-schedule/-/psammead-radio-schedule-5.1.34.tgz#9dabdf10b057921bfadd3c87967ba1de68d4aa57"
+  integrity sha512-X6KNwx8JbizkYYCecHlQSLRRWifFC8yRGj/3I1+Yj95qj9imzufEC798xRnJpsbu2Nzn+RjhY160GoKf4UMqHw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-assets" "3.1.8"
-    "@bbc/psammead-detokeniser" "1.0.5"
-    "@bbc/psammead-grid" "3.1.0"
-    "@bbc/psammead-live-label" "2.0.19"
-    "@bbc/psammead-styles" "7.2.5"
-    "@bbc/psammead-timestamp-container" "5.0.29"
+    "@bbc/psammead-assets" "3.1.9"
+    "@bbc/psammead-detokeniser" "1.0.6"
+    "@bbc/psammead-grid" "3.1.1"
+    "@bbc/psammead-live-label" "2.0.20"
+    "@bbc/psammead-styles" "7.2.6"
+    "@bbc/psammead-timestamp-container" "5.0.30"
 
 "@bbc/psammead-rich-text-transforms@2.0.6":
   version "2.0.6"
@@ -1405,45 +1405,45 @@
     ramda "^0.27.1"
     xmldoc "^1.1.2"
 
-"@bbc/psammead-script-link@3.0.18":
-  version "3.0.18"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-script-link/-/psammead-script-link-3.0.18.tgz#8a3a2667619ba8a8529c2d3ddd362a9aec9568ab"
-  integrity sha512-a4GKuZ8AbqkPqOOLB0grIXzjB8VyjUfTSINwgfyZSXHypLR+PsMbmTWkmEux3SryFc8R8cwCHQIQujSh/CEJoA==
+"@bbc/psammead-script-link@3.0.19":
+  version "3.0.19"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-script-link/-/psammead-script-link-3.0.19.tgz#68b8bb3d0228c33e03cb4f1c4da543524e2f4a24"
+  integrity sha512-LWKUqrcm+RMX72MRCdr2H2+gG4KclHXQ8yHyyIxq1cRHAfobnnogfCrUvtgSrjWK4/4iPFMcfweDsJF7Duh9Pw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-section-label@7.0.18":
-  version "7.0.18"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-section-label/-/psammead-section-label-7.0.18.tgz#e8f74c71e594626800e5f4087b6b0b3660fa3a10"
-  integrity sha512-V04zOjHi29KxO1pVig7hT6BWEboaw+6yQhhO6yXtaW02bm58+IQkQQK8BV26sbpDWLPOg2l/SZffGzpRZ8Bklw==
+"@bbc/psammead-section-label@7.0.19":
+  version "7.0.19"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-section-label/-/psammead-section-label-7.0.19.tgz#87993fed7d4eb36e97f6a223bd8c8b6e68d0eefd"
+  integrity sha512-1AP7edgfZk9tz/SufInIlk9ciYIbxYuzsS8Gj9Egmu8ALP3g0GENd+qatzTa27BCEmHEp8uWMLDez6itNnKKTA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-social-embed@3.1.14":
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-social-embed/-/psammead-social-embed-3.1.14.tgz#31902275e79652d93bd31b90f5e869b70fff85ee"
-  integrity sha512-MPYwJmFZZSOoyAW9Uztabu4usyhWoRqdLa310vFxvOxdOf1xLpFZuCmK2LLQPUBk0S9ZtHbHFYAEyyXWzdNJDA==
+"@bbc/psammead-social-embed@3.1.15":
+  version "3.1.15"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-social-embed/-/psammead-social-embed-3.1.15.tgz#da9e893a51de3d89ab1966f68b43ab707e85cf6a"
+  integrity sha512-T4Iwn+xs86QDawLUw3mOxAktNia6N5fjMZLckorIMQvPZNnzH/7jFdXl6EyANRmjKyOMyMLj0gFoBCNCdh1PmA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-story-promo-list@6.0.17":
-  version "6.0.17"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-story-promo-list/-/psammead-story-promo-list-6.0.17.tgz#99e0d631733f60a2a5179df7a69a2582c081643c"
-  integrity sha512-idvQbgBDxl8t/t7I11Vl2ODcWhQ1yAhHKwPUFp/kSiG7cJkHhkzAxrxfJbAT2c3vIjPDdDSgaHkGAqSvMEzgOQ==
+"@bbc/psammead-story-promo-list@6.0.18":
+  version "6.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-story-promo-list/-/psammead-story-promo-list-6.0.18.tgz#ee230406a8a41180979b8ad80227db242f417312"
+  integrity sha512-xI+8x6dKL45YzXf33Ror8aYRPwHiRft/GH9zzwxxr5+SvJplF0ECmGN+tlXIDbr/0IcXX+ejKtCAveCp1vgk9Q==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-story-promo@8.0.19":
-  version "8.0.19"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-story-promo/-/psammead-story-promo-8.0.19.tgz#bb07fc980f34d61f9caf8e1b8b7a190b8498b327"
-  integrity sha512-6FWcLlqIpzWGIptWzXtW2pz0EItYLuw0ME2IcElWX0sPa5j2H9K4YHATCgLxuRi926GPmjAHZuR/D3xQMbNDtA==
+"@bbc/psammead-story-promo@8.0.20":
+  version "8.0.20"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-story-promo/-/psammead-story-promo-8.0.20.tgz#a663794c761bf49637a6547c126c57ac860ec639"
+  integrity sha512-8FgLJ8WIIEuQetgMhNCMfE55+WVleP8XCeyj8KegeHGrfqYC73mnhGC6nG1+PNSBZ0X8H/atJKwrh0onHsRhUA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
 "@bbc/psammead-storybook-helpers@9.0.14":
   version "9.0.14"
@@ -1453,50 +1453,50 @@
     "@bbc/gel-foundations" "6.1.3"
     react-helmet "^6.1.0"
 
-"@bbc/psammead-styles@7.2.5":
-  version "7.2.5"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.5.tgz#183f81d70487ffe167eeb956d916dae20de13bc5"
-  integrity sha512-mJGZ+KYHVvGK4E773xPVlz62DaL+WK6hYN7SwJTg6puBZ0EoThFbDLVmz7NCEz+vL9m0uEiABtucn96OcZwpMQ==
+"@bbc/psammead-styles@7.2.6":
+  version "7.2.6"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-styles/-/psammead-styles-7.2.6.tgz#e4b40524c8e9fb314beb421b446d076dc6daa430"
+  integrity sha512-BjJ8B+9R0bM08NfcVKiv+118ADUf5CUlZXayBU1919i0lO4nJoqBfpbM+RVPK6sImTQ9td82POUbhDmyPqPlyw==
 
 "@bbc/psammead-test-helpers@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-test-helpers/-/psammead-test-helpers-6.0.4.tgz#e2030a6f3cff8b7bdd076fd2771817377415e704"
   integrity sha512-UI5+gJOy2ZgP08T005rH1MUR2ySngyRH0BLVl0xbwKq19uAbcVclv94zx9jqwdUvxjycykJyNbu1Tjg0L3DrSw==
 
-"@bbc/psammead-timestamp-container@5.0.29":
-  version "5.0.29"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp-container/-/psammead-timestamp-container-5.0.29.tgz#c5ada5ddd900c4ba1911261517e4a4e9cdb7630e"
-  integrity sha512-+1I4ME1Mfc9hOyoPyVTqUxoYmSzvGmA1vX7KogLLQ3GG06vz97Da2dXZQf/Y/nVX801YUm6vdaJo8VJ1JQF1OQ==
+"@bbc/psammead-timestamp-container@5.0.30":
+  version "5.0.30"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp-container/-/psammead-timestamp-container-5.0.30.tgz#f0b9306ee45d54f6a2cfab72505db1e92b990a5f"
+  integrity sha512-hnAPiiedZISRzZQFUvSDkB1B7YghOygQJTl3OAKZMQIfE3X53cBimUzi0+xv+zplvWE1tBt3K3oDG/bYLy/pQQ==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-timestamp" "4.0.17"
+    "@bbc/psammead-timestamp" "4.0.18"
     moment-timezone "^0.5.26"
 
-"@bbc/psammead-timestamp@4.0.17":
-  version "4.0.17"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp/-/psammead-timestamp-4.0.17.tgz#744c02b7358f20ecbbef54a1ee7a505c1196f2fb"
-  integrity sha512-NvekgwGKOQ+Qzw5GCJwUFM8FRJU99ELgkCDo6Jxrt/0qZ94DiYccSaafEnEfCik2DNDf2AeZuvipyUrt4wRkEg==
+"@bbc/psammead-timestamp@4.0.18":
+  version "4.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp/-/psammead-timestamp-4.0.18.tgz#9e725040d1150a0b878f203ec53fc11d2f0f9b63"
+  integrity sha512-7KfnXrErRQD8eICtnsRydJJDlRMTtV92B5PEJIYH7pyUUqbLC3PzIUIeUHWroY9J12TRbFgbYo2nvRskb8Gwdg==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-useful-links@3.0.18":
-  version "3.0.18"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.18.tgz#5d8d86597a6a90151400bd3b9bde75cf899db9c8"
-  integrity sha512-njr1lcVme5965mBunTmcKn1dLLnX3r2sgKnwH3o7RvYVKf/C1/Wgi9lafa9ZCvA0DGORxK/OQsGeysTifV/g2A==
+"@bbc/psammead-useful-links@3.0.19":
+  version "3.0.19"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.19.tgz#d2442f3cdc57f10034a50e4f9f23061b6090a093"
+  integrity sha512-9tTpFRX/0UjzzBuY1OSpeFwrq+yKB34UtY2SLEwWe9o+Ey7NBfWEBlx0+YNIpFv2NgbcyXoLfEAlWYbBIUWDLw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.2.5"
+    "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-visually-hidden-text@2.0.6":
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-visually-hidden-text/-/psammead-visually-hidden-text-2.0.6.tgz#c67ebc5a4a739043f42c632bee90368eb8dabeb2"
-  integrity sha512-QoRs//2m9ukQeFoX2rmLu+LdezjeFDmCGDg9WKa8tewcwzEW5vbpDQXOl4BqH8CVAAj5D7E8m1Na8q0K24mggA==
+"@bbc/psammead-visually-hidden-text@2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-visually-hidden-text/-/psammead-visually-hidden-text-2.0.7.tgz#90e6dac8499589e55b5048738c5ae6e37195a961"
+  integrity sha512-mKPYgTmgmKjjbaKkjKRugceMkCWOpFStfu9j4qtKnvAhQAkXXE+VXk5MvYCBxYti7TlVDJ0u5nEF3Uu5lyHGyA==
 
-"@bbc/web-vitals@1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.7.tgz#4506e0da242018a589871d4ba89cff0137fc9972"
-  integrity sha512-c7o4AquhP3A5UnK2469VqaVMk+DIXORp2w6+Ll2+JfCDXHGCPDOHXRZZX9O/a+EZ5useIa5gH/nUrGVDlPwXBA==
+"@bbc/web-vitals@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.8.tgz#369ea0dd713b22f20547d9fb5f33b155341c7303"
+  integrity sha512-/psHpWVJfI3X+s9iBTRNCTfhpFxvqafPS92XNsqMNNeLWQbqEBHi50/c/zq4mxXgJsm42xST9rm1NFPhysfG2g==
   dependencies:
     cross-fetch "^3.1.4"
     react-adaptive-hooks "0.0.8"
