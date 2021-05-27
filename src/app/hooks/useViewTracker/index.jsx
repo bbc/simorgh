@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
-import { useInView } from 'react-intersection-observer';
+import { observe } from 'react-intersection-observer';
 // Polyfill IntersectionObserver, e.g. for IE11
 import 'intersection-observer';
 
@@ -17,12 +17,9 @@ const useViewTracker = (props = {}) => {
   const format = path(['format'], props);
   const url = path(['url'], props);
   const timer = useRef(null);
+  const [inView, setInView] = useState(false);
   const [viewSent, setViewSent] = useState(false);
   const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    skip: !eventTrackingIsEnabled || viewSent,
-  });
   const {
     campaignID,
     pageIdentifier,
@@ -83,7 +80,22 @@ const useViewTracker = (props = {}) => {
     viewSent,
   ]);
 
-  return ref;
+  return node => {
+    if (eventTrackingIsEnabled && !viewSent) {
+      const destroy = observe(
+        node,
+        isIntersecting => {
+          if (isIntersecting) {
+            setInView(true);
+            destroy();
+          }
+        },
+        {
+          threshold: 0.5,
+        },
+      );
+    }
+  };
 };
 
 export default useViewTracker;
