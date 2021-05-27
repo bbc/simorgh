@@ -18,7 +18,11 @@ const useViewTracker = (props = {}) => {
   const url = path(['url'], props);
   const timer = useRef(null);
   const [viewSent, setViewSent] = useState(false);
-  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
+  const { enabled: eventTrackingIsEnabled, value } = useToggle('eventTracking');
+  const isExcluded =
+    typeof value === 'string'
+      ? value?.trim().split(',').includes(componentName)
+      : false;
   const [ref, inView] = useInView({
     threshold: 0.5,
     skip: !eventTrackingIsEnabled || viewSent,
@@ -33,7 +37,7 @@ const useViewTracker = (props = {}) => {
   const { service } = useContext(ServiceContext);
 
   useEffect(() => {
-    if (eventTrackingIsEnabled && inView && !timer.current) {
+    if (eventTrackingIsEnabled && !isExcluded && inView && !timer.current) {
       timer.current = setTimeout(() => {
         const shouldSendEvent = [
           !viewSent,
