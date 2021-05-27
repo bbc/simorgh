@@ -15,7 +15,8 @@ const useClickTrackerHandler = (props = {}) => {
   const href = path(['href'], props);
   const format = path(['format'], props);
 
-  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
+  const { enabled: eventTrackingIsEnabled, value } = useToggle('eventTracking');
+  const isExcluded = value?.trim().split(',').includes(componentName);
   const [clicked, setClicked] = useState(false);
   const {
     campaignID,
@@ -28,7 +29,14 @@ const useClickTrackerHandler = (props = {}) => {
 
   return useCallback(
     event => {
-      if (eventTrackingIsEnabled && !clicked && isValidClick(event)) {
+      const shouldRegisterClick = [
+        eventTrackingIsEnabled,
+        !isExcluded,
+        !clicked,
+        isValidClick(event),
+      ].every(Boolean);
+
+      if (shouldRegisterClick) {
         setClicked(true);
 
         const shouldSendEvent = [

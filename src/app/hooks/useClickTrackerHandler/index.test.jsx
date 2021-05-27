@@ -285,6 +285,30 @@ describe('Click tracking', () => {
       expect(window.location.assign).toHaveBeenCalledWith(url);
     });
   });
+
+  it('should disable click tracking if the toggle is enabled but the component is on the exclusion list', () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const customToggle = {
+      eventTracking: {
+        enabled: true,
+        value: 'component-name,other-component',
+      },
+    };
+    const customHookProps = {
+      componentName: 'component-name',
+      format: 'CHD=promo::1',
+    };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData} toggles={customToggle}>
+        <TestComponent hookProps={customHookProps} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(spyFetch).not.toHaveBeenCalled();
+  });
 });
 
 describe('Error handling', () => {
