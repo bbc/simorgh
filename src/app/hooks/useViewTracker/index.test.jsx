@@ -202,7 +202,7 @@ describe('Expected use', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should send event to ATI when eventTracking toggle is enabled and different components name is on the exclusion list', async () => {
+  it('should send event to ATI when eventTracking toggle is enabled and a different component name is on the exclusion list', async () => {
     setIntersectionNotObserved();
 
     const { rerender } = renderHook(() => useViewTracker(trackingData), {
@@ -223,7 +223,7 @@ describe('Expected use', () => {
 
     act(() => jest.advanceTimersByTime(1100));
 
-    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: true });
+    expect(useInView).toHaveBeenCalledWith({ threshold: 0.5, skip: false });
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
 
@@ -284,6 +284,54 @@ describe('Expected use', () => {
 });
 
 describe('Error handling', () => {
+  it('should not throw error and should send event to ATI when exclusion list is undefined', async () => {
+    setIntersectionObserved();
+
+    const trackingData = undefined;
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: true,
+            value: undefined,
+          },
+        },
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
+  it('should not throw error and should send event to ATI when exclusion list is an unexpected data type', async () => {
+    setIntersectionObserved();
+
+    const trackingData = undefined;
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+        toggles: {
+          eventTracking: {
+            enabled: true,
+            value: ['most-read'],
+          },
+        },
+      },
+    });
+
+    act(() => jest.advanceTimersByTime(1100));
+
+    expect(result.error).toBeUndefined();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
+
   it('should not throw error and not send event to ATI when no tracking data passed into hook', async () => {
     setIntersectionObserved();
 

@@ -25,7 +25,7 @@ const useViewTracker = (props = {}) => {
       : false;
   const [ref, inView] = useInView({
     threshold: 0.5,
-    skip: !eventTrackingIsEnabled || viewSent,
+    skip: !eventTrackingIsEnabled || isExcluded || viewSent,
   });
   const {
     campaignID,
