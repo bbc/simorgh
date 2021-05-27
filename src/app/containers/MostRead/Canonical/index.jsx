@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { oneOf, string, elementType } from 'prop-types';
+import { oneOf, string, elementType, shape, node } from 'prop-types';
 import {
   MostReadList,
   MostReadItemWrapper,
   MostReadRank,
   MostReadLink,
 } from '@bbc/psammead-most-read';
+import { scriptPropType } from '@bbc/gel-foundations/dist/prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
@@ -18,6 +19,55 @@ import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+
+const TrackedMostReadLink = ({
+  dir,
+  service,
+  script,
+  title,
+  href,
+  size,
+  eventTrackingData,
+  children,
+}) => {
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  return (
+    <MostReadLink
+      dir={dir}
+      service={service}
+      script={script}
+      title={title}
+      href={href}
+      size={size}
+      onClick={clickTrackerHandler}
+    >
+      {children}
+    </MostReadLink>
+  );
+};
+
+TrackedMostReadLink.propTypes = {
+  dir: oneOf(['rtl', 'ltr']),
+  service: string.isRequired,
+  script: shape(scriptPropType).isRequired,
+  title: string.isRequired,
+  href: string.isRequired,
+  children: node, // this node will be a timestamp container
+  size: oneOf(['default', 'small']),
+  eventTrackingData: shape({
+    componentName: string,
+  }),
+};
+
+TrackedMostReadLink.defaultProps = {
+  dir: 'ltr',
+  children: null,
+  size: 'default',
+  eventTrackingData: null,
+};
 
 const logger = nodeLogger(__filename);
 
@@ -27,6 +77,7 @@ const CanonicalMostRead = ({
   size,
   initialData,
   wrapper: Wrapper,
+  eventTrackingData,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const {
@@ -38,6 +89,7 @@ const CanonicalMostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
+  const viewRef = useViewTracker(eventTrackingData);
 
   const filteredData = processMostRead({
     data: initialData,
@@ -112,6 +164,7 @@ const CanonicalMostRead = ({
             dir={dir}
             key={item.id}
             columnLayout={columnLayout}
+            ref={viewRef}
           >
             <MostReadRank
               service={service}
@@ -122,13 +175,15 @@ const CanonicalMostRead = ({
               columnLayout={columnLayout}
               size={size}
             />
-            <MostReadLink
+
+            <TrackedMostReadLink
               dir={dir}
               service={service}
               script={script}
               title={item.title}
               href={item.href}
               size={size}
+              eventTrackingData={eventTrackingData}
             >
               {shouldRenderLastUpdated(item.timestamp) && (
                 <LastUpdated
@@ -140,7 +195,7 @@ const CanonicalMostRead = ({
                   timezone={timezone}
                 />
               )}
-            </MostReadLink>
+            </TrackedMostReadLink>
           </MostReadItemWrapper>
         ))}
       </MostReadList>
@@ -154,6 +209,9 @@ CanonicalMostRead.propTypes = {
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
+  eventTrackingData: shape({
+    componentName: 'most-read',
+  }),
 };
 
 CanonicalMostRead.defaultProps = {
@@ -161,6 +219,7 @@ CanonicalMostRead.defaultProps = {
   size: 'default',
   initialData: null,
   wrapper: React.Fragment,
+  eventTrackingData: null,
 };
 
 export default CanonicalMostRead;
