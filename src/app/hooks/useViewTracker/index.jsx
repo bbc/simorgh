@@ -1,8 +1,5 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
-import { useInView } from 'react-intersection-observer';
-// Polyfill IntersectionObserver, e.g. for IE11
-import 'intersection-observer';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
@@ -11,18 +8,17 @@ import useToggle from '../useToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
+const MIN_VIEWED_PERCENT = 0.5;
 
 const useViewTracker = (props = {}) => {
+  const observer = useRef();
+  const timer = useRef(null);
+  const [isInView, setIsInView] = useState();
+  const [eventSent, setEventSent] = useState(false);
+  const { enabled: trackingIsEnabled } = useToggle('eventTracking');
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
   const url = path(['url'], props);
-  const timer = useRef(null);
-  const [viewSent, setViewSent] = useState(false);
-  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    skip: !eventTrackingIsEnabled || viewSent,
-  });
   const {
     campaignID,
     pageIdentifier,
@@ -31,12 +27,31 @@ const useViewTracker = (props = {}) => {
     statsDestination,
   } = useContext(EventTrackingContext);
   const { service } = useContext(ServiceContext);
+  const initObserver = async () => {
+    if (typeof window.IntersectionObserver === 'undefined') {
+      // Polyfill IntersectionObserver, e.g. for IE11
+      await import('intersection-observer');
+    }
+
+    observer.current = new IntersectionObserver(
+      function observerCallback(changes) {
+        changes.forEach(({ isIntersecting }) => {
+          setIsInView(isIntersecting);
+        });
+      },
+      {
+        threshold: [MIN_VIEWED_PERCENT],
+      },
+    );
+  };
 
   useEffect(() => {
-    if (eventTrackingIsEnabled && inView && !timer.current) {
+    if (isInView && !timer.current) {
       timer.current = setTimeout(() => {
-        const shouldSendEvent = [
-          !viewSent,
+        const shouldSendEvent = [trackingIsEnabled, isInView, !eventSent].every(
+          Boolean,
+        );
+        const hasRequiredProps = [
           campaignID,
           componentName,
           pageIdentifier,
@@ -46,7 +61,7 @@ const useViewTracker = (props = {}) => {
           statsDestination,
         ].every(Boolean);
 
-        if (shouldSendEvent) {
+        if (shouldSendEvent && hasRequiredProps) {
           sendEventBeacon({
             campaignID,
             componentName,
@@ -59,7 +74,10 @@ const useViewTracker = (props = {}) => {
             type: EVENT_TYPE,
             url,
           });
-          setViewSent(true);
+          setEventSent(true);
+          observer.current.disconnect();
+          observer.current = null;
+          timer.current = null;
         }
       }, VIEWED_DURATION_MS);
     } else {
@@ -67,23 +85,34 @@ const useViewTracker = (props = {}) => {
       timer.current = null;
     }
 
-    return () => clearTimeout(timer.current);
+    return () => {
+      clearTimeout(timer.current);
+    };
   }, [
     campaignID,
     componentName,
-    eventTrackingIsEnabled,
     format,
-    inView,
+    isInView,
     pageIdentifier,
     platform,
     producerId,
     service,
     statsDestination,
+    trackingIsEnabled,
+    eventSent,
     url,
-    viewSent,
   ]);
 
-  return ref;
+  return async element => {
+    if (!trackingIsEnabled || eventSent) {
+      return;
+    }
+    if (!observer.current) {
+      await initObserver();
+    }
+
+    observer.current.observe(element);
+  };
 };
 
 export default useViewTracker;
