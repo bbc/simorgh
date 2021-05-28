@@ -1,3 +1,4 @@
+import Cache from 'lru-cache';
 import defaultToggles from '#lib/config/toggles';
 import constructTogglesEndpoint from '#contexts/ToggleContext/utils/constructTogglesEndpoint';
 import nodeLogger from '#lib/logger.node';
@@ -9,10 +10,13 @@ import {
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 
 const logger = nodeLogger(__filename);
+const outageCache = new Cache(1);
 
 const getToggles = async (service, cache) => {
   const environment = process.env.SIMORGH_APP_ENV || 'local';
+  const outageTimeout = outageCache.get('timeout');
   const timeout =
+    outageTimeout ||
     parseInt(process.env.SIMORGH_CONFIG_TIMEOUT_SECONDS, 10) * 1000;
   const localToggles = defaultToggles[environment];
   if (!localToggles.enableFetchingToggles.enabled) {
@@ -54,6 +58,13 @@ const getToggles = async (service, cache) => {
     };
   } catch (error) {
     logger.error(CONFIG_ERROR, { error: error.toString(), url, service });
+    if (!outageTimeout) {
+      outageCache.set(
+        'timeout',
+        parseInt(process.env.SIMORGH_CONFIG_OUTAGE_TIMEOUT_SECONDS, 10) * 1000,
+        parseInt(process.env.SIMORGH_CONFIG_OUTAGE_DURATION_SECONDS, 10) * 1000,
+      );
+    }
     return localToggles;
   }
 };
