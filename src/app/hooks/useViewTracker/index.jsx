@@ -10,7 +10,7 @@ const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const useViewTracker = (props = {}) => {
+const useViewTracker = props => {
   const observer = useRef();
   const timer = useRef(null);
   const [isInView, setIsInView] = useState();
@@ -32,17 +32,16 @@ const useViewTracker = (props = {}) => {
       // Polyfill IntersectionObserver, e.g. for IE11
       await import('intersection-observer');
     }
+    const callback = changes => {
+      changes.forEach(({ isIntersecting }) => {
+        setIsInView(isIntersecting);
+      });
+    };
+    const options = {
+      threshold: [MIN_VIEWED_PERCENT],
+    };
 
-    observer.current = new IntersectionObserver(
-      function observerCallback(changes) {
-        changes.forEach(({ isIntersecting }) => {
-          setIsInView(isIntersecting);
-        });
-      },
-      {
-        threshold: [MIN_VIEWED_PERCENT],
-      },
-    );
+    observer.current = new IntersectionObserver(callback, options);
   };
 
   useEffect(() => {
