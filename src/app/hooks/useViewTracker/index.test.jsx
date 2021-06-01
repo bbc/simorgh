@@ -220,13 +220,11 @@ describe('Expected use', () => {
     });
 
     const [[, options]] = global.IntersectionObserver.mock.calls;
+    const [[viewEventUrl]] = global.fetch.mock.calls;
 
     expect(global.IntersectionObserver).toHaveBeenCalledTimes(1);
     expect(options).toEqual({ threshold: [0.5] });
     expect(global.fetch).toHaveBeenCalledTimes(1);
-
-    const [[viewEventUrl]] = global.fetch.mock.calls;
-
     expect(urlToObject(viewEventUrl)).toEqual({
       origin: 'https://logws1363.ati-host.net',
       pathname: '/',
@@ -434,8 +432,6 @@ describe('Error handling', () => {
 
     await result.current(element);
 
-    act(() => jest.advanceTimersByTime(1100));
-
     expect(result.error).toBeUndefined();
     expect(typeof global.IntersectionObserver).toEqual('function');
   });
@@ -453,8 +449,6 @@ describe('Error handling', () => {
     const element = document.createElement('div');
 
     await result.current(element);
-
-    act(() => jest.advanceTimersByTime(1100));
 
     expect(result.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
