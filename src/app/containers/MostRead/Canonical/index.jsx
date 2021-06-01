@@ -42,7 +42,7 @@ const TrackedMostReadLink = ({
       title={title}
       href={href}
       size={size}
-      onClick={clickTrackerHandler}
+      handleClick={clickTrackerHandler}
     >
       {children}
     </MostReadLink>
@@ -210,7 +210,7 @@ CanonicalMostRead.propTypes = {
   initialData: mostReadShape,
   wrapper: elementType,
   eventTrackingData: shape({
-    componentName: 'most-read',
+    componentName: string,
   }),
 };
 
