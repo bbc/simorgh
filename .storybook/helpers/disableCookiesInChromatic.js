@@ -3,17 +3,11 @@ import isChromatic from 'chromatic/isChromatic';
 if (isChromatic()) {
   if (!document.__defineGetter__) {
     Object.defineProperty(document, 'cookie', {
-      get: function () {
-        return '';
-      },
-      set: function () {
-        return true;
-      },
+      get: () => '',
+      set: () => {},
     });
   } else {
-    document.__defineGetter__('cookie', function () {
-      return '';
-    });
-    document.__defineSetter__('cookie', function () {});
+    document.__defineGetter__('cookie', () => '');
+    document.__defineSetter__('cookie', () => {});
   }
 }
