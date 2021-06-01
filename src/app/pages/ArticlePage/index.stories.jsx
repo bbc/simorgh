@@ -1,4 +1,5 @@
 import React from 'react';
+import { MemoryRouter } from 'react-router';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -27,10 +28,12 @@ storiesOf('Pages/Article Page', module)
           service="pidgin"
         >
           <UserContextProvider>
-            <ArticlePage
-              pageData={articleData}
-              mostReadEndpointOverride="./data/news/mostRead/index.json"
-            />
+            <MemoryRouter>
+              <ArticlePage
+                pageData={articleData}
+                mostReadEndpointOverride="./data/news/mostRead/index.json"
+              />
+            </MemoryRouter>
           </UserContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
