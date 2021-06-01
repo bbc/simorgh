@@ -6,6 +6,8 @@ import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 
+import disableCookiesInChromatic from './helpers/disableCookiesInChromatic';
+
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
   { prefix: 'F_LATHA', path: 'fonts/Latha/' },
@@ -18,21 +20,24 @@ const fontPathMap = [
   { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
-addDecorator(story => (
-  /* eslint-disable react/jsx-filename-extension */
-  <>
-    <GlobalStyles
-      fonts={Object.values(fontFaces).map(fontFace => {
-        const fontMap =
-          fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
-          fontPathMap[0];
-        return fontFace(fontMap.path);
-      })}
-    />
-    {story()}
-  </>
-  /* eslint-enable react/jsx-filename-extension */
-));
+addDecorator(story => {
+  disableCookiesInChromatic();
+  return (
+    /* eslint-disable react/jsx-filename-extension */
+    <>
+      <GlobalStyles
+        fonts={Object.values(fontFaces).map(fontFace => {
+          const fontMap =
+            fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
+            fontPathMap[0];
+          return fontFace(fontMap.path);
+        })}
+      />
+      {story()}
+    </>
+    /* eslint-enable react/jsx-filename-extension */
+  );
+});
 
 const theme = create({
   base: 'light',
