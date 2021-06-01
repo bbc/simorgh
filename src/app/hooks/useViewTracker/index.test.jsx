@@ -516,4 +516,27 @@ describe('Error handling', () => {
     expect(result.error).toBeUndefined();
     expect(global.fetch).not.toHaveBeenCalled();
   });
+
+  it('should not throw error and not send event to ATI when no element is passed into hook ref callback function', async () => {
+    const trackingData = {
+      componentName: 'most-read',
+      format: 'CHD=promo::2',
+      url: 'http://www.bbc.com/pidgin/tori-51745682',
+    };
+
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+
+    const element = null;
+
+    await result.current(element);
+
+    expect(result.error).toBeUndefined();
+    expect(global.IntersectionObserver).not.toHaveBeenCalled();
+    expect(global.fetch).not.toHaveBeenCalled();
+  });
 });

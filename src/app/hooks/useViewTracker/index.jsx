@@ -10,7 +10,7 @@ const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
-const useViewTracker = props => {
+const useViewTracker = (props = {}) => {
   const observer = useRef();
   const timer = useRef(null);
   const [isInView, setIsInView] = useState();
@@ -103,7 +103,7 @@ const useViewTracker = props => {
   ]);
 
   return async element => {
-    if (!trackingIsEnabled || eventSent) {
+    if (!element || !trackingIsEnabled || eventSent) {
       return;
     }
     if (!observer.current) {
