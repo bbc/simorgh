@@ -1,0 +1,446 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:ce4krqk1334o",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o",
+      "canonicalUrl": "https://www.bbc.com/mundo/articles/ce4krqk1334o"
+    },
+    "type": "article",
+    "createdBy": "Mundo",
+    "language": "es",
+    "lastUpdated": 1620376665769,
+    "firstPublished": 1620147687728,
+    "lastPublished": 1620147687728,
+    "timestamp": 1620147687728,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "locator": "urn:bbc:optimo:asset:ce4krqk1334o",
+      "availability": "AVAILABLE",
+      "taggings": [],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "urlLink",
+      "subheadline"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 1
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Article with anchors",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Article with anchors",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Anchor 1",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Anchor 1",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Anchor 1",
+                              "attributes": ["bold"]
+                            }
+                          }
+                        ],
+                        "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-1",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Anchor 2",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Anchor 2",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 2", "attributes": [] }
+                          }
+                        ],
+                        "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-2",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Anchor 3",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Anchor 3",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 3", "attributes": [] }
+                          }
+                        ],
+                        "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o?example=123#Anchor-3",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Anchor 4",
+                  "blocks": [
+                    {
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Anchor 4",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 4", "attributes": [] }
+                          }
+                        ],
+                        "locator": "https://www.test.bbc.com/mundo/articles/ce4krqk1334o",
+                        "isExternal": false
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Anchor 1",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 1", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Anchor 2",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 2", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "subheadline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Anchor 3",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": { "text": "Anchor 3", "attributes": [] }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Fruitcake wafer dragée caramels chupa chups gummi bears. Soufflé pudding donut chocolate cake. Lollipop brownie oat cake. Chocolate donut bear claw fruitcake dragée marshmallow tootsie roll jelly beans.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Tart cheesecake macaroon. Tootsie roll ice cream lemon drops. Wafer icing bear claw dragée.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:ce4krqk1334o",
+      "canonicalUrl": "https://www.bbc.com/mundo/articles/ce4krqk1334o"
+    },
+    "timestamp": 1620147687728,
+    "suitableForSyndication": true,
+    "language": "es",
+    "headlines": {
+      "seoHeadline": "Article with anchors",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Article with anchors",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Article with anchors",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {},
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Article with anchors - summary",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Article with anchors - summary",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "locator": "urn:bbc:optimo:asset:ce4krqk1334o",
+      "availability": "AVAILABLE",
+      "taggings": [],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "id": "urn:bbc:ares::article:ce4krqk1334o",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
