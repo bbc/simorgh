@@ -292,12 +292,12 @@ describe('Expected use', () => {
 
     await result.current(element);
 
-    const observerInstanceA = getObserverInstance(element);
+    const observerInstance = getObserverInstance(element);
 
     act(() => {
       triggerIntersection({
         changes: [{ isIntersecting: true }, { isIntersecting: false }],
-        observer: observerInstanceA,
+        observer: observerInstance,
       });
     });
 
@@ -306,6 +306,46 @@ describe('Expected use', () => {
     });
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should send multiple view events for multiple hook instances', async () => {
+    const { result: resultA } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+    const { result: resultB } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+    const elementA = document.createElement('div');
+    const elementB = document.createElement('div');
+
+    await resultA.current(elementA);
+    await resultB.current(elementB);
+
+    const observerInstanceA = getObserverInstance(elementA);
+    const observerInstanceB = getObserverInstance(elementB);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstanceA,
+      });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstanceB,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 
   it('should disconnect IntersectionObserver after event is sent', async () => {
