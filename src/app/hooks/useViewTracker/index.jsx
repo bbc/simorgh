@@ -48,9 +48,6 @@ const useViewTracker = (props = {}) => {
   useEffect(() => {
     if (isInView && !timer.current) {
       timer.current = setTimeout(() => {
-        const shouldSendEvent = [trackingIsEnabled, isInView, !eventSent].every(
-          Boolean,
-        );
         const hasRequiredProps = [
           campaignID,
           componentName,
@@ -61,7 +58,14 @@ const useViewTracker = (props = {}) => {
           statsDestination,
         ].every(Boolean);
 
-        if (shouldSendEvent && hasRequiredProps) {
+        const shouldSendEvent = [
+          hasRequiredProps,
+          trackingIsEnabled,
+          isInView,
+          !eventSent,
+        ].every(Boolean);
+
+        if (shouldSendEvent) {
           sendEventBeacon({
             campaignID,
             componentName,
