@@ -319,3 +319,26 @@ describe('Consent Banner Utilities', () => {
     });
   });
 });
+
+describe('Chromatic snapshots', () => {
+  it('does not set PRIVACY_COOKIE when the user agent belongs to Chromatic so that snapshots are consistent', () => {
+    const { navigator } = global;
+
+    delete global.navigator;
+
+    global.navigator = {
+      userAgent: 'Chromatic',
+    };
+
+    setCookieGetMock({ privacy: '0' });
+
+    const { runInitial } = getConsentBannerUtilities();
+
+    runInitial();
+
+    expect(Cookie.set).toHaveBeenCalledTimes(0);
+    expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+
+    global.navigator = navigator;
+  });
+});
