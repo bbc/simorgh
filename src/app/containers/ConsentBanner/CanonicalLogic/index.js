@@ -1,4 +1,6 @@
 import Cookie from 'js-cookie';
+import isChromatic from 'chromatic/isChromatic';
+
 import setCookie from '#lib/utilities/setCookie';
 import setCookieOven from './setCookieOven';
 
@@ -57,7 +59,9 @@ const consentBannerUtilities = ({
     if (onClient) {
       if (showPrivacyBanner()) {
         setShowPrivacyBanner(true);
-        setSeenPrivacyBanner();
+        if (!isChromatic()) {
+          setSeenPrivacyBanner();
+        }
       }
 
       if (showCookieBanner()) {
