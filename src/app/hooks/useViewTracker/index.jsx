@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
+import prop from 'ramda/src/prop';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
@@ -33,9 +34,9 @@ const useViewTracker = (props = {}) => {
       await import('intersection-observer');
     }
     const callback = changes => {
-      changes.forEach(({ isIntersecting }) => {
-        setIsInView(isIntersecting);
-      });
+      const someElementsAreInView = changes.some(prop('isIntersecting'));
+
+      setIsInView(someElementsAreInView);
     };
     const options = {
       threshold: [MIN_VIEWED_PERCENT],

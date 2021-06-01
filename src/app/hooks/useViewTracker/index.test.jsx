@@ -48,10 +48,10 @@ const getObserverInstance = element => {
   }
 };
 
-const triggerIntersection = ({ isIntersecting, observer }) => {
+const triggerIntersection = ({ changes, observer }) => {
   const item = observers.get(observer);
 
-  item.callback([{ isIntersecting }]);
+  item.callback(changes);
 };
 
 const { error } = console;
@@ -139,7 +139,7 @@ describe('Expected use', () => {
 
     act(() => {
       triggerIntersection({
-        isIntersecting: false,
+        changes: [{ isIntersecting: false }],
         observer: observerInstance,
       });
     });
@@ -212,7 +212,10 @@ describe('Expected use', () => {
     const observerInstance = getObserverInstance(element);
 
     act(() => {
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
@@ -262,12 +265,39 @@ describe('Expected use', () => {
 
     act(() => {
       triggerIntersection({
-        isIntersecting: true,
+        changes: [{ isIntersecting: true }],
         observer: observerInstanceA,
       });
       triggerIntersection({
-        isIntersecting: true,
+        changes: [{ isIntersecting: true }],
         observer: observerInstanceB,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should send one view event for multiple observed elements when at least one of them is in view', async () => {
+    const { result } = renderHook(() => useViewTracker(trackingData), {
+      wrapper,
+      initialProps: {
+        pageData: fixtureData,
+      },
+    });
+    const element = document.createElement('div');
+
+    await result.current(element);
+
+    const observerInstanceA = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }, { isIntersecting: false }],
+        observer: observerInstanceA,
       });
     });
 
@@ -294,7 +324,10 @@ describe('Expected use', () => {
     const { disconnect } = observerInstance;
 
     act(() => {
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
@@ -319,7 +352,10 @@ describe('Expected use', () => {
     const { disconnect } = observerInstance;
 
     act(() => {
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
@@ -345,7 +381,10 @@ describe('Expected use', () => {
 
     act(() => {
       // scroll element into view
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
@@ -355,7 +394,7 @@ describe('Expected use', () => {
     act(() => {
       // scroll element out of view
       triggerIntersection({
-        isIntersecting: false,
+        changes: [{ isIntersecting: false }],
         observer: observerInstance,
       });
     });
@@ -382,7 +421,10 @@ describe('Expected use', () => {
 
     act(() => {
       // scroll element into view
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
@@ -392,14 +434,17 @@ describe('Expected use', () => {
     act(() => {
       // scroll element out of view
       triggerIntersection({
-        isIntersecting: false,
+        changes: [{ isIntersecting: false }],
         observer: observerInstance,
       });
     });
 
     act(() => {
       // scroll element into view again
-      triggerIntersection({ isIntersecting: true, observer: observerInstance });
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
     });
 
     act(() => {
