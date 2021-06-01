@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle, no-restricted-properties */
+
 import isChromatic from 'chromatic/isChromatic';
 
 if (isChromatic()) {
