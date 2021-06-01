@@ -78,6 +78,7 @@ const useViewTracker = (props = {}) => {
     eventTrackingIsEnabled,
     format,
     inView,
+    isExcluded,
     pageIdentifier,
     platform,
     producerId,
