@@ -13,6 +13,7 @@ const PRIVACY_COOKIE_CURRENT = 'july2019';
 const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
+const isStorybook = () => process.env.STORYBOOK;
 
 // We opted for the sameSite=None attribute below to maintain consistency with Orbit/cross-TLD browsing
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
@@ -33,12 +34,17 @@ const showCookieBanner = () =>
   !EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(Cookie.get(EXPLICIT_COOKIE));
 const policyCookieSet = () => !!Cookie.get(POLICY_COOKIE);
 
-const setSeenPrivacyBanner = () =>
+const setSeenPrivacyBanner = () => {
+  if (isStorybook()) {
+    return;
+  }
+
   setCookie({
     name: PRIVACY_COOKIE,
     value: PRIVACY_COOKIE_CURRENT,
     sameSite: SAME_SITE_VALUE,
   });
+};
 const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
 const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
 const setDismissedCookieBanner = () =>
