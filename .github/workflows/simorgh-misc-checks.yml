@@ -17,6 +17,7 @@ jobs:
         node-version: [12.x]
     env:
       CI: true
+      STORYBOOK_CHROMATIC_CI: true
 
     steps:
       - uses: actions/checkout@v2
