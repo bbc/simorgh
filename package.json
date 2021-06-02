@@ -19,12 +19,11 @@
     "browserslist": "4.16.5",
     "multicast-dns": "7.2.3",
     "web-vitals": "1.1.1",
-    "electron": "9.4.0",
     "ws": "7.4.6"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
-    "bbcA11y": "echo 'BBC A11y Disabled Temporarily Due to Security Vulnerabilities'",
+    "bbcA11y": "echo 'BBC A11y Disabled Temporarily Due to npm audit warnings'",
     "bbcA11y:ci": "npm run bbcA11y",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build": "yarn build:local && node ./scripts/bundleSize/index.js",
