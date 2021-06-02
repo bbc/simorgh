@@ -33,8 +33,6 @@ import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 
-global.performance.getEntriesByName = jest.fn(() => []);
-
 // mock pages/index.js to return a non async page component
 jest.mock('#pages/index.js', () => ({
   StoryPage: jest.requireActual('#pages/StoryPage').default,
