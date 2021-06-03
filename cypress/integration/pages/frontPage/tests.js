@@ -49,6 +49,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
               cy.get('h3').eq(3).click();
               cy.go('back');
               cy.url().should('eq', currentURL);
+              // If I run the tests without this done() I get an error saying 'The done() callback was never invoked!'
+              done();
             });
           });
         }
