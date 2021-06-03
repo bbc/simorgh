@@ -61,7 +61,6 @@ const useViewTracker = (props = {}) => {
         const shouldSendEvent = [
           hasRequiredProps,
           trackingIsEnabled,
-          isInView,
           !eventSent,
         ].every(Boolean);
 
