@@ -7,7 +7,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
-import useViewTracker from '#app/hooks/useViewTracker';
+import useViewTracker from '#hooks/useViewTracker';
 
 const EVENT_TRACKING_DATA = {
   componentName: 'features',
