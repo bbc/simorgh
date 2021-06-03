@@ -20,6 +20,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         ) {
           it('individual promo should link to corresponding article pages and back navigation should link to frontpage', done => {
             // This is to catch an application error that keeps failing live E2Es
+            // See issue #9138
             // We are waiting for a response from Google to find a fix
             // And in the meantime are stopping this error failing the tests
             // eslint-disable-next-line no-unused-vars
