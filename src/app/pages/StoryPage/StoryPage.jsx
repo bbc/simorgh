@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -251,16 +250,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const ResponsivePodcastPromoWrapper = styled.div`
-    margin-top: ${GEL_SPACING_TRPL};
-    margin-bottom: ${GEL_SPACING_TRPL};
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin-top: -${GEL_SPACING_SEXT};
-      margin-bottom: -${GEL_SPACING};
-      padding: ${GEL_SPACING_DBL};
-    }
-  `;
-
   const MostReadWrapper = ({ children }) => (
     <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
       <SectionLabel
@@ -347,11 +336,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {podcastPromoEnabled && (
-            <ResponsivePodcastPromoWrapper>
-              <PodcastPromo />
-            </ResponsivePodcastPromoWrapper>
-          )}
+          {podcastPromoEnabled && <PodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis
