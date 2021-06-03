@@ -1,3 +1,5 @@
+import { waitFor } from '@testing-library/react';
+
 const fetch = require('isomorphic-fetch');
 
 jest.mock('../../cypress/support/helpers/getPageUrls', () => {
@@ -91,6 +93,8 @@ describe('amp validator tests', () => {
   });
 
   it('should print passes when verbose is true', async () => {
+    jest.setTimeout(10000);
+
     fetch.mockImplementation(() => ({
       text: () => `<!doctype html>
     <html ⚡>
@@ -114,7 +118,12 @@ describe('amp validator tests', () => {
       </body>
     </html>`,
     }));
-    await runValidator(true);
-    expect(log).toBeCalledTimes(41);
+    await waitFor(
+      async () => {
+        await runValidator(true);
+        expect(log).toBeCalledTimes(41);
+      },
+      { timeout: 10000 },
+    );
   });
 });
