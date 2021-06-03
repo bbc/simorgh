@@ -8,6 +8,7 @@ import nepaliMostReadData from '#data/nepali/mostRead';
 import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
 import ukrainianMostReadData from '#data/ukrainian/mostRead';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
@@ -18,6 +19,8 @@ import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -26,13 +29,21 @@ const MostReadCanonicalWithContext = ({
   initialData,
   wrapper,
   pageLang,
+  eventTrackingData,
 }) => (
   <ServiceContextProvider service={service} pageLang={pageLang}>
-    <CanonicalMostRead
-      endpoint={endpoint}
-      initialData={initialData}
-      wrapper={wrapper}
-    />
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: { enabled: true },
+      }}
+    >
+      <CanonicalMostRead
+        endpoint={endpoint}
+        initialData={initialData}
+        wrapper={wrapper}
+        eventTrackingData={eventTrackingData}
+      />
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
@@ -258,6 +269,40 @@ describe('MostReadContainerCanonical', () => {
         error:
           'Error: Unexpected response (HTTP status code 500) when requesting www.test.bbc.com/pidgin/mostread.json',
       });
+    });
+  });
+
+  describe('Event Tracking', () => {
+    const EVENT_TRACKING_DATA = {
+      componentName: 'most-read',
+    };
+
+    it('should call the view tracking hook with the correct params', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(
+        <MostReadCanonicalWithContext
+          service="pidgin"
+          endpoint="www.test.bbc.com/pidgin/mostread.json"
+          initialData={pidginMostReadData}
+          eventTrackingData={EVENT_TRACKING_DATA}
+        />,
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+    });
+
+    it('should call the click tracking hook with the correct params', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      render(
+        <MostReadCanonicalWithContext
+          service="pidgin"
+          endpoint="www.test.bbc.com/pidgin/mostread.json"
+          initialData={pidginMostReadData}
+          eventTrackingData={EVENT_TRACKING_DATA}
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
     });
   });
 });
