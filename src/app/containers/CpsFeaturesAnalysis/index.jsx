@@ -7,9 +7,15 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
+import useViewTracker from '#app/hooks/useViewTracker';
+
+const EVENT_TRACKING_DATA = {
+  componentName: 'features',
+};
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
   const { translations, serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   const title = pathOr(
     'Features & Analysis',
@@ -34,13 +40,14 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       promoListComponent={({ promoItems, dir }) => (
         <StoryPromoUl>
           {promoItems.map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
+            <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
               <StoryPromo
                 item={item}
                 dir={dir}
                 displayImage
                 displaySummary={false}
                 serviceDatetimeLocale={serviceDatetimeLocale}
+                eventTrackingData={EVENT_TRACKING_DATA}
               />
             </StoryPromoLi>
           ))}
