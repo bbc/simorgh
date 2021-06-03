@@ -42,7 +42,7 @@ const TrackedMostReadLink = ({
       title={title}
       href={href}
       size={size}
-      handleClick={clickTrackerHandler}
+      onClick={clickTrackerHandler}
     >
       {children}
     </MostReadLink>
