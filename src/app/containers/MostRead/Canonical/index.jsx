@@ -175,7 +175,6 @@ const CanonicalMostRead = ({
               columnLayout={columnLayout}
               size={size}
             />
-
             <TrackedMostReadLink
               dir={dir}
               service={service}
