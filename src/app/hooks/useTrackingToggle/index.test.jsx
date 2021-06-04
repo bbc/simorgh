@@ -7,6 +7,22 @@ const wrapper = ({ children, toggles }) => (
   <ToggleContextProvider toggles={toggles}>{children}</ToggleContextProvider>
 );
 
+const isEnabled = (componentName, enabled, value) => {
+  const { result } = renderHook(() => useTrackingToggle(componentName), {
+    wrapper,
+    initialProps: {
+      toggles: {
+        eventTracking: {
+          enabled,
+          value,
+        },
+      },
+    },
+  });
+
+  return result.current.trackingIsEnabled;
+};
+
 describe('Expected Use', () => {
   const componentName = 'most-read';
 
@@ -25,23 +41,7 @@ describe('Expected Use', () => {
   `(
     "should return '$expected' for enabled = '$enabled' and exclusion list = '$value'",
     ({ enabled, value, expected }) => {
-      const { result } = renderHook(() => useTrackingToggle(componentName), {
-        wrapper,
-        initialProps: {
-          toggles: {
-            eventTracking: {
-              enabled,
-              value,
-            },
-          },
-        },
-      });
-
-      const {
-        current: { trackingIsEnabled },
-      } = result;
-
-      expect(trackingIsEnabled).toBe(expected);
+      expect(isEnabled(componentName, enabled, value)).toBe(expected);
     },
   );
 });
@@ -68,23 +68,7 @@ describe('Error handling', () => {
   `(
     "should return '$expected' for enabled = '$enabled' and exclusion list = '$value'",
     ({ enabled, value, expected }) => {
-      const { result } = renderHook(() => useTrackingToggle(componentName), {
-        wrapper,
-        initialProps: {
-          toggles: {
-            eventTracking: {
-              enabled,
-              value,
-            },
-          },
-        },
-      });
-
-      const {
-        current: { trackingIsEnabled },
-      } = result;
-
-      expect(trackingIsEnabled).toBe(expected);
+      expect(isEnabled(componentName, enabled, value)).toBe(expected);
     },
   );
 });
