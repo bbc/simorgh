@@ -1,13 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { addDecorator } from '@storybook/react';
-import isChromatic from 'chromatic/isChromatic';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-
-import clearAppStorage from './helpers/clearAppStorage';
 
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
@@ -21,30 +18,21 @@ const fontPathMap = [
   { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
-addDecorator(story => {
-  useEffect(() => {
-    if (isChromatic()) {
-      // prevent the consent banner introducing inconsistent Chromatic snapshots
-      clearAppStorage();
-    }
-  }, []);
-
-  return (
-    /* eslint-disable react/jsx-filename-extension */
-    <>
-      <GlobalStyles
-        fonts={Object.values(fontFaces).map(fontFace => {
-          const fontMap =
-            fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
-            fontPathMap[0];
-          return fontFace(fontMap.path);
-        })}
-      />
-      {story()}
-    </>
-    /* eslint-enable react/jsx-filename-extension */
-  );
-});
+addDecorator(story => (
+  /* eslint-disable react/jsx-filename-extension */
+  <>
+    <GlobalStyles
+      fonts={Object.values(fontFaces).map(fontFace => {
+        const fontMap =
+          fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
+          fontPathMap[0];
+        return fontFace(fontMap.path);
+      })}
+    />
+    {story()}
+  </>
+  /* eslint-enable react/jsx-filename-extension */
+));
 
 const theme = create({
   base: 'light',
