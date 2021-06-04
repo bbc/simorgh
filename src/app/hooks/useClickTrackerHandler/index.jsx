@@ -6,7 +6,7 @@ import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
+import useTrackingToggle from '#hooks/useTrackingToggle';
 
 const EVENT_TYPE = 'click';
 
@@ -15,11 +15,8 @@ const useClickTrackerHandler = (props = {}) => {
   const href = path(['href'], props);
   const format = path(['format'], props);
 
-  const { enabled: eventTrackingIsEnabled, value } = useToggle('eventTracking');
-  const isExcluded =
-    typeof value === 'string'
-      ? value?.trim().split(',').includes(componentName)
-      : false;
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
+
   const [clicked, setClicked] = useState(false);
   const {
     campaignID,
@@ -33,8 +30,7 @@ const useClickTrackerHandler = (props = {}) => {
   return useCallback(
     event => {
       const shouldRegisterClick = [
-        eventTrackingIsEnabled,
-        !isExcluded,
+        trackingIsEnabled,
         !clicked,
         isValidClick(event),
       ].every(Boolean);
@@ -79,8 +75,7 @@ const useClickTrackerHandler = (props = {}) => {
       }
     },
     [
-      eventTrackingIsEnabled,
-      isExcluded,
+      trackingIsEnabled,
       clicked,
       campaignID,
       componentName,
