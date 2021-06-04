@@ -1,7 +1,4 @@
-import { waitFor } from '@testing-library/react';
-
 const fetch = require('isomorphic-fetch');
-const amphtmlValidator = require('amphtml-validator');
 
 jest.mock('isomorphic-fetch');
 fetch.mockImplementation(() => ({ text: () => '<html amp></html>' }));
@@ -10,60 +7,7 @@ log.mockImplementation(jest.fn);
 const error = jest.spyOn(global.console, 'error');
 error.mockImplementation(jest.fn);
 
-const {
-  getPageString,
-  printResult,
-  printSummary,
-  validate,
-  runValidator,
-} = require('.');
-
-const validAmp = `
-  <!doctype html>
-  <html ⚡>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-      <meta name="description" content="This is the AMP Boilerplate.">
-      <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <!-- Import other AMP Extensions here -->
-      <style amp-custom>
-      /* Add your styles here */
-      </style>
-      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
-      <link rel="canonical" href=".">
-      <title>My AMP Page</title>
-    </head>
-    <body>
-      <h1>Hello World</h1>
-    </body>
-  </html>`;
-
-// The mandatory attribute '⚡' is missing in the html tag, making this invalid amp html
-const invalidAmp = `
-  <!doctype html>
-  <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-      <meta name="description" content="This is the AMP Boilerplate.">
-      <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-      <script async src="https://cdn.ampproject.org/v0.js"></script>
-      <!-- Import other AMP Extensions here -->
-      <style amp-custom>
-      /* Add your styles here */
-      </style>
-      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
-      <link rel="canonical" href=".">
-      <title>My AMP Page</title>
-    </head>
-    <body>
-      <h1>Hello World</h1>
-    </body>
-  </html>`;
+const { getPageString, printResult, printSummary, validate } = require('.');
 
 describe('amp validator tests', () => {
   beforeAll(() => {
@@ -133,44 +77,5 @@ describe('amp validator tests', () => {
 
     expect(result).toEqual(expectedResult);
     expect(validateString).toHaveBeenCalledWith('<html amp></html>');
-  });
-
-  it('should pass if given valid amp html', async () => {
-    fetch.mockImplementation(() => ({
-      text: () => validAmp,
-    }));
-
-    await waitFor(
-      async () => {
-        const validator = await amphtmlValidator.getInstance();
-        const { status } = await validate({ validator, url: '/arbitraryUrl' });
-        expect(status).toBe('PASS');
-      },
-      { timeout: 5000 },
-    );
-  });
-
-  it('should fail if given invalid amp html', async () => {
-    fetch.mockImplementation(() => ({
-      text: () => invalidAmp,
-    }));
-
-    await waitFor(async () => {
-      const validator = await amphtmlValidator.getInstance();
-      const { status } = await validate({ validator, url: '/arbitraryUrl' });
-      expect(status).toBe('FAIL');
-    });
-  });
-
-  it('should exit with a non-zero exit code if invalid html is given', async () => {
-    fetch.mockImplementation(() => ({
-      text: () => invalidAmp,
-    }));
-
-    await waitFor(async () => {
-      await runValidator();
-      expect(process.exitCode).not.toBeUndefined();
-      expect(process.exitCode).not.toBe(0);
-    });
   });
 });
