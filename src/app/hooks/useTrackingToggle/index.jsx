@@ -12,7 +12,7 @@ const useTrackingToggle = componentName => {
   const isExcluded = excludedComponents.includes(componentName);
 
   return {
-    trackingIsEnabled: enabled && !isExcluded,
+    trackingIsEnabled: enabled === true && !isExcluded,
   };
 };
 
