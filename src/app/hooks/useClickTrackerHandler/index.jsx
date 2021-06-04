@@ -16,7 +16,6 @@ const useClickTrackerHandler = (props = {}) => {
   const format = path(['format'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
-
   const [clicked, setClicked] = useState(false);
   const {
     campaignID,
