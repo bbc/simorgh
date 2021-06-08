@@ -60,7 +60,7 @@ const consentBannerUtilities = ({
     if (onClient) {
       if (isChromatic()) {
         // prevent setting cookies so chromatic snapshots are consistent
-        showPrivacyBanner();
+        setShowPrivacyBanner(true);
         return;
       }
 
