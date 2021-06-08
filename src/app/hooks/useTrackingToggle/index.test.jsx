@@ -29,13 +29,13 @@ describe('Expected Use', () => {
   it.each`
     enabled  | value                           | expected | description
     ${false} | ${''}                           | ${false} | ${'tracking disabled and empty string for value'}
-    ${false} | ${'most-read'}                  | ${false} | ${'tracking disabled and correct component name for value'}
-    ${false} | ${'related-content'}            | ${false} | ${'tracking disabled and incorrect component name for value'}
+    ${false} | ${'most-read'}                  | ${false} | ${'tracking disabled and same component name for value'}
+    ${false} | ${'related-content'}            | ${false} | ${'tracking disabled and different component name for value'}
     ${false} | ${'most-read,related-content'}  | ${false} | ${'tracking disabled and both component names for value'}
     ${false} | ${'most-read, related-content'} | ${false} | ${'tracking disabled and both component names for value with space'}
     ${true}  | ${''}                           | ${true}  | ${'empty string for value'}
-    ${true}  | ${'most-read'}                  | ${false} | ${'correct component name for value'}
-    ${true}  | ${'related-content'}            | ${true}  | ${'incorrect component name for value'}
+    ${true}  | ${'most-read'}                  | ${false} | ${'same component name for value'}
+    ${true}  | ${'related-content'}            | ${true}  | ${'different component name for value'}
     ${true}  | ${'most-read,related-content'}  | ${false} | ${'both component names for value'}
     ${true}  | ${'most-read, related-content'} | ${false} | ${'both component names for value with space'}
   `(
@@ -50,23 +50,23 @@ describe('Error handling', () => {
   const componentName = 'most-read';
 
   it.each`
-    enabled      | value                | expected
-    ${0}         | ${'most-read'}       | ${false}
-    ${0}         | ${'related-content'} | ${false}
-    ${1}         | ${'most-read'}       | ${false}
-    ${1}         | ${'related-content'} | ${false}
-    ${true}      | ${['most-read']}     | ${true}
-    ${true}      | ${5}                 | ${true}
-    ${true}      | ${','}               | ${true}
-    ${true}      | ${',,'}              | ${true}
-    ${true}      | ${undefined}         | ${true}
-    ${true}      | ${null}              | ${true}
-    ${undefined} | ${''}                | ${false}
-    ${null}      | ${''}                | ${false}
-    ${undefined} | ${undefined}         | ${false}
-    ${null}      | ${null}              | ${false}
+    enabled      | value                | expected | description
+    ${0}         | ${'most-read'}       | ${false} | ${'non-boolean value for enabled and same component name'}
+    ${0}         | ${'related-content'} | ${false} | ${'non-boolean value for enabled and different component name'}
+    ${1}         | ${'most-read'}       | ${false} | ${'non-boolean truthy value for enabled and same component name'}
+    ${1}         | ${'related-content'} | ${false} | ${'non-boolean truthy value for enabled and different component name'}
+    ${true}      | ${['most-read']}     | ${true}  | ${'non-string for value'}
+    ${true}      | ${5}                 | ${true}  | ${'non-string for value'}
+    ${true}      | ${','}               | ${true}  | ${'single comma for value'}
+    ${true}      | ${',,'}              | ${true}  | ${'double comma for value'}
+    ${true}      | ${undefined}         | ${true}  | ${'undefined for value'}
+    ${true}      | ${null}              | ${true}  | ${'null for value'}
+    ${undefined} | ${''}                | ${false} | ${'undefined for enabled'}
+    ${null}      | ${''}                | ${false} | ${'null for enabled'}
+    ${undefined} | ${undefined}         | ${false} | ${'undefined for enabled and value'}
+    ${null}      | ${null}              | ${false} | ${'null for enabled and value'}
   `(
-    "should return '$expected' for enabled = '$enabled' and exclusion list = '$value'",
+    "should return '$expected' for enabled = '$enabled' and exclusion list = '$value' ($description)",
     ({ enabled, value, expected }) => {
       expect(isEnabled(componentName, enabled, value)).toBe(expected);
     },
