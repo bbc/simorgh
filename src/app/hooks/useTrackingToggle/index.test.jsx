@@ -27,19 +27,19 @@ describe('Expected Use', () => {
   const componentName = 'most-read';
 
   it.each`
-    enabled  | value                           | expected
-    ${false} | ${''}                           | ${false}
-    ${false} | ${'most-read'}                  | ${false}
-    ${false} | ${'related-content'}            | ${false}
-    ${false} | ${'most-read,related-content'}  | ${false}
-    ${false} | ${'most-read, related-content'} | ${false}
-    ${true}  | ${''}                           | ${true}
-    ${true}  | ${'most-read'}                  | ${false}
-    ${true}  | ${'related-content'}            | ${true}
-    ${true}  | ${'most-read,related-content'}  | ${false}
-    ${true}  | ${'most-read, related-content'} | ${false}
+    enabled  | value                           | expected | description
+    ${false} | ${''}                           | ${false} | ${'tracking disabled and empty string for value'}
+    ${false} | ${'most-read'}                  | ${false} | ${'tracking disabled and correct component name for value'}
+    ${false} | ${'related-content'}            | ${false} | ${'tracking disabled and incorrect component name for value'}
+    ${false} | ${'most-read,related-content'}  | ${false} | ${'tracking disabled and both component names for value'}
+    ${false} | ${'most-read, related-content'} | ${false} | ${'tracking disabled and both component names for value with space'}
+    ${true}  | ${''}                           | ${true}  | ${'empty string for value'}
+    ${true}  | ${'most-read'}                  | ${false} | ${'correct component name for value'}
+    ${true}  | ${'related-content'}            | ${true}  | ${'incorrect component name for value'}
+    ${true}  | ${'most-read,related-content'}  | ${false} | ${'both component names for value'}
+    ${true}  | ${'most-read, related-content'} | ${false} | ${'both component names for value with space'}
   `(
-    "should return '$expected' for enabled = '$enabled' and exclusion list = '$value'",
+    "should return '$expected' for enabled = '$enabled' and exclusion list = '$value' ($description)",
     ({ enabled, value, expected }) => {
       expect(isEnabled(componentName, enabled, value)).toBe(expected);
     },
