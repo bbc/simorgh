@@ -5,6 +5,7 @@ import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -110,7 +111,18 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const blockLevelEventTracking = path(['block'], eventTrackingData);
+  const linkLevelEventTracking = path(['link'], eventTrackingData);
+  const handleBlockLevelClickTracking = useClickTrackerHandler(
+    blockLevelEventTracking,
+  );
+  const handleLinkLevelEventTracking = useClickTrackerHandler(
+    linkLevelEventTracking,
+  );
+  const handleClickTracking = event => {
+    handleBlockLevelClickTracking(event);
+    handleLinkLevelEventTracking(event);
+  };
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 

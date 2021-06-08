@@ -19,7 +19,7 @@ const StyledStoryPromoWrapper = styled.div`
   }
 `;
 
-const RecommendationsPromo = ({ promo, dir }) => {
+const RecommendationsPromo = ({ promo, dir, eventTrackingData }) => {
   return (
     <Grid
       columns={{
@@ -38,6 +38,7 @@ const RecommendationsPromo = ({ promo, dir }) => {
           dir={dir}
           isRecommendation
           displaySummary={false}
+          eventTrackingData={eventTrackingData}
         />
       </StyledStoryPromoWrapper>
     </Grid>
