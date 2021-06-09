@@ -35,7 +35,7 @@ const RecommendationsPromoListItem = forwardRef(
         <RecommendationsPromo
           promo={item}
           dir={dir}
-          eventTrackingData={eventTrackingData.block}
+          eventTrackingData={eventTrackingData}
         />
       </Grid>
     );

@@ -1,6 +1,6 @@
 import { getHeadline, getUrl } from '#lib/utilities/getStoryPromoInfo';
 
-export default ({ item, index }) => {
+export default ({ item, index } = {}) => {
   const block = {
     componentName: 'wsoj',
   };
