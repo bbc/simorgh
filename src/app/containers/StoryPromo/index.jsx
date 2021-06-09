@@ -17,7 +17,9 @@ import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
   getAssetTypeCode,
-  getHeadlineUrlAndLive,
+  getHeadline,
+  getUrl,
+  getIsLive,
 } from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
@@ -126,11 +128,9 @@ const StoryPromoContainer = ({
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
   const isLtr = dir === 'ltr';
-
-  const { headline, url, isLive } = getHeadlineUrlAndLive(
-    item,
-    isAssetTypeCode,
-  );
+  const headline = getHeadline(item);
+  const url = getUrl(item);
+  const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
   const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
