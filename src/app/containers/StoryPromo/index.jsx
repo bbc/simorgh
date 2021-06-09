@@ -112,7 +112,22 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const blockLevelEventTrackingData = pathOr(
+    null,
+    ['block'],
+    eventTrackingData,
+  );
+  const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
+  const blockLevelClickTrackingHandler = useClickTrackerHandler(
+    blockLevelEventTrackingData,
+  );
+  const linkLevelClickTrackingHandler = useClickTrackerHandler(
+    linkLevelEventTrackingData,
+  );
+  const handleClickTracking = event => {
+    blockLevelClickTrackingHandler(event);
+    linkLevelClickTrackingHandler(event);
+  };
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -310,7 +325,14 @@ StoryPromoContainer.propTypes = {
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
   eventTrackingData: shape({
-    componentName: string,
+    block: shape({
+      componentName: string,
+    }),
+    link: shape({
+      componentName: string,
+      url: string,
+      format: string,
+    }),
   }),
 };
 
