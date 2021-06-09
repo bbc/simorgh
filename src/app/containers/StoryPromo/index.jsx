@@ -31,6 +31,30 @@ import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
+const useCombinedClickTrackerHandler = eventTrackingData => {
+  const blockLevelEventTrackingData = pathOr(
+    null,
+    ['block'],
+    eventTrackingData,
+  );
+  const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
+  const blockLevelClickTrackingHandler = useClickTrackerHandler(
+    blockLevelEventTrackingData,
+  );
+  const linkLevelClickTrackingHandler = useClickTrackerHandler(
+    linkLevelEventTrackingData,
+  );
+
+  return event => {
+    if (blockLevelEventTrackingData) {
+      blockLevelClickTrackingHandler(event);
+    }
+    if (linkLevelEventTrackingData) {
+      linkLevelClickTrackingHandler(event);
+    }
+  };
+};
+
 const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
@@ -112,22 +136,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const blockLevelEventTrackingData = pathOr(
-    null,
-    ['block'],
-    eventTrackingData,
-  );
-  const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
-  const blockLevelClickTrackingHandler = useClickTrackerHandler(
-    blockLevelEventTrackingData,
-  );
-  const linkLevelClickTrackingHandler = useClickTrackerHandler(
-    linkLevelEventTrackingData,
-  );
-  const handleClickTracking = event => {
-    blockLevelClickTrackingHandler(event);
-    linkLevelClickTrackingHandler(event);
-  };
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
