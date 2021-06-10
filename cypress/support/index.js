@@ -18,6 +18,8 @@ Cypress.on(`window:before:load`, win => {
 // eslint-disable-next-line consistent-return
 Cypress.on('uncaught:exception', err => {
   // returning false here prevents Cypress from failing the test
+  cy.log(err.message);
+
   if (
     err.message &&
     err.message.includes("Cannot read property 'postMessage' of undefined")
