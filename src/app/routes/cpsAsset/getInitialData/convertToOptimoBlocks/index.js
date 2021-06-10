@@ -10,7 +10,7 @@ import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
 import socialEmbed from './blocks/socialEmbed';
-import minimalist from './blocks/minimalist';
+import table from './blocks/table';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
@@ -41,7 +41,7 @@ const typesToConvert = {
   legacyMedia,
   include,
   social_embed: socialEmbed,
-  table: minimalist,
+  table,
 };
 
 // Here pathname is passed as a prop specifically for CPS includes
