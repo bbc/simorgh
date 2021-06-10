@@ -13,7 +13,6 @@
     "postcss": "8.3.0",
     "browserslist": "4.16.5",
     "multicast-dns": "7.2.3",
-    "web-vitals": "1.1.1",
     "ws": "7.4.6",
     "trim-newlines": "3.0.1",
     "css-what": "5.0.1",
