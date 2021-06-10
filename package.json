@@ -8,6 +8,8 @@
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
     "moment": "2.29.1",
+    "ssri": "8.0.1",
+    "hosted-git-info": "3.0.8",
     "postcss": "8.3.0",
     "browserslist": "4.16.5",
     "web-vitals": "1.1.1",
