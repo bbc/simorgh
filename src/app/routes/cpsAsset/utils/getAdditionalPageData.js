@@ -3,6 +3,7 @@ import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import getAssetType from './getAssetType';
 import getAssetUri from './getAssetUri';
 import hasRecommendations from './hasRecommendations';
+import hasMostRead from './hasMostRead';
 import fetchPageData from '../../utils/fetchPageData';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getMostWatchedEndpoint from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
@@ -23,13 +24,18 @@ const pageTypeUrls = async (
   switch (assetType) {
     case STORY_PAGE:
       return [
-        {
-          name: 'mostRead',
-          path: getMostReadEndpoint({ service, variant }).replace('.json', ''),
-          assetUri,
-          api: 'mostread',
-          apiContext: 'secondary_data',
-        },
+        (await hasMostRead(service, variant))
+          ? {
+              name: 'mostRead',
+              path: getMostReadEndpoint({ service, variant }).replace(
+                '.json',
+                '',
+              ),
+              assetUri,
+              api: 'mostread',
+              apiContext: 'secondary_data',
+            }
+          : null,
         {
           name: 'secondaryColumn',
           path: getSecondaryColumnUrl({ service, variant }),
