@@ -13,6 +13,9 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as trackingToggle from '#hooks/useTrackingToggle';
+
+const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
 const { location } = window;
 
@@ -133,23 +136,18 @@ describe('Click tracking', () => {
     });
   });
 
-  it('should not send a tracking request on click if the toggle is disabled', () => {
-    const spyFetch = jest.spyOn(global, 'fetch');
-    const disabledToggle = {
-      eventTracking: {
-        enabled: false,
-      },
-    };
+  it('should not send a tracking request if the toggle is disabled', () => {
+    trackingToggleSpy.mockImplementationOnce(() => false);
 
     const { getByTestId } = render(
-      <WithContexts pageData={pidginData} toggles={disabledToggle}>
+      <WithContexts pageData={pidginData}>
         <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByTestId('test-component')));
 
-    expect(spyFetch).not.toHaveBeenCalled();
+    expect(global.fetch).toHaveBeenCalledTimes(0);
   });
 
   it('should send tracking request on click of child element (button)', async () => {
