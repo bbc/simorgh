@@ -1348,10 +1348,10 @@
     "@bbc/psammead-assets" "3.1.9"
     "@bbc/psammead-styles" "7.2.6"
 
-"@bbc/psammead-most-read@6.0.31":
-  version "6.0.31"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.0.31.tgz#aff0d2366fe636029df807ac132043d3f49cd806"
-  integrity sha512-310xj4+ImU+LPoTAMVhdMzUZsVDIutenZV+0dT+A8HZdoRQuife1vMbobTF+nIxwSa0RtgGN39invkizNcitNw==
+"@bbc/psammead-most-read@6.1.0":
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-most-read/-/psammead-most-read-6.1.0.tgz#157621d1d77facad3e6ef5660dad0b0ccce5885a"
+  integrity sha512-rCXpeNRqFv/s7x0HofsTeYvCPYtGmUGxXEHp7XVCID0yvYUXjGcn73xgU4/RpAOa2xgOkCa5v6HozmiAGyuMKg==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-grid" "3.1.1"
@@ -1493,14 +1493,14 @@
   resolved "https://registry.yarnpkg.com/@bbc/psammead-visually-hidden-text/-/psammead-visually-hidden-text-2.0.7.tgz#90e6dac8499589e55b5048738c5ae6e37195a961"
   integrity sha512-mKPYgTmgmKjjbaKkjKRugceMkCWOpFStfu9j4qtKnvAhQAkXXE+VXk5MvYCBxYti7TlVDJ0u5nEF3Uu5lyHGyA==
 
-"@bbc/web-vitals@1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.8.tgz#369ea0dd713b22f20547d9fb5f33b155341c7303"
-  integrity sha512-/psHpWVJfI3X+s9iBTRNCTfhpFxvqafPS92XNsqMNNeLWQbqEBHi50/c/zq4mxXgJsm42xST9rm1NFPhysfG2g==
+"@bbc/web-vitals@1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@bbc/web-vitals/-/web-vitals-1.0.9.tgz#86d38e3da71dcb6f769947d3a72018f50096e38a"
+  integrity sha512-nH74fmFQYDUT+4rA0vyGO3LxoFrBw9N7IbloE9lQRKMXS6lQdsKswj+8CC7GAGo1k8KH5BQhuasyooHY32d99w==
   dependencies:
     cross-fetch "^3.1.4"
     react-adaptive-hooks "0.0.8"
-    web-vitals "^1.1.1"
+    web-vitals "^2.0.0"
 
 "@bcoe/v8-coverage@^0.2.3":
   version "0.2.3"
@@ -14762,7 +14762,7 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-web-vitals@1.1.1, web-vitals@^1.1.1:
+web-vitals@1.1.1, web-vitals@^2.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-1.1.1.tgz#2df535e3355fb7fbe34787b44b736e270e539377"
   integrity sha512-jYOaqu01Ny1NvMwJ3dBJDUOJ2PGWknZWH4AUnvFOscvbdHMERIKT2TlgiAey5rVyfOePG7so2JcXXZdSnBvioQ==
