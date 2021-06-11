@@ -5,21 +5,22 @@ import prop from 'ramda/src/prop';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../useToggle';
+import useTrackingToggle from '#hooks/useTrackingToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
 const MIN_VIEWED_PERCENT = 0.5;
 
 const useViewTracker = (props = {}) => {
+  const componentName = path(['componentName'], props);
+  const format = path(['format'], props);
+  const url = path(['url'], props);
+
   const observer = useRef();
   const timer = useRef(null);
   const [isInView, setIsInView] = useState();
   const [eventSent, setEventSent] = useState(false);
-  const { enabled: trackingIsEnabled } = useToggle('eventTracking');
-  const componentName = path(['componentName'], props);
-  const format = path(['format'], props);
-  const url = path(['url'], props);
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
   const {
     campaignID,
     pageIdentifier,
