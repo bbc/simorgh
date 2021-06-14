@@ -17,11 +17,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const Grid = props => {
+const Grid = React.forwardRef((props, ref) => {
   const { dir } = useContext(ServiceContext);
 
-  return <GRID dir={dir} {...props} />;
-};
+  return <GRID dir={dir} {...props} ref={ref} />;
+});
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;
 /* (group4ColWidth 6.75rem * 4) + (3 * 16px gutters) = 27rem + 3rem = 30rem */
