@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, oneOf, oneOfType } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { storyItem } from '#models/propTypes/storyItem';
+import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
@@ -35,9 +35,18 @@ const PromoListComponent = ({ promoItems, dir }) => {
   );
 };
 
+PromoListComponent.propTypes = {
+  promoItems: arrayOf(oneOfType([shape(storyItem), shape(linkPromo)]))
+    .isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+PromoListComponent.defaultProps = {
+  dir: 'ltr',
+};
+
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   return (
     <StoryPromo
@@ -45,9 +54,17 @@ const PromoComponent = ({ promo, dir }) => {
       dir={dir}
       displayImage
       serviceDatetimeLocale={serviceDatetimeLocale}
-      ref={viewRef}
     />
   );
+};
+
+PromoComponent.propTypes = {
+  promo: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+PromoComponent.defaultProps = {
+  dir: 'ltr',
 };
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
