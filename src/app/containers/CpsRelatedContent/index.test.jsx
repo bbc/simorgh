@@ -11,6 +11,8 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
@@ -143,5 +145,27 @@ describe('CpsRelatedContent', () => {
   it('should render a default title if translations are not available', () => {
     renderRelatedContentNoTitle();
     expect(screen.getByText(`Related content`)).toBeTruthy();
+  });
+});
+
+describe('Event Tracking', () => {
+  const EVENT_TRACKING_DATA = {
+    componentName: 'related-content',
+  };
+
+  it('should call the click tracking hook with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+    renderRelatedContent();
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+  });
+
+  it('should call the view tracking hook with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    renderRelatedContent();
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
   });
 });
