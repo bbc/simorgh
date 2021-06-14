@@ -149,7 +149,7 @@ describe('CpsRelatedContent', () => {
 });
 
 describe('Event Tracking', () => {
-  it('should implement 3 BLOCK level (1 for each promo item) and 3 LINK level click trackers ', () => {
+  it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     const expected = {
       componentName: 'related-content',
       preventNavigation: true,
