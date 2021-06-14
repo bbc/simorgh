@@ -35,7 +35,7 @@ describe('RecommendationsPromoList', () => {
   );
 
   describe('Event Tracking', () => {
-    it('should implement 3 BLOCK level and 3 LINK level click tracker (1 for each promo item)', () => {
+    it('should implement 3 BLOCK level and 3 LINK level click trackers (1 for each promo item)', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
       render(<Fixture />);
