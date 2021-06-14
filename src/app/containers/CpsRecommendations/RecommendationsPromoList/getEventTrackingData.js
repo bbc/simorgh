@@ -8,7 +8,7 @@ export default ({ item, index } = {}) => {
   const url = getUrl(item);
   const advertiserID = url && url.split('/')[1];
 
-  if ([headline, url, advertiserID].every(Boolean)) {
+  if ([headline, url, advertiserID, index >= 0].every(Boolean)) {
     const link = {
       componentName: encodeURIComponent(headline),
       url: advertiserID,
