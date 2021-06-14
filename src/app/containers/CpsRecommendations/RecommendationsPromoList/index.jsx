@@ -61,6 +61,7 @@ const RecommendationsPromoList = ({ promoItems, dir }) => {
     >
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem
+          key={item.id}
           ref={blockViewTrackerRef}
           index={index}
           item={item}
