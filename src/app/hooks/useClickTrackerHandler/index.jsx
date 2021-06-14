@@ -11,6 +11,7 @@ import useTrackingToggle from '#hooks/useTrackingToggle';
 const EVENT_TYPE = 'click';
 
 const useClickTrackerHandler = (props = {}) => {
+  const preventNavigation = path(['preventNavigation'], props);
   const componentName = path(['componentName'], props);
   const href = path(['href'], props);
   const format = path(['format'], props);
@@ -27,7 +28,7 @@ const useClickTrackerHandler = (props = {}) => {
   const { service } = useContext(ServiceContext);
 
   return useCallback(
-    event => {
+    async event => {
       const shouldRegisterClick = [
         trackingIsEnabled,
         !clicked,
@@ -54,7 +55,7 @@ const useClickTrackerHandler = (props = {}) => {
           event.preventDefault();
 
           try {
-            sendEventBeacon({
+            await sendEventBeacon({
               type: EVENT_TYPE,
               campaignID,
               componentName,
@@ -66,7 +67,7 @@ const useClickTrackerHandler = (props = {}) => {
               statsDestination,
             });
           } finally {
-            if (nextPageUrl) {
+            if (nextPageUrl && !preventNavigation) {
               window.location.assign(nextPageUrl);
             }
           }
@@ -80,6 +81,7 @@ const useClickTrackerHandler = (props = {}) => {
       componentName,
       pageIdentifier,
       platform,
+      preventNavigation,
       producerId,
       service,
       statsDestination,

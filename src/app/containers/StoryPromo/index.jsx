@@ -38,19 +38,29 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     eventTrackingData,
   );
   const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
-  const blockLevelClickTrackingHandler = useClickTrackerHandler(
-    blockLevelEventTrackingData,
-  );
-  const linkLevelClickTrackingHandler = useClickTrackerHandler(
-    linkLevelEventTrackingData,
-  );
+  const handleBlockLevelClick = useClickTrackerHandler({
+    ...blockLevelEventTrackingData,
+    preventNavigation: true,
+  });
+  const handleLinkLevelClick = useClickTrackerHandler({
+    ...linkLevelEventTrackingData,
+    preventNavigation: true,
+  });
 
-  return event => {
+  return async event => {
+    const nextPageUrl =
+      pathOr(null, ['href'], eventTrackingData) ||
+      pathOr(null, ['target', 'href'], event);
+
     if (blockLevelEventTrackingData) {
-      blockLevelClickTrackingHandler(event);
+      await handleBlockLevelClick(event);
     }
     if (linkLevelEventTrackingData) {
-      linkLevelClickTrackingHandler(event);
+      await handleLinkLevelClick(event);
+    }
+
+    if (nextPageUrl) {
+      window.location.assign(nextPageUrl);
     }
   };
 };
