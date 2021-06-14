@@ -25,11 +25,9 @@ const CpsTable = ({ blocks, supportedServices }) => {
   if (!supportedServices.includes(service)) return null;
 
   return (
-    <>
-      <StyledTable service={service}>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledTable>
-    </>
+    <StyledTable service={service}>
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+    </StyledTable>
   );
 };
 

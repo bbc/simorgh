@@ -4,7 +4,6 @@ import { arrayOf, shape } from 'prop-types';
 
 import Blocks from '../../Blocks';
 import CpsTableCell from '../CpsTableCell';
-import CpsTableHeader from '../CpsTableHeader';
 
 const StyledTr = styled.tr`
   &:hover {
@@ -14,16 +13,14 @@ const StyledTr = styled.tr`
 
 const componentsToRender = {
   tableCell: CpsTableCell,
-  tableHeader: CpsTableHeader,
+  tableHeader: CpsTableCell,
 };
 
-const CpsTableRow = ({ blocks }) => {
-  return (
-    <StyledTr>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </StyledTr>
-  );
-};
+const CpsTableRow = ({ blocks }) => (
+  <StyledTr>
+    <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+  </StyledTr>
+);
 
 CpsTableRow.propTypes = {
   blocks: arrayOf(shape({})).isRequired,

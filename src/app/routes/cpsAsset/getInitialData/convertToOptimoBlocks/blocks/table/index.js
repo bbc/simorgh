@@ -1,11 +1,21 @@
 import convertParagraph from '../paragraph';
 
-const convertCells = async block => ({
-  type: block.cellType === 'header' ? 'tableHeader' : 'tableCell',
-  model: {
-    blocks: [await convertParagraph(block.content[0])],
-  },
-});
+const convertCells = async block => {
+  const paragraphContentOnly = block.content.filter(
+    content => content.type === 'paragraph',
+  );
+
+  const paragraphBlocks = await Promise.all(
+    paragraphContentOnly.map(convertParagraph),
+  );
+
+  return {
+    type: block.cellType === 'header' ? 'tableHeader' : 'tableCell',
+    model: {
+      blocks: paragraphBlocks,
+    },
+  };
+};
 
 const convertRows = async block => {
   const cellBlocks = await Promise.all(block.map(convertCells));
