@@ -51,28 +51,40 @@ describe('RecommendationsPromoList', () => {
         [linkLevelTrackingItem3],
       ] = clickTrackerSpy.mock.calls;
 
-      expect(blockLevelTrackingItem1).toEqual({ componentName: 'wsoj' });
+      expect(blockLevelTrackingItem1).toEqual({
+        componentName: 'wsoj',
+        preventNavigation: true,
+      });
       expect(linkLevelTrackingItem1).toEqual({
         componentName:
           'Meet%20boys%20who%20dey%20convert%20cassava%20to%20electricity',
         format: 'CHD=promo::1',
         url: 'pidgin',
+        preventNavigation: true,
       });
 
-      expect(blockLevelTrackingItem2).toEqual({ componentName: 'wsoj' });
+      expect(blockLevelTrackingItem2).toEqual({
+        componentName: 'wsoj',
+        preventNavigation: true,
+      });
       expect(linkLevelTrackingItem2).toEqual({
         componentName:
           'How%20light%20companies%20dey%20use%20estimated%20billing%20show%20Nigerians%20pepper',
         format: 'CHD=promo::2',
         url: 'pidgin',
+        preventNavigation: true,
       });
 
-      expect(blockLevelTrackingItem3).toEqual({ componentName: 'wsoj' });
+      expect(blockLevelTrackingItem3).toEqual({
+        componentName: 'wsoj',
+        preventNavigation: true,
+      });
       expect(linkLevelTrackingItem3).toEqual({
         componentName:
           'Nigeria%3A%20Wetin%205%2C222%20megawatts%20electric%20fit%20do%3F',
         format: 'CHD=promo::3',
         url: 'pidgin',
+        preventNavigation: true,
       });
     });
 
