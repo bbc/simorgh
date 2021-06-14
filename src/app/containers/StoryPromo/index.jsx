@@ -58,7 +58,6 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     if (linkLevelEventTrackingData) {
       await handleLinkLevelClick(event);
     }
-
     if (nextPageUrl) {
       window.location.assign(nextPageUrl);
     }
