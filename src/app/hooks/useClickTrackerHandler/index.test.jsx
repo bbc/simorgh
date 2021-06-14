@@ -191,7 +191,7 @@ describe('Click tracking', () => {
       const handleClick = useClickTrackerHandler(parentHookProps);
 
       return (
-        <div onClick={handleClick({ format: 'CHD=promo::1' })}>
+        <div onClick={handleClick}>
           <TestComponent hookProps={defaultProps} />
         </div>
       );
@@ -281,6 +281,23 @@ describe('Click tracking', () => {
     await waitFor(() => {
       expect(window.location.assign).toHaveBeenCalledTimes(1);
       expect(window.location.assign).toHaveBeenCalledWith(url);
+    });
+  });
+
+  it('should not navigate to the next page if preventNavigation is true', async () => {
+    const url = 'https://bbc.com/pidgin';
+    const { getByText } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent
+          hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
+        />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByText('Link')));
+
+    await waitFor(() => {
+      expect(window.location.assign).not.toHaveBeenCalled();
     });
   });
 });
