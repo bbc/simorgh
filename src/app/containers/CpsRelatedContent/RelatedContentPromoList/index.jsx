@@ -34,7 +34,7 @@ const RelatedContentPromoList = ({
   isMediaContent,
   eventTrackingData,
 }) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
     <Grid

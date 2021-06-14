@@ -40,11 +40,11 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
   const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
   const handleBlockLevelClick = useClickTrackerHandler({
     ...blockLevelEventTrackingData,
-    preventNavigation: true,
+    ...(blockLevelEventTrackingData && { preventNavigation: true }),
   });
   const handleLinkLevelClick = useClickTrackerHandler({
     ...linkLevelEventTrackingData,
-    preventNavigation: true,
+    ...(linkLevelEventTrackingData && { preventNavigation: true }),
   });
 
   return async event => {
