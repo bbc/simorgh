@@ -13,9 +13,43 @@ const EVENT_TRACKING_DATA = {
   componentName: 'features',
 };
 
-const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { translations, serviceDatetimeLocale } = useContext(ServiceContext);
+const PromoListComponent = ({ promoItems, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(EVENT_TRACKING_DATA);
+
+  return (
+    <StoryPromoUl>
+      {promoItems.map(item => (
+        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displayImage
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            eventTrackingData={EVENT_TRACKING_DATA}
+          />
+        </StoryPromoLi>
+      ))}
+    </StoryPromoUl>
+  );
+};
+
+const PromoComponent = ({ promo, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+
+  return (
+    <StoryPromo
+      item={promo}
+      dir={dir}
+      displayImage
+      serviceDatetimeLocale={serviceDatetimeLocale}
+    />
+  );
+};
+
+const FeaturesAnalysis = ({ content, parentColumns }) => {
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr(
     'Features & Analysis',
@@ -29,30 +63,8 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       title={title}
       content={content}
       parentColumns={parentColumns}
-      promoComponent={({ promo, dir }) => (
-        <StoryPromo
-          item={promo}
-          dir={dir}
-          displayImage
-          serviceDatetimeLocale={serviceDatetimeLocale}
-        />
-      )}
-      promoListComponent={({ promoItems, dir }) => (
-        <StoryPromoUl>
-          {promoItems.map(item => (
-            <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-              <StoryPromo
-                item={item}
-                dir={dir}
-                displayImage
-                displaySummary={false}
-                serviceDatetimeLocale={serviceDatetimeLocale}
-                eventTrackingData={EVENT_TRACKING_DATA}
-              />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
-      )}
+      promoComponent={PromoComponent}
+      promoListComponent={PromoListComponent}
       columnType="secondary"
     />
   );
