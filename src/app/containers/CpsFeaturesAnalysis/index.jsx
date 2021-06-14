@@ -9,13 +9,13 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import useViewTracker from '#hooks/useViewTracker';
 
-const EVENT_TRACKING_DATA = {
+const eventTrackingData = {
   componentName: 'features',
 };
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
+  const viewRef = useViewTracker(eventTrackingData);
 
   return (
     <StoryPromoUl>
@@ -27,7 +27,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displayImage
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
-            eventTrackingData={EVENT_TRACKING_DATA}
+            eventTrackingData={eventTrackingData}
           />
         </StoryPromoLi>
       ))}
@@ -47,7 +47,7 @@ PromoListComponent.defaultProps = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
+  const viewRef = useViewTracker(eventTrackingData);
 
   return (
     <div ref={viewRef}>

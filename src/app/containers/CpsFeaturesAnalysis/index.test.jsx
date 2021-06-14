@@ -145,7 +145,7 @@ describe('CpsRelatedContent', () => {
 });
 
 describe('Event Tracking', () => {
-  const EVENT_TRACKING_DATA = {
+  const eventTrackingData = {
     componentName: 'features',
   };
 
@@ -154,7 +154,7 @@ describe('Event Tracking', () => {
 
     renderFeaturesAnalysis();
 
-    expect(viewTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
   });
 
   it('should call the click tracking hook with the correct params', () => {
@@ -162,6 +162,6 @@ describe('Event Tracking', () => {
 
     renderFeaturesAnalysis();
 
-    expect(clickTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
   });
 });
