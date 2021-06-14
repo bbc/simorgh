@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, oneOf } from 'prop-types';
 
 import { GEL_BODY_COPY } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { textBlockPropTypes } from '#models/propTypes/text';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
@@ -32,7 +33,17 @@ const CpsTable = ({ blocks, supportedServices }) => {
 };
 
 CpsTable.propTypes = {
-  blocks: arrayOf(shape({})).isRequired,
+  blocks: arrayOf(
+    shape({
+      type: ['tableRow'],
+      blocks: arrayOf(
+        shape({
+          type: oneOf(['tableCell', 'tableHeader']),
+          blocks: arrayOf(textBlockPropTypes),
+        }),
+      ),
+    }),
+  ).isRequired,
   supportedServices: arrayOf(string),
 };
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, oneOf, shape } from 'prop-types';
+
+import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
 import CpsTableCell from '../CpsTableCell';
@@ -23,7 +25,12 @@ const CpsTableRow = ({ blocks }) => (
 );
 
 CpsTableRow.propTypes = {
-  blocks: arrayOf(shape({})).isRequired,
+  blocks: arrayOf(
+    shape({
+      type: oneOf(['tableCell', 'tableHeader']),
+      blocks: arrayOf(textBlockPropTypes),
+    }),
+  ).isRequired,
 };
 
 export default CpsTableRow;

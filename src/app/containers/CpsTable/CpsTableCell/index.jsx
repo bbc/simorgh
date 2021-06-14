@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, string } from 'prop-types';
+
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
 import CpsText from '../../CpsText';
@@ -34,7 +36,7 @@ const CpsTableCell = ({ blocks, type }) => {
 };
 
 CpsTableCell.propTypes = {
-  blocks: arrayOf(shape({})).isRequired,
+  blocks: arrayOf(textBlockPropTypes).isRequired,
   type: string,
 };
 
