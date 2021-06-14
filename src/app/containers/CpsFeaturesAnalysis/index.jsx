@@ -37,6 +37,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   return (
     <StoryPromo
@@ -44,6 +45,7 @@ const PromoComponent = ({ promo, dir }) => {
       dir={dir}
       displayImage
       serviceDatetimeLocale={serviceDatetimeLocale}
+      ref={viewRef}
     />
   );
 };
