@@ -47,14 +47,17 @@ PromoListComponent.defaultProps = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(EVENT_TRACKING_DATA);
 
   return (
-    <StoryPromo
-      item={promo}
-      dir={dir}
-      displayImage
-      serviceDatetimeLocale={serviceDatetimeLocale}
-    />
+    <div ref={viewRef}>
+      <StoryPromo
+        item={promo}
+        dir={dir}
+        displayImage
+        serviceDatetimeLocale={serviceDatetimeLocale}
+      />
+    </div>
   );
 };
 
