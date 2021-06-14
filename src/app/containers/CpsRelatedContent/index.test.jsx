@@ -150,7 +150,7 @@ describe('CpsRelatedContent', () => {
 
 describe('Event Tracking', () => {
   const EVENT_TRACKING_DATA = {
-    componentName: 'related-content',
+    block: { componentName: 'related-content' },
   };
 
   it('should call the click tracking hook with the correct params', () => {
