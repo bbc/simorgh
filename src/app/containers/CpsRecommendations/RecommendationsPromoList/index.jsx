@@ -10,16 +10,16 @@ import getEventTrackingData from './getEventTrackingData';
 const RecommendationsPromoListItem = forwardRef(
   ({ item, dir, index }, forwardedRef) => {
     const eventTrackingData = getEventTrackingData({ item, index });
-    const linkViewTrackerRef = useViewTracker(eventTrackingData.link);
-    const ref = element => {
-      linkViewTrackerRef(element);
+    const linkViewEventTracker = useViewTracker(eventTrackingData.link);
+    const elementRefCallback = element => {
+      linkViewEventTracker(element);
       forwardedRef(element);
     };
 
     return (
       <Grid
         item
-        ref={ref}
+        ref={elementRefCallback}
         columns={{
           group0: 1,
           group1: 1,
@@ -44,7 +44,7 @@ const RecommendationsPromoListItem = forwardRef(
 
 const RecommendationsPromoList = ({ promoItems, dir }) => {
   const eventTrackingData = getEventTrackingData();
-  const blockViewTrackerRef = useViewTracker(eventTrackingData.block);
+  const blockViewEventTracker = useViewTracker(eventTrackingData.block);
 
   return (
     <Grid
@@ -62,7 +62,7 @@ const RecommendationsPromoList = ({ promoItems, dir }) => {
       {promoItems.map((item, index) => (
         <RecommendationsPromoListItem
           key={item.id}
-          ref={blockViewTrackerRef}
+          ref={blockViewEventTracker}
           index={index}
           item={item}
           dir={dir}
