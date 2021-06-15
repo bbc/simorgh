@@ -7,6 +7,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -139,5 +141,27 @@ describe('CpsRelatedContent', () => {
   it('should render a default title if translations are not available', () => {
     renderFeaturesAnalysisNoTitle();
     expect(screen.getByText(`Features & Analysis`)).toBeTruthy();
+  });
+});
+
+describe('Event Tracking', () => {
+  const eventTrackingData = {
+    componentName: 'features',
+  };
+
+  it('should call the view tracking hook with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    renderFeaturesAnalysis();
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+  });
+
+  it('should call the click tracking hook with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+    renderFeaturesAnalysis();
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
   });
 });
