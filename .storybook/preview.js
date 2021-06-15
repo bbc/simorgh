@@ -16,10 +16,12 @@ addDecorator(Story => {
   }, []);
 
   return (
+    /* eslint-disable react/jsx-filename-extension */
     <>
       <Fonts />
       <Story />
     </>
+    /* eslint-enable react/jsx-filename-extension */
   );
 });
 
