@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import isChromatic from 'chromatic/isChromatic';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';

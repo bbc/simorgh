@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export, react/jsx-filename-extension */
+/* eslint-disable import/prefer-default-export */
 
 import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
@@ -16,12 +16,10 @@ addDecorator(Story => {
   }, []);
 
   return (
-    /* eslint-disable react/jsx-filename-extension */
     <>
       <Fonts />
       <Story />
     </>
-    /* eslint-enable react/jsx-filename-extension */
   );
 });
 
