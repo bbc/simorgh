@@ -29,40 +29,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-
-const useCombinedClickTrackerHandler = eventTrackingData => {
-  const blockLevelEventTrackingData = pathOr(
-    null,
-    ['block'],
-    eventTrackingData,
-  );
-  const linkLevelEventTrackingData = pathOr(null, ['link'], eventTrackingData);
-  const handleBlockLevelClick = useClickTrackerHandler({
-    ...blockLevelEventTrackingData,
-    ...(blockLevelEventTrackingData && { preventNavigation: true }),
-  });
-  const handleLinkLevelClick = useClickTrackerHandler({
-    ...linkLevelEventTrackingData,
-    ...(linkLevelEventTrackingData && { preventNavigation: true }),
-  });
-
-  return async event => {
-    const nextPageUrl =
-      pathOr(null, ['href'], eventTrackingData) ||
-      pathOr(null, ['target', 'href'], event);
-
-    if (blockLevelEventTrackingData) {
-      await handleBlockLevelClick(event);
-    }
-    if (linkLevelEventTrackingData) {
-      await handleLinkLevelClick(event);
-    }
-    if (nextPageUrl) {
-      window.location.assign(nextPageUrl);
-    }
-  };
-};
+import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
