@@ -161,8 +161,8 @@ export const CPSTableWithNonParagraphs = {
   type: 'table',
 };
 
-const buildTableRow = (rows, isHeader = false) => ({
-  type: 'tableRow',
+export const buildTableRow = (rows, isHeader = false) => ({
+  type: isHeader ? 'tableHeaderRow' : 'tableRow',
   model: {
     blocks: rows.map(row => ({
       type: isHeader ? 'tableHeader' : 'tableCell',
