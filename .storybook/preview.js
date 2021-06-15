@@ -2,17 +2,16 @@
 
 import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
-import isChromatic from 'chromatic/isChromatic';
 import { create } from '@storybook/theming';
+import isChromatic from 'chromatic/isChromatic';
+import { forceVisible } from 'react-lazyload';
 
 import Fonts from './Fonts';
-import clearAppStorage from './helpers/clearAppStorage';
 
 addDecorator(Story => {
   useEffect(() => {
     if (isChromatic()) {
-      // prevent the consent banner introducing inconsistent Chromatic snapshots
-      clearAppStorage();
+      forceVisible();
     }
   }, []);
 

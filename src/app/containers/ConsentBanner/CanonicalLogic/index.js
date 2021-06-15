@@ -13,6 +13,9 @@ const PRIVACY_COOKIE_CURRENT = 'july2019';
 const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
 const onClient = typeof window !== 'undefined';
+const isChromatic = () =>
+  process.env.STORYBOOK === 'true' &&
+  window.navigator.userAgent.match(/Chromatic/);
 
 // We opted for the sameSite=None attribute below to maintain consistency with Orbit/cross-TLD browsing
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
@@ -55,9 +58,15 @@ const consentBannerUtilities = ({
 }) => {
   const runInitial = () => {
     if (onClient) {
+      if (isChromatic()) {
+        // prevent setting cookies so chromatic snapshots are consistent
+        setShowPrivacyBanner(true);
+        return;
+      }
+
       if (showPrivacyBanner()) {
         setShowPrivacyBanner(true);
-        // setSeenPrivacyBanner();
+        setSeenPrivacyBanner();
       }
 
       if (showCookieBanner()) {
