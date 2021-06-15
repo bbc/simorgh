@@ -5,7 +5,7 @@ export const mapsWithoutPreroll = {
     {
       reason: 'service does not have preroll ads enabled',
       paths: [
-        'https://www.bbc.com/pidgin/media-44221514', // CPS Video
+        'https://www.bbc.com/pidgin/media-55222820', // CPS Video
       ],
     },
     {
