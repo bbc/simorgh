@@ -8,7 +8,7 @@ import { forceVisible } from 'react-lazyload';
 
 import Fonts from './Fonts';
 
-addDecorator(story => {
+addDecorator(Story => {
   useEffect(() => {
     if (isChromatic()) {
       forceVisible();
@@ -18,8 +18,13 @@ addDecorator(story => {
   return (
     /* eslint-disable react/jsx-filename-extension */
     <>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: '.sb-main-padded.sb-show-main { padding: 0 }',
+        }}
+      />
       <Fonts />
-      {story()}
+      <Story />
     </>
     /* eslint-enable react/jsx-filename-extension */
   );
