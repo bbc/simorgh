@@ -8,7 +8,7 @@ import { forceVisible } from 'react-lazyload';
 
 import Fonts from './Fonts';
 
-addDecorator(Story => {
+addDecorator(story => {
   useEffect(() => {
     if (isChromatic()) {
       forceVisible();
@@ -19,7 +19,7 @@ addDecorator(Story => {
     /* eslint-disable react/jsx-filename-extension */
     <>
       <Fonts />
-      <Story />
+      {story()}
     </>
     /* eslint-enable react/jsx-filename-extension */
   );
