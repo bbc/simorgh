@@ -14,6 +14,7 @@ import {
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_HLF_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -269,6 +270,7 @@ const PopOutAtGroup5 = styled(GridItemMedium)`
     @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
       max-height: 0; /* [1] */
       padding-top: 0.25rem;
+      padding-left: ${GEL_SPACING_HLF_TRPL};
     }
   }
 `;
