@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/prefer-default-export, react/jsx-filename-extension */
 
 import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
@@ -16,17 +16,10 @@ addDecorator(Story => {
   }, []);
 
   return (
-    /* eslint-disable react/jsx-filename-extension */
     <>
-      <style
-        dangerouslySetInnerHTML={{
-          __html: '.sb-main-padded.sb-show-main { padding: 0 }',
-        }}
-      />
       <Fonts />
       <Story />
     </>
-    /* eslint-enable react/jsx-filename-extension */
   );
 });
 
@@ -38,6 +31,7 @@ const theme = create({
 
 export const parameters = {
   passArgsFirst: false,
+  layout: 'fullscreen',
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
