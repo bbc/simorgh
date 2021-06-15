@@ -14,6 +14,7 @@ const StyledTd = styled.td`
   padding-bottom: ${GEL_SPACING};
   padding-left: ${GEL_SPACING};
   vertical-align: middle;
+  text-align: left;
 
   ${({ isHeaderCell }) => isHeaderCell && 'background: #f7f7f5;'}
 

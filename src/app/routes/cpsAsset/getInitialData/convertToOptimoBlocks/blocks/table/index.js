@@ -19,9 +19,10 @@ const convertCells = async block => {
 
 const convertRows = async block => {
   const cellBlocks = await Promise.all(block.map(convertCells));
+  const isHeaderRow = cellBlocks.some(cell => cell.type === 'tableHeader');
 
   return {
-    type: 'tableRow',
+    type: isHeaderRow ? 'tableHeaderRow' : 'tableRow',
     model: {
       blocks: cellBlocks,
     },

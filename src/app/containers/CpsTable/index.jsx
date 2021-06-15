@@ -18,6 +18,7 @@ const StyledTable = styled.table`
 `;
 
 const componentsToRender = {
+  tableHeaderRow: CpsTableRow,
   tableRow: CpsTableRow,
 };
 
@@ -25,9 +26,17 @@ const CpsTable = ({ blocks, supportedServices }) => {
   const { service } = useContext(ServiceContext);
   if (!supportedServices.includes(service)) return null;
 
+  const headerBlocks = blocks.filter(block => block.type === 'tableHeaderRow');
+  const bodyBlocks = blocks.filter(block => block.type === 'tableRow');
+
   return (
     <StyledTable service={service}>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      <thead>
+        <Blocks blocks={headerBlocks} componentsToRender={componentsToRender} />
+      </thead>
+      <tbody>
+        <Blocks blocks={bodyBlocks} componentsToRender={componentsToRender} />
+      </tbody>
     </StyledTable>
   );
 };
@@ -35,7 +44,7 @@ const CpsTable = ({ blocks, supportedServices }) => {
 CpsTable.propTypes = {
   blocks: arrayOf(
     shape({
-      type: ['tableRow'],
+      type: oneOf(['tableHeaderRow', 'tableRow']),
       blocks: arrayOf(
         shape({
           type: oneOf(['tableCell', 'tableHeader']),
