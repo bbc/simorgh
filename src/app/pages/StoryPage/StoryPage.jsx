@@ -317,11 +317,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+          <Topics topics={topics} />
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}
           />
-          <Topics topics={topics} />
         </GridPrimaryColumn>
         <GridSecondaryColumn
           item

@@ -19,15 +19,19 @@ const Topics = ({ topics }) => {
   const { service, script, translations } = useContext(ServiceContext);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
+  console.log(topics);
 
   return (
-    <aside>
+    <aside aria-labelledby="related-topics">
       <StyledHeading service={service} script={script}>
         {heading}
       </StyledHeading>
       <TopicTags service={service} script={script}>
-        {topics.map(({ topicName }) => (
-          <TopicTag name={topicName} link="https://google.com" />
+        {topics.map(({ topicName, topicId }) => (
+          <TopicTag
+            name={topicName}
+            link={`${process.env.SIMORGH_BASE_URL}/${service}/topics/${topicId}`} // Variants?
+          />
         ))}
       </TopicTags>
     </aside>
