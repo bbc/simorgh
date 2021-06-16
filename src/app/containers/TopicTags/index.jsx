@@ -1,31 +1,23 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
-import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { getBrevier } from '@bbc/gel-foundations/typography';
 import { pathOr } from 'ramda';
-import styled from '@emotion/styled';
+import SectionLabel from '@bbc/psammead-section-label';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
-const StyledHeading = styled.h2`
-  ${({ service }) =>
-    getSansRegular(service)} // Need to check 'getSansRegular' with UX
-${({ script }) =>
-    script && getBrevier(script)} // Need to check 'getBrevier' with UX
-`;
 
 const Topics = ({ topics }) => {
   // what does topics object look like?
   // how do we take json and produce topics object?
-  const { service, script, translations } = useContext(ServiceContext);
+  const { service, script, translations, dir } = useContext(ServiceContext);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
   console.log(topics);
 
   return (
     <aside aria-labelledby="related-topics">
-      <StyledHeading service={service} script={script}>
+      <SectionLabel bar script={script} service={service} dir="ltr">
         {heading}
-      </StyledHeading>
+      </SectionLabel>
       <TopicTags service={service} script={script}>
         {topics.map(({ topicName, topicId }) => (
           <TopicTag
