@@ -1,0 +1,1301 @@
+{
+  "metadata":{
+     "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55025018",
+     "locators":{
+        "assetUri":"/mundo/noticias-internacional-55025018",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-internacional-55025018",
+        "curie":"http://www.bbc.co.uk/asset/1af07774-b46d-4ccd-ac9e-1e68c97929f5",
+        "assetId":"55025018"
+     },
+     "type":"STY",
+     "createdBy":"mundo-v6",
+     "language":"es",
+     "lastUpdated":1621629782761,
+     "firstPublished":1605914909000,
+     "lastPublished":1605914909000,
+     "timestamp":1605914909000,
+     "options":{
+        "isIgorSeoTagsEnabled":false,
+        "includeComments":false,
+        "allowRightHandSide":true,
+        "isFactCheck":false,
+        "allowDateStamp":true,
+        "suitableForSyndication":true,
+        "hasNewsTracker":false,
+        "allowRelatedStoriesBox":true,
+        "isKeyContent":false,
+        "allowHeadline":true,
+        "allowAdvertising":true,
+        "hasContentWarning":false,
+        "isBreakingNews":false,
+        "allowPrintingSharingLinks":true
+     },
+     "analyticsLabels":{
+        "cps_asset_type":"sty",
+        "counterName":"mundo.world.story.55025018.page",
+        "cps_asset_id":"55025018"
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
+        },
+        "campaigns":[
+           {
+              "campaignId":"5a988e2939461b000e9dabf8",
+              "campaignName":"WS - Educate me"
+           },
+           {
+              "campaignId":"5a988e3739461b000e9dabfa",
+              "campaignName":"WS - Give me perspective"
+           },
+           {
+              "campaignId":"5a988e4739461b000e9dabfc",
+              "campaignName":"WS - Update me"
+           }
+        ],
+        "taggings":[
+           
+        ],
+        "predicates":{
+           "about":[
+              {
+                 "value":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                 "thingLabel":"Elecciones presidenciales en Estados Unidos 2020",
+                 "thingUri":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                 "thingId":"10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+                 "thingType":[
+                    "core:Thing",
+                    "core:Event",
+                    "tagging:TagConcept"
+                 ],
+                 "thingSameAs":[
+                    "http://www.wikidata.org/entity/Q22019872",
+                    "http://dbpedia.org/resource/2020_United_States_elections"
+                 ],
+                 "thingEnglishLabel":"US election 2020",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                 "thingLabel":"Joe Biden",
+                 "thingUri":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                 "thingId":"1e80aea5-9931-40e5-bac5-c919d297df08",
+                 "thingType":[
+                    "tagging:Agent",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Person",
+                    "tagging:AmbiguousTerm"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Joe_Biden"
+                 ],
+                 "thingEnglishLabel":"Joe Biden",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                 "thingLabel":"Política",
+                 "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                 "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                 "thingType":[
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Politics"
+                 ],
+                 "thingEnglishLabel":"Politics",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                 "thingLabel":"Donald Trump",
+                 "thingUri":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                 "thingId":"78080d81-2849-497e-bc3a-bf364626456b",
+                 "thingType":[
+                    "tagging:AmbiguousTerm",
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Person",
+                    "tagging:Agent"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Donald_Trump"
+                 ],
+                 "thingEnglishLabel":"Donald Trump",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                 "thingLabel":"Estados Unidos",
+                 "thingUri":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                 "thingId":"82857f8e-8134-462a-bb32-b7b14f4eab75",
+                 "thingType":[
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                 ],
+                 "thingSameAs":[
+                    "http://sws.geonames.org/6252001/"
+                 ],
+                 "thingEnglishLabel":"United States",
+                 "type":"about"
+              }
+           ]
+        }
+     },
+     "tags":{
+        "about":[
+           {
+              "thingLabel":"Elecciones presidenciales en Estados Unidos 2020",
+              "thingUri":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+              "thingId":"10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+              "thingType":[
+                 "core:Thing",
+                 "core:Event",
+                 "tagging:TagConcept"
+              ],
+              "thingSameAs":[
+                 "http://www.wikidata.org/entity/Q22019872",
+                 "http://dbpedia.org/resource/2020_United_States_elections"
+              ],
+              "topicName":"Elecciones presidenciales en Estados Unidos 2020",
+              "topicId":"c404v5z20w4t",
+              "curationList":[
+                 {
+                    "curationId":"6e0332da-fd3e-4c64-8b17-aa6d50ebdb26",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"US election 2020",
+              "thingLabelLanguage":"es",
+              "thingPreferredLabel":"US election 2020"
+           },
+           {
+              "thingLabel":"Joe Biden",
+              "thingUri":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+              "thingId":"1e80aea5-9931-40e5-bac5-c919d297df08",
+              "thingType":[
+                 "tagging:Agent",
+                 "tagging:TagConcept",
+                 "core:Thing",
+                 "core:Person",
+                 "tagging:AmbiguousTerm"
+              ],
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Joe_Biden"
+              ],
+              "topicName":"Joe Biden",
+              "topicId":"c7rmlwq1rmmt",
+              "curationList":[
+                 {
+                    "curationId":"d709245b-e39c-4015-af4a-a19e7d8008f5",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"Joe Biden",
+              "thingLabelLanguage":"es",
+              "thingPreferredLabel":"Joe Biden"
+           },
+           {
+              "thingLabel":"Política",
+              "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+              "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+              "thingType":[
+                 "tagging:TagConcept",
+                 "core:Theme",
+                 "core:Thing"
+              ],
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Politics"
+              ],
+              "topicName":"Política",
+              "topicId":"c6vzy3xq10yt",
+              "curationList":[
+                 {
+                    "curationId":"25eebf80-8f9f-4652-8dfb-ad93e17ecba4",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"Politics",
+              "thingLabelLanguage":"es",
+              "thingPreferredLabel":"Politics"
+           },
+           {
+              "thingLabel":"Donald Trump",
+              "thingUri":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+              "thingId":"78080d81-2849-497e-bc3a-bf364626456b",
+              "thingType":[
+                 "tagging:AmbiguousTerm",
+                 "core:Thing",
+                 "tagging:TagConcept",
+                 "core:Person",
+                 "tagging:Agent"
+              ],
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Donald_Trump"
+              ],
+              "topicName":"Donald Trump",
+              "topicId":"cnq687xnvj8t",
+              "curationList":[
+                 {
+                    "curationId":"ec77e729-694e-4b64-887d-0d6d35cfb00c",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"Donald Trump",
+              "thingLabelLanguage":"es",
+              "thingPreferredLabel":"Donald Trump"
+           },
+           {
+              "thingLabel":"Estados Unidos",
+              "thingUri":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+              "thingId":"82857f8e-8134-462a-bb32-b7b14f4eab75",
+              "thingType":[
+                 "tagging:TagConcept",
+                 "core:Place",
+                 "core:Thing"
+              ],
+              "thingSameAs":[
+                 "http://sws.geonames.org/6252001/"
+              ],
+              "topicName":"Estados Unidos",
+              "topicId":"cdr5613yzwqt",
+              "curationList":[
+                 {
+                    "curationId":"5c2bf4db-926e-4a03-941f-8ef9ad70855a",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"United States",
+              "thingLabelLanguage":"es",
+              "thingPreferredLabel":"United States"
+           }
+        ]
+     },
+     "version":"v1.3.13",
+     "blockTypes":[
+        "image",
+        "paragraph",
+        "crosshead",
+        "list",
+        "social_embed"
+     ],
+     "includeComments":false,
+     "atiAnalytics":{
+        "producerName":"MUNDO",
+        "producerId":"62"
+     },
+     "readTime":6,
+     "siteUri":"/mundo",
+     "topics":[
+        {
+           "topicName":"Elecciones presidenciales en Estados Unidos 2020",
+           "topicId":"c404v5z20w4t",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"6e0332da-fd3e-4c64-8b17-aa6d50ebdb26",
+                 "curationType":"vivo-stream",
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "core:Thing",
+              "core:Event",
+              "tagging:TagConcept"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+        },
+        {
+           "topicName":"Política",
+           "topicId":"c6vzy3xq10yt",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"25eebf80-8f9f-4652-8dfb-ad93e17ecba4",
+                 "curationType":"vivo-stream",
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+        },
+        {
+           "topicName":"Joe Biden",
+           "topicId":"c7rmlwq1rmmt",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"d709245b-e39c-4015-af4a-a19e7d8008f5",
+                 "curationType":"vivo-stream",
+                 "position":0,
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "tagging:Agent",
+              "tagging:TagConcept",
+              "core:Thing",
+              "core:Person",
+              "tagging:AmbiguousTerm"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+        },
+        {
+           "topicName":"Estados Unidos",
+           "topicId":"cdr5613yzwqt",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"5c2bf4db-926e-4a03-941f-8ef9ad70855a",
+                 "curationType":"vivo-stream",
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+        },
+        {
+           "topicName":"Donald Trump",
+           "topicId":"cnq687xnvj8t",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"ec77e729-694e-4b64-887d-0d6d35cfb00c",
+                 "curationType":"vivo-stream",
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Person",
+              "tagging:Agent"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+        }
+     ]
+  },
+  "content":{
+     "blocks":[
+        {
+           "id":"115587946",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/FDD2/production/_115587946_trump_976getty.jpg",
+           "path":"/cpsprodpb/FDD2/production/_115587946_trump_976getty.jpg",
+           "height":549,
+           "width":976,
+           "altText":"Trump en un acto de campaña.",
+           "copyrightHolder":"Getty Images",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"Casi dos semanas después de que Joe Biden fuera proyectado ganador de las elecciones de Estados Unidos, Donald Trump sigue negándose a conceder la victoria. ¿Tiene el presidente un plan para revertir el resultado?",
+           "role":"introduction",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"La estrategia legal del presidente para desafiar el resultado de las elecciones parece estar cayendo en saco roto en los tribunales. Tras interponer decenas de demandas, el equipo de Trump aún tiene que anotarse una victoria significativa, o presentar pruebas de fraude generalizado.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Su abogado más destacado, el exalcalde de Nueva York Rudy Giuliani, dijo el jueves que la campaña <bold>iba a retirar sus </bold><bold>acciones </bold><bold>legales </bold>en Michigan, un estado que Biden ganó por más de 160.000 votos.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"En Georgia, el secretario de estado republicano anunció que certificará el resultado electoral, que proporcionó a Biden una ventaja de poco más de 12.000 votos después de que el estado llevara a cabo un recuento manual de cerca de 5 millones de sufragios.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Mientras las puertas de su reelección permanecen cerradas, el presidente parece estar cambiando su estrategia para voltear los resultados de una improbable táctica legal a una jugada política <bold>más arriesgada.</bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"Una guía sencilla de la estrategia de Trump",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"He aquí lo que Trump puede esperar hacer:",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "numbered":true,
+           "items":[
+              {
+                 "text":"Bloquear el proceso de certificación de votos en el mayor número de estados posible, a través de demandas o animando a funcionarios republicanos a objetar el resultado.",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Convencer a las legislaturas controladas por los republicanos en estados donde Biden ganó de manera ajustada para que descarten los resultados del voto popular como corruptos por fraude generalizado.",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Hacer entonces que la legislatura otorgue los votos del Colegio Electoral de ese estado, que son emitidos por los llamados electores el 14 de diciembre, a Trump en lugar de a Biden.",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              },
+              {
+                 "text":"Hacer eso en el suficiente número de estados —Wisconsin, Michigan y Pensilvania, por ejemplo— para que Trump pase de sus 232 votos electorales para llegar a la marca ganadora de los 270 votos. O, al menos, forzar a que Biden baje de los 306 votos electorales a 269, lo que sería un empate y dejaría el destino de la elección en manos de la Cámara de Representantes, donde Trump tendría ventaja.",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "text":"¿Qué está haciendo Trump para hacer que esto pase?",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"La primera señal de que Trump estaba haciendo presión sobre ciertos estados para que ignoraran el total actual de votos se produjo después de que la prensa del país informara que el presidente había llamado a funcionarios republicanos que se habían negado inicialmente a certificar el resultado de las elecciones de Detroit, la ciudad más grande de Michigan.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Que dos funcionarios de bajo nivel del partido, entre miles de representantes electorales de todo Estados Unidos, hablaran directamente con un presidente era algo muy poco usual. Al final, revirtieron su decisión de bloquear el procedimiento y, después de la llamada de Trump, manifestaron su arrepentimiento por <bold>haberse echado atrás. </bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"Esos indicios se convirtieron en pruebas claras de intencionalidad cuando líderes republicanos del Legislativo de Michigan aceptaron una invitación del presidente para visitar la Casa Blanca este viernes.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"(<italic>La reunión, sin embargo, no parece haber dado frutos</italic><italic>. Ver</italic><italic>:</italic><itemMeta>mundo/noticias-internacional-55027523</itemMeta><italic>)</italic>.",
+           "meta":[
+              {
+                 "headlines":{
+                    "shortHeadline":"Las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan",
+                    "headline":"Elecciones de Estados Unidos: las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan",
+                    "overtyped":"Las opciones de Trump se reducen con los republicanos de Michigan dispuestos a reconocer la victoria de Biden"
+                 },
+                 "locators":{
+                    "href":"https://www.bbc.com/mundo/noticias-internacional-55027523"
+                 },
+                 "summary":"Los intentos de Donald Trump por revertir el resultado en las elecciones de EE.UU. sufrieron nuevos un nuevo revés luego de que una corte de Pensilvania desestimara sus intentos por anular millones de votos en el estado.",
+                 "timestamp":1606041564000,
+                 "language":"es",
+                 "passport":{
+                    "category":{
+                       "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                       "categoryName":"News"
+                    },
+                    "taggings":[
+                       
+                    ]
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55027523",
+                 "type":"cps"
+              }
+           ],
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "id":"113810578",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/155CD/production/_113810578_us2020_separator-nc.png",
+           "path":"/cpsprodpb/155CD/production/_113810578_us2020_separator-nc.png",
+           "height":265,
+           "width":2561,
+           "altText":"Section divider",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"Algunas claves",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"Para alcanzar la presidencia de EE.UU., no hay que ganar mayoría de los votos populares sino conseguir al menos 270 de los 538 votos del <bold>C</bold><bold>olegio </bold><bold>E</bold><bold>lectoral.</bold>",
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"El candidato que gane el voto popular en un estado, generalmente se lleva todos los votos electorales de ese territorio.",
+                 "markupType":"plain_text",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"<bold>Florida</bold>, por ejemplo, tiene 29 votos electorales. Texas, 38. El candidato que llegue a 270, gana las elecciones.",
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "id":"113810578",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/155CD/production/_113810578_us2020_separator-nc.png",
+           "path":"/cpsprodpb/155CD/production/_113810578_us2020_separator-nc.png",
+           "height":265,
+           "width":2561,
+           "altText":"Section divider",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"La noticia estuvo acompañada de informaciones que apuntan que Trump está decidido a encontrar otras formas de presionar a los legisladores de estados clave para revisar y quizá revertir sus resultados electorales.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Lo que es tradicionalmente una mera formalidad en elecciones normales -la certificación bipartidista del total de votos por estado- se ha convertido <bold>en el último campo de batalla</bold> de los intentos del presidente para mantenerse en el poder los próximos cuatro años.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"¿Podría Trump conseguir su objetivo?",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"Las posibilidades de que Trump salga exitoso son muy, muy escasas. Para empezar, el presidente debería voltear los resultados en diversos estados, donde la ventaja de Biden oscila entre las decenas de miles de votos a más de cientos de miles. Este año 2020 no es 2000, cuando <bold>todo se decidió en Florida.</bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"Además, muchos de los estados que el equipo legal de Trump tiene en el punto de mira —Michigan, Wisconsin, Pensilvania y Nevada— tienen gobernadores del Partido Demócrata, que no se van a quedar de brazos cruzados mientras todo esto pasa.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"En Michigan, por ejemplo, la gobernadora Gretchen Whitmer podría despedir al actual consejo electoral del estado y reemplazarlo con uno dispuesto a certificar la victoria de Biden.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"115576805",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/C6B3/production/_115576805_33c1394a-d524-4e92-8672-9cd514188456.jpg",
+           "path":"/cpsprodpb/C6B3/production/_115576805_33c1394a-d524-4e92-8672-9cd514188456.jpg",
+           "height":549,
+           "width":976,
+           "altText":"La Casa Blanca con flores.",
+           "caption":"Trump parece estar cambiando su estrategia: de la táctica legal a una jugada política más arriesgada.",
+           "copyrightHolder":"Getty Images",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"Los gobernadores demócratas podrían responder nombrando a sus propios electores pro-Biden para que compitan con los que la Legislatura republicana escoja, dejando en manos del Congreso la decisión de a qué grupo reconocer.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"(<italic>Además, </italic><italic>el viernes </italic><italic>los líderes republicanos en el congreso de Michigan se comprometieron a seguir &quot;el proceso normal&quot; y dijeron no disponer de ninguna información que sugiriera que el resultado a favor de Biden pudiera cambiar, incluso después de haberse reunido con Trump en la Casa Blanca. N del E</italic>).",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"En cualquier caso, eso no quiere decir que los seguidores de Biden no estén preocupados. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Pese a que la posibilidad de que todo esto ocurra está al nivel de que la Tierra sea impactada por un meteorito gigante o que a alguien le caiga un rayo en el momento en que gane la lotería, arrebatarles la victoria sería tal cataclismo político en este momento que la remota posibilidad de ello es suficiente como para <bold>provocar escalofríos</bold> en las filas demócratas.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"¿Es legal la estrategia de Trump?",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"Trump ha pasado gran parte de su tiempo en la Casa Blanca minando normas y tradiciones presidenciales. Y parece que sus últimos días en el puesto no serán diferentes.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Sin embargo, que la presión que Trump está poniendo en funcionarios electorales y en legislaturas de los estados sea un acto sin precedentes o controvertido, <bold>no significa que sea ilegal.</bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"En los primeros tiempos de la nación, las legislaturas de los estados tenían amplios poderes sobre cómo adjudicar sus votos electorales y a día de hoy todavía no hay un requerimiento constitucional para que acaten los resultados del voto popular. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"115581809",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/162C2/production/_115581809_giuliani_hands.jpg",
+           "path":"/cpsprodpb/162C2/production/_115581809_giuliani_hands.jpg",
+           "height":549,
+           "width":976,
+           "altText":"Rudy Giuliani",
+           "caption":"El abogado de Trump Rudy Giuliani ha estado liderando las batallas legales del presidente y esta semana acusó a países como Venezuela de estar detrás de un supuesto fraude.",
+           "copyrightHolder":"Getty Images",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"Desde entonces las legislaturas han circunscrito esa competencia al asignar sus votos de acuerdo a los resultados de la elección popular, pero la base del sistema original <bold>sigue estando intacta.</bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"Si el presidente consigue convencer a una legislatura para que actúe (a su favor), los demócratas seguramente presentarán objeciones legales. La ley, tanto a nivel nacional como en cada estado, es difusa, dado que este tipo de caso rara vez ha sido objeto de litigio.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"¿Podrían los estados cambiar la legislación sobre cómo organizan sus elecciones de forma retroactiva? Quizá. Pero el veredicto final dependerá de los jueces.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"¿Hay alguien que haya intentado esto antes?",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"La última vez que unas elecciones ajustadas implicaron una disputa sobre electores fue en el año 2000, cuando se enfrentaron el demócrata Al Gore y el republicano George W. Bush. Aquello fue una batalla en un estado, Florida, donde la diferencia entre ambos candidatos era de unos pocos cientos de votos. Al final, la Corte Suprema de Estados Unidos tomó parte y detuvo cualquier revisión más, y Bush se convirtió en presidente.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Para unas elecciones disputadas en múltiples estados tendríamos que echar la vista mucho más atrás, hasta 1876, con la contienda entre el republicano Rutherford B. Hayes y el demócrata Samuel Tildon.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"<itemMeta>mundo/noticias-internacional-54820694</itemMeta>",
+                 "meta":[
+                    {
+                       "headlines":{
+                          "shortHeadline":"Qué ocurrió en 1876, una de las elecciones más polémicas y disputadas de la historia de EE.UU.",
+                          "headline":"Elecciones Trump vs. Biden: cómo fue la elección de 1876 en EE.UU., una de las más polémicas y disputadas de la historia de ese país",
+                          "overtyped":"Qué ocurrió en 1876, una de las elecciones más polémicas y disputadas de la historia de EE.UU."
+                       },
+                       "locators":{
+                          "href":"https://www.bbc.com/mundo/noticias-internacional-54820694"
+                       },
+                       "summary":"El demócrata Samuel Tilden ganó el voto popular y llevaba la delantera en los votos electorales. Pero quien se quedó con la presidencia fue el republicano Rutherford Hayes, luego de una disputa por varios votos y de un acuerdo con sus rivales cuyas consecuencias se sintieron hasta la segunda mitad del siglo XX.",
+                       "timestamp":1604615498000,
+                       "language":"es",
+                       "passport":{
+                          "category":{
+                             "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                             "categoryName":"News"
+                          },
+                          "taggings":[
+                             
+                          ]
+                       },
+                       "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54820694",
+                       "type":"cps"
+                    }
+                 ],
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"<itemMeta>mundo/noticias-internacional-54926198</itemMeta>",
+                 "meta":[
+                    {
+                       "headlines":{
+                          "shortHeadline":"Ni los medios ni Trump: quién decide realmente el ganador de las elecciones",
+                          "headline":"Elecciones en EE.UU. 2020 | Ni los medios ni Trump: quién decide realmente el ganador",
+                          "overtyped":"Ni los medios ni Trump: quién decide realmente el ganador de las elecciones"
+                       },
+                       "locators":{
+                          "href":"https://www.bbc.com/mundo/noticias-internacional-54926198"
+                       },
+                       "summary":"Aunque Joe Biden haya sido declarado presidente electo de EE.UU. por las proyecciones de los resultados de los grandes medios, las autoridades electorales de cada estado están volcadas en el proceso de certificación de los datos. Un trámite que ha cobrado especial relevancia en este año anómalo.",
+                       "timestamp":1605301309000,
+                       "language":"es",
+                       "passport":{
+                          "category":{
+                             "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                             "categoryName":"Explainer"
+                          },
+                          "taggings":[
+                             
+                          ]
+                       },
+                       "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54926198",
+                       "type":"cps"
+                    }
+                 ],
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              },
+              {
+                 "text":"<itemMeta>mundo/noticias-internacional-54804801</itemMeta>",
+                 "meta":[
+                    {
+                       "headlines":{
+                          "shortHeadline":"Cuántos votos electorales aporta cada estado al Colegio que elige al presidente de EE.UU.",
+                          "headline":"Votos electorales: cuántos aporta cada estado al Colegio que elige al presidente de EE.UU.",
+                          "overtyped":"Cuántos votos electorales aporta cada estado al Colegio que elige al presidente de EE.UU. "
+                       },
+                       "locators":{
+                          "href":"https://www.bbc.com/mundo/noticias-internacional-54804801"
+                       },
+                       "summary":"Te contamos el peso de cada estado a la hora de elegir al presidente de EE.UU.",
+                       "timestamp":1604470741000,
+                       "language":"es",
+                       "passport":{
+                          "category":{
+                             "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                             "categoryName":"News"
+                          },
+                          "taggings":[
+                             
+                          ]
+                       },
+                       "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54804801",
+                       "type":"cps"
+                    }
+                 ],
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "text":"En ese caso, los resultados disputados en Luisiana, Carolina del Sur y Florida significaron que ningún candidato era capaz de conseguir una mayoría en el Colegio Electoral. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"La situación de bloqueo provocó que las elecciones acabaran en la Cámara de Representantes, que al final se posicionó a favor de Hayes, quien, como Bush en 2000 y Trump en 2016, habían ganado menos votos a nivel nacional que su contrincante. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"¿Qué pasa si Donald Trump se niega a dejar el poder?",
+           "markupType":"plain_text",
+           "type":"crosshead"
+        },
+        {
+           "text":"Si los intentos del presidente de revertir los resultados de las elecciones fracasan, a las 12:01 del 20 de enero Joe Biden tomará posesión como el <bold>46º presidente de Estados Unidos</bold>, tanto si Trump reconoce su victoria como si no.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"<itemMeta>mundo/noticias-internacional-55027523</itemMeta>",
+                 "meta":[
+                    {
+                       "headlines":{
+                          "shortHeadline":"Las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan",
+                          "headline":"Elecciones de Estados Unidos: las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan",
+                          "overtyped":"Las opciones de Trump se reducen con los republicanos de Michigan dispuestos a reconocer la victoria de Biden "
+                       },
+                       "locators":{
+                          "href":"https://www.bbc.com/mundo/noticias-internacional-55027523"
+                       },
+                       "summary":"Los intentos de Donald Trump por revertir el resultado en las elecciones de EE.UU. sufrieron nuevos un nuevo revés luego de que una corte de Pensilvania desestimara sus intentos por anular millones de votos en el estado.",
+                       "timestamp":1606041564000,
+                       "language":"es",
+                       "passport":{
+                          "category":{
+                             "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                             "categoryName":"News"
+                          },
+                          "taggings":[
+                             
+                          ]
+                       },
+                       "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55027523",
+                       "type":"cps"
+                    }
+                 ],
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "text":"En ese momento, el servicio secreto y el Ejército del país tienen vía libre para tratar al expresidente de la forma en que lo harían con cualquier individuo no autorizado en propiedad gubernamental.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"115581811",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/2E2A/production/_115581811_detroit_counting.jpg",
+           "path":"/cpsprodpb/2E2A/production/_115581811_detroit_counting.jpg",
+           "height":549,
+           "width":976,
+           "altText":"Conteo de votos en Detroit, Michigan.",
+           "caption":"El equipo de Trump no ha presentado ni una prueba de fraude electoral.",
+           "copyrightHolder":"Getty Images",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"&quot;Es indignante lo que está haciendo&quot;, dijo Biden en una rueda de prensa el jueves. ",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"&quot;Se están mandando mensajes enormemente dañinos al resto del mundo sobre cómo funciona la democracia&quot;.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Incluso si el presidente no tiene éxito, su aparente <bold>estrategia devastadora </bold>de disputar los resultados de las elecciones sienta un precedente y, según las encuestas, está minando la confianza de muchos estadounidenses en el sistema e instituciones democráticas del país.",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "id":"113810578",
+           "subType":"body",
+           "href":"http://c.files.bbci.co.uk/155CD/production/_113810578_us2020_separator-nc.png",
+           "path":"/cpsprodpb/155CD/production/_113810578_us2020_separator-nc.png",
+           "height":265,
+           "width":2561,
+           "altText":"Section divider",
+           "copyrightHolder":"BBC",
+           "positionHint":"full-width",
+           "originCode":"cpsprodpb",
+           "type":"image"
+        },
+        {
+           "text":"<italic>Recuerda que </italic><italic>puedes recibir notificaciones de BBC Mundo. Descarga nuestra app y actívalas para no perderte nuestro mejor contenido.</italic>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "numbered":false,
+           "items":[
+              {
+                 "text":"<link><caption>¿Ya conoces nuestro canal de YouTube? ¡Suscríbete!</caption><url href=\"https://www.youtube.com/user/BBCMundo?sub_confirmation=1\" platform=\"highweb\"/></link>",
+                 "markupType":"candy_xml",
+                 "type":"listItem"
+              }
+           ],
+           "type":"list"
+        },
+        {
+           "href":"https://www.youtube.com/watch?v=N8720PvEhPc",
+           "source":"youtube",
+           "embed":{
+              "oembed":{
+                 "version":"1.0",
+                 "title":"Quién es Kamala Harris, primera mujer vicepresidenta de Estados Unidos | BBC Mundo",
+                 "author_name":"BBC News Mundo",
+                 "author_url":"https://www.youtube.com/user/BBCMundo",
+                 "provider_name":"YouTube",
+                 "provider_url":"https://www.youtube.com/",
+                 "thumbnail_url":"https://i.ytimg.com/vi/N8720PvEhPc/hqdefault.jpg",
+                 "thumbnail_width":480,
+                 "thumbnail_height":360,
+                 "html":"<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/N8720PvEhPc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                 "width":480,
+                 "height":270
+              },
+              "fallback_image":{
+                 "fallback_image_width":500,
+                 "fallback_image_height":269,
+                 "alt_text":"YouTube post by BBC News Mundo: Quién es Kamala Harris, primera mujer vicepresidenta de Estados Unidos | BBC Mundo"
+              }
+           },
+           "id":"N8720PvEhPc",
+           "type":"social_embed"
+        }
+     ]
+  },
+  "promo":{
+     "headlines":{
+        "shortHeadline":"La \"arriesgada jugada política\" de Trump para voltear los resultados de las elecciones (y qué posibilidades tiene de conseguirlo)",
+        "headline":"La \"arriesgada jugada política\" de Trump para voltear los resultados de las elecciones (y qué posibilidades tiene de conseguirlo)"
+     },
+     "locators":{
+        "assetUri":"/mundo/noticias-internacional-55025018",
+        "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-internacional-55025018",
+        "curie":"http://www.bbc.co.uk/asset/1af07774-b46d-4ccd-ac9e-1e68c97929f5",
+        "assetId":"55025018"
+     },
+     "summary":"El presidente Donald Trump parece estar cambiando su estrategia para voltear los resultados de las elecciones de una improbable táctica legal a una jugada política más arriesgada.",
+     "timestamp":1605914909000,
+     "language":"es",
+     "byline":{
+        "name":"Anthony Zurcher",
+        "title":"Corresponsal de la BBC en Washington DC",
+        "persons":[
+           {
+              "name":"Anthony Zurcher",
+              "function":"Corresponsal de la BBC en Washington DC",
+              "thumbnail":"http://news.bbcimg.co.uk/media/images/81364000/png/_81364548_anthonyzurcher_112x63.png"
+           }
+        ]
+     },
+     "passport":{
+        "category":{
+           "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+           "categoryName":"News"
+        },
+        "campaigns":[
+           {
+              "campaignId":"5a988e2939461b000e9dabf8",
+              "campaignName":"WS - Educate me"
+           },
+           {
+              "campaignId":"5a988e3739461b000e9dabfa",
+              "campaignName":"WS - Give me perspective"
+           },
+           {
+              "campaignId":"5a988e4739461b000e9dabfc",
+              "campaignName":"WS - Update me"
+           }
+        ],
+        "taggings":[
+           
+        ],
+        "predicates":{
+           "about":[
+              {
+                 "value":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                 "thingLabel":"Elecciones presidenciales en Estados Unidos 2020",
+                 "thingUri":"http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
+                 "thingId":"10f9cc6b-0a52-46d3-bce6-9cd78b34600f",
+                 "thingType":[
+                    "core:Thing",
+                    "core:Event",
+                    "tagging:TagConcept"
+                 ],
+                 "thingSameAs":[
+                    "http://www.wikidata.org/entity/Q22019872",
+                    "http://dbpedia.org/resource/2020_United_States_elections"
+                 ],
+                 "thingEnglishLabel":"US election 2020",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                 "thingLabel":"Joe Biden",
+                 "thingUri":"http://www.bbc.co.uk/things/1e80aea5-9931-40e5-bac5-c919d297df08#id",
+                 "thingId":"1e80aea5-9931-40e5-bac5-c919d297df08",
+                 "thingType":[
+                    "tagging:Agent",
+                    "tagging:TagConcept",
+                    "core:Thing",
+                    "core:Person",
+                    "tagging:AmbiguousTerm"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Joe_Biden"
+                 ],
+                 "thingEnglishLabel":"Joe Biden",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                 "thingLabel":"Política",
+                 "thingUri":"http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+                 "thingId":"75612fa6-147c-4a43-97fa-fcf70d9cced3",
+                 "thingType":[
+                    "tagging:TagConcept",
+                    "core:Theme",
+                    "core:Thing"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Politics"
+                 ],
+                 "thingEnglishLabel":"Politics",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                 "thingLabel":"Donald Trump",
+                 "thingUri":"http://www.bbc.co.uk/things/78080d81-2849-497e-bc3a-bf364626456b#id",
+                 "thingId":"78080d81-2849-497e-bc3a-bf364626456b",
+                 "thingType":[
+                    "tagging:AmbiguousTerm",
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "core:Person",
+                    "tagging:Agent"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Donald_Trump"
+                 ],
+                 "thingEnglishLabel":"Donald Trump",
+                 "type":"about"
+              },
+              {
+                 "value":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                 "thingLabel":"Estados Unidos",
+                 "thingUri":"http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+                 "thingId":"82857f8e-8134-462a-bb32-b7b14f4eab75",
+                 "thingType":[
+                    "tagging:TagConcept",
+                    "core:Place",
+                    "core:Thing"
+                 ],
+                 "thingSameAs":[
+                    "http://sws.geonames.org/6252001/"
+                 ],
+                 "thingEnglishLabel":"United States",
+                 "type":"about"
+              }
+           ]
+        }
+     },
+     "indexImage":{
+        "id":"115587946",
+        "subType":"index",
+        "href":"http://c.files.bbci.co.uk/FDD2/production/_115587946_trump_976getty.jpg",
+        "path":"/cpsprodpb/FDD2/production/_115587946_trump_976getty.jpg",
+        "height":549,
+        "width":976,
+        "altText":"Trump at rally",
+        "copyrightHolder":"Getty Images",
+        "originCode":"cpsprodpb",
+        "type":"image"
+     },
+     "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55025018",
+     "type":"cps"
+  },
+  "relatedContent":{
+     "section":{
+        "subType":"index",
+        "name":"Internacional",
+        "uri":"/mundo/internacional",
+        "type":"simple"
+     },
+     "site":{
+        "subType":"site",
+        "name":"BBC Mundo",
+        "uri":"/mundo",
+        "type":"simple"
+     },
+     "groups":[
+        {
+           "type":"see-alsos",
+           "promos":[
+              {
+                 "headlines":{
+                    "shortHeadline":"Las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan",
+                    "headline":"Elecciones de Estados Unidos: las opciones de Trump se reducen con nuevas derrotas en Pensilvania y Michigan"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-internacional-55027523",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-internacional-55027523"
+                 },
+                 "summary":"Los intentos de Donald Trump por revertir el resultado en las elecciones de EE.UU. sufrieron nuevos un nuevo revés luego de que una corte de Pensilvania desestimara sus intentos por anular millones de votos en el estado.",
+                 "timestamp":1606041564000,
+                 "language":"es",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"115591484",
+                    "subType":"index",
+                    "href":"http://c.files.bbci.co.uk/BD23/production/_115591484_mediaitem115591482.jpg",
+                    "path":"/cpsprodpb/BD23/production/_115591484_mediaitem115591482.jpg",
+                    "height":432,
+                    "width":768,
+                    "altText":"Donald Trump",
+                    "caption":"La estrategia de Trump para quedarse en la Casa Blanca no arece estar funcionando.",
+                    "copyrightHolder":"EPA",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55027523",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"Qué ocurrió en 1876, una de las elecciones más polémicas y disputadas de la historia de EE.UU.",
+                    "headline":"Elecciones Trump vs. Biden: cómo fue la elección de 1876 en EE.UU., una de las más polémicas y disputadas de la historia de ese país"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-internacional-54820694",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-internacional-54820694"
+                 },
+                 "summary":"El demócrata Samuel Tilden ganó el voto popular y llevaba la delantera en los votos electorales. Pero quien se quedó con la presidencia fue el republicano Rutherford Hayes, luego de una disputa por varios votos y de un acuerdo con sus rivales cuyas consecuencias se sintieron hasta la segunda mitad del siglo XX.",
+                 "timestamp":1604615498000,
+                 "language":"es",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"115233406",
+                    "subType":"index",
+                    "href":"http://c.files.bbci.co.uk/EC11/production/_115233406_gettyimages-464769291.jpg",
+                    "path":"/cpsprodpb/EC11/production/_115233406_gettyimages-464769291.jpg",
+                    "height":549,
+                    "width":976,
+                    "altText":"Samuel Tilden y Rutherford Hayes",
+                    "copyrightHolder":"Getty Images",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54820694",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"\"Una increíble irresponsabilidad\": la crítica de Joe Biden a la negación de Trump de su derrota",
+                    "headline":"Joe Biden: la crítica del exvicepresidente a la negación \"irresponsable\" de Trump de su derrota"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-internacional-55011673",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-internacional-55011673"
+                 },
+                 "summary":"El exvicepresidente dijo que el rechazo que ha externado Donald Trump a su derrota está enviando un \"mensaje horrible\" al mundo sobre su país. El presidente ahora podría estar buscando controlar el colegio electoral a través de Congresos estatales.",
+                 "timestamp":1605842767000,
+                 "language":"es",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"115563389",
+                    "subType":"index",
+                    "href":"http://c.files.bbci.co.uk/18020/production/_115563389_dd51e606-7538-4ee1-ac6e-b9e1ab87e429.jpg",
+                    "path":"/cpsprodpb/18020/production/_115563389_dd51e606-7538-4ee1-ac6e-b9e1ab87e429.jpg",
+                    "height":549,
+                    "width":976,
+                    "altText":"Joe Biden",
+                    "caption":"Joe Biden dijo que \"la gran mayoría\" de los estadounidenses creen que la elección fue \"legítima\".",
+                    "copyrightHolder":"Reuters",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-55011673",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"Cuántos votos electorales aporta cada estado al Colegio que elige al presidente de EE.UU.",
+                    "headline":"Votos electorales: cuántos aporta cada estado al Colegio que elige al presidente de EE.UU."
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-internacional-54804801",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-internacional-54804801"
+                 },
+                 "summary":"Te contamos el peso de cada estado a la hora de elegir al presidente de EE.UU.",
+                 "timestamp":1604470741000,
+                 "language":"es",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"115221665",
+                    "subType":"index",
+                    "href":"http://c.files.bbci.co.uk/DD24/production/_115221665_colegio_electoral_clean.png",
+                    "path":"/cpsprodpb/DD24/production/_115221665_colegio_electoral_clean.png",
+                    "height":1152,
+                    "width":2048,
+                    "altText":"Imagen de Estados Unidos con votos de colegio electoral por cada Estado",
+                    "copyrightHolder":"BBC",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54804801",
+                 "type":"cps"
+              },
+              {
+                 "headlines":{
+                    "shortHeadline":"Ni los medios ni Trump: quién decide realmente el ganador de las elecciones",
+                    "headline":"Elecciones en EE.UU. 2020 | Ni los medios ni Trump: quién decide realmente el ganador"
+                 },
+                 "locators":{
+                    "assetUri":"/mundo/noticias-internacional-54926198",
+                    "cpsUrn":"urn:bbc:content:assetUri:/mundo/noticias-internacional-54926198"
+                 },
+                 "summary":"Aunque Joe Biden haya sido declarado presidente electo de EE.UU. por las proyecciones de los resultados de los grandes medios, las autoridades electorales de cada estado están volcadas en el proceso de certificación de los datos. Un trámite que ha cobrado especial relevancia en este año anómalo.",
+                 "timestamp":1605301309000,
+                 "language":"es",
+                 "cpsType":"STY",
+                 "indexImage":{
+                    "id":"115180621",
+                    "subType":"index",
+                    "href":"http://c.files.bbci.co.uk/3140/production/_115180621_day_2_graphics_promo_976-nc.png",
+                    "path":"/cpsprodpb/3140/production/_115180621_day_2_graphics_promo_976-nc.png",
+                    "height":549,
+                    "width":976,
+                    "altText":"Results in maps and charts promo image",
+                    "copyrightHolder":"BBC",
+                    "type":"image"
+                 },
+                 "id":"urn:bbc:ares::asset:mundo/noticias-internacional-54926198",
+                 "type":"cps"
+              }
+           ]
+        }
+     ]
+  }
+}

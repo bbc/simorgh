@@ -50,6 +50,7 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import Topics from '#containers/TopicTags';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -96,6 +97,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -319,6 +321,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             content={relatedContent}
             parentColumns={gridColsMain}
           />
+          <Topics topics={topics} />
         </GridPrimaryColumn>
         <GridSecondaryColumn
           item

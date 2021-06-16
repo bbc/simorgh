@@ -1480,6 +1480,14 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.2.6"
 
+"@bbc/psammead-topic-tags@0.1.0-alpha.6":
+  version "0.1.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-topic-tags/-/psammead-topic-tags-0.1.0-alpha.6.tgz#48776212a3a8614d39262b2c6593b613dcf8dad7"
+  integrity sha512-dJbBAE/Ko8dwAg6On9E2AGV9Rt6qTipy0+Q/A2e+NW17mHN8vntpteGyE7u63/SRhcniDJ+1O5S46IvVnEqlGQ==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.6"
+
 "@bbc/psammead-useful-links@3.0.19":
   version "3.0.19"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.19.tgz#d2442f3cdc57f10034a50e4f9f23061b6090a093"
