@@ -2,8 +2,28 @@ import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
 import { pathOr } from 'ramda';
 import SectionLabel from '@bbc/psammead-section-label';
+import styled from '@emotion/styled';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/dist/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/dist/spacings';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 
+const StyledTopicsWrapper = styled.aside`
+  padding: 0 ${GEL_SPACING};
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    padding: 0;
+  }
+`;
 
 const Topics = ({ topics }) => {
   // what does topics object look like?
@@ -11,11 +31,10 @@ const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
-  console.log(topics);
 
   return (
-    <aside aria-labelledby="related-topics">
-      <SectionLabel bar script={script} service={service} dir="ltr">
+    <StyledTopicsWrapper aria-labelledby="related-topics">
+      <SectionLabel bar script={script} service={service} dir={dir}>
         {heading}
       </SectionLabel>
       <TopicTags service={service} script={script}>
@@ -26,7 +45,7 @@ const Topics = ({ topics }) => {
           />
         ))}
       </TopicTags>
-    </aside>
+    </StyledTopicsWrapper>
   );
 };
 
