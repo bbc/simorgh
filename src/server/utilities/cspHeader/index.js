@@ -282,10 +282,14 @@ const directives = {
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
       ...advertisingDirectives.fontSrc,
     ],
-    ampNonLive: [...bbcDomains],
+    ampNonLive: [
+      ...bbcDomains,
+      'http://localhost:7080', // for localhost canonical fonts
+    ],
     canonicalNonLive: [
       ...bbcDomains,
       'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/fonts/fontawesome-webfont.woff', // Adverts
+      'http://localhost:7080', // for localhost canonical fonts
       ...advertisingDirectives.fontSrc,
     ],
   },

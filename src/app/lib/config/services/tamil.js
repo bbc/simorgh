@@ -6,10 +6,29 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
+
+const fontsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}static/fonts/NotoSans`;
+
+export const F_NOTO_SANS_BENGALI_REGULAR = () => `
+  @font-face {
+    font-family: Latha;
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansTamil-Regular.woff') format('woff'), url('${fontsPath}/NotoSansTamil-Regular.eot') format('eot'), url('${fontsPath}/NotoSansTamil-Regular.ttf') format('ttf');
+    font-display: swap;
+  }`;
+
+export const F_NOTO_SANS_BENGALI_BOLD = () => `
+  @font-face {
+    font-family: Latha;
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansTamil-Bold.woff') format('woff'), url('${fontsPath}/NotoSansTamil-Bold.eot') format('eot'), url('${fontsPath}/NotoSansTamil-Bold.ttf') format('ttf');
+    font-display: swap;
+  }`;
 
 export const service = {
   default: {
@@ -321,7 +340,7 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
+    fonts: [F_NOTO_SANS_BENGALI_BOLD, F_NOTO_SANS_BENGALI_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

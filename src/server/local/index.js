@@ -232,6 +232,14 @@ export default server => {
       );
       sendDataFile(res, localComscorePath, next);
     })
+    .get('/static/fonts/NotoSans/:font', ({ params }, res, next) => {
+      const { font } = params;
+      const localFontPath = path.join(
+        process.cwd(),
+        `/public/static/fonts/NotoSans/${font}`,
+      );
+      sendDataFile(res, localFontPath, next);
+    })
     .get('/ckns_policy/*', (req, res) => {
       // Route to allow the cookie banner to make the cookie oven request
       // without throwing an error due to not being on a bbc domain.

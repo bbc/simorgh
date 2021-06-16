@@ -6,13 +6,29 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { sinhalese } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_ISKOOLA_POTA_BBC_BOLD,
-  F_ISKOOLA_POTA_BBC_REGULAR,
-} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
+
+const fontsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}static/fonts/NotoSans`;
+
+export const F_NOTO_SANS_SINHALA_REGULAR = () => `
+  @font-face {
+    font-family: "Iskoola Pota BBC";
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansSinhala-Regular.woff') format('woff'), url('${fontsPath}/NotoSansSinhala-Regular.eot') format('eot'), url('${fontsPath}/NotoSansSinhala-Regular.ttf') format('ttf');
+    font-display: swap;
+  }`;
+
+export const F_NOTO_SANS_SINHALA_BOLD = () => `
+  @font-face {
+    font-family: "Iskoola Pota BBC";
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansSinhala-Bold.woff') format('woff'), url('${fontsPath}/NotoSansSinhala-Bold.eot') format('eot'), url('${fontsPath}/NotoSansSinhala-Bold.ttf') format('ttf');
+    font-display: swap;
+  }`;
 
 export const service = {
   default: {
@@ -310,7 +326,7 @@ export const service = {
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
+    fonts: [F_NOTO_SANS_SINHALA_BOLD, F_NOTO_SANS_SINHALA_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

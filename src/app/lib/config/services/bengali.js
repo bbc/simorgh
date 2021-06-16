@@ -6,13 +6,29 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { bengali } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
-import {
-  F_SHONAR_BANGLA_BOLD,
-  F_SHONAR_BANGLA_REGULAR,
-} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
+
+const fontsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}static/fonts/NotoSans`;
+
+export const F_NOTO_SANS_BENGALI_REGULAR = () => `
+  @font-face {
+    font-family: "Shonar Bangla";
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansBengali-Regular.woff') format('woff'), url('${fontsPath}/NotoSansBengali-Regular.eot') format('eot'), url('${fontsPath}/NotoSansBengali-Regular.ttf') format('ttf');
+    font-display: swap;
+  }`;
+
+export const F_NOTO_SANS_BENGALI_BOLD = () => `
+  @font-face {
+    font-family: "Shonar Bangla";
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansBengali-Bold.woff') format('woff'), url('${fontsPath}/NotoSansBengali-Bold.eot') format('eot'), url('${fontsPath}/NotoSansBengali-Bold.ttf') format('ttf');
+    font-display: swap;
+  }`;
 
 export const service = {
   default: {
@@ -317,7 +333,7 @@ export const service = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
+    fonts: [F_NOTO_SANS_BENGALI_BOLD, F_NOTO_SANS_BENGALI_REGULAR],
     timezone: 'Asia/Dhaka',
     navigation: [
       {
