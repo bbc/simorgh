@@ -80,14 +80,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // On Demand Brand
-              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0xzx', // On Demand Episode
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wc0', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // On Demand Brand
-              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct0xzx', // On Demand Episode
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wd4', // On Demand Episode
             ],
             enabled: true,
           },
@@ -306,14 +306,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/afrique/bbc_afrique_radio/programmes/p030s6dq', // On Demand Brand
-              '/afrique/bbc_afrique_radio/w172xqydyfv659p', // On Demand Episode
+              '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/afrique/bbc_afrique_radio/programmes/p030s6g6', // On Demand Brand
-              '/afrique/bbc_afrique_radio/w172xqydyfv659p', // On Demand Episode
+              '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // On Demand Episode
             ],
             enabled: true,
           },
@@ -329,14 +329,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
-              '/afrique/bbc_afrique_tv/tv/w172xc9yfm2s90v', // Episode
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
-              '/afrique/bbc_afrique_tv/tv/w172xc9yfm2s90v', // Episode
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
             ],
             enabled: true,
           },
@@ -561,14 +561,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/amharic/bbc_amharic_radio/programmes/w13xttnt', // On Demand Brand
-              '/amharic/bbc_amharic_radio/w3ct0xnw', // On Demand Episode
+              '/amharic/bbc_amharic_radio/w3ct1lqy', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/amharic/bbc_amharic_radio/programmes/w13xttnt', // On Demand Brand
-              '/amharic/bbc_amharic_radio/w3ct0xnw', // On Demand Episode
+              '/amharic/bbc_amharic_radio/w3ct1lqy', // On Demand Episode
             ],
             enabled: true,
           },
@@ -788,18 +788,18 @@ module.exports = () => ({
           live: {
             paths: [
               '/arabic/bbc_arabic_radio/programmes/p030vh2y', // On Demand Brand
-              '/arabic/bbc_arabic_radio/w172xrrwdl3rhck', // On Demand Episode
+              '/arabic/bbc_arabic_radio/w172y3wn75cm441', // On Demand Episode
               '/arabic/podcasts/p02pc9qc', // Podcast Brand
-              '/arabic/podcasts/p02pc9qc/p08wtg4d', // Podcast Episode
+              '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/arabic/bbc_arabic_radio/programmes/p030vh25', // On Demand Brand
-              '/arabic/bbc_arabic_radio/w172xrrwdl3rhck', // On Demand Episode
+              '/arabic/bbc_arabic_radio/w172y3wn75cm441', // On Demand Episode
               '/arabic/podcasts/p02pc9qc', // Podcast Brand
-              '/arabic/podcasts/p02pc9qc/p08wtg4d', // Podcast Episode
+              '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
             ],
             enabled: true,
           },
@@ -1220,14 +1220,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/bengali/bbc_bangla_radio/programmes/p030vjwg', // On Demand Brand
-              '/bengali/bbc_bangla_radio/w172xmzjfl6m4pj', // On Demand Episode
+              '/bengali/bbc_bangla_radio/w172xwdq2b07ywv', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/bengali/bbc_bangla_radio/programmes/p030vjwm', // On Demand Brand
-              '/bengali/bbc_bangla_radio/w172xmzjfl6m4pj', // On Demand Episode
+              '/bengali/bbc_bangla_radio/w172xwdq2b07ywv', // On Demand Episode
             ],
             enabled: false,
           },
@@ -1451,18 +1451,18 @@ module.exports = () => ({
           live: {
             paths: [
               '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
-              '/burmese/bbc_burmese_radio/w3ct0ylp', // On Demand Episode
+              '/burmese/bbc_burmese_radio/w3ct1m6n', // On Demand Episode
               '/burmese/podcasts/p02pc9lh', // Podcast brand
-              '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
+              '/burmese/podcasts/p02pc9lh/p09kzply', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
-              '/burmese/bbc_burmese_radio/w3ct0ylp', // On Demand Episode
+              '/burmese/bbc_burmese_radio/w3ct1m6n', // On Demand Episode
               '/burmese/podcasts/p02pc9lh', // Podcast brand
-              '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
+              '/burmese/podcasts/p02pc9lh/p09kzply', // Podcast Episode
             ],
             enabled: true,
           },
@@ -1482,14 +1482,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
-              '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0', // Episode
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
-              '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0', // Episode
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
             ],
             enabled: true,
           },
@@ -1789,18 +1789,18 @@ module.exports = () => ({
           live: {
             paths: [
               '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
-              '/gahuza/bbc_gahuza_radio/w3ct11fw', // On Demand Episode
+              '/gahuza/bbc_gahuza_radio/w3ct1v5v', // On Demand Episode
               '/gahuza/podcasts/p07yh8hb', // Podcast Brand
-              '/gahuza/podcasts/p07yh8hb/p094vs2n', // Podcast Episode
+              '/gahuza/podcasts/p07yh8hb/p09km4t4', // Podcast Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
-              '/gahuza/bbc_gahuza_radio/w3ct11fw', // On Demand Episode
+              '/gahuza/bbc_gahuza_radio/w3ct1v5v', // On Demand Episode
               '/gahuza/podcasts/p07yh8hb', // Podcast Brand
-              '/gahuza/podcasts/p07yh8hb/p094vs2n', // Podcast Episode
+              '/gahuza/podcasts/p07yh8hb/p09km4t4', // Podcast Episode
             ],
             enabled: false,
           },
@@ -2016,14 +2016,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
-              '/gujarati/bbc_gujarati_tv/tv/w172xcdzy5m46wm', // Episode
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
-              '/gujarati/bbc_gujarati_tv/tv/w172xcdzy5m46wm', // Episode
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
             ],
             enabled: true,
           },
@@ -2243,9 +2243,9 @@ module.exports = () => ({
           live: {
             paths: [
               '/hausa/bbc_hausa_radio/programmes/p030s4mh', // On Demand Brand
-              '/hausa/bbc_hausa_radio/w3ct1033', // On Demand Episode
+              '/hausa/bbc_hausa_radio/w3ct1qzn', // On Demand Episode
               '/hausa/podcasts/p08mlgcb', // Podcast Brand
-              '/hausa/podcasts/p08mlgcb/p095k3hd', // Podcast Episode
+              '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode
             ],
             enabled: true,
           },
@@ -2254,7 +2254,7 @@ module.exports = () => ({
               '/hausa/bbc_hausa_radio/programmes/p030s4mx', // On Demand Brand
               '/hausa/bbc_hausa_radio/w3ct1033', // On Demand Episode
               '/hausa/podcasts/p08mlgcb', // Podcast Brand
-              '/hausa/podcasts/p08mlgcb/p095k3hd', // Podcast Episode
+              '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode
             ],
             enabled: true,
           },
@@ -2274,14 +2274,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
-              '/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8', // Episode
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
-              '/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8', // Episode
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
             ],
             enabled: true,
           },
@@ -2508,14 +2508,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/hindi/podcasts/p0552909', // Podcast Brand
-              '/hindi/podcasts/p0552909/p0964mwl', // Podcast Episode
+              '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/hindi/podcasts/p0552909', // Podcast Brand
-              '/hindi/podcasts/p0552909/p0964mwl', // Podcast Episode
+              '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
             ],
             enabled: true,
           },
@@ -2534,14 +2534,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
-              '/hindi/bbc_hindi_tv/tv/w172xf1cdm164gm', // Episode
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
-              '/hindi/bbc_hindi_tv/tv/w172xf1cdm164gm', // Episode
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
             ],
             enabled: true,
           },
@@ -2956,18 +2956,18 @@ module.exports = () => ({
           live: {
             paths: [
               '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // On Demand Brand
-              '/indonesia/bbc_indonesian_radio/w172xnm8j4vjqfx', // On Demand Episode
+              '/indonesia/bbc_indonesian_radio/w172xybnvm6718v', // On Demand Episode
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
-              '/indonesia/podcasts/p02pc9v6/p096mj9z', // Podcast Episode
+              '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // On Demand Brand
-              '/indonesia/bbc_indonesian_radio/w172xnm8j4vjqfx', // On Demand Episode
+              '/indonesia/bbc_indonesian_radio/w172xybnvm6718v', // On Demand Episode
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
-              '/indonesia/podcasts/p02pc9v6/p096mj9z', // Podcast Episode
+              '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
             enabled: true,
           },
@@ -3383,14 +3383,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/korean/bbc_korean_radio/programmes/w13xttll', // On Demand Brand
-              '/korean/bbc_korean_radio/w3ct11qy', // On Demand Episode
+              '/korean/bbc_korean_radio/w3ct1vk5', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/korean/bbc_korean_radio/programmes/w13xttlm', // On Demand Brand
-              '/korean/bbc_korean_radio/w3ct11qy', // On Demand Episode
+              '/korean/bbc_korean_radio/w3ct1vk5', // On Demand Episode
             ],
             enabled: false,
           },
@@ -3609,14 +3609,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // On Demand Brand
-              '/kyrgyz/bbc_kyrgyz_radio/w3ct16dk', // On Demand Episode
+              '/kyrgyz/bbc_kyrgyz_radio/w3ct1vw9', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // On Demand Brand
-              '/kyrgyz/bbc_kyrgyz_radio/w3ct16dk', // On Demand Episode
+              '/kyrgyz/bbc_kyrgyz_radio/w3ct1vw9', // On Demand Episode
             ],
             enabled: false,
           },
@@ -3632,14 +3632,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
-              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864', // Episode
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
-              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864', // Episode
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
             ],
             enabled: true,
           },
@@ -3848,14 +3848,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/marathi/podcasts/p09431p4', // Podcast Brand
-              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
             ],
             enabled: true,
           },
@@ -4385,8 +4385,8 @@ module.exports = () => ({
           live: {
             paths: [
               '/nepali/bbc_nepali_radio/programmes/p0340xzt', // On Demand Brand
-              '/nepali/bbc_nepali_radio/w172xp9mdctjs6y', // On Demand Episode
-              '/nepali/podcasts/p02pc9w3/p086v2bv', // Podcast Episode
+              '/nepali/bbc_nepali_radio/w172xzcfvptk838', // On Demand Episode
+              '/nepali/podcasts/p02pc9w3/p09j0dm5', // Podcast Episode
               '/nepali/podcasts/p02pc9w3', // Podcast Brand
             ],
             enabled: true,
@@ -4394,8 +4394,8 @@ module.exports = () => ({
           test: {
             paths: [
               '/nepali/bbc_nepali_radio/programmes/p0340xzt', // On Demand Brand
-              '/nepali/bbc_nepali_radio/w172xp9mdctjs6y', // On Demand Episode
-              '/nepali/podcasts/p02pc9w3/p086v2bv', // Podcast Episode
+              '/nepali/bbc_nepali_radio/w172xzcfvptk838', // On Demand Episode
+              '/nepali/podcasts/p02pc9w3/p09j0dm5', // Podcast Episode
               '/nepali/podcasts/p02pc9w3', // Podcast Brand
             ],
             enabled: true,
@@ -4779,14 +4779,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Brand
-              '/pashto/bbc_pashto_radio/w3ct15fq', // On Demand Episode
+              '/pashto/bbc_pashto_radio/w3ct26m6', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_radio/programmes/p0340ysc', // On Demand Brand
-              '/pashto/bbc_pashto_radio/w3ct15fq', // On Demand Episode
+              '/pashto/bbc_pashto_radio/w3ct26m6', // On Demand Episode
             ],
             enabled: false,
           },
@@ -4802,14 +4802,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
-              '/pashto/bbc_pashto_tv/tv/w172xclpygykpc1', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
-              '/pashto/bbc_pashto_tv/tv/w172xclpygykpc1', // Episode
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
             ],
             enabled: true,
           },
@@ -4982,7 +4982,7 @@ module.exports = () => ({
               '/pashto/23289748', // CPS STY
               '/pashto/arts-and-literature-50230813', // CPS PGL
               // '', // On Demand Radio Brand
-              '/pashto/bbc_pashto_radio/w3ct0lz1', // On Demand Radio Episode
+              '/pashto/bbc_pashto_radio/w3ct2694', // On Demand Radio Episode
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
               // '', // On Demand TV Episode
               // '/pashto/popular/read', // Most Read
@@ -5083,10 +5083,10 @@ module.exports = () => ({
             paths: [
               '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
               '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Brand Persian
-              '/persian/bbc_dari_radio/w172xpxh6wd849q', // On Demand Episode Dari
-              '/persian/bbc_persian_radio/w3ct1cl0', // On Demand Episode Persian
+              '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
+              '/persian/bbc_persian_radio/w3ct2cv6', // On Demand Episode Persian
               '/persian/podcasts/p02pc9wf', // Podcast Brand
-              '/persian/podcasts/p02pc9wf/p095lyj1', // Podcast Episode
+              '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
             enabled: true,
           },
@@ -5094,10 +5094,10 @@ module.exports = () => ({
             paths: [
               '/persian/bbc_dari_radio/programmes/p0364sj5', // On Demand Brand Dari
               '/persian/bbc_persian_radio/programmes/p0340vyw', // On Demand Brand Persian
-              '/persian/bbc_dari_radio/w172xpxh6wd849q', // On Demand Episode Dari
-              '/persian/bbc_persian_radio/w3ct1cl0', // On Demand Episode Persian
+              '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
+              '/persian/bbc_persian_radio/w3ct2cv6', // On Demand Episode Persian
               '/persian/podcasts/p02pc9wf', // Podcast Brand
-              '/persian/podcasts/p02pc9wf/p095lyj1', // Podcast Episode
+              '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
             enabled: true,
           },
@@ -5118,14 +5118,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
-              '/persian/bbc_persian_tv/tv/w172xbvsqnv11gl', // Episode
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
-              '/persian/bbc_persian_tv/tv/w172xbvsqnv11gl', // Episode
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
             ],
             enabled: true,
           },
@@ -5579,14 +5579,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/portuguese/podcasts/p07r3r3t', // Podcast Brand
-              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+              '/portuguese/podcasts/p07r3r3t/p09clrrg', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/portuguese/podcasts/p07r3r3t', // Podcast Brand
-              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+              '/portuguese/podcasts/p07r3r3t/p09clrrg', // Podcast Episode
             ],
             enabled: true,
           },
@@ -5983,14 +5983,14 @@ module.exports = () => ({
         environments: {
           live: {
             paths: [
-              '/russian/podcasts/p05607v8/p06xlzvx', // Podcast Episode
+              '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
               '/russian/podcasts/p05607v8', // Podcast Brand
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/russian/podcasts/p05607v8/p06xlzvx', // Podcast Episode
+              '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
               '/russian/podcasts/p05607v8', // Podcast Brand
             ],
             enabled: true,
@@ -6837,14 +6837,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/somali/bbc_somali_radio/programmes/p034117j', // On Demand Brand
-              '/somali/bbc_somali_radio/w172xpdhfxxyn3r', // On Demand Episode
+              '/somali/bbc_somali_radio/w172xzzpp131z23', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/somali/bbc_somali_radio/programmes/p034117j', // On Demand Brand
-              '/somali/bbc_somali_radio/w172xpdhfxxyn3r', // On Demand Episode
+              '/somali/bbc_somali_radio/w172xzzpp131z23', // On Demand Episode
             ],
             enabled: false,
           },
@@ -6860,14 +6860,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
-              '/somali/bbc_somali_tv/tv/w172xcmxr9kd9y5', // Episode
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
-              '/somali/bbc_somali_tv/tv/w172xcmxr9kd9y5', // Episode
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
             enabled: true,
           },
@@ -7150,14 +7150,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/swahili/bbc_swahili_radio/programmes/p03411mj', // On Demand Brand
-              '/swahili/bbc_swahili_radio/w3ct12kw', // On Demand Episode
+              '/swahili/bbc_swahili_radio/w3ct1y1s', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/swahili/bbc_swahili_radio/programmes/p030s7gh', // On Demand Brand
-              '/swahili/bbc_swahili_radio/w3ct12kw', // On Demand Episode
+              '/swahili/bbc_swahili_radio/w3ct1y1s', // On Demand Episode
             ],
             enabled: true,
           },
@@ -7173,14 +7173,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
-              '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
-              '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
             ],
             enabled: true,
           },
@@ -7405,14 +7405,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/tamil/bbc_tamil_radio/programmes/p03412jh', // On Demand Brand
-              '/tamil/bbc_tamil_radio/w172xpgys3r1y5f', // On Demand Episode
+              '/tamil/bbc_tamil_radio/w172y03bbzbnwc0', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/tamil/bbc_tamil_radio/programmes/p03412jh', // On Demand Brand
-              '/tamil/bbc_tamil_radio/w172xpgys3r1y5f', // On Demand Episode
+              '/tamil/bbc_tamil_radio/w172y03bbzbnwc0', // On Demand Episode
             ],
             enabled: false,
           },
@@ -7428,14 +7428,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
-              '/tamil/bbc_tamil_tv/tv/w172xcr8ptqz4x0', // Episode
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
-              '/tamil/bbc_tamil_tv/tv/w172xcr8ptqz4x0', // Episode
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
             ],
             enabled: true,
           },
@@ -7645,14 +7645,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
-              '/telugu/bbc_telugu_tv/tv/w172xcshhnbsqlx', // On Demand Episode
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
-              '/telugu/bbc_telugu_tv/tv/w172xcshhnbsqlx', // On Demand Episode
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
             ],
             enabled: true,
           },
@@ -8079,14 +8079,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // On Demand Brand
-              '/tigrinya/bbc_tigrinya_radio/w3ct0y9l', // On Demand Episode
+              '/tigrinya/bbc_tigrinya_radio/w3ct1xhz', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // On Demand Brand
-              '/tigrinya/bbc_tigrinya_radio/w3ct0y9l', // On Demand Episode
+              '/tigrinya/bbc_tigrinya_radio/w3ct1xhz', // On Demand Episode
             ],
             enabled: false,
           },
@@ -8925,14 +8925,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
-              '/ukrainian/bbc_ukrainian_tv/tv/w172xct3dkn80sk', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
-              '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g', // Episode
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
             ],
             enabled: true,
           },
@@ -9163,14 +9163,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
-              '/urdu/bbc_urdu_radio/w172xphchh1df2k', // On Demand Episode
+              '/urdu/bbc_urdu_radio/w172y03qq2blt8p', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
-              '/urdu/bbc_urdu_radio/w172xphchh1df2k', // On Demand Episode
+              '/urdu/bbc_urdu_radio/w172y03qq2blt8p', // On Demand Episode
             ],
             enabled: false,
           },
@@ -9186,14 +9186,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
-              '/urdu/bbc_urdu_tv/tv/w172xctq9gyscnk', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
-              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
             ],
             enabled: true,
           },
@@ -9418,14 +9418,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // On Demand Brand
-              '/uzbek/bbc_uzbek_radio/w172xq3c9xvfvmt', // On Demand Episode
+              '/uzbek/bbc_uzbek_radio/w172y044spy82mn', // On Demand Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // On Demand Brand
-              '/uzbek/bbc_uzbek_radio/w172xq3c9xvfvmt', // On Demand Episode
+              '/uzbek/bbc_uzbek_radio/w172y044spy82mn', // On Demand Episode
             ],
             enabled: false,
           },
@@ -9441,14 +9441,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
-              '/uzbek/bbc_uzbek_tv/tv/w172xcvb6d87cgw', // Episode
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
-              '/uzbek/bbc_uzbek_tv/tv/w172xcvcngj8204', // Episode
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
             ],
             enabled: true,
           },
@@ -10042,8 +10042,8 @@ module.exports = () => ({
           live: {
             paths: [
               '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // On Demand Episode
-              '/zhongwen/simp/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
               '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: false,
@@ -10051,8 +10051,8 @@ module.exports = () => ({
           test: {
             paths: [
               '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // On Demand Episode
-              '/zhongwen/simp/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
               '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: false,
@@ -10265,8 +10265,8 @@ module.exports = () => ({
           live: {
             paths: [
               '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
-              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // On Demand Episode
-              '/zhongwen/trad/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
               '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: true,
@@ -10274,8 +10274,8 @@ module.exports = () => ({
           test: {
             paths: [
               '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
-              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // On Demand Episode
-              '/zhongwen/trad/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
               '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: true,
