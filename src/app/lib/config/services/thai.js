@@ -10,6 +10,26 @@ import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
 import '@bbc/psammead-locales/moment/th';
 import withContext from '../../../contexts/utils/withContext';
 
+const fontsPath = `${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH}static/fonts/NotoSans`;
+
+export const F_NOTO_SANS_THAI_REGULAR = () => `
+  @font-face {
+    font-family: Tahoma;
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansThai-Regular.woff') format('woff'), url('${fontsPath}/NotoSansThai-Regular.eot') format('eot'), url('${fontsPath}/NotoSansThai-Regular.ttf') format('ttf');
+    font-display: swap;
+  }`;
+
+export const F_NOTO_SANS_THAI_BOLD = () => `
+  @font-face {
+    font-family: Tahoma;
+    font-weight: 400;
+    font-style: normal;
+    src: url('${fontsPath}/NotoSansThai-Bold.woff') format('woff'), url('${fontsPath}/NotoSansThai-Bold.eot') format('eot'), url('${fontsPath}/NotoSansThai-Bold.ttf') format('ttf');
+    font-display: swap;
+  }`;
+
 export const service = {
   default: {
     lang: `th`,
@@ -339,7 +359,7 @@ export const service = {
       copyrightText:
         'บีบีซี. บีบีซีไม่มีส่วนรับผิดชอบต่อเนื้อหาของเว็บไซต์ภายนอก. นโยบายของเราเรื่องการเชื่อมต่อไปยังลิงก์ภายนอก.',
     },
-    fonts: [],
+    fonts: [F_NOTO_SANS_THAI_BOLD, F_NOTO_SANS_THAI_REGULAR],
     timezone: 'Asia/Bangkok',
   },
 };
