@@ -12,7 +12,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'news',
         script: latin,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -24,7 +24,7 @@ describe('MostReadList', () => {
         service: 'persian',
         script: arabic,
         dir: 'rtl',
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -35,7 +35,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'bengali',
         script: bengali,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -46,7 +46,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'burmese',
         script: burmese,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -57,7 +57,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'news',
         script: latin,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -68,7 +68,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'news',
         script: latin,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 
@@ -79,7 +79,7 @@ describe('MostReadList', () => {
         numberOfItems: 10,
         service: 'news',
         script: latin,
-      }).map(item => item)}
+      })}
     </MostReadList>,
   );
 });
