@@ -1,5 +1,7 @@
 import getEventTrackingData from './getEventTrackingData';
 
+process.env.SIMORGH_BASE_URL = 'http://bbc.com';
+
 describe('getEventTrackingData', () => {
   it('should return correct block event tracking data', () => {
     const expected = {
@@ -26,7 +28,8 @@ describe('getEventTrackingData', () => {
         componentName:
           'Soy%20una%20mujer%20genocida%20y%20a%C3%BAn%20me%20persiguen%20los%20recuerdos%20de%20lo%20que%20hice',
         format: 'CHD=promo::3',
-        url: 'mundo',
+        advertiserID: 'mundo',
+        url: 'http://bbc.com/mundo/noticias-internacional-53113381',
       },
     };
     const actual = getEventTrackingData({ item: itemFixture, index: 2 });
@@ -47,7 +50,8 @@ describe('getEventTrackingData', () => {
         componentName:
           'Soy%20una%20mujer%20genocida%20y%20a%C3%BAn%20me%20persiguen%20los%20recuerdos%20de%20lo%20que%20hice',
         format: 'CHD=promo::1',
-        url: 'mundo',
+        advertiserID: 'mundo',
+        url: 'http://bbc.com/mundo/noticias-internacional-53113381',
       },
     };
     const actual = getEventTrackingData({ item: itemFixture, index: 0 });

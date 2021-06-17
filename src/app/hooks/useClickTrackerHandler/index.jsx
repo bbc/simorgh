@@ -14,6 +14,7 @@ const useClickTrackerHandler = (props = {}) => {
   const preventNavigation = path(['preventNavigation'], props);
   const componentName = path(['componentName'], props);
   const href = path(['href'], props);
+  const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
@@ -64,6 +65,7 @@ const useClickTrackerHandler = (props = {}) => {
               platform,
               producerId,
               service,
+              advertiserID,
               statsDestination,
             });
           } finally {
@@ -86,6 +88,7 @@ const useClickTrackerHandler = (props = {}) => {
       service,
       statsDestination,
       href,
+      advertiserID,
       format,
     ],
   );

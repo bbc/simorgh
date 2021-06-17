@@ -11,7 +11,8 @@ export default ({ item, index } = {}) => {
   if ([headline, url, advertiserID, index >= 0].every(Boolean)) {
     const link = {
       componentName: encodeURIComponent(headline),
-      url: advertiserID,
+      advertiserID,
+      url: `${process.env.SIMORGH_BASE_URL}${url}`,
       format: `CHD=promo::${index + 1}`,
     };
 

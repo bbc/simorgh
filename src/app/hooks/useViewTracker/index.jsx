@@ -14,6 +14,7 @@ const MIN_VIEWED_PERCENT = 0.5;
 const useViewTracker = (props = {}) => {
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
+  const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
 
   const observer = useRef();
@@ -76,6 +77,7 @@ const useViewTracker = (props = {}) => {
             service,
             statsDestination,
             type: EVENT_TYPE,
+            advertiserID,
             url,
           });
           setEventSent(true);
@@ -104,6 +106,7 @@ const useViewTracker = (props = {}) => {
     statsDestination,
     trackingIsEnabled,
     eventSent,
+    advertiserID,
     url,
   ]);
 
