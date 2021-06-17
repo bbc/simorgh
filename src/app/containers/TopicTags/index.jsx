@@ -15,28 +15,33 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 
 const StyledTopicsWrapper = styled.aside`
   padding: 0 ${GEL_SPACING};
+  padding-bottom: 2.5rem;
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING_DBL};
+    padding-bottom: 2.5rem;
   }
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     padding: 0;
+    padding-bottom: 2.5rem;
   }
 `;
 
+const StyledSectionLabel = styled(SectionLabel)`
+  margin-top: 0;
+`;
+
 const Topics = ({ topics }) => {
-  // what does topics object look like?
-  // how do we take json and produce topics object?
   const { service, script, translations, dir } = useContext(ServiceContext);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
 
   return (
     <StyledTopicsWrapper aria-labelledby="related-topics">
-      <SectionLabel bar script={script} service={service} dir={dir}>
+      <StyledSectionLabel bar script={script} service={service} dir={dir}>
         {heading}
-      </SectionLabel>
+      </StyledSectionLabel>
       <TopicTags service={service} script={script}>
         {topics.map(({ topicName, topicId }) => (
           <TopicTag
