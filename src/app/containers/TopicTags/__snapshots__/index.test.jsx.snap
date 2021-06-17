@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopicTags should render correctly with a single tag 1`] = `<div />`;
+
+exports[`TopicTags should render correctly with multiple tags 1`] = `<div />`;
+
+exports[`TopicTags should render correctly with no tags 1`] = `<div />`;
