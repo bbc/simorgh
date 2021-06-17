@@ -1,15 +1,77 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
+import { arrayOf, shape, number, oneOf, oneOfType } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { storyItem } from '#models/propTypes/storyItem';
+import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
+import useViewTracker from '#hooks/useViewTracker';
+
+const eventTrackingData = {
+  componentName: 'features',
+};
+
+const PromoListComponent = ({ promoItems, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(eventTrackingData);
+
+  return (
+    <StoryPromoUl>
+      {promoItems.map(item => (
+        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displayImage
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            eventTrackingData={eventTrackingData}
+          />
+        </StoryPromoLi>
+      ))}
+    </StoryPromoUl>
+  );
+};
+
+PromoListComponent.propTypes = {
+  promoItems: arrayOf(oneOfType([shape(storyItem), shape(linkPromo)]))
+    .isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+PromoListComponent.defaultProps = {
+  dir: 'ltr',
+};
+
+const PromoComponent = ({ promo, dir }) => {
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const viewRef = useViewTracker(eventTrackingData);
+
+  return (
+    <div ref={viewRef}>
+      <StoryPromo
+        item={promo}
+        dir={dir}
+        displayImage
+        serviceDatetimeLocale={serviceDatetimeLocale}
+      />
+    </div>
+  );
+};
+
+PromoComponent.propTypes = {
+  promo: oneOfType([shape(storyItem), shape(linkPromo)]).isRequired,
+  dir: oneOf(['ltr', 'rtl']),
+};
+
+PromoComponent.defaultProps = {
+  dir: 'ltr',
+};
 
 const FeaturesAnalysis = ({ content, parentColumns }) => {
-  const { translations, serviceDatetimeLocale } = useContext(ServiceContext);
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr(
     'Features & Analysis',
@@ -23,29 +85,8 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       title={title}
       content={content}
       parentColumns={parentColumns}
-      promoComponent={({ promo, dir }) => (
-        <StoryPromo
-          item={promo}
-          dir={dir}
-          displayImage
-          serviceDatetimeLocale={serviceDatetimeLocale}
-        />
-      )}
-      promoListComponent={({ promoItems, dir }) => (
-        <StoryPromoUl>
-          {promoItems.map(item => (
-            <StoryPromoLi key={item.id || item.uri}>
-              <StoryPromo
-                item={item}
-                dir={dir}
-                displayImage
-                displaySummary={false}
-                serviceDatetimeLocale={serviceDatetimeLocale}
-              />
-            </StoryPromoLi>
-          ))}
-        </StoryPromoUl>
-      )}
+      promoComponent={PromoComponent}
+      promoListComponent={PromoListComponent}
       columnType="secondary"
     />
   );
