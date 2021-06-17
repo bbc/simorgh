@@ -9,6 +9,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
 
+process.env.SIMORGH_BASE_URL = 'http://bbc.com';
+
 const promoItems = path(
   ['relatedContent', 'groups', 0, 'promos'],
   pidginPageData,
@@ -59,7 +61,8 @@ describe('RecommendationsPromoList', () => {
         componentName:
           'Meet%20boys%20who%20dey%20convert%20cassava%20to%20electricity',
         format: 'CHD=promo::1',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/44508901',
         preventNavigation: true,
       });
 
@@ -71,7 +74,8 @@ describe('RecommendationsPromoList', () => {
         componentName:
           'How%20light%20companies%20dey%20use%20estimated%20billing%20show%20Nigerians%20pepper',
         format: 'CHD=promo::2',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/tori-46975713',
         preventNavigation: true,
       });
 
@@ -83,7 +87,8 @@ describe('RecommendationsPromoList', () => {
         componentName:
           'Nigeria%3A%20Wetin%205%2C222%20megawatts%20electric%20fit%20do%3F',
         format: 'CHD=promo::3',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/tori-42494678',
         preventNavigation: true,
       });
     });
@@ -105,21 +110,24 @@ describe('RecommendationsPromoList', () => {
         componentName:
           'Meet%20boys%20who%20dey%20convert%20cassava%20to%20electricity',
         format: 'CHD=promo::1',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/44508901',
       });
 
       expect(linkLevelTrackingItem2).toEqual({
         componentName:
           'How%20light%20companies%20dey%20use%20estimated%20billing%20show%20Nigerians%20pepper',
         format: 'CHD=promo::2',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/tori-46975713',
       });
 
       expect(linkLevelTrackingItem3).toEqual({
         componentName:
           'Nigeria%3A%20Wetin%205%2C222%20megawatts%20electric%20fit%20do%3F',
         format: 'CHD=promo::3',
-        url: 'pidgin',
+        advertiserID: 'pidgin',
+        url: 'http://bbc.com/pidgin/tori-42494678',
       });
     });
   });
