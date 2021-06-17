@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string, oneOf, node } from 'prop-types';
+import { shape, string, oneOf, node, func } from 'prop-types';
 import styled from '@emotion/styled';
 import { getPica, getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { C_EBON } from '@bbc/psammead-styles/colours';
