@@ -66,25 +66,21 @@ describe('MostReadLink', () => {
 describe('MostReadItemWrapper', () => {
   shouldMatchSnapshot(
     'should render ltr correctly with 10 items',
-    <WithContexts>
-      {getItemWrapperArray({
-        numberOfItems: 10,
-        service: 'news',
-        script: latin,
-      }).map(item => item)}
-    </WithContexts>,
+    getItemWrapperArray({
+      numberOfItems: 10,
+      service: 'news',
+      script: latin,
+    }),
   );
 
   shouldMatchSnapshot(
     'should render rtl correctly with 10 items',
-    <WithContexts>
-      {getItemWrapperArray({
-        numberOfItems: 10,
-        service: 'persian',
-        script: arabic,
-        dir: 'rtl',
-      }).map(item => item)}
-    </WithContexts>,
+    getItemWrapperArray({
+      numberOfItems: 10,
+      service: 'persian',
+      script: arabic,
+      dir: 'rtl',
+    }),
   );
 
   describe('getParentColumns helper method', () => {
