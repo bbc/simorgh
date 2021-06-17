@@ -11,7 +11,14 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/dist/spacings';
+import { arrayOf, shape, string } from 'prop-types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useViewTracker from '#hooks/useViewTracker';
+
+const eventTrackingData = {
+  componentName: 'topic-tags', // Need to check with Jon B
+};
 
 const StyledTopicsWrapper = styled.aside`
   padding: 0 ${GEL_SPACING};
@@ -34,6 +41,8 @@ const StyledSectionLabel = styled(SectionLabel)`
 
 const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingData);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
 
@@ -47,11 +56,26 @@ const Topics = ({ topics }) => {
           <TopicTag
             name={topicName}
             link={`${process.env.SIMORGH_BASE_URL}/${service}/topics/${topicId}`} // Variants?
+            onClick={clickTrackerHandler}
+            ref={viewRef} // TopicTags are styled components, which automatically forward refs.
           />
         ))}
       </TopicTags>
     </StyledTopicsWrapper>
   );
+};
+
+Topics.propTypes = {
+  topics: arrayOf(
+    shape({
+      topicName: string,
+      topicId: string,
+    }),
+  ),
+};
+
+Topics.defaultProps = {
+  topics: null,
 };
 
 export default Topics;
