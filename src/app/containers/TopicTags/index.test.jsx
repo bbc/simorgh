@@ -71,4 +71,15 @@ describe('Event Tracking', () => {
 
     expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
   });
+
+  it('should call the view tracker with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracker, 'default');
+    render(
+      <WithContexts>
+        <Topics topics={[{ topicName: 'topic', topicId: 'id' }]} />
+      </WithContexts>,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+  });
 });
