@@ -236,6 +236,7 @@ exports[`TopicTags should render correctly with a single tag 1`] = `
             <span
               class="emotion-13 emotion-14"
               dir="ltr"
+              id="related-topics"
             >
               Temas relacionados
             </span>
@@ -497,6 +498,7 @@ exports[`TopicTags should render correctly with multiple tags 1`] = `
             <span
               class="emotion-13 emotion-14"
               dir="ltr"
+              id="related-topics"
             >
               Temas relacionados
             </span>
@@ -777,6 +779,7 @@ exports[`TopicTags should render correctly with no tags 1`] = `
             <span
               class="emotion-13 emotion-14"
               dir="ltr"
+              id="related-topics"
             >
               Temas relacionados
             </span>

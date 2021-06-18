@@ -56,11 +56,17 @@ const Topics = ({ topics }) => {
 
   return (
     <StyledTopicsWrapper aria-labelledby="related-topics">
-      <StyledSectionLabel bar script={script} service={service} dir={dir}>
+      <StyledSectionLabel
+        bar
+        script={script}
+        service={service}
+        dir={dir}
+        labelId="related-topics"
+      >
         {heading}
       </StyledSectionLabel>
       <TopicTags service={service} script={script}>
-        {topics.length === 1 ? (
+        {topics?.length === 1 ? (
           <TopicTag
             name={topics[0].topicName}
             link={getTopicPageUrl(topics[0].topicId)}
