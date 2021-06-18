@@ -48,7 +48,7 @@ const Topics = ({ topics }) => {
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
 
-  const constructTopicPageUrl = id => {
+  const getTopicPageUrl = id => {
     return variant
       ? `${process.env.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
       : `${process.env.SIMORGH_BASE_URL}/${service}/topics/${id}`;
@@ -63,7 +63,7 @@ const Topics = ({ topics }) => {
         {topics.map(({ topicName, topicId }) => (
           <TopicTag
             name={topicName}
-            link={constructTopicPageUrl(topicId)}
+            link={getTopicPageUrl(topicId)}
             onClick={clickTrackerHandler}
             ref={viewRef}
             key={topicId}
