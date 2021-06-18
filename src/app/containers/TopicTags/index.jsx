@@ -58,6 +58,7 @@ const Topics = ({ topics }) => {
             link={`${process.env.SIMORGH_BASE_URL}/${service}/topics/${topicId}`} // Variants?
             onClick={clickTrackerHandler}
             ref={viewRef} // TopicTags are styled components, which automatically forward refs.
+            key={topicId}
           />
         ))}
       </TopicTags>

@@ -1,12 +1,16 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import Topics from '#containers/TopicTags';
+import WithContexts from '../PageHandlers/withContexts';
+import * as clickTracker from '#hooks/useClickTrackerHandler';
+import * as viewTracker from '#hooks/useViewTracker';
 
 const withContexts = ({ children }) => (
-  <ServiceContextProvider service="pidgin">
+  <ServiceContextProvider service="mundo">
     <ToggleContextProvider
       toggles={{
         eventTracking: {
@@ -45,4 +49,21 @@ describe('TopicTags', () => {
       />,
     ),
   );
+});
+
+describe('Event Tracking', () => {
+  const eventTrackingData = {
+    componentName: 'topic-tags',
+  };
+
+  it('should call the click tracker with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracker, 'default');
+    render(
+      <WithContexts>
+        <Topics topics={[{ topicName: 'topic', topicId: 'id' }]} />
+      </WithContexts>,
+    );
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+  });
 });
