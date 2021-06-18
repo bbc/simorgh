@@ -20,7 +20,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
 
   return async event => {
     const nextPageUrl =
-      path(['href'], eventTrackingData) || path(['target', 'href'], event);
+      path(['target', 'href'], event) || path(['url'], eventTrackingData);
 
     if (blockData) {
       await handleBlockLevelClick(event);

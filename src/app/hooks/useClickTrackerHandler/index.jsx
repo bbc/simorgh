@@ -13,7 +13,7 @@ const EVENT_TYPE = 'click';
 const useClickTrackerHandler = (props = {}) => {
   const preventNavigation = path(['preventNavigation'], props);
   const componentName = path(['componentName'], props);
-  const href = path(['href'], props);
+  const url = path(['url'], props);
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
 
@@ -50,7 +50,7 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          const nextPageUrl = href || event.target.href;
+          const nextPageUrl = path(['target', 'href'], event) || url;
 
           event.stopPropagation();
           event.preventDefault();
@@ -67,6 +67,7 @@ const useClickTrackerHandler = (props = {}) => {
               service,
               advertiserID,
               statsDestination,
+              url: nextPageUrl,
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
@@ -87,7 +88,7 @@ const useClickTrackerHandler = (props = {}) => {
       producerId,
       service,
       statsDestination,
-      href,
+      url,
       advertiserID,
       format,
     ],
