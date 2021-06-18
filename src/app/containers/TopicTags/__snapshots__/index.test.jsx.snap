@@ -248,7 +248,13 @@ exports[`TopicTags should render correctly with a single tag 1`] = `
     >
       <div
         class="emotion-17 emotion-18"
-      />
+      >
+        <a
+          href="undefined/mundo/topics/123"
+        >
+          topic
+        </a>
+      </div>
     </div>
   </aside>
 </div>

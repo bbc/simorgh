@@ -60,15 +60,25 @@ const Topics = ({ topics }) => {
         {heading}
       </StyledSectionLabel>
       <TopicTags service={service} script={script}>
-        {topics?.map(({ topicName, topicId }) => (
+        {topics.length === 1 ? (
           <TopicTag
-            name={topicName}
-            link={getTopicPageUrl(topicId)}
+            name={topics[0].topicName}
+            link={getTopicPageUrl(topics[0].topicId)}
             onClick={clickTrackerHandler}
             ref={viewRef}
-            key={topicId}
+            key={topics[0].topicId}
           />
-        ))}
+        ) : (
+          topics?.map(({ topicName, topicId }) => (
+            <TopicTag
+              name={topicName}
+              link={getTopicPageUrl(topicId)}
+              onClick={clickTrackerHandler}
+              ref={viewRef}
+              key={topicId}
+            />
+          ))
+        )}
       </TopicTags>
     </StyledTopicsWrapper>
   );
