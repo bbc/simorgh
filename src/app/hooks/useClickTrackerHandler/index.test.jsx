@@ -272,7 +272,7 @@ describe('Click tracking', () => {
     const url = 'https://bbc.com/sport';
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, href: url }} />
+        <TestComponent hookProps={{ ...defaultProps, url }} />
       </WithContexts>,
     );
 
