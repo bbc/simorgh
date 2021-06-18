@@ -38,10 +38,16 @@ const ImageWithPlaceholder = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [syncDecoding, setSyncDecoding] = useState(false);
   const imageProps = { alt, src, sizes, width, srcset, fade };
   const imgType = src.split('.').pop();
   const imageToRender = (
-    <Image onLoad={() => setIsLoaded(true)} {...imageProps} />
+    <Image
+      onLoad={() => setIsLoaded(true)}
+      onError={() => setSyncDecoding(true)}
+      decoding={syncDecoding ? 'sync' : null}
+      {...imageProps}
+    />
   );
 
   const shouldPreload = !isAmp && preload;
