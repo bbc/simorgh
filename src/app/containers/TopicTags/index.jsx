@@ -60,7 +60,7 @@ const Topics = ({ topics }) => {
         {heading}
       </StyledSectionLabel>
       <TopicTags service={service} script={script}>
-        {topics.map(({ topicName, topicId }) => (
+        {topics?.map(({ topicName, topicId }) => (
           <TopicTag
             name={topicName}
             link={getTopicPageUrl(topicId)}

@@ -2,25 +2,34 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import Topics from '#containers/TopicTags';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const WithContexts = ({ children }) => (
-  <ServiceContextProvider service="mundo">
-    <ToggleContextProvider
-      toggles={{
-        eventTracking: {
-          enabled: true,
-        },
-      }}
-    >
-      <EventTrackingContextProvider>{children}</EventTrackingContextProvider>
-    </ToggleContextProvider>
-  </ServiceContextProvider>
+  <RequestContextProvider
+    service="mundo"
+    pageType={STORY_PAGE}
+    isAmp={false}
+    pathname="/"
+  >
+    <ServiceContextProvider service="mundo">
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+        }}
+      >
+        <EventTrackingContextProvider>{children}</EventTrackingContextProvider>
+      </ToggleContextProvider>
+    </ServiceContextProvider>
+  </RequestContextProvider>
 );
 
 describe('TopicTags', () => {
