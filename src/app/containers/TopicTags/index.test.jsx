@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
@@ -5,11 +6,10 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import Topics from '#containers/TopicTags';
-import WithContexts from '../PageHandlers/withContexts';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 
-const withContexts = ({ children }) => (
+const WithContexts = ({ children }) => (
   <ServiceContextProvider service="mundo">
     <ToggleContextProvider
       toggles={{
@@ -29,25 +29,30 @@ describe('TopicTags', () => {
 
   shouldMatchSnapshot(
     'should render correctly with no tags',
-    withContexts(<Topics />),
+    <WithContexts>
+      <Topics />
+    </WithContexts>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with a single tag',
-    withContexts(<Topics topics={[{ topicName: 'topic', topicId: '123' }]} />),
+    <WithContexts>
+      <Topics topics={[{ topicName: 'topic', topicId: '123' }]} />
+    </WithContexts>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with multiple tags',
-    withContexts(
+    <WithContexts>
       <Topics
         topics={[
           { topicName: 'topic1', topicId: '1' },
           { topicName: 'topic2', topicId: '2' },
           { topicName: 'topic3', topicId: '3' },
         ]}
-      />,
-    ),
+      />
+      ,
+    </WithContexts>,
   );
 });
 
