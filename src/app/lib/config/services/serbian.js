@@ -170,6 +170,7 @@ export const service = {
       currentPage: 'Otvorena stranica',
       skipLinkText: 'Pređite na sadržaj',
       relatedContent: 'Povezano',
+      relatedTopics: 'Povezane teme',
       navMenuText: 'Odeljci',
       mediaAssetPage: {
         mediaPlayer: 'Media plejer',
@@ -472,6 +473,7 @@ export const service = {
       currentPage: 'Отворена страница',
       skipLinkText: 'Пређите на садржај',
       relatedContent: 'Повезано',
+      relatedTopics: 'Повезане теме',
       navMenuText: 'Одељци',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плејер',

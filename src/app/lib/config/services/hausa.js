@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      relatedTopics: 'Labarai masu alaka',
       navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

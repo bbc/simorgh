@@ -249,6 +249,7 @@ const baseServiceConfig = {
         'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
     },
     relatedContent: 'Статті на цю ж тему',
+    relatedTopics: 'Також на цю тему',
     ...secondaryColumnTranslations,
   },
   brandSVG,

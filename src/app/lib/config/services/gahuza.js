@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      relatedTopics: 'Ibindi bisa n’ibi',
       navMenuText: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',

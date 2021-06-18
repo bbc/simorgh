@@ -71,6 +71,7 @@ export const service = {
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      relatedTopics: 'موضوعات مرتبط',
       navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',

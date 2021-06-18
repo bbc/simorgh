@@ -69,6 +69,7 @@ export const service = {
       currentPage: 'Current page',
       skipLinkText: 'Skip to content',
       relatedContent: 'Related content',
+      relatedTopics: 'Related topics',
       navMenuText: 'Sections',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

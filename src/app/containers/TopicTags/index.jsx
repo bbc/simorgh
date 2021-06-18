@@ -65,7 +65,7 @@ const Topics = ({ topics }) => {
             name={topicName}
             link={constructTopicPageUrl(topicId)}
             onClick={clickTrackerHandler}
-            ref={viewRef} // TopicTags are styled components, which automatically forward refs.
+            ref={viewRef}
             key={topicId}
           />
         ))}

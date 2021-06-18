@@ -70,6 +70,7 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      relatedTopics: 'متعلقہ عنوانات',
       navMenuText: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

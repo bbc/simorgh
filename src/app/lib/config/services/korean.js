@@ -65,6 +65,7 @@ export const service = {
       currentPage: '현재 페이지',
       skipLinkText: '내용 보기',
       relatedContent: '관련 기사 더 보기',
+      relatedTopics: '관련 토픽',
       navMenuText: '섹션',
       mediaAssetPage: {
         mediaPlayer: '미디어 플레이어',

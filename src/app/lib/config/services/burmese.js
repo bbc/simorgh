@@ -67,6 +67,7 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
+      relatedTopics: 'ဆကျစပျ အကွောငျးအရာမြား',
       navMenuText: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',

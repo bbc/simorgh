@@ -67,6 +67,7 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
