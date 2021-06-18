@@ -13,6 +13,7 @@ import {
 } from '@bbc/gel-foundations/dist/spacings';
 import { arrayOf, shape, string } from 'prop-types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
+import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 
@@ -41,10 +42,17 @@ const StyledSectionLabel = styled(SectionLabel)`
 
 const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
+  const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
 
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
+
+  const constructTopicPageUrl = id => {
+    return variant
+      ? `${process.env.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
+      : `${process.env.SIMORGH_BASE_URL}/${service}/topics/${id}`;
+  };
 
   return (
     <StyledTopicsWrapper aria-labelledby="related-topics">
@@ -55,7 +63,7 @@ const Topics = ({ topics }) => {
         {topics.map(({ topicName, topicId }) => (
           <TopicTag
             name={topicName}
-            link={`${process.env.SIMORGH_BASE_URL}/${service}/topics/${topicId}`} // Variants?
+            link={constructTopicPageUrl(topicId)}
             onClick={clickTrackerHandler}
             ref={viewRef} // TopicTags are styled components, which automatically forward refs.
             key={topicId}
