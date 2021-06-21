@@ -268,22 +268,6 @@ describe('Click tracking', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should send user to the specified href when click target is non-navigational', async () => {
-    const url = 'https://bbc.com/sport';
-    const { getByTestId } = render(
-      <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, url }} />
-      </WithContexts>,
-    );
-
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    await waitFor(() => {
-      expect(window.location.assign).toHaveBeenCalledTimes(1);
-      expect(window.location.assign).toHaveBeenCalledWith(url);
-    });
-  });
-
   it('should not navigate to the next page if preventNavigation is true', async () => {
     const url = 'https://bbc.com/pidgin';
     const { getByText } = render(
