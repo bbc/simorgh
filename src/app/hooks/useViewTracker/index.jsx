@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import prop from 'ramda/src/prop';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
@@ -22,13 +23,18 @@ const useViewTracker = (props = {}) => {
   const [isInView, setIsInView] = useState();
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
+  const eventTrackingContext = useContext(EventTrackingContext);
   const {
-    campaignID,
     pageIdentifier,
     platform,
     producerId,
     statsDestination,
-  } = useContext(EventTrackingContext);
+  } = eventTrackingContext;
+  const campaignID = pathOr(
+    path(['campaignID'], eventTrackingContext),
+    ['campaignID'],
+    props,
+  );
   const { service } = useContext(ServiceContext);
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {

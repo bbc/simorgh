@@ -284,6 +284,24 @@ describe('Click tracking', () => {
       expect(window.location.assign).not.toHaveBeenCalled();
     });
   });
+
+  it('should be able to override the campaignID that is sent to ATI', async () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const campaignID = 'custom-campaign';
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, campaignID }} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    const [[viewEventUrl]] = spyFetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
+      'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+    );
+  });
 });
 
 describe('Error handling', () => {
