@@ -50,7 +50,7 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          const nextPageUrl = path(['target', 'href'], event) || url;
+          const nextPageUrl = path(['target', 'href'], event);
 
           event.stopPropagation();
           event.preventDefault();
@@ -67,7 +67,7 @@ const useClickTrackerHandler = (props = {}) => {
               service,
               advertiserID,
               statsDestination,
-              url: nextPageUrl,
+              url,
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
