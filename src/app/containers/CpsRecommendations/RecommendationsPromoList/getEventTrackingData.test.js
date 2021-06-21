@@ -25,6 +25,7 @@ describe('getEventTrackingData', () => {
     const expected = {
       block: { componentName: 'wsoj' },
       link: {
+        campaignID: 'cps_wsoj',
         componentName:
           'Soy%20una%20mujer%20genocida%20y%20a%C3%BAn%20me%20persiguen%20los%20recuerdos%20de%20lo%20que%20hice',
         format: 'CHD=promo::3',
@@ -47,6 +48,7 @@ describe('getEventTrackingData', () => {
     const expected = {
       block: { componentName: 'wsoj' },
       link: {
+        campaignID: 'cps_wsoj',
         componentName:
           'Soy%20una%20mujer%20genocida%20y%20a%C3%BAn%20me%20persiguen%20los%20recuerdos%20de%20lo%20que%20hice',
         format: 'CHD=promo::1',
