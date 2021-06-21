@@ -80,6 +80,9 @@ const logCodes = {
 
   // Social Embed
   SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
+
+  // Toggle API
+  TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 };
 
 module.exports = logCodes;
