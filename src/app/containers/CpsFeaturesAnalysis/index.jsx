@@ -10,12 +10,14 @@ import StoryPromo from '../StoryPromo';
 import useViewTracker from '#hooks/useViewTracker';
 
 const eventTrackingData = {
-  componentName: 'features',
+  block: {
+    componentName: 'features',
+  },
 };
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   return (
     <StoryPromoUl>

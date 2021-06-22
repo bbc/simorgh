@@ -17,7 +17,9 @@ import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
   getAssetTypeCode,
-  getHeadlineUrlAndLive,
+  getHeadline,
+  getUrl,
+  getIsLive,
 } from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
@@ -27,7 +29,7 @@ import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
@@ -110,7 +112,7 @@ const StoryPromoContainer = ({
     timezone,
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -126,11 +128,9 @@ const StoryPromoContainer = ({
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
   const isLtr = dir === 'ltr';
-
-  const { headline, url, isLive } = getHeadlineUrlAndLive(
-    item,
-    isAssetTypeCode,
-  );
+  const headline = getHeadline(item);
+  const url = getUrl(item);
+  const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
   const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
@@ -310,7 +310,14 @@ StoryPromoContainer.propTypes = {
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
   eventTrackingData: shape({
-    componentName: string,
+    block: shape({
+      componentName: string,
+    }),
+    link: shape({
+      componentName: string,
+      url: string,
+      format: string,
+    }),
   }),
 };
 

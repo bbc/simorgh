@@ -9,8 +9,10 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import RelatedContentPromo from './RelatedContentPromo';
 import RelatedContentPromoList from './RelatedContentPromoList';
 
-const EVENT_TRACKING_DATA = {
-  componentName: 'related-content',
+const eventTrackingData = {
+  block: {
+    componentName: 'related-content',
+  },
 };
 
 const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
@@ -32,7 +34,7 @@ const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
       promoComponent={RelatedContentPromo}
       promoListComponent={RelatedContentPromoList}
       columnType="secondary"
-      eventTrackingData={EVENT_TRACKING_DATA}
+      eventTrackingData={eventTrackingData}
     />
   );
 };
