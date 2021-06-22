@@ -544,9 +544,7 @@ export const getXtorMarketingString = href => {
 
   const queryWithParams = { ...query, ...hashObject };
 
-  return Object.prototype.hasOwnProperty.call(queryWithParams, field)
-    ? queryWithParams[field]
-    : null;
+  return queryWithParams[field] || null;
 };
 
 export const getATIMarketingString = (href, campaignType) => {
