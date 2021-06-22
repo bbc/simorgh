@@ -1,4 +1,5 @@
 import React from 'react';
+import path from 'ramda/src/path';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -34,7 +35,8 @@ const RelatedContentPromoList = ({
   isMediaContent,
   eventTrackingData,
 }) => {
-  const viewRef = useViewTracker(eventTrackingData);
+  const blockLevelEventTrackingData = path(['block'], eventTrackingData);
+  const viewRef = useViewTracker(blockLevelEventTrackingData);
 
   return (
     <Grid

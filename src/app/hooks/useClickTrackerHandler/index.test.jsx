@@ -191,7 +191,7 @@ describe('Click tracking', () => {
       const handleClick = useClickTrackerHandler(parentHookProps);
 
       return (
-        <div onClick={handleClick({ format: 'CHD=promo::1' })}>
+        <div onClick={handleClick}>
           <TestComponent hookProps={defaultProps} />
         </div>
       );
@@ -268,20 +268,39 @@ describe('Click tracking', () => {
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
-  it('should send user to the specified href when click target is non-navigational', async () => {
-    const url = 'https://bbc.com/sport';
+  it('should not navigate to the next page if preventNavigation is true', async () => {
+    const url = 'https://bbc.com/pidgin';
+    const { getByText } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent
+          hookProps={{ ...defaultProps, href: url, preventNavigation: true }}
+        />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByText('Link')));
+
+    await waitFor(() => {
+      expect(window.location.assign).not.toHaveBeenCalled();
+    });
+  });
+
+  it('should be able to override the campaignID that is sent to ATI', async () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const campaignID = 'custom-campaign';
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, href: url }} />
+        <TestComponent hookProps={{ ...defaultProps, campaignID }} />
       </WithContexts>,
     );
 
     act(() => userEvent.click(getByTestId('test-component')));
 
-    await waitFor(() => {
-      expect(window.location.assign).toHaveBeenCalledTimes(1);
-      expect(window.location.assign).toHaveBeenCalledWith(url);
-    });
+    const [[viewEventUrl]] = spyFetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
+      'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+    );
   });
 });
 

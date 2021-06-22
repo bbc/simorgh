@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, shape, string, number } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
+import useViewTracker from '#hooks/useViewTracker';
 import Grid from '../../../components/Grid';
 import RecommendationsPromo from '../RecommendationsPromo';
+import getEventTrackingData from './getEventTrackingData';
 
-const RecommendationsPromoList = ({ promoItems, dir }) => (
-  <Grid
-    columns={{
-      group0: 1,
-      group1: 1,
-      group2: 1,
-      group3: 1,
-      group4: 1,
-      group5: 1,
-    }}
-    as={StoryPromoUl}
-    enableGelGutters
-  >
-    {promoItems.map(item => (
+const RecommendationsPromoListItem = forwardRef(
+  ({ item, dir, index }, forwardedRef) => {
+    const eventTrackingData = getEventTrackingData({ item, index });
+    const linkViewEventTracker = useViewTracker(eventTrackingData.link);
+    const elementRefCallback = element => {
+      linkViewEventTracker(element);
+      forwardedRef(element);
+    };
+
+    return (
       <Grid
         item
+        ref={elementRefCallback}
         columns={{
           group0: 1,
           group1: 1,
@@ -33,11 +32,51 @@ const RecommendationsPromoList = ({ promoItems, dir }) => (
         border={false}
         key={item.id || item.uri}
       >
-        {RecommendationsPromo({ promo: item, dir })}
+        <RecommendationsPromo
+          promo={item}
+          dir={dir}
+          eventTrackingData={eventTrackingData}
+        />
       </Grid>
-    ))}
-  </Grid>
+    );
+  },
 );
+
+const RecommendationsPromoList = ({ promoItems, dir }) => {
+  const eventTrackingData = getEventTrackingData();
+  const blockViewEventTracker = useViewTracker(eventTrackingData.block);
+
+  return (
+    <Grid
+      columns={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 1,
+        group5: 1,
+      }}
+      as={StoryPromoUl}
+      enableGelGutters
+    >
+      {promoItems.map((item, index) => (
+        <RecommendationsPromoListItem
+          key={item.id}
+          ref={blockViewEventTracker}
+          index={index}
+          item={item}
+          dir={dir}
+        />
+      ))}
+    </Grid>
+  );
+};
+
+RecommendationsPromoListItem.propTypes = {
+  dir: string.isRequired,
+  item: storyItem.isRequired,
+  index: number.isRequired,
+};
 
 RecommendationsPromoList.propTypes = {
   dir: string.isRequired,

@@ -19,7 +19,7 @@ const StyledStoryPromoWrapper = styled.div`
   }
 `;
 
-const RecommendationsPromo = ({ promo, dir }) => {
+const RecommendationsPromo = ({ promo, dir, eventTrackingData }) => {
   return (
     <Grid
       columns={{
@@ -38,6 +38,7 @@ const RecommendationsPromo = ({ promo, dir }) => {
           dir={dir}
           isRecommendation
           displaySummary={false}
+          eventTrackingData={eventTrackingData}
         />
       </StyledStoryPromoWrapper>
     </Grid>
@@ -47,6 +48,20 @@ const RecommendationsPromo = ({ promo, dir }) => {
 RecommendationsPromo.propTypes = {
   dir: string.isRequired,
   promo: oneOfType([shape(storyItem)]).isRequired,
+  eventTrackingData: shape({
+    block: shape({
+      componentName: string,
+    }),
+    link: shape({
+      componentName: string,
+      url: string,
+      format: string,
+    }),
+  }),
+};
+
+RecommendationsPromo.defaultProps = {
+  eventTrackingData: null,
 };
 
 export default RecommendationsPromo;

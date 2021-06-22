@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
@@ -11,23 +12,30 @@ import useTrackingToggle from '#hooks/useTrackingToggle';
 const EVENT_TYPE = 'click';
 
 const useClickTrackerHandler = (props = {}) => {
+  const preventNavigation = path(['preventNavigation'], props);
   const componentName = path(['componentName'], props);
-  const href = path(['href'], props);
+  const url = path(['url'], props);
+  const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
+  const eventTrackingContext = useContext(EventTrackingContext);
   const {
-    campaignID,
     pageIdentifier,
     platform,
     producerId,
     statsDestination,
-  } = useContext(EventTrackingContext);
+  } = eventTrackingContext;
+  const campaignID = pathOr(
+    path(['campaignID'], eventTrackingContext),
+    ['campaignID'],
+    props,
+  );
   const { service } = useContext(ServiceContext);
 
   return useCallback(
-    event => {
+    async event => {
       const shouldRegisterClick = [
         trackingIsEnabled,
         !clicked,
@@ -48,13 +56,13 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          const nextPageUrl = href || event.target.href;
+          const nextPageUrl = path(['target', 'href'], event);
 
           event.stopPropagation();
           event.preventDefault();
 
           try {
-            sendEventBeacon({
+            await sendEventBeacon({
               type: EVENT_TYPE,
               campaignID,
               componentName,
@@ -63,10 +71,12 @@ const useClickTrackerHandler = (props = {}) => {
               platform,
               producerId,
               service,
+              advertiserID,
               statsDestination,
+              url,
             });
           } finally {
-            if (nextPageUrl) {
+            if (nextPageUrl && !preventNavigation) {
               window.location.assign(nextPageUrl);
             }
           }
@@ -80,10 +90,12 @@ const useClickTrackerHandler = (props = {}) => {
       componentName,
       pageIdentifier,
       platform,
+      preventNavigation,
       producerId,
       service,
       statsDestination,
-      href,
+      url,
+      advertiserID,
       format,
     ],
   );
