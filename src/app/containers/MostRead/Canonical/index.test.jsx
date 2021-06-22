@@ -273,7 +273,7 @@ describe('MostReadContainerCanonical', () => {
   });
 
   describe('Event Tracking', () => {
-    const EVENT_TRACKING_DATA = {
+    const blockLevelEventTrackingData = {
       componentName: 'most-read',
     };
 
@@ -284,11 +284,11 @@ describe('MostReadContainerCanonical', () => {
           service="pidgin"
           endpoint="www.test.bbc.com/pidgin/mostread.json"
           initialData={pidginMostReadData}
-          eventTrackingData={EVENT_TRACKING_DATA}
+          eventTrackingData={blockLevelEventTrackingData}
         />,
       );
 
-      expect(viewTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+      expect(viewTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
     });
 
     it('should call the click tracking hook with the correct params', () => {
@@ -298,11 +298,11 @@ describe('MostReadContainerCanonical', () => {
           service="pidgin"
           endpoint="www.test.bbc.com/pidgin/mostread.json"
           initialData={pidginMostReadData}
-          eventTrackingData={EVENT_TRACKING_DATA}
+          eventTrackingData={blockLevelEventTrackingData}
         />,
       );
 
-      expect(clickTrackerSpy).toHaveBeenCalledWith(EVENT_TRACKING_DATA);
+      expect(clickTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
     });
   });
 });
