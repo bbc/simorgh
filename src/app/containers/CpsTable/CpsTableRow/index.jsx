@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { arrayOf, oneOf, shape } from 'prop-types';
 
+import { C_SPORT_MIST } from '@bbc/psammead-styles/colours';
+
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
@@ -9,7 +11,7 @@ import CpsTableCell from '../CpsTableCell';
 
 const StyledTr = styled.tr`
   &:hover {
-    background-color: #f7f7f5;
+    background-color: ${C_SPORT_MIST};
   }
 `;
 
