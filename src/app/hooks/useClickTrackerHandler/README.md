@@ -26,7 +26,7 @@ A click event is sent to ATI when a user performs a valid click (as per [clickTy
   - Left click + shift + option
   - Left click + shift + option + cmd
 
-The hook returns an event handler which can be given to a component's `onClick` property to track clicks on that component and any of its children. After the component has been clicked once, it will no longer send ATI requests on click.
+The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that component and any of its children. After the component has been clicked once, it will no longer send ATI requests on click.
 
 ### Usage
 
@@ -46,7 +46,7 @@ const Promo = () => {
    */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
-    href: 'promo-link',
+    link: 'promo-link',
   });
 
   return (
@@ -107,7 +107,7 @@ const TopStories = () => {
 
     const clickTrackerHandler = useClickTrackerHandler({
       ...eventTrackingData,
-      href: link,
+      link,
     });
 
     return (
@@ -129,8 +129,10 @@ const TopStories = () => {
 
 ### Props
 
-| Argument      | Type   | Required | Example                                                                                                                              |
-| ------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                    |
-| format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                       |
-| href          | string | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop. |
+| Argument          | Type    | Required | Example                                                                                                                                                                                                              |
+| ----------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                         |
+| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                    |
+| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
+| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                 |
+| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |

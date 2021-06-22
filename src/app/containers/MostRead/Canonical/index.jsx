@@ -1,12 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { oneOf, string, elementType } from 'prop-types';
-import {
-  MostReadList,
-  MostReadItemWrapper,
-  MostReadRank,
-  MostReadLink,
-} from '@bbc/psammead-most-read';
+import { MostReadLink, MostReadItemWrapper } from './Item';
+import MostReadList from './List';
+import MostReadRank from './Rank';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
