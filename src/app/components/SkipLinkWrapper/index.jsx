@@ -12,6 +12,7 @@ const GEL_SPACING_PLUS_HALF = `0.75rem`;
 
 const Wrapper = styled.div`
   position: relative;
+  z-index: 10;
 `;
 
 const SkipLink = styled.a`

@@ -1,7 +1,13 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import Brand from '@bbc/psammead-brand';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+
+const SkipContentWrapper = styled.div`
+  position: relative;
+  z-index: 10;
+`;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const {
@@ -20,21 +26,23 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const maxWidth = svgRatio * svgMaxHeight;
 
   return (
-    <Brand
-      backgroundColour={brandBackgroundColour}
-      logoColour={brandLogoColour}
-      product={product}
-      serviceLocalisedName={serviceLocalizedName}
-      svgHeight={svgMaxHeight}
-      minWidth={minWidth}
-      maxWidth={maxWidth}
-      svg={brandSVG}
-      url={`/${service}`}
-      skipLink={skipLink}
-      scriptLink={scriptLink}
-      ref={brandRef}
-      {...props}
-    />
+    <SkipContentWrapper>
+      <Brand
+        backgroundColour={brandBackgroundColour}
+        logoColour={brandLogoColour}
+        product={product}
+        serviceLocalisedName={serviceLocalizedName}
+        svgHeight={svgMaxHeight}
+        minWidth={minWidth}
+        maxWidth={maxWidth}
+        svg={brandSVG}
+        url={`/${service}`}
+        skipLink={skipLink}
+        scriptLink={scriptLink}
+        ref={brandRef}
+        {...props}
+      />
+    </SkipContentWrapper>
   );
 };
 
