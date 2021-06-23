@@ -4,9 +4,9 @@ import Brand from '@bbc/psammead-brand';
 import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const SkipContentWrapper = styled.div`
+const StyledBrand = styled(Brand)`
   position: relative;
-  z-index: 10;
+  z-index: 1;
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
@@ -26,23 +26,21 @@ const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
   const maxWidth = svgRatio * svgMaxHeight;
 
   return (
-    <SkipContentWrapper>
-      <Brand
-        backgroundColour={brandBackgroundColour}
-        logoColour={brandLogoColour}
-        product={product}
-        serviceLocalisedName={serviceLocalizedName}
-        svgHeight={svgMaxHeight}
-        minWidth={minWidth}
-        maxWidth={maxWidth}
-        svg={brandSVG}
-        url={`/${service}`}
-        skipLink={skipLink}
-        scriptLink={scriptLink}
-        ref={brandRef}
-        {...props}
-      />
-    </SkipContentWrapper>
+    <StyledBrand
+      backgroundColour={brandBackgroundColour}
+      logoColour={brandLogoColour}
+      product={product}
+      serviceLocalisedName={serviceLocalizedName}
+      svgHeight={svgMaxHeight}
+      minWidth={minWidth}
+      maxWidth={maxWidth}
+      svg={brandSVG}
+      url={`/${service}`}
+      skipLink={skipLink}
+      scriptLink={scriptLink}
+      ref={brandRef}
+      {...props}
+    />
   );
 };
 
