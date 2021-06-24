@@ -226,6 +226,7 @@ export const buildATIEventTrackUrl = ({
   campaignID,
   format,
   type,
+  advertiserID,
   url,
 }) => {
   // on AMP, variable substitutions are used in the value and they cannot be
@@ -295,6 +296,7 @@ export const buildATIEventTrackUrl = ({
         componentName,
         format,
         pageIdentifier,
+        advertiserID,
         url,
       }),
       wrap: false,
