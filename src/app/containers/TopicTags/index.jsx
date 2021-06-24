@@ -18,7 +18,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 
 const eventTrackingData = {
-  componentName: 'topic-tags', // Need to check with Jon B
+  componentName: 'topics',
 };
 
 const StyledTopicsWrapper = styled.aside`

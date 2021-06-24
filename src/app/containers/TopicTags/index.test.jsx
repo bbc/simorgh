@@ -67,7 +67,7 @@ describe('TopicTags', () => {
 
 describe('Event Tracking', () => {
   const eventTrackingData = {
-    componentName: 'topic-tags',
+    componentName: 'topics',
   };
 
   it('should call the click tracker with the correct params', () => {
