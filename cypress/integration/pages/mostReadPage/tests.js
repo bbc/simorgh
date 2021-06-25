@@ -22,12 +22,15 @@ export default ({ service, pageType, variant }) => {
             if (mostReadIsEnabled) {
               cy.request(mostReadPath).then(({ body: mostReadJson }) => {
                 if (mostReadJson.totalRecords > 0) {
-                  cy.get('ol').should('exist');
+                  cy.get('[data-e2e="most-read"]').within(() => {
+                    cy.get('li').should('exist');
+                  });
                 } else {
                   cy.log('Not enough records to show component');
                   cy.task('log', 'Not enough records to show component');
-
-                  cy.get('ol').should('not.exist');
+                  cy.get('[data-e2e="most-read"]').within(() => {
+                    cy.get('li').should('not.exist');
+                  });
                 }
               });
             }

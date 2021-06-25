@@ -5,7 +5,7 @@ import testsForCanonicalOnly from './testsForCanonicalOnly';
 import crossPlatformTests from './tests';
 import visitPage from '../../../support/helpers/visitPage';
 
-const pageType = 'mostWatchedPage';
+const pageType = 'mostReadPage';
 Object.keys(config)
   .filter(service => serviceHasPageType(service, pageType))
   .forEach(serviceId => {
