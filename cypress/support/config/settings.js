@@ -7030,15 +7030,27 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            paths: [
+              '/sport/rugby-union/56359986',
+              '/sport/golf/56318994',
+              '/sport/cricket/20256774',
+            ],
             enabled: true,
           },
           test: {
-            paths: ['/sport/formula1/23355387', '/sport/tennis/23372108'],
+            paths: [
+              '/sport/formula1/23355387',
+              '/sport/tennis/23372108',
+              '/sport/cricket/20256774',
+            ],
             enabled: true,
           },
           local: {
-            paths: ['/sport/rugby-union/56359986', '/sport/golf/56318994'],
+            paths: [
+              '/sport/rugby-union/56359986',
+              '/sport/golf/56318994',
+              '/sport/cricket/20256774',
+            ],
             enabled: true,
           },
         },
