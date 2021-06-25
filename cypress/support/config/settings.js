@@ -7038,11 +7038,7 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: [
-              '/sport/formula1/23355387',
-              '/sport/tennis/23372108',
-              '/sport/cricket/20256774',
-            ],
+            paths: ['/sport/formula1/23355387', '/sport/tennis/23372108'],
             enabled: true,
           },
           local: {
