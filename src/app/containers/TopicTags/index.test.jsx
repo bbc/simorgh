@@ -11,26 +11,37 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
-const WithContexts = ({ children }) => (
-  <RequestContextProvider
-    service="mundo"
-    pageType={STORY_PAGE}
-    isAmp={false}
-    pathname="/"
-  >
-    <ServiceContextProvider service="mundo">
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: {
-            enabled: true,
-          },
-        }}
+const WithContexts = ({ children, enabled = true }) => {
+  const toggles = {
+    topicTags: {
+      enabled,
+    },
+  };
+  return (
+    <ToggleContextProvider toggles={toggles}>
+      <RequestContextProvider
+        service="mundo"
+        pageType={STORY_PAGE}
+        isAmp={false}
+        pathname="/"
       >
-        <EventTrackingContextProvider>{children}</EventTrackingContextProvider>
-      </ToggleContextProvider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+        <ServiceContextProvider service="mundo">
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: {
+                enabled: true,
+              },
+            }}
+          >
+            <EventTrackingContextProvider>
+              {children}
+            </EventTrackingContextProvider>
+          </ToggleContextProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
+  );
+};
 
 describe('TopicTags', () => {
   // Different variations match snapshots
@@ -63,6 +74,22 @@ describe('TopicTags', () => {
       ,
     </WithContexts>,
   );
+
+  it('should return null when the topicTags toggle is disabled', () => {
+    const { container } = render(
+      <WithContexts enabled={false}>
+        <Topics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />
+      </WithContexts>,
+    );
+
+    expect(container.firstChild).toBeNull();
+  });
 });
 
 describe('Event Tracking', () => {

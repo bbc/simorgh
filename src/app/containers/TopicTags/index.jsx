@@ -16,6 +16,7 @@ import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
+import useToggle from '#hooks/useToggle';
 
 const eventTrackingData = {
   componentName: 'topics',
@@ -43,6 +44,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
+  const { enabled: topicTagsEnabled } = useToggle('topicTags');
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
 
@@ -55,38 +57,40 @@ const Topics = ({ topics }) => {
   };
 
   return (
-    <StyledTopicsWrapper aria-labelledby="related-topics">
-      <StyledSectionLabel
-        bar
-        script={script}
-        service={service}
-        dir={dir}
-        labelId="related-topics"
-      >
-        {heading}
-      </StyledSectionLabel>
-      <TopicTags service={service} script={script}>
-        {topics?.length === 1 ? (
-          <TopicTag
-            name={topics[0].topicName}
-            link={getTopicPageUrl(topics[0].topicId)}
-            onClick={clickTrackerHandler}
-            ref={viewRef}
-            key={topics[0].topicId}
-          />
-        ) : (
-          topics?.map(({ topicName, topicId }) => (
+    topicTagsEnabled && (
+      <StyledTopicsWrapper aria-labelledby="related-topics">
+        <StyledSectionLabel
+          bar
+          script={script}
+          service={service}
+          dir={dir}
+          labelId="related-topics"
+        >
+          {heading}
+        </StyledSectionLabel>
+        <TopicTags service={service} script={script}>
+          {topics?.length === 1 ? (
             <TopicTag
-              name={topicName}
-              link={getTopicPageUrl(topicId)}
+              name={topics[0].topicName}
+              link={getTopicPageUrl(topics[0].topicId)}
               onClick={clickTrackerHandler}
               ref={viewRef}
-              key={topicId}
+              key={topics[0].topicId}
             />
-          ))
-        )}
-      </TopicTags>
-    </StyledTopicsWrapper>
+          ) : (
+            topics?.map(({ topicName, topicId }) => (
+              <TopicTag
+                name={topicName}
+                link={getTopicPageUrl(topicId)}
+                onClick={clickTrackerHandler}
+                ref={viewRef}
+                key={topicId}
+              />
+            ))
+          )}
+        </TopicTags>
+      </StyledTopicsWrapper>
+    )
   );
 };
 
