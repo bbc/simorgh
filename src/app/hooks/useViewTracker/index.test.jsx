@@ -496,6 +496,40 @@ describe('Expected use', () => {
     expect(viewEventUrl).toMatch('https://logws1363.ati-host.net');
     expect(global.fetch).toHaveBeenCalledTimes(1);
   });
+
+  it('should be able to override the campaignID that is sent to ATI', async () => {
+    const { result } = renderHook(
+      () => useViewTracker({ ...trackingData, campaignID: 'custom-campaign' }),
+      {
+        wrapper,
+        initialProps: {
+          pageData: fixtureData,
+        },
+      },
+    );
+    const element = document.createElement('div');
+
+    await result.current(element);
+
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    const [[viewEventUrl]] = global.fetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl).searchParams.ati).toEqual(
+      'PUB-[custom-campaign]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
+    );
+  });
 });
 
 describe('Error handling', () => {
