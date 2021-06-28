@@ -37,6 +37,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid } from '#app/components/Grid';
+import Topics from '#containers/TopicTags';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -64,6 +65,7 @@ const MediaAssetPage = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const topics = path(['metadata', 'topics'], pageData);
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -189,6 +191,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGelPageGrid>
 
+      <Topics topics={topics} />
       <CpsRelatedContent content={relatedContent} isMediaContent />
       {!isAmp && (
         <MostWatchedWrapper>

@@ -44,7 +44,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
-  const { enabled: topicTagsIsEnabled } = useToggle('topicTags');
+  const { enabled: topicTagsIsEnabled } = useToggle('topicsTags');
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
