@@ -1468,6 +1468,14 @@
     "@bbc/psammead-timestamp" "4.0.18"
     moment-timezone "^0.5.26"
 
+"@bbc/psammead-timestamp@4.0.18":
+  version "4.0.18"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp/-/psammead-timestamp-4.0.18.tgz#9e725040d1150a0b878f203ec53fc11d2f0f9b63"
+  integrity sha512-7KfnXrErRQD8eICtnsRydJJDlRMTtV92B5PEJIYH7pyUUqbLC3PzIUIeUHWroY9J12TRbFgbYo2nvRskb8Gwdg==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.2.6"
+
 "@bbc/psammead-timestamp@4.0.19":
   version "4.0.19"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-timestamp/-/psammead-timestamp-4.0.19.tgz#9a0c7ddc15286bf5e24fc3be2ddb86c7b8030e9d"
@@ -1482,7 +1490,7 @@
   integrity sha512-2gPukDVv4pUPH0PMJ2hQAm0H4P7RFVPwgdodeMbSCXhTRni8zB/ndEoGIQJf/XNjtOM8S3NRqH50bdMiXhOJyA==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
-    "@bbc/psammead-styles" "7.3.0"
+    "@bbc/psammead-styles" "7.2.6"
 
 "@bbc/psammead-useful-links@3.0.20":
   version "3.0.20"
