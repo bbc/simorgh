@@ -12,34 +12,30 @@ import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const WithContexts = ({ children, enabled = true }) => {
-  const toggles = {
-    topicTags: {
-      enabled,
-    },
-  };
   return (
-    <ToggleContextProvider toggles={toggles}>
-      <RequestContextProvider
-        service="mundo"
-        pageType={STORY_PAGE}
-        isAmp={false}
-        pathname="/"
-      >
-        <ServiceContextProvider service="mundo">
-          <ToggleContextProvider
-            toggles={{
-              eventTracking: {
-                enabled: true,
-              },
-            }}
-          >
-            <EventTrackingContextProvider>
-              {children}
-            </EventTrackingContextProvider>
-          </ToggleContextProvider>
-        </ServiceContextProvider>
-      </RequestContextProvider>
-    </ToggleContextProvider>
+    <RequestContextProvider
+      service="mundo"
+      pageType={STORY_PAGE}
+      isAmp={false}
+      pathname="/"
+    >
+      <ServiceContextProvider service="mundo">
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+            topicTags: {
+              enabled,
+            },
+          }}
+        >
+          <EventTrackingContextProvider>
+            {children}
+          </EventTrackingContextProvider>
+        </ToggleContextProvider>
+      </ServiceContextProvider>
+    </RequestContextProvider>
   );
 };
 
