@@ -44,7 +44,7 @@ const StyledSectionLabel = styled(SectionLabel)`
 const Topics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
-  const { enabled: topicTagsIsEnabled } = useToggle('topicsTags');
+  const { enabled: topicTagsAreEnabled } = useToggle('topicsTags');
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
@@ -56,7 +56,8 @@ const Topics = ({ topics }) => {
   };
 
   return (
-    topicTagsIsEnabled && (
+    topics &&
+    topicTagsAreEnabled && (
       <StyledTopicsWrapper aria-labelledby="related-topics">
         <StyledSectionLabel
           bar
