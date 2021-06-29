@@ -50,15 +50,14 @@ describe('ImageWithPlaceholder', () => {
 
   it('should re-render with decoding attribute set to sync if an error occurs', () => {
     const { getByAltText } = render(<ImageWithPlaceholder />);
-    expect(getByAltText('Pauline Clayton').getAttribute('decoding')).toBeNull();
+    const image = getByAltText('Pauline Clayton');
+    expect(image.getAttribute('decoding')).toBeNull();
 
     act(() => {
-      fireEvent(getByAltText('Pauline Clayton'), new Event('error'));
+      fireEvent(image, new Event('error'));
     });
 
-    expect(getByAltText('Pauline Clayton').getAttribute('decoding')).toEqual(
-      'sync',
-    );
+    expect(image.getAttribute('decoding')).toEqual('sync');
   });
 
   it('should not add a link tag to the head of the document when rendering an AMP image', async () => {
