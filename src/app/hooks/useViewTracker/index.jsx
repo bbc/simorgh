@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import prop from 'ramda/src/prop';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
@@ -14,6 +15,7 @@ const MIN_VIEWED_PERCENT = 0.5;
 const useViewTracker = (props = {}) => {
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
+  const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
 
   const observer = useRef();
@@ -21,13 +23,18 @@ const useViewTracker = (props = {}) => {
   const [isInView, setIsInView] = useState();
   const [eventSent, setEventSent] = useState(false);
   const { trackingIsEnabled } = useTrackingToggle(componentName);
+  const eventTrackingContext = useContext(EventTrackingContext);
   const {
-    campaignID,
     pageIdentifier,
     platform,
     producerId,
     statsDestination,
-  } = useContext(EventTrackingContext);
+  } = eventTrackingContext;
+  const campaignID = pathOr(
+    path(['campaignID'], eventTrackingContext),
+    ['campaignID'],
+    props,
+  );
   const { service } = useContext(ServiceContext);
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
@@ -76,6 +83,7 @@ const useViewTracker = (props = {}) => {
             service,
             statsDestination,
             type: EVENT_TYPE,
+            advertiserID,
             url,
           });
           setEventSent(true);
@@ -104,6 +112,7 @@ const useViewTracker = (props = {}) => {
     statsDestination,
     trackingIsEnabled,
     eventSent,
+    advertiserID,
     url,
   ]);
 

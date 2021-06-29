@@ -7,6 +7,10 @@ import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
 import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 
+const blockLevelEventTrackingData = {
+  componentName: 'most-read',
+};
+
 const MostReadContainer = ({
   mostReadEndpointOverride,
   initialData,
@@ -45,6 +49,7 @@ const MostReadContainer = ({
       wrapper={wrapper}
       columnLayout={columnLayout}
       size={size}
+      eventTrackingData={blockLevelEventTrackingData}
     />
   );
 };

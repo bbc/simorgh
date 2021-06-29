@@ -11,6 +11,7 @@ export const sendEventBeacon = async ({
   service,
   statsDestination,
   type,
+  advertiserID,
   url,
 }) => {
   await sendBeacon(
@@ -24,6 +25,7 @@ export const sendEventBeacon = async ({
       service,
       statsDestination,
       type,
+      advertiserID,
       url,
     }),
   );
