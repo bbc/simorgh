@@ -2486,6 +2486,28 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@storybook/addon-a11y@^6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.3.1.tgz#376f380f99855ee7171b97fa92995ad7c723f719"
+  integrity sha512-UFBm4NWHV1tm/DfIjFmZeG2Csfv1rh5vsqbllMiTXnvuKAFSTxMTzyk/mEy4wSDAC58+MAyiJ+x6JM8oQKfUTQ==
+  dependencies:
+    "@storybook/addons" "6.3.1"
+    "@storybook/api" "6.3.1"
+    "@storybook/channels" "6.3.1"
+    "@storybook/client-api" "6.3.1"
+    "@storybook/client-logger" "6.3.1"
+    "@storybook/components" "6.3.1"
+    "@storybook/core-events" "6.3.1"
+    "@storybook/theming" "6.3.1"
+    axe-core "^4.2.0"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    lodash "^4.17.20"
+    react-sizeme "^3.0.1"
+    regenerator-runtime "^0.13.7"
+    ts-dedent "^2.0.0"
+    util-deprecate "^1.0.2"
+
 "@storybook/addon-knobs@6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-6.2.9.tgz#879b2e3861c29b30b53f1d624315a2f3a463785a"
@@ -2509,6 +2531,23 @@
     react-colorful "^5.0.1"
     react-lifecycles-compat "^3.0.4"
     react-select "^3.2.0"
+    regenerator-runtime "^0.13.7"
+
+"@storybook/addon-viewport@^6.3.1":
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.3.1.tgz#81544e7ac0d14c8a34ddf5cdc6bc650e6800770d"
+  integrity sha512-qrEFkfyoR4jnMRvzGt/n81AkaIDABxrguiGON5SKkXKnZ1DvpxeLjqkskrsVzCsMFKdiX8Cvv2SDB/bbKXbmqQ==
+  dependencies:
+    "@storybook/addons" "6.3.1"
+    "@storybook/api" "6.3.1"
+    "@storybook/client-logger" "6.3.1"
+    "@storybook/components" "6.3.1"
+    "@storybook/core-events" "6.3.1"
+    "@storybook/theming" "6.3.1"
+    core-js "^3.8.2"
+    global "^4.4.0"
+    memoizerific "^1.11.3"
+    prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
 "@storybook/addons@6.2.9":
@@ -4380,6 +4419,11 @@ axe-core@^4.0.2:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.1.tgz#2e50bcf10ee5b819014f6e342e41e45096239e34"
   integrity sha512-evY7DN8qSIbsW2H/TWQ1bX3sXN1d4MNb5Vb4n7BzPuCwRHdkZ1H2eNLuSh73EoQqkGKUtju2G2HCcjCfhvZIAA==
+
+axe-core@^4.2.0:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.3.tgz#2a3afc332f0031b42f602f4a3de03c211ca98f72"
+  integrity sha512-pXnVMfJKSIWU2Ml4JHP7pZEPIrgBO1Fd3WGx+fPBsS+KRGhE4vxooD8XBGWbQOIVSZsVK7pUDBBkCicNu80yzQ==
 
 axios@0.21.1, axios@^0.21.1:
   version "0.21.1"
@@ -12426,7 +12470,7 @@ pretty-hrtime@^1.0.3:
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
-prismjs@1.24.9, prismjs@^1.21.0, prismjs@~1.23.0:
+prismjs@1.24.0, prismjs@^1.21.0, prismjs@~1.23.0:
   version "1.24.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.0.tgz#0409c30068a6c52c89ef7f1089b3ca4de56be2ac"
   integrity sha512-SqV5GRsNqnzCL8k5dfAjCNhUrF3pR0A9lTDSCUZeh/LIshheXJEaP0hwLz2t4XHivd2J/v2HR+gRnigzeKe3cQ==
