@@ -3,14 +3,6 @@ import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
 import { pathOr } from 'ramda';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/dist/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/dist/spacings';
 import { arrayOf, shape, string } from 'prop-types';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -23,18 +15,7 @@ const eventTrackingData = {
 };
 
 const StyledTopicsWrapper = styled.aside`
-  padding: 0 ${GEL_SPACING};
   padding-bottom: 2.5rem;
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING_DBL};
-    padding-bottom: 2.5rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: 0;
-    padding-bottom: 2.5rem;
-  }
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`

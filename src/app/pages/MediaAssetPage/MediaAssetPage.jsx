@@ -36,7 +36,7 @@ import {
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
-import { GelPageGrid } from '#app/components/Grid';
+import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import Topics from '#containers/TopicTags';
 
 const StyledTimestamp = styled(Timestamp)`
@@ -191,7 +191,21 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledGelPageGrid>
 
-      <Topics topics={topics} />
+      <StyledGelPageGrid
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+      >
+        <GridItemLarge>
+          <Topics topics={topics} />
+        </GridItemLarge>
+      </StyledGelPageGrid>
+
       <CpsRelatedContent content={relatedContent} isMediaContent />
       {!isAmp && (
         <MostWatchedWrapper>

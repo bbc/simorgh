@@ -14,7 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -319,7 +319,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <Topics topics={topics} />
+          <GridItemLarge>
+            <Topics topics={topics} />
+          </GridItemLarge>
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}

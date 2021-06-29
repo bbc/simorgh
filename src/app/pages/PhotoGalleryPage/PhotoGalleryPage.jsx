@@ -11,7 +11,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GelPageGrid } from '#app/components/Grid';
+import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -33,6 +33,7 @@ import {
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
+import Topics from '#containers/TopicTags';
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -52,6 +53,7 @@ const PhotoGalleryPage = ({ pageData }) => {
     ? getImageParts(indexImagePath)[1]
     : null;
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
@@ -131,6 +133,20 @@ const PhotoGalleryPage = ({ pageData }) => {
         }}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </StyledGelPageGrid>
+      <StyledGelPageGrid
+        columns={{
+          group0: 6,
+          group1: 6,
+          group2: 6,
+          group3: 6,
+          group4: 8,
+          group5: 20,
+        }}
+      >
+        <GridItemLarge>
+          <Topics topics={topics} />
+        </GridItemLarge>
       </StyledGelPageGrid>
       <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
