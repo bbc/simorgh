@@ -166,6 +166,8 @@
     "@loadable/babel-plugin": "5.13.2",
     "@loadable/webpack-plugin": "5.15.0",
     "@storybook/addon-a11y": "^6.3.1",
+    "@storybook/addon-controls": "^6.3.1",
+    "@storybook/addon-docs": "^6.3.1",
     "@storybook/addon-knobs": "6.2.9",
     "@storybook/addon-viewport": "^6.3.1",
     "@storybook/react": "6.3.1",
