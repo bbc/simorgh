@@ -71,10 +71,7 @@ describe('TopicTags', () => {
   it('should not render an unordered list when there is only one topic', () => {
     const { container } = render(
       <WithContexts>
-        <Topics
-          topics={[{ topicName: 'topic1', topicId: '1' }]}
-          data-testid="topics"
-        />
+        <Topics topics={[{ topicName: 'topic1', topicId: '1' }]} />
       </WithContexts>,
     );
     expect(container.querySelector('ul')).toBeNull();
@@ -88,7 +85,6 @@ describe('TopicTags', () => {
             { topicName: 'topic1', topicId: '1' },
             { topicName: 'topic2', topicId: '2' },
           ]}
-          data-testid="topics"
         />
       </WithContexts>,
     );
