@@ -68,8 +68,20 @@ describe('TopicTags', () => {
     </WithContexts>,
   );
 
+  it('should not render an unordered list when there is only one topic', () => {
+    const { container } = render(
+      <WithContexts>
+        <Topics
+          topics={[{ topicName: 'topic1', topicId: '1' }]}
+          data-testid="topics"
+        />
+      </WithContexts>,
+    );
+    expect(container.querySelector('ul')).toBeNull();
+  });
+
   it('should render an unordered list when there is more than one topic', () => {
-    const { container, getByTestId } = render(
+    const { container } = render(
       <WithContexts>
         <Topics
           topics={[
@@ -80,7 +92,7 @@ describe('TopicTags', () => {
         />
       </WithContexts>,
     );
-    expect(getByTestId('topics')).toBe(HTMLUListElement);
+    expect(container.querySelector('ul')).not.toBeNull();
   });
 
   it('should return null when the topicsTags toggle is disabled', () => {
