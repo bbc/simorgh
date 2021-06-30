@@ -1,5 +1,5 @@
 import React from 'react';
-import { shape, string, oneOf, node, func } from 'prop-types';
+import { shape, string, oneOf, node } from 'prop-types';
 import styled from '@emotion/styled';
 import { getPica, getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { C_EBON } from '@bbc/psammead-styles/colours';
@@ -17,6 +17,7 @@ import {
   mostReadListGridProps,
   mostReadItemGridProps,
 } from '../../utilities/gridProps';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 export const getParentColumns = columnLayout => {
   if (columnLayout !== 'oneColumn') {
@@ -93,21 +94,25 @@ export const MostReadLink = ({
   href,
   children,
   size,
-  onClick,
-}) => (
-  <StyledItem dir={dir} size={size}>
-    <StyledLink
-      href={href}
-      script={script}
-      service={service}
-      size={size}
-      onClick={onClick}
-    >
-      {title}
-    </StyledLink>
-    {children && <TimestampWrapper>{children}</TimestampWrapper>}
-  </StyledItem>
-);
+  eventTrackingData,
+}) => {
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
+
+  return (
+    <StyledItem dir={dir} size={size}>
+      <StyledLink
+        href={href}
+        script={script}
+        service={service}
+        size={size}
+        onClick={clickTrackerHandler}
+      >
+        {title}
+      </StyledLink>
+      {children && <TimestampWrapper>{children}</TimestampWrapper>}
+    </StyledItem>
+  );
+};
 
 MostReadLink.propTypes = {
   dir: oneOf(['rtl', 'ltr']),
@@ -117,14 +122,16 @@ MostReadLink.propTypes = {
   href: string.isRequired,
   children: node, // this node will be a timestamp container
   size: oneOf(['default', 'small']),
-  onClick: func,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 MostReadLink.defaultProps = {
   dir: 'ltr',
   children: null,
   size: 'default',
-  onClick: null,
+  eventTrackingData: null,
 };
 
 const ItemWrapper = styled.div`
