@@ -89,27 +89,3 @@ Topics.defaultProps = {
 };
 
 export default Topics;
-
-// "topics": [
-//   {
-//   "topicName": "Elecciones presidenciales en Estados Unidos 2020",
-//   "topicId": "c404v5z20w4t",
-//   "subjectList": [
-//   {
-//   "subjectId": "http://www.bbc.co.uk/things/10f9cc6b-0a52-46d3-bce6-9cd78b34600f#id",
-//   "subjectType": "tag"
-//   }
-//   ],
-//   "curationList": [
-//   {
-//   "curationId": "6e0332da-fd3e-4c64-8b17-aa6d50ebdb26",
-//   "curationType": "vivo-stream",
-//   "visualProminence": "NORMAL"
-//   }
-//   ],
-//   "types": [
-//   "core:Thing",
-//   "core:Event",
-//   "tagging:TagConcept"
-//   ]
-//   },
