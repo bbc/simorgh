@@ -14,6 +14,7 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
+import useToggle from '#hooks/useToggle';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
@@ -85,15 +86,82 @@ export const AMP_ACCESS_FETCH = service => {
   );
 };
 
+const AdContent = props => {
+  // eslint-disable-next-line react/prop-types
+  const { script, service, dir, label, slotType, pageType } = props;
+  return (
+    <>
+      <StyledLink
+        href={LABEL_LINK}
+        script={script}
+        service={service}
+        dir={dir}
+        tabIndex="-1"
+      >
+        {label}
+      </StyledLink>
+      <AdSlot service={service} slotType={slotType} pageType={pageType} />
+    </>
+  );
+};
+
+const AdWithoutPlaceholder = props => {
+  // eslint-disable-next-line react/prop-types
+  const { ariaLabel, slotType } = props;
+  return (
+    <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
+      <AdSection
+        aria-label={ariaLabel}
+        role="region"
+        data-e2e="advertisement"
+        aria-hidden="true"
+      >
+        <AdContainer slotType={slotType}>
+          <StyledWrapper>
+            <AdContent {...props} />
+          </StyledWrapper>
+        </AdContainer>
+      </AdSection>
+    </DisplayWrapper>
+  );
+};
+
+const AdWithPlaceholder = props => {
+  // eslint-disable-next-line react/prop-types
+  const { ariaLabel, slotType } = props;
+  return (
+    <AdSection
+      aria-label={ariaLabel}
+      role="region"
+      data-e2e="advertisement"
+      aria-hidden="true"
+    >
+      <AdContainer slotType={slotType}>
+        <StyledWrapper>
+          <DisplayWrapper
+            amp-access="toggles.ads.enabled"
+            amp-access-hide="true"
+          >
+            <AdContent {...props} />
+          </DisplayWrapper>
+        </StyledWrapper>
+      </AdContainer>
+    </AdSection>
+  );
+};
+
 const AmpAd = ({ slotType }) => {
   const { translations, dir, script, service } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
+  const { enabled: showPlaceholder } = useToggle('adPlaceholder');
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],
     translations,
   );
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+
+  const Advert = showPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
 
   return (
     <>
@@ -102,33 +170,15 @@ const AmpAd = ({ slotType }) => {
         {AMP_ACCESS_JS}
         {AMP_ACCESS_FETCH(service)}
       </Helmet>
-      <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
-        <AdSection
-          aria-label={ariaLabel}
-          role="region"
-          data-e2e="advertisement"
-          aria-hidden="true"
-        >
-          <AdContainer slotType={slotType}>
-            <StyledWrapper>
-              <StyledLink
-                href={LABEL_LINK}
-                script={script}
-                service={service}
-                dir={dir}
-                tabIndex="-1"
-              >
-                {label}
-              </StyledLink>
-              <AdSlot
-                service={service}
-                slotType={slotType}
-                pageType={pageType}
-              />
-            </StyledWrapper>
-          </AdContainer>
-        </AdSection>
-      </DisplayWrapper>
+      <Advert
+        service={service}
+        script={script}
+        dir={dir}
+        label={label}
+        pageType={pageType}
+        ariaLabel={ariaLabel}
+        slotType={slotType}
+      />
     </>
   );
 };

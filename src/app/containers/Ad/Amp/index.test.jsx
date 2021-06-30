@@ -5,6 +5,7 @@ import AmpAd, { AMP_ACCESS_FETCH } from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 const adJsonAttributes = slotType => ({
   targeting: {
@@ -14,7 +15,7 @@ const adJsonAttributes = slotType => ({
   },
 });
 
-const adWithContext = slotType => (
+const adWithContext = (slotType, enabled = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
@@ -23,7 +24,15 @@ const adWithContext = slotType => (
     pathname="/"
   >
     <ServiceContextProvider service="afrique">
-      <AmpAd slotType={slotType} />
+      <ToggleContextProvider
+        toggles={{
+          adPlaceholder: {
+            enabled,
+          },
+        }}
+      >
+        <AmpAd slotType={slotType} />
+      </ToggleContextProvider>
     </ServiceContextProvider>
   </RequestContextProvider>
 );
@@ -50,14 +59,24 @@ describe('AMP Ads', () => {
   });
 
   describe('Assertions', () => {
-    it('should not render ad placeholder in UK', () => {
+    it('should not render ad placeholder in UK when adPlaceholder toggle is false', () => {
       const { getByLabelText } = render(
         <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
-          {adWithContext('leaderboard')}
+          {adWithContext('leaderboard', false)}
         </div>,
       );
 
       expect(getByLabelText('Publicités')).not.toBeVisible();
+    });
+
+    it('should render ad placeholder in UK when adPlaceholder toggle is true', () => {
+      const { getByLabelText } = render(
+        <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
+          {adWithContext('leaderboard', true)}
+        </div>,
+      );
+
+      expect(getByLabelText('Publicités')).toBeVisible();
     });
 
     it.each`
