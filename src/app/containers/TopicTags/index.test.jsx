@@ -68,7 +68,7 @@ describe('TopicTags', () => {
     </WithContexts>,
   );
 
-  it.only('should render an unordered list when there is more than one topic', () => {
+  it('should render an unordered list when there is more than one topic', () => {
     const { container, getByTestId } = render(
       <WithContexts>
         <Topics
