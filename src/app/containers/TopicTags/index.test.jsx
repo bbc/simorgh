@@ -25,7 +25,7 @@ const WithContexts = ({ children, enabled = true }) => {
             eventTracking: {
               enabled: true,
             },
-            topicTags: {
+            topicsTags: {
               enabled,
             },
           }}
@@ -40,9 +40,6 @@ const WithContexts = ({ children, enabled = true }) => {
 };
 
 describe('TopicTags', () => {
-  // Different variations match snapshots
-  // Should call event tracking hooks
-
   shouldMatchSnapshot(
     'should render correctly with no tags',
     <WithContexts>
@@ -71,7 +68,22 @@ describe('TopicTags', () => {
     </WithContexts>,
   );
 
-  it('should return null when the topicTags toggle is disabled', () => {
+  it.only('should render an unordered list when there is more than one topic', () => {
+    const { container, getByTestId } = render(
+      <WithContexts>
+        <Topics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+          ]}
+          data-testid="topics"
+        />
+      </WithContexts>,
+    );
+    expect(getByTestId('topics')).toBe(HTMLUListElement);
+  });
+
+  it('should return null when the topicsTags toggle is disabled', () => {
     const { container } = render(
       <WithContexts enabled={false}>
         <Topics
