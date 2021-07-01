@@ -28,7 +28,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
+import { GelPageGrid } from '#components/Grid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -50,7 +50,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import Topics from '#containers/TopicTags';
+import Topics, { TopicsWrapper } from '#containers/TopicTags';
 
 const componentsToRender = {
   headline: headings,
@@ -174,21 +174,13 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           />
         </GelPageGrid>
       </main>
-      <GelPageGrid
-        enableGelGutters
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-      >
-        <GridItemLarge>
+
+      {topics && (
+        <TopicsWrapper>
           <Topics topics={topics} />
-        </GridItemLarge>
-      </GelPageGrid>
+        </TopicsWrapper>
+      )}
+
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}

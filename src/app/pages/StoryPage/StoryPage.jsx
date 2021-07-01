@@ -319,9 +319,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
-          <GridItemLarge>
-            <Topics topics={topics} />
-          </GridItemLarge>
+
+          {topics && (
+            <GridItemLarge>
+              <Topics topics={topics} />
+            </GridItemLarge>
+          )}
+
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}
