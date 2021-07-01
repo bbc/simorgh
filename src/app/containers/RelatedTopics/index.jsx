@@ -45,7 +45,7 @@ RelatedTopicsWrapper.propTypes = {
 
 const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
+  const { isAmp, variant } = useContext(RequestContext);
   const { enabled: topicTagsAreEnabled } = useToggle('topicsTags');
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
@@ -59,6 +59,7 @@ const RelatedTopics = ({ topics }) => {
 
   return (
     topics &&
+    !isAmp &&
     topicTagsAreEnabled && (
       <StyledTopicsWrapper aria-labelledby="related-topics">
         <StyledSectionLabel
