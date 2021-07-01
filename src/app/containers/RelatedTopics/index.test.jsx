@@ -18,13 +18,14 @@ const WithContexts = ({
   variant,
   enabled = true,
   service = 'mundo',
+  isAmp = false,
 }) => {
   return (
     <RequestContextProvider
       service={service}
       variant={variant}
       pageType={STORY_PAGE}
-      isAmp={false}
+      isAmp={isAmp}
       pathname="/"
     >
       <ServiceContextProvider service={service}>
@@ -110,6 +111,21 @@ describe('Expected use', () => {
       'href',
       `https://bbc.com/uzbek/cyr/topics/${topic.topicId}`,
     );
+  });
+
+  it('should return null when on AMP', () => {
+    const { container } = render(
+      <WithContexts enabled={false} isAmp>
+        <RelatedTopics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />
+      </WithContexts>,
+    );
+    expect(container.firstChild).toBeNull();
   });
 
   it('should return null when the topicsTags toggle is disabled', () => {
