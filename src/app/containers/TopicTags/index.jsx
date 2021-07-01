@@ -43,7 +43,7 @@ TopicsWrapper.propTypes = {
   children: node.isRequired,
 };
 
-const Topics = ({ topics }) => {
+const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const { enabled: topicTagsAreEnabled } = useToggle('topicsTags');
@@ -96,7 +96,7 @@ const Topics = ({ topics }) => {
   );
 };
 
-Topics.propTypes = {
+RelatedTopics.propTypes = {
   topics: arrayOf(
     shape({
       topicName: string,
@@ -105,8 +105,8 @@ Topics.propTypes = {
   ),
 };
 
-Topics.defaultProps = {
+RelatedTopics.defaultProps = {
   topics: null,
 };
 
-export default Topics;
+export default RelatedTopics;
