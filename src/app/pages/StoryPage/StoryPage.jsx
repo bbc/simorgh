@@ -51,7 +51,7 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
-import Topics from '#containers/TopicTags';
+import RelatedTopics from '#containers/RelatedTopics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -322,7 +322,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
 
           {topics && (
             <GridItemLarge>
-              <Topics topics={topics} />
+              <RelatedTopics topics={topics} />
             </GridItemLarge>
           )}
 

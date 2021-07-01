@@ -23,7 +23,7 @@ const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
 `;
 
-export const TopicsWrapper = ({ children }) => (
+export const RelatedTopicsWrapper = ({ children }) => (
   <GelPageGrid
     enableGelGutters
     columns={{
@@ -39,7 +39,7 @@ export const TopicsWrapper = ({ children }) => (
   </GelPageGrid>
 );
 
-TopicsWrapper.propTypes = {
+RelatedTopicsWrapper.propTypes = {
   children: node.isRequired,
 };
 

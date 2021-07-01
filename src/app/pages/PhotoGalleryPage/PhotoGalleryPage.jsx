@@ -33,7 +33,7 @@ import {
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
-import Topics, { TopicsWrapper } from '#containers/TopicTags';
+import RelatedTopics, { RelatedTopicsWrapper } from '#containers/RelatedTopics';
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -136,9 +136,9 @@ const PhotoGalleryPage = ({ pageData }) => {
       </StyledGelPageGrid>
 
       {topics && (
-        <TopicsWrapper>
-          <Topics topics={topics} />
-        </TopicsWrapper>
+        <RelatedTopicsWrapper>
+          <RelatedTopics topics={topics} />
+        </RelatedTopicsWrapper>
       )}
 
       <CpsRelatedContent content={relatedContent} enableGridWrapper />

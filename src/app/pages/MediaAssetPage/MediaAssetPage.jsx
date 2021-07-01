@@ -37,7 +37,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid } from '#app/components/Grid';
-import Topics, { TopicsWrapper } from '#containers/TopicTags';
+import RelatedTopics, { RelatedTopicsWrapper } from '#containers/RelatedTopics';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -192,9 +192,9 @@ const MediaAssetPage = ({ pageData }) => {
       </StyledGelPageGrid>
 
       {topics && (
-        <TopicsWrapper>
-          <Topics topics={topics} />
-        </TopicsWrapper>
+        <RelatedTopicsWrapper>
+          <RelatedTopics topics={topics} />
+        </RelatedTopicsWrapper>
       )}
 
       <CpsRelatedContent content={relatedContent} isMediaContent />

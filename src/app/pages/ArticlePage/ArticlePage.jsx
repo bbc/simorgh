@@ -50,7 +50,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import Topics, { TopicsWrapper } from '#containers/TopicTags';
+import RelatedTopics, { RelatedTopicsWrapper } from '#containers/RelatedTopics';
 
 const componentsToRender = {
   headline: headings,
@@ -176,9 +176,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       </main>
 
       {topics && (
-        <TopicsWrapper>
-          <Topics topics={topics} />
-        </TopicsWrapper>
+        <RelatedTopicsWrapper>
+          <RelatedTopics topics={topics} />
+        </RelatedTopicsWrapper>
       )}
 
       <MostReadContainer

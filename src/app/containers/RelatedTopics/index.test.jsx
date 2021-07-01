@@ -6,7 +6,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
-import Topics from '#containers/TopicTags';
+import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -51,21 +51,21 @@ describe('Expected use', () => {
   shouldMatchSnapshot(
     'should render correctly with no tags',
     <WithContexts>
-      <Topics />
+      <RelatedTopics />
     </WithContexts>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with a single tag',
     <WithContexts>
-      <Topics topics={[{ topicName: 'topic', topicId: '123' }]} />
+      <RelatedTopics topics={[{ topicName: 'topic', topicId: '123' }]} />
     </WithContexts>,
   );
 
   shouldMatchSnapshot(
     'should render correctly with multiple tags',
     <WithContexts>
-      <Topics
+      <RelatedTopics
         topics={[
           { topicName: 'topic1', topicId: '1' },
           { topicName: 'topic2', topicId: '2' },
@@ -84,7 +84,7 @@ describe('Expected use', () => {
 
     const { getByText } = render(
       <WithContexts service="pidgin">
-        <Topics topics={[topic]} />
+        <RelatedTopics topics={[topic]} />
       </WithContexts>,
     );
 
@@ -102,7 +102,7 @@ describe('Expected use', () => {
 
     const { getByText } = render(
       <WithContexts service="uzbek" variant="cyr">
-        <Topics topics={[topic]} />
+        <RelatedTopics topics={[topic]} />
       </WithContexts>,
     );
 
@@ -115,7 +115,7 @@ describe('Expected use', () => {
   it('should return null when the topicsTags toggle is disabled', () => {
     const { container } = render(
       <WithContexts enabled={false}>
-        <Topics
+        <RelatedTopics
           topics={[
             { topicName: 'topic1', topicId: '1' },
             { topicName: 'topic2', topicId: '2' },
@@ -132,7 +132,7 @@ describe('A11y', () => {
   it('should not render an unordered list when there is only one topic', () => {
     const { container } = render(
       <WithContexts>
-        <Topics topics={[{ topicName: 'topic1', topicId: '1' }]} />
+        <RelatedTopics topics={[{ topicName: 'topic1', topicId: '1' }]} />
       </WithContexts>,
     );
     expect(container.querySelector('ul')).toBeNull();
@@ -141,7 +141,7 @@ describe('A11y', () => {
   it('should render an unordered list when there is more than one topic', () => {
     const { container } = render(
       <WithContexts>
-        <Topics
+        <RelatedTopics
           topics={[
             { topicName: 'topic1', topicId: '1' },
             { topicName: 'topic2', topicId: '2' },
@@ -162,7 +162,7 @@ describe('Event Tracking', () => {
     const clickTrackerSpy = jest.spyOn(clickTracker, 'default');
     render(
       <WithContexts>
-        <Topics topics={[{ topicName: 'topic', topicId: 'id' }]} />
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
       </WithContexts>,
     );
 
@@ -173,7 +173,7 @@ describe('Event Tracking', () => {
     const viewTrackerSpy = jest.spyOn(viewTracker, 'default');
     render(
       <WithContexts>
-        <Topics topics={[{ topicName: 'topic', topicId: 'id' }]} />
+        <RelatedTopics topics={[{ topicName: 'topic', topicId: 'id' }]} />
       </WithContexts>,
     );
 
