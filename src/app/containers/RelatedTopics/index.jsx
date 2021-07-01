@@ -71,7 +71,7 @@ const RelatedTopics = ({ topics }) => {
           {heading}
         </StyledSectionLabel>
         <TopicTags service={service} script={script}>
-          {topics?.length === 1 ? (
+          {topics.length === 1 ? (
             <TopicTag
               name={topics[0].topicName}
               link={getTopicPageUrl(topics[0].topicId)}
@@ -80,7 +80,7 @@ const RelatedTopics = ({ topics }) => {
               key={topics[0].topicId}
             />
           ) : (
-            topics?.map(({ topicName, topicId }) => (
+            topics.map(({ topicName, topicId }) => (
               <TopicTag
                 name={topicName}
                 link={getTopicPageUrl(topicId)}
