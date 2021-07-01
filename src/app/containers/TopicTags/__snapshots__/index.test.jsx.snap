@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TopicTags should render correctly with a single tag 1`] = `
+exports[`Expected use should render correctly with a single tag 1`] = `
 .emotion-0 {
   padding-bottom: 2.5rem;
 }
@@ -236,7 +236,7 @@ exports[`TopicTags should render correctly with a single tag 1`] = `
         class="emotion-17 emotion-18"
       >
         <a
-          href="undefined/mundo/topics/123"
+          href="https://bbc.com/mundo/topics/123"
         >
           topic
         </a>
@@ -246,7 +246,7 @@ exports[`TopicTags should render correctly with a single tag 1`] = `
 </div>
 `;
 
-exports[`TopicTags should render correctly with multiple tags 1`] = `
+exports[`Expected use should render correctly with multiple tags 1`] = `
 .emotion-0 {
   padding-bottom: 2.5rem;
 }
@@ -484,7 +484,7 @@ exports[`TopicTags should render correctly with multiple tags 1`] = `
         class="emotion-17 emotion-18"
       >
         <a
-          href="undefined/mundo/topics/1"
+          href="https://bbc.com/mundo/topics/1"
         >
           topic1
         </a>
@@ -493,7 +493,7 @@ exports[`TopicTags should render correctly with multiple tags 1`] = `
         class="emotion-17 emotion-18"
       >
         <a
-          href="undefined/mundo/topics/2"
+          href="https://bbc.com/mundo/topics/2"
         >
           topic2
         </a>
@@ -502,7 +502,7 @@ exports[`TopicTags should render correctly with multiple tags 1`] = `
         class="emotion-17 emotion-18"
       >
         <a
-          href="undefined/mundo/topics/3"
+          href="https://bbc.com/mundo/topics/3"
         >
           topic3
         </a>
@@ -513,4 +513,4 @@ exports[`TopicTags should render correctly with multiple tags 1`] = `
 </div>
 `;
 
-exports[`TopicTags should render correctly with no tags 1`] = `<div />`;
+exports[`Expected use should render correctly with no tags 1`] = `<div />`;

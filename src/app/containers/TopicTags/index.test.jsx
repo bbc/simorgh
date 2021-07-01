@@ -11,15 +11,23 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
-const WithContexts = ({ children, enabled = true }) => {
+process.env.SIMORGH_BASE_URL = 'https://bbc.com';
+
+const WithContexts = ({
+  children,
+  variant,
+  enabled = true,
+  service = 'mundo',
+}) => {
   return (
     <RequestContextProvider
-      service="mundo"
+      service={service}
+      variant={variant}
       pageType={STORY_PAGE}
       isAmp={false}
       pathname="/"
     >
-      <ServiceContextProvider service="mundo">
+      <ServiceContextProvider service={service}>
         <ToggleContextProvider
           toggles={{
             eventTracking: {
@@ -39,7 +47,7 @@ const WithContexts = ({ children, enabled = true }) => {
   );
 };
 
-describe('TopicTags', () => {
+describe('Expected use', () => {
   shouldMatchSnapshot(
     'should render correctly with no tags',
     <WithContexts>
@@ -68,6 +76,59 @@ describe('TopicTags', () => {
     </WithContexts>,
   );
 
+  it('should construct the correct topics href given a topic id without a variant', () => {
+    const topic = {
+      topicName: 'foo',
+      topicId: 'bar',
+    };
+
+    const { getByText } = render(
+      <WithContexts service="pidgin">
+        <Topics topics={[topic]} />
+      </WithContexts>,
+    );
+
+    expect(getByText(topic.topicName)).toHaveAttribute(
+      'href',
+      `https://bbc.com/pidgin/topics/${topic.topicId}`,
+    );
+  });
+
+  it('should construct the correct topics href given a topic id and a variant', () => {
+    const topic = {
+      topicName: 'foo',
+      topicId: 'bar',
+    };
+
+    const { getByText } = render(
+      <WithContexts service="uzbek" variant="cyr">
+        <Topics topics={[topic]} />
+      </WithContexts>,
+    );
+
+    expect(getByText(topic.topicName)).toHaveAttribute(
+      'href',
+      `https://bbc.com/uzbek/cyr/topics/${topic.topicId}`,
+    );
+  });
+
+  it('should return null when the topicsTags toggle is disabled', () => {
+    const { container } = render(
+      <WithContexts enabled={false}>
+        <Topics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />
+      </WithContexts>,
+    );
+    expect(container.firstChild).toBeNull();
+  });
+});
+
+describe('A11y', () => {
   it('should not render an unordered list when there is only one topic', () => {
     const { container } = render(
       <WithContexts>
@@ -89,22 +150,6 @@ describe('TopicTags', () => {
       </WithContexts>,
     );
     expect(container.querySelector('ul')).not.toBeNull();
-  });
-
-  it('should return null when the topicsTags toggle is disabled', () => {
-    const { container } = render(
-      <WithContexts enabled={false}>
-        <Topics
-          topics={[
-            { topicName: 'topic1', topicId: '1' },
-            { topicName: 'topic2', topicId: '2' },
-            { topicName: 'topic3', topicId: '3' },
-          ]}
-        />
-      </WithContexts>,
-    );
-
-    expect(container.firstChild).toBeNull();
   });
 });
 
