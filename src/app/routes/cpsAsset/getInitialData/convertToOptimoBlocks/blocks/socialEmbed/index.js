@@ -1,18 +1,17 @@
 import path from 'ramda/src/path';
 
+const isSocialEmbed = ({ type }) => type === 'social_embed';
+const matchesSource = source => block => block.source === source;
+
 const convertSocialEmbed = (block, pageData) => {
   const blocks = path(['content', 'blocks'], pageData);
-  const socialEmbedMap = blocks.reduce((map, _block) => {
-    const { type, source } = _block;
-    if (type === 'social_embed') {
-      const hasSource = !!map[source];
-      map[source] = hasSource ? [...map[source], _block] : [_block]; // eslint-disable-line no-param-reassign
-    }
-    return map;
-  }, {});
-
   const { type, source, ...rest } = block;
-  const indexOfType = socialEmbedMap[source].indexOf(block);
+  // source is e.g. "twitter"
+  const allSocialEmbedBlocks = blocks.filter(isSocialEmbed);
+  const allSocialEmbedsBySource = allSocialEmbedBlocks.filter(
+    matchesSource(source),
+  );
+  const indexOfType = allSocialEmbedsBySource.indexOf(block);
 
   return {
     type,
