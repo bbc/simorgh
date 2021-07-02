@@ -43,6 +43,7 @@ const addIndexToSocialEmbedBlock = (block, index) => {
 };
 
 export default json => {
+  // TODO should maybe try/catch this function
   const articleBlocks = getArticleBlocks(json);
   const socialEmbedBlocks = articleBlocks.filter(isSocialEmbedBlock);
   const socialEmbedsByProvider = socialEmbedBlocks.filter(matchesProvider);
