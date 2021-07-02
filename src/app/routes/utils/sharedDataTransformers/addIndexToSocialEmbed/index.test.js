@@ -2,53 +2,37 @@ import path from 'ramda/src/path';
 import addIndexToSocialEmbed from '.';
 import fixtureData from './fixtureData.json';
 
-const getBlockOfIndex = index =>
-  path([
-    'content',
-    'model',
-    'blocks',
-    index,
-    'model',
-    'blocks',
-    0,
-    'model',
-    'blocks',
-    0,
-    'model',
-    'oembed',
-    'indexOfType',
-  ]);
+const getArticleBlocks = path(['content', 'model', 'blocks']);
+const getIndexOfSocialEmbed = path([
+  'model',
+  'blocks',
+  0,
+  'model',
+  'blocks',
+  0,
+  'model',
+  'oembed',
+  'indexOfType',
+]);
 
 it('should return enriched blocks with the first social block with "indexOfType" equal to 1', () => {
-  const enrichedArticleBlocks = addIndexToSocialEmbed(fixtureData);
-  const firstSocialBlock = enrichedArticleBlocks.content.model.blocks.find(
-    ({ type }) => type === 'social',
+  const enrichedArticleBlocks = getArticleBlocks(
+    addIndexToSocialEmbed(fixtureData),
   );
+  const firstSocialEmbed = enrichedArticleBlocks[2];
 
-  expect(
-    path(
-      [
-        'model',
-        'blocks',
-        0,
-        'model',
-        'blocks',
-        0,
-        'model',
-        'oembed',
-        'indexOfType',
-      ],
-      firstSocialBlock,
-    ),
-  ).toEqual(1);
+  expect(getIndexOfSocialEmbed(firstSocialEmbed)).toEqual(1);
 });
 
 it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all social blocks', () => {
-  const enrichedArticleBlocks = addIndexToSocialEmbed(fixtureData);
+  const enrichedArticleBlocks = getArticleBlocks(
+    addIndexToSocialEmbed(fixtureData),
+  );
+  const firstSocialEmbed = enrichedArticleBlocks[2];
+  const secondSocialEmbed = enrichedArticleBlocks[4];
+  const thirdSocialEmbed = enrichedArticleBlocks[6];
 
-  expect(getBlockOfIndex(2)(enrichedArticleBlocks)).toEqual(1);
-
-  expect(getBlockOfIndex(4)(enrichedArticleBlocks)).toEqual(2);
-
-  expect(getBlockOfIndex(6)(enrichedArticleBlocks)).toEqual(3);
+  expect(getIndexOfSocialEmbed(firstSocialEmbed)).toEqual(1);
+  expect(getIndexOfSocialEmbed(secondSocialEmbed)).toEqual(2);
+  expect(getIndexOfSocialEmbed(thirdSocialEmbed)).toEqual(3);
 });
