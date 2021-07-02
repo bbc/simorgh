@@ -31,8 +31,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-
-  const index = id;
+  const index = oEmbed.indexOfType;
 
   const {
     fallback: fallbackTranslations,

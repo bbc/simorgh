@@ -17,6 +17,7 @@ export const cpsTwitterBlock = {
     id: '1237210910835392512',
     embed: {
       oembed: {
+        indexOfType: 1,
         url: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
         author_name: 'Miley Ray Cyrus',
         author_url: 'https://twitter.com/MileyCyrus',
@@ -54,6 +55,7 @@ export const twitterBlock = {
             type: 'aresOEmbed',
             model: {
               oembed: {
+                indexOfType: 1,
                 version: '1.0',
                 author_name: 'BBC News (UK)',
                 author_url: 'https://twitter.com/BBCNews',
