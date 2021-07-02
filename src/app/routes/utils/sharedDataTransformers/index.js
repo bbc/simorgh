@@ -1,11 +1,11 @@
 import augmentWithTimestamp from './augmentWithTimestamp';
 import applyBlockPositioning from './applyBlockPositioning';
 import addIdsToBlocks from './addIdsToBlocks';
-import addIndexToSocialEmbed from './addIndexToSocialEmbed';
+import addIndexesToSocialEmbeds from './addIndexesToSocialEmbeds';
 
 export {
   augmentWithTimestamp,
   applyBlockPositioning,
   addIdsToBlocks,
-  addIndexToSocialEmbed,
+  addIndexesToSocialEmbeds,
 };
