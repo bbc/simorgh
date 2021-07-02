@@ -35,18 +35,19 @@ const enrichSocialEmbedBlocks = indexedSocialEmbedBlocks => block => {
 
   return block;
 };
+const addIndexToSocialEmbedBlock = (block, index) => {
+  const indexOfType = index + 1;
+  const oEmbed = view(oEmbedLens, block);
+
+  return set(oEmbedLens, { ...oEmbed, indexOfType }, block);
+};
 
 export default json => {
   const articleBlocks = getArticleBlocks(json);
   const socialEmbedBlocks = articleBlocks.filter(isSocialEmbedBlock);
   const socialEmbedsByProvider = socialEmbedBlocks.filter(matchesProvider);
   const indexedSocialEmbedBlocks = socialEmbedsByProvider.map(
-    (block, index) => {
-      const indexOfType = index + 1;
-      const oEmbed = view(oEmbedLens, block);
-
-      return set(oEmbedLens, { ...oEmbed, indexOfType }, block);
-    },
+    addIndexToSocialEmbedBlock,
   );
   const enrichedArticleBlocks = articleBlocks.map(
     enrichSocialEmbedBlocks(indexedSocialEmbedBlocks),
