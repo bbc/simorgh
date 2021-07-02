@@ -22,7 +22,7 @@ const oEmbedLens = lensPath([
 const matchesProvider = pipe(
   view(oEmbedLens),
   prop('provider_name'),
-  equals('Twitter'),
+  equals('Twitter'), // TODO needs to be for all providers, not just Twitter
 );
 const getEmbedUrl = pipe(view(oEmbedLens), prop('url'));
 const matchesEmbedUrl = embedUrl => pipe(getEmbedUrl, equals(embedUrl));
