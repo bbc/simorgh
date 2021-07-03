@@ -1,4 +1,5 @@
 import equals from 'ramda/src/equals';
+import filter from 'ramda/src/filter';
 import find from 'ramda/src/find';
 import groupBy from 'ramda/src/groupBy';
 import lensPath from 'ramda/src/lensPath';
@@ -13,6 +14,7 @@ const model = 'model';
 const firstItem = [0];
 const pathToBlocks = [model, 'blocks'];
 const articleBlocksLens = lensPath(['content'].concat(pathToBlocks));
+const getArticleBlocks = view(articleBlocksLens);
 const oEmbedLens = lensPath(
   pathToBlocks.concat(firstItem, pathToBlocks, firstItem, [model, 'oembed']),
 );
@@ -21,7 +23,12 @@ const getOembed = view(oEmbedLens);
 const getOembedProp = property => pipe(getOembed, prop(property));
 const getEmbedUrl = getOembedProp('url');
 const getEmbedProvider = getOembedProp('provider_name');
-const groupEmbedsByProvider = groupBy(getEmbedProvider);
+const groupEmbedsByProvider = pipe(
+  getArticleBlocks,
+  filter(isEmbed),
+  groupBy(getEmbedProvider),
+  Object.entries,
+);
 const matchesEmbedUrl = embedUrl => pipe(getEmbedUrl, equals(embedUrl));
 const addIndexToEmbed = ([provider, blocks]) => [
   provider,
@@ -48,13 +55,9 @@ const enrichEmbed = indexedEmbeds => unIndexedEmbed => {
 
 export default json => {
   try {
-    const articleBlocks = view(articleBlocksLens, json);
-    const embeds = articleBlocks.filter(isEmbed);
-    const embedsGroupedByProvider = groupEmbedsByProvider(embeds);
-    const indexedEmbeds = Object.entries(embedsGroupedByProvider).map(
-      addIndexToEmbed,
-    );
-    const enrichedArticleBlocks = articleBlocks.map(
+    const embedsGroupedByProvider = groupEmbedsByProvider(json);
+    const indexedEmbeds = embedsGroupedByProvider.map(addIndexToEmbed);
+    const enrichedArticleBlocks = getArticleBlocks(json).map(
       when(isEmbed, enrichEmbed(indexedEmbeds)),
     );
 
