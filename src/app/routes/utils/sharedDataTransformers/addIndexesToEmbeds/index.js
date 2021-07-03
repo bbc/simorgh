@@ -9,19 +9,19 @@ import view from 'ramda/src/view';
 
 const model = 'model';
 const firstItem = [0];
-const blockPath = [model, 'blocks'];
-const articleBlocksLens = lensPath(['content'].concat(blockPath));
+const pathToBlocks = [model, 'blocks'];
+const articleBlocksLens = lensPath(['content'].concat(pathToBlocks));
 const oEmbedLens = lensPath(
-  blockPath.concat(firstItem, blockPath, firstItem, [model, 'oembed']),
+  pathToBlocks.concat(firstItem, pathToBlocks, firstItem, [model, 'oembed']),
 );
-const isEmbedBlock = pipe(prop('type'), equals('social')); // to include embeds other than social then change this line
+const isEmbed = pipe(prop('type'), equals('social')); // to include embeds other than social then change this line
 const getOembed = view(oEmbedLens);
 const getOembedProp = property => pipe(getOembed, prop(property));
 const getEmbedUrl = getOembedProp('url');
 const getEmbedProvider = getOembedProp('provider_name');
-const getEmbedsByProviders = groupBy(getEmbedProvider);
+const groupEmbedsByProvider = groupBy(getEmbedProvider);
 const matchesEmbedUrl = embedUrl => pipe(getEmbedUrl, equals(embedUrl));
-const addIndexToEmbedBlock = ([provider, blocks]) => [
+const addIndexToEmbed = ([provider, blocks]) => [
   provider,
   blocks.map((block, index) => {
     const indexOfType = index + 1;
@@ -30,15 +30,15 @@ const addIndexToEmbedBlock = ([provider, blocks]) => [
     return set(oEmbedLens, { ...oEmbed, indexOfType }, block);
   }),
 ];
-const enrichEmbedBlocks = indexedEmbedBlocks => block => {
-  if (isEmbedBlock(block)) {
+const enrichEmbeds = indexedEmbeds => block => {
+  if (isEmbed(block)) {
     const provider = getEmbedProvider(block); // e.g. Twitter, YouTube
     const embedUrl = getEmbedUrl(block);
-    const [, blocksByProvider] = indexedEmbedBlocks.find(
+    const [, embedsByProvider] = indexedEmbeds.find(
       pipe(path(firstItem), equals(provider)),
     );
 
-    return blocksByProvider.find(matchesEmbedUrl(embedUrl));
+    return embedsByProvider.find(matchesEmbedUrl(embedUrl));
   }
 
   return block;
@@ -47,13 +47,13 @@ const enrichEmbedBlocks = indexedEmbedBlocks => block => {
 export default json => {
   try {
     const articleBlocks = view(articleBlocksLens, json);
-    const embedBlocks = articleBlocks.filter(isEmbedBlock);
-    const embedsByProviders = getEmbedsByProviders(embedBlocks);
-    const indexedEmbedBlocks = Object.entries(embedsByProviders).map(
-      addIndexToEmbedBlock,
+    const embeds = articleBlocks.filter(isEmbed);
+    const embedsGroupedByProvider = groupEmbedsByProvider(embeds);
+    const indexedEmbeds = Object.entries(embedsGroupedByProvider).map(
+      addIndexToEmbed,
     );
     const enrichedArticleBlocks = articleBlocks.map(
-      enrichEmbedBlocks(indexedEmbedBlocks),
+      enrichEmbeds(indexedEmbeds),
     );
 
     return set(articleBlocksLens, enrichedArticleBlocks, json);
