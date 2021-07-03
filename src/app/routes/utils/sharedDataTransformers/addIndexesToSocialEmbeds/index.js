@@ -1,4 +1,3 @@
-import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import path from 'ramda/src/path';
 import pipe from 'ramda/src/pipe';
 import prop from 'ramda/src/prop';
@@ -8,42 +7,38 @@ import set from 'ramda/src/set';
 import view from 'ramda/src/view';
 import groupBy from 'ramda/src/groupBy';
 
-const getArticleBlocks = path(['content', 'model', 'blocks']);
-const isSocialEmbedBlock = pipe(prop('type'), equals('social'));
-const oEmbedLens = lensPath([
-  'model',
-  'blocks',
-  0,
-  'model',
-  'blocks',
-  0,
-  'model',
-  'oembed',
-]);
-const getSocialEmbedsByProviders = groupBy(
-  pipe(view(oEmbedLens), prop('provider_name')),
+const model = 'model';
+const firstItem = [0];
+const blockPath = [model, 'blocks'];
+const articleBlocksLens = lensPath(['content'].concat(blockPath));
+const oEmbedLens = lensPath(
+  blockPath.concat(firstItem, blockPath, firstItem, [model, 'oembed']),
 );
-const getEmbedUrl = pipe(view(oEmbedLens), prop('url'));
-const getProvider = pipe(view(oEmbedLens), prop('provider_name'));
+const isEmbedBlock = pipe(prop('type'), equals('social'));
+const getOembed = view(oEmbedLens);
+const getOembedProp = property => pipe(getOembed, prop(property));
+const getEmbedUrl = getOembedProp('url');
+const getEmbedProvider = getOembedProp('provider_name');
+const getEmbedsByProviders = groupBy(getEmbedProvider);
 const matchesEmbedUrl = embedUrl => pipe(getEmbedUrl, equals(embedUrl));
-const addIndexToSocialEmbedBlock = ([provider, blocks]) => [
+const addIndexToEmbedBlock = ([provider, blocks]) => [
   provider,
   blocks.map((block, index) => {
     const indexOfType = index + 1;
-    const oEmbed = view(oEmbedLens, block);
+    const oEmbed = getOembed(block);
 
     return set(oEmbedLens, { ...oEmbed, indexOfType }, block);
   }),
 ];
-const enrichSocialEmbedBlocks = indexedSocialEmbedBlocks => block => {
-  if (isSocialEmbedBlock(block)) {
-    const provider = getProvider(block); // e.g. Twitter, YouTube
+const enrichEmbedBlocks = indexedEmbedBlocks => block => {
+  if (isEmbedBlock(block)) {
+    const provider = getEmbedProvider(block); // e.g. Twitter, YouTube
     const embedUrl = getEmbedUrl(block);
-    const [, providerBlocks] = indexedSocialEmbedBlocks.find(
-      pipe(path([0]), equals(provider)),
+    const [, blocksByProvider] = indexedEmbedBlocks.find(
+      pipe(path(firstItem), equals(provider)),
     );
 
-    return providerBlocks.find(matchesEmbedUrl(embedUrl));
+    return blocksByProvider.find(matchesEmbedUrl(embedUrl));
   }
 
   return block;
@@ -51,30 +46,19 @@ const enrichSocialEmbedBlocks = indexedSocialEmbedBlocks => block => {
 
 export default json => {
   try {
-    const articleBlocks = getArticleBlocks(json);
-    const socialEmbedBlocks = articleBlocks.filter(isSocialEmbedBlock);
-    const socialEmbedsByProviders = getSocialEmbedsByProviders(
-      socialEmbedBlocks,
+    const articleBlocks = view(articleBlocksLens, json);
+    const embedBlocks = articleBlocks.filter(isEmbedBlock);
+    const embedsByProviders = getEmbedsByProviders(embedBlocks);
+    const indexedEmbedBlocks = Object.entries(embedsByProviders).map(
+      addIndexToEmbedBlock,
     );
-    const indexedSocialEmbedBlocks = Object.entries(
-      socialEmbedsByProviders,
-    ).map(addIndexToSocialEmbedBlock);
     const enrichedArticleBlocks = articleBlocks.map(
-      enrichSocialEmbedBlocks(indexedSocialEmbedBlocks),
+      enrichEmbedBlocks(indexedEmbedBlocks),
     );
 
-    return mergeDeepLeft(
-      {
-        content: {
-          model: {
-            blocks: enrichedArticleBlocks,
-          },
-        },
-      },
-      json,
-    );
+    return set(articleBlocksLens, enrichedArticleBlocks, json);
   } catch (error) {
-    console.error('Error transforming data in addIndexToSocialEmbeds', error);
+    console.error(error);
 
     return json;
   }
