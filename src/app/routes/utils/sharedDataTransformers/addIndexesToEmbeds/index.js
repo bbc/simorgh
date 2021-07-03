@@ -1,11 +1,11 @@
+import equals from 'ramda/src/equals';
+import groupBy from 'ramda/src/groupBy';
+import lensPath from 'ramda/src/lensPath';
 import path from 'ramda/src/path';
 import pipe from 'ramda/src/pipe';
 import prop from 'ramda/src/prop';
-import equals from 'ramda/src/equals';
-import lensPath from 'ramda/src/lensPath';
 import set from 'ramda/src/set';
 import view from 'ramda/src/view';
-import groupBy from 'ramda/src/groupBy';
 
 const model = 'model';
 const firstItem = [0];
