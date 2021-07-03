@@ -1,5 +1,5 @@
 import path from 'ramda/src/path';
-import addIndexesToSocialEmbeds from '.';
+import addIndexesToEmbeds from '.';
 
 const textBlock = {
   type: 'text',
@@ -21,7 +21,7 @@ const textBlock = {
   },
 };
 
-const buildSocialEmbedBlock = ({ provider, url }) => ({
+const buildEmbedBlock = ({ provider, url }) => ({
   type: 'social',
   model: {
     blocks: [
@@ -55,12 +55,12 @@ const getOembed = path([
   'oembed',
 ]);
 
-it('should return enriched blocks with the first social block with "indexOfType" equal to 1', () => {
+it('should return enriched blocks with the first embed block with "indexOfType" equal to 1', () => {
   const fixture = {
     content: {
       model: {
         blocks: [
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/0516510',
           }),
@@ -68,7 +68,7 @@ it('should return enriched blocks with the first social block with "indexOfType"
       },
     },
   };
-  const enrichedArticleBlocks = addIndexesToSocialEmbeds(fixture);
+  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
 
   expect(getOembed(enrichedArticleBlocks.content.model.blocks[0])).toEqual({
     indexOfType: 1,
@@ -77,14 +77,14 @@ it('should return enriched blocks with the first social block with "indexOfType"
   });
 });
 
-it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all social blocks', () => {
+it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all embed blocks', () => {
   const fixture = {
     content: {
       model: {
         blocks: [
           textBlock,
           textBlock,
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/151510212',
           }),
@@ -92,13 +92,13 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
           textBlock,
           textBlock,
           textBlock,
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/0215154',
           }),
           textBlock,
           textBlock,
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/020541541',
           }),
@@ -106,7 +106,7 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
       },
     },
   };
-  const enrichedArticleBlocks = addIndexesToSocialEmbeds(fixture);
+  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
 
   expect(getOembed(enrichedArticleBlocks.content.model.blocks[2])).toEqual({
     indexOfType: 1,
@@ -125,44 +125,44 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
   });
 });
 
-it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all social blocks of any provider', () => {
+it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all embed blocks of any provider', () => {
   const fixture = {
     content: {
       model: {
         blocks: [
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'YouTube',
             url: 'https://youtube.com/watch/215151531',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/3543545',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'YouTube',
             url: 'https://youtube.com/watch/545561451',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Instagram',
             url: 'https://instagram.com/bbcnews/55135135',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/2516546541351',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Twitter',
             url: 'https://twitter.com/bbcnews/status/354354545',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'YouTube',
             url: 'https://youtube.com/watch/3202151240',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'YouTube',
             url: 'https://youtube.com/watch/0021251521',
           }),
-          buildSocialEmbedBlock({
+          buildEmbedBlock({
             provider: 'Instagram',
             url: 'https://instagram.com/bbcnews/status/02105151',
           }),
@@ -170,7 +170,7 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
       },
     },
   };
-  const enrichedArticleBlocks = addIndexesToSocialEmbeds(fixture);
+  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
   const { blocks } = enrichedArticleBlocks.content.model;
 
   expect(getOembed(blocks[0])).toEqual({
@@ -178,30 +178,10 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/215151531',
   });
-  expect(getOembed(blocks[1])).toEqual({
-    indexOfType: 1,
-    provider_name: 'Twitter',
-    url: 'https://twitter.com/bbcnews/status/3543545',
-  });
   expect(getOembed(blocks[2])).toEqual({
     indexOfType: 2,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/545561451',
-  });
-  expect(getOembed(blocks[3])).toEqual({
-    indexOfType: 1,
-    provider_name: 'Instagram',
-    url: 'https://instagram.com/bbcnews/55135135',
-  });
-  expect(getOembed(blocks[4])).toEqual({
-    indexOfType: 2,
-    provider_name: 'Twitter',
-    url: 'https://twitter.com/bbcnews/status/2516546541351',
-  });
-  expect(getOembed(blocks[5])).toEqual({
-    indexOfType: 3,
-    provider_name: 'Twitter',
-    url: 'https://twitter.com/bbcnews/status/354354545',
   });
   expect(getOembed(blocks[6])).toEqual({
     indexOfType: 3,
@@ -212,6 +192,29 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
     indexOfType: 4,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/0021251521',
+  });
+
+  expect(getOembed(blocks[1])).toEqual({
+    indexOfType: 1,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/3543545',
+  });
+
+  expect(getOembed(blocks[4])).toEqual({
+    indexOfType: 2,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/2516546541351',
+  });
+  expect(getOembed(blocks[5])).toEqual({
+    indexOfType: 3,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/354354545',
+  });
+
+  expect(getOembed(blocks[3])).toEqual({
+    indexOfType: 1,
+    provider_name: 'Instagram',
+    url: 'https://instagram.com/bbcnews/55135135',
   });
   expect(getOembed(blocks[8])).toEqual({
     indexOfType: 2,
