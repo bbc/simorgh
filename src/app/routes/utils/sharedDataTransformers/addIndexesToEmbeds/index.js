@@ -14,7 +14,7 @@ const articleBlocksLens = lensPath(['content'].concat(blockPath));
 const oEmbedLens = lensPath(
   blockPath.concat(firstItem, blockPath, firstItem, [model, 'oembed']),
 );
-const isEmbedBlock = pipe(prop('type'), equals('social'));
+const isEmbedBlock = pipe(prop('type'), equals('social')); // to include embeds other than social then change this line
 const getOembed = view(oEmbedLens);
 const getOembedProp = property => pipe(getOembed, prop(property));
 const getEmbedUrl = getOembedProp('url');
