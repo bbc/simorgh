@@ -1,4 +1,5 @@
 import equals from 'ramda/src/equals';
+import find from 'ramda/src/find';
 import groupBy from 'ramda/src/groupBy';
 import lensPath from 'ramda/src/lensPath';
 import path from 'ramda/src/path';
@@ -6,6 +7,7 @@ import pipe from 'ramda/src/pipe';
 import prop from 'ramda/src/prop';
 import set from 'ramda/src/set';
 import view from 'ramda/src/view';
+import when from 'ramda/src/when';
 
 const model = 'model';
 const firstItem = [0];
@@ -30,18 +32,18 @@ const addIndexToEmbed = ([provider, blocks]) => [
     return set(oEmbedLens, { ...oEmbed, indexOfType }, block);
   }),
 ];
-const enrichEmbeds = indexedEmbeds => block => {
-  if (isEmbed(block)) {
-    const provider = getEmbedProvider(block); // e.g. Twitter, YouTube
-    const embedUrl = getEmbedUrl(block);
-    const [, embedsByProvider] = indexedEmbeds.find(
-      pipe(path(firstItem), equals(provider)),
-    );
 
-    return embedsByProvider.find(matchesEmbedUrl(embedUrl));
-  }
+const enrichEmbed = indexedEmbeds => unIndexedEmbed => {
+  const provider = getEmbedProvider(unIndexedEmbed); // e.g. Twitter, YouTube
+  const url = getEmbedUrl(unIndexedEmbed);
+  const findEmbedsByProvider = find(pipe(path(firstItem), equals(provider)));
+  const findEmbedsByUrl = find(matchesEmbedUrl(url));
+  const getMatchingEmbed = pipe(
+    findEmbedsByProvider,
+    pipe(path([1]), findEmbedsByUrl),
+  );
 
-  return block;
+  return getMatchingEmbed(indexedEmbeds);
 };
 
 export default json => {
@@ -53,7 +55,7 @@ export default json => {
       addIndexToEmbed,
     );
     const enrichedArticleBlocks = articleBlocks.map(
-      enrichEmbeds(indexedEmbeds),
+      when(isEmbed, enrichEmbed(indexedEmbeds)),
     );
 
     return set(articleBlocksLens, enrichedArticleBlocks, json);
