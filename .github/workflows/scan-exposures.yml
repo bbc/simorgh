@@ -1,0 +1,88 @@
+name: "Scan Exposures"
+
+on:
+  pull_request:
+    branches: [latest]
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited, deleted]
+  pull_request_review:
+    types: [submitted, edited]
+  pull_request_review_comment:
+    types: [created, edited, deleted]
+  
+  
+jobs:
+
+  scan_prs:
+    name: Scan PR Exposures
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+      
+      - name: Scan Issue
+        if: ${{ github.event_name == 'issues' }}
+        env:
+          ISSUE_NUMBER: ${{ github.issue.number }}
+          PATTERN: ${{ secrets.PATTERN }}
+        run: |
+          yarn scan -issue "$ISSUE_NUMBER" "$PATTERN"
+      
+      - name: Scan PR
+        if: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_review' || github.event_name == 'pull_request_review_comment' }}
+        env:
+          PR_NUMBER: ${{ github.pull_request.number }}
+          PATTERN: ${{ secrets.PATTERN }}
+        run: yarn scan -pr "$PR_NUMBER" "$PATTERN"
+
+  scan_comments:
+    name: Scan Comment Exposures
+    runs-on: ubuntu-latest
+    # The issue_comment event is triggered by comments on issues and PRs.
+    if: ${{ github.event_name == 'issue_comment' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cache Node Modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('yarn.lock') }}
+
+      - name: Install Node Modules
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+      
+      - name: Scan Issue
+        # This step only runs on issue comments
+        if: ${{ !github.event.issue.pull_request }}
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PATTERN: ${{ secrets.PATTERN }}
+        run: |
+          yarn scan -issue "$ISSUE_NUMBER" "$PATTERN"
+      
+      - name: Scan PR
+        # This step only runs on PR comments
+        if: ${{ github.event.issue.pull_request }}
+        env:
+          PR_NUMBER: ${{ github.event.issue.number }}
+          PATTERN: ${{ secrets.PATTERN }}
+        run: yarn scan -pr "$PR_NUMBER" "$PATTERN"
