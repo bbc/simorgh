@@ -20,6 +20,14 @@ pglStories.add('Azeri', () => {
         status={200}
         pageData={pageData}
         service="azeri"
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+          topicsTags: {
+            enabled: true,
+          },
+        }}
       />
     </BrowserRouter>
   );
