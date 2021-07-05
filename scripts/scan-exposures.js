@@ -69,9 +69,7 @@ const scanPr = async pullNumber => {
 
     corpus = [title, body, ...prComments, ...prReviewComments];
   } catch (error) {
-    throw new Error(
-      `Error when attempting to get PR #${pullNumber}: \n${error}`,
-    );
+    throw new Error(`Error when attempting to get PR #${pullNumber}`);
   }
 
   return scanCorpus(corpus, regex);
@@ -104,10 +102,7 @@ const scanIssue = async issueNumber => {
 
     corpus = [title, body, ...issueComments];
   } catch (error) {
-    console.error(error);
-    throw new Error(
-      `Error when attempting to get issue #${issueNumber}: \n${error}`,
-    );
+    throw new Error(`Error when attempting to get issue #${issueNumber}`);
   }
 
   return scanCorpus(corpus, regex);
