@@ -24,7 +24,7 @@ storiesOf('Pages/Article Page', module)
         eventTracking: {
           enabled: true,
         },
-        topicsTags: {
+        optimoTopicsTags: {
           enabled: true,
         },
       }}

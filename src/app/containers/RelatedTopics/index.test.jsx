@@ -9,22 +9,24 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 process.env.SIMORGH_BASE_URL = 'https://bbc.com';
 
 const WithContexts = ({
   children,
   variant,
-  enabled = true,
+  optimoEnabled = true,
+  cpsEnabled = true,
   service = 'mundo',
   isAmp = false,
+  pageType = STORY_PAGE,
 }) => {
   return (
     <RequestContextProvider
       service={service}
       variant={variant}
-      pageType={STORY_PAGE}
+      pageType={pageType}
       isAmp={isAmp}
       pathname="/"
     >
@@ -34,8 +36,11 @@ const WithContexts = ({
             eventTracking: {
               enabled: true,
             },
-            topicsTags: {
-              enabled,
+            cpsTopicsTags: {
+              cpsEnabled,
+            },
+            optimoTopicsTags: {
+              optimoEnabled,
             },
           }}
         >
@@ -113,9 +118,9 @@ describe('Expected use', () => {
     );
   });
 
-  it('should return null when on AMP', () => {
+  it('should return null on story pages when the topicsTags toggle is disabled on CPS', () => {
     const { container } = render(
-      <WithContexts enabled={false} isAmp>
+      <WithContexts cpsEnabled={false} pageType={STORY_PAGE}>
         <RelatedTopics
           topics={[
             { topicName: 'topic1', topicId: '1' },
@@ -128,9 +133,9 @@ describe('Expected use', () => {
     expect(container.firstChild).toBeNull();
   });
 
-  it('should return null when the topicsTags toggle is disabled', () => {
+  it('should return null on article pages when the topicsTags toggle is disabled on Optimo', () => {
     const { container } = render(
-      <WithContexts enabled={false}>
+      <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
         <RelatedTopics
           topics={[
             { topicName: 'topic1', topicId: '1' },

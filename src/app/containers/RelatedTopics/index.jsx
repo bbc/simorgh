@@ -11,6 +11,7 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const eventTrackingData = {
   componentName: 'topics',
@@ -46,8 +47,13 @@ RelatedTopicsWrapper.propTypes = {
 
 const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
-  const { variant } = useContext(RequestContext);
-  const { enabled: topicTagsAreEnabled } = useToggle('topicsTags');
+  const { variant, pageType } = useContext(RequestContext);
+  const { enabled: cpsTopicTagsAreEnabled } = useToggle('cpsTopicsTags');
+  const { enabled: optimoTopicTagsAreEnabled } = useToggle('optimoTopicsTags');
+  const isEnabled =
+    pageType === ARTICLE_PAGE
+      ? optimoTopicTagsAreEnabled
+      : cpsTopicTagsAreEnabled;
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
@@ -60,7 +66,7 @@ const RelatedTopics = ({ topics }) => {
 
   return (
     topics &&
-    topicTagsAreEnabled && (
+    isEnabled && (
       <StyledTopicsWrapper aria-labelledby="related-topics">
         <StyledSectionLabel
           bar

@@ -24,7 +24,7 @@ pglStories.add('Azeri', () => {
           eventTracking: {
             enabled: true,
           },
-          topicsTags: {
+          cpsTopicsTags: {
             enabled: true,
           },
         }}

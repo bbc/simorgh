@@ -69,7 +69,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
               eventTracking: {
                 enabled: true,
               },
-              topicsTags: {
+              cpsTopicsTags: {
                 enabled: true,
               },
             }}

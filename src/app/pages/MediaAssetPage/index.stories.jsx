@@ -36,7 +36,7 @@ platforms.forEach(platform => {
             eventTracking: {
               enabled: true,
             },
-            topicsTags: {
+            cpsTopicsTags: {
               enabled: true,
             },
           }}

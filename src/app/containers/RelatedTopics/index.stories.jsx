@@ -13,34 +13,38 @@ import RelatedTopics from '.';
 const WithContexts = ({
   children,
   variant,
-  enabled = true,
+  optimoEnabled = true,
+  cpsEnabled = true,
   service = 'mundo',
 }) => {
   return (
-    <RequestContextProvider
-      service={service}
-      variant={variant}
-      pageType={STORY_PAGE}
-      isAmp={false}
-      pathname="/"
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: {
+          enabled: true,
+        },
+        cpsTopicsTags: {
+          cpsEnabled,
+        },
+        optimoTopicsTags: {
+          optimoEnabled,
+        },
+      }}
     >
-      <ServiceContextProvider service={service}>
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: {
-              enabled: true,
-            },
-            topicsTags: {
-              enabled,
-            },
-          }}
-        >
+      <RequestContextProvider
+        service={service}
+        variant={variant}
+        pageType={STORY_PAGE}
+        isAmp={false}
+        pathname="/"
+      >
+        <ServiceContextProvider service={service}>
           <EventTrackingContextProvider>
             {children}
           </EventTrackingContextProvider>
-        </ToggleContextProvider>
-      </ServiceContextProvider>
-    </RequestContextProvider>
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    </ToggleContextProvider>
   );
 };
 
