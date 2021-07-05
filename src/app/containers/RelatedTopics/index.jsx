@@ -4,6 +4,7 @@ import { pathOr } from 'ramda';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string, node } from 'prop-types';
+import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
@@ -16,7 +17,7 @@ const eventTrackingData = {
 };
 
 const StyledTopicsWrapper = styled.aside`
-  padding-bottom: 2.5rem;
+  padding-bottom: ${GEL_SPACING_QUIN};
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
