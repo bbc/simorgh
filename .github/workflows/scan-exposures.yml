@@ -45,7 +45,7 @@ jobs:
       - name: Scan PR
         if: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_review' || github.event_name == 'pull_request_review_comment' }}
         env:
-          PR_NUMBER: ${{ github.pull_request.number }}
+          PR_NUMBER: test123
           PATTERN: ${{ secrets.PATTERN }}
         run: yarn scan:exposures -pr "$PR_NUMBER" "$PATTERN"
 
