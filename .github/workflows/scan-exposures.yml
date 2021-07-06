@@ -35,6 +35,7 @@ jobs:
         run: yarn install --frozen-lockfile
       
       - name: Scan Issue
+        shell: bash
         if: ${{ github.event_name == 'issues' }}
         env:
           ISSUE_NUMBER: ${{ github.issue.number }}
@@ -46,7 +47,7 @@ jobs:
         shell: bash
         if: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_review' || github.event_name == 'pull_request_review_comment' }}
         env:
-          PR_NUMBER: test123
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           PATTERN: ${{ secrets.PATTERN }}
         run: yarn scan:exposures -pr "$PR_NUMBER" "$PATTERN"
 
@@ -72,6 +73,7 @@ jobs:
         run: yarn install --frozen-lockfile
       
       - name: Scan Issue
+        shell: bash
         # This step only runs on issue comments
         if: ${{ !github.event.issue.pull_request }}
         env:
@@ -81,6 +83,7 @@ jobs:
           yarn scan:exposures -issue "$ISSUE_NUMBER" "$PATTERN"
       
       - name: Scan PR
+        shell: bash
         # This step only runs on PR comments
         if: ${{ github.event.issue.pull_request }}
         env:
