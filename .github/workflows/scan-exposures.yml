@@ -43,6 +43,7 @@ jobs:
           yarn scan:exposures -issue "$ISSUE_NUMBER" "$PATTERN"
       
       - name: Scan PR
+        shell: bash
         if: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_review' || github.event_name == 'pull_request_review_comment' }}
         env:
           PR_NUMBER: test123
