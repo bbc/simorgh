@@ -1,11 +1,11 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 const adJsonAttributes = slotType => ({
   targeting: {
@@ -15,7 +15,13 @@ const adJsonAttributes = slotType => ({
   },
 });
 
-const adWithContext = (slotType, placeholderEnabled = false) => (
+const adTranslations = {
+  ads: {
+    advertisementLabel: 'Publicités',
+  },
+};
+
+const adWithContext = (slotType, showAdPlaceholder = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
@@ -23,17 +29,17 @@ const adWithContext = (slotType, placeholderEnabled = false) => (
     service="afrique"
     pathname="/"
   >
-    <ServiceContextProvider service="afrique">
-      <ToggleContextProvider
-        toggles={{
-          adPlaceholder: {
-            placeholderEnabled,
-          },
-        }}
-      >
-        <AmpAd slotType={slotType} />
-      </ToggleContextProvider>
-    </ServiceContextProvider>
+    <ServiceContext.Provider
+      value={{
+        service: 'afrique',
+        dir: 'ltr',
+        script: latinDiacritics,
+        translations: adTranslations,
+        showAdPlaceholder,
+      }}
+    >
+      <AmpAd slotType={slotType} />
+    </ServiceContext.Provider>
   </RequestContextProvider>
 );
 
