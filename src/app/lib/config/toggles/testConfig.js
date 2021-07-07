@@ -50,10 +50,4 @@ export default {
   variantCookie: {
     enabled: true,
   },
-  cpsTopicsTags: {
-    enabled: true,
-  },
-  optimoTopicsTags: {
-    enabled: true,
-  },
 };
