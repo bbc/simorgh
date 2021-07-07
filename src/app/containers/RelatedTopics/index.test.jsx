@@ -12,6 +12,15 @@ import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 process.env.SIMORGH_BASE_URL = 'https://bbc.com';
+const envType = process.env.SIMORGH_APP_ENV;
+
+beforeEach(() => {
+  process.env.SIMORGH_APP_ENV = 'test';
+});
+
+afterAll(() => {
+  process.env.SIMORGH_APP_ENV = envType;
+});
 
 const WithContexts = ({
   children,
@@ -118,22 +127,8 @@ describe('Expected use', () => {
     );
   });
 
-  it('should return null on story pages when the topicsTags toggle is disabled on CPS', () => {
-    const { container } = render(
-      <WithContexts cpsEnabled={false} pageType={STORY_PAGE}>
-        <RelatedTopics
-          topics={[
-            { topicName: 'topic1', topicId: '1' },
-            { topicName: 'topic2', topicId: '2' },
-            { topicName: 'topic3', topicId: '3' },
-          ]}
-        />
-      </WithContexts>,
-    );
-    expect(container.firstChild).toBeNull();
-  });
-
-  it('should return null on article pages when the topicsTags toggle is disabled on Optimo', () => {
+  it('should return null when on the live environment', () => {
+    process.env.SIMORGH_APP_ENV = 'live';
     const { container } = render(
       <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
         <RelatedTopics
