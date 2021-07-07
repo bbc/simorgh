@@ -58,6 +58,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Tori we dem pay for',
