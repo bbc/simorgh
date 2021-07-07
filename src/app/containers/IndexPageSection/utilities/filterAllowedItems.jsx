@@ -1,8 +1,5 @@
 import dropWhile from 'ramda/src/dropWhile';
-import {
-  getAssetTypeCode,
-  getHeadlineUrlAndLive,
-} from '#lib/utilities/getStoryPromoInfo';
+import { getHeadline, getUrl } from '#lib/utilities/getStoryPromoInfo';
 
 const MAX_ALLOWED_ITEMS_FIRST_SECTION = 13;
 const MAX_ALLOWED_ITEMS = 10;
@@ -28,9 +25,8 @@ export const removeTVBulletinsIfNotAVLiveStream = ({ items, type }) =>
 
 export const removeItemsWithoutUrlOrHeadline = items =>
   items.filter(item => {
-    const { headline, url } = getHeadlineUrlAndLive(
-      item,
-      getAssetTypeCode(item),
-    );
+    const headline = getHeadline(item);
+    const url = getUrl(item);
+
     return headline && url;
   });

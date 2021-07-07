@@ -54,6 +54,13 @@ const externalLinks = {
           'https://podcasts.apple.com/us/podcast/%D8%A3%D8%A8%D8%B9%D8%A7%D8%AF-%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9/id1561146726',
       },
     ],
+    p09m6x31: [
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%B9-%D9%84%D8%A7%D9%82%D8%A7%D8%AA/id1573549106',
+      },
+    ],
   },
 };
 

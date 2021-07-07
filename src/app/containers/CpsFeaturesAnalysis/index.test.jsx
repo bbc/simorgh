@@ -145,23 +145,40 @@ describe('CpsRelatedContent', () => {
 });
 
 describe('Event Tracking', () => {
-  const eventTrackingData = {
-    componentName: 'features',
-  };
-
-  it('should call the view tracking hook with the correct params', () => {
-    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-
-    renderFeaturesAnalysis();
-
-    expect(viewTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
-  });
-
-  it('should call the click tracking hook with the correct params', () => {
+  it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
+    const expected = {
+      componentName: 'features',
+      preventNavigation: true,
+    };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
     renderFeaturesAnalysis();
 
-    expect(clickTrackerSpy).toHaveBeenCalledWith(eventTrackingData);
+    const [
+      [blockLevelTrackingItem1],
+      [linkLevelTrackingItem1],
+
+      [blockLevelTrackingItem2],
+      [linkLevelTrackingItem2],
+    ] = clickTrackerSpy.mock.calls;
+
+    expect(blockLevelTrackingItem1).toEqual(expected);
+    expect(linkLevelTrackingItem1).toEqual({});
+
+    expect(blockLevelTrackingItem2).toEqual(expected);
+    expect(linkLevelTrackingItem2).toEqual({});
+  });
+
+  it('should implement 1 BLOCK level view tracker', () => {
+    const expected = {
+      componentName: 'features',
+    };
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    renderFeaturesAnalysis();
+
+    const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
+
+    expect(blockLevelTracking).toEqual(expected);
   });
 });
