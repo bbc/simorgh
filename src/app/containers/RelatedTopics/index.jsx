@@ -67,7 +67,10 @@ const RelatedTopics = ({ topics }) => {
   return (
     topics &&
     isEnabled && (
-      <StyledTopicsWrapper aria-labelledby="related-topics">
+      <StyledTopicsWrapper
+        aria-labelledby="related-topics"
+        role="complementary"
+      >
         <StyledSectionLabel
           bar
           script={script}
