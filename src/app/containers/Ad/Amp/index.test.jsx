@@ -27,7 +27,7 @@ const adWithContext = (slotType, placeholderEnabled = false) => (
       <ToggleContextProvider
         toggles={{
           adPlaceholder: {
-            enabled,
+            placeholderEnabled,
           },
         }}
       >
