@@ -18,6 +18,7 @@ const podcastExternalLinks = {
   persian: () => import('./persian.js'),
   portuguese: () => import('./portuguese.js'),
   russian: () => import('./russian.js'),
+  ukrainian: () => import('./ukrainian.js'),
   zhongwen: () => import('./zhongwen.js'),
 };
 
