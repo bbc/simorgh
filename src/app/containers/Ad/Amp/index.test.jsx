@@ -15,7 +15,7 @@ const adJsonAttributes = slotType => ({
   },
 });
 
-const adWithContext = (slotType, enabled = false) => (
+const adWithContext = (slotType, placeholderEnabled = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
