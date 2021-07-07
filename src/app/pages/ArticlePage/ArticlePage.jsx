@@ -91,6 +91,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
+  const isTest =
+    process.env.SIMORGH_APP_ENV === 'local' ||
+    process.env.SIMORGH_APP_ENV === 'test';
 
   useEffect(() => {
     if (hash) {
@@ -185,7 +188,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </ArticlePageGrid>
       </main>
 
-      {topics && (
+      {isTest && topics && (
         <ArticlePageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
