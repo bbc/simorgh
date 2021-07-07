@@ -9,7 +9,7 @@
     "@emotion/utils": "1.0.0",
     "moment": "2.29.1",
     "ssri": "8.0.1",
-    "hosted-git-info": "3.0.8",
+    "hosted-git-info": "4.0.2",
     "postcss": "8.3.0",
     "browserslist": "4.16.5",
     "multicast-dns": "7.2.3",
