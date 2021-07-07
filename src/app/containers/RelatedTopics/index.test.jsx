@@ -37,10 +37,10 @@ const WithContexts = ({
               enabled: true,
             },
             cpsTopicsTags: {
-              cpsEnabled,
+              enabled: cpsEnabled,
             },
             optimoTopicsTags: {
-              optimoEnabled,
+              enabled: optimoEnabled,
             },
           }}
         >
