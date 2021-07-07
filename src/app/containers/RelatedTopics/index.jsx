@@ -3,9 +3,8 @@ import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
 import { pathOr } from 'ramda';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string, node } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -22,26 +21,6 @@ const StyledTopicsWrapper = styled.aside`
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
 `;
-
-export const RelatedTopicsWrapper = ({ children }) => (
-  <GelPageGrid
-    enableGelGutters
-    columns={{
-      group0: 6,
-      group1: 6,
-      group2: 6,
-      group3: 6,
-      group4: 8,
-      group5: 20,
-    }}
-  >
-    <GridItemLarge>{children}</GridItemLarge>
-  </GelPageGrid>
-);
-
-RelatedTopicsWrapper.propTypes = {
-  children: node.isRequired,
-};
 
 const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
