@@ -25,8 +25,6 @@ afterAll(() => {
 const WithContexts = ({
   children,
   variant,
-  optimoEnabled = true,
-  cpsEnabled = true,
   service = 'mundo',
   isAmp = false,
   pageType = STORY_PAGE,
@@ -44,12 +42,6 @@ const WithContexts = ({
           toggles={{
             eventTracking: {
               enabled: true,
-            },
-            cpsTopicsTags: {
-              enabled: cpsEnabled,
-            },
-            optimoTopicsTags: {
-              enabled: optimoEnabled,
             },
           }}
         >

@@ -69,9 +69,6 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
               eventTracking: {
                 enabled: true,
               },
-              cpsTopicsTags: {
-                enabled: true,
-              },
             }}
           />
         </BrowserRouter>

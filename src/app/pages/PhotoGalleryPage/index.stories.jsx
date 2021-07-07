@@ -24,9 +24,6 @@ pglStories.add('Azeri', () => {
           eventTracking: {
             enabled: true,
           },
-          cpsTopicsTags: {
-            enabled: true,
-          },
         }}
       />
     </BrowserRouter>

@@ -10,24 +10,12 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import RelatedTopics from '.';
 
-const WithContexts = ({
-  children,
-  variant,
-  optimoEnabled = true,
-  cpsEnabled = true,
-  service = 'mundo',
-}) => {
+const WithContexts = ({ children, variant, service = 'mundo' }) => {
   return (
     <ToggleContextProvider
       toggles={{
         eventTracking: {
           enabled: true,
-        },
-        cpsTopicsTags: {
-          enabled: cpsEnabled,
-        },
-        optimoTopicsTags: {
-          enabled: optimoEnabled,
         },
       }}
     >

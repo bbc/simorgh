@@ -36,9 +36,6 @@ platforms.forEach(platform => {
             eventTracking: {
               enabled: true,
             },
-            cpsTopicsTags: {
-              enabled: true,
-            },
           }}
         />
       </BrowserRouter>

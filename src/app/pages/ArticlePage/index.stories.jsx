@@ -24,9 +24,6 @@ storiesOf('Pages/Article Page', module)
         eventTracking: {
           enabled: true,
         },
-        optimoTopicsTags: {
-          enabled: true,
-        },
       }}
     >
       {/* Service set to pidgin to enable most read. Article data is in english */}
