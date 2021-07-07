@@ -202,6 +202,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   <aside
     aria-labelledby="related-topics"
     class="emotion-0 emotion-1"
+    role="complementary"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
@@ -449,6 +450,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   <aside
     aria-labelledby="related-topics"
     class="emotion-0 emotion-1"
+    role="complementary"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
