@@ -14,7 +14,6 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import useToggle from '#hooks/useToggle';
 import AdSlot from './AdSlot';
 import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
@@ -151,9 +150,10 @@ const AdWithPlaceholder = props => {
 };
 
 const AmpAd = ({ slotType }) => {
-  const { translations, dir, script, service } = useContext(ServiceContext);
+  const { translations, dir, script, service, showAdPlaceholder } = useContext(
+    ServiceContext,
+  );
   const { pageType } = useContext(RequestContext);
-  const { enabled: showPlaceholder } = useToggle('adPlaceholder');
   const label = pathOr(
     'Advertisement',
     ['ads', 'advertisementLabel'],
@@ -161,7 +161,7 @@ const AmpAd = ({ slotType }) => {
   );
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
-  const Advert = showPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
+  const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
 
   return (
     <>

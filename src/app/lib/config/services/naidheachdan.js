@@ -54,6 +54,7 @@ export const service = {
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Dachaigh',
+    showAdPlaceholder: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
