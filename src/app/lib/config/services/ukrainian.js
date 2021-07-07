@@ -368,6 +368,7 @@ export const service = {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
       ...secondaryColumnTranslations,
+      relatedTopics: 'Темы',
     },
     datetimeLocale: 'ru',
     serviceDatetimeLocale: 'uk',
