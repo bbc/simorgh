@@ -28,7 +28,7 @@ import text from '#containers/Text';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
-import { GelPageGrid } from '#components/Grid';
+import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -50,7 +50,7 @@ import {
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import RelatedTopics, { RelatedTopicsWrapper } from '#containers/RelatedTopics';
+import RelatedTopics from '#containers/RelatedTopics';
 
 const componentsToRender = {
   headline: headings,
@@ -127,6 +127,26 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
+  const ArticlePageGrid = ({ children }) => (
+    <GelPageGrid
+      enableGelGutters
+      columns={{
+        group0: 6,
+        group1: 6,
+        group2: 6,
+        group3: 6,
+        group4: 8,
+        group5: 20,
+      }}
+    >
+      {children}
+    </GelPageGrid>
+  );
+
+  ArticlePageGrid.propTypes = {
+    children: node.isRequired,
+  };
+
   return (
     <>
       <ATIAnalytics data={pageData} />
@@ -157,28 +177,20 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         imageLocator={promoImage}
       />
       <main role="main">
-        <GelPageGrid
-          enableGelGutters
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 8,
-            group5: 20,
-          }}
-        >
+        <ArticlePageGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
-        </GelPageGrid>
+        </ArticlePageGrid>
       </main>
 
       {topics && (
-        <RelatedTopicsWrapper>
-          <RelatedTopics topics={topics} />
-        </RelatedTopicsWrapper>
+        <ArticlePageGrid>
+          <GridItemLarge>
+            <RelatedTopics topics={topics} />
+          </GridItemLarge>
+        </ArticlePageGrid>
       )}
 
       <MostReadContainer
