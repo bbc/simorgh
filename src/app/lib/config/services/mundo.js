@@ -66,7 +66,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
-    showAdPlaceholder: true,
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Publicidad',
