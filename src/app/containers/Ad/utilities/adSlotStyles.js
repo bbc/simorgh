@@ -49,7 +49,7 @@ const LEADERBOARD_HEIGHTS = {
   GROUP_3: `${5.625 + AD_UNIT_MARGIN}rem`,
   // 90px + AD_UNIT_MARGIN = 115px
   LARGE: `${16.625 + AD_UNIT_MARGIN}rem`,
-  // 250px + AD_UNIT_MARGIN = 275px
+  // 266px + AD_UNIT_MARGIN = 291px
 };
 
 /*
