@@ -100,7 +100,7 @@ exports[`CanonicalAds Ads Snapshots should correctly render an Canonical leaderb
 
 @media (min-width: 58.75rem) {
   .emotion-0 {
-    min-height: 17.6875rem;
+    min-height: 18.6875rem;
     padding: 0.5rem 1rem;
   }
 }
