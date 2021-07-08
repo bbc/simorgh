@@ -92,8 +92,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const isTest =
-    process.env.SIMORGH_APP_ENV === 'local' ||
-    process.env.SIMORGH_APP_ENV === 'test';
+    process?.env?.SIMORGH_APP_ENV === 'local' ||
+    process?.env?.SIMORGH_APP_ENV === 'test';
 
   useEffect(() => {
     if (hash) {

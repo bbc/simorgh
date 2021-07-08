@@ -100,8 +100,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const isTest =
-    process.env.SIMORGH_APP_ENV === 'local' ||
-    process.env.SIMORGH_APP_ENV === 'test';
+    process?.env?.SIMORGH_APP_ENV === 'local' ||
+    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const gridColumns = {
     group0: 8,
