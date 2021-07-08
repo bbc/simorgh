@@ -1,0 +1,1159 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:mundo/noticias-56669604",
+    "locators": {
+      "assetUri": "/mundo/noticias-56669604",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-56669604",
+      "curie": "http://www.bbc.co.uk/asset/51e12d86-6e33-4918-8a9f-cbbd536bc4e8",
+      "assetId": "56669604"
+    },
+    "type": "STY",
+    "createdBy": "mundo-v6",
+    "language": "es",
+    "lastUpdated": 1621562230986,
+    "firstPublished": 1618565876000,
+    "lastPublished": 1618565876000,
+    "timestamp": 1618565876000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "mundo.also_in_the_news.story.56669604.page",
+      "cps_asset_id": "56669604"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "locator": "urn:bbc:cps:curie:asset:51e12d86-6e33-4918-8a9f-cbbd536bc4e8",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "thingLabel": "Sociedad",
+            "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Life",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+            "thingLabel": "Espectáculos",
+            "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+            "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+            "thingType": [
+              "core:Theme",
+              "tagging:Genre",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Entertainment",
+              "http://www.wikidata.org/entity/Q173799"
+            ],
+            "thingEnglishLabel": "Entertainment",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+            "thingLabel": "Cine",
+            "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+            "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q11424",
+              "http://dbpedia.org/resource/Film"
+            ],
+            "thingEnglishLabel": "Film",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "thingLabel": "Sociedad y Cultura",
+            "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Culture",
+              "http://www.wikidata.org/entity/Q11042"
+            ],
+            "thingEnglishLabel": "Culture",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+            "thingLabel": "Feminismo",
+            "thingUri": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+            "thingId": "8a9d5e78-6caf-44a7-8564-34e9319ecb23",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": ["http://dbpedia.org/resource/Feminism"],
+            "thingEnglishLabel": "Feminism",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+            "thingLabel": "Feature",
+            "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+            "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+            ],
+            "thingEnglishLabel": "Feature",
+            "thingPreferredLabel": "Feature",
+            "thingLabelLanguage": "es",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Sociedad",
+          "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+          "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": [],
+          "topicName": "Sociedad",
+          "topicId": "c404v5gr5gkt",
+          "curationList": [
+            {
+              "curationId": "3ae3a047-4a4a-4773-ad76-2d1d18ff6cf2",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Life",
+          "thingLabelLanguage": "es",
+          "thingPreferredLabel": "Life"
+        },
+        {
+          "thingLabel": "Espectáculos",
+          "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+          "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+          "thingType": [
+            "core:Theme",
+            "tagging:Genre",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Entertainment",
+            "http://www.wikidata.org/entity/Q173799"
+          ],
+          "topicName": "Espectáculos",
+          "topicId": "cvjp23xzr3dt",
+          "curationList": [
+            {
+              "curationId": "582cc767-64f3-403c-a1d1-02bdd3bbc4a2",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Entertainment",
+          "thingLabelLanguage": "es",
+          "thingPreferredLabel": "Entertainment"
+        },
+        {
+          "thingLabel": "Cine",
+          "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+          "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "tagging:Format"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q11424",
+            "http://dbpedia.org/resource/Film"
+          ],
+          "topicName": "Cine",
+          "topicId": "cvjp23xgy61t",
+          "curationList": [
+            {
+              "curationId": "8647cf01-37b6-4888-a751-1ec2b38dd676",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Film",
+          "thingLabelLanguage": "es",
+          "thingPreferredLabel": "Film"
+        },
+        {
+          "thingLabel": "Sociedad y Cultura",
+          "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+          "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Culture",
+            "http://www.wikidata.org/entity/Q11042"
+          ],
+          "topicName": "Sociedad y Cultura",
+          "topicId": "c2dwq9zyv4yt",
+          "curationList": [
+            {
+              "curationId": "1fe8030e-61ed-44f6-a798-f05acc8eb4b9",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Culture",
+          "thingLabelLanguage": "es",
+          "thingPreferredLabel": "Culture"
+        },
+        {
+          "thingLabel": "Feminismo",
+          "thingUri": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+          "thingId": "8a9d5e78-6caf-44a7-8564-34e9319ecb23",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": ["http://dbpedia.org/resource/Feminism"],
+          "topicName": "Feminismo",
+          "topicId": "c082p5d151nt",
+          "curationList": [
+            {
+              "curationId": "de1f7cbc-523a-4057-8fab-24688454a079",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Feminism",
+          "thingLabelLanguage": "es",
+          "thingPreferredLabel": "Feminism"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": ["image", "paragraph", "crosshead", "list", "social_embed"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "MUNDO", "producerId": "62" },
+    "readTime": 5,
+    "siteUri": "/mundo",
+    "topics": [
+      {
+        "topicName": "Feminismo",
+        "topicId": "c082p5d151nt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "de1f7cbc-523a-4057-8fab-24688454a079",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+      },
+      {
+        "topicName": "Sociedad y Cultura",
+        "topicId": "c2dwq9zyv4yt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "1fe8030e-61ed-44f6-a798-f05acc8eb4b9",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+      },
+      {
+        "topicName": "Sociedad",
+        "topicId": "c404v5gr5gkt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "3ae3a047-4a4a-4773-ad76-2d1d18ff6cf2",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+      },
+      {
+        "topicName": "Cine",
+        "topicId": "cvjp23xgy61t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "8647cf01-37b6-4888-a751-1ec2b38dd676",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "core:Theme",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept",
+          "tagging:Format"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+      },
+      {
+        "topicName": "Espectáculos",
+        "topicId": "cvjp23xzr3dt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "582cc767-64f3-403c-a1d1-02bdd3bbc4a2",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:Genre",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116819253",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/89DB/production/_116819253_pyw1.jpg",
+        "path": "/cpsprodpb/89DB/production/_116819253_pyw1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Carey Mulligan en \"Una joven prometedora\".",
+        "caption": "Carey Mulligan interpreta a Cassandra Thomas, protagonista de \"Una joven prometedora\".",
+        "copyrightHolder": "Focus Features",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Todas las semanas, Cassie Thomas, de 29 años, va sola a un club nocturno y finge estar borracha.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Y hace un trabajo convincente. No puede mantenerse de pie, desenfoca la mirada y arrastra el habla. Por lo general, no pasa mucho tiempo antes de que un hombre aparentemente amable se acerque y le ofrezca ayuda para llegar a casa.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Excepto que no la llevan a casa. La mayoría de veces, encuentran una excusa para llevarla a sus casas, con la esperanza de que esté tan borracha que puedan tener sexo con ella. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ignoran que ella dice no sentirse bien o que quiere irse a dormir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Normalmente, cuando comienzan a quitarle la ropa, su plan falla. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "De repente, Cassie enfoca la mirada y su tono de voz se vuelve letal. &quot;¿Qué estás haciendo?&quot;, les pregunta ella.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>N</bold><bold>o está borracha en </bold><bold>lo </bold><bold>absoluto, y el cazador está a punto de convertirse en cazado</bold>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Esta es la premisa de <italic>Promising Young Woman</italic> (traducida como &quot;Hermosa venganza&quot; o &quot;Una joven prometedora&quot;), la película protagonizada por Carey Mulligan y dirigida por Emerald Fennell que ha recibido cinco nominaciones a los Oscar, que se entregarán el domingo 25 de abril.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"Cultura de los hook-ups\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Fennell, quien fue productora y escritora de algunos capítulos de la serie <italic>Killing Eve </italic><italic>e </italic>interpreta a Camilla Parker Bowles (ahora la duquesa de Cornwall) en la serie <italic>The Crown</italic>, se inspiró en sus propias experiencias al ver cómo algunos hombres se aprovechaban de mujeres borrachas.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "116828574",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/B9DE/production/_116828574_095_pyw_fp_005_r2.jpg",
+        "path": "/cpsprodpb/B9DE/production/_116828574_095_pyw_fp_005_r2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Escena de \"Una joven prometedora\"",
+        "caption": "Cassie les voltea el tablero a los hombres que tratan de acostarse con ella mientras está supuestamente ebria.",
+        "copyrightHolder": "Focus Features",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;Es una gran parte de la cultura de los <italic>hook-ups</italic> (encuentros sexuales casuales), lamentablemente&quot;, le dice Fennell a BBC News. &quot;Todavía no se repudia lo suficiente a quienes se acuestan con chicas muy borrachas. Era absolutamente común cuando era joven, y creo que probablemente en la mayoría de los lugares todavía lo es&quot;.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Espero que [la situación] esté mejorando. Todavía creo que mucha gente no ha pensado mucho en las cosas que discutimos en esta película, o no ha pensado en ese tipo de coerción suave que solemos ver&quot;, dice la directora.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>mundo/noticias-56355245</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Estos son los nominados a los Oscar 2021: ¿está tu película favorita entre las elegidas?",
+                  "headline": "Oscar 2021: estos son los nominados a los premios de la Academia de Hollywood",
+                  "overtyped": "Estos son los nominados a los Oscar 2021: ¿está tu película favorita entre las elegidas?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/mundo/noticias-56355245"
+                },
+                "summary": "Llegan con retraso por causa de la pandemia del coronavirus, pero finalmente este domingo 25 de abril tendrá lugar la edición 93ª de los premios Oscar.",
+                "timestamp": 1619355511000,
+                "language": "es",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-56355245",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Al escuchar la premisa y ver el tráiler, sería fácil pensar que  &quot;Una joven prometedora&quot; es una crítica feminista que mete a todos los hombres injustamente en el mismo saco.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Pero es un poco más compleja que eso. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>Cassie no se presenta como moralmente superior y muchas de sus propias acciones son reprobables</bold>. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Además, hay varios personajes femeninos en la película que también enfrentan la ira de Cassie por su propio comportamiento dudoso. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ya sea la decana de la universidad que no investigó adecuadamente una acusación de agresión o la amiga de una víctima de violación que hace de la vista gorda. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En diversos grados, hay múltiples personajes, de ambos sexos, que son cómplices.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116820269",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/177CA/production/_116820269_252_4148_d005_00706_r.jpg",
+        "path": "/cpsprodpb/177CA/production/_116820269_252_4148_d005_00706_r.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Carey Mulligan y Emerald Fennell",
+        "caption": "La directora Emerald Fennell (a la derecha, durante la filmación) escribió unos capítulos de la serie \"Killing Eve\"",
+        "copyrightHolder": "Merie Weismiller Wallace",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;Ha habido tanta gente, tantas mujeres también, incluida yo misma, que en ocasiones no nos comportamos de la manera en que debíamos, que no ofrecimos suficiente apoyo o que no tomamos las cosas lo suficientemente en serio&quot;, dice Fennell.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>mundo/noticias-55990183</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Oscar 2021: las 22 películas que deberías ver para seguir la temporada de premios de Hollywood",
+                  "headline": "Oscar 2021: las 22 películas que deberías ver para seguir la temporada de premios de Hollywood",
+                  "overtyped": "Oscar 2021: las 22 películas que no debes perderte para seguir la temporada de premios de Hollywood"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/mundo/noticias-55990183"
+                },
+                "summary": "En BBC Mundo te ofrecemos una lista de 22 filmes que han sido reconocidos durante la temporada de premios de cine en EE.UU., que cierra con los Oscar este mes.",
+                "timestamp": 1618824255000,
+                "language": "es",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-55990183",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "&quot;Para muchos hombres creo que [la película] ha sido profundamente incómoda, porque se han dado cuenta de que tal vez ha habido momentos en los que no han tenido suficiente empatía para pensar en lo que la otra persona podría estar experimentando&quot;, señala.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;No creo que sea una crítica contra los hombres. Es una crítica contra la cultura en la que todos crecimos, que tiende a ponerse del lado de los hombres más que de las mujeres&quot;, agrega.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      { "text": "Críticas", "markupType": "plain_text", "type": "crosshead" },
+      {
+        "text": "&quot;Una joven prometedora&quot; iba a estrenarse en 2020, poco después de presentarse en el Festival de Cine de Sundance en enero. Pero se retrasó debido a la pandemia. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Pero las primeras críticas que recibió fueron ampliamente positivas.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Dramáticamente, se presenta tan clara y audaz que sus golpes narrativos son geniales&quot;, escribió Todd McCarthy en <italic>The Hollywood Reporter</italic>. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>Pero no todo el mundo </bold><bold>piensa </bold><bold>que la película </bold><bold>sea acertada</bold><bold>. </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Es misantropía empaquetada como un manifiesto feminista, listo pero no inteligente, cínico sin ser perceptivo o particularmente apasionado&quot;, dijo Stephanie Zacharek en la revista <italic>Time</italic>. &quot;Las mujeres están enojadas por una buena razón. Merecen mejores películas que esta&quot;.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "116823294",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/C050/production/_116823294_thecrown_403_unit_03450.jpg",
+        "path": "/cpsprodpb/C050/production/_116823294_thecrown_403_unit_03450.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Emerald Fennell en \"The Crown\"",
+        "caption": "Fennell interpretó a Camilla Parker Bowles en la serie \"The Crown\", de Netflix.",
+        "copyrightHolder": "Netflix",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Mulligan, quien saltó a la fama a fines de la década de los 2000 después de protagonizar la película <italic>An Education</italic>, dice que le atrajo la complejidad del personaje de Cassie.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;El desafío y la diversión para mí es encontrar papeles con los que no sé qué hacer, y con los que me siento intimidada&quot;, señaló. &quot;Cuanto más fuera de mi zona de confort estoy, más me divierto&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Y esto definitivamente se sintió así, no podría haber soñado con este papel. Tenía tanta profundidad y tanta historia, pero había algo urgente en lo que [Cassie] estaba haciendo. Está estancada, pero también moviéndose, así que estaban pasando muchas cosas, y lo tomé con entusiasmo&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116828570",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1D9E/production/_116828570_mulliganreuters.jpg",
+        "path": "/cpsprodpb/1D9E/production/_116828570_mulliganreuters.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Carey Mulligan",
+        "caption": "Mulligan se opuso a una crítica que cuestionaba su idoneidad para el papel.",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Temporada de premios",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Cuando hablamos a mediados de enero, estaba claro que Fennell tendría un gran impulso en la temporada de premios. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dice que está encantada de simplemente estar en la agenda. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>mundo/noticias-56234522</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Globos de Oro 2021: estos son los ganadores de los premios a lo mejor del cine y la televisión de Hollywood",
+                  "headline": "Golden Globes 2021: estos son los ganadores de los premios a lo mejor del cine y la televisión de Hollywood",
+                  "overtyped": "Globos de Oro 2021: estos son los ganadores de los premios a lo mejor del cine y la televisión de Hollywood"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/mundo/noticias-56234522"
+                },
+                "summary": "\"Nomadland\" se llevó el galardón a la mejor película y su directora, Chloe Zhao, se convirtió en la segunda mujer en la historia del premio en triunfar en la categoría de dirección. \"The Crown\" se impuso en las categorías de televisión.",
+                "timestamp": 1614579044000,
+                "language": "es",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:mundo/noticias-56234522",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "&quot;Básicamente, estás hablando con alguien que se siente como ganadora de una competencia, por lo que solo ser mencionada junto a esas otras directoras es bastante abrumador para mí y se siente completamente surrealista&quot;, dice.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Es emocionante que en un año tan terrible y extraño, haya habido tantas cosas geniales, el hecho de que también haya tanta diversidad y tantas mujeres haciendo cosas, es realmente emocionante. Se siente como si hubiera una prisa por la novedad, por cosas emocionantes que no hayas visto antes, incluso en la televisión: <italic>Normal People</italic>, <italic>I May Destroy You</italic>, <italic>Bridgerton</italic>, 'Gambito de Dama'. Qué año para las historias&quot;, dijo.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Efectivamente, poco después de nuestra entrevista, <bold>Fennell </bold><bold>fue </bold><bold>nominada a mejor director</bold><bold>a</bold><bold> en los Globos de Oro junto a Regina King (por </bold><bold><italic>One Night In Miami</italic></bold><bold>) y Chloé Zhao (por </bold><bold><italic>Nomadland</italic></bold><bold>)</bold>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Fue la primera vez que hubo tres nominadas femeninas en la categoría. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "A mediados de marzo, Fennell y Zhao fueron nominadas al Oscar.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gran pregunta",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Pero dejando de lado las ostentosas ceremonias de premiación, será difícil determinar cuánto impacto tendrá la película. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Una joven prometedora&quot; no llegará a todas las personas del planeta que necesiten verla, lo que plantea la pregunta: ¿cómo podrá cambiar la sociedad su comportamiento?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116836613",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/7BAF/production/_116836613_femaledirectorscomp.jpg",
+        "path": "/cpsprodpb/7BAF/production/_116836613_femaledirectorscomp.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Regina King, Emerald Fennell y Chloe Zhao",
+        "caption": "Regina King, Emerald Fennell y Chloe Zhao fueron nominadas a mejor directora en los Golden Globes.",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;La verdad es que es una pregunta mucho más grande de lo que yo o cualquier persona podemos responder&quot;, dice Fennell. &quot;Pero si esta historia es una fábula o una alegoría, es que solo puedes recibir perdón y redimirte si reconoces lo que has hecho&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Muy a menudo te encuentras con disculpas cuando se trata de este tipo de cosas, unas disculpas a medias y no asumen la responsabilidad. Y todo lo que Cassie está buscando es una persona que diga 'esto está profundamente mal, y tienes razón en estar enojada, esto no debería haber sucedido', pero nadie quiere porque nadie quiere admitir que ha sido parte de algo tan terrible&quot;, señala.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "105819610",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/069B/production/_105819610_line976.jpg",
+        "path": "/cpsprodpb/069B/production/_105819610_line976.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "Línea",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "<italic>Recuerda que</italic><italic> puedes recibir notificaciones de BBC Mundo. Descarga nuestra app y actívalas para no perderte nuestro mejor contenido.</italic>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>¿Ya conoces nuestro canal de YouTube? ¡Suscríbete!</caption><url href=\"https://www.youtube.com/user/BBCMundo?sub_confirmation=1\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=S5Lkm_l-47M",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Amazonas: el mercado ilegal de áreas protegidas en Facebook | Investigación de la BBC",
+            "author_name": "BBC News Mundo",
+            "author_url": "https://www.youtube.com/user/BBCMundo",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/S5Lkm_l-47M/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/S5Lkm_l-47M?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Mundo: Amazonas: el mercado ilegal de áreas protegidas en Facebook | Investigación de la BBC"
+          }
+        },
+        "id": "S5Lkm_l-47M",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"Todavía no se repudia lo suficiente a quienes se acuestan con chicas muy borrachas\": la inquietante realidad que retrata la película 'Promising Young Woman'",
+      "headline": "\"Promising Young Woman\": la inquietante realidad que retrata la película nominada a 5 premios Oscar"
+    },
+    "locators": {
+      "assetUri": "/mundo/noticias-56669604",
+      "cpsUrn": "urn:bbc:content:assetUri:mundo/noticias-56669604",
+      "curie": "http://www.bbc.co.uk/asset/51e12d86-6e33-4918-8a9f-cbbd536bc4e8",
+      "assetId": "56669604"
+    },
+    "summary": "\"Promising Young Woman\" es un giro oscuro y retorcido de la \"cultura\" de los encuentros sexuales casuales.",
+    "timestamp": 1618565876000,
+    "language": "es",
+    "byline": {
+      "name": "Steven McIntosh",
+      "title": "Periodista de Entretenimiento de la BBC",
+      "persons": [
+        {
+          "name": "Steven McIntosh",
+          "function": "Periodista de Entretenimiento de la BBC"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName": "Feature"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "es",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Mundo",
+      "locator": "urn:bbc:cps:curie:asset:51e12d86-6e33-4918-8a9f-cbbd536bc4e8",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/fdeece8d-b243-45ed-b4b6-3ad34532dc4a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "thingLabel": "Sociedad",
+            "thingUri": "http://www.bbc.co.uk/things/0239ab33-1cfc-4f5d-babb-a8159711af3e#id",
+            "thingId": "0239ab33-1cfc-4f5d-babb-a8159711af3e",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Life",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+            "thingLabel": "Espectáculos",
+            "thingUri": "http://www.bbc.co.uk/things/1c3b60a9-14eb-484b-a750-9f5b1aeaac31#id",
+            "thingId": "1c3b60a9-14eb-484b-a750-9f5b1aeaac31",
+            "thingType": [
+              "core:Theme",
+              "tagging:Genre",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Entertainment",
+              "http://www.wikidata.org/entity/Q173799"
+            ],
+            "thingEnglishLabel": "Entertainment",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+            "thingLabel": "Cine",
+            "thingUri": "http://www.bbc.co.uk/things/2611f753-ece7-47ea-9782-f912bc1e4088#id",
+            "thingId": "2611f753-ece7-47ea-9782-f912bc1e4088",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q11424",
+              "http://dbpedia.org/resource/Film"
+            ],
+            "thingEnglishLabel": "Film",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "thingLabel": "Sociedad y Cultura",
+            "thingUri": "http://www.bbc.co.uk/things/6a73afa3-ea6b-45c1-80bb-49060b99f864#id",
+            "thingId": "6a73afa3-ea6b-45c1-80bb-49060b99f864",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Culture",
+              "http://www.wikidata.org/entity/Q11042"
+            ],
+            "thingEnglishLabel": "Culture",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+            "thingLabel": "Feminismo",
+            "thingUri": "http://www.bbc.co.uk/things/8a9d5e78-6caf-44a7-8564-34e9319ecb23#id",
+            "thingId": "8a9d5e78-6caf-44a7-8564-34e9319ecb23",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": ["http://dbpedia.org/resource/Feminism"],
+            "thingEnglishLabel": "Feminism",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+            "thingLabel": "Feature",
+            "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+            "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+            ],
+            "thingEnglishLabel": "Feature",
+            "thingPreferredLabel": "Feature",
+            "thingLabelLanguage": "es",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "116828571",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/44AE/production/_116828571_promisingcomposite.jpg",
+      "path": "/cpsprodpb/44AE/production/_116828571_promisingcomposite.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Carey Mulligan en \"Promising Young Woman\"",
+      "copyrightHolder": "Focus Features",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:mundo/noticias-56669604",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Otras noticias",
+      "uri": "/mundo/otras_noticias",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Mundo",
+      "uri": "/mundo",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Estos son los nominados a los Oscar 2021: ¿está tu película favorita entre las elegidas?",
+              "headline": "Oscar 2021: estos son los nominados a los premios de la Academia de Hollywood"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-56355245",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-56355245"
+            },
+            "summary": "Llegan con retraso por causa de la pandemia del coronavirus, pero finalmente este domingo 25 de abril tendrá lugar la edición 93ª de los premios Oscar.",
+            "timestamp": 1619355511000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117586485",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/E464/production/_117586485_mediaitem117586481.jpg",
+              "path": "/cpsprodpb/E464/production/_117586485_mediaitem117586481.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Borat 2",
+              "caption": "Maria Bakalova está nominada por \"Borat 2\".",
+              "copyrightHolder": "Borat 2",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-56355245",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Oscar 2021: las 22 películas que deberías ver para seguir la temporada de premios de Hollywood",
+              "headline": "Oscar 2021: las 22 películas que deberías ver para seguir la temporada de premios de Hollywood"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-55990183",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-55990183"
+            },
+            "summary": "En BBC Mundo te ofrecemos una lista de 22 filmes que han sido reconocidos durante la temporada de premios de cine en EE.UU., que cierra con los Oscar este mes.",
+            "timestamp": 1618824255000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "116886321",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3050/production/_116886321_cf57a219-478c-4a86-aec7-7a5d74a8824d.jpg",
+              "path": "/cpsprodpb/3050/production/_116886321_cf57a219-478c-4a86-aec7-7a5d74a8824d.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Promising Young Woman",
+              "copyrightHolder": "Focus Features",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-55990183",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Globos de Oro 2021: estos son los ganadores de los premios a lo mejor del cine y la televisión de Hollywood",
+              "headline": "Golden Globes 2021: estos son los ganadores de los premios a lo mejor del cine y la televisión de Hollywood"
+            },
+            "locators": {
+              "assetUri": "/mundo/noticias-56234522",
+              "cpsUrn": "urn:bbc:content:assetUri:/mundo/noticias-56234522"
+            },
+            "summary": "\"Nomadland\" se llevó el galardón a la mejor película y su directora, Chloe Zhao, se convirtió en la segunda mujer en la historia del premio en triunfar en la categoría de dirección. \"The Crown\" se impuso en las categorías de televisión.",
+            "timestamp": 1614579044000,
+            "language": "es",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117343539",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16D5E/production/_117343539_mediaitem117343538.jpg",
+              "path": "/cpsprodpb/16D5E/production/_117343539_mediaitem117343538.jpg",
+              "height": 360,
+              "width": 640,
+              "altText": "Nomadland",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:mundo/noticias-56234522",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

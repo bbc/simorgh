@@ -1,42 +1,62 @@
 import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
-import { useInView } from 'react-intersection-observer';
-// Polyfill IntersectionObserver, e.g. for IE11
-import 'intersection-observer';
+import pathOr from 'ramda/src/pathOr';
+import prop from 'ramda/src/prop';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '../useToggle';
+import useTrackingToggle from '#hooks/useTrackingToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
+const MIN_VIEWED_PERCENT = 0.5;
 
 const useViewTracker = (props = {}) => {
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
+  const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
+
+  const observer = useRef();
   const timer = useRef(null);
-  const [viewSent, setViewSent] = useState(false);
-  const { enabled: eventTrackingIsEnabled } = useToggle('eventTracking');
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    skip: !eventTrackingIsEnabled || viewSent,
-  });
+  const [isInView, setIsInView] = useState();
+  const [eventSent, setEventSent] = useState(false);
+  const { trackingIsEnabled } = useTrackingToggle(componentName);
+  const eventTrackingContext = useContext(EventTrackingContext);
   const {
-    campaignID,
     pageIdentifier,
     platform,
     producerId,
     statsDestination,
-  } = useContext(EventTrackingContext);
+  } = eventTrackingContext;
+  const campaignID = pathOr(
+    path(['campaignID'], eventTrackingContext),
+    ['campaignID'],
+    props,
+  );
   const { service } = useContext(ServiceContext);
+  const initObserver = async () => {
+    if (typeof window.IntersectionObserver === 'undefined') {
+      // Polyfill IntersectionObserver, e.g. for IE11
+      await import('intersection-observer');
+    }
+    const callback = changes => {
+      const someElementsAreInView = changes.some(prop('isIntersecting'));
+
+      setIsInView(someElementsAreInView);
+    };
+    const options = {
+      threshold: [MIN_VIEWED_PERCENT],
+    };
+
+    observer.current = new IntersectionObserver(callback, options);
+  };
 
   useEffect(() => {
-    if (eventTrackingIsEnabled && inView && !timer.current) {
+    if (isInView && !timer.current) {
       timer.current = setTimeout(() => {
-        const shouldSendEvent = [
-          !viewSent,
+        const hasRequiredProps = [
           campaignID,
           componentName,
           pageIdentifier,
@@ -44,6 +64,12 @@ const useViewTracker = (props = {}) => {
           producerId,
           service,
           statsDestination,
+        ].every(Boolean);
+
+        const shouldSendEvent = [
+          hasRequiredProps,
+          trackingIsEnabled,
+          !eventSent,
         ].every(Boolean);
 
         if (shouldSendEvent) {
@@ -57,9 +83,13 @@ const useViewTracker = (props = {}) => {
             service,
             statsDestination,
             type: EVENT_TYPE,
+            advertiserID,
             url,
           });
-          setViewSent(true);
+          setEventSent(true);
+          observer.current.disconnect();
+          observer.current = null;
+          timer.current = null;
         }
       }, VIEWED_DURATION_MS);
     } else {
@@ -67,23 +97,35 @@ const useViewTracker = (props = {}) => {
       timer.current = null;
     }
 
-    return () => clearTimeout(timer.current);
+    return () => {
+      clearTimeout(timer.current);
+    };
   }, [
     campaignID,
     componentName,
-    eventTrackingIsEnabled,
     format,
-    inView,
+    isInView,
     pageIdentifier,
     platform,
     producerId,
     service,
     statsDestination,
+    trackingIsEnabled,
+    eventSent,
+    advertiserID,
     url,
-    viewSent,
   ]);
 
-  return ref;
+  return async element => {
+    if (!element || !trackingIsEnabled || eventSent) {
+      return;
+    }
+    if (!observer.current) {
+      await initObserver();
+    }
+
+    observer.current.observe(element);
+  };
 };
 
 export default useViewTracker;

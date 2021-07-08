@@ -2,12 +2,11 @@
 
 import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
-import isChromatic from 'chromatic/isChromatic';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-
-import clearAppStorage from './helpers/clearAppStorage';
+import isChromatic from 'chromatic/isChromatic';
+import { forceVisible } from 'react-lazyload';
 
 const fontPathMap = [
   { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
@@ -24,8 +23,7 @@ const fontPathMap = [
 addDecorator(story => {
   useEffect(() => {
     if (isChromatic()) {
-      // prevent the consent banner introducing inconsistent Chromatic snapshots
-      clearAppStorage();
+      forceVisible();
     }
   }, []);
 

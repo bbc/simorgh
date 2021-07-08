@@ -1388,59 +1388,61 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
       <div
         class="emotion-19 emotion-20"
       >
-        <div
-          class="emotion-21 emotion-22"
-          data-e2e="story-promo"
-        >
+        <div>
           <div
-            class="emotion-23 emotion-24"
-            dir="ltr"
+            class="emotion-21 emotion-22"
+            data-e2e="story-promo"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-23 emotion-24"
+              dir="ltr"
             >
               <div
-                class="emotion-27 emotion-28"
-                data-e2e="image-placeholder"
+                class="emotion-25 emotion-26"
               >
                 <div
-                  class="lazyload-wrapper "
+                  class="emotion-27 emotion-28"
+                  data-e2e="image-placeholder"
                 >
                   <div
-                    class="lazyload-placeholder"
-                  />
+                    class="lazyload-wrapper "
+                  >
+                    <div
+                      class="lazyload-placeholder"
+                    />
+                  </div>
                 </div>
+                <div
+                  class="emotion-29 emotion-30"
+                />
               </div>
-              <div
-                class="emotion-29 emotion-30"
-              />
             </div>
-          </div>
-          <div
-            class="emotion-31 emotion-32"
-            dir="ltr"
-          >
-            <h3
-              class="emotion-33 emotion-34"
+            <div
+              class="emotion-31 emotion-32"
+              dir="ltr"
             >
-              <a
-                class="emotion-35 emotion-36"
-                href="/igbo/afirika-23252735"
+              <h3
+                class="emotion-33 emotion-34"
               >
-                STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
-              </a>
-            </h3>
-            <p
-              class="emotion-37 emotion-38"
-            >
-              This is a test asset used in Simorgh, please do not edit it without asking.
-            </p>
-            <time
-              class="emotion-39 emotion-40"
-              datetime="2020-02-03"
-            >
-              3rd February 2020
-            </time>
+                <a
+                  class="emotion-35 emotion-36"
+                  href="/igbo/afirika-23252735"
+                >
+                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                </a>
+              </h3>
+              <p
+                class="emotion-37 emotion-38"
+              >
+                This is a test asset used in Simorgh, please do not edit it without asking.
+              </p>
+              <time
+                class="emotion-39 emotion-40"
+                datetime="2020-02-03"
+              >
+                3rd February 2020
+              </time>
+            </div>
           </div>
         </div>
       </div>

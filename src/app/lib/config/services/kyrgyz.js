@@ -229,6 +229,7 @@ export const service = {
         nextRadioShow: 'Кезектеги радио программа',
         duration: 'Узактыгы',
         recentEpisodes: 'Мурдагы берүүлөр',
+        podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
       },
       socialEmbed: {
         caption: {

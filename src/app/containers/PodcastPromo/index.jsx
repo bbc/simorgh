@@ -1,5 +1,14 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import styled from '@emotion/styled';
+
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_SEXT,
+} from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -9,6 +18,16 @@ const getSrcFromSize = (url, size) => {
   const src = url.replace('$recipe', `${size}x${size}`);
   return `${src} ${size}w`;
 };
+
+const ResponsivePodcastPromoWrapper = styled.div`
+  margin-top: ${GEL_SPACING_TRPL};
+  margin-bottom: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: -${GEL_SPACING_SEXT};
+    margin-bottom: -${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL};
+  }
+`;
 
 const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
@@ -41,45 +60,47 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <PromoComponent
-      script={script}
-      service={service}
-      role="region"
-      aria-labelledby="podcast-promo"
-    >
-      <PromoComponent.Title id="podcast-promo">
-        {podcastPromoTitle}
-      </PromoComponent.Title>
-      <PromoComponent.Card>
-        <PromoComponent.Card.ImageWrapper>
-          <ImageWithPlaceholder
-            src={imgSrc}
-            srcset={srcset}
-            sizes={sizes}
-            alt={alt}
-            height={1}
-            width={1}
-            ratio={100}
-            lazyLoad
-          />
-        </PromoComponent.Card.ImageWrapper>
-        <PromoComponent.Card.Content>
-          <PromoComponent.Card.Title>
-            <PromoComponent.Card.Link href={url}>
-              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                {podcastBrandTitle}
-              </span>
-            </PromoComponent.Card.Link>
-          </PromoComponent.Card.Title>
-          <PromoComponent.Card.Description>
-            {description}
-          </PromoComponent.Card.Description>
-          <PromoComponent.Card.EpisodesText>
-            {label}
-          </PromoComponent.Card.EpisodesText>
-        </PromoComponent.Card.Content>
-      </PromoComponent.Card>
-    </PromoComponent>
+    <ResponsivePodcastPromoWrapper>
+      <PromoComponent
+        script={script}
+        service={service}
+        role="region"
+        aria-labelledby="podcast-promo"
+      >
+        <PromoComponent.Title id="podcast-promo">
+          {podcastPromoTitle}
+        </PromoComponent.Title>
+        <PromoComponent.Card>
+          <PromoComponent.Card.ImageWrapper>
+            <ImageWithPlaceholder
+              src={imgSrc}
+              srcset={srcset}
+              sizes={sizes}
+              alt={alt}
+              height={1}
+              width={1}
+              ratio={100}
+              lazyLoad
+            />
+          </PromoComponent.Card.ImageWrapper>
+          <PromoComponent.Card.Content>
+            <PromoComponent.Card.Title>
+              <PromoComponent.Card.Link href={url}>
+                <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+                  {podcastBrandTitle}
+                </span>
+              </PromoComponent.Card.Link>
+            </PromoComponent.Card.Title>
+            <PromoComponent.Card.Description>
+              {description}
+            </PromoComponent.Card.Description>
+            <PromoComponent.Card.EpisodesText>
+              {label}
+            </PromoComponent.Card.EpisodesText>
+          </PromoComponent.Card.Content>
+        </PromoComponent.Card>
+      </PromoComponent>
+    </ResponsivePodcastPromoWrapper>
   );
 };
 

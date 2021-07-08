@@ -14,14 +14,15 @@ import {
 import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
+  GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const Grid = props => {
+const Grid = React.forwardRef((props, ref) => {
   const { dir } = useContext(ServiceContext);
 
-  return <GRID dir={dir} {...props} />;
-};
+  return <GRID dir={dir} {...props} ref={ref} />;
+});
 
 const fourOfSixColumnsMaxWidthGroup4 = `30rem`;
 /* (group4ColWidth 6.75rem * 4) + (3 * 16px gutters) = 27rem + 3rem = 30rem */
@@ -269,6 +270,7 @@ const PopOutAtGroup5 = styled(GridItemMedium)`
     @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
       max-height: 0; /* [1] */
       padding-top: 0.25rem;
+      margin: 0 ${GEL_SPACING_DBL};
     }
   }
 `;

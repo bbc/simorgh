@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -35,6 +34,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
@@ -177,6 +177,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
+    table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
@@ -247,16 +248,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     margin-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       margin-bottom: ${GEL_SPACING_SEXT};
-      padding: ${GEL_SPACING_DBL};
-    }
-  `;
-
-  const ResponsivePodcastPromoWrapper = styled.div`
-    margin-top: ${GEL_SPACING_TRPL};
-    margin-bottom: ${GEL_SPACING_TRPL};
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin-top: -${GEL_SPACING_SEXT};
-      margin-bottom: -${GEL_SPACING};
       padding: ${GEL_SPACING_DBL};
     }
   `;
@@ -347,11 +338,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {podcastPromoEnabled && (
-            <ResponsivePodcastPromoWrapper>
-              <PodcastPromo />
-            </ResponsivePodcastPromoWrapper>
-          )}
+          {podcastPromoEnabled && <PodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis

@@ -11,6 +11,8 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
@@ -143,5 +145,50 @@ describe('CpsRelatedContent', () => {
   it('should render a default title if translations are not available', () => {
     renderRelatedContentNoTitle();
     expect(screen.getByText(`Related content`)).toBeTruthy();
+  });
+});
+
+describe('Event Tracking', () => {
+  it('should implement 3 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
+    const expected = {
+      componentName: 'related-content',
+      preventNavigation: true,
+    };
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+    renderRelatedContent();
+
+    const [
+      [blockLevelTrackingItem1],
+      [linkLevelTrackingItem1],
+
+      [blockLevelTrackingItem2],
+      [linkLevelTrackingItem2],
+
+      [blockLevelTrackingItem3],
+      [linkLevelTrackingItem3],
+    ] = clickTrackerSpy.mock.calls;
+
+    expect(blockLevelTrackingItem1).toEqual(expected);
+    expect(linkLevelTrackingItem1).toEqual({});
+
+    expect(blockLevelTrackingItem2).toEqual(expected);
+    expect(linkLevelTrackingItem2).toEqual({});
+
+    expect(blockLevelTrackingItem3).toEqual(expected);
+    expect(linkLevelTrackingItem3).toEqual({});
+  });
+
+  it('should implement 1 BLOCK level view tracker', () => {
+    const expected = {
+      componentName: 'related-content',
+    };
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    renderRelatedContent();
+
+    const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
+
+    expect(blockLevelTracking).toEqual(expected);
   });
 });

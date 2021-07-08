@@ -13,6 +13,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
   }
 }
 
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-0 .emotion-70::after {
   left: 0;
 }
@@ -733,6 +742,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
   }
 }
 
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-0 .emotion-66::after {
   left: 0;
 }
@@ -1361,6 +1379,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
   }
 }
 
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-0 .emotion-66::after {
   left: 0;
 }
@@ -1981,6 +2008,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-0 .emotion-17::after {
@@ -2677,6 +2713,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
   border-top: 0.0625rem solid #FFFFFF;
 }
 
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
+}
+
 .emotion-0 .emotion-17::after {
   left: 0;
 }
@@ -3277,6 +3322,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
   position: relative;
   background-color: #B80000;
   border-top: 0.0625rem solid #FFFFFF;
+}
+
+.emotion-0::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 0.0625rem solid transparent;
 }
 
 .emotion-0 .emotion-17::after {

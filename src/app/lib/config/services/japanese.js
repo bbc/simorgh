@@ -310,6 +310,10 @@ export const service = {
         url: '/japanese/52137815',
       },
       {
+        title: '東京五輪・パラ',
+        url: '/japanese/57464837',
+      },
+      {
         title: '日本',
         url: '/japanese/topics/cyx5k201n3qt',
       },
