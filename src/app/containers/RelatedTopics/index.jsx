@@ -26,16 +26,16 @@ const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const isEnabled =
-    process.env.SIMORGH_APP_ENV === 'test' ||
-    process.env.SIMORGH_APP_ENV === 'local';
+    process?.env?.SIMORGH_APP_ENV === 'test' ||
+    process?.env?.SIMORGH_APP_ENV === 'local';
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
 
   const getTopicPageUrl = id => {
     return variant
-      ? `${process.env.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
-      : `${process.env.SIMORGH_BASE_URL}/${service}/topics/${id}`;
+      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
+      : `${process?.env?.SIMORGH_BASE_URL}/${service}/topics/${id}`;
   };
 
   return (

@@ -12,14 +12,11 @@ import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 process.env.SIMORGH_BASE_URL = 'https://bbc.com';
-const envType = process.env.SIMORGH_APP_ENV;
+const { env } = process;
 
 beforeEach(() => {
+  jest.resetModules();
   process.env.SIMORGH_APP_ENV = 'test';
-});
-
-afterAll(() => {
-  process.env.SIMORGH_APP_ENV = envType;
 });
 
 const WithContexts = ({
@@ -55,6 +52,10 @@ const WithContexts = ({
 };
 
 describe('Expected use', () => {
+  afterAll(() => {
+    process.env = env;
+  });
+
   shouldMatchSnapshot(
     'should render correctly with no tags',
     <WithContexts>
@@ -121,6 +122,23 @@ describe('Expected use', () => {
 
   it('should return null when on the live environment', () => {
     process.env.SIMORGH_APP_ENV = 'live';
+    const { container } = render(
+      <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
+        <RelatedTopics
+          topics={[
+            { topicName: 'topic1', topicId: '1' },
+            { topicName: 'topic2', topicId: '2' },
+            { topicName: 'topic3', topicId: '3' },
+          ]}
+        />
+      </WithContexts>,
+    );
+    expect(container.firstChild).toBeNull();
+  });
+
+  it('should return null when process is undefined', () => {
+    process.env = undefined;
+
     const { container } = render(
       <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
         <RelatedTopics
