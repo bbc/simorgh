@@ -11,7 +11,7 @@
     "browserslist": "4.16.6",
     "web-vitals": "1.1.1",
     "css-what": "5.0.1",
-    "glob-parent": "5.1.2",
+    "glob-parent": "6.0.0",
     "prismjs": "1.24.1",
     "trim": "0.0.3"
   },
