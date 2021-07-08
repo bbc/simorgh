@@ -71,6 +71,9 @@
     },
     "intersection-observer@*": {
       "reason": "Licenced under W3C-20150513; https://spdx.org/licenses/W3C-20150513.html"
+    },
+    "argparse@*": {
+      "reason": "Licensed under Python-2.0; https://github.com/nodeca/argparse/blob/master/LICENSE"
     }
   }
 }
