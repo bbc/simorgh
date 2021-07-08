@@ -173,7 +173,7 @@
     "@storybook/addon-viewport": "6.3.3",
     "@storybook/react": "6.3.3",
     "@storybook/theming": "6.3.3",
-    "@testing-library/dom": "7.31.2",
+    "@testing-library/dom": "8.1.0",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "11.2.7",
     "@testing-library/react-hooks": "5.1.3",
