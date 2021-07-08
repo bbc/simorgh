@@ -13,7 +13,7 @@
     "css-what": "5.0.1",
     "glob-parent": "5.1.2",
     "prismjs": "1.24.1",
-    "trim": "0.0.3"
+    "trim": "1.0.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
