@@ -37,7 +37,7 @@ exports[`AMP Ads Snapshots should correctly render an AMP leaderboard ad 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-4 {
-    min-height: 17.6875rem;
+    min-height: 18.6875rem;
   }
 }
 
