@@ -120,7 +120,7 @@ describe('Ad Container', () => {
       );
 
       shouldMatchSnapshot(
-        'should render a leaderboard ad without a placeholder when showAdToggle is false',
+        'should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false',
         <ServiceContext.Provider
           value={{ showAdPlaceholder: false, ...context }}
         >
