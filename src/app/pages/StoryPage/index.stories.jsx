@@ -54,7 +54,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
     .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
     .addDecorator(withKnobs)
     .addDecorator(withSecondaryColumnsKnob(pageData))
-    .add(service, ({ data }) => {
+    .add(service, () => {
       return (
         <BrowserRouter>
           <StoryPage
@@ -62,7 +62,7 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
             isAmp={false}
             pathname="/path"
             status={200}
-            pageData={data}
+            pageData={pageData}
             service={service}
             mostReadEndpointOverride="./data/mundo/mostRead/index.json"
           />
