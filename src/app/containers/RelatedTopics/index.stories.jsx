@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -36,29 +35,27 @@ const WithContexts = ({ children, variant, service = 'mundo' }) => {
   );
 };
 
-storiesOf('Containers/RelatedTopics', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add(`single topic`, ({ service, variant, text }) => (
-    <WithContexts service={service} variant={variant}>
-      <RelatedTopics topics={[{ topicName: text, topicId: 'topicId' }]} />
-    </WithContexts>
-  ));
+export default {
+  component: RelatedTopics,
+  title: 'Containers/Related Topics',
+  decorators: [withKnobs, withServicesKnob()],
+};
 
-storiesOf('Containers/RelatedTopics', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add(`multiple topics`, ({ service, variant, text }) => {
-    const textArray = text.split(' ');
-    const topics = textArray.map((item, index) => ({
-      topicName: item,
-      topicId: `id${index}`,
-    }));
-    return (
-      <WithContexts service={service} variant={variant}>
-        <RelatedTopics topics={topics} />
-      </WithContexts>
-    );
-  });
+export const RelatedTopicsSingle = ({ service, variant, text }) => (
+  <WithContexts service={service} variant={variant}>
+    <RelatedTopics topics={[{ topicName: text, topicId: 'topicId' }]} />
+  </WithContexts>
+);
+
+export const RelatedTopicsMultiple = ({ service, variant, text }) => {
+  const textArray = text.split(' ');
+  const topics = textArray.map((item, index) => ({
+    topicName: item,
+    topicId: `id${index}`,
+  }));
+  return (
+    <WithContexts service={service} variant={variant}>
+      <RelatedTopics topics={topics} />
+    </WithContexts>
+  );
+};
