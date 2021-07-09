@@ -75,7 +75,7 @@ describe('AMP Ads', () => {
       expect(getByLabelText('Publicités')).not.toBeVisible();
     });
 
-    it('should render ad placeholder in UK when adPlaceholder toggle is true', () => {
+    it('should render ad placeholder in UK when showAdPlaceholder in service config is true', () => {
       const { getByLabelText } = render(
         <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
           {adWithContext('leaderboard', true)}
