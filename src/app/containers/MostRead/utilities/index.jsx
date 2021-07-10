@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
 import Timestamp from '@bbc/psammead-timestamp';
 import { MostReadItemWrapper, MostReadLink } from '../Canonical/Item';
 import MostReadRank from '../Canonical/Rank';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-/* eslint-disable react/prop-types */
 const lastUpdated = ({ script, service }) => (
   // This will return the provided english translations
   <Timestamp
@@ -16,6 +18,18 @@ const lastUpdated = ({ script, service }) => (
   >
     Last updated: 5th November 2016
   </Timestamp>
+);
+
+const WithContexts = ({ children }) => (
+  <ServiceContextProvider service="pidgin">
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: { enabled: true },
+      }}
+    >
+      {children}
+    </ToggleContextProvider>
+  </ServiceContextProvider>
 );
 
 export const getItem = ({ service, withTimestamp = false }) => {
@@ -69,5 +83,5 @@ export const getItemWrapperArray = ({
       </MostReadItemWrapper>,
     );
   }
-  return itemWrapperArray;
+  return <WithContexts>{itemWrapperArray}</WithContexts>;
 };

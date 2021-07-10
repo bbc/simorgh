@@ -11,8 +11,8 @@ module.exports = {
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
-    '@storybook/addon-controls',
     '@storybook/addon-docs',
+    '@storybook/addon-controls',
   ],
   webpackFinal: async config => {
     config.plugins.push(
