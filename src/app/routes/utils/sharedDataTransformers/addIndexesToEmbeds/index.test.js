@@ -275,7 +275,7 @@ it('should return original json input if the embed is missing url or provider pr
   expect(actual).toEqual(expected);
 });
 
-it('should return enriched blocks with a new property "indexOfType" even for duplicate embeds', () => {
+it('should return enriched blocks correctly incremented "indexOfType" for duplicate embeds in article', () => {
   const fixture = {
     content: {
       model: {
