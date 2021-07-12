@@ -274,3 +274,44 @@ it('should return original json input if the embed is missing url or provider pr
 
   expect(actual).toEqual(expected);
 });
+
+it('should return enriched blocks with a new property "indexOfType" even for duplicate embeds', () => {
+  const fixture = {
+    content: {
+      model: {
+        blocks: [
+          buildEmbedBlock({
+            provider: 'Twitter',
+            url: 'https://twitter.com/bbcnews/status/3543545',
+          }),
+          buildEmbedBlock({
+            provider: 'Twitter',
+            url: 'https://twitter.com/bbcnews/status/3543545',
+          }),
+          buildEmbedBlock({
+            provider: 'Twitter',
+            url: 'https://twitter.com/bbcnews/status/3543545',
+          }),
+        ],
+      },
+    },
+  };
+  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
+  const { blocks } = enrichedArticleBlocks.content.model;
+
+  expect(getOembed(blocks[0])).toEqual({
+    indexOfType: 1,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/3543545',
+  });
+  expect(getOembed(blocks[1])).toEqual({
+    indexOfType: 2,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/3543545',
+  });
+  expect(getOembed(blocks[2])).toEqual({
+    indexOfType: 3,
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/3543545',
+  });
+});

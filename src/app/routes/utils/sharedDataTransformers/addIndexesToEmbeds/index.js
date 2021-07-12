@@ -59,6 +59,26 @@ const enrichEmbed = indexedEmbeds => unIndexedEmbed => {
   return getMatchingEmbed(indexedEmbeds);
 };
 
+const handleDuplicates = (accumulator, block) => {
+  const duplicates = accumulator.filter(matchesEmbedUrl(getEmbedUrl(block)));
+  const numDuplicates = duplicates.length;
+
+  if (numDuplicates > 0) {
+    const lastDuplicate = duplicates[numDuplicates - 1];
+    const indexOfType = getOembedProp('indexOfType')(lastDuplicate) + 1;
+    const oEmbed = getOembed(block);
+    const updatedOembed = {
+      ...oEmbed,
+      ...(indexOfType && { indexOfType }),
+    };
+    const updatedBlock = set(oEmbedLens, updatedOembed, block);
+
+    return [...accumulator, updatedBlock];
+  }
+
+  return [...accumulator, block];
+};
+
 export default json => {
   try {
     const embedsGroupedByProvider = groupEmbedsByProvider(json);
@@ -66,9 +86,11 @@ export default json => {
     const enrichedArticleBlocks = getArticleBlocks(json).map(
       when(isValidSocialEmbed, enrichEmbed(indexedEmbeds)),
     );
+    const newArticleBlocks = enrichedArticleBlocks.reduce(handleDuplicates, []);
 
-    return set(articleBlocksLens, enrichedArticleBlocks, json);
+    return set(articleBlocksLens, newArticleBlocks, json);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
 
     return json;
