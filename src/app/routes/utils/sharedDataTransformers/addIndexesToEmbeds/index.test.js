@@ -55,29 +55,7 @@ const getOembed = path([
   'oembed',
 ]);
 
-it('should return enriched blocks with the first embed block with "indexOfType" equal to 1', () => {
-  const fixture = {
-    content: {
-      model: {
-        blocks: [
-          buildEmbedBlock({
-            provider: 'Twitter',
-            url: 'https://twitter.com/bbcnews/status/0516510',
-          }),
-        ],
-      },
-    },
-  };
-  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
-
-  expect(getOembed(enrichedArticleBlocks.content.model.blocks[0])).toEqual({
-    indexOfType: 1,
-    provider_name: 'Twitter',
-    url: 'https://twitter.com/bbcnews/status/0516510',
-  });
-});
-
-it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all embed blocks', () => {
+it('should return enriched blocks with a new property "indexOfType" (indicates the position of the social embed block by provider) added to all embed blocks', () => {
   const fixture = {
     content: {
       model: {
@@ -125,7 +103,7 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
   });
 });
 
-it('should return enriched blocks with a new property "indexOfType" equal to n + 1 added to all embed blocks of any provider', () => {
+it('should return enriched blocks with a new property "indexOfType" (indicates the position of the social embed block by provider) to all embed blocks of any provider', () => {
   const fixture = {
     content: {
       model: {
