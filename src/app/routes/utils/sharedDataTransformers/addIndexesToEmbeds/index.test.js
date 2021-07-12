@@ -222,3 +222,77 @@ it('should return enriched blocks with a new property "indexOfType" equal to n +
     url: 'https://instagram.com/bbcnews/status/02105151',
   });
 });
+
+it('should return original json input if the data structure is not as expected', () => {
+  /* eslint-disable no-console */
+  const { error } = console;
+  console.error = jest.fn();
+
+  const fixture = {
+    blah: 'hello',
+  };
+  const actual = addIndexesToEmbeds(fixture);
+  const expected = fixture;
+
+  expect(actual).toEqual(expected);
+  expect(console.error).toHaveBeenCalled();
+
+  console.error = error;
+  /* eslint-enable no-console */
+});
+
+it('should return original json input if the embed is missing url or provider props', () => {
+  const embedWithMissingUrl = {
+    type: 'social',
+    model: {
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                type: 'aresOEmbed',
+                model: {
+                  oembed: {
+                    provider_name: 'Twitter',
+                  },
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  };
+  const embedWithMissingProvider = {
+    type: 'social',
+    model: {
+      blocks: [
+        {
+          model: {
+            blocks: [
+              {
+                type: 'aresOEmbed',
+                model: {
+                  oembed: {
+                    url: 'https://twitter.com/bbcnews/status/354354545',
+                  },
+                },
+              },
+            ],
+          },
+        },
+      ],
+    },
+  };
+  const fixture = {
+    content: {
+      model: {
+        blocks: [textBlock, embedWithMissingUrl, embedWithMissingProvider],
+      },
+    },
+  };
+  const actual = addIndexesToEmbeds(fixture);
+  const expected = fixture;
+
+  expect(actual).toEqual(expected);
+});

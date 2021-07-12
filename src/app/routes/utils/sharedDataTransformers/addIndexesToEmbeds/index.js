@@ -1,3 +1,4 @@
+import allPass from 'ramda/src/allPass';
 import equals from 'ramda/src/equals';
 import filter from 'ramda/src/filter';
 import find from 'ramda/src/find';
@@ -18,14 +19,19 @@ const getArticleBlocks = view(articleBlocksLens);
 const oEmbedLens = lensPath(
   pathToBlocks.concat(firstItem, pathToBlocks, firstItem, [model, 'oembed']),
 );
-const isEmbed = pipe(prop('type'), equals('social')); // to include embeds other than social then change this line
 const getOembed = view(oEmbedLens);
 const getOembedProp = property => pipe(getOembed, prop(property));
 const getEmbedUrl = getOembedProp('url');
 const getEmbedProvider = getOembedProp('provider_name');
+const isSocialEmbed = pipe(prop('type'), equals('social'));
+const isValidSocialEmbed = allPass([
+  isSocialEmbed,
+  getEmbedUrl,
+  getEmbedProvider,
+]);
 const groupEmbedsByProvider = pipe(
   getArticleBlocks,
-  filter(isEmbed),
+  filter(isValidSocialEmbed),
   groupBy(getEmbedProvider),
   Object.entries,
 );
@@ -58,7 +64,7 @@ export default json => {
     const embedsGroupedByProvider = groupEmbedsByProvider(json);
     const indexedEmbeds = embedsGroupedByProvider.map(addIndexToEmbed);
     const enrichedArticleBlocks = getArticleBlocks(json).map(
-      when(isEmbed, enrichEmbed(indexedEmbeds)),
+      when(isValidSocialEmbed, enrichEmbed(indexedEmbeds)),
     );
 
     return set(articleBlocksLens, enrichedArticleBlocks, json);
