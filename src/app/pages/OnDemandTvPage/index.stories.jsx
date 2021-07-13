@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { OnDemandTvPage } from '..';
@@ -23,28 +22,33 @@ const matchFixtures = service => ({
   },
 });
 
-const status = 200;
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => (
+  <BrowserRouter>
+    <OnDemandTvPage
+      match={matchFixtures(service)}
+      pageData={onDemandTvFixtures[service]}
+      status={200}
+      service={service}
+      isAmp={false}
+      loading={false}
+      error=""
+      pageType={MEDIA_PAGE}
+    />
+  </BrowserRouter>
+);
 
-storiesOf('Pages/OnDemand TV Page', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .addDecorator(withKnobs)
-  .addDecorator(
+export default {
+  Component,
+  title: 'Pages/OnDemand TV Page',
+  decorators: [
+    withKnobs,
     withServicesKnob({
       defaultService: 'pashto',
       services: Object.keys(onDemandTvFixtures),
     }),
-  )
-  .add('default', ({ service }) => (
-    <BrowserRouter>
-      <OnDemandTvPage
-        match={matchFixtures(service)}
-        pageData={onDemandTvFixtures[service]}
-        status={status}
-        service={service}
-        isAmp={false}
-        loading={false}
-        error=""
-        pageType={MEDIA_PAGE}
-      />
-    </BrowserRouter>
-  ));
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+  ],
+};
+
+export const Page = Component;

@@ -1,24 +1,21 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import persianAfghanistanIdxData from '#data/persian/afghanistan';
 import ukraineInRussianIdxData from '#data/ukrainian/ukraine_in_russian';
 import IdxPageWithContext from './testHelpers';
 
-const stories = storiesOf('Pages/Idx Page', module);
+export default {
+  Component: IdxPageWithContext,
+  title: 'Pages/Idx Page',
+};
 
-[
-  {
-    idxPage: 'persian/afghanistan',
-    pageData: persianAfghanistanIdxData,
-    service: 'persian',
-  },
-  {
-    idxPage: 'ukrainian/ukraine_in_russian',
-    pageData: ukraineInRussianIdxData,
-    service: 'ukrainian',
-  },
-].forEach(({ idxPage, pageData, service }) => {
-  stories.add(`${idxPage}`, () => {
-    return <IdxPageWithContext service={service} pageData={pageData} />;
-  });
-});
+export const Persian = () => (
+  <IdxPageWithContext service="persian" pageData={persianAfghanistanIdxData} />
+);
+
+Persian.storyName = 'persian/afghanistan';
+
+export const Ukrainian = () => (
+  <IdxPageWithContext service="ukrainian" pageData={ukraineInRussianIdxData} />
+);
+
+Ukrainian.storyName = 'ukrainian/ukraine_in_russian';
