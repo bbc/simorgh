@@ -20,7 +20,6 @@ const getEmbedProvider = getOembedProp('provider_name');
 const getEmbedIndexOfType = getOembedProp('indexOfType');
 const matchesEmbedProvider = provider =>
   pipe(getEmbedProvider, equals(provider));
-
 const enrichBlocks = (accumulator, block) => {
   const embedUrl = getEmbedUrl(block);
   const embedProvider = getEmbedProvider(block);
