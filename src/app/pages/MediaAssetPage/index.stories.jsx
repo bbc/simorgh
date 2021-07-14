@@ -32,6 +32,11 @@ platforms.forEach(platform => {
           status={200}
           pageData={pageData}
           service="pidgin"
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
         />
       </BrowserRouter>
     );

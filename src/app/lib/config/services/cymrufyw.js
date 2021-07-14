@@ -70,6 +70,7 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      relatedTopics: 'Pynciau Cysylltiedig',
       navMenuText: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

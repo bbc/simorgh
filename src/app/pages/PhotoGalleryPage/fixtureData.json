@@ -172,7 +172,13 @@
     },
     "version": "v1.0.10",
     "blockTypes": ["image"],
-    "includeComments": false
+    "includeComments": false,
+    "topics": [
+      {
+        "topicName": "Eurovision",
+        "topicId": "topicId"
+      }
+    ]
   },
   "relatedContent": {
     "groups": [

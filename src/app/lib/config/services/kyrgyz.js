@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      relatedTopics: 'Тектеш темалар',
       navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

@@ -14,7 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -51,6 +51,7 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import RelatedTopics from '#containers/RelatedTopics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -97,6 +98,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
+  const isTest =
+    process?.env?.SIMORGH_APP_ENV === 'local' ||
+    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const gridColumns = {
     group0: 8,
@@ -317,6 +322,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+
+          {isTest && topics && (
+            <GridItemLarge>
+              <RelatedTopics topics={topics} />
+            </GridItemLarge>
+          )}
+
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}

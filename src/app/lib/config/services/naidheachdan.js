@@ -70,6 +70,7 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      relatedTopics: 'Cuspairean Ceangailte',
       navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
