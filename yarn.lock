@@ -1533,10 +1533,10 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.3.0"
 
-"@bbc/psammead-topic-tags@0.1.0-alpha.9":
-  version "0.1.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-topic-tags/-/psammead-topic-tags-0.1.0-alpha.9.tgz#e029d042eb3be180ba94c1eca2cc6e9389afd206"
-  integrity sha512-R2N9JaSB9zhBQK/hRBYfu+9on+Z4nfebNYs3e6Svzzuh5Z0W98V+8ka0irW6vqHBil5dPgDa93UGDDfrLeZ+pw==
+"@bbc/psammead-topic-tags@0.1.0-alpha.10":
+  version "0.1.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-topic-tags/-/psammead-topic-tags-0.1.0-alpha.10.tgz#e28fd772f2cac034061a7d7ce3e57060c0ac0050"
+  integrity sha512-BO5ridBsg1R7DSR4RufMQezGKz/QHCtoJ3npPLDvbo4EmEk/T0QQg87LNTkH/pqm5duJaW83OD9qzwPZFFIWMQ==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.3.0"
