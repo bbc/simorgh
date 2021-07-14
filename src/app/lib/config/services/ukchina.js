@@ -141,6 +141,7 @@ export const service = {
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
+      relatedTopics: '相关主题内容',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
@@ -401,6 +402,7 @@ export const service = {
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
+      relatedTopics: '相關主題內容',
       navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',

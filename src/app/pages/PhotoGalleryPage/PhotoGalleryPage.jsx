@@ -9,9 +9,10 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import { node } from 'prop-types';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import { GelPageGrid } from '#app/components/Grid';
+import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -33,6 +34,28 @@ import {
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
+import RelatedTopics from '#containers/RelatedTopics';
+
+const PhotoGalleryPageGrid = ({ children, ...props }) => (
+  <GelPageGrid
+    enableGelGutters
+    columns={{
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 8,
+      group5: 20,
+    }}
+    {...props}
+  >
+    {children}
+  </GelPageGrid>
+);
+
+PhotoGalleryPageGrid.propTypes = {
+  children: node.isRequired,
+};
 
 const PhotoGalleryPage = ({ pageData }) => {
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -52,9 +75,13 @@ const PhotoGalleryPage = ({ pageData }) => {
     ? getImageParts(indexImagePath)[1]
     : null;
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const isTest =
+    process?.env?.SIMORGH_APP_ENV === 'local' ||
+    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const componentsToRender = {
     fauxHeadline,
@@ -71,7 +98,7 @@ const PhotoGalleryPage = ({ pageData }) => {
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
   };
 
-  const StyledGelPageGrid = styled(GelPageGrid)`
+  const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`
     padding-bottom: ${GEL_SPACING_TRPL};
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -117,21 +144,18 @@ const PhotoGalleryPage = ({ pageData }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
 
-      <StyledGelPageGrid
-        as="main"
-        role="main"
-        enableGelGutters
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-      >
+      <StyledPhotoGalleryPageGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGelPageGrid>
+      </StyledPhotoGalleryPageGrid>
+
+      {isTest && topics && (
+        <PhotoGalleryPageGrid>
+          <GridItemLarge>
+            <RelatedTopics topics={topics} />
+          </GridItemLarge>
+        </PhotoGalleryPageGrid>
+      )}
+
       <CpsRelatedContent content={relatedContent} enableGridWrapper />
     </>
   );
