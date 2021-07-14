@@ -181,7 +181,6 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0.96875rem 0.4375rem;
-  line-height: 1;
   background-color: #F2F2F2;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -429,7 +428,6 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 0.96875rem 0.4375rem;
-  line-height: 1;
   background-color: #F2F2F2;
   -webkit-text-decoration: none;
   text-decoration: none;
