@@ -14,13 +14,6 @@ import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
 
-const { env } = process;
-process.env.SIMORGH_BASE_URL = 'https://bbc.com';
-
-afterAll(() => {
-  process.env = env;
-});
-
 const eventTrackingData = {
   componentName: 'topics',
 };

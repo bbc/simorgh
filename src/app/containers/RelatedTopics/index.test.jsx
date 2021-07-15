@@ -11,6 +11,13 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
+const { env } = process;
+process.env.SIMORGH_BASE_URL = 'https://bbc.com';
+
+afterAll(() => {
+  process.env = env;
+});
+
 beforeEach(() => {
   jest.resetModules();
 });
