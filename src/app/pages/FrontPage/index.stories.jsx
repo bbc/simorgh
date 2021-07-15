@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import arabicData from '#data/arabic/frontpage';
@@ -28,28 +27,34 @@ const serviceConfigs = {
   serbian: serbianConfig,
 };
 
-const stories = storiesOf('Pages/Front Page', module).addDecorator(story => (
-  <WithTimeMachine>{story()}</WithTimeMachine>
-));
+// eslint-disable-next-line react/prop-types
+const Component = ({ service, variant = 'default' } = {}) => (
+  <BrowserRouter>
+    <FrontPage
+      isAmp={false}
+      pageType={FRONT_PAGE}
+      status={200}
+      pathname={serviceConfigs[service][variant].navigation[0].url}
+      service={service}
+      variant={variant}
+      pageData={serviceDataSets[service][variant]}
+      mostReadEndpointOverride={getLocalMostReadEndpoint({
+        service,
+        variant,
+      })}
+    />
+  </BrowserRouter>
+);
 
-Object.keys(serviceDataSets).forEach(service => {
-  Object.keys(serviceDataSets[service]).forEach(variant => {
-    stories.add(`${service} ${variant === 'default' ? '' : variant}`, () => (
-      <BrowserRouter>
-        <FrontPage
-          isAmp={false}
-          pageType={FRONT_PAGE}
-          status={200}
-          pathname={serviceConfigs[service][variant].navigation[0].url}
-          service={service}
-          variant={variant}
-          pageData={serviceDataSets[service][variant]}
-          mostReadEndpointOverride={getLocalMostReadEndpoint({
-            service,
-            variant,
-          })}
-        />
-      </BrowserRouter>
-    ));
-  });
-});
+export default {
+  Component,
+  title: 'Pages/Front Page',
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+};
+
+export const Arabic = () => <Component service="arabic" />;
+export const Igbo = () => <Component service="igbo" />;
+export const SerbianCyrillic = () => (
+  <Component service="serbian" variant="cyr" />
+);
+export const SerbianLatin = () => <Component service="serbian" variant="lat" />;
