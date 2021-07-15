@@ -25,9 +25,6 @@ const StyledSectionLabel = styled(SectionLabel)`
 const RelatedTopics = ({ topics }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
-  const isEnabled =
-    process?.env?.SIMORGH_APP_ENV === 'test' ||
-    process?.env?.SIMORGH_APP_ENV === 'local';
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
@@ -39,8 +36,7 @@ const RelatedTopics = ({ topics }) => {
   };
 
   return (
-    topics &&
-    isEnabled && (
+    topics && (
       <StyledTopicsWrapper
         aria-labelledby="related-topics"
         role="complementary"

@@ -9,7 +9,7 @@ import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import RelatedTopics from '#containers/RelatedTopics';
 import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
-import { STORY_PAGE, ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 process.env.SIMORGH_BASE_URL = 'https://bbc.com';
 const { env } = process;
@@ -118,39 +118,6 @@ describe('Expected use', () => {
       'href',
       `https://bbc.com/uzbek/cyr/topics/${topic.topicId}`,
     );
-  });
-
-  it('should return null when on the live environment', () => {
-    process.env.SIMORGH_APP_ENV = 'live';
-    const { container } = render(
-      <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
-        <RelatedTopics
-          topics={[
-            { topicName: 'topic1', topicId: '1' },
-            { topicName: 'topic2', topicId: '2' },
-            { topicName: 'topic3', topicId: '3' },
-          ]}
-        />
-      </WithContexts>,
-    );
-    expect(container.firstChild).toBeNull();
-  });
-
-  it('should return null when process is undefined', () => {
-    process.env = undefined;
-
-    const { container } = render(
-      <WithContexts optimoEnabled={false} pageType={ARTICLE_PAGE}>
-        <RelatedTopics
-          topics={[
-            { topicName: 'topic1', topicId: '1' },
-            { topicName: 'topic2', topicId: '2' },
-            { topicName: 'topic3', topicId: '3' },
-          ]}
-        />
-      </WithContexts>,
-    );
-    expect(container.firstChild).toBeNull();
   });
 });
 
