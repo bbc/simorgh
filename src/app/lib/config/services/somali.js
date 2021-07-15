@@ -66,6 +66,7 @@ export const service = {
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
+      relatedTopics: 'Mowduucyada la xiriira',
       navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',

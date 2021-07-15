@@ -67,6 +67,7 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',

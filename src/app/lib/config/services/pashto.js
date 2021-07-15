@@ -72,6 +72,7 @@ export const service = {
       currentPage: 'اوسنۍ پاڼه',
       skipLinkText: 'مطلب ته ورشئ',
       relatedContent: 'ورته مطالب',
+      relatedTopics: 'اړونده مطالب',
       navMenuText: 'برخې',
       mediaAssetPage: {
         mediaPlayer: 'میډیا پلیئر',
