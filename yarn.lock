@@ -1533,6 +1533,14 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.3.0"
 
+"@bbc/psammead-topic-tags@0.1.0-alpha.10":
+  version "0.1.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-topic-tags/-/psammead-topic-tags-0.1.0-alpha.10.tgz#e28fd772f2cac034061a7d7ce3e57060c0ac0050"
+  integrity sha512-BO5ridBsg1R7DSR4RufMQezGKz/QHCtoJ3npPLDvbo4EmEk/T0QQg87LNTkH/pqm5duJaW83OD9qzwPZFFIWMQ==
+  dependencies:
+    "@bbc/gel-foundations" "6.1.3"
+    "@bbc/psammead-styles" "7.3.0"
+
 "@bbc/psammead-useful-links@3.0.20":
   version "3.0.20"
   resolved "https://registry.yarnpkg.com/@bbc/psammead-useful-links/-/psammead-useful-links-3.0.20.tgz#ad76eeb4ae5ccb0e4d5b1e51844ca0488cd79deb"
@@ -3226,16 +3234,15 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react-hooks@5.1.3":
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-5.1.3.tgz#f722cc526025be2c16966a9a081edf47a2528721"
-  integrity sha512-UdEUtlQapQ579NEcXDAUE275u+KUsPtxW7NmFrNt0bE6lW8lqNCyxDK0RSuECmNZ/S0/fgP00W9RWRhVKO/hRg==
+"@testing-library/react-hooks@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-7.0.0.tgz#dd6d37a7e018f147a3b9153137f10e013be8472b"
+  integrity sha512-WFBGH8DWdIGGBHt6PBtQPe2v4Kbj9vQ1sQ9qLBTmwn1PNggngint4MTE/IiWCYhPbyTW3oc/7X62DObMn/AjQQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@types/react" ">=16.9.0"
     "@types/react-dom" ">=16.9.0"
     "@types/react-test-renderer" ">=16.9.0"
-    filter-console "^0.1.1"
     react-error-boundary "^3.1.0"
 
 "@testing-library/react@11.2.7":
@@ -7580,11 +7587,6 @@ fill-range@^7.0.1:
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
-
-filter-console@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/filter-console/-/filter-console-0.1.1.tgz#6242be28982bba7415bcc6db74a79f4a294fa67c"
-  integrity sha512-zrXoV1Uaz52DqPs+qEwNJWJFAWZpYJ47UNmpN9q4j+/EYsz85uV0DC9k8tRND5kYmoVzL0W+Y75q4Rg8sRJCdg==
 
 finalhandler@~1.1.2:
   version "1.1.2"
@@ -12791,15 +12793,10 @@ react-input-autosize@^3.0.0:
   dependencies:
     prop-types "^15.5.8"
 
-react-is@^16.12.0, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
+react-is@16.13.1, react-is@^16.12.0, "react-is@^16.12.0 || ^17.0.0", react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^17.0.1, react-is@^17.0.2:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-"react-is@^16.12.0 || ^17.0.0", react-is@^17.0.1, react-is@^17.0.2:
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
-  integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
 react-lazyload@3.2.0:
   version "3.2.0"

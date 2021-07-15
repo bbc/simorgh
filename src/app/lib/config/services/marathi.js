@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      relatedTopics: 'संबंधित विषय',
       navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',

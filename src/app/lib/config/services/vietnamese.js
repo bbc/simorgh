@@ -67,6 +67,7 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      relatedTopics: 'Chủ đề liên quan',
       navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
