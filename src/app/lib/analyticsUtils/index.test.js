@@ -20,10 +20,8 @@ const {
   getPublishedDatetime,
   getAtUserId,
   sanitise,
-  getProducer,
   getAtiUrl,
   getEventInfo,
-  getComponentInfo,
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
@@ -386,12 +384,6 @@ describe('getPublishedDatetime', () => {
   });
 });
 
-describe('getProducer', () => {
-  it('should return a number', () => {
-    expect(typeof Number(getProducer('news'))).toEqual('number');
-  });
-});
-
 describe('getAtiUrl', () => {
   it('should return url', () => {
     const data = [
@@ -422,75 +414,24 @@ describe('getAtiUrl', () => {
 
 describe('getEventInfo', () => {
   const params = {
-    service: 'service',
-    componentName: 'component',
-    componentInfo: {
-      actionLabel: 'actionLabel',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'child',
-      },
-    },
-    type: 'type',
+    pageIdentifier: 'page-identifier',
+    componentName: 'component-name',
+    campaignID: 'campaign-id',
+    url: 'url',
+    format: 'format',
+    detailedPlacement: 'detailed-placement',
+    advertiserID: 'mundo',
+    variant: 'a/b-test',
   };
-  const pageIdentifier = 'page';
 
   it('should return url section', () => {
-    expect(getEventInfo(pageIdentifier, params)).toEqual(
-      'PUB-[service-component]-[actionLabel~type]-[]-[PAR=container-component~CHD=child]-[page]-[]-[responsive_web~news-simorgh]-[url.com]',
+    expect(getEventInfo(params)).toEqual(
+      'PUB-[campaign-id]-[component-name]-[a/b-test]-[format]-[page-identifier]-[detailed-placement]-[mundo]-[url]',
     );
   });
 
-  it('should include elem.href in output', () => {
-    expect(getEventInfo(pageIdentifier, params)).toContain('[url.com]');
-  });
-});
-
-describe('getComponentInfo', () => {
-  const event = { target: { href: 'url.com' } };
-  const props = { actionLabel: 'prop1', child: 'prop2' };
-
-  it('should return a componentInfo object', () => {
-    const result = {
-      actionLabel: 'component-prop1',
-      source: '',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'prop2',
-      },
-    };
-
-    expect(
-      getComponentInfo({
-        result: event.target.href,
-        componentName: 'component',
-        componentData: props,
-      }),
-    ).toEqual(result);
-  });
-
-  it('should return an object with adId if value included in props', () => {
-    props.source = 'source';
-
-    const result = {
-      actionLabel: 'component-prop1',
-      source: 'source',
-      result: 'url.com',
-      positioning: {
-        parent: 'container-component',
-        child: 'prop2',
-      },
-    };
-
-    expect(
-      getComponentInfo({
-        result: event.target.href,
-        componentName: 'component',
-        componentData: props,
-      }),
-    ).toEqual(result);
+  it('should allow empty values', () => {
+    expect(getEventInfo()).toContain('PUB-[]-[]-[]-[]-[]-[]-[]-[]');
   });
 });
 
@@ -746,10 +687,11 @@ describe('getCustomMarketingString', () => {
 
 describe('getXtorMarketingString', () => {
   it.each`
-    expectation                                                               | href                                                      | expectedValue
-    ${'the value of the "xtor" field when it is a hash param from an anchor'} | ${'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030'} | ${'AD-3030'}
-    ${'the value of the xtor field when it is a query param'}                 | ${'https://www.bbc.com/mundo?xtor=AD-3030'}               | ${'AD-3030'}
-    ${'null when xtor param is not available'}                                | ${'https://www.bbc.com/mundo#at_medium'}                  | ${null}
+    expectation                                                                           | href                                                          | expectedValue
+    ${'the value of the "xtor" field when it is a hash param from an anchor'}             | ${'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030'}     | ${'AD-3030'}
+    ${'the value of the xtor field when xtor is a query param and there is a hash param'} | ${'https://www.bbc.com/mundo?xtor=AD-3030#at_medium=AD-3040'} | ${'AD-3030'}
+    ${'the value of the xtor field when it is a query param'}                             | ${'https://www.bbc.com/mundo?xtor=AD-3030'}                   | ${'AD-3030'}
+    ${'null when xtor param is not available'}                                            | ${'https://www.bbc.com/mundo#at_medium'}                      | ${null}
   `('should return $expectation', ({ href, expectedValue }) => {
     expect(getXtorMarketingString(href)).toEqual(expectedValue);
   });

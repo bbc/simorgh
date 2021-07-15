@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { node } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -15,7 +14,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
@@ -35,6 +34,7 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
@@ -51,6 +51,7 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import RelatedTopics from '#containers/RelatedTopics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -97,6 +98,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
+  const isTest =
+    process?.env?.SIMORGH_APP_ENV === 'local' ||
+    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const gridColumns = {
     group0: 8,
@@ -177,6 +182,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
+    table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
@@ -251,16 +257,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     }
   `;
 
-  const ResponsivePodcastPromoWrapper = styled.div`
-    margin-top: ${GEL_SPACING_TRPL};
-    margin-bottom: ${GEL_SPACING_TRPL};
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin-top: -${GEL_SPACING_SEXT};
-      margin-bottom: -${GEL_SPACING};
-      padding: ${GEL_SPACING_DBL};
-    }
-  `;
-
   const MostReadWrapper = ({ children }) => (
     <section role="region" aria-labelledby="Most-Read" data-e2e="most-read">
       <SectionLabel
@@ -326,6 +322,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+
+          {isTest && topics && (
+            <GridItemLarge>
+              <RelatedTopics topics={topics} />
+            </GridItemLarge>
+          )}
+
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}
@@ -347,11 +350,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {podcastPromoEnabled && (
-            <ResponsivePodcastPromoWrapper>
-              <PodcastPromo />
-            </ResponsivePodcastPromoWrapper>
-          )}
+          {podcastPromoEnabled && <PodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis

@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      relatedTopics: 'Mada zinazohusiana',
       navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',

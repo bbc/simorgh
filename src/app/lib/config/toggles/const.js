@@ -4,6 +4,7 @@ export default {
   COMSCORE_ANALYTICS: 'comscoreAnalytics',
   CPS_RECOMMENDATIONS: 'cpsRecommendations',
   ENABLE_FETCHING_TOGGLES: 'enableFetchingToggles',
+  EVENT_TRACKING: 'eventTracking',
   INCLUDE: 'include',
   LIVE_RADIO_SCHEDULE: 'liveRadioSchedule',
   MEDIA_PLAYER: 'mediaPlayer',

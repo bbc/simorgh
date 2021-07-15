@@ -39,7 +39,9 @@ Object.keys(config)
     const paths = getPaths(service);
     paths.forEach(path => {
       describeForEuOnly(`${path} - Canonical Cookie Banner`, () => {
-        runCanonicalTests({ service, variant, pageType, path });
+        if (service !== 'news') {
+          runCanonicalTests({ service, variant, pageType, path });
+        }
       });
     });
 

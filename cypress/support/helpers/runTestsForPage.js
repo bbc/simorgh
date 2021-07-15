@@ -89,6 +89,12 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - AMP`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
+            // If the page type is front page we use this query to get test ads which are more reliable
+            // This was implemented due to a repeating application error on Arabic AMP front page when ads were present
+            if (pageType === 'frontPage') {
+              // eslint-disable-next-line no-param-reassign
+              currentPath += '?site=test';
+            }
             visitPage(getAmpUrl(currentPath), pageType);
           });
 

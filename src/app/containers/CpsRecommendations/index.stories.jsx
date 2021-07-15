@@ -15,6 +15,9 @@ const renderRecommendations = (items, service, dir) => {
     cpsRecommendations: {
       enabled: true,
     },
+    eventTracking: {
+      enabled: false,
+    },
   };
   const parentGridCols = {
     group0: 8,

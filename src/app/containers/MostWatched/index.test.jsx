@@ -4,6 +4,7 @@ import { render } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { storyItem } from '#models/propTypes/storyItem';
 import MostWatched from '.';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
@@ -20,7 +21,13 @@ const MostWatchedComponent = ({ data, isAmp, isMostWatchedPage }) => (
       service="pidgin"
       statusCode={200}
     >
-      <MostWatched data={data} isMostWatchedPage={isMostWatchedPage} />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: true },
+        }}
+      >
+        <MostWatched data={data} isMostWatchedPage={isMostWatchedPage} />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );

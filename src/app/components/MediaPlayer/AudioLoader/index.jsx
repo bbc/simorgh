@@ -32,7 +32,12 @@ const spin = keyframes`
 const Spinner = styled.svg`
   width: 64px;
   height: 64px;
+
   stroke: currentColor;
+  @media screen and (-ms-high-contrast: active) {
+    stroke: windowText;
+  }
+
   will-change: transform;
   @media (prefers-reduced-motion: no-preference) {
     animation: ${spin} 1.1s 3 linear;
@@ -49,6 +54,7 @@ const AudioLoader = ({ children, isLoading }) => (
           height="38"
           viewBox="0 0 38 38"
           focusable="false"
+          stroke="black"
         >
           <g fill="none" strokeWidth="2" transform="translate(1 1)">
             <circle strokeOpacity="0.2" cx="18" cy="18" r="18" />

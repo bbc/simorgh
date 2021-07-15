@@ -9,7 +9,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import { EventContextProvider } from '#contexts/EventContext';
+import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 
 const WithContexts = Component => {
   const WithContextsContainer = props => {
@@ -49,11 +49,11 @@ const WithContexts = Component => {
             timeOnServer={timeOnServer}
             showAdsBasedOnLocation={showAdsBasedOnLocation}
           >
-            <EventContextProvider>
+            <EventTrackingContextProvider pageData={pageData}>
               <UserContextProvider>
                 <Component {...props} />
               </UserContextProvider>
-            </EventContextProvider>
+            </EventTrackingContextProvider>
           </RequestContextProvider>
         </ServiceContextProvider>
       </ToggleContextProvider>

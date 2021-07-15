@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
@@ -66,12 +67,18 @@ const getStoryPromo = (
       pageType={ARTICLE_PAGE}
       service="news"
     >
-      <StoryPromoContainer
-        item={item}
-        promoType={promoType}
-        isRecommendation={isRecommendation}
-        isSingleColumnLayout={isSingleColumnLayout}
-      />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
+      >
+        <StoryPromoContainer
+          item={item}
+          promoType={promoType}
+          isRecommendation={isRecommendation}
+          isSingleColumnLayout={isSingleColumnLayout}
+        />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );

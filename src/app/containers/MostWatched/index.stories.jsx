@@ -8,6 +8,7 @@ import {
 import MostWatchedContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
@@ -31,7 +32,13 @@ storiesOf(MOST_WATCHED_STORIES, module)
           service="pidgin"
           statusCode={200}
         >
-          <MostWatchedContainer data={promos} />
+          <ToggleContextProvider
+            toggles={{
+              eventTracking: { enabled: false },
+            }}
+          >
+            <MostWatchedContainer data={promos} />
+          </ToggleContextProvider>
         </RequestContextProvider>
       </ServiceContextProvider>
     );

@@ -6,6 +6,7 @@ import topStories from '#pages/StoryPage/topStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const getTopStories = platform => (service, dir, data) => (
@@ -19,7 +20,13 @@ const getTopStories = platform => (service, dir, data) => (
         pathname="/"
         service={service}
       >
-        <TopStories content={data} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <TopStories content={data} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   </div>

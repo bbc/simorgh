@@ -66,6 +66,7 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      relatedTopics: '関連トピックス',
       navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'メディアプレイヤー',
@@ -308,6 +309,10 @@ export const service = {
       {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
+      },
+      {
+        title: '東京五輪・パラ',
+        url: '/japanese/57464837',
       },
       {
         title: '日本',

@@ -52,8 +52,8 @@ const getLinkXML = (url, text) =>
 
 const replaceChevrons = text =>
   text
-    .replace('<', '&lt;')
-    .replace('>', '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
     .replace(/&(?!amp|gt|lt)/, '&amp;');
 
 const transformBlockText = (blockText, blockMeta) => {

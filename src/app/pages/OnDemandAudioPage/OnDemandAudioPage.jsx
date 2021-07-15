@@ -183,7 +183,12 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
             columns={getGroups(6, 6, 6, 6, 6, 6)}
             enableGelGutters
           >
-            <StyledGridItemParagraph item columns={getGroups(6, 6, 4, 4, 4, 4)}>
+            <StyledGridItemParagraph
+              item
+              columns={getGroups(6, 6, 4, 4, 4, 4)}
+              parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
+              parentEnableGelGutters
+            >
               <StyledRadioHeadingContainer
                 idAttr={idAttr}
                 brandTitle={brandTitle}
@@ -195,7 +200,12 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
                 <FooterTimestamp releaseDateTimeStamp={releaseDateTimeStamp} />
               )}
             </StyledGridItemParagraph>
-            <StyledGridItemImage item columns={getGroups(0, 0, 2, 2, 2, 2)}>
+            <StyledGridItemImage
+              item
+              columns={getGroups(0, 0, 2, 2, 2, 2)}
+              parentColumns={getGroups(6, 6, 6, 6, 6, 6)}
+              parentEnableGelGutters
+            >
               <EpisodeImage imageUrl={imageUrl} alt={imageAltText} />
             </StyledGridItemImage>
           </StyledGelWrapperGrid>

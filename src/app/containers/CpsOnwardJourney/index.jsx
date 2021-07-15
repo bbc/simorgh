@@ -165,13 +165,14 @@ const CpsOnwardJourney = ({
   content,
   isMediaContent,
   parentColumns,
-  promoListComponent,
-  promoComponent,
+  promoListComponent: PromoListComponent,
+  promoComponent: PromoComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
   columnType,
   skipLink,
+  eventTrackingData,
 }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
@@ -221,10 +222,19 @@ const CpsOnwardJourney = ({
         ) : null}
         {hasSingleContent ? (
           <SingleContentWrapper columnType={columnType}>
-            {promoComponent({ promo: singleContent, dir })}
+            <PromoComponent
+              promo={singleContent}
+              dir={dir}
+              eventTrackingData={eventTrackingData}
+            />
           </SingleContentWrapper>
         ) : (
-          promoListComponent({ promoItems: content, dir, isMediaContent })
+          <PromoListComponent
+            promoItems={content}
+            dir={dir}
+            isMediaContent={isMediaContent}
+            eventTrackingData={eventTrackingData}
+          />
         )}
       </OptionallyRenderedSkipWrapper>
     </CpsOnwardJourneyWrapper>
@@ -257,6 +267,9 @@ CpsOnwardJourney.propTypes = {
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
   skipLink: shape(skipLinkProps),
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -270,6 +283,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBar: true,
   sectionLabelBackground: C_GHOST,
   skipLink: null,
+  eventTrackingData: null,
 };
 
 export default CpsOnwardJourney;

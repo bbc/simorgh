@@ -1,4 +1,5 @@
 import React from 'react';
+import path from 'ramda/src/path';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -8,6 +9,7 @@ import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import Grid from '../../../components/Grid';
 import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
+import useViewTracker from '#hooks/useViewTracker';
 
 const MediaStoryPromoLi = styled(StoryPromoLi)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -27,7 +29,15 @@ MostWatchedOl.defaultProps = {
   'data-e2e': 'most-watched-ol',
 };
 
-const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
+const RelatedContentPromoList = ({
+  promoItems,
+  dir,
+  isMediaContent,
+  eventTrackingData,
+}) => {
+  const blockLevelEventTrackingData = path(['block'], eventTrackingData);
+  const viewRef = useViewTracker(blockLevelEventTrackingData);
+
   return (
     <Grid
       columns={{
@@ -54,12 +64,14 @@ const RelatedContentPromoList = ({ promoItems, dir, isMediaContent }) => {
           }}
           as={isMediaContent ? MediaStoryPromoLi : StoryPromoLi}
           key={item.id || item.uri}
+          ref={viewRef}
         >
           <StoryPromo
             item={item}
             dir={dir}
             displaySummary={false}
             isSingleColumnLayout={isMediaContent}
+            eventTrackingData={eventTrackingData}
           />
         </Grid>
       ))}
@@ -71,10 +83,14 @@ RelatedContentPromoList.propTypes = {
   dir: string.isRequired,
   isMediaContent: bool,
   promoItems: arrayOf(shape(storyItem)).isRequired,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 RelatedContentPromoList.defaultProps = {
   isMediaContent: false,
+  eventTrackingData: null,
 };
 
 export default RelatedContentPromoList;

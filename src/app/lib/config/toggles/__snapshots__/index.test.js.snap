@@ -19,6 +19,9 @@ Object {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
+  "eventTracking": Object {
+    "enabled": false,
+  },
   "include": Object {
     "enabled": true,
   },
@@ -74,6 +77,9 @@ Object {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
   },
+  "eventTracking": Object {
+    "enabled": true,
+  },
   "include": Object {
     "enabled": true,
   },
@@ -125,6 +131,9 @@ Object {
   "enableFetchingToggles": Object {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
+  },
+  "eventTracking": Object {
+    "enabled": true,
   },
   "include": Object {
     "enabled": true,

@@ -575,7 +575,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
       </div>
     </li>
   </ol>
-  ,
 </div>
 `;
 
@@ -1140,6 +1139,5 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
       </div>
     </li>
   </ul>
-  ,
 </div>
 `;

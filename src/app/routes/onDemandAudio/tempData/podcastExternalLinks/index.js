@@ -12,11 +12,13 @@ const podcastExternalLinks = {
   hausa: () => import('./hausa.js'),
   hindi: () => import('./hindi.js'),
   indonesia: () => import('./indonesia.js'),
+  kyrgyz: () => import('./kyrgyz.js'),
   marathi: () => import('./marathi.js'),
   nepali: () => import('./nepali.js'),
   persian: () => import('./persian.js'),
   portuguese: () => import('./portuguese.js'),
   russian: () => import('./russian.js'),
+  ukrainian: () => import('./ukrainian.js'),
   zhongwen: () => import('./zhongwen.js'),
 };
 

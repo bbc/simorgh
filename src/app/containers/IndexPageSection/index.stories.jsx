@@ -2,6 +2,7 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import IndexPageSection from '.';
 
 import igboData from '#data/igbo/frontpage/index.json';
@@ -19,7 +20,13 @@ const getSection = platform => (service, data) => (
       pageType={FRONT_PAGE}
       service={service}
     >
-      <IndexPageSection group={data} sectionNumber={1} />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: { enabled: false },
+        }}
+      >
+        <IndexPageSection group={data} sectionNumber={1} />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );

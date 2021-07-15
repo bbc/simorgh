@@ -38,12 +38,18 @@ const sendDataFile = (res, dataFilePath, next) => {
 
 const PUBLIC_DIRECTORY = 'build/public';
 
+const removeTrailingSlash = url => {
+  const hasTrailingSlash = url.length > 1 && url.endsWith('/');
+  const redirectUrl = hasTrailingSlash ? url.slice(0, -1) : url;
+
+  return [hasTrailingSlash, redirectUrl];
+};
+
 export default server => {
   return server
     .use((req, res, next) => {
-      if (req.url.substr(-1) === '/' && req.url.length > 1)
-        res.redirect(301, req.url.slice(0, -1));
-      else next();
+      const [shouldRedirect, redirectUrl] = removeTrailingSlash(req.url);
+      return shouldRedirect ? res.redirect(301, redirectUrl) : next();
     })
     .use(
       expressStaticGzip(PUBLIC_DIRECTORY, {

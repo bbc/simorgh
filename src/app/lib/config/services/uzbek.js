@@ -65,6 +65,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      relatedTopics: 'Алоқадор мавзулар',
       navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',

@@ -25,8 +25,9 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
   if (result) {
     // the path is the first item in the array
     const path = result[0];
+    const hash = locator.split('#')[1] || null;
     return (
-      <InternalInlineLink to={path}>
+      <InternalInlineLink to={{ pathname: path, hash, state: { hash } }}>
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </InternalInlineLink>
     );

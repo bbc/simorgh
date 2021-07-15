@@ -1,4 +1,5 @@
-import { buildATIUrl, buildATIClickParams } from '.';
+/* eslint-disable no-console */
+import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -258,9 +259,9 @@ describe('ATIAnalytics params', () => {
     });
   });
 
-  describe('buildATIClickParams', () => {
+  describe('buildATIEventTrackingParams', () => {
     it('should return the right article params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         article,
         { ...requestContext, pageType: ARTICLE_PAGE },
         serviceContext,
@@ -288,7 +289,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right frontPage params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         frontPage,
         { ...requestContext, pageType: FRONT_PAGE },
         serviceContext,
@@ -311,7 +312,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right IDX page params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         idxPage,
         { ...requestContext, pageType: INDEX_PAGE },
         serviceContext,
@@ -334,7 +335,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right media params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         media,
         { ...requestContext, pageType: MEDIA_PAGE },
         serviceContext,
@@ -355,7 +356,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right MAP params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         MAP,
         { ...requestContext, pageType: MEDIA_ASSET_PAGE },
         serviceContext,
@@ -385,7 +386,7 @@ describe('ATIAnalytics params', () => {
     });
 
     it('should return the right PGL params', () => {
-      const params = buildATIClickParams(
+      const params = buildATIEventTrackingParams(
         PGL,
         { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
         serviceContext,
@@ -407,6 +408,26 @@ describe('ATIAnalytics params', () => {
         timePublished: '1970-01-01T00:00:00.000Z',
         timeUpdated: '1970-01-01T00:00:00.000Z',
       });
+    });
+
+    it('should not throw exception and return empty object if no pageData is passed in', () => {
+      const { error } = console;
+      console.error = jest.fn();
+
+      const pageData = null;
+      const params = buildATIEventTrackingParams(
+        pageData,
+        { ...requestContext, pageType: PHOTO_GALLERY_PAGE },
+        serviceContext,
+      );
+
+      expect(params).toEqual({});
+      expect(console.error).toHaveBeenCalledWith(
+        expect.stringContaining(
+          'ATI Event Tracking Error: Could not parse tracking values from page data:',
+        ),
+      );
+      console.error = error;
     });
   });
 });

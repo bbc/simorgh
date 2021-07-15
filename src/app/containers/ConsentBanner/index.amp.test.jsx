@@ -35,7 +35,8 @@ describe('Amp Consent Banner Container', () => {
   it('should render two banners with correct amp actions and visibility', () => {
     expect(Banner).toHaveBeenCalledWith(
       {
-        acceptAction: 'tap:cookie.show, privacy.hide',
+        acceptAction:
+          'tap:cookie.show, privacy.hide, AMP.setState({ isManagingSettings: false }), dataCollectionHeading.focus',
         promptId: 'privacy',
         rejectAction: 'tap:cookie.show, privacy.hide',
         type: 'privacy',

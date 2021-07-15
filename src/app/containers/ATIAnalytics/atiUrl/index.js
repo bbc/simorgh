@@ -12,7 +12,6 @@ import {
   sanitise,
   getAtiUrl,
   getEventInfo,
-  getProducer,
   getCampaignType,
   getATIMarketingString,
 } from '#lib/analyticsUtils';
@@ -220,12 +219,15 @@ export const buildATIPageTrackPath = ({
 
 export const buildATIEventTrackUrl = ({
   pageIdentifier,
-  service,
+  producerId,
   platform,
   statsDestination,
   componentName,
-  componentInfo,
+  campaignID,
+  format,
   type,
+  advertiserID,
+  url,
 }) => {
   // on AMP, variable substitutions are used in the value and they cannot be
   // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
@@ -233,6 +235,12 @@ export const buildATIEventTrackUrl = ({
 
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
+    {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
+      wrap: false,
+    },
     {
       key: 's',
       description: 'destination',
@@ -243,7 +251,7 @@ export const buildATIEventTrackUrl = ({
     {
       key: 's2',
       description: 'producer',
-      value: getProducer(service),
+      value: producerId,
       wrap: false,
     },
     {
@@ -283,13 +291,16 @@ export const buildATIEventTrackUrl = ({
     {
       key: eventPublisher,
       description: 'event publisher',
-      value: getEventInfo(pageIdentifier, {
-        service,
+      value: getEventInfo({
+        campaignID,
         componentName,
-        componentInfo,
-        type: type || '',
+        format,
+        pageIdentifier,
+        advertiserID,
+        url,
       }),
       wrap: false,
+      disableEncoding: true,
     },
   ];
 

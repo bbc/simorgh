@@ -44,6 +44,7 @@ storiesOf('Pages/Radio Page', module)
       services: Object.keys(liveRadioFixtures),
     }),
   )
+  .addParameters({ chromatic: { diffThreshold: 0.2 } })
   .add('default', ({ service }) => (
     <BrowserRouter>
       <LiveRadioPage

@@ -7,6 +7,7 @@ import pidginData from '#data/pidgin/cpsAssets/tori-49450859.json';
 import arabicData from '#data/arabic/cpsAssets/media-49580542.json';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const pidginRelatedContentData = pidginData.relatedContent.groups[0].promos;
@@ -23,7 +24,13 @@ const getRelatedContent = platform => (service, dir, data) => (
         pathname="/"
         service={service}
       >
-        <CpsRelatedContent content={data} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <CpsRelatedContent content={data} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   </div>

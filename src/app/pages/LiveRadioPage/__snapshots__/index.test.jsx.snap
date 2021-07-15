@@ -277,6 +277,12 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   will-change: transform;
 }
 
+@media screen and (-ms-high-contrast: active) {
+  .emotion-13 {
+    stroke: windowText;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .emotion-13 {
     -webkit-animation: animation-0 1.1s 3 linear;
@@ -363,6 +369,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
             class="emotion-13 emotion-14"
             focusable="false"
             height="38"
+            stroke="black"
             viewBox="0 0 38 38"
             width="38"
             xmlns="http://www.w3.org/2000/svg"
@@ -695,6 +702,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   height: 64px;
   stroke: currentColor;
   will-change: transform;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-13 {
+    stroke: windowText;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1566,6 +1579,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
             class="emotion-13 emotion-14"
             focusable="false"
             height="38"
+            stroke="black"
             viewBox="0 0 38 38"
             width="38"
             xmlns="http://www.w3.org/2000/svg"
