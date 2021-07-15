@@ -5,10 +5,21 @@ import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
 import { arrayOf, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import useViewTracker from '#hooks/useViewTracker';
+
+const { env } = process;
+process.env.SIMORGH_BASE_URL = 'https://bbc.com';
+
+afterAll(() => {
+  process.env = env;
+});
 
 const eventTrackingData = {
   componentName: 'topics',
@@ -20,6 +31,10 @@ const StyledTopicsWrapper = styled.aside`
 
 const StyledSectionLabel = styled(SectionLabel)`
   margin-top: 0;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const RelatedTopics = ({ topics }) => {

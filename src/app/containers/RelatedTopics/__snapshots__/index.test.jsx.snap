@@ -25,6 +25,12 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   }
 }
 
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    margin-bottom: 1rem;
+  }
+}
+
 .emotion-5 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
@@ -268,6 +274,12 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 @media (min-width: 63rem) {
   .emotion-3 {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-3 {
+    margin-bottom: 1rem;
   }
 }
 
