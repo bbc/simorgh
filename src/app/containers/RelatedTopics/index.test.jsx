@@ -11,12 +11,8 @@ import * as clickTracker from '#hooks/useClickTrackerHandler';
 import * as viewTracker from '#hooks/useViewTracker';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
-process.env.SIMORGH_BASE_URL = 'https://bbc.com';
-const { env } = process;
-
 beforeEach(() => {
   jest.resetModules();
-  process.env.SIMORGH_APP_ENV = 'test';
 });
 
 const WithContexts = ({
@@ -52,10 +48,6 @@ const WithContexts = ({
 };
 
 describe('Expected use', () => {
-  afterAll(() => {
-    process.env = env;
-  });
-
   shouldMatchSnapshot(
     'should render correctly with no tags',
     <WithContexts>
