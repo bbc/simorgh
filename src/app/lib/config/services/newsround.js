@@ -58,6 +58,7 @@ export const service = {
       brandBorderColour: `${C_NEWSROUND_PURPLE_30}`,
       brandHighlightColour: `${C_WHITE}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
