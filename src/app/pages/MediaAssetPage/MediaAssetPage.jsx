@@ -36,6 +36,7 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
@@ -72,6 +73,7 @@ MediaAssetPageGrid.propTypes = {
 };
 
 const MediaAssetPage = ({ pageData }) => {
+  const { service } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
@@ -88,6 +90,7 @@ const MediaAssetPage = ({ pageData }) => {
     pageData,
   );
   const topics = path(['metadata', 'topics'], pageData);
+  const isSport = service === 'sport';
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -201,7 +204,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>
 
-      {topics && (
+      {!isSport && topics && (
         <MediaAssetPageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
