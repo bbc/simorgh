@@ -82,7 +82,7 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { articleAuthor } = useContext(ServiceContext);
+  const { service, articleAuthor } = useContext(ServiceContext);
   const { state } = useLocation();
   const hash = state?.hash;
   const headline = getHeadline(pageData);
@@ -91,6 +91,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
+  const isSport = service === 'sport';
 
   useEffect(() => {
     if (hash) {
@@ -185,7 +186,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         </ArticlePageGrid>
       </main>
 
-      {topics && (
+      {!isSport && topics && (
         <ArticlePageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
