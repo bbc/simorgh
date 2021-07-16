@@ -48,6 +48,7 @@ const baseServiceConfig = {
     brandHighlightColour: `${C_WHITE}`,
     brandBorderColour: `${C_POSTBOX_30}`,
   },
+  showAdPlaceholder: true,
   fonts: [],
   timezone: 'GMT',
 };
