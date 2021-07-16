@@ -48,6 +48,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     noBylinesPolicy:
       'https://www.bbc.com/yoruba/institutional-48528718#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',
