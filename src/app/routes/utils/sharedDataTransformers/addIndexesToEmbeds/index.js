@@ -30,7 +30,7 @@ const enrichBlocks = (accumulator, block) => {
     );
     const numBlocksByProvider = blocksByProvider.length;
     const lastBlockByProvider = blocksByProvider[numBlocksByProvider - 1];
-    const indexOfType = getEmbedIndexOfType(lastBlockByProvider) + 1 || 1;
+    const indexOfType = getEmbedIndexOfType(lastBlockByProvider) + 1 || 0;
     const oEmbed = getOembed(block);
     const updatedOembed = {
       ...oEmbed,

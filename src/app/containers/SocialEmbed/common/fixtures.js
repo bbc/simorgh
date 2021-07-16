@@ -1,6 +1,6 @@
 export const cpsTwitterBlockNoEmbed = {
   type: 'twitter',
-  indexOfType: 1,
+  indexOfType: 0,
   model: {
     href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
     id: '1237210910835392512',
@@ -52,7 +52,7 @@ export const twitterBlock = {
         type: 'aresOEmbed',
         model: {
           oembed: {
-            indexOfType: 1,
+            indexOfType: 0,
             version: '1.0',
             author_name: 'BBC News (UK)',
             author_url: 'https://twitter.com/BBCNews',
