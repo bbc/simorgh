@@ -10,6 +10,7 @@ import {
   renderRadioSchedule,
   uniqueStates,
 } from './testHelpers/helper';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import notes from '../README.md';
 import StartTime from './StartTime';
 
@@ -62,14 +63,15 @@ storiesOf('Components/RadioSchedule/StartTime', module)
     'default',
     ({ locale, script, service, dir, timezone = 'GMT' }) => {
       return (
-        <StartTime
-          timestamp={storiesUnixTimestamp}
-          timezone={timezone}
+        <ServiceContextProvider
+          service={service}
           locale={locale}
           script={script}
-          service={service}
           dir={dir}
-        />
+          timezone={timezone}
+        >
+          <StartTime timestamp={storiesUnixTimestamp} />
+        </ServiceContextProvider>
       );
     },
     { notes },
