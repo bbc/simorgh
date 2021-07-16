@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -35,6 +35,7 @@ import {
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
 import RelatedTopics from '#containers/RelatedTopics';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const PhotoGalleryPageGrid = ({ children, ...props }) => (
   <GelPageGrid
@@ -58,6 +59,7 @@ PhotoGalleryPageGrid.propTypes = {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
+  const { service } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -79,6 +81,7 @@ const PhotoGalleryPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
+  const isSport = service === 'sport';
 
   const componentsToRender = {
     fauxHeadline,
@@ -145,7 +148,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledPhotoGalleryPageGrid>
 
-      {topics && (
+      {!isSport && topics && (
         <PhotoGalleryPageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
