@@ -99,9 +99,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const isTest =
-    process?.env?.SIMORGH_APP_ENV === 'local' ||
-    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const gridColumns = {
     group0: 8,
@@ -323,7 +320,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
 
-          {isTest && topics && (
+          {topics && (
             <GridItemLarge>
               <RelatedTopics topics={topics} />
             </GridItemLarge>
