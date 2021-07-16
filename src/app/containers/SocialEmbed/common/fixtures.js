@@ -46,7 +46,7 @@ export const cpsTwitterBlock = {
 export const twitterBlock = {
   type: 'renditions',
   model: {
-    locator: 'urn:bbc:optimo:social:619df6aa-8abf-4e4d-baf1-189b0106f2fa',
+    locator: 'urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9',
     blocks: [
       {
         type: 'aresOEmbed',
@@ -54,13 +54,13 @@ export const twitterBlock = {
           oembed: {
             indexOfType: 1,
             version: '1.0',
-            author_name: 'BBC Pidgin',
-            author_url: 'https://twitter.com/bbcnewspidgin',
+            author_name: 'BBC News (UK)',
+            author_url: 'https://twitter.com/BBCNews',
             provider_name: 'Twitter',
             provider_url: 'https://twitter.com',
-            url: 'https://twitter.com/bbcnewspidgin/status/1401130492313866243',
+            url: 'https://twitter.com/BBCNews/status/1384138850478346243',
             html:
-              '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Logan Paul vs Mayweather: Date, time and how to watch di fight.<br><br>Wen dis Youtuber &amp; Former professional boxer jam dis weekend, wetin you think say go happun?<br><br>Read more here: <a href="https://t.co/mLHxByELjA">https://t.co/mLHxByELjA</a> <a href="https://t.co/lp7GmXfGTF">pic.twitter.com/lp7GmXfGTF</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href="https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw">June 5, 2021</a></blockquote>\n',
+              '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was &quot;indescribable&quot; <a href="https://t.co/xz93WmAdfR">https://t.co/xz93WmAdfR</a></p>&mdash; BBC News (UK) (@BBCNews) <a href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw">April 19, 2021</a></blockquote>\n',
             width: 550,
           },
         },
@@ -72,7 +72,7 @@ export const twitterBlock = {
 export const twitterBlockNoEmbed = {
   type: 'renditions',
   model: {
-    locator: 'urn:bbc:optimo:social:619df6aa-8abf-4e4d-baf1-189b0106f2fa',
+    locator: 'urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9',
     blocks: [
       {
         type: 'aresOEmbed',
