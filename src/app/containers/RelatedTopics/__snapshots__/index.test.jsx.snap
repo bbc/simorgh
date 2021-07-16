@@ -148,7 +148,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: -1rem;
+  margin-top: -0.5rem;
   margin-bottom: 0;
   margin-left: -0.25rem;
   margin-right: -0.25rem;
@@ -162,7 +162,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   word-break: break-word;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
@@ -405,7 +405,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: -1rem;
+  margin-top: -0.5rem;
   margin-bottom: 0;
   margin-left: -0.25rem;
   margin-right: -0.25rem;
@@ -420,7 +420,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   font-size: 0.875rem;
   line-height: 1.125rem;
   word-break: break-word;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-left: 0.25rem;
   margin-right: 0.25rem;
 }
