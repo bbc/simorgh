@@ -54,6 +54,7 @@ export const service = {
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Dachaigh',
+    showAdPlaceholder: false,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -70,6 +71,7 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      relatedTopics: 'Cuspairean Ceangailte',
       navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

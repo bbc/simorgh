@@ -59,6 +59,7 @@ export const service = {
       brandBorderColour: `${C_SPORT_YELLOW_30}`,
       brandHighlightColour: `${C_BLACK}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',

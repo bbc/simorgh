@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'જાહેરાત',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'વર્તમાન પેજ',
       skipLinkText: 'કન્ટેન્ટ પર જાવ',
       relatedContent: 'સંબંધિત સમાચાર',
+      relatedTopics: 'સંબંધિત મુદ્દા',
       navMenuText: 'વિભાગો',
       mediaAssetPage: {
         mediaPlayer: 'મીડિયા પ્લેયર',

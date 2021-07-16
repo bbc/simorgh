@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Kwamamaza',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      relatedTopics: 'Ibindi bisa n’ibi',
       navMenuText: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',

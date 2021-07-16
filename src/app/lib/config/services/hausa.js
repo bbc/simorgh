@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Talla',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      relatedTopics: 'Labarai masu alaka',
       navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

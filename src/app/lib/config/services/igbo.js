@@ -58,6 +58,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Mgbasa ozi',
@@ -67,6 +68,7 @@ export const service = {
       currentPage: 'Peegi ị nọ ugbua',
       skipLinkText: 'Wụga n’ọdịnaya',
       relatedContent: "Ihe ndị ọzọ n'akụkọ a",
+      relatedTopics: 'Isiokwu ndị emetụtara',
       navMenuText: 'Ngalaba',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
