@@ -16,7 +16,7 @@ export default {
   component: CanonicalMediaPlayer,
   parameters: {
     chromatic: {
-      values: [{ name: 'diffThreshold', value: 0.2 }],
+      diffThreshold: 0.2,
     },
     docs: { page: notes },
   },
