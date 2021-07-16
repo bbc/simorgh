@@ -87,17 +87,17 @@ it('should return enriched blocks with a new property "indexOfType" (indicates t
   const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
 
   expect(getOembed(enrichedArticleBlocks.content.model.blocks[2])).toEqual({
-    indexOfType: 1,
+    indexOfType: 0,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/151510212',
   });
   expect(getOembed(enrichedArticleBlocks.content.model.blocks[7])).toEqual({
-    indexOfType: 2,
+    indexOfType: 1,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/0215154',
   });
   expect(getOembed(enrichedArticleBlocks.content.model.blocks[10])).toEqual({
-    indexOfType: 3,
+    indexOfType: 2,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/020541541',
   });
@@ -152,50 +152,50 @@ it('should return enriched blocks with a new property "indexOfType" (indicates t
   const { blocks } = enrichedArticleBlocks.content.model;
 
   expect(getOembed(blocks[0])).toEqual({
-    indexOfType: 1,
+    indexOfType: 0,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/215151531',
   });
   expect(getOembed(blocks[2])).toEqual({
-    indexOfType: 2,
+    indexOfType: 1,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/545561451',
   });
   expect(getOembed(blocks[6])).toEqual({
-    indexOfType: 3,
+    indexOfType: 2,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/3202151240',
   });
   expect(getOembed(blocks[7])).toEqual({
-    indexOfType: 4,
+    indexOfType: 3,
     provider_name: 'YouTube',
     url: 'https://youtube.com/watch/0021251521',
   });
 
   expect(getOembed(blocks[1])).toEqual({
-    indexOfType: 1,
+    indexOfType: 0,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/3543545',
   });
 
   expect(getOembed(blocks[4])).toEqual({
-    indexOfType: 2,
+    indexOfType: 1,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/2516546541351',
   });
   expect(getOembed(blocks[5])).toEqual({
-    indexOfType: 3,
+    indexOfType: 2,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/354354545',
   });
 
   expect(getOembed(blocks[3])).toEqual({
-    indexOfType: 1,
+    indexOfType: 0,
     provider_name: 'Instagram',
     url: 'https://instagram.com/bbcnews/55135135',
   });
   expect(getOembed(blocks[8])).toEqual({
-    indexOfType: 2,
+    indexOfType: 1,
     provider_name: 'Instagram',
     url: 'https://instagram.com/bbcnews/status/02105151',
   });
@@ -300,17 +300,17 @@ it('should return enriched blocks correctly incremented "indexOfType" for duplic
   const { blocks } = enrichedArticleBlocks.content.model;
 
   expect(getOembed(blocks[0])).toEqual({
-    indexOfType: 1,
+    indexOfType: 0,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/3543545',
   });
   expect(getOembed(blocks[1])).toEqual({
-    indexOfType: 2,
+    indexOfType: 1,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/3543545',
   });
   expect(getOembed(blocks[2])).toEqual({
-    indexOfType: 3,
+    indexOfType: 2,
     provider_name: 'Twitter',
     url: 'https://twitter.com/bbcnews/status/3543545',
   });
