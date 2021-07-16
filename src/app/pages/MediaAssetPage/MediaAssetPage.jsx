@@ -88,9 +88,6 @@ const MediaAssetPage = ({ pageData }) => {
     pageData,
   );
   const topics = path(['metadata', 'topics'], pageData);
-  const isTest =
-    process?.env?.SIMORGH_APP_ENV === 'local' ||
-    process?.env?.SIMORGH_APP_ENV === 'test';
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -204,7 +201,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>
 
-      {isTest && topics && (
+      {topics && (
         <MediaAssetPageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
