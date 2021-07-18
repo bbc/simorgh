@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob, themes } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -8,7 +7,7 @@ import { afrique, pashto } from './fixtures';
 import RecentVideoEpisodes from '.';
 
 /* eslint-disable react/prop-types */
-const RecentVideoEpisodesWithContext = ({ masterBrand, episodes, service }) => (
+const Component = ({ masterBrand, episodes, service }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       service={service}
@@ -22,78 +21,37 @@ const RecentVideoEpisodesWithContext = ({ masterBrand, episodes, service }) => (
   </ServiceContextProvider>
 );
 
-storiesOf('Containers/EpisodeList/RecentVideoEpisodes/LTR (afrique)', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'afrique' }))
-  .add(
-    'multiple items',
-    ({ service }) => {
-      return (
-        <RecentVideoEpisodesWithContext
-          episodes={afrique}
-          masterBrand={`bbc_${service}_tv`}
-          service={service}
-        />
-      );
-    },
-    {
-      options: {
-        theme: themes.dark,
-      },
-    },
-  )
-  .add(
-    'single item',
-    ({ service }) => {
-      return (
-        <RecentVideoEpisodesWithContext
-          episodes={[afrique[0]]}
-          masterBrand={`bbc_${service}_tv`}
-          service={service}
-        />
-      );
-    },
-    {
-      options: {
-        theme: themes.dark,
-      },
-    },
-  );
+const fixtures = { afrique, pashto };
 
-storiesOf('Containers/EpisodeList/RecentVideoEpisodes/RTL (pashto)', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'pashto' }))
-  .add(
-    'multiple items',
-    ({ service }) => {
-      return (
-        <RecentVideoEpisodesWithContext
-          episodes={pashto}
-          masterBrand={`bbc_${service}_tv`}
-          service={service}
-        />
-      );
+export default {
+  title: 'Containers/Episode List/Video',
+  Component,
+  decorators: [
+    withKnobs,
+    withServicesKnob({
+      defaultService: 'afrique',
+      services: Object.keys(fixtures),
+    }),
+  ],
+  parameters: {
+    options: {
+      theme: themes.dark,
     },
-    {
-      options: {
-        theme: themes.dark,
-      },
-    },
-  )
-  .add(
-    'single item',
-    ({ service }) => {
-      return (
-        <RecentVideoEpisodesWithContext
-          episodes={[pashto[0]]}
-          masterBrand={`bbc_${service}_tv`}
-          service={service}
-        />
-      );
-    },
-    {
-      options: {
-        theme: themes.dark,
-      },
-    },
-  );
+  },
+};
+
+export const MultipleItems = ({ service }) => (
+  <Component
+    episodes={fixtures[service]}
+    masterBrand={`bbc_${service}_tv`}
+    service={service}
+  />
+);
+
+export const SingleItem = ({ service }) => (
+  <Component
+    episodes={[fixtures[service][0]]}
+    masterBrand={`bbc_${service}_tv`}
+    service={service}
+  />
+);

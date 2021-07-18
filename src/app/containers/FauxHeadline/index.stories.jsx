@@ -7,10 +7,16 @@ import blocksSingleFragment from '../Headings/testHelpers';
 
 const headline = blocksSingleFragment('This is a headline.', []);
 
-storiesOf('Containers/FauxHeadline', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('default FauxHeadline', () => (
-    <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-      <FauxHeadlineContainer type="fauxHeadline" blocks={headline} />
-    </ServiceContext.Provider>
-  ));
+const Component = () => (
+  <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+    <FauxHeadlineContainer type="fauxHeadline" blocks={headline} />
+  </ServiceContext.Provider>
+);
+
+export default {
+  title: 'Containers/Faux Headline',
+  Component,
+  parameters: { chromatic: { disable: true } },
+};
+
+export const FauxHeadline = Component;
