@@ -4,29 +4,63 @@
 import getDataUrl from '../../support/helpers/getDataUrl';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
-  describe(`No testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
-    it('should render topic tags if they are in the json, and they should lead to topic page', () => {
-      cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
-        const topicTagsPresent = body.metadata.topics;
-        let topicTagsLength = 0;
-        if (topicTagsPresent) {
-          topicTagsLength = topicTagsPresent.length;
-        }
-        cy.log(topicTagsPresent);
-        cy.log(topicTagsLength);
-        if (topicTagsPresent && topicTagsLength > 1) {
-          cy.get(`aside[aria-labelledby*='related-topics'] > ul > li > a`)
-            .first()
-            .click();
-          cy.go('back');
-          cy.wait(1000);
-        } else if (topicTagsPresent && topicTagsLength === 1) {
-          cy.get(`aside[aria-labelledby*='related-topics']`).find('a').click();
-          cy.go('back');
-          cy.wait(1000);
-        } else {
-          cy.log('No topic tags in json');
-        }
+  describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+    it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
+      cy.url().then(url => {
+        const firstVisitedPage = url;
+
+        cy.request(getDataUrl(firstVisitedPage)).then(({ body }) => {
+          // Check if data has topic tags
+          const topicTagsPresent = body.metadata.topics;
+          let topicTagsLength = 0;
+
+          // Get number of topic tags expected
+          if (topicTagsPresent) {
+            topicTagsLength = topicTagsPresent.length;
+          }
+
+          if (topicTagsPresent && topicTagsLength > 1) {
+            // Gets the Topic Tag name
+            cy.get(
+              `aside[aria-labelledby*='related-topics'] > ul > li:first > a`,
+            ).then($tag => {
+              const topicTitle = $tag.text();
+              cy.wrap(topicTitle).as('topicTitle');
+            });
+            // Clicks on the first topic tag
+            cy.get(`aside[aria-labelledby*='related-topics'] > ul > li > a`)
+              .first()
+              .click();
+
+            // Checks the page is of the Topic Tag clicked on
+            cy.get('@topicTitle').then(title => {
+              cy.get('h1').should('contain', title);
+            });
+
+            // Needs to be back to the first page for the rest of the test suite
+            // cy.go('back') does not work on AMP as it returns to a canonical page
+            cy.visit(firstVisitedPage);
+          } else if (topicTagsPresent && topicTagsLength === 1) {
+            cy.get(`aside[aria-labelledby*='related-topics']`)
+              .find('a')
+              .then($tag => {
+                const topicTitle = $tag.text();
+                cy.wrap(topicTitle).as('topicTitle');
+              });
+            // If there is only one topic tag it is not in a list
+            cy.get(`aside[aria-labelledby*='related-topics']`)
+              .find('a')
+              .click();
+            // Checks the page is of the Topic Tag clicked on
+            cy.get('@topicTitle').then(title => {
+              cy.get('h1').should('contain', title);
+            });
+
+            cy.visit(firstVisitedPage);
+          } else {
+            cy.log('No topic tags in json');
+          }
+        });
       });
     });
   });
