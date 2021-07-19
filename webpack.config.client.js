@@ -56,6 +56,12 @@ module.exports = ({
       },
       disableHostCheck: true,
     },
+    resolve: {
+      fallback: {
+        // Override webpacks default handling for these as they arnt availible on the client.
+        fs: 'empty',
+      },
+    },
     output: {
       path: resolvePath('build/public'),
       /**
@@ -72,6 +78,7 @@ module.exports = ({
         : prodPublicPath,
     },
     optimization: {
+      moduleIds: 'hashed',
       minimizer: [
         new TerserPlugin({
           terserOptions: {
@@ -89,7 +96,7 @@ module.exports = ({
         maxSize: 245760, // 240kb
         cacheGroups: {
           default: false,
-          vendors: false,
+          defaultVendors: false,
           framework: {
             name: 'framework',
             chunks: 'all',
@@ -163,8 +170,6 @@ module.exports = ({
       },
     },
     node: {
-      // Override webpacks default handling for these as they arnt availible on the client.
-      fs: 'empty',
       __filename: 'mock',
     },
     plugins: [
@@ -181,11 +186,6 @@ module.exports = ({
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
-      /**
-       * Needed to prevent bundle hashes changing when the order they're imported is changed.
-       * See https://webpack.js.org/guides/caching/#module-identifiers
-       */
-      new webpack.HashedModuleIdsPlugin(),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
        * side replacement, when building the bundle code for the client.
