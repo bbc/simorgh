@@ -48,20 +48,6 @@ describe('SocialEmbedContainer', () => {
         ),
       ).toBeFalsy();
     });
-
-    it('should not render when disabled', () => {
-      const { container } = render(
-        withContexts(SocialEmbedContainer, {
-          isAmp: false,
-          isEnabled: false,
-        })({
-          blocks: [twitterBlock],
-          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
-        }),
-      );
-      expect(container.firstChild).toBeNull();
-      expect(loggerMock.info).not.toHaveBeenCalled();
-    });
   });
 
   describe('AMP', () => {

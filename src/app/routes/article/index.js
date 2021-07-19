@@ -1,3 +1,5 @@
+import { memo } from 'react';
+import pageIsSame from '../utils/pageIsSame';
 import { ArticlePage } from '#pages';
 import getInitialData from './getInitialData';
 import { articlePath } from '#utils/regex';
