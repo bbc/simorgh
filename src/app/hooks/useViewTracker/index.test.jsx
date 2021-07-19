@@ -58,7 +58,7 @@ const { error } = console;
 
 beforeEach(() => {
   jest.clearAllMocks();
-  jest.useFakeTimers();
+  jest.useFakeTimers('modern');
   console.error = jest.fn();
   global.IntersectionObserver = IntersectionObserver;
 });
