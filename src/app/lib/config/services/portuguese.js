@@ -68,6 +68,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Publicidade',
@@ -78,6 +79,7 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      relatedTopics: 'Tópicos relacionados',
       navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

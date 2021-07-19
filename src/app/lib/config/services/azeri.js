@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Reklam',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
+      relatedTopics: 'Əlaqəli mövzular',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

@@ -57,6 +57,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Iklan',
@@ -66,6 +67,7 @@ export const service = {
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
+      relatedTopics: 'Topik terkait',
       navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',

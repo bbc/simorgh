@@ -4,6 +4,7 @@
   "description": "Simorgh",
   "main": "./src/client.js",
   "resolutions": {
+    "react-is": "16.13.1",
     "@emotion/serialize": "1.0.2",
     "@emotion/sheet": "1.0.1",
     "@emotion/utils": "1.0.0",
@@ -98,7 +99,6 @@
     "@bbc/psammead-navigation": "9.2.2",
     "@bbc/psammead-paragraph": "4.0.18",
     "@bbc/psammead-play-button": "3.0.22",
-    "@bbc/psammead-radio-schedule": "5.1.35",
     "@bbc/psammead-rich-text-transforms": "2.0.6",
     "@bbc/psammead-script-link": "3.0.20",
     "@bbc/psammead-section-label": "7.0.20",
@@ -108,6 +108,7 @@
     "@bbc/psammead-styles": "7.3.0",
     "@bbc/psammead-timestamp": "4.0.19",
     "@bbc/psammead-timestamp-container": "5.0.30",
+    "@bbc/psammead-topic-tags": "1.0.0",
     "@bbc/psammead-useful-links": "3.0.20",
     "@bbc/psammead-visually-hidden-text": "2.0.7",
     "@bbc/web-vitals": "1.0.8",

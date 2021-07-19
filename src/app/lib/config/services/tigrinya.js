@@ -60,6 +60,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'መላለዪ',
@@ -69,6 +70,7 @@ export const service = {
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      relatedTopics: 'ተዛማዲ ዛዕባታት',
       navMenuText: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
