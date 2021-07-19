@@ -1,6 +1,5 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import IndexPageSection from '.';

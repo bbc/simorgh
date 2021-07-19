@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import FauxHeadlineContainer from '.';

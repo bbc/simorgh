@@ -1,10 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import {
-  withServicesKnob,
-  buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import MostWatchedContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -14,6 +10,7 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 
+// eslint-disable-next-line react/prop-types
 const Component = ({ service }) => {
   return (
     <ServiceContextProvider service={service}>

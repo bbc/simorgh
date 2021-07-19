@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Grid from '#app/components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -77,7 +76,6 @@ export default {
   },
 };
 
-// LTR
 export const WithTopRow = () => <Component RowType={TopRowStory} />;
 export const WithLeadingRow = () => <Component RowType={LeadingRowStory} />;
 export const WithRegularRow = () => <Component RowType={RegularRowStory} />;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 
@@ -10,7 +9,6 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from './common/fixtures';
-import withContexts from './common/testHelper';
 import CpsSocialEmbedContainer from '.';
 
 const Component = props => {

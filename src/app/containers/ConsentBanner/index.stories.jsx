@@ -5,7 +5,8 @@ import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
-const Component = platform => (
+// eslint-disable-next-line react/prop-types
+const Component = ({ platform }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       platform={platform}
