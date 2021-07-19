@@ -12,9 +12,9 @@ Object.keys(config)
     // eslint-disable-next-line prefer-const
     let { variant, name: service } = config[serviceId];
     if (variant !== 'default') {
-      const capitaliseVariant =
+      const capitalisedVariant =
         variant.charAt(0).toUpperCase() + variant.slice(1);
-      service += capitaliseVariant;
+      service += capitalisedVariant;
     }
     const paths = getPaths(serviceId, pageType);
     paths.forEach(currentPath => {
