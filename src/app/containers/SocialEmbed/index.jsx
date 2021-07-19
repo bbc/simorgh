@@ -24,14 +24,13 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const { service, translations } = useContext(ServiceContext);
   const { enabled } = useToggle('socialEmbed');
 
-  console.log(blocks, source, enabled);
-  if (!blocks || !source || !enabled) return `${blocks}${source}${enabled}`;
+  if (!blocks || !source || !enabled) return null;
 
   const provider = getProviderFromSource(source);
   const id = getIdFromSource(source);
 
   const { model } = blocks[0];
-  const oEmbed = path(['blocks', 0, 'model', 'embed'], model);
+  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
 
   const index = id;
 

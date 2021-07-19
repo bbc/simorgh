@@ -49,14 +49,13 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-// The blocks in the fixture folder do not
-const conformBlock = block => [
-  { model: { blocks: [{ model: { embed: block.model.embed.oembed } }] } },
+const createBlocks = block => [
+  { model: { blocks: [{ model: { oembed: block?.model?.embed?.oembed } }] } },
 ];
 
 export const CanonicalExample = props => (
   <Component
-    blocks={conformBlock(cpsTwitterBlock)}
+    blocks={createBlocks(cpsTwitterBlock)}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
     {...props}
   />
@@ -65,7 +64,7 @@ export const CanonicalExample = props => (
 export const AmpExample = props => (
   <Component
     isAmp
-    blocks={conformBlock(cpsTwitterBlock)}
+    blocks={createBlocks(cpsTwitterBlock)}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
     {...props}
   />
@@ -74,48 +73,8 @@ AmpExample.decorators = [AmpDecorator];
 
 export const NoEmbed = props => (
   <Component
-    blocks={[cpsTwitterBlockNoEmbed]}
+    blocks={createBlocks(cpsTwitterBlockNoEmbed)}
     source="https://twitter.com/MileyCyrus/status/1237210910835392512"
     {...props}
   />
 );
-
-/*
-storiesOf('Containers/CPS Social Embed/Canonical', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add('default', ({ service }) =>
-    withContexts(CpsSocialEmbedContainer, {
-      isAmp: false,
-      isEnabled: true,
-      service,
-    })({
-      blocks: [cpsTwitterBlock],
-    }),
-  )
-  .add('no embed', ({ service }) =>
-    withContexts(CpsSocialEmbedContainer, {
-      isAmp: false,
-      isEnabled: true,
-      service,
-    })({
-      blocks: [cpsTwitterBlockNoEmbed],
-    }),
-  );
-
-storiesOf('Containers/CPS Social Embed/AMP', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .addDecorator(AmpDecorator)
-  .add('default', ({ service }) =>
-    withContexts(CpsSocialEmbedContainer, {
-      isAmp: true,
-      isEnabled: true,
-      service,
-    })({
-      blocks: [cpsTwitterBlock],
-    }),
-  );
-*/
