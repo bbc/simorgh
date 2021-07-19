@@ -12,6 +12,9 @@ Object {
   "cpsRecommendations": Object {
     "enabled": false,
   },
+  "cpsSocialEmbed": Object {
+    "enabled": true,
+  },
   "enableFetchingToggles": Object {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
@@ -42,6 +45,9 @@ Object {
   },
   "scriptLink": Object {
     "enabled": true,
+  },
+  "socialEmbed": Object {
+    "enabled": false,
   },
   "variantCookie": Object {
     "enabled": true,
@@ -64,6 +70,9 @@ Object {
   "cpsRecommendations": Object {
     "enabled": true,
   },
+  "cpsSocialEmbed": Object {
+    "enabled": true,
+  },
   "enableFetchingToggles": Object {
     "enabled": true,
     "value": "(afaanoromoo|afrique|amharic|arabic|archive|azeri|bengali|burmese|cymrufyw|gahuza|gujarati|hausa|hindi|igbo|indonesia|japanese|korean|kyrgyz|marathi|mundo|naidheachdan|nepali|news|pashto|persian|pidgin|portuguese|punjabi|russian|scotland|serbian|sinhala|somali|swahili|tamil|telugu|thai|tigrinya|turkce|ukchina|ukrainian|urdu|uzbek|vietnamese|yoruba|zhongwen)",
@@ -93,6 +102,9 @@ Object {
     "enabled": true,
   },
   "scriptLink": Object {
+    "enabled": true,
+  },
+  "socialEmbed": Object {
     "enabled": true,
   },
   "variantCookie": Object {

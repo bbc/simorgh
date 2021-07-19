@@ -49,6 +49,20 @@ describe('CpsSocialEmbedContainer', () => {
       ).toBeFalsy();
     });
 
+    it('should not render when disabled', () => {
+      const { container } = render(
+        withContexts(CpsSocialEmbedContainer, {
+          isAmp: false,
+          isEnabled: false,
+        })({
+          blocks: [cpsTwitterBlock],
+          source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+        }),
+      );
+      expect(container.firstChild).toBeNull();
+      expect(loggerMock.info).not.toHaveBeenCalled();
+    });
+
     shouldMatchSnapshot(
       'should render correctly without an embed block',
       withContexts(CpsSocialEmbedContainer, {

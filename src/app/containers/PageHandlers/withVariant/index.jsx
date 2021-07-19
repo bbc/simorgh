@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { useParams, useLocation, Redirect } from 'react-router-dom';
 import getVariantRedirectUrl from './getVariantRedirectUrl';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
-    debugger;
-    const { service, variant, location } = props;
+    const { service, variant } = useParams();
+    const location = useLocation();
+
     const { path, params } = pathOr({}, ['match'], props);
+
     const redirectPath = getVariantRedirectUrl({
       path,
       params,
