@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Matangazo',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      relatedTopics: 'Mada zinazohusiana',
       navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',

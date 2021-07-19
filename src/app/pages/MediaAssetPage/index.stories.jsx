@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
@@ -7,33 +6,27 @@ import MediaAssetPage from '.';
 import pageData from './fixtureData';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
-const isAmp = platform => platform === 'AMP';
+// eslint-disable-next-line react/prop-types
+const Component = ({ isAmp = false } = {}) => (
+  <BrowserRouter>
+    <MediaAssetPage
+      pageType={MEDIA_ASSET_PAGE}
+      isAmp={isAmp}
+      pathname="/pathname"
+      status={200}
+      pageData={pageData}
+      service="pidgin"
+    />
+  </BrowserRouter>
+);
 
-const platforms = ['Canonical', 'AMP'];
+export default {
+  Component,
+  title: 'Pages/Media Asset Page',
+  decorators: [story => <WithTimeMachine>{story()}</WithTimeMachine>],
+};
 
-platforms.forEach(platform => {
-  const mapStories = storiesOf(`Pages/Media Asset Page/${platform}`, module);
+export const Canonical = Component;
 
-  mapStories.addDecorator(story => (
-    <WithTimeMachine>{story()}</WithTimeMachine>
-  ));
-
-  if (isAmp(platform)) {
-    mapStories.addDecorator(AmpDecorator);
-  }
-
-  mapStories.add('default', () => {
-    return (
-      <BrowserRouter>
-        <MediaAssetPage
-          pageType={MEDIA_ASSET_PAGE}
-          isAmp={isAmp(platform)}
-          pathname="/pathname"
-          status={200}
-          pageData={pageData}
-          service="pidgin"
-        />
-      </BrowserRouter>
-    );
-  });
-});
+export const Amp = () => <Component isAmp />;
+Amp.decorators = [AmpDecorator];

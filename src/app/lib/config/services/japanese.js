@@ -57,6 +57,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: '広告',
@@ -66,6 +67,7 @@ export const service = {
       currentPage: '現在のページ',
       skipLinkText: 'コンテンツへ移動',
       relatedContent: '関連コンテンツ',
+      relatedTopics: '関連トピックス',
       navMenuText: 'ジャンル',
       mediaAssetPage: {
         mediaPlayer: 'メディアプレイヤー',

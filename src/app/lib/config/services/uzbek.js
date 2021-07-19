@@ -56,6 +56,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Реклама',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      relatedTopics: 'Алоқадор мавзулар',
       navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',

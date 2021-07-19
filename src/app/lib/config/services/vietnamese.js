@@ -58,6 +58,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'Quảng cáo',
@@ -67,6 +68,7 @@ export const service = {
       currentPage: 'Trang hiện nay',
       skipLinkText: 'Bỏ qua để xem nội dung',
       relatedContent: 'Tin liên quan',
+      relatedTopics: 'Chủ đề liên quan',
       navMenuText: 'Mục',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

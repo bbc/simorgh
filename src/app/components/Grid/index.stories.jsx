@@ -1,6 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Grid, { CPSPageGrid } from '.';
+import Grid, { CPSPageGrid as CPSPageGridComponent } from '.';
 
 const outerGridProps = {
   columns: {
@@ -25,31 +24,23 @@ const gridItemProps = {
   },
 };
 
-storiesOf('Components/Grid', module)
-  .add('default', () => {
-    return (
-      <Grid {...outerGridProps}>
-        <Grid {...gridItemProps}>
-          <p>Item spanning 2 out of 6 columns</p>
-        </Grid>
-      </Grid>
-    );
-  })
-  .add('Grid as Main', () => {
-    return (
-      <Grid as="main" role="main" {...outerGridProps}>
-        <Grid {...gridItemProps}>
-          <p>Item with Main element as the parent grid</p>
-        </Grid>
-      </Grid>
-    );
-  })
-  .add('CPSPageGrid', () => {
-    return (
-      <CPSPageGrid>
-        <Grid {...gridItemProps}>
-          <p>CPS page grid</p>
-        </Grid>
-      </CPSPageGrid>
-    );
-  });
+export default {
+  Component: Grid,
+  title: 'Components/Grid',
+};
+
+export const GridAsMain = () => (
+  <Grid as="main" role="main" {...outerGridProps}>
+    <Grid {...gridItemProps}>
+      <p>Item with Main element as the parent grid</p>
+    </Grid>
+  </Grid>
+);
+
+export const CPSPageGrid = () => (
+  <CPSPageGridComponent>
+    <Grid {...gridItemProps}>
+      <p>CPS page grid</p>
+    </Grid>
+  </CPSPageGridComponent>
+);
