@@ -1,10 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import {
-  withServicesKnob,
-  buildRTLSubstories,
-} from '@bbc/psammead-storybook-helpers';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import MostWatchedContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -14,34 +10,35 @@ import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const promos = mostWatchedData.records.slice(0, 5).map(item => item.promo);
 
-const MOST_WATCHED_STORIES = 'Containers/Most Watched';
-storiesOf(MOST_WATCHED_STORIES, module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'pidgin' }))
-  .addParameters({
-    chromatic: { disable: true },
-  })
-  .add('default', ({ service }) => {
-    return (
-      <ServiceContextProvider service={service}>
-        <RequestContextProvider
-          bbcOrigin="https://www.test.bbc.co.uk"
-          isAmp={false}
-          pageType={MEDIA_ASSET_PAGE}
-          pathname="/pidgin/tori-49450859"
-          service="pidgin"
-          statusCode={200}
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => {
+  return (
+    <ServiceContextProvider service={service}>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        isAmp={false}
+        pageType={MEDIA_ASSET_PAGE}
+        pathname="/pidgin/tori-49450859"
+        service="pidgin"
+        statusCode={200}
+      >
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
         >
-          <ToggleContextProvider
-            toggles={{
-              eventTracking: { enabled: false },
-            }}
-          >
-            <MostWatchedContainer data={promos} />
-          </ToggleContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    );
-  });
+          <MostWatchedContainer data={promos} />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  );
+};
 
-buildRTLSubstories(MOST_WATCHED_STORIES);
+export default {
+  title: 'Containers/Most Watched',
+  Component,
+  parameters: { chromatic: { disable: true } },
+  decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
+};
+
+export const MostWatched = Component;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -51,18 +50,19 @@ const galleryPromo = promoFixture('Gallery');
 const podcastPromo = promoFixture('Podcast');
 const recommendationPromo = storyFixture();
 
-const getStoryPromo = (
-  platform,
+/* eslint-disable react/prop-types */
+const Component = ({
+  isAmp = false,
   item,
-  promoType,
-  isRecommendation,
-  isSingleColumnLayout,
-) => (
+  promoType = 'regular',
+  isRecommendation = false,
+  isSingleColumnLayout = false,
+}) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
-      isAmp={platform === 'amp'}
+      isAmp={isAmp}
       pathname="/pathname"
       pageType={ARTICLE_PAGE}
       service="news"
@@ -83,67 +83,82 @@ const getStoryPromo = (
   </ServiceContextProvider>
 );
 
-const getCanonicalStoryPromo = (
-  item,
-  promoType = 'regular',
-  isRecommendation = false,
-  isSingleColumnLayout = false,
-) =>
-  getStoryPromo(
-    'canonical',
-    item,
-    promoType,
-    isRecommendation,
-    isSingleColumnLayout,
-  );
+export default {
+  title: 'Containers/Story Promo',
+  Component,
+  parameters: { chromatic: { disable: true } },
+};
 
-const getAmpStoryPromo = (
-  item,
-  promoType = 'regular',
-  isRecommendation = false,
-  isSingleColumnLayout = false,
-) =>
-  getStoryPromo('amp', item, promoType, isRecommendation, isSingleColumnLayout);
+// Canonical
+export const Audio = () => <Component item={audioFixture} />;
+export const Video = () => <Component item={videoFixture} />;
+export const StandardLink = () => <Component item={standardPromo} />;
+export const FeatureLink = () => <Component item={featurePromo} />;
+export const VideoLink = () => <Component item={videoPromo} />;
+export const AudioLink = () => <Component item={audioPromo} />;
+export const GalleryLink = () => <Component item={galleryPromo} />;
+export const PodcastLink = () => <Component item={podcastPromo} />;
+export const Regular = () => <Component item={firstFixture} />;
+export const RegularSingleColumn = () => (
+  <Component item={firstFixture} isSingleColumnLayout />
+);
+export const Leading = () => (
+  <Component promoType="leading" item={firstFixture} />
+);
+export const Top = () => <Component promoType="top" item={firstFixture} />;
+export const GuidePromo = () => <Component item={guideLinkItem} />;
+export const Recommendation = () => (
+  <Component item={recommendationPromo} isRecommendation />
+);
 
-storiesOf('Containers/Story Promo/Canonical', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('Audio fixture', () => getCanonicalStoryPromo(audioFixture))
-  .add('Video fixture', () => getCanonicalStoryPromo(videoFixture))
-  .add('Standard link promo', () => getCanonicalStoryPromo(standardPromo))
-  .add('Feature link promo', () => getCanonicalStoryPromo(featurePromo))
-  .add('Video link promo', () => getCanonicalStoryPromo(videoPromo))
-  .add('Audio link promo', () => getCanonicalStoryPromo(audioPromo))
-  .add('Gallery link promo', () => getCanonicalStoryPromo(galleryPromo))
-  .add('Podcast link promo', () => getCanonicalStoryPromo(podcastPromo))
-  .add('Regular', () => getCanonicalStoryPromo(firstFixture))
-  .add('Regular Single Column Layout', () =>
-    getCanonicalStoryPromo(firstFixture, 'regular', false, true),
-  )
-  .add('Leading', () => getCanonicalStoryPromo(firstFixture, 'leading'))
-  .add('Top', () => getCanonicalStoryPromo(firstFixture, 'top'))
-  .add('Guide promo', () => getCanonicalStoryPromo(guideLinkItem))
-  .add('Recommendation', () =>
-    getCanonicalStoryPromo(recommendationPromo, 'regular', true),
-  );
+// Canonical
+export const AudioAmp = () => <Component isAmp item={audioFixture} />;
+AudioAmp.decorators = [AmpDecorator];
 
-storiesOf('Containers/Story Promo/AMP', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(AmpDecorator)
-  .add('Audio fixture', () => getAmpStoryPromo(audioFixture))
-  .add('Video fixture', () => getAmpStoryPromo(videoFixture))
-  .add('Standard link promo', () => getAmpStoryPromo(standardPromo))
-  .add('Video link promo', () => getAmpStoryPromo(videoPromo))
-  .add('Feature link promo', () => getAmpStoryPromo(featurePromo))
-  .add('Audio link promo', () => getAmpStoryPromo(audioPromo))
-  .add('Gallery link promo', () => getAmpStoryPromo(galleryPromo))
-  .add('Podcast link promo', () => getAmpStoryPromo(podcastPromo))
-  .add('Regular', () => getAmpStoryPromo(firstFixture))
-  .add('Regular Single Column Layout', () =>
-    getAmpStoryPromo(firstFixture, 'regular', false, true),
-  )
-  .add('Leading', () => getAmpStoryPromo(firstFixture, 'leading'))
-  .add('Top', () => getAmpStoryPromo(firstFixture, 'top'))
-  .add('Guide promo', () => getAmpStoryPromo(guideLinkItem))
-  .add('Recommendation', () =>
-    getAmpStoryPromo(recommendationPromo, 'regular', true),
-  );
+export const VideoAmp = () => <Component isAmp item={videoFixture} />;
+VideoAmp.decorators = [AmpDecorator];
+
+export const StandardLinkAmp = () => <Component isAmp item={standardPromo} />;
+StandardLinkAmp.decorators = [AmpDecorator];
+
+export const FeatureLinkAmp = () => <Component isAmp item={featurePromo} />;
+FeatureLinkAmp.decorators = [AmpDecorator];
+
+export const VideoLinkAmp = () => <Component isAmp item={videoPromo} />;
+VideoLinkAmp.decorators = [AmpDecorator];
+
+export const AudioLinkAmp = () => <Component isAmp item={audioPromo} />;
+AudioLinkAmp.decorators = [AmpDecorator];
+
+export const GalleryLinkAmp = () => <Component isAmp item={galleryPromo} />;
+GalleryLinkAmp.decorators = [AmpDecorator];
+
+export const PodcastLinkAmp = () => <Component isAmp item={podcastPromo} />;
+PodcastLinkAmp.decorators = [AmpDecorator];
+
+export const RegularAmp = () => <Component isAmp item={firstFixture} />;
+RegularAmp.decorators = [AmpDecorator];
+
+// Amp
+export const RegularSingleColumnAmp = () => (
+  <Component isAmp item={firstFixture} isSingleColumnLayout />
+);
+RegularSingleColumnAmp.decorators = [AmpDecorator];
+
+export const LeadingAmp = () => (
+  <Component isAmp promoType="leading" item={firstFixture} />
+);
+LeadingAmp.decorators = [AmpDecorator];
+
+export const TopAmp = () => (
+  <Component isAmp promoType="top" item={firstFixture} />
+);
+TopAmp.decorators = [AmpDecorator];
+
+export const GuidePromoAmp = () => <Component isAmp item={guideLinkItem} />;
+GuidePromoAmp.decorators = [AmpDecorator];
+
+export const RecommendationAmp = () => (
+  <Component isAmp item={recommendationPromo} isRecommendation />
+);
+RecommendationAmp.decorators = [AmpDecorator];

@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -8,13 +7,7 @@ import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 
 /* eslint-disable react/prop-types */
-const RecentAudioEpisodesWithContext = ({
-  masterBrand,
-  brandId,
-  pageType,
-  episodes,
-  service,
-}) => (
+const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       service={service}
@@ -32,50 +25,38 @@ const RecentAudioEpisodesWithContext = ({
   </ServiceContextProvider>
 );
 
-storiesOf('Containers/EpisodeList/RecentAudioEpisodes/LTR (indonesian)', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'indonesia' }))
-  .add('multiple items', ({ service }) => {
-    return (
-      <RecentAudioEpisodesWithContext
-        episodes={indonesian}
-        pageType="Podcast"
-        masterBrand="bbc_indonesian_radio"
-        service={service}
-      />
-    );
-  })
-  .add('single item', ({ service }) => {
-    return (
-      <RecentAudioEpisodesWithContext
-        episodes={[indonesian[0]]}
-        pageType="Podcast"
-        masterBrand="bbc_indonesian_radio"
-        service={service}
-      />
-    );
-  });
+const fixtures = { indonesia: indonesian, arabic };
+const masterBrands = {
+  indonesia: 'bbc_indonesian_radio',
+  arabic: 'bbc_arabic_radio',
+};
 
-storiesOf('Containers/EpisodeList/RecentAudioEpisodes/RTL (arabic)', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob({ defaultService: 'arabic' }))
-  .add('multiple items', ({ service }) => {
-    return (
-      <RecentAudioEpisodesWithContext
-        episodes={arabic}
-        pageType="Podcast"
-        masterBrand="bbc_indonesian_radio"
-        service={service}
-      />
-    );
-  })
-  .add('single item', ({ service }) => {
-    return (
-      <RecentAudioEpisodesWithContext
-        episodes={[arabic[0]]}
-        pageType="Podcast"
-        masterBrand="bbc_indonesian_radio"
-        service={service}
-      />
-    );
-  });
+export default {
+  title: 'Containers/Episode List/Audio',
+  Component,
+  decorators: [
+    withKnobs,
+    withServicesKnob({
+      defaultService: 'indonesia',
+      services: Object.keys(fixtures),
+    }),
+  ],
+};
+
+export const MultipleItems = ({ service }) => (
+  <Component
+    episodes={fixtures[service]}
+    pageType="Podcast"
+    masterBrand={masterBrands[service]}
+    service={service}
+  />
+);
+
+export const SingleItem = ({ service }) => (
+  <Component
+    episodes={[fixtures[service][0]]}
+    pageType="Podcast"
+    masterBrand={masterBrands[service]}
+    service={service}
+  />
+);

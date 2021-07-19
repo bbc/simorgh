@@ -1,18 +1,23 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import Component from '.';
 
-storiesOf('Containers/Image with Placeholder/Canonical', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('default', () => <ImageWithPlaceholder />)
-  .add('with a lazyloaded image', () => <LazyLoadImageWithPlaceholder />);
+export default {
+  title: 'Containers/Image with Placeholder',
+  Component,
+  parameters: {
+    chromatic: { disable: true },
+  },
+};
 
-storiesOf('Containers/Image with Placeholder/AMP', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(AmpDecorator)
-  .add('default', () => <AmpImageWithPlaceholder />);
+// Canonical
+export const DefaultExample = ImageWithPlaceholder;
+export const WithALazyLoadedImage = LazyLoadImageWithPlaceholder;
+
+// Amp
+export const AmpExample = AmpImageWithPlaceholder;
+AmpExample.decorators = [AmpDecorator];

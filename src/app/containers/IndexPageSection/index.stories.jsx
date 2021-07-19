@@ -1,6 +1,5 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
-import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import IndexPageSection from '.';
@@ -12,11 +11,12 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
-const getSection = platform => (service, data) => (
+// eslint-disable-next-line react/prop-types
+const Component = ({ service, data, isAmp = false }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.com"
-      isAmp={platform === 'amp'}
+      isAmp={isAmp}
       pageType={FRONT_PAGE}
       service={service}
     >
@@ -31,52 +31,67 @@ const getSection = platform => (service, data) => (
   </ServiceContextProvider>
 );
 
-const getCanonicalSection = getSection('canonical');
-const getAmpSection = getSection('amp');
+export default {
+  title: 'Containers/Front Page Section',
+  Component,
+  parameters: { chromatic: { disable: true } },
+};
 
-storiesOf('Containers/Front Page Section/Canonical', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('igbo', () => getCanonicalSection('igbo', igboData.content.groups[0]))
-  .add('pidgin', () =>
-    getCanonicalSection('pidgin', pidginData.content.groups[0]),
-  )
-  .add('link to more', () =>
-    getCanonicalSection(
-      'pidgin',
-      pidginData.content.groups.find(
-        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
-      ),
-    ),
-  )
-  .add('useful links', () =>
-    getCanonicalSection(
-      'igbo',
-      russianData.content.groups.find(
-        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
-      ),
-    ),
-  );
+export const Igbo = () => (
+  <Component service="igbo" data={igboData.content.groups[0]} />
+);
 
-storiesOf('Containers/Front Page Section/AMP', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(AmpDecorator)
-  .add('igbo - amp', () => getAmpSection('igbo', igboData.content.groups[0]))
-  .add('pidgin - amp', () =>
-    getAmpSection('pidgin', pidginData.content.groups[0]),
-  )
-  .add('link to more - amp', () =>
-    getAmpSection(
-      'pidgin',
-      pidginData.content.groups.find(
-        sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
-      ),
-    ),
-  )
-  .add('useful links - amp', () =>
-    getAmpSection(
-      'igbo',
-      russianData.content.groups.find(
-        sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
-      ),
-    ),
-  );
+export const Pidgin = () => (
+  <Component service="pidgin" data={pidginData.content.groups[0]} />
+);
+
+export const LinkToMore = () => (
+  <Component
+    service="pidgin"
+    data={pidginData.content.groups.find(
+      sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+    )}
+  />
+);
+
+export const UsefulLinks = () => (
+  <Component
+    service="igbo"
+    data={russianData.content.groups.find(
+      sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
+    )}
+  />
+);
+
+// Amp
+export const IgboAmp = () => (
+  <Component isAmp service="igbo" data={igboData.content.groups[0]} />
+);
+IgboAmp.decorators = [AmpDecorator];
+
+export const PidginAmp = () => (
+  <Component isAmp service="pidgin" data={pidginData.content.groups[0]} />
+);
+PidginAmp.decorators = [AmpDecorator];
+
+export const LinkToMoreAmp = () => (
+  <Component
+    isAmp
+    service="pidgin"
+    data={pidginData.content.groups.find(
+      sec => pathOr(null, ['strapline', 'type'], sec) === 'LINK',
+    )}
+  />
+);
+LinkToMoreAmp.decorators = [AmpDecorator];
+
+export const UsefulLinksAmp = () => (
+  <Component
+    isAmp
+    service="igbo"
+    data={russianData.content.groups.find(
+      sec => pathOr(null, ['semanticGroupName'], sec) === 'Useful links',
+    )}
+  />
+);
+UsefulLinksAmp.decorators = [AmpDecorator];

@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ImageContainer from '.';
 import { GridWrapper } from '#app/components/Grid';
@@ -10,25 +9,21 @@ import {
   square,
 } from './helpers/fixtureData';
 
-storiesOf('Containers/Image within grid', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('landscape image', () => (
-    <GridWrapper>
-      <ImageContainer {...imageData(landscape)} />
-    </GridWrapper>
-  ))
-  .add('portrait image', () => (
-    <GridWrapper>
-      <ImageContainer {...imageData(portrait)} />
-    </GridWrapper>
-  ))
-  .add('square image', () => (
-    <GridWrapper>
-      <ImageContainer {...imageData(square)} />
-    </GridWrapper>
-  ))
-  .add('custom ratio image', () => (
-    <GridWrapper>
-      <ImageContainer {...imageData(custom)} />
-    </GridWrapper>
-  ));
+const Component = props => (
+  <GridWrapper>
+    <ImageContainer {...props} />
+  </GridWrapper>
+);
+
+export default {
+  title: 'Containers/Image within grid',
+  Component,
+  parameters: {
+    chromatic: { disable: true },
+  },
+};
+
+export const LandscapeImage = () => <Component {...imageData(landscape)} />;
+export const PortraitImage = () => <Component {...imageData(portrait)} />;
+export const SquareImage = () => <Component {...imageData(square)} />;
+export const CustomRatioImage = () => <Component {...imageData(custom)} />;

@@ -1,8 +1,7 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
-import PodcastPromo from '.';
+import PodcastPromoComponent from '.';
 
 const serviceContextMock = {
   service: 'news',
@@ -23,10 +22,15 @@ const serviceContextMock = {
   },
 };
 
-storiesOf('Containers/PodcastPromo', module).add('default', () => {
-  return (
-    <ServiceContext.Provider value={serviceContextMock}>
-      <PodcastPromo />
-    </ServiceContext.Provider>
-  );
-});
+const Component = () => (
+  <ServiceContext.Provider value={serviceContextMock}>
+    <PodcastPromoComponent />
+  </ServiceContext.Provider>
+);
+
+export default {
+  title: 'Containers/Podcast Promo',
+  Component,
+};
+
+export const PodcastPromo = Component;

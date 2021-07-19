@@ -1,5 +1,4 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import InlineLinkContainer from '.';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 
@@ -12,60 +11,70 @@ const fragmentBlock = (text, attributes = []) => ({
   },
 });
 
-storiesOf('Containers/InlineLink', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('internal link', () => (
-    <InlineLinkContainer
-      locator="https://www.bbc.com/news"
-      blocks={[fragmentBlock('This is an internal link', [])]}
-      isExternal={false}
+/* eslint-disable react/prop-types */
+const Component = ({
+  isExternal = false,
+  locator = 'https://www.bbc.com/news',
+  blocks,
+}) => (
+  <InlineLinkContainer
+    locator={locator}
+    blocks={blocks}
+    isExternal={isExternal}
+  />
+);
+
+export default {
+  title: 'Containers/Inline Link',
+  Component,
+  parameters: { chromatic: { disable: true } },
+};
+
+export const InternalLink = () => (
+  <Component blocks={[fragmentBlock('This is an internal link', [])]} />
+);
+
+export const InternalLinkBold = () => (
+  <Component
+    blocks={[fragmentBlock('This is an internal link which is bold', ['bold'])]}
+  />
+);
+
+export const InternalLinkItalic = () => (
+  <Component
+    blocks={[
+      fragmentBlock('This is an internal link which is italic', ['italic']),
+    ]}
+  />
+);
+
+export const InternalLinkBoldItalic = () => (
+  <Component
+    blocks={[
+      fragmentBlock('This is an internal link which is bold & italic', [
+        'bold',
+        'italic',
+      ]),
+    ]}
+  />
+);
+
+export const ExternalLinkNews = () => (
+  <ServiceContextProvider service="news">
+    <Component
+      locator="https://www.example.com/"
+      blocks={[fragmentBlock('This is an external link', [])]}
+      isExternal
     />
-  ))
-  .add('internal link bold', () => (
-    <InlineLinkContainer
-      locator="https://www.bbc.com/news"
-      blocks={[
-        fragmentBlock('This is an internal link which is bold', ['bold']),
-      ]}
-      isExternal={false}
+  </ServiceContextProvider>
+);
+
+export const ExternalLinkPersian = () => (
+  <ServiceContextProvider service="persian">
+    <Component
+      locator="https://www.example.com/"
+      blocks={[fragmentBlock('این لینک هست', [])]}
+      isExternal
     />
-  ))
-  .add('internal link italic', () => (
-    <InlineLinkContainer
-      locator="https://www.bbc.com/news"
-      blocks={[
-        fragmentBlock('This is an internal link which is italic', ['italic']),
-      ]}
-      isExternal={false}
-    />
-  ))
-  .add('internal link bold & italic', () => (
-    <InlineLinkContainer
-      locator="https://www.bbc.com/news"
-      blocks={[
-        fragmentBlock('This is an internal link which is bold & italic', [
-          'bold',
-          'italic',
-        ]),
-      ]}
-      isExternal={false}
-    />
-  ))
-  .add('external link - English aria-label text', () => (
-    <ServiceContextProvider service="news">
-      <InlineLinkContainer
-        locator="https://www.example.com/"
-        blocks={[fragmentBlock('This is an external link', [])]}
-        isExternal
-      />
-    </ServiceContextProvider>
-  ))
-  .add('external link - Persian aria-label text', () => (
-    <ServiceContextProvider service="persian">
-      <InlineLinkContainer
-        locator="https://www.example.com/"
-        blocks={[fragmentBlock('این لینک هست', [])]}
-        isExternal
-      />
-    </ServiceContextProvider>
-  ));
+  </ServiceContextProvider>
+);
