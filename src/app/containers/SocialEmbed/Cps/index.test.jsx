@@ -25,7 +25,10 @@ describe('CpsSocialEmbedContainer', () => {
         withContexts(CpsSocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
-        })({ blocks: [cpsTwitterBlock] }),
+        })({
+          blocks: [cpsTwitterBlock],
+          source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+        }),
       );
       expect(container.firstChild).toMatchSnapshot();
       expect(
@@ -46,23 +49,15 @@ describe('CpsSocialEmbedContainer', () => {
       ).toBeFalsy();
     });
 
-    it('should not render when disabled', () => {
-      const { container } = render(
-        withContexts(CpsSocialEmbedContainer, {
-          isAmp: false,
-          isEnabled: false,
-        })({ blocks: [cpsTwitterBlock] }),
-      );
-      expect(container.firstChild).toBeNull();
-      expect(loggerMock.info).not.toHaveBeenCalled();
-    });
-
     shouldMatchSnapshot(
       'should render correctly without an embed block',
       withContexts(CpsSocialEmbedContainer, {
         isAmp: false,
         isEnabled: true,
-      })({ blocks: [cpsTwitterBlockNoEmbed] }),
+      })({
+        blocks: [cpsTwitterBlockNoEmbed],
+        source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+      }),
     );
   });
 
@@ -72,7 +67,10 @@ describe('CpsSocialEmbedContainer', () => {
       withContexts(CpsSocialEmbedContainer, {
         isAmp: true,
         isEnabled: true,
-      })({ blocks: [cpsTwitterBlock] }),
+      })({
+        blocks: [cpsTwitterBlock],
+        source: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+      }),
     );
   });
 });
