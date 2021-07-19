@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, act, fireEvent } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
@@ -46,6 +46,18 @@ describe('ImageWithPlaceholder', () => {
     await waitFor(() => {
       expect(document.querySelector('head link')).not.toBeInTheDocument();
     });
+  });
+
+  it('should re-render with decoding attribute set to sync if an error occurs', () => {
+    const { getByAltText } = render(<ImageWithPlaceholder />);
+    const image = getByAltText('Pauline Clayton');
+    expect(image.getAttribute('decoding')).toBeNull();
+
+    act(() => {
+      fireEvent(image, new Event('error'));
+    });
+
+    expect(image.getAttribute('decoding')).toEqual('sync');
   });
 
   it('should not add a link tag to the head of the document when rendering an AMP image', async () => {

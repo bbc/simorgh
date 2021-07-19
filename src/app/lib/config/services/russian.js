@@ -135,6 +135,7 @@ export const mainTranslations = {
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
+  relatedTopics: 'Темы',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
@@ -276,6 +277,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     brandSVG,
     mostRead: {
       header: 'Самое популярное',

@@ -48,6 +48,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     noBylinesPolicy:
       'https://www.bbc.com/yoruba/institutional-48528718#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',
@@ -65,6 +66,7 @@ export const service = {
       currentPage: 'Ojú ewé to wà yìí',
       skipLinkText: 'Fò kọjá sí nnkan tí ó wà nínú rẹ̀',
       relatedContent: 'Àwọn afíkun lórí ìròyìn yìí',
+      relatedTopics: 'Àwọn Àkórí Tójọra',
       navMenuText: 'Àwọn abala',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

@@ -1,8 +1,9 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import AmpAd, { AMP_ACCESS_FETCH } from './index';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
@@ -14,7 +15,13 @@ const adJsonAttributes = slotType => ({
   },
 });
 
-const adWithContext = slotType => (
+const adTranslations = {
+  ads: {
+    advertisementLabel: 'Publicités',
+  },
+};
+
+const adWithContext = (slotType, showAdPlaceholder = false) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp
@@ -22,9 +29,17 @@ const adWithContext = slotType => (
     service="afrique"
     pathname="/"
   >
-    <ServiceContextProvider service="afrique">
+    <ServiceContext.Provider
+      value={{
+        service: 'afrique',
+        dir: 'ltr',
+        script: latinDiacritics,
+        translations: adTranslations,
+        showAdPlaceholder,
+      }}
+    >
       <AmpAd slotType={slotType} />
-    </ServiceContextProvider>
+    </ServiceContext.Provider>
   </RequestContextProvider>
 );
 
@@ -50,14 +65,24 @@ describe('AMP Ads', () => {
   });
 
   describe('Assertions', () => {
-    it('should not render ad placeholder in UK', () => {
+    it('should not render ad placeholder in UK when showAdPlaceholder in service config is false', () => {
       const { getByLabelText } = render(
         <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
-          {adWithContext('leaderboard')}
+          {adWithContext('leaderboard', false)}
         </div>,
       );
 
       expect(getByLabelText('Publicités')).not.toBeVisible();
+    });
+
+    it('should render ad placeholder in UK when showAdPlaceholder in service config is true', () => {
+      const { getByLabelText } = render(
+        <div className="amp-geo-group-eea amp-geo-group-gbOrUnknown">
+          {adWithContext('leaderboard', true)}
+        </div>,
+      );
+
+      expect(getByLabelText('Publicités')).toBeVisible();
     });
 
     it.each`
