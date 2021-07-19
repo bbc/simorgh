@@ -8,7 +8,6 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#app/components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
@@ -22,9 +21,8 @@ const logger = nodeLogger(__filename);
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
 
-  if (!blocks || !source || !enabled) return null;
+  if (!blocks || !source) return null;
 
   const provider = getProviderFromSource(source);
   const id = getIdFromSource(source);
