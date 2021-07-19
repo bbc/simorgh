@@ -38,9 +38,11 @@ const RelatedTopics = ({ topics }) => {
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
 
   const getTopicPageUrl = id => {
+    const wordForTopics = service === 'cymrufyw' ? 'pynciau' : 'topics';
+
     return variant
-      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
-      : `${process?.env?.SIMORGH_BASE_URL}/${service}/topics/${id}`;
+      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/${wordForTopics}/${id}`
+      : `${process?.env?.SIMORGH_BASE_URL}/${service}/${wordForTopics}/${id}`;
   };
 
   return (
