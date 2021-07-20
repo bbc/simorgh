@@ -118,6 +118,8 @@
     "@emotion/styled": "11.3.0",
     "@loadable/component": "5.15.0",
     "@loadable/server": "5.15.0",
+    "@storybook/builder-webpack5": "6.4.0-alpha.18",
+    "@storybook/manager-webpack5": "6.4.0-alpha.18",
     "@testing-library/user-event": "13.1.9",
     "aws-embedded-metrics": "2.0.4",
     "compression": "1.7.4",

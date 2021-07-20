@@ -6,6 +6,9 @@ const { webpackDirAlias } = require('../dirAlias');
 const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../src/app/**/**/*.stories.jsx'],
   addons: [
     '@storybook/addon-knobs',
