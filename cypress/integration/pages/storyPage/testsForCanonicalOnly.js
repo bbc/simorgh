@@ -153,7 +153,7 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           cy.get(
             `[data-e2e="${socialEmbedSource}-embed-${socialEmbedUrl}"]`,
           ).scrollIntoView();
-          cy.get(`[href^="#skip-${socialEmbedSource}-content"]`).should(
+          cy.get(`[href^="#end-of-${socialEmbedSource}-content"]`).should(
             'exist',
           );
         }
