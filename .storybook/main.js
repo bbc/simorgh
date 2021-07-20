@@ -1,9 +1,12 @@
 /* eslint-disable no-param-reassign */
 const webpack = require('webpack');
 const path = require('path');
+const dotenv = require('dotenv');
 const { webpackDirAlias } = require('../dirAlias');
-
 const toPath = _path => path.join(process.cwd(), _path);
+
+const { getClientEnvVars } = require('../src/clientEnvVars');
+const DOT_ENV_CONFIG = dotenv.config();
 
 module.exports = {
   core: {
@@ -33,6 +36,14 @@ module.exports = {
           );
         },
       ),
+    );
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
+      new webpack.DefinePlugin({
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+      }),
     );
 
     config.resolve.extensions.push('.js', '.jsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`

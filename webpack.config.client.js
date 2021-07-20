@@ -194,7 +194,7 @@ module.exports = ({
         process: 'process/browser',
       }),
       new webpack.DefinePlugin({
-        'process.env': JSON.stringify(getClientEnvVars(DOT_ENV_CONFIG)),
+        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
