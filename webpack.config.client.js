@@ -38,7 +38,7 @@ module.exports = ({
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
   const clientConfig = {
-    target: 'web', // compile for browser environment
+    target: ['web', 'es5'], // compile for browser environment
     entry: START_DEV_SERVER
       ? [
           `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
