@@ -5,9 +5,6 @@ const dotenv = require('dotenv');
 const { webpackDirAlias } = require('../dirAlias');
 const toPath = _path => path.join(process.cwd(), _path);
 
-const { getClientEnvVars } = require('../src/clientEnvVars');
-const DOT_ENV_CONFIG = dotenv.config();
-
 module.exports = {
   core: {
     builder: 'webpack5',
@@ -36,13 +33,8 @@ module.exports = {
           );
         },
       ),
-    );
-    config.plugins.push(
       new webpack.ProvidePlugin({
         process: 'process/browser',
-      }),
-      new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
     );
 
