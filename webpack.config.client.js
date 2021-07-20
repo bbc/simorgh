@@ -11,7 +11,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-const { DuplicatesPlugin } = require('inspectpack/plugin');
+// const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
@@ -60,6 +60,7 @@ module.exports = ({
       fallback: {
         // Override webpacks default handling for these as they arnt availible on the client.
         fs: 'empty',
+        stream: require.resolve('stream-browserify'),
       },
     },
     output: {
@@ -78,7 +79,7 @@ module.exports = ({
         : prodPublicPath,
     },
     optimization: {
-      moduleIds: 'hashed',
+      moduleIds: 'deterministic',
       minimizer: [
         new TerserPlugin({
           terserOptions: {
@@ -177,14 +178,17 @@ module.exports = ({
       new CopyWebpackPlugin({
         patterns: [{ from: 'public' }],
       }),
-      new DuplicatesPlugin({
-        // Emit compilation warning or error? (Default: `false`)
-        emitErrors: true,
-        // Display full duplicates information? (Default: `false`)
-        verbose: true,
+      // new DuplicatesPlugin({
+      //   // Emit compilation warning or error? (Default: `false`)
+      //   emitErrors: true,
+      //   // Display full duplicates information? (Default: `false`)
+      //   verbose: true,
+      // }),
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
       }),
       new webpack.DefinePlugin({
-        'process.env': getClientEnvVars(DOT_ENV_CONFIG),
+        'process.env': JSON.stringify(getClientEnvVars(DOT_ENV_CONFIG)),
       }),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
@@ -245,7 +249,6 @@ module.exports = ({
        */
       new CompressionPlugin({
         algorithm: 'gzip',
-        filename: '[path].gz[query]',
         test: /\.js$/,
         threshold: 10240,
         minRatio: 0.8,
@@ -253,21 +256,21 @@ module.exports = ({
     );
   }
   if (IS_PROD) {
-    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
-    /**
-     * Visualize size of webpack output files with an interactive zoomable treemap.
-     * https://github.com/webpack-contrib/webpack-bundle-analyzer
-     */
-    clientConfig.plugins.push(
-      new BundleAnalyzerPlugin({
-        analyzerMode: 'static',
-        defaultSizes: 'gzip',
-        generateStatsFile: true,
-        openAnalyzer: false,
-        reportFilename: '../../reports/webpackBundleReport.html',
-        statsFilename: '../../reports/webpackBundleReport.json',
-      }),
-    );
+    // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
+    // /**
+    //  * Visualize size of webpack output files with an interactive zoomable treemap.
+    //  * https://github.com/webpack-contrib/webpack-bundle-analyzer
+    //  */
+    // clientConfig.plugins.push(
+    //   new BundleAnalyzerPlugin({
+    //     analyzerMode: 'static',
+    //     defaultSizes: 'gzip',
+    //     generateStatsFile: true,
+    //     openAnalyzer: false,
+    //     reportFilename: '../../reports/webpackBundleReport.html',
+    //     statsFilename: '../../reports/webpackBundleReport.json',
+    //   }),
+    // );
   }
   return clientConfig;
 };
