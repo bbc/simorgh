@@ -81,7 +81,7 @@ describe('Js bundle requests', () => {
               const serviceMatches = requests.filter(url =>
                 url.match(
                   new RegExp(
-                    `(\\/static\\/js\\/${config[service].name}-.+?.js)`,
+                    `(\\/static\\/js\\/${config[service].name}.+?.js)`,
                     'g',
                   ),
                 ),
