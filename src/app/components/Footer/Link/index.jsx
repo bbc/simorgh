@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 import { string, bool } from 'prop-types';
 import { getSansBold } from '@bbc/psammead-styles/font-styles';
 import { C_WHITE } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING_HLF_TRPL } from '@bbc/gel-foundations/spacings';
 
 const StyledLink = styled.a`
   ${({ service }) => service && getSansBold(service)}
   color: ${C_WHITE};
   display: ${({ inline }) => (inline ? 'inline' : 'block')};
-  padding: ${GEL_SPACING} 0 ${GEL_SPACING};
+  padding: ${GEL_SPACING_HLF_TRPL} 0 ${GEL_SPACING_HLF_TRPL};
   text-decoration: none;
 
   &:hover,
