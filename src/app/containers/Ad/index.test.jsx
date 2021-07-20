@@ -59,7 +59,9 @@ describe('Ad Container', () => {
     describe('AMP', () => {
       shouldMatchSnapshot(
         'should correctly render a leaderboard ad',
-        <ServiceContextProvider service="mundo">
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: false, ...context }}
+        >
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
@@ -74,12 +76,14 @@ describe('Ad Container', () => {
               <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
-        </ServiceContextProvider>,
+        </ServiceContext.Provider>,
       );
 
       shouldMatchSnapshot(
         'should correctly render an mpu ad',
-        <ServiceContextProvider service="mundo">
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: false, ...context }}
+        >
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
@@ -94,7 +98,7 @@ describe('Ad Container', () => {
               <AdContainer slotType="mpu" />
             </ToggleContext.Provider>
           </RequestContextProvider>
-        </ServiceContextProvider>,
+        </ServiceContext.Provider>,
       );
 
       shouldMatchSnapshot(
