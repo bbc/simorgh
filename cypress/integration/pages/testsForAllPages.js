@@ -7,9 +7,11 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       cy.url().then(url => {
-        const firstVisitedPage = url;
+        const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
 
-        cy.request(getDataUrl(firstVisitedPage)).then(({ body }) => {
+        const firstVisitedPage = url;
+        cy.log(firstVisitedPage);
+        cy.request(getDataUrl(urlForData)).then(({ body }) => {
           // Check if data has topic tags
           const topicTagsPresent = body.metadata.topics;
           let topicTagsLength = 0;
@@ -32,12 +34,12 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
               .first()
               .click();
 
-            // Checks the page is of the Topic Tag clicked on
+            // Checks the page is of the Topic Tag clicked on by checking H1
             cy.get('@topicTitle').then(title => {
               cy.get('h1').should('contain', title);
             });
 
-            // Needs to be back to the first page for the rest of the test suite
+            // Needs to go back to the first page for the rest of the test suite
             // cy.go('back') does not work on AMP as it returns to a canonical page
             cy.visit(firstVisitedPage);
           } else if (topicTagsPresent && topicTagsLength === 1) {
