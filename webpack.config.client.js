@@ -184,6 +184,12 @@ module.exports = ({
       //   // Display full duplicates information? (Default: `false`)
       //   verbose: true,
       // }),
+      /*
+       * webpack 5 does no longer includes a polyfill for the Node.js process variable in
+       * frontend code. webpack advise to avoid using it in the frontend code however the
+       * following plugin will enable the process variable in frontend code until we find
+       * an alternative for this sort of thing.
+       */
       new webpack.ProvidePlugin({
         process: 'process/browser',
       }),
