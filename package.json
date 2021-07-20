@@ -189,7 +189,7 @@
     "chromatic": "5.9.2",
     "chrome-launcher": "0.14.0",
     "cli-table": "0.3.6",
-    "compression-webpack-plugin": "6.1.1",
+    "compression-webpack-plugin": "8.0.1",
     "copy-webpack-plugin": "9.0.1",
     "crypto": "1.0.1",
     "cypress": "7.7.0",
@@ -243,7 +243,7 @@
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.2",
     "webpack-merge": "5.8.0",
-    "webpack-node-externals": "2.5.2",
+    "webpack-node-externals": "3.0.0",
     "yaml-js": "0.2.3"
   },
   "spec": {
