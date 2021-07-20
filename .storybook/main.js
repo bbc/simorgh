@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 const webpack = require('webpack');
 const path = require('path');
-const dotenv = require('dotenv');
 const { webpackDirAlias } = require('../dirAlias');
 const toPath = _path => path.join(process.cwd(), _path);
 
