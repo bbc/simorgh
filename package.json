@@ -21,7 +21,7 @@
     "bbcA11y": "echo 'BBC A11y Disabled Temporarily Due to npm audit warnings'",
     "bbcA11y:ci": "npm run bbcA11y",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
-    "build": "yarn build:local",
+    "build": "yarn build:local && node ./scripts/bundleSize/index.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",

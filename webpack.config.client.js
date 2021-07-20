@@ -256,21 +256,21 @@ module.exports = ({
     );
   }
   if (IS_PROD) {
-    // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
-    // /**
-    //  * Visualize size of webpack output files with an interactive zoomable treemap.
-    //  * https://github.com/webpack-contrib/webpack-bundle-analyzer
-    //  */
-    // clientConfig.plugins.push(
-    //   new BundleAnalyzerPlugin({
-    //     analyzerMode: 'static',
-    //     defaultSizes: 'gzip',
-    //     generateStatsFile: true,
-    //     openAnalyzer: false,
-    //     reportFilename: '../../reports/webpackBundleReport.html',
-    //     statsFilename: '../../reports/webpackBundleReport.json',
-    //   }),
-    // );
+    const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); // eslint-disable-line
+    /**
+     * Visualize size of webpack output files with an interactive zoomable treemap.
+     * https://github.com/webpack-contrib/webpack-bundle-analyzer
+     */
+    clientConfig.plugins.push(
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        defaultSizes: 'gzip',
+        generateStatsFile: true,
+        openAnalyzer: false,
+        reportFilename: '../../reports/webpackBundleReport.html',
+        statsFilename: '../../reports/webpackBundleReport.json',
+      }),
+    );
   }
   return clientConfig;
 };
