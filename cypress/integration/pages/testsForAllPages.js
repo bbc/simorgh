@@ -11,7 +11,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
 
           const firstVisitedPage = url;
-          cy.log(firstVisitedPage);
+
           cy.request(getDataUrl(urlForData)).then(({ body }) => {
             // Check if data has topic tags
             const topicTagsPresent = body.metadata.topics;
@@ -66,7 +66,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           });
         });
       } else {
-        cy.log('Topic tags currently disabled on Sport');
+        cy.log('Topic tags currently disabled on Sport and Newsround');
       }
     });
   });
