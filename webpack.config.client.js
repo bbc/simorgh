@@ -13,6 +13,7 @@ const webpack = require('webpack');
 const dotenv = require('dotenv');
 // const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
+const { russian } = require('@bbc/psammead-assets/dist/svgs');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
 const TOTAL_PAGE_TYPES = fs
@@ -146,6 +147,14 @@ module.exports = ({
             reuseExistingChunk: true,
           },
           shared: {
+            // test(module) {
+            //   return (
+            //     module.resource &&
+            //     !module.resource.includes(
+            //       'src/app/lib/config/services/russian.js',
+            //     )
+            //   );
+            // },
             name(module, chunks) {
               const cryptoName = crypto
                 .createHash('sha1')

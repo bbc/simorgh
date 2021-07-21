@@ -87,7 +87,13 @@ describe('Js bundle requests', () => {
                 ),
               );
 
-              expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+              if (config[service].name === 'russian') {
+                // webpack includes the russian service config in a shared chunk
+                // because the ukrainian-russian service also uses the russian config
+                expect(serviceMatches.length).toBe(0);
+              } else {
+                expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+              }
             });
           });
         } else {
