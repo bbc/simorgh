@@ -70,7 +70,7 @@ describe('Js bundle requests', () => {
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${serviceRegex}|.+Page)-.+?.js)|(\\/static\\/.+?-lib-.+?.js)`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${serviceRegex}|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
                       'g',
                     ),
                   );
@@ -81,13 +81,19 @@ describe('Js bundle requests', () => {
               const serviceMatches = requests.filter(url =>
                 url.match(
                   new RegExp(
-                    `(\\/static\\/js\\/${config[service].name}-.+?.js)`,
+                    `(\\/static\\/js\\/${config[service].name}.+?.js)`,
                     'g',
                   ),
                 ),
               );
 
-              expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+              if (config[service].name === 'russian') {
+                // webpack includes the russian service config in a shared chunk
+                // because the ukrainian-russian service also uses the russian config
+                expect(serviceMatches.length).toBe(0);
+              } else {
+                expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
+              }
             });
           });
         } else {
