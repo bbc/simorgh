@@ -9,7 +9,7 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const RadioSchedule = props => <Component {...props} />;
+export const RadioSchedule = Component;
 
 export const ScheduleDifferentHeights = props => (
   <Component {...props} withLongSummary />
