@@ -7,6 +7,12 @@ const createTranslations = ({ translations, index }) => {
     translations,
   ).concat(index === undefined ? '' : `, ${index}`);
 
+  const endTextVisuallyHiddenText = pathOr(
+    'End of %provider_name% content',
+    ['socialEmbed', 'skipLink', 'endTextVisuallyHidden'],
+    translations,
+  ).concat(index === undefined ? '' : `, ${index}`);
+
   return {
     fallback: {
       text: pathOr(
@@ -33,11 +39,7 @@ const createTranslations = ({ translations, index }) => {
 
     skipLink: {
       text: skipLinkText,
-      endTextVisuallyHidden: `${pathOr(
-        'End of %provider_name% content',
-        ['socialEmbed', 'skipLink', 'endTextVisuallyHidden'],
-        translations,
-      )}, ${index}`,
+      endTextVisuallyHidden: endTextVisuallyHiddenText,
     },
 
     caption: {
