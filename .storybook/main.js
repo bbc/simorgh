@@ -18,6 +18,7 @@ module.exports = {
     '@storybook/addon-controls',
   ],
   webpackFinal: async config => {
+    config.target = ['web', 'es5'];
     config.plugins.push(
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
