@@ -48,7 +48,10 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `end-of-%provider%-content-${oEmbedPosition}`,
+    endTextId:
+      oEmbedPosition === undefined
+        ? `end-of-%provider%-content`
+        : `end-of-%provider%-content-${oEmbedPosition}`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
