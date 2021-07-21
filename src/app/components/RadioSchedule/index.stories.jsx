@@ -4,7 +4,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { renderRadioSchedule as Component } from './testHelpers/helper';
 
 export default {
-  title: 'Components/RadioSchedule',
+  title: 'Components/Radio Schedule',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };
