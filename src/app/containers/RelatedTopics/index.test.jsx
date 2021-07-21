@@ -101,6 +101,24 @@ describe('Expected use', () => {
     );
   });
 
+  it('should construct the correct topics href given a topic id when service=cymrufyw', () => {
+    const topic = {
+      topicName: 'foo',
+      topicId: 'bar',
+    };
+
+    const { getByText } = render(
+      <WithContexts service="cymrufyw">
+        <RelatedTopics topics={[topic]} />
+      </WithContexts>,
+    );
+
+    expect(getByText(topic.topicName)).toHaveAttribute(
+      'href',
+      `https://bbc.com/cymrufyw/pynciau/${topic.topicId}`,
+    );
+  });
+
   it('should construct the correct topics href given a topic id and a variant', () => {
     const topic = {
       topicName: 'foo',
