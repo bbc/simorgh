@@ -4,7 +4,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { renderProgramCard as Component } from '../testHelpers/helper';
 
 export default {
-  title: 'Components/RadioSchedule/ProgramCard',
+  title: 'Components/Radio Schedule/Program Card',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };
