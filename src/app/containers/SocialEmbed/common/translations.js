@@ -5,7 +5,7 @@ const createTranslations = ({ translations, index }) => {
     'Skip %provider_name% content',
     ['socialEmbed', 'skipLink', 'text'],
     translations,
-  ).concat(index === undefined ? '' : `, ${index}`);
+  ).concat(index > 0 ? `, ${index}` : '');
 
   const endTextVisuallyHiddenText = pathOr(
     'End of %provider_name% content',
