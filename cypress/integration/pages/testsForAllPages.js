@@ -66,7 +66,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           });
         });
       } else {
-        cy.log('Topic tags currently disabled on Sport');
+        cy.log('Topic tags currently disabled on Sport and Newsround');
       }
     });
   });
