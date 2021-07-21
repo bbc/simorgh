@@ -11,9 +11,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const LoadablePlugin = require('@loadable/webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-// const { DuplicatesPlugin } = require('inspectpack/plugin');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
 const { getClientEnvVars } = require('./src/clientEnvVars');
-const { russian } = require('@bbc/psammead-assets/dist/svgs');
 
 const FRAMEWORK_BUNDLES = ['react', 'react-dom'];
 const TOTAL_PAGE_TYPES = fs
@@ -187,12 +186,12 @@ module.exports = ({
       new CopyWebpackPlugin({
         patterns: [{ from: 'public' }],
       }),
-      // new DuplicatesPlugin({
-      //   // Emit compilation warning or error? (Default: `false`)
-      //   emitErrors: true,
-      //   // Display full duplicates information? (Default: `false`)
-      //   verbose: true,
-      // }),
+      new DuplicatesPlugin({
+        // Emit compilation warning or error? (Default: `false`)
+        emitErrors: true,
+        // Display full duplicates information? (Default: `false`)
+        verbose: true,
+      }),
       /*
        * webpack 5 does no longer includes a polyfill for the Node.js process variable in
        * frontend code. webpack advise to avoid using it in the frontend code however the
