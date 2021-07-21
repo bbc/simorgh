@@ -1,56 +1,30 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ErrorPage from './ErrorPage';
 
-storiesOf('Pages/Error Page', module)
-  .add('404', () => (
-    <ServiceContextProvider service="news">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>
-  ))
-  .add('500', () => (
-    <ServiceContextProvider service="news">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>
-  ))
-  .add('404 - Persian', () => (
-    <ServiceContextProvider service="persian">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>
-  ))
-  .add('500 - Persian', () => (
-    <ServiceContextProvider service="persian">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>
-  ))
-  .add('404 - Igbo', () => (
-    <ServiceContextProvider service="igbo">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>
-  ))
-  .add('500 - Igbo', () => (
-    <ServiceContextProvider service="igbo">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>
-  ))
-  .add('404 - Pidgin', () => (
-    <ServiceContextProvider service="pidgin">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>
-  ))
-  .add('500 - Pidgin', () => (
-    <ServiceContextProvider service="pidgin">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>
-  ))
-  .add('404 - Yoruba', () => (
-    <ServiceContextProvider service="yoruba">
-      <ErrorPage errorCode={404} />
-    </ServiceContextProvider>
-  ))
-  .add('500 - Yoruba', () => (
-    <ServiceContextProvider service="yoruba">
-      <ErrorPage errorCode={500} />
-    </ServiceContextProvider>
-  ));
+// eslint-disable-next-line react/prop-types
+const Component = ({ service = 'news', status = 404 } = {}) => (
+  <ServiceContextProvider service={service}>
+    <ErrorPage errorCode={status} />
+  </ServiceContextProvider>
+);
+
+export default {
+  Component,
+  title: 'Pages/Error Page',
+};
+
+export const News404 = () => <Component />;
+export const News500 = () => <Component status={500} />;
+
+export const Persian404 = () => <Component service="persian" />;
+export const Persian500 = () => <Component service="persian" status={500} />;
+
+export const Igbo404 = () => <Component service="igbo" />;
+export const Igbo500 = () => <Component service="igbo" status={500} />;
+
+export const Pidgin404 = () => <Component service="pidgin" />;
+export const Pidgin500 = () => <Component service="pidgin" status={500} />;
+
+export const Yoruba404 = () => <Component service="yoruba" />;
+export const Yoruba500 = () => <Component service="yoruba" status={500} />;

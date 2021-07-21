@@ -61,6 +61,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
     translations: {
       ads: {
         advertisementLabel: 'اشتہار',
@@ -70,6 +71,7 @@ export const service = {
       currentPage: 'موجودہ صفحہ',
       skipLinkText: 'مواد پر جائیں',
       relatedContent: 'اسی بارے میں',
+      relatedTopics: 'متعلقہ عنوانات',
       navMenuText: 'سیکشن',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

@@ -73,6 +73,22 @@ const externalLinks = {
           'https://castbox.fm/channel/id3130703?utm_campaign=i_share_ch&utm_medium=dlink&utm_source=i_share&country=us',
       },
     ],
+    p09nx6zm: [
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/ru/podcast/%D0%BF%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%B9%D0%BE%D0%BC%D0%B5%D0%B9-%D0%BC%D0%B0%D1%80%D1%83/id1575896140',
+      },
+      {
+        linkText: 'Yandex',
+        linkUrl: 'https://music.yandex.com/album/16801020',
+      },
+      {
+        linkText: 'Castbox',
+        linkUrl:
+          'https://castbox.fm/channel/%D0%9F%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%B8%D1%80%D1%8B-%D0%99%D0%BE%D0%BC%D0%B5%D0%B9-%D0%9C%D0%B0%D1%80%D1%83-id4407848',
+      },
+    ],
     p082h9l8: [
       {
         linkText: 'Spotify',

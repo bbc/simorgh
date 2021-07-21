@@ -8,7 +8,6 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#app/components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
@@ -22,23 +21,21 @@ const logger = nodeLogger(__filename);
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
 
-  if (!blocks || !source || !enabled) return null;
+  if (!blocks || !source) return null;
 
   const provider = getProviderFromSource(source);
   const id = getIdFromSource(source);
 
   const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-
-  const index = id;
+  const oEmbedPosition = path(['indexOfType'], oEmbed) + 1;
 
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
     caption: captionTranslations,
-  } = createTranslations({ translations, index });
+  } = createTranslations({ translations, index: oEmbedPosition });
 
   const fallback = {
     ...fallbackTranslations,
@@ -47,7 +44,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `skip-%provider%-content-${index}`,
+    endTextId: `end-of-%provider%-content-${oEmbedPosition}`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;

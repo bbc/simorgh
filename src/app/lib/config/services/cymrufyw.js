@@ -61,6 +61,7 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
@@ -70,6 +71,8 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      topicsPath: 'pynciau',
+      relatedTopics: 'Pynciau Cysylltiedig',
       navMenuText: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',

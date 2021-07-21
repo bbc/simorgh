@@ -1,22 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-.emotion-0 {
+.emotion-1 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
   padding: 0 0.5rem;
   border-top: 0.0625rem solid transparent;
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 25rem) {
-  .emotion-0 {
+  .emotion-1 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -38,12 +40,12 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-2 {
+  .emotion-3 {
     display: block;
   }
 }
 
-.emotion-4 {
+.emotion-5 {
   display: inline-block;
   width: 100%;
   max-width: 10.496849999999998rem;
@@ -55,12 +57,12 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-4 {
+  .emotion-5 {
     display: block;
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -77,34 +79,34 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-6 {
+  .emotion-7 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-6 {
+  .emotion-7 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active),print {
-  .emotion-6 {
+  .emotion-7 {
     fill: windowText;
   }
 }
 
-.emotion-5:hover .emotion-6,
-.emotion-5:focus .emotion-6 {
+.emotion-6:hover .emotion-7,
+.emotion-6:focus .emotion-7 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -115,7 +117,7 @@ exports[`FooterContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-10 {
+.emotion-11 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -123,23 +125,23 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 25rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-11 {
     padding: 0 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-13 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-14 {
+.emotion-15 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -149,14 +151,14 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-14 {
+  .emotion-15 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-14 {
+  .emotion-15 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -164,7 +166,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-15 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(
@@ -177,7 +179,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-15 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(
@@ -190,7 +192,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-14 {
+  .emotion-15 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(
@@ -203,7 +205,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-14 {
+  .emotion-15 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(
@@ -215,49 +217,49 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-18 {
+.emotion-19 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #FFFFFF;
   display: block;
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-18:hover,
-.emotion-18:focus {
+.emotion-19:hover,
+.emotion-19:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-20 {
+.emotion-21 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-22 {
+.emotion-23 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   color: #FFFFFF;
   display: inline;
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-22:hover,
-.emotion-22:focus {
+.emotion-23:hover,
+.emotion-23:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -267,18 +269,18 @@ exports[`FooterContainer should render correctly 1`] = `
     role="contentinfo"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-0 emotion-1 emotion-2"
     >
       <div
-        class="emotion-2 emotion-3"
+        class="emotion-3 emotion-4"
       >
         <a
-          class="emotion-4 emotion-5"
+          class="emotion-5 emotion-6"
           href="/news"
         >
           <svg
             aria-hidden="true"
-            class="emotion-6 emotion-7"
+            class="emotion-7 emotion-8"
             focusable="false"
             height="24"
             viewBox="0 0 167.95 24"
@@ -299,7 +301,7 @@ exports[`FooterContainer should render correctly 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-8 emotion-9"
+            class="emotion-9 emotion-10"
           >
             BBC News
           </span>
@@ -307,21 +309,21 @@ exports[`FooterContainer should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-10 emotion-11"
+      class="emotion-11 emotion-12"
     >
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-13 emotion-14"
       >
         <ul
-          class="emotion-14 emotion-15"
+          class="emotion-15 emotion-16"
           role="list"
         >
           <li
-            class="emotion-16 emotion-17"
+            class="emotion-17 emotion-18"
             role="listitem"
           >
             <a
-              class="emotion-18 emotion-19"
+              class="emotion-19 emotion-20"
               href="https://www.bbc.com/yoruba/institutional-48528718"
             >
               Why you can trust the BBC
@@ -329,7 +331,7 @@ exports[`FooterContainer should render correctly 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-20 emotion-21"
+          class="emotion-21 emotion-22"
         >
           <span
             lang="en-GB"
@@ -340,7 +342,7 @@ exports[`FooterContainer should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="emotion-22 emotion-19"
+            class="emotion-23 emotion-20"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.
