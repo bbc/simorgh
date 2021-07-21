@@ -36,11 +36,12 @@ const RelatedTopics = ({ topics }) => {
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
   const heading = pathOr('Related Topics', ['relatedTopics'], translations);
+  const topicsPath = pathOr('topics', ['topicsPath'], translations);
 
   const getTopicPageUrl = id => {
     return variant
-      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/topics/${id}`
-      : `${process?.env?.SIMORGH_BASE_URL}/${service}/topics/${id}`;
+      ? `${process?.env?.SIMORGH_BASE_URL}/${service}/${variant}/${topicsPath}/${id}`
+      : `${process?.env?.SIMORGH_BASE_URL}/${service}/${topicsPath}/${id}`;
   };
 
   return (

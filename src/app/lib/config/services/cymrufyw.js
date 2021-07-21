@@ -71,6 +71,7 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      topicsPath: 'pynciau',
       relatedTopics: 'Pynciau Cysylltiedig',
       navMenuText: 'Adrannau',
       mediaAssetPage: {
