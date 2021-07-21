@@ -1,8 +1,6 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-// import ProgramCard from '.';
 import { renderProgramCard as Component } from '../testHelpers/helper';
 
 export default {
