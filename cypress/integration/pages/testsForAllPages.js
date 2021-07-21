@@ -6,7 +6,7 @@ import getDataUrl from '../../support/helpers/getDataUrl';
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
-      if (service !== 'sport') {
+      if (service !== 'sport' && service !== 'newsround') {
         cy.url().then(url => {
           const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
 
