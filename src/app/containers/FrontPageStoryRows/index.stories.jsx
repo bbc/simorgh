@@ -1,6 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 import Grid from '#app/components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -37,7 +36,13 @@ const RegularRowStory = ({ dir, displayImages }) => (
   />
 );
 
-const getRow = (RowType, dir = 'ltr', displayImages = true) => {
+const selectDir = () => {
+  const isRtl = boolean('Right to Left', false);
+  return isRtl ? 'rtl' : 'ltr';
+};
+
+// eslint-disable-next-line react/prop-types
+const Component = ({ RowType, displayImages = true }) => {
   return (
     <ServiceContextProvider service="news">
       <RequestContextProvider
@@ -54,7 +59,7 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
           }}
         >
           <Grid enableGelGutters columns={topStoryColumns}>
-            <RowType dir={dir} displayImages={displayImages} />
+            <RowType dir={selectDir()} displayImages={displayImages} />
           </Grid>
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -62,16 +67,18 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
   );
 };
 
-storiesOf('Containers/Front Page Story Row', module)
-  .addParameters({
+export default {
+  title: 'Containers/Front Page Story Row',
+  Component,
+  decorators: [withKnobs],
+  parameters: {
     chromatic: { disable: true },
-  })
-  .addDecorator(withKnobs)
-  .add('Top Row', () => getRow(TopRowStory))
-  .add('Leading Row', () => getRow(LeadingRowStory))
-  .add('Regular Row', () => getRow(RegularRowStory))
-  .add('NoImage Row', () => getRow(RegularRowStory, 'ltr', false))
-  .add('Top Row RTL', () => getRow(TopRowStory, 'rtl'))
-  .add('Leading Row RTL', () => getRow(LeadingRowStory, 'rtl'))
-  .add('Regular Row RTL', () => getRow(RegularRowStory, 'rtl'))
-  .add('NoImage Row RTL', () => getRow(RegularRowStory, 'rtl', false));
+  },
+};
+
+export const WithTopRow = () => <Component RowType={TopRowStory} />;
+export const WithLeadingRow = () => <Component RowType={LeadingRowStory} />;
+export const WithRegularRow = () => <Component RowType={RegularRowStory} />;
+export const WithNoImageRow = () => (
+  <Component RowType={RegularRowStory} displayImages={false} />
+);
