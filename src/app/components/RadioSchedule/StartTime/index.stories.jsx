@@ -20,7 +20,7 @@ const Component = ({ service, locale, script, dir, timezone }) => (
 );
 
 export default {
-  title: 'Components/RadioSchedule/StartTime',
+  title: 'Components/Radio Schedule/Start Time',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };
