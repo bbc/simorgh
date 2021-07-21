@@ -230,7 +230,7 @@ exports[`FooterContainer should render correctly 1`] = `
   font-style: normal;
   color: #FFFFFF;
   display: block;
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -253,7 +253,7 @@ exports[`FooterContainer should render correctly 1`] = `
   font-style: normal;
   color: #FFFFFF;
   display: inline;
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.75rem 0 0.75rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

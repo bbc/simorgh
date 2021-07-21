@@ -7,7 +7,6 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-
 import { cpsTwitterBlock, cpsTwitterBlockNoEmbed } from './common/fixtures';
 import CpsSocialEmbedContainer from '.';
 

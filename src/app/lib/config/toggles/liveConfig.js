@@ -41,12 +41,6 @@ export default {
   scriptLink: {
     enabled: true,
   },
-  cpsSocialEmbed: {
-    enabled: true,
-  },
-  socialEmbed: {
-    enabled: false,
-  },
   variantCookie: {
     enabled: true,
   },
