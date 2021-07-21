@@ -11,7 +11,7 @@ const createTranslations = ({ translations, index }) => {
     'End of %provider_name% content',
     ['socialEmbed', 'skipLink', 'endTextVisuallyHidden'],
     translations,
-  ).concat(index === undefined ? '' : `, ${index}`);
+  ).concat(index > 0 ? `, ${index}` : '');
 
   return {
     fallback: {
