@@ -1,7 +1,10 @@
 {
   "metadata": {
     "id": "urn:bbc:ares:ws_media:brand:bbc_russian_radio/p05607v8",
-    "locators": { "pid": "p06xlzvx", "brandPid": "p05607v8" },
+    "locators": {
+      "pid": "p06xlzvx",
+      "brandPid": "p05607v8"
+    },
     "type": "WSRADIO",
     "createdBy": "bbc_russian_radio",
     "language": "ru",
@@ -19,7 +22,9 @@
     },
     "tags": {},
     "version": "v1.3.11",
-    "blockTypes": ["media"],
+    "blockTypes": [
+      "media"
+    ],
     "title": "Радиоархив Русской службы Би-би-си",
     "releaseDateTimeStamp": 1547164800000,
     "atiAnalytics": {}
@@ -41,7 +46,9 @@
         "versions": [
           {
             "versionId": "p06xlz6f",
-            "types": ["Podcast"],
+            "types": [
+              "Podcast"
+            ],
             "duration": 778,
             "durationISO8601": "PT12M58S",
             "warnings": {},
@@ -62,8 +69,13 @@
     ]
   },
   "promo": {
-    "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-    "locators": { "pid": "p06xlzvx", "brandPid": "p05607v8" },
+    "headlines": {
+      "headline": "Радиоархив Русской службы Би-би-си"
+    },
+    "locators": {
+      "pid": "p06xlzvx",
+      "brandPid": "p05607v8"
+    },
     "media": {
       "id": "p06xlzvx",
       "subType": "episode",
@@ -79,11 +91,17 @@
       "versions": [
         {
           "versionId": "p06xlz6f",
-          "types": ["Podcast"],
+          "types": [
+            "Podcast"
+          ],
           "duration": 778,
           "durationISO8601": "PT12M58S",
           "warnings": {},
-          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
           "availableFrom": 1547211600000,
           "availabilityStatus": "available"
         }
@@ -124,8 +142,13 @@
         "type": "other-episode",
         "promos": [
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06x0tn3", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06x0tn3",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06x0tn3",
               "subType": "episode",
@@ -141,7 +164,9 @@
               "versions": [
                 {
                   "versionId": "p06x0sll",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 1158,
                   "durationISO8601": "PT19M18S",
                   "warnings": {},
@@ -179,8 +204,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06vm5xl", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06vm5xl",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06vm5xl",
               "subType": "episode",
@@ -196,7 +226,9 @@
               "versions": [
                 {
                   "versionId": "p06vlstg",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 2032,
                   "durationISO8601": "PT33M52S",
                   "warnings": {},
@@ -234,8 +266,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06vm4sc", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06vm4sc",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06vm4sc",
               "subType": "episode",
@@ -251,7 +288,9 @@
               "versions": [
                 {
                   "versionId": "p06vlsqs",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 2106,
                   "durationISO8601": "PT35M6S",
                   "warnings": {},
@@ -289,8 +328,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06pbj4p", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06pbj4p",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06pbj4p",
               "subType": "episode",
@@ -306,7 +350,9 @@
               "versions": [
                 {
                   "versionId": "p06pbhfx",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 884,
                   "durationISO8601": "PT14M44S",
                   "warnings": {},
@@ -344,8 +390,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06nq39v", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06nq39v",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06nq39v",
               "subType": "episode",
@@ -361,7 +412,9 @@
               "versions": [
                 {
                   "versionId": "p06nq0tz",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 1537,
                   "durationISO8601": "PT25M37S",
                   "warnings": {},
@@ -399,8 +452,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06n2khy", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06n2khy",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06n2khy",
               "subType": "episode",
@@ -416,7 +474,9 @@
               "versions": [
                 {
                   "versionId": "p06n2jpm",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 3107,
                   "durationISO8601": "PT51M47S",
                   "warnings": {},
@@ -454,8 +514,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06hrrr6", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06hrrr6",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06hrrr6",
               "subType": "episode",
@@ -471,7 +536,9 @@
               "versions": [
                 {
                   "versionId": "p06hrqtg",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 1478,
                   "durationISO8601": "PT24M38S",
                   "warnings": {},
@@ -509,8 +576,13 @@
             "type": "ws_radio"
           },
           {
-            "headlines": { "headline": "Радиоархив Русской службы Би-би-си" },
-            "locators": { "pid": "p06hrqnj", "brandPid": "p05607v8" },
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06hrqnj",
+              "brandPid": "p05607v8"
+            },
             "media": {
               "id": "p06hrqnj",
               "subType": "episode",
@@ -526,7 +598,9 @@
               "versions": [
                 {
                   "versionId": "p06hrq15",
-                  "types": ["Podcast"],
+                  "types": [
+                    "Podcast"
+                  ],
                   "duration": 1448,
                   "durationISO8601": "PT24M8S",
                   "warnings": {},
