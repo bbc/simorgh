@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import moment from 'moment';
@@ -32,7 +31,8 @@ const radioServices = {
   urdu: 'urdu',
 };
 
-const renderRadioScheduleContainer = service => (
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => (
   <BrowserRouter>
     <ToggleContextProvider>
       <RequestContextProvider
@@ -55,26 +55,26 @@ const renderRadioScheduleContainer = service => (
 );
 
 moment.locale('en-GB'); // needed for Time Machine date string
-const stories = storiesOf('Containers/RadioSchedule', module)
-  .addDecorator(withKnobs)
-  .addDecorator(story => (
-    <WithTimeMachine
-      datetime={moment.utc().format('x')} // Sets datetime to today. e.g. 1584525420043
-      dateString={moment.utc().format('LLLL')} // Sets dateString to today. e.g. Wednesday, 18 March 2020 09:57
-    >
-      {story()}
-    </WithTimeMachine>
-  ))
-  .addDecorator(
+
+export default {
+  title: 'Containers/Radio Schedule',
+  Component,
+  parameters: { chromatic: { disable: true } },
+  decorators: [
+    withKnobs,
     withServicesKnob({
       defaultService: 'korean',
       services: Object.keys(radioServices),
     }),
-  )
-  .addParameters({
-    chromatic: { disable: true },
-  });
+    story => (
+      <WithTimeMachine
+        datetime={moment.utc().format('x')} // Sets datetime to today. e.g. 1584525420043
+        dateString={moment.utc().format('LLLL')} // Sets dateString to today. e.g. Wednesday, 18 March 2020 09:57
+      >
+        {story()}
+      </WithTimeMachine>
+    ),
+  ],
+};
 
-stories.add('Radio schedules', ({ service }) => {
-  return renderRadioScheduleContainer(service);
-});
+export const RadioSchedule = Component;
