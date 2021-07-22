@@ -185,11 +185,6 @@ describe('Consent Banner Utilities', () => {
         expires: 365,
         domain: '.bbc.com',
       });
-      expect(setCookieOvenMock).toHaveBeenCalledWith(
-        POLICY_COOKIE,
-        '000',
-        undefined,
-      );
     });
 
     it('does not set POLICY_COOKIE when its already set', () => {
@@ -218,11 +213,6 @@ describe('Consent Banner Utilities', () => {
         expires: 365,
         domain: '.bbc.com',
       });
-      expect(setCookieOvenMock).toHaveBeenCalledWith(
-        POLICY_COOKIE,
-        '000',
-        undefined,
-      );
       expect(setShowCookieBannerMock).toHaveBeenCalledWith(true);
     });
 
@@ -246,11 +236,7 @@ describe('Consent Banner Utilities', () => {
 
       cookieOnAllow();
 
-      expect(setCookieOvenMock).toHaveBeenCalledWith(
-        POLICY_COOKIE,
-        '111',
-        logger,
-      );
+      expect(setCookieOvenMock).toHaveBeenCalledWith('111', logger);
     });
   });
 
@@ -286,20 +272,7 @@ describe('Consent Banner Utilities', () => {
 
       expect(setShowCookieBannerMock).toHaveBeenCalledWith(false);
       expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
-      expect(Cookie.set).toHaveBeenCalledTimes(2);
-      expect(Cookie.set).toHaveBeenCalledWith(POLICY_COOKIE, '111', {
-        expires: 365,
-        domain: '.bbc.com',
-      });
-      expect(setCookieOvenMock).toHaveBeenCalledWith(
-        POLICY_COOKIE,
-        '111',
-        undefined,
-      );
-      expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
-        expires: 365,
-        domain: '.bbc.com',
-      });
+      expect(setCookieOvenMock).toHaveBeenCalledWith('111', undefined);
     });
   });
 
@@ -311,11 +284,6 @@ describe('Consent Banner Utilities', () => {
 
       expect(setShowCookieBannerMock).toHaveBeenCalledWith(false);
       expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
-      expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(EXPLICIT_COOKIE, '1', {
-        expires: 365,
-        domain: '.bbc.com',
-      });
     });
   });
 });

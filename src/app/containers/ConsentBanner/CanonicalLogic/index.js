@@ -5,7 +5,6 @@ import setCookieOven from './setCookieOven';
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
-const COOKIE_BANNER_APPROVED = '1';
 const EXPLICIT_COOKIE_ACCEPTED_VALUES = ['1', '2'];
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
@@ -21,9 +20,20 @@ const isChromatic = () =>
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
 const SAME_SITE_VALUE = 'None';
 
-const setPolicyCookie = (value, logger) => {
-  setCookie({ name: POLICY_COOKIE, value, sameSite: SAME_SITE_VALUE });
-  setCookieOven(POLICY_COOKIE, value, logger);
+const setPolicyCookie = (policy, logger, explicit) => {
+  if (explicit) {
+    // Use cookie oven to set cookie via http so Safari does not delete in 7 days
+    setCookieOven(policy, logger);
+  } else {
+    // Set locally via JS when it's just the default policy as the banner
+    // persists anyway so Safari deleting doesn't matter and we can save
+    // hitting the oven too hard
+    setCookie({
+      name: POLICY_COOKIE,
+      value: policy,
+      sameSite: SAME_SITE_VALUE,
+    });
+  }
 };
 
 const showPrivacyBanner = () => {
@@ -42,14 +52,12 @@ const setSeenPrivacyBanner = () =>
     value: PRIVACY_COOKIE_CURRENT,
     sameSite: SAME_SITE_VALUE,
   });
-const setDefaultPolicy = logger => setPolicyCookie(POLICY_DENIED, logger);
-const setApprovedPolicy = logger => setPolicyCookie(POLICY_APPROVED, logger);
-const setDismissedCookieBanner = () =>
-  setCookie({
-    name: EXPLICIT_COOKIE,
-    value: COOKIE_BANNER_APPROVED,
-    sameSite: SAME_SITE_VALUE,
-  });
+const setDefaultPolicy = logger =>
+  setPolicyCookie(POLICY_DENIED, logger, false);
+const setApprovedPolicy = logger =>
+  setPolicyCookie(POLICY_APPROVED, logger, true);
+const setDismissedCookieBanner = logger =>
+  setPolicyCookie(POLICY_DENIED, logger, true);
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,
