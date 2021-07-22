@@ -4,25 +4,31 @@ const cookieOvenDomainBase = origin => {
   }
 
   if (origin.includes('.stage.') || origin.includes('.test.')) {
-    return 'https://cookie-oven.test.api.bbc';
+    return 'https://www.test.bbc';
   }
 
-  return 'https://cookie-oven.api.bbc';
+  return 'https://www.bbc';
 };
 
-const domainExtension = origin => {
+const domainExtension = (origin, opposite) => {
   if (origin.includes('localhost')) {
     return '';
   }
 
   if (origin.includes('.com')) {
-    return '.co.uk';
+    if (opposite) {
+      return '.co.uk';
+    }
+    return '.com';
   }
 
-  return '.com';
+  if (opposite) {
+    return '.com';
+  }
+  return '.co.uk';
 };
 
-const cookieOvenUrl = origin =>
-  cookieOvenDomainBase(origin) + domainExtension(origin);
+const cookieOvenUrl = (origin, opposite) =>
+  cookieOvenDomainBase(origin) + domainExtension(origin, opposite);
 
 export default cookieOvenUrl;

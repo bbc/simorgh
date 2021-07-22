@@ -18,11 +18,11 @@ describe('setCookieOven', () => {
   it(`should fetch`, () => {
     const setCookieOven = require('./setCookieOven').default;
 
-    setCookieOven('cookie', 'value');
+    setCookieOven('value');
 
-    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost');
+    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', false);
     expect(fetch).toHaveBeenCalledWith(
-      'https://cookieOvenUrl.com/cookie/value',
+      'https://cookieOvenUrl.com/cookieoven?policy=value',
     );
   });
 
@@ -42,7 +42,7 @@ describe('setCookieOven', () => {
     it(`should send error to console when logger function isn't provided`, async () => {
       const setCookieOven = require('./setCookieOven').default;
 
-      await setCookieOven('cookie', 'value');
+      await setCookieOven('value');
 
       // eslint-disable-next-line no-console
       expect(console.error).toHaveBeenCalledWith(error);
@@ -53,7 +53,7 @@ describe('setCookieOven', () => {
 
       const setCookieOven = require('./setCookieOven').default;
 
-      await setCookieOven('cookie', 'value', logger);
+      await setCookieOven('value', logger);
 
       expect(logger.error).toHaveBeenCalledWith(error);
     });
