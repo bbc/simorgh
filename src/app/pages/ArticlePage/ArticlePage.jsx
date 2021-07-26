@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
@@ -83,8 +82,6 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
-  const { state } = useLocation();
-  const hash = state?.hash;
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -92,14 +89,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
   const isSport = service === 'sport';
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash);
-      element?.scrollIntoView();
-      element?.focus();
-    }
-  }, [hash]);
 
   const promoImageBlocks = pathOr(
     [],
