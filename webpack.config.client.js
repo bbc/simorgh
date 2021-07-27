@@ -146,26 +146,20 @@ module.exports = ({
             reuseExistingChunk: true,
           },
           shared: {
-            // test(module) {
-            //   return (
-            //     module.resource &&
-            //     !module.resource.includes(
-            //       'src/app/lib/config/services/russian.js',
-            //     )
-            //   );
-            // },
             name(module, chunks) {
+              const chunkName = chunks.reduce((acc, chunk) => {
+                return [acc, chunk.name].filter(Boolean).join('-');
+              }, '');
               const cryptoName = crypto
                 .createHash('sha1')
-                .update(
-                  chunks.reduce((acc, chunk) => {
-                    return acc + chunk.name;
-                  }, ''),
-                )
+                .update(chunkName)
                 .digest('base64')
                 .replace(/\//g, '');
 
-              return `shared-${cryptoName}`;
+              return [
+                'shared',
+                chunkName === 'russian-ukrainian' ? chunkName : cryptoName,
+              ].join('-');
             },
             priority: 10,
             minChunks: 2,

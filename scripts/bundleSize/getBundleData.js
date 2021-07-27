@@ -82,7 +82,7 @@ const getServiceBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
-        jsFiles.filter(file => file.startsWith(service)),
+        jsFiles.filter(file => file.includes(service)),
       );
 
       return { serviceName: service, bundles: bundlesData };
