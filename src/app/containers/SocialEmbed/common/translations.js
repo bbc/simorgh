@@ -7,7 +7,7 @@ const createTranslations = ({ translations, index }) => {
     translations,
   ).concat(index > 0 ? `, ${index}` : '');
 
-  const endTextVisuallyHiddenText = pathOr(
+  const skipLinkEndTextVisuallyHidden = pathOr(
     'End of %provider_name% content',
     ['socialEmbed', 'skipLink', 'endTextVisuallyHidden'],
     translations,
@@ -39,7 +39,7 @@ const createTranslations = ({ translations, index }) => {
 
     skipLink: {
       text: skipLinkText,
-      endTextVisuallyHidden: endTextVisuallyHiddenText,
+      endTextVisuallyHidden: skipLinkEndTextVisuallyHidden,
     },
 
     caption: {

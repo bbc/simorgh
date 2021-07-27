@@ -31,9 +31,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
   const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
-  const oEmbedPosition = is(Number, oEmbedIndexOfType)
-    ? oEmbedIndexOfType + 1
-    : undefined;
+  const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
 
   const {
     fallback: fallbackTranslations,

@@ -20,7 +20,7 @@ const getEmbedProvider = getOembedProp('provider_name');
 const getEmbedIndexOfType = getOembedProp('indexOfType');
 const matchesEmbedProvider = provider =>
   pipe(getEmbedProvider, equals(provider));
-const enrichBlocks = (accumulator, block, index, blocks) => {
+const accumulatedBlocksByProvider = (accumulator, block, index, blocks) => {
   const embedUrl = getEmbedUrl(block);
   const embedProvider = getEmbedProvider(block);
 
@@ -35,9 +35,11 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
     const numBlocksByProviderOfAllBlocks = blocksByProviderOfAllBlocks.length;
     const lastBlockByProvider = blocksByProvider[numBlocksByProvider - 1];
     const isOnlyEmbedOfType = numBlocksByProviderOfAllBlocks === 1;
+
     if (isOnlyEmbedOfType) {
       return accumulator.concat(block);
     }
+
     const indexOfType = getEmbedIndexOfType(lastBlockByProvider) + 1 || 0;
     const oEmbed = getOembed(block);
     const updatedOembed = {
@@ -54,7 +56,10 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
 
 export default json => {
   try {
-    const newArticleBlocks = getArticleBlocks(json).reduce(enrichBlocks, []);
+    const newArticleBlocks = getArticleBlocks(json).reduce(
+      accumulatedBlocksByProvider,
+      [],
+    );
 
     return set(articleBlocksLens, newArticleBlocks, json);
   } catch (error) {
