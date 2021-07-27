@@ -26,7 +26,11 @@ const WithVariant = Component => {
 
   VariantContainer.propTypes = {
     service: PropTypes.string.isRequired,
-    variant: PropTypes.string.isRequired,
+    variant: PropTypes.string,
+  };
+
+  VariantContainer.defaultProps = {
+    variant: null,
   };
 
   return VariantContainer;
