@@ -1,18 +1,19 @@
 import React from 'react';
 import paragraph from '../Paragraph';
 import Blocks from '../Blocks';
+import unorderedList from '../BulletedList';
 import { textModelPropTypes } from '#models/propTypes/text';
 
-const componentsToRender = { paragraph };
+const componentsToRender = {
+  paragraph,
+  unorderedList,
+  orderedList: unorderedList,
+};
 
 const TextContainer = ({ blocks }) => {
   if (!blocks) return null;
 
-  return (
-    <>
-      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-    </>
-  );
+  return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
 };
 
 TextContainer.propTypes = {
