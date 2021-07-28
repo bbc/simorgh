@@ -147,9 +147,7 @@ module.exports = ({
           },
           shared: {
             name(module, chunks) {
-              const chunkName = chunks.reduce((acc, chunk) => {
-                return [acc, chunk.name].filter(Boolean).join('-');
-              }, '');
+              const chunkName = chunks.map(({ name }) => name).join('-');
               const cryptoName = crypto
                 .createHash('sha1')
                 .update(chunkName)
