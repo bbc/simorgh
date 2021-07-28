@@ -60,9 +60,10 @@ describe('Js bundle requests', () => {
             it('only loads expected js bundles', () => {
               const { name: serviceName } = config[service];
               const serviceRegex =
-                config[service].name === 'ukrainian'
-                  ? 'ukrainian|russian'
-                  : serviceName;
+                {
+                  russian: 'shared-russian-ukrainian',
+                  ukrainian: 'ukrainian|shared-russian-ukrainian',
+                }[serviceName] || serviceName;
 
               requests
                 .filter(url => url.endsWith('.js'))
@@ -87,13 +88,7 @@ describe('Js bundle requests', () => {
                 ),
               );
 
-              if (config[service].name === 'russian') {
-                // webpack includes the russian service config in a shared chunk
-                // because the ukrainian-russian service also uses the russian config
-                expect(serviceMatches.length).toBe(0);
-              } else {
-                expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
-              }
+              expect(serviceMatches.length).toBeGreaterThanOrEqual(1);
             });
           });
         } else {
