@@ -146,7 +146,7 @@
     "react-router": "5.2.0",
     "react-router-config": "5.1.1",
     "react-router-dom": "5.2.0",
-    "url-parse": "1.5.1",
+    "url-parse": "1.5.2",
     "uuid": "8.3.2",
     "winston": "3.3.3"
   },
@@ -232,7 +232,7 @@
     "start-server-webpack-plugin": "2.2.5",
     "strip-ansi": "6.0.0",
     "stylelint": "13.13.1",
-    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-recommended": "5.0.0",
     "supertest": "6.1.4",
     "swagger-cli": "4.0.4",
     "terser-webpack-plugin": "4.2.3",
@@ -243,7 +243,7 @@
     "webpack-cli": "3.3.12",
     "webpack-dev-server": "3.11.2",
     "webpack-merge": "5.8.0",
-    "webpack-node-externals": "2.5.2",
+    "webpack-node-externals": "3.0.0",
     "yaml-js": "0.2.3"
   },
   "spec": {
