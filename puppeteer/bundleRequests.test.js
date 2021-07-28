@@ -17,6 +17,19 @@ const isJsBundle = url => url.includes(localBaseUrl);
 
 jest.setTimeout(10000); // overriding the default jest timeout
 
+const getServiceBundleRegex = service => {
+  const SHARED_RUSSIAN_UKRAINIAN = 'shared-russian-ukrainian';
+
+  switch (service) {
+    case 'russian':
+      return SHARED_RUSSIAN_UKRAINIAN;
+    case 'ukrainian':
+      return `${service}|${SHARED_RUSSIAN_UKRAINIAN}`;
+    default:
+      return service;
+  }
+};
+
 describe('Js bundle requests', () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({
@@ -58,12 +71,7 @@ describe('Js bundle requests', () => {
             });
 
             it('only loads expected js bundles', () => {
-              const { name: serviceName } = config[service];
-              const serviceRegex =
-                {
-                  russian: 'shared-russian-ukrainian',
-                  ukrainian: 'ukrainian|shared-russian-ukrainian',
-                }[serviceName] || serviceName;
+              const serviceRegex = getServiceBundleRegex(config[service].name);
 
               requests
                 .filter(url => url.endsWith('.js'))
@@ -79,12 +87,10 @@ describe('Js bundle requests', () => {
             });
 
             it('loads at least 1 service bundle', () => {
+              const serviceRegex = getServiceBundleRegex(config[service].name);
               const serviceMatches = requests.filter(url =>
                 url.match(
-                  new RegExp(
-                    `(\\/static\\/js\\/${config[service].name}.+?.js)`,
-                    'g',
-                  ),
+                  new RegExp(`(\\/static\\/js\\/${serviceRegex}.+?.js)`, 'g'),
                 ),
               );
 
