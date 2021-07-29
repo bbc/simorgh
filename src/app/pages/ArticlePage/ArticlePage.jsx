@@ -82,7 +82,7 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
   }
 `;
 
-const GreyMain = styled.main`
+const Main = styled.main`
   background-color: ${C_LUNAR};
   padding-bottom: ${GEL_SPACING_TRPL};
   margin-bottom: ${GEL_SPACING_DBL};
@@ -183,14 +183,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <GreyMain role="main">
+      <Main role="main">
         <ArticlePageGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
         </ArticlePageGrid>
-      </GreyMain>
+      </Main>
 
       {showRelatedTopics && topics && (
         <ArticlePageGrid>
