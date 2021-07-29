@@ -31,16 +31,15 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
     const allBlocksByProvider = blocks.filter(
       matchesEmbedProvider(embedProvider),
     );
-    const numOfAccumulatedBlocksByProvider = accumulatedBlocksByProvider.length;
     const numOfAllBlocksByProvider = allBlocksByProvider.length;
-    const lastBlockByProvider =
-      accumulatedBlocksByProvider[numOfAccumulatedBlocksByProvider - 1];
     const isOnlyEmbedOfType = numOfAllBlocksByProvider === 1;
 
     if (isOnlyEmbedOfType) {
       return accumulator.concat(block);
     }
-
+    const numOfAccumulatedBlocksByProvider = accumulatedBlocksByProvider.length;
+    const lastBlockByProvider =
+      accumulatedBlocksByProvider[numOfAccumulatedBlocksByProvider - 1];
     const indexOfType = getEmbedIndexOfType(lastBlockByProvider) + 1 || 0;
     const oEmbed = getOembed(block);
     const updatedOembed = {
