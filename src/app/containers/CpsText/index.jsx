@@ -1,18 +1,10 @@
 import React from 'react';
-import { arrayOf, oneOfType, shape, oneOf, string } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 import paragraph from '../Paragraph';
-import unorderedList, { ListPropTypes } from '../BulletedList';
-import { ParagraphPropTypes } from '../BulletedListItem';
+import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
 
-// Render orderedLists as unorderedLists for now.
-const componentsToRender = {
-  paragraph,
-  unorderedList,
-  orderedList: unorderedList,
-};
-
-const CpsTextContainer = ({ blocks }) => {
+const CpsTextContainer = ({ blocks, componentsToRender }) => {
   if (!blocks) return null;
 
   return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
@@ -20,24 +12,23 @@ const CpsTextContainer = ({ blocks }) => {
 
 export const CpsTextPropTypes = {
   blocks: arrayOf(
-    oneOfType([
-      shape({
-        type: oneOf(['unorderedList', 'orderedList']).isRequired,
-        model: shape(ListPropTypes),
-      }),
-      shape({
-        type: oneOf(['paragraph']),
-        model: shape({
-          text: string,
-          ...ParagraphPropTypes,
-        }),
-      }),
-    ]).isRequired,
+    shape({
+      type: string.isRequired,
+    }),
   ).isRequired,
 };
 
 CpsTextContainer.propTypes = {
   ...CpsTextPropTypes,
+  componentsToRender: shape(),
+};
+
+CpsTextContainer.defaultProps = {
+  componentsToRender: {
+    paragraph,
+    unorderedList,
+    orderedList: unorderedList,
+  },
 };
 
 export default CpsTextContainer;
