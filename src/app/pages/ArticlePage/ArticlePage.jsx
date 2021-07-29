@@ -20,6 +20,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import paragraph from '#containers/Paragraph';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
@@ -82,8 +83,14 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
   }
 `;
 
+const Main = styled.main`
+  background-color: ${C_LUNAR};
+  padding-bottom: ${GEL_SPACING_TRPL};
+  margin-bottom: ${GEL_SPACING_DBL};
+`;
+
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { service, articleAuthor } = useContext(ServiceContext);
+  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const { state } = useLocation();
   const hash = state?.hash;
   const headline = getHeadline(pageData);
@@ -92,7 +99,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const isSport = service === 'sport';
 
   useEffect(() => {
     if (hash) {
@@ -178,16 +184,16 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <main role="main">
+      <Main role="main">
         <ArticlePageGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
         </ArticlePageGrid>
-      </main>
+      </Main>
 
-      {!isSport && topics && (
+      {showRelatedTopics && topics && (
         <ArticlePageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
