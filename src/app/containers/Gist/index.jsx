@@ -25,10 +25,6 @@ const GistWrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => getPica(script)}
   color: ${C_METAL};
-  & li::before {
-    border-color: ${C_METAL};
-    background-color: ${C_METAL};
-  }
   border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
   background-color: ${C_WHITE};
   padding-top: ${GEL_SPACING_QUAD};
