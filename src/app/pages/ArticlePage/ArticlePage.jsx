@@ -20,11 +20,12 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import paragraph from '#containers/Paragraph';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
-import text from '#containers/Text';
+import Text from '#containers/CpsText';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -57,7 +58,7 @@ const componentsToRender = {
   subheadline: headings,
   audio: articleMediaPlayer,
   video: articleMediaPlayer,
-  text,
+  text: props => <Text {...props} componentsToRender={{ paragraph }} />,
   image,
   timestamp,
   social: SocialEmbedContainer,
