@@ -73,7 +73,7 @@ MediaAssetPageGrid.propTypes = {
 };
 
 const MediaAssetPage = ({ pageData }) => {
-  const { service } = useContext(ServiceContext);
+  const { showRelatedTopics } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
@@ -90,7 +90,6 @@ const MediaAssetPage = ({ pageData }) => {
     pageData,
   );
   const topics = path(['metadata', 'topics'], pageData);
-  const isSport = service === 'sport';
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -204,7 +203,7 @@ const MediaAssetPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>
 
-      {!isSport && topics && (
+      {showRelatedTopics && topics && (
         <MediaAssetPageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
