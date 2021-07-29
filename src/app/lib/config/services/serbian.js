@@ -44,6 +44,7 @@ const baseServiceConfig = {
     brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: false,
+  showRelatedTopics: true,
   brandSVG,
   fonts: [],
   timezone: 'GMT',
