@@ -59,7 +59,7 @@ PhotoGalleryPageGrid.propTypes = {
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
-  const { service } = useContext(ServiceContext);
+  const { showRelatedTopics } = useContext(ServiceContext);
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
   const summary = path(['promo', 'summary'], pageData);
@@ -81,7 +81,6 @@ const PhotoGalleryPage = ({ pageData }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const isSport = service === 'sport';
 
   const componentsToRender = {
     fauxHeadline,
@@ -148,7 +147,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledPhotoGalleryPageGrid>
 
-      {!isSport && topics && (
+      {showRelatedTopics && topics && (
         <PhotoGalleryPageGrid>
           <GridItemLarge>
             <RelatedTopics topics={topics} />
