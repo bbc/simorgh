@@ -56,10 +56,7 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
 
 export default json => {
   try {
-    const newArticleBlocks = getArticleBlocks(json).reduce(
-      accumulatedBlocksByProvider,
-      [],
-    );
+    const newArticleBlocks = getArticleBlocks(json).reduce(enrichBlocks, []);
 
     return set(articleBlocksLens, newArticleBlocks, json);
   } catch (error) {
