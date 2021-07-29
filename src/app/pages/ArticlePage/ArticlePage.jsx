@@ -20,6 +20,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -79,6 +80,12 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
     padding: 0 ${GEL_SPACING_DBL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
+`;
+
+const Main = styled.main`
+  background-color: ${C_LUNAR};
+  padding-bottom: ${GEL_SPACING_TRPL};
+  margin-bottom: ${GEL_SPACING_DBL};
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
@@ -176,14 +183,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <main role="main">
+      <Main role="main">
         <ArticlePageGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
         </ArticlePageGrid>
-      </main>
+      </Main>
 
       {showRelatedTopics && topics && (
         <ArticlePageGrid>
