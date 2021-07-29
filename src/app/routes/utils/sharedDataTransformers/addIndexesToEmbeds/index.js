@@ -25,15 +25,16 @@ const enrichBlocks = (accumulator, block, index, blocks) => {
   const embedProvider = getEmbedProvider(block);
 
   if (embedUrl && embedProvider) {
-    const blocksByProvider = accumulator.filter(
+    const accumulatedBlocksByProvider = accumulator.filter(
       matchesEmbedProvider(embedProvider),
     );
     const blocksByProviderOfAllBlocks = blocks.filter(
       matchesEmbedProvider(embedProvider),
     );
-    const numBlocksByProvider = blocksByProvider.length;
+    const numBlocksByProvider = accumulatedBlocksByProvider.length;
     const numBlocksByProviderOfAllBlocks = blocksByProviderOfAllBlocks.length;
-    const lastBlockByProvider = blocksByProvider[numBlocksByProvider - 1];
+    const lastBlockByProvider =
+      accumulatedBlocksByProvider[numBlocksByProvider - 1];
     const isOnlyEmbedOfType = numBlocksByProviderOfAllBlocks === 1;
 
     if (isOnlyEmbedOfType) {
