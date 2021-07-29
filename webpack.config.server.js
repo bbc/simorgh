@@ -42,7 +42,7 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   };
 
   if (START_DEV_SERVER) {
-    const StartServerPlugin = require('start-server-webpack-plugin');
+    const StartServerPlugin = require('start-server-nestjs-webpack-plugin');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
       new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
