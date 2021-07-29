@@ -278,6 +278,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     brandSVG,
     mostRead: {
       header: 'Самое популярное',

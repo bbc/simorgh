@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_WHITE}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
