@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Gist from '.';
-import fixtureData from './fixtures';
+import fixtureData, { fixtureDataOneItem } from './fixtures';
 
 // eslint-disable-next-line react/prop-types
 const GistWithContext = ({ gistData = fixtureData }) => (
@@ -24,4 +25,14 @@ describe('Gist', () => {
 
     expect(container.querySelectorAll('li').length).toEqual(5);
   });
+
+  shouldMatchSnapshot(
+    'should render the gist with multiple list items',
+    <GistWithContext />,
+  );
+
+  shouldMatchSnapshot(
+    'should render the gist with one list item',
+    <GistWithContext gistData={fixtureDataOneItem} />,
+  );
 });
