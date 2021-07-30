@@ -213,14 +213,14 @@ const fixtureData = {
                           id: 'z',
                           model: {
                             text:
-                              'If the sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
+                              'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
                             blocks: [
                               {
                                 type: 'fragment',
                                 id: 'zz',
                                 model: {
                                   text:
-                                    'If the sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
+                                    'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
                                   attributes: [],
                                 },
                               },
