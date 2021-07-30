@@ -15,7 +15,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { object } from 'prop-types';
+import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
 import unorderedList from '../BulletedList';
@@ -90,9 +90,18 @@ const Gist = ({ gistData }) => {
 };
 
 Gist.propTypes = {
-  // Add shape
-  // eslint-disable-next-line react/forbid-prop-types
-  gistData: object.isRequired,
+  gistData: shape({
+    model: shape({
+      intentType: string.isRequired,
+      relationshipType: string.isRequired,
+      blocks: arrayOf(
+        shape({
+          type: string.isRequired,
+          id: string.isRequired,
+        }),
+      ),
+    }),
+  }).isRequired,
 };
 
 export default Gist;
