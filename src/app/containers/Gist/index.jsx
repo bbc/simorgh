@@ -18,7 +18,7 @@ import {
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
-import unorderedList from '../BulletedList';
+import UnorderedList from '../BulletedList';
 import Text from '#containers/CpsText';
 
 const GistWrapper = styled.div`
@@ -85,8 +85,13 @@ const componentsToRender = {
     <Text
       {...props}
       componentsToRender={{
-        unorderedList,
-        orderedList: unorderedList,
+        unorderedList: innerProps => (
+          <UnorderedList
+            {...innerProps}
+            bulletPointShape="square"
+            bulletPointColour={C_METAL}
+          />
+        ),
       }}
     />
   ),

@@ -14,13 +14,13 @@ const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const BulletedListContainer = ({ blocks }) => {
+const BulletedListContainer = ({ blocks, ...rest }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
     <GridItemMedium>
       <Wrapper>
-        <BulletedList script={script} service={service} dir={dir}>
+        <BulletedList {...rest} script={script} service={service} dir={dir}>
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </BulletedList>
       </Wrapper>
