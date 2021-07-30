@@ -22,6 +22,6 @@ describe('Gist', () => {
   it('should render an unordered list', () => {
     const { container } = render(<GistWithContext />);
 
-    expect(container.querySelectorAll('li').length).toEqual(2);
+    expect(container.querySelectorAll('li').length).toEqual(5);
   });
 });
