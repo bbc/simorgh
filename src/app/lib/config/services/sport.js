@@ -60,6 +60,7 @@ export const service = {
       brandHighlightColour: `${C_BLACK}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: false,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',

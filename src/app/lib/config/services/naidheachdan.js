@@ -55,6 +55,7 @@ export const service = {
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Dachaigh',
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
