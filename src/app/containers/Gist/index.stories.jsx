@@ -24,4 +24,4 @@ export default {
   parameters: { chromatic: { disable: true } },
 };
 
-export const AtAGlance = props => <Component {...props} />;
+export const AtAGlance = Component;
