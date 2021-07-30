@@ -34,7 +34,10 @@ const GistWrapper = styled.div`
       ? `padding-left: ${GEL_SPACING_DBL};`
       : `padding-right: ${GEL_SPACING_DBL};`}
   ul {
-    padding-inline-start: ${GEL_SPACING};
+    ${({ dir }) =>
+      dir === 'ltr'
+        ? `padding-left: ${GEL_SPACING};`
+        : `padding-right: ${GEL_SPACING};`}
   }
   ul > li {
     margin-bottom: 10px;
@@ -46,7 +49,7 @@ const GistWrapper = styled.div`
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     ul {
-      padding-inline-start: 0;
+      ${({ dir }) => (dir === 'ltr' ? `padding-left: 0;` : `padding-right: 0;`)}
     }
   }
 
@@ -56,7 +59,10 @@ const GistWrapper = styled.div`
         ? `padding-left: ${GEL_SPACING_QUAD};`
         : `padding-right: ${GEL_SPACING_QUAD};`}
     ul {
-      padding-inline-start: ${GEL_SPACING_DBL};
+      ${({ dir }) =>
+        dir === 'ltr'
+          ? `padding-left: ${GEL_SPACING_DBL};`
+          : `padding-right: ${GEL_SPACING_DBL};`}
     }
     ul > li {
       ${({ dir }) =>
