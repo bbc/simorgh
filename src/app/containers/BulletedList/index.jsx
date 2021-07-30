@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
+import pick from 'ramda/src/pick';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf } from 'prop-types';
@@ -20,7 +21,12 @@ const BulletedListContainer = ({ blocks, ...rest }) => {
   return (
     <GridItemMedium>
       <Wrapper>
-        <BulletedList {...rest} script={script} service={service} dir={dir}>
+        <BulletedList
+          {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
+          script={script}
+          service={service}
+          dir={dir}
+        >
           <Blocks blocks={blocks} componentsToRender={componentsToRender} />
         </BulletedList>
       </Wrapper>
