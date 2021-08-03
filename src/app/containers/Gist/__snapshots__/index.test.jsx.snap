@@ -5,8 +5,8 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #6E6E73;
   border-top: 0.25rem solid #B80000;
   background-color: #FFFFFF;
@@ -17,15 +17,15 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -44,16 +44,18 @@ exports[`Gist should render the gist with multiple list items 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
     padding-left: 2rem;
   }
 
-  .emotion-0 ul {
+  .emotion-0 ul>li {
     padding-left: 1rem;
   }
+}
 
-  .emotion-0 ul>li {
+@media (min-width: 63rem) {
+  .emotion-0 ul {
     padding-left: 1rem;
   }
 }
@@ -70,15 +72,15 @@ exports[`Gist should render the gist with multiple list items 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -357,8 +359,8 @@ exports[`Gist should render the gist with one list item 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
   color: #6E6E73;
   border-top: 0.25rem solid #B80000;
   background-color: #FFFFFF;
@@ -369,15 +371,15 @@ exports[`Gist should render the gist with one list item 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -396,16 +398,18 @@ exports[`Gist should render the gist with one list item 1`] = `
   }
 }
 
-@media (min-width: 63rem) {
+@media (min-width: 37.5rem) {
   .emotion-0 {
     padding-left: 2rem;
   }
 
-  .emotion-0 ul {
+  .emotion-0 ul>li {
     padding-left: 1rem;
   }
+}
 
-  .emotion-0 ul>li {
+@media (min-width: 63rem) {
+  .emotion-0 ul {
     padding-left: 1rem;
   }
 }
@@ -422,15 +426,15 @@ exports[`Gist should render the gist with one list item 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-2 {
-    font-size: 1.125rem;
-    line-height: 1.375rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
