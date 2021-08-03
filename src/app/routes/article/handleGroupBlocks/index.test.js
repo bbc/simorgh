@@ -80,7 +80,7 @@ describe('Gist data selection', () => {
       [
         groupBlock({
           intentType: 'not-overview',
-          blocks: [textBlock({ blocks: [unorderedListBlock('list')] })],
+          blocks: [textBlock({ blocks: [unorderedListBlock()] })],
         }),
       ],
       validateBlocksExcluded(group, text, list),
