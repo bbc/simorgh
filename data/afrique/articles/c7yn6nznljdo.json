@@ -8,7 +8,7 @@
     "type": "article",
     "createdBy": "Afrique",
     "language": "en-gb",
-    "lastUpdated": 1627966174557,
+    "lastUpdated": 1627984921880,
     "firstPublished": 1627470119562,
     "lastPublished": 1627470119562,
     "timestamp": 1627470119562,
@@ -39,10 +39,11 @@
       "unorderedList",
       "listItem",
       "urlLink",
-      "audio",
-      "caption",
       "video",
-      "aresMedia",
+      "caption",
+      "image",
+      "altText",
+      "rawImage",
       "aresMedia"
     ],
     "suitableForSyndication": true,
@@ -101,12 +102,12 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "Level 1",
+                                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "Level 1",
+                                          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                                           "attributes": []
                                         }
                                       }
@@ -123,59 +124,110 @@
                                 {
                                   "type": "paragraph",
                                   "model": {
-                                    "text": "rich text bold italic bold-italic link bold-italic-link",
+                                    "text": "Sed venenatis ultrices lacus convallis dictum.",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "rich text ",
+                                          "text": "Sed venenatis ultrices lacus convallis dictum.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "This text is bold, this is italic and this is bold italic.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This text is ",
                                           "attributes": []
                                         }
                                       },
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "bold",
+                                          "text": "bold, ",
                                           "attributes": ["bold"]
                                         }
                                       },
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": " ",
+                                          "text": "this is",
                                           "attributes": []
                                         }
                                       },
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "italic",
+                                          "text": " italic ",
                                           "attributes": ["italic"]
                                         }
                                       },
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": " ",
+                                          "text": "and this is ",
                                           "attributes": []
                                         }
                                       },
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "bold-italic ",
+                                          "text": "bold italic.",
+                                          "attributes": ["bold", "italic"]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "We can have links here which can also be bold italic.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "We can have",
+                                          "attributes": []
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": " ",
                                           "attributes": ["bold", "italic"]
                                         }
                                       },
                                       {
                                         "type": "urlLink",
                                         "model": {
-                                          "text": "link",
+                                          "text": "links",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "link",
+                                                "text": "links",
                                                 "attributes": []
                                               }
                                             }
@@ -187,19 +239,19 @@
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": " ",
+                                          "text": " here which can also be ",
                                           "attributes": []
                                         }
                                       },
                                       {
                                         "type": "urlLink",
                                         "model": {
-                                          "text": "bold-italic-link",
+                                          "text": "bold italic",
                                           "blocks": [
                                             {
                                               "type": "fragment",
                                               "model": {
-                                                "text": "bold-italic-link",
+                                                "text": "bold italic",
                                                 "attributes": ["bold", "italic"]
                                               }
                                             }
@@ -207,105 +259,18 @@
                                           "locator": "https://www.google.com",
                                           "isExternal": true
                                         }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": ".",
+                                          "attributes": []
+                                        }
                                       }
                                     ]
                                   }
                                 }
                               ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "audio",
-          "model": {
-            "locator": "urn:bbc:pips:pid:p01cqycr",
-            "blocks": [
-              {
-                "type": "caption",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "The Wold's most interesting stories",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "The Wold's most interesting stories",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "aresMedia",
-                "model": {
-                  "blocks": [
-                    {
-                      "blockId": "urn:bbc:ares::clip:p01cqycr",
-                      "type": "aresMediaMetadata",
-                      "model": {
-                        "id": "p01cqycr",
-                        "subType": "clip",
-                        "format": "audio",
-                        "title": "BBC News Piding One Minute News",
-                        "synopses": {
-                          "short": "The Wold's most interesting stories",
-                          "medium": "The Wold's most interesting stories",
-                          "long": "The Wold's most interesting stories"
-                        },
-                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
-                        "embedding": false,
-                        "advertising": true,
-                        "versions": [
-                          {
-                            "versionId": "p01cqyct",
-                            "types": ["Original"],
-                            "duration": 15,
-                            "durationISO8601": "PT15S",
-                            "warnings": {},
-                            "availableTerritories": {
-                              "uk": true,
-                              "nonUk": true
-                            },
-                            "availableFrom": 1502288512000
-                          }
-                        ],
-                        "syndication": {
-                          "destinations": []
-                        },
-                        "smpKind": "radioProgramme"
-                      }
-                    },
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
-                              "originCode": "mpv"
                             }
                           }
                         ]
@@ -442,6 +407,157 @@
               }
             ]
           }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis  ultrices lacus convallis dictum. In tellus diam, vehicula non ornare id,  hendrerit et urna. Fusce vel metus accumsan, consectetur augue ut,  facilisis augue. Maecenas ut interdum orci, in faucibus nisl.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Donec eget  ex cursus est tincidunt laoreet ac vitae nulla. Suspendisse ullamcorper  id dolor non aliquam. Aenean ipsum lorem, laoreet venenatis pretium eu,  tincidunt id mauris. Aliquam faucibus tellus eget erat auctor, vitae  rutrum risus porttitor. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "My Image",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "My Image",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "rawImage",
+                "model": {
+                  "width": 3115,
+                  "height": 4672,
+                  "locator": "0297/test/c5ed58d0-f441-11eb-a33b-d7e701902f6d.jpg",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC",
+                  "suitableForSyndication": true
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Praesent vel sem nisi. Etiam elementum libero mollis felis scelerisque  consectetur. Cras in porttitor orci.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Pellentesque tempor eros venenatis  est tincidunt, vitae pretium lacus tempor. Donec lobortis vulputate  mattis. Sed sit amet dui vitae nibh egestas bibendum. Mauris congue urna  at condimentum congue.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Nulla gravida pulvinar purus, sit amet faucibus  libero rutrum at. Phasellus porttitor quam leo. Curabitur a hendrerit  arcu, quis euismod ligula. Pellentesque non sagittis ante. Morbi magna  tellus, tincidunt non porta id, tempus eu nisi. Cras luctus quis urna  sed pellentesque.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "Duis eget egestas augue, non vestibulum risus. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "Duis eget egestas augue, non vestibulum risus. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       ]
     }
@@ -483,7 +599,52 @@
         ]
       }
     },
-    "images": {},
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "My Image",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "My Image",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 3115,
+              "height": 4672,
+              "locator": "0297/test/c5ed58d0-f441-11eb-a33b-d7e701902f6d.jpg",
+              "originCode": "cpsdevpb",
+              "copyrightHolder": "BBC",
+              "suitableForSyndication": true
+            }
+          }
+        ]
+      }
+    },
     "summary": {
       "blocks": [
         {
