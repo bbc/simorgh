@@ -10,9 +10,10 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL, C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
-import { getPica, getGreatPrimer } from '@bbc/gel-foundations/typography';
+import { getDoublePica, getGreatPrimer } from '@bbc/gel-foundations/typography';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { string, arrayOf, shape } from 'prop-types';
@@ -23,7 +24,7 @@ import Text from '#containers/CpsText';
 
 const GistWrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
-  ${({ script }) => getPica(script)}
+  ${({ script }) => getGreatPrimer(script)}
   color: ${C_METAL};
   border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
   background-color: ${C_WHITE};
@@ -53,18 +54,21 @@ const GistWrapper = styled.div`
     }
   }
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     ${({ dir }) =>
       dir === 'ltr'
         ? `padding-left: ${GEL_SPACING_QUAD};`
         : `padding-right: ${GEL_SPACING_QUAD};`}
-    ul {
+    ul > li {
       ${({ dir }) =>
         dir === 'ltr'
           ? `padding-left: ${GEL_SPACING_DBL};`
           : `padding-right: ${GEL_SPACING_DBL};`}
     }
-    ul > li {
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    ul {
       ${({ dir }) =>
         dir === 'ltr'
           ? `padding-left: ${GEL_SPACING_DBL};`
@@ -75,7 +79,7 @@ const GistWrapper = styled.div`
 
 const GistIntroduction = styled.strong`
   ${({ service }) => getSansBold(service)}
-  ${({ script }) => getGreatPrimer(script)}
+  ${({ script }) => getDoublePica(script)}
   display: inline-block;
   padding-bottom: ${GEL_SPACING_DBL};
 `;
