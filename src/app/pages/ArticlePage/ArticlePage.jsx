@@ -26,7 +26,7 @@ import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
-import Text from '#containers/CpsText';
+import text from '#containers/CpsText';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -59,7 +59,7 @@ const componentsToRender = {
   subheadline: headings,
   audio: articleMediaPlayer,
   video: articleMediaPlayer,
-  text: props => <Text {...props} componentsToRender={{ paragraph }} />,
+  text,
   image,
   timestamp,
   social: SocialEmbedContainer,
