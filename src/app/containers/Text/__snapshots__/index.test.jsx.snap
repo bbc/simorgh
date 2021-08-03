@@ -132,6 +132,53 @@ exports[`TextContainer with data should render correctly 1`] = `
   }
 }
 
+.emotion-22 {
+  margin-bottom: 1.5rem;
+}
+
+.emotion-24 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0;
+  list-style-type: none;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-24 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-24 {
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.emotion-24>li {
+  position: relative;
+}
+
+.emotion-24>li::before {
+  top: 0.5rem;
+  content: ' ';
+  position: absolute;
+  border-width: 1rem;
+  border: 0.1875rem solid #3F3F42;
+  background-color: #3F3F42;
+  border-radius: 50%;
+  left: -1rem;
+}
+
+.emotion-26 {
+  margin-bottom: 1rem;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -187,6 +234,48 @@ exports[`TextContainer with data should render correctly 1`] = `
     >
       This is a 5th paragraph block.
     </p>
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <div
+      class="emotion-22 emotion-23"
+    >
+      <ul
+        class="emotion-24 emotion-25"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-26 emotion-27"
+          role="listitem"
+        >
+          This is a list item
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <div
+      class="emotion-22 emotion-23"
+    >
+      <ul
+        class="emotion-24 emotion-25"
+        dir="ltr"
+        role="list"
+      >
+        <li
+          class="emotion-26 emotion-27"
+          role="listitem"
+        >
+          This is a list item
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;
