@@ -1440,10 +1440,10 @@
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.3.0"
 
-"@bbc/psammead-section-label@7.0.20":
-  version "7.0.20"
-  resolved "https://registry.yarnpkg.com/@bbc/psammead-section-label/-/psammead-section-label-7.0.20.tgz#cbbe10251d837ce57da530abe3e8c073183c9637"
-  integrity sha512-Y5HIDHUnPVeXNELWQfGOweegpRQkJDX3WwBrJeBgHZT5298wTUimJVuPTZtAahceq5RjGPS7NuBozKWYYbLfTA==
+"@bbc/psammead-section-label@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@bbc/psammead-section-label/-/psammead-section-label-7.1.0.tgz#d1a426d9e4595bb61d9b3827a5173c2b2863fc58"
+  integrity sha512-ZIYkJxSGT4shQhShYqKQ/3lSMPGBcg17Tgh5h2GLk2lql4oOppKbEpj5A1cjmYXBNrmlCiljEO+fHt89kGzOOw==
   dependencies:
     "@bbc/gel-foundations" "6.1.3"
     "@bbc/psammead-styles" "7.3.0"
