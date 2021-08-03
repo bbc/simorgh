@@ -6,9 +6,9 @@ import Gist from '.';
 import fixtureData, { fixtureDataOneItem } from './fixtures';
 
 // eslint-disable-next-line react/prop-types
-const GistWithContext = ({ gistData = fixtureData }) => (
+const GistWithContext = ({ blocks = fixtureData }) => (
   <ServiceContextProvider dir="ltr" service="news" lang="en-GB">
-    <Gist gistData={gistData} />
+    <Gist blocks={blocks} />
   </ServiceContextProvider>
 );
 
@@ -33,6 +33,6 @@ describe('Gist', () => {
 
   shouldMatchSnapshot(
     'should render the gist with one list item',
-    <GistWithContext gistData={fixtureDataOneItem} />,
+    <GistWithContext blocks={fixtureDataOneItem} />,
   );
 });
