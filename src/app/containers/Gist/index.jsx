@@ -97,7 +97,7 @@ const componentsToRender = {
   ),
 };
 
-const Gist = ({ gistData }) => {
+const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
@@ -105,27 +105,18 @@ const Gist = ({ gistData }) => {
       <GistIntroduction service={service} script={script}>
         {gistTitle}
       </GistIntroduction>
-      <Blocks
-        blocks={path(['model', 'blocks'], gistData)}
-        componentsToRender={componentsToRender}
-      />
+      <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </GistWrapper>
   );
 };
 
 Gist.propTypes = {
-  gistData: shape({
-    model: shape({
-      intentType: string.isRequired,
-      relationshipType: string.isRequired,
-      blocks: arrayOf(
-        shape({
-          type: string.isRequired,
-          id: string.isRequired,
-        }),
-      ),
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      id: string.isRequired,
     }),
-  }).isRequired,
+  ).isRequired,
 };
 
 export default Gist;

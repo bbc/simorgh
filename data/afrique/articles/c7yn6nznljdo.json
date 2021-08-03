@@ -1,0 +1,539 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:c7yn6nznljdo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo",
+      "canonicalUrl": "https://www.bbc.com/afrique/articles/c7yn6nznljdo"
+    },
+    "type": "article",
+    "createdBy": "Afrique",
+    "language": "en-gb",
+    "lastUpdated": 1627966174557,
+    "firstPublished": 1627470119562,
+    "lastPublished": 1627470119562,
+    "timestamp": 1627470119562,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+      "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "group",
+      "unorderedList",
+      "listItem",
+      "urlLink",
+      "audio",
+      "caption",
+      "video",
+      "aresMedia",
+      "aresMedia"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 1
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Ryan's Test Article",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Ryan's Test Article",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "model": {
+            "intentType": "overview",
+            "relationshipType": "optional",
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "unorderedList",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "Level 1",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Level 1",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "rich text bold italic bold-italic link bold-italic-link",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "rich text ",
+                                          "attributes": []
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "bold",
+                                          "attributes": ["bold"]
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": " ",
+                                          "attributes": []
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "italic",
+                                          "attributes": ["italic"]
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": " ",
+                                          "attributes": []
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "bold-italic ",
+                                          "attributes": ["bold", "italic"]
+                                        }
+                                      },
+                                      {
+                                        "type": "urlLink",
+                                        "model": {
+                                          "text": "link",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "link",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ],
+                                          "locator": "https://www.google.com",
+                                          "isExternal": true
+                                        }
+                                      },
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": " ",
+                                          "attributes": []
+                                        }
+                                      },
+                                      {
+                                        "type": "urlLink",
+                                        "model": {
+                                          "text": "bold-italic-link",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "bold-italic-link",
+                                                "attributes": ["bold", "italic"]
+                                              }
+                                            }
+                                          ],
+                                          "locator": "https://www.google.com",
+                                          "isExternal": true
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "audio",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01cqycr",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "The Wold's most interesting stories",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "The Wold's most interesting stories",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01cqycr",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01cqycr",
+                        "subType": "clip",
+                        "format": "audio",
+                        "title": "BBC News Piding One Minute News",
+                        "synopses": {
+                          "short": "The Wold's most interesting stories",
+                          "medium": "The Wold's most interesting stories",
+                          "long": "The Wold's most interesting stories"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01cqz13.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "versions": [
+                          {
+                            "versionId": "p01cqyct",
+                            "types": ["Original"],
+                            "duration": 15,
+                            "durationISO8601": "PT15S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1502288512000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "smpKind": "radioProgramme"
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p01cqz13.jpg",
+                              "originCode": "mpv"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "video",
+          "model": {
+            "locator": "urn:bbc:pips:pid:p01kx42s",
+            "blocks": [
+              {
+                "type": "caption",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "トランプ氏、香港人権法案に署名　中国は反発",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "トランプ氏、香港人権法案に署名　中国は反発",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "aresMedia",
+                "model": {
+                  "blocks": [
+                    {
+                      "blockId": "urn:bbc:ares::clip:p01kx42s",
+                      "type": "aresMediaMetadata",
+                      "model": {
+                        "id": "p01kx42s",
+                        "subType": "clip",
+                        "format": "audio_video",
+                        "title": "トランプ氏、香港人権法案に署名　中国は反発",
+                        "synopses": {
+                          "short": "トランプ氏、香港人権法案に署名　中国は反発",
+                          "long": "トランプ氏、香港人権法案に署名　中国は反発",
+                          "medium": "トランプ氏、香港人権法案に署名　中国は反発"
+                        },
+                        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p012zl0f.jpg",
+                        "embedding": false,
+                        "advertising": true,
+                        "caption": "トランプ氏、香港人権法案に署名　中国は反発",
+                        "versions": [
+                          {
+                            "versionId": "p01kx42v",
+                            "types": ["Original"],
+                            "duration": 5,
+                            "durationISO8601": "PT5S",
+                            "warnings": {},
+                            "availableTerritories": {
+                              "uk": true,
+                              "nonUk": true
+                            },
+                            "availableFrom": 1545304011000
+                          }
+                        ],
+                        "syndication": {
+                          "destinations": []
+                        },
+                        "smpKind": "programme"
+                      }
+                    },
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "ichef.test.bbci.co.uk/images/ic/$widthxn/p012zl0f.jpg",
+                              "originCode": "mpv"
+                            }
+                          },
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "World Service Thumbnail",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "World Service Thumbnail",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:c7yn6nznljdo",
+      "canonicalUrl": "https://www.bbc.com/afrique/articles/c7yn6nznljdo"
+    },
+    "timestamp": 1627470119562,
+    "suitableForSyndication": true,
+    "language": "en-gb",
+    "headlines": {
+      "seoHeadline": "Ryan's Test Article",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Ryan's Test Article",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Ryan's Test Article",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {},
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+      "locator": "urn:bbc:optimo:asset:c7yn6nznljdo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "id": "urn:bbc:ares::article:c7yn6nznljdo",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

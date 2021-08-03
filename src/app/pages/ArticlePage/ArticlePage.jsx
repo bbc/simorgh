@@ -27,6 +27,7 @@ import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import Text from '#containers/CpsText';
+import gist from '#containers/Gist';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -53,6 +54,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
+import isLive from '#lib/utilities/isLive';
 
 const componentsToRender = {
   headline: headings,
@@ -63,6 +65,7 @@ const componentsToRender = {
   image,
   timestamp,
   social: SocialEmbedContainer,
+  ...(!isLive() && { group: gist }),
 };
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
