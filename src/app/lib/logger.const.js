@@ -58,6 +58,7 @@ const logCodes = {
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
+  GIST_TRANSFORMATION_FAILED: 'gist_transformation_failed',
 
   // Most Read
   MOST_READ_FETCH_ERROR: 'most_read_fetch_error',

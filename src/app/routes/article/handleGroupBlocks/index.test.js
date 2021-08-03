@@ -3,29 +3,31 @@ import pipe from 'ramda/src/pipe';
 
 import {
   buildFixture,
-  imageBlock,
+  mediaBlock,
   groupBlock,
+  headlineBlock,
   unorderedListBlock,
   textBlock,
   defaultIds,
 } from './fixtures';
 import transformer from '.';
 
-const { image, group, list, paragraph, text } = defaultIds;
+const { media, group, list, headline, text } = defaultIds;
+
 const getBlocks = path(['content', 'model', 'blocks']);
 
 const runTest = (fixture, ...tests) =>
   pipe(buildFixture, transformer, getBlocks, ...tests)(fixture);
 
 const findBlock = (id, blocks) => {
-  if (!blocks || !blocks.length) return false;
+  if (!blocks || !blocks.length) return null;
 
   for (let i = 0; i < blocks.length; i += 1) {
     if (blocks[i].id === id) return blocks[i];
-    const dfsResult = findBlock(id, blocks[i].model?.blocks);
-    if (dfsResult) return dfsResult;
+    const recursiveResult = findBlock(id, blocks[i].model?.blocks);
+    if (recursiveResult) return recursiveResult;
   }
-  return false;
+  return null;
 };
 
 const validateBlockIncluded = id => blocks => {
@@ -50,19 +52,19 @@ const validateBlocksExcluded = (...ids) => blocks => {
 
 describe('Gist data selection', () => {
   it('does not remove unrelated blocks', () => {
-    runTest([imageBlock()], validateBlockIncluded(image));
+    runTest([mediaBlock()], validateBlockIncluded(media));
   });
 
   it('does not remove unrelated blocks when a valid gist block exists', () => {
     runTest(
       [
-        imageBlock(),
+        mediaBlock(),
         groupBlock({
           intentType: 'overview',
           blocks: [textBlock({ blocks: [unorderedListBlock()] })],
         }),
       ],
-      validateBlockIncluded(image),
+      validateBlockIncluded(media),
     );
   });
 
@@ -97,10 +99,10 @@ describe('Gist data selection', () => {
       [
         groupBlock({
           intentType: 'overview',
-          blocks: [imageBlock()],
+          blocks: [mediaBlock()],
         }),
       ],
-      validateBlocksExcluded(group, image),
+      validateBlocksExcluded(group, media),
     );
   });
 
@@ -109,10 +111,10 @@ describe('Gist data selection', () => {
       [
         groupBlock({
           intentType: 'overview',
-          blocks: [imageBlock(), textBlock({ blocks: [unorderedListBlock()] })],
+          blocks: [mediaBlock(), textBlock({ blocks: [unorderedListBlock()] })],
         }),
       ],
-      validateBlocksExcluded(group, image, text, list),
+      validateBlocksExcluded(group, media, text, list),
     );
   });
 
@@ -121,10 +123,10 @@ describe('Gist data selection', () => {
       [
         groupBlock({
           intentType: 'overview',
-          blocks: [textBlock({ blocks: [imageBlock()] })],
+          blocks: [textBlock({ blocks: [mediaBlock()] })],
         }),
       ],
-      validateBlocksExcluded(group, text, image),
+      validateBlocksExcluded(group, text, media),
     );
   });
 
@@ -145,7 +147,7 @@ describe('Gist data selection', () => {
       [
         groupBlock({
           intentType: 'overview',
-          blocks: [textBlock({ blocks: [imageBlock(), unorderedListBlock()] })],
+          blocks: [textBlock({ blocks: [mediaBlock(), unorderedListBlock()] })],
         }),
       ],
       validateBlocksIncluded(group, text, list),
@@ -205,13 +207,13 @@ describe('Gist block cleaning', () => {
           intentType: 'overview',
           blocks: [
             textBlock({
-              blocks: [imageBlock(), unorderedListBlock()],
+              blocks: [mediaBlock(), unorderedListBlock()],
             }),
           ],
         }),
       ],
       validateBlocksIncluded(group, text, list),
-      validateBlocksExcluded(image),
+      validateBlocksExcluded(media),
     );
   });
 
@@ -240,6 +242,65 @@ describe('Gist block cleaning', () => {
   });
 });
 
-const validateBlockPosition = (id, position) => {};
+const validateBlockOrder = (...order) => blocks => {
+  order.forEach((id, position) => expect(blocks[position].id).toBe(id));
+  return blocks;
+};
 
-describe('Gist block positioning', () => {});
+describe('Gist block positioning', () => {
+  it('is moved to top when article has no headline', () => {
+    runTest(
+      [
+        textBlock(),
+        groupBlock({
+          intentType: 'overview',
+          blocks: [
+            textBlock({
+              blocks: [unorderedListBlock()],
+            }),
+          ],
+        }),
+      ],
+      validateBlockOrder(group, text),
+    );
+  });
+
+  it('is is moved below the first headline', () => {
+    runTest(
+      [
+        textBlock(),
+        groupBlock({
+          intentType: 'overview',
+          blocks: [
+            textBlock({
+              blocks: [unorderedListBlock()],
+            }),
+          ],
+        }),
+        headlineBlock(),
+      ],
+      validateBlockOrder(text, headline, group),
+    );
+  });
+
+  it('is moved below a media block that appears immediately after the first headline', () => {
+    ['image', 'audio', 'video'].forEach(mediaBlockType =>
+      runTest(
+        [
+          textBlock(),
+          groupBlock({
+            intentType: 'overview',
+            blocks: [
+              textBlock({
+                blocks: [unorderedListBlock()],
+              }),
+            ],
+          }),
+          headlineBlock(),
+          mediaBlock({ type: mediaBlockType }),
+        ],
+        validateBlockOrder(text, headline, media, group),
+      ),
+    );
+  });
+});
