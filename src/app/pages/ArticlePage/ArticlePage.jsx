@@ -15,17 +15,17 @@ import {
 import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
-import text from '#containers/Text';
+import text from '#containers/CpsText';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -83,9 +83,17 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 `;
 
 const Main = styled.main`
-  background-color: ${C_LUNAR};
+  background-color: #f6f6f6;
   padding-bottom: ${GEL_SPACING_TRPL};
-  margin-bottom: ${GEL_SPACING_DBL};
+`;
+
+const StyledRelatedTopics = styled(RelatedTopics)`
+  margin-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+    padding-bottom: ${GEL_SPACING_QUAD};
+  }
 `;
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
@@ -125,7 +133,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
-      <MostReadSectionLabel />
+      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
       {children}
     </ArticlePageMostReadSection>
   );
@@ -195,7 +203,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       {showRelatedTopics && topics && (
         <ArticlePageGrid>
           <GridItemLarge>
-            <RelatedTopics topics={topics} />
+            <StyledRelatedTopics
+              topics={topics}
+              mobileDivider={false}
+              bar={false}
+            />
           </GridItemLarge>
         </ArticlePageGrid>
       )}
