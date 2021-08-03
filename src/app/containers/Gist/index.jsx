@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import {
@@ -21,6 +20,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
 import UnorderedList from '../BulletedList';
 import Text from '#containers/CpsText';
+import { GridItemMedium } from '#app/components/Grid';
 
 const GistWrapper = styled.div`
   ${({ service }) => getSansRegular(service)}
@@ -29,7 +29,8 @@ const GistWrapper = styled.div`
   border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
   background-color: ${C_WHITE};
   padding-top: ${GEL_SPACING_QUAD};
-  padding-bottom: ${GEL_SPACING_QUAD};
+  padding-bottom: ${GEL_SPACING};
+  margin-bottom: ${GEL_SPACING_QUAD};
   ${({ dir }) =>
     dir === 'ltr'
       ? `padding-left: ${GEL_SPACING_DBL};`
@@ -101,35 +102,28 @@ const componentsToRender = {
   ),
 };
 
-const Gist = ({ gistData }) => {
+const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
-    <GistWrapper service={service} script={script} dir={dir}>
-      <GistIntroduction service={service} script={script}>
-        {gistTitle}
-      </GistIntroduction>
-      <Blocks
-        blocks={path(['model', 'blocks'], gistData)}
-        componentsToRender={componentsToRender}
-      />
-    </GistWrapper>
+    <GridItemMedium>
+      <GistWrapper service={service} script={script} dir={dir}>
+        <GistIntroduction service={service} script={script}>
+          {gistTitle}
+        </GistIntroduction>
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </GistWrapper>
+    </GridItemMedium>
   );
 };
 
 Gist.propTypes = {
-  gistData: shape({
-    model: shape({
-      intentType: string.isRequired,
-      relationshipType: string.isRequired,
-      blocks: arrayOf(
-        shape({
-          type: string.isRequired,
-          id: string.isRequired,
-        }),
-      ),
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      id: string.isRequired,
     }),
-  }).isRequired,
+  ).isRequired,
 };
 
 export default Gist;
