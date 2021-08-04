@@ -49,7 +49,7 @@ const Component = ({ service, isAmp = false }) => {
 export default {
   title: 'Containers/Media Player',
   Component,
-  parameters: { chromatic: { disableSnapshot: true } },
+  parameters: { chromatic: { disable: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 
