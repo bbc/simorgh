@@ -20,16 +20,26 @@ const getEmbedProvider = getOembedProp('provider_name');
 const getEmbedIndexOfType = getOembedProp('indexOfType');
 const matchesEmbedProvider = provider =>
   pipe(getEmbedProvider, equals(provider));
-const enrichBlocks = (accumulator, block) => {
+const enrichBlocks = (accumulator, block, index, blocks) => {
   const embedUrl = getEmbedUrl(block);
   const embedProvider = getEmbedProvider(block);
 
   if (embedUrl && embedProvider) {
-    const blocksByProvider = accumulator.filter(
+    const accumulatedBlocksByProvider = accumulator.filter(
       matchesEmbedProvider(embedProvider),
     );
-    const numBlocksByProvider = blocksByProvider.length;
-    const lastBlockByProvider = blocksByProvider[numBlocksByProvider - 1];
+    const allBlocksByProvider = blocks.filter(
+      matchesEmbedProvider(embedProvider),
+    );
+    const numOfAllBlocksByProvider = allBlocksByProvider.length;
+    const isOnlyEmbedOfType = numOfAllBlocksByProvider === 1;
+
+    if (isOnlyEmbedOfType) {
+      return accumulator.concat(block);
+    }
+    const numOfAccumulatedBlocksByProvider = accumulatedBlocksByProvider.length;
+    const lastBlockByProvider =
+      accumulatedBlocksByProvider[numOfAccumulatedBlocksByProvider - 1];
     const indexOfType = getEmbedIndexOfType(lastBlockByProvider) + 1 || 0;
     const oEmbed = getOembed(block);
     const updatedOembed = {

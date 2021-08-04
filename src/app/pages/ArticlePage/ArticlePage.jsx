@@ -14,6 +14,7 @@ import {
 import {
   GEL_MARGIN_ABOVE_400PX,
   GEL_MARGIN_BELOW_400PX,
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
@@ -23,7 +24,8 @@ import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
-import text from '#containers/Text';
+import gist from '#containers/Gist';
+import text from '#containers/CpsText';
 import image from '#containers/Image';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -50,6 +52,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
+import isLive from '#lib/utilities/isLive';
 
 const componentsToRender = {
   headline: headings,
@@ -60,6 +63,7 @@ const componentsToRender = {
   image,
   timestamp,
   social: SocialEmbedContainer,
+  ...(!isLive() && { group: gist }),
 };
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
@@ -80,15 +84,28 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
   }
 `;
 
+const Main = styled.main`
+  background-color: #f6f6f6;
+  padding-bottom: ${GEL_SPACING_TRPL};
+`;
+
+const StyledRelatedTopics = styled(RelatedTopics)`
+  margin-top: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin-top: ${GEL_SPACING_QUAD};
+    padding-bottom: ${GEL_SPACING_QUAD};
+  }
+`;
+
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
-  const { service, articleAuthor } = useContext(ServiceContext);
+  const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const isSport = service === 'sport';
 
   const promoImageBlocks = pathOr(
     [],
@@ -108,7 +125,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>
-      <MostReadSectionLabel />
+      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
       {children}
     </ArticlePageMostReadSection>
   );
@@ -166,19 +183,23 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <main role="main">
+      <Main role="main">
         <ArticlePageGrid>
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
           />
         </ArticlePageGrid>
-      </main>
+      </Main>
 
-      {!isSport && topics && (
+      {showRelatedTopics && topics && (
         <ArticlePageGrid>
           <GridItemLarge>
-            <RelatedTopics topics={topics} />
+            <StyledRelatedTopics
+              topics={topics}
+              mobileDivider={false}
+              bar={false}
+            />
           </GridItemLarge>
         </ArticlePageGrid>
       )}

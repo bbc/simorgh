@@ -49,6 +49,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     noBylinesPolicy:
       'https://www.bbc.com/yoruba/institutional-48528718#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/yoruba/institutional-48528718',

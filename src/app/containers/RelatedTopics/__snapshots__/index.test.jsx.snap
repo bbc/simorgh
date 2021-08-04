@@ -34,6 +34,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 .emotion-5 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -44,6 +45,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-5 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -52,11 +54,28 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 }
 
 .emotion-7 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-7 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+.emotion-9 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,7 +85,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -86,7 +105,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-13 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -94,7 +113,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -114,32 +133,32 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     padding-right: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -155,7 +174,7 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   padding: 0;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -168,20 +187,20 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-17 a {
+.emotion-19 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -198,13 +217,13 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   color: #222222;
 }
 
-.emotion-17 a:hover,
-.emotion-17 a:focus {
+.emotion-19 a:hover,
+.emotion-19 a:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-17 a:visited {
+.emotion-19 a:visited {
   color: #6E6E73;
 }
 
@@ -220,17 +239,20 @@ exports[`Expected use should render correctly with a single tag 1`] = `
       <div
         class="emotion-5 emotion-6"
       />
-      <h2
+      <div
         class="emotion-7 emotion-8"
+      />
+      <h2
+        class="emotion-9 emotion-10"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-11 emotion-12"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
               dir="ltr"
               id="related-topics"
             >
@@ -241,10 +263,10 @@ exports[`Expected use should render correctly with a single tag 1`] = `
       </h2>
     </div>
     <div
-      class="emotion-15 emotion-16"
+      class="emotion-17 emotion-18"
     >
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         <a
           href="https://bbc.com/mundo/topics/123"
@@ -291,6 +313,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 .emotion-5 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -301,6 +324,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-5 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -309,11 +333,28 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 }
 
 .emotion-7 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-7 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-7 {
+    display: none;
+  }
+}
+
+.emotion-9 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -323,7 +364,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   flex-direction: column;
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -343,7 +384,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-11 {
+  .emotion-13 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -351,7 +392,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -371,32 +412,32 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     padding-right: 1rem;
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -413,7 +454,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   list-style-type: none;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -426,20 +467,20 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-17 a {
+.emotion-19 a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -456,13 +497,13 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   color: #222222;
 }
 
-.emotion-17 a:hover,
-.emotion-17 a:focus {
+.emotion-19 a:hover,
+.emotion-19 a:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-17 a:visited {
+.emotion-19 a:visited {
   color: #6E6E73;
 }
 
@@ -478,17 +519,20 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
       <div
         class="emotion-5 emotion-6"
       />
-      <h2
+      <div
         class="emotion-7 emotion-8"
+      />
+      <h2
+        class="emotion-9 emotion-10"
       >
         <span
-          class="emotion-9 emotion-10"
+          class="emotion-11 emotion-12"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
               dir="ltr"
               id="related-topics"
             >
@@ -499,11 +543,11 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
       </h2>
     </div>
     <ul
-      class="emotion-15 emotion-16"
+      class="emotion-17 emotion-18"
       role="list"
     >
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         <a
           href="https://bbc.com/mundo/topics/1"
@@ -512,7 +556,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
         </a>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         <a
           href="https://bbc.com/mundo/topics/2"
@@ -521,7 +565,7 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
         </a>
       </li>
       <li
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         <a
           href="https://bbc.com/mundo/topics/3"

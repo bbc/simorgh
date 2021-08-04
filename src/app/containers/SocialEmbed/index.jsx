@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
@@ -29,7 +30,8 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-  const oEmbedPosition = path(['indexOfType'], oEmbed) + 1;
+  const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
+  const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
 
   const {
     fallback: fallbackTranslations,
@@ -44,7 +46,10 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `end-of-%provider%-content-${oEmbedPosition}`,
+    endTextId:
+      oEmbedPosition > 0
+        ? `end-of-%provider%-content-${oEmbedPosition}`
+        : `end-of-%provider%-content`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;

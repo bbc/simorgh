@@ -712,6 +712,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 .emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -722,6 +723,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-9 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -730,11 +732,28 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 }
 
 .emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -744,7 +763,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   flex-direction: column;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -764,7 +783,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -772,7 +791,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -792,27 +811,27 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
@@ -835,17 +854,20 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
         <div
           class="emotion-9 emotion-10"
         />
-        <strong
+        <div
           class="emotion-11 emotion-12"
+        />
+        <strong
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-17 emotion-18"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="heading-label"
               >
@@ -856,7 +878,7 @@ exports[`CpsOnwardJourney renders section label with element as strong 1`] = `
         </strong>
       </div>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-21 emotion-22"
       >
         <div
           dir="ltr"
@@ -1109,6 +1131,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 .emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -1119,6 +1142,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 
 @media (min-width: 37.5rem) {
   .emotion-9 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -1127,11 +1151,28 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 }
 
 .emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1141,7 +1182,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   flex-direction: column;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1161,7 +1202,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1169,7 +1210,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1189,27 +1230,27 @@ exports[`CpsOnwardJourney renders section label with with alternative background
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
@@ -1232,17 +1273,20 @@ exports[`CpsOnwardJourney renders section label with with alternative background
         <div
           class="emotion-9 emotion-10"
         />
-        <h2
+        <div
           class="emotion-11 emotion-12"
+        />
+        <h2
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-17 emotion-18"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="heading-label"
               >
@@ -1253,7 +1297,7 @@ exports[`CpsOnwardJourney renders section label with with alternative background
         </h2>
       </div>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-21 emotion-22"
       >
         <div
           dir="ltr"
@@ -1504,11 +1548,28 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 }
 
 .emotion-9 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-9 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-9 {
+    display: none;
+  }
+}
+
+.emotion-11 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1518,7 +1579,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   flex-direction: column;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1538,7 +1599,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-13 {
+  .emotion-15 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1546,7 +1607,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
   }
 }
 
-.emotion-15 {
+.emotion-17 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1566,27 +1627,27 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-17 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     padding-right: 1rem;
   }
 }
@@ -1606,17 +1667,20 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
       <div
         class="emotion-6 emotion-7 emotion-8"
       >
-        <h2
+        <div
           class="emotion-9 emotion-10"
+        />
+        <h2
+          class="emotion-11 emotion-12"
         >
           <span
-            class="emotion-11 emotion-12"
+            class="emotion-13 emotion-14"
           >
             <span
-              class="emotion-13 emotion-14"
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-17 emotion-18"
                 dir="ltr"
                 id="heading-label"
               >
@@ -1627,7 +1691,7 @@ exports[`CpsOnwardJourney renders section label with without bar under section l
         </h2>
       </div>
       <div
-        class="emotion-17 emotion-18"
+        class="emotion-19 emotion-20"
       >
         <div
           dir="ltr"
@@ -1927,6 +1991,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 .emotion-13 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -1937,6 +2002,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-13 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -1945,11 +2011,28 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 }
 
 .emotion-15 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-15 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    display: none;
+  }
+}
+
+.emotion-17 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1959,7 +2042,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   flex-direction: column;
 }
 
-.emotion-19 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1979,7 +2062,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1987,7 +2070,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2007,32 +2090,32 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     padding-right: 1rem;
   }
 }
 
-.emotion-23 {
+.emotion-25 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2070,17 +2153,20 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
           <div
             class="emotion-13 emotion-14"
           />
-          <h2
+          <div
             class="emotion-15 emotion-16"
+          />
+          <h2
+            class="emotion-17 emotion-18"
           >
             <span
-              class="emotion-17 emotion-18"
+              class="emotion-19 emotion-20"
             >
               <span
-                class="emotion-19 emotion-20"
+                class="emotion-21 emotion-22"
               >
                 <span
-                  class="emotion-21 emotion-22"
+                  class="emotion-23 emotion-24"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -2120,7 +2206,7 @@ exports[`CpsOnwardJourney renders skip link with multiple promos 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-23 emotion-24"
+          class="emotion-25 emotion-26"
           id="end-of-the-foo-section"
           tabindex="-1"
         >
@@ -2415,6 +2501,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 .emotion-13 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -2425,6 +2512,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-13 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -2433,11 +2521,28 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 }
 
 .emotion-15 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-15 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-15 {
+    display: none;
+  }
+}
+
+.emotion-17 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2447,7 +2552,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   flex-direction: column;
 }
 
-.emotion-19 {
+.emotion-21 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2467,7 +2572,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2475,7 +2580,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
   }
 }
 
-.emotion-21 {
+.emotion-23 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2495,32 +2600,32 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-21 {
+  .emotion-23 {
     padding-right: 1rem;
   }
 }
 
-.emotion-25 {
+.emotion-27 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2558,17 +2663,20 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           <div
             class="emotion-13 emotion-14"
           />
-          <h2
+          <div
             class="emotion-15 emotion-16"
+          />
+          <h2
+            class="emotion-17 emotion-18"
           >
             <span
-              class="emotion-17 emotion-18"
+              class="emotion-19 emotion-20"
             >
               <span
-                class="emotion-19 emotion-20"
+                class="emotion-21 emotion-22"
               >
                 <span
-                  class="emotion-21 emotion-22"
+                  class="emotion-23 emotion-24"
                   dir="ltr"
                   id="heading-label"
                 >
@@ -2579,7 +2687,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </h2>
         </div>
         <div
-          class="emotion-23 emotion-24"
+          class="emotion-25 emotion-26"
         >
           <div
             dir="ltr"
@@ -2592,7 +2700,7 @@ exports[`CpsOnwardJourney renders skip link with single promo 1`] = `
           </div>
         </div>
         <p
-          class="emotion-25 emotion-26"
+          class="emotion-27 emotion-28"
           id="end-of-the-foo-section"
           tabindex="-1"
         >
