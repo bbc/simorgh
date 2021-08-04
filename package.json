@@ -170,7 +170,7 @@
     "@storybook/addon-a11y": "6.3.6",
     "@storybook/addon-controls": "6.3.6",
     "@storybook/addon-docs": "6.3.6",
-    "@storybook/addon-knobs": "6.3.0",
+    "@storybook/addon-knobs": "6.2.9",
     "@storybook/addon-viewport": "6.3.6",
     "@storybook/builder-webpack5": "6.4.0-alpha.23",
     "@storybook/manager-webpack5": "6.4.0-alpha.23",
