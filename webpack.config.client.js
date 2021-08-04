@@ -38,7 +38,7 @@ module.exports = ({
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
   const clientConfig = {
-    target: 'web', // compile for browser environment
+    target: ['web', 'es5'], // compile for browser environment
     entry: START_DEV_SERVER
       ? [
           `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
@@ -56,6 +56,13 @@ module.exports = ({
       },
       disableHostCheck: true,
     },
+    resolve: {
+      fallback: {
+        // Override webpacks default handling for these as they arnt availible on the client.
+        fs: false,
+        stream: require.resolve('stream-browserify'),
+      },
+    },
     output: {
       path: resolvePath('build/public'),
       /**
@@ -72,6 +79,7 @@ module.exports = ({
         : prodPublicPath,
     },
     optimization: {
+      moduleIds: 'deterministic',
       minimizer: [
         new TerserPlugin({
           terserOptions: {
@@ -89,7 +97,7 @@ module.exports = ({
         maxSize: 245760, // 240kb
         cacheGroups: {
           default: false,
-          vendors: false,
+          defaultVendors: false,
           framework: {
             name: 'framework',
             chunks: 'all',
@@ -139,17 +147,17 @@ module.exports = ({
           },
           shared: {
             name(module, chunks) {
+              const chunkName = chunks.map(({ name }) => name).join('-');
               const cryptoName = crypto
                 .createHash('sha1')
-                .update(
-                  chunks.reduce((acc, chunk) => {
-                    return acc + chunk.name;
-                  }, ''),
-                )
+                .update(chunkName)
                 .digest('base64')
                 .replace(/\//g, '');
 
-              return `shared-${cryptoName}`;
+              return [
+                'shared',
+                chunkName === 'russian-ukrainian' ? chunkName : cryptoName,
+              ].join('-');
             },
             priority: 10,
             minChunks: 2,
@@ -163,8 +171,6 @@ module.exports = ({
       },
     },
     node: {
-      // Override webpacks default handling for these as they arnt availible on the client.
-      fs: 'empty',
       __filename: 'mock',
     },
     plugins: [
@@ -178,14 +184,18 @@ module.exports = ({
         // Display full duplicates information? (Default: `false`)
         verbose: true,
       }),
+      /*
+       * webpack 5 does no longer includes a polyfill for the Node.js process variable in
+       * frontend code. webpack advise to avoid using it in the frontend code however the
+       * following plugin will enable the process variable in frontend code until we find
+       * an alternative for this sort of thing.
+       */
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
       new webpack.DefinePlugin({
         'process.env': getClientEnvVars(DOT_ENV_CONFIG),
       }),
-      /**
-       * Needed to prevent bundle hashes changing when the order they're imported is changed.
-       * See https://webpack.js.org/guides/caching/#module-identifiers
-       */
-      new webpack.HashedModuleIdsPlugin(),
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
        * side replacement, when building the bundle code for the client.
@@ -245,7 +255,6 @@ module.exports = ({
        */
       new CompressionPlugin({
         algorithm: 'gzip',
-        filename: '[path].gz[query]',
         test: /\.js$/,
         threshold: 10240,
         minRatio: 0.8,
