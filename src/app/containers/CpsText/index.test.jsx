@@ -6,7 +6,7 @@ import {
 } from '@bbc/psammead-test-helpers';
 import CpsTextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { paragraphBlock, fragmentBlock } from '../Text/fixtures';
+import { paragraphBlock, fragmentBlock } from './fixtures';
 
 const listItemBlock = (id = null, listBlocks) => ({
   id,
