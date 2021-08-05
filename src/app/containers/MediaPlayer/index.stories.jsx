@@ -49,10 +49,15 @@ const Component = ({ service, isAmp = false }) => {
 export default {
   title: 'Containers/Media Player',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 
 export const Canonical = Component;
-export const Amp = props => <Component isAmp {...props} />;
+export const Amp = props => (
+  <div>
+    <Component isAmp {...props} />
+    hello
+  </div>
+);
 Amp.decorators = [AmpDecorator];
