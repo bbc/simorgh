@@ -63,5 +63,5 @@ const AmpTemplate = props => (
 );
 
 export const Amp = AmpTemplate.bind({});
-Amp.parameters = { chromatic: { disableSnapshot: true } };
+Amp.parameters = { chromatic: { disable: true } };
 Amp.decorators = [AmpDecorator];
