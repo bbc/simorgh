@@ -49,7 +49,7 @@ const Component = ({ service, isAmp = false }) => {
 export default {
   title: 'Containers/Media Player',
   Component,
-  parameters: { chromatic: { disableSnapshot: true } },
+  // parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 
@@ -60,4 +60,5 @@ export const Amp = props => (
     hello
   </div>
 );
+Amp.parameters = { chromatic: { disableSnapshot: true } };
 Amp.decorators = [AmpDecorator];
