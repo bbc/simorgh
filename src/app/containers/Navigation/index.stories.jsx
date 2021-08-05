@@ -24,7 +24,7 @@ const Component = ({ isAmp = false, service, variant }) => (
 export default {
   title: 'Containers/Navigation',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 

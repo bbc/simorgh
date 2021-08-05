@@ -86,7 +86,7 @@ const Component = ({
 export default {
   title: 'Containers/Story Promo',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 // Canonical

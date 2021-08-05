@@ -26,7 +26,7 @@ export default {
   title: 'Containers/Copyright',
   Component,
   decorators: [withKnobs, withServicesKnob()],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const Copyright = Component;

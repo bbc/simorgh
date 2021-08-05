@@ -24,7 +24,7 @@ export default {
   title: 'Containers/Brand',
   Component,
   decorators: [withKnobs, withServicesKnob()],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const Brand = props => <Component {...props} />;

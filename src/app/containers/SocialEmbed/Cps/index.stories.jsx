@@ -18,7 +18,7 @@ const Component = props =>
 export default {
   title: 'Containers/Social Embed/CPS',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 

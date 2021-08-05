@@ -59,7 +59,7 @@ moment.locale('en-GB'); // needed for Time Machine date string
 export default {
   title: 'Containers/Radio Schedule',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [
     withKnobs,
     withServicesKnob({

@@ -20,7 +20,7 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 export default {
   title: 'Containers/Article/Article Figure',
   decorators: [withKnobs, withServicesKnob()],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 // Canonical

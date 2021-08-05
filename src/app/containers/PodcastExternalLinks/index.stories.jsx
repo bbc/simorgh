@@ -33,7 +33,7 @@ const Component = ({ service, variant }) => (
 export default {
   title: 'Containers/Podcast External Links',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 

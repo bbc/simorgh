@@ -15,7 +15,7 @@ const Component = () => (
 export default {
   title: 'Containers/Faux Headline',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const FauxHeadline = Component;

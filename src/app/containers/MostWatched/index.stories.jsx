@@ -37,7 +37,7 @@ const Component = ({ service }) => {
 export default {
   title: 'Containers/Most Watched',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
 };
 

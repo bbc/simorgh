@@ -38,7 +38,7 @@ const Component = ({ service, variant, columnLayout }) => (
 export default {
   title: 'Containers/Most Read',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob({ defaultService: 'pidgin' })],
 };
 

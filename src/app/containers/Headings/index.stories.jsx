@@ -18,7 +18,7 @@ const Component = ({ type, blocks }) => (
 export default {
   title: 'Containers/Heading',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const Heading = () => <Component type="headline" blocks={headline} />;

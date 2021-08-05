@@ -21,7 +21,7 @@ export default {
   title: 'Containers/Gist',
   Component,
   decorators: [withKnobs, withServicesKnob()],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const AtAGlance = Component;

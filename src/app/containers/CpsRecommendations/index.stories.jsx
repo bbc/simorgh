@@ -50,7 +50,7 @@ const Component = ({ items, service, dir }) => {
 export default {
   Component,
   title: 'Containers/CPS Recommendations',
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const MultipleItems = () => (

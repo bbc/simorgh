@@ -39,7 +39,7 @@ const Component = ({ isAmp, service, dir, data }) => (
 export default {
   Component,
   title: 'Containers/CPS Related Content',
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 // Canonical

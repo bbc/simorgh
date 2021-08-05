@@ -40,7 +40,7 @@ const Component = ({
 export default {
   Component,
   title: 'Containers/CPS Features & Analysis',
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 // Canonical

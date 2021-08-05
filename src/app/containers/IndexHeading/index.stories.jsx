@@ -14,7 +14,7 @@ const Component = ({ service }) => (
 export default {
   title: 'Containers/Index Heading',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
   decorators: [withKnobs, withServicesKnob()],
 };
 

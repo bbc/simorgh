@@ -32,7 +32,7 @@ export default {
     withServicesKnob(),
     story => <WithTimeMachine>{story()}</WithTimeMachine>,
   ],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const A = props => (

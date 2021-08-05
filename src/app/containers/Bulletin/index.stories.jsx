@@ -65,7 +65,7 @@ export default {
   Component,
   title: 'Containers/Bulletin',
   decorators: [withKnobs, withServicesKnob()],
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 // Canonical

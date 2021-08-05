@@ -34,7 +34,7 @@ const Component = ({ service, data, isAmp = false }) => (
 export default {
   title: 'Containers/Front Page Section',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const Igbo = () => (

@@ -27,7 +27,7 @@ const Component = ({
 export default {
   title: 'Containers/Inline Link',
   Component,
-  parameters: { chromatic: { disable: true } },
+  parameters: { chromatic: { disableSnapshot: true } },
 };
 
 export const InternalLink = () => (
