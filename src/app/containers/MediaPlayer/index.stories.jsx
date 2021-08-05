@@ -54,11 +54,14 @@ export default {
 };
 
 export const Canonical = Component;
-export const Amp = props => (
+
+const AmpTemplate = props => (
   <div>
     <Component isAmp {...props} />
     hello
   </div>
 );
+
+export const Amp = AmpTemplate.bind({});
 Amp.parameters = { chromatic: { disableSnapshot: true } };
 Amp.decorators = [AmpDecorator];
