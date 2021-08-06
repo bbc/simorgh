@@ -2889,6 +2889,7 @@ exports[`Media Asset Page should render component 1`] = `
 .emotion-236 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -2899,6 +2900,7 @@ exports[`Media Asset Page should render component 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-236 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -2907,11 +2909,28 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 .emotion-238 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-238 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-238 {
+    display: none;
+  }
+}
+
+.emotion-240 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-240 {
+.emotion-242 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2921,7 +2940,7 @@ exports[`Media Asset Page should render component 1`] = `
   flex-direction: column;
 }
 
-.emotion-242 {
+.emotion-244 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2941,7 +2960,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-242 {
+  .emotion-244 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -2949,7 +2968,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-244 {
+.emotion-246 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2969,39 +2988,39 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-244 {
+  .emotion-246 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-244 {
+  .emotion-246 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-244 {
+  .emotion-246 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-244 {
+  .emotion-246 {
     padding-right: 1rem;
   }
 }
 
-.emotion-247 {
+.emotion-249 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-247 {
+  .emotion-249 {
     display: grid;
     position: initial;
     width: initial;
@@ -3009,7 +3028,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3017,7 +3036,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3025,7 +3044,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -3033,7 +3052,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -3041,7 +3060,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3049,7 +3068,7 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-247 {
+    .emotion-249 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -3057,134 +3076,134 @@ exports[`Media Asset Page should render component 1`] = `
   }
 }
 
-.emotion-250 {
+.emotion-252 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-250 {
+  .emotion-252 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-250:last-child {
+.emotion-252:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-250 {
+  .emotion-252 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-250 {
+  .emotion-252 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-250:first-child {
+.emotion-252:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-250:first-child {
+  .emotion-252:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-250:last-child {
+.emotion-252:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 63rem) {
-  .emotion-250 {
+  .emotion-252 {
     border-bottom: 0.0625rem solid #F2F2F2;
     padding: 1rem 0 1rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-250 {
+  .emotion-252 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-250 {
+    .emotion-252 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 }
 
-.emotion-253 {
+.emotion-255 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-253 {
+  .emotion-255 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-253 {
+    .emotion-255 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-253 {
+    .emotion-255 {
       display: block;
     }
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-253 {
+  .emotion-255 {
     display: grid;
   }
 }
 
-.emotion-255 {
+.emotion-257 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -3192,43 +3211,43 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-255 {
+  .emotion-257 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-255 {
+  .emotion-257 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-257 {
+.emotion-259 {
   position: relative;
 }
 
 @media (min-width: 25rem) {
-  .emotion-261 {
+  .emotion-263 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-261>* {
+.emotion-263>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-261>* {
+  .emotion-263>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-263 {
+.emotion-265 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -3236,13 +3255,13 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-263 {
+  .emotion-265 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-263 {
+  .emotion-265 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -3250,7 +3269,7 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-263 {
+  .emotion-265 {
     display: block;
     width: initial;
     padding: initial;
@@ -3258,13 +3277,13 @@ exports[`Media Asset Page should render component 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-263 {
+    .emotion-265 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-265 {
+.emotion-267 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -3276,20 +3295,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-265 {
+  .emotion-267 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-265 {
+  .emotion-267 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-267 {
+.emotion-269 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -3298,7 +3317,7 @@ exports[`Media Asset Page should render component 1`] = `
   overflow-wrap: anywhere;
 }
 
-.emotion-267:before {
+.emotion-269:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -3310,17 +3329,17 @@ exports[`Media Asset Page should render component 1`] = `
   z-index: 1;
 }
 
-.emotion-267:hover,
-.emotion-267:focus {
+.emotion-269:hover,
+.emotion-269:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-267:visited {
+.emotion-269:visited {
   color: #6E6E73;
 }
 
-.emotion-269 {
+.emotion-271 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -3331,20 +3350,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-269 {
+  .emotion-271 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-269 {
+  .emotion-271 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-307 {
+.emotion-309 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -3356,20 +3375,20 @@ exports[`Media Asset Page should render component 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-307 {
+  .emotion-309 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-307 {
+  .emotion-309 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-309 {
+.emotion-311 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3381,7 +3400,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 100%;
 }
 
-.emotion-311 {
+.emotion-313 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3390,7 +3409,7 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-341 {
+.emotion-343 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -3399,11 +3418,11 @@ exports[`Media Asset Page should render component 1`] = `
   height: 0.75rem;
 }
 
-.emotion-343 {
+.emotion-345 {
   padding: 0 0.25rem;
 }
 
-.emotion-357 {
+.emotion-359 {
   padding-bottom: 2rem;
 }
 
@@ -4093,17 +4112,20 @@ exports[`Media Asset Page should render component 1`] = `
                   <div
                     class="emotion-236 emotion-237"
                   />
-                  <h2
+                  <div
                     class="emotion-238 emotion-239"
+                  />
+                  <h2
+                    class="emotion-240 emotion-241"
                   >
                     <span
-                      class="emotion-240 emotion-241"
+                      class="emotion-242 emotion-243"
                     >
                       <span
-                        class="emotion-242 emotion-243"
+                        class="emotion-244 emotion-245"
                       >
                         <span
-                          class="emotion-244 emotion-245"
+                          class="emotion-246 emotion-247"
                           dir="ltr"
                           id="related-content-heading"
                         >
@@ -4114,25 +4136,25 @@ exports[`Media Asset Page should render component 1`] = `
                   </h2>
                 </div>
                 <ol
-                  class="emotion-3 emotion-247 emotion-248"
+                  class="emotion-3 emotion-249 emotion-250"
                   data-e2e="most-watched-ol"
                   dir="ltr"
                   role="list"
                 >
                   <li
-                    class="emotion-3 emotion-250 emotion-251"
+                    class="emotion-3 emotion-252 emotion-253"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-252 emotion-253 emotion-254"
+                      class="emotion-254 emotion-255 emotion-256"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-255 emotion-256"
+                        class="emotion-257 emotion-258"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-257 emotion-258"
+                          class="emotion-259 emotion-260"
                         >
                           <div
                             class="emotion-17 emotion-18"
@@ -4147,26 +4169,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-261 emotion-262"
+                            class="emotion-263 emotion-264"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-263 emotion-264"
+                        class="emotion-265 emotion-266"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-265 emotion-266"
+                          class="emotion-267 emotion-268"
                         >
                           <a
-                            class="emotion-267 emotion-268"
+                            class="emotion-269 emotion-270"
                             href="/pidgin/tori-23145776"
                           >
                             Police Arrest 3 ontop Anambra Church Attack
                           </a>
                         </h3>
                         <time
-                          class="emotion-269 emotion-28"
+                          class="emotion-271 emotion-28"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4175,19 +4197,19 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-250 emotion-251"
+                    class="emotion-3 emotion-252 emotion-253"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-252 emotion-253 emotion-254"
+                      class="emotion-254 emotion-255 emotion-256"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-255 emotion-256"
+                        class="emotion-257 emotion-258"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-257 emotion-258"
+                          class="emotion-259 emotion-260"
                         >
                           <div
                             class="emotion-17 emotion-18"
@@ -4202,26 +4224,26 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-261 emotion-262"
+                            class="emotion-263 emotion-264"
                           />
                         </div>
                       </div>
                       <div
-                        class="emotion-263 emotion-264"
+                        class="emotion-265 emotion-266"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-265 emotion-266"
+                          class="emotion-267 emotion-268"
                         >
                           <a
-                            class="emotion-267 emotion-268"
+                            class="emotion-269 emotion-270"
                             href="/pidgin/tori-23143754"
                           >
                             Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
                           </a>
                         </h3>
                         <time
-                          class="emotion-269 emotion-28"
+                          class="emotion-271 emotion-28"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4230,39 +4252,39 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-250 emotion-251"
+                    class="emotion-3 emotion-252 emotion-253"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-252 emotion-253 emotion-254"
+                      class="emotion-254 emotion-255 emotion-256"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-255 emotion-256"
+                        class="emotion-257 emotion-258"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-257 emotion-258"
+                          class="emotion-259 emotion-260"
                         >
                           <div
                             class="emotion-17 emotion-18"
                             data-e2e="image-placeholder"
                           />
                           <div
-                            class="emotion-261 emotion-262"
+                            class="emotion-263 emotion-264"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-307 emotion-308"
+                              class="emotion-309 emotion-310"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-309 emotion-310"
+                                class="emotion-311 emotion-312"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-311 emotion-312"
+                                  class="emotion-313 emotion-314"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -4283,14 +4305,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-263 emotion-264"
+                        class="emotion-265 emotion-266"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-265 emotion-266"
+                          class="emotion-267 emotion-268"
                         >
                           <a
-                            class="emotion-267 emotion-268"
+                            class="emotion-269 emotion-270"
                             href="/pidgin/23146654"
                           >
                             <span
@@ -4308,7 +4330,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-269 emotion-28"
+                          class="emotion-271 emotion-28"
                           datetime="2017-08-08"
                         >
                           8th August 2017
@@ -4317,19 +4339,19 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                   </li>
                   <li
-                    class="emotion-3 emotion-250 emotion-251"
+                    class="emotion-3 emotion-252 emotion-253"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-252 emotion-253 emotion-254"
+                      class="emotion-254 emotion-255 emotion-256"
                       data-e2e="story-promo"
                     >
                       <div
-                        class="emotion-255 emotion-256"
+                        class="emotion-257 emotion-258"
                         dir="ltr"
                       >
                         <div
-                          class="emotion-257 emotion-258"
+                          class="emotion-259 emotion-260"
                         >
                           <div
                             class="emotion-17 emotion-18"
@@ -4344,20 +4366,20 @@ exports[`Media Asset Page should render component 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-261 emotion-262"
+                            class="emotion-263 emotion-264"
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-307 emotion-308"
+                              class="emotion-309 emotion-310"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-309 emotion-310"
+                                class="emotion-311 emotion-312"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-341 emotion-342"
+                                  class="emotion-343 emotion-344"
                                   focusable="false"
                                   height="12px"
                                   viewBox="0 0 13 12"
@@ -4371,7 +4393,7 @@ exports[`Media Asset Page should render component 1`] = `
                                   />
                                 </svg>
                                 <time
-                                  class="emotion-343 emotion-344"
+                                  class="emotion-345 emotion-346"
                                   datetime="PT15S"
                                 >
                                   0:15
@@ -4382,14 +4404,14 @@ exports[`Media Asset Page should render component 1`] = `
                         </div>
                       </div>
                       <div
-                        class="emotion-263 emotion-264"
+                        class="emotion-265 emotion-266"
                         dir="ltr"
                       >
                         <h3
-                          class="emotion-265 emotion-266"
+                          class="emotion-267 emotion-268"
                         >
                           <a
-                            class="emotion-267 emotion-268"
+                            class="emotion-269 emotion-270"
                             href="/pidgin/media-23147054"
                           >
                             <span
@@ -4412,7 +4434,7 @@ exports[`Media Asset Page should render component 1`] = `
                           </a>
                         </h3>
                         <time
-                          class="emotion-269 emotion-28"
+                          class="emotion-271 emotion-28"
                           datetime="2017-08-17"
                         >
                           17th August 2017
@@ -4424,7 +4446,7 @@ exports[`Media Asset Page should render component 1`] = `
               </div>
             </section>
             <div
-              class="emotion-357 emotion-358"
+              class="emotion-359 emotion-360"
             />
           </div>
         </div>

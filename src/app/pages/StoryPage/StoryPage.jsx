@@ -65,6 +65,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     service,
     serviceLang,
     lang,
+    showRelatedTopics,
   } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -99,7 +100,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
   const topics = path(['metadata', 'topics'], pageData);
-  const isSport = service === 'sport';
 
   const gridColumns = {
     group0: 8,
@@ -321,7 +321,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
 
-          {!isSport && topics && (
+          {showRelatedTopics && topics && (
             <GridItemLarge>
               <RelatedTopics topics={topics} />
             </GridItemLarge>
