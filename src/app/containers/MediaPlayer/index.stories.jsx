@@ -55,12 +55,7 @@ export default {
 
 export const Canonical = Component;
 
-const AmpTemplate = props => (
-  <div>
-    <Component isAmp {...props} />
-    hello
-  </div>
-);
+const AmpTemplate = props => <Component isAmp {...props} />;
 
 export const Amp = AmpTemplate.bind({});
 Amp.parameters = { chromatic: { disable: true } };
