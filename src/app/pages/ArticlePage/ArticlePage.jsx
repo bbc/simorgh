@@ -142,7 +142,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     if (children.props.children.length > 0) {
       return (
         <ArticlePageMostReadSection>
-          {console.log(children.props.children, 'here')}
           <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
           {children}
         </ArticlePageMostReadSection>

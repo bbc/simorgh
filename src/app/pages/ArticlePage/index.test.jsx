@@ -12,6 +12,7 @@ import {
   articleDataPersian,
   articleDataPidgin,
 } from '#pages/ArticlePage/fixtureData';
+import articleJSONArabic from '#data/arabic/articles/cl5m3453w36o.json';
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
@@ -21,6 +22,11 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));
 articleDataNewsNoHeadline.content.model.blocks.shift();
+
+const emptyMostRead = {
+  totalRecords: 0,
+  records: [],
+};
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;
@@ -221,9 +227,24 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   expect(container).toMatchSnapshot();
 });
 
-// it('should not render the most read section (arabic) when there are no most read articles', async () => {
+it('should not render the most read section (arabic) when there are no most read articles', async () => {
+  const arabicArticleData = JSON.stringify(articleJSONArabic);
+  const articleWithEmptyMostRead = mergeDeepLeft(
+    emptyMostRead,
+    arabicArticleData,
+  );
+  const { container } = render(
+    <Context service="arabic">
+      <ArticlePage pageData={articleWithEmptyMostRead} />
+    </Context>,
+  );
 
-// });
+  await waitFor(() => container.querySelector('#Most-Read'));
+  const mostReadSection = container.querySelector('#Most-Read');
+
+  expect(mostReadSection).toBeNull();
+  expect(container).toMatchSnapshot();
+});
 
 it('should focus on id when anchor link is clicked', async () => {
   const articleDataNewsWithSummary = mergeDeepLeft(
