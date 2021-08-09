@@ -134,12 +134,22 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     filterForBlockType(promoImageBlocks, 'rawImage'),
   );
 
-  const MostReadWrapper = ({ children }) => (
-    <ArticlePageMostReadSection>
-      <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
-      {children}
-    </ArticlePageMostReadSection>
-  );
+  // const mostReadChildren = path(
+  //   ['children','props','children']
+  // );
+
+  const MostReadWrapper = ({ children }) => {
+    if (children.props.children.length > 0) {
+      return (
+        <ArticlePageMostReadSection>
+          {console.log(children.props.children, 'here')}
+          <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
+          {children}
+        </ArticlePageMostReadSection>
+      );
+    }
+    return null;
+  };
 
   MostReadWrapper.propTypes = {
     children: node.isRequired,

@@ -220,6 +220,11 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
+
+// it('should not render the most read section (arabic) when there are no most read articles', async () => {
+
+// });
+
 it('should focus on id when anchor link is clicked', async () => {
   const articleDataNewsWithSummary = mergeDeepLeft(
     {
