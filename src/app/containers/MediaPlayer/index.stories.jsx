@@ -53,12 +53,7 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-const AmpTemplate = props => (
-  <div>
-    hello
-    <Component isAmp {...props} />;
-  </div>
-);
+const AmpTemplate = props => <Component isAmp {...props} />;
 
 export const Canonical = Component;
 export const Amp = AmpTemplate.bind({});
