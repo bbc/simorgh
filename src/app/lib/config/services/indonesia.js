@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      gist: 'Rangkuman',
       error: {
         404: {
           statusCode: '404',

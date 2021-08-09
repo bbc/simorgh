@@ -76,6 +76,7 @@ export const service = {
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      gist: 'အနှစျခြုပျ',
       error: {
         404: {
           statusCode: '၄၀၄',

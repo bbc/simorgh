@@ -85,6 +85,7 @@ export const service = {
         audioPlayer: 'Reproductor de audio',
         videoPlayer: 'Reproductor de video',
       },
+      gist: 'Sumario',
       error: {
         404: {
           statusCode: '404',
