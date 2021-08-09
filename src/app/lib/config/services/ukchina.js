@@ -150,7 +150,7 @@ export const service = {
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
-      gist: '	概要',
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',

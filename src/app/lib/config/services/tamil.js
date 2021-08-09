@@ -75,7 +75,7 @@ export const service = {
         audioPlayer: 'கேட்பொலி பிளேயர்',
         videoPlayer: 'காணொளி பிளேயர்',
       },
-      gist: '	முக்கிய சாராம்சம்',
+      gist: 'முக்கிய சாராம்சம்',
       error: {
         404: {
           statusCode: '404',
