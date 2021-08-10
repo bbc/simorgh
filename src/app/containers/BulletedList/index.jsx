@@ -11,7 +11,7 @@ import { GridItemMedium } from '#app/components/Grid';
 
 const componentsToRender = { listItem };
 
-const Wrapper = styled.div`
+const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
@@ -19,18 +19,16 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
-    <GridItemMedium>
-      <Wrapper className={className}>
-        <BulletedList
-          {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
-          script={script}
-          service={service}
-          dir={dir}
-        >
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </BulletedList>
-      </Wrapper>
-    </GridItemMedium>
+    <StyledGridItemMedium className={className}>
+      <BulletedList
+        {...pick(['bulletPointShape', 'bulletPointColour'], rest)}
+        script={script}
+        service={service}
+        dir={dir}
+      >
+        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+      </BulletedList>
+    </StyledGridItemMedium>
   );
 };
 
