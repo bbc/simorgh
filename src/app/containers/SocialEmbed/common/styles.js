@@ -22,8 +22,6 @@ const getWrapperHeightStyles = oEmbed => {
 };
 
 export const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
   ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
