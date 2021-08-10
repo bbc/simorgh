@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: '오디오 플레이어',
         videoPlayer: '비디오 플레이어',
       },
+      gist: '요약',
       error: {
         404: {
           statusCode: '404',

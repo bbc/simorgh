@@ -80,6 +80,7 @@ export const service = {
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
       },
+      gist: 'ملخص',
       error: {
         404: {
           statusCode: '404',
