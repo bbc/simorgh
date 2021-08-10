@@ -53,7 +53,6 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
-import isLive from '#lib/utilities/isLive';
 
 const componentsToRender = {
   headline: headings,
@@ -64,7 +63,7 @@ const componentsToRender = {
   image,
   timestamp,
   social: SocialEmbedContainer,
-  ...(!isLive() && { group: gist }),
+  group: gist,
 };
 
 const ArticlePageMostReadSection = styled(MostReadSection)`
