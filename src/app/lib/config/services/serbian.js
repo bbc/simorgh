@@ -179,6 +179,7 @@ export const service = {
         audioPlayer: 'Audio plejer',
         videoPlayer: 'Video plejer',
       },
+      gist: 'Sažetak',
       error: {
         404: {
           statusCode: '404',
@@ -482,6 +483,7 @@ export const service = {
         audioPlayer: 'Аудио плејер',
         videoPlayer: 'Видео плејер',
       },
+      gist: 'Сажетак',
       error: {
         404: {
           statusCode: '404',

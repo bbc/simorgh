@@ -141,6 +141,7 @@ export const mainTranslations = {
     audioPlayer: 'Аудио плеер',
     videoPlayer: 'Видео плеер',
   },
+  gist: 'Коротко',
   error: {
     404: {
       statusCode: '404',
