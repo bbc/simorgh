@@ -90,7 +90,7 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
     //
     // Specifically it runs against this asset http://localhost:7080/russian/news-55041160
     // but should pass against any page Story page with 2 or more instagram posts
-    it('Lazy loaded instagram posts enrich', () => {
+    it.only('Lazy loaded instagram posts enrich', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
 
@@ -111,20 +111,34 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
             [1, 'model', 'blocks', 0, 'model', 'href'],
             instagramEmbedBlocks,
           );
+          const thirdInstagramEmbedUrl = path(
+            [2, 'model', 'blocks', 0, 'model', 'href'],
+            instagramEmbedBlocks,
+          );
 
           cy.get(
             `[data-e2e="instagram-embed-${firstInstagramEmbedUrl}"]`,
           ).scrollIntoView();
-          cy.get('.instagram-media-rendered').should('have.length', 1);
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(3000);
+          cy.get('.instagram-media-rendered').should(
+            'have.length.of.at.most',
+            2,
+          );
           cy.get(
             `[data-e2e="instagram-embed-${secondInstagramEmbedUrl}"]`,
           ).scrollIntoView();
-          // of.at.least is used here instead of having length of exactly 2
-          // so the test does not fail if more than one twitter embed scrolls
+          cy.get(
+            `[data-e2e="instagram-embed-${thirdInstagramEmbedUrl}"]`,
+          ).scrollIntoView();
+          // eslint-disable-next-line cypress/no-unnecessary-waiting
+          cy.wait(3000);
+          // of.at.least is used here instead of having length of exactly 3
+          // so the test does not fail if more than one instagram embed scrolls
           // into view
           cy.get('.instagram-media-rendered').should(
             'have.length.of.at.least',
-            2,
+            3,
           );
         }
       });
