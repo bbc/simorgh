@@ -61,10 +61,8 @@ const GistList = styled(UnorderedList)`
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     ${({ direction }) => `padding-${direction}: ${GEL_SPACING_DBL};`}
-    li {
-      &:last-child {
-        padding-bottom: ${GEL_SPACING_QUAD};
-      }
+    li:last-child {
+      padding-bottom: ${GEL_SPACING_QUAD};
     }
   }
 `;
