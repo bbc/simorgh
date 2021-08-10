@@ -101,52 +101,54 @@ const CanonicalMostRead = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   return (
-    <Wrapper>
-      <MostReadList
-        numberOfItems={items.length}
-        dir={dir}
-        columnLayout={columnLayout}
-      >
-        {items.map((item, i) => (
-          <MostReadItemWrapper
-            dir={dir}
-            key={item.id}
-            columnLayout={columnLayout}
-            ref={viewRef}
-          >
-            <MostReadRank
-              service={service}
-              script={script}
-              listIndex={i + 1}
-              numberOfItems={items.length}
+    items.length > 0 && (
+      <Wrapper>
+        <MostReadList
+          numberOfItems={items.length}
+          dir={dir}
+          columnLayout={columnLayout}
+        >
+          {items.map((item, i) => (
+            <MostReadItemWrapper
               dir={dir}
+              key={item.id}
               columnLayout={columnLayout}
-              size={size}
-            />
-            <MostReadLink
-              dir={dir}
-              service={service}
-              script={script}
-              title={item.title}
-              href={item.href}
-              size={size}
-              eventTrackingData={eventTrackingData}
+              ref={viewRef}
             >
-              {shouldRenderLastUpdated(item.timestamp) && (
-                <LastUpdated
-                  prefix={lastUpdated}
-                  script={script}
-                  service={service}
-                  timestamp={item.timestamp}
-                  locale={locale}
-                  timezone={timezone}
-                />
-              )}
-            </MostReadLink>
-          </MostReadItemWrapper>
-        ))}
-      </MostReadList>
-    </Wrapper>
+              <MostReadRank
+                service={service}
+                script={script}
+                listIndex={i + 1}
+                numberOfItems={items.length}
+                dir={dir}
+                columnLayout={columnLayout}
+                size={size}
+              />
+              <MostReadLink
+                dir={dir}
+                service={service}
+                script={script}
+                title={item.title}
+                href={item.href}
+                size={size}
+                eventTrackingData={eventTrackingData}
+              >
+                {shouldRenderLastUpdated(item.timestamp) && (
+                  <LastUpdated
+                    prefix={lastUpdated}
+                    script={script}
+                    service={service}
+                    timestamp={item.timestamp}
+                    locale={locale}
+                    timezone={timezone}
+                  />
+                )}
+              </MostReadLink>
+            </MostReadItemWrapper>
+          ))}
+        </MostReadList>
+      </Wrapper>
+    )
   );
 };
 
