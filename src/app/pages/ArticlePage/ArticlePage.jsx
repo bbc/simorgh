@@ -138,7 +138,19 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   //   ['children','props','children']
   // );
 
+  // return(children.props.wrapper.length > 0 ? <articlepage stuff> : null)
+
+  // const MostReadWrapper = ({ children }) => {
+  //   return children.props.wrapper.length > 0 ? (
+  //     <ArticlePageMostReadSection>
+  //       <MostReadSectionLabel mobileDivider={showRelatedTopics && topics} />
+  //       {children}
+  //     </ArticlePageMostReadSection>
+  //   ) : null;
+  // };
+
   const MostReadWrapper = ({ children }) => {
+    console.log(children.props.children);
     if (children.props.children.length > 0) {
       return (
         <ArticlePageMostReadSection>
