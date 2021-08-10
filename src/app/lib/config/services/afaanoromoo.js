@@ -76,6 +76,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Guduunfaa',
       error: {
         404: {
           statusCode: '404',

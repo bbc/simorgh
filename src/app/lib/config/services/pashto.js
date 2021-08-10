@@ -80,6 +80,7 @@ export const service = {
         audioPlayer: 'اډیو پلیئر',
         videoPlayer: 'ویډیو پلیئر',
       },
+      gist: 'لنډیز',
       error: {
         404: {
           statusCode: '۴۰۴',

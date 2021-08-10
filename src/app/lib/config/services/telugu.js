@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: 'ఆడియో ప్లేయర్',
         videoPlayer: 'వీడియో ప్లేయర్',
       },
+      gist: 'సారాంశం',
       error: {
         404: {
           statusCode: '404',
