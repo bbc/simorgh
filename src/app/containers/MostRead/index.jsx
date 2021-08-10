@@ -20,7 +20,6 @@ const MostReadContainer = ({
   serverRenderOnAmp,
 }) => {
   const { variant, isAmp } = useContext(RequestContext);
-  console.log(initialData);
   const {
     service,
     mostRead: { hasMostRead },
