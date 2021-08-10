@@ -1292,8 +1292,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 .emotion-131 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
@@ -5614,8 +5612,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 .emotion-136 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
@@ -8762,8 +8758,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 .emotion-136 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
