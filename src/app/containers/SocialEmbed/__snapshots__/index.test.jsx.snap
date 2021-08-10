@@ -102,8 +102,6 @@ exports[`SocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-2 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 18.75rem;
@@ -306,8 +304,6 @@ exports[`SocialEmbedContainer Canonical should render and unmount correctly 1`] 
 }
 
 .emotion-2 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
   min-height: 18.75rem;
