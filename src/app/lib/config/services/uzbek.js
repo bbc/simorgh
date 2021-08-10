@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'Аудио плейер',
         videoPlayer: 'Видео плейер',
       },
+      gist: 'Хулоса',
       error: {
         404: {
           statusCode: '404',

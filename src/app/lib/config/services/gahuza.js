@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'Kina amajwi',
         videoPlayer: 'Kina amasanamu',
       },
+      gist: 'Incamake',
       error: {
         404: {
           statusCode: '404',
