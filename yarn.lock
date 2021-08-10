@@ -6752,10 +6752,10 @@ cypress-multi-reporters@1.5.0:
     debug "^4.1.1"
     lodash "^4.17.15"
 
-cypress-terminal-report@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/cypress-terminal-report/-/cypress-terminal-report-3.3.0.tgz#8ea91df7d8d3dd96baf86e73b51c06ea6fa55a41"
-  integrity sha512-2a0l6qFLFeVLYjFdxm+hCigA+mjpHNZ3t13plD2IV+fE56Dfzj1t2NGdlafzkYF+v/wpqtkqvtk6qDpV++kYOQ==
+cypress-terminal-report@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/cypress-terminal-report/-/cypress-terminal-report-3.2.2.tgz#a148bd275eb15551a26dcd613f13f89d61dc296f"
+  integrity sha512-mEx8UlffSGsTHIK7pbBOPTz/cf/JwMqx6/+s7+y7V7MXqv86BXvWhP8kvYbcW3xjYj4B3C625toYUD20q9LmKA==
   dependencies:
     chalk "^3.0.0"
     fs-extra "^9.0.1"
