@@ -240,7 +240,7 @@
     "terser-webpack-plugin": "5.1.4",
     "timemachine": "0.3.2",
     "wait-on": "6.0.0",
-    "webpack": "5.49.0",
+    "webpack": "5.50.0",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.7.2",
     "webpack-dev-server": "3.11.2",
