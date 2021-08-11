@@ -94,7 +94,7 @@ const CanonicalMostRead = ({
     isAmp,
   ]);
 
-  if (!items) {
+  if (!items || items.length === 0) {
     return null;
   }
 
