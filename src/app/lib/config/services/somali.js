@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Xayeysiin',
@@ -73,6 +74,7 @@ export const service = {
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      gist: 'Kooban',
       error: {
         404: {
           statusCode: '404',

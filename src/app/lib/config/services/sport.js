@@ -60,6 +60,7 @@ export const service = {
       brandHighlightColour: `${C_BLACK}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: false,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
@@ -74,6 +75,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'At a glance',
       error: {
         404: {
           statusCode: '404',

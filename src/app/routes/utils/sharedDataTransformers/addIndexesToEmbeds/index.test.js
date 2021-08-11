@@ -103,6 +103,31 @@ it('should return enriched blocks with a new property "indexOfType" (indicates t
   });
 });
 
+it('should return no social embed indexOfType if only one exists', () => {
+  const fixture = {
+    content: {
+      model: {
+        blocks: [
+          textBlock,
+          textBlock,
+          textBlock,
+          textBlock,
+          buildEmbedBlock({
+            provider: 'Twitter',
+            url: 'https://twitter.com/bbcnews/status/151510212',
+          }),
+        ],
+      },
+    },
+  };
+  const enrichedArticleBlocks = addIndexesToEmbeds(fixture);
+
+  expect(getOembed(enrichedArticleBlocks.content.model.blocks[4])).toEqual({
+    provider_name: 'Twitter',
+    url: 'https://twitter.com/bbcnews/status/151510212',
+  });
+});
+
 it('should return enriched blocks with a new property "indexOfType" (indicates the position of the social embed block by provider) to all embed blocks of any provider', () => {
   const fixture = {
     content: {

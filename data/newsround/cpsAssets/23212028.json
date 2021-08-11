@@ -1,0 +1,454 @@
+{
+  "metadata":{
+     "id":"urn:bbc:ares::asset:newsround/23212028",
+     "locators":{
+        "assetUri":"/newsround/23212028",
+        "cpsUrn":"urn:bbc:content:assetUri:newsround/23212028",
+        "curie":"http://www.bbc.co.uk/asset/2e65f37a-9543-a140-891e-2e2c6b94b704",
+        "assetId":"23212028"
+     },
+     "type":"STY",
+     "createdBy":"newsround-v6",
+     "language":"en-gb",
+     "lastUpdated":1620909714146,
+     "firstPublished":1534324633000,
+     "lastPublished":1534324633000,
+     "timestamp":1534324633000,
+     "options":{
+        "isIgorSeoTagsEnabled":false,
+        "includeComments":false,
+        "allowRightHandSide":true,
+        "isFactCheck":false,
+        "allowDateStamp":true,
+        "suitableForSyndication":true,
+        "hasNewsTracker":false,
+        "allowRelatedStoriesBox":true,
+        "isKeyContent":false,
+        "allowHeadline":true,
+        "allowAdvertising":false,
+        "hasContentWarning":false,
+        "isBreakingNews":false,
+        "allowPrintingSharingLinks":false
+     },
+     "analyticsLabels":{
+        "cps_asset_type":"sty",
+        "counterName":"newsround.home.story.23212028.page",
+        "cps_asset_id":"23212028"
+     },
+     "passport":{
+        "language":"en-gb",
+        "home":"http://www.bbc.co.uk/ontologies/passport/home/Newsround",
+        "locator":"urn:bbc:cps:curie:asset:2e65f37a-9543-a140-891e-2e2c6b94b704",
+        "availability":"AVAILABLE",
+        "taggings":[
+           {
+              "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+              "value":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id"
+           }
+        ],
+        "schemaVersion":"1.2.0",
+        "publishedState":"PUBLISHED",
+        "predicates":{
+           "about":[
+              {
+                 "value":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+                 "thingLabel":"Adidas",
+                 "thingUri":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+                 "thingId":"b9c56ef3-1315-47dd-9ff5-a9c2d8532284",
+                 "thingType":[
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm",
+                    "tagging:Agent"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Adidas"
+                 ],
+                 "thingEnglishLabel":"Adidas",
+                 "type":"about"
+              }
+           ]
+        }
+     },
+     "tags":{
+        "about":[
+           {
+              "thingLabel":"Adidas",
+              "thingUri":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+              "thingId":"b9c56ef3-1315-47dd-9ff5-a9c2d8532284",
+              "thingType":[
+                 "core:Organisation",
+                 "core:Thing",
+                 "tagging:TagConcept",
+                 "tagging:AmbiguousTerm",
+                 "tagging:Agent"
+              ],
+              "thingSameAs":[
+                 "http://dbpedia.org/resource/Adidas"
+              ],
+              "topicName":"Adidas",
+              "topicId":"c7yqgq2564jt",
+              "curationList":[
+                 {
+                    "curationId":"4d6b67b0-3523-456a-b5a8-bcd7945086b4",
+                    "curationType":"vivo-stream"
+                 }
+              ],
+              "thingEnglishLabel":"Adidas",
+              "thingLabelLanguage":"en-gb",
+              "thingPreferredLabel":"Adidas"
+           }
+        ]
+     },
+     "version":"v1.3.13",
+     "blockTypes":[
+        "paragraph",
+        "pullOut",
+        "image",
+        "heading"
+     ],
+     "includeComments":false,
+     "atiAnalytics":{
+        "producerName":"NEWSROUND",
+        "producerId":"65"
+     },
+     "readTime":2,
+     "siteUri":"/newsround",
+     "topics":[
+        {
+           "topicName":"Adidas",
+           "topicId":"c7yqgq2564jt",
+           "subjectList":[
+              {
+                 "subjectId":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+                 "subjectType":"tag"
+              }
+           ],
+           "curationList":[
+              {
+                 "curationId":"4d6b67b0-3523-456a-b5a8-bcd7945086b4",
+                 "curationType":"vivo-stream",
+                 "position":0,
+                 "visualProminence":"NORMAL"
+              }
+           ],
+           "types":[
+              "core:Organisation",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:AmbiguousTerm",
+              "tagging:Agent"
+           ],
+           "home":"http://www.bbc.co.uk/ontologies/passport/home/Newsround"
+        }
+     ]
+  },
+  "content":{
+     "blocks":[
+        {
+           "text":"<bold>Every now and then, an athlete comes along that gets the sporting world very excited indeed - and Dina Asher-Smith is one of them.</bold>",
+           "markupType":"candy_xml",
+           "type":"paragraph"
+        },
+        {
+           "text":"She is the fastest woman in British history and has just completed a seriously impressive run at the European Championships in Berlin, winning three gold medals in the 100m, 200m and 4x100m relay.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"This performance made Dina the first woman since German Katrin Krabbe in 1990 to win three European sprint titles at one championships - and the first female Briton ever to win a treble at a major championships!",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"It's safe to say that at the young age of 22, Dina has an incredible number of records to her name already.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"So who is this superstar sprinter? Read our guide to find out more about her.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "title":"Love sport? Check these out",
+           "size":"wide",
+           "elements":[
+              {
+                 "text":"Cats or dogs? Kadeena Cox decides",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              },
+              {
+                 "text":"Ellie Simmonds takes on our very serious quiz (ahem...)",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              },
+              {
+                 "text":"Farah v Bolt: Who would win?",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              }
+           ],
+           "type":"pullOut"
+        },
+        {
+           "id":"63686430",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/0D8C/test/_63686430__102965556_insta2.jpg",
+           "path":"/cpsdevpb/0D8C/test/_63686430__102965556_insta2.jpg",
+           "height":450,
+           "width":800,
+           "altText":"a",
+           "caption":"Dina showed promise on the athletics track from a young age",
+           "copyrightHolder":"INSTAGRAM/DINAASHERSMITH",
+           "positionHint":"full-width",
+           "originCode":"cpsdevpb",
+           "type":"image"
+        },
+        {
+           "text":"Early years",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "text":"Dina Asher-Smith was born on 4 December 1995 in London.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Even as a young girl, she was super sporty and was always very good at sprinting.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"At the age of eight, she joined the Bees Academy at Blackheath and Bromley Harriers Athletic Club.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"A man called John Blackie became her coach and - 14 years later - they are still a team.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "title":"Three facts about Dina Asher-Smith",
+           "size":"wide",
+           "elements":[
+              {
+                 "text":"1. She has just graduated from Kings College in London where she completed a history degree",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              },
+              {
+                 "text":"2. Serena Williams is one of her heroes - she says she'd have a &quot;complete fan girl moment&quot; if she met her!",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              },
+              {
+                 "text":"3. She says her mum and dad are the ones who keep her feet on the ground and keep her focused",
+                 "markupType":"plain_text",
+                 "type":"paragraph"
+              }
+           ],
+           "type":"pullOut"
+        },
+        {
+           "text":"Dina showed loads of promise as a young athlete, winning gold medals in the World and European Junior Championships.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"In fact, she was the world's fastest teenager ever over 60m and 200m.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"But it would turn out that this sort of early success was just a sign of things to come.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Superstar senior sprinter",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "text":"In 2015, Dina would rewrite British sprinting history at a senior level.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"She started her record-breaking streak by smashing the British 100m record in London. If that wasn't enough, she went on to break the British 200m and 4x100m relay records at the World Championships in Beijing later that year.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Michael Johnson - four-time Olympic champion and a BBC athletics pundit - says: &quot;I have been watching British athletics with the BBC since 2002 and in all that time I have not seen anyone like Dina Asher-Smith.&quot;",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63686432",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/5BAC/test/_63686432__102965554_untitled-1.jpg",
+           "path":"/cpsdevpb/5BAC/test/_63686432__102965554_untitled-1.jpg",
+           "height":450,
+           "width":800,
+           "altText":"a",
+           "caption":"She's not just an amazing athlete - last year, she completed her university degree in history at King's College London",
+           "copyrightHolder":"INSTAGRAM/DINAASHERSMITH",
+           "positionHint":"full-width",
+           "originCode":"cpsdevpb",
+           "type":"image"
+        },
+        {
+           "text":"&quot;British sprinting at junior level has always been good&quot; but what makes Dina so special is the fact that &quot;she continued to improve year after year, can compete against the best in the world and has the full package, physically and mentally,&quot; he added.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Even athletes like Mo Farah &quot;took a lifetime&quot; to reach the best they could be, explains Michael.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"Her performance in Berlin has well and truly established Dina amongst some of the world's best track athletes competing at the moment and she even reduced her coach John to tears with her performance.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"What next?",
+           "markupType":"plain_text",
+           "type":"heading"
+        },
+        {
+           "text":"So what next for this superstar talent? Well, there's not long to rest before her next competition.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"She will race in the 200m at the Diamond League event in Birmingham this weekend.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"But the big event that everybody is already talking about is the next Olympic Games, which will be taking place in Tokyo in Japan, in two years' time.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "id":"63686434",
+           "subType":"body",
+           "href":"http://b.files.bbci.co.uk/A9CC/test/_63686434__102965273_hi048644735.jpg",
+           "path":"/cpsdevpb/A9CC/test/_63686434__102965273_hi048644735.jpg",
+           "height":450,
+           "width":800,
+           "altText":"a",
+           "caption":"Here she is on the right celebrating winning the 4x100m relay with her teammates at the European Athletics Championships recently",
+           "copyrightHolder":"PRESS ASSOCIATION",
+           "positionHint":"full-width",
+           "originCode":"cpsdevpb",
+           "type":"image"
+        },
+        {
+           "text":"And Michael thinks that she's got what it takes.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"&quot;Is she capable of winning gold in Tokyo? Absolutely,&quot; he says.",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        },
+        {
+           "text":"&quot;She is absolutely now one of the best in the world. When other athletes are training for these world medals, they will have Dina Asher-Smith in mind.&quot;",
+           "markupType":"plain_text",
+           "type":"paragraph"
+        }
+     ]
+  },
+  "promo":{
+     "headlines":{
+        "shortHeadline":"This is one athlete you need to know about",
+        "headline":"Who is Dina Asher-Smith?"
+     },
+     "locators":{
+        "assetUri":"/newsround/23212028",
+        "cpsUrn":"urn:bbc:content:assetUri:newsround/23212028",
+        "curie":"http://www.bbc.co.uk/asset/2e65f37a-9543-a140-891e-2e2c6b94b704",
+        "assetId":"23212028"
+     },
+     "summary":"Dina Asher-Smith is the fastest woman in British history and has just completed a seriously impressive run at the European Championships in Berlin by winning three gold medals.",
+     "timestamp":1534324633000,
+     "language":"en-gb",
+     "passport":{
+        "language":"en-gb",
+        "home":"http://www.bbc.co.uk/ontologies/passport/home/Newsround",
+        "locator":"urn:bbc:cps:curie:asset:2e65f37a-9543-a140-891e-2e2c6b94b704",
+        "availability":"AVAILABLE",
+        "taggings":[
+           {
+              "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
+              "value":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id"
+           }
+        ],
+        "schemaVersion":"1.2.0",
+        "publishedState":"PUBLISHED",
+        "predicates":{
+           "about":[
+              {
+                 "value":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+                 "thingLabel":"Adidas",
+                 "thingUri":"http://www.bbc.co.uk/things/b9c56ef3-1315-47dd-9ff5-a9c2d8532284#id",
+                 "thingId":"b9c56ef3-1315-47dd-9ff5-a9c2d8532284",
+                 "thingType":[
+                    "core:Organisation",
+                    "core:Thing",
+                    "tagging:TagConcept",
+                    "tagging:AmbiguousTerm",
+                    "tagging:Agent"
+                 ],
+                 "thingSameAs":[
+                    "http://dbpedia.org/resource/Adidas"
+                 ],
+                 "thingEnglishLabel":"Adidas",
+                 "type":"about"
+              }
+           ]
+        }
+     },
+     "indexImage":{
+        "id":"63686455",
+        "subType":"index",
+        "href":"http://b.files.bbci.co.uk/D8AC/test/_63686455__102969957_hi048624544.jpg",
+        "path":"/cpsdevpb/D8AC/test/_63686455__102969957_hi048624544.jpg",
+        "height":261,
+        "width":464,
+        "altText":"a",
+        "copyrightHolder":"BBC",
+        "originCode":"cpsdevpb",
+        "type":"image"
+     },
+     "id":"urn:bbc:ares::asset:newsround/23212028",
+     "type":"cps"
+  },
+  "relatedContent":{
+     "section":{
+        "subType":"index",
+        "name":"CBBC Newsround",
+        "uri":"/newsround/home",
+        "type":"simple"
+     },
+     "site":{
+        "subType":"site",
+        "name":"CBBC Newsround",
+        "uri":"/newsround",
+        "type":"simple"
+     },
+     "groups":[
+        
+     ]
+  }
+}

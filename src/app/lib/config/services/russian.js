@@ -141,6 +141,7 @@ export const mainTranslations = {
     audioPlayer: 'Аудио плеер',
     videoPlayer: 'Видео плеер',
   },
+  gist: 'Коротко',
   error: {
     404: {
       statusCode: '404',
@@ -278,6 +279,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     brandSVG,
     mostRead: {
       header: 'Самое популярное',

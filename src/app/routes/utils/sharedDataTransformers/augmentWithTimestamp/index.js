@@ -1,5 +1,9 @@
 /* eslint-disable no-use-before-define */
 import pathOr from 'ramda/src/pathOr';
+import insert from 'ramda/src/insert';
+import path from 'ramda/src/path';
+import pathEq from 'ramda/src/pathEq';
+import assocPath from 'ramda/src/assocPath';
 import deepClone from '../../jsonClone';
 
 const augmentWithTimestamp = jsonRaw => {
@@ -34,6 +38,21 @@ export default augmentWithTimestamp;
  */
 const insertTimestampBlock = (originalJson, timestampBlock) => {
   const json = deepClone(originalJson); // make a copy so we don't corrupt the input
+
+  const blockPath = ['content', 'model', 'blocks'];
+
+  const blocks = path(blockPath, json);
+  const gistPosition = pathOr([], blockPath, json).findIndex(
+    pathEq(['type'], 'group'),
+  );
+
+  if (gistPosition >= 0) {
+    return assocPath(
+      blockPath,
+      insert(gistPosition + 1, timestampBlock, blocks),
+      json,
+    );
+  }
   const { headlineBlocks, mainBlocks } = splitBlocksByHeadline(
     json.content.model.blocks,
   );

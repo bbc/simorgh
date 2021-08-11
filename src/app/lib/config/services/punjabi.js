@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'ਇਸ਼ਤਿਹਾਰ',
@@ -73,6 +74,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'ਸਾਰ',
       error: {
         404: {
           statusCode: '404',

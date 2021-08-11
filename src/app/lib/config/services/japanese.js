@@ -58,6 +58,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: '広告',
@@ -74,6 +75,7 @@ export const service = {
         audioPlayer: '音声プレイヤー',
         videoPlayer: '動画プレイヤー',
       },
+      gist: '要点',
       error: {
         404: {
           statusCode: '404',

@@ -3,7 +3,7 @@ import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
 import { pathOr } from 'ramda';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
-import { arrayOf, shape, string } from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -30,7 +30,7 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RelatedTopics = ({ topics }) => {
+const RelatedTopics = ({ topics, mobileDivider, bar, className }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -49,13 +49,15 @@ const RelatedTopics = ({ topics }) => {
       <StyledTopicsWrapper
         aria-labelledby="related-topics"
         role="complementary"
+        className={className}
       >
         <StyledSectionLabel
-          bar
+          bar={bar}
           script={script}
           service={service}
           dir={dir}
           labelId="related-topics"
+          mobileDivider={mobileDivider}
         >
           {heading}
         </StyledSectionLabel>
@@ -92,10 +94,16 @@ RelatedTopics.propTypes = {
       topicId: string,
     }),
   ),
+  mobileDivider: bool,
+  bar: bool,
+  className: string,
 };
 
 RelatedTopics.defaultProps = {
   topics: null,
+  mobileDivider: true,
+  bar: true,
+  className: null,
 };
 
 export default RelatedTopics;

@@ -1144,11 +1144,111 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-weight: inherit;
 }
 
-.emotion-59 {
+.emotion-58 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-61 {
+@media (max-width: 14.9375rem) {
+  .emotion-58 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-58 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-58 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-58 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-58 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-58 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-58 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-58 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-60 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1159,24 +1259,24 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-61 {
+  .emotion-60 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-61 {
+  .emotion-60 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-61>li {
+.emotion-60>li {
   position: relative;
 }
 
-.emotion-61>li::before {
+.emotion-60>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -1187,66 +1287,66 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   left: -1rem;
 }
 
-.emotion-63 {
+.emotion-62 {
   margin-bottom: 1rem;
 }
 
-.emotion-133 {
+.emotion-131 {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
 
-.emotion-140 {
+.emotion-138 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-140 {
+  .emotion-138 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1254,7 +1354,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1262,7 +1362,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1270,7 +1370,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1278,7 +1378,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -1286,7 +1386,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 80rem) {
-    .emotion-140 {
+    .emotion-138 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -1295,37 +1395,37 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-140 {
+  .emotion-138 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-140 {
+  .emotion-138 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-140 {
+  .emotion-138 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-144 {
+.emotion-142 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-146 {
+.emotion-144 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -1335,7 +1435,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 100%;
 }
 
-.emotion-154 {
+.emotion-152 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1347,27 +1447,27 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-154 {
+  .emotion-152 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-154 {
+  .emotion-152 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-154 {
+  .emotion-152 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1375,7 +1475,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1383,7 +1483,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1391,7 +1491,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -1399,7 +1499,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -1407,7 +1507,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 80rem) {
-  .emotion-183 {
+  .emotion-181 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -1415,49 +1515,49 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display: grid) {
-  .emotion-183 {
+  .emotion-181 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-183 {
+    .emotion-181 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -1465,35 +1565,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 63rem) {
-  .emotion-183 {
+  .emotion-181 {
     margin-top: 2rem;
   }
 }
 
-.emotion-185 {
+.emotion-183 {
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-185 {
+  .emotion-183 {
     margin-bottom: 3rem;
     padding: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-187 {
+  .emotion-185 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-187 {
+  .emotion-185 {
     padding: 0 1rem;
   }
 }
 
-.emotion-190 {
+.emotion-188 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -1502,20 +1602,42 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-190 {
+  .emotion-188 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-190 {
+  .emotion-188 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-190 {
+  .emotion-188 {
     margin-top: 0;
+  }
+}
+
+.emotion-190 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-190 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-190 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
   }
 }
 
@@ -1532,10 +1654,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width: 37.5rem) {
   .emotion-192 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+    display: none;
   }
 }
 
@@ -1886,7 +2005,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   height: 0.75rem;
 }
 
-.emotion-271 {
+.emotion-273 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1894,43 +2013,43 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 63rem) {
-  .emotion-271 {
+  .emotion-273 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-271 {
+  .emotion-273 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-273 {
+.emotion-275 {
   position: relative;
 }
 
 @media (min-width: 25rem) {
-  .emotion-277 {
+  .emotion-279 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-277>* {
+.emotion-279>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-277>* {
+  .emotion-279>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-279 {
+.emotion-281 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1938,13 +2057,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-279 {
+  .emotion-281 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-279 {
+  .emotion-281 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1952,7 +2071,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-279 {
+  .emotion-281 {
     display: block;
     width: initial;
     padding: initial;
@@ -1960,13 +2079,13 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) {
-    .emotion-279 {
+    .emotion-281 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-281 {
+.emotion-283 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1978,20 +2097,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-281 {
+  .emotion-283 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-281 {
+  .emotion-283 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-399 {
+.emotion-401 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2003,29 +2122,29 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-399 {
+  .emotion-401 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-399 {
+  .emotion-401 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-405 {
+.emotion-407 {
   padding: 0 0.25rem;
 }
 
-.emotion-459 {
+.emotion-461 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-461 {
+.emotion-463 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -2033,18 +2152,18 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-461 {
+  .emotion-463 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-461 {
+  .emotion-463 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-474 {
+.emotion-478 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -2053,7 +2172,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @supports (display: grid) {
-  .emotion-474 {
+  .emotion-478 {
     display: grid;
     position: initial;
     width: initial;
@@ -2061,7 +2180,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2069,7 +2188,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2077,7 +2196,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -2085,7 +2204,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2093,7 +2212,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2101,7 +2220,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 
   @media (min-width: 80rem) {
-    .emotion-474 {
+    .emotion-478 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2109,62 +2228,62 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   }
 }
 
-.emotion-477 {
+.emotion-481 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-477 {
+  .emotion-481 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-477 {
+    .emotion-481 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-479 {
+.emotion-483 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2177,30 +2296,30 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-481 {
+  .emotion-485 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-481 {
+  .emotion-485 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-481 {
+  .emotion-485 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-481 {
+  .emotion-485 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-483 {
+.emotion-487 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -2213,32 +2332,32 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-483 {
+  .emotion-487 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-483 {
+  .emotion-487 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-485 {
+.emotion-489 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-485 {
+  .emotion-489 {
     padding-right: 0;
   }
 }
 
-.emotion-487 {
+.emotion-491 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -2252,26 +2371,26 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-487 {
+  .emotion-491 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-487 {
+  .emotion-491 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-487:hover,
-.emotion-487:focus {
+.emotion-491:hover,
+.emotion-491:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-487:before {
+.emotion-491:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2283,7 +2402,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   z-index: 1;
 }
 
-.emotion-489 {
+.emotion-493 {
   padding-top: 0.5rem;
 }
 
@@ -2468,56 +2587,52 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="emotion-43 emotion-2"
+                    class="emotion-57 emotion-58 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-59 emotion-60"
+                    <ul
+                      class="emotion-60 emotion-61"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-61 emotion-62"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
+                        This is a unordered list
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-47 emotion-48"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a unordered list
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-53 emotion-54"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-47 emotion-48"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-53 emotion-54"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-43 emotion-2"
@@ -2643,63 +2758,59 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="emotion-43 emotion-2"
+                    class="emotion-57 emotion-58 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-59 emotion-60"
+                    <ul
+                      class="emotion-60 emotion-61"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-61 emotion-62"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
+                        This is a ordered list
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-47 emotion-48"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a ordered list
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-62 emotion-63"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-53 emotion-54"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-47 emotion-48"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-63 emotion-64"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-53 emotion-54"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-43 emotion-2"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-133 emotion-134"
+                      class="emotion-131 emotion-132"
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
@@ -2723,20 +2834,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     </p>
                   </div>
                   <div
-                    class="emotion-139 emotion-140 emotion-2"
+                    class="emotion-137 emotion-138 emotion-2"
                     dir="ltr"
                   >
                     <figure
                       class="emotion-23 emotion-24"
                     >
                       <div
-                        class="emotion-144 emotion-145"
+                        class="emotion-142 emotion-143"
                         data-e2e="media-player"
                       >
                         <iframe
                           allow="autoplay"
                           allowfullscreen=""
-                          class="emotion-146 emotion-147"
+                          class="emotion-144 emotion-145"
                           scrolling="no"
                           src="https://test.bbc.com/ws/av-embeds/cps/igbo/afirika-23252735/p01mr6r9/pcm"
                           title="Media player"
@@ -2763,7 +2874,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-154 emotion-155"
+                      class="emotion-152 emotion-153"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -2775,7 +2886,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-154 emotion-155"
+                      class="emotion-152 emotion-153"
                       id="This-is-a-subheading"
                       tabindex="-1"
                     >
@@ -2798,7 +2909,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-154 emotion-155"
+                      class="emotion-152 emotion-153"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -2847,21 +2958,24 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 </main>
               </div>
               <div
-                class="emotion-182 emotion-183 emotion-2"
+                class="emotion-180 emotion-181 emotion-2"
                 dir="ltr"
               >
                 <div
-                  class="emotion-185 emotion-186"
+                  class="emotion-183 emotion-184"
                 >
                   <section
                     aria-labelledby="top-stories-heading"
-                    class=" emotion-187 emotion-188"
+                    class=" emotion-185 emotion-186"
                     data-e2e="top-stories-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-189 emotion-190 emotion-191"
+                      class="emotion-187 emotion-188 emotion-189"
                     >
+                      <div
+                        class="emotion-190 emotion-191"
+                      />
                       <div
                         class="emotion-192 emotion-193"
                       />
@@ -3024,17 +3138,20 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="emotion-185 emotion-186"
+                  class="emotion-183 emotion-184"
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class=" emotion-187 emotion-188"
+                    class=" emotion-185 emotion-186"
                     data-e2e="features-analysis-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-189 emotion-190 emotion-191"
+                      class="emotion-187 emotion-188 emotion-189"
                     >
+                      <div
+                        class="emotion-190 emotion-191"
+                      />
                       <div
                         class="emotion-192 emotion-193"
                       />
@@ -3070,11 +3187,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3089,16 +3206,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3124,11 +3241,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3143,16 +3260,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3178,11 +3295,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3197,16 +3314,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3232,11 +3349,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3251,16 +3368,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3286,11 +3403,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3305,16 +3422,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3340,11 +3457,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3359,16 +3476,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3394,11 +3511,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3413,11 +3530,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-399 emotion-235"
+                                  class="emotion-401 emotion-235"
                                   data-e2e="media-indicator"
                                   dir="ltr"
                                 >
@@ -3440,7 +3557,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                       />
                                     </svg>
                                     <time
-                                      class="emotion-405 emotion-406"
+                                      class="emotion-407 emotion-408"
                                       datetime="PT49S"
                                     >
                                       0:49
@@ -3451,11 +3568,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3497,11 +3614,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3516,16 +3633,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3551,11 +3668,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-271 emotion-272"
+                            class="emotion-273 emotion-274"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-273 emotion-274"
+                              class="emotion-275 emotion-276"
                             >
                               <div
                                 class="emotion-29 emotion-30"
@@ -3570,16 +3687,16 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 </div>
                               </div>
                               <div
-                                class="emotion-277 emotion-278"
+                                class="emotion-279 emotion-280"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-279 emotion-209"
+                            class="emotion-281 emotion-209"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-281 emotion-211"
+                              class="emotion-283 emotion-211"
                             >
                               <a
                                 class="emotion-212 emotion-213"
@@ -3601,7 +3718,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </section>
                 </div>
                 <div
-                  class="emotion-459 emotion-460"
+                  class="emotion-461 emotion-462"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -3609,8 +3726,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     role="region"
                   >
                     <div
-                      class="emotion-461 emotion-191"
+                      class="emotion-463 emotion-189"
                     >
+                      <div
+                        class="emotion-190 emotion-191"
+                      />
                       <div
                         class="emotion-192 emotion-193"
                       />
@@ -3635,40 +3755,40 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                       </h2>
                     </div>
                     <ol
-                      class="emotion-473 emotion-474 emotion-2"
+                      class="emotion-477 emotion-478 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50299413"
                             >
                               Obi adịghị ndị Igbo mma n'ọnọdụ ha nọ na Naịjirịa - Ekweremadu
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3681,35 +3801,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50295552"
                             >
                               Ihe gọọmentị Naịjirịa sị a ga-eme tupu ha agbapee 'border'
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3722,35 +3842,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50227971"
                             >
                               Onye bụ 'Sarah Baartman' a e ji maka ya adọri Dice Ailes?
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3763,35 +3883,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50299416"
                             >
                               Ụlọ na-agba ọkụ n'ahia Balogun, Legọs
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3804,35 +3924,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50259685"
                             >
                               Gịnị bụ ikuchi nwaanyị n'ala Igbo?
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3845,35 +3965,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50294336"
                             >
                               Nne ụmụaka atọ ụlọ aja dagburu n'Ebonyi amabeghị na ha nwụrụ
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3886,35 +4006,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50292027"
                             >
                               Akwamozu o kwesiri ịbụ oriri na nkwari?
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3927,35 +4047,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50289214"
                             >
                               Gịnị ka ị ma maka 'Aba Women's riot' mere afọ 90 gara aga?
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -3968,35 +4088,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/mba-uba-50266111"
                             >
                               Eke adọgbuola nwaanyị ji ya eme ihe olu
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -4009,35 +4129,35 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                         </div>
                       </li>
                       <li
-                        class="emotion-476 emotion-477 emotion-2"
+                        class="emotion-480 emotion-481 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-479 emotion-480"
+                          class="emotion-483 emotion-484"
                         >
                           <div
-                            class="emotion-481 emotion-482"
+                            class="emotion-485 emotion-486"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-483 emotion-484"
+                              class="emotion-487 emotion-488"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-485 emotion-486"
+                            class="emotion-489 emotion-490"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-487 emotion-488"
+                              class="emotion-491 emotion-492"
                               href="/igbo/afirika-50279948"
                             >
                               Etu dị na nwunye zụtara ụmụaka abụọ si ma n'ọnya ndị uweojii
                             </a>
                             <div
-                              class="emotion-489 emotion-490"
+                              class="emotion-493 emotion-494"
                             >
                               <time
                                 class="emotion-214 emotion-215"
@@ -5346,11 +5466,111 @@ exports[`Story Page should render correctly when the secondary column data is no
   font-weight: inherit;
 }
 
-.emotion-64 {
+.emotion-63 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-66 {
+@media (max-width: 14.9375rem) {
+  .emotion-63 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-63 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-63 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-63 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-63 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-63 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-63 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-65 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5361,24 +5581,24 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-66>li {
+.emotion-65>li {
   position: relative;
 }
 
-.emotion-66>li::before {
+.emotion-65>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -5389,66 +5609,66 @@ exports[`Story Page should render correctly when the secondary column data is no
   left: -1rem;
 }
 
-.emotion-68 {
+.emotion-67 {
   margin-bottom: 1rem;
 }
 
-.emotion-138 {
+.emotion-136 {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
 
-.emotion-145 {
+.emotion-143 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-145 {
+  .emotion-143 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5456,7 +5676,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5464,7 +5684,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5472,7 +5692,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -5480,7 +5700,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -5488,7 +5708,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   }
 
   @media (min-width: 80rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -5497,37 +5717,37 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-145 {
+  .emotion-143 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-145 {
+  .emotion-143 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-149 {
+.emotion-147 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-151 {
+.emotion-149 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -5537,7 +5757,7 @@ exports[`Story Page should render correctly when the secondary column data is no
   height: 100%;
 }
 
-.emotion-159 {
+.emotion-157 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5549,27 +5769,27 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-159 {
+  .emotion-157 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-159 {
+  .emotion-157 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-159 {
+  .emotion-157 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -5577,7 +5797,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -5585,7 +5805,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -5593,7 +5813,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -5601,7 +5821,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -5609,7 +5829,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 80rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -5617,49 +5837,49 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @supports (display: grid) {
-  .emotion-184 {
+  .emotion-182 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -5667,17 +5887,17 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 63rem) {
-  .emotion-184 {
+  .emotion-182 {
     margin-top: 2rem;
   }
 }
 
-.emotion-186 {
+.emotion-184 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-188 {
+.emotion-186 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -5685,14 +5905,36 @@ exports[`Story Page should render correctly when the secondary column data is no
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-188 {
+  .emotion-186 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-188 {
+  .emotion-186 {
     margin-bottom: 1.5rem;
+  }
+}
+
+.emotion-188 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-188 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-188 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
   }
 }
 
@@ -5709,10 +5951,7 @@ exports[`Story Page should render correctly when the secondary column data is no
 
 @media (min-width: 37.5rem) {
   .emotion-190 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+    display: none;
   }
 }
 
@@ -6264,56 +6503,52 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </p>
                   </div>
                   <div
-                    class="emotion-48 emotion-2"
+                    class="emotion-62 emotion-63 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-64 emotion-65"
+                    <ul
+                      class="emotion-65 emotion-66"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-66 emotion-67"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                        This is a unordered list
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-52 emotion-53"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a unordered list
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-58 emotion-59"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-52 emotion-53"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-58 emotion-59"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-48 emotion-2"
@@ -6439,63 +6674,59 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </p>
                   </div>
                   <div
-                    class="emotion-48 emotion-2"
+                    class="emotion-62 emotion-63 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-64 emotion-65"
+                    <ul
+                      class="emotion-65 emotion-66"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-66 emotion-67"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                        This is a ordered list
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-52 emotion-53"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a ordered list
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-58 emotion-59"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-52 emotion-53"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-58 emotion-59"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-48 emotion-2"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-138 emotion-139"
+                      class="emotion-136 emotion-137"
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
@@ -6519,20 +6750,20 @@ exports[`Story Page should render correctly when the secondary column data is no
                     </p>
                   </div>
                   <div
-                    class="emotion-144 emotion-145 emotion-2"
+                    class="emotion-142 emotion-143 emotion-2"
                     dir="ltr"
                   >
                     <figure
                       class="emotion-28 emotion-29"
                     >
                       <div
-                        class="emotion-149 emotion-150"
+                        class="emotion-147 emotion-148"
                         data-e2e="media-player"
                       >
                         <iframe
                           allow="autoplay"
                           allowfullscreen=""
-                          class="emotion-151 emotion-152"
+                          class="emotion-149 emotion-150"
                           scrolling="no"
                           src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
@@ -6559,7 +6790,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-159 emotion-160"
+                      class="emotion-157 emotion-158"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -6582,7 +6813,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-159 emotion-160"
+                      class="emotion-157 emotion-158"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -6631,11 +6862,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                 </main>
               </div>
               <div
-                class="emotion-183 emotion-184 emotion-2"
+                class="emotion-181 emotion-182 emotion-2"
                 dir="ltr"
               >
                 <div
-                  class="emotion-186 emotion-187"
+                  class="emotion-184 emotion-185"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -6643,8 +6874,11 @@ exports[`Story Page should render correctly when the secondary column data is no
                     role="region"
                   >
                     <div
-                      class="emotion-188 emotion-189"
+                      class="emotion-186 emotion-187"
                     >
+                      <div
+                        class="emotion-188 emotion-189"
+                      />
                       <div
                         class="emotion-190 emotion-191"
                       />
@@ -8380,11 +8614,111 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-weight: inherit;
 }
 
-.emotion-64 {
+.emotion-63 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-66 {
+@media (max-width: 14.9375rem) {
+  .emotion-63 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-63 {
+    padding: 0 0.5rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-63 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-63 {
+    padding: 0 1rem;
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-63 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-63 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-63 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 0.5rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      padding: 0 1rem;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-63 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-65 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8395,24 +8729,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-65 {
     font-size: 1rem;
     line-height: 1.375rem;
   }
 }
 
-.emotion-66>li {
+.emotion-65>li {
   position: relative;
 }
 
-.emotion-66>li::before {
+.emotion-65>li::before {
   top: 0.5rem;
   content: ' ';
   position: absolute;
@@ -8423,66 +8757,66 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   left: -1rem;
 }
 
-.emotion-68 {
+.emotion-67 {
   margin-bottom: 1rem;
 }
 
-.emotion-138 {
+.emotion-136 {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
 
-.emotion-145 {
+.emotion-143 {
   margin-top: 0.5rem;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 16.666666666666668%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-left: 33.333333333333336%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-145 {
+  .emotion-143 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8490,7 +8824,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8498,7 +8832,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8506,7 +8840,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -8514,7 +8848,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 2;
@@ -8522,7 +8856,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-145 {
+    .emotion-143 {
       grid-template-columns: repeat(12, 1fr);
       grid-column-end: span 12;
       grid-column-start: 5;
@@ -8531,37 +8865,37 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-top: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-145 {
+  .emotion-143 {
     margin-top: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-145 {
+  .emotion-143 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-145 {
+  .emotion-143 {
     padding: 0.5rem 0 0;
     margin-top: 2rem;
   }
 }
 
-.emotion-149 {
+.emotion-147 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-151 {
+.emotion-149 {
   border: 0;
   left: 0;
   overflow: hidden;
@@ -8571,7 +8905,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.emotion-159 {
+.emotion-157 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -8583,27 +8917,27 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-159 {
+  .emotion-157 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-159 {
+  .emotion-157 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-159 {
+  .emotion-157 {
     padding-top: 2rem;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -8611,7 +8945,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -8619,7 +8953,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -8627,7 +8961,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(100%);
     display: inline-block;
     vertical-align: top;
@@ -8635,7 +8969,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -8643,7 +8977,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-184 {
+  .emotion-182 {
     width: calc(33.333333333333336%);
     display: inline-block;
     vertical-align: top;
@@ -8651,49 +8985,49 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-184 {
+  .emotion-182 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-184 {
+    .emotion-182 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
@@ -8701,35 +9035,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-184 {
+  .emotion-182 {
     margin-top: 2rem;
   }
 }
 
-.emotion-186 {
+.emotion-184 {
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 63rem) {
-  .emotion-186 {
+  .emotion-184 {
     margin-bottom: 3rem;
     padding: 1rem;
   }
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-188 {
+  .emotion-186 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-188 {
+  .emotion-186 {
     padding: 0 1rem;
   }
 }
 
-.emotion-191 {
+.emotion-189 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -8738,20 +9072,42 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-189 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-191 {
+  .emotion-189 {
     margin-bottom: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-191 {
+  .emotion-189 {
     margin-top: 0;
+  }
+}
+
+.emotion-191 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+  display: none;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-191 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-191 {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1.375rem;
   }
 }
 
@@ -8768,10 +9124,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-193 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 1.375rem;
+    display: none;
   }
 }
 
@@ -9065,7 +9418,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-264 {
+.emotion-266 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -9073,43 +9426,43 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 63rem) {
-  .emotion-264 {
+  .emotion-266 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-264 {
+  .emotion-266 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-266 {
+.emotion-268 {
   position: relative;
 }
 
 @media (min-width: 25rem) {
-  .emotion-270 {
+  .emotion-272 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-270>* {
+.emotion-272>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-270>* {
+  .emotion-272>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-272 {
+.emotion-274 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -9117,13 +9470,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-272 {
+  .emotion-274 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-272 {
+  .emotion-274 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -9131,7 +9484,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-272 {
+  .emotion-274 {
     display: block;
     width: initial;
     padding: initial;
@@ -9139,13 +9492,13 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) {
-    .emotion-272 {
+    .emotion-274 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-274 {
+.emotion-276 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -9157,20 +9510,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-274 {
+  .emotion-276 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-274 {
+  .emotion-276 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-292 {
+.emotion-294 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9182,20 +9535,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-292 {
+  .emotion-294 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-292 {
+  .emotion-294 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-294 {
+.emotion-296 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9207,7 +9560,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 100%;
 }
 
-.emotion-296 {
+.emotion-298 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -9216,11 +9569,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.emotion-298 {
+.emotion-300 {
   padding: 0 0.25rem;
 }
 
-.emotion-328 {
+.emotion-330 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -9229,7 +9582,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.75rem;
 }
 
-.emotion-456 {
+.emotion-458 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -9238,12 +9591,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   height: 0.8125rem;
 }
 
-.emotion-468 {
+.emotion-470 {
   margin-bottom: 1.5rem;
   padding: 1rem;
 }
 
-.emotion-470 {
+.emotion-472 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -9251,18 +9604,18 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-470 {
+  .emotion-472 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-470 {
+  .emotion-472 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-483 {
+.emotion-487 {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -9271,7 +9624,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @supports (display: grid) {
-  .emotion-483 {
+  .emotion-487 {
     display: grid;
     position: initial;
     width: initial;
@@ -9279,7 +9632,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9287,7 +9640,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9295,7 +9648,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -9303,7 +9656,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9311,7 +9664,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9319,7 +9672,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 
   @media (min-width: 80rem) {
-    .emotion-483 {
+    .emotion-487 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -9327,62 +9680,62 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   }
 }
 
-.emotion-486 {
+.emotion-490 {
   position: relative;
   padding-bottom: 1.5rem;
 }
 
 @supports (display: grid) {
-  .emotion-486 {
+  .emotion-490 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-486 {
+    .emotion-490 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 }
 
-.emotion-488 {
+.emotion-492 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9395,30 +9748,30 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-490 {
+  .emotion-494 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-490 {
+  .emotion-494 {
     min-width: 1.75rem;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-490 {
+  .emotion-494 {
     min-width: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-490 {
+  .emotion-494 {
     min-width: 2.5rem;
   }
 }
 
-.emotion-492 {
+.emotion-496 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -9431,32 +9784,32 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-492 {
+  .emotion-496 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-492 {
+  .emotion-496 {
     font-size: 2rem;
     line-height: 2.25rem;
   }
 }
 
-.emotion-494 {
+.emotion-498 {
   padding-top: 0.2rem;
   padding-left: 0.5rem;
   padding-right: 1rem;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-494 {
+  .emotion-498 {
     padding-right: 0;
   }
 }
 
-.emotion-496 {
+.emotion-500 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -9470,26 +9823,26 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-496 {
+  .emotion-500 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-496 {
+  .emotion-500 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-496:hover,
-.emotion-496:focus {
+.emotion-500:hover,
+.emotion-500:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-496:before {
+.emotion-500:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -9501,7 +9854,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   z-index: 1;
 }
 
-.emotion-498 {
+.emotion-502 {
   padding-top: 0.5rem;
 }
 
@@ -9698,56 +10051,52 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-48 emotion-2"
+                    class="emotion-62 emotion-63 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-64 emotion-65"
+                    <ul
+                      class="emotion-65 emotion-66"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-66 emotion-67"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                        This is a unordered list
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-52 emotion-53"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a unordered list
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-58 emotion-59"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-52 emotion-53"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-58 emotion-59"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-48 emotion-2"
@@ -9873,63 +10222,59 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-48 emotion-2"
+                    class="emotion-62 emotion-63 emotion-2"
                     dir="ltr"
                   >
-                    <div
-                      class="emotion-64 emotion-65"
+                    <ul
+                      class="emotion-65 emotion-66"
+                      dir="ltr"
+                      role="list"
                     >
-                      <ul
-                        class="emotion-66 emotion-67"
-                        dir="ltr"
-                        role="list"
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
                       >
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                        This is a ordered list
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        It can have 
+                        <b>
+                          bold text
+                        </b>
+                         in it
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <a
+                          class="emotion-52 emotion-53"
+                          href="https://bbc.com/pidgin/23248703"
                         >
-                          This is a ordered list
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
+                          It can also have links
+                        </a>
+                      </li>
+                      <li
+                        class="emotion-67 emotion-68"
+                        role="listitem"
+                      >
+                        <i
+                          class="emotion-58 emotion-59"
                         >
-                          It can have 
-                          <b>
-                            bold text
-                          </b>
-                           in it
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <a
-                            class="emotion-52 emotion-53"
-                            href="https://bbc.com/pidgin/23248703"
-                          >
-                            It can also have links
-                          </a>
-                        </li>
-                        <li
-                          class="emotion-68 emotion-69"
-                          role="listitem"
-                        >
-                          <i
-                            class="emotion-58 emotion-59"
-                          >
-                            It can even have italic text in it!
-                          </i>
-                        </li>
-                      </ul>
-                    </div>
+                          It can even have italic text in it!
+                        </i>
+                      </li>
+                    </ul>
                   </div>
                   <div
                     class="emotion-48 emotion-2"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-138 emotion-139"
+                      class="emotion-136 emotion-137"
                       data-e2e="twitter-embed-https://twitter.com/casualafro/status/1184522157050748929"
                     >
                       <div
@@ -9953,20 +10298,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     </p>
                   </div>
                   <div
-                    class="emotion-144 emotion-145 emotion-2"
+                    class="emotion-142 emotion-143 emotion-2"
                     dir="ltr"
                   >
                     <figure
                       class="emotion-28 emotion-29"
                     >
                       <div
-                        class="emotion-149 emotion-150"
+                        class="emotion-147 emotion-148"
                         data-e2e="media-player"
                       >
                         <iframe
                           allow="autoplay"
                           allowfullscreen=""
-                          class="emotion-151 emotion-152"
+                          class="emotion-149 emotion-150"
                           scrolling="no"
                           src="https://test.bbc.com/ws/av-embeds/cps/pidgin/world-23252817/p01mr6r9/pcm"
                           title="Media player"
@@ -9993,7 +10338,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-159 emotion-160"
+                      class="emotion-157 emotion-158"
                       id="This-is-a-heading"
                       tabindex="-1"
                     >
@@ -10016,7 +10361,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     dir="ltr"
                   >
                     <h2
-                      class="emotion-159 emotion-160"
+                      class="emotion-157 emotion-158"
                       id="This-is-a-crosshead"
                       tabindex="-1"
                     >
@@ -10065,21 +10410,24 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 </main>
               </div>
               <div
-                class="emotion-183 emotion-184 emotion-2"
+                class="emotion-181 emotion-182 emotion-2"
                 dir="ltr"
               >
                 <div
-                  class="emotion-186 emotion-187"
+                  class="emotion-184 emotion-185"
                 >
                   <section
                     aria-labelledby="top-stories-heading"
-                    class=" emotion-188 emotion-189"
+                    class=" emotion-186 emotion-187"
                     data-e2e="top-stories-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-190 emotion-191 emotion-192"
+                      class="emotion-188 emotion-189 emotion-190"
                     >
+                      <div
+                        class="emotion-191 emotion-192"
+                      />
                       <div
                         class="emotion-193 emotion-194"
                       />
@@ -10201,17 +10549,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </section>
                 </div>
                 <div
-                  class="emotion-186 emotion-187"
+                  class="emotion-184 emotion-185"
                 >
                   <section
                     aria-labelledby="features-analysis-heading"
-                    class=" emotion-188 emotion-189"
+                    class=" emotion-186 emotion-187"
                     data-e2e="features-analysis-heading"
                     role="region"
                   >
                     <div
-                      class="emotion-190 emotion-191 emotion-192"
+                      class="emotion-188 emotion-189 emotion-190"
                     >
+                      <div
+                        class="emotion-191 emotion-192"
+                      />
                       <div
                         class="emotion-193 emotion-194"
                       />
@@ -10247,11 +10598,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10266,16 +10617,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10301,11 +10652,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10320,20 +10671,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-292 emotion-293"
+                                  class="emotion-294 emotion-295"
                                   data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-294 emotion-295"
+                                    class="emotion-296 emotion-297"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-296 emotion-297"
+                                      class="emotion-298 emotion-299"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 32 32"
@@ -10344,7 +10695,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                       />
                                     </svg>
                                     <time
-                                      class="emotion-298 emotion-299"
+                                      class="emotion-300 emotion-301"
                                       datetime="PT1M7S"
                                     >
                                       1:07
@@ -10355,11 +10706,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10402,11 +10753,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10421,20 +10772,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-292 emotion-293"
+                                  class="emotion-294 emotion-295"
                                   data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-294 emotion-295"
+                                    class="emotion-296 emotion-297"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-328 emotion-329"
+                                      class="emotion-330 emotion-331"
                                       focusable="false"
                                       height="12px"
                                       viewBox="0 0 13 12"
@@ -10453,11 +10804,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10495,11 +10846,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10514,16 +10865,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10549,11 +10900,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10568,16 +10919,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10603,11 +10954,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10622,16 +10973,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10657,11 +11008,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10676,16 +11027,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10711,11 +11062,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10730,16 +11081,16 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               />
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10765,11 +11116,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                           data-e2e="story-promo"
                         >
                           <div
-                            class="emotion-264 emotion-265"
+                            class="emotion-266 emotion-267"
                             dir="ltr"
                           >
                             <div
-                              class="emotion-266 emotion-267"
+                              class="emotion-268 emotion-269"
                             >
                               <div
                                 class="emotion-34 emotion-35"
@@ -10784,20 +11135,20 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 </div>
                               </div>
                               <div
-                                class="emotion-270 emotion-271"
+                                class="emotion-272 emotion-273"
                               >
                                 <div
                                   aria-hidden="true"
-                                  class="emotion-292 emotion-293"
+                                  class="emotion-294 emotion-295"
                                   data-e2e="media-indicator"
                                   dir="ltr"
                                 >
                                   <div
-                                    class="emotion-294 emotion-295"
+                                    class="emotion-296 emotion-297"
                                   >
                                     <svg
                                       aria-hidden="true"
-                                      class="emotion-456 emotion-457"
+                                      class="emotion-458 emotion-459"
                                       focusable="false"
                                       height="13px"
                                       viewBox="0 0 32 26"
@@ -10818,11 +11169,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             </div>
                           </div>
                           <div
-                            class="emotion-272 emotion-210"
+                            class="emotion-274 emotion-210"
                             dir="ltr"
                           >
                             <h3
-                              class="emotion-274 emotion-212"
+                              class="emotion-276 emotion-212"
                             >
                               <a
                                 class="emotion-213 emotion-214"
@@ -10856,7 +11207,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   </section>
                 </div>
                 <div
-                  class="emotion-468 emotion-469"
+                  class="emotion-470 emotion-471"
                 >
                   <section
                     aria-labelledby="Most-Read"
@@ -10864,8 +11215,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     role="region"
                   >
                     <div
-                      class="emotion-470 emotion-192"
+                      class="emotion-472 emotion-190"
                     >
+                      <div
+                        class="emotion-191 emotion-192"
+                      />
                       <div
                         class="emotion-193 emotion-194"
                       />
@@ -10890,40 +11244,40 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                       </h2>
                     </div>
                     <ol
-                      class="emotion-482 emotion-483 emotion-2"
+                      class="emotion-486 emotion-487 emotion-2"
                       dir="ltr"
                       role="list"
                     >
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               1
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-46729879"
                             >
                               Public Holidays wey go happun for 2019
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -10936,35 +11290,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               2
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50304653"
                             >
                               Liberia banks don run out of money
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -10977,35 +11331,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               3
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50298882"
                             >
                               Why Oscars disqualify Genevieve Nnaji 'Lionheart' film
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11018,35 +11372,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               4
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50315150"
                             >
                               Ghana opposition NDC list 51 family and friends inside Akufo-Addo govment
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11059,35 +11413,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               5
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50315157"
                             >
                               How Balogun market fire kill Policeman for Lagos
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11100,35 +11454,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               6
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50093818"
                             >
                               Labour, FG finally agree minimum wage salary adjustment
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11141,35 +11495,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               7
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-50187218"
                             >
                               Naira Marley na 'Bad Influence'?
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11182,35 +11536,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               8
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-48347911"
                             >
                               Tins you suppose know about Naira Marley
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11223,35 +11577,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               9
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/sport-50312710"
                             >
                               Golden Eaglets crash out of Fifa U17 World Cup
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"
@@ -11264,35 +11618,35 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                         </div>
                       </li>
                       <li
-                        class="emotion-485 emotion-486 emotion-2"
+                        class="emotion-489 emotion-490 emotion-2"
                         dir="ltr"
                         role="listitem"
                       >
                         <div
-                          class="emotion-488 emotion-489"
+                          class="emotion-492 emotion-493"
                         >
                           <div
-                            class="emotion-490 emotion-491"
+                            class="emotion-494 emotion-495"
                             dir="ltr"
                           >
                             <span
-                              class="emotion-492 emotion-493"
+                              class="emotion-496 emotion-497"
                             >
                               10
                             </span>
                           </div>
                           <div
-                            class="emotion-494 emotion-495"
+                            class="emotion-498 emotion-499"
                             dir="ltr"
                           >
                             <a
-                              class="emotion-496 emotion-497"
+                              class="emotion-500 emotion-501"
                               href="/pidgin/tori-42945173"
                             >
                               Tiger nut drink fit wake up your sex drive - Nutritionist
                             </a>
                             <div
-                              class="emotion-498 emotion-499"
+                              class="emotion-502 emotion-503"
                             >
                               <time
                                 class="emotion-215 emotion-25"

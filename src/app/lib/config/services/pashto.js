@@ -63,6 +63,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'اعلان',
@@ -79,6 +80,7 @@ export const service = {
         audioPlayer: 'اډیو پلیئر',
         videoPlayer: 'ویډیو پلیئر',
       },
+      gist: 'لنډیز',
       error: {
         404: {
           statusCode: '۴۰۴',

@@ -58,6 +58,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Iklan',
@@ -74,6 +75,7 @@ export const service = {
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      gist: 'Rangkuman',
       error: {
         404: {
           statusCode: '404',

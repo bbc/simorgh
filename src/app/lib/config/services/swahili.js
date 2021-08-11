@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Matangazo',
@@ -73,6 +74,7 @@ export const service = {
         audioPlayer: 'Kicheza Sauti',
         videoPlayer: 'Kicheza Video',
       },
+      gist: 'Muhtasari',
       error: {
         404: {
           statusCode: '404',

@@ -1,14 +1,18 @@
 import pipe from 'ramda/src/pipe';
+
 import fetchPageData from '../../utils/fetchPageData';
+import handleGroupBlocks from '../handleGroupBlocks';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
 } from '../../utils/sharedDataTransformers';
+
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
+  handleGroupBlocks,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,

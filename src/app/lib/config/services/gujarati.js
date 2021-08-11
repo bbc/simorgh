@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'જાહેરાત',
@@ -73,6 +74,7 @@ export const service = {
         audioPlayer: 'ઓડિયો પ્લેયર',
         videoPlayer: 'વીડિયો પ્લેયર',
       },
+      gist: 'સારાંશ',
       error: {
         404: {
           statusCode: '404',

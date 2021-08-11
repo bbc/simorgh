@@ -212,11 +212,28 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-13 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-13 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    display: none;
+  }
+}
+
+.emotion-15 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -226,7 +243,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,7 +263,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -254,7 +271,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -274,33 +291,33 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     padding-right: 1rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-25 {
     display: grid;
     position: initial;
     width: initial;
@@ -308,7 +325,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -316,7 +333,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -324,7 +341,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -332,7 +349,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -340,7 +357,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -348,7 +365,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -356,43 +373,43 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-25>div {
+.emotion-27>div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-25>div {
+  .emotion-27>div {
     margin: 0.25rem 0;
   }
 }
 
-.emotion-27 {
+.emotion-29 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-27 {
+  .emotion-29 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-27 {
+    .emotion-29 {
       display: block;
     }
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -400,24 +417,24 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 63rem) {
-  .emotion-29 {
+  .emotion-31 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-29 {
+  .emotion-31 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   position: relative;
 }
 
-.emotion-33 {
+.emotion-35 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -433,39 +450,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 25rem) {
-  .emotion-33 {
+  .emotion-35 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-35 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-35 {
+  .emotion-37 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-35>* {
+.emotion-37>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-35>* {
+  .emotion-37>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-37 {
+.emotion-39 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -473,13 +490,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-39 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-37 {
+  .emotion-39 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -487,7 +504,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-37 {
+  .emotion-39 {
     display: block;
     width: initial;
     padding: initial;
@@ -495,13 +512,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) {
-    .emotion-37 {
+    .emotion-39 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-39 {
+.emotion-41 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -514,26 +531,26 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-39 {
+  .emotion-41 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
 
-.emotion-41 {
+.emotion-43 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -542,7 +559,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.emotion-41:before {
+.emotion-43:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -554,17 +571,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.emotion-41:hover,
-.emotion-41:focus {
+.emotion-43:hover,
+.emotion-43:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-41:visited {
+.emotion-43:visited {
   color: #6E6E73;
 }
 
-.emotion-43 {
+.emotion-45 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -601,17 +618,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           <div
             class="emotion-10 emotion-11 emotion-12"
           >
-            <strong
+            <div
               class="emotion-13 emotion-14"
+            />
+            <strong
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-17 emotion-18"
               >
                 <span
-                  class="emotion-17 emotion-18"
+                  class="emotion-19 emotion-20"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class="emotion-21 emotion-22"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -622,29 +642,29 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <div
-            class="emotion-21 emotion-22"
+            class="emotion-23 emotion-24"
           >
             <div
-              class="emotion-23 emotion-1"
+              class="emotion-25 emotion-1"
               dir="ltr"
             >
               <div
-                class="emotion-25 emotion-26"
+                class="emotion-27 emotion-28"
                 data-e2e="story-promo-wrapper"
               >
                 <div
-                  class="emotion-27 emotion-28"
+                  class="emotion-29 emotion-30"
                   data-e2e="story-promo"
                 >
                   <div
-                    class="emotion-29 emotion-30"
+                    class="emotion-31 emotion-32"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-31 emotion-32"
+                      class="emotion-33 emotion-34"
                     >
                       <div
-                        class="emotion-33 emotion-34"
+                        class="emotion-35 emotion-36"
                         data-e2e="image-placeholder"
                       >
                         <div
@@ -656,19 +676,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                         </div>
                       </div>
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       />
                     </div>
                   </div>
                   <div
-                    class="emotion-37 emotion-38"
+                    class="emotion-39 emotion-40"
                     dir="ltr"
                   >
                     <div
-                      class="emotion-39 emotion-40"
+                      class="emotion-41 emotion-42"
                     >
                       <a
-                        class="emotion-41 emotion-42"
+                        class="emotion-43 emotion-44"
                         href="/mundo/noticias-53377054"
                       >
                         La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -680,7 +700,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </div>
           </div>
           <p
-            class="emotion-43 emotion-44"
+            class="emotion-45 emotion-46"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -899,11 +919,28 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-13 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-13 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    display: none;
+  }
+}
+
+.emotion-15 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -913,7 +950,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -933,7 +970,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -941,7 +978,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -961,39 +998,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.25rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     padding-right: 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-24 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-22 {
+  .emotion-24 {
     display: grid;
     position: initial;
     width: initial;
@@ -1001,7 +1038,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1009,7 +1046,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1017,7 +1054,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1025,7 +1062,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1033,7 +1070,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1041,7 +1078,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 80rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1049,54 +1086,54 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-25:last-child {
+.emotion-27:last-child {
   border: none;
 }
 
 @supports (display: grid) {
-  .emotion-25 {
+  .emotion-27 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
@@ -1104,7 +1141,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display: grid) {
-  .emotion-27 {
+  .emotion-29 {
     display: grid;
     position: initial;
     width: initial;
@@ -1112,7 +1149,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1120,7 +1157,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1128,7 +1165,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1136,7 +1173,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1144,7 +1181,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1152,7 +1189,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 80rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1160,43 +1197,43 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-29>div {
+.emotion-31>div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-29>div {
+  .emotion-31>div {
     margin: 0.25rem 0;
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-31 {
+  .emotion-33 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-31 {
+    .emotion-33 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-31 {
+    .emotion-33 {
       display: block;
     }
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1204,24 +1241,24 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-35 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-33 {
+  .emotion-35 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-37 {
+.emotion-39 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1237,39 +1274,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 25rem) {
-  .emotion-37 {
+  .emotion-39 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-37 {
+  .emotion-39 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-39 {
+  .emotion-41 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-39>* {
+.emotion-41>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-39>* {
+  .emotion-41>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-41 {
+.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1277,13 +1314,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-43 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-41 {
+  .emotion-43 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1291,7 +1328,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-41 {
+  .emotion-43 {
     display: block;
     width: initial;
     padding: initial;
@@ -1299,13 +1336,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) {
-    .emotion-41 {
+    .emotion-43 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-43 {
+.emotion-45 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1318,26 +1355,26 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-43 {
+  .emotion-45 {
     padding: 0.5rem 1rem 1rem 0;
   }
 }
 
-.emotion-45 {
+.emotion-47 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1346,7 +1383,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.emotion-45:before {
+.emotion-47:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1358,17 +1395,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.emotion-45:hover,
-.emotion-45:focus {
+.emotion-47:hover,
+.emotion-47:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-45:visited {
+.emotion-47:visited {
   color: #6E6E73;
 }
 
-.emotion-116 {
+.emotion-118 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1405,17 +1442,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           <div
             class="emotion-10 emotion-11 emotion-12"
           >
-            <strong
+            <div
               class="emotion-13 emotion-14"
+            />
+            <strong
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-17 emotion-18"
               >
                 <span
-                  class="emotion-17 emotion-18"
+                  class="emotion-19 emotion-20"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class="emotion-21 emotion-22"
                     dir="ltr"
                     id="recommendations-heading"
                   >
@@ -1426,36 +1466,36 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="emotion-1 emotion-22 emotion-23"
+            class="emotion-1 emotion-24 emotion-25"
             dir="ltr"
             role="list"
           >
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="ltr"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-37 emotion-38"
+                          class="emotion-39 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -1467,19 +1507,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/mundo/noticias-53377054"
                         >
                           La conmovedora historia de cómo una madre y el hombre preso por la muerte de su hija se unieron para atrapar al verdadero asesino
@@ -1491,31 +1531,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="ltr"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-37 emotion-38"
+                          class="emotion-39 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -1527,19 +1567,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/mundo/noticias-america-latina-52884902"
                         >
                           Coronavirus en Colombia | El caso de la vigilante Edy Fonseca: "Me retuvieron en un edificio de clase alta durante la pandemia, lo acepté y me siento culpable"
@@ -1551,31 +1591,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="ltr"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-37 emotion-38"
+                          class="emotion-39 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -1587,19 +1627,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/mundo/noticias-internacional-53113381"
                         >
                           Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice
@@ -1611,31 +1651,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="ltr"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="ltr"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-37 emotion-38"
+                          class="emotion-39 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -1647,19 +1687,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="ltr"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/mundo/vert-cul-53370542"
                         >
                           Estrenos 2020: las 10 mejores películas de lo que va del año según la BBC (y que seguramente no pudiste ver en el cine)
@@ -1672,7 +1712,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="emotion-116 emotion-117"
+            class="emotion-118 emotion-119"
             id="end-of-recommendations"
             tabindex="-1"
           >
@@ -1891,11 +1931,28 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-13 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-13 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-13 {
+    display: none;
+  }
+}
+
+.emotion-15 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1905,7 +1962,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   flex-direction: column;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1925,7 +1982,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1933,7 +1990,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-19 {
+.emotion-21 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
@@ -1953,39 +2010,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-19 {
+  .emotion-21 {
     padding-left: 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-24 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-22 {
+  .emotion-24 {
     display: grid;
     position: initial;
     width: initial;
@@ -1993,7 +2050,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2001,7 +2058,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2009,7 +2066,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2017,7 +2074,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2025,7 +2082,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2033,7 +2090,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 80rem) {
-    .emotion-22 {
+    .emotion-24 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2041,54 +2098,54 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-25:last-child {
+.emotion-27:last-child {
   border: none;
 }
 
 @supports (display: grid) {
-  .emotion-25 {
+  .emotion-27 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
     }
@@ -2096,7 +2153,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (display: grid) {
-  .emotion-27 {
+  .emotion-29 {
     display: grid;
     position: initial;
     width: initial;
@@ -2104,7 +2161,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2112,7 +2169,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2120,7 +2177,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -2128,7 +2185,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2136,7 +2193,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2144,7 +2201,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 80rem) {
-    .emotion-27 {
+    .emotion-29 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -2152,43 +2209,43 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
-.emotion-29>div {
+.emotion-31>div {
   display: grid;
   margin: 0.25rem 0;
   background-color: #FDFDFD;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-29>div {
+  .emotion-31>div {
     margin: 0.25rem 0;
   }
 }
 
-.emotion-31 {
+.emotion-33 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-31 {
+  .emotion-33 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-31 {
+    .emotion-33 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-31 {
+    .emotion-33 {
       display: block;
     }
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2196,24 +2253,24 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-35 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-33 {
+  .emotion-35 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-37 {
+.emotion-39 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2229,39 +2286,39 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 25rem) {
-  .emotion-37 {
+  .emotion-39 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-37 {
+  .emotion-39 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-39 {
+  .emotion-41 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-39>* {
+.emotion-41>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-39>* {
+  .emotion-41>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-41 {
+.emotion-43 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2269,13 +2326,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-43 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-41 {
+  .emotion-43 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2283,7 +2340,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-41 {
+  .emotion-43 {
     display: block;
     width: initial;
     padding: initial;
@@ -2291,13 +2348,13 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 
   @media (min-width: 63rem) {
-    .emotion-41 {
+    .emotion-43 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-43 {
+.emotion-45 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2310,26 +2367,26 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-43 {
+  .emotion-45 {
     padding: 0.5rem 0 1rem 1rem;
   }
 }
 
-.emotion-45 {
+.emotion-47 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -2338,7 +2395,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   overflow-wrap: anywhere;
 }
 
-.emotion-45:before {
+.emotion-47:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -2350,17 +2407,17 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   z-index: 1;
 }
 
-.emotion-45:hover,
-.emotion-45:focus {
+.emotion-47:hover,
+.emotion-47:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-45:visited {
+.emotion-47:visited {
   color: #6E6E73;
 }
 
-.emotion-60 {
+.emotion-62 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -2376,20 +2433,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 @media (min-width: 25rem) {
-  .emotion-60 {
+  .emotion-62 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-60 {
+  .emotion-62 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-116 {
+.emotion-118 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -2426,17 +2483,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
           <div
             class="emotion-10 emotion-11 emotion-12"
           >
-            <strong
+            <div
               class="emotion-13 emotion-14"
+            />
+            <strong
+              class="emotion-15 emotion-16"
             >
               <span
-                class="emotion-15 emotion-16"
+                class="emotion-17 emotion-18"
               >
                 <span
-                  class="emotion-17 emotion-18"
+                  class="emotion-19 emotion-20"
                 >
                   <span
-                    class="emotion-19 emotion-20"
+                    class="emotion-21 emotion-22"
                     dir="rtl"
                     id="recommendations-heading"
                   >
@@ -2447,36 +2507,36 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </strong>
           </div>
           <ul
-            class="emotion-1 emotion-22 emotion-23"
+            class="emotion-1 emotion-24 emotion-25"
             dir="rtl"
             role="list"
           >
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="rtl"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-37 emotion-38"
+                          class="emotion-39 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -2488,19 +2548,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/arabic/middleeast-53329495"
                         >
                           الصراع في سوريا: الأمم المتحدة تقول إن جرائم حرب "فظيعة" ارتكبت في معركة ادلب
@@ -2512,31 +2572,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="rtl"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-60 emotion-38"
+                          class="emotion-62 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -2548,19 +2608,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/arabic/middleeast-53146050"
                         >
                           الحرب في ليبيا: الرئيس الفرنسي ماكرون يقول إن تركيا تمارس "لعبة خطرة" في ليبيا
@@ -2572,31 +2632,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="rtl"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-60 emotion-38"
+                          class="emotion-62 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -2608,19 +2668,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/arabic/middleeast-52959311"
                         >
                           ليبيا: هل يخوض أردوغان مغامرة وقودها السوريون؟
@@ -2632,31 +2692,31 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
               </div>
             </li>
             <li
-              class="emotion-1 emotion-25 emotion-26"
+              class="emotion-1 emotion-27 emotion-28"
               dir="rtl"
               role="listitem"
             >
               <div
-                class="emotion-27 emotion-1"
+                class="emotion-29 emotion-1"
                 dir="rtl"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="story-promo-wrapper"
                 >
                   <div
-                    class="emotion-31 emotion-32"
+                    class="emotion-33 emotion-34"
                     data-e2e="story-promo"
                   >
                     <div
-                      class="emotion-33 emotion-34"
+                      class="emotion-35 emotion-36"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-35 emotion-36"
+                        class="emotion-37 emotion-38"
                       >
                         <div
-                          class="emotion-60 emotion-38"
+                          class="emotion-62 emotion-40"
                           data-e2e="image-placeholder"
                         >
                           <div
@@ -2668,19 +2728,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
                           </div>
                         </div>
                         <div
-                          class="emotion-39 emotion-40"
+                          class="emotion-41 emotion-42"
                         />
                       </div>
                     </div>
                     <div
-                      class="emotion-41 emotion-42"
+                      class="emotion-43 emotion-44"
                       dir="rtl"
                     >
                       <div
-                        class="emotion-43 emotion-44"
+                        class="emotion-45 emotion-46"
                       >
                         <a
-                          class="emotion-45 emotion-46"
+                          class="emotion-47 emotion-48"
                           href="/arabic/inthepress-52320329"
                         >
                           صحف بريطانية تناقش "الاختبار" الروسي في الشرق الأوسط و"العلاجات الدجلية" لفيروس كورونا
@@ -2693,7 +2753,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
             </li>
           </ul>
           <p
-            class="emotion-116 emotion-117"
+            class="emotion-118 emotion-119"
             id="end-of-recommendations"
             tabindex="-1"
           >

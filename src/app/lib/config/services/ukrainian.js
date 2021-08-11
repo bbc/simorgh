@@ -55,6 +55,7 @@ const baseServiceConfig = {
     brandBorderColour: `${C_POSTBOX_30}`,
   },
   showAdPlaceholder: true,
+  showRelatedTopics: true,
   translations: {
     ads: {
       advertisementLabel: 'Реклама',
@@ -69,6 +70,7 @@ const baseServiceConfig = {
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    gist: 'Стисло',
     error: {
       404: {
         statusCode: '404',

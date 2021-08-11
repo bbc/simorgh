@@ -57,6 +57,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'जाहिरात',
@@ -73,6 +74,7 @@ export const service = {
         audioPlayer: 'ऑडिओ प्लेयर',
         videoPlayer: 'व्हीडिओ प्लेयर',
       },
+      gist: 'थोडक्यात',
       error: {
         404: {
           statusCode: '404',

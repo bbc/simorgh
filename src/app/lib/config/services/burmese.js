@@ -59,6 +59,7 @@ export const service = {
       brandBorderColour: `${C_POSTBOX_30}`,
     },
     showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'ကြော်ငြာ',
@@ -68,13 +69,14 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
-      relatedTopics: 'ဆကျစပျ အကွောငျးအရာမြား',
+      relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
       navMenuText: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      gist: 'အနှစ်ချုပ်',
       error: {
         404: {
           statusCode: '၄၀၄',
