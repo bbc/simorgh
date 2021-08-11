@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'ઓડિયો પ્લેયર',
         videoPlayer: 'વીડિયો પ્લેયર',
       },
+      gist: 'સારાંશ',
       error: {
         404: {
           statusCode: '404',

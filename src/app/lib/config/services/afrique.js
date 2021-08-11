@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: 'Lecteur audio',
         videoPlayer: 'Lecteur vidéo',
       },
+      gist: 'Points clés',
       error: {
         404: {
           statusCode: '404',
