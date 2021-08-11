@@ -101,54 +101,52 @@ const CanonicalMostRead = ({
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   return (
-    items.length > 0 && (
-      <Wrapper>
-        <MostReadList
-          numberOfItems={items.length}
-          dir={dir}
-          columnLayout={columnLayout}
-        >
-          {items.map((item, i) => (
-            <MostReadItemWrapper
+    <Wrapper>
+      <MostReadList
+        numberOfItems={items.length}
+        dir={dir}
+        columnLayout={columnLayout}
+      >
+        {items.map((item, i) => (
+          <MostReadItemWrapper
+            dir={dir}
+            key={item.id}
+            columnLayout={columnLayout}
+            ref={viewRef}
+          >
+            <MostReadRank
+              service={service}
+              script={script}
+              listIndex={i + 1}
+              numberOfItems={items.length}
               dir={dir}
-              key={item.id}
               columnLayout={columnLayout}
-              ref={viewRef}
+              size={size}
+            />
+            <MostReadLink
+              dir={dir}
+              service={service}
+              script={script}
+              title={item.title}
+              href={item.href}
+              size={size}
+              eventTrackingData={eventTrackingData}
             >
-              <MostReadRank
-                service={service}
-                script={script}
-                listIndex={i + 1}
-                numberOfItems={items.length}
-                dir={dir}
-                columnLayout={columnLayout}
-                size={size}
-              />
-              <MostReadLink
-                dir={dir}
-                service={service}
-                script={script}
-                title={item.title}
-                href={item.href}
-                size={size}
-                eventTrackingData={eventTrackingData}
-              >
-                {shouldRenderLastUpdated(item.timestamp) && (
-                  <LastUpdated
-                    prefix={lastUpdated}
-                    script={script}
-                    service={service}
-                    timestamp={item.timestamp}
-                    locale={locale}
-                    timezone={timezone}
-                  />
-                )}
-              </MostReadLink>
-            </MostReadItemWrapper>
-          ))}
-        </MostReadList>
-      </Wrapper>
-    )
+              {shouldRenderLastUpdated(item.timestamp) && (
+                <LastUpdated
+                  prefix={lastUpdated}
+                  script={script}
+                  service={service}
+                  timestamp={item.timestamp}
+                  locale={locale}
+                  timezone={timezone}
+                />
+              )}
+            </MostReadLink>
+          </MostReadItemWrapper>
+        ))}
+      </MostReadList>
+    </Wrapper>
   );
 };
 
