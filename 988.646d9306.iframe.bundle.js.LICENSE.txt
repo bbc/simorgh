@@ -5,14 +5,6 @@ object-assign
 */
 
 /*!
- * JavaScript Cookie v2.2.1
- * https://github.com/js-cookie/js-cookie
- *
- * Copyright 2006, 2015 Klaus Hartl & Fagner Brack
- * Released under the MIT license
- */
-
-/*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
@@ -58,6 +50,8 @@ object-assign
  * distribute or in any file that contains substantial portions of this source
  * code.
  */
+
+/*! js-cookie v3.0.0 | MIT */
 
 /** @license React v0.20.2
  * scheduler.production.min.js
