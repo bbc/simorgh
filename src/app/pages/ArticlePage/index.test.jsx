@@ -220,6 +220,7 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
+
 it('should focus on id when anchor link is clicked', async () => {
   const articleDataNewsWithSummary = mergeDeepLeft(
     {
