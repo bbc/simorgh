@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import path from 'ramda/src/path';
 import runCanonicalAdsTests from '../../../support/helpers/adsTests/testsForCanonicalOnly';
 
@@ -119,7 +120,6 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           cy.get(
             `[data-e2e="instagram-embed-${firstInstagramEmbedUrl}"]`,
           ).scrollIntoView();
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(3000);
           cy.get('.instagram-media-rendered').should(
             'have.length.of.at.most',
@@ -128,10 +128,10 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
           cy.get(
             `[data-e2e="instagram-embed-${secondInstagramEmbedUrl}"]`,
           ).scrollIntoView();
+          cy.wait(3000);
           cy.get(
             `[data-e2e="instagram-embed-${thirdInstagramEmbedUrl}"]`,
           ).scrollIntoView();
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(3000);
           // of.at.least is used here instead of having length of exactly 3
           // so the test does not fail if more than one instagram embed scrolls
