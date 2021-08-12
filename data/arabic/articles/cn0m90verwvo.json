@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::article:cn0m90verwvo",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cn0m90verwvo",
+      "canonicalUrl": "https://www.bbc.com/arabic/articles/cn0m90verwvo"
+    },
+    "type": "article",
+    "createdBy": "Arabic",
+    "language": "ar",
+    "lastUpdated": 1628083344249,
+    "firstPublished": 1628083342158,
+    "lastPublished": 1628083342158,
+    "timestamp": 1628083342158,
+    "options": {},
+    "analyticsLabels": {},
+    "passport": {
+      "language": "ar",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+      "locator": "urn:bbc:optimo:asset:cn0m90verwvo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "group",
+      "unorderedList",
+      "listItem"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 1
+  },
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "model": {
+                        "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "group",
+          "model": {
+            "intentType": "overview",
+            "relationshipType": "optional",
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "unorderedList",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "listItem",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "paragraph",
+                                  "model": {
+                                    "text": "وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.وكانت  المنطقة التي استهدفتها الحركة في العاصمة الأفغانية شديدة التحصين، علماً  أن كابول ظلت، خلال الأسابيع الماضية، بمنأى عن العنف الذي اشتدّ في أجزاء  أخرى من البلاد.",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "أعلنت  حركة طالبان مسؤوليتها عن هجوم استهدف مقر إقامة وزير الدفاع الأفغاني  بالإنابة في كابول، وسط حالة من القلق تشهدها أفغانستان جراء المكاسب  العسكرية السريعة للحركة.وقال  المتحدث باسم طالبان، ذبيح الله مجاهد، إن الحركة استهدفت مقر إقامة بسم  الله محمدي ليل الثلاثاء، مضيفا أن اجتماعاً مهماً كان منعقداً هناك في ذلك  الوقت.وأفادت تقارير بنجاة محمدي، وباشتباك القوات الحكومية مع المسلحين المجهولين الذين شنوا الهجوم لأكثر من أربع ساعات.وكانت  المنطقة التي استهدفتها الحركة في العاصمة الأفغانية شديدة التحصين، علماً  أن كابول ظلت، خلال الأسابيع الماضية، بمنأى عن العنف الذي اشتدّ في أجزاء  أخرى من البلاد.",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:cn0m90verwvo",
+      "canonicalUrl": "https://www.bbc.com/arabic/articles/cn0m90verwvo"
+    },
+    "timestamp": 1628083342158,
+    "suitableForSyndication": true,
+    "language": "ar",
+    "headlines": {
+      "seoHeadline": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "طالبان: الحركة تعلن مسؤوليتها عن هجوم على منزل وزير الدفاع في كابول وتتعهد بالمزيد من الهجمات",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {},
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "ar",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+      "locator": "urn:bbc:optimo:asset:cn0m90verwvo",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "id": "urn:bbc:ares::article:cn0m90verwvo",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

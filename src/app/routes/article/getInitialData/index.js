@@ -1,7 +1,5 @@
 import pipe from 'ramda/src/pipe';
-import identity from 'ramda/src/identity';
 
-import isLive from '#lib/utilities/isLive';
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import {
@@ -14,7 +12,7 @@ import {
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
-  isLive() ? identity : handleGroupBlocks,
+  handleGroupBlocks,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,

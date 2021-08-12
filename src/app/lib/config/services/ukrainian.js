@@ -70,6 +70,7 @@ const baseServiceConfig = {
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    gist: 'Стисло',
     error: {
       404: {
         statusCode: '404',

@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'Kicheza Sauti',
         videoPlayer: 'Kicheza Video',
       },
+      gist: 'Muhtasari',
       error: {
         404: {
           statusCode: '404',
