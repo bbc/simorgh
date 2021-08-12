@@ -10,19 +10,18 @@ import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 const MAX_WIDTH = '31.25rem';
 export const LAZYLOAD_OFFSET = 250;
 
-const getWrapperHeightStyles = oEmbed => {
+const getWrapperHeightStyles = (oEmbed, minHeight) => {
   /**
    * Adjust MIN_HEIGHT to configure the default minimum height of Social Embed
    * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
    */
-  const MIN_HEIGHT = '18.75rem';
+  if (minHeight) return `min-height: ${minHeight}`;
   if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
-  if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
   return '';
 };
 
 export const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
+  ${({ oEmbed, minHeight }) => getWrapperHeightStyles(oEmbed, minHeight)}
 `;

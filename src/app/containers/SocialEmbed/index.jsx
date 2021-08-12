@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import Lazyload from 'react-lazyload';
@@ -19,9 +19,12 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
+const MIN_HEIGHT = '18.75rem';
+
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
+  const [minWrapperHeight, setMinWrapperHeight] = useState(MIN_HEIGHT);
 
   if (!blocks || !source) return null;
 
@@ -65,6 +68,7 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         provider={provider}
         data-e2e={`${provider}-embed-${source}`}
         oEmbed={oEmbed}
+        minHeight={minWrapperHeight}
       >
         {isAmp ? (
           <AmpSocialEmbed
@@ -84,6 +88,9 @@ const SocialEmbedContainer = ({ blocks, source }) => {
               fallback={fallback}
               skipLink={skipLink}
               caption={caption}
+              onRender={() => {
+                setMinWrapperHeight('0');
+              }}
             />
           </Lazyload>
         )}
