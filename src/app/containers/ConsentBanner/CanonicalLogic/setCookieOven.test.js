@@ -4,8 +4,8 @@ let cookieOvenUrl;
 
 describe('setCookieOven', () => {
   beforeEach(() => {
-    jest.mock('./cookieOvenUrl', () => jest.fn());
-    cookieOvenUrl = require('./cookieOvenUrl');
+    jest.mock('./getCookieOvenUrl', () => jest.fn());
+    cookieOvenUrl = require('./getCookieOvenUrl');
     cookieOvenUrl.mockImplementation(() => 'https://cookieOvenUrl.com');
 
     fetch.mockImplementation(() => fetchResponse);

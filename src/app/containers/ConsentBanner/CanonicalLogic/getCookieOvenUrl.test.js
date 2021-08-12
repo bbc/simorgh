@@ -1,7 +1,7 @@
-import cookieOvenUrl from './cookieOvenUrl';
+import getCookieOvenUrl from './getCookieOvenUrl';
 import { localBaseUrl } from '#testHelpers/config';
 
-describe('cookieOvenUrl', () => {
+describe('getCookieOvenUrl', () => {
   const logicMap = [
     ['https://www.bbc.com', 'https://www.bbc.co.uk'],
     ['https://www.bbc.co.uk', 'https://www.bbc.com'],
@@ -27,7 +27,7 @@ describe('cookieOvenUrl', () => {
 
   logicMap.forEach(([location, expectedOutput]) => {
     it(`should return correct basepath for ${location}`, () => {
-      expect(cookieOvenUrl(location, true)).toEqual(expectedOutput);
+      expect(getCookieOvenUrl(location, true)).toEqual(expectedOutput);
     });
   });
 });
