@@ -198,7 +198,7 @@ export const getAtUserId = () => {
     console.log(error);
     cookie = null;
   }
-  const val = pathOr(uuid(), ['val'], cookie);
+  const val = path(['val'], cookie) || uuid();
 
   Cookie.set(cookieName, { val }, { expires, path: '/' });
 
