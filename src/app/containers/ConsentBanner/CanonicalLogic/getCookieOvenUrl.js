@@ -10,10 +10,9 @@ const getCookieOvenDomainBase = origin => {
   return 'https://www.bbc';
 };
 
-const getDomainExtension = (origin, options = { switchDomain: false }) => {
+const getDomainExtension = (origin, switchDomain) => {
   const DOT_COM = '.com';
   const DOT_CO_DOT_UK = '.co.uk';
-  const { switchDomain } = options;
 
   if (origin.includes('localhost')) {
     return '';
@@ -26,7 +25,8 @@ const getDomainExtension = (origin, options = { switchDomain: false }) => {
   return switchDomain ? DOT_COM : DOT_CO_DOT_UK;
 };
 
-const getCookieOvenUrl = (origin, switchDomain) => {
+const getCookieOvenUrl = (origin, options = { switchDomain: false }) => {
+  const { switchDomain } = options;
   const cookieOvenDomainBase = getCookieOvenDomainBase(origin);
   const domainExtension = getDomainExtension(origin, switchDomain);
 
