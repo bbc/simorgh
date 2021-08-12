@@ -188,18 +188,17 @@ export const getAtUserId = () => {
   // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
   if (isOperaProxy()) return null;
 
-  const cookieName = 'atuserid';
-  const cookie = Cookie.getJSON(cookieName);
-  let val = pathOr(null, ['val'], cookie);
+  const COOKIE_NAME = 'atuserid';
+  let cookieValue = Cookie.get(COOKIE_NAME);
   const expires = 397; // expires in 13 months
 
-  if (!cookie || !val) {
-    val = uuid();
+  if (!cookieValue) {
+    cookieValue = uuid();
   }
 
-  Cookie.set(cookieName, { val }, { expires, path: '/' });
+  Cookie.set(COOKIE_NAME, cookieValue, { expires, path: '/' });
 
-  return val;
+  return cookieValue;
 };
 
 export const sanitise = initialString =>
