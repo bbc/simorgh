@@ -1,21 +1,21 @@
-import cookieOvenUrl from './cookieOvenUrl';
 import 'isomorphic-fetch';
+import getCookieOvenUrl from './getCookieOvenUrl';
 
 const cookieOvenFetch = async (policy, logger) => {
   if (window.location && window.location.origin) {
     try {
-      await fetch(
-        `${cookieOvenUrl(
-          window.location.origin,
-          false,
-        )}/cookieoven?policy=${policy}`,
-      );
-      await fetch(
-        `${cookieOvenUrl(
-          window.location.origin,
-          true,
-        )}/cookieoven?policy=${policy}`,
-      );
+      await Promise.all([
+        fetch(
+          `${getCookieOvenUrl(window.location.origin, {
+            switchDomain: false,
+          })}/cookieoven?policy=${policy}`,
+        ),
+        fetch(
+          `${getCookieOvenUrl(window.location.origin, {
+            switchDomain: true,
+          })}/cookieoven?policy=${policy}`,
+        ),
+      ]);
     } catch (e) {
       const log = logger || console;
       log.error(e);
