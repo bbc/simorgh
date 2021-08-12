@@ -189,12 +189,8 @@ export const getAtUserId = () => {
   if (isOperaProxy()) return null;
 
   const COOKIE_NAME = 'atuserid';
-  let cookieValue = Cookie.get(COOKIE_NAME);
+  const cookieValue = Cookie.get(COOKIE_NAME) || uuid();
   const expires = 397; // expires in 13 months
-
-  if (!cookieValue) {
-    cookieValue = uuid();
-  }
 
   Cookie.set(COOKIE_NAME, cookieValue, { expires, path: '/' });
 
