@@ -20,7 +20,12 @@ describe('setCookieOven', () => {
 
     setCookieOven('value');
 
-    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', false);
+    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', {
+      switchDomain: false,
+    });
+    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', {
+      switchDomain: true,
+    });
     expect(fetch).toHaveBeenCalledWith(
       'https://cookieOvenUrl.com/cookieoven?policy=value',
     );
