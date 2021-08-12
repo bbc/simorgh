@@ -91,7 +91,7 @@ export const testsThatNeverRunDuringSmokeTestingForCanonicalOnly = () => {
     //
     // Specifically it runs against this asset http://localhost:7080/russian/news-55041160
     // but should pass against any page Story page with 2 or more instagram posts
-    it.only('Lazy loaded instagram posts enrich', () => {
+    it('Lazy loaded instagram posts enrich', () => {
       cy.window().then(win => {
         const jsonData = win.SIMORGH_DATA.pageData;
 
