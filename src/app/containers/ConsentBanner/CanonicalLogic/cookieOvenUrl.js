@@ -10,7 +10,7 @@ const cookieOvenDomainBase = origin => {
   return 'https://www.bbc';
 };
 
-const domainExtension = (origin, opposite) => {
+const getDomainExtension = (origin, opposite) => {
   if (origin.includes('localhost')) {
     return '';
   }
@@ -29,6 +29,6 @@ const domainExtension = (origin, opposite) => {
 };
 
 const cookieOvenUrl = (origin, opposite) =>
-  cookieOvenDomainBase(origin) + domainExtension(origin, opposite);
+  cookieOvenDomainBase(origin) + getDomainExtension(origin, opposite);
 
 export default cookieOvenUrl;
