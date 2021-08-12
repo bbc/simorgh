@@ -1,4 +1,4 @@
-const cookieOvenDomainBase = origin => {
+const getCookieOvenDomainBase = origin => {
   if (origin.includes('localhost')) {
     return origin;
   }
@@ -29,6 +29,6 @@ const getDomainExtension = (origin, opposite) => {
 };
 
 const cookieOvenUrl = (origin, opposite) =>
-  cookieOvenDomainBase(origin) + getDomainExtension(origin, opposite);
+  getCookieOvenDomainBase(origin) + getDomainExtension(origin, opposite);
 
 export default cookieOvenUrl;
