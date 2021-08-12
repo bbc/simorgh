@@ -27,7 +27,9 @@ describe('getCookieOvenUrl', () => {
 
   logicMap.forEach(([location, expectedOutput]) => {
     it(`should return correct basepath for ${location}`, () => {
-      expect(getCookieOvenUrl(location, true)).toEqual(expectedOutput);
+      expect(getCookieOvenUrl(location, { switchDomain: true })).toEqual(
+        expectedOutput,
+      );
     });
   });
 });

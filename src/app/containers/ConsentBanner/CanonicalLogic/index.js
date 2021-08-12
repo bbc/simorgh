@@ -20,7 +20,7 @@ const isChromatic = () =>
 // Setting sameSite=None allows the cookie to be accessed and updated on `.co.uk` and `.com`
 const SAME_SITE_VALUE = 'None';
 
-const setPolicyCookie = (policy, logger, explicit) => {
+const setPolicyCookie = ({ policy, logger, explicit }) => {
   if (explicit) {
     // Use cookie oven to set cookie via http so Safari does not delete in 7 days
     setCookieOven(policy, logger);
@@ -38,6 +38,7 @@ const setPolicyCookie = (policy, logger, explicit) => {
 
 const showPrivacyBanner = () => {
   const privacyCookie = Cookie.get(PRIVACY_COOKIE);
+
   return (
     !privacyCookie || PRIVACY_COOKIE_PREVIOUS_VALUES.includes(privacyCookie)
   );
@@ -53,11 +54,23 @@ const setSeenPrivacyBanner = () =>
     sameSite: SAME_SITE_VALUE,
   });
 const setDefaultPolicy = logger =>
-  setPolicyCookie(POLICY_DENIED, logger, false);
+  setPolicyCookie({
+    policy: POLICY_DENIED,
+    logger,
+    explicit: false,
+  });
 const setApprovedPolicy = logger =>
-  setPolicyCookie(POLICY_APPROVED, logger, true);
+  setPolicyCookie({
+    policy: POLICY_APPROVED,
+    logger,
+    explicit: true,
+  });
 const setDismissedCookieBanner = logger =>
-  setPolicyCookie(POLICY_DENIED, logger, true);
+  setPolicyCookie({
+    policy: POLICY_DENIED,
+    logger,
+    explicit: true,
+  });
 
 const consentBannerUtilities = ({
   setShowPrivacyBanner,
