@@ -53,11 +53,9 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-const AmpTemplate = props => (
-  <Component isAmp data-chromatic="ignore" {...props} />
-);
+const AmpTemplate = props => <Component isAmp {...props} />;
 
 export const Canonical = Component;
 export const Amp = AmpTemplate.bind({});
-Amp.parameters = { chromatic: { disable: true } };
+Amp.parameters = { chromatic: { disable: false } };
 Amp.decorators = [AmpDecorator];
