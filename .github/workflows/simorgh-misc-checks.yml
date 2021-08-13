@@ -37,9 +37,7 @@ jobs:
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: |
-          chmod +x ./scripts/yarnInstallCi.sh
-          ./scripts/yarnInstallCi.sh
+        run: ./scripts/yarnInstallCi.sh
 
       - name: Chromatic UI Tests
         uses: chromaui/action@v1
