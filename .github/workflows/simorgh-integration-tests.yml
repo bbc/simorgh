@@ -36,7 +36,9 @@ jobs:
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn ci
+        run:  |
+          chmod +x ./scripts/yarnInstallCi.sh
+          ./scripts/yarnInstallCi.sh
 
       - name: Integration Tests
         run: yarn test:integration -- --ci
