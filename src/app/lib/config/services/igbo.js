@@ -76,6 +76,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Nchịkọta',
       error: {
         home: 'Akụkọ',
         currentPage: 'Current page',
