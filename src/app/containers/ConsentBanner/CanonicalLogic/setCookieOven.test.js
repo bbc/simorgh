@@ -1,34 +1,52 @@
-/* eslint-disable global-require */
-let fetchResponse;
-let cookieOvenUrl;
+import setCookieOven from './setCookieOven';
+
+const { origin } = window.location;
+delete window.location;
+
+beforeEach(() => {
+  window.location = new URL(origin);
+});
 
 describe('setCookieOven', () => {
-  beforeEach(() => {
-    jest.mock('./getCookieOvenUrl', () => jest.fn());
-    cookieOvenUrl = require('./getCookieOvenUrl');
-    cookieOvenUrl.mockImplementation(() => 'https://cookieOvenUrl.com');
-
-    fetch.mockImplementation(() => fetchResponse);
-  });
-
   afterEach(() => {
-    fetch.resetMocks();
+    jest.clearAllMocks();
   });
 
-  it(`should fetch`, () => {
-    const setCookieOven = require('./setCookieOven').default;
+  it('should hit the correct outside UK and UK cookie oven endpoints when on localhost', () => {
+    setCookieOven('value');
+
+    const [[outsideUkEndpoint], [ukEndpoint]] = fetch.mock.calls;
+
+    expect(outsideUkEndpoint).toBe('http://localhost/cookieoven?policy=value');
+    expect(ukEndpoint).toBe('http://localhost/cookieoven?policy=value');
+  });
+
+  it('should hit the correct outside UK and UK cookie oven endpoints when on the test environment', () => {
+    window.location = new URL('https://www.test.bbc.com');
 
     setCookieOven('value');
 
-    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', {
-      switchDomain: false,
-    });
-    expect(cookieOvenUrl).toHaveBeenCalledWith('http://localhost', {
-      switchDomain: true,
-    });
-    expect(fetch).toHaveBeenCalledWith(
-      'https://cookieOvenUrl.com/cookieoven?policy=value',
+    const [[outsideUkEndpoint], [ukEndpoint]] = fetch.mock.calls;
+
+    expect(outsideUkEndpoint).toBe(
+      'https://www.test.bbc.com/cookieoven?policy=value',
     );
+    expect(ukEndpoint).toBe(
+      'https://www.test.bbc.co.uk/cookieoven?policy=value',
+    );
+  });
+
+  it('should hit the correct outside UK and UK cookie oven endpoints when on the live environment', () => {
+    window.location = new URL('https://www.bbc.com');
+
+    setCookieOven('value');
+
+    const [[outsideUkEndpoint], [ukEndpoint]] = fetch.mock.calls;
+
+    expect(outsideUkEndpoint).toBe(
+      'https://www.bbc.com/cookieoven?policy=value',
+    );
+    expect(ukEndpoint).toBe('https://www.bbc.co.uk/cookieoven?policy=value');
   });
 
   describe('when the fetch fails', () => {
@@ -36,7 +54,7 @@ describe('setCookieOven', () => {
 
     beforeEach(() => {
       error = new Error('An error');
-      fetchResponse = Promise.reject(error);
+      // fetchResponse = Promise.reject(error);
       global.console = { error: jest.fn() };
     });
 
@@ -44,8 +62,8 @@ describe('setCookieOven', () => {
       jest.resetAllMocks();
     });
 
-    it(`should send error to console when logger function isn't provided`, async () => {
-      const setCookieOven = require('./setCookieOven').default;
+    it("should send error to console when logger function isn't provided", async () => {
+      global.fetch = jest.fn(() => Promise.reject(error));
 
       await setCookieOven('value');
 
@@ -53,10 +71,10 @@ describe('setCookieOven', () => {
       expect(console.error).toHaveBeenCalledWith(error);
     });
 
-    it(`should send error to logger function when provided`, async () => {
-      const logger = { error: jest.fn() };
+    it('should send error to logger function when provided', async () => {
+      global.fetch = jest.fn(() => Promise.reject(error));
 
-      const setCookieOven = require('./setCookieOven').default;
+      const logger = { error: jest.fn() };
 
       await setCookieOven('value', logger);
 
