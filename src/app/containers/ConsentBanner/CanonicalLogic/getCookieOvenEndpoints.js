@@ -1,11 +1,11 @@
 export default ({ origin, policy }) => {
-  const path = `cookieoven`;
+  const path = 'cookieoven';
   const params = `policy=${policy}`;
 
   if (origin.includes('localhost')) {
     const localhostEndpoint = `${origin}/${path}?${params}`;
 
-    return Array(2).fill(localhostEndpoint);
+    return [localhostEndpoint];
   }
 
   const liveOrigin = 'https://www.bbc';

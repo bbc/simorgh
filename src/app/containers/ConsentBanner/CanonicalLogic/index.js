@@ -11,7 +11,7 @@ const POLICY_DENIED = '000';
 const PRIVACY_COOKIE_CURRENT = 'july2019';
 const PRIVACY_COOKIE_PREVIOUS_VALUES = ['0', '1'];
 
-const onClient = typeof window !== 'undefined';
+const isOnClient = typeof window !== 'undefined';
 const isChromatic = () =>
   process.env.STORYBOOK === 'true' &&
   window.navigator.userAgent.match(/Chromatic/);
@@ -78,7 +78,7 @@ const consentBannerUtilities = ({
   logger,
 }) => {
   const runInitial = () => {
-    if (onClient) {
+    if (isOnClient) {
       if (isChromatic()) {
         // prevent setting cookies so chromatic snapshots are consistent
         setShowPrivacyBanner(true);

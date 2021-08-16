@@ -1,10 +1,10 @@
-import getCookieOvenEndpoint from './getCookieOvenEndpoint';
+import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 import { localBaseUrl } from '#testHelpers/config';
 
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';
 
-describe('getCookieOvenEndpoint', () => {
+describe('getCookieOvenEndpoints', () => {
   test.each`
     origin                                                      | policy             | expectedOutsideUkEndpoint                           | expectedUkEndpoint
     ${'https://www.bbc.com'}                                    | ${POLICY_APPROVED} | ${'https://www.bbc.com/cookieoven?policy=111'}      | ${'https://www.bbc.co.uk/cookieoven?policy=111'}
@@ -27,8 +27,8 @@ describe('getCookieOvenEndpoint', () => {
     ${'https://simorgh.test.api.bbci.co.uk'}                    | ${POLICY_DENIED}   | ${'https://www.test.bbc.com/cookieoven?policy=000'} | ${'https://www.test.bbc.co.uk/cookieoven?policy=000'}
     ${'https://my-routing-layer.test.cookieless-domain.co.uk/'} | ${POLICY_APPROVED} | ${'https://www.test.bbc.com/cookieoven?policy=111'} | ${'https://www.test.bbc.co.uk/cookieoven?policy=111'}
     ${'https://my-routing-layer.test.cookieless-domain.co.uk/'} | ${POLICY_DENIED}   | ${'https://www.test.bbc.com/cookieoven?policy=000'} | ${'https://www.test.bbc.co.uk/cookieoven?policy=000'}
-    ${localBaseUrl}                                             | ${POLICY_APPROVED} | ${`${localBaseUrl}/cookieoven?policy=111`}          | ${`${localBaseUrl}/cookieoven?policy=111`}
-    ${localBaseUrl}                                             | ${POLICY_DENIED}   | ${`${localBaseUrl}/cookieoven?policy=000`}          | ${`${localBaseUrl}/cookieoven?policy=000`}
+    ${localBaseUrl}                                             | ${POLICY_APPROVED} | ${`${localBaseUrl}/cookieoven?policy=111`}          | ${undefined}
+    ${localBaseUrl}                                             | ${POLICY_DENIED}   | ${`${localBaseUrl}/cookieoven?policy=000`}          | ${undefined}
     ${'https://foobar.org'}                                     | ${POLICY_APPROVED} | ${'https://www.bbc.com/cookieoven?policy=111'}      | ${'https://www.bbc.co.uk/cookieoven?policy=111'}
     ${'https://foobar.org'}                                     | ${POLICY_DENIED}   | ${'https://www.bbc.com/cookieoven?policy=000'}      | ${'https://www.bbc.co.uk/cookieoven?policy=000'}
     ${'http://foobar.org'}                                      | ${POLICY_APPROVED} | ${'https://www.bbc.com/cookieoven?policy=111'}      | ${'https://www.bbc.co.uk/cookieoven?policy=111'}
@@ -38,7 +38,7 @@ describe('getCookieOvenEndpoint', () => {
   `(
     'returns outsideUkCookieOven="$expectedOutsideUkEndpoint" and ukCookieOven="$expectedUkEndpoint" when origin="$origin" and policy="$policy"',
     ({ origin, policy, expectedOutsideUkEndpoint, expectedUkEndpoint }) => {
-      const [outsideUkEndpoint, ukEndpoint] = getCookieOvenEndpoint({
+      const [outsideUkEndpoint, ukEndpoint] = getCookieOvenEndpoints({
         origin,
         policy,
       });

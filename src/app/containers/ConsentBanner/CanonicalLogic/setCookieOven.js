@@ -1,19 +1,19 @@
 import 'isomorphic-fetch';
 import path from 'ramda/src/path';
 
-import getCookieOvenUrl from './getCookieOvenEndpoint';
+import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 
 export default async (policy, logger) => {
   const origin = path(['location', 'origin'], window);
 
   if (origin) {
-    const [outsideUkCookieOven, ukCookieOven] = getCookieOvenUrl({
+    const cookieOvenEndpoints = getCookieOvenEndpoints({
       origin,
       policy,
     });
 
     try {
-      await Promise.all([fetch(outsideUkCookieOven), fetch(ukCookieOven)]);
+      await Promise.all(cookieOvenEndpoints.map(endpoint => fetch(endpoint)));
     } catch (e) {
       const log = logger || console;
 
