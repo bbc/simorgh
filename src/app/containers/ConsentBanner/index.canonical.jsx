@@ -1,50 +1,41 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
+
 import Banner from './Banner/index.canonical';
-import consentBannerUtilities from './CanonicalLogic';
+import useConsentBanner from './useCookieBanner';
 import { UserContext } from '#contexts/UserContext';
 
 const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);
-  const [showPrivacy, setShowPrivacyBanner] = useState(false);
-  const [showCookie, setShowCookieBanner] = useState(false);
-
   const {
-    runInitial,
-    privacyOnAllow,
-    privacyOnReject,
-    cookieOnAllow,
-    cookieOnReject,
-  } = consentBannerUtilities({ setShowPrivacyBanner, setShowCookieBanner });
-
-  useEffect(runInitial, []);
-
-  const onCookieAction = actionType => {
-    if (actionType === 'accept') {
-      cookieOnAllow();
-      updateCookiePolicy();
-      onDismissFocusRef?.current?.querySelector('a')?.focus();
-    } else if (actionType === 'reject') {
-      cookieOnReject();
-    }
-  };
+    showPrivacyBanner,
+    showCookieBanner,
+    handlePrivacyBannerAccepted,
+    handlePrivacyBannerRejected,
+    handleCookieBannerAccepted,
+    handleCookieBannerRejected,
+  } = useConsentBanner();
 
   return (
     <>
-      {showPrivacy ? (
+      {showPrivacyBanner && (
         <Banner
           type="privacy"
-          onAccept={privacyOnAllow}
-          onReject={privacyOnReject}
+          onAccept={handlePrivacyBannerAccepted}
+          onReject={handlePrivacyBannerRejected}
         />
-      ) : null}
-      {!showPrivacy && showCookie ? (
+      )}
+      {showCookieBanner && (
         <Banner
           type="cookie"
-          onAccept={() => onCookieAction('accept')}
-          onReject={() => onCookieAction('reject')}
+          onAccept={() => {
+            handleCookieBannerAccepted();
+            updateCookiePolicy();
+            onDismissFocusRef?.current?.querySelector('a')?.focus();
+          }}
+          onReject={handleCookieBannerRejected}
         />
-      ) : null}
+      )}
     </>
   );
 };

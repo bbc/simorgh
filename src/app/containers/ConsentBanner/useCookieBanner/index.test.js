@@ -1,33 +1,21 @@
 /* eslint-disable global-require */
+import Cookies from 'js-cookie';
+
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
 const POLICY_COOKIE = 'ckns_policy';
 
-let Cookie;
-let setCookieOvenMock;
 const setShowPrivacyBannerMock = jest.fn();
 const setShowCookieBannerMock = jest.fn();
-const PRIVACY_COOKIE_CURRENT = 'july2019';
-const setCookieGetMock = ({
-  privacy = PRIVACY_COOKIE_CURRENT,
-  explicit = '1',
-  policy = '111',
-}) => {
-  Cookie.get.mockImplementation(cookie => {
-    if (cookie === PRIVACY_COOKIE) {
-      return privacy;
-    }
+const DEFAULT_PRIVACY_COOKIE = 'july2019';
+const DEFAULT_EXPLICIT_COOKIE = '1';
+const DEFAULT_POLICY_COOKIE = '111';
 
-    if (cookie === EXPLICIT_COOKIE) {
-      return explicit;
-    }
-
-    return policy;
-  });
-};
+const cookieSetterSpy = jest.spyOn(Cookies, 'set');
 
 const getConsentBannerUtilities = ({ logger } = {}) => {
   const consentBannerUtilities = require('./index').default;
+
   return consentBannerUtilities({
     setShowPrivacyBanner: setShowPrivacyBannerMock,
     setShowCookieBanner: setShowCookieBannerMock,
@@ -41,69 +29,52 @@ describe('Consent Banner Utilities', () => {
     global.document.domain = 'www.bbc.com';
   });
 
-  beforeEach(() => {
-    jest.mock('js-cookie', () => jest.fn());
-    Cookie = require('js-cookie');
-    Cookie.get = jest.fn();
-    Cookie.set = jest.fn();
-
-    jest.mock('./setCookieOven', () => jest.fn());
-    setCookieOvenMock = require('./setCookieOven');
-  });
-
   describe('runInitial', () => {
-    it('does not show the privacy banner when PRIVACY_COOKIE is current policy value', () => {
-      setCookieGetMock({ privacy: PRIVACY_COOKIE_CURRENT });
-
+    it.only('does not show the privacy banner when PRIVACY_COOKIE is current policy value', () => {
+      Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
-    });
-
-    it('does not show the privacy banner when PRIVACY_COOKIE is anythingelse', () => {
-      setCookieGetMock({ privacy: 'anythingelse' });
-
-      const { runInitial } = getConsentBannerUtilities();
-
-      runInitial();
-
-      expect(Cookie.set).toHaveBeenCalledTimes(0);
-      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
-    });
-
-    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 0', () => {
-      setCookieGetMock({ privacy: '0' });
-
-      const { runInitial } = getConsentBannerUtilities();
-
-      runInitial();
-
-      expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(
-        PRIVACY_COOKIE,
-        PRIVACY_COOKIE_CURRENT,
-        {
-          expires: 365,
-          domain: `.bbc.com`,
-        },
+      expect(document.cookie).toBe(
+        'ckns_privacy=july2019; ckns_explicit=1; ckns_policy=111',
       );
-      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
     });
 
-    it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 1', () => {
-      setCookieGetMock({ privacy: '1' });
-
+    it.only('does not show the privacy banner when PRIVACY_COOKIE is anythingelse', () => {
+      Cookies.set(PRIVACY_COOKIE, 'anythingelse');
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(
+      expect(document.cookie).toBe(
+        'ckns_privacy=anythingelse; ckns_explicit=1; ckns_policy=111',
+      );
+      expect(setShowPrivacyBannerMock).not.toHaveBeenCalled();
+    });
+
+    it.only('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 0', () => {
+      Cookies.set(PRIVACY_COOKIE, '0');
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(document.cookie).toBe(
+        'ckns_privacy=0; ckns_explicit=1; ckns_policy=111',
+      );
+      expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
-        PRIVACY_COOKIE_CURRENT,
+        DEFAULT_PRIVACY_COOKIE,
         {
           expires: 365,
           domain: '.bbc.com',
@@ -112,17 +83,18 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('sets PRIVACY_COOKIE and shows privacy banner when cookie is null', () => {
-      setCookieGetMock({ privacy: null });
-
+    it.only('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 1', () => {
+      Cookies.set(PRIVACY_COOKIE, '1');
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledTimes(1);
-      expect(Cookie.set).toHaveBeenCalledWith(
+      expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
-        PRIVACY_COOKIE_CURRENT,
+        DEFAULT_PRIVACY_COOKIE,
         {
           expires: 365,
           domain: '.bbc.com',
@@ -131,18 +103,40 @@ describe('Consent Banner Utilities', () => {
       expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
     });
 
-    it('sets PRIVACY_COOKIE without domain restrictions', () => {
+    it.only('sets PRIVACY_COOKIE and shows privacy banner when cookie is null', () => {
+      Cookies.set(PRIVACY_COOKIE, null);
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
+      const { runInitial } = getConsentBannerUtilities();
+
+      runInitial();
+
+      expect(cookieSetterSpy).toHaveBeenCalledWith(
+        PRIVACY_COOKIE,
+        DEFAULT_PRIVACY_COOKIE,
+        {
+          expires: 365,
+          domain: '.bbc.com',
+        },
+      );
+      expect(setShowPrivacyBannerMock).toHaveBeenCalledWith(true);
+    });
+
+    it.only('sets PRIVACY_COOKIE without domain restrictions', () => {
       global.document.domain = 'www.bbc.co.uk';
-
-      setCookieGetMock({ privacy: null });
+      Cookies.set(PRIVACY_COOKIE, null);
+      Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
+      Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
+      cookieSetterSpy.mockClear();
 
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
 
-      expect(Cookie.set).toHaveBeenCalledWith(
+      expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
-        PRIVACY_COOKIE_CURRENT,
+        DEFAULT_PRIVACY_COOKIE,
         {
           expires: 365,
           domain: '.bbc.co.uk',
@@ -152,8 +146,6 @@ describe('Consent Banner Utilities', () => {
 
     it('does not show the cookie banner when EXPLICIT_COOKIE is 1 or 2', () => {
       ['1', '2'].forEach(value => {
-        setCookieGetMock({ explicit: value });
-
         const { runInitial } = getConsentBannerUtilities();
 
         runInitial();
@@ -164,8 +156,6 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', () => {
-      setCookieGetMock({ explicit: '0' });
-
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
@@ -175,8 +165,6 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('sets POLICY_COOKIE when it is not set', () => {
-      setCookieGetMock({ policy: null });
-
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
@@ -188,8 +176,6 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('does not set POLICY_COOKIE when its already set', () => {
-      setCookieGetMock({ policy: '010' });
-
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
@@ -202,8 +188,6 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('shows cookie banner when EXPLICIT_COOKIE is 0 and sets POLICY_COOKIE when cookie is null', () => {
-      setCookieGetMock({ explicit: '0', policy: null });
-
       const { runInitial } = getConsentBannerUtilities();
 
       runInitial();
@@ -217,7 +201,6 @@ describe('Consent Banner Utilities', () => {
     });
 
     it('sets POLICY_COOKIE without domain restrictions', () => {
-      setCookieGetMock({ explicit: '0', policy: null });
       global.document.domain = 'www.test.bbc.com';
 
       const { runInitial } = getConsentBannerUtilities();
