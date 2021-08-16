@@ -23,22 +23,29 @@ const initialBannerState = {
 };
 
 const bannerReducer = (state, action) => {
-  const { showPrivacyBanner, showCookieBanner } = state;
   const { type, payload } = action;
 
   switch (type) {
-    case ACTIONS.SHOW_PRIVACY_BANNER:
+    case ACTIONS.SHOW_PRIVACY_BANNER: {
+      const showPrivacyBanner = payload;
+      const { showCookieBanner } = state;
+
       return {
-        showPrivacyBanner: payload,
-        showCookieBanner: payload ? false : showCookieBanner,
+        showPrivacyBanner,
+        showCookieBanner: showPrivacyBanner ? false : showCookieBanner,
       };
-    case ACTIONS.SHOW_COOKIE_BANNER:
+    }
+    case ACTIONS.SHOW_COOKIE_BANNER: {
+      const showCookieBanner = payload;
+      const { showPrivacyBanner } = state;
+
       return {
-        showCookieBanner: payload,
-        showPrivacyBanner: payload ? false : showPrivacyBanner,
+        showCookieBanner,
+        showPrivacyBanner: showCookieBanner ? false : showPrivacyBanner,
       };
+    }
     default:
-      return { showPrivacyBanner, showCookieBanner };
+      return state;
   }
 };
 
