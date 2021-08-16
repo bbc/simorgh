@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import setCookieOven from './setCookieOven';
 
 const { origin } = window.location;
@@ -50,12 +51,10 @@ describe('setCookieOven', () => {
   });
 
   describe('when the fetch fails', () => {
-    let error;
+    const { error: consoleError } = console;
 
-    beforeEach(() => {
-      error = new Error('An error');
-      // fetchResponse = Promise.reject(error);
-      global.console = { error: jest.fn() };
+    afterEach(() => {
+      console.error = consoleError;
     });
 
     afterEach(() => {
@@ -63,15 +62,19 @@ describe('setCookieOven', () => {
     });
 
     it("should send error to console when logger function isn't provided", async () => {
+      const error = new Error('An error');
+
+      console.error = jest.fn();
       global.fetch = jest.fn(() => Promise.reject(error));
 
       await setCookieOven('value');
 
-      // eslint-disable-next-line no-console
       expect(console.error).toHaveBeenCalledWith(error);
     });
 
     it('should send error to logger function when provided', async () => {
+      const error = new Error('An error');
+
       global.fetch = jest.fn(() => Promise.reject(error));
 
       const logger = { error: jest.fn() };
