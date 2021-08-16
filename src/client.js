@@ -18,11 +18,7 @@ const root = document.getElementById('root');
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(() => {
-    try {
-      hydrate(<ClientApp data={data} routes={routes} />, root);
-    } catch (e) {
-      hydrate(<ClientApp data={{ status: 500 }} />, root);
-    }
+    hydrate(<ClientApp data={data} routes={routes} />, root);
   });
 } else {
   logger.warn(`
