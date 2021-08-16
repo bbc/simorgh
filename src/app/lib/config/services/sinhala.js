@@ -78,6 +78,7 @@ export const service = {
         audioPlayer: 'හඬ වාදකය',
         videoPlayer: 'වීඩියෝ ධාවකය',
       },
+      gist: 'සාරාංශය',
       error: {
         404: {
           statusCode: '404',

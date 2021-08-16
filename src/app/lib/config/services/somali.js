@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      gist: 'Kooban',
       error: {
         404: {
           statusCode: '404',

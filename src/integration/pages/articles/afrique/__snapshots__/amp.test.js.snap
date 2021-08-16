@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AMP Articles Gist list item should match text 1`] = `"Lorem ipsum dolor sit amet, consectetur adipiscing elit."`;
+
+exports[`AMP Articles Gist title should match text 1`] = `"Points clés"`;
