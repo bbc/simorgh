@@ -16,10 +16,10 @@ describe('setCookieOven', () => {
   it('should hit the correct outside UK and UK cookie oven endpoints when on localhost', () => {
     setCookieOven('value');
 
-    const [[outsideUkEndpoint], [ukEndpoint]] = fetch.mock.calls;
-
-    expect(outsideUkEndpoint).toBe('http://localhost/cookieoven?policy=value');
-    expect(ukEndpoint).toBe('http://localhost/cookieoven?policy=value');
+    expect(fetch).toHaveBeenCalledWith(
+      'http://localhost/cookieoven?policy=value',
+    );
+    expect(fetch).toHaveBeenCalledTimes(1);
   });
 
   it('should hit the correct outside UK and UK cookie oven endpoints when on the test environment', () => {
@@ -35,6 +35,7 @@ describe('setCookieOven', () => {
     expect(ukEndpoint).toBe(
       'https://www.test.bbc.co.uk/cookieoven?policy=value',
     );
+    expect(fetch).toHaveBeenCalledTimes(2);
   });
 
   it('should hit the correct outside UK and UK cookie oven endpoints when on the live environment', () => {
@@ -48,6 +49,7 @@ describe('setCookieOven', () => {
       'https://www.bbc.com/cookieoven?policy=value',
     );
     expect(ukEndpoint).toBe('https://www.bbc.co.uk/cookieoven?policy=value');
+    expect(fetch).toHaveBeenCalledTimes(2);
   });
 
   describe('when the fetch fails', () => {
