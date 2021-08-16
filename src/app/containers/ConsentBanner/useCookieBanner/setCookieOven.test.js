@@ -13,7 +13,7 @@ describe('setCookieOven', () => {
     jest.clearAllMocks();
   });
 
-  it('should hit the correct outside UK and UK cookie oven endpoints when on localhost', () => {
+  it('should hit the correct endpoint when on localhost', () => {
     setCookieOven('value');
 
     expect(fetch).toHaveBeenCalledWith(

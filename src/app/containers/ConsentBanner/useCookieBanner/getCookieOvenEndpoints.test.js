@@ -36,7 +36,7 @@ describe('getCookieOvenEndpoints', () => {
     ${'foobar.org'}                                             | ${POLICY_APPROVED} | ${'https://www.bbc.com/cookieoven?policy=111'}      | ${'https://www.bbc.co.uk/cookieoven?policy=111'}
     ${'foobar.org'}                                             | ${POLICY_DENIED}   | ${'https://www.bbc.com/cookieoven?policy=000'}      | ${'https://www.bbc.co.uk/cookieoven?policy=000'}
   `(
-    'returns outsideUkCookieOven="$expectedOutsideUkEndpoint" and ukCookieOven="$expectedUkEndpoint" when origin="$origin" and policy="$policy"',
+    `returns correct endpoints when on $origin and policy is $policy`,
     ({ origin, policy, expectedOutsideUkEndpoint, expectedUkEndpoint }) => {
       const [outsideUkEndpoint, ukEndpoint] = getCookieOvenEndpoints({
         origin,

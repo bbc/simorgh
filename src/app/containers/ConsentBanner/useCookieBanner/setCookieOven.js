@@ -3,7 +3,7 @@ import path from 'ramda/src/path';
 
 import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 
-export default async (policy, logger) => {
+export default async policy => {
   const origin = path(['location', 'origin'], window);
 
   if (origin) {
@@ -15,9 +15,7 @@ export default async (policy, logger) => {
     try {
       await Promise.all(cookieOvenEndpoints.map(endpoint => fetch(endpoint)));
     } catch (e) {
-      const log = logger || console;
-
-      log.error(e);
+      console.error(e);
     }
   }
 };

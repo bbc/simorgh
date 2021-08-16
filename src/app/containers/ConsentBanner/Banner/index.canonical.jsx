@@ -19,21 +19,17 @@ const ConsentBannerWrapper = styled.div`
   z-index: 2147483647;
 `;
 
-const Accept = (message, onClick, dataAttribute) => {
-  return (
-    <button onClick={onClick} type="button" {...dataAttribute}>
-      {message}
-    </button>
-  );
-};
+const AcceptButton = (message, onClick, dataAttribute) => (
+  <button onClick={onClick} type="button" {...dataAttribute}>
+    {message}
+  </button>
+);
 
-const Reject = (message, href, onClick, dataAttribute) => {
-  return (
-    <a href={href} onClick={onClick} {...dataAttribute}>
-      {message}
-    </a>
-  );
-};
+const RejectButton = (message, href, onClick, dataAttribute) => (
+  <a href={href} onClick={onClick} {...dataAttribute}>
+    {message}
+  </a>
+);
 
 const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
@@ -57,12 +53,12 @@ const CanonicalConsentBannerContainer = ({ type, onReject, onAccept }) => {
         dir={dir}
         title={consentBannerConfig.title}
         text={BannerText(consentBannerConfig.description)}
-        accept={Accept(
+        accept={AcceptButton(
           consentBannerConfig.accept,
           onAccept,
           dataAttribute('accept'),
         )}
-        reject={Reject(
+        reject={RejectButton(
           consentBannerConfig.reject,
           consentBannerConfig.rejectUrl,
           onReject,
