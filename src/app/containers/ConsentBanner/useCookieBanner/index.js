@@ -10,7 +10,7 @@ const POLICY_COOKIE = 'ckns_policy';
 const EXPLICIT_COOKIE_ACCEPTED_VALUES = ['1', '2'];
 const POLICY_ACCEPTED = '111';
 const POLICY_REJECTED = '000';
-const COOKIE_BANNER_ACCEPTED = '1';
+const COOKIE_BANNER_EXPLICIT_CHOICE_MADE = '1';
 const PRIVACY_COOKIE_CURRENT_VALUE = 'july2019';
 const PRIVACY_COOKIE_LEGACY_VALUES = ['0', '1'];
 const SHOW_PRIVACY_BANNER = 'SHOW_PRIVACY_BANNER';
@@ -47,6 +47,8 @@ const bannerReducer = (state, action) => {
   }
 };
 
+const isValidCookieValue = value => Boolean(value) && value !== 'null';
+
 const isChromatic = () =>
   process.env.STORYBOOK === 'true' &&
   window.navigator.userAgent.match(/Chromatic/);
@@ -72,6 +74,7 @@ const setPolicyCookie = ({ policy, explicit }) => {
 };
 
 const setUserDidSeePrivacyBanner = () => {
+  // prevent setting cookies on Chromatic so that snapshots are consistent
   if (!isChromatic()) {
     setCookie({
       name: PRIVACY_COOKIE,
@@ -96,7 +99,7 @@ const setUserDidAcceptPolicy = () =>
 const setUserDidDismissCookieBanner = () =>
   setCookie({
     name: EXPLICIT_COOKIE,
-    value: COOKIE_BANNER_ACCEPTED,
+    value: COOKIE_BANNER_EXPLICIT_CHOICE_MADE,
     sameSite: SAME_SITE_VALUE,
   });
 
@@ -111,8 +114,8 @@ const useConsentBanner = () => {
     const explicitCookie = Cookie.get(EXPLICIT_COOKIE);
     const policyCookie = Cookie.get(POLICY_COOKIE);
 
-    const userHasPrivacyCookie = Boolean(privacyCookie);
-    const userHasPolicyCookie = Boolean(policyCookie);
+    const userHasPrivacyCookie = isValidCookieValue(privacyCookie);
+    const userHasPolicyCookie = isValidCookieValue(policyCookie);
     const userHasLegacyPrivacyCookie = PRIVACY_COOKIE_LEGACY_VALUES.includes(
       privacyCookie,
     );
