@@ -265,7 +265,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 78rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -802,7 +802,9 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           dir="ltr"
           href="#content"
         >
-          Waka go wetin de inside
+          <div>
+            Waka go wetin de inside
+          </div>
         </a>
       </div>
     </div>
@@ -1319,7 +1321,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 78rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -1856,7 +1858,9 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           dir="ltr"
           href="#content"
         >
-          Waka go wetin de inside
+          <div>
+            Waka go wetin de inside
+          </div>
         </a>
       </div>
     </div>
@@ -2373,7 +2377,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 78rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -2910,7 +2914,9 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           dir="ltr"
           href="#content"
         >
-          Waka go wetin de inside
+          <div>
+            Waka go wetin de inside
+          </div>
         </a>
       </div>
     </div>
