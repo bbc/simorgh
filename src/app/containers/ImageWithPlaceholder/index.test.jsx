@@ -48,18 +48,6 @@ describe('ImageWithPlaceholder', () => {
     });
   });
 
-  it('should re-render with decoding attribute set to sync if an error occurs', () => {
-    const { getByAltText } = render(<ImageWithPlaceholder />);
-    const image = getByAltText('Pauline Clayton');
-    expect(image.getAttribute('decoding')).toBeNull();
-
-    act(() => {
-      fireEvent(image, new Event('error'));
-    });
-
-    expect(image.getAttribute('decoding')).toEqual('sync');
-  });
-
   it('should not add a link tag to the head of the document when rendering an AMP image', async () => {
     render(<AmpImageWithPlaceholder />);
 
