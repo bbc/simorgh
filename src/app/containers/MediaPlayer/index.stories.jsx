@@ -53,6 +53,7 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Canonical = Component;
 export const Amp = props => <Component isAmp {...props} />;
+export const Canonical = Component;
+
 Amp.decorators = [AmpDecorator];
