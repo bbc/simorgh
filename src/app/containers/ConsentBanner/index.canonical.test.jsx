@@ -1,162 +1,127 @@
 /* eslint-disable global-require */
-import React, { useContext } from 'react';
-import ReactDOM from 'react-dom';
-import { act } from 'react-dom/test-utils';
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import Cookies from 'js-cookie';
 
-let CanonicalContainer;
-let logic;
-let container;
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
+import ConsentBanner from '.';
 
-let setShowPrivacyBannerState;
-let setShowCookieBannerState;
+const PRIVACY_COOKIE = 'ckns_privacy';
+const EXPLICIT_COOKIE = 'ckns_explicit';
+const POLICY_COOKIE = 'ckns_policy';
+const DEFAULT_PRIVACY_COOKIE = 'july2019';
+const PRIVACY_BANNER_TEXT =
+  "We've made some important changes to our Privacy and Cookies Policy and we want you to know what this means for you and your data.";
+const COOKIE_BANNER_TEXT = 'Let us know you agree to cookies';
 
-const runInitial = jest.fn();
-const privacyOnAllow = jest.fn();
-const privacyOnReject = jest.fn();
-const cookieOnAllow = jest.fn();
-const cookieOnReject = jest.fn();
+const renderFixture = () =>
+  render(
+    <RequestContextProvider
+      bbcOrigin="https://www.test.bbc.co.uk"
+      id="c0000000000o"
+      pageType="article"
+      isAmp={false}
+      service="news"
+      statusCode={200}
+      pathname="/pathname"
+    >
+      <ServiceContextProvider service="news">
+        <ToggleContextProvider toggles={{}}>
+          <UserContextProvider>
+            <ConsentBanner />
+          </UserContextProvider>
+        </ToggleContextProvider>
+      </ServiceContextProvider>
+    </RequestContextProvider>,
+  );
 
-jest.mock('./Banner/index.canonical', () => jest.fn());
-const Banner = require('./Banner/index.canonical');
-
-Banner.mockImplementation(({ type }) => <div>Canonical {type} banner</div>);
-
-jest.mock('react', () => {
-  const original = jest.requireActual('react');
-  return {
-    ...original,
-    useContext: jest.fn().mockImplementation(original.useContext),
-  };
+beforeEach(() => {
+  Cookies.remove(PRIVACY_COOKIE);
+  Cookies.remove(EXPLICIT_COOKIE);
+  Cookies.remove(POLICY_COOKIE);
 });
 
-const updateCookiePolicy = jest.fn();
+describe('Canonical Consent Banner', () => {
+  it('should render only privacy banner when no cookies are set', () => {
+    renderFixture();
 
-useContext.mockImplementation(() => ({ updateCookiePolicy }));
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
 
-describe('Canonical Consent Banner Container', () => {
-  beforeEach(() => {
-    jest.mock('./CanonicalLogic', () => jest.fn());
-    logic = require('./CanonicalLogic');
-
-    logic.mockImplementation(
-      ({ setShowPrivacyBanner, setShowCookieBanner }) => {
-        setShowCookieBannerState = setShowCookieBanner;
-        setShowPrivacyBannerState = setShowPrivacyBanner;
-
-        return {
-          runInitial,
-          privacyOnAllow,
-          privacyOnReject,
-          cookieOnAllow,
-          cookieOnReject,
-        };
-      },
-    );
-
-    CanonicalContainer = require('./index').default;
-
-    container = document.createElement('div');
-    document.body.appendChild(container);
+    expect(privacyBannerHeadingEl).toBeInTheDocument();
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
   });
 
-  afterEach(() => {
-    jest.clearAllMocks();
+  it('should render only the privacy banner when PRIVACY_COOKIE is 0', () => {
+    Cookies.set(PRIVACY_COOKIE, '0');
+
+    renderFixture();
+
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+
+    expect(privacyBannerHeadingEl).toBeInTheDocument();
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
   });
 
-  it('should render privacy banner when both banners are set to be shown', () => {
-    act(() => {
-      ReactDOM.render(<CanonicalContainer />, container);
+  it('should render only the cookie banner when EXPLICIT_COOKIE is 0 and PRIVACY_COOKIE is set', async () => {
+    Cookies.set(EXPLICIT_COOKIE, '0');
+    Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
 
-      setShowPrivacyBannerState(true);
-      setShowCookieBannerState(true);
-    });
+    renderFixture();
 
-    expect(container.innerHTML).toBe('<div>Canonical privacy banner</div>');
-    expect(runInitial).toHaveBeenCalled();
-    expect(logic).toHaveBeenCalledWith({
-      setShowCookieBanner: expect.any(Function),
-      setShowPrivacyBanner: expect.any(Function),
-    });
-    expect(Banner).toHaveBeenCalledWith(
-      {
-        onAccept: privacyOnAllow,
-        onReject: privacyOnReject,
-        type: 'privacy',
-      },
-      {},
-    );
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+
+    expect(cookieBannerHeadingEl).toBeInTheDocument();
+    expect(privacyBannerHeadingEl).not.toBeInTheDocument();
   });
 
-  it('should render privacy banner when only privacy banner is set to be shown', () => {
-    act(() => {
-      ReactDOM.render(<CanonicalContainer />, container);
+  it('should render no banners when EXPLICIT_COOKIE is 1 and PRIVACY_COOKIE is set', () => {
+    Cookies.set(EXPLICIT_COOKIE, '1');
+    Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
 
-      setShowPrivacyBannerState(true);
-      setShowCookieBannerState(false);
-    });
+    renderFixture();
 
-    expect(container.innerHTML).toBe('<div>Canonical privacy banner</div>');
-    expect(runInitial).toHaveBeenCalled();
-    expect(logic).toHaveBeenCalledWith({
-      setShowCookieBanner: expect.any(Function),
-      setShowPrivacyBanner: expect.any(Function),
-    });
-    expect(Banner).toHaveBeenCalledWith(
-      {
-        onAccept: privacyOnAllow,
-        onReject: privacyOnReject,
-        type: 'privacy',
-      },
-      {},
-    );
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+    expect(privacyBannerHeadingEl).not.toBeInTheDocument();
   });
 
-  it('should render cookie banner when only cookie banner is set to be shown', () => {
-    act(() => {
-      ReactDOM.render(<CanonicalContainer />, container);
+  it('should render only the cookie banner when the privacy banner is dismissed', async () => {
+    renderFixture();
 
-      setShowPrivacyBannerState(false);
-      setShowCookieBannerState(true);
-    });
+    const okButtonEl = screen.queryByText('OK');
 
-    expect(container.innerHTML).toBe('<div>Canonical cookie banner</div>');
-    expect(runInitial).toHaveBeenCalled();
-    expect(logic).toHaveBeenCalledWith({
-      setShowCookieBanner: expect.any(Function),
-      setShowPrivacyBanner: expect.any(Function),
-    });
-    expect(Banner).toHaveBeenCalledWith(
-      {
-        onAccept: expect.any(Function),
-        onReject: expect.any(Function),
-        type: 'cookie',
-      },
-      {},
-    );
+    fireEvent.click(okButtonEl);
 
-    expect(cookieOnAllow).not.toHaveBeenCalled();
-    expect(updateCookiePolicy).not.toHaveBeenCalled();
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
 
-    Banner.mock.calls[0][0].onAccept();
-
-    expect(cookieOnAllow).toHaveBeenCalled();
-    expect(updateCookiePolicy).toHaveBeenCalled();
+    expect(cookieBannerHeadingEl).toBeInTheDocument();
+    expect(privacyBannerHeadingEl).not.toBeInTheDocument();
   });
 
-  it('should render no banners when both are set to not be shown', () => {
-    act(() => {
-      ReactDOM.render(<CanonicalContainer />, container);
+  it('should render no banners when both are dismissed', async () => {
+    renderFixture();
 
-      setShowPrivacyBannerState(false);
-      setShowCookieBannerState(false);
-    });
+    const okButtonEl = screen.queryByText('OK');
 
-    expect(container.innerHTML).toBe('');
-    expect(runInitial).toHaveBeenCalled();
-    expect(logic).toHaveBeenCalledWith({
-      setShowCookieBanner: expect.any(Function),
-      setShowPrivacyBanner: expect.any(Function),
-    });
-    expect(Banner).not.toHaveBeenCalled();
+    fireEvent.click(okButtonEl);
+
+    const agreeButtonEl = screen.queryByText('Yes, I agree');
+
+    fireEvent.click(agreeButtonEl);
+
+    const cookieBannerHeadingEl = screen.queryByText(COOKIE_BANNER_TEXT);
+    const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
+
+    expect(cookieBannerHeadingEl).not.toBeInTheDocument();
+    expect(privacyBannerHeadingEl).not.toBeInTheDocument();
   });
 });
