@@ -65,7 +65,7 @@ export const service = {
       brandDescription:
         'विवेचना: व्यक्तियों, विषयों या घटनाओं की गहरी पड़ताल का कार्यक्रम',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p09krvnc.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09krvnc.jpg',
         alt: 'विवेचना',
       },
       linkLabel: {

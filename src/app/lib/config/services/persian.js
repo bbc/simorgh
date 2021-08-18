@@ -70,7 +70,7 @@ export const service = {
       brandDescription:
         'برنامه چشم انداز بامدادی رادیو بی‌بی‌سی، شامل خبر، گزارش و تحلیل از وقایع ایران و جهان',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lnx.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
         alt: 'رادیو فارسی بی‌بی‌سی',
       },
       linkLabel: {

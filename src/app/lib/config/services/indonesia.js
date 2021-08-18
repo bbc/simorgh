@@ -65,7 +65,7 @@ export const service = {
       brandDescription:
         'Buletin berita pendek dan cepat yang ditujukan pada audiens muda',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p08wdkvj.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08wdkvj.jpg',
         alt: 'Global Newsbeat',
       },
       linkLabel: {

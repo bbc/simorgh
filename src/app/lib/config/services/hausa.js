@@ -64,7 +64,7 @@ export const service = {
       brandDescription:
         'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p08mlbpj.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08mlbpj.jpg',
         alt: 'Korona: Ina Mafita?',
       },
       linkLabel: {

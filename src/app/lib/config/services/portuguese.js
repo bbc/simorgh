@@ -76,7 +76,7 @@ export const service = {
       brandDescription:
         'Incríveis histórias reais que nem a mente mais criativa poderia ter inventado',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p09dsdxd.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09dsdxd.jpg',
         alt: 'Que História!',
       },
       linkLabel: {

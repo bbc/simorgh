@@ -63,7 +63,7 @@ export const service = {
       brandTitle: 'सोपी गोष्ट',
       brandDescription: 'दिवसातली सगळ्यांत मोठी बातमी सोप्या भाषेत',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p0965nyb.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0965nyb.jpg',
         alt: 'सोपी गोष्ट',
       },
       linkLabel: {

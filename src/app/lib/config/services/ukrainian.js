@@ -61,7 +61,7 @@ const baseServiceConfig = {
     brandTitle: 'Що це було',
     brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
     image: {
-      src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p09jrvvq.jpg',
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
       alt: 'Що це було',
     },
     linkLabel: {

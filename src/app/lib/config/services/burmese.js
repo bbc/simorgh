@@ -66,7 +66,7 @@ export const service = {
       brandDescription:
         'BBC Burmese provides up-to-date news and current affairs in Burmese',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lpc.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
         alt: 'Burmese Morning Broadcast',
       },
       linkLabel: {

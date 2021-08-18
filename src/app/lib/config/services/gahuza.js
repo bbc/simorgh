@@ -64,7 +64,7 @@ export const service = {
       brandDescription:
         'Amakuru y’imonota 30 mutegurirwa na BBC Gahuzamiryango',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p082wksc.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p082wksc.jpg',
         alt: 'Amakuru kuri BBC - Gahuzamiryango',
       },
       linkLabel: {
