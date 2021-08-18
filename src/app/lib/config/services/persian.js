@@ -64,6 +64,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پادکست',
+      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandDescription:
+        'برنامه چشم انداز بامدادی رادیو بی‌بی‌سی، شامل خبر، گزارش و تحلیل از وقایع ایران و جهان',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
+        alt: 'رادیو فارسی بی‌بی‌سی',
+      },
+      linkLabel: {
+        text: 'برنامه ها',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'آگهی',
