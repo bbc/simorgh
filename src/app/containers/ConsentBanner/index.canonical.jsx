@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 
 import Banner from './Banner/index.canonical';
-import useConsentBanner from './useCookieBanner';
+import useConsentBanners from './useConsentBanners';
 import { UserContext } from '#contexts/UserContext';
 
 const Canonical = ({ onDismissFocusRef }) => {
@@ -14,7 +14,7 @@ const Canonical = ({ onDismissFocusRef }) => {
     handlePrivacyBannerRejected,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
-  } = useConsentBanner();
+  } = useConsentBanners();
 
   return (
     <>
