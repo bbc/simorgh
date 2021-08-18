@@ -218,7 +218,7 @@ describe('useConsentBanners', () => {
   });
 
   describe('handlePrivacyBannerRejected', () => {
-    it('should return showPrivacyBanner to true when handlePrivacyBannerRejected is triggered', () => {
+    it('should return showCookieBanner=TRUE when handlePrivacyBannerRejected is triggered', () => {
       cookieSetterSpy.mockClear();
 
       const { result } = renderHook(() => useConsentBanners());
@@ -235,7 +235,7 @@ describe('useConsentBanners', () => {
   });
 
   describe('handleCookieBannerAccepted', () => {
-    it('should return showCookieBanner=FALSE, sets EXPLICIT_COOKIE to 1 and sets POLICY_COOKIE to 111 when handleCookieBannerAccepted is triggered', () => {
+    it('should return showCookieBanner=FALSE and showPrivacyBanner=FALSE, sets EXPLICIT_COOKIE to 1 and sets POLICY_COOKIE to 111 when handleCookieBannerAccepted is triggered', () => {
       cookieSetterSpy.mockClear();
 
       const { result } = renderHook(() => useConsentBanners());
@@ -255,7 +255,7 @@ describe('useConsentBanners', () => {
   });
 
   describe('handleCookieBannerRejected', () => {
-    it('should return showCookieBanner=FALSE, sets EXPLICIT_COOKIE to 1 and does not set POLICY_COOKIE when handleCookieBannerRejected is triggered', () => {
+    it('should return showCookieBanner=FALSE and showPrivacyBanner=FALSE, sets EXPLICIT_COOKIE to 1 and does not set POLICY_COOKIE when handleCookieBannerRejected is triggered', () => {
       cookieSetterSpy.mockClear();
 
       const { result } = renderHook(() => useConsentBanners());
