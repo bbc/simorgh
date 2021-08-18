@@ -60,6 +60,20 @@ export const service = {
     },
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'ပေါ့တ်ကာစ်',
+      brandTitle: 'Burmese Morning Broadcast',
+      brandDescription:
+        'BBC Burmese provides up-to-date news and current affairs in Burmese',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
+        alt: 'Burmese Morning Broadcast',
+      },
+      linkLabel: {
+        text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
+        href: 'https://www.bbc.com/burmese/podcasts/p02p9f6q',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'ကြော်ငြာ',

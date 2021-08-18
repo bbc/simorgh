@@ -58,6 +58,19 @@ export const service = {
     },
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'सोपी गोष्ट',
+      brandDescription: 'दिवसातली सगळ्यांत मोठी बातमी सोप्या भाषेत',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0965nyb.jpg',
+        alt: 'सोपी गोष्ट',
+      },
+      linkLabel: {
+        text: 'भाग',
+        href: 'https://www.bbc.com/marathi/podcasts/p09437hm',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'जाहिरात',

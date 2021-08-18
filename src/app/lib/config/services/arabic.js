@@ -63,6 +63,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'البودكاست',
+      brandTitle: 'بي بي سي إكسترا',
+      brandDescription:
+        'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09kh14x.jpg',
+        alt: 'بي بي سي إكسترا',
+      },
+      linkLabel: {
+        text: 'الحلقات',
+        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'إعلان',
