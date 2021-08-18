@@ -63,7 +63,7 @@ describe('setCookieOven', () => {
       jest.resetAllMocks();
     });
 
-    it("should send error to console when logger function isn't provided", async () => {
+    it('should send error to console log', async () => {
       const error = new Error('An error');
 
       console.error = jest.fn();
