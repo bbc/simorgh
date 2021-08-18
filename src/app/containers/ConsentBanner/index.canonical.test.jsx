@@ -45,7 +45,7 @@ beforeEach(() => {
 });
 
 describe('Canonical Consent Banner', () => {
-  it('should render only privacy banner when no cookies are set', () => {
+  it('should render only the privacy banner when no cookies are set', () => {
     renderFixture();
 
     const privacyBannerHeadingEl = screen.queryByText(PRIVACY_BANNER_TEXT);
