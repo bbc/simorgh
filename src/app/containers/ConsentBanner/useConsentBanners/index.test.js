@@ -33,6 +33,7 @@ describe('useConsentBanners', () => {
       const { result } = renderHook(() => useConsentBanners());
 
       expect(result.current.showPrivacyBanner).toBe(false);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('should return showPrivacyBanner=FALSE when PRIVACY_COOKIE is anythingelse', () => {
@@ -41,6 +42,7 @@ describe('useConsentBanners', () => {
       const { result } = renderHook(() => useConsentBanners());
 
       expect(result.current.showPrivacyBanner).toBe(false);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets PRIVACY_COOKIE and returns showPrivacyBanner=TRUE when PRIVACY_COOKIE is 0', () => {
@@ -57,6 +59,7 @@ describe('useConsentBanners', () => {
         },
       );
       expect(result.current.showPrivacyBanner).toBe(true);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets PRIVACY_COOKIE and returns showPrivacyBanner=TRUE when PRIVACY_COOKIE is 1', () => {
@@ -73,6 +76,7 @@ describe('useConsentBanners', () => {
         },
       );
       expect(result.current.showPrivacyBanner).toBe(true);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets PRIVACY_COOKIE and returns showPrivacyBanner=TRUE when cookie is null', () => {
@@ -89,6 +93,7 @@ describe('useConsentBanners', () => {
         },
       );
       expect(result.current.showPrivacyBanner).toBe(true);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets PRIVACY_COOKIE without domain restrictions', () => {
@@ -106,6 +111,7 @@ describe('useConsentBanners', () => {
           domain: '.bbc.co.uk',
         },
       );
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('should return showCookieBanner=FALSE when EXPLICIT_COOKIE is 1 or 2', () => {
@@ -117,6 +123,7 @@ describe('useConsentBanners', () => {
 
         expect(cookieSetterSpy).toHaveBeenCalledTimes(0);
         expect(result.current.showCookieBanner).toBe(false);
+        expect(fetch).not.toHaveBeenCalled();
       });
     });
 
@@ -130,6 +137,7 @@ describe('useConsentBanners', () => {
       expect(cookieSetterSpy).toHaveBeenCalledTimes(0);
       expect(result.current.showPrivacyBanner).toBe(false);
       expect(result.current.showCookieBanner).toBe(true);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets POLICY_COOKIE when it is not set', () => {
@@ -143,6 +151,7 @@ describe('useConsentBanners', () => {
         domain: '.bbc.com',
       });
       expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('does not set POLICY_COOKIE when its already set', () => {
@@ -155,6 +164,7 @@ describe('useConsentBanners', () => {
         expect.anything(),
         expect.anything(),
       );
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('should return showCookieBanner=TRUE when EXPLICIT_COOKIE is 0 and sets POLICY_COOKIE when cookie is null', () => {
@@ -171,6 +181,7 @@ describe('useConsentBanners', () => {
       });
       expect(result.current.showCookieBanner).toBe(true);
       expect(result.current.showPrivacyBanner).toBe(false);
+      expect(fetch).not.toHaveBeenCalled();
     });
 
     it('sets POLICY_COOKIE without domain restrictions', () => {
@@ -185,6 +196,7 @@ describe('useConsentBanners', () => {
         expires: 365,
         domain: '.bbc.com',
       });
+      expect(fetch).not.toHaveBeenCalled();
     });
   });
 
@@ -201,6 +213,7 @@ describe('useConsentBanners', () => {
       expect(result.current.showPrivacyBanner).toBe(false);
       expect(result.current.showCookieBanner).toBe(true);
       expect(cookieSetterSpy).not.toHaveBeenCalled();
+      expect(fetch).not.toHaveBeenCalled();
     });
   });
 
@@ -217,6 +230,7 @@ describe('useConsentBanners', () => {
       expect(result.current.showPrivacyBanner).toBe(false);
       expect(result.current.showCookieBanner).toBe(true);
       expect(cookieSetterSpy).not.toHaveBeenCalled();
+      expect(fetch).not.toHaveBeenCalled();
     });
   });
 
@@ -234,7 +248,7 @@ describe('useConsentBanners', () => {
       expect(result.current.showPrivacyBanner).toBe(false);
       expect(Cookies.get(EXPLICIT_COOKIE)).toBe('1');
       expect(Cookies.get(POLICY_COOKIE)).toBe('111');
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(fetch).toHaveBeenCalledWith(
         'http://localhost/cookieoven?policy=111',
       );
     });
@@ -258,6 +272,7 @@ describe('useConsentBanners', () => {
         expect.anything(),
         expect.anything(),
       );
+      expect(fetch).not.toHaveBeenCalled();
     });
   });
 });
