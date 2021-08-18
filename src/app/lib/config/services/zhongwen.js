@@ -41,6 +41,20 @@ const baseServiceConfig = {
     hasStoryRecommendations: false,
   },
   brandSVG,
+  podcastPromo: {
+    title: 'Podcast',
+    brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',
+    brandDescription:
+      'BBC國際台粵語節目，重溫一周國際大事，兩岸四地消息，英國境況。並備有專題環節：〈記者來鴻〉、〈英國生活點滴〉和〈華人談天下〉。',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p02h1mg5.jpg',
+      alt: 'BBC 時事一周 Newsweek (Cantonese)',
+    },
+    linkLabel: {
+      text: '分集',
+      href: 'https://www.bbc.com/zhongwen/trad/podcasts/p02pc9xp',
+    },
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,

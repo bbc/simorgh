@@ -58,6 +58,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Korona: Ina Mafita?',
+      brandDescription:
+        'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p08mlbpj.jpg',
+        alt: 'Korona: Ina Mafita?',
+      },
+      linkLabel: {
+        text: 'Kashi-kashi',
+        href: 'https://www.bbc.com/hausa/podcasts/p08mlgcb',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Talla',
