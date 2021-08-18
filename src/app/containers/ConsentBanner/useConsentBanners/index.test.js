@@ -2,7 +2,7 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import Cookies from 'js-cookie';
 
-import useCookieBanner from '.';
+import useConsentBanners from '.';
 
 const PRIVACY_COOKIE = 'ckns_privacy';
 const EXPLICIT_COOKIE = 'ckns_explicit';
@@ -20,7 +20,7 @@ beforeEach(() => {
   Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
 });
 
-describe('useCookieBanner', () => {
+describe('useConsentBanners', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -30,7 +30,7 @@ describe('useCookieBanner', () => {
       Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(result.current.showPrivacyBanner).toBe(false);
     });
@@ -38,7 +38,7 @@ describe('useCookieBanner', () => {
     it('does not show the privacy banner when PRIVACY_COOKIE is anythingelse', () => {
       Cookies.set(PRIVACY_COOKIE, 'anythingelse');
       cookieSetterSpy.mockClear();
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(result.current.showPrivacyBanner).toBe(false);
     });
@@ -46,7 +46,7 @@ describe('useCookieBanner', () => {
     it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 0', () => {
       Cookies.set(PRIVACY_COOKIE, '0');
       cookieSetterSpy.mockClear();
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
@@ -62,7 +62,7 @@ describe('useCookieBanner', () => {
     it('sets PRIVACY_COOKIE and shows the privacy banner when PRIVACY_COOKIE is 1', () => {
       Cookies.set(PRIVACY_COOKIE, '1');
       cookieSetterSpy.mockClear();
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
@@ -78,7 +78,7 @@ describe('useCookieBanner', () => {
     it('sets PRIVACY_COOKIE and shows privacy banner when cookie is null', () => {
       Cookies.set(PRIVACY_COOKIE, null);
       cookieSetterSpy.mockClear();
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
@@ -96,7 +96,7 @@ describe('useCookieBanner', () => {
       Cookies.set(PRIVACY_COOKIE, null);
       cookieSetterSpy.mockClear();
 
-      renderHook(() => useCookieBanner());
+      renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(
         PRIVACY_COOKIE,
@@ -113,7 +113,7 @@ describe('useCookieBanner', () => {
         Cookies.set(EXPLICIT_COOKIE, value);
         cookieSetterSpy.mockClear();
 
-        const { result } = renderHook(() => useCookieBanner());
+        const { result } = renderHook(() => useConsentBanners());
 
         expect(cookieSetterSpy).toHaveBeenCalledTimes(0);
         expect(result.current.showCookieBanner).toBe(false);
@@ -125,7 +125,7 @@ describe('useCookieBanner', () => {
       Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledTimes(0);
       expect(result.current.showPrivacyBanner).toBe(false);
@@ -136,7 +136,7 @@ describe('useCookieBanner', () => {
       Cookies.remove(POLICY_COOKIE);
       cookieSetterSpy.mockClear();
 
-      renderHook(() => useCookieBanner());
+      renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
@@ -148,7 +148,7 @@ describe('useCookieBanner', () => {
     it('does not set POLICY_COOKIE when its already set', () => {
       cookieSetterSpy.mockClear();
 
-      renderHook(() => useCookieBanner());
+      renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).not.toHaveBeenCalledWith(
         POLICY_COOKIE,
@@ -162,7 +162,7 @@ describe('useCookieBanner', () => {
       Cookies.set(POLICY_COOKIE, null);
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
       expect(cookieSetterSpy).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
@@ -179,7 +179,7 @@ describe('useCookieBanner', () => {
       Cookies.set(POLICY_COOKIE, null);
       cookieSetterSpy.mockClear();
 
-      renderHook(() => useCookieBanner());
+      renderHook(() => useConsentBanners());
 
       expect(cookieSetterSpy).toHaveBeenCalledWith(POLICY_COOKIE, '000', {
         expires: 365,
@@ -192,7 +192,7 @@ describe('useCookieBanner', () => {
     it('hides privacy banner', () => {
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       act(() => {
         result.current.handlePrivacyBannerAccepted();
@@ -208,7 +208,7 @@ describe('useCookieBanner', () => {
     it('hides privacy banner', () => {
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       act(() => {
         result.current.handlePrivacyBannerRejected();
@@ -224,7 +224,7 @@ describe('useCookieBanner', () => {
     it('hides cookie banner, sets EXPLICIT_COOKIE to 1 and sets POLICY_COOKIE to 111', () => {
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       act(() => {
         result.current.handleCookieBannerAccepted();
@@ -244,7 +244,7 @@ describe('useCookieBanner', () => {
     it('hides cookie banner, sets EXPLICIT_COOKIE to 1 and does not set POLICY_COOKIE', () => {
       cookieSetterSpy.mockClear();
 
-      const { result } = renderHook(() => useCookieBanner());
+      const { result } = renderHook(() => useConsentBanners());
 
       act(() => {
         result.current.handleCookieBannerRejected();
