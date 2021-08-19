@@ -22,7 +22,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Title, 'h2');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Title script={scripts.latin} service="russian">
+      <PodcastPromo.Title script={scripts.latin} service="russian" dir="ltr">
         Content
       </PodcastPromo.Title>,
     );
@@ -86,7 +86,11 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.EpisodesText, 'p');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Card.EpisodesText script={scripts.latin} service="russian">
+      <PodcastPromo.Card.EpisodesText
+        script={scripts.latin}
+        service="russian"
+        dir="ltr"
+      >
         Episodes
       </PodcastPromo.Card.EpisodesText>,
     );
