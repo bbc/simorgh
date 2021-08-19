@@ -312,6 +312,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
       >
         <h2
           class="emotion-6 emotion-7"
+          dir="ltr"
           id="podcast-promo"
         >
           <svg
@@ -373,6 +374,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
           </p>
           <p
             class="emotion-24 emotion-25"
+            dir="ltr"
           >
             <svg
               aria-hidden="true"

@@ -236,6 +236,31 @@ describe('MostReadContainerCanonical', () => {
     expect(container).toBeEmpty();
   });
 
+  it(`should not render most read when no article data exists`, async () => {
+    const emptyMostRead = {
+      generated: '2021-08-03T12:18:51.749Z',
+      lastRecordTimeStamp: '2021-05-04T11:53:00Z',
+      firstRecordTimeStamp: '2021-05-04T11:38:00Z',
+      totalRecords: 0,
+      records: [],
+    };
+    fetchMock.mock(
+      `www.test.bbc.com/arabic/mostread.json`,
+      setStaleLastRecordTimeStamp(emptyMostRead),
+    );
+
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="arabic"
+          endpoint="www.test.bbc.com/arabic/mostread.json"
+        />,
+      ).container;
+    });
+    expect(container).toBeEmptyDOMElement();
+  });
+
   describe('Logging', () => {
     it('should log MOST_READ_CLIENT_REQUEST when most read data request is received', async () => {
       await act(async () => {
