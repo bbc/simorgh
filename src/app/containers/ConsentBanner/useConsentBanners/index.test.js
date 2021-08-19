@@ -13,8 +13,15 @@ const DEFAULT_POLICY_COOKIE = '111';
 
 const cookieSetterSpy = jest.spyOn(Cookies, 'set');
 
+beforeAll(() => {
+  const { location } = window;
+  delete global.window.location;
+  global.window.location = { ...location };
+});
+
 beforeEach(() => {
   global.document.domain = 'www.bbc.com';
+  global.window.location.origin = 'https://www.bbc.com';
   Cookies.set(PRIVACY_COOKIE, DEFAULT_PRIVACY_COOKIE);
   Cookies.set(EXPLICIT_COOKIE, DEFAULT_EXPLICIT_COOKIE);
   Cookies.set(POLICY_COOKIE, DEFAULT_POLICY_COOKIE);
@@ -249,8 +256,12 @@ describe('useConsentBanners', () => {
       expect(Cookies.get(EXPLICIT_COOKIE)).toBe('1');
       expect(Cookies.get(POLICY_COOKIE)).toBe('111');
       expect(fetch).toHaveBeenCalledWith(
-        'http://localhost/cookieoven?policy=111',
+        'https://www.bbc.com/cookieoven?policy=111',
       );
+      expect(fetch).toHaveBeenCalledWith(
+        'https://www.bbc.co.uk/cookieoven?policy=111',
+      );
+      expect(fetch).toHaveBeenCalledTimes(2);
     });
   });
 
