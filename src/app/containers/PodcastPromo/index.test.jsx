@@ -107,21 +107,23 @@ describe('PodcastPromo', () => {
 });
 
 describe('Event Tracking', () => {
-  const blockLevelEventTrackingData = {
-    componentName: 'podcast-promo',
-  };
-
   it('should call the view tracking hook with the correct params', () => {
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
     render(<PromoWithContext />);
 
-    expect(viewTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'podcast-promo',
+    });
   });
 
   it('should call the click tracking hook with the correct params', () => {
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-    render(<PromoWithContext />);
+    const { container } = render(<PromoWithContext />);
+    const url = container.querySelector('a').getAttribute('href');
 
-    expect(clickTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'podcast-promo',
+      url,
+    });
   });
 });

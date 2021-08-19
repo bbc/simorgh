@@ -44,14 +44,6 @@ const Promo = () => {
   const url = path(['linkLabel', 'href'], podcastPromo);
   const label = path(['linkLabel', 'text'], podcastPromo);
 
-  const viewTrackerRef = useViewTracker({
-    componentName: 'podcast-promo',
-  });
-
-  const clickTrackerRef = useClickTrackerHandler({
-    componentName: 'podcast-promo',
-  });
-
   const showPromo = [
     podcastBrandTitle,
     podcastPromoTitle,
@@ -61,6 +53,16 @@ const Promo = () => {
     url,
     label,
   ].every(Boolean);
+
+  const viewTrackerRef = useViewTracker({
+    componentName: 'podcast-promo',
+  });
+
+  const clickTrackerRef = useClickTrackerHandler({
+    componentName: 'podcast-promo',
+    url,
+  });
+
   if (!showPromo) {
     return null;
   }
