@@ -118,12 +118,10 @@ describe('Event Tracking', () => {
 
   it('should call the click tracking hook with the correct params', () => {
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-    const { container } = render(<PromoWithContext />);
-    const url = container.querySelector('a').getAttribute('href');
+    render(<PromoWithContext />);
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'podcast-promo',
-      url,
     });
   });
 });

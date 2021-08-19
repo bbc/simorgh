@@ -60,7 +60,6 @@ const Promo = () => {
 
   const clickTrackerRef = useClickTrackerHandler({
     componentName: 'podcast-promo',
-    url,
   });
 
   if (!showPromo) {
