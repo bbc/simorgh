@@ -32,7 +32,7 @@ describe('Disclaimer Component', () => {
   });
 
   it('Does not render the disclaimer when toggled off', () => {
-    const { queryByTestId } = renderComponent({ enabled: false });
-    expect(queryByTestId('disclaimer')).not.toBeInTheDocument();
+    const { container } = renderComponent({ enabled: false });
+    expect(container).toBeEmptyDOMElement();
   });
 });
