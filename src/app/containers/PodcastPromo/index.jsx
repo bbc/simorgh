@@ -33,7 +33,7 @@ const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
 
 const Promo = () => {
-  const { podcastPromo, script, service } = useContext(ServiceContext);
+  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
   const podcastPromoTitle = path(['title'], podcastPromo);
   const podcastBrandTitle = path(['brandTitle'], podcastPromo);
   const description = path(['brandDescription'], podcastPromo);
@@ -67,7 +67,7 @@ const Promo = () => {
         role="region"
         aria-labelledby="podcast-promo"
       >
-        <PromoComponent.Title id="podcast-promo">
+        <PromoComponent.Title id="podcast-promo" dir={dir}>
           {podcastPromoTitle}
         </PromoComponent.Title>
         <PromoComponent.Card>
@@ -94,7 +94,7 @@ const Promo = () => {
             <PromoComponent.Card.Description>
               {description}
             </PromoComponent.Card.Description>
-            <PromoComponent.Card.EpisodesText>
+            <PromoComponent.Card.EpisodesText dir={dir}>
               {label}
             </PromoComponent.Card.EpisodesText>
           </PromoComponent.Card.Content>
