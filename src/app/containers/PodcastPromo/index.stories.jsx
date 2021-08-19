@@ -8,6 +8,7 @@ import PodcastPromoComponent from '.';
 const serviceContextMock = {
   service: 'news',
   script: latin,
+  dir: 'ltr',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
