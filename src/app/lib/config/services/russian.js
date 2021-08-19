@@ -306,6 +306,11 @@ export const service = {
         href: 'https://www.bbc.com/russian/media-47937790',
       },
     },
+    disclaimer: {
+      text: 'Placeholder text',
+      linkText: '',
+      linkUrl: '',
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
