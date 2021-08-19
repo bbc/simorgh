@@ -442,27 +442,33 @@ describe('getAtUserId', () => {
     Cookie.set('atuserid', JSON.stringify({ val: 'uuid' }));
     cookieSetterSpy.mockClear();
     const actual = getAtUserId();
-    const [[cookieName, cookieValue, options]] = cookieSetterSpy.mock.calls;
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
 
     expect(actual).toEqual('uuid');
     expect(cookieName).toEqual('atuserid');
     expect(JSON.parse(cookieValue)).toEqual({
       val: 'uuid',
     });
-    expect(options).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should create new user id if cookie does not exist and set the id in cookies', () => {
     const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     const actual = getAtUserId();
-    const [[cookieName, cookieValue, options]] = cookieSetterSpy.mock.calls;
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
 
     expect(actual).toMatch(uuidRegex);
     expect(cookieName).toEqual('atuserid');
     expect(JSON.parse(cookieValue)).toEqual({
       val: expect.stringMatching(uuidRegex),
     });
-    expect(options).toEqual({ expires: 397, path: '/' });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });
 
