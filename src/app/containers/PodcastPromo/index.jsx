@@ -9,6 +9,8 @@ import {
   GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -42,6 +44,14 @@ const Promo = () => {
   const url = path(['linkLabel', 'href'], podcastPromo);
   const label = path(['linkLabel', 'text'], podcastPromo);
 
+  const viewTrackerRef = useViewTracker({
+    componentName: 'podcast-promo',
+  });
+
+  const clickTrackerRef = useClickTrackerHandler({
+    componentName: 'podcast-promo',
+  });
+
   const showPromo = [
     podcastBrandTitle,
     podcastPromoTitle,
@@ -60,7 +70,7 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ResponsivePodcastPromoWrapper>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef}>
       <PromoComponent
         script={script}
         service={service}
@@ -85,7 +95,7 @@ const Promo = () => {
           </PromoComponent.Card.ImageWrapper>
           <PromoComponent.Card.Content>
             <PromoComponent.Card.Title>
-              <PromoComponent.Card.Link href={url}>
+              <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                   {podcastBrandTitle}
                 </span>
