@@ -38,6 +38,11 @@ describe('ClientApp', () => {
     const { getByText } = renderClientApp();
     expect(getByText('Mocked App component')).toBeInTheDocument();
   });
+
+  it('should catch exceptions', () => {
+    jest.mock('./App', () => jest.fn(() => throw Error('Error!')));
+    expect(renderClientApp).not.toThrow();
+  });
 });
 
 describe('ServerApp', () => {
