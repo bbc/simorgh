@@ -439,7 +439,7 @@ describe('getAtUserId', () => {
   });
 
   it('should return AT user id when found and then set it in cookies again to update the expiraton date', () => {
-    Cookie.set('atuserid', JSON.stringify({ val: 'uuid' }));
+    Cookie.set('atuserid', { val: 'uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
     const [
