@@ -151,13 +151,6 @@ const useConsentBanner = () => {
     });
   };
 
-  const handlePrivacyBannerRejected = () => {
-    dispatch({
-      type: SHOW_COOKIE_BANNER,
-      payload: true,
-    });
-  };
-
   const handleCookieBannerAccepted = () => {
     dispatch({
       type: SHOW_COOKIE_BANNER,
@@ -179,7 +172,6 @@ const useConsentBanner = () => {
     showPrivacyBanner,
     showCookieBanner,
     handlePrivacyBannerAccepted,
-    handlePrivacyBannerRejected,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
   };
