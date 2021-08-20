@@ -9,6 +9,7 @@ import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
  */
 const MAX_WIDTH = '31.25rem';
 export const LAZYLOAD_OFFSET = 250;
+const MIN_WRAPPER_HEIGHT = '18.75rem';
 
 const getWrapperHeightStyles = (oEmbed, minHeight) => {
   /**
@@ -23,5 +24,6 @@ const getWrapperHeightStyles = (oEmbed, minHeight) => {
 export const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
-  ${({ oEmbed, minHeight }) => getWrapperHeightStyles(oEmbed, minHeight)}
+  ${({ oEmbed, minHeight = MIN_WRAPPER_HEIGHT }) =>
+    getWrapperHeightStyles(oEmbed, minHeight)}
 `;

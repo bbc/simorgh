@@ -19,12 +19,10 @@ import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
-const MIN_HEIGHT = '18.75rem';
-
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const [minWrapperHeight, setMinWrapperHeight] = useState(MIN_HEIGHT);
+  const [minWrapperHeight, setMinWrapperHeight] = useState();
 
   if (!blocks || !source) return null;
 

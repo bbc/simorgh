@@ -538,6 +538,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
+  min-height: 18.75rem;
 }
 
 .emotion-4 {
