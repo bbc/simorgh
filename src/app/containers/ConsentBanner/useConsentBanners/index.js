@@ -14,34 +14,36 @@ const COOKIE_BANNER_EXPLICIT_CHOICE_MADE = '1';
 const PRIVACY_COOKIE_CURRENT_VALUE = 'july2019';
 const PRIVACY_COOKIE_LEGACY_VALUES = ['0', '1'];
 const SHOW_PRIVACY_BANNER = 'SHOW_PRIVACY_BANNER';
+const HIDE_PRIVACY_BANNER = 'HIDE_PRIVACY_BANNER';
 const SHOW_COOKIE_BANNER = 'SHOW_COOKIE_BANNER';
+const HIDE_COOKIE_BANNER = 'HIDE_COOKIE_BANNER';
 const initialState = {
   showPrivacyBanner: false,
   showCookieBanner: false,
 };
 
 const bannerReducer = (state, action) => {
-  const { type, payload } = action;
-
-  switch (type) {
-    case SHOW_PRIVACY_BANNER: {
-      const showPrivacyBanner = payload;
-      const { showCookieBanner } = state;
-
+  switch (action) {
+    case SHOW_PRIVACY_BANNER:
       return {
-        showPrivacyBanner,
-        showCookieBanner: showPrivacyBanner ? false : showCookieBanner,
+        showPrivacyBanner: true,
+        showCookieBanner: false,
       };
-    }
-    case SHOW_COOKIE_BANNER: {
-      const showCookieBanner = payload;
-      const { showPrivacyBanner } = state;
-
+    case SHOW_COOKIE_BANNER:
       return {
-        showCookieBanner,
-        showPrivacyBanner: showCookieBanner ? false : showPrivacyBanner,
+        showCookieBanner: true,
+        showPrivacyBanner: false,
       };
-    }
+    case HIDE_PRIVACY_BANNER:
+      return {
+        ...state,
+        showPrivacyBanner: false,
+      };
+    case HIDE_COOKIE_BANNER:
+      return {
+        ...state,
+        showCookieBanner: false,
+      };
     default:
       return state;
   }
@@ -127,16 +129,10 @@ const useConsentBanner = () => {
       !userHasPrivacyCookie || userHasLegacyPrivacyCookie;
 
     if (shouldShowPrivacyBanner) {
-      dispatch({
-        type: SHOW_PRIVACY_BANNER,
-        payload: true,
-      });
+      dispatch(SHOW_PRIVACY_BANNER);
       setUserDidSeePrivacyBanner();
     } else if (shouldShowCookieBanner) {
-      dispatch({
-        type: SHOW_COOKIE_BANNER,
-        payload: true,
-      });
+      dispatch(SHOW_COOKIE_BANNER);
     }
 
     if (!userHasPolicyCookie) {
@@ -145,26 +141,17 @@ const useConsentBanner = () => {
   }, []);
 
   const handlePrivacyBannerAccepted = () => {
-    dispatch({
-      type: SHOW_COOKIE_BANNER,
-      payload: true,
-    });
+    dispatch(SHOW_COOKIE_BANNER);
   };
 
   const handleCookieBannerAccepted = () => {
-    dispatch({
-      type: SHOW_COOKIE_BANNER,
-      payload: false,
-    });
+    dispatch(HIDE_COOKIE_BANNER);
     setUserDidDismissCookieBanner();
     setUserDidAcceptPolicy();
   };
 
   const handleCookieBannerRejected = () => {
-    dispatch({
-      type: SHOW_COOKIE_BANNER,
-      payload: false,
-    });
+    dispatch(HIDE_COOKIE_BANNER);
     setUserDidDismissCookieBanner();
   };
 
