@@ -224,23 +224,6 @@ describe('useConsentBanners', () => {
     });
   });
 
-  describe('handlePrivacyBannerRejected', () => {
-    it('should return showCookieBanner=TRUE when handlePrivacyBannerRejected is triggered', () => {
-      cookieSetterSpy.mockClear();
-
-      const { result } = renderHook(() => useConsentBanners());
-
-      act(() => {
-        result.current.handlePrivacyBannerRejected();
-      });
-
-      expect(result.current.showPrivacyBanner).toBe(false);
-      expect(result.current.showCookieBanner).toBe(true);
-      expect(cookieSetterSpy).not.toHaveBeenCalled();
-      expect(fetch).not.toHaveBeenCalled();
-    });
-  });
-
   describe('handleCookieBannerAccepted', () => {
     it('should return showCookieBanner=FALSE and showPrivacyBanner=FALSE, sets EXPLICIT_COOKIE to 1 and sets POLICY_COOKIE to 111 when handleCookieBannerAccepted is triggered', () => {
       cookieSetterSpy.mockClear();

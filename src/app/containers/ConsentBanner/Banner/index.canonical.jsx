@@ -99,8 +99,12 @@ RejectButton.defaultProps = {
 
 CanonicalConsentBannerContainer.propTypes = {
   type: string.isRequired,
-  onReject: func.isRequired,
+  onReject: func,
   onAccept: func.isRequired,
+};
+
+CanonicalConsentBannerContainer.defaultProps = {
+  onReject: () => {},
 };
 
 export default CanonicalConsentBannerContainer;

@@ -11,7 +11,6 @@ const Canonical = ({ onDismissFocusRef }) => {
     showPrivacyBanner,
     showCookieBanner,
     handlePrivacyBannerAccepted,
-    handlePrivacyBannerRejected,
     handleCookieBannerAccepted,
     handleCookieBannerRejected,
   } = useConsentBanners();
@@ -19,11 +18,7 @@ const Canonical = ({ onDismissFocusRef }) => {
   return (
     <>
       {showPrivacyBanner && (
-        <Banner
-          type="privacy"
-          onAccept={handlePrivacyBannerAccepted}
-          onReject={handlePrivacyBannerRejected}
-        />
+        <Banner type="privacy" onAccept={handlePrivacyBannerAccepted} />
       )}
       {showCookieBanner && (
         <Banner
