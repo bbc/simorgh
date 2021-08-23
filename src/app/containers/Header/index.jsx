@@ -60,7 +60,7 @@ const HeaderContainer = () => {
       href="#content"
       lang={serviceLang && lang}
     >
-      {skipLinkText}
+      <div>{skipLinkText}</div>
     </SkipLink>
   );
 
