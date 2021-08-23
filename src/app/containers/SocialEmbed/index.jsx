@@ -22,7 +22,6 @@ const logger = nodeLogger(__filename);
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const [minWrapperHeight, setMinWrapperHeight] = useState();
 
   if (!blocks || !source) return null;
 
@@ -66,7 +65,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
         provider={provider}
         data-e2e={`${provider}-embed-${source}`}
         oEmbed={oEmbed}
-        minHeight={minWrapperHeight}
       >
         {isAmp ? (
           <AmpSocialEmbed
@@ -86,9 +84,6 @@ const SocialEmbedContainer = ({ blocks, source }) => {
               fallback={fallback}
               skipLink={skipLink}
               caption={caption}
-              onRender={() => {
-                setMinWrapperHeight('0');
-              }}
             />
           </Lazyload>
         )}
