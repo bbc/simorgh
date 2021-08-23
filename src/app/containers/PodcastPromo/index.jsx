@@ -54,13 +54,12 @@ const Promo = () => {
     label,
   ].every(Boolean);
 
-  const viewTrackerRef = useViewTracker({
-    componentName: 'podcast-promo',
-  });
+  const eventTrackingData = {
+    componentName: 'promo-podcast',
+  };
 
-  const clickTrackerRef = useClickTrackerHandler({
-    componentName: 'podcast-promo',
-  });
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
   if (!showPromo) {
     return null;
