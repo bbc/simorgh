@@ -479,7 +479,7 @@ it('should render the OG metatags', async () => {
     { content: 'Article summary.', property: 'og:description' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       property: 'og:image',
     },
     { content: 'BBC News', property: 'og:image:alt' },
@@ -515,7 +515,7 @@ it('should render the twitter metatags', async () => {
     { content: 'BBC News', name: 'twitter:image:alt' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       name: 'twitter:image:src',
     },
     { content: '@BBCNews', name: 'twitter:site' },
