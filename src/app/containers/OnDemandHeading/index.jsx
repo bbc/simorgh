@@ -3,7 +3,11 @@ import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '@bbc/psammead-headings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { GEL_SPACING, GEL_SPACING_SEPT } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
 import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { getDoublePica, getParagon } from '@bbc/gel-foundations/typography';
@@ -17,9 +21,8 @@ const BrandTitle = styled.span`
   word-break: break-word;
   ${({ script, darkMode }) => (darkMode ? '' : script && getParagon(script))}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    padding-bottom: 0;
+    padding-bottom: ${GEL_SPACING_DBL};
     word-break: break-word;
-    line-height: ${GEL_SPACING_SEPT};
   }
 `;
 
@@ -27,6 +30,9 @@ const Subheading = styled.span`
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
   margin: 0;
+  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
+    font-size: ${GEL_SPACING_TRPL};
+  }
 `;
 
 const OnDemandHeadingContainer = ({
