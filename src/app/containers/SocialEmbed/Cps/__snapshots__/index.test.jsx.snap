@@ -104,7 +104,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
+  min-height: 14rem;
 }
 
 .emotion-4 {
@@ -306,7 +306,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
+  min-height: 14rem;
 }
 
 .emotion-4 {
@@ -369,6 +369,10 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 
 .emotion-8 .twitter-tweet {
   margin-top: 0!important;
+  margin-bottom: 10rem!important;
+}
+
+.emotion-8 .twitter-tweet-rendered {
   margin-bottom: 0!important;
 }
 
@@ -538,7 +542,6 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
 .emotion-2 {
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
 }
 
 .emotion-4 {
