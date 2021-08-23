@@ -1,11 +1,14 @@
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import PodcastPromoComponent from '.';
 
 const serviceContextMock = {
   service: 'news',
   script: latin,
+  dir: 'ltr',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
@@ -23,9 +26,15 @@ const serviceContextMock = {
 };
 
 const Component = () => (
-  <ServiceContext.Provider value={serviceContextMock}>
-    <PodcastPromoComponent />
-  </ServiceContext.Provider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+    }}
+  >
+    <ServiceContext.Provider value={serviceContextMock}>
+      <PodcastPromoComponent />
+    </ServiceContext.Provider>
+  </ToggleContextProvider>
 );
 
 export default {

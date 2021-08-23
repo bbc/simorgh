@@ -111,6 +111,7 @@ exports[`Podcast Promo Card Episodes Text should match snapshot 1`] = `
 <div>
   <p
     class="emotion-0 emotion-1"
+    dir="ltr"
   >
     <svg
       aria-hidden="true"
@@ -346,6 +347,7 @@ exports[`Podcast Promo Title should match snapshot 1`] = `
   >
     <h2
       class="emotion-2 emotion-3"
+      dir="ltr"
     >
       <svg
         aria-hidden="true"
