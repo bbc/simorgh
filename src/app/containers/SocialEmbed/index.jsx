@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import Lazyload from 'react-lazyload';
