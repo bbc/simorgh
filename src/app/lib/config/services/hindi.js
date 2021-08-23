@@ -59,6 +59,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'विवेचना',
+      brandDescription:
+        'विवेचना: व्यक्तियों, विषयों या घटनाओं की गहरी पड़ताल का कार्यक्रम',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09krvnc.jpg',
+        alt: 'विवेचना',
+      },
+      linkLabel: {
+        text: 'एपिसोड्स',
+        href: 'https://www.bbc.com/hindi/podcasts/p0552909',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'विज्ञापन',

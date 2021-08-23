@@ -20,7 +20,7 @@ const Heading = styled.h2`
     fill: currentColor;
     position: relative;
     bottom: 0.3125rem;
-    right: 0.1875rem;
+    ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
   }
 `;
 
