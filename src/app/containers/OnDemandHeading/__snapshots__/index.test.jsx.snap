@@ -42,9 +42,9 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -60,12 +60,13 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 }
 
 .emotion-6 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -79,6 +80,25 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   .emotion-6 {
     font-size: 1.5rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6 37.4375rem {
+  font-size: 1.25rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 
@@ -167,9 +187,9 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-2 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -185,12 +205,13 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 .emotion-6 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -204,6 +225,25 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   .emotion-6 {
     font-size: 1.5rem;
     line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+}
+
+.emotion-6 37.4375rem {
+  font-size: 1.25rem;
+  line-height: 1rem;
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-6 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 }
 

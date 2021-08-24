@@ -7,6 +7,7 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import {
   MEDIA_QUERY_TYPOGRAPHY,
@@ -27,21 +28,26 @@ const BrandTitle = styled.span`
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: ${GEL_SPACING_DBL};
     word-break: break-word;
+    line-height: ${GEL_SPACING_QUAD};
   }
 `;
 
 const Subheading = styled.span`
+  display: inline-block;
+  margin: 0;
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
-  margin: 0;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     font-size: ${GEL_SPACING_TRPL};
+    line-height: 1.75rem;
   }
   ${GEL_GROUP_2_SCREEN_WIDTH_MAX} {
     font-size: 1.25rem;
+    line-height: ${GEL_SPACING_DBL};
   }
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
+    line-height: 1.375rem;
   }
 `;
 
