@@ -8,7 +8,11 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
+import {
+  MEDIA_QUERY_TYPOGRAPHY,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { getDoublePica, getParagon } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
@@ -32,6 +36,12 @@ const Subheading = styled.span`
   margin: 0;
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     font-size: ${GEL_SPACING_TRPL};
+  }
+  ${GEL_GROUP_2_SCREEN_WIDTH_MAX} {
+    font-size: 1.25rem;
+  }
+  @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    font-size: 1.125rem;
   }
 `;
 
