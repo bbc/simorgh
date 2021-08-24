@@ -64,7 +64,7 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'البودكاست',
+      title: 'بودكاست',
       brandTitle: 'بي بي سي إكسترا',
       brandDescription:
         'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
