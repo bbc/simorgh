@@ -17,7 +17,7 @@ const getWrapperHeightStyles = oEmbed => {
    */
   const MIN_HEIGHT = '14rem';
   if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
-  if (oEmbed) return `min-height: ${MIN_HEIGHT}`;
+  if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
   return '';
 };
 
