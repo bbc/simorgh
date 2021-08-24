@@ -54,7 +54,7 @@ module.exports = ({
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
-      disableHostCheck: true,
+      allowedHosts: 'all',
     },
     resolve: {
       fallback: {
@@ -227,10 +227,6 @@ module.exports = ({
       }),
     ],
   };
-
-  if (START_DEV_SERVER) {
-    clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
-  }
 
   if (IS_PROD) {
     const BrotliPlugin = require('brotli-webpack-plugin');

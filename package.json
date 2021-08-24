@@ -55,7 +55,7 @@
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
-    "webpack:dev:client": "NODE_ENV=development webpack serve --inline --hot --env config='client'",
+    "webpack:dev:client": "NODE_ENV=development webpack serve --hot --env config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env config='server'"
   },
   "repository": {
