@@ -40,11 +40,7 @@ module.exports = ({
   const clientConfig = {
     target: ['web', 'es5'], // compile for browser environment
     entry: START_DEV_SERVER
-      ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
-          'webpack/hot/only-dev-server',
-          './src/client',
-        ]
+      ? ['webpack/hot/only-dev-server', './src/client']
       : ['./src/poly', './src/client'],
     devServer: {
       host: 'localhost',
