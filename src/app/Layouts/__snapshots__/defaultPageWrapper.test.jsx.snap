@@ -1014,7 +1014,9 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             dir="ltr"
             href="#content"
           >
-            Skip to content
+            <div>
+              Skip to content
+            </div>
           </a>
         </div>
       </div>
