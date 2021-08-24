@@ -61,13 +61,13 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ပေါ့တ်ကာစ်',
-      brandTitle: 'Burmese Morning Broadcast',
+      title: 'ပေါ့ဒ်ကတ်စ်',
+      brandTitle: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
       brandDescription:
         'BBC Burmese provides up-to-date news and current affairs in Burmese',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
-        alt: 'Burmese Morning Broadcast',
+        alt: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
       },
       linkLabel: {
         text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
