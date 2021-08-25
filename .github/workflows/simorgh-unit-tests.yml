@@ -47,7 +47,7 @@ jobs:
 
       - name: Install Node Modules
         if: steps.cache.outputs.cache-hit != 'true'
-        run: ./scripts/yarnInstallCi.sh
+        run: ./scripts/installNodeModules.sh
 
       - name: Build Simorgh
         run: |
