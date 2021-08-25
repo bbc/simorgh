@@ -37,17 +37,17 @@ const Subheading = styled.span`
   margin: 0;
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
-  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    font-size: ${GEL_SPACING_TRPL};
-    line-height: 1.75rem;
-  }
-  ${GEL_GROUP_2_SCREEN_WIDTH_MAX} {
-    font-size: 1.25rem;
-    line-height: ${GEL_SPACING_DBL};
-  }
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    font-size: 1.25rem;
+    line-height: ${GEL_SPACING_DBL};
+  }
+  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
+    font-size: ${GEL_SPACING_TRPL};
+    line-height: 1.75rem;
   }
 `;
 
