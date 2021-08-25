@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import styled from '@emotion/styled';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
 import AmpCookieBanner from './cookie.amp';
