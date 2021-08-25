@@ -365,22 +365,24 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-25 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-25 37.4375rem {
-  font-size: 1.25rem;
-  line-height: 1rem;
-}
-
 @media (max-width: 22.5rem) and (min-width: 15rem) {
   .emotion-25 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 1.25rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -955,22 +957,24 @@ exports[`should show the expired content message if episode is expired 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-22 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-22 37.4375rem {
-  font-size: 1.25rem;
-  line-height: 1rem;
-}
-
 @media (max-width: 22.5rem) and (min-width: 15rem) {
   .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1536,22 +1540,24 @@ exports[`should show the future content message if episode is not yet available 
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-22 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-22 37.4375rem {
-  font-size: 1.25rem;
-  line-height: 1rem;
-}
-
 @media (max-width: 22.5rem) and (min-width: 15rem) {
   .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2117,22 +2123,24 @@ exports[`should show the future content message if episode is pending 1`] = `
   }
 }
 
-@media (min-width: 37.5rem) {
-  .emotion-22 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-.emotion-22 37.4375rem {
-  font-size: 1.25rem;
-  line-height: 1rem;
-}
-
 @media (max-width: 22.5rem) and (min-width: 15rem) {
   .emotion-22 {
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
