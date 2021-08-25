@@ -38,15 +38,19 @@ const Subheading = styled.span`
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
   @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    // For 18px font size
+    // For 22px line height
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    // For 20px font size
     font-size: 1.25rem;
     line-height: ${GEL_SPACING_DBL};
   }
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     font-size: ${GEL_SPACING_TRPL};
+    // For 28px line height
     line-height: 1.75rem;
   }
 `;
