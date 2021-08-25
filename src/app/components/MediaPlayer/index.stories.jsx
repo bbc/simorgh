@@ -122,6 +122,7 @@ export const AMP = () => (
   />
 );
 
+AMP.parameters = { chromatic: { disable: true } };
 AMP.decorators = [ampDecorator];
 
 export const AMPAudioSkin = () => (

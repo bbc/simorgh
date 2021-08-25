@@ -19,7 +19,7 @@ const EpisodesText = styled.p`
     height: ${GEL_SPACING_DBL};
     position: relative;
     bottom: 0.125rem;
-    right: 0.1875rem;
+    ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
   }
 `;
 

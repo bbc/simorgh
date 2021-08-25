@@ -29,7 +29,7 @@ const CanonicalChartbeatBeacon = ({ chartbeatConfig }) => {
         })();
       `}
       </script>
-      <script async type="text/javascript" src={chartbeatSource} />
+      <script defer type="text/javascript" src={chartbeatSource} />
     </Helmet>
   );
 };

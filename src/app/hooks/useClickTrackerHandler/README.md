@@ -46,7 +46,7 @@ const Promo = () => {
    */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
-    link: 'promo-link',
+    url: 'promo-link',
   });
 
   return (
@@ -92,35 +92,35 @@ const TopStories = () => {
   const topStories = [
     {
       title: 'Top Story 1',
-      link: 'link-1',
+      url: 'link-1',
     },
     {
       title: 'Top Story 2',
-      link: 'link-2',
+      url: 'link-2',
     },
     {
       title: 'Top Story 3',
-      link: 'link-3',
+      url: 'link-3',
     },
   ];
-  const TopStory = ({ title, link }) => {
+  const TopStory = ({ title, url }) => {
 
     const clickTrackerHandler = useClickTrackerHandler({
       ...eventTrackingData,
-      link,
+      url,
     });
 
     return (
       <li onClick={clickTrackerHandler}>
-        <a href={link}>{title}</a>
+        <a href={url}>{title}</a>
       </li>,
     ),
   );
 
   return (
     <ol>
-      {topStories.map(({ title, link }) => (
-        <TopStory title={title} link={link} />
+      {topStories.map(({ title, url }) => (
+        <TopStory title={title} url={url} />
       ))}
     </ol>
   );
