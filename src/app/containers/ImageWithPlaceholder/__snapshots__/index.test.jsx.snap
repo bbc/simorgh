@@ -134,7 +134,7 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
   }
 }
 
-.emotion-2 {
+.emotion-3 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -142,6 +142,7 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
   animation: animation-0 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+  height: auto;
 }
 
 <div>
@@ -151,7 +152,8 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
   >
     <img
       alt="Pauline Clayton"
-      class="emotion-2 emotion-3"
+      class="emotion-2 emotion-3 emotion-4"
+      height="360"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
       srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
       width="640"
