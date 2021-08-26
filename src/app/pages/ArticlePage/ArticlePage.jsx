@@ -34,6 +34,7 @@ import { GelPageGrid, GridItemLarge } from '#components/Grid';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 import articleMediaPlayer from '#containers/ArticleMediaPlayer';
 import LinkedData from '#containers/LinkedData';
 import MostReadContainer from '#containers/MostRead';
@@ -168,7 +169,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     <>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
-      <ComscoreAnalytics />
+      <ComscoreAnalytics articleId={getArticleId(pageData)}
+      />
+      <NielsenAnalytics />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
