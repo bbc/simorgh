@@ -161,7 +161,7 @@ const linkPromoAlsoItemsPropTypes = shape({
 
 IndexAlsosContainer.propTypes = {
   alsoItems: arrayOf(
-    oneOfType(assetPromoAlsoItemsPropTypes, linkPromoAlsoItemsPropTypes),
+    oneOfType([assetPromoAlsoItemsPropTypes, linkPromoAlsoItemsPropTypes]),
   ).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,

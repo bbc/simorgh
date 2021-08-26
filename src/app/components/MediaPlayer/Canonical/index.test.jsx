@@ -4,23 +4,51 @@ import { render } from '@testing-library/react';
 import Canonical from '.';
 import '@testing-library/jest-dom/extend-expect';
 
-const Player = additionalProps => (
-  <Canonical
-    src="http://foo.bar/iframe/amp"
-    placeholderSrc="http://foo.bar/placeholder.png"
-    placeholderSrcset="http://foo.bar/placeholder.png"
-    showPlaceholder={false}
-    title="Media player"
-    service="news"
-    noJsMessage="Please enable Javascript or try a different browser"
-    {...additionalProps}
-  />
-);
+const Player = additionalProps => {
+  const func = jest.fn();
+  return (
+    <Canonical
+      src="http://foo.bar/iframe/amp"
+      placeholderSrc="http://foo.bar/placeholder.png"
+      placeholderSrcset="http://foo.bar/placeholder.png"
+      showPlaceholder={false}
+      title="Media player"
+      service="news"
+      noJsMessage="Please enable Javascript or try a different browser"
+      onMediaInitialised={func}
+      onMediaPlaying={func}
+      onMediaPause={func}
+      onMediaEnded={func}
+      onMediaPlaylistEnded={func}
+      onMediaError={func}
+      darkMode={false}
+      showLoadingImage={false}
+      message="Message"
+      {...additionalProps}
+    />
+  );
+};
 
 describe('Media Player: Canonical', () => {
+  const func = jest.fn();
   shouldMatchSnapshot(
     'should render an iframe',
-    <Canonical src="https://foo.bar/iframe" title="Media player" />,
+    <Canonical
+      src="https://foo.bar/iframe"
+      title="Media player"
+      service="news"
+      onMediaInitialised={func}
+      onMediaPlaying={func}
+      onMediaPause={func}
+      onMediaEnded={func}
+      onMediaPlaylistEnded={func}
+      onMediaError={func}
+      darkMode={false}
+      showLoadingImage={false}
+      showPlaceholder={false}
+      noJsMessage="No JS"
+      message="Message"
+    />,
   );
 
   it('should contain the noscript tag for no-JS scenarios ', () => {

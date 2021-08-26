@@ -4,17 +4,24 @@ import chalk from 'chalk';
 const REACT_FAILED_PROP_TYPE = 'Failed prop type';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
+const REACT_PSUEDO_CLASS = 'The pseudo class ":first-child"';
+const REACT_UNMATCHED_GET = 'Unmatched GET to';
 const REACT_ERRORS = [
   REACT_FAILED_PROP_TYPE,
   REACT_NO_KEYS,
   REACT_DUPLICATE_KEYS,
 ];
+const REACT_SUPPRESSED_WARNINGS = [REACT_PSUEDO_CLASS, REACT_UNMATCHED_GET];
 const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
+const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
 
-const { error } = console;
+const { error, warn } = console;
 
 const didSuppressWarning = message => {
   const { expectedWarnings } = window;
+  if (REACT_SUPPRESSED_REGEX.test(message)) {
+    return true;
+  }
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {
       const warningsRegex = new RegExp(
@@ -45,4 +52,10 @@ console.error = (message, ...rest) => {
   }
 
   error(message, ...rest);
+};
+
+// eslint-disable-next-line no-console
+console.warn = (message, ...rest) => {
+  if (didSuppressWarning(message)) return;
+  warn(message, ...rest);
 };

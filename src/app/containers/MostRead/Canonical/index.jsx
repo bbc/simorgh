@@ -49,6 +49,7 @@ const CanonicalMostRead = ({
   const [items, setItems] = useState(filteredData);
 
   useEffect(() => {
+    const abortController = new AbortController();
     if (!items) {
       const handleResponse = url => async response => {
         if (!response.ok) {
@@ -70,7 +71,7 @@ const CanonicalMostRead = ({
       const fetchMostReadData = pathname => {
         logger.info(MOST_READ_CLIENT_REQUEST, { url: endpoint });
 
-        return fetch(pathname)
+        return fetch(pathname, { signal: abortController.signal })
           .then(handleResponse(pathname))
           .catch(error => {
             logger.error(MOST_READ_FETCH_ERROR, {
@@ -82,6 +83,10 @@ const CanonicalMostRead = ({
 
       fetchMostReadData(endpoint);
     }
+
+    return () => {
+      abortController.abort();
+    };
   }, [
     endpoint,
     numberOfItems,

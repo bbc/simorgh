@@ -47,6 +47,9 @@ export const renderProgramCard = ({
   displaySummary = boolean('show summary', true),
   linkComponent = 'a',
   linkComponentAttr = 'href',
+  summary = 'This is a summary',
+  link = 'test',
+  brandTitle = 'Title',
 }) => {
   const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
 
@@ -56,6 +59,9 @@ export const renderProgramCard = ({
     durationLabel: dir === 'rtl' ? 'المدة الزمنية %duration%' : durationLabel,
     linkComponent,
     linkComponentAttr,
+    summary,
+    link,
+    brandTitle,
   };
 
   const program = {
