@@ -1,0 +1,416 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:pidgin/58228654",
+      "locators": {
+        "assetUri": "/pidgin/58228654",
+        "cpsUrn": "urn:bbc:content:assetUri:pidgin/58228654",
+        "curie": "http://www.bbc.co.uk/asset/e65222e4-464a-4c0c-88bd-f53e064fea70",
+        "assetId": "58228654"
+      },
+      "type": "STY",
+      "createdBy": "pidgin-v6",
+      "language": "pcm",
+      "lastUpdated": 1629104142896,
+      "firstPublished": 1629101194000,
+      "lastPublished": 1629101194000,
+      "timestamp": 1629101194000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "cps_asset_type": "sty",
+        "counterName": "pidgin.story.58228654.page",
+        "cps_asset_id": "58228654"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3e39461b000e9dabfb",
+            "campaignName": "WS - Keep me on trend"
+          }
+        ],
+        "taggings": []
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "crosshead"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "PIDGIN",
+        "producerId": "70"
+      },
+      "readTime": 2,
+      "siteUri": "/pidgin"
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "119948965",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/DE98/production/_119948965_kabulairport.jpg",
+          "path": "/cpsprodpb/DE98/production/_119948965_kabulairport.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "US troops take over airport",
+          "copyrightHolder": "AFP",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Pipo dey run comot from Kabul di capital of Afghanistan as di Taliban don takeover di city.",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Na katakata for di Kabul airport as thousands of pipo try to fly comot from Afghanistan before di Taliban go fully establish for di kontri.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Di confusion everywia for di airport force US troops to fire warning shots for air to prevent di crowd of desperate citizens from running into planes, one official tell tori pipo Reuters.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Di official say: “Di crowd  bin dey out of control, di firing na only to reduce tension.”",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>pidgin/world-58213504</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Who be di Taliban wey dey at di centre of di war for Afghanistan?",
+                    "headline": "Taliban Afghanistan war: Who be di Talibans wey dey at di centre of di fight for di South Asia kontri?",
+                    "overtyped": "Who be di Taliban wey dey at di centre of di war for Afghanistan?"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/pidgin/world-58213504"
+                  },
+                  "summary": "Di hardline Islamist group don rise again as di US withdraw from Afghanistan afta 20 years.",
+                  "timestamp": 1629045052000,
+                  "language": "pcm",
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:pidgin/world-58213504",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>pidgin/tori-58208228</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Wetin dey happun for Afghanistan as militants take control of major cities",
+                    "headline": "Afghanistan: Militants take control of major cities for Afghanistan",
+                    "overtyped": "Wetin dey happun for Afghanistan as militants take control of major cities"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/pidgin/tori-58208228"
+                  },
+                  "summary": "Thousands of Afghans dey seek refuge for di capital Kabul as militants seize more key cities.",
+                  "timestamp": 1628878682000,
+                  "language": "pcm",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:pidgin/tori-58208228",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "US military don secure di site and dem don take over air traffic control to evacuate American and allied staff on military planes.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "But commercial flights dey suspended, as hundreds of Afghans and other foreign nationals dey stranded.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Afghanistan Civil Aviation Authorities cancel all flights out of di Kabul international airport.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Aside from pipo wey dey try fly out of di kontri, many odas enta road and traffic jam also full everywia as pipo dey try drive out of Kabul wit dia families.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "As some of di pipo dey run comot from Kabul and out of Afghanistan, odas according to one Afghan Member of Parliament, Farzana Elham, “dey hide inside dia house.” ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Earlier, pipo bin gada for banks hoping to withdraw dia money as dem dey fear say dem fit lose dia savings.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Di militants also release prisoners for Kabul prison wey don call for peaceful transition of power.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Some districts for Kabul don already fall into di hand of di Talibans.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "All di oda major cities for di kontri don already fall to di Taliban and dem don almost completely take over di kontri.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Afghanistan and oda times militia take over presidential palace",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "id": "119168870",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/1ECE/production/_119168870_gettyimages-1204741868.jpg",
+          "path": "/cpsprodpb/1ECE/production/_119168870_gettyimages-1204741868.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Afghan Taliban fighters and villagers attend a gathering as they celebrate the peace deal signed between US and Taliban in Laghman Province, Alingar district on March 2, 2020.",
+          "caption": "Taliban fighters in Laghman Province for March 2020. Di group dey resurgent as di US prepares to withdraw",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "E no longer be news say Taliban no only dey in control of Kabul wey be capital of Afghanistan but dem don also seize control of di presidential palace on Sunday.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Afghan presido Ashraf Ghani leave di kontri as Taliban dey approach Kabul wey throw di kontri into limbo.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "See di oda times wey militias take over presidential palace.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>Yemen presidential palace </bold>- Dis one happun for 2015 as fight bin dey go on between Houthi fighters and di goment over control.",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "According to BBC report on di 3rd of April, di Houthi militia push through di city with armoured tanks killing 44 pipo before dem take control of di palace.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Di presido Abdallah Saleh later run go Saudi Arabia for im safety.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>Central African Republic</bold> - Dis one happun for 2013 as rebels take control of di presidential palace but presido Francois Bozize don already run comot for di palace at di time.",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "According to BBC report heavy fighting bin happun between di seleke rebels and goment forces on di 24th of March before di rebels take control.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Na later tori pipo confam say presido Bozize and im family escape go Congo.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "Katakata for airport, traffic for roads as Afghans dey run from Taliban rule",
+        "headline": "Taliban: Afghanistan airport don dey US troops hand as Afghans dey try run from Taliban rule"
+      },
+      "locators": {
+        "assetUri": "/pidgin/58228654",
+        "cpsUrn": "urn:bbc:content:assetUri:pidgin/58228654",
+        "curie": "http://www.bbc.co.uk/asset/e65222e4-464a-4c0c-88bd-f53e064fea70",
+        "assetId": "58228654"
+      },
+      "summary": "Afghans dey run comot from dia kontri afta Taliban takeover goment.",
+      "timestamp": 1629101194000,
+      "language": "pcm",
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e3e39461b000e9dabfb",
+            "campaignName": "WS - Keep me on trend"
+          }
+        ],
+        "taggings": []
+      },
+      "indexImage": {
+        "id": "119948966",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/105A8/production/_119948966_kabulairport.jpg",
+        "path": "/cpsprodpb/105A8/production/_119948966_kabulairport.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "US troops take over airport",
+        "copyrightHolder": "AFP",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:pidgin/58228654",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Domot",
+        "uri": "/pidgin/front_page",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Pidgin",
+        "uri": "/pidgin",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "see-alsos",
+          "promos": [
+            {
+              "headlines": {
+                "shortHeadline": "Who be di Taliban wey dey at di centre of di war for Afghanistan?",
+                "headline": "Taliban Afghanistan war: Who be di Talibans wey dey at di centre of di fight for di South Asia kontri?"
+              },
+              "locators": {
+                "assetUri": "/pidgin/world-58213504",
+                "cpsUrn": "urn:bbc:content:assetUri:/pidgin/world-58213504"
+              },
+              "summary": "Di hardline Islamist group don rise again as di US withdraw from Afghanistan afta 20 years.",
+              "timestamp": 1629045052000,
+              "language": "pcm",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "119168870",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1ECE/production/_119168870_gettyimages-1204741868.jpg",
+                "path": "/cpsprodpb/1ECE/production/_119168870_gettyimages-1204741868.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Afghan Taliban fighters and villagers attend a gathering as they celebrate the peace deal signed between US and Taliban in Laghman Province, Alingar district on March 2, 2020.",
+                "caption": "Taliban fighters in Laghman Province in March 2020. The group is resurgent as the US prepares to withdraw",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/world-58213504",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "Afghan ministers 'prepare for peaceful transfer of power'",
+                "headline": "Afghanistan Taliban conflict: Afghan ministers 'prepare for peaceful transfer of power'"
+              },
+              "locators": {
+                "assetUri": "/pidgin/world-58220175",
+                "cpsUrn": "urn:bbc:content:assetUri:/pidgin/world-58220175"
+              },
+              "summary": "Di acting Afghan interior minister don tok inside one video, wey local outlet Tolo TV broadcast, say dem go \"peacefully transfer power\" to transitional government.",
+              "timestamp": 1629020809000,
+              "language": "pcm",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "119937438",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14611/production/_119937438_gettyimages-1234668246.jpg",
+                "path": "/cpsprodpb/14611/production/_119937438_gettyimages-1234668246.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Afghan conflict",
+                "caption": "Afghan police tanda for checkpoints inside Kabul",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/world-58220175",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "Wetin dey happun for Afghanistan as militants take control of major cities",
+                "headline": "Afghanistan: Militants take control of major cities for Afghanistan"
+              },
+              "locators": {
+                "assetUri": "/pidgin/tori-58208228",
+                "cpsUrn": "urn:bbc:content:assetUri:/pidgin/tori-58208228"
+              },
+              "summary": "Thousands of Afghans dey seek refuge for di capital Kabul as militants seize more key cities.",
+              "timestamp": 1628878682000,
+              "language": "pcm",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "119923270",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1C40/production/_119923270_afghanistan_family_getty.jpg",
+                "path": "/cpsprodpb/1C40/production/_119923270_afghanistan_family_getty.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "A displaced family in a tent at a makeshift camp in Kabul",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:pidgin/tori-58208228",
+              "type": "cps"
+            }
+          ]
+        }
+      ]
+    }
+  }

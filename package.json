@@ -28,7 +28,6 @@
     "build:storybook": "node .storybook/buildFontPreloads && build-storybook -s .storybook/static -c .storybook -o storybook_dist",
     "build:test": "cp envConfig/test.env .env && NODE_ENV=production webpack",
     "build:test:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/test.env > .env && NODE_ENV=production webpack",
-    "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "cypress": "cypress run",
     "cypress:interactive": "cypress open",
     "cypress:3rdParty": "yarn cypress -- --project ./3rdPartyCypress/.",
@@ -172,8 +171,8 @@
     "@storybook/addon-docs": "6.3.6",
     "@storybook/addon-knobs": "6.2.9",
     "@storybook/addon-viewport": "6.3.6",
-    "@storybook/builder-webpack5": "6.4.0-alpha.30",
-    "@storybook/manager-webpack5": "6.4.0-alpha.30",
+    "@storybook/builder-webpack5": "6.4.0-alpha.31",
+    "@storybook/manager-webpack5": "6.4.0-alpha.31",
     "@storybook/react": "6.3.6",
     "@storybook/theming": "6.3.6",
     "@testing-library/dom": "8.1.0",
@@ -240,7 +239,7 @@
     "terser-webpack-plugin": "5.1.4",
     "timemachine": "0.3.2",
     "wait-on": "6.0.0",
-    "webpack": "5.50.0",
+    "webpack": "5.51.1",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.8.0",
     "webpack-dev-server": "3.11.2",
@@ -265,5 +264,6 @@
     "commitHash": "383522b",
     "deployEnvironment": "green",
     "version": "1.0.0"
-  }
+  },
+  "packageManager": "yarn@3.0.0"
 }
