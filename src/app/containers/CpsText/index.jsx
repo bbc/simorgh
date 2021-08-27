@@ -10,20 +10,17 @@ const CpsTextContainer = ({ blocks, componentsToRender }) => {
   return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
 };
 
-export const CpsTextPropTypes = {
+CpsTextContainer.propTypes = {
   blocks: arrayOf(
     shape({
       type: string.isRequired,
     }),
-  ).isRequired,
-};
-
-CpsTextContainer.propTypes = {
-  ...CpsTextPropTypes,
+  ),
   componentsToRender: objectOf(elementType),
 };
 
 CpsTextContainer.defaultProps = {
+  blocks: null,
   componentsToRender: {
     paragraph,
     unorderedList,

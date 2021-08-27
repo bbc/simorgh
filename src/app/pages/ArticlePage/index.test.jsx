@@ -186,6 +186,8 @@ it('should render a news article correctly', async () => {
     </Context>,
   );
 
+  await waitFor(() => container.querySelector('#Most-Read'));
+
   expect(container).toMatchSnapshot();
 });
 

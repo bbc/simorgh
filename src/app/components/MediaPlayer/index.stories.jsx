@@ -134,6 +134,7 @@ export const AMPAudioSkin = () => (
     skin="audio"
     title="Audio player"
     noJsMessage="no js"
+    service="news"
   />
 );
 
