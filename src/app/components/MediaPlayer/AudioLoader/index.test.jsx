@@ -1,11 +1,15 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import '@testing-library/jest-dom/extend-expect';
 
 import AudioLoader from '.';
 
 describe('Audio Loader', () => {
+  suppressPropWarnings(['children', 'string']);
   shouldMatchSnapshot(
     'should match snapshot',
     <AudioLoader isLoading>Content</AudioLoader>,
