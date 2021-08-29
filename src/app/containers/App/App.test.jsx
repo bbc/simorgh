@@ -41,6 +41,8 @@ describe('App', () => {
   const updatedToggles = { mockToggle: { enabled: false } };
   getToggles.mockReturnValue(updatedToggles);
 
+  window.scrollTo = jest.fn(() => {});
+
   beforeEach(() => {
     ({ rerender, container } = render(
       <App

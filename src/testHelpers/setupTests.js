@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/extend-expect';
 import chalk from 'chalk';
 
-const REACT_FAILED_PROP_TYPE = 'Failed prop type';
+const REACT_FAILED_PROP_TYPE = 'Failed prop';
 const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
 const REACT_PSUEDO_CLASS = 'The pseudo class ":first-child"';
@@ -17,7 +17,7 @@ const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
 
 const { error, warn } = console;
 
-const didSuppressWarning = message => {
+const didSuppressWarning = (message, ...rest) => {
   const { expectedWarnings } = window;
   if (REACT_SUPPRESSED_REGEX.test(message)) {
     return true;
@@ -25,9 +25,10 @@ const didSuppressWarning = message => {
   if (expectedWarnings && Array.isArray(expectedWarnings)) {
     for (let i = 0; i < expectedWarnings.length; i += 1) {
       const warningsRegex = new RegExp(
-        [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('.*'),
+        [REACT_FAILED_PROP_TYPE, ...expectedWarnings[i]].join('*.*'),
       );
-      if (warningsRegex.test(message)) {
+      const consoleFormattedMessage = message.replace('%s', rest);
+      if (warningsRegex.test(consoleFormattedMessage)) {
         window.expectedWarnings.splice(i, 1);
         return true;
       }
@@ -38,7 +39,7 @@ const didSuppressWarning = message => {
 
 // eslint-disable-next-line no-console
 console.error = (message, ...rest) => {
-  if (didSuppressWarning(message)) return;
+  if (didSuppressWarning(message, ...rest)) return;
 
   if (REACT_ERRORS_REGEX.test(message)) {
     throw new Error(

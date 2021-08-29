@@ -96,7 +96,6 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   } = radioScheduleConfig;
 
   useEffect(() => {
-    const abortController = new AbortController();
     if (!radioSchedule) {
       const handleResponse = url => async response => {
         if (!response.ok) {
@@ -116,7 +115,7 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
       };
 
       const fetchRadioScheduleData = pathname =>
-        fetch(pathname, { mode: 'no-cors', signal: abortController.signal })
+        fetch(pathname, { mode: 'no-cors' })
           .then(handleResponse(pathname))
           .catch(error => {
             logger.error(
@@ -133,10 +132,6 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
 
       fetchRadioScheduleData(endpoint);
     }
-
-    return () => {
-      abortController.abort();
-    };
   }, [endpoint, service, timeOnServer, radioSchedule]);
 
   if (!radioSchedule) {
