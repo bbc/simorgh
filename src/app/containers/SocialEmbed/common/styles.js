@@ -15,15 +15,13 @@ const getWrapperHeightStyles = oEmbed => {
    * Adjust MIN_HEIGHT to configure the default minimum height of Social Embed
    * wrappers. This helps reduce layout shift. It is not applied to fallbacks.
    */
-  const MIN_HEIGHT = '18.75rem';
+  const MIN_HEIGHT = '14rem';
   if (oEmbed?.height) return `min-height: ${oEmbed.height / 16}rem`;
   if (oEmbed) return `min-height: ${MIN_HEIGHT};`;
   return '';
 };
 
 export const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: ${GEL_SPACING_TRPL};
   max-width: ${MAX_WIDTH};
   ${({ oEmbed }) => getWrapperHeightStyles(oEmbed)}
