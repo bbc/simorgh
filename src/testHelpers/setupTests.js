@@ -6,12 +6,17 @@ const REACT_NO_KEYS = 'Each child in a list should have a unique "key" prop';
 const REACT_DUPLICATE_KEYS = 'Encountered two children with the same key';
 const REACT_PSUEDO_CLASS = 'The pseudo class ":first-child"';
 const REACT_UNMATCHED_GET = 'Unmatched GET to';
+const REACT_UNMOUNTED = 'React state update on an unmounted component';
 const REACT_ERRORS = [
   REACT_FAILED_PROP_TYPE,
   REACT_NO_KEYS,
   REACT_DUPLICATE_KEYS,
 ];
-const REACT_SUPPRESSED_WARNINGS = [REACT_PSUEDO_CLASS, REACT_UNMATCHED_GET];
+const REACT_SUPPRESSED_WARNINGS = [
+  REACT_PSUEDO_CLASS,
+  REACT_UNMATCHED_GET,
+  REACT_UNMOUNTED,
+];
 const REACT_ERRORS_REGEX = new RegExp(REACT_ERRORS.join('|'));
 const REACT_SUPPRESSED_REGEX = new RegExp(REACT_SUPPRESSED_WARNINGS.join('|'));
 
