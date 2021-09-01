@@ -3,7 +3,7 @@ const excludeElements = [
 ];
 const context = '*'.concat(
   excludeElements
-    .map(selector => `:not(${selector}):not(${selector}) *`)
+    .map(selector => `:not(${selector}):not(${selector} *)`)
     .join(''),
 );
 
@@ -21,7 +21,7 @@ const logA11yViolations = violations => {
       impact,
       description,
       occurrences: nodes.length,
-      paths: nodes.map(({ target }) => target).join(', '),
+      paths: nodes.map(({ target }) => target).join('\n'),
     }),
   );
 
@@ -38,9 +38,11 @@ export default () => {
       },
       rules: [
         {
-          // We need to exclude this rule for AV embeds because of the inner & outer double iframe setup we have with media players.
-          // When Toucan is implemented we won't have iframes so we can remove the disabling of the frame-title-unique rule.
-          // Please remove this when Toucan is implemented so we can catch real frame-title-unique a11y errors.
+          /*
+           * We need to exclude this rule for AV embeds because of the inner & outer double iframe setup we have with media players.
+           * When Toucan is implemented we won't have iframes so we can remove the disabling of the frame-title-unique rule.
+           * Please remove this when Toucan is implemented so we can catch real frame-title-unique a11y errors.
+           */
           id: 'frame-title-unique',
           selector: '*:not([src*="/ws/av-embeds/"])',
         },
