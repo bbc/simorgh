@@ -31,7 +31,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
         '[id*="include-"]', // VJ includes
       ];
       const context = '*'.concat(
-        excludeElements.map(selector => `:not(${selector})`).join(''),
+        excludeElements.map(selector => `:not(${selector}) > *`).join(''),
       );
 
       cy.injectAxe();
