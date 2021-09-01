@@ -7,6 +7,14 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
     it('Has no detectable a11y violations on load', () => {
       cy.injectAxe();
+      cy.configureAxe({
+        rules: [
+          {
+            id: 'frame-title-unique',
+            enabled: false,
+          },
+        ],
+      });
       cy.checkA11y(null, {
         runOnly: {
           type: 'tag',
