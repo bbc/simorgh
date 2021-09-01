@@ -69,7 +69,7 @@ export const service = {
       brandDescription:
         'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09kh14x.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t9xpv.jpg',
         alt: 'بي بي سي إكسترا',
       },
       linkLabel: {
