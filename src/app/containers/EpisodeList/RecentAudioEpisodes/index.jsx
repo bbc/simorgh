@@ -22,6 +22,8 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const Spacer = styled.aside`
   position: relative;
@@ -53,6 +55,16 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
     timezone,
     datetimeLocale,
   } = useContext(ServiceContext);
+  const eventTrackingData = {
+    componentName: 'episodes-audio',
+    campaignID:
+      pageType === 'Podcast'
+        ? 'player-episode-podcast'
+        : 'player-episode-radio',
+  };
+  console.log(eventTrackingData);
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
   const { variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
@@ -106,6 +118,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         dir={dir}
         ulProps={ulProps}
         liProps={liProps}
+        ref={viewTrackerRef}
       >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>

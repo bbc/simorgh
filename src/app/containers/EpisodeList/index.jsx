@@ -34,35 +34,29 @@ const StyledEpisodeListItem = styled.li`
   }
 `;
 
-const EpisodeList = ({
-  children,
-  script,
-  service,
-  dir,
-  darkMode,
-  ulProps,
-  liProps,
-}) => {
-  if (!children.length) return null;
+const EpisodeList = React.forwardRef(
+  ({ children, script, service, dir, darkMode, ulProps, liProps }, ref) => {
+    if (!children.length) return null;
 
-  const hasMultipleChildren = children.length > 1;
+    const hasMultipleChildren = children.length > 1;
 
-  return (
-    <EpisodeContext.Provider value={{ script, service, dir, darkMode }}>
-      {hasMultipleChildren ? (
-        <StyledEpisodeList role="list" {...ulProps}>
-          {children.map(child => (
-            <StyledEpisodeListItem key={child.key} {...liProps}>
-              {child}
-            </StyledEpisodeListItem>
-          ))}
-        </StyledEpisodeList>
-      ) : (
-        children
-      )}
-    </EpisodeContext.Provider>
-  );
-};
+    return (
+      <EpisodeContext.Provider value={{ script, service, dir, darkMode }}>
+        {hasMultipleChildren ? (
+          <StyledEpisodeList role="list" ref={ref} {...ulProps}>
+            {children.map(child => (
+              <StyledEpisodeListItem key={child.key} {...liProps}>
+                {child}
+              </StyledEpisodeListItem>
+            ))}
+          </StyledEpisodeList>
+        ) : (
+          children
+        )}
+      </EpisodeContext.Provider>
+    );
+  },
+);
 
 EpisodeList.propTypes = {
   children: arrayOf(element),
