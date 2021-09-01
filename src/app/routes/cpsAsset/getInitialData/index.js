@@ -19,6 +19,7 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
+import getToggles from '#lib/utilities/getToggles';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
@@ -40,22 +41,23 @@ export const only = (pageTypes, transformer) => (pageData, ...args) => {
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
 
-const processOptimoBlocks = pipe(
-  only([MEDIA_ASSET_PAGE], processUnavailableMedia),
-  addHeadlineBlock,
-  addSummaryBlock,
-  augmentWithTimestamp,
-  only(
-    [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
-    augmentWithDisclaimer,
-  ),
-  addBylineBlock,
-  addRecommendationsBlock,
-  addMpuBlock,
-  addIdsToBlocks,
-  applyBlockPositioning,
-  cpsOnlyOnwardJourneys,
-);
+const processOptimoBlocks = toggles =>
+  pipe(
+    only([MEDIA_ASSET_PAGE], processUnavailableMedia),
+    addHeadlineBlock,
+    addSummaryBlock,
+    augmentWithTimestamp,
+    only(
+      [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
+      augmentWithDisclaimer(toggles),
+    ),
+    addBylineBlock,
+    addRecommendationsBlock,
+    addMpuBlock,
+    addIdsToBlocks,
+    applyBlockPositioning,
+    cpsOnlyOnwardJourneys,
+  );
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
@@ -66,7 +68,8 @@ const transformJson = async (json, pathname) => {
       formattedPageData,
       pathname,
     );
-    return processOptimoBlocks(optimoBlocks);
+    const toggles = await getToggles(pathname.split('/')[1]);
+    return processOptimoBlocks(toggles)(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
