@@ -12,7 +12,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           violations.length === 1 ? '' : 's'
         } ${violations.length === 1 ? 'was' : 'were'} detected`,
       );
-      // pluck specific keys to keep the table readable
+
       const violationData = violations.map(
         ({ id, impact, description, nodes }) => ({
           id,
@@ -25,7 +25,16 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
       cy.task('table', violationData);
     };
 
-    it('Has no detectable a11y violations on load', () => {
+    it('should have no detectable a11y violations on page load', () => {
+      const excludeElements = [
+        '[id*="include-"]', // VJ includes
+      ];
+      const context = excludeElements.length
+        ? '*'.concat(
+            excludeElements.map(selector => `:not(${selector})`).join(''),
+          )
+        : '*';
+
       cy.injectAxe();
       cy.configureAxe({
         runOnly: {
@@ -42,7 +51,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           },
         ],
       });
-      cy.checkA11y(null, null, logA11yViolations);
+      cy.checkA11y(context, null, logA11yViolations);
     });
 
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
