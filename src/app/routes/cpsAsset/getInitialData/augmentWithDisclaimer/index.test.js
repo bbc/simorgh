@@ -1,11 +1,6 @@
 import transformer from '.';
 
 const fixtureData = (blocks = [{ type: 'timestamp' }]) => ({
-  metadata: {
-    firstPublished: 1514808060000,
-    lastPublished: 1514811600000,
-    type: 'article',
-  },
   content: {
     model: {
       blocks,
@@ -36,6 +31,6 @@ describe('augmentWithDisclaimer', () => {
   it('Should not add a disclaimer when toggled off for that service', () => {
     const transformedData = transformer(toggles(false))(fixtureData([]));
 
-    expect(transformedData.content.model.blocks[1]).toBeUndefined();
+    expect(transformedData.content.model.blocks[0]).toBeUndefined();
   });
 });

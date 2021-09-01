@@ -61,14 +61,13 @@ const processOptimoBlocks = toggles =>
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
-const transformJson = async (json, pathname) => {
+const transformJson = async (json, pathname, toggles) => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(
       formattedPageData,
       pathname,
     );
-    const toggles = await getToggles(pathname.split('/')[1]);
     return processOptimoBlocks(toggles)(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
@@ -112,7 +111,7 @@ export default async ({
     return {
       status,
       pageData: {
-        ...(await transformJson(json, pathname)),
+        ...(await transformJson(json, pathname, toggles)),
         ...processedAdditionalData,
       },
     };
