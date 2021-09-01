@@ -31,7 +31,7 @@ export const service = {
     brandName: 'BBC News',
     product: 'BBC News',
     defaultImage:
-      'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
     defaultImageAltText: 'BBC News',
     dir: 'ltr',
     externalLinkText: ', external',

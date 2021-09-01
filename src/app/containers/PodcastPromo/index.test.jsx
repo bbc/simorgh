@@ -112,7 +112,7 @@ describe('Event Tracking', () => {
     render(<PromoWithContext />);
 
     expect(viewTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'podcast-promo',
+      componentName: 'promo-podcast',
     });
   });
 
@@ -121,7 +121,7 @@ describe('Event Tracking', () => {
     render(<PromoWithContext />);
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
-      componentName: 'podcast-promo',
+      componentName: 'promo-podcast',
     });
   });
 });
