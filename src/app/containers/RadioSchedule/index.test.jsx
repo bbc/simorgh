@@ -14,7 +14,7 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext service="arabic" />,
     );
     await waitFor(() => {
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
   });
 
@@ -34,7 +34,7 @@ describe('RadioScheduleData', () => {
       <RadioSchedulesWithContext service="arabic" radioScheduleToggle isAmp />,
     );
     await waitFor(() => {
-      expect(container).toBeEmpty();
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });
