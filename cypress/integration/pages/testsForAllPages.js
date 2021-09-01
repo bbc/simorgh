@@ -19,6 +19,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
           impact,
           description,
           nodes: nodes.length,
+          paths: nodes.map(({ target }) => target).join(', '),
         }),
       );
 
