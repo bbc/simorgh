@@ -29,11 +29,9 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
       const excludeElements = [
         '[id*="include-"]', // VJ includes
       ];
-      const context = excludeElements.length
-        ? '*'.concat(
-            excludeElements.map(selector => `:not(${selector})`).join(''),
-          )
-        : '*';
+      const context = '*'.concat(
+        excludeElements.map(selector => `:not(${selector})`).join(''),
+      );
 
       cy.injectAxe();
       cy.configureAxe({
