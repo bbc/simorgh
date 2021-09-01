@@ -1,7 +1,10 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -74,6 +77,7 @@ WrappedStoryPromo.defaultProps = {
 };
 
 describe('StoryPromo Container', () => {
+  suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
   Object.entries(fixtures).forEach(([name, data]) => {
     shouldMatchSnapshot(
       `should render ${name} correctly for canonical`,

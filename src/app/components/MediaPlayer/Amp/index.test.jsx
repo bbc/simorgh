@@ -14,6 +14,8 @@ describe('Media Player: Amp', () => {
       title="Media player"
       height={9}
       width={16}
+      noJsMessage="Please enable Javascript or try a different browser"
+      service="news"
     />,
   );
 
