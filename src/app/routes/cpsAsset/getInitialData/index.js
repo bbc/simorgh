@@ -19,7 +19,6 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import getToggles from '#lib/utilities/getToggles';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
