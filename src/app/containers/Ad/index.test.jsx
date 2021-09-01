@@ -2,7 +2,10 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import {
   ServiceContext,
@@ -25,6 +28,7 @@ const context = {
 };
 
 describe('Ad Container', () => {
+  suppressPropWarnings(['isAmp', 'RequestContextProvider']);
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 

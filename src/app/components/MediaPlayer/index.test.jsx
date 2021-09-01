@@ -12,6 +12,7 @@ describe('Media Player: AMP Entry', () => {
       height={16}
       width={9}
       noJsMessage="no js"
+      service="news"
     />,
   );
 
@@ -25,6 +26,7 @@ describe('Media Player: AMP Entry', () => {
       height={9}
       width={16}
       noJsMessage="no js"
+      service="news"
     />,
   );
 
@@ -39,6 +41,7 @@ describe('Media Player: AMP Entry', () => {
       height={9}
       width={16}
       noJsMessage="no js"
+      service="news"
     />,
   );
 });
