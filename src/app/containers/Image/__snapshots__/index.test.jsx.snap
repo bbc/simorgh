@@ -600,7 +600,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -608,6 +608,7 @@ exports[`Image with data should render an image with alt text 1`] = `
   animation: animation-0 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+  height: auto;
 }
 
 <div>
@@ -632,7 +633,8 @@ exports[`Image with data should render an image with alt text 1`] = `
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-              class="emotion-10 emotion-11"
+              class="emotion-10 emotion-11 emotion-12"
+              height="420"
               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
               srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
               width="640"
@@ -932,7 +934,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -940,53 +942,54 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   animation: animation-0 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+  height: auto;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @media (min-width: 80rem) {
-  .emotion-12 {
+  .emotion-13 {
     margin-left: 0%;
   }
 }
 
 @supports (display: grid) {
-  .emotion-12 {
+  .emotion-13 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -994,7 +997,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1002,7 +1005,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-start: 1;
@@ -1010,7 +1013,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1018,7 +1021,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(5, 1fr);
       grid-column-end: span 5;
       grid-column-start: 1;
@@ -1026,7 +1029,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 
   @media (min-width: 80rem) {
-    .emotion-12 {
+    .emotion-13 {
       grid-template-columns: repeat(10, 1fr);
       grid-column-end: span 10;
       grid-column-start: 1;
@@ -1034,7 +1037,7 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   }
 }
 
-.emotion-14 {
+.emotion-15 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1051,37 +1054,37 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-15 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: 100%;
     margin: 0.5rem 0 0;
   }
 }
 
-.emotion-14>p {
+.emotion-15>p {
   padding-bottom: 1.5rem;
   margin: 0;
 }
 
-.emotion-14>p:last-child {
+.emotion-15>p:last-child {
   padding-bottom: 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
-  .emotion-14 {
+  .emotion-15 {
     width: calc(100% - 1rem);
     margin-left: 1rem;
     padding-right: 1rem;
@@ -1090,13 +1093,13 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 }
 
 @media (min-width: 63rem) {
-  .emotion-14 {
+  .emotion-15 {
     padding-right: 0;
     padding-left: 0.5rem;
   }
 }
 
-.emotion-16 {
+.emotion-17 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1129,7 +1132,8 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-              class="emotion-10 emotion-11"
+              class="emotion-10 emotion-11 emotion-12"
+              height="420"
               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
               srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
               width="640"
@@ -1137,15 +1141,15 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
           </div>
         </div>
         <div
-          class="emotion-12 emotion-1"
+          class="emotion-13 emotion-1"
           dir="ltr"
         >
           <figcaption
-            class="emotion-14 emotion-15"
+            class="emotion-15 emotion-16"
             dir="ltr"
           >
             <span
-              class="emotion-16 emotion-17"
+              class="emotion-17 emotion-18"
             >
               Image caption, 
             </span>
@@ -1447,7 +1451,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -1455,9 +1459,10 @@ exports[`Image with data should render an image with alt text and offscreen copy
   animation: animation-0 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+  height: auto;
 }
 
-.emotion-12 {
+.emotion-13 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -1471,7 +1476,7 @@ exports[`Image with data should render an image with alt text and offscreen copy
   left: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1504,17 +1509,18 @@ exports[`Image with data should render an image with alt text and offscreen copy
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-              class="emotion-10 emotion-11"
+              class="emotion-10 emotion-11 emotion-12"
+              height="420"
               src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
               srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
               width="640"
             />
             <p
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
               role="text"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="emotion-15 emotion-16"
               >
                 Image source, 
               </span>
@@ -1815,7 +1821,7 @@ exports[`Image with data should render an image with other originCode - this wou
   }
 }
 
-.emotion-10 {
+.emotion-11 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -1823,9 +1829,10 @@ exports[`Image with data should render an image with other originCode - this wou
   animation: animation-0 0.2s linear;
   -webkit-transition: visibility 0.2s linear;
   transition: visibility 0.2s linear;
+  height: auto;
 }
 
-.emotion-12 {
+.emotion-13 {
   font-size: 0.75rem;
   line-height: 1rem;
   background-color: rgba(34, 34, 34, 0.75);
@@ -1839,7 +1846,7 @@ exports[`Image with data should render an image with other originCode - this wou
   left: 0;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -1872,17 +1879,18 @@ exports[`Image with data should render an image with other originCode - this wou
           >
             <img
               alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
-              class="emotion-10 emotion-11"
+              class="emotion-10 emotion-11 emotion-12"
+              height="420"
               src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
               srcset="https://ichef.bbci.co.uk/news/240/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 240w, https://ichef.bbci.co.uk/news/320/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 320w, https://ichef.bbci.co.uk/news/480/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 480w, https://ichef.bbci.co.uk/news/624/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 624w, https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png 640w"
               width="640"
             />
             <p
-              class="emotion-12 emotion-13"
+              class="emotion-13 emotion-14"
               role="text"
             >
               <span
-                class="emotion-14 emotion-15"
+                class="emotion-15 emotion-16"
               >
                 Image source, 
               </span>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { string, number, bool, node } from 'prop-types';
+import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Image, { AmpImg } from '@bbc/psammead-image';
@@ -8,6 +9,10 @@ import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
+
+const StyledImage = styled(Image)`
+  height: auto;
+`;
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
@@ -38,16 +43,10 @@ const ImageWithPlaceholder = ({
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [syncDecoding, setSyncDecoding] = useState(false);
-  const imageProps = { alt, src, sizes, width, srcset, fade };
+  const imageProps = { alt, src, sizes, width, srcset, fade, height };
   const imgType = src.split('.').pop();
   const imageToRender = (
-    <Image
-      onLoad={() => setIsLoaded(true)}
-      onError={() => setSyncDecoding(true)}
-      decoding={syncDecoding ? 'sync' : null}
-      {...imageProps}
-    />
+    <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
 
   const shouldPreload = !isAmp && preload;
