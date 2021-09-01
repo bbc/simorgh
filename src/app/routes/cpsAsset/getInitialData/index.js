@@ -6,6 +6,7 @@ import {
   addIdsToBlocks,
   applyBlockPositioning,
 } from '../../utils/sharedDataTransformers';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 import parseInternalLinks from './convertToOptimoBlocks/blocks/internalLinks';
 import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
@@ -18,7 +19,11 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -28,16 +33,22 @@ const formatPageData = pipe(
   timestampToMilliseconds,
 );
 
-export const only = (pageType, transformer) => (pageData, ...args) => {
-  const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
+export const only = (pageTypes, transformer) => (pageData, ...args) => {
+  const isCorrectPageType = pageTypes.includes(
+    path(['metadata', 'type'], pageData),
+  );
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
 
 const processOptimoBlocks = pipe(
-  only(MEDIA_ASSET_PAGE, processUnavailableMedia),
+  only([MEDIA_ASSET_PAGE], processUnavailableMedia),
   addHeadlineBlock,
   addSummaryBlock,
   augmentWithTimestamp,
+  only(
+    [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
+    augmentWithDisclaimer,
+  ),
   addBylineBlock,
   addRecommendationsBlock,
   addMpuBlock,

@@ -17,7 +17,7 @@ import MediaMessage from './MediaMessage';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
-import Disclaimer from '#containers/Disclaimer';
+import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
@@ -159,6 +159,7 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
+    disclaimer,
   };
 
   const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`
@@ -201,7 +202,6 @@ const MediaAssetPage = ({ pageData }) => {
       />
       <ATIAnalytics data={pageData} />
       <StyledMediaAssetPageGrid as="main" role="main">
-        <Disclaimer />
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>
 
