@@ -10,7 +10,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
       cy.checkA11y(null, {
         runOnly: {
           type: 'tag',
-          values: ['wcag2a', 'wcag2aa', 'best-practice'],
+          values: ['wcag21a', 'wcag21aa', 'wcag2a', 'wcag2aa', 'best-practice'],
         },
       });
     });
