@@ -194,6 +194,7 @@
     "copy-webpack-plugin": "9.0.1",
     "crypto": "1.0.1",
     "cypress": "8.2.0",
+    "cypress-axe": "^0.13.0",
     "cypress-multi-reporters": "1.5.0",
     "cypress-terminal-report": "3.2.2",
     "depcheck": "1.4.2",

@@ -5,6 +5,16 @@ import getDataUrl from '../../support/helpers/getDataUrl';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+    it('Has no detectable a11y violations on load', () => {
+      cy.injectAxe();
+      cy.checkA11y(null, {
+        runOnly: {
+          type: 'tag',
+          values: ['wcag2a', 'wcag2aa', 'best-practice'],
+        },
+      });
+    });
+
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (
         service !== 'sport' &&
