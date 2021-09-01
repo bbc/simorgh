@@ -34,8 +34,8 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
         },
         rules: [
           {
-            // we need to disable this rule because of the inner & outer double iframe setup we have with media players
-            // when Toucan is implemented we won't have iframes so we can remove the disabled of this rule.
+            // We need to disable this rule because of the inner & outer double iframe setup we have with media players.
+            // When Toucan is implemented we won't have iframes so we can remove the disabling of the frame-title-unique rule.
             // Please remove this when Toucan is implemented so we can catch real frame-title-unique a11y errors.
             id: 'frame-title-unique',
             enabled: false,
