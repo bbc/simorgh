@@ -5,22 +5,55 @@ import getDataUrl from '../../support/helpers/getDataUrl';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
+    const logA11yViolations = violations => {
+      cy.task(
+        'log',
+        `${violations.length} accessibility violation${
+          violations.length === 1 ? '' : 's'
+        } ${violations.length === 1 ? 'was' : 'were'} detected`,
+      );
+      // pluck specific keys to keep the table readable
+      const violationData = violations.map(
+        ({ id, impact, description, nodes }) => ({
+          id,
+          impact,
+          description,
+          nodes: nodes.length,
+        }),
+      );
+
+      cy.task('table', violationData);
+    };
+
     it('Has no detectable a11y violations on load', () => {
       cy.injectAxe();
       cy.configureAxe({
         rules: [
           {
+            // we need to disable this rule because of the inner & outer double iframe setup we have with media players
+            // when Toucan is implemented we won't have iframes so we can remove the disabled of this rule.
+            // Please remove this when Toucan is implemented so we can catch real frame-title-unique a11y errors.
             id: 'frame-title-unique',
             enabled: false,
           },
         ],
       });
-      cy.checkA11y(null, {
-        runOnly: {
-          type: 'tag',
-          values: ['wcag21a', 'wcag21aa', 'wcag2a', 'wcag2aa', 'best-practice'],
+      cy.checkA11y(
+        null,
+        {
+          runOnly: {
+            type: 'tag',
+            values: [
+              'wcag21a',
+              'wcag21aa',
+              'wcag2a',
+              'wcag2aa',
+              'best-practice',
+            ],
+          },
         },
-      });
+        logA11yViolations,
+      );
     });
 
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
