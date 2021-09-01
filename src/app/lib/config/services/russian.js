@@ -308,8 +308,6 @@ export const service = {
     },
     disclaimer: {
       text: 'Placeholder text',
-      linkText: '',
-      linkUrl: '',
     },
     radioSchedule: {
       hasRadioSchedule: false,
