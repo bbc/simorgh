@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/yoruba.png',
     defaultImageAltText: 'BBC News Yorùbá',
     dir: 'ltr',
-    externalLinkText: ', Láti ìta',
+    externalLinkText: ', ìta',
     imageCaptionOffscreenText: 'Àkọlé àwòrán, ',
     videoCaptionOffscreenText: 'Àkọlé fídíò, ',
     audioCaptionOffscreenText: 'Àkọlé fọ́nrán ohùn, ',
