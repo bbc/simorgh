@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { bool } from 'prop-types';
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
 import styled from '@emotion/styled';
@@ -25,12 +26,16 @@ const Inner = styled.div`
   text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING_QUIN};
-  }
+  ${({ increasePaddingOnDesktop }) =>
+    increasePaddingOnDesktop &&
+    `
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+        padding: ${GEL_SPACING_DBL} ${GEL_SPACING_QUIN};
+      }
+    `}
 `;
 
-const DisclaimerComponent = () => {
+const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
   const { service, script, disclaimer } = useContext(ServiceContext);
   const { enabled } = useToggle('disclaimer');
 
@@ -40,11 +45,23 @@ const DisclaimerComponent = () => {
 
   return (
     <GridItemLarge data-testid="disclaimer">
-      <Inner service={service} script={script}>
+      <Inner
+        service={service}
+        script={script}
+        increasePaddingOnDesktop={increasePaddingOnDesktop}
+      >
         {path(['text'], disclaimer)}
       </Inner>
     </GridItemLarge>
   );
+};
+
+DisclaimerComponent.propTypes = {
+  increasePaddingOnDesktop: bool,
+};
+
+DisclaimerComponent.defaultProps = {
+  increasePaddingOnDesktop: true,
 };
 
 export default DisclaimerComponent;

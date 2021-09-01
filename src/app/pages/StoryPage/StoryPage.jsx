@@ -20,7 +20,7 @@ import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
-import disclaimer from '#containers/Disclaimer';
+import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import Image from '#containers/Image';
@@ -191,7 +191,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         items={recommendationsInitialData}
       />
     ),
-    disclaimer,
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
+    ),
   };
 
   const StyledTimestamp = styled(Timestamp)`
