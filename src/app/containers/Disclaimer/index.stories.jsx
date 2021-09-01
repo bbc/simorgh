@@ -7,21 +7,19 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import DisclaimerComponent from '.';
 
 // eslint-disable-next-line react/prop-types
-const Component = ({ service }) => {
-  return (
-    <ToggleContextProvider
-      toggles={{
-        disclaimer: {
-          enabled: true,
-        },
-      }}
-    >
-      <ServiceContextProvider service={service}>
-        <DisclaimerComponent />
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  );
-};
+const Component = ({ service }) => (
+  <ToggleContextProvider
+    toggles={{
+      disclaimer: {
+        enabled: true,
+      },
+    }}
+  >
+    <ServiceContextProvider service={service}>
+      <DisclaimerComponent />
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+);
 
 export default {
   title: 'Containers/Disclaimer',
