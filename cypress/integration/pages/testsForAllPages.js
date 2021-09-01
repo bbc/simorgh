@@ -15,10 +15,10 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 
       const violationData = violations.map(
         ({ id, impact, description, nodes }) => ({
-          id,
+          'rule id': id,
           impact,
           description,
-          nodes: nodes.length,
+          occurrences: nodes.length,
           paths: nodes.map(({ target }) => target).join(', '),
         }),
       );
@@ -28,10 +28,12 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 
     it('should have no detectable a11y violations on page load', () => {
       const excludeElements = [
-        '[id*="include-"]', // VJ includes
+        '[id^="include-"]', // VJ includes
       ];
       const context = '*'.concat(
-        excludeElements.map(selector => `:not(${selector}) > *`).join(''),
+        excludeElements
+          .map(selector => `:not(${selector}):not(${selector}) > *`)
+          .join(''),
       );
 
       cy.injectAxe();
@@ -42,11 +44,11 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
         },
         rules: [
           {
-            // We need to disable this rule because of the inner & outer double iframe setup we have with media players.
+            // We need to exclude this rule for AV embeds because of the inner & outer double iframe setup we have with media players.
             // When Toucan is implemented we won't have iframes so we can remove the disabling of the frame-title-unique rule.
             // Please remove this when Toucan is implemented so we can catch real frame-title-unique a11y errors.
             id: 'frame-title-unique',
-            enabled: false,
+            selector: '*:not([src*="/ws/av-embeds/"])',
           },
         ],
       });
