@@ -103,6 +103,7 @@ describe('Event Tracking', () => {
 
     expect(viewTrackerSpy).toHaveBeenCalledWith({
       componentName: 'third-party',
+      campaignID: 'player-episode-podcast',
     });
   });
 
@@ -112,6 +113,7 @@ describe('Event Tracking', () => {
 
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'third-party',
+      campaignID: 'player-episode-podcast',
     });
   });
 });
