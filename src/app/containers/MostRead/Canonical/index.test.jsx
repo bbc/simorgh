@@ -233,7 +233,7 @@ describe('MostReadContainerCanonical', () => {
         />,
       ).container;
     });
-    expect(container).toBeEmpty();
+    expect(container).toBeEmptyDOMElement();
   });
 
   it(`should not render most read when no article data exists`, async () => {
