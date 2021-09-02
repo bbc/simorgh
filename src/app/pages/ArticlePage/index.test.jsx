@@ -186,7 +186,9 @@ it('should render a news article correctly', async () => {
     </Context>,
   );
 
-  expect(container).toMatchSnapshot();
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {
