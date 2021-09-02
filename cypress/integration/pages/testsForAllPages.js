@@ -6,7 +6,9 @@ import getDataUrl from '../../support/helpers/getDataUrl';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
-    checkA11y();
+    it('should have no detectable a11y violations on page load', () => {
+      checkA11y();
+    });
 
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (
