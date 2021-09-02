@@ -81,6 +81,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   const { translations, service, script, dir, lang } = useContext(
     ServiceContext,
   );
+  const { externalLinkText } = useContext(ServiceContext);
 
   if (!links.length) return null;
 
@@ -112,6 +113,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
                     {linkText}
                   </span>
                   <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
+                  <VisuallyHiddenText>{`, ${externalLinkText}`}</VisuallyHiddenText>
                 </span>
               </Link>
             </StyledListItem>
