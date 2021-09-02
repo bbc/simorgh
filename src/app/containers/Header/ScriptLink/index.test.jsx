@@ -320,6 +320,6 @@ describe(`Script Link`, () => {
       frontPagePath,
       '/serbian/lat',
     );
-    expect(container).toBeEmpty();
+    expect(container).toBeEmptyDOMElement();
   });
 });
