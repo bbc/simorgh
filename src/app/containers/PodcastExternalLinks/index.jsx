@@ -87,6 +87,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
 
   const eventTrackingData = {
     componentName: 'third-party',
+    campaignID: 'player-episode-podcast',
   };
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
