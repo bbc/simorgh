@@ -48,7 +48,10 @@ module.exports = {
         corejs: '3',
       },
     ],
-    '@babel/preset-react', // transform JSX to JS
+    [
+      '@babel/preset-react', // transform JSX to JS
+      { "runtime": "automatic", "importSource": "@emotion/react" }
+    ]
   ],
   plugins: plugins,
   overrides: [
