@@ -102,7 +102,11 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <Spacer role="complementary" aria-labelledby="recent-episodes">
+    <Spacer
+      role="complementary"
+      aria-labelledby="recent-episodes"
+      ref={viewTrackerRef}
+    >
       <StyledSectionLabel
         script={script}
         service={service}
@@ -118,7 +122,6 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         dir={dir}
         ulProps={ulProps}
         liProps={liProps}
-        ref={viewTrackerRef}
       >
         {episodes.map(episode => (
           <EpisodeList.Episode key={episode.id}>
