@@ -1,5 +1,5 @@
 const exclude = [
-  '[id^="include-"]', // VJ includes
+  '[id^="include-"]', // VJ includes (we have no control over these)
 ];
 
 const logA11yViolations = violations => {
