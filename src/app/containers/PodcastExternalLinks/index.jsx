@@ -14,6 +14,9 @@ import {
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
@@ -82,6 +85,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     ServiceContext,
   );
 
+  const eventTrackingData = {
+    componentName: 'third-party',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
   if (!links.length) return null;
 
   const defaultTranslation = 'This podcast is also available on';
@@ -94,7 +104,11 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   const firstLink = links[0];
 
   return (
-    <Wrapper role="complementary" aria-labelledby="third-party-links">
+    <Wrapper
+      role="complementary"
+      aria-labelledby="third-party-links"
+      ref={viewTrackerRef}
+    >
       <ThirdPartyLinksTitle
         script={script}
         service={service}
@@ -103,7 +117,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         {title}
       </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
-        <StyledList role="list">
+        <StyledList role="list" onClick={clickTrackerRef}>
           {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={linkText}>
               <Link href={linkUrl} service={service} script={script} dir={dir}>
@@ -124,6 +138,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           service={service}
           script={script}
           dir={dir}
+          onClick={clickTrackerRef}
         >
           <span>
             <span lang={ExternalLinkTextLangs[firstLink.linkText] || lang}>

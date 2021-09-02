@@ -5,11 +5,21 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import PodcastExternalLinks from '.';
 
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+
 /* eslint-disable react/prop-types */
 const Component = ({ links, service = 'russian', variant = null }) => (
-  <ServiceContextProvider service={service} variant={variant}>
-    <PodcastExternalLinks links={links} brandTitle="A brand podcast" />
-  </ServiceContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+    }}
+  >
+    <ServiceContextProvider service={service} variant={variant}>
+      <PodcastExternalLinks links={links} brandTitle="A brand podcast" />
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 const links = [
@@ -83,5 +93,25 @@ describe('PodcastExternalLinks', () => {
     const { getByText } = render(<Component links={links} />);
     const linkText = getByText('Spotify');
     expect(linkText.getAttribute('lang')).toEqual('en-GB');
+  });
+});
+
+describe('Event Tracking', () => {
+  it('should call the view tracking hook with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    render(<Component links={links} />);
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'third-party',
+    });
+  });
+
+  it('should call the click tracking hook with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    render(<Component links={links} />);
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'third-party',
+    });
   });
 });
