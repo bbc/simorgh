@@ -117,9 +117,9 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         {title}
       </ThirdPartyLinksTitle>
       {hasMultipleLinks ? (
-        <StyledList role="list" onClick={clickTrackerRef}>
+        <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
-            <StyledListItem dir={dir} key={linkText}>
+            <StyledListItem dir={dir} key={linkText} onClick={clickTrackerRef}>
               <Link href={linkUrl} service={service} script={script} dir={dir}>
                 <span role="text">
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
