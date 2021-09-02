@@ -1,11 +1,6 @@
-const excludeElements = [
+const exclude = [
   '[id^="include-"]', // VJ includes
 ];
-const context = '*'.concat(
-  excludeElements
-    .map(selector => `:not(${selector}):not(${selector} *)`)
-    .join(''),
-);
 
 const logA11yViolations = violations => {
   cy.task(
@@ -48,6 +43,12 @@ export default () => {
         },
       ],
     });
-    cy.checkA11y(context, null, logA11yViolations);
+    cy.checkA11y(
+      {
+        exclude: [exclude],
+      },
+      null,
+      logA11yViolations,
+    );
   });
 };
