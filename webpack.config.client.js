@@ -40,11 +40,7 @@ module.exports = ({
   const clientConfig = {
     target: ['web', 'es5'], // compile for browser environment
     entry: START_DEV_SERVER
-      ? [
-          `webpack-dev-server/client?http://localhost:${webpackDevServerPort}`,
-          'webpack/hot/only-dev-server',
-          './src/client',
-        ]
+      ? ['webpack/hot/only-dev-server', './src/client']
       : ['./src/poly', './src/client'],
     devServer: {
       host: 'localhost',
@@ -54,7 +50,7 @@ module.exports = ({
       headers: {
         'Access-Control-Allow-Origin': '*',
       },
-      disableHostCheck: true,
+      allowedHosts: 'all',
     },
     resolve: {
       fallback: {
@@ -227,10 +223,6 @@ module.exports = ({
       }),
     ],
   };
-
-  if (START_DEV_SERVER) {
-    clientConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
-  }
 
   if (IS_PROD) {
     const BrotliPlugin = require('brotli-webpack-plugin');
