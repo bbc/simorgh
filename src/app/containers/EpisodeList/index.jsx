@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -34,7 +34,7 @@ const StyledEpisodeListItem = styled.li`
   }
 `;
 
-const EpisodeList = React.forwardRef(
+const EpisodeList = forwardRef(
   ({ children, script, service, dir, darkMode, ulProps, liProps }, ref) => {
     if (!children.length) return null;
 
