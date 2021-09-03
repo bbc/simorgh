@@ -28,6 +28,7 @@ import headings from '#containers/Headings';
 import gist from '#containers/Gist';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
+import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
@@ -195,6 +196,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <Main role="main">
         <ArticlePageGrid>
+          <Disclaimer />
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}
