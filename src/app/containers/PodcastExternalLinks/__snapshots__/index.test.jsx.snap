@@ -160,6 +160,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             >
               , A brand podcast
             </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , , внешняя ссылка
+            </span>
           </span>
         </a>
       </li>
@@ -185,6 +190,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             >
               , A brand podcast
             </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , , внешняя ссылка
+            </span>
           </span>
         </a>
       </li>
@@ -209,6 +219,11 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               class="emotion-10 emotion-11"
             >
               , A brand podcast
+            </span>
+            <span
+              class="emotion-10 emotion-11"
+            >
+              , , внешняя ссылка
             </span>
           </span>
         </a>
