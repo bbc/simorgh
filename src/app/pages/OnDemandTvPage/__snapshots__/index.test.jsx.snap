@@ -495,6 +495,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1087,6 +1088,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1670,6 +1672,7 @@ exports[`should show the future content message if episode is not yet available 
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2253,6 +2256,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
