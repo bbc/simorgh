@@ -15,11 +15,11 @@ const StyledRadioHeadingContainer = styled(OnDemandHeading)`
 
   /* We need a media query here to explicitly overwrite the same media query within psammead-headings' Headline  */
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
+    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
 
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} 0 ${GEL_SPACING};
   }
 `;
 
