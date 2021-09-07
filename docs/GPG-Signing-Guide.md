@@ -12,6 +12,7 @@ Please familiarise yourself with our:
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md) (you are here)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 - [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 This document explains how to set up GPG Signing on MacOS for Simorgh and its relating projects.
 
@@ -54,3 +55,7 @@ git config --global commit.gpgsign true
 ```
 brew install pinentry-mac
 ```
+
+## Troubleshooting
+
+[Unsigned commits in latest are preventing me from pushing my branch](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md#unsigned-commits-in-latest-are-preventing-me-from-pushing-my-branch)

@@ -12,6 +12,7 @@ Please familiarise yourself with our:
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 - [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md) (you are here)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 This section of the docs is where we make note of and recommend useful tools that help to improve the development process in Simorgh. For example, IDE extensions that lint code in real-time.
 
