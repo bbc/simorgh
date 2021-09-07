@@ -18,7 +18,7 @@ If for some reason unsigned commits have been merged into the latest branch, pos
 
 ## How to Sign Previous Commits
 
-The following instructions was taken from [here](https://hyperledger-indy.readthedocs.io/projects/sdk/en/latest/docs/contributors/signing-commits.html).
+The following instructions were taken from [here](https://hyperledger-indy.readthedocs.io/projects/sdk/en/latest/docs/contributors/signing-commits.html).
 
 1. Use `git log --show-signature` to see which commits need to be signed.
 2. Go into interactive rebase mode using `git rebase -i HEAD~X` where `X` is the number of commits up to the most current commit you would like to see.
