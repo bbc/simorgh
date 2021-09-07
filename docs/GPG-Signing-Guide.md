@@ -58,4 +58,6 @@ brew install pinentry-mac
 
 ## Troubleshooting
 
-[Unsigned commits in latest are preventing me from pushing my branch](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md#unsigned-commits-in-latest-are-preventing-me-from-pushing-my-branch)
+### Unsigned commits in latest are preventing me from pushing my branch
+
+Please refer to [these docs](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md#unsigned-commits-in-latest-are-preventing-me-from-pushing-my-branch).
