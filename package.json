@@ -54,7 +54,7 @@
     "test:linkey": "node scripts/linkeySetup.js && jest src/app/lib/config/services/*.test.js --verbose true; yarn test:linkey:cleanup",
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
-    "webpack:dev:client": "NODE_ENV=development webpack serve --inline --hot --env config='client'",
+    "webpack:dev:client": "NODE_ENV=development webpack serve --hot --env config='client'",
     "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env config='server'"
   },
   "repository": {
@@ -239,10 +239,10 @@
     "terser-webpack-plugin": "5.1.4",
     "timemachine": "0.3.2",
     "wait-on": "6.0.0",
-    "webpack": "5.51.1",
+    "webpack": "5.52.0",
     "webpack-bundle-analyzer": "4.4.2",
     "webpack-cli": "4.8.0",
-    "webpack-dev-server": "3.11.2",
+    "webpack-dev-server": "4.1.0",
     "webpack-merge": "5.8.0",
     "webpack-node-externals": "3.0.0",
     "yaml-js": "0.3.0"
