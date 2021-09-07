@@ -113,7 +113,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
                     {linkText}
                   </span>
                   <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
-                  <VisuallyHiddenText>${externalLinkText}</VisuallyHiddenText>
+                  <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
                 </span>
               </Link>
             </StyledListItem>
