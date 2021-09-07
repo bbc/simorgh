@@ -306,6 +306,10 @@ export const service = {
         href: 'https://www.bbc.com/russian/media-47937790',
       },
     },
+    disclaimer: {
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },

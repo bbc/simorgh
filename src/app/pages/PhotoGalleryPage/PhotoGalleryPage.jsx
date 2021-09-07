@@ -18,6 +18,7 @@ import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
+import disclaimer from '#containers/Disclaimer';
 import text from '#containers/CpsText';
 import image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -95,6 +96,7 @@ const PhotoGalleryPage = ({ pageData }) => {
       ) : null,
     video: props => <MediaPlayer {...props} assetUri={assetUri} />,
     version: props => <MediaPlayer {...props} assetUri={assetUri} />,
+    disclaimer,
   };
 
   const StyledPhotoGalleryPageGrid = styled(PhotoGalleryPageGrid)`
