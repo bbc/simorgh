@@ -353,7 +353,7 @@ export const service = {
         url: '/gahuza/topics/c5qvpq0jzy7t',
       },
       {
-        title: 'Video',
+        title: 'Amajwi n’amashusho',
         url: '/gahuza/media/video',
       },
     ],
