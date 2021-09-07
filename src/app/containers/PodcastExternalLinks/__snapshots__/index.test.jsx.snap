@@ -163,6 +163,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
+              $
               , внешняя ссылка
             </span>
           </span>
@@ -193,6 +194,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
+              $
               , внешняя ссылка
             </span>
           </span>
@@ -223,6 +225,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
+              $
               , внешняя ссылка
             </span>
           </span>
