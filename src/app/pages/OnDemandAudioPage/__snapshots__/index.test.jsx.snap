@@ -412,13 +412,13 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 2rem 0 0.5rem;
+    padding: 1rem 0 0.5rem;
   }
 }
 
@@ -518,6 +518,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
   color: #6E6E73;
 }
 
@@ -1343,13 +1344,13 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 2rem 0 0.5rem;
+    padding: 1rem 0 0.5rem;
   }
 }
 
@@ -1449,6 +1450,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
   color: #6E6E73;
 }
 
@@ -2254,13 +2256,13 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 2rem 0 0.5rem;
+    padding: 1rem 0 0.5rem;
   }
 }
 
@@ -2360,6 +2362,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
   color: #6E6E73;
 }
 
@@ -3107,13 +3110,13 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 2rem 0 0.5rem;
+    padding: 1rem 0 0.5rem;
   }
 }
 
@@ -3213,6 +3216,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   color: #3F3F42;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
   color: #6E6E73;
 }
 
