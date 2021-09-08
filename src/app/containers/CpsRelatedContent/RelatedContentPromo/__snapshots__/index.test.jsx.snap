@@ -248,17 +248,6 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 .emotion-18 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -270,34 +259,34 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-18 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-20 {
+  .emotion-18 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-22 {
+.emotion-20 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -308,14 +297,14 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-20 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -368,11 +357,6 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
             <span
               role="text"
             >
-              <span
-                class="emotion-18 emotion-19"
-              >
-                , 
-              </span>
               <span>
                 Meet boys who dey convert cassava to electricity
               </span>
@@ -380,12 +364,12 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
           </a>
         </h3>
         <p
-          class="emotion-20 emotion-21"
+          class="emotion-18 emotion-19"
         >
           James den Kwesi Ansah want convert most of Ghana's cassava waste into cheap electricity supply for schools, hospitals den villages.
         </p>
         <time
-          class="emotion-22 emotion-23"
+          class="emotion-20 emotion-21"
           datetime="1970-01-18"
         >
           18th January 1970
