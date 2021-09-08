@@ -18,8 +18,6 @@
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
-    "bbcA11y": "echo 'BBC A11y Disabled Temporarily Due to npm audit warnings'",
-    "bbcA11y:ci": "npm run bbcA11y",
     "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
     "build": "yarn build:local && node ./scripts/bundleSize/index.js",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
@@ -194,6 +192,7 @@
     "copy-webpack-plugin": "9.0.1",
     "crypto": "1.0.1",
     "cypress": "8.2.0",
+    "cypress-axe": "0.13.0",
     "cypress-multi-reporters": "1.5.0",
     "cypress-terminal-report": "3.2.2",
     "depcheck": "1.4.2",

@@ -8803,6 +8803,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cypress-axe@npm:0.13.0":
+  version: 0.13.0
+  resolution: "cypress-axe@npm:0.13.0"
+  peerDependencies:
+    axe-core: ^3 || ^4
+    cypress: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+  checksum: 52879b6b7af46c101f20b1969e98d03e3ddc64a7c3c1dc6a536837550a4d7d4211e493817ff4b253d0d4ce6acf62ff4d5d33389709b924c9e0a9cf602b0a81d7
+  languageName: node
+  linkType: hard
+
 "cypress-multi-reporters@npm:1.5.0":
   version: 1.5.0
   resolution: "cypress-multi-reporters@npm:1.5.0"
@@ -19305,6 +19315,7 @@ resolve@^2.0.0-next.3:
     core-js: 3.16.0
     crypto: 1.0.1
     cypress: 8.2.0
+    cypress-axe: 0.13.0
     cypress-multi-reporters: 1.5.0
     cypress-terminal-report: 3.2.2
     depcheck: 1.4.2
