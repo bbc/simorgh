@@ -58,15 +58,19 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   }
 }
 
+.emotion-2 {
+  margin-top: 8px;
+  background-color: #f6f6f6;
+}
+
 .emotion-2>div {
   display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
+  margin: 0.5rem;
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-2>div {
-    margin: 0.25rem 0;
+    margin: 0.5rem;
   }
 }
 

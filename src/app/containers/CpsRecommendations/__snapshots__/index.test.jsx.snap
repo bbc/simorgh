@@ -100,9 +100,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1.5rem 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
@@ -115,13 +115,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width: 37.5rem) {
   .emotion-2 {
     margin: 0 0 1.5rem;
-    padding: 1rem 0;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    padding: 1rem;
   }
 }
 
@@ -277,7 +270,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -373,15 +366,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+.emotion-27 {
+  margin-top: 8px;
+  background-color: #f6f6f6;
+}
+
 .emotion-27>div {
   display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
+  margin: 0.5rem;
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-27>div {
-    margin: 0.25rem 0;
+    margin: 0.5rem;
   }
 }
 
@@ -807,9 +804,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1.5rem 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
@@ -822,13 +819,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width: 37.5rem) {
   .emotion-2 {
     margin: 0 0 1.5rem;
-    padding: 1rem 0;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    padding: 1rem;
   }
 }
 
@@ -984,7 +974,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1197,15 +1187,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+.emotion-31 {
+  margin-top: 8px;
+  background-color: #f6f6f6;
+}
+
 .emotion-31>div {
   display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
+  margin: 0.5rem;
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-31>div {
-    margin: 0.25rem 0;
+    margin: 0.5rem;
   }
 }
 
@@ -1819,9 +1813,9 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-2 {
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1.5rem 0;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 @media (min-width: 25rem) and (max-width: 62.9375rem) {
@@ -1834,13 +1828,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 @media (min-width: 37.5rem) {
   .emotion-2 {
     margin: 0 0 1.5rem;
-    padding: 1rem 0;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    padding: 1rem;
   }
 }
 
@@ -1996,7 +1983,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #F2F2F2;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-left: 0.5rem;
   display: -webkit-box;
@@ -2209,15 +2196,19 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   }
 }
 
+.emotion-31 {
+  margin-top: 8px;
+  background-color: #f6f6f6;
+}
+
 .emotion-31>div {
   display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
+  margin: 0.5rem;
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-31>div {
-    margin: 0.25rem 0;
+    margin: 0.5rem;
   }
 }
 
