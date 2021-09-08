@@ -7,6 +7,15 @@ import {
 } from '../utilities/cookiePrivacyBanner';
 import visitPage from '../../../support/helpers/visitPage';
 
+/*
+ * The ckns_explicit can have a value of 1 or 2 depending on a user's location.
+ * A value of 1 is set when the user is inside the UK.
+ * A value of 2 is set when the user is in the EU.
+ */
+const USER_IS_IN_UK = 1;
+const USER_IS_IN_EU = 2;
+const ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES = [USER_IS_IN_UK, USER_IS_IN_EU];
+
 const assertCookieHasValue = (cookieName, value) => {
   cy.getCookie(cookieName).should('have.property', 'value', value);
 };
@@ -50,7 +59,10 @@ export default ({ service, variant, pageType, path }) => {
 
     getCookieBannerAcceptCanonical(service, variant).click();
 
-    assertCookieHasOneOfValues('ckns_explicit', ['1', '2']);
+    assertCookieHasOneOfValues(
+      'ckns_explicit',
+      ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
+    );
     assertCookieHasValue('ckns_privacy', 'july2019');
     assertCookieHasValue('ckns_policy', '111');
 
@@ -75,7 +87,10 @@ export default ({ service, variant, pageType, path }) => {
 
     visitPage(path, pageType);
 
-    assertCookieHasOneOfValues('ckns_explicit', ['1', '2']);
+    assertCookieHasOneOfValues(
+      'ckns_explicit',
+      ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
+    );
     assertCookieHasValue('ckns_privacy', 'july2019');
     assertCookieHasValue('ckns_policy', '000');
 
