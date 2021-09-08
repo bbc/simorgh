@@ -1,7 +1,7 @@
 const exclude = [
   // These elements can contain a11y violations as we have no control over what is rendered inside of them
   '.bbc-news-vj-embed-wrapper, [id^="include-"]', // VJ includes
-  '[class*=dotcom], [id*=dotcom]', // GNL ads
+  '[class*=dotcom], [id*=dotcom], #edr_survey', // GNL ads
 ];
 
 const logA11yViolations = violations => {

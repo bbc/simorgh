@@ -6207,6 +6207,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ansi-html-community@npm:^0.0.8":
+  version: 0.0.8
+  resolution: "ansi-html-community@npm:0.0.8"
+  bin:
+    ansi-html: bin/ansi-html
+  checksum: 04c568e8348a636963f915e48eaa3e01218322e1169acafdd79c384f22e5558c003f79bbc480c1563865497482817c7eed025f0653ebc17642fededa5cb42089
+  languageName: node
+  linkType: hard
+
 "ansi-html@npm:0.0.7, ansi-html@npm:^0.0.7":
   version: 0.0.7
   resolution: "ansi-html@npm:0.0.7"
@@ -13949,6 +13958,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"jest-worker@npm:^27.0.6":
+  version: 27.1.1
+  resolution: "jest-worker@npm:27.1.1"
+  dependencies:
+    "@types/node": "*"
+    merge-stream: ^2.0.0
+    supports-color: ^8.0.0
+  checksum: 7bf3bd9b0fab9c377c735d0684e8cadb930b946012ef9b1e6d9902230adbdf9bc276e2d531835a0e7c34d65fdb1c91243948caa0b5d0a7d8f6333ae240eff7c2
+  languageName: node
+  linkType: hard
+
 "jest@npm:26.6.3":
   version: 26.6.3
   resolution: "jest@npm:26.6.3"
@@ -18917,7 +18937,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^3.0.0, schema-utils@npm:^3.1.0":
+"schema-utils@npm:^3.0.0, schema-utils@npm:^3.1.0, schema-utils@npm:^3.1.1":
   version: 3.1.1
   resolution: "schema-utils@npm:3.1.1"
   dependencies:
@@ -19382,7 +19402,7 @@ resolve@^2.0.0-next.3:
     stylelint-config-recommended: 5.0.0
     supertest: 6.1.4
     swagger-cli: 4.0.4
-    terser-webpack-plugin: 5.1.4
+    terser-webpack-plugin: 5.2.3
     timemachine: 0.3.2
     url-parse: 1.5.3
     uuid: 8.3.2
@@ -19390,7 +19410,7 @@ resolve@^2.0.0-next.3:
     webpack: 5.52.0
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
-    webpack-dev-server: 4.1.0
+    webpack-dev-server: 4.1.1
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
     winston: 3.3.3
@@ -20522,19 +20542,26 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:5.1.4, terser-webpack-plugin@npm:^5.0.3, terser-webpack-plugin@npm:^5.1.3":
-  version: 5.1.4
-  resolution: "terser-webpack-plugin@npm:5.1.4"
+"terser-webpack-plugin@npm:5.2.3":
+  version: 5.2.3
+  resolution: "terser-webpack-plugin@npm:5.2.3"
   dependencies:
-    jest-worker: ^27.0.2
+    jest-worker: ^27.0.6
     p-limit: ^3.1.0
-    schema-utils: ^3.0.0
+    schema-utils: ^3.1.1
     serialize-javascript: ^6.0.0
     source-map: ^0.6.1
-    terser: ^5.7.0
+    terser: ^5.7.2
   peerDependencies:
     webpack: ^5.1.0
-  checksum: 7e5f97ac1944aaff12460201496314ab75d842f4f088e0344ca5143caf85a340d7b0294ed6b4e32b52bbd1bea71648d6417034e889872c582c1be4840e9bd0e7
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+    esbuild:
+      optional: true
+    uglify-js:
+      optional: true
+  checksum: af93a5823ca4914760c210a75f9a32b32a48ffbb09d86a56ffac076fde750d536e1e65f7a919232f7c6baf39024ecc52cb478ca0da35af5f9540677d951b1f5a
   languageName: node
   linkType: hard
 
@@ -20576,6 +20603,22 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"terser-webpack-plugin@npm:^5.0.3, terser-webpack-plugin@npm:^5.1.3":
+  version: 5.1.4
+  resolution: "terser-webpack-plugin@npm:5.1.4"
+  dependencies:
+    jest-worker: ^27.0.2
+    p-limit: ^3.1.0
+    schema-utils: ^3.0.0
+    serialize-javascript: ^6.0.0
+    source-map: ^0.6.1
+    terser: ^5.7.0
+  peerDependencies:
+    webpack: ^5.1.0
+  checksum: 7e5f97ac1944aaff12460201496314ab75d842f4f088e0344ca5143caf85a340d7b0294ed6b4e32b52bbd1bea71648d6417034e889872c582c1be4840e9bd0e7
+  languageName: node
+  linkType: hard
+
 "terser@npm:^4.1.2, terser@npm:^4.6.3":
   version: 4.8.0
   resolution: "terser@npm:4.8.0"
@@ -20589,7 +20632,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.3.4, terser@npm:^5.7.0":
+"terser@npm:^5.3.4, terser@npm:^5.7.0, terser@npm:^5.7.2":
   version: 5.7.2
   resolution: "terser@npm:5.7.2"
   dependencies:
@@ -21910,11 +21953,11 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.1.0":
-  version: 4.1.0
-  resolution: "webpack-dev-server@npm:4.1.0"
+"webpack-dev-server@npm:4.1.1":
+  version: 4.1.1
+  resolution: "webpack-dev-server@npm:4.1.1"
   dependencies:
-    ansi-html: ^0.0.7
+    ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
     chokidar: ^3.5.1
     colorette: ^1.2.2
@@ -21946,7 +21989,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 5d26b8ef5eae2db597c9cbd14e64bd0dfe5a6fefa775fa22771b9d9e305e92155595a36329e8c996cbe0e457c3f0e87fc9bea9917b37cd94fdf0dfb52ad1d29f
+  checksum: 868eb7bb7f6d3cbdd78c28a2e8cda924b0d68213a5c8c8b5f1698d1ce5e25f088a9db7ef912888543eb149c9a12b67aa8f618651db24fea9f6a6b46799870305
   languageName: node
   linkType: hard
 
