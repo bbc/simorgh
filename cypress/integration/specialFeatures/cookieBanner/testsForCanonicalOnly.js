@@ -12,8 +12,8 @@ import visitPage from '../../../support/helpers/visitPage';
  * A value of 1 is set when the user is inside the UK.
  * A value of 2 is set when the user is in the EU.
  */
-const USER_IS_IN_UK = 1;
-const USER_IS_IN_EU = 2;
+const USER_IS_IN_UK = '1';
+const USER_IS_IN_EU = '2';
 const ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES = [USER_IS_IN_UK, USER_IS_IN_EU];
 
 const assertCookieHasValue = (cookieName, value) => {
