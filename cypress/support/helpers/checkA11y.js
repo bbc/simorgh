@@ -1,5 +1,7 @@
 const exclude = [
   '[id^="include-"]', // VJ includes (we have no control over these)
+  '[class*=dotcom]', // GNL ads (these can a11y violations)
+  '[id*=dotcom]', // GNL ads (these can a11y violations)
 ];
 
 const logA11yViolations = violations => {
