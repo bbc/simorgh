@@ -1,6 +1,5 @@
 import React from 'react';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import styled from '@emotion/styled';
 import { shape, string, oneOfType } from 'prop-types';
@@ -9,12 +8,13 @@ import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 
 const StyledStoryPromoWrapper = styled.div`
+  margin-top: 8px;
+  background-color: #f6f6f6;
   > div {
     display: grid;
-    margin: ${GEL_SPACING_HLF} 0;
-    background-color: ${C_GHOST};
+    margin: ${GEL_SPACING};
     @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      margin: ${GEL_SPACING_HLF} 0;
+      margin: ${GEL_SPACING};
     }
   }
 `;
