@@ -14,6 +14,9 @@ import {
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+
 import { ServiceContext } from '#contexts/ServiceContext';
 import Link from './Link';
 
@@ -82,6 +85,14 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
     ServiceContext,
   );
 
+  const eventTrackingData = {
+    componentName: 'third-party',
+    campaignID: 'player-episode-podcast',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
   if (!links.length) return null;
 
   const defaultTranslation = 'This podcast is also available on';
@@ -94,7 +105,11 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   const firstLink = links[0];
 
   return (
-    <Wrapper role="complementary" aria-labelledby="third-party-links">
+    <Wrapper
+      role="complementary"
+      aria-labelledby="third-party-links"
+      ref={viewTrackerRef}
+    >
       <ThirdPartyLinksTitle
         script={script}
         service={service}
@@ -105,7 +120,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
-            <StyledListItem dir={dir} key={linkText}>
+            <StyledListItem dir={dir} key={linkText} onClick={clickTrackerRef}>
               <Link href={linkUrl} service={service} script={script} dir={dir}>
                 <span role="text">
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
@@ -124,6 +139,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           service={service}
           script={script}
           dir={dir}
+          onClick={clickTrackerRef}
         >
           <span>
             <span lang={ExternalLinkTextLangs[firstLink.linkText] || lang}>
