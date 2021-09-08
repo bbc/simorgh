@@ -10,7 +10,6 @@ import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
