@@ -8,7 +8,7 @@ import {
 import visitPage from '../../../support/helpers/visitPage';
 
 /*
- * The ckns_explicit can have a value of 1 or 2 depending on a user's location.
+ * The ckns_explicit cookie can have a value of 1 or 2 depending on a user's location.
  * A value of 1 is set when the user is inside the UK.
  * A value of 2 is set when the user is in the EU.
  */
