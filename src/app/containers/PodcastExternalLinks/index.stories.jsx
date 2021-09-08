@@ -3,31 +3,40 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import PodcastExternalLinksComponent from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => (
-  <ServiceContextProvider service={service} variant={variant}>
-    <PodcastExternalLinksComponent
-      links={[
-        {
-          linkUrl: 'https://bbc.com',
-          linkText: 'Apple',
-        },
-        {
-          linkUrl: 'https://bbc.com',
-          linkText: 'Google',
-        },
-        {
-          linkUrl: 'https://bbc.com',
-          linkText: 'Spotify',
-        },
-        {
-          linkUrl: 'https://bbc.com',
-          linkText: 'RSS',
-        },
-      ]}
-    />
-  </ServiceContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: {
+        enabled: false,
+      },
+    }}
+  >
+    <ServiceContextProvider service={service} variant={variant}>
+      <PodcastExternalLinksComponent
+        links={[
+          {
+            linkUrl: 'https://bbc.com',
+            linkText: 'Apple',
+          },
+          {
+            linkUrl: 'https://bbc.com',
+            linkText: 'Google',
+          },
+          {
+            linkUrl: 'https://bbc.com',
+            linkText: 'Spotify',
+          },
+          {
+            linkUrl: 'https://bbc.com',
+            linkText: 'RSS',
+          },
+        ]}
+      />
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 export default {
