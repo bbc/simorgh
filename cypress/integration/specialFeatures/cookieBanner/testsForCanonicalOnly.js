@@ -21,7 +21,9 @@ const assertCookieHasValue = (cookieName, value) => {
 };
 
 const assertCookieHasOneOfValues = (cookieName, values) => {
-  cy.getCookie(cookieName).value.to.be.oneOf(values);
+  cy.getCookie(cookieName).then(({ value }) => {
+    expect(value).to.be.oneOf(values);
+  });
 };
 
 const assertCookieExpiryDate = (cookieName, timestamp) => {
