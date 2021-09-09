@@ -39,7 +39,6 @@ const RecommendationsImage = ({ indexImage }) => {
 };
 
 RecommendationsImage.propTypes = {
-  useLargeImages: bool.isRequired,
   lazyLoad: bool,
   indexImage: shape,
 };
