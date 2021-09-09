@@ -1,7 +1,7 @@
 const exclude = [
   // These elements can contain a11y violations as we have no control over what is rendered inside of them
   '.bbc-news-vj-embed-wrapper, [id^="include-"]', // VJ includes
-  '[class*=dotcom], [id*=dotcom], #edr_survey', // GNL ads
+  '[class*=dotcom], [id*=dotcom]', // GNL ads
 ];
 
 const logA11yViolations = violations => {
@@ -18,7 +18,7 @@ const logA11yViolations = violations => {
       impact,
       description,
       occurrences: nodes.length,
-      paths: nodes.map(({ target }) => target).join('\n'),
+      paths: nodes.map(({ target }) => target).join(', '),
     }),
   );
 
@@ -41,6 +41,22 @@ const checkA11y = () => {
          */
         id: 'frame-title-unique',
         selector: '*:not([src*="/ws/av-embeds/"])',
+      },
+      {
+        /*
+         * Due to the number of transient iframe elements without title attributes injected into the DOM by ads code we need to disable this rule.
+         * Adding elements to the exclude array does not work because the exclude selector must only run when the DOM is ready and some ad elements are injected after the DOM ready event.
+         */
+        id: 'frame-title',
+        enabled: false,
+      },
+      {
+        /*
+         * Our ads containers use the aria-hidden attribute however they contain focusable elements within them.
+         * Disabling this rule for now until we figure out why the ads container has the aria-hidden attribute.
+         */
+        id: 'aria-hidden-focus',
+        enabled: false,
       },
     ],
   });
