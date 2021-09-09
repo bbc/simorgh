@@ -1,52 +1,101 @@
 import React from 'react';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
+import pathOr from 'ramda/src/pathOr';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import { Link } from '@bbc/psammead-story-promo';
+import { grid } from '@bbc/psammead-styles/detection';
 import styled from '@emotion/styled';
 import { shape, string, oneOfType } from 'prop-types';
-import Grid from '../../../components/Grid';
-import StoryPromo from '../../StoryPromo';
+import LinkContents from '../../StoryPromo/LinkContents';
+import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
+import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 
-const StyledStoryPromoWrapper = styled.div`
+const StyledPromoWrapper = styled.div`
+  padding: ${GEL_SPACING};
+  margin-top: 8px;
+  background-color: #f6f6f6;
   > div {
     display: grid;
-    margin: ${GEL_SPACING_HLF} 0;
-    background-color: ${C_GHOST};
-    @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      margin: ${GEL_SPACING_HLF} 0;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  overflow-wrap: anywhere;
+`;
+
+const TextGridItem = styled.div`
+  display: inline-block;
+
+  @supports (${grid}) {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 4 / span 9;
+  }
+`;
+
+const ImageGridItem = styled.div`
+  display: inline-block;
+  position: relative;
+
+  @supports (${grid}) {
+    width: initial;
+    grid-column: 1 / span 3;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+`;
+
+const PromoGridWrapper = styled.div`
+  position: relative;
+  @supports (${grid}) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: ${GEL_SPACING};
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      grid-column-gap: ${GEL_SPACING_DBL};
+    }
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+      display: block;
     }
   }
 `;
 
-const RecommendationsPromo = ({ promo, dir, eventTrackingData }) => {
+const RecommendationsPromo = ({ promo, eventTrackingData }) => {
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
+
+  const url = pathOr(null, ['locators', 'assetUri'], promo);
+
   return (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 1,
-        group5: 1,
-      }}
-      enableGelGutters
-    >
-      <StyledStoryPromoWrapper data-e2e="story-promo-wrapper">
-        <StoryPromo
-          item={promo}
-          dir={dir}
-          isRecommendation
-          displaySummary={false}
-          eventTrackingData={eventTrackingData}
-        />
-      </StyledStoryPromoWrapper>
-    </Grid>
+    <StyledPromoWrapper data-e2e="story-promo-wrapper">
+      <PromoGridWrapper>
+        <ImageGridItem>
+          <ImageWrapper>
+            <RecommendationsImage item={promo} />
+          </ImageWrapper>
+        </ImageGridItem>
+        <TextGridItem>
+          <StyledLink
+            href={url}
+            onClick={eventTrackingData ? handleClickTracking : null}
+          >
+            <LinkContents item={promo} isInline />
+          </StyledLink>
+        </TextGridItem>
+      </PromoGridWrapper>
+    </StyledPromoWrapper>
   );
 };
 
 RecommendationsPromo.propTypes = {
-  dir: string.isRequired,
   promo: oneOfType([shape(storyItem)]).isRequired,
   eventTrackingData: shape({
     block: shape({
