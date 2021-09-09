@@ -68,7 +68,7 @@ const Link = styled.a`
   }
 `;
 
-const StyledHeadline = styled.h3`
+const StyledHeadline = styled.div`
   ${({ service }) => getSerifMedium(service)}
   ${({ script }) => getPica(script)}
   color: ${C_EBON};
