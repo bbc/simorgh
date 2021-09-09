@@ -87,7 +87,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
     <StyledPromoWrapper data-e2e="story-promo-wrapper">
       <PromoGridWrapper>
         <ImageWrapper>
-          <RecommendationsImage indexImage={indexImage} />
+          <RecommendationsImage indexImage={indexImage} lazyLoad />
         </ImageWrapper>
         <TextWrapper>
           <StyledHeadline script={script} service={service}>

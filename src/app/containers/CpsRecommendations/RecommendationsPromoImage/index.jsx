@@ -6,7 +6,7 @@ import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 
-const RecommendationsImage = ({ indexImage }) => {
+const RecommendationsImage = ({ indexImage, lazyLoad }) => {
   if (!indexImage) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
@@ -33,14 +33,14 @@ const RecommendationsImage = ({ indexImage }) => {
       copyright={indexImage.copyrightHolder}
       srcset={srcset}
       sizes={sizes}
-      lazyLoad
+      lazyLoad={lazyLoad}
     />
   );
 };
 
 RecommendationsImage.propTypes = {
   lazyLoad: bool,
-  indexImage: shape,
+  indexImage: shape({}),
 };
 
 RecommendationsImage.defaultProps = {
