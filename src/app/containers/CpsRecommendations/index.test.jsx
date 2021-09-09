@@ -68,11 +68,36 @@ describe('CpsRecommendations', () => {
   });
 
   it('should contain a region landmark role', () => {
-    const { container } = render(<Component />);
+    const toggleEnabled = true;
+
+    const { getByRole } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
+      toggleEnabled,
+    );
+
+    const section = getByRole('region');
+    expect(section.getAttribute('aria-labelledby')).toBe(
+      'recommendations-heading',
+    );
   });
 
   it('should contain a link to skip to end of recommendations component', () => {
-    const { container } = render(<Component />);
+    const toggleEnabled = true;
+
+    const { container } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
+      toggleEnabled,
+    );
+
+    const links = container.querySelectorAll('a');
+    const skipLink = links[0];
+
+    expect(skipLink.getAttribute('href')).toEqual('#end-of-recommendations');
+    expect(skipLink.textContent).toEqual(
+      'Saltar Quizás también te interese y continuar leyendo',
+    );
   });
 
   it('should not render when there is no recommendations data', () => {
