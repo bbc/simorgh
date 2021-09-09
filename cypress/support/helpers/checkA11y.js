@@ -18,7 +18,7 @@ const logA11yViolations = violations => {
       impact,
       description,
       occurrences: nodes.length,
-      paths: nodes.map(({ target }) => target).join('\n'),
+      paths: nodes.map(({ target }) => target).join(', '),
     }),
   );
 
