@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
@@ -13,7 +14,7 @@ import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTra
 
 const StyledPromoWrapper = styled.div`
   padding: ${GEL_SPACING};
-  margin-top: 8px;
+  margin-top: ${GEL_SPACING};
   background-color: #f6f6f6;
 `;
 
@@ -31,8 +32,12 @@ const ImageWrapper = styled.div`
 const TextWrapper = styled.div`
   display: inline-block;
   width: calc(100% - 120px);
-  padding: 0 16px;
+  padding: 0 ${GEL_SPACING};
   vertical-align: top;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING_DBL};
+  }
 `;
 
 const Link = styled.a`
