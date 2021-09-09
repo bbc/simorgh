@@ -23,4 +23,12 @@ describe('RecommendationsPromo', () => {
       </ToggleContextProvider>
     </ServiceContextProvider>,
   );
+
+  it('should contain skip link for screen readers', () => {
+    const { container } = render(Component);
+  });
+
+  it('should render the title as a div', () => {
+    const { container } = render(Component);
+  });
 });

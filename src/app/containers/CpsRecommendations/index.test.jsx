@@ -67,6 +67,14 @@ describe('CpsRecommendations', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should contain a region landmark role', () => {
+    const { container } = render(<Component />);
+  });
+
+  it('should contain a link to skip to end of recommendations component', () => {
+    const { container } = render(<Component />);
+  });
+
   it('should not render when there is no recommendations data', () => {
     const toggleEnabled = true;
 

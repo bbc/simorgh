@@ -36,6 +36,9 @@ describe('RecommendationsPromoList', () => {
     <Fixture />,
   );
 
+  it('should render 1 promo not as a list item', () => {});
+
+  it('should render multiple promos in an unordered list', () => {});
   describe('Event Tracking', () => {
     it('should implement 3 BLOCK level and 3 LINK level click trackers (1 for each promo item)', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
