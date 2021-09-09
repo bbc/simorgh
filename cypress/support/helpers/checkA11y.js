@@ -18,7 +18,7 @@ const logA11yViolations = violations => {
       impact,
       description,
       occurrences: nodes.length,
-      paths: nodes.map(({ target }) => target).join('\n'),
+      paths: nodes.map(({ target }) => target).join(', '),
     }),
   );
 
@@ -48,6 +48,14 @@ const checkA11y = () => {
          * Adding elements to the exclude array does not work because the exclude selector must only run when the DOM is ready and some ad elements are injected after the DOM ready event.
          */
         id: 'frame-title',
+        enabled: false,
+      },
+      {
+        /*
+         * Our ads containers use the aria-hidden attribute however they contain focusable elements within them.
+         * Disabling this rule for now until we figure out why the ads container has the aria-hidden attribute.
+         */
+        id: 'aria-hidden-focus',
         enabled: false,
       },
     ],
