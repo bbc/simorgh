@@ -9,7 +9,6 @@ import { Link } from '@bbc/psammead-story-promo';
 import { grid } from '@bbc/psammead-styles/detection';
 import styled from '@emotion/styled';
 import { shape, string, oneOfType } from 'prop-types';
-import LinkContents from '../../StoryPromo/LinkContents';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
@@ -71,7 +70,7 @@ const PromoGridWrapper = styled.div`
 
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-
+  const headline = pathOr(null, ['headlines', 'headline'], promo);
   const url = pathOr(null, ['locators', 'assetUri'], promo);
 
   return (
@@ -87,7 +86,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
             href={url}
             onClick={eventTrackingData ? handleClickTracking : null}
           >
-            <LinkContents item={promo} isInline />
+            {headline}
           </StyledLink>
         </TextGridItem>
       </PromoGridWrapper>
