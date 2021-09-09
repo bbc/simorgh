@@ -44,7 +44,8 @@ const checkA11y = () => {
       },
       {
         /*
-         * Due to the number of transient iframe elements without title attributes injected into the DOM by ads code we need to disable this rule
+         * Due to the number of transient iframe elements without title attributes injected into the DOM by ads code we need to disable this rule.
+         * Adding these element to the exclude array does not work because the exclude selector must only run when the DOM is ready and some ad elements are injected after the DOM ready event.
          */
         id: 'frame-title',
         enabled: false,
