@@ -1,13 +1,13 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
+import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { Link } from '@bbc/psammead-story-promo';
 import { grid } from '@bbc/psammead-styles/detection';
-import styled from '@emotion/styled';
+import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -20,35 +20,6 @@ const StyledPromoWrapper = styled.div`
   > div {
     display: grid;
   }
-`;
-
-const StyledLink = styled(Link)`
-  overflow-wrap: anywhere;
-`;
-
-const TextGridItem = styled.div`
-  display: inline-block;
-
-  @supports (${grid}) {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 4 / span 9;
-  }
-`;
-
-const ImageGridItem = styled.div`
-  display: inline-block;
-  position: relative;
-
-  @supports (${grid}) {
-    width: initial;
-    grid-column: 1 / span 3;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
 `;
 
 const PromoGridWrapper = styled.div`
@@ -68,6 +39,59 @@ const PromoGridWrapper = styled.div`
   }
 `;
 
+const ImageGridItem = styled.div`
+  display: inline-block;
+  position: relative;
+
+  @supports (${grid}) {
+    width: initial;
+    grid-column: 1 / span 3;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+`;
+
+const TextGridItem = styled.div`
+  display: inline-block;
+
+  @supports (${grid}) {
+    display: block;
+    width: initial;
+    padding: initial;
+    grid-column: 4 / span 9;
+  }
+`;
+
+const Link = styled.a`
+  position: static;
+  color: ${C_EBON};
+  text-decoration: none;
+  overflow-wrap: break-word;
+
+  &:before {
+    bottom: 0;
+    content: '';
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: ${C_METAL};
+  }
+`;
+
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   const headline = pathOr(null, ['headlines', 'headline'], promo);
@@ -83,12 +107,12 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
           </ImageWrapper>
         </ImageGridItem>
         <TextGridItem>
-          <StyledLink
+          <Link
             href={url}
             onClick={eventTrackingData ? handleClickTracking : null}
           >
             {headline}
-          </StyledLink>
+          </Link>
         </TextGridItem>
       </PromoGridWrapper>
     </StyledPromoWrapper>
