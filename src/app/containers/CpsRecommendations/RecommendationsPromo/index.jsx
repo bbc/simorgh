@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -6,9 +6,12 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { getPica } from '@bbc/gel-foundations/typography';
 import { grid } from '@bbc/psammead-styles/detection';
 import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
@@ -92,7 +95,16 @@ const Link = styled.a`
   }
 `;
 
+const StyledHeadline = styled.h3`
+  ${({ service }) => getSerifMedium(service)}
+  ${({ script }) => getPica(script)}
+  color: ${C_EBON};
+  margin: 0;
+  padding-bottom: ${GEL_SPACING};
+`;
+
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
+  const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   const headline = pathOr(null, ['headlines', 'headline'], promo);
   const url = pathOr(null, ['locators', 'assetUri'], promo);
@@ -107,12 +119,14 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
           </ImageWrapper>
         </ImageGridItem>
         <TextGridItem>
-          <Link
-            href={url}
-            onClick={eventTrackingData ? handleClickTracking : null}
-          >
-            {headline}
-          </Link>
+          <StyledHeadline script={script} service={service}>
+            <Link
+              href={url}
+              onClick={eventTrackingData ? handleClickTracking : null}
+            >
+              {headline}
+            </Link>
+          </StyledHeadline>
         </TextGridItem>
       </PromoGridWrapper>
     </StyledPromoWrapper>
