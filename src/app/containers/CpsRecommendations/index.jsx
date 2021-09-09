@@ -6,7 +6,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -23,7 +22,6 @@ import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
-import RecommendationsPromo from './RecommendationsPromo';
 import RecommendationsPromoList from './RecommendationsPromoList';
 
 const Wrapper = styled.div`
@@ -58,19 +56,6 @@ const RecommendationsWrapper = styled.div`
   }
 `;
 
-const SingleContentWrapper = styled.div`
-  ${({ columnType }) =>
-    columnType === 'secondary' &&
-    `
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-      padding-top: ${GEL_SPACING_DBL};
-    }
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      padding-bottom: ${GEL_SPACING_TRPL};
-    }
-  `}
-`;
-
 const LabelComponent = styled(SectionLabel)`
   margin: 0;
   padding: 0;
@@ -90,9 +75,6 @@ const CpsRecommendations = ({ items }) => {
     role: 'region',
     'aria-labelledby': labelId,
   };
-
-  const hasSingleContent = items.length === 1;
-  const [singleContent] = items;
 
   const CpsOnwardJourneyWrapper = ({ children }) => (
     <Wrapper data-e2e={labelId} {...a11yAttributes}>
@@ -148,13 +130,7 @@ const CpsRecommendations = ({ items }) => {
                 {title}
               </LabelComponent>
             ) : null}
-            {hasSingleContent ? (
-              <SingleContentWrapper columnType="main">
-                <RecommendationsPromo promo={singleContent} dir={dir} />
-              </SingleContentWrapper>
-            ) : (
-              <RecommendationsPromoList promoItems={items} dir={dir} />
-            )}
+            <RecommendationsPromoList promoItems={items} dir={dir} />
           </SkipWrapper>
         </CpsOnwardJourneyWrapper>
       </RecommendationsWrapper>
