@@ -19,11 +19,12 @@ const ContextWrap = ({
   children,
   nielsenAnalyticsToggle,
   personalisation,
+  service,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
     pageType={pageType}
-    service="news"
+    service={service}
     statusCode={200}
     bbcOrigin={origin}
     pathname="/pathname"
@@ -54,6 +55,7 @@ ContextWrap.propTypes = {
   platform: string.isRequired,
   nielsenAnalyticsToggle: bool.isRequired,
   personalisation: shape({}),
+  service: string.isRequired,
 };
 
 ContextWrap.defaultProps = {
@@ -69,6 +71,7 @@ describe('Nielsen Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
           nielsenAnalyticsToggle={false}
+          service="news"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -84,6 +87,7 @@ describe('Nielsen Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
           nielsenAnalyticsToggle
+          service="news"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -99,6 +103,7 @@ describe('Nielsen Analytics Container', () => {
           pageType={ARTICLE_PAGE}
           origin="bbc.com"
           nielsenAnalyticsToggle
+          service="news"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -106,6 +111,40 @@ describe('Nielsen Analytics Container', () => {
 
       expect(container.firstChild).not.toBeNull();
       expect(container.firstChild).toMatchSnapshot();
+    });
+
+    it('should set correct apid for news pages', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          nielsenAnalyticsToggle
+          service="news"
+        >
+          <NielsenAnalytics />
+        </ContextWrap>,
+      );
+
+      const data = JSON.parse(container.querySelector('script').textContent);
+      expect(data.vars.apid).toBe('474C2B0B-0C04-4182-BCFB-FC9469A48C9B');
+    });
+
+    it('should set correct apid for sports pages', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          nielsenAnalyticsToggle
+          service="sport"
+        >
+          <NielsenAnalytics />
+        </ContextWrap>,
+      );
+
+      const data = JSON.parse(container.querySelector('script').textContent);
+      expect(data.vars.apid).toBe('DC4AFDB2-B352-4D51-81EF-38BE41114F22');
     });
   });
 });
