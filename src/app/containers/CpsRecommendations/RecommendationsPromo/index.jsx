@@ -1,14 +1,9 @@
 import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
-import { grid } from '@bbc/psammead-styles/detection';
 import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -20,57 +15,24 @@ const StyledPromoWrapper = styled.div`
   padding: ${GEL_SPACING};
   margin-top: 8px;
   background-color: #f6f6f6;
-  > div {
-    display: grid;
-  }
 `;
 
 const PromoGridWrapper = styled.div`
   position: relative;
-  @supports (${grid}) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: ${GEL_SPACING};
-
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      grid-column-gap: ${GEL_SPACING_DBL};
-    }
-
-    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      display: block;
-    }
-  }
-`;
-
-const ImageGridItem = styled.div`
-  display: inline-block;
-  position: relative;
-
-  @supports (${grid}) {
-    width: initial;
-    grid-column: 1 / span 4;
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      grid-column: 1 / span 3;
-    }
-  }
 `;
 
 const ImageWrapper = styled.div`
+  display: inline-block;
   position: relative;
+  width: 120px;
+  vertical-align: top;
 `;
 
-const TextGridItem = styled.div`
+const TextWrapper = styled.div`
   display: inline-block;
-
-  @supports (${grid}) {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 5 / span 8;
-    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-      grid-column: 4 / span 9;
-    }
-  }
+  width: calc(100% - 120px);
+  padding: 0 16px;
+  vertical-align: top;
 `;
 
 const Link = styled.a`
@@ -119,12 +81,10 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   return (
     <StyledPromoWrapper data-e2e="story-promo-wrapper">
       <PromoGridWrapper>
-        <ImageGridItem>
-          <ImageWrapper>
-            <RecommendationsImage indexImage={indexImage} />
-          </ImageWrapper>
-        </ImageGridItem>
-        <TextGridItem>
+        <ImageWrapper>
+          <RecommendationsImage indexImage={indexImage} />
+        </ImageWrapper>
+        <TextWrapper>
           <StyledHeadline script={script} service={service}>
             <Link
               href={url}
@@ -133,7 +93,7 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
               {headline}
             </Link>
           </StyledHeadline>
-        </TextGridItem>
+        </TextWrapper>
       </PromoGridWrapper>
     </StyledPromoWrapper>
   );
