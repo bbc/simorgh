@@ -1,20 +1,18 @@
 import React from 'react';
 import { shape, bool } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../../ImageWithPlaceholder';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 
-const RecommendationsImage = ({ item, lazyLoad }) => {
-  const imageValues = pathOr(null, ['indexImage'], item);
-  if (!imageValues) {
+const RecommendationsImage = ({ indexImage }) => {
+  if (!indexImage) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
-  const { height, width, path } = imageValues;
+  const { height, width, path } = indexImage;
 
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
@@ -27,15 +25,15 @@ const RecommendationsImage = ({ item, lazyLoad }) => {
 
   return (
     <ImageWithPlaceholder
-      alt={imageValues.altText}
+      alt={indexImage.altText}
       ratio={ratio}
       src={src}
       fallback={false}
-      {...imageValues}
-      lazyLoad={lazyLoad}
-      copyright={imageValues.copyrightHolder}
+      {...indexImage}
+      copyright={indexImage.copyrightHolder}
       srcset={srcset}
       sizes={sizes}
+      lazyLoad
     />
   );
 };
@@ -43,18 +41,16 @@ const RecommendationsImage = ({ item, lazyLoad }) => {
 RecommendationsImage.propTypes = {
   useLargeImages: bool.isRequired,
   lazyLoad: bool,
-  item: shape,
+  indexImage: shape,
 };
 
 RecommendationsImage.defaultProps = {
   lazyLoad: false,
-  item: shape({
-    imageValues: shape({
-      path: '',
-      altText: '',
-      height: '',
-      width: '',
-    }),
+  indexImage: shape({
+    path: '',
+    altText: '',
+    height: '',
+    width: '',
   }),
 };
 

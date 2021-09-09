@@ -72,13 +72,14 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
   const headline = pathOr(null, ['headlines', 'headline'], promo);
   const url = pathOr(null, ['locators', 'assetUri'], promo);
+  const indexImage = pathOr(null, ['indexImage'], promo);
 
   return (
     <StyledPromoWrapper data-e2e="story-promo-wrapper">
       <PromoGridWrapper>
         <ImageGridItem>
           <ImageWrapper>
-            <RecommendationsImage item={promo} />
+            <RecommendationsImage indexImage={indexImage} />
           </ImageWrapper>
         </ImageGridItem>
         <TextGridItem>
