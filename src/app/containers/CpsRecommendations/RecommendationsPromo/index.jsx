@@ -48,7 +48,10 @@ const ImageGridItem = styled.div`
 
   @supports (${grid}) {
     width: initial;
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      grid-column: 1 / span 3;
+    }
   }
 `;
 
@@ -63,7 +66,10 @@ const TextGridItem = styled.div`
     display: block;
     width: initial;
     padding: initial;
-    grid-column: 4 / span 9;
+    grid-column: 5 / span 8;
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+      grid-column: 4 / span 9;
+    }
   }
 `;
 
@@ -100,7 +106,7 @@ const StyledHeadline = styled.h3`
   ${({ script }) => getPica(script)}
   color: ${C_EBON};
   margin: 0;
-  padding-bottom: ${GEL_SPACING};
+  padding: ${GEL_SPACING} 0;
 `;
 
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
