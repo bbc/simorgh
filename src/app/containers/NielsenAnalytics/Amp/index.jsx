@@ -11,11 +11,8 @@ const AccessDiv = props => <div {...props} />;
 // Using amp-geo to hide/display based on the country
 // amp-analytics doesn't generate any call if display none
 const DisplayWrapper = styled(AccessDiv)`
-  .amp-geo-pending &,
-  .amp-geo-group-gbOrUnknown & {
-    display: none;
-    visibility: hidden;
-  }
+  display: none;
+  visibility: hidden;
   .amp-iso-country-au & {
     display: block;
   }
