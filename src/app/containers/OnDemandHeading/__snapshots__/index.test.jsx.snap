@@ -34,7 +34,8 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 }
 
 .emotion-2 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -93,7 +94,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -107,10 +108,9 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
 <div>
   <h1
     class=" emotion-0 emotion-1"
+    role="text"
   >
-    <span
-      role="text"
-    >
+    <span>
       <span
         class="emotion-2 emotion-3"
       >
@@ -165,7 +165,8 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 }
 
 .emotion-2 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -240,7 +241,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-6 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -254,10 +255,9 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
 <div>
   <h1
     class=" emotion-0 emotion-1"
+    role="text"
   >
-    <span
-      role="text"
-    >
+    <span>
       <span
         class="emotion-2 emotion-3"
       >
