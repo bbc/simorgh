@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { StoryPromoLiBase, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { arrayOf, shape, string, number } from 'prop-types';
+import { arrayOf, shape, number } from 'prop-types';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
 import Grid from '../../../components/Grid';
