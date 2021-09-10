@@ -119,8 +119,6 @@ export default ({ service, variant, pageType, path }) => {
     cy.setCookie('ckns_policy', 'made_up_value');
     visitPage(path, pageType);
 
-    cy.wait(1000);
-
     assertCookieHasValue('ckns_policy', 'made_up_value');
   });
 };
