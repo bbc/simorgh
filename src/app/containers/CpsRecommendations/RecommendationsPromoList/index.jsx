@@ -8,7 +8,7 @@ import RecommendationsPromo from '../RecommendationsPromo';
 import getEventTrackingData from './getEventTrackingData';
 
 const RecommendationsPromoListItem = forwardRef(
-  ({ item, dir, index }, forwardedRef) => {
+  ({ item, index }, forwardedRef) => {
     const eventTrackingData = getEventTrackingData({ item, index });
     const linkViewEventTracker = useViewTracker(eventTrackingData.link);
     const elementRefCallback = element => {
@@ -34,7 +34,6 @@ const RecommendationsPromoListItem = forwardRef(
       >
         <RecommendationsPromo
           promo={item}
-          dir={dir}
           eventTrackingData={eventTrackingData}
         />
       </Grid>
@@ -42,7 +41,7 @@ const RecommendationsPromoListItem = forwardRef(
   },
 );
 
-const RecommendationsPromoList = ({ promoItems, dir }) => {
+const RecommendationsPromoList = ({ promoItems }) => {
   const eventTrackingData = getEventTrackingData();
   const blockViewEventTracker = useViewTracker(eventTrackingData.block);
 
@@ -65,7 +64,6 @@ const RecommendationsPromoList = ({ promoItems, dir }) => {
           ref={blockViewEventTracker}
           index={index}
           item={item}
-          dir={dir}
         />
       ))}
     </Grid>
@@ -73,13 +71,11 @@ const RecommendationsPromoList = ({ promoItems, dir }) => {
 };
 
 RecommendationsPromoListItem.propTypes = {
-  dir: string.isRequired,
   item: shape(storyItem).isRequired,
   index: number.isRequired,
 };
 
 RecommendationsPromoList.propTypes = {
-  dir: string.isRequired,
   promoItems: arrayOf(shape(storyItem)).isRequired,
 };
 

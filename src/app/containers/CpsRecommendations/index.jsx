@@ -43,7 +43,7 @@ const SkipWrapper = ({ skipLink, service, children }) => {
   );
 };
 
-const skipLinkProps = {
+const skipLinkPropShape = {
   terms: shape({
     '%title%': string,
   }),
@@ -55,7 +55,7 @@ const skipLinkProps = {
 SkipWrapper.propTypes = {
   service: string.isRequired,
   children: node.isRequired,
-  skipLink: shape(skipLinkProps),
+  skipLink: shape(skipLinkPropShape),
 };
 
 SkipWrapper.defaultProps = {
@@ -152,9 +152,9 @@ const CpsRecommendations = ({ items }) => {
               </LabelComponent>
             ) : null}
             {isSinglePromo ? (
-              <RecommendationsPromo promo={items[0]} dir={dir} />
+              <RecommendationsPromo promo={items[0]} />
             ) : (
-              <RecommendationsPromoList promoItems={items} dir={dir} />
+              <RecommendationsPromoList promoItems={items} />
             )}
           </SkipWrapper>
         </CpsOnwardJourneyWrapper>
