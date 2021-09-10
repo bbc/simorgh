@@ -20,7 +20,8 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: ${GEL_SPACING};
   word-break: break-word;
@@ -76,6 +77,7 @@ const OnDemandHeadingContainer = ({
 
   return (
     <Headline
+      role="text"
       script={script}
       service={service}
       id={idAttr}
@@ -84,7 +86,7 @@ const OnDemandHeadingContainer = ({
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
-      <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
+      <TextWrapper>
         <BrandTitle script={script} darkMode={darkMode}>
           {brandTitle}
         </BrandTitle>
