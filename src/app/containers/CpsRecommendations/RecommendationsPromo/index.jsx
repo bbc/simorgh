@@ -7,6 +7,7 @@ import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
+import Grid from '../../../components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -80,21 +81,33 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const indexImage = pathOr(null, ['indexImage'], promo);
 
   return (
-    <StyledPromoWrapper data-e2e="story-promo-wrapper">
-      <ImageWrapper>
-        <RecommendationsImage indexImage={indexImage} lazyLoad />
-      </ImageWrapper>
-      <TextWrapper>
-        <StyledHeadline script={script} service={service}>
-          <Link
-            href={url}
-            onClick={eventTrackingData ? handleClickTracking : null}
-          >
-            {headline}
-          </Link>
-        </StyledHeadline>
-      </TextWrapper>
-    </StyledPromoWrapper>
+    <Grid
+      columns={{
+        group0: 1,
+        group1: 1,
+        group2: 1,
+        group3: 1,
+        group4: 1,
+        group5: 1,
+      }}
+      enableGelGutters
+    >
+      <StyledPromoWrapper data-e2e="story-promo-wrapper">
+        <ImageWrapper>
+          <RecommendationsImage indexImage={indexImage} lazyLoad />
+        </ImageWrapper>
+        <TextWrapper>
+          <StyledHeadline script={script} service={service}>
+            <Link
+              href={url}
+              onClick={eventTrackingData ? handleClickTracking : null}
+            >
+              {headline}
+            </Link>
+          </StyledHeadline>
+        </TextWrapper>
+      </StyledPromoWrapper>
+    </Grid>
   );
 };
 
