@@ -28,7 +28,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
   display: inline-block;
-  width: calc(100% - 120px);
+  width: calc(100% - 7.5rem);
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
 
