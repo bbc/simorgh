@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import {
   getCookieBannerCanonical,
   getCookieBannerAcceptCanonical,
@@ -61,6 +62,8 @@ export default ({ service, variant, pageType, path }) => {
 
     getCookieBannerAcceptCanonical(service, variant).click();
 
+    cy.wait(1000);
+
     assertCookieHasOneOfValues(
       'ckns_explicit',
       ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
@@ -89,6 +92,8 @@ export default ({ service, variant, pageType, path }) => {
 
     visitPage(path, pageType);
 
+    cy.wait(1000);
+
     assertCookieHasOneOfValues(
       'ckns_explicit',
       ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
@@ -107,6 +112,8 @@ export default ({ service, variant, pageType, path }) => {
     cy.setCookie('ckns_privacy', 'july2019');
     visitPage(path, pageType);
 
+    cy.wait(1000);
+
     getPrivacyBanner(service, variant).should('not.exist');
     getCookieBannerCanonical(service, variant).should('be.visible');
   });
@@ -115,6 +122,8 @@ export default ({ service, variant, pageType, path }) => {
     cy.clearCookies();
     cy.setCookie('ckns_policy', 'made_up_value');
     visitPage(path, pageType);
+
+    cy.wait(1000);
 
     assertCookieHasValue('ckns_policy', 'made_up_value');
   });
