@@ -22,7 +22,7 @@ const StyledPromoWrapper = styled.div`
 const ImageWrapper = styled.div`
   display: inline-block;
   position: relative;
-  width: 120px;
+  width: 7.5rem;
   vertical-align: top;
 `;
 
