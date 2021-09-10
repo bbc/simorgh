@@ -92,8 +92,6 @@ export default ({ service, variant, pageType, path }) => {
 
     visitPage(path, pageType);
 
-    cy.wait(1000);
-
     assertCookieHasOneOfValues(
       'ckns_explicit',
       ACCEPTED_CKNS_EXPLICIT_COOKIE_VALUES,
