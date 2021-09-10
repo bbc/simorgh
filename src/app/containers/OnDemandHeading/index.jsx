@@ -44,7 +44,7 @@ const Subheading = styled.span`
   }
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     font-size: 1.25rem;
-    line-height: ${GEL_SPACING_DBL};
+    line-height: ${GEL_SPACING_TRPL};
   }
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     font-size: ${GEL_SPACING_TRPL};
