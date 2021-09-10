@@ -18,10 +18,6 @@ const StyledPromoWrapper = styled.div`
   background-color: #f6f6f6;
 `;
 
-const PromoGridWrapper = styled.div`
-  position: relative;
-`;
-
 const ImageWrapper = styled.div`
   display: inline-block;
   position: relative;
@@ -85,21 +81,19 @@ const RecommendationsPromo = ({ promo, eventTrackingData }) => {
 
   return (
     <StyledPromoWrapper data-e2e="story-promo-wrapper">
-      <PromoGridWrapper>
-        <ImageWrapper>
-          <RecommendationsImage indexImage={indexImage} lazyLoad />
-        </ImageWrapper>
-        <TextWrapper>
-          <StyledHeadline script={script} service={service}>
-            <Link
-              href={url}
-              onClick={eventTrackingData ? handleClickTracking : null}
-            >
-              {headline}
-            </Link>
-          </StyledHeadline>
-        </TextWrapper>
-      </PromoGridWrapper>
+      <ImageWrapper>
+        <RecommendationsImage indexImage={indexImage} lazyLoad />
+      </ImageWrapper>
+      <TextWrapper>
+        <StyledHeadline script={script} service={service}>
+          <Link
+            href={url}
+            onClick={eventTrackingData ? handleClickTracking : null}
+          >
+            {headline}
+          </Link>
+        </StyledHeadline>
+      </TextWrapper>
     </StyledPromoWrapper>
   );
 };
