@@ -100,6 +100,18 @@ describe('CpsRecommendations', () => {
     );
   });
 
+  it('should not render a list when there is only one promo', () => {
+    const toggleEnabled = true;
+    const { queryByRole } = renderContainer(
+      [ltrRecommendationsData[0]],
+      'mundo',
+      toggleEnabled,
+    );
+
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(queryByRole('listitem')).not.toBeInTheDocument();
+  });
+
   it('should not render when there is no recommendations data', () => {
     const toggleEnabled = true;
 

@@ -23,6 +23,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import RecommendationsPromoList from './RecommendationsPromoList';
+import RecommendationsPromo from './RecommendationsPromo';
 
 const Wrapper = styled.div`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
@@ -102,6 +103,8 @@ const CpsRecommendations = ({ items }) => {
     '%title%': title,
   };
 
+  const isSinglePromo = items.length === 1;
+
   const endTextId = 'end-of-recommendations';
 
   const skipLinkProps = {
@@ -130,7 +133,11 @@ const CpsRecommendations = ({ items }) => {
                 {title}
               </LabelComponent>
             ) : null}
-            <RecommendationsPromoList promoItems={items} dir={dir} />
+            {isSinglePromo ? (
+              <RecommendationsPromo promo={items[0]} dir={dir} />
+            ) : (
+              <RecommendationsPromoList promoItems={items} dir={dir} />
+            )}
           </SkipWrapper>
         </CpsOnwardJourneyWrapper>
       </RecommendationsWrapper>
