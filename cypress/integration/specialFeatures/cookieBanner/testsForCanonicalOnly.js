@@ -110,8 +110,6 @@ export default ({ service, variant, pageType, path }) => {
     cy.setCookie('ckns_privacy', 'july2019');
     visitPage(path, pageType);
 
-    cy.wait(1000);
-
     getPrivacyBanner(service, variant).should('not.exist');
     getCookieBannerCanonical(service, variant).should('be.visible');
   });
