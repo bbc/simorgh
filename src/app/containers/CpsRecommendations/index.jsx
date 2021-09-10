@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, node } from 'prop-types';
+import { arrayOf, shape, node, string } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -35,13 +35,31 @@ const Wrapper = styled.div`
   }
 `;
 
-// eslint-disable-next-line react/prop-types
 const SkipWrapper = ({ skipLink, service, children }) => {
   return (
     <SkipLinkWrapper service={service} {...skipLink}>
       {children}
     </SkipLinkWrapper>
   );
+};
+
+const skipLinkProps = {
+  terms: shape({
+    '%title%': string,
+  }),
+  endTextVisuallyHidden: string,
+  endTextId: string,
+  text: string,
+};
+
+SkipWrapper.propTypes = {
+  service: string.isRequired,
+  children: node.isRequired,
+  skipLink: shape(skipLinkProps),
+};
+
+SkipWrapper.defaultProps = {
+  skipLink: null,
 };
 
 const RecommendationsWrapper = styled.div`
