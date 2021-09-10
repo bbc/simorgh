@@ -112,8 +112,9 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
                     {linkText}
                   </span>
-                  <VisuallyHiddenText>{`, ${brandTitle}`}</VisuallyHiddenText>
-                  <VisuallyHiddenText>{externalLinkText}</VisuallyHiddenText>
+                  <VisuallyHiddenText aria-label={externalLinkText}>
+                    {`, ${brandTitle}`}
+                  </VisuallyHiddenText>
                 </span>
               </Link>
             </StyledListItem>
