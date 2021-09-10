@@ -327,7 +327,8 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 .emotion-21 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -375,7 +376,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 @media (max-width: 37.4375rem) {
   .emotion-25 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -568,6 +569,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
       <strong
         aria-hidden="true"
         class=" emotion-18 emotion-19 emotion-20"
+        role="text"
       >
         <span
           class="emotion-21 emotion-22"
@@ -920,7 +922,8 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -968,7 +971,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-22 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1152,6 +1155,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
       <strong
         aria-hidden="true"
         class=" emotion-15 emotion-16 emotion-17"
+        role="text"
       >
         <span
           class="emotion-18 emotion-19"
@@ -1504,7 +1508,8 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -1552,7 +1557,7 @@ exports[`should show the future content message if episode is not yet available 
 @media (max-width: 37.4375rem) {
   .emotion-22 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1736,6 +1741,7 @@ exports[`should show the future content message if episode is not yet available 
       <strong
         aria-hidden="true"
         class=" emotion-15 emotion-16 emotion-17"
+        role="text"
       >
         <span
           class="emotion-18 emotion-19"
@@ -2088,7 +2094,8 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -2136,7 +2143,7 @@ exports[`should show the future content message if episode is pending 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-22 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2320,6 +2327,7 @@ exports[`should show the future content message if episode is pending 1`] = `
       <strong
         aria-hidden="true"
         class=" emotion-15 emotion-16 emotion-17"
+        role="text"
       >
         <span
           class="emotion-18 emotion-19"

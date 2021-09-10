@@ -388,6 +388,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
   margin: 0;
   padding: 2rem 0;
   padding: 2rem 0 1rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -412,18 +413,19 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 1rem 0 1rem;
+    padding: 2rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 1rem 0 0.5rem;
+    padding: 2rem 0 0.5rem;
   }
 }
 
 .emotion-14 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -498,7 +500,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -807,11 +809,10 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
           <h1
             class=" emotion-11 emotion-12 emotion-13"
             id="content"
+            role="text"
             tabindex="-1"
           >
-            <span
-              role="text"
-            >
+            <span>
               <span
                 class="emotion-14 emotion-15"
               >
@@ -1320,6 +1321,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
   margin: 0;
   padding: 2rem 0;
   padding: 2rem 0 1rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1344,18 +1346,19 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 1rem 0 1rem;
+    padding: 2rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 1rem 0 0.5rem;
+    padding: 2rem 0 0.5rem;
   }
 }
 
 .emotion-14 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -1430,7 +1433,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
 @media (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -1741,11 +1744,10 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
           <h1
             class=" emotion-11 emotion-12 emotion-13"
             id="content"
+            role="text"
             tabindex="-1"
           >
-            <span
-              role="text"
-            >
+            <span>
               <span
                 class="emotion-14 emotion-15"
               >
@@ -2232,6 +2234,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
   margin: 0;
   padding: 2rem 0;
   padding: 2rem 0 1rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2256,18 +2259,19 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 1rem 0 1rem;
+    padding: 2rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 1rem 0 0.5rem;
+    padding: 2rem 0 0.5rem;
   }
 }
 
 .emotion-14 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -2342,7 +2346,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
 @media (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2631,11 +2635,10 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
           <h1
             class=" emotion-11 emotion-12 emotion-13"
             id="content"
+            role="text"
             tabindex="-1"
           >
-            <span
-              role="text"
-            >
+            <span>
               <span
                 class="emotion-14 emotion-15"
               >
@@ -3086,6 +3089,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
   margin: 0;
   padding: 2rem 0;
   padding: 2rem 0 1rem;
+  display: inline-block;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -3110,18 +3114,19 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 
 @media (min-width: 37.5rem) {
   .emotion-12 {
-    padding: 1rem 0 1rem;
+    padding: 2rem 0 1rem;
   }
 }
 
 @media (max-width: 62.9375rem) {
   .emotion-12 {
-    padding: 1rem 0 0.5rem;
+    padding: 2rem 0 0.5rem;
   }
 }
 
 .emotion-14 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -3196,7 +3201,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
 @media (max-width: 37.4375rem) {
   .emotion-18 {
     font-size: 1.25rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -3485,11 +3490,10 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
           <h1
             class=" emotion-11 emotion-12 emotion-13"
             id="content"
+            role="text"
             tabindex="-1"
           >
-            <span
-              role="text"
-            >
+            <span>
               <span
                 class="emotion-14 emotion-15"
               >
