@@ -369,7 +369,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-25 {
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .emotion-27 {
@@ -1070,7 +1070,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-31 {
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .emotion-33 {
@@ -1924,7 +1924,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-31 {
   padding: 0.5rem;
   margin-top: 0.5rem;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .emotion-33 {
