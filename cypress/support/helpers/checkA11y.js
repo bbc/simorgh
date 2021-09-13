@@ -34,6 +34,10 @@ const checkA11y = () => {
     },
     rules: [
       {
+        id: 'color-contrast',
+        enabled: false,
+      },
+      {
         /*
          * We need to exclude this rule for AV embeds because of the inner & outer double iframe setup we have with media players.
          * When Toucan is implemented we won't have iframes so we can remove the disabling of the frame-title-unique rule.
