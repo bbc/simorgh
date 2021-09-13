@@ -77,7 +77,6 @@ const OnDemandHeadingContainer = ({
 
   return (
     <Headline
-      role="text"
       script={script}
       service={service}
       id={idAttr}
@@ -86,7 +85,7 @@ const OnDemandHeadingContainer = ({
       {...(idAttr === 'content' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
-      <TextWrapper>
+      <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>
         <BrandTitle script={script} darkMode={darkMode}>
           {brandTitle}
         </BrandTitle>
