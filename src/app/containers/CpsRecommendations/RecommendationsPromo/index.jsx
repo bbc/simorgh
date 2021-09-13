@@ -5,7 +5,7 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
-import { C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
+import { C_EBON, C_METAL, C_GREY_2 } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
 import Grid from '../../../components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -16,7 +16,7 @@ import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTra
 const StyledPromoWrapper = styled.div`
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
-  background-color: #f6f6f6;
+  background-color: ${C_GREY_2};
 `;
 
 const ImageWrapper = styled.div`
