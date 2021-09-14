@@ -147,6 +147,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const ArticlePageGrid = ({ children }) => (
     <GelPageGrid
+      id="article-content"
       enableGelGutters
       columns={{
         group0: 6,

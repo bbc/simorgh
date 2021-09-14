@@ -2912,7 +2912,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         <a
           class="emotion-27 emotion-28"
           dir="ltr"
-          href="#content"
+          href="#article-content"
         >
           <div>
             Waka go wetin de inside

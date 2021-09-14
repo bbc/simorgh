@@ -1131,6 +1131,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="ltr"
+      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
@@ -1973,6 +1974,7 @@ exports[`should render a news article correctly 1`] = `
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="ltr"
+      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
@@ -3133,6 +3135,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="rtl"
+      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
