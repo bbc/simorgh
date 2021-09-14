@@ -21,7 +21,7 @@ exports[`InlineLinkContainer external link accessibility should be explicitly ma
 
 <div>
   <a
-    aria-label="این لینک هست، لینک خارجی"
+    aria-label="این لینک هست، خارجی"
     class="emotion-0 emotion-1"
     href="https://www.example.com/"
   >

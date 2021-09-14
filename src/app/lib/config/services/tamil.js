@@ -26,7 +26,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
-    externalLinkText: ', வெளி இணைப்பு',
+    externalLinkText: ', வெளி',
     imageCaptionOffscreenText: 'படக்குறிப்பு, ',
     videoCaptionOffscreenText: 'காணொளிக் குறிப்பு, ',
     audioCaptionOffscreenText: 'கேட்பொலிக் குறிப்பு, ',
