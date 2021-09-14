@@ -31,6 +31,7 @@ const TextWrapper = styled.div`
   width: calc(100% - 7.5rem);
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
+  height: 100%;
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING_DBL};
@@ -71,6 +72,9 @@ const StyledHeadline = styled.div`
   color: ${C_EBON};
   margin: 0;
   padding: ${GEL_SPACING} 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
