@@ -98,7 +98,6 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
   displaySummary,
-  isRecommendation,
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
@@ -150,11 +149,7 @@ const StoryPromoContainer = ({
   const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
   const displayTimestamp =
-    timestamp &&
-    !isStoryPromoPodcast &&
-    !isContentTypeGuide &&
-    !isRecommendation &&
-    !isLive;
+    timestamp && !isStoryPromoPodcast && !isContentTypeGuide && !isLive;
 
   if (cpsType === MEDIA_ASSET_PAGE && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
@@ -174,13 +169,11 @@ const StoryPromoContainer = ({
 
   const headingTagOverride = getHeadingTagOverride({
     pageType,
-    isRecommendation,
     isContentTypeGuide,
   });
 
   const StyledHeadline = styled(Headline)`
     ${() =>
-      isRecommendation &&
       `
       padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
         isLtr ? 0 : GEL_SPACING
@@ -228,7 +221,7 @@ const StoryPromoContainer = ({
           )}
         </StyledLink>
       </StyledHeadline>
-      {promoSummary && displaySummary && !isRecommendation && (
+      {promoSummary && displaySummary && (
         <Summary
           script={script}
           service={service}
@@ -306,7 +299,6 @@ StoryPromoContainer.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
   displaySummary: bool,
-  isRecommendation: bool,
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
   eventTrackingData: shape({
@@ -327,7 +319,6 @@ StoryPromoContainer.defaultProps = {
   dir: 'ltr',
   displayImage: true,
   displaySummary: true,
-  isRecommendation: false,
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
