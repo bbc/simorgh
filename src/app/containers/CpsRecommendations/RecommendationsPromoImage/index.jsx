@@ -1,6 +1,9 @@
 import React from 'react';
 import { shape, bool } from 'prop-types';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
+import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+} from '@bbc/gel-foundations/breakpoints';
 import ImageWithPlaceholder from '../../ImageWithPlaceholder';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';

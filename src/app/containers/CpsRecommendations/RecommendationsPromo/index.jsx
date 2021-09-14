@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_EBON, C_METAL, C_GREY_2 } from '@bbc/psammead-styles/colours';
@@ -22,8 +25,16 @@ const StyledPromoWrapper = styled.div`
 const ImageWrapper = styled.div`
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 6.8rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    width: 7.5rem;
+  }
 `;
 
 const TextWrapper = styled.div`
