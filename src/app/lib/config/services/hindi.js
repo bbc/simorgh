@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
-    externalLinkText: ', बाहरी सामग्री',
+    externalLinkText: ', बाहरी',
     imageCaptionOffscreenText: 'इमेज कैप्शन, ',
     videoCaptionOffscreenText: 'वीडियो कैप्शन, ',
     audioCaptionOffscreenText: 'ऑडियो कैप्शन, ',
