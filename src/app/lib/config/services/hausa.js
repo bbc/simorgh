@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
-    externalLinkText: ', adireshin waje',
+    externalLinkText: ', waje',
     imageCaptionOffscreenText: 'Bayanan hoto, ',
     videoCaptionOffscreenText: 'Bayanan bidiyo, ',
     audioCaptionOffscreenText: 'Bayanan sauti',

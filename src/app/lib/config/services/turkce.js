@@ -34,7 +34,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/turkce.png',
     defaultImageAltText: 'BBC News Türkçe',
     dir: `ltr`,
-    externalLinkText: ', Dış Link',
+    externalLinkText: ', dış',
     imageCaptionOffscreenText: 'Fotoğraf altı yazısı, ',
     videoCaptionOffscreenText: 'Video altyazısı, ',
     audioCaptionOffscreenText: 'Ses dosyası altyazısı, ',
