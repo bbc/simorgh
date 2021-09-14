@@ -104,6 +104,7 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   width: calc(100% - 7.5rem);
   padding: 0 0.5rem;
   vertical-align: top;
+  height: 100%;
 }
 
 @media (min-width: 37.5rem) {
@@ -121,6 +122,15 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   color: #222222;
   margin: 0;
   padding: 0.5rem 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
