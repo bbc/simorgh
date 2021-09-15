@@ -480,7 +480,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
-  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
@@ -1203,7 +1202,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
-  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
@@ -2079,7 +2077,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
-  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;

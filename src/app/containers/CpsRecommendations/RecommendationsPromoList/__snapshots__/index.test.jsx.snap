@@ -289,7 +289,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   content: '';
   left: 0;
   overflow: hidden;
-  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
