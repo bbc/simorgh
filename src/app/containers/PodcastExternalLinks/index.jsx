@@ -126,6 +126,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         </StyledList>
       ) : (
         <Link
+          aria-label={`${firstLink.linkText}, ${brandTitle} ${externalLinkText}`}
           href={firstLink.linkUrl}
           key={firstLink.linkText}
           service={service}
