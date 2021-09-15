@@ -246,7 +246,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
-    externalLinkText: ', внешняя ссылка',
+    externalLinkText: ', внешняя',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
     audioCaptionOffscreenText: 'Подпись к аудио, ',

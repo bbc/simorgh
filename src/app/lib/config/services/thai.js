@@ -27,7 +27,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
-    externalLinkText: ', ลิงก์จากภายนอก',
+    externalLinkText: ', จากภายนอก',
     imageCaptionOffscreenText: 'คำบรรยายภาพ, ',
     videoCaptionOffscreenText: 'คำบรรยายวิดีโอ, ',
     audioCaptionOffscreenText: 'คำบรรยายเสียง, ',
