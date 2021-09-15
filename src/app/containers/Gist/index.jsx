@@ -3,7 +3,6 @@ import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
   GEL_SPACING_TRPL,
