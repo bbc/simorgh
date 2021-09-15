@@ -143,7 +143,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="Apple, A brand podcast , внешняя ссылка"
+          aria-label="Apple, A brand podcast, внешняя"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
@@ -169,7 +169,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="Spotify, A brand podcast , внешняя ссылка"
+          aria-label="Spotify, A brand podcast, внешняя"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
@@ -195,7 +195,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="RSS, A brand podcast , внешняя ссылка"
+          aria-label="RSS, A brand podcast, внешняя"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
