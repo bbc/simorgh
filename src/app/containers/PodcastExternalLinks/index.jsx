@@ -108,7 +108,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
           {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={linkText}>
               <Link
-                aria-label={externalLinkText}
+                aria-label={`${linkText}, ${brandTitle} ${externalLinkText}`}
                 href={linkUrl}
                 service={service}
                 script={script}
