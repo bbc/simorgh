@@ -81,7 +81,6 @@ const StyledHeadline = styled.div`
   ${({ script }) => getPica(script)}
   color: ${C_EBON};
   margin: 0;
-  padding: ${GEL_SPACING} 0;
   height: 100%;
   display: flex;
   align-items: center;
