@@ -38,7 +38,7 @@ const GistIntroduction = styled.strong`
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getDoublePica(script)}
   display: inline-block;
-  padding-bottom: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const GistList = styled(UnorderedList)`
@@ -52,8 +52,8 @@ const GistList = styled(UnorderedList)`
   li {
     ${({ service }) => getSansRegular(service)}
     ${({ script }) => getGreatPrimer(script)}
-    ${({ direction }) => `padding-${direction}: ${GEL_SPACING};`}
-    margin-bottom: ${GEL_SPACING_HLF_TRPL};
+    ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF};`}
+    margin-bottom: ${GEL_SPACING_DBL};
     &:last-child {
       padding-bottom: ${GEL_SPACING_DBL};
     }
