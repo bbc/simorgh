@@ -67,8 +67,20 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
 .emotion-4 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-6 {

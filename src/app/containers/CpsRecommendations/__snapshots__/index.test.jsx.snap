@@ -200,7 +200,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width: 37.5rem) {
   .emotion-11 {
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
   }
 }
 
@@ -375,8 +375,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-27 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-27 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-27 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-29 {
@@ -794,7 +806,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width: 37.5rem) {
   .emotion-11 {
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
   }
 }
 
@@ -1086,8 +1098,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-33 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-33 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-33 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-35 {
@@ -1658,7 +1682,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 
 @media (min-width: 37.5rem) {
   .emotion-11 {
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
   }
 }
 
@@ -1950,8 +1974,20 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 .emotion-33 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-33 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-33 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-35 {
