@@ -79,7 +79,7 @@ const LabelComponent = styled(SectionLabel)`
   margin: 0;
   padding: 0;
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: 0 0 ${GEL_SPACING_DBL};
+    margin: 0 0 ${GEL_SPACING};
   }
 `;
 
