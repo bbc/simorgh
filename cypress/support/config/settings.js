@@ -9917,7 +9917,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/yoruba/afrika-51998079'],
+            paths: ['/yoruba/afrika-58539527'],
             enabled: true,
           },
           test: {

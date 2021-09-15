@@ -30,7 +30,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
-    externalLinkText: '، لینک خارجی',
+    externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
     videoCaptionOffscreenText: 'توضیح ویدئو، ',
     audioCaptionOffscreenText: 'توضیح صدا، ',

@@ -54,6 +54,12 @@ const externalLinks = {
           'https://podcasts.apple.com/gb/podcast/bbc-persian-radio/id262741509',
       },
     ],
+    p09v5lgp: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/4k2EWdvmGiWLgXpUrm8VMS',
+      },
+    ],
   },
 };
 

@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
-    externalLinkText: ', बाहेरचा मजकूर',
+    externalLinkText: ', बाहेर',
     imageCaptionOffscreenText: 'फोटो कॅप्शन, ',
     videoCaptionOffscreenText: 'व्हीडिओ कॅप्शन, ',
     audioCaptionOffscreenText: 'ऑडिओ कॅप्शन, ',

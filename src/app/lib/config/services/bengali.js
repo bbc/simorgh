@@ -29,7 +29,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
     defaultImageAltText: 'BBC News বাংলা',
     dir: `ltr`,
-    externalLinkText: ', বিবিসির বাইরের খবর',
+    externalLinkText: ', বাইরের',
     imageCaptionOffscreenText: 'ছবির ক্যাপশান, ',
     videoCaptionOffscreenText: 'ভিডিওর ক্যাপশান, ',
     audioCaptionOffscreenText: 'অডিওর ক্যাপশান, ',
