@@ -52,7 +52,7 @@ const GistList = styled(UnorderedList)`
   li {
     ${({ service }) => getSansRegular(service)}
     ${({ script }) => getGreatPrimer(script)}
-    ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF};`}
+    ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
     margin-bottom: ${GEL_SPACING_DBL};
     &:last-child {
       padding-bottom: ${GEL_SPACING_DBL};
