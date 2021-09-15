@@ -47,7 +47,7 @@ export default service => {
 
     it('I can see a skip to content link', () => {
       const skipToContentEl = document.querySelector(
-        'header [href="#content"]',
+        'header [href="#content"],header [href="#article-content"]',
       );
 
       expect(skipToContentEl).toBeInTheDocument();

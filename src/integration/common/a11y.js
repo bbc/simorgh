@@ -1,7 +1,9 @@
 export default () => {
   describe('A11y', () => {
     it('I can see the skip to content link', () => {
-      const skipToContentEl = document.querySelector('[href="#content"]');
+      const skipToContentEl = document.querySelector(
+        '[href="#content"],[href="#article-content"]',
+      );
 
       expect(skipToContentEl).toBeInTheDocument();
       expect(skipToContentEl.textContent).toBeTruthy();
