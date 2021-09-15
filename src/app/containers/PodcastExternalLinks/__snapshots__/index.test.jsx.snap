@@ -143,6 +143,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
+          aria-label="Apple, A brand podcast , внешняя ссылка"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
@@ -156,7 +157,6 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Apple
             </span>
             <span
-              aria-label=", внешняя ссылка"
               class="emotion-10 emotion-11"
             >
               , A brand podcast
@@ -169,6 +169,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
+          aria-label="Spotify, A brand podcast , внешняя ссылка"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
@@ -182,7 +183,6 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               Spotify
             </span>
             <span
-              aria-label=", внешняя ссылка"
               class="emotion-10 emotion-11"
             >
               , A brand podcast
@@ -195,6 +195,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
+          aria-label="RSS, A brand podcast , внешняя ссылка"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
@@ -208,7 +209,6 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
               RSS
             </span>
             <span
-              aria-label=", внешняя ссылка"
               class="emotion-10 emotion-11"
             >
               , A brand podcast
