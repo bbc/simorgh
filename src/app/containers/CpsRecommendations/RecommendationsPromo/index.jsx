@@ -60,7 +60,6 @@ const Link = styled.a`
     content: '';
     left: 0;
     overflow: hidden;
-    position: absolute;
     right: 0;
     top: 0;
     white-space: nowrap;
