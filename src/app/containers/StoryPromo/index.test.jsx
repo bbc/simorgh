@@ -458,11 +458,7 @@ describe('StoryPromo Container', () => {
     describe('Recommendation Promo', () => {
       it('should render headline as a div instead of an h3', () => {
         const { container } = render(
-          <WrappedStoryPromo
-            platform="canonical"
-            item={fixtures.standard}
-            isRecommendation
-          />,
+          <WrappedStoryPromo platform="canonical" item={fixtures.standard} />,
         );
 
         expect(container.querySelector('h3')).toBeNull();

@@ -55,7 +55,6 @@ const Component = ({
   isAmp = false,
   item,
   promoType = 'regular',
-  isRecommendation = false,
   isSingleColumnLayout = false,
 }) => (
   <ServiceContextProvider service="news">
@@ -75,7 +74,6 @@ const Component = ({
         <StoryPromoContainer
           item={item}
           promoType={promoType}
-          isRecommendation={isRecommendation}
           isSingleColumnLayout={isSingleColumnLayout}
         />
       </ToggleContextProvider>
@@ -107,9 +105,7 @@ export const Leading = () => (
 );
 export const Top = () => <Component promoType="top" item={firstFixture} />;
 export const GuidePromo = () => <Component item={guideLinkItem} />;
-export const Recommendation = () => (
-  <Component item={recommendationPromo} isRecommendation />
-);
+export const Recommendation = () => <Component item={recommendationPromo} />;
 
 // Canonical
 export const AudioAmp = () => <Component isAmp item={audioFixture} />;
@@ -159,6 +155,6 @@ export const GuidePromoAmp = () => <Component isAmp item={guideLinkItem} />;
 GuidePromoAmp.decorators = [AmpDecorator];
 
 export const RecommendationAmp = () => (
-  <Component isAmp item={recommendationPromo} isRecommendation />
+  <Component isAmp item={recommendationPromo} />
 );
 RecommendationAmp.decorators = [AmpDecorator];
