@@ -1,3 +1,4 @@
+/* eslint-disable cypress/no-unnecessary-waiting */
 import {
   getCookieBannerCanonical,
   getCookieBannerAcceptCanonical,
@@ -60,6 +61,8 @@ export default ({ service, variant, pageType, path }) => {
     getPrivacyBanner(service, variant).should('not.exist');
 
     getCookieBannerAcceptCanonical(service, variant).click();
+
+    cy.wait(1000);
 
     assertCookieHasOneOfValues(
       'ckns_explicit',

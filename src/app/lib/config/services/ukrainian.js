@@ -28,7 +28,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
   dir: `ltr`,
-  externalLinkText: ', зовнішнє посилання',
+  externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',
   audioCaptionOffscreenText: 'Підпис до аудіо',

@@ -3,6 +3,7 @@
 // We recommend using inline conditional logic to limit tests to services which differ.
 import checkA11y from '../../support/helpers/checkA11y';
 import getDataUrl from '../../support/helpers/getDataUrl';
+import visitPage from '../../support/helpers/visitPage';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
@@ -51,7 +52,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
 
               // Needs to go back to the first page for the rest of the test suite
               // cy.go('back') does not work on AMP as it returns to a canonical page
-              cy.visit(firstVisitedPage);
+              visitPage(firstVisitedPage, 'storyPage');
             } else if (topicTagsPresent && topicTagsLength === 1) {
               cy.get(`aside[aria-labelledby*='related-topics']`)
                 .find('a')
