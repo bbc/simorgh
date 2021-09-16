@@ -250,7 +250,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   line-height: 1.25rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;

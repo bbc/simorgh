@@ -441,7 +441,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   line-height: 1.25rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1163,7 +1162,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   line-height: 1.25rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2038,7 +2036,6 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   line-height: 1.5rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
