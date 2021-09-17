@@ -4,15 +4,24 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { sinhalese } from '@bbc/gel-foundations/scripts';
+import { sinhalese, sinhaleseNotoSerif } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_ISKOOLA_POTA_BBC_BOLD,
   F_ISKOOLA_POTA_BBC_REGULAR,
+  F_NOTO_SERIF_SINHALA_BOLD,
+  F_NOTO_SERIF_SINHALA_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
+import isLive from '#lib/utilities/isLive';
+
+const fonts = isLive()
+  ? [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR]
+  : [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR];
+
+const script = isLive() ? sinhalese : sinhaleseNotoSerif;
 
 export const service = {
   default: {
@@ -49,7 +58,7 @@ export const service = {
       'https://www.bbc.com/sinhala/institutional-50288553#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/sinhala/institutional-50288553',
     isTrustProjectParticipant: true,
-    script: sinhalese,
+    script,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',
@@ -314,7 +323,7 @@ export const service = {
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
+    fonts,
     timezone: 'GMT',
     navigation: [
       {

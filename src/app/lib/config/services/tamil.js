@@ -6,10 +6,20 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
+import {
+  F_LATHA_BOLD,
+  F_LATHA_REGULAR,
+  F_TAMIL_BOLD,
+  F_TAMIL_REGULAR,
+} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
+import isLive from '#lib/utilities/isLive';
+
+const fonts = isLive()
+  ? [F_LATHA_BOLD, F_LATHA_REGULAR]
+  : [F_TAMIL_BOLD, F_TAMIL_REGULAR];
 
 export const service = {
   default: {
@@ -325,7 +335,7 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
+    fonts,
     timezone: 'GMT',
     navigation: [
       {
