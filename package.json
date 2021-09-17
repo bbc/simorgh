@@ -188,7 +188,7 @@
     "chromatic": "5.9.2",
     "chrome-launcher": "0.14.0",
     "cli-table": "0.3.6",
-    "compression-webpack-plugin": "8.0.1",
+    "compression-webpack-plugin": "9.0.0",
     "copy-webpack-plugin": "9.0.1",
     "crypto": "1.0.1",
     "cypress": "8.2.0",
