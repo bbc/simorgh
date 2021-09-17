@@ -18,7 +18,7 @@ const DisplayWrapper = styled(AccessDiv)`
   }
 `;
 
-const AmpNielsenAnalytics = ({ apid, assetid, section }) => (
+const AmpNielsenAnalytics = ({ apid, section }) => (
   <DisplayWrapper>
     <amp-analytics type="nielsen">
       <script
@@ -29,7 +29,6 @@ const AmpNielsenAnalytics = ({ apid, assetid, section }) => (
             vars: {
               apid,
               section,
-              assetid,
               apv: '1.0',
               type: 'static',
               segC: 'BBC - Google AMP',
@@ -43,7 +42,6 @@ const AmpNielsenAnalytics = ({ apid, assetid, section }) => (
 
 AmpNielsenAnalytics.propTypes = {
   apid: string.isRequired,
-  assetid: string.isRequired,
   section: string.isRequired,
 };
 

@@ -20,6 +20,7 @@ const ContextWrap = ({
   nielsenAnalyticsToggle,
   personalisation,
   service,
+  pathname,
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -27,7 +28,7 @@ const ContextWrap = ({
     service={service}
     statusCode={200}
     bbcOrigin={origin}
-    pathname="/pathname"
+    pathname={pathname}
   >
     <ServiceContextProvider service="pidgin">
       <ToggleContext.Provider
@@ -56,6 +57,7 @@ ContextWrap.propTypes = {
   nielsenAnalyticsToggle: bool.isRequired,
   personalisation: shape({}),
   service: string.isRequired,
+  pathname: string.isRequired,
 };
 
 ContextWrap.defaultProps = {
@@ -72,6 +74,7 @@ describe('Nielsen Analytics Container', () => {
           origin="bbc.com"
           nielsenAnalyticsToggle={false}
           service="news"
+          pathname="somepath"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -88,6 +91,7 @@ describe('Nielsen Analytics Container', () => {
           origin="bbc.com"
           nielsenAnalyticsToggle
           service="news"
+          pathname="somepath"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -104,6 +108,7 @@ describe('Nielsen Analytics Container', () => {
           origin="bbc.com"
           nielsenAnalyticsToggle
           service="news"
+          pathname="somepath"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -121,6 +126,7 @@ describe('Nielsen Analytics Container', () => {
           origin="bbc.com"
           nielsenAnalyticsToggle
           service="news"
+          pathname="somepath"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -138,6 +144,7 @@ describe('Nielsen Analytics Container', () => {
           origin="bbc.com"
           nielsenAnalyticsToggle
           service="sport"
+          pathname="somepath"
         >
           <NielsenAnalytics />
         </ContextWrap>,
@@ -145,6 +152,42 @@ describe('Nielsen Analytics Container', () => {
 
       const data = JSON.parse(container.querySelector('script').textContent);
       expect(data.vars.apid).toBe('DC4AFDB2-B352-4D51-81EF-38BE41114F22');
+    });
+
+    it('should set correct section for CPS articles', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          nielsenAnalyticsToggle
+          service="sport"
+          pathname="/news/business-58007120.amp"
+        >
+          <NielsenAnalytics />
+        </ContextWrap>,
+      );
+
+      const data = JSON.parse(container.querySelector('script').textContent);
+      expect(data.vars.section).toBe('BBC Sport Business');
+    });
+
+    it('should set correct section for Optimo articles', () => {
+      const { container } = render(
+        <ContextWrap
+          platform="amp"
+          pageType={ARTICLE_PAGE}
+          origin="bbc.com"
+          nielsenAnalyticsToggle
+          service="news"
+          pathname="/sport/articles/c6v11qzyv8po.amp"
+        >
+          <NielsenAnalytics />
+        </ContextWrap>,
+      );
+
+      const data = JSON.parse(container.querySelector('script').textContent);
+      expect(data.vars.section).toBe('BBC News');
     });
   });
 });

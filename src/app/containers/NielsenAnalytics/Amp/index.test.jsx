@@ -11,7 +11,7 @@ describe('Assertions', () => {
     const ampNeilsenEl = document.querySelector('amp-analytics');
     const scriptEl = document.querySelector('script');
     const scriptContent =
-      '{"vars":{"apid":"apid","section":"section","assetid":"assetid","apv":"1.0","type":"static","segC":"BBC - Google AMP"}}';
+      '{"vars":{"apid":"apid","section":"section","apv":"1.0","type":"static","segC":"BBC - Google AMP"}}';
 
     expect(ampNeilsenEl).toBeInTheDocument();
     expect(scriptEl).toBeInTheDocument();

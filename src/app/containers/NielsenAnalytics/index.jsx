@@ -25,17 +25,24 @@ const NielsenAnalytics = () => {
     return null;
   }
 
-  // strip .amp off the path
-  // i.e. CPS /news/business-58007120
-  // i.e. Optimo /news/articles/c6v11qzyv8po
-  const assetid = pathname.split('.')[0];
+  /*
+  section var logic:
+  1. strip .amp off the path
+  2. capitalise the service and in the case of CPS articles the subsection (can't get this from Optimo yet)
 
+  So for CPS articles:
+  example path = /news/business-58007120.amp
+  section = BBC News Business
+
+  for Optimo articles:
+  example path = /news/articles/c6v11qzyv8po.amp
+  section = BBC News Business
+   */
+
+  const assetid = pathname.split('.')[0];
   const capitalise = word => {
     return `${word[0].toUpperCase()}${word.substr(1)}`;
   };
-
-  // CPS ["", "news", "business-58007120"]
-  // Optimo ["", "news", "articles", "c6v11qzyv8po"]
   let section = `BBC ${capitalise(service)}`;
   const sectionSplit = assetid.split('/');
   const lastSection = sectionSplit[sectionSplit.length - 1];
@@ -45,9 +52,7 @@ const NielsenAnalytics = () => {
     section = `${section} ${capitalise(lastSectionSplit[0])}`;
   }
 
-  return (
-    <AmpNielsenAnalytics apid={apid} assetid={assetid} section={section} />
-  );
+  return <AmpNielsenAnalytics apid={apid} section={section} />;
 };
 
 export default NielsenAnalytics;
