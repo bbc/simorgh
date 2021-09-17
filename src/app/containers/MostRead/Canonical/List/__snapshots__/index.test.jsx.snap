@@ -241,7 +241,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
 }
 
 .emotion-10 {
-  font-family: "Shonar Bangla",Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-family: "Noto Serif Bengali","Shonar Bangla",Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2rem;
@@ -281,7 +281,7 @@ exports[`MostReadList should render with ltr bengali items with correct dir 1`] 
 .emotion-14 {
   font-size: 1.0625rem;
   line-height: 1.4375rem;
-  font-family: "Shonar Bangla",Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-family: "Noto Serif Bengali","Shonar Bangla",Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   position: static;
