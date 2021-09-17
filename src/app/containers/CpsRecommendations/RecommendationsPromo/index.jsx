@@ -17,6 +17,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 
 const StyledPromoWrapper = styled.div`
+  position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
   background-color: ${C_GREY_2};
@@ -60,6 +61,7 @@ const Link = styled.a`
     content: '';
     left: 0;
     overflow: hidden;
+    position: absolute;
     right: 0;
     top: 0;
     white-space: nowrap;
