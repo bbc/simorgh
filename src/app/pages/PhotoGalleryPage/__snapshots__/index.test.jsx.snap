@@ -5610,7 +5610,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #6E6E73;
 }
 
-.emotion-241 {
+.emotion-239 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5621,20 +5621,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-241 {
+  .emotion-239 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-241 {
+  .emotion-239 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-256 {
+.emotion-254 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5646,20 +5646,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-256 {
+  .emotion-254 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-256 {
+  .emotion-254 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-258 {
+.emotion-256 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5671,7 +5671,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.emotion-260 {
+.emotion-258 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -6396,11 +6396,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             <span
                               role="text"
                             >
-                              <span
-                                class="emotion-34 emotion-35"
-                              >
-                                , 
-                              </span>
                               <span>
                                 Bole na correct Port Harcourt food.
                               </span>
@@ -6408,7 +6403,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-239 emotion-12"
                           datetime="2018-08-09"
                         >
                           9th August 2018
@@ -6441,16 +6436,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-256 emotion-257"
+                              class="emotion-254 emotion-255"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-258 emotion-259"
+                                class="emotion-256 emotion-257"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-260 emotion-261"
+                                  class="emotion-258 emotion-259"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -6497,7 +6492,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-239 emotion-12"
                           datetime="2018-08-19"
                         >
                           19th August 2018
@@ -11644,11 +11639,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             <span
                               role="text"
                             >
-                              <span
-                                class="emotion-32 emotion-33"
-                              >
-                                , 
-                              </span>
                               <span>
                                 Bakı sakinləri müstəqillik barədə danışır
                               </span>
