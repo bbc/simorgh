@@ -178,6 +178,7 @@ exports[`Canonical Articles Image should match snapshot 1`] = `
   alt="قهوه"
   class="eehpdyc0 bbc-oabvne e1enwo3v0"
   height="576"
+  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
   width="1024"

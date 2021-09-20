@@ -59,6 +59,7 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
     resolution: DEFAULT_IMAGE_RES,
   });
   const srcSet = createSrcset(originCode, locator, width);
+  const sizes = '(min-width: 1008px) 645px, 100vw';
   const lazyLoad = shouldLazyLoad(position);
 
   let GridWrapper = GridItemLargeNoMargin;
@@ -81,6 +82,7 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
         src={rawImageSrc}
         width={width}
         srcset={srcSet}
+        sizes={sizes}
         showCopyright
         lazyLoad={lazyLoad}
         preload={ShouldPreLoadLeadImage}

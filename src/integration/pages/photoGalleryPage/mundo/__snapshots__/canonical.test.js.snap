@@ -171,6 +171,7 @@ exports[`Canonical Photo Gallery Page Image should match snapshot 1`] = `
   alt="Tenista de 1904"
   class="eehpdyc0 bbc-oabvne e1enwo3v0"
   height="549"
+  sizes="(min-width: 1008px) 645px, 100vw"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
   width="549"
