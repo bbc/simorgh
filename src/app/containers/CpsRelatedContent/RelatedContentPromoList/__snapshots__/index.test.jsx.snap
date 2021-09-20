@@ -356,17 +356,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 .emotion-23 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-25 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -377,14 +366,14 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-25 {
+  .emotion-23 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-25 {
+  .emotion-23 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -444,11 +433,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
               <span
                 role="text"
               >
-                <span
-                  class="emotion-23 emotion-24"
-                >
-                  , 
-                </span>
                 <span>
                   Meet boys who dey convert cassava to electricity
                 </span>
@@ -456,7 +440,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             </a>
           </h3>
           <time
-            class="emotion-25 emotion-26"
+            class="emotion-23 emotion-24"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -512,7 +496,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             </a>
           </h3>
           <time
-            class="emotion-25 emotion-26"
+            class="emotion-23 emotion-24"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -568,7 +552,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             </a>
           </h3>
           <time
-            class="emotion-25 emotion-26"
+            class="emotion-23 emotion-24"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -923,17 +907,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 }
 
 .emotion-22 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
-.emotion-24 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -944,14 +917,14 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-24 {
+  .emotion-22 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -1010,11 +983,6 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
               <span
                 role="text"
               >
-                <span
-                  class="emotion-22 emotion-23"
-                >
-                  , 
-                </span>
                 <span>
                   Meet boys who dey convert cassava to electricity
                 </span>
@@ -1022,7 +990,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             </a>
           </h3>
           <time
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -1078,7 +1046,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             </a>
           </h3>
           <time
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
             datetime="1970-01-18"
           >
             18th January 1970
@@ -1134,7 +1102,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             </a>
           </h3>
           <time
-            class="emotion-24 emotion-25"
+            class="emotion-22 emotion-23"
             datetime="1970-01-18"
           >
             18th January 1970

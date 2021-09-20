@@ -352,8 +352,19 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
                 class="emotion-18 emotion-19"
                 href="/pidgin/44508901"
               >
-                Meet boys who dey convert cassava to electricity
-              </a>
+                <a
+                  class="emotion-24 emotion-25"
+                  href="/pidgin/44508901"
+                >
+                  <span
+                    role="text"
+                  >
+                    <span>
+                      Meet boys who dey convert cassava to electricity
+                    </span>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

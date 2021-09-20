@@ -225,8 +225,19 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
             class="emotion-12 emotion-13"
             href="/pidgin/44508901"
           >
-            Meet boys who dey convert cassava to electricity
-          </a>
+            <a
+              class="emotion-18 emotion-19"
+              href="/pidgin/44508901"
+            >
+              <span
+                role="text"
+              >
+                <span>
+                  Meet boys who dey convert cassava to electricity
+                </span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
