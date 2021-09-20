@@ -176,6 +176,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 }
 
 .emotion-8 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -288,6 +289,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   content: '';
   left: 0;
   overflow: hidden;
+  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;

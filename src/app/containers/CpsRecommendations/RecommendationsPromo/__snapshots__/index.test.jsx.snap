@@ -59,6 +59,7 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
 }
 
 .emotion-2 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -171,6 +172,7 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   content: '';
   left: 0;
   overflow: hidden;
+  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;

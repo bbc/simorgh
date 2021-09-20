@@ -367,6 +367,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-25 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -479,6 +480,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
+  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
@@ -1088,6 +1090,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-31 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -1200,6 +1203,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
+  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
@@ -1962,6 +1966,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
 }
 
 .emotion-31 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -2074,6 +2079,7 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   content: '';
   left: 0;
   overflow: hidden;
+  position: absolute;
   right: 0;
   top: 0;
   white-space: nowrap;
