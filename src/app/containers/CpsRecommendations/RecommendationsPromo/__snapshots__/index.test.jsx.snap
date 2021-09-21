@@ -265,17 +265,6 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   color: #6E6E73;
 }
 
-.emotion-20 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
-}
-
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -328,11 +317,6 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
               <span
                 role="text"
               >
-                <span
-                  class="emotion-20 emotion-21"
-                >
-                  , 
-                </span>
                 <span>
                   Meet boys who dey convert cassava to electricity
                 </span>
