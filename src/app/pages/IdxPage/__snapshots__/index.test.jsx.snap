@@ -5999,7 +5999,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-12 emotion-13"
           >
             <a
-              aria-labelledby="Verticals"
               class="emotion-65 emotion-66"
               href="http://www.bbc.com/ukrainian/magazine_russian"
             >
@@ -6827,7 +6826,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-12 emotion-13"
           >
             <a
-              aria-labelledby="Picture-galleries"
               class="emotion-65 emotion-66"
               href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
             >
