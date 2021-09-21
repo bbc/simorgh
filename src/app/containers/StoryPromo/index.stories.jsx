@@ -18,11 +18,6 @@ const mediaFixture = type =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
-const storyFixture = () =>
-  pathOr(null, ['content', 'groups'], fixture)
-    .flatMap(group => pathOr(null, ['items'], group))
-    .find(item => pathOr(null, ['cpsType'], item) === 'STY');
-
 const promoFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
@@ -48,7 +43,6 @@ const featurePromo = promoFixture('Feature');
 const audioPromo = promoFixture('Audio');
 const galleryPromo = promoFixture('Gallery');
 const podcastPromo = promoFixture('Podcast');
-const recommendationPromo = storyFixture();
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -105,7 +99,6 @@ export const Leading = () => (
 );
 export const Top = () => <Component promoType="top" item={firstFixture} />;
 export const GuidePromo = () => <Component item={guideLinkItem} />;
-export const Recommendation = () => <Component item={recommendationPromo} />;
 
 // Canonical
 export const AudioAmp = () => <Component isAmp item={audioFixture} />;
@@ -153,8 +146,3 @@ TopAmp.decorators = [AmpDecorator];
 
 export const GuidePromoAmp = () => <Component isAmp item={guideLinkItem} />;
 GuidePromoAmp.decorators = [AmpDecorator];
-
-export const RecommendationAmp = () => (
-  <Component isAmp item={recommendationPromo} />
-);
-RecommendationAmp.decorators = [AmpDecorator];
