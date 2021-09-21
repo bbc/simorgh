@@ -15,7 +15,7 @@ import {
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
-import isTest from '#lib/utilities/isTest';
+import isTest from '../../utilities/isTest';
 
 const fonts = isTest()
   ? [

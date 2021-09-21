@@ -15,7 +15,7 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
-import isTest from '#lib/utilities/isTest';
+import isTest from '../../utilities/isTest';
 
 const fonts = isTest()
   ? [
