@@ -9,17 +9,26 @@ import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_LATHA_BOLD,
   F_LATHA_REGULAR,
-  F_TAMIL_BOLD,
-  F_TAMIL_REGULAR,
+  F_NOTO_SANS_TAMIL_BOLD,
+  F_NOTO_SANS_TAMIL_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
-import isLive from '#lib/utilities/isLive';
+import isTest from '#lib/utilities/isTest';
 
-const fonts = isLive()
-  ? [F_LATHA_BOLD, F_LATHA_REGULAR]
-  : [F_TAMIL_BOLD, F_TAMIL_REGULAR];
+const fonts = isTest()
+  ? [
+      () =>
+        F_NOTO_SANS_TAMIL_BOLD(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
+        ),
+      () =>
+        F_NOTO_SANS_TAMIL_REGULAR(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
+        ),
+    ]
+  : [F_LATHA_BOLD, F_LATHA_REGULAR];
 
 export const service = {
   default: {

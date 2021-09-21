@@ -15,13 +15,22 @@ import {
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
-import isLive from '#lib/utilities/isLive';
+import isTest from '#lib/utilities/isTest';
 
-const fonts = isLive()
-  ? [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR]
-  : [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR];
+const fonts = isTest()
+  ? [
+      () =>
+        F_NOTO_SERIF_SINHALA_BOLD(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/',
+        ),
+      () =>
+        F_NOTO_SERIF_SINHALA_REGULAR(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/',
+        ),
+    ]
+  : [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR];
 
-const script = isLive() ? sinhalese : sinhaleseNotoSerif;
+const script = isTest() ? sinhalese : sinhaleseNotoSerif;
 
 export const service = {
   default: {

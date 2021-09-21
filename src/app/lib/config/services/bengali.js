@@ -15,13 +15,22 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
-import isLive from '#lib/utilities/isLive';
+import isTest from '#lib/utilities/isTest';
 
-const fonts = isLive()
-  ? [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR]
-  : [F_NOTO_SERIF_BENGALI_BOLD, F_NOTO_SERIF_BENGALI_REGULAR];
+const fonts = isTest()
+  ? [
+      () =>
+        F_NOTO_SERIF_BENGALI_BOLD(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+        ),
+      () =>
+        F_NOTO_SERIF_BENGALI_REGULAR(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+        ),
+    ]
+  : [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR];
 
-const script = isLive() ? bengali : bengaliNotoSerif;
+const script = isTest() ? bengali : bengaliNotoSerif;
 
 export const service = {
   default: {
