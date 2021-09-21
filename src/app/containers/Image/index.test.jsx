@@ -78,10 +78,16 @@ describe('Image', () => {
 
     describe('with no altTextBlock', () => {
       suppressPropWarnings(['type', 'null']);
-      isNull(
-        'should return null',
-        <ImageContainer sizes="100vw" {...dataWithoutAltText} />,
-      );
+
+      it('should not render the image', () => {
+        render(<ImageContainer sizes="100vw" {...dataWithoutAltText} />);
+
+        const imgEl = screen.queryByAltText(
+          'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        );
+
+        expect(imgEl).not.toBeInTheDocument();
+      });
     });
 
     it('should render an image with alt text', () => {
