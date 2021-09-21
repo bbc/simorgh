@@ -1574,7 +1574,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 
 @media (min-width: 63rem) {
   .emotion-184 {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }
@@ -9055,7 +9055,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-185 {
-    margin-bottom: 3rem;
+    margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }

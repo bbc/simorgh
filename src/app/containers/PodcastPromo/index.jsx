@@ -6,7 +6,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import useViewTracker from '#hooks/useViewTracker';
@@ -25,8 +24,8 @@ const ResponsivePodcastPromoWrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};
   margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: -${GEL_SPACING_SEXT};
-    margin-bottom: -${GEL_SPACING};
+    margin-top: 0;
+    margin-bottom: ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL};
   }
 `;

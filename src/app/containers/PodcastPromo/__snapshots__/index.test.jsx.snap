@@ -8,8 +8,8 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 @media (min-width: 63rem) {
   .emotion-0 {
-    margin-top: -3rem;
-    margin-bottom: -0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     padding: 1rem;
   }
 }
