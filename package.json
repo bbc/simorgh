@@ -13,7 +13,7 @@
     "web-vitals": "1.1.1",
     "css-what": "5.0.1",
     "glob-parent": "5.1.2",
-    "prismjs": "1.24.1",
+    "prismjs": "1.25.0",
     "trim": "0.0.3"
   },
   "scripts": {
