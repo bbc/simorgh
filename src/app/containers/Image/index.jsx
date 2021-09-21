@@ -27,7 +27,7 @@ const getCopyright = copyrightHolder => {
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
-const ImageContainer = ({ blocks, position, shouldPreload }) => {
+const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
   if (!blocks) {
     return null;
   }
@@ -59,7 +59,6 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
     resolution: DEFAULT_IMAGE_RES,
   });
   const srcSet = createSrcset(originCode, locator, width);
-  const sizes = '(min-width: 1008px) 645px, 100vw';
   const lazyLoad = shouldLazyLoad(position);
 
   let GridWrapper = GridItemLargeNoMargin;
