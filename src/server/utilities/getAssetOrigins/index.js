@@ -4,7 +4,6 @@ const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGINS = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
-  'https://ws-downloads.test.files.bbci.co.uk',
 ];
 const COOKIE_ORIGIN = 'https://cookie-oven.api.bbc.co.uk';
 
