@@ -1978,9 +1978,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-navigation@npm:9.2.6":
-  version: 9.2.6
-  resolution: "@bbc/psammead-navigation@npm:9.2.6"
+"@bbc/psammead-navigation@npm:9.2.7":
+  version: 9.2.7
+  resolution: "@bbc/psammead-navigation@npm:9.2.7"
   dependencies:
     "@bbc/gel-foundations": 6.3.0
     "@bbc/psammead-assets": 3.1.9
@@ -1990,7 +1990,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 78c82595a2871f4b18288e450f3d77060d913c0b22d17ae0fba1411a404306979b9b622d8c7685bfc97cd97c11e04cf3f6bfb472b5bd269c0b7828baa99802ef
+  checksum: 75c4e07d20e5d0a159b841ff7c63c6bac23a48df5f34b4ab95b266e0869028a1bac390ec89ab4e25a69120290311ad4dc6b35e20504a2e8655951da788079fd7
   languageName: node
   linkType: hard
 
@@ -2044,9 +2044,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-section-label@npm:7.1.4":
-  version: 7.1.4
-  resolution: "@bbc/psammead-section-label@npm:7.1.4"
+"@bbc/psammead-section-label@npm:7.1.5":
+  version: 7.1.5
+  resolution: "@bbc/psammead-section-label@npm:7.1.5"
   dependencies:
     "@bbc/gel-foundations": 6.3.0
     "@bbc/psammead-styles": 7.6.0
@@ -2054,7 +2054,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.6.2
     react: ">=16.9.0"
-  checksum: 143d60d0b5d6cc513b409dc731dfaabfc409a9e340690f368e77ff05e0676fb76bc26ba0b727d835ce5991a50179573e7fb8760eb52cb4dd76e098446b7a6184
+  checksum: 0da967c364664a6c10fc56eafb2279c995e579ea030cd96701aaf0dda1e4dff3a7e81072355653f0f0e58c5eb3803182dd588af61a69e35a4d9068f846905842
   languageName: node
   linkType: hard
 
@@ -19253,12 +19253,12 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-live-label": 2.0.25
     "@bbc/psammead-locales": 5.0.7
     "@bbc/psammead-media-indicator": 6.1.7
-    "@bbc/psammead-navigation": 9.2.6
+    "@bbc/psammead-navigation": 9.2.7
     "@bbc/psammead-paragraph": 4.0.22
     "@bbc/psammead-play-button": 3.0.26
     "@bbc/psammead-rich-text-transforms": 2.0.6
     "@bbc/psammead-script-link": 3.0.24
-    "@bbc/psammead-section-label": 7.1.4
+    "@bbc/psammead-section-label": 7.1.5
     "@bbc/psammead-social-embed": 3.3.4
     "@bbc/psammead-story-promo": 8.0.25
     "@bbc/psammead-story-promo-list": 6.0.23
