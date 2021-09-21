@@ -300,7 +300,7 @@ exports[`Canonical Feature Index page Story Promo Headline should match text 1`]
 exports[`Canonical Feature Index page Story Promo Image should match image 1`] = `
 <img
   alt="بل گیٹس"
-  class="eehpdyc0 bbc-1ualc3j-StyledImg-StyledImage e1enwo3v0"
+  class="eehpdyc0 bbc-100dhyn e1enwo3v0"
   height="576"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
