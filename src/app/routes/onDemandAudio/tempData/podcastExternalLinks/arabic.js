@@ -61,6 +61,12 @@ const externalLinks = {
           'https://podcasts.apple.com/gb/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%B9-%D9%84%D8%A7%D9%82%D8%A7%D8%AA/id1573549106',
       },
     ],
+    p09w8yvk: [
+      {
+        linkText: 'Spotify',
+        linkUrl: 'https://open.spotify.com/show/0dyrgq9nQMdZ5b7Hfcz6q6',
+      },
+    ],
   },
 };
 
