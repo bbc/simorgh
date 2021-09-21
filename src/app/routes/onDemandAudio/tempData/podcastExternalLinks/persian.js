@@ -59,6 +59,11 @@ const externalLinks = {
         linkText: 'Spotify',
         linkUrl: 'https://open.spotify.com/show/4k2EWdvmGiWLgXpUrm8VMS',
       },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/gb/podcast/%D8%A8%DB%8C%D9%86-%D8%B3%D8%B7%D9%88%D8%B1/id1584665242',
+      },
     ],
   },
 };
