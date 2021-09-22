@@ -1731,12 +1731,12 @@ __metadata:
   peerDependencies:
     "@emotion/styled": ^11.0.0
     react: ">=16.9.0"
-<<<<<<< HEAD
-  checksum: cd870d1bbe318a8b834d48dec18738b071ccbab9d7d8536eee9ad91d5436f8348e79d742bafb01db4f924972d02f741dd3d8277275609cd5f3bdfa3b5a38a5b8
+  checksum: 667a4006b1132bffb489f46b06eeb98b882a48cb37869468b5f64e7620896ecbc6c78364118f9c12595b978ea017533733986f96d8e6d8a2adbf636c54224014
   languageName: node
   linkType: hard
 
-"@bbc/psammead-bulleted-list@npm:3.1.6":
+"@bbc/psammead-bulleted-list@npm:3.1.7":
+  version: 3.1.7
   resolution: "@bbc/psammead-bulleted-list@npm:3.1.7"
   dependencies:
     "@bbc/gel-foundations": 6.3.0
@@ -1757,27 +1757,11 @@ __metadata:
     "@bbc/psammead-live-label": 2.0.28
     "@bbc/psammead-story-promo": 8.0.28
     "@bbc/psammead-styles": 7.6.3
->>>>>>> latest
     "@bbc/psammead-visually-hidden-text": 2.0.7
   peerDependencies:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 585b662d802868fcaeb980c0a78eedc5a6b22ec39d7c6b8f370f65712500c29a3bd0006dc6881f98a8887522e333e633207b1f79f823e6f01519aa591c881112
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-byline@npm:3.0.25":
-  version: 3.0.25
-  resolution: "@bbc/psammead-byline@npm:3.0.25"
-  dependencies:
-    "@bbc/gel-foundations": 6.3.0
-    "@bbc/psammead-styles": 7.6.2
-  peerDependencies:
-    "@emotion/styled": ^11.0.0
-    react: ">=16.9.0"
-  checksum: 04e4058238bb93ed65adfad4b748121d3849ec5771353d77765a107ee686fe7e19848e1ee54a188929c55392c9288af337b5548cfdba84a03ad9c30b35a18602
-=======
   checksum: 949bfe223fc96658c8477c915ba5d5bef37f911a22005e19e5247774c2b27ae81e4a3f1776c913398bbf2e7f1f715d8964a44cb96ec7b630add27c4425986036
   languageName: node
   linkType: hard
@@ -1792,7 +1776,6 @@ __metadata:
     "@emotion/styled": ^11.0.0
     react: ">=16.9.0"
   checksum: d00bc3104c747ddc4f27ccb06c34f3b50b69c5bcef0678ed2cd3cec3b74d1e83fa001d6017175cfa24e01006a4a2c7d6bb769d383c53571c60a054f48bef5e9f
->>>>>>> latest
   languageName: node
   linkType: hard
 
