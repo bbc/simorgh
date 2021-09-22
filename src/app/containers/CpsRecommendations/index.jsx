@@ -3,7 +3,6 @@ import { arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
