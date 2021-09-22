@@ -30,7 +30,7 @@ const fonts = isTest()
     ]
   : [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR];
 
-const script = isTest() ? bengali : bengaliNotoSerif;
+const script = isTest() ? bengaliNotoSerif : bengali;
 
 export const service = {
   default: {
