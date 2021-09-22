@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_persian_radio/p09v5lgp",
+    "locators": { "pid": "p09vd901", "brandPid": "p09v5lgp" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_persian_radio",
+    "language": "fa",
+    "lastUpdated": 1632222653687,
+    "firstPublished": 1631113543000,
+    "lastPublished": 1631113543000,
+    "timestamp": 1631113543000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "بین سطور - BBC News فارسی",
+      "pageIdentifier": "persian.bbc_persian_radio.podcasts.programmes.p09v5lgp.page",
+      "producerId": "69",
+      "contentType": "player-episode",
+      "producer": "PERSIAN"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": ["media"],
+    "title": "بین سطور",
+    "releaseDateTimeStamp": 1631059200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p09vd901",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "حسین باستانی در این پادکست به بررسی سازوکارِ انسانیت زدایی از محکومان به اعدام می پردازد."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09vd3rp",
+            "types": ["Podcast"],
+            "duration": 2388,
+            "durationISO8601": "PT39M48S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1631112540000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "انسانیت زدایی از اعدامی – بین سطور",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "بین سطور" },
+    "locators": { "pid": "p09vd901", "brandPid": "p09v5lgp" },
+    "media": {
+      "id": "p09vd901",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "حسین باستانی در این پادکست به بررسی سازوکارِ انسانیت زدایی از محکومان به اعدام می پردازد."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p09vd3rp",
+          "types": ["Podcast"],
+          "duration": 2388,
+          "durationISO8601": "PT39M48S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1631112540000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "انسانیت زدایی از اعدامی – بین سطور",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1631059200000,
+    "brand": { "pid": "p09v5lgp", "title": "بین سطور" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09vd901",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "بین سطور" },
+            "locators": { "pid": "p09v8lp7", "brandPid": "p09v5lgp" },
+            "media": {
+              "id": "p09v8lp7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "این پادکست به بازخوانی نقش آیت الله خامنه ای در انتخابات ریاست جمهوری ۱۴۰۰ اختصاص دارد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09v8lps.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09v8hn6",
+                  "types": ["Podcast"],
+                  "duration": 1995,
+                  "durationISO8601": "PT33M15S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1631010660000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "دولت دلخواه رهبر؛ ویرایش ۱۴۰۰ - بین سطور",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09v8lps.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09v8lps.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1630972800000,
+            "brand": { "pid": "p09v5lgp", "title": "بین سطور" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09v8lp7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "بین سطور" },
+            "locators": { "pid": "p09v5m1j", "brandPid": "p09v5lgp" },
+            "media": {
+              "id": "p09v5m1j",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "\"بین سطور\" پادکستی پژوهش-محور در مورد تحولات ایران، به تهیه‌کنندگی حسین باستانی است.",
+                "medium": "\"بین سطور\" به تشریح زوایای ناگفته تحولات و وقایع مهم ایران می پردازد. هدف از این بررسی، درستی سنجی روایت‌های کلیدی با توجه به مستندات گذشته و حال، یا شفاف سازی ابهاماتی مشخص است."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09v5ksn",
+                  "types": ["Podcast"],
+                  "duration": 81,
+                  "durationISO8601": "PT1M21S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1630923960000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "معرفی پادکست \"بین سطور\"",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09v5kzl.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1630886400000,
+            "brand": { "pid": "p09v5lgp", "title": "بین سطور" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09v5m1j",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}
