@@ -30,7 +30,7 @@ const fonts = isTest()
     ]
   : [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR];
 
-const script = isTest() ? sinhalese : sinhaleseNotoSerif;
+const script = isTest() ? sinhaleseNotoSerif : sinhalese;
 
 export const service = {
   default: {
