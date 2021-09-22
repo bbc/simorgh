@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, node, string } from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import styled from '@emotion/styled';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
@@ -25,53 +25,20 @@ import { GridItemMediumNoMargin } from '#app/components/Grid';
 import RecommendationsPromoList from './RecommendationsPromoList';
 import RecommendationsPromo from './RecommendationsPromo';
 
-const Wrapper = styled.div`
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${GEL_SPACING};
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    padding: 0 ${GEL_SPACING_DBL};
-  }
-`;
-
-const SkipWrapper = ({ skipLink, service, children }) => {
-  return (
-    <SkipLinkWrapper service={service} {...skipLink}>
-      {children}
-    </SkipLinkWrapper>
-  );
-};
-
-const skipLinkPropShape = {
-  terms: shape({
-    '%title%': string,
-  }),
-  endTextVisuallyHidden: string,
-  endTextId: string,
-  text: string,
-};
-
-SkipWrapper.propTypes = {
-  service: string.isRequired,
-  children: node.isRequired,
-  skipLink: shape(skipLinkPropShape),
-};
-
-SkipWrapper.defaultProps = {
-  skipLink: null,
-};
-
 const RecommendationsWrapper = styled.div`
   background-color: ${C_GHOST};
   margin: ${GEL_SPACING_TRPL} 0;
-  padding: ${GEL_SPACING_DBL} 0;
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     margin: 0 0 ${GEL_SPACING_TRPL};
-    padding: 0 0 ${GEL_SPACING_DBL};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 0 ${GEL_SPACING_TRPL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL} 0;
   }
 `;
 
@@ -95,16 +62,6 @@ const CpsRecommendations = ({ items }) => {
     'aria-labelledby': labelId,
   };
 
-  const CpsOnwardJourneyWrapper = ({ children }) => (
-    <Wrapper data-e2e={labelId} {...a11yAttributes}>
-      {children}
-    </Wrapper>
-  );
-
-  CpsOnwardJourneyWrapper.propTypes = {
-    children: node.isRequired,
-  };
-
   const { hasStoryRecommendations } = recommendations;
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
@@ -125,7 +82,7 @@ const CpsRecommendations = ({ items }) => {
 
   const endTextId = 'end-of-recommendations';
 
-  const skipLinkProps = {
+  const skipLink = {
     endTextId,
     terms,
     text,
@@ -134,30 +91,28 @@ const CpsRecommendations = ({ items }) => {
 
   return (
     <GridItemMediumNoMargin>
-      <RecommendationsWrapper>
-        <CpsOnwardJourneyWrapper>
-          <SkipWrapper skipLink={skipLinkProps} service={service}>
-            {title ? (
-              <LabelComponent
-                script={script}
-                service={service}
-                dir={dir}
-                labelId={labelId}
-                columnType="main"
-                overrideHeadingAs="strong"
-                bar={false}
-                backgroundColor={C_GHOST}
-              >
-                {title}
-              </LabelComponent>
-            ) : null}
-            {isSinglePromo ? (
-              <RecommendationsPromo promo={items[0]} />
-            ) : (
-              <RecommendationsPromoList promoItems={items} />
-            )}
-          </SkipWrapper>
-        </CpsOnwardJourneyWrapper>
+      <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
+        <SkipLinkWrapper service={service} {...skipLink}>
+          {title ? (
+            <LabelComponent
+              script={script}
+              service={service}
+              dir={dir}
+              labelId={labelId}
+              columnType="main"
+              overrideHeadingAs="strong"
+              bar={false}
+              backgroundColor={C_GHOST}
+            >
+              {title}
+            </LabelComponent>
+          ) : null}
+          {isSinglePromo ? (
+            <RecommendationsPromo promo={items[0]} />
+          ) : (
+            <RecommendationsPromoList promoItems={items} />
+          )}
+        </SkipLinkWrapper>
       </RecommendationsWrapper>
     </GridItemMediumNoMargin>
   );
