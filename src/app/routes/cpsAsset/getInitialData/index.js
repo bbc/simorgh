@@ -53,13 +53,13 @@ const processOptimoBlocks = toggles =>
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
       augmentWithDisclaimer(toggles),
     ),
+    isLive() ? identity : insertPodcastPromo,
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
     addIdsToBlocks,
     applyBlockPositioning,
     cpsOnlyOnwardJourneys,
-    isLive() ? identity : insertPodcastPromo,
   );
 
 // Here pathname is passed as a prop specifically for CPS includes
