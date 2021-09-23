@@ -1,4 +1,6 @@
+import React from 'react';
 import styled from '@emotion/styled';
+
 import isLive from '#lib/utilities/isLive';
 
 const Prototype = styled.div`
@@ -31,4 +33,4 @@ const Prototype = styled.div`
   }
 `;
 
-export default isLive() ? () => null : Prototype;
+export default isLive() ? () => null : () => <Prototype />;
