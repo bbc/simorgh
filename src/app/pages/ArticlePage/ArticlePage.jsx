@@ -28,7 +28,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import gist from '#containers/Gist';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
 import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
@@ -62,7 +62,7 @@ const componentsToRender = {
   audio: articleMediaPlayer,
   video: articleMediaPlayer,
   text,
-  image,
+  image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
   timestamp,
   social: SocialEmbedContainer,
   group: gist,
