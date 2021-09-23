@@ -30,19 +30,19 @@ import {
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
-const formatPageData = pipe(
-  addAnalyticsCounterName,
-  parseInternalLinks,
-  timestampToMilliseconds,
-  isLive() ? identity : insertPodcastPromo,
-);
-
 export const only = (pageTypes, transformer) => (pageData, ...args) => {
   const isCorrectPageType = pageTypes.includes(
     path(['metadata', 'type'], pageData),
   );
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
+
+const formatPageData = pipe(
+  addAnalyticsCounterName,
+  parseInternalLinks,
+  timestampToMilliseconds,
+  only([STORY_PAGE], isLive() ? identity : insertPodcastPromo),
+);
 
 const processOptimoBlocks = toggles =>
   pipe(
