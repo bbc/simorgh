@@ -38,10 +38,6 @@ const setClearingFlag = (pageData, promoPosition) => {
   );
 
   if (firstNonParagraphIndex < 0) return pageData;
-
-  if (!getBlocks(pageData)[promoPosition + firstNonParagraphIndex])
-    return pageData;
-
   return assocPath(
     [
       'content',
