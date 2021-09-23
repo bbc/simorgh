@@ -54,6 +54,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 
 const componentsToRender = {
   headline: headings,
@@ -170,6 +171,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <NielsenAnalytics />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
