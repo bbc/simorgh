@@ -21,7 +21,7 @@ import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -116,7 +116,9 @@ const MediaAssetPage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image,
+    image: props => (
+      <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+    ),
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />

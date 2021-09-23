@@ -84,6 +84,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   const { translations, service, script, dir, lang } = useContext(
     ServiceContext,
   );
+  const { externalLinkText } = useContext(ServiceContext);
 
   const eventTrackingData = {
     componentName: 'third-party',
@@ -121,7 +122,13 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
             <StyledListItem dir={dir} key={linkText} onClick={clickTrackerRef}>
-              <Link href={linkUrl} service={service} script={script} dir={dir}>
+              <Link
+                aria-label={`${linkText}, ${brandTitle}${externalLinkText}`}
+                href={linkUrl}
+                service={service}
+                script={script}
+                dir={dir}
+              >
                 <span role="text">
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>
                     {linkText}
@@ -134,6 +141,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
         </StyledList>
       ) : (
         <Link
+          aria-label={`${firstLink.linkText}, ${brandTitle} ${externalLinkText}`}
           href={firstLink.linkUrl}
           key={firstLink.linkText}
           service={service}
