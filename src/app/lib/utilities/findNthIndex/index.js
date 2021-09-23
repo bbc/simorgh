@@ -29,7 +29,7 @@ const findNthIndex = (n, predicate, inputArray) => {
   if (!validateInputs(n, predicate, inputArray)) return -1;
   let count = 0;
   for (let i = 0; i < inputArray.length; i += 1) {
-    if (n - count > inputArray.length) break;
+    if (n - count > inputArray.length - i) break;
 
     if (predicate(inputArray[i])) {
       if (count + 1 === n) return i;

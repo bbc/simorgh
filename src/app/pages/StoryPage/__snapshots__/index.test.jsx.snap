@@ -2773,7 +2773,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   </div>
                   <div
                     class="emotion-103 emotion-104"
-                    type="podcastPromo"
                   />
                   <div
                     class="emotion-44 emotion-2"
@@ -6746,7 +6745,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                   </div>
                   <div
                     class="emotion-108 emotion-109"
-                    type="podcastPromo"
                   />
                   <div
                     class="emotion-49 emotion-2"
