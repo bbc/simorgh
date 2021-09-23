@@ -1,20 +1,9 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import isLive from '#lib/utilities/isLive';
 
 const Prototype = styled.div`
   background: #f4f4f4;
   float: left;
-
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #ccc;
-  text-transform: uppercase;
-  line-height: 2;
-  font-size: 20px;
 
   width: 115px;
   height: 370px;
@@ -42,7 +31,4 @@ const Prototype = styled.div`
   }
 `;
 
-const PodcastPromoPrototype = () =>
-  isLive() ? null : <Prototype>Podcast Promo</Prototype>;
-
-export default PodcastPromoPrototype;
+export default isLive() ? () => null : Prototype;

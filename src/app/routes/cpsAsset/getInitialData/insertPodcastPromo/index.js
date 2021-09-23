@@ -12,7 +12,7 @@ const podcastPromoBlock = {
 };
 
 const getPromoPosition = pageData =>
-  findNthIndex(8, pathEq(['type'], 'text'), getBlocks(pageData));
+  findNthIndex(7, pathEq(['type'], 'text'), getBlocks(pageData));
 
 const insertPodcastPromo = pageData => {
   const promoPosition = getPromoPosition(pageData);
