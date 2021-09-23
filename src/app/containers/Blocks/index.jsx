@@ -36,9 +36,8 @@ const Blocks = ({ blocks, componentsToRender }) =>
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
     return (
-      <Wrapper>
+      <Wrapper key={id}>
         <Block
-          key={id}
           position={position}
           type={type}
           typeOfPreviousBlock={typeOfPreviousBlock}
