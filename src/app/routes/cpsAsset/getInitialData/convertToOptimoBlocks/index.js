@@ -71,7 +71,6 @@ const parseBlockByType = (block, json, assetType, pathname) => {
 const transferSimorghMetadata = (originalBlocks, newBlocks) =>
   newBlocks.map((newBlock, i) => {
     if (!newBlock) return newBlock;
-    if (!originalBlocks[i].simorghMetadata) return newBlock;
     return { ...newBlock, ...pick(['simorghMetadata'], originalBlocks[i]) };
   });
 
