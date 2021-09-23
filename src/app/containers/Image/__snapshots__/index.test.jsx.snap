@@ -314,16 +314,6 @@ exports[`Image with data should render a lazyload container and not preload the 
 `;
 
 exports[`Image with data should render an image with alt text and caption 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -603,10 +593,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -832,16 +818,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
 `;
 
 exports[`Image with data should render an image with alt text and offscreen copyright 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -1121,10 +1097,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -1203,16 +1175,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
 `;
 
 exports[`Image with data should render an image with other originCode - this would be a broken image 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -1492,10 +1454,6 @@ exports[`Image with data should render an image with other originCode - this wou
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
