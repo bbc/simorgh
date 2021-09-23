@@ -1,5 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import pick from 'ramda/src/pick';
 import identity from 'ramda/src/identity';
 import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';
@@ -67,6 +68,13 @@ const parseBlockByType = (block, json, assetType, pathname) => {
   return parsedBlock;
 };
 
+const transferSimorghMetadata = (originalBlocks, newBlocks) =>
+  newBlocks.map((newBlock, i) => {
+    if (!newBlock) return newBlock;
+    if (!originalBlocks[i].simorghMetadata) return newBlock;
+    return { ...newBlock, ...pick(['simorghMetadata'], originalBlocks[i]) };
+  });
+
 const convertToOptimoBlocks = async (jsonRaw, pathname) => {
   const json = clone(jsonRaw);
   const assetType = path(['metadata', 'type'], json);
@@ -80,7 +88,7 @@ const convertToOptimoBlocks = async (jsonRaw, pathname) => {
     ...json,
     content: {
       model: {
-        blocks: parsedBlocks.filter(Boolean),
+        blocks: transferSimorghMetadata(blocks, parsedBlocks).filter(Boolean),
       },
     },
   };
