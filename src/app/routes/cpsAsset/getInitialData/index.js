@@ -1,5 +1,7 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
+import identity from 'ramda/src/identity';
+import isLive from '#lib/utilities/isLive';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -12,6 +14,7 @@ import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import insertPodcastPromo from './insertPodcastPromo';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addMpuBlock from './addMpuBlock';
@@ -56,6 +59,7 @@ const processOptimoBlocks = toggles =>
     addIdsToBlocks,
     applyBlockPositioning,
     cpsOnlyOnwardJourneys,
+    isLive() ? identity : insertPodcastPromo,
   );
 
 // Here pathname is passed as a prop specifically for CPS includes
