@@ -7,13 +7,17 @@ const buildArray = length =>
 
 describe('findNthIndex', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'error');
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it.each`
     n         | predicate  | array             | expected | expectError
-    ${-1}     | ${Boolean} | ${[false]}        | ${-1}    | ${false}
-    ${0}      | ${Boolean} | ${[false]}        | ${-1}    | ${false}
+    ${-1}     | ${Boolean} | ${[false]}        | ${-1}    | ${true}
+    ${0}      | ${Boolean} | ${[false]}        | ${-1}    | ${true}
     ${1}      | ${Boolean} | ${[false]}        | ${-1}    | ${false}
     ${1}      | ${Boolean} | ${[true]}         | ${0}     | ${false}
     ${'junk'} | ${Boolean} | ${[true]}         | ${-1}    | ${true}
@@ -29,8 +33,11 @@ describe('findNthIndex', () => {
     'when passed $n, $predicate, $array, should return $expected',
     ({ n, predicate, array, expected, expectError }) => {
       expect(findNthIndex(n, predicate, array)).toBe(expected);
+
       if (expectError) {
         expect(global.console.error).toHaveBeenCalled();
+      } else {
+        expect(global.console.error).not.toHaveBeenCalled();
       }
     },
   );
