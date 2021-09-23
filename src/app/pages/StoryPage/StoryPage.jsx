@@ -40,6 +40,8 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
+import InlinePodcastPromo from '#containers/PodcastPromo/inline';
+
 import {
   getFirstPublished,
   getLastPublished,
@@ -201,6 +203,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
+    podcastPromo: InlinePodcastPromo,
   };
 
   const StyledTimestamp = styled(Timestamp)`

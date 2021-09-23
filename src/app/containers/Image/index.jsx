@@ -85,7 +85,6 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
         showCopyright
         lazyLoad={lazyLoad}
         preload={ShouldPreLoadLeadImage}
-        fade
         type="image"
       />
     </GridWrapper>
