@@ -2,17 +2,7 @@
 
 exports[`Story Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.emotion-1 {
+  .emotion-1 {
   width: 100%;
   width: 100%;
   margin: 0 auto;
@@ -801,10 +791,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -4194,16 +4180,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 `;
 
 exports[`Story Page should render correctly when the secondary column data is not available 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-1 {
   width: 100%;
   width: 100%;
@@ -5134,10 +5110,6 @@ exports[`Story Page should render correctly when the secondary column data is no
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -7344,16 +7316,6 @@ exports[`Story Page should render correctly when the secondary column data is no
 `;
 
 exports[`Story Page snapshots should match snapshot for STY 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-1 {
   width: 100%;
   width: 100%;
@@ -8284,10 +8246,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
