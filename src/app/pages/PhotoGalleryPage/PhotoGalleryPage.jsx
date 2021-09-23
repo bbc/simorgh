@@ -20,16 +20,17 @@ import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import disclaimer from '#containers/Disclaimer';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import cpsAssetPagePropTypes from '#models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
   getAboutTags,
   getFirstPublished,
@@ -57,6 +58,26 @@ const PhotoGalleryPageGrid = ({ children, ...props }) => (
 
 PhotoGalleryPageGrid.propTypes = {
   children: node.isRequired,
+};
+
+const getImageSizes = ({ blocks }) => {
+  if (!blocks) {
+    return null;
+  }
+  const rawImageBlock = filterForBlockType(blocks, 'rawImage');
+  const height = path(['model', 'height'], rawImageBlock);
+  const width = path(['model', 'width'], rawImageBlock);
+  const isSquareImage = height === width;
+  const isTallImage = height > width;
+
+  if (isSquareImage) {
+    return '(min-width: 600px) 80vw, (min-width: 1008px) 632px, 95vw';
+  }
+  if (isTallImage) {
+    return '(min-width: 400px) 60vw, (min-width: 600px) 80vw, (min-width: 1008px) 502px, 95vw';
+  }
+
+  return '(min-width: 1008px) 760px, 100vw';
 };
 
 const PhotoGalleryPage = ({ pageData }) => {
@@ -89,7 +110,11 @@ const PhotoGalleryPage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image,
+    image: props => {
+      const sizes = getImageSizes(props);
+
+      return <Image {...props} sizes={sizes} />;
+    },
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />

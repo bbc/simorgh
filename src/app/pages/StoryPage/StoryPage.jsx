@@ -173,7 +173,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image: props => <Image {...props} shouldPreload={preloadLeadImageToggle} />,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 645px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
