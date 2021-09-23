@@ -3,21 +3,19 @@ import groupBy from 'ramda/src/groupBy';
 import path from 'ramda/src/path';
 import transformer from '.';
 
-const buildBlocks = (count, type = 'text') =>
+const buildBlocks = (count, type = 'paragraph') =>
   Array(count)
     .fill()
     .map(() => ({ type }));
 
 const buildPageFixture = blocks => ({
   content: {
-    model: {
-      blocks,
-    },
+    blocks,
   },
 });
 
 const findPromoIndex = transformedData =>
-  transformedData.content.model.blocks.findIndex(
+  transformedData.content.blocks.findIndex(
     block => block.type === 'podcastPromo',
   );
 
@@ -32,12 +30,12 @@ describe('insertPodcastPromo', () => {
   it('adds a podcast promo block', () => {
     const input = buildPageFixture(buildBlocks(10));
 
-    const { text: textBlocks, podcastPromo: promoBlocks } = groupBy(
+    const { paragraph: paragraphBlocks, podcastPromo: promoBlocks } = groupBy(
       path(['type']),
-      transformer(input).content.model.blocks,
+      transformer(input).content.blocks,
     );
 
-    expect(textBlocks.length).toBe(10);
+    expect(paragraphBlocks.length).toBe(10);
     expect(promoBlocks.length).toBe(1);
   });
 

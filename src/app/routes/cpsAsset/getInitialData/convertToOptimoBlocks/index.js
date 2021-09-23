@@ -1,5 +1,6 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import identity from 'ramda/src/identity';
 import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
@@ -42,6 +43,7 @@ const typesToConvert = {
   include,
   social_embed: socialEmbed,
   table,
+  podcastPromo: identity,
 };
 
 // Here pathname is passed as a prop specifically for CPS includes

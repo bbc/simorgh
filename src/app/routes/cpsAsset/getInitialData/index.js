@@ -34,6 +34,7 @@ const formatPageData = pipe(
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
+  isLive() ? identity : insertPodcastPromo,
 );
 
 export const only = (pageTypes, transformer) => (pageData, ...args) => {
@@ -53,7 +54,6 @@ const processOptimoBlocks = toggles =>
       [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
       augmentWithDisclaimer(toggles),
     ),
-    isLive() ? identity : insertPodcastPromo,
     addBylineBlock,
     addRecommendationsBlock,
     addMpuBlock,
