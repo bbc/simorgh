@@ -44,9 +44,9 @@ describe('insertPodcastPromo', () => {
   it.each`
     scenario | inputBlocks                                          | expectedIndex
     ${1}     | ${buildBlocks(0)}                                    | ${-1}
-    ${2}     | ${buildBlocks(7)}                                    | ${-1}
-    ${3}     | ${buildBlocks(8)}                                    | ${6}
-    ${4}     | ${buildBlocks(9)}                                    | ${6}
+    ${2}     | ${buildBlocks(6)}                                    | ${-1}
+    ${3}     | ${buildBlocks(7)}                                    | ${6}
+    ${4}     | ${buildBlocks(8)}                                    | ${6}
     ${5}     | ${buildBlocks(8, 'not-text')}                        | ${-1}
     ${6}     | ${buildBlocks(1, 'not-text').concat(buildBlocks(8))} | ${7}
   `(
