@@ -33,6 +33,7 @@ const ArticleFigure = ({
   captionBlock,
   type,
   srcset,
+  sizes,
   showCopyright,
 }) => {
   let parentColumns = {
@@ -98,6 +99,7 @@ const ArticleFigure = ({
             preload={preload}
             fade={fade}
             srcset={srcset}
+            sizes={sizes}
           >
             {showCopyright && renderCopyright(copyright)}
           </ImageWithPlaceholder>
@@ -146,6 +148,7 @@ ArticleFigure.propTypes = {
   src: string.isRequired,
   type: string,
   srcset: string,
+  sizes: string,
   width: number.isRequired,
   showCopyright: bool,
 };
@@ -159,6 +162,7 @@ ArticleFigure.defaultProps = {
   preload: false,
   type: '',
   srcset: null,
+  sizes: null,
   showCopyright: false,
 };
 
