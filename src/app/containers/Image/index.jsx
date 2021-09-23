@@ -27,7 +27,7 @@ const getCopyright = copyrightHolder => {
 const shouldLazyLoad = position =>
   !!urlWithPageAnchor() || position[0] > LAZYLOAD_FROM_BLOCK;
 
-const ImageContainer = ({ blocks, position, shouldPreload }) => {
+const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
   if (!blocks) {
     return null;
   }
@@ -81,6 +81,7 @@ const ImageContainer = ({ blocks, position, shouldPreload }) => {
         src={rawImageSrc}
         width={width}
         srcset={srcSet}
+        sizes={sizes}
         showCopyright
         lazyLoad={lazyLoad}
         preload={ShouldPreLoadLeadImage}
