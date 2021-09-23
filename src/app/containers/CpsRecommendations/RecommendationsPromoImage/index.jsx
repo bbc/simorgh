@@ -12,7 +12,7 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
     return <ImagePlaceholder ratio={landscapeRatio} />;
   }
 
-  const { height, width, path } = indexImage;
+  const { height, width, path, altText, copyrightHolder } = indexImage;
 
   const ratio = (height / width) * 100;
   const originCode = getOriginCode(path);
@@ -24,12 +24,12 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
 
   return (
     <ImageWithPlaceholder
-      alt={indexImage.altText}
+      alt={altText}
       ratio={ratio}
       src={src}
       fallback={false}
       {...indexImage}
-      copyright={indexImage.copyrightHolder}
+      copyright={copyrightHolder}
       srcset={srcset}
       lazyLoad={lazyLoad}
     />
