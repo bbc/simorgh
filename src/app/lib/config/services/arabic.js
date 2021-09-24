@@ -65,7 +65,7 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'بي بي سي إكسترابودكاست "عَلاقات"',
+      brandTitle: 'بودكاست "عَلاقات"',
       brandDescription:
         'بودكاست أسبوعي يناقش العلاقات العاطفية باختلافها ويسلط الضوء على تحدياتها وحلولها المتاحة',
       image: {
