@@ -61,17 +61,16 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ပေါ့ဒ်ကတ်စ်',
-      brandTitle: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
-      brandDescription:
-        'BBC Burmese provides up-to-date news and current affairs in Burmese',
+      title: 'ပေါ့တ်ကာစ်',
+      brandTitle: 'Burmese Evening Podcast',
+      brandDescription: 'Up-to-date news and current affairs in Burmese',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
-        alt: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
+        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lyd.jpg',
+        alt: 'Burmese Evening Podcast',
       },
       linkLabel: {
         text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
-        href: 'https://www.bbc.com/burmese/podcasts/p02p9f6q',
+        href: 'https://www.bbc.com/burmese/podcasts/p02pc9lh',
       },
     },
     translations: {
