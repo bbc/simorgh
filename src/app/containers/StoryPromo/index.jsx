@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
@@ -126,7 +125,6 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
-  const isLtr = dir === 'ltr';
   const headline = getHeadline(item);
   const url = getUrl(item);
   const isLive = getIsLive(item);
