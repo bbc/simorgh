@@ -2,7 +2,7 @@
 
 exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 .emotion-0 {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding-bottom: 1.5rem;
 }
 
@@ -1615,7 +1615,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 
 exports[`should render a news article correctly 1`] = `
 .emotion-0 {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding-bottom: 1.5rem;
 }
 
@@ -2006,7 +2006,7 @@ exports[`should render a news article correctly 1`] = `
 
 exports[`should render a rtl article (persian) with most read correctly 1`] = `
 .emotion-0 {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   padding-bottom: 1.5rem;
 }
 

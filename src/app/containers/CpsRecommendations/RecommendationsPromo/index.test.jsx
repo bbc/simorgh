@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import path from 'ramda/src/path';
 import RecommendationsPromo from '.';
@@ -8,9 +9,8 @@ import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 
-describe('RecommendationsPromo', () => {
-  shouldMatchSnapshot(
-    'it renders a Story Promo wrapped in a Grid component',
+const Component = () => {
+  return (
     <ServiceContextProvider service="pidgin">
       <ToggleContextProvider
         toggles={{
@@ -21,6 +21,25 @@ describe('RecommendationsPromo', () => {
       >
         <RecommendationsPromo promo={promos[0]} dir="ltr" />,
       </ToggleContextProvider>
-    </ServiceContextProvider>,
+    </ServiceContextProvider>
   );
+};
+
+describe('RecommendationsPromo', () => {
+  shouldMatchSnapshot(
+    'it renders a Story Promo wrapped in a Grid component',
+    <Component />,
+  );
+
+  it('should render the title of the article as a link', () => {
+    const { getByText, container } = render(<Component />);
+
+    const links = container.querySelectorAll('a');
+
+    expect(
+      getByText('Meet boys who dey convert cassava to electricity'),
+    ).toBeInTheDocument();
+    expect(links).toHaveLength(1);
+    expect(links[0].getAttribute('href')).toEqual('/pidgin/44508901');
+  });
 });

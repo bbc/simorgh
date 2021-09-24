@@ -67,6 +67,51 @@ describe('CpsRecommendations', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should contain a region landmark role', () => {
+    const toggleEnabled = true;
+
+    const { getByRole } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
+      toggleEnabled,
+    );
+
+    const section = getByRole('region');
+    expect(section.getAttribute('aria-labelledby')).toBe(
+      'recommendations-heading',
+    );
+  });
+
+  it('should contain a link to skip to end of recommendations component', () => {
+    const toggleEnabled = true;
+
+    const { container } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
+      toggleEnabled,
+    );
+
+    const links = container.querySelectorAll('a');
+    const skipLink = links[0];
+
+    expect(skipLink.getAttribute('href')).toEqual('#end-of-recommendations');
+    expect(skipLink.textContent).toEqual(
+      'Saltar Quizás también te interese y continuar leyendo',
+    );
+  });
+
+  it('should not render a list when there is only one promo', () => {
+    const toggleEnabled = true;
+    const { queryByRole } = renderContainer(
+      [ltrRecommendationsData[0]],
+      'mundo',
+      toggleEnabled,
+    );
+
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(queryByRole('listitem')).not.toBeInTheDocument();
+  });
+
   it('should not render when there is no recommendations data', () => {
     const toggleEnabled = true;
 
