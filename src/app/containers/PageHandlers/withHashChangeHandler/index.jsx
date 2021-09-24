@@ -2,7 +2,7 @@ import React, { memo, useEffect } from 'react';
 import path from 'ramda/src/path';
 import pipe from 'ramda/src/pipe';
 
-import isHashChange from './isHashChange';
+import isHashChangeOnSamePath from './isHashChangeOnSamePath';
 
 const useHashChangeHandler = hash => {
   useEffect(() => {
@@ -25,6 +25,6 @@ const withHashChangeHandler = Component => props => {
   return <Component {...props} />;
 };
 
-const withMemoization = Component => memo(Component, isHashChange);
+const withMemoization = Component => memo(Component, isHashChangeOnSamePath);
 
 export default pipe(withMemoization, withHashChangeHandler);
