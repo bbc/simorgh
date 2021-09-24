@@ -60,16 +60,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Amakuru kuri BBC - Gahuzamiryango',
-      brandDescription:
-        'Amakuru y’imonota 30 mutegurirwa na BBC Gahuzamiryango',
+      brandTitle: 'Ikiganiro cy’abagore',
+      brandDescription: 'Ikiganiro cy’abagore kuri BBC Gahuzamiryango',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p082wksc.jpg',
-        alt: 'Amakuru kuri BBC - Gahuzamiryango',
+        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p082wkdq.jpg',
+        alt: 'Ikiganiro cy’abagore',
       },
       linkLabel: {
         text: 'Inkurikirane',
-        href: 'https://www.bbc.com/gahuza/podcasts/p07yhgwh',
+        href: '	https://www.bbc.com/gahuza/podcasts/p07yjlmf',
       },
     },
     translations: {
