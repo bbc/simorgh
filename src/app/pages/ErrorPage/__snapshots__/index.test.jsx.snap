@@ -273,7 +273,9 @@ exports[`ErrorPage should correctly render for 404 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -287,8 +289,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         Page cannot be found
       </h1>
@@ -604,7 +605,9 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -618,8 +621,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         این صفحه پیدا نشد
       </h1>
@@ -935,7 +937,9 @@ exports[`ErrorPage should correctly render for 500 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -949,8 +953,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         Internal server error
       </h1>
@@ -1261,7 +1264,9 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -1275,8 +1280,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         خطا در سرور داخلی
       </h1>
@@ -1587,7 +1591,9 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -1601,8 +1607,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         Internal server error
       </h1>

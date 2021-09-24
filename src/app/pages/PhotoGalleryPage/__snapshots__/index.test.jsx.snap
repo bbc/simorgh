@@ -1107,7 +1107,9 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <div
                 class="emotion-4 emotion-3"
@@ -1115,7 +1117,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
               >
                 <h1
                   class="emotion-6 emotion-7"
-                  id="content"
+                  id="headline"
                   tabindex="-1"
                 >
                   Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
@@ -3155,7 +3157,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <div
                 class="emotion-4 emotion-3"
@@ -3163,7 +3167,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
               >
                 <h1
                   class="emotion-6 emotion-7"
-                  id="content"
+                  id="headline"
                   tabindex="-1"
                 >
                   Manneen durii 5 Magaalaa Finfinnee keessaa daawwachuu qabdan
@@ -5666,7 +5670,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <div
                 class="emotion-4 emotion-3"
@@ -5674,7 +5680,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
               >
                 <h1
                   class="emotion-6 emotion-7"
-                  id="content"
+                  id="headline"
                   tabindex="-1"
                 >
                   Fish and plantain sara everi wia for 2019 Bole Festival
@@ -7451,7 +7457,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <div
                 class="emotion-4 emotion-3"
@@ -7459,7 +7467,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
               >
                 <h1
                   class="emotion-6 emotion-7"
-                  id="content"
+                  id="headline"
                   tabindex="-1"
                 >
                   PGL - Blood pressure drugs dey work better
@@ -9910,7 +9918,9 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <div
                 class="emotion-4 emotion-3"
@@ -9918,7 +9928,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
               >
                 <h1
                   class="emotion-6 emotion-7"
-                  id="content"
+                  id="headline"
                   tabindex="-1"
                 >
                   Azərbaycan Xalq Cümhuriyyəti - Fotolarda

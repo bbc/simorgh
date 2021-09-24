@@ -1157,11 +1157,13 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <h1
                 class="emotion-4 emotion-5"
-                id="content"
+                id="headline"
                 tabindex="-1"
               >
                 Ўзбек деҳқонининг косаси нега оқармайдиshort
@@ -3643,11 +3645,13 @@ exports[`Media Asset Page should render component 1`] = `
             <main
               class="emotion-0 emotion-1 emotion-2 emotion-3"
               dir="ltr"
+              id="content"
               role="main"
+              tabindex="-1"
             >
               <h1
                 class="emotion-4 emotion-5"
-                id="content"
+                id="headline"
                 tabindex="-1"
               >
                 Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;

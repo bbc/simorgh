@@ -1126,12 +1126,13 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
   </div>
   <main
     class="emotion-0 emotion-1"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="ltr"
-      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
@@ -1139,7 +1140,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
-          id="content"
+          id="headline"
           tabindex="-1"
         >
           Article Headline in Pidgin
@@ -1969,12 +1970,13 @@ exports[`should render a news article correctly 1`] = `
   </div>
   <main
     class="emotion-0 emotion-1"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="ltr"
-      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
@@ -1982,7 +1984,7 @@ exports[`should render a news article correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
-          id="content"
+          id="headline"
           tabindex="-1"
         >
           Article Headline
@@ -3130,12 +3132,13 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
   </div>
   <main
     class="emotion-0 emotion-1"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-2 emotion-3 emotion-4"
       dir="rtl"
-      id="article-content"
     >
       <div
         class="emotion-5 emotion-4"
@@ -3143,7 +3146,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
-          id="content"
+          id="headline"
           tabindex="-1"
         >
           سرصفحه مقاله

@@ -729,7 +729,9 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
   </div>
   <main
     data-e2e="most-watched"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-0 emotion-1"
@@ -745,7 +747,7 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
           <h1
             class="emotion-7 emotion-8 emotion-9"
             dir="ltr"
-            id="content"
+            id="headline"
             tabindex="-1"
           >
             De one we dem don look

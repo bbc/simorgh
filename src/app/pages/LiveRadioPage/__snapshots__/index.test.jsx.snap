@@ -339,7 +339,9 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -347,8 +349,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         BBC Afrique Radio
       </h1>
@@ -1566,7 +1567,9 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -1574,8 +1577,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         BBC Afrique Radio
       </h1>

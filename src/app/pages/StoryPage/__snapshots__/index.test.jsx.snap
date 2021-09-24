@@ -2421,7 +2421,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 dir="ltr"
               >
                 <main
+                  id="content"
                   role="main"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-6 emotion-2"
@@ -2429,7 +2431,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <h1
                       class="emotion-8 emotion-9"
-                      id="content"
+                      id="headline"
                       tabindex="-1"
                     >
                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
@@ -6323,7 +6325,9 @@ exports[`Story Page should render correctly when the secondary column data is no
                 dir="ltr"
               >
                 <main
+                  id="content"
                   role="main"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-6 emotion-2"
@@ -6331,7 +6335,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <h1
                       class="emotion-8 emotion-9"
-                      id="content"
+                      id="headline"
                       tabindex="-1"
                     >
                       STY - Blood pressure drugs dey work better
@@ -9859,7 +9863,9 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 dir="ltr"
               >
                 <main
+                  id="content"
                   role="main"
+                  tabindex="-1"
                 >
                   <div
                     class="emotion-6 emotion-2"
@@ -9867,7 +9873,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <h1
                       class="emotion-8 emotion-9"
-                      id="content"
+                      id="headline"
                       tabindex="-1"
                     >
                       STY - Blood pressure drugs dey work better

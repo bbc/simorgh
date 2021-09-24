@@ -526,7 +526,9 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -534,8 +536,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
@@ -1121,7 +1122,9 @@ exports[`should show the expired content message if episode is expired 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -1129,8 +1132,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
@@ -1706,7 +1708,9 @@ exports[`should show the future content message if episode is not yet available 
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -1714,8 +1718,7 @@ exports[`should show the future content message if episode is not yet available 
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>
@@ -2291,7 +2294,9 @@ exports[`should show the future content message if episode is pending 1`] = `
   <main
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-3 emotion-2"
@@ -2299,8 +2304,7 @@ exports[`should show the future content message if episode is pending 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="content"
-        tabindex="-1"
+        id="headline"
       >
         نړۍ دا وخت, ۲۷ می ۲۰۲۰
       </h1>

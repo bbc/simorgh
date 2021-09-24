@@ -562,7 +562,9 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
   </div>
   <main
     data-e2e="most-read"
+    id="content"
     role="main"
+    tabindex="-1"
   >
     <div
       class="emotion-0 emotion-1"
@@ -570,7 +572,7 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       <h1
         class="emotion-2 emotion-3"
         dir="ltr"
-        id="content"
+        id="headline"
         tabindex="-1"
       >
         De one we dem de read well well
