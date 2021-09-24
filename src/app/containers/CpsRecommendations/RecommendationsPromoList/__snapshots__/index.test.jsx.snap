@@ -175,68 +175,33 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   }
 }
 
-.emotion-8>div {
-  display: grid;
-  margin: 0.25rem 0;
-  background-color: #FDFDFD;
-}
-
-@media (max-width: 62.9375rem) {
-  .emotion-8>div {
-    margin: 0.25rem 0;
-  }
+.emotion-8 {
+  position: relative;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #F6F6F6;
 }
 
 .emotion-10 {
+  display: inline-block;
   position: relative;
+  width: 4.7rem;
+  vertical-align: top;
 }
 
-@supports (grid-template-columns: fit-content(200px)) {
+@media (min-width: 25rem) {
   .emotion-10 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 0.5rem;
+    width: 6.8rem;
   }
+}
 
-  @media (min-width: 37.5rem) {
-    .emotion-10 {
-      grid-column-gap: 1rem;
-    }
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-10 {
-      display: block;
-    }
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    width: 7.5rem;
   }
 }
 
 .emotion-12 {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 33.33%;
-}
-
-@media (min-width: 63rem) {
-  .emotion-12 {
-    display: block;
-    width: 100%;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-12 {
-    width: initial;
-    grid-column: 1/span 2;
-  }
-}
-
-.emotion-14 {
-  position: relative;
-}
-
-.emotion-16 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -251,116 +216,75 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 }
 
 @media (min-width: 25rem) {
-  .emotion-16 {
+  .emotion-12 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-16 {
+  .emotion-12 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-@media (min-width: 25rem) {
-  .emotion-18 {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
-.emotion-18>* {
-  height: 2rem;
-  padding: 0.5rem 0.25rem;
-}
-
-@media (max-width: 24.9375rem) {
-  .emotion-18>* {
-    height: 1.25rem;
-    padding: 0.25rem 0.25rem 0;
-  }
-}
-
-.emotion-20 {
+.emotion-14 {
   display: inline-block;
-  vertical-align: top;
-  width: 66.67%;
+  width: calc(100% - 7.5rem);
   padding: 0 0.5rem;
+  vertical-align: top;
+  height: 100%;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-14 {
     padding: 0 1rem;
   }
 }
 
-@media (min-width: 63rem) {
-  .emotion-20 {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-@supports (grid-template-columns: fit-content(200px)) {
-  .emotion-20 {
-    display: block;
-    width: initial;
-    padding: initial;
-    grid-column: 3/span 4;
-  }
-
-  @media (min-width: 63rem) {
-    .emotion-20 {
-      padding-top: 0.5rem;
-    }
-  }
-}
-
-.emotion-22 {
-  color: #222222;
-  margin: 0;
-  padding-bottom: 0.5rem;
+.emotion-16 {
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  padding: 0.5rem 0.5rem 0.5rem 0;
+  color: #222222;
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-22 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-22 {
+  .emotion-16 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-@media (min-width: 63rem) {
-  .emotion-22 {
-    padding: 0.5rem 1rem 1rem 0;
-  }
-}
-
-.emotion-24 {
+.emotion-18 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
   overflow-wrap: break-word;
-  overflow-wrap: anywhere;
 }
 
-.emotion-24:before {
+.emotion-18:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -372,13 +296,13 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   z-index: 1;
 }
 
-.emotion-24:hover,
-.emotion-24:focus {
+.emotion-18:hover,
+.emotion-18:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-24:visited {
+.emotion-18:visited {
   color: #6E6E73;
 }
 
@@ -403,53 +327,33 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
         >
           <div
             class="emotion-10 emotion-11"
-            data-e2e="story-promo"
           >
             <div
               class="emotion-12 emotion-13"
-              dir="ltr"
+              data-e2e="image-placeholder"
+              style="padding-bottom: 56.25%;"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="lazyload-wrapper "
               >
                 <div
-                  class="emotion-16 emotion-17"
-                  data-e2e="image-placeholder"
-                  style="padding-bottom: 56.25%;"
-                >
-                  <div
-                    class="lazyload-wrapper "
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="emotion-18 emotion-19"
+                  class="lazyload-placeholder"
                 />
               </div>
             </div>
+          </div>
+          <div
+            class="emotion-14 emotion-15"
+          >
             <div
-              class="emotion-20 emotion-21"
-              dir="ltr"
+              class="emotion-16 emotion-17"
             >
-              <div
-                class="emotion-22 emotion-23"
+              <a
+                class="emotion-18 emotion-19"
+                href="/pidgin/44508901"
               >
-                <a
-                  class="emotion-24 emotion-25"
-                  href="/pidgin/44508901"
-                >
-                  <span
-                    role="text"
-                  >
-                    <span>
-                      Meet boys who dey convert cassava to electricity
-                    </span>
-                  </span>
-                </a>
-              </div>
+                Meet boys who dey convert cassava to electricity
+              </a>
             </div>
           </div>
         </div>
@@ -470,47 +374,33 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
         >
           <div
             class="emotion-10 emotion-11"
-            data-e2e="story-promo"
           >
             <div
               class="emotion-12 emotion-13"
-              dir="ltr"
+              data-e2e="image-placeholder"
+              style="padding-bottom: 56.25%;"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="lazyload-wrapper "
               >
                 <div
-                  class="emotion-16 emotion-17"
-                  data-e2e="image-placeholder"
-                  style="padding-bottom: 56.25%;"
-                >
-                  <div
-                    class="lazyload-wrapper "
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="emotion-18 emotion-19"
+                  class="lazyload-placeholder"
                 />
               </div>
             </div>
+          </div>
+          <div
+            class="emotion-14 emotion-15"
+          >
             <div
-              class="emotion-20 emotion-21"
-              dir="ltr"
+              class="emotion-16 emotion-17"
             >
-              <div
-                class="emotion-22 emotion-23"
+              <a
+                class="emotion-18 emotion-19"
+                href="/pidgin/tori-46975713"
               >
-                <a
-                  class="emotion-24 emotion-25"
-                  href="/pidgin/tori-46975713"
-                >
-                  How light companies dey use estimated billing show Nigerians pepper
-                </a>
-              </div>
+                How light companies dey use estimated billing show Nigerians pepper
+              </a>
             </div>
           </div>
         </div>
@@ -531,47 +421,33 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
         >
           <div
             class="emotion-10 emotion-11"
-            data-e2e="story-promo"
           >
             <div
               class="emotion-12 emotion-13"
-              dir="ltr"
+              data-e2e="image-placeholder"
+              style="padding-bottom: 56.25%;"
             >
               <div
-                class="emotion-14 emotion-15"
+                class="lazyload-wrapper "
               >
                 <div
-                  class="emotion-16 emotion-17"
-                  data-e2e="image-placeholder"
-                  style="padding-bottom: 56.25%;"
-                >
-                  <div
-                    class="lazyload-wrapper "
-                  >
-                    <div
-                      class="lazyload-placeholder"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="emotion-18 emotion-19"
+                  class="lazyload-placeholder"
                 />
               </div>
             </div>
+          </div>
+          <div
+            class="emotion-14 emotion-15"
+          >
             <div
-              class="emotion-20 emotion-21"
-              dir="ltr"
+              class="emotion-16 emotion-17"
             >
-              <div
-                class="emotion-22 emotion-23"
+              <a
+                class="emotion-18 emotion-19"
+                href="/pidgin/tori-42494678"
               >
-                <a
-                  class="emotion-24 emotion-25"
-                  href="/pidgin/tori-42494678"
-                >
-                  Nigeria: Wetin 5,222 megawatts electric fit do?
-                </a>
-              </div>
+                Nigeria: Wetin 5,222 megawatts electric fit do?
+              </a>
             </div>
           </div>
         </div>
