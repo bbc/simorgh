@@ -64,17 +64,17 @@ export const service = {
     showAdPlaceholder: true,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'بودكاست',
-      brandTitle: 'بي بي سي إكسترا',
+      title: 'البودكاست',
+      brandTitle: 'بي بي سي إكسترابودكاست "عَلاقات"',
       brandDescription:
-        'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
+        'بودكاست أسبوعي يناقش العلاقات العاطفية باختلافها ويسلط الضوء على تحدياتها وحلولها المتاحة',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t9xpv.jpg',
-        alt: 'بي بي سي إكسترا',
+        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p09m72gz.jpg',
+        alt: 'بودكاست "عَلاقات"',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+        href: 'https://www.bbc.com/arabic/podcasts/p09m6x31',
       },
     },
     translations: {
