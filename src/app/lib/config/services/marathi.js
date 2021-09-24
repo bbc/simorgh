@@ -63,7 +63,7 @@ export const service = {
       brandTitle: 'तीन गोष्टी',
       brandDescription: 'दिवसभरातल्या कोरोना आणि इतर घडामोडींचा आढावा',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p0940n6j.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p0940n6j.jpg',
         alt: 'तीन गोष्टी',
       },
       linkLabel: {

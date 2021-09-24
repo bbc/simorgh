@@ -65,7 +65,7 @@ export const service = {
       brandDescription:
         'नई रिलीज़ हुई फ़िल्मों की समीक्षा करता साप्ताहिक कार्यक्रम',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p09kn96g.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p09kn96g.jpg',
         alt: 'बीबीसी 70 एमएम',
       },
       linkLabel: {

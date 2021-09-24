@@ -65,7 +65,7 @@ export const service = {
       brandTitle: 'Burmese Evening Podcast',
       brandDescription: 'Up-to-date news and current affairs in Burmese',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lyd.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lyd.jpg',
         alt: 'Burmese Evening Podcast',
       },
       linkLabel: {

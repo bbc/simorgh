@@ -69,7 +69,7 @@ export const service = {
       brandTitle: 'داستان انقلاب به روایت بی‌ بی سی',
       brandDescription: 'مجموعه داستان انقلاب از آرشیو رادیوی بی بی سی',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p0703j1b.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p0703j1b.jpg',
         alt: 'داستان انقلاب به روایت بی‌ بی سی',
       },
       linkLabel: {
