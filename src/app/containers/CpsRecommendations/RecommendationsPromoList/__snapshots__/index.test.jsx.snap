@@ -176,6 +176,7 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 }
 
 .emotion-8 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -184,8 +185,20 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
 .emotion-10 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-10 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-12 {
@@ -238,7 +251,6 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   line-height: 1.25rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;

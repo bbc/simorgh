@@ -59,6 +59,7 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
 }
 
 .emotion-2 {
+  position: relative;
   padding: 0.5rem;
   margin-top: 0.5rem;
   background-color: #F6F6F6;
@@ -67,8 +68,20 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
 .emotion-4 {
   display: inline-block;
   position: relative;
-  width: 7.5rem;
+  width: 4.7rem;
   vertical-align: top;
+}
+
+@media (min-width: 25rem) {
+  .emotion-4 {
+    width: 6.8rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    width: 7.5rem;
+  }
 }
 
 .emotion-6 {
@@ -121,7 +134,6 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   line-height: 1.25rem;
   color: #222222;
   margin: 0;
-  padding: 0.5rem 0;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;

@@ -2,17 +2,7 @@
 
 exports[`Photo Gallery Page should not show the pop-out timestamp when allowDateStamp is false 1`] = `
 <DocumentFragment>
-  @keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.emotion-2 {
+  .emotion-2 {
   width: 100%;
   padding-bottom: 1.5rem;
 }
@@ -641,10 +631,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -1170,6 +1156,7 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                           alt="Masaraa Aaxee Minilik"
                           class="emotion-22 emotion-23 emotion-24"
                           height="549"
+                          sizes="(min-width: 1008px) 760px, 100vw"
                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                           srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
                           width="976"
@@ -1921,16 +1908,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
 `;
 
 exports[`Photo Gallery Page snapshots should match snapshot for PGL with about tags 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-2 {
   width: 100%;
   padding-bottom: 1.5rem;
@@ -2701,10 +2678,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -3242,6 +3215,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                           alt="Masaraa Aaxee Minilik"
                           class="emotion-27 emotion-28 emotion-29"
                           height="549"
+                          sizes="(min-width: 1008px) 760px, 100vw"
                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                           srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
                           width="976"
@@ -3993,16 +3967,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
 `;
 
 exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS onward journeys 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-2 {
   width: 100%;
   padding-bottom: 1.5rem;
@@ -4773,10 +4737,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -5610,7 +5570,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   color: #6E6E73;
 }
 
-.emotion-241 {
+.emotion-239 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -5621,20 +5581,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-241 {
+  .emotion-239 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-241 {
+  .emotion-239 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-256 {
+.emotion-254 {
   color: #222222;
   background-color: #FFFFFF;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5646,20 +5606,20 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-256 {
+  .emotion-254 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-256 {
+  .emotion-254 {
     font-size: 0.75rem;
     line-height: 1rem;
   }
 }
 
-.emotion-258 {
+.emotion-256 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5671,7 +5631,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
   height: 100%;
 }
 
-.emotion-260 {
+.emotion-258 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -5766,6 +5726,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           alt="Bole festival for Pitakwa"
                           class="emotion-27 emotion-28 emotion-29"
                           height="549"
+                          sizes="(min-width: 1008px) 760px, 100vw"
                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg"
                           srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 800w"
                           width="976"
@@ -6396,11 +6357,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             <span
                               role="text"
                             >
-                              <span
-                                class="emotion-34 emotion-35"
-                              >
-                                , 
-                              </span>
                               <span>
                                 Bole na correct Port Harcourt food.
                               </span>
@@ -6408,7 +6364,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-239 emotion-12"
                           datetime="2018-08-09"
                         >
                           9th August 2018
@@ -6441,16 +6397,16 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           >
                             <div
                               aria-hidden="true"
-                              class="emotion-256 emotion-257"
+                              class="emotion-254 emotion-255"
                               data-e2e="media-indicator"
                               dir="ltr"
                             >
                               <div
-                                class="emotion-258 emotion-259"
+                                class="emotion-256 emotion-257"
                               >
                                 <svg
                                   aria-hidden="true"
-                                  class="emotion-260 emotion-261"
+                                  class="emotion-258 emotion-259"
                                   focusable="false"
                                   height="13px"
                                   viewBox="0 0 32 26"
@@ -6497,7 +6453,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           </a>
                         </h3>
                         <time
-                          class="emotion-241 emotion-12"
+                          class="emotion-239 emotion-12"
                           datetime="2018-08-19"
                         >
                           19th August 2018
@@ -6517,16 +6473,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
 `;
 
 exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onward journeys 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-2 {
   width: 100%;
   padding-bottom: 1.5rem;
@@ -7297,10 +7243,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -7569,6 +7511,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                           alt="Bill Clinton"
                           class="emotion-27 emotion-28 emotion-29"
                           height="549"
+                          sizes="(min-width: 1008px) 760px, 100vw"
                           src="https://ichef.bbci.co.uk/news/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
                           srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg 800w"
                           width="976"
@@ -8017,16 +7960,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
 `;
 
 exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS onward journeys filtered 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-2 {
   width: 100%;
   padding-bottom: 1.5rem;
@@ -8797,10 +8730,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
   height: auto;
 }
 
@@ -10041,6 +9970,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           alt="AXC parlamentinin birinci iclasının açılışı"
                           class="emotion-27 emotion-28 emotion-29"
                           height="650"
+                          sizes="(min-width: 1008px) 760px, 100vw"
                           src="https://ichef.bbci.co.uk/news/640/cpsprodpb/1DBC/production/_101621670_0-158827.jpg"
                           srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 800w"
                           width="976"
@@ -11644,11 +11574,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             <span
                               role="text"
                             >
-                              <span
-                                class="emotion-32 emotion-33"
-                              >
-                                , 
-                              </span>
                               <span>
                                 Bakı sakinləri müstəqillik barədə danışır
                               </span>

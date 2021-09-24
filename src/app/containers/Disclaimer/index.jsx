@@ -11,8 +11,8 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import { C_GREY_6 } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 
 import { GridItemLarge } from '#app/components/Grid';
 
@@ -22,8 +22,8 @@ import useToggle from '#hooks/useToggle';
 const Inner = styled.div`
   ${({ script }) => script && getLongPrimer(script)}
   ${({ service }) => service && getSansLight(service)}
-  background: ${C_GREY_2};
-  color: #3a3c3e;
+  background: #f6f6f6;
+  color: ${C_GREY_6};
   text-transform: uppercase;
   margin-bottom: ${GEL_SPACING_TRPL};
   padding: ${GEL_SPACING_DBL};

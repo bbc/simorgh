@@ -17,6 +17,7 @@ import { storyItem } from '#models/propTypes/storyItem';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 
 const StyledPromoWrapper = styled.div`
+  position: relative;
   padding: ${GEL_SPACING};
   margin-top: ${GEL_SPACING};
   background-color: ${C_GREY_2};
@@ -82,7 +83,6 @@ const StyledHeadline = styled.div`
   ${({ script }) => getPica(script)}
   color: ${C_EBON};
   margin: 0;
-  padding: ${GEL_SPACING} 0;
   height: 100%;
   display: flex;
   align-items: center;
