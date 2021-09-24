@@ -48,7 +48,6 @@ const ImageWithPlaceholder = ({
   const imageToRender = (
     <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
-
   const shouldPreload = !isAmp && preload;
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
 
