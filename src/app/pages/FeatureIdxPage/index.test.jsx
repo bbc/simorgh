@@ -160,10 +160,8 @@ describe('Feature Idx Page', () => {
 
         const h1 = container.querySelector('h1');
         const content = h1.getAttribute('id');
-        const tabIndex = h1.getAttribute('tabIndex');
 
         expect(content).toEqual('content');
-        expect(tabIndex).toBe('-1');
 
         expect(h1.textContent).toMatchInlineSnapshot(
           `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`,

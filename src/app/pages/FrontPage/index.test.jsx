@@ -154,10 +154,8 @@ describe('Front Page', () => {
 
       const h1 = container.querySelector('h1');
       const headline = h1.getAttribute('id');
-      const tabIndex = h1.getAttribute('tabIndex');
 
       expect(headline).toEqual('headline');
-      expect(tabIndex).toBe('-1');
 
       const span = h1.querySelector('span');
       expect(span.getAttribute('role')).toEqual('text');
