@@ -61,16 +61,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Global Newsbeat',
+      brandTitle: 'Dunia Pagi Ini BBC Indonesia',
       brandDescription:
-        'Buletin berita pendek dan cepat yang ditujukan pada audiens muda',
+        'BBC Indonesia mengudara pada Pukul 05.00 dan 06.00 WIB, Senin sampai Jumat',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08wdkvj.jpg',
-        alt: 'Global Newsbeat',
+        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lr8.jpg',
+        alt: 'Dunia Pagi Ini BBC Indonesia',
       },
       linkLabel: {
         text: 'Episode',
-        href: 'https://www.bbc.com/indonesia/podcasts/p08wdlfl',
+        href: 'https://www.bbc.com/indonesia/podcasts/p02pc9v6',
       },
     },
     translations: {
