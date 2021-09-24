@@ -40,6 +40,8 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
+import InlinePodcastPromo from '#containers/PodcastPromo/inline';
+
 import {
   getFirstPublished,
   getLastPublished,
@@ -53,6 +55,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -200,6 +203,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
+    podcastPromo: InlinePodcastPromo,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -311,6 +315,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />

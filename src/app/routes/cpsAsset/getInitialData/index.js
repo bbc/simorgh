@@ -1,5 +1,7 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
+import identity from 'ramda/src/identity';
+import isLive from '#lib/utilities/isLive';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -12,6 +14,7 @@ import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import insertPodcastPromo from './insertPodcastPromo';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addMpuBlock from './addMpuBlock';
@@ -27,18 +30,19 @@ import {
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
-const formatPageData = pipe(
-  addAnalyticsCounterName,
-  parseInternalLinks,
-  timestampToMilliseconds,
-);
-
 export const only = (pageTypes, transformer) => (pageData, ...args) => {
   const isCorrectPageType = pageTypes.includes(
     path(['metadata', 'type'], pageData),
   );
   return isCorrectPageType ? transformer(pageData, ...args) : pageData;
 };
+
+const formatPageData = pipe(
+  addAnalyticsCounterName,
+  parseInternalLinks,
+  timestampToMilliseconds,
+  only([STORY_PAGE], isLive() ? identity : insertPodcastPromo),
+);
 
 const processOptimoBlocks = toggles =>
   pipe(
