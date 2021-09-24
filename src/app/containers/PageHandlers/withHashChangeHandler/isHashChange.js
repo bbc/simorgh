@@ -1,11 +1,6 @@
-import equals from 'ramda/src/equals';
-
 export default (
-  { location: { hash: prevHash, ...prevLocation }, ...prevProps },
-  { location: { hash: nextHash, ...nextLocation }, ...nextProps },
+  { location: { hash: prevHash } },
+  { location: { hash: nextHash } },
 ) => {
-  const propsAreEqual = equals(prevProps, nextProps);
-  const locationIsEqual = equals(prevLocation, nextLocation);
-
-  return propsAreEqual && locationIsEqual;
+  return prevHash !== nextHash;
 };
