@@ -66,16 +66,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'رادیو فارسی بی‌بی‌سی',
-      brandDescription:
-        'برنامه چشم انداز بامدادی رادیو بی‌بی‌سی، شامل خبر، گزارش و تحلیل از وقایع ایران و جهان',
+      brandTitle: 'داستان انقلاب به روایت بی‌ بی سی',
+      brandDescription: 'مجموعه داستان انقلاب از آرشیو رادیوی بی بی سی',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
-        alt: 'رادیو فارسی بی‌بی‌سی',
+        src: 'http://ichef.bbci.co.uk/images/ic/3000x3000/p0703j1b.jpg',
+        alt: 'داستان انقلاب به روایت بی‌ بی سی',
       },
       linkLabel: {
         text: 'برنامه ها',
-        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
       },
     },
     translations: {
