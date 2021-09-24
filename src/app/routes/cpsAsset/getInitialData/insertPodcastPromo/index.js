@@ -13,9 +13,17 @@ const podcastPromoBlock = {
 };
 
 const withListException = (blocks, targetIndex) => {
+  // We want to insert the podcast promo at the target index
+  // If the block that occurs 2 places later is not a list, we can continue with that plan
   if (!pathEq([targetIndex + 2, 'type'], 'list', blocks)) return targetIndex;
+
+  // Otherwise, we need to check if the two blocks after that list are both paragraphs
+  // If either of them are NOT paragraphs, we do not add the podcast promo to the blocks
   if (!pathEq([targetIndex + 3, 'type'], 'paragraph', blocks)) return -1;
   if (!pathEq([targetIndex + 4, 'type'], 'paragraph', blocks)) return -1;
+
+  // If they're both paragraphs, we can position the promo after the list block,
+  // so it can float next to those two paragraphs
   return targetIndex + 3;
 };
 
