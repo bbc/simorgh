@@ -172,21 +172,6 @@ const StoryPromoContainer = ({
     isContentTypeGuide,
   });
 
-  const StyledHeadline = styled(Headline)`
-    ${() =>
-      `
-      padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
-        isLtr ? 0 : GEL_SPACING
-      };
-
-      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-        padding: ${GEL_SPACING} ${
-        isLtr ? GEL_SPACING_DBL : 0
-      } ${GEL_SPACING_DBL} ${isLtr ? 0 : GEL_SPACING_DBL};
-      }
-    `}
-  `;
-
   const locale = serviceDatetimeLocale || datetimeLocale;
 
   const StyledLink = styled(Link)`
@@ -195,7 +180,7 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      <StyledHeadline
+      <Headline
         script={script}
         service={service}
         promoType={promoType}
@@ -220,7 +205,7 @@ const StoryPromoContainer = ({
             linkcontents
           )}
         </StyledLink>
-      </StyledHeadline>
+      </Headline>
       {promoSummary && displaySummary && (
         <Summary
           script={script}
