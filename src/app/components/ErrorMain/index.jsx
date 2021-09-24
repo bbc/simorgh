@@ -53,6 +53,8 @@ const ErrorMain = ({
   <StyledGelPageGrid
     as="main"
     role="main"
+    id="content"
+    tabIndex={-1}
     columns={{
       group0: 6,
       group1: 6,
@@ -86,7 +88,7 @@ const ErrorMain = ({
       <StatusCode script={script} data-e2e="status-code">
         {statusCode}
       </StatusCode>
-      <Heading id="content" script={script} service={service} tabIndex="-1">
+      <Heading id="headline" script={script} service={service}>
         {title}
       </Heading>
       <CustomParagraph script={script} service={service}>

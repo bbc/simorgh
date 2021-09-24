@@ -170,7 +170,12 @@ const PhotoGalleryPage = ({ pageData }) => {
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
 
-      <StyledPhotoGalleryPageGrid as="main" role="main">
+      <StyledPhotoGalleryPageGrid
+        as="main"
+        role="main"
+        id="content"
+        tabIndex={-1}
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledPhotoGalleryPageGrid>
 

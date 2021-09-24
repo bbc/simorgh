@@ -99,9 +99,9 @@ const IdxPage = ({
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main">
+      <main role="main" id="content" tabIndex={-1} aria-describedby="headline">
         <IndexPageContainer>
-          <IndexHeading id="content" pageType="idx">
+          <IndexHeading id="headline" pageType="idx">
             {title}
           </IndexHeading>
           {groups.map((group, index) => (

@@ -33,9 +33,7 @@ export default () => {
 
   describe('a11y', () => {
     it('Assistive technology reads the brand and episode title as the headline', () => {
-      const headlineEl = document.querySelector(
-        'h1[id="content"][tabindex="-1"]',
-      );
+      const headlineEl = document.querySelector('h1[id="headline"]');
 
       expect(headlineEl).toBeInTheDocument();
       expect(headlineEl.textContent).toBeTruthy();

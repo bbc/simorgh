@@ -8,8 +8,8 @@ export default () => {
       expect(mainHeadingEl).toBeInTheDocument();
     });
 
-    it('should have id attribute with value equal to "content"', () => {
-      expect(idAttr).toEqual('content');
+    it('should have id attribute with value equal to "headline"', () => {
+      expect(idAttr).toEqual('headline');
     });
 
     it('should contain text', () => {

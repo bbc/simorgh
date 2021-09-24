@@ -203,7 +203,12 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <StyledMediaAssetPageGrid as="main" role="main">
+      <StyledMediaAssetPageGrid
+        as="main"
+        role="main"
+        id="content"
+        tabIndex={-1}
+      >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </StyledMediaAssetPageGrid>
 

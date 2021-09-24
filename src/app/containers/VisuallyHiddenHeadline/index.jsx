@@ -15,7 +15,7 @@ const VisuallyHiddenHeadlineContainer = ({ blocks }) => {
     return null;
   }
 
-  const id = 'content'; // Used for the skiplink
+  const id = 'headline'; // Used for the skiplink
 
   return (
     <VisuallyHiddenHeadline id={id} tabIndex="-1">

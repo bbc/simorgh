@@ -105,8 +105,8 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
-      <main role="main">
-        <VisuallyHiddenText id="content" tabIndex="-1" as="h1">
+      <main role="main" id="content" tabIndex={-1}>
+        <VisuallyHiddenText as="h1" id="headline">
           {offScreenText}
         </VisuallyHiddenText>
         <IndexPageContainer>

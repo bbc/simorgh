@@ -148,7 +148,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
 
   const ArticlePageGrid = ({ children }) => (
     <GelPageGrid
-      id="article-content"
       enableGelGutters
       columns={{
         group0: 6,
@@ -197,7 +196,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <Main role="main">
+      <Main role="main" id="content" tabIndex={-1}>
         <ArticlePageGrid>
           <Disclaimer />
           <Blocks

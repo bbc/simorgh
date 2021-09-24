@@ -154,6 +154,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       <StyledGelPageGrid
         as="main"
         role="main"
+        id="content"
+        tabIndex={-1}
         columns={getGroups(6, 6, 6, 6, 8, 20)}
         enableGelGutters
       >
@@ -163,7 +165,7 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
-          <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
+          <VisuallyHiddenText as="h1" id="headline">
             {/* these must be concatenated for screen reader UX - #7062 */}
             {`${brandTitle}, ${formattedTimestamp}`}
           </VisuallyHiddenText>

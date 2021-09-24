@@ -82,7 +82,7 @@ const OnDemandHeadingContainer = ({
       id={idAttr}
       darkMode={darkMode}
       className={className}
-      {...(idAttr === 'content' && { tabIndex: '-1' })}
+      {...(idAttr === 'headline' && { tabIndex: '-1' })}
       {...(ariaHidden && { as: 'strong', 'aria-hidden': 'true' })}
     >
       <TextWrapper {...(ariaHidden ? {} : { role: 'text' })}>

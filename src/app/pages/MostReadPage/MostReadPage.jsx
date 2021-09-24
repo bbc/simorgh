@@ -47,7 +47,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
 
   const MostReadWrapper = ({ children }) => (
     <>
-      <IndexHeading id="content">{header}</IndexHeading>
+      <IndexHeading id="headline">{header}</IndexHeading>
       <MarginWrapper>
         <GelPageGrid
           columns={{
@@ -102,7 +102,7 @@ const MostReadPage = ({ pageData, mostReadEndpointOverride }) => {
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={header} />
-      <main role="main" data-e2e="most-read">
+      <main role="main" data-e2e="most-read" id="content" tabIndex={-1}>
         <IndexPageContainer>
           <MostReadContainer
             mostReadEndpointOverride={mostReadEndpointOverride}

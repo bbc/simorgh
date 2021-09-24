@@ -49,8 +49,6 @@ const HeaderContainer = () => {
 
   const brandRef = useRef(null);
 
-  const skipHref = pageType === ARTICLE_PAGE ? '#article-content' : '#content';
-
   // `serviceLang` is defined when the language the page is written in is different to the
   // language of the service. `serviceLang` is used to override the page language.
   // However, the skip to content link remains set in the page language.
@@ -59,7 +57,7 @@ const HeaderContainer = () => {
       service={service}
       script={script}
       dir={dir}
-      href={skipHref}
+      href="#content"
       lang={serviceLang && lang}
     >
       <div>{skipLinkText}</div>

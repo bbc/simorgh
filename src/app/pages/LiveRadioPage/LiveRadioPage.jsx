@@ -77,6 +77,8 @@ const LiveRadioPage = ({ pageData }) => {
       <GelPageGrid
         as="main"
         role="main"
+        id="content"
+        tabIndex={-1}
         columns={{
           group0: 6,
           group1: 6,
@@ -107,12 +109,7 @@ const LiveRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <Headline
-            script={script}
-            service={service}
-            id="content"
-            tabIndex="-1"
-          >
+          <Headline script={script} service={service} id="headline">
             {heading}
           </Headline>
           <Paragraph script={script} service={service}>

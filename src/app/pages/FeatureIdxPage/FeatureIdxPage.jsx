@@ -51,9 +51,9 @@ const FeatureIdxPage = ({ pageData }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
-      <main role="main">
+      <main role="main" id="content" tabIndex={-1}>
         <IndexPageContainer>
-          <IndexHeading id="content" pageType="fix">
+          <IndexHeading id="headline" pageType="fix">
             {title}
           </IndexHeading>
           {groups.map((group, index) => {

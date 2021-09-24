@@ -1,9 +1,7 @@
 export default () => {
   describe('A11y', () => {
     it('I can see the skip to content link', () => {
-      const skipToContentEl = document.querySelector(
-        '[href="#content"],[href="#article-content"]',
-      );
+      const skipToContentEl = document.querySelector('[href="#content"]');
 
       expect(skipToContentEl).toBeInTheDocument();
       expect(skipToContentEl.textContent).toBeTruthy();
@@ -11,9 +9,7 @@ export default () => {
     });
 
     it('Headline in main content', () => {
-      const accessibleH1El = document.querySelector(
-        'h1[id="content"][tabindex="-1"]',
-      );
+      const accessibleH1El = document.querySelector('h1[id="headline"]');
 
       expect(accessibleH1El).toBeInTheDocument();
     });
