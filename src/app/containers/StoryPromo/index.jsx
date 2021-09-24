@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
@@ -98,7 +97,6 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
   displaySummary,
-  isRecommendation,
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
@@ -127,7 +125,6 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
-  const isLtr = dir === 'ltr';
   const headline = getHeadline(item);
   const url = getUrl(item);
   const isLive = getIsLive(item);
@@ -150,11 +147,7 @@ const StoryPromoContainer = ({
   const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
   const displayTimestamp =
-    timestamp &&
-    !isStoryPromoPodcast &&
-    !isContentTypeGuide &&
-    !isRecommendation &&
-    !isLive;
+    timestamp && !isStoryPromoPodcast && !isContentTypeGuide && !isLive;
 
   if (cpsType === MEDIA_ASSET_PAGE && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
@@ -174,25 +167,8 @@ const StoryPromoContainer = ({
 
   const headingTagOverride = getHeadingTagOverride({
     pageType,
-    isRecommendation,
     isContentTypeGuide,
   });
-
-  const StyledHeadline = styled(Headline)`
-    ${() =>
-      isRecommendation &&
-      `
-      padding: ${GEL_SPACING} ${isLtr ? GEL_SPACING : 0} ${GEL_SPACING} ${
-        isLtr ? 0 : GEL_SPACING
-      };
-
-      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-        padding: ${GEL_SPACING} ${
-        isLtr ? GEL_SPACING_DBL : 0
-      } ${GEL_SPACING_DBL} ${isLtr ? 0 : GEL_SPACING_DBL};
-      }
-    `}
-  `;
 
   const locale = serviceDatetimeLocale || datetimeLocale;
 
@@ -202,7 +178,7 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      <StyledHeadline
+      <Headline
         script={script}
         service={service}
         promoType={promoType}
@@ -227,8 +203,8 @@ const StoryPromoContainer = ({
             linkcontents
           )}
         </StyledLink>
-      </StyledHeadline>
-      {promoSummary && displaySummary && !isRecommendation && (
+      </Headline>
+      {promoSummary && displaySummary && (
         <Summary
           script={script}
           service={service}
@@ -306,7 +282,6 @@ StoryPromoContainer.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
   displaySummary: bool,
-  isRecommendation: bool,
   isSingleColumnLayout: bool,
   serviceDatetimeLocale: string,
   eventTrackingData: shape({
@@ -327,7 +302,6 @@ StoryPromoContainer.defaultProps = {
   dir: 'ltr',
   displayImage: true,
   displaySummary: true,
-  isRecommendation: false,
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
