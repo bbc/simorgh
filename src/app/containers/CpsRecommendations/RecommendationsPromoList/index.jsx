@@ -74,7 +74,7 @@ const RecommendationsPromoList = ({ promoItems, dir }) => {
 
 RecommendationsPromoListItem.propTypes = {
   dir: string.isRequired,
-  item: storyItem.isRequired,
+  item: shape(storyItem).isRequired,
   index: number.isRequired,
 };
 

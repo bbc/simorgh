@@ -119,9 +119,11 @@ export const AMP = () => (
       ...withDuration,
     }}
     title="Video player"
+    noJsMessage="no js"
   />
 );
 
+AMP.parameters = { chromatic: { disable: true } };
 AMP.decorators = [ampDecorator];
 
 export const AMPAudioSkin = () => (
@@ -131,6 +133,8 @@ export const AMPAudioSkin = () => (
     placeholderSrc="https://news.files.bbci.co.uk/include/articles/public/images/amp_audio_placeholder.png"
     skin="audio"
     title="Audio player"
+    noJsMessage="no js"
+    service="news"
   />
 );
 

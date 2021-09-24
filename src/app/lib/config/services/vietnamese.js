@@ -76,6 +76,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Tóm tắt',
       error: {
         404: {
           statusCode: '404',

@@ -6,10 +6,29 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
+import {
+  F_LATHA_BOLD,
+  F_LATHA_REGULAR,
+  F_NOTO_SANS_TAMIL_BOLD,
+  F_NOTO_SANS_TAMIL_REGULAR,
+} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
+import isTest from '../../utilities/isTest';
+
+const fonts = isTest()
+  ? [
+      () =>
+        F_NOTO_SANS_TAMIL_BOLD(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
+        ),
+      () =>
+        F_NOTO_SANS_TAMIL_REGULAR(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
+        ),
+    ]
+  : [F_LATHA_BOLD, F_LATHA_REGULAR];
 
 export const service = {
   default: {
@@ -26,7 +45,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
-    externalLinkText: ', வெளி இணைப்பு',
+    externalLinkText: ', வெளி',
     imageCaptionOffscreenText: 'படக்குறிப்பு, ',
     videoCaptionOffscreenText: 'காணொளிக் குறிப்பு, ',
     audioCaptionOffscreenText: 'கேட்பொலிக் குறிப்பு, ',
@@ -75,6 +94,7 @@ export const service = {
         audioPlayer: 'கேட்பொலி பிளேயர்',
         videoPlayer: 'காணொளி பிளேயர்',
       },
+      gist: 'முக்கிய சாராம்சம்',
       error: {
         404: {
           statusCode: '404',
@@ -324,7 +344,7 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
+    fonts,
     timezone: 'GMT',
     navigation: [
       {

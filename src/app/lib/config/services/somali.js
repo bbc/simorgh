@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
-    externalLinkText: ', Bogag kale',
+    externalLinkText: ', kale',
     imageCaptionOffscreenText: 'Qoraalka sawirka, ',
     videoCaptionOffscreenText: 'Qoraalka Muuqaalka, ',
     audioCaptionOffscreenText: 'Qoraalka Codka, ',
@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      gist: 'Kooban',
       error: {
         404: {
           statusCode: '404',

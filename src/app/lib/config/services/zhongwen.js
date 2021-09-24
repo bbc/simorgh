@@ -41,6 +41,20 @@ const baseServiceConfig = {
     hasStoryRecommendations: false,
   },
   brandSVG,
+  podcastPromo: {
+    title: 'Podcast',
+    brandTitle: 'BBC 時事一周 Newsweek (Cantonese)',
+    brandDescription:
+      'BBC國際台粵語節目，重溫一周國際大事，兩岸四地消息，英國境況。並備有專題環節：〈記者來鴻〉、〈英國生活點滴〉和〈華人談天下〉。',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1mg5.jpg',
+      alt: 'BBC 時事一周 Newsweek (Cantonese)',
+    },
+    linkLabel: {
+      text: '分集',
+      href: 'https://www.bbc.com/zhongwen/trad/podcasts/p02pc9xp',
+    },
+  },
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
@@ -57,7 +71,7 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    externalLinkText: ', 外部链接',
+    externalLinkText: ', 外部',
     frontPageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
@@ -174,6 +188,7 @@ export const service = {
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',
@@ -346,7 +361,7 @@ export const service = {
     locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
-    externalLinkText: ', 外部鏈接',
+    externalLinkText: ', 外部',
     frontPageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字，',
     audioCaptionOffscreenText: '音频加注文字，',
@@ -459,6 +474,7 @@ export const service = {
         audioPlayer: '音頻播放器',
         videoPlayer: '視頻播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',

@@ -9,6 +9,8 @@ import {
   GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -33,7 +35,7 @@ const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
 
 const Promo = () => {
-  const { podcastPromo, script, service } = useContext(ServiceContext);
+  const { podcastPromo, script, service, dir } = useContext(ServiceContext);
   const podcastPromoTitle = path(['title'], podcastPromo);
   const podcastBrandTitle = path(['brandTitle'], podcastPromo);
   const description = path(['brandDescription'], podcastPromo);
@@ -51,6 +53,14 @@ const Promo = () => {
     url,
     label,
   ].every(Boolean);
+
+  const eventTrackingData = {
+    componentName: 'promo-podcast',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
   if (!showPromo) {
     return null;
   }
@@ -60,14 +70,14 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ResponsivePodcastPromoWrapper>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef}>
       <PromoComponent
         script={script}
         service={service}
         role="region"
         aria-labelledby="podcast-promo"
       >
-        <PromoComponent.Title id="podcast-promo">
+        <PromoComponent.Title id="podcast-promo" dir={dir}>
           {podcastPromoTitle}
         </PromoComponent.Title>
         <PromoComponent.Card>
@@ -85,7 +95,7 @@ const Promo = () => {
           </PromoComponent.Card.ImageWrapper>
           <PromoComponent.Card.Content>
             <PromoComponent.Card.Title>
-              <PromoComponent.Card.Link href={url}>
+              <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                   {podcastBrandTitle}
                 </span>
@@ -94,7 +104,7 @@ const Promo = () => {
             <PromoComponent.Card.Description>
               {description}
             </PromoComponent.Card.Description>
-            <PromoComponent.Card.EpisodesText>
+            <PromoComponent.Card.EpisodesText dir={dir}>
               {label}
             </PromoComponent.Card.EpisodesText>
           </PromoComponent.Card.Content>

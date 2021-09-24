@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
-    externalLinkText: ', lien externe',
+    externalLinkText: ', externe',
     imageCaptionOffscreenText: 'Légende image, ',
     videoCaptionOffscreenText: 'Légende vidéo, ',
     audioCaptionOffscreenText: 'Légende audio, ',
@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: 'Lecteur audio',
         videoPlayer: 'Lecteur vidéo',
       },
+      gist: 'Points clés',
       error: {
         404: {
           statusCode: '404',

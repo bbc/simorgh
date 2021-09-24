@@ -4,15 +4,33 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { bengali } from '@bbc/gel-foundations/scripts';
+import { bengali, bengaliNotoSerif } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_SHONAR_BANGLA_BOLD,
   F_SHONAR_BANGLA_REGULAR,
+  F_NOTO_SERIF_BENGALI_BOLD,
+  F_NOTO_SERIF_BENGALI_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
+import isTest from '../../utilities/isTest';
+
+const fonts = isTest()
+  ? [
+      () =>
+        F_NOTO_SERIF_BENGALI_BOLD(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+        ),
+      () =>
+        F_NOTO_SERIF_BENGALI_REGULAR(
+          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+        ),
+    ]
+  : [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR];
+
+const script = isTest() ? bengaliNotoSerif : bengali;
 
 export const service = {
   default: {
@@ -29,7 +47,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/bengali.png',
     defaultImageAltText: 'BBC News বাংলা',
     dir: `ltr`,
-    externalLinkText: ', বিবিসির বাইরের খবর',
+    externalLinkText: ', বাইরের',
     imageCaptionOffscreenText: 'ছবির ক্যাপশান, ',
     videoCaptionOffscreenText: 'ভিডিওর ক্যাপশান, ',
     audioCaptionOffscreenText: 'অডিওর ক্যাপশান, ',
@@ -49,7 +67,7 @@ export const service = {
       'https://www.bbc.com/bengali/institutional-50409861#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
-    script: bengali,
+    script,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
@@ -79,6 +97,7 @@ export const service = {
         audioPlayer: 'অডিও প্লেয়ার',
         videoPlayer: 'ভিডিও প্লেয়ার',
       },
+      gist: 'সার সংক্ষেপ',
       error: {
         404: {
           statusCode: '৪০৪',
@@ -320,7 +339,7 @@ export const service = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts: [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR],
+    fonts,
     timezone: 'Asia/Dhaka',
     navigation: [
       {

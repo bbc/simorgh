@@ -20,6 +20,7 @@ import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
+import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
 import text from '#containers/CpsText';
 import Image from '#containers/Image';
@@ -39,6 +40,8 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
+import InlinePodcastPromo from '#containers/PodcastPromo/inline';
+
 import {
   getFirstPublished,
   getLastPublished,
@@ -52,6 +55,7 @@ import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstra
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -170,7 +174,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image: props => <Image {...props} shouldPreload={preloadLeadImageToggle} />,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 645px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
@@ -190,6 +200,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         items={recommendationsInitialData}
       />
     ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
+    ),
+    podcastPromo: InlinePodcastPromo,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -301,6 +315,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />

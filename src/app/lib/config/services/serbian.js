@@ -58,7 +58,7 @@ export const service = {
     articleTimestampSuffix: '',
     brandName: 'BBC News na srpskom',
     datetimeLocale: `sr`,
-    externalLinkText: ', spoljna stranica',
+    externalLinkText: ', spoljna',
     frontPageTitle: 'Glavna stranica',
     lang: `sr-latn`,
     locale: `sr-latn`,
@@ -179,6 +179,7 @@ export const service = {
         audioPlayer: 'Audio plejer',
         videoPlayer: 'Video plejer',
       },
+      gist: 'Sažetak',
       error: {
         404: {
           statusCode: '404',
@@ -361,7 +362,7 @@ export const service = {
     articleTimestampSuffix: '',
     brandName: 'BBC News на српском',
     datetimeLocale: `sr-cyrl`,
-    externalLinkText: ', спољна страница',
+    externalLinkText: ', спољна',
     frontPageTitle: 'Главна страница',
     lang: `sr-cyrl`,
     locale: `sr-cyrl`,
@@ -482,6 +483,7 @@ export const service = {
         audioPlayer: 'Аудио плејер',
         videoPlayer: 'Видео плејер',
       },
+      gist: 'Сажетак',
       error: {
         404: {
           statusCode: '404',

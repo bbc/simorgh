@@ -141,6 +141,7 @@ export const mainTranslations = {
     audioPlayer: 'Аудио плеер',
     videoPlayer: 'Видео плеер',
   },
+  gist: 'Коротко',
   error: {
     404: {
       statusCode: '404',
@@ -245,7 +246,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
-    externalLinkText: ', внешняя ссылка',
+    externalLinkText: ', внешняя',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
     audioCaptionOffscreenText: 'Подпись к аудио, ',
@@ -297,13 +298,17 @@ export const service = {
       brandDescription:
         'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0776f5z.jpg',
         alt: 'Что это было?',
       },
       linkLabel: {
         text: 'эпизоды',
         href: 'https://www.bbc.com/russian/media-47937790',
       },
+    },
+    disclaimer: {
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
     },
     radioSchedule: {
       hasRadioSchedule: false,

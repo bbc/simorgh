@@ -28,7 +28,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
   dir: `ltr`,
-  externalLinkText: ', зовнішнє посилання',
+  externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',
   audioCaptionOffscreenText: 'Підпис до аудіо',
@@ -56,6 +56,19 @@ const baseServiceConfig = {
   },
   showAdPlaceholder: true,
   showRelatedTopics: true,
+  podcastPromo: {
+    title: 'подкаст',
+    brandTitle: 'Що це було',
+    brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
+      alt: 'Що це було',
+    },
+    linkLabel: {
+      text: 'Випуски',
+      href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
+    },
+  },
   translations: {
     ads: {
       advertisementLabel: 'Реклама',
@@ -70,6 +83,7 @@ const baseServiceConfig = {
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    gist: 'Стисло',
     error: {
       404: {
         statusCode: '404',

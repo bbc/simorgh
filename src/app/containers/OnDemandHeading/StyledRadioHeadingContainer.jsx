@@ -12,6 +12,7 @@ import OnDemandHeading from '.';
 
 const StyledRadioHeadingContainer = styled(OnDemandHeading)`
   padding: ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_DBL};
+  display: inline-block;
 
   /* We need a media query here to explicitly overwrite the same media query within psammead-headings' Headline  */
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

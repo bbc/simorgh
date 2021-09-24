@@ -60,6 +60,20 @@ export const service = {
     },
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'ပေါ့ဒ်ကတ်စ်',
+      brandTitle: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
+      brandDescription:
+        'BBC Burmese provides up-to-date news and current affairs in Burmese',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
+        alt: 'ဘီဘီစီမြန်မာပိုင်း မနက်ခင်းသတင်းအစီအစဉ်',
+      },
+      linkLabel: {
+        text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
+        href: 'https://www.bbc.com/burmese/podcasts/p02p9f6q',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'ကြော်ငြာ',
@@ -69,13 +83,14 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
-      relatedTopics: 'ဆကျစပျအေ(ကာငျးအရာမြား',
+      relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
       navMenuText: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      gist: 'အနှစ်ချုပ်',
       error: {
         404: {
           statusCode: '၄၀၄',

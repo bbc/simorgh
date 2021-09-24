@@ -59,6 +59,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Global Newsbeat',
+      brandDescription:
+        'Buletin berita pendek dan cepat yang ditujukan pada audiens muda',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08wdkvj.jpg',
+        alt: 'Global Newsbeat',
+      },
+      linkLabel: {
+        text: 'Episode',
+        href: 'https://www.bbc.com/indonesia/podcasts/p08wdlfl',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Iklan',
@@ -75,6 +89,7 @@ export const service = {
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      gist: 'Rangkuman',
       error: {
         404: {
           statusCode: '404',

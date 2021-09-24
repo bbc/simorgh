@@ -1,0 +1,503 @@
+{
+    "metadata": {
+    "id": "urn:bbc:ares::asset:burmese/burma-58148901",
+    "locators": {
+    "assetUri": "/burmese/burma-58148901",
+    "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-58148901",
+    "curie": "http://www.bbc.co.uk/asset/ae0cdd25-adf3-4d33-b9dc-eecd9d2a25c6",
+    "assetId": "58148901"
+    },
+    "type": "STY",
+    "createdBy": "burmese-v6",
+    "language": "my",
+    "lastUpdated": 1628516919207,
+    "firstPublished": 1628516912000,
+    "lastPublished": 1628516912000,
+    "timestamp": 1628516912000,
+    "options": {
+    "isIgorSeoTagsEnabled": false,
+    "includeComments": false,
+    "allowRightHandSide": true,
+    "isFactCheck": false,
+    "allowDateStamp": true,
+    "suitableForSyndication": true,
+    "hasNewsTracker": false,
+    "allowRelatedStoriesBox": true,
+    "isKeyContent": false,
+    "allowHeadline": true,
+    "allowAdvertising": true,
+    "hasContentWarning": false,
+    "isBreakingNews": false,
+    "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+    "cps_asset_type": "sty",
+    "counterName": "burmese.burma.story.58148901.page",
+    "cps_asset_id": "58148901"
+    },
+    "passport": {
+    "category": {
+    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+    "categoryName": "News"
+    },
+    "campaigns": [
+    {
+    "campaignId": "5a988e4739461b000e9dabfc",
+    "campaignName": "WS - Update me"
+    }
+    ],
+    "language": "my",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+    "locator": "urn:bbc:cps:curie:asset:ae0cdd25-adf3-4d33-b9dc-eecd9d2a25c6",
+    "availability": "AVAILABLE",
+    "taggings": [
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+    "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+    }
+    ],
+    "schemaVersion": "1.3.0",
+    "publishedState": "PUBLISHED",
+    "predicates": {
+    "about": [
+    {
+    "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+    "thingLabel": "ထိုင်း",
+    "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+    "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+    "thingType": [
+    "core:Place",
+    "tagging:TagConcept",
+    "core:Thing"
+    ],
+    "thingSameAs": [
+    "http://sws.geonames.org/1605651/"
+    ],
+    "thingEnglishLabel": "Thailand",
+    "type": "about"
+    },
+    {
+    "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+    "thingLabel": "ခရီးသွားလုပ်ငန်း",
+    "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+    "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+    "thingType": [
+    "tagging:TagConcept",
+    "core:Thing",
+    "core:Theme"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q49389",
+    "http://dbpedia.org/resource/Tourism"
+    ],
+    "thingEnglishLabel": "Tourism",
+    "type": "about"
+    },
+    {
+    "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+    "thingLabel": "ရာဇဝတ်မှု",
+    "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+    "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
+    "thingType": [
+    "core:Thing",
+    "core:Theme",
+    "tagging:TagConcept"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q83267",
+    "http://dbpedia.org/resource/Crime"
+    ],
+    "thingEnglishLabel": "Crime",
+    "type": "about"
+    }
+    ],
+    "formats": [
+    {
+    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+    "thingLabel": "Report",
+    "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+    "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+    "thingType": [
+    "tagging:TagConcept",
+    "tagging:Format"
+    ],
+    "thingSameAs": [],
+    "thingEnglishLabel": "Report",
+    "thingPreferredLabel": "Report",
+    "thingLabelLanguage": "my",
+    "type": "formats"
+    }
+    ]
+    }
+    },
+    "tags": {
+    "about": [
+    {
+    "thingLabel": "ထိုင်း",
+    "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+    "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+    "thingType": [
+    "core:Place",
+    "tagging:TagConcept",
+    "core:Thing"
+    ],
+    "thingSameAs": [
+    "http://sws.geonames.org/1605651/"
+    ],
+    "topicName": "ထိုင်း",
+    "topicId": "c340q4gdx89t",
+    "curationList": [
+    {
+    "curationId": "3d788da3-a4d4-4ca9-9ad1-3531a78b5ae4",
+    "curationType": "vivo-stream"
+    }
+    ],
+    "thingEnglishLabel": "Thailand",
+    "thingLabelLanguage": "my",
+    "thingPreferredLabel": "Thailand"
+    },
+    {
+    "thingLabel": "ခရီးသွားလုပ်ငန်း",
+    "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+    "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+    "thingType": [
+    "tagging:TagConcept",
+    "core:Thing",
+    "core:Theme"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q49389",
+    "http://dbpedia.org/resource/Tourism"
+    ],
+    "topicName": "ခရီးသွားလုပ်ငန်း",
+    "topicId": "cpzd4z824r1t",
+    "curationList": [
+    {
+    "curationId": "27bb5c79-6be6-40fd-ad59-ba7c8afd2880",
+    "curationType": "vivo-stream"
+    }
+    ],
+    "thingEnglishLabel": "Tourism",
+    "thingLabelLanguage": "my",
+    "thingPreferredLabel": "Tourism"
+    },
+    {
+    "thingLabel": "ရာဇဝတ်မှု",
+    "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+    "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
+    "thingType": [
+    "core:Thing",
+    "core:Theme",
+    "tagging:TagConcept"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q83267",
+    "http://dbpedia.org/resource/Crime"
+    ],
+    "topicName": "ရာဇဝတ်မှု",
+    "topicId": "c340q4g7083t",
+    "curationList": [
+    {
+    "curationId": "8c5ec7e6-9c0e-4caa-a52d-0c90837550e9",
+    "curationType": "vivo-stream"
+    }
+    ],
+    "thingEnglishLabel": "Crime",
+    "thingLabelLanguage": "my",
+    "thingPreferredLabel": "Crime"
+    }
+    ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": [
+    "image",
+    "paragraph"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+    "producerName": "BURMESE",
+    "producerId": "35"
+    },
+    "readTime": 1,
+    "siteUri": "/burmese",
+    "topics": []
+    },
+    "content": {
+    "blocks": [
+    {
+    "id": "119843742",
+    "subType": "body",
+    "href": "http://c.files.bbci.co.uk/609E/production/_119843742_58148901.jpg",
+    "path": "/cpsprodpb/609E/production/_119843742_58148901.jpg",
+    "height": 549,
+    "width": 976,
+    "altText": "အာယွန် ရေတံခွန်ဟာ ခရီးသွားတွေ  ကြိုက်တဲ့ နေရာတစ်ခု ဖြစ်နေ",
+    "caption": "အာယွန် ရေတံခွန်ဟာ ခရီးသွားတွေ  ကြိုက်တဲ့ နေရာတစ်ခု ဖြစ်နေ",
+    "copyrightHolder": "BBC",
+    "positionHint": "full-width",
+    "originCode": "cpsprodpb",
+    "type": "image"
+    },
+    {
+    "text": "<bold> ပြီးခဲ့တဲ့တ</bold><bold>စ်</bold><bold>ပတ်က ဖူးခက်ကျွန်း အပန်းဖြေစခန်းက ရေတံခွန်တစ်ခုနားမှာ အလောင်းရှာတွေ့ခဲ့တဲ့ ဆွစ်ဇာလန်နိုင်ငံသူ အမျိုးသမီး အသတ်ခံရမှုနဲ့ ဆက်စပ်ပြီး အသက်၂၇နှစ် ထိုင်းနိုင်ငံ သား တစ်ယောက်ကို ထိုင်းရဲတပ်ဖွဲ့က ဖမ်းဆီး တရားစွဲဆိုထားပါတယ်။ </bold>",
+    "markupType": "candy_xml",
+    "type": "paragraph"
+    },
+    {
+    "text": " အသတ်ခံရတဲ့  နစ်ကိုးလ် ဆောဗိန် ဝစ်စ်ကာပေါ့ဖ်ဟာ ဆွစ်ဇာလန်နိုင်ငံသူ အသက် ၅၇နှစ်ရှိတယ်ဆိုတာကို ဒေသခံတာဝန်ရှိတဲ့သူတွေက အတည်ပြုပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " သူ့ကို ရေထဲမှာ မှောက်လျက်အနေအထား အပေါ်က အဝတ်မဲအုပ်ထားတာကို တွေ့ခဲ့ရပြီး အဲ့ဒီ အနီးအနားတစ်ဝိုက်မှာ သူ့ မိုဘိုင်းဖုန်း၊ဘောင်းဘီတိုတွေနဲ့ အားကစားဖိနပ်တွေကိုလည်း ရဲတပ်ဖွဲ့က ရှာတွေ့ခဲ့ပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " တရားစွဲခံထားရတဲ့ သီရာဝပ်တော်တစ် ကိုယ်တိုင်ကလည်း  အဲ့ဒီ့ အမျိုးသမီးကိုသတ်ပြီး ပစ္စည်းတွေကို ယူခဲ့ပါတယ်လို့ ရဲ တပ်ဖွဲ့ကလုပ်တဲ့ သတင်းစာရှင်းလင်းပွဲတစ်ခုမှာ သတင်းထောက်တွေကို ဝန်ခံထားပါတယ်။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " &quot;သေဆုံးသွားတဲ့ ကမ္ဘာလှည့်ခရီးသည်ရဲ့ မိသားစုကို ကျွန်တော် တောင်းပန်ပါတယ်။ ထိုင်းနိုင်ငံသားအားလုံးကို လည်းကျွန်တော့်ကို ခွင့်လွှတ်ပါလို့‌ တောင်းပန်ပါတယ်&quot;  လို့ သူက ပြောခဲ့ပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " နစ်ကိုးလ် ဆောဗိန် ဝစ်စ်ကာပေါ့ဖ် ရေတံခွန်ကို ထွက်သွားတဲ့အချိန်နဲ့  သူ ရေတံခွန်ဘက်ကို ထွက်သွားတဲ့အချိန် တစ်ချိန်တည်းဖြစ်နေတာကို  CCTVမှတ်တမ်းထဲမှာတွေ့ရှိခဲ့ ပြီးနောက် သူ့ကို ထိန်းသိမ်းခဲ့တာလို့ ရဲတပ်ဖွဲ့ က ထုတ်ပြော ထားပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " သူ အသတ်ခံရတဲ့ရက်က &quot;Phuket Sandbox&quot; ခေါ်တဲ့ ဖူးခက်ကျွန်း ပြန်ဖွင့်တဲ့ အစီအစဥ်စအပြီး သီတင်းပတ်တွေအတွင်းမှာဖြစ်ပြီး  သူ ထိုင်းနိုင်ငံထဲကို ရောက်တဲ့ရက်က ဇူလိုင် ၁၃ရက်နေ့လို့ သိရပါတယ်။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": "&quot;Phuket Sandbox&quot;အစီအစဥ်အရ ကာကွယ်ဆေးထိုးထားပြီးသား  ကမ္ဘာလှည့်ခရီးသည်တွေ ကွာရန်တင်းလုပ်စရမလိုဘဲ လာခွင့်ရပေမယ့် ထိုင်းနိုင်ငံ ပင်မနယ်မြေထဲကိုတော့ ၁၄ရက်အတွင်း ခရီးသွားခွင့်မရှိပါဘူး။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": "ဆောဗိန် ဝစ်စ်ကာပေါ့ဖ်အသတ်ခံရပြီးတဲ့နောက် ဖူးခက်ကျွန်းရဲ  လုံခြုံရေးကို ဒေသခံ အာဏာပိုင်တွေက တိုးမြှင့်ချထားပြီး အဲ့ဒီကနေ တစ်ဆင့်  ကမ္ဘာလှည့်ခရီးသွားတွေ အလည်လာကြမယ့် အစီအစဥ်အကြီးအကျယ် ထိခိုက်သွားမှာကိုလည်း စိုးရိမ်နေကြပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " မလုံခြုံတဲ့နေရာ တစ်ခုချင်းဆီကို သေသေချာ စိစစ်လေ့လာပြီး တာဝန်ရှိတဲ့သူတွေရဲ့ စောင့်ကြည့်မှုအောက်ကို ထည့်ထားမယ်လို့ ကျွန်းအုပ်ချုပ်ရေးမှူး နာရွန်ဝန်ဆီအူးက ပြောထားပါတယ်။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " ဆွစ် အမျိုးသမီး ဖူးခက်ကျွန်းမှာ အသတ်ခံရတဲ့အတွက် ဆွစ်ဇာလန်နိုင်ငံ သံအမတ်ဆီကို ဝမ်းနည်းကြောင်း သဝဏ်လွှာ ပေးပို့ထားတယ်လို့ ထိုင်း နိုင်ငံခြားရေးဝန်ကြီး ဒွန်ပရာမက်ဝီနီရဲ့ ပြောရေးဆိုခွင့်ရှိသူတစ်ယောက်က တွစ်တာမှာ တင်ထားပါတယ်။  ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " စုံစမ်းစစ်ဆေးမှုတွေ မြန်မြန်လုပ်ပြီးတာနဲ့  လက်သည်တရားခံကို မြန်မြန်ဖမ်းဖို့ ရဲတပ်ဖွဲ့ကို ဝန်ကြီး ချုပ်ပရာယုချန်အိုချာကလည်း ညွှန်ကြားခဲ့တယ်လို့ ထိုင်း အစိုးရပြော‌ရေးဆိုခွင့်ရှိသူ အနှုချာဘူရာပါချာစီရီက လည်းပြောပါတယ်။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " ပြီးတော့ ဖူးခက်ကျွန်းရဲ့ လုံခြုံရေးကို တိုးမြှင့်ထားဖို့ တာဝန်ရှိတဲ့သူတွေက ညွှန်ကြားထားတယ်လို့လည်း သိရပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " အသတ်ခံရတဲ့သူဟာ ဆွစ် သံတမန်တယောက် ဖြစ်ခဲ့တယ်ဆိုတာ ဒေသခံမီဒီယာတွေမှာ သတင်းထုတ်ပြန်ထားပြီး  အာဏာပိုင်တွေကတော့ သူ့အလုပ်အကိုင်နဲ့ပ့တ်သက်လို့ ထုတ်ပြောတာမျိုး မရှိသေးပါဘူး။",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " ခရီးသွားလုပ်ငန်းဟာ ကိုဗစ်ကပ်ရောဂါမဖြစ်တုန်းကဆို ထိုင်းနိုင်ငံ စီးပွားရေးရဲ့ ငါးပုံတစ်ပုံကို ရှာဖွေပေးနေတာ ဖြစ်ပါတယ်။ ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    },
+    {
+    "text": " ",
+    "markupType": "plain_text",
+    "type": "paragraph"
+    }
+    ]
+    },
+    "promo": {
+    "headlines": {
+    "shortHeadline": "ဆွစ်ဇာလန် ကမ္ဘာလှည့်ခရီးသည် သတ်မှုနဲ့ ထိုင်းနိုင်ငံသားတစ်ဦးကို ဖမ်းခံရ",
+    "headline": "ဆွစ်ဇာလန် ကမ္ဘာလှည့်ခရီးသည် သတ်မှုနဲ့ ထိုင်းနိုင်ငံသားတစ်ဦးကို ဖမ်းခံရ"
+    },
+    "locators": {
+    "assetUri": "/burmese/burma-58148901",
+    "cpsUrn": "urn:bbc:content:assetUri:burmese/burma-58148901",
+    "curie": "http://www.bbc.co.uk/asset/ae0cdd25-adf3-4d33-b9dc-eecd9d2a25c6",
+    "assetId": "58148901"
+    },
+    "summary": "ပြီးခဲ့တဲ့တစ်ပတ်က ဖူးခက်ကျွန်း အပန်းဖြေစခန်းက ရေတံခွန်တစ်ခုနားမှာ အလောင်းရှာ တွေ့ခဲ့ တဲ့ ဆွစ်ဇာလန်နိုင်ငံသူ အမျိုးသမီး အသတ်ခံရမှုနဲ့ ဆက်စပ်ပြီး အသက်၂၇နှစ် ထိုင်းနိုင်ငံ သား တစ်ယောက်ကို ထိုင်းရဲတပ်ဖွဲ့ က ဖမ်းဆီး တရားစွဲဆိုထားပါတယ်။",
+    "timestamp": 1628516912000,
+    "language": "my",
+    "passport": {
+    "category": {
+    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+    "categoryName": "News"
+    },
+    "campaigns": [
+    {
+    "campaignId": "5a988e4739461b000e9dabfc",
+    "campaignName": "WS - Update me"
+    }
+    ],
+    "language": "my",
+    "home": "http://www.bbc.co.uk/ontologies/passport/home/Burmese",
+    "locator": "urn:bbc:cps:curie:asset:ae0cdd25-adf3-4d33-b9dc-eecd9d2a25c6",
+    "availability": "AVAILABLE",
+    "taggings": [
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+    "value": "http://www.bbc.co.uk/things/6a7acc93-be80-45dc-b063-8cea412d54ce#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+    "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+    },
+    {
+    "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+    "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+    }
+    ],
+    "schemaVersion": "1.3.0",
+    "publishedState": "PUBLISHED",
+    "predicates": {
+    "about": [
+    {
+    "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+    "thingLabel": "ထိုင်း",
+    "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+    "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+    "thingType": [
+    "core:Place",
+    "tagging:TagConcept",
+    "core:Thing"
+    ],
+    "thingSameAs": [
+    "http://sws.geonames.org/1605651/"
+    ],
+    "thingEnglishLabel": "Thailand",
+    "type": "about"
+    },
+    {
+    "value": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+    "thingLabel": "ခရီးသွားလုပ်ငန်း",
+    "thingUri": "http://www.bbc.co.uk/things/ae43b7ed-1477-4bcc-8a84-d6d75919cbbc#id",
+    "thingId": "ae43b7ed-1477-4bcc-8a84-d6d75919cbbc",
+    "thingType": [
+    "tagging:TagConcept",
+    "core:Thing",
+    "core:Theme"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q49389",
+    "http://dbpedia.org/resource/Tourism"
+    ],
+    "thingEnglishLabel": "Tourism",
+    "type": "about"
+    },
+    {
+    "value": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+    "thingLabel": "ရာဇဝတ်မှု",
+    "thingUri": "http://www.bbc.co.uk/things/bd7b89a7-78bd-4c60-a78c-9983a479f70f#id",
+    "thingId": "bd7b89a7-78bd-4c60-a78c-9983a479f70f",
+    "thingType": [
+    "core:Thing",
+    "core:Theme",
+    "tagging:TagConcept"
+    ],
+    "thingSameAs": [
+    "http://www.wikidata.org/entity/Q83267",
+    "http://dbpedia.org/resource/Crime"
+    ],
+    "thingEnglishLabel": "Crime",
+    "type": "about"
+    }
+    ],
+    "formats": [
+    {
+    "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+    "thingLabel": "Report",
+    "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+    "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+    "thingType": [
+    "tagging:TagConcept",
+    "tagging:Format"
+    ],
+    "thingSameAs": [],
+    "thingEnglishLabel": "Report",
+    "thingPreferredLabel": "Report",
+    "thingLabelLanguage": "my",
+    "type": "formats"
+    }
+    ]
+    }
+    },
+    "indexImage": {
+    "id": "119843742",
+    "subType": "index",
+    "href": "http://c.files.bbci.co.uk/609E/production/_119843742_58148901.jpg",
+    "path": "/cpsprodpb/609E/production/_119843742_58148901.jpg",
+    "height": 549,
+    "width": 976,
+    "altText": "အာယွန် ရေတံခွန်ဟာ ခရီးသွားတွေ  ကြိုက်တဲ့ နေရာတစ်ခု ဖြစ်နေ",
+    "caption": "အာယွန် ရေတံခွန်ဟာ ခရီးသွားတွေ  ကြိုက်တဲ့ နေရာတစ်ခု ဖြစ်နေ",
+    "copyrightHolder": "BBC",
+    "originCode": "cpsprodpb",
+    "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:burmese/burma-58148901",
+    "type": "cps"
+    },
+    "relatedContent": {
+    "section": {
+    "subType": "index",
+    "name": "မြန်မာ့ရေးရာ",
+    "uri": "/burmese/burma",
+    "type": "simple"
+    },
+    "site": {
+    "subType": "site",
+    "name": "ဘီဘီစီ မြန်မာ | အထူးသတင်း | နောက်ဆုံးရ သတင်း | နောက်ဆုံးရခေါင်းစဉ် သတင်း |မြန်မာသတင်း",
+    "uri": "/burmese",
+    "type": "simple"
+    },
+    "groups": []
+    }
+    }

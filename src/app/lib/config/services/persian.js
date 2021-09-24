@@ -30,7 +30,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
-    externalLinkText: '، لینک خارجی',
+    externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
     videoCaptionOffscreenText: 'توضیح ویدئو، ',
     audioCaptionOffscreenText: 'توضیح صدا، ',
@@ -64,6 +64,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پادکست',
+      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandDescription:
+        'برنامه چشم انداز بامدادی رادیو بی‌بی‌سی، شامل خبر، گزارش و تحلیل از وقایع ایران و جهان',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
+        alt: 'رادیو فارسی بی‌بی‌سی',
+      },
+      linkLabel: {
+        text: 'برنامه ها',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'آگهی',
@@ -80,6 +94,7 @@ export const service = {
         audioPlayer: 'پخش صدا',
         videoPlayer: 'پخش ویدیو',
       },
+      gist: 'خلاصه',
       error: {
         404: {
           statusCode: '۴۰۴',

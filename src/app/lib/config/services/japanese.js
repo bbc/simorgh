@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: '音声プレイヤー',
         videoPlayer: '動画プレイヤー',
       },
+      gist: '要点',
       error: {
         404: {
           statusCode: '404',
@@ -311,10 +312,6 @@ export const service = {
       {
         title: 'コロナウイルス',
         url: '/japanese/52137815',
-      },
-      {
-        title: '東京五輪・パラ',
-        url: '/japanese/57464837',
       },
       {
         title: '日本',

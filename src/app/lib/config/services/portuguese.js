@@ -70,6 +70,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Que História!',
+      brandDescription:
+        'Incríveis histórias reais que nem a mente mais criativa poderia ter inventado',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09dsdxd.jpg',
+        alt: 'Que História!',
+      },
+      linkLabel: {
+        text: 'Episódios',
+        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Publicidade',
@@ -87,6 +101,7 @@ export const service = {
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Pontos-chave',
       error: {
         404: {
           statusCode: '404',

@@ -51,7 +51,7 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    externalLinkText: ', 外部链接',
+    externalLinkText: ', 外部',
     frontPageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
@@ -150,6 +150,7 @@ export const service = {
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',
@@ -319,7 +320,7 @@ export const service = {
     locale: `zh-hant`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: 'zh-Hant',
-    externalLinkText: ', 外部鏈接',
+    externalLinkText: ', 外部',
     frontPageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字, ',
     audioCaptionOffscreenText: '音頻加註文字，',
@@ -411,6 +412,7 @@ export const service = {
         audioPlayer: '音頻播放器',
         videoPlayer: '視頻播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',

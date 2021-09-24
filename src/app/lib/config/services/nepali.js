@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
-    externalLinkText: ', बाह्य सामग्री',
+    externalLinkText: ', बाह्य',
     imageCaptionOffscreenText: 'तस्बिरको क्याप्शन, ',
     videoCaptionOffscreenText: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
     audioCaptionOffscreenText: 'अडिओ क्याप्शन सुरु हुँदैछ, ',
@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'अडिओ प्लेअर',
         videoPlayer: 'भिडिओ प्लेअर',
       },
+      gist: 'सारांश',
       error: {
         404: {
           statusCode: '४०४',

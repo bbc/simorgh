@@ -85,6 +85,7 @@ export const service = {
         audioPlayer: 'Reproductor de audio',
         videoPlayer: 'Reproductor de video',
       },
+      gist: 'Sumario',
       error: {
         404: {
           statusCode: '404',
@@ -387,6 +388,10 @@ export const service = {
       {
         title: 'Centroamérica Cuenta',
         url: '/mundo/noticias-43826245',
+      },
+      {
+        title: 'BBC Extra',
+        url: '/mundo/noticias-48908206',
       },
     ],
   },

@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/gujarati.png',
     defaultImageAltText: 'BBC News ગુજરાતી',
     dir: `ltr`,
-    externalLinkText: ', બહારની સામગ્રી',
+    externalLinkText: ', બહારની',
     imageCaptionOffscreenText: 'ઇમેજ કૅપ્શન, ',
     videoCaptionOffscreenText: 'વીડિયો કૅપ્શન, ',
     audioCaptionOffscreenText: 'ઓડિયો કૅપ્શન, ',
@@ -74,6 +74,7 @@ export const service = {
         audioPlayer: 'ઓડિયો પ્લેયર',
         videoPlayer: 'વીડિયો પ્લેયર',
       },
+      gist: 'સારાંશ',
       error: {
         404: {
           statusCode: '404',

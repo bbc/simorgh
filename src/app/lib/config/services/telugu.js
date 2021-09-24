@@ -26,7 +26,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
     defaultImageAltText: 'BBC News తెలుగు',
     dir: `ltr`,
-    externalLinkText: ', ఇతర కథనాలు',
+    externalLinkText: ', ఇతర',
     imageCaptionOffscreenText: 'ఫొటో క్యాప్షన్, ',
     videoCaptionOffscreenText: 'వీడియో క్యాప్షన్, ',
     audioCaptionOffscreenText: 'ఆడియో క్యాప్షన్, ',
@@ -75,6 +75,7 @@ export const service = {
         audioPlayer: 'ఆడియో ప్లేయర్',
         videoPlayer: 'వీడియో ప్లేయర్',
       },
+      gist: 'సారాంశం',
       error: {
         404: {
           statusCode: '404',

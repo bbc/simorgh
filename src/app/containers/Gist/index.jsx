@@ -3,78 +3,33 @@ import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
-  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_QUAD,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_HLF_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL, C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { getSansRegular, getSansBold } from '@bbc/psammead-styles/font-styles';
 import { getDoublePica, getGreatPrimer } from '@bbc/gel-foundations/typography';
-import {
-  GEL_GROUP_2_SCREEN_WIDTH_MIN,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
 import UnorderedList from '../BulletedList';
 import Text from '#containers/CpsText';
-import { GridItemMedium } from '#app/components/Grid';
+import { GridItemLarge } from '#app/components/Grid';
 
 const GistWrapper = styled.div`
-  ${({ service }) => getSansRegular(service)}
-  ${({ script }) => getGreatPrimer(script)}
   color: ${C_METAL};
   border-top: ${GEL_SPACING_HLF} solid ${C_POSTBOX};
   background-color: ${C_WHITE};
-  padding-top: ${GEL_SPACING_QUAD};
-  padding-bottom: ${GEL_SPACING};
-  margin-bottom: ${GEL_SPACING_QUAD};
   ${({ dir }) =>
     dir === 'ltr'
-      ? `padding-left: ${GEL_SPACING_DBL};`
-      : `padding-right: ${GEL_SPACING_DBL};`}
-  ul {
-    ${({ dir }) =>
-      dir === 'ltr'
-        ? `padding-left: ${GEL_SPACING};`
-        : `padding-right: ${GEL_SPACING};`}
-  }
-  ul > li {
-    margin-bottom: 10px;
-    ${({ dir }) =>
-      dir === 'ltr'
-        ? `padding-left: ${GEL_SPACING};`
-        : `padding-right: ${GEL_SPACING};`}
-  }
-
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    ul {
-      ${({ dir }) => (dir === 'ltr' ? `padding-left: 0;` : `padding-right: 0;`)}
-    }
-  }
-
+      ? `padding: ${GEL_SPACING_TRPL} ${GEL_SPACING_TRPL} 0 ${GEL_SPACING_DBL};`
+      : `padding: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL} 0 ${GEL_SPACING_TRPL};`}
+  margin-bottom: ${GEL_SPACING_QUAD};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ dir }) =>
-      dir === 'ltr'
-        ? `padding-left: ${GEL_SPACING_QUAD};`
-        : `padding-right: ${GEL_SPACING_QUAD};`}
-    ul > li {
-      ${({ dir }) =>
-        dir === 'ltr'
-          ? `padding-left: ${GEL_SPACING_DBL};`
-          : `padding-right: ${GEL_SPACING_DBL};`}
-    }
-  }
-
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    ul {
-      ${({ dir }) =>
-        dir === 'ltr'
-          ? `padding-left: ${GEL_SPACING_DBL};`
-          : `padding-right: ${GEL_SPACING_DBL};`}
-    }
+    padding: ${GEL_SPACING_QUAD} ${GEL_SPACING_QUAD} 0 ${GEL_SPACING_QUAD};
   }
 `;
 
@@ -82,17 +37,46 @@ const GistIntroduction = styled.strong`
   ${({ service }) => getSansBold(service)}
   ${({ script }) => getDoublePica(script)}
   display: inline-block;
-  padding-bottom: ${GEL_SPACING_DBL};
+  padding-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const componentsToRender = {
+const GistList = styled(UnorderedList)`
+  margin-bottom: 0;
+  padding: 0;
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    ${({ service }) => getSansRegular(service)}
+    ${({ script }) => getGreatPrimer(script)}
+    ${({ direction }) => `padding-${direction}: ${GEL_SPACING_HLF_TRPL};`}
+    margin-bottom: ${GEL_SPACING_DBL};
+    &:last-child {
+      padding-bottom: ${GEL_SPACING_DBL};
+    }
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    ${({ direction }) => `padding-${direction}: ${GEL_SPACING_DBL};`}
+    li:last-child {
+      padding-bottom: ${GEL_SPACING_QUAD};
+    }
+  }
+`;
+
+const componentsToRender = (service, script, dir) => ({
   text: props => (
     <Text
       {...props}
       componentsToRender={{
         unorderedList: innerProps => (
-          <UnorderedList
+          <GistList
             {...innerProps}
+            service={service}
+            script={script}
+            direction={dir === 'rtl' ? 'right' : 'left'}
             bulletPointShape="square"
             bulletPointColour={C_METAL}
           />
@@ -100,20 +84,23 @@ const componentsToRender = {
       }}
     />
   ),
-};
+});
 
 const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
   const gistTitle = pathOr('At a glance', ['gist'], translations);
   return (
-    <GridItemMedium>
+    <GridItemLarge role="region" aria-labelledby="gist-title">
       <GistWrapper service={service} script={script} dir={dir}>
-        <GistIntroduction service={service} script={script}>
+        <GistIntroduction service={service} script={script} id="gist-title">
           {gistTitle}
         </GistIntroduction>
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Blocks
+          blocks={blocks}
+          componentsToRender={componentsToRender(service, script, dir)}
+        />
       </GistWrapper>
-    </GridItemMedium>
+    </GridItemLarge>
   );
 };
 
