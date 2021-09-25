@@ -69,7 +69,7 @@ export const service = {
       brandDescription:
         'بودكاست أسبوعي يناقش العلاقات العاطفية باختلافها ويسلط الضوء على تحدياتها وحلولها المتاحة',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p09m72gz.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09m72gz.jpg',
         alt: 'بودكاست "عَلاقات"',
       },
       linkLabel: {

@@ -63,7 +63,7 @@ export const service = {
       brandTitle: 'Ikiganiro cy’abagore',
       brandDescription: 'Ikiganiro cy’abagore kuri BBC Gahuzamiryango',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p082wkdq.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p082wkdq.jpg',
         alt: 'Ikiganiro cy’abagore',
       },
       linkLabel: {

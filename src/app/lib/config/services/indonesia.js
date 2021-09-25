@@ -65,7 +65,7 @@ export const service = {
       brandDescription:
         'BBC Indonesia mengudara pada Pukul 05.00 dan 06.00 WIB, Senin sampai Jumat',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/3000x3000/p02h1lr8.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lr8.jpg',
         alt: 'Dunia Pagi Ini BBC Indonesia',
       },
       linkLabel: {
