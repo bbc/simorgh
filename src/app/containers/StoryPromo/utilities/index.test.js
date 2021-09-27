@@ -47,41 +47,26 @@ describe('isPgl', () => {
 describe('getHeadingTagOverride', () => {
   it('should return h2 if page type is mostWatched', () => {
     const pageType = MOST_WATCHED_PAGE;
-    const isRecommendation = false;
     const isContentTypeGuide = false;
     expect(
       getHeadingTagOverride({
         pageType,
-        isRecommendation,
         isContentTypeGuide,
       }),
     ).toEqual('h2');
   });
 
-  it('should return div if isRecommendation is true', () => {
-    const pageType = PHOTO_GALLERY_PAGE;
-    const isRecommendation = true;
-    const isContentTypeGuide = false;
-    expect(
-      getHeadingTagOverride({ pageType, isRecommendation, isContentTypeGuide }),
-    ).toEqual('div');
-  });
-
   it('should return div if isContentTypeGuide is true', () => {
     const pageType = PHOTO_GALLERY_PAGE;
-    const isRecommendation = false;
     const isContentTypeGuide = true;
-    expect(
-      getHeadingTagOverride({ pageType, isRecommendation, isContentTypeGuide }),
-    ).toEqual('div');
+    expect(getHeadingTagOverride({ pageType, isContentTypeGuide })).toEqual(
+      'div',
+    );
   });
 
   it('should return null if page type is not mostWatched and other args are false', () => {
     const pageType = PHOTO_GALLERY_PAGE;
-    const isRecommendation = false;
     const isContentTypeGuide = false;
-    expect(
-      getHeadingTagOverride({ pageType, isRecommendation, isContentTypeGuide }),
-    ).toBe(null);
+    expect(getHeadingTagOverride({ pageType, isContentTypeGuide })).toBe(null);
   });
 });
