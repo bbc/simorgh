@@ -161,7 +161,7 @@ describe('Feature Idx Page', () => {
         const h1 = container.querySelector('h1');
         const content = h1.getAttribute('id');
 
-        expect(content).toEqual('content');
+        expect(content).toEqual('headline');
 
         expect(h1.textContent).toMatchInlineSnapshot(
           `"کورونا وائرس: تحقیق، تشخیص اور احتیاط"`,
