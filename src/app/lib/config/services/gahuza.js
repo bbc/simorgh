@@ -68,7 +68,7 @@ export const service = {
       },
       linkLabel: {
         text: 'Inkurikirane',
-        href: '	https://www.bbc.com/gahuza/podcasts/p07yjlmf',
+        href: 'https://www.bbc.com/gahuza/podcasts/p07yjlmf',
       },
     },
     translations: {
