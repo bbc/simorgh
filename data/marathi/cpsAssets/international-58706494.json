@@ -1,0 +1,1341 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:marathi/international-58706494",
+    "locators": {
+      "assetUri": "/marathi/international-58706494",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/international-58706494",
+      "curie": "http://www.bbc.co.uk/asset/e6af5b88-ec04-4337-b332-8c3cae3fe908",
+      "assetId": "58706494"
+    },
+    "type": "STY",
+    "createdBy": "marathi-v6",
+    "language": "mr",
+    "lastUpdated": 1632817654641,
+    "firstPublished": 1632803981000,
+    "lastPublished": 1632807614000,
+    "timestamp": 1632807614000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Afghanistan~Business~Taliban~United+States~Trade",
+      "cps_asset_id": "58706494",
+      "ldp_ids": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6~2f2db234-3c2d-40a4-b4ac-eea661faadd0~304deb8b-74ea-4a9c-94d1-d4b2c9806d92~82857f8e-8134-462a-bb32-b7b14f4eab75~cec5d136-f83d-4e00-a3be-d22a7b89401f",
+      "counterName": "marathi.international.story.58706494.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "mr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
+      "locator": "urn:bbc:cps:curie:asset:e6af5b88-ec04-4337-b332-8c3cae3fe908",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/07b797fe-cb0a-442b-874a-2d5a009c78f8#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "thingLabel": "अफगाणिस्तान",
+            "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/1149361/"
+            ],
+            "thingEnglishLabel": "Afghanistan",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingLabel": "व्यवसाय",
+            "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q21857788",
+              "http://dbpedia.org/resource/Business"
+            ],
+            "thingEnglishLabel": "Business",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+            "thingLabel": "तालिबान",
+            "thingUri": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+            "thingId": "304deb8b-74ea-4a9c-94d1-d4b2c9806d92",
+            "thingType": [
+              "core:Organisation",
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:Agent",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Taliban",
+              "http://www.wikidata.org/entity/Q42418"
+            ],
+            "thingEnglishLabel": "Taliban",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "युएस",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/6252001/"
+            ],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "thingLabel": "व्यापार",
+            "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Trade"
+            ],
+            "thingEnglishLabel": "Trade",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "mr",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "अफगाणिस्तान",
+          "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+          "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/1149361/"
+          ],
+          "topicName": "अफगाणिस्तान",
+          "topicId": "cnq68k69py6t",
+          "curationList": [
+            {
+              "curationId": "35a9258e-8460-4883-8684-3bbb4cc853cf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Afghanistan",
+          "thingLabelLanguage": "mr",
+          "thingPreferredLabel": "Afghanistan"
+        },
+        {
+          "thingLabel": "व्यवसाय",
+          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q21857788",
+            "http://dbpedia.org/resource/Business"
+          ],
+          "topicName": "व्यवसाय",
+          "topicId": "c8y94696d8nt",
+          "curationList": [
+            {
+              "curationId": "267ecc71-9ceb-44e3-885b-e7715690c913",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Business",
+          "thingLabelLanguage": "mr",
+          "thingPreferredLabel": "Business"
+        },
+        {
+          "thingLabel": "तालिबान",
+          "thingUri": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+          "thingId": "304deb8b-74ea-4a9c-94d1-d4b2c9806d92",
+          "thingType": [
+            "core:Organisation",
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "tagging:Agent",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Taliban",
+            "http://www.wikidata.org/entity/Q42418"
+          ],
+          "topicName": "तालिबान: अफगाणिस्तानमध्ये सुरू असलेल्या घडामोडी",
+          "topicId": "c6vzy7z80wnt",
+          "curationList": [
+            {
+              "curationId": "508c34f4-791e-4670-baa3-005bf6d26fa3",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Taliban",
+          "thingLabelLanguage": "mr",
+          "thingPreferredLabel": "Taliban"
+        },
+        {
+          "thingLabel": "युएस",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/6252001/"
+          ],
+          "topicName": "युएस",
+          "topicId": "cpzd4kdyx50t",
+          "curationList": [
+            {
+              "curationId": "c662fe6b-d7ac-43cd-b92a-d1b232f11871",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United States",
+          "thingLabelLanguage": "mr",
+          "thingPreferredLabel": "United States"
+        },
+        {
+          "thingLabel": "व्यापार",
+          "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+          "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Trade"
+          ],
+          "topicName": "व्यापार",
+          "topicId": "c06gq3g3xwvt",
+          "curationList": [
+            {
+              "curationId": "499d5ab1-5eff-4397-b710-6ede687259a2",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Trade",
+          "thingLabelLanguage": "mr",
+          "thingPreferredLabel": "Trade"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "crosshead",
+      "heading",
+      "social_embed"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "MARATHI",
+      "producerId": "59"
+    },
+    "readTime": 7,
+    "siteUri": "/marathi",
+    "topics": [
+      {
+        "topicName": "व्यापार",
+        "topicId": "c06gq3g3xwvt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "499d5ab1-5eff-4397-b710-6ede687259a2",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+      },
+      {
+        "topicName": "तालिबान: अफगाणिस्तानमध्ये सुरू असलेल्या घडामोडी",
+        "topicId": "c6vzy7z80wnt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "508c34f4-791e-4670-baa3-005bf6d26fa3",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Organisation",
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "tagging:Agent",
+          "tagging:TagConcept"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+      },
+      {
+        "topicName": "व्यवसाय",
+        "topicId": "c8y94696d8nt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "267ecc71-9ceb-44e3-885b-e7715690c913",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+      },
+      {
+        "topicName": "अफगाणिस्तान",
+        "topicId": "cnq68k69py6t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "35a9258e-8460-4883-8684-3bbb4cc853cf",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+      },
+      {
+        "topicName": "युएस",
+        "topicId": "cpzd4kdyx50t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "c662fe6b-d7ac-43cd-b92a-d1b232f11871",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "120706907",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/11530/production/_120706907_1ac78ae2-456c-4934-b56c-50dc4abe6e61.jpg",
+        "path": "/cpsprodpb/11530/production/_120706907_1ac78ae2-456c-4934-b56c-50dc4abe6e61.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "युद्धात एक बाजू जिंकते तर दुसरी हरते असं म्हटलं जातं पण अमेरिकेचं अफगाणिस्तानमध्ये जे सैन्य होतं त्यामध्ये एका पक्षाचा मात्र फायदाच फायदा झाला आहे. ते म्हणजे काही ठराविक कंपन्या. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "अफगाणिस्तानात अमेरिकेनी सर्वांत मोठी आणि खर्चिक लढाई लढली. या लढाईचा अंत 30 ऑगस्टला अमेरिकन सैनिकांनी अफगाणिस्तान सोडल्यावर झाला. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ब्राऊन विद्यापीठाच्या 'कॉस्ट ऑफ वॉर प्रोजेक्ट'नुसार, अमेरिकेच्या तिजोरीतून या युद्धामुळे 2.3 अब्ज डॉलर इतकी रक्कम खर्च झाली.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "अफगाणिस्तानातून अमेरिकेच्या माघारीनंतर तालिबानची ताकद तिथं वाढली, त्यांनी देशावर कब्जाही केला आणि सर्वत्र गदारोळही माजला. या सगळ्याला अनेक तज्ज्ञांनी अमेरिकेचा पराभव मानला.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "काही लोकांसाठी हा पराभव असू शकतो, मात्र अनेकांनासाठी नफ्याची गोष्टी ठरली.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>marathi/international-58574025</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "अफगाणिस्तानात तालिबान आल्यानंतर 'या' महिलांचं आयुष्य कसं बदललं?",
+                  "headline": "अफगाणिस्तानात तालिबान आल्यानंतर 'या' महिलांचं आयुष्य कसं बदललं?",
+                  "overtyped": "अफगाणिस्तानात तालिबान आल्यानंतर 'या' महिलांचं आयुष्य कसं बदललं?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/international-58574025"
+                },
+                "summary": "इथे काही अशाही महिला आहेत ज्या तालिबानच्या गोळ्यांना घाबरत नाहीत. त्यांना चाबकाच्या फटक्यांची भीती नाही, किंवा आपल्या जवळच्यांची चिंता नाहीये.",
+                "timestamp": 1631851249000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/international-58574025",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/international-58258241</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "अफगाणिस्तानात लागू होत असलेला शरिया कायदा काय आहे?",
+                  "headline": "तालिबान : शरिया कायदा म्हणजे काय?",
+                  "overtyped": "अफगाणिस्तानात लागू होत असलेला शरिया कायदा काय आहे?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/international-58258241"
+                },
+                "summary": "तुमचे घरगुती नातेसंबंध, अर्थविषयक व्यवहार, नोकरी, उद्योग, लग्न, घटस्फोट अशा सगळ्याविषयी शरियामध्ये कायदे आहेत. आणि ते पाळले नाहीत तर काही शिक्षासुद्धा आहेत.",
+                "timestamp": 1630497168000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/international-58258241",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "2001 ते 2021 या दरम्यान या युद्धात खर्च झालेल्या 2.3 अब्ज डॉलरमधील जवळपास 1.05 अब्ज डॉलर अफगाणिस्तानमध्ये संरक्षण मंत्रालयाच्या मोहिमा पूर्ण करण्यासाठी खर्च झाले.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "या रकमेतला मोठा भाग तर अमेरिकेच्या मोहिमांना सहकार्य करणाऱ्या खासगी कंपन्यांनाच्या सेवांसाठीच खर्च झाला.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "यूनिव्हर्सिटी ऑफ कॅलिफोर्नियामधील कॅनडी स्कूल ऑफ गव्हर्नन्सच्या प्रोफेसर लिंडा बिल्म्स सांगतात की, &quot;या लढाईत अमेरिकन सैनिकांची संख्या जास्त नव्हती. सर्व स्वयंसेवक सैन्य कंत्राटदारांनी पुरवले होते. अमेरिकन सैनिकांच्या तुलनेत तिथं कंत्राटदारांच्या माध्यमातून काम करणाऱ्यांची संख्या दुप्पट होती.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लिंडा बिम्स यांनी बीबीसी मुंडोला सांगितलं की, अफगाणिस्तानात पाठवल्या जाणाऱ्या सैनिकांची संख्या राजनितीक पद्धतीनं मर्यादित ठेवण्यात आली होती आणि याच आधारावर कंत्राटदारांची संख्याही ठरवली जात होती.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "त्या पुढे सांगतात, &quot;तिथले कंत्राटदार अनेक प्रकारची कामं करत असत. विमानात इंधन भरणं, ट्रक चालवणं, जेवण बनवणं, साफसफाई करणं, हेलिकॉप्टर चालवणं, सर्व प्रकारच्या साहित्याची वाहतूक करणं ही कामं कंत्राटदारांच्या मार्फत केली जात. लष्करी ठिकाणं, विमानतळं, रन वे इत्यादी गोष्टींची निर्मितीही ते करत.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>'या' पाच कंपन्यांना </bold><bold>सर्वांत </bold><bold>जास्त फायदा</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "अमेरिका आणि इतर देशांच्या 100 हून अधिक कंपन्यांना अफगाणिस्तानात सर्व प्रकारच्या सेवांसाठी अमेरिकेच्या संरक्षण मंत्रालयाकडून कंत्राटं मिळाली होती. यातील काही कंपन्यांनी अब्जावधी डॉलरही कमावले.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'20 इयर्स ऑफ वॉर' प्रोजेक्टच्या संचालक प्रोफेसर हेदी पेल्टियर 'कॉस्ट ऑफ वॉर प्रोजेक्ट'च्याही भाग होत्या.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर यांनी बीबीसी मुंडोशी बोलताना सांगितलं की, असा कुठला अधिकृत आकडा नाहीय, ज्यातून कुठल्या कंपनीला सर्वाधिक फायदा झाला हे सांगू शकू. मात्र, त्यांच्या प्रोजेक्टच्या अंदाजानुसारची आकडेवारी बीबीसी मुंडोसोबत त्यांनी शेअर केली.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710335",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/D035/production/_120710335_4c3bf6cd-b3e5-4566-b2f2-a36a4fc36553.jpg",
+        "path": "/cpsprodpb/D035/production/_120710335_4c3bf6cd-b3e5-4566-b2f2-a36a4fc36553.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "हा अंदाज अमेरिकन सरकारच्या usaspending.gov वर उपलब्ध डेटाच्या आधारे तयार करण्यात आलाय. हा डेटा अमेरिकन सरकारच्या खर्चाची अधिकृत माहिती देतो. 2008 च्या आर्थिक संकटानंतर हे तयार केलं गेलंय.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर सांगतात, &quot;ही आकडेवारी 2008 ते 2021 या दरम्यानच्या कालावधीवर आधारित आहे. मात्र, काही प्रोजेक्ट 2008 च्या आधीचेही आहेत. 2001 पासून पाहायचं झाल्यास ही आकडेवारी आणखी जास्त असू शकते.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "या अंदाजांनुसार, अफगाणिस्तानात अमेरिकेच्या डाइनकॉर्प, फ्लूअर आणि केलॉग ब्राऊन अँड रूट या तीन मुख्य कंत्राटदार कंपन्या आहेत. या कंपन्यांना 'लॉजिस्टिक्स इनक्रीज प्रोग्राम विथ सिव्हिलियन पर्सनेल (लॉगकॅप)'चा भाग म्हणून दिले जात असत.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर यांनी सांगितलं की, &quot;लॉगकॅप बहुवर्षीय कंत्राट आहे, ज्यातून लॉजिटिस्टिक्स, व्यवस्थापन, परिवहन, उपकरणं आणि विमानांच्या देखभाल, सहाकार्याच्या सेवांची संधी देते.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "डाइनकॉर्प",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "डाइनकॉर्पच्या अनेक कामांमधील एक काम अफगाणिस्तानात पोलीस आणि नशाविरोधी दलांना उपकरणं आणि प्रशिक्षण देणं होतं होतं. हमीद करझाई अफगाणिस्तानचे राष्ट्रपती असताना डाइनकॉर्पनेच त्यांना अंगरक्षक पुरवले होते.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियार यांच्या मते, डाइनकॉर्पला 14.4 अब्ज डॉलरची कंत्राटं मिळाली, त्यात लॉगकॅपच्या 7.5 अब्ज डॉलरचा समावेश आहे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "डाइनकॉर्पला नुकतंच अमेंटम कंसोर्शियमने अधिकृत केलं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710337",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/11E55/production/_120710337_852fa275-b2b3-431e-800e-2af7d332aeff.jpg",
+        "path": "/cpsprodpb/11E55/production/_120710337_852fa275-b2b3-431e-800e-2af7d332aeff.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "डाइनकॉर्पच्या प्रवक्त्यानं बीबीसी मुंडोला सांगितलं की, &quot;2002 नंतर डाइनकॉर्प इंटरनॅशनलने आपल्या सरकारी क्लायंट्स आणि अफगाणिस्तानातील सहकाऱ्यांशी सोबत खांद्याला खांदा मिळवून काम केलं.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "खासगी कंपनी असल्यानं आपल्या कंपनीच्या कंत्राटांबद्दल आणि आर्थिक गोष्टींची माहिती सर्वजनिक करू शकत नसल्याचे डाइनकॉर्पचे प्रवक्ते म्हणाले.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "फ्लूअर",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "फ्लूअर ही टेक्सासस्थित कंपनी आहे. दक्षिण अफगाणिस्तानात अमेरिकेच्या लष्करी चौक्यांची निर्मिती ही कंपनी करत असे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "या कंपनीच्या वेबसाईटवर दिलेल्या माहितीनुसार, या कंपनीने अफगाणिस्तानमध्ये 76 फॉरवर्ड ऑपरेटिंग बेस सुद्धा संचालित केले. एक लाख सैनिकांना मदत केली आणि एक दिवसात एक लाख 91 हजारहून अधिक जणांना जेवण दिलं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर यांच्या मते, फ्लूअर कॉर्पोरेशनला 13.5 अब्ज डॉलरची कंत्राटं मिळाली, त्यात 12.6 अब्ज डॉलर लॉगकॅपनुसार होते.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "बीबीसी मुंडोने फ्लूअर कंपनीच्या अफगाणिस्तानातील कामांबद्दल माहिती जाणून घेण्याचा प्रयत्न केला होता. मात्र, हे वृत्त प्रकाशित होईपर्यंत त्यांच्याकडून कुठलाच प्रतिसाद आला नाही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "केबीआर",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "कॅलोग ब्राऊन रूट (केबीआर) ही कंपनी अमेरिकन सैनिकांच्या मदतीसाठी इंजिनिअरिंग आणि लॉजिस्टिकशी संबंधित काम करत असे. तात्पुरती निवासस्थानं, जेवण आणि इतर सेवा या कंपनीमार्फत पुरवली जात असे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ही कंपनी नाटोच्या हवाई हल्ल्यांसाठी अफगाणिस्तानात अनेक विमानतळांवर सहकार्य करत होती. यामध्ये रनवे आणि विमानांच्या देखभालीपासून हवाई संचाराच्या व्यवस्थापनापर्यंतच्या बाबींचा समावेश आहे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710339",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/16C75/production/_120710339_7bc50174-e154-49fe-9a39-e2c0bf8929bb.jpg",
+        "path": "/cpsprodpb/16C75/production/_120710339_7bc50174-e154-49fe-9a39-e2c0bf8929bb.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "प्रो. पेल्टियर यांच्या अंदाजानुसार, केबीआरला अमेरिकेच्या संरक्षण मंत्रालयाकडून 3.6 अब्ज डॉलरची कंत्राटं मिळाली होती.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "या कंपनीच्या प्रवक्त्यानं बीबीसी मुंडोला सांगितलं की, &quot;केबीआरने लॉगकॅपकडून झालेल्या एका प्रतिस्पर्धेतून मिळालेल्या कंत्राटाच्या माध्यमातून 2002 ते 2010 पर्यंत अफगाणिस्तानातील अमेरिकन सैनिकांना सहकार्य केलं. 2001 मध्ये हे कंत्राट आम्ही मिळवलं होतं.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;या कंत्राटानुसार अमेरिकन सैन्याच्या 82 ठिकाणी अन्न, लाँड्री, वीज, साफसफाई आणि देखभाल यांसारख्या सेवा दिल्या. जुलै 2009 मध्ये लष्करानं हे कंत्राट डाइनकॉर्प आणि फ्लूअर या कंपन्यांना दिलं. या दोन कंपन्यांनी मग संयुक्तपणे हे काम केलं. केबीआरने 2010 मध्ये आपली सेवा बंद केली.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "रेथियन",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "सर्वात जास्त नफा कमावणाऱ्या कंपन्यांमधील चौथी कंपनी रेथियन होती. अमेरिकेतील सर्वांत मोठ्या एरोस्पेस आणि संरक्षण कंपन्यांमधील रेथियन एक आहे. अफगाणिस्तानातील सेवांसाठी या कंपनीला 2.5 अब्ज डॉलर्सचं कंत्राट मिळालं होतं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "अफगाण वायुसेनेला प्रशिक्षण देणं ही या कंपनीची शेवटची असाईनमेंट होती. त्यासाठी या कंपनीला 2020 साली 14 कोटी 50 लाख डॉलर एवढ्या रकमेचं कंत्राट देण्यात आलं होतं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "एजिस एलएलसी ही व्हर्जिनियामध्ये स्थित संरक्षण आणि गुप्त कंपनी आहे. अफगाणिस्तानात सेवा देण्यातून नफा कमावणाऱ्या कंपन्यांमधील ही पाचवी कंपनी आहे. या कंपनीला 1.2 अब्ज डॉलर्सचं कंत्राट देण्यात आलं होतं. ही कंपनी काबुलमधील अमेरिकन दूतावासाला सुरक्षा पुरवत होती.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "बीबीसी मुंडोने एजिसशी संपर्क साधला. मात्र, हे वृत्त प्रकाशित होईपर्यंत त्यांच्याकडून कुठलाच प्रतिसाद आला नाही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "संरक्षण कंपन्यांना फायदा?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "बीबीसी मुंडोने ज्या तज्ज्ञांशी चर्चा केली, त्यांनी सहमती दर्शवली की, अमेरिकन संरक्षण कंत्राटदार, जसे की बोईंग, रेथियन, लॉकहीड मार्टिन, जनरल डायनामिक्स आणि नॉर्थरोप ग्रुमॅन यांना अफगाण युद्धातून बराच फायदा झाला.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लिंडा बिल्म्स सांगतात की, यांनी युद्धातून प्रचंड पैसा कमावला.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710341",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/37DD/production/_120710341_53e1fb4a-f433-49c3-aa9a-f12def9fe666.jpg",
+        "path": "/cpsprodpb/37DD/production/_120710341_53e1fb4a-f433-49c3-aa9a-f12def9fe666.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "मात्र, किती पैसा मिळाला हे शोधणं अवघड आहे. कारण यांचे कंत्राट अफगाणिस्तानातल्या मोहिमांशी थेट जोडलेले नव्हते.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर यांनी सांगितलं की, &quot;या सर्वांना अमेरिकेत साहित्य बनवण्यासाठी कंत्राटं मिळाली होती. हीच साहित्यनंतर अफगाणिस्तानात वापरली जाणार होती. त्यामुळे हा खर्च अफगाणिस्तानात झालेल्या खर्चात समाविष्ट नाहीय.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'कॉस्ट ऑफ वॉर' प्रोजेक्टने या आठवड्यात जारी केलेल्या अहवालानुसार, 9/11 नंतर या पाच कंपन्यांना अमेरिकेच्या लष्करी खर्चातून जास्त फायदा झाला. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "हा अहवाल सांगतो की, &quot;2001-2020 दरम्यानच्या आर्थिक वर्षात या पाच कंपन्यांना अमेरिकेच्या संरक्षण मंत्रालयानं 2.1 खरब डॉलरची कंत्राटं दिली.&quot; 2021 च्या वर्षातल्या खर्चाचा यात समावेश नाहीय.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "बीबीसी मुंडोने या पाचही कंपन्यांना प्रश्न विचारला की, अफगाणिस्तानातल्या युद्धानं त्यांच्या व्यवसाय आणि कंत्राटांना फटका बसला का? जनरल डायनामिक्सनं प्रतिक्रिया देण्यास नकार दिला आणि दुसऱ्या कंपन्यांनी हे वृत्त प्रकाशित होईपर्यंत काहीच प्रतिक्रिया कळवली नाही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. पेल्टियर या रेथियन कंपनीचं उदाहरण देऊन सांगतात की, या कंपनीने 2.5 अब्ज डॉलरहून अधिकची कमाई केली. कारण हा आकडा केवळ अफगाणिस्तानात थेट मिळालेल्या कंत्राटांचा आहे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;रेथियनला शस्त्रास्त्र किंवा संचार प्रणालीचं कंत्राट मिळालं असेल आणि ते अमेरिकेत बनवून अफगाणिस्तानात वापरलं असेल, तर ते कंत्राट अफगाणिस्तानात मिळाल्याचं ग्राह्य धरलं जाणार नाही,&quot; असं त्या सांगतात.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "बोईंग कंपनी एफ-15 आणि एफ-18 लढाऊ विमानं बनवते. मात्र, बोईंग मोठ्या कंपन्यांच्या यादीत दिसत नाही. याचप्रकारे ब्लॅकहॉक हेलिकॉप्टर निर्माती कंपनी लॉकहीड मार्टिन सुद्धा या यादीत दिसत नाही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710343",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/85FD/production/_120710343_9ff93cac-b179-4e1f-aeb0-2be83e1f929e.jpg",
+        "path": "/cpsprodpb/85FD/production/_120710343_9ff93cac-b179-4e1f-aeb0-2be83e1f929e.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "लिंडा बिल्म्स सांगतात की, जनरल डायनॅमिक्सने लाइटवेट लष्करी वाहनं बनवली आणि अफगाणिस्तानात सायबर सिक्युरिटीबाबतही बरीच कामं केली.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "बीबीसी मुंडोच्या प्रश्नावर पेंटागनच्या प्रवक्त्या जेसिका मॅक्सवेल यांनी दुजोरा दिला की, या पाच संरक्षण कंत्राटदारांनी अफगाणिस्तानात उपकरणं आणि सेवा देऊन किती कमावले हे शोधणं अवघड आहे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "त्या म्हणाल्या, &quot;याचा अंदाज लावणं अशक्य आहे. संरक्षण मंत्रालय या कंपन्याकडून अनेक प्रकारची उत्पादनं आणि सेवा मिळवते. मात्र, केवळ अफगाणिस्तानसाठीच नव्हे. आम्ही जगभरातील मोहिमांसाठी खरेदी करतो. काहींचा वापर अफगाणिस्तानात केला गेला.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "किमतींबाबत मनमानी",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "लिंडा बिल्म्स म्हणतात की, अफगाण युद्धात सेवांच्या किंमतींमध्ये कंपन्यांनी मनमानी केली आहे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "त्या पुढे सांगतात, &quot;अनेक कंत्राटं कुठल्याही निविदांविना दिले गेले किंवा त्यात कमी स्पर्धा होती. तसंच या पद्धतीच्या सेवा देणाऱ्या कंपन्या फार कमी आहेत. त्यामुळे या कंपन्यांचा एकाधिकार सुरू होतो.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लिंडा सांगतात की, अनेकदा कंपन्या किंमती वाढवतात. सेवा देण्याच्या ठिकाणी वाईट परिस्थिती आणि तिथवर पोहोचण्यासाठीच्या अडचणी अशी कारणं यावेळी दिली जातात.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "अफगाण युद्धात कंत्राटं देण्याच्या पद्धतीवरून संरक्षण मंत्रालयाच्या प्रवक्त्यांनी सांगितलं की, &quot;संरक्षण मंत्रालयाचं धोरण आहे की, शक्य तितकं प्रतिस्पर्धेच्या आधारावर कंत्राटं द्यावीत. मात्र, अनेक शस्त्रास्त्र कंपन्यांनी त्यांच्या अगदी सुरुवातीच्या काळातच निविदा दिली होती.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710345",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/D41D/production/_120710345_36ccbcbf-8521-4348-b0f5-3dd8003aec29.jpg",
+        "path": "/cpsprodpb/D41D/production/_120710345_36ccbcbf-8521-4348-b0f5-3dd8003aec29.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "लिंडा यामध्ये भ्रष्टाचाराचे संकेत व्यक्त करतात. त्या म्हणतात, &quot;एखाद्या भिंतीला रंगवण्यासाठी 20 पट अधिक किंमत देणं वेगळी गोष्ट आहे. मात्र, पैसे घेणं आणि भिंतही न रंगवणं म्हणजे भ्रष्टाचार आहे. म्हणजे, रंगवण्यासाठी काहीच नाहीय, तरीही पैसे घेतले गेले.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "त्याचसोबत त्या सांगतात की, अफगाणिस्तानात सब-काँट्रॅक्टर्सनाही कामं दिली गेली. याचा अर्थ असा की, मुख्य कंत्राटदार, ज्यानं सरकारकडून काम मिळवलं होतं, त्याने काम पूर्ण करण्यासाठी इतराला कंत्राट दिलं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लिंडा बिल्म्स यांच्या मते, सब-काँट्रॅक्टर्सनी किती पैसे घेतले, याचा हिशेबच नाही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "याबाबत संरक्षणमंत्रालयाच्या प्रवक्त्यांचं म्हणणं आहे की, &quot;देशाचे नियम आणि कायदे वस्तू आणि सेवांच्या योग्य किंमतीच्या हमीसाठी सक्षम सुरक्षा प्रणाली असते. अगदी जिथं एकच पुरवठादार असतो, तिथंही.&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120710347",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1223D/production/_120710347_8c27371b-c15e-482a-98d1-0ca88f5eff39.jpg",
+        "path": "/cpsprodpb/1223D/production/_120710347_8c27371b-c15e-482a-98d1-0ca88f5eff39.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "अफगाणिस्तान, अमेरिका, तालिबान",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "कथित भ्रष्टाचाराच्या आरोपांसंबंधी मॅक्सवेलचं म्हणणं होतं की, फसवणूक, दुरुपयोग किंवा भ्रष्टाचाराशी संबंधित कुठल्याही पुराव्याबाबत संरक्षण विभागाच्या महानिरीक्षकांना कळवलं गेलं पाहिजे.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'द न्यूयॉर्क टाइम्स'च्या वृत्तानुसार, महानिरीक्षकांच्या कार्यालयानं सांगितलं की, 2008 आणि 2017 च्या दरम्यान अमेरिकेला अफगाणिस्तानात पुनर्निमाणाच्या प्रयत्नांमध्ये दुरुपयोग किंवा फसवणूक यातून जवळपास 15.5 अब्ज डॉलर्सचं नुकसान झालं.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "लिंडा बिल्म्स सांगतात की, &quot;युद्धातून एकाच प्रकारच्या कंपनीला फायदा झाली नाही, तर संरक्षण उपकरणांशी संबंधित कंपन्यांसह विविध कंपन्यांनाही फायदा झाला. यात लॉजिस्टिक्सशी संबंधित कंपन्या, निर्मिती कंपन्या आणि इंधन पुरवठादार इत्यादींचा समावेश आहे.&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "हेही वाचलंत का?",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>marathi/41178421</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "मुस्लीम धर्मात नेमके पंथ तरी किती?",
+                  "headline": "मुस्लीम धर्मात किती पंथ आहेत?",
+                  "overtyped": "मुस्लीम धर्मात नेमके पंथ तरी किती?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/41178421"
+                },
+                "summary": "मुस्लीम धर्म अनेक पंथ, उपपंथ आणि गटातटांमध्ये विभागला आहे. त्याचा नेमका आकडा काय आहे? भारतात इस्लाममध्ये किती उपपंथ आहेत?",
+                "timestamp": 1629292795000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/41178421",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/international-57704770</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "तालिबान संघटना काय आहे? तालिबानचा उदय नेमका कसा झाला?",
+                  "headline": "तालिबान काय आहे? अफगाणिस्तानमध्ये त्यांचा उदय असा झाला",
+                  "overtyped": "तालिबान संघटना काय आहे? तालिबानचा उदय नेमका कसा झाला?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/international-57704770"
+                },
+                "summary": "एकीकडे अमेरिकन लष्कर अफगाणिस्तानातून बाहेर पडण्याची तयारी करत असतानाच तालिबान संघटना देशात आपलं अस्तित्व मजबूत करण्याच्या प्रयत्नात हात-पाय पसरू लागली आहे.",
+                "timestamp": 1629110974000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/international-57704770",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/international-58214836</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "तालिबानला अफगाणिस्तानात इतक्या वेगाने विजय कसा मिळत गेला?",
+                  "headline": "तालिबानला अफगाणिस्तानात इतक्या वेगाने विजय कसा मिळत गेला?",
+                  "overtyped": "तालिबानला अफगाणिस्तानात इतक्या वेगाने विजय कसा मिळत गेला?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/international-58214836"
+                },
+                "summary": "अफगाणिस्तानातील तालिबानच्या चढाईचा वेग अनेकांना आश्चर्यचकित करून गेल्याचं दिसतं. प्रादेशिक राजधान्या पत्त्यांच्या बंगल्यांसारख्या कोसळत आहेत.",
+                "timestamp": 1628945533000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/international-58214836",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>marathi/international-56784323</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "अफगाणिस्तानात अमेरिका-ब्रिटनच्या सैन्यानं 20 वर्षं राहून काय साध्यं केलं?",
+                  "headline": "अफगाणिस्तानात अमेरिका-ब्रिटनच्या सैन्यानं 20 वर्षं राहून काय साध्यं केलं?",
+                  "overtyped": "अफगाणिस्तानात अमेरिका-ब्रिटनच्या सैन्यानं 20 वर्षं राहून काय साध्यं केलं?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/marathi/international-56784323"
+                },
+                "summary": "'सर्वात मोठा काळजीचा विषय आहे म्हणजे अफगाणिस्तानात 1990 च्या दशकातील स्थिती पुन्हा निर्माण होऊ शकते. '",
+                "timestamp": 1628936269000,
+                "language": "mr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:marathi/international-56784323",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=tGwSiUO2Ekc",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Taliban in Afghanistan : Kabul मध्ये सत्तेत आल्यानंतर अफगाण लोकांसमोर काय आहेत चिंता?",
+            "author_name": "BBC News Marathi",
+            "author_url": "https://www.youtube.com/c/BBCNewsMarathi",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/tGwSiUO2Ekc/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/tGwSiUO2Ekc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Marathi: Taliban in Afghanistan : Kabul मध्ये सत्तेत आल्यानंतर अफगाण लोकांसमोर काय आहेत चिंता?"
+          }
+        },
+        "id": "tGwSiUO2Ekc",
+        "type": "social_embed"
+      },
+      {
+        "text": "(बीबीसी न्यूज मराठीचे सर्व अपडेट्स मिळवण्यासाठी आम्हाला <link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UC7pluR6rB5KZIbN2IxamzxQ\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UC7pluR6rB5KZIbN2IxamzxQ\" platform=\"enhancedmobile\"/></link>, <link><caption>Facebook, </caption><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"highweb\"/><url href=\"https://www.facebook.com/BBCnewsMarathi/\" platform=\"enhancedmobile\"/></link><link><caption>Instagram</caption><url href=\"https://www.instagram.com/bbcnewsmarathi/\" platform=\"highweb\"/><url href=\"https://www.instagram.com/bbcnewsmarathi/\" platform=\"enhancedmobile\"/></link> आणि  <link><caption>Twitter </caption><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"highweb\"/><url href=\"https://twitter.com/bbcnewsmarathi\" platform=\"enhancedmobile\"/></link>वर नक्की फॉलो करा.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "बीबीसी न्यूज मराठीच्या सगळ्या बातम्या तुम्ही <bold>Jio TV app</bold> वर पाहू शकता. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>'सोपी गोष्ट'</bold> आणि <bold>'3 गोष्टी' </bold>हे मराठीतले बातम्यांचे पहिले पॉडकास्ट्स तुम्ही <bold>Gaana, Spotify, JioSaavn </bold>आणि <bold>Apple Podcasts </bold>इथे ऐकू शकता.)",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "अफगाणिस्तानातील युद्धातून कोणत्या कंपन्यांना झाला अब्जावधींचा नफा?",
+      "headline": "अफगाणिस्तानातील युद्धातून कोणत्या कंपन्यांना झाला अब्जावधींचा नफा?"
+    },
+    "locators": {
+      "assetUri": "/marathi/international-58706494",
+      "cpsUrn": "urn:bbc:content:assetUri:marathi/international-58706494",
+      "curie": "http://www.bbc.co.uk/asset/e6af5b88-ec04-4337-b332-8c3cae3fe908",
+      "assetId": "58706494"
+    },
+    "summary": "2001 ते 2021 या दरम्यान या युद्धात खर्च झालेल्या 2.3 अब्ज डॉलरमधील जवळपास 1.05 अब्ज डॉलर अफगाणिस्तानमध्ये संरक्षण मंत्रालयाच्या मोहिमा पूर्ण करण्यासाठी खर्च झाले.",
+    "timestamp": 1632807614000,
+    "language": "mr",
+    "byline": {
+      "name": "आंखेल बेर्मुदेज",
+      "title": "बीबीसी न्यूज मुंडो",
+      "persons": [
+        {
+          "name": "Léa Surugue",
+          "function": "BBC Future"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "mr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Marathi",
+      "locator": "urn:bbc:cps:curie:asset:e6af5b88-ec04-4337-b332-8c3cae3fe908",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/07b797fe-cb0a-442b-874a-2d5a009c78f8#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "thingLabel": "अफगाणिस्तान",
+            "thingUri": "http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+            "thingId": "1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/1149361/"
+            ],
+            "thingEnglishLabel": "Afghanistan",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingLabel": "व्यवसाय",
+            "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
+            "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q21857788",
+              "http://dbpedia.org/resource/Business"
+            ],
+            "thingEnglishLabel": "Business",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+            "thingLabel": "तालिबान",
+            "thingUri": "http://www.bbc.co.uk/things/304deb8b-74ea-4a9c-94d1-d4b2c9806d92#id",
+            "thingId": "304deb8b-74ea-4a9c-94d1-d4b2c9806d92",
+            "thingType": [
+              "core:Organisation",
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:Agent",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Taliban",
+              "http://www.wikidata.org/entity/Q42418"
+            ],
+            "thingEnglishLabel": "Taliban",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "युएस",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/6252001/"
+            ],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "thingLabel": "व्यापार",
+            "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
+            "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Trade"
+            ],
+            "thingEnglishLabel": "Trade",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "mr",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "120716562",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/67C1/production/_120716562_25306b54-d7e9-4093-af83-70e19bbda487.jpg",
+      "path": "/cpsprodpb/67C1/production/_120716562_25306b54-d7e9-4093-af83-70e19bbda487.jpg",
+      "height": 450,
+      "width": 800,
+      "altText": "तालिबान",
+      "copyrightHolder": "Getty Images",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:marathi/international-58706494",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "आंतरराष्ट्रीय",
+      "uri": "/marathi/international",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC मराठी",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
