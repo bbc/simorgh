@@ -438,7 +438,21 @@ describe('getAtUserId', () => {
     cookieSetterSpy = jest.spyOn(Cookie, 'set');
   });
 
-  it('should return AT user id when found and then set it in cookies again to update the expiraton date', () => {
+  it('should return the AT user id', () => {
+    Cookie.set('atuserid', { val: 'uuid' });
+    cookieSetterSpy.mockClear();
+    const atUserId = getAtUserId();
+    const [[cookieName, cookieValue]] = cookieSetterSpy.mock.calls;
+
+    expect(atUserId).toEqual('uuid');
+    expect(cookieName).toEqual('atuserid');
+    expect(cookieValue).toEqual({
+      val: 'uuid',
+    });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should update the cookie expiration date when the AT user id is returned', () => {
     Cookie.set('atuserid', { val: 'uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
