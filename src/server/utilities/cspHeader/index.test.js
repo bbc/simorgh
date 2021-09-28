@@ -536,6 +536,8 @@ describe('cspHeader', () => {
             },
           };
 
+          process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
+
           injectCspHeader(req, res, next);
 
           expect(next).toHaveBeenCalled();
