@@ -75,6 +75,8 @@ const expectedOutput = {
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
   showAdsBasedOnLocation: input.showAdsBasedOnLocation,
+  service: 'service',
+  pathname: '/current-path',
 };
 
 describe('RequestContext', () => {

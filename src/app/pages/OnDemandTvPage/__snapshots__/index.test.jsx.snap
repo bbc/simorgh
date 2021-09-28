@@ -326,7 +326,8 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 }
 
 .emotion-21 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -334,19 +335,20 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
 
 @media (min-width: 37.5rem) {
   .emotion-21 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-25 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -360,6 +362,27 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   .emotion-25 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-25 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-25 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-25 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -472,6 +495,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -897,7 +921,8 @@ exports[`should show the expired content message if episode is expired 1`] = `
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -905,19 +930,20 @@ exports[`should show the expired content message if episode is expired 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-18 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-22 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -931,6 +957,27 @@ exports[`should show the expired content message if episode is expired 1`] = `
   .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-22 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1043,6 +1090,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1458,7 +1506,8 @@ exports[`should show the future content message if episode is not yet available 
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -1466,19 +1515,20 @@ exports[`should show the future content message if episode is not yet available 
 
 @media (min-width: 37.5rem) {
   .emotion-18 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-22 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -1492,6 +1542,27 @@ exports[`should show the future content message if episode is not yet available 
   .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-22 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1604,6 +1675,7 @@ exports[`should show the future content message if episode is not yet available 
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2019,7 +2091,8 @@ exports[`should show the future content message if episode is pending 1`] = `
 }
 
 .emotion-18 {
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: 0.5rem;
   word-break: break-word;
@@ -2027,19 +2100,20 @@ exports[`should show the future content message if episode is pending 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-18 {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 3.5rem;
+    line-height: 2rem;
   }
 }
 
 .emotion-22 {
+  display: inline-block;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-family: "BBC Reith Qalam",Arial,Verdana,Geneva,Helvetica,sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -2053,6 +2127,27 @@ exports[`should show the future content message if episode is pending 1`] = `
   .emotion-22 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+}
+
+@media (max-width: 22.5rem) and (min-width: 15rem) {
+  .emotion-22 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+@media (max-width: 37.4375rem) {
+  .emotion-22 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2165,6 +2260,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   color: #F2F2F2;
   padding-bottom: 1.5rem;
   margin: 0;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
