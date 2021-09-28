@@ -16,7 +16,7 @@ import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
 import UnorderedList from '../BulletedList';
-import Text from '#containers/CpsText';
+import Text from '#containers/Text';
 import { GridItemLarge } from '#app/components/Grid';
 
 const GistWrapper = styled.div`
