@@ -1,0 +1,679 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:indonesia/dunia-58476696",
+      "locators": {
+        "assetUri": "/indonesia/dunia-58476696",
+        "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-58476696",
+        "curie": "http://www.bbc.co.uk/asset/a799a255-9176-4ed8-a43c-ca5a9fdc87d0",
+        "assetId": "58476696"
+      },
+      "type": "STY",
+      "createdBy": "indonesia-v6",
+      "language": "id",
+      "lastUpdated": 1632491477997,
+      "firstPublished": 1631018438000,
+      "lastPublished": 1632491330000,
+      "timestamp": 1632491330000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "cps_asset_type": "sty",
+        "counterName": "indonesia.world.story.58476696.page",
+        "cps_asset_id": "58476696"
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "id",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+        "locator": "urn:bbc:cps:curie:asset:a799a255-9176-4ed8-a43c-ca5a9fdc87d0",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "id",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "crosshead",
+        "social_embed"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "INDONESIAN",
+        "producerId": "54"
+      },
+      "readTime": 4,
+      "siteUri": "/indonesia"
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "120630166",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/10237/production/_120630166_gettyimages-815936050.jpg",
+          "path": "/cpsprodpb/10237/production/_120630166_gettyimages-815936050.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Tugu peringatan korban Malaysian Airlines MH17 di Donetsk, Ukraina, yang jatuh pada 17 Juli 2014.",
+          "caption": "Warga meletakkan bunga pada peringatan tahun ketiga di tugu peringatan korban Malaysia Airlines MH17 di Donetsk, Ukraina, pada 17 Juli.",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Seorang perempuan yang putrinya termasuk di antara 298 orang yang meninggal ketika pesawat Malaysian Airlines ditembak jatuh di atas Ukraina mengatakan Jumat (24/09) ia ingin menatap langsung mata tersangka dan &quot;membuat mereka merasakan rasa sakit dan kehilangan.&quot;",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Para keluarga korban pesawat dengan nomor penerbangan MH17, ditembak jatuh di atas kawasan yang dikuasai pemberontak pro-Rusia pada 2014 mengecam apa yang mereka sebut &quot;kematian brutal&quot; orang-orang tercinta dalam sidang empat terdakwa di pengadilan di Schiphol, Belanda.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pesawat itu  jatuh di wilayah Donetsk, sekitar 50 km dari perbatasan Rusia-Ukraina.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Keterangan dari keluarga korban Indonesia juga dibacakan dalam sidang hari Kamis (23/09). Keluarga korban yang tak disebutkan namanya ini menceritakan bagaimana keluarga tidak tidur saat menunggu kepastian apakah saudara mereka benar berada dalam pesawat naas itu pada 17 Juli 2014.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "&quot;Saya terus mencek berita dan pagi itu sekitar pukul 08:00 pagi, saya melihat nama adik saya sebagai salah satu korban di berita. Saat itu, airmata mulai turun...tak dapat ditahan lagi...tak dapat menahan kesedihan mendalam lagi, saya tak percaya dia pergi selamanya,&quot; kata keluarga korban dalam pernyataan yang dikirim ke BBC News Indonesia oleh pengacara keluarga yang berkantor di London.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dari 298 korban, 193 berasal dari Belanda, 43 dari Malaysia termasuk 15 awak pesawat, 27 dari Australia, ada 12 dari Indonesia, 10 dari Inggris dan selebihnya dari Belgia, Jerman, Filipina dan Selandia Baru.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120683503",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/774A/production/_120683503_gettyimages-454764708.jpg",
+          "path": "/cpsprodpb/774A/production/_120683503_gettyimages-454764708.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Keluarga salah satu dari 12 korban asal Indonesia ketika tiba di bandara Adi Sumarmo, Solo pada 6 September 2014.",
+          "caption": "Keluarga salah satu dari 12 korban asal Indonesia ketika tiba di Bandara Adi Sumarmo, Solo pada 6 September 2014.",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Kesaksian para keluarga korban Jumat (24/09) ini menutup pernyataan dari 90 sanak saudara korban dari delapan negara.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "<bold>Baca juga</bold>:",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>indonesia/dunia-44240869</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Terjawab, dari mana rudal yang menjatuhkan pesawat MH17",
+                    "headline": "Terjawab, dari mana rudal yang menjatuhkan pesawat MH17",
+                    "overtyped": "Terjawab, dari mana rudal yang menjatuhkan pesawat MH17"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/indonesia/dunia-44240869"
+                  },
+                  "summary": "Rudal yang menjatuhkan pesawat Malaysia Airlines nomor penerbangan MH17 saat berada di wilayah udara Ukraina berasal dari satu brigade Rusia, kata tim penyelidik internasional.",
+                  "timestamp": 1527188052000,
+                  "language": "id",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:indonesia/dunia-44240869",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>indonesia/dunia-40631269</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Perasaan haru di kalangan keluarga korban saat peresmian 'Taman MH17'",
+                    "headline": "Perasaan haru di kalangan keluarga korban saat peresmian 'Taman MH17'",
+                    "overtyped": "Perasaan haru di kalangan keluarga korban saat peresmian 'Taman MH17'"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/indonesia/dunia-40631269"
+                  },
+                  "summary": "Keluarga korban pesawat Malaysia Airline MH17 asal Indonesia, terharu saat menghadiri upacara peresmian taman untuk mengenang para korban di dekat bandara Schiphol.",
+                  "timestamp": 1500308037000,
+                  "language": "id",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:indonesia/dunia-40631269",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>indonesia/dunia-40207921</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Gambar-gambar terakhir korban MH17 boleh dilihat keluarga",
+                    "headline": "Gambar-gambar terakhir korban MH17 boleh dilihat keluarga",
+                    "overtyped": "Gambar-gambar terakhir korban MH17 boleh dilihat keluarga"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/indonesia/dunia-40207921"
+                  },
+                  "summary": "Keluarga korban Malaysia Airlines MH17 yang ditembak jatuh di atas Ukraina diizinkan melihat gambar terakhir para penumpang sebelum masuk ke pesawat.",
+                  "timestamp": 1496974339000,
+                  "language": "id",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:indonesia/dunia-40207921",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "Mereka menceritakan dampak kehilangan sanak saudara dan menyatakan harapan, keadilan akan tercapai.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Pesawat Malaysian Airlines itu terbang dari Amsterdam ke Kuala Lumpur saat ditembak oleh apa yang digambarkan oleh penyidik dan penuntut internasional sebagai misil darat ke udara Rusia.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Putri Jeanne Hornikx, Astrid, 31 dan pasangannya, Bart 40, termasuk di antara korban.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120413449",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/170DF/production/_120413449_gettyimages-1233114049-594x594.jpg",
+          "path": "/cpsprodpb/170DF/production/_120413449_gettyimages-1233114049-594x594.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "A reconstruction of the wreckage of the Malaysia Airlines plane",
+          "caption": "Sebelum sidang, hakim memeriksa puing-puing pesawat Malaysia Airlines yang telah direkonstruksi.",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Vonis pada akhir 2022",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "Hornikx yang hadir dalam sidang menunjukkan hakim sidik jari putrinya dan mengatakan, &quot;Beginilah ia diidentifikasi.&quot;",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "&quot;Saya ingin menatap mata tersangka agar mereka merasakan kehilangan dan rasa sakit kami. Agar penderitaan kami mereka rasakan juga,&quot; kata Hornikx.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120630168",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/15057/production/_120630168_gettyimages-1156029573.jpg",
+          "path": "/cpsprodpb/15057/production/_120630168_gettyimages-1156029573.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Bendera negara asal korban pesawat MH17.",
+          "caption": "Bendera negara asal korban pesawat MH17.",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Dua pertiga dari korban adalah warga Belanda. Pemerintah Belanda menuding Moskow berada di balik serangan ini.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Rusia - yang tetap berkukuh tidak mendanai dan mendukung pemberontak pro-Rusia yang memerangi pemerintah Ukraina - menolak mengekstradisi tersangka. Hanya satu tersangka yang memiliki kuasa hukum.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Vonis diperkirakan akan diputuskan pada akhir 2022.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Jaksa Belanda mendakwa tiga orang Rusia dan seorang Ukrania, yang dicurigai mengangkut sistem misil itu. Mereka mulai diadili dengan dakwaan pembunuhan tahun lalu.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120413447",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/122BF/production/_120413447_070336124-1.jpg",
+          "path": "/cpsprodpb/122BF/production/_120413447_070336124-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Sidang MH17 di Belanda",
+          "caption": "Sidang berlangsung di pengadilan dengan keamanan tinggi di dekat Bandara Schiphol.",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Sebanyak 298 orang — 283 penumpang dan 15 awak — yang ada di dalam pesawat tipe Boeing 777 tersebut tewas. Para korban diketahui berasal dari sepuluh negara berbeda.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Jaksa penuntut dari Belanda mengatakan para tersangka berperan menembak pesawat dengan peluru kendali buatan Rusia di atas zona pertempuran Ukraina timur. Rusia menyangkal bertanggung jawab.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Para tersangka: Igor Girkin, Sergei Dubinsky, Leonid Kharchenko, dan Oleg Pulatof, mulai disidang di Belanda tahun lalu, setelah kasusnya dibawa ke pengadilan oleh sejumlah jaksa penuntut dari Belanda, menyusul penyelidikan internasional.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Keempatnya disangka sebagai anggota kelompok separatis pro-Rusia yang membantu para pemberontak melawan pasukan pemerintah Ukraina di wilayah timur Ukraina.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hanya satu tersangka, Pulatov, yang menyewa tim pengacara dari Belanda untuk mewakilinya.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hakim Hendrik Steenhuis mengatakan pada awal persidangan, bahwa sidang ini &quot;sangat emosional bagi para keluarga&quot;, saat ia memberi kesempatan kepada mereka untuk memberikan testimoni di pengadilan untuk pertama kalinya.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "'Bau kematian'",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "Anggota keluarga pertama yang memberikan kesaksiannya di pengadilan pada awal September lalu adalah Ria van der Steen. Ayah dan ibu tirinya menjadi korban tragedi ini.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dalam persidangan, Van der Steen mengatakan mimpi buruk yang kerap dialaminya setelah peristiwa itu. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dia mencari sang ayah di antara puing-puing pesawat yang membara. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "&quot;Bau kebakaran, bau kematian di mana-mana,&quot; ujarnya. &quot;Saya terus berteriak, 'Ayah, di mana kau berada?'&quot;",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Dia juga mengungkapkan, sang ayah diidentifikasi dengan serpihan kecil tulang tangannya — hanya itulah bagian tubuhnya yang tersisa.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Kesaksian kedua datang dari warga Australia, Vanessa Fizk, yang orang tuanya meninggal dalam ledakan itu.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Melalui sambungan video dari Australia, Fizk berkata para pelaku &quot;harus mendapatkan hukuman atas tindakan keji mereka&quot;.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120410152",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/620D/production/_120410152_070336126-1.jpg",
+          "path": "/cpsprodpb/620D/production/_120410152_070336126-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Ria van der Steen, MH17",
+          "caption": "Ria van der Steen, ayah dan ibu tirinya tewas dalam peristiwa ini, mengatakan kerap bermimpi buruk.",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "Kakaknya, James Fizk, berpendapat sama. Dia berkata orang tuanya adalah korban dari konflik yang tidak melibatkan mereka.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "&quot;Misinformasi dari Rusia, kurangnya keterlibatan Rusia, dan penyangkalan mereka membuat saya bingung,&quot; ujarnya.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Keluarga dan kerabat dari delapan negara, termasuk Inggris, akan memberikan testimoni di sidang. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "105914180",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/1FCD/production/_105914180_line976-nc.png",
+          "path": "/cpsprodpb/1FCD/production/_105914180_line976-nc.png",
+          "height": 2,
+          "width": 624,
+          "altText": "line",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>Tonton dan berlangganan channel YouTube BBC Indonesia di sini</caption><url href=\"https://bit.ly/2Mkg9hY\" platform=\"highweb\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "href": "https://youtu.be/A8nmAVGLkHg",
+          "source": "youtube",
+          "id": "A8nmAVGLkHg",
+          "type": "social_embed"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "Keluarga korban penembakan pesawat MH17 ungkapkan 'rasa kehilangan dan sakit'",
+        "headline": "Korban pesawat MH17: Keluarga korban termasuk dari Indonesia ungkapkan 'rasa kehilangan dan sakit' di pengadilan Belanda"
+      },
+      "locators": {
+        "assetUri": "/indonesia/dunia-58476696",
+        "cpsUrn": "urn:bbc:content:assetUri:indonesia/dunia-58476696",
+        "curie": "http://www.bbc.co.uk/asset/a799a255-9176-4ed8-a43c-ca5a9fdc87d0",
+        "assetId": "58476696"
+      },
+      "summary": "Keluarga korban penembakan pesawat MH17 di wilayah udara Ukraina yang menewaskan 298 orang mengecam apa yang mereka sebut \"kematian brutal\" orang-orang tercinta dalam sidang empat terdakwa di pengadilan Belanda.",
+      "timestamp": 1632491330000,
+      "language": "id",
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+          "categoryName": "News"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "id",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Indonesia",
+        "locator": "urn:bbc:cps:curie:asset:a799a255-9176-4ed8-a43c-ca5a9fdc87d0",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/e5309204-528f-46a9-a78f-ca792f8515d8#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "id",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "indexImage": {
+        "id": "120413447",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/122BF/production/_120413447_070336124-1.jpg",
+        "path": "/cpsprodpb/122BF/production/_120413447_070336124-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Sidang MH17 di Belanda",
+        "caption": "Sidang berlangsung di pengadilan dengan keamanan tinggi di dekat Bandara Schiphol.",
+        "copyrightHolder": "Reuters",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:indonesia/dunia-58476696",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Dunia",
+        "uri": "/indonesia/dunia",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Indonesia",
+        "uri": "/indonesia",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "see-alsos",
+          "promos": [
+            {
+              "headlines": {
+                "shortHeadline": "Terjawab, dari mana rudal yang menjatuhkan pesawat MH17",
+                "headline": "Terjawab, dari mana rudal yang menjatuhkan pesawat MH17"
+              },
+              "locators": {
+                "assetUri": "/indonesia/dunia-44240869",
+                "cpsUrn": "urn:bbc:content:assetUri:/indonesia/dunia-44240869"
+              },
+              "summary": "Rudal yang menjatuhkan pesawat Malaysia Airlines nomor penerbangan MH17 saat berada di wilayah udara Ukraina berasal dari satu brigade Rusia, kata tim penyelidik internasional.",
+              "timestamp": 1527188052000,
+              "language": "id",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "101731496",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/10F25/production/_101731496_047005579-1.jpg",
+                "path": "/cpsprodpb/10F25/production/_101731496_047005579-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "MH17",
+                "caption": "Tim penyelidik menggabungkan serpihan pesawat untuk mengetahui penyebab jatuhnya pesawat MH17.",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/dunia-44240869",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "Perasaan haru di kalangan keluarga korban saat peresmian 'Taman MH17'",
+                "headline": "Perasaan haru di kalangan keluarga korban saat peresmian 'Taman MH17'"
+              },
+              "locators": {
+                "assetUri": "/indonesia/dunia-40631269",
+                "cpsUrn": "urn:bbc:content:assetUri:/indonesia/dunia-40631269"
+              },
+              "summary": "Keluarga korban pesawat Malaysia Airline MH17 asal Indonesia, terharu saat menghadiri upacara peresmian taman untuk mengenang para korban di dekat bandara Schiphol.",
+              "timestamp": 1500308037000,
+              "language": "id",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "96976634",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AA93/production/_96976634_040647190-1.jpg",
+                "path": "/cpsprodpb/AA93/production/_96976634_040647190-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "MH17",
+                "caption": "Raja Willem-Alexander dan Ratu Maxima menghadiri peresmian taman bagi keluarga korban MH17.",
+                "copyrightHolder": "REMKO DE WAAL",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/dunia-40631269",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "Gambar-gambar terakhir korban MH17 boleh dilihat keluarga",
+                "headline": "Gambar-gambar terakhir korban MH17 boleh dilihat keluarga"
+              },
+              "locators": {
+                "assetUri": "/indonesia/dunia-40207921",
+                "cpsUrn": "urn:bbc:content:assetUri:/indonesia/dunia-40207921"
+              },
+              "summary": "Keluarga korban Malaysia Airlines MH17 yang ditembak jatuh di atas Ukraina diizinkan melihat gambar terakhir para penumpang sebelum masuk ke pesawat.",
+              "timestamp": 1496974339000,
+              "language": "id",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "96403552",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/63BA/production/_96403552_039942012-1.jpg",
+                "path": "/cpsprodpb/63BA/production/_96403552_039942012-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "Malaysia Airlines, MH17, Ukraina",
+                "caption": "Tim penyidik mengatakan rudal BUK yang ditembakkan dari Ukraina timur menghantam MH17.",
+                "copyrightHolder": "AFP/EMMANUEL DUNAND",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:indonesia/dunia-40207921",
+              "type": "cps"
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,730 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:arabic/middleeast-58677609",
+      "locators": {
+        "assetUri": "/arabic/middleeast-58677609",
+        "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-58677609",
+        "curie": "http://www.bbc.co.uk/asset/fdb485d5-63bd-4dd8-9d69-b50c2a564785",
+        "assetId": "58677609"
+      },
+      "type": "STY",
+      "createdBy": "arabic-v6",
+      "language": "ar",
+      "lastUpdated": 1632483357426,
+      "firstPublished": 1632476900000,
+      "lastPublished": 1632476900000,
+      "timestamp": 1632476900000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "ldp_tags": "Yemen~Iran~Saudi+Arabia",
+        "cps_asset_id": "58677609",
+        "ldp_ids": "3d9ca6eb-a694-4880-88db-de4ed05d42cc~511accd7-6ee6-4dfb-8e2b-b236be8cb14c~dd4fa30e-dec8-479a-8881-b480af10392c",
+        "counterName": "arabic.middle_east.story.58677609.page",
+        "cps_asset_type": "sty"
+      },
+      "passport": {
+        "language": "ar",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+        "locator": "urn:bbc:cps:curie:asset:fdb485d5-63bd-4dd8-9d69-b50c2a564785",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+            "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/b2146e49-3a4b-49e0-adb4-86ca7225eac3#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+              "thingLabel": "اليمن",
+              "thingUri": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+              "thingId": "3d9ca6eb-a694-4880-88db-de4ed05d42cc",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/69543/"
+              ],
+              "thingEnglishLabel": "Yemen",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+              "thingLabel": "إيران",
+              "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+              "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/130758/"
+              ],
+              "thingEnglishLabel": "Iran",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+              "thingLabel": "السعودية",
+              "thingUri": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+              "thingId": "dd4fa30e-dec8-479a-8881-b480af10392c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/102358/"
+              ],
+              "thingEnglishLabel": "Saudi Arabia",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "ar",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "tags": {
+        "about": [
+          {
+            "thingLabel": "اليمن",
+            "thingUri": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+            "thingId": "3d9ca6eb-a694-4880-88db-de4ed05d42cc",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/69543/"
+            ],
+            "topicName": "اليمن",
+            "topicId": "cjgn721x780t",
+            "curationList": [
+              {
+                "curationId": "d161ed9e-2b0a-447f-bc9a-35e1decc52e9",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Yemen",
+            "thingLabelLanguage": "ar",
+            "thingPreferredLabel": "Yemen"
+          },
+          {
+            "thingLabel": "إيران",
+            "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/130758/"
+            ],
+            "topicName": "إيران",
+            "topicId": "cdr56g2zzk8t",
+            "curationList": [
+              {
+                "curationId": "a522639c-3568-4a3b-b692-454f5339ca69",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Iran",
+            "thingLabelLanguage": "ar",
+            "thingPreferredLabel": "Iran"
+          },
+          {
+            "thingLabel": "السعودية",
+            "thingUri": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+            "thingId": "dd4fa30e-dec8-479a-8881-b480af10392c",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/102358/"
+            ],
+            "topicName": "السعودية",
+            "topicId": "c6vzykrk7z6t",
+            "curationList": [
+              {
+                "curationId": "185ccdc9-d2c2-4a00-97fd-df2696dc2c97",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Saudi Arabia",
+            "thingLabelLanguage": "ar",
+            "thingPreferredLabel": "Saudi Arabia"
+          }
+        ]
+      },
+      "version": "v1.3.13",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "media"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "ARABIC",
+        "producerId": "5"
+      },
+      "readTime": 2,
+      "siteUri": "/arabic",
+      "topics": [
+        {
+          "topicName": "السعودية",
+          "topicId": "c6vzykrk7z6t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "185ccdc9-d2c2-4a00-97fd-df2696dc2c97",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+        },
+        {
+          "topicName": "إيران",
+          "topicId": "cdr56g2zzk8t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "a522639c-3568-4a3b-b692-454f5339ca69",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+        },
+        {
+          "topicName": "اليمن",
+          "topicId": "cjgn721x780t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "d161ed9e-2b0a-447f-bc9a-35e1decc52e9",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+        }
+      ]
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "120679097",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/134F9/production/_120679097_mediaitem120679096.jpg",
+          "path": "/cpsprodpb/134F9/production/_120679097_mediaitem120679096.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "خامنئي يقلد علي فدوي وساماً عام 2016",
+          "caption": "خامنئي يقلد علي فدوي وساماً عام 2016",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "قال نائب القائد العام للحرس الثوري الإيراني إن التحالف الذي تقوده السعودية في اليمن ناشد إيران &quot;لإنقاذها من الأزمة&quot; الناجمة عن الحرب.",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "وقال العميد علي فدوي في مقابلة تلفزيونية إن &quot;الذين بدأوا الحرب في اليمن بتوسلون الآن لإنقاذهم&quot;، من دون تسمية السعودية والتحالف بشكل مباشر، حسبما نقلت وكالة تسنيم التابعة للحرس الثوري، الجمعة.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>arabic/middleeast-56523589</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "الحرب في اليمن: التعقيدات الداخلية ومصادر التمويل الذاتية للصراع",
+                    "headline": "الحرب في اليمن: التعقيدات الداخلية ومصادر التمويل الذاتية للصراع",
+                    "overtyped": "الحرب في اليمن: التعقيدات الداخلية ومصادر التمويل الذاتية للصراع"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/arabic/middleeast-56523589"
+                  },
+                  "summary": "يدخل اليمن العام السابع لأطول وأعنف وأشرس حرب شهدها في تاريخه حيث ذهب ضحيتها حتى الآن نحو 330 ألف شخص وشردت الملايين.",
+                  "timestamp": 1616687136000,
+                  "language": "ar",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                      "categoryName": "Analysis"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:arabic/middleeast-56523589",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>arabic/middleeast-49909246</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "هل انتقلت إيران والسعودية من حافة الهاوية إلى حافة التسوية؟",
+                    "headline": "هل انتقلت إيران والسعودية من حافة الهاوية إلى حافة التسوية؟",
+                    "overtyped": "هل انتقلت إيران والسعودية من حافة الهاوية إلى حافة التسوية؟"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/arabic/middleeast-49909246"
+                  },
+                  "summary": "أحداث الخليج كانت كافية لإشعال حرب لو كانت نية الحرب موجودة لدى الولايات المتحدة، لكن الحرب لم تقع وبالتالي كان واضحا بالنسبة لإيران والسعودية على حد سواء ولكل اللاعبين الآخرين في المنطقة، أن المرحلة مرحلة استنزاف ممنهج.",
+                  "timestamp": 1570020725000,
+                  "language": "ar",
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:arabic/middleeast-49909246",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "يأتي تصريح فدوي وسط تعليقات متفائلة لمسؤولين إيرانيين وسعوديين بشأن احتمالات التقارب بين الخصمين الإقليميين.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120679099",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/18319/production/_120679099_mediaitem120679098.jpg",
+          "path": "/cpsprodpb/18319/production/_120679099_mediaitem120679098.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "خطاب الملك السعودي أمام الجمعية العامة للأمم المتحدة",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "وقال المتحدث باسم وزارة الخارجية الإيرانية سعيد خطيب زاده إن طهران ترى &quot;مؤشرات جدية&quot; على تحسن العلاقات مع الرياض، في تصريح للتلفزيون الرسمي الإيراني، الخميس.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "وكان خطيب زادة صرّح في وقت سابق أن الاتصالات بين البلدين باتت &quot;أكثر انتظاماً&quot; في الآونة الأخيرة، مضيفاً أن المناقشات حول الأمن في الخليج الفارسي شهدت &quot;تقدماً جاداً&quot;.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "يأتي ذلك بعد خطاب العاهل السعودي الملك سلمان أمام الجمعية العامة للأمم المتحدة في 22 سبتمبر/ أيلول، وقال فيه إنه يأمل أن يؤدي الحوار إلى &quot;نتائج ملموسة&quot; ويمهد الطريق لإرساء تعاون بين الجانبين. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "وعقدت إيران والسعودية ثلاث جولات من المحادثات استضافها العراق لمناقشة القضايا الثنائية والإقليمية والدولية. ومن المقرر أن تستضيف بغداد اجتماعاً آخر في موعد غير محدد، بحسب السفير الإيراني في العراق إيراج مسجدي.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "120679101",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/27D5/production/_120679101_mediaitem120679100.jpg",
+          "path": "/cpsprodpb/27D5/production/_120679101_mediaitem120679100.jpg",
+          "height": 576,
+          "width": 1024,
+          "altText": "بدأ التحالف بقيادة السعودية عمليته في اليمن عام 2015",
+          "caption": "بدأ التحالف بقيادة السعودية عمليته في اليمن عام 2015",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "انقطعت العلاقات الدبلوماسية بين الخصمين اللدودين منذ عام 2016، بعدما هاجم محتجون إيرانيون سفارة الرياض في طهران، والقنصلية السعودية في مشهد، إثر إعدام رجل الدين السعودي الشيعي البارز نمر النمر. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "ويشنّ التحالف بقيادة السعودية تدخلاً عسكرياً في اليمن منذ عام 2015، إثر إطاحة جماعة الحوثي المدعومة من إيران بالحكومة اليمنية.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "ويوصف الوضع في اليمن بأنه أسوأ أزمة إنسانية في العالم.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "p09g86pd",
+          "subType": "clip",
+          "format": "video",
+          "title": "\"معركة مأرب قد تكون الأكثر دموية في تاريخ اليمن\"",
+          "synopses": {
+            "short": "الحرب في اليمن: هل تحسم معركة مأرب مستقبل الصراع؟",
+            "long": "يشن الحوثيون، الذين يسيطرون على العاصمة صنعاء، حملة شرسة للسيطرة على مدينة مأرب الواقعة في محافظة غنية بالنفط والغاز بهدف وضع أيديهم على كامل الشمال اليمني.\nوتفيد التقارير باحتدام الفتال بين القوات الحكومية والمسلحين الحوثيين قرب مدينة مأرب، التي تعتبر آخر معاقل الحكومة في شمال البلاد. \nفهل تحسم المعركة مستقبل الحرب في اليمن؟",
+            "medium": "تفيد التقارير باحتدام الفتال بين القوات الحكومية والمسلحين الحوثيين قرب مدينة مأرب، التي تعتبر آخر معاقل الحكومة في شمال البلاد، فهل تحسم المعركة مستقبل الحرب في اليمن؟"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09g89q1.jpg",
+          "embedding": true,
+          "advertising": true,
+          "caption": "الحرب في اليمن: هل تحسم معركة مأرب مستقبل الصراع؟",
+          "versions": [
+            {
+              "versionId": "p09g86pg",
+              "types": [
+                "Original"
+              ],
+              "duration": 221,
+              "durationISO8601": "PT3M41S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true
+              },
+              "availableFrom": 1619773814000
+            }
+          ],
+          "smpKind": "programme",
+          "type": "media"
+        },
+        {
+          "text": "ويعتمد ما يقدر بنحو 20 مليون شخص - ثلثي سكان اليمن - على المساعدات الإنسانية. ويعاني حوالي مليوني طفل من سوء التغذية الحاد.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "مسؤول إيراني: التحالف بقيادة السعودية \"يناشدنا لإخراجه من أزمة اليمن\"",
+        "headline": "الحرس الثوري الإيراني: التحالف بقيادة السعودية \"يناشدنا لإخراجه من أزمة اليمن\""
+      },
+      "locators": {
+        "assetUri": "/arabic/middleeast-58677609",
+        "cpsUrn": "urn:bbc:content:assetUri:arabic/middleeast-58677609",
+        "curie": "http://www.bbc.co.uk/asset/fdb485d5-63bd-4dd8-9d69-b50c2a564785",
+        "assetId": "58677609"
+      },
+      "summary": "يأتي تصريح العميد علي فدوي وسط تعليقات متفائلة لمسؤولين إيرانيين وسعوديين بشأن احتمالات التقارب بين الخصمين الإقليميين.",
+      "timestamp": 1632476900000,
+      "language": "ar",
+      "byline": {
+        "name": "قسم المتابعة الإعلامية",
+        "title": "بي بي سي ",
+        "persons": [
+          {
+            "name": "قسم المتابعة الإعلامية",
+            "function": "بي بي سي"
+          }
+        ]
+      },
+      "passport": {
+        "language": "ar",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+        "locator": "urn:bbc:cps:curie:asset:fdb485d5-63bd-4dd8-9d69-b50c2a564785",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+            "value": "http://www.bbc.co.uk/things/f2b5dd0e-dda0-454c-893d-792d46ff48c3#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/b2146e49-3a4b-49e0-adb4-86ca7225eac3#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+              "thingLabel": "اليمن",
+              "thingUri": "http://www.bbc.co.uk/things/3d9ca6eb-a694-4880-88db-de4ed05d42cc#id",
+              "thingId": "3d9ca6eb-a694-4880-88db-de4ed05d42cc",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/69543/"
+              ],
+              "thingEnglishLabel": "Yemen",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+              "thingLabel": "إيران",
+              "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+              "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/130758/"
+              ],
+              "thingEnglishLabel": "Iran",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+              "thingLabel": "السعودية",
+              "thingUri": "http://www.bbc.co.uk/things/dd4fa30e-dec8-479a-8881-b480af10392c#id",
+              "thingId": "dd4fa30e-dec8-479a-8881-b480af10392c",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Place",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/102358/"
+              ],
+              "thingEnglishLabel": "Saudi Arabia",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "ar",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "indexImage": {
+        "id": "120679101",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/27D5/production/_120679101_mediaitem120679100.jpg",
+        "path": "/cpsprodpb/27D5/production/_120679101_mediaitem120679100.jpg",
+        "height": 576,
+        "width": 1024,
+        "altText": "بدأ التحالف بقيادة السعودية عمليته في اليمن عام 2015",
+        "caption": "بدأ التحالف بقيادة السعودية عمليته في اليمن عام 2015",
+        "copyrightHolder": "Getty Images",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:arabic/middleeast-58677609",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "أخبار الشرق الأوسط",
+        "uri": "/arabic/middleeast",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Arabic",
+        "uri": "/arabic",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "see-alsos",
+          "promos": [
+            {
+              "headlines": {
+                "shortHeadline": "تصريحات بن سلمان: تبريد للأزمة مع إيران أم مقدمة لتسوية؟",
+                "headline": "بعد تصريحات بن سلمان الودية: هل تنضم السعودية وإيران لـ\"موسم المصالحات\" في الشرق الأوسط؟"
+              },
+              "locators": {
+                "assetUri": "/arabic/in-depth-56919196",
+                "cpsUrn": "urn:bbc:content:assetUri:/arabic/in-depth-56919196"
+              },
+              "summary": "محللون يرجحون أن تؤدي التهدئة بين السعودية وإيران إلى تبريد صراعات المنطقة وليس حلها بشكل كامل.",
+              "timestamp": 1619626239000,
+              "language": "ar",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "118244644",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AE64/production/_118244644__118236620_d4cc9518-90d2-403d-bbfb-7d8856509393.jpg",
+                "path": "/cpsprodpb/AE64/production/_118244644__118236620_d4cc9518-90d2-403d-bbfb-7d8856509393.jpg",
+                "height": 360,
+                "width": 640,
+                "altText": "السعودية وإيران",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/in-depth-56919196",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "shortHeadline": "غضب دولي بسبب إعدام الحوثيين تسعة أشخاص",
+                "headline": "الحرب في اليمن: المجتمع الدولي يدين إعدام الحوثيين تسعة أشخاص"
+              },
+              "locators": {
+                "assetUri": "/arabic/middleeast-58633535",
+                "cpsUrn": "urn:bbc:content:assetUri:/arabic/middleeast-58633535"
+              },
+              "summary": "إدانات دولية واسعة لتنفيذ الحوثيين أحكام إعدام بحق تسعة أشخاص من بينهم شخص كان قاصراً عند إلقاء القبض عليه بتهمة التورط في مقتل أحد زعماء الحوثيين",
+              "timestamp": 1632180682000,
+              "language": "ar",
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "120635268",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/150ED/production/_120635268__120633762_mediaitem120633758-1.jpg",
+                "path": "/cpsprodpb/150ED/production/_120635268__120633762_mediaitem120633758-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "الحوثيون",
+                "caption": "واجهت الإعدامات التي نفذها الحوثيون إدانات دولية على نطاق واسع",
+                "copyrightHolder": "Reuters",
+                "type": "image"
+              },
+              "id": "urn:bbc:ares::asset:arabic/middleeast-58633535",
+              "type": "cps"
+            }
+          ]
+        }
+      ]
+    }
+  }
