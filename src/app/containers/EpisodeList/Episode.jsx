@@ -1,6 +1,6 @@
 import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
-import { node, string, func } from 'prop-types';
+import { node, string } from 'prop-types';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import tail from 'ramda/src/tail';
 import {
