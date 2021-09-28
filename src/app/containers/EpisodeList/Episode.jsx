@@ -1,4 +1,4 @@
-import React, { Children, cloneElement } from 'react';
+import React, { Children, cloneElement, forwardRef } from 'react';
 import styled from '@emotion/styled';
 import { node, string, func } from 'prop-types';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -29,14 +29,14 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Episode = ({ children, dir, viewTrackerRef }) => {
+const Episode = forwardRef(({ children, dir }, ref) => {
   const showMediaIndicator = pathOr({}, '0', children).type !== Image;
 
   return (
     <Wrapper
       dir={dir}
       showMediaIndicator={showMediaIndicator}
-      {...(viewTrackerRef && { ref: viewTrackerRef })}
+      {...(ref && { ref })}
     >
       {showMediaIndicator ? (
         Children.toArray(children)
@@ -50,16 +50,11 @@ const Episode = ({ children, dir, viewTrackerRef }) => {
       )}
     </Wrapper>
   );
-};
+});
 
 Episode.propTypes = {
   children: node.isRequired,
   dir: string.isRequired,
-  viewTrackerRef: func,
-};
-
-Episode.defaultProps = {
-  viewTrackerRef: null,
 };
 
 export default withEpisodeContext(Episode);

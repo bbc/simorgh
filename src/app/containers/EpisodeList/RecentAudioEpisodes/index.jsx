@@ -120,7 +120,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         liProps={liProps}
       >
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id} viewTrackerRef={viewTrackerRef}>
+          <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}
