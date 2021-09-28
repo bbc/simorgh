@@ -60,15 +60,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'पॉडकास्ट',
-      brandTitle: 'सोपी गोष्ट',
-      brandDescription: 'दिवसातली सगळ्यांत मोठी बातमी सोप्या भाषेत',
+      brandTitle: 'तीन गोष्टी',
+      brandDescription: 'दिवसभरातल्या कोरोना आणि इतर घडामोडींचा आढावा',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0965nyb.jpg',
-        alt: 'सोपी गोष्ट',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0940n6j.jpg',
+        alt: 'तीन गोष्टी',
       },
       linkLabel: {
         text: 'भाग',
-        href: 'https://www.bbc.com/marathi/podcasts/p09437hm',
+        href: 'https://www.bbc.com/marathi/podcasts/p09431p4',
       },
     },
     translations: {

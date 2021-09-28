@@ -1,0 +1,401 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_indonesian_radio/p02pc9v6",
+      "locators": {
+        "pid": "p09wtj1j",
+        "brandPid": "p02pc9v6"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_indonesian_radio",
+      "language": "id",
+      "lastUpdated": 1632493402770,
+      "firstPublished": 1632436284000,
+      "lastPublished": 1632436284000,
+      "timestamp": 1632436284000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "Dunia Pagi Ini BBC Indonesia - BBC News Indonesia",
+        "pageIdentifier": "indonesia.bbc_indonesian_radio.podcasts.programmes.p02pc9v6.page",
+        "producerId": "54",
+        "contentType": "player-episode",
+        "producer": "INDONESIAN"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "Dunia Pagi Ini BBC Indonesia",
+      "releaseDateTimeStamp": 1632355200000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09wtj1j",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "Ketidakpastian seputar moratorium izin kebun sawit di Indonesia terus berlanjut.",
+            "medium": "Ketidakpastian perpanjangan atau penghentian moratorium, pemberian izin baru perkebunan kelapa sawit di Indonesia terus berlanjut, sementara dampaknya dapat dirasakan."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09wtg8v",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 900,
+              "durationISO8601": "PT15M",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": 1633040940000,
+              "availableFrom": 1632436140000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Dunia Pagi Ini BBC Indonesia Jumat 24 September 2021",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Dunia Pagi Ini BBC Indonesia"
+      },
+      "locators": {
+        "pid": "p09wtj1j",
+        "brandPid": "p02pc9v6"
+      },
+      "media": {
+        "id": "p09wtj1j",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Ketidakpastian seputar moratorium izin kebun sawit di Indonesia terus berlanjut.",
+          "medium": "Ketidakpastian perpanjangan atau penghentian moratorium, pemberian izin baru perkebunan kelapa sawit di Indonesia terus berlanjut, sementara dampaknya dapat dirasakan."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09wtg8v",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 900,
+            "durationISO8601": "PT15M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1633040940000,
+            "availableFrom": 1632436140000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Dunia Pagi Ini BBC Indonesia Jumat 24 September 2021",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1632355200000,
+      "brand": {
+        "pid": "p02pc9v6",
+        "title": "Dunia Pagi Ini BBC Indonesia"
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p09wtj1j",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Indonesia",
+        "uri": "/indonesia",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "locators": {
+                "pid": "p09wptrd",
+                "brandPid": "p02pc9v6"
+              },
+              "media": {
+                "id": "p09wptrd",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Ribuan murid positif Covid, kurang dari satu bulan sejak pembelajaran tatap muka digelar,",
+                  "medium": "Setidaknya 15.000 murid terpapar Covid, kurang dari satu bulan sejak dilaksanakan pembelajaran tatap muka, yang disambut sebagian orang tua murid."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wpthm",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 900,
+                    "durationISO8601": "PT15M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1632954780000,
+                    "availableFrom": 1632349980000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Dunia Pagi Ini BBC Indonesia Kamis 23 September 2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632268800000,
+              "brand": {
+                "pid": "p02pc9v6",
+                "title": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p09wptrd",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "locators": {
+                "pid": "p09wlkpn",
+                "brandPid": "p02pc9v6"
+              },
+              "media": {
+                "id": "p09wlkpn",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Pernyataan pemerintah Indonesia bahwa pandemi telah terkendali, dinilai tidak tepat.",
+                  "medium": "Pernyataan pemerintah Indonesia bahwa situasi pandemi telah terkendali dengan menggunakan indikator angka reproduksi efektif sebagai tolak ukur, dinilai tidak tepat."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wlkfs",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 900,
+                    "durationISO8601": "PT15M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1632868200000,
+                    "availableFrom": 1632263400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Dunia Pagi Ini BBC Indonesia Rabu 22 September 2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632182400000,
+              "brand": {
+                "pid": "p02pc9v6",
+                "title": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p09wlkpn",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "locators": {
+                "pid": "p09whylm",
+                "brandPid": "p02pc9v6"
+              },
+              "media": {
+                "id": "p09whylm",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Tenaga kesehatan di Papua meminta jaminan keamanan menyusul penyerangan Puskesmas.",
+                  "medium": "Para tenaga kesehatan di Kabupaten Pegunungan Bintang, Papua, meminta jaminan keamanan agar mereka bisa menjalankan tugas, menyusul penyerangan Puskesmas dengan korban jiwa."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09whyc1",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 899,
+                    "durationISO8601": "PT14M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1632781500000,
+                    "availableFrom": 1632176700000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Dunia Pagi Ini BBC Indonesia Selasa 21 September 2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632096000000,
+              "brand": {
+                "pid": "p02pc9v6",
+                "title": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p09whylm",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "locators": {
+                "pid": "p09wfdkv",
+                "brandPid": "p02pc9v6"
+              },
+              "media": {
+                "id": "p09wfdkv",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Kematian Ali Kalora diyakini tidak lantas hentikan kelompok Mujahidin Indonesia Timur.",
+                  "medium": "Kematian pemimpin kelompok militan Mujahidin Indonesia Timur, Ali Kalora, diyakini tidak lantas menghentikan gerakan teror kelompok tersebut."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wfdff",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 900,
+                    "durationISO8601": "PT15M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1632695040000,
+                    "availableFrom": 1632090240000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Dunia Pagi Ini BBC Indonesia Senin 20 September 2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p02pc307.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632009600000,
+              "brand": {
+                "pid": "p02pc9v6",
+                "title": "Dunia Pagi Ini BBC Indonesia"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_indonesian_radio/p09wfdkv",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }
