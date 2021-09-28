@@ -80,13 +80,11 @@ const TopStories = () => {
     },
   ];
   const TopStory = ({ title, link }) =>
-    forwardRef(
-      (props, ref)(
-        <li ref={ref}>
-          <a href={link}>{title}</a>
-        </li>,
-      ),
-    );
+    forwardRef((props, ref) => (
+      <li ref={ref}>
+        <a href={link}>{title}</a>
+      </li>
+    ));
 
   return (
     <ol>
