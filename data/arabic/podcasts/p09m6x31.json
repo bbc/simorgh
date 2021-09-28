@@ -1,0 +1,207 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_arabic_radio/p09m6x31",
+      "locators": {
+        "pid": "p09pxqjs",
+        "brandPid": "p09m6x31"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_arabic_radio",
+      "language": "ar",
+      "lastUpdated": 1632489097709,
+      "firstPublished": 1626780071000,
+      "lastPublished": 1626780071000,
+      "timestamp": 1626780071000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "بودكاست \"عَلاقات\" - BBC News Arabic",
+        "pageIdentifier": "arabic.bbc_arabic_radio.podcasts.programmes.p09m6x31.page",
+        "producerId": "5",
+        "contentType": "player-episode",
+        "producer": "ARABIC"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "بودكاست \"عَلاقات\"",
+      "releaseDateTimeStamp": 1626739200000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09pxqjs",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "حلقة من بودكاست علاقات تتناول موضوع الكراش أو ما يُعرف بشعور الإعجاب في العلاقات العاطفية"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09pxpk3",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 541,
+              "durationISO8601": "PT9M1S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1626800400000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "بودكاست علاقات - حلقة الكراش",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "بودكاست \"عَلاقات\""
+      },
+      "locators": {
+        "pid": "p09pxqjs",
+        "brandPid": "p09m6x31"
+      },
+      "media": {
+        "id": "p09pxqjs",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "حلقة من بودكاست علاقات تتناول موضوع الكراش أو ما يُعرف بشعور الإعجاب في العلاقات العاطفية"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09pxpk3",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 541,
+            "durationISO8601": "PT9M1S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1626800400000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "بودكاست علاقات - حلقة الكراش",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1626739200000,
+      "brand": {
+        "pid": "p09m6x31",
+        "title": "بودكاست \"عَلاقات\""
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09pxqjs",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Arabic",
+        "uri": "/arabic",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "بودكاست \"عَلاقات\""
+              },
+              "locators": {
+                "pid": "p09m7310",
+                "brandPid": "p09m6x31"
+              },
+              "media": {
+                "id": "p09m7310",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "حوار خارج الرسميات والخطوط العريضة، دردشات عفوية وآراء مختصين في بودكاست عَلاقات.",
+                  "medium": "حوار خارج الرسميات والخطوط العريضة، دردشات عفوية وآراء مختصين، يناقش العلاقات العاطفية وتحدياتها واختلافها، تتابعونه في بودكاست عَلاقات."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09m71n3",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 63,
+                    "durationISO8601": "PT1M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1624376700000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "بودكاست \"علاقات\"",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09m7296.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1624320000000,
+              "brand": {
+                "pid": "p09m6x31",
+                "title": "بودكاست \"عَلاقات\""
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09m7310",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }
