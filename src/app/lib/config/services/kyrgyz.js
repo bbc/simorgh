@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
-    externalLinkText: ', Би-Би-Сиден тышкары баракча',
+    externalLinkText: ', баракчалар',
     imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
     videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
     audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',

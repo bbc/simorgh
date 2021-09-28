@@ -62,16 +62,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'ပေါ့တ်ကာစ်',
-      brandTitle: 'Burmese Morning Broadcast',
-      brandDescription:
-        'BBC Burmese provides up-to-date news and current affairs in Burmese',
+      brandTitle: 'Burmese Evening Podcast',
+      brandDescription: 'Up-to-date news and current affairs in Burmese',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lpc.jpg',
-        alt: 'Burmese Morning Broadcast',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lyd.jpg',
+        alt: 'Burmese Evening Podcast',
       },
       linkLabel: {
         text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
-        href: 'https://www.bbc.com/burmese/podcasts/p02p9f6q',
+        href: 'https://www.bbc.com/burmese/podcasts/p02pc9lh',
       },
     },
     translations: {

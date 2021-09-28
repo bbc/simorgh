@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import styled from '@emotion/styled';
+import path from 'ramda/src/path';
+
 import {
   objectOf,
   arrayOf,
@@ -8,6 +11,10 @@ import {
   oneOfType,
   object,
 } from 'prop-types';
+
+const Clearer = styled.div`
+  clear: both;
+`;
 
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
@@ -23,15 +30,20 @@ const Blocks = ({ blocks, componentsToRender }) =>
       return null;
     }
 
+    const Wrapper = path(['simorghMetadata', 'clear'], block)
+      ? Clearer
+      : Fragment;
+
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
     return (
-      <Block
-        key={id}
-        position={position}
-        type={type}
-        typeOfPreviousBlock={typeOfPreviousBlock}
-        {...model}
-      />
+      <Wrapper key={id}>
+        <Block
+          position={position}
+          type={type}
+          typeOfPreviousBlock={typeOfPreviousBlock}
+          {...model}
+        />
+      </Wrapper>
     );
   });
 

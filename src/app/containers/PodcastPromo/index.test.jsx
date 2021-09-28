@@ -3,13 +3,24 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
 import PodcastPromo from '.';
+
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 /* eslint-disable react/prop-types */
 const PromoWithContext = ({ service = 'russian', variant = null }) => (
-  <ServiceContextProvider service={service} variant={variant}>
-    <PodcastPromo />
-  </ServiceContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+    }}
+  >
+    <ServiceContextProvider service={service} variant={variant}>
+      <PodcastPromo />
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 describe('PodcastPromo', () => {
@@ -92,5 +103,25 @@ describe('PodcastPromo', () => {
 
     expect(focusableAttrs.every(attr => attr === 'false')).toBe(true);
     expect(ariaHiddenAttrs.every(attr => attr === 'true')).toBe(true);
+  });
+});
+
+describe('Event Tracking', () => {
+  it('should call the view tracking hook with the correct params', () => {
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+    render(<PromoWithContext />);
+
+    expect(viewTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'promo-podcast',
+    });
+  });
+
+  it('should call the click tracking hook with the correct params', () => {
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    render(<PromoWithContext />);
+
+    expect(clickTrackerSpy).toHaveBeenCalledWith({
+      componentName: 'promo-podcast',
+    });
   });
 });

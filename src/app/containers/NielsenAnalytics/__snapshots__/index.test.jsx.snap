@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nielsen Analytics Container AMP should render Nielsen amp-analytics component 1`] = `
+.emotion-0 {
+  display: none;
+  visibility: hidden;
+}
+
+.amp-iso-country-au .emotion-0 {
+  display: block;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <amp-analytics
+    type="nielsen"
+  >
+    <script
+      type="application/json"
+    >
+      {"vars":{"apid":"474C2B0B-0C04-4182-BCFB-FC9469A48C9B","section":"BBC News","apv":"1.0","type":"static","segC":"BBC - Google AMP"}}
+    </script>
+  </amp-analytics>
+</div>
+`;

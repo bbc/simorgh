@@ -50,7 +50,7 @@ describe('getInitialData', () => {
       },
     };
     const mockTransformer = jest.fn();
-    only(MEDIA_ASSET_PAGE, mockTransformer)(pageData);
+    only([MEDIA_ASSET_PAGE], mockTransformer)(pageData);
     expect(mockTransformer).toBeCalledTimes(1);
   });
 
@@ -61,7 +61,7 @@ describe('getInitialData', () => {
       },
     };
     const mockTransformer = jest.fn();
-    only(MEDIA_ASSET_PAGE, mockTransformer)(pageData);
+    only([MEDIA_ASSET_PAGE], mockTransformer)(pageData);
     expect(mockTransformer).toBeCalledTimes(0);
   });
 });

@@ -246,7 +246,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
-    externalLinkText: ', внешняя ссылка',
+    externalLinkText: ', внешняя',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
     audioCaptionOffscreenText: 'Подпись к аудио, ',
@@ -305,6 +305,10 @@ export const service = {
         text: 'эпизоды',
         href: 'https://www.bbc.com/russian/media-47937790',
       },
+    },
+    disclaimer: {
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
     },
     radioSchedule: {
       hasRadioSchedule: false,

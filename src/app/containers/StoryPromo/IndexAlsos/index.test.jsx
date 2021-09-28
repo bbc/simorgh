@@ -1,7 +1,10 @@
 import React from 'react';
 import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import relatedItems from './relatedItems';
@@ -16,6 +19,7 @@ const shouldMatchSnapshotWithContext = (title, component) =>
   shouldMatchSnapshot(title, withServiceContext(component));
 
 describe('Index Alsos', () => {
+  suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
   describe('Snapshots', () => {
     shouldMatchSnapshotWithContext(
       'should render multiple correctly',

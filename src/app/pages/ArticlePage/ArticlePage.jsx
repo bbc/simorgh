@@ -21,13 +21,15 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
+import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import gist from '#containers/Gist';
 import text from '#containers/CpsText';
-import image from '#containers/Image';
+import Image from '#containers/Image';
+import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
 import timestamp from '#containers/ArticleTimestamp';
 import { GelPageGrid, GridItemLarge } from '#components/Grid';
@@ -53,6 +55,7 @@ import {
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 
 const componentsToRender = {
   headline: headings,
@@ -60,7 +63,7 @@ const componentsToRender = {
   audio: articleMediaPlayer,
   video: articleMediaPlayer,
   text,
-  image,
+  image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
   timestamp,
   social: SocialEmbedContainer,
   group: gist,
@@ -85,7 +88,7 @@ const ArticlePageMostReadSection = styled(MostReadSection)`
 `;
 
 const Main = styled.main`
-  background-color: #f6f6f6;
+  background-color: ${C_GREY_2};
   padding-bottom: ${GEL_SPACING_TRPL};
 `;
 
@@ -169,6 +172,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <NielsenAnalytics />
       <ArticleMetadata
         articleId={getArticleId(pageData)}
         title={headline}
@@ -195,6 +199,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <Main role="main">
         <ArticlePageGrid>
+          <Disclaimer />
           <Blocks
             blocks={path(['content', 'model', 'blocks'], pageData)}
             componentsToRender={componentsToRender}

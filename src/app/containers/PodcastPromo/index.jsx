@@ -6,9 +6,10 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_SEXT,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -23,8 +24,8 @@ const ResponsivePodcastPromoWrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};
   margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: -${GEL_SPACING_SEXT};
-    margin-bottom: -${GEL_SPACING};
+    margin-top: 0;
+    margin-bottom: ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL};
   }
 `;
@@ -51,6 +52,14 @@ const Promo = () => {
     url,
     label,
   ].every(Boolean);
+
+  const eventTrackingData = {
+    componentName: 'promo-podcast',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
   if (!showPromo) {
     return null;
   }
@@ -60,7 +69,7 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ResponsivePodcastPromoWrapper>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef}>
       <PromoComponent
         script={script}
         service={service}
@@ -85,7 +94,7 @@ const Promo = () => {
           </PromoComponent.Card.ImageWrapper>
           <PromoComponent.Card.Content>
             <PromoComponent.Card.Title>
-              <PromoComponent.Card.Link href={url}>
+              <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
                 <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
                   {podcastBrandTitle}
                 </span>
