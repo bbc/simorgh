@@ -51,7 +51,9 @@ module.exports = (shell = {}) => {
       },
     },
     devServer: {
-      stats,
+      devMiddleware: {
+        stats,
+      },
     },
     stats,
     node: {

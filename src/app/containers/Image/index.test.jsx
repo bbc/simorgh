@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -12,7 +12,7 @@ import { ServiceContextProvider } from '../../contexts/ServiceContext';
 describe('Image', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'array']);
-    isNull('should return null', <ImageContainer />);
+    isNull('should return null', <ImageContainer sizes="100vw" />);
   });
 
   describe('with data', () => {
@@ -72,23 +72,48 @@ describe('Image', () => {
       suppressPropWarnings(['Missing', 'rawImage']);
       isNull(
         'should return null',
-        <ImageContainer {...dataWithoutRawImageBlock} />,
+        <ImageContainer sizes="100vw" {...dataWithoutRawImageBlock} />,
       );
     });
 
     describe('with no altTextBlock', () => {
       suppressPropWarnings(['type', 'null']);
-      isNull('should return null', <ImageContainer {...dataWithoutAltText} />);
+
+      it('should not render the image', () => {
+        render(<ImageContainer sizes="100vw" {...dataWithoutAltText} />);
+
+        const imgEl = screen.queryByAltText(
+          'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+        );
+
+        expect(imgEl).not.toBeInTheDocument();
+      });
     });
 
-    shouldMatchSnapshot(
-      'should render an image with alt text',
-      <ImageContainer {...data} />,
-    );
+    it('should render an image with alt text', () => {
+      render(<ImageContainer sizes="100vw" {...data} />);
+
+      const imgEl = screen.getByAltText(
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      );
+
+      expect(imgEl).toBeInTheDocument();
+    });
+
+    it('should render an image with a sizes attribute', () => {
+      render(<ImageContainer sizes="100vw" {...data} />);
+
+      const imgEl = screen.getByAltText(
+        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+      );
+      const sizesAttribute = imgEl.getAttribute('sizes');
+
+      expect(sizesAttribute).toBe('100vw');
+    });
 
     it('should render a lazyload container and not preload the image if the image is after the 4th block', () => {
       const { container } = render(
-        <ImageContainer position={[5]} {...data} shouldPreload />,
+        <ImageContainer sizes="100vw" position={[5]} {...data} shouldPreload />,
       );
       const noScriptEl = document.querySelector('noscript');
       const imageEl = document.querySelector('img');
@@ -100,7 +125,9 @@ describe('Image', () => {
     });
 
     it('should preload an image if the image is before the 5th block', async () => {
-      render(<ImageContainer position={[4]} {...data} shouldPreload />);
+      render(
+        <ImageContainer sizes="100vw" position={[4]} {...data} shouldPreload />,
+      );
 
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');
@@ -109,7 +136,14 @@ describe('Image', () => {
     });
 
     it('should not preload an image if the image is before the 5th block but shouldPreload is false', async () => {
-      render(<ImageContainer position={[4]} {...data} shouldPreload={false} />);
+      render(
+        <ImageContainer
+          sizes="100vw"
+          position={[4]}
+          {...data}
+          shouldPreload={false}
+        />,
+      );
 
       await waitFor(() => {
         const linkPreload = document.querySelector('head link');
@@ -129,7 +163,7 @@ describe('Image', () => {
     shouldMatchSnapshot(
       'should render an image with alt text and offscreen copyright',
       <ServiceContextProvider service="news">
-        <ImageContainer {...dataWithNonBbcCopyright} />
+        <ImageContainer sizes="100vw" {...dataWithNonBbcCopyright} />
       </ServiceContextProvider>,
     );
 
@@ -150,7 +184,7 @@ describe('Image', () => {
     shouldMatchSnapshot(
       'should render an image with alt text and caption',
       <ServiceContextProvider service="news">
-        <ImageContainer {...dataWithCaption} />
+        <ImageContainer sizes="100vw" {...dataWithCaption} />
       </ServiceContextProvider>,
     );
 
@@ -166,7 +200,7 @@ describe('Image', () => {
     shouldMatchSnapshot(
       'should render an image with other originCode - this would be a broken image',
       <ServiceContextProvider service="news">
-        <ImageContainer {...dataWithOtherOriginCode} />
+        <ImageContainer sizes="100vw" {...dataWithOtherOriginCode} />
       </ServiceContextProvider>,
     );
   });

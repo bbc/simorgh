@@ -36,6 +36,13 @@ describe('RecommendationsPromoList', () => {
     <Fixture />,
   );
 
+  it('should render multiple promos in an unordered list', () => {
+    const { container, getByRole } = render(<Fixture />);
+
+    expect(getByRole('list')).toBeInTheDocument();
+    expect(container.querySelectorAll('li').length).toEqual(3);
+  });
+
   describe('Event Tracking', () => {
     it('should implement 3 BLOCK level and 3 LINK level click trackers (1 for each promo item)', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');

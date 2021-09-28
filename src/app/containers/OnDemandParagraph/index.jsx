@@ -8,6 +8,7 @@ import { C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const StyledParagraphComponent = styled(ParagraphComponent)`
+  padding-bottom: 16px;
   ${({ darkMode }) => !darkMode && `color: ${C_METAL};`}
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
     padding-bottom: ${GEL_SPACING};

@@ -1,4 +1,4 @@
-name: Simorgh CI - AMP Validation, bbc-a11y, Lighthouse & Puppeteer Tests
+name: Simorgh CI - AMP Validation, Lighthouse & Puppeteer Tests
 on:
   create:
     branches:
@@ -45,9 +45,6 @@ jobs:
 
       - name: Run AMP Validator
         run: yarn amp:validate
-
-      - name: Run bbc-a11y
-        run: yarn bbcA11y:ci
 
       - name: Run Lighthouse
         run: yarn lighthouse

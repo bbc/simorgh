@@ -28,7 +28,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/urdu.png',
     defaultImageAltText: 'BBC News اردو',
     dir: 'rtl',
-    externalLinkText: '، بیرونی مواد',
+    externalLinkText: '، بیرو',
     imageCaptionOffscreenText: '،تصویر کا کیپشن',
     videoCaptionOffscreenText: '،ویڈیو کیپشن',
     audioCaptionOffscreenText: '،آڈیو کیپشن',

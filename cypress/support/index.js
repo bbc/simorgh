@@ -1,3 +1,5 @@
+import 'cypress-axe';
+
 import './commands';
 
 Cypress.Screenshot.defaults({

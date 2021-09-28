@@ -38,6 +38,8 @@ const advertisingDirectives = {
     'https://pagead2.googlesyndication.com',
     'https://sb.scorecardresearch.com',
     'https://secure-us.imrworldwide.com',
+    'https://uaid-linkage.imrworldwide.com',
+    'https://cloudapi.imrworldwide.com',
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',

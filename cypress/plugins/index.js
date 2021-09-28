@@ -24,6 +24,12 @@ module.exports = (on, config) => {
 
       return null;
     },
+    table(message) {
+      // eslint-disable-next-line no-console
+      console.table(message);
+
+      return null;
+    },
   });
 
   return config;

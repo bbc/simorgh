@@ -32,7 +32,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/igbo.png',
     defaultImageAltText: 'BBC News Ìgbò',
     dir: 'ltr',
-    externalLinkText: ', Site na mpụta',
+    externalLinkText: ', na mpụta',
     imageCaptionOffscreenText: 'Nkọwa foto, ',
     videoCaptionOffscreenText: 'Aha onyonyo, ',
     audioCaptionOffscreenText: 'Aha nkeananụānụ, ',

@@ -5,6 +5,9 @@ import RecentAudioEpisodes from '.';
 import { indonesian, zhongwen, arabic } from './fixtures';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
+import * as viewTracking from '#hooks/useViewTracker';
 
 /* eslint-disable react/prop-types */
 const RecentAudioEpisodesWithContext = ({
@@ -23,12 +26,20 @@ const RecentAudioEpisodesWithContext = ({
       isAmp={false}
       variant={variant}
     >
-      <RecentAudioEpisodes
-        masterBrand={masterBrand}
-        episodes={episodes}
-        brandId={brandId}
-        pageType={pageType}
-      />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+        }}
+      >
+        <RecentAudioEpisodes
+          masterBrand={masterBrand}
+          episodes={episodes}
+          brandId={brandId}
+          pageType={pageType}
+        />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -337,5 +348,56 @@ describe('RecentAudioEpisodes', () => {
       'data-e2e',
       'recent-episodes-list-item',
     );
+  });
+});
+
+describe('Event Tracking', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
+
+  const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+  const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+  it('should call the event tracking hooks with the correct params on a podcast page', () => {
+    const expectedEventTrackingData = {
+      componentName: 'episodes-audio',
+      campaignID: 'player-episode-podcast',
+    };
+
+    render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        pageType="Podcast"
+        episodes={indonesian}
+        service="indonesia"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
+    expect(viewTrackerSpy).toHaveBeenCalledWith(expectedEventTrackingData);
+    expect(clickTrackerSpy).toHaveBeenCalledTimes(1);
+    expect(clickTrackerSpy).toHaveBeenCalledWith(expectedEventTrackingData);
+  });
+
+  it('should call the event tracking hooks with the correct params on an od radio page', () => {
+    const expectedEventTrackingData = {
+      componentName: 'episodes-audio',
+      campaignID: 'player-episode-radio',
+    };
+
+    render(
+      <RecentAudioEpisodesWithContext
+        masterBrand="bbc_indonesian_radio"
+        pageType="On Demand Radio"
+        episodes={indonesian}
+        service="indonesia"
+      />,
+    );
+
+    expect(viewTrackerSpy).toHaveBeenCalledTimes(1);
+    expect(viewTrackerSpy).toHaveBeenCalledWith(expectedEventTrackingData);
+    expect(clickTrackerSpy).toHaveBeenCalledTimes(1);
+    expect(clickTrackerSpy).toHaveBeenCalledWith(expectedEventTrackingData);
   });
 });

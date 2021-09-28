@@ -29,6 +29,9 @@ export default {
   navOnArticles: {
     enabled: true,
   },
+  nielsenAnalytics: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
