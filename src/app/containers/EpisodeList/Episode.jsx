@@ -1,6 +1,6 @@
 import React, { Children, cloneElement } from 'react';
 import styled from '@emotion/styled';
-import { node, string } from 'prop-types';
+import { node, string, func } from 'prop-types';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import tail from 'ramda/src/tail';
 import {
@@ -29,11 +29,15 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Episode = ({ children, dir }) => {
+const Episode = ({ children, dir, viewTrackerRef }) => {
   const showMediaIndicator = pathOr({}, '0', children).type !== Image;
 
   return (
-    <Wrapper dir={dir} showMediaIndicator={showMediaIndicator}>
+    <Wrapper
+      dir={dir}
+      showMediaIndicator={showMediaIndicator}
+      {...(viewTrackerRef && { ref: viewTrackerRef })}
+    >
       {showMediaIndicator ? (
         Children.toArray(children)
           .filter(Boolean)
@@ -51,6 +55,11 @@ const Episode = ({ children, dir }) => {
 Episode.propTypes = {
   children: node.isRequired,
   dir: string.isRequired,
+  viewTrackerRef: func,
+};
+
+Episode.defaultProps = {
+  viewTrackerRef: null,
 };
 
 export default withEpisodeContext(Episode);
