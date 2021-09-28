@@ -98,7 +98,7 @@ describe('ArticleMetadata get branded image', () => {
           .querySelector('meta[property="og:image"]')
           .getAttribute('content'),
       ).toEqual(
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       );
     });
   });
@@ -186,7 +186,9 @@ it('should render a news article correctly', async () => {
     </Context>,
   );
 
-  expect(container).toMatchSnapshot();
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {

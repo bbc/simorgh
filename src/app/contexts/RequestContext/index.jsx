@@ -66,6 +66,8 @@ export const RequestContextProvider = ({
     variant,
     timeOnServer,
     showAdsBasedOnLocation,
+    service,
+    pathname,
     ...getMetaUrls(origin, pathname),
   };
 

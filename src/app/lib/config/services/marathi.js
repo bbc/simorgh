@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
-    externalLinkText: ', बाहेरचा मजकूर',
+    externalLinkText: ', बाहेर',
     imageCaptionOffscreenText: 'फोटो कॅप्शन, ',
     videoCaptionOffscreenText: 'व्हीडिओ कॅप्शन, ',
     audioCaptionOffscreenText: 'ऑडिओ कॅप्शन, ',
@@ -58,6 +58,19 @@ export const service = {
     },
     showAdPlaceholder: false,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'सोपी गोष्ट',
+      brandDescription: 'दिवसातली सगळ्यांत मोठी बातमी सोप्या भाषेत',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0965nyb.jpg',
+        alt: 'सोपी गोष्ट',
+      },
+      linkLabel: {
+        text: 'भाग',
+        href: 'https://www.bbc.com/marathi/podcasts/p09437hm',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'जाहिरात',

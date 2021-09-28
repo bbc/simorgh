@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, act } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { bool } from 'prop-types';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -53,13 +53,7 @@ describe('Most Watched Page Main', () => {
   });
 
   it('shoulder render the Most Watched component on Canonical', async () => {
-    let container;
-    let getByText;
-    await act(async () => {
-      const response = await render(<MostWatchedPageWithContext />);
-      getByText = response.getByText;
-      container = response.container;
-    });
+    const { getByText, container } = render(<MostWatchedPageWithContext />);
 
     const expectedHeader = 'De one we dem don look';
     const expectedContent = `'I no know say I different for society until pipo begin look me one kain'`;
@@ -69,14 +63,10 @@ describe('Most Watched Page Main', () => {
     expect(getByText(expectedContent)).toBeInTheDocument();
   });
 
-  it('shoulder render the Most Watched component on AMP', async () => {
-    let getByText;
-    let container;
-    await act(async () => {
-      const response = await render(<MostWatchedPageWithContext isAmp />);
-      getByText = response.getByText;
-      container = response.container;
-    });
+  it('shoulder render the Most Watched component on AMP', () => {
+    const { getByText, container } = render(
+      <MostWatchedPageWithContext isAmp />,
+    );
 
     const expectedHeader = 'De one we dem don look';
     const expectedContent = `'I no know say I different for society until pipo begin look me one kain'`;

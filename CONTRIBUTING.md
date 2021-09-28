@@ -16,6 +16,7 @@ Please familiarise yourself with our:
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
 - [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 

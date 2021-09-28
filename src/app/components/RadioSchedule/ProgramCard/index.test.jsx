@@ -1,8 +1,12 @@
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { renderProgramCard, uniqueStates } from '../testHelpers/helper';
 
 describe('ProgramCard', () => {
+  suppressPropWarnings(['program', 'ProgramCard']);
   uniqueStates.forEach(state => {
     shouldMatchSnapshot(
       `should render correctly for ${state}`,

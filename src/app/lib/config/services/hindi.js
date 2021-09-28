@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
-    externalLinkText: ', बाहरी सामग्री',
+    externalLinkText: ', बाहरी',
     imageCaptionOffscreenText: 'इमेज कैप्शन, ',
     videoCaptionOffscreenText: 'वीडियो कैप्शन, ',
     audioCaptionOffscreenText: 'ऑडियो कैप्शन, ',
@@ -59,6 +59,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'विवेचना',
+      brandDescription:
+        'विवेचना: व्यक्तियों, विषयों या घटनाओं की गहरी पड़ताल का कार्यक्रम',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09krvnc.jpg',
+        alt: 'विवेचना',
+      },
+      linkLabel: {
+        text: 'एपिसोड्स',
+        href: 'https://www.bbc.com/hindi/podcasts/p0552909',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'विज्ञापन',

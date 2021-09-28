@@ -3,6 +3,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { indonesian, arabic } from './fixtures';
 import RecentAudioEpisodes from './index';
 
@@ -15,12 +16,20 @@ const Component = ({ masterBrand, brandId, pageType, episodes, service }) => (
       pathname={`/${service}`}
       isAmp={false}
     >
-      <RecentAudioEpisodes
-        masterBrand={masterBrand}
-        episodes={episodes}
-        brandId={brandId}
-        pageType={pageType}
-      />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: false,
+          },
+        }}
+      >
+        <RecentAudioEpisodes
+          masterBrand={masterBrand}
+          episodes={episodes}
+          brandId={brandId}
+          pageType={pageType}
+        />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );

@@ -29,7 +29,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
-    externalLinkText: 'خارجي، ',
+    externalLinkText: '، خارجي ',
     imageCaptionOffscreenText: 'التعليق على الصورة، ',
     videoCaptionOffscreenText: 'التعليق على الفيديو، ',
     audioCaptionOffscreenText: 'التعليق على التسجيل الصوتي، ',
@@ -63,6 +63,20 @@ export const service = {
     },
     showAdPlaceholder: true,
     showRelatedTopics: true,
+    podcastPromo: {
+      title: 'بودكاست',
+      brandTitle: 'بي بي سي إكسترا',
+      brandDescription:
+        'بي بي سي إكسترا بودكاست يناقش كل أمور حياتنا اليومية، يأتيكم ثلاثة أيام أسبوعياً',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09t9xpv.jpg',
+        alt: 'بي بي سي إكسترا',
+      },
+      linkLabel: {
+        text: 'الحلقات',
+        href: 'https://www.bbc.com/arabic/podcasts/p02pc9qc',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'إعلان',

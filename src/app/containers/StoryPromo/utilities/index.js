@@ -11,16 +11,12 @@ export const isMap = item => {
   return isCpsTypeMap || Boolean(hasMedia);
 };
 
-export const getHeadingTagOverride = ({
-  pageType,
-  isRecommendation,
-  isContentTypeGuide,
-}) => {
+export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
   if (pageType === MOST_WATCHED_PAGE) {
     return 'h2';
   }
 
-  if (isRecommendation || isContentTypeGuide) {
+  if (isContentTypeGuide) {
     return 'div';
   }
 
