@@ -23,6 +23,7 @@ A view event is triggered when:
 | format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
 | url               | string  | no       | The url of the page e.g. `https://www.bbc.com/mundo/noticias-america-latina-56989232`                                                                                                                                |
 | preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |
+| minViewedPercent  | number  | no       | What is the minimum percentage of the component that needs be in view before the event is triggered. Defaults to `50`.                                                                                               |
 
 ### Usage
 

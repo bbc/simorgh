@@ -247,6 +247,38 @@ describe('Expected use', () => {
     });
   });
 
+  it('allows users to override the minimum required viewed percent', async () => {
+    const { result } = renderHook(
+      () => useViewTracker({ ...trackingData, minViewedPercent: 10 }),
+      {
+        wrapper,
+        initialProps: {
+          pageData: fixtureData,
+        },
+      },
+    );
+    const element = document.createElement('div');
+
+    await result.current(element);
+
+    const observerInstance = getObserverInstance(element);
+
+    act(() => {
+      triggerIntersection({
+        changes: [{ isIntersecting: true }],
+        observer: observerInstance,
+      });
+    });
+
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+
+    const [[, options]] = global.IntersectionObserver.mock.calls;
+
+    expect(options).toEqual({ threshold: [0.1] });
+  });
+
   it('should only send one view event when mutiple elements are viewed', async () => {
     const { result } = renderHook(() => useViewTracker(trackingData), {
       wrapper,

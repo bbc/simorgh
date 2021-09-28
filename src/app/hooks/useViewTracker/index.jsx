@@ -10,13 +10,18 @@ import useTrackingToggle from '#hooks/useTrackingToggle';
 
 const EVENT_TYPE = 'view';
 const VIEWED_DURATION_MS = 1000;
-const MIN_VIEWED_PERCENT = 0.5;
+const DEFAULT_MIN_VIEWED_PERCENT = 50;
 
 const useViewTracker = (props = {}) => {
   const componentName = path(['componentName'], props);
   const format = path(['format'], props);
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
+  const minViewedPercent = pathOr(
+    DEFAULT_MIN_VIEWED_PERCENT,
+    ['minViewedPercent'],
+    props,
+  );
 
   const observer = useRef();
   const timer = useRef(null);
@@ -47,7 +52,7 @@ const useViewTracker = (props = {}) => {
       setIsInView(someElementsAreInView);
     };
     const options = {
-      threshold: [MIN_VIEWED_PERCENT],
+      threshold: [minViewedPercent / 100],
     };
 
     observer.current = new IntersectionObserver(callback, options);

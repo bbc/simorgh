@@ -63,7 +63,10 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         : 'player-episode-radio',
   };
 
-  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const viewTrackerRef = useViewTracker({
+    ...eventTrackingData,
+    minViewedPercent: 50 / episodes.length,
+  });
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { variant } = useContext(RequestContext);
 
