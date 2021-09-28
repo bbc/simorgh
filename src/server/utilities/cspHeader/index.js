@@ -395,7 +395,7 @@ const injectCspHeader = (req, res, next) => {
   /**
    * If we're handling requests externally, i.e. from Mozart, we can check the value
    * of `originHeader` to determine whether we're in a Live environment. If this is
-   * not set we could be handling requests locally and should check SIMORGH_APP_ENV.
+   * not set we could be handling requests locally and should check SIMORGH_APP_ENV
    */
   const isLive = originHeader
     ? origin === 'https://www.bbc.co.uk' || origin === 'https://www.bbc.com'
