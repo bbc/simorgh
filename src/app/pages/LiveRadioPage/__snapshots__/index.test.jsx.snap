@@ -349,7 +349,6 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="headline"
       >
         BBC Afrique Radio
       </h1>
@@ -1577,7 +1576,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
-        id="headline"
       >
         BBC Afrique Radio
       </h1>

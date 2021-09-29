@@ -68,27 +68,6 @@ describe('OnDemand TV Brand Page ', () => {
     process.env = { ...env };
   });
 
-  it('a11y - should render a visually hidden headline', async () => {
-    fetch.mockResponse(JSON.stringify(pashtoPageData));
-
-    const { pageData } = await getInitialData({
-      path: 'some-ondemand-tv-path',
-      pageType,
-      toggles,
-    });
-    await renderPage({
-      pageData,
-      service: 'pashto',
-    });
-
-    const visuallyHiddenHeadline = document.querySelector(
-      'h1[class*="VisuallyHiddenText"]',
-    );
-
-    expect(visuallyHiddenHeadline).toBeInTheDocument();
-    expect(visuallyHiddenHeadline.innerHTML).toEqual('نړۍ دا وخت, ۲۷ می ۲۰۲۰');
-  });
-
   it('should show the brand title for OnDemand TV Pages', async () => {
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 

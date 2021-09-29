@@ -9,7 +9,7 @@ export default () => {
     });
 
     it('Headline in main content', () => {
-      const accessibleH1El = document.querySelector('h1[id="headline"]');
+      const accessibleH1El = document.querySelector('h1');
 
       expect(accessibleH1El).toBeInTheDocument();
     });

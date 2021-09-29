@@ -2331,7 +2331,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
     chartbeat
   </div>
   <main
-    aria-describedby="headline"
     id="content"
     role="main"
     tabindex="-1"
@@ -2342,7 +2341,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
       <h1
         class="emotion-2 emotion-3"
         dir="rtl"
-        id="headline"
         tabindex="-1"
       >
         صفحه افغانستان
@@ -5850,7 +5848,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
     chartbeat
   </div>
   <main
-    aria-describedby="headline"
     id="content"
     role="main"
     tabindex="-1"
@@ -5861,7 +5858,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
       <h1
         class="emotion-2 emotion-3"
         dir="ltr"
-        id="headline"
         tabindex="-1"
       >
         РУС

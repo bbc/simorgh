@@ -572,7 +572,6 @@ exports[`Most Read Page Main should match snapshot for most read page 1`] = `
       <h1
         class="emotion-2 emotion-3"
         dir="ltr"
-        id="headline"
         tabindex="-1"
       >
         De one we dem de read well well

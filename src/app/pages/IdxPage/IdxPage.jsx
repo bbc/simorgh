@@ -99,11 +99,9 @@ const IdxPage = ({
         openGraphType="website"
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
-      <main role="main" id="content" tabIndex={-1} aria-describedby="headline">
+      <main role="main" id="content" tabIndex={-1}>
         <IndexPageContainer>
-          <IndexHeading id="headline" pageType="idx">
-            {title}
-          </IndexHeading>
+          <IndexHeading pageType="idx">{title}</IndexHeading>
           {groups.map((group, index) => (
             <Fragment key={group.title}>
               {radioScheduleOnIdxPage &&

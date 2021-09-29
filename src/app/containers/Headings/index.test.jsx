@@ -96,14 +96,6 @@ describe('Headings', () => {
         'should render h1 containing correct text',
         <HeadingsContainerWithContext data={data} />,
       );
-
-      it('should have an id for the skiplink with value "headline"', () => {
-        const { getByText } = render(
-          <HeadingsContainerWithContext data={data} />,
-        );
-
-        expect(getByText('Plain headline').getAttribute('id')).toBe('headline');
-      });
     });
 
     describe('subheadline', () => {

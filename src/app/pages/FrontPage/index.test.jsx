@@ -132,40 +132,6 @@ describe('Front Page', () => {
   });
 
   describe('Assertions', () => {
-    it('should render visually hidden text as h1', async () => {
-      fetchMock.mock(
-        'http://localhost/some-front-page-path.json',
-        JSON.stringify(pidginFrontPageData),
-      );
-      const { pageData } = await getInitialData({
-        path: 'some-front-page-path',
-        service: 'pidgin',
-      });
-      fetchMock.mock(
-        ' /pidgin/mostread.json',
-        JSON.stringify(pidginMostReadData),
-      );
-
-      let container;
-      await act(async () => {
-        container = render(<FrontPageWithContext pageData={pageData} />)
-          .container;
-      });
-
-      const h1 = container.querySelector('h1');
-      const headline = h1.getAttribute('id');
-
-      expect(headline).toEqual('headline');
-
-      const span = h1.querySelector('span');
-      expect(span.getAttribute('role')).toEqual('text');
-      expect(span.textContent).toEqual('BBC News, Pidgin - Home');
-
-      const langSpan = span.querySelector('span');
-      expect(langSpan.getAttribute('lang')).toEqual('en-GB');
-      expect(langSpan.textContent).toEqual('BBC News');
-    });
-
     it('should render front page sections', async () => {
       fetchMock.mock(
         'http://localhost/some-front-page-path.json',

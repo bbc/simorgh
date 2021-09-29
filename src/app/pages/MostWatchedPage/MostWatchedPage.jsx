@@ -107,7 +107,7 @@ const MostWatchedPage = ({ pageData }) => {
       <main role="main" data-e2e="most-watched" id="content" tabIndex={-1}>
         <StyledIndexPageContainer>
           <MostWatchedWrapper>
-            <StyledIndexHeading id="headline">{header}</StyledIndexHeading>
+            <StyledIndexHeading>{header}</StyledIndexHeading>
             <MostWatchedContainer data={mostWatchedData} isMostWatchedPage />
           </MostWatchedWrapper>
         </StyledIndexPageContainer>

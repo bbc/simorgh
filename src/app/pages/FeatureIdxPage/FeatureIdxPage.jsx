@@ -53,9 +53,7 @@ const FeatureIdxPage = ({ pageData }) => {
       <AdContainer slotType="leaderboard" />
       <main role="main" id="content" tabIndex={-1}>
         <IndexPageContainer>
-          <IndexHeading id="headline" pageType="fix">
-            {title}
-          </IndexHeading>
+          <IndexHeading pageType="fix">{title}</IndexHeading>
           {groups.map((group, index) => {
             const isFirstSection = index === 0;
 

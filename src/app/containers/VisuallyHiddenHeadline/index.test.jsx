@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import {
   shouldMatchSnapshot,
   isNull,
@@ -38,14 +37,6 @@ describe('VisuallyHiddenHeadline', () => {
         'should render h1 containing correct text',
         <VisuallyHiddenHeadlineContainer {...data} />,
       );
-
-      it('should have an id for the skiplink with value "headline"', () => {
-        const { getByText } = render(
-          <VisuallyHiddenHeadlineContainer {...data} />,
-        );
-
-        expect(getByText('Plain headline').getAttribute('id')).toBe('headline');
-      });
     });
   });
 });

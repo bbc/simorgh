@@ -4,7 +4,6 @@ import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -58,15 +57,9 @@ MostReadWrapper.propTypes = {
 };
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    product,
-    serviceLocalizedName,
-    translations,
-    frontPageTitle,
-  } = useContext(ServiceContext);
+  const { frontPageTitle } = useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
-  const home = path(['home'], translations);
   const groups = path(['content', 'groups'], pageData);
   const lang = path(['metadata', 'language'], pageData);
   const description = path(['metadata', 'summary'], pageData);
@@ -75,13 +68,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
   const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-
-  const offScreenText = (
-    // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
-      <span lang="en-GB">{product}</span>, {serviceLocalizedName} - {home}
-    </span>
-  );
 
   // Most Read is required to render above useful-links if it exists
 
@@ -106,9 +92,6 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
       <main role="main" id="content" tabIndex={-1}>
-        <VisuallyHiddenText as="h1" id="headline">
-          {offScreenText}
-        </VisuallyHiddenText>
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>

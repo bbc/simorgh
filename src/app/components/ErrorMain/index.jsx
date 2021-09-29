@@ -88,7 +88,7 @@ const ErrorMain = ({
       <StatusCode script={script} data-e2e="status-code">
         {statusCode}
       </StatusCode>
-      <Heading id="headline" script={script} service={service}>
+      <Heading script={script} service={service}>
         {title}
       </Heading>
       <CustomParagraph script={script} service={service}>
