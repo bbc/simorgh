@@ -21,6 +21,10 @@ describe('cspHeader', () => {
     jest.resetAllMocks();
   });
 
+  afterAll(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
   [
     {
       isAmp: true,
