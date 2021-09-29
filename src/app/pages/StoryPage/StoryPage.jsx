@@ -22,7 +22,7 @@ import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
