@@ -105,8 +105,10 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
-      <main role="main" id="content" tabIndex={-1}>
-        <VisuallyHiddenText as="h1">{offScreenText}</VisuallyHiddenText>
+      <main role="main" id="content" aria-labelledby="headline" tabIndex={-1}>
+        <VisuallyHiddenText id="headline" as="h1">
+          {offScreenText}
+        </VisuallyHiddenText>
         <IndexPageContainer>
           {groups.map((group, index) => (
             <Fragment key={group.title}>

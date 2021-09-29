@@ -46,7 +46,7 @@ const getNextPageState = async pathname => {
 };
 
 const setFocusOnMainHeading = () => {
-  const mainHeadingEl = document.querySelector('h1#content');
+  const mainHeadingEl = document.querySelector('h1#headline');
 
   if (mainHeadingEl) {
     mainHeadingEl.focus();

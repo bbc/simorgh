@@ -51,9 +51,11 @@ const FeatureIdxPage = ({ pageData }) => {
       />
       <LinkedData type="WebPage" seoTitle={seoTitle} />
       <AdContainer slotType="leaderboard" />
-      <main role="main" id="content" tabIndex={-1}>
+      <main role="main" id="content" aria-labelledby="headline" tabIndex={-1}>
         <IndexPageContainer>
-          <IndexHeading pageType="fix">{title}</IndexHeading>
+          <IndexHeading id="headline" pageType="fix">
+            {title}
+          </IndexHeading>
           {groups.map((group, index) => {
             const isFirstSection = index === 0;
 

@@ -271,6 +271,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
 
 <div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     id="content"
@@ -289,6 +290,7 @@ exports[`ErrorPage should correctly render for 404 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
+        id="headline"
       >
         Page cannot be found
       </h1>
@@ -602,6 +604,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
 
 <div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
     id="content"
@@ -620,6 +623,7 @@ exports[`ErrorPage should correctly render for 404 for persian 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
+        id="headline"
       >
         این صفحه پیدا نشد
       </h1>
@@ -933,6 +937,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
 
 <div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     id="content"
@@ -951,6 +956,7 @@ exports[`ErrorPage should correctly render for 500 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
+        id="headline"
       >
         Internal server error
       </h1>
@@ -1259,6 +1265,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
 
 <div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="rtl"
     id="content"
@@ -1277,6 +1284,7 @@ exports[`ErrorPage should correctly render for 500 for persian 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
+        id="headline"
       >
         خطا در سرور داخلی
       </h1>
@@ -1585,6 +1593,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
 
 <div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     id="content"
@@ -1603,6 +1612,7 @@ exports[`ErrorPage should correctly render for other status code 1`] = `
       </span>
       <h1
         class="emotion-7 emotion-8"
+        id="headline"
       >
         Internal server error
       </h1>

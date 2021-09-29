@@ -1125,6 +1125,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1"
     id="content"
     role="main"
@@ -1967,6 +1968,7 @@ exports[`should render a news article correctly 1`] = `
     chartbeat
   </div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1"
     id="content"
     role="main"
@@ -3127,6 +3129,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
     chartbeat
   </div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1"
     id="content"
     role="main"

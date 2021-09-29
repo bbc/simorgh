@@ -2421,6 +2421,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                 dir="ltr"
               >
                 <main
+                  aria-labelledby="headline"
                   id="content"
                   role="main"
                   tabindex="-1"
@@ -6323,6 +6324,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                 dir="ltr"
               >
                 <main
+                  aria-labelledby="headline"
                   id="content"
                   role="main"
                   tabindex="-1"
@@ -9859,6 +9861,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                 dir="ltr"
               >
                 <main
+                  aria-labelledby="headline"
                   id="content"
                   role="main"
                   tabindex="-1"

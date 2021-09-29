@@ -337,6 +337,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     </script>
   </amp-analytics>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     id="content"
@@ -349,6 +350,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
+        id="headline"
       >
         BBC Afrique Radio
       </h1>
@@ -1564,6 +1566,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     chartbeat
   </div>
   <main
+    aria-labelledby="headline"
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
     id="content"
@@ -1576,6 +1579,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
     >
       <h1
         class="emotion-5 emotion-6"
+        id="headline"
       >
         BBC Afrique Radio
       </h1>

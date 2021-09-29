@@ -197,7 +197,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <Main role="main" id="content" tabIndex={-1}>
+      <Main role="main" id="content" aria-labelledby="headline" tabIndex={-1}>
         <ArticlePageGrid>
           <Disclaimer />
           <Blocks

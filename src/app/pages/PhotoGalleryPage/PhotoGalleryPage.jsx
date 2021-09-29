@@ -174,6 +174,7 @@ const PhotoGalleryPage = ({ pageData }) => {
         as="main"
         role="main"
         id="content"
+        aria-labelledby="headline"
         tabIndex={-1}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />

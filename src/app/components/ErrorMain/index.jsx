@@ -54,6 +54,7 @@ const ErrorMain = ({
     as="main"
     role="main"
     id="content"
+    aria-labelledby="headline"
     tabIndex={-1}
     columns={{
       group0: 6,
@@ -88,7 +89,7 @@ const ErrorMain = ({
       <StatusCode script={script} data-e2e="status-code">
         {statusCode}
       </StatusCode>
-      <Heading script={script} service={service}>
+      <Heading id="headline" script={script} service={service}>
         {title}
       </Heading>
       <CustomParagraph script={script} service={service}>

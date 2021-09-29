@@ -78,6 +78,7 @@ const LiveRadioPage = ({ pageData }) => {
         as="main"
         role="main"
         id="content"
+        aria-labelledby="headline"
         tabIndex={-1}
         columns={{
           group0: 6,
@@ -109,7 +110,7 @@ const LiveRadioPage = ({ pageData }) => {
           }}
           margins={{ group0: true, group1: true, group2: true, group3: true }}
         >
-          <Headline script={script} service={service}>
+          <Headline script={script} service={service} id="headline">
             {heading}
           </Headline>
           <Paragraph script={script} service={service}>

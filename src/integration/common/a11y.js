@@ -9,9 +9,9 @@ export default () => {
     });
 
     it('Headline in main content', () => {
-      const accessibleH1El = document.querySelector('h1');
+      const h1El = document.querySelector('h1');
 
-      expect(accessibleH1El).toBeInTheDocument();
+      expect(h1El).toBeInTheDocument();
     });
   });
 };

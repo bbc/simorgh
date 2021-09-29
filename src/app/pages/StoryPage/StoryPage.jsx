@@ -332,7 +332,12 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           startOffset={gridOffset}
           parentColumns={gridColumns}
         >
-          <main role="main" id="content" tabIndex={-1}>
+          <main
+            role="main"
+            id="content"
+            aria-labelledby="headline"
+            tabIndex={-1}
+          >
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
 

@@ -15,6 +15,8 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import ATIAnalytics from '../../containers/ATIAnalytics';
@@ -80,9 +82,24 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     mediumSynopsis,
   } = pageData;
 
-  const { lang, service, translations, brandName } = useContext(ServiceContext);
+  const {
+    lang,
+    timezone,
+    datetimeLocale,
+    service,
+    translations,
+    brandName,
+  } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
+
+  const formattedTimestamp = formatUnixTimestamp({
+    timestamp: releaseDateTimeStamp,
+    format: 'LL',
+    timezone,
+    locale: datetimeLocale,
+    isRelative: false,
+  });
 
   const mediaId = `${service}/${masterBrand}/${episodeId}/${lang}`;
 
@@ -148,6 +165,10 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           columns={getGroups(6, 6, 6, 6, 6, 12)}
           margins={getGroups(true, true, true, true, false, false)}
         >
+          <VisuallyHiddenText as="h1" id="headline">
+            {/* these must be concatenated for screen reader UX - #7062 */}
+            {`${brandTitle}, ${formattedTimestamp}`}
+          </VisuallyHiddenText>
           {mediaIsAvailable ? (
             <StyledVideoPlayer
               embedUrl={embedUrl}
