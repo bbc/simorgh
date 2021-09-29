@@ -196,6 +196,7 @@ export const getAtUserId = () => {
     try {
       cookie = JSON.parse(cookie);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
       cookie = null;
     }
