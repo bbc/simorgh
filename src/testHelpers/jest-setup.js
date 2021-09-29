@@ -1,5 +1,9 @@
 import fetch from 'jest-fetch-mock';
 import path from 'path';
+import { TextEncoder, TextDecoder } from 'util';
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 /*
  * Mock to avoid async behaviour in tests
