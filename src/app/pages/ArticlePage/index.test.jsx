@@ -1,7 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
-import { render, waitFor, act } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import ArticlePage from './ArticlePage';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -40,7 +38,7 @@ const Context = ({ service, children }) => (
         service={service}
         statusCode={200}
       >
-        <MemoryRouter>{children}</MemoryRouter>
+        {children}
       </RequestContextProvider>
     </ServiceContextProvider>
   </ToggleContextProvider>
@@ -221,100 +219,4 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
-});
-
-it('should focus on id when anchor link is clicked', async () => {
-  const articleDataNewsWithSummary = mergeDeepLeft(
-    {
-      content: {
-        model: {
-          blocks: [
-            {
-              id: '1',
-              type: 'text',
-              model: {
-                blocks: [
-                  {
-                    id: '2',
-                    type: 'paragraph',
-                    model: {
-                      text: 'Anchor 1',
-                      blocks: [
-                        {
-                          id: '3',
-                          type: 'urlLink',
-                          model: {
-                            text: 'Anchor 1 link',
-                            blocks: [
-                              {
-                                id: '4',
-                                type: 'fragment',
-                                model: {
-                                  text: 'Anchor 1 link',
-                                  attributes: ['bold'],
-                                },
-                              },
-                            ],
-                            locator:
-                              'https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-1',
-                            isExternal: false,
-                          },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-            {
-              id: '5',
-              type: 'subheadline',
-              model: {
-                blocks: [
-                  {
-                    id: '6',
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          id: '7',
-                          type: 'paragraph',
-                          model: {
-                            text: 'Anchor 1',
-                            blocks: [
-                              {
-                                id: '8',
-                                type: 'fragment',
-                                model: {
-                                  text: 'Anchor 1 heading',
-                                  attributes: [],
-                                },
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
-      },
-    },
-    articleDataNews,
-  );
-  const { getByText } = render(
-    <Context service="news">
-      <ArticlePage pageData={articleDataNewsWithSummary} />
-    </Context>,
-  );
-  const link = getByText('Anchor 1 link').closest('a');
-  const element = getByText('Anchor 1 heading');
-  window.HTMLElement.prototype.scrollIntoView = jest.fn();
-  expect(link.href).toContain(element.id);
-  act(() => userEvent.click(link));
-  expect(document.activeElement).toEqual(element);
-  expect(window.HTMLElement.prototype.scrollIntoView).toHaveBeenCalledTimes(1);
 });
