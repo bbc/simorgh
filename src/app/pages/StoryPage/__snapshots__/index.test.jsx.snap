@@ -2432,6 +2432,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                   >
                     <h1
                       class="emotion-8 emotion-9"
+                      id="headline"
                     >
                       STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                     </h1>
@@ -6335,6 +6336,7 @@ exports[`Story Page should render correctly when the secondary column data is no
                   >
                     <h1
                       class="emotion-8 emotion-9"
+                      id="headline"
                     >
                       STY - Blood pressure drugs dey work better
                     </h1>
@@ -9872,6 +9874,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                   >
                     <h1
                       class="emotion-8 emotion-9"
+                      id="headline"
                     >
                       STY - Blood pressure drugs dey work better
                     </h1>

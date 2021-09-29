@@ -53,7 +53,7 @@ const HeadingsContainer = ({ blocks, type }) => {
   );
 
   const subHeadingId = sanitiseSubheadline(type, text);
-  const id = type === 'subheadline' ? subHeadingId : null;
+  const id = type === 'headline' ? 'headline' : subHeadingId;
 
   return (
     <GridItem>

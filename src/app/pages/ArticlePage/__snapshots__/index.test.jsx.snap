@@ -1141,6 +1141,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
+          id="headline"
         >
           Article Headline in Pidgin
         </h1>
@@ -1984,6 +1985,7 @@ exports[`should render a news article correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
+          id="headline"
         >
           Article Headline
         </h1>
@@ -3145,6 +3147,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
       >
         <h1
           class="emotion-7 emotion-8"
+          id="headline"
         >
           سرصفحه مقاله
         </h1>
