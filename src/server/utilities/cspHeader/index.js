@@ -1,6 +1,6 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import isLiveEnv from '#lib/utilities/isLive';
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 /*
@@ -390,13 +390,8 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
-  const originHeader = req.headers['bbc-origin'];
-  const { origin } = getOriginContext(originHeader);
 
-  const isLive =
-    origin === 'https://www.bbc.co.uk' || origin === 'https://www.bbc.com';
-
-  const middleware = csp(helmetCsp({ isAmp, isLive }));
+  const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
   middleware(req, res, next);
 };
 
