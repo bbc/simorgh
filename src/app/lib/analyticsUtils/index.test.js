@@ -33,8 +33,6 @@ const {
   getATIMarketingString,
 } = require('./index');
 
-let locServeCookieValue;
-
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
     beforeEach(() => {
@@ -251,18 +249,15 @@ describe('getDeviceLanguage', () => {
 
 describe('isLocServeCookieSet', () => {
   beforeEach(() => {
-    jest.mock('js-cookie', () => jest.fn());
-    Cookie.get = jest.fn();
-    Cookie.get.mockImplementation(() => locServeCookieValue);
+    Cookie.remove('loc_serve');
   });
-
   // eslint-disable-next-line global-require
   returnsNullWhenOffClient(require('./index').isLocServeCookieSet);
 
   it('should return true if cookie is set', () => {
     const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
-    locServeCookieValue = 'value';
+    Cookie.set('loc_serve', 'value');
 
     const locServeCookie = isLocServeCookieSet();
 
@@ -271,8 +266,6 @@ describe('isLocServeCookieSet', () => {
 
   it('should return false if cookie is not set', () => {
     const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
-
-    locServeCookieValue = null;
 
     const locServeCookie = isLocServeCookieSet();
 
@@ -436,33 +429,60 @@ describe('getEventInfo', () => {
 });
 
 describe('getAtUserId', () => {
+  let cookieSetterSpy;
+
   returnsNullWhenOffClient(getAtUserId);
-
-  it('should return AT user id when found', () => {
-    Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
-
-    const id = getAtUserId();
-    expect(id).toEqual('uuid');
+  beforeEach(() => {
+    jest.clearAllMocks();
+    Cookie.remove('atuserid');
+    cookieSetterSpy = jest.spyOn(Cookie, 'set');
   });
 
-  it('should create new user id if cookie does not exist', () => {
-    Cookie.set = jest.fn();
-    Cookie.getJSON = jest.fn().mockReturnValue(null);
-    const val = '00000000-1111-aaaa-bbbb-1234567890ab';
+  it('should return the AT user id', () => {
+    Cookie.set('atuserid', { val: 'uuid' });
+    cookieSetterSpy.mockClear();
+    const atUserId = getAtUserId();
+    const [[cookieName, cookieValue]] = cookieSetterSpy.mock.calls;
 
-    let id = getAtUserId();
-    expect(id).not.toBeNull();
-    expect(id).not.toBe(val);
-    expect(id).toHaveLength(val.length);
-    expect(Cookie.set).toHaveBeenCalledWith(
-      'atuserid',
-      { val: id },
-      { expires: 397, path: '/' },
-    );
+    expect(atUserId).toEqual('uuid');
+    expect(cookieName).toEqual('atuserid');
+    expect(cookieValue).toEqual({
+      val: 'uuid',
+    });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+  });
 
-    Cookie.getJSON = jest.fn().mockReturnValue({ val });
-    id = getAtUserId();
-    expect(id).toBe(val);
+  it('should update the cookie expiration date when the AT user id is returned', () => {
+    Cookie.set('atuserid', { val: 'uuid' });
+    cookieSetterSpy.mockClear();
+    const atUserId = getAtUserId();
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
+
+    expect(atUserId).toEqual('uuid');
+    expect(cookieName).toEqual('atuserid');
+    expect(cookieValue).toEqual({
+      val: 'uuid',
+    });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should create new user id if cookie does not exist and set the id in cookies', () => {
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const atUserId = getAtUserId();
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
+
+    expect(atUserId).toMatch(uuidRegex);
+    expect(cookieName).toEqual('atuserid');
+    expect(cookieValue).toEqual({
+      val: expect.stringMatching(uuidRegex),
+    });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });
 
