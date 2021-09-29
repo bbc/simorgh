@@ -8,7 +8,7 @@ import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { textBlockPropTypes } from '#models/propTypes/text';
 
 import Blocks from '../../Blocks';
-import CpsText from '../../CpsText';
+import Text from '../../Text';
 
 const StyledTd = styled.td`
   border-bottom: 1px solid ${C_SPORT_SILVER};
@@ -26,7 +26,7 @@ const StyledTd = styled.td`
 `;
 
 const componentsToRender = {
-  text: CpsText,
+  text: Text,
 };
 
 const CpsTableCell = ({ blocks, type }) => {

@@ -21,6 +21,10 @@ describe('cspHeader', () => {
     jest.resetAllMocks();
   });
 
+  afterAll(() => {
+    delete process.env.SIMORGH_APP_ENV;
+  });
+
   [
     {
       isAmp: true,
@@ -535,6 +539,8 @@ describe('cspHeader', () => {
               headers[key] = value;
             },
           };
+
+          process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
           injectCspHeader(req, res, next);
 

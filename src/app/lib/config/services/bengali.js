@@ -4,33 +4,26 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { bengali, bengaliNotoSerif } from '@bbc/gel-foundations/scripts';
+import { bengaliNotoSerif } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_SHONAR_BANGLA_BOLD,
-  F_SHONAR_BANGLA_REGULAR,
   F_NOTO_SERIF_BENGALI_BOLD,
   F_NOTO_SERIF_BENGALI_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
-import isTest from '../../utilities/isTest';
 
-const fonts = isTest()
-  ? [
-      () =>
-        F_NOTO_SERIF_BENGALI_BOLD(
-          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
-        ),
-      () =>
-        F_NOTO_SERIF_BENGALI_REGULAR(
-          'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
-        ),
-    ]
-  : [F_SHONAR_BANGLA_BOLD, F_SHONAR_BANGLA_REGULAR];
-
-const script = isTest() ? bengaliNotoSerif : bengali;
+const fonts = [
+  () =>
+    F_NOTO_SERIF_BENGALI_BOLD(
+      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+    ),
+  () =>
+    F_NOTO_SERIF_BENGALI_REGULAR(
+      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
+    ),
+];
 
 export const service = {
   default: {
@@ -67,7 +60,7 @@ export const service = {
       'https://www.bbc.com/bengali/institutional-50409861#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
-    script,
+    script: bengaliNotoSerif,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:

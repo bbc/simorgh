@@ -20,7 +20,7 @@ import LinkedData from '#containers/LinkedData';
 import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';

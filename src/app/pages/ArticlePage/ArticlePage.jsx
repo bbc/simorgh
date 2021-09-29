@@ -1,5 +1,4 @@
-import React, { useContext, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
@@ -27,7 +26,7 @@ import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import gist from '#containers/Gist';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
@@ -103,22 +102,12 @@ const StyledRelatedTopics = styled(RelatedTopics)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
-  const { state } = useLocation();
-  const hash = state?.hash;
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
-
-  useEffect(() => {
-    if (hash) {
-      const element = document.getElementById(hash);
-      element?.scrollIntoView();
-      element?.focus();
-    }
-  }, [hash]);
 
   const promoImageBlocks = pathOr(
     [],
