@@ -74,8 +74,7 @@ export const service = {
         alt: 'پادکست',
       },
       linkLabel: {
-        text:
-          'Interviews with prominent politicians, writers and artists on BBC Persian TV.',
+        text: 'برنامه ها',
         href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
       },
     },
