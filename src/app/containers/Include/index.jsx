@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import { string, bool, number } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import EmbedError from '@bbc/psammead-embed-error';
@@ -76,8 +76,15 @@ const IncludeContainer = props => {
 };
 
 IncludeContainer.propTypes = {
+  isAmpSupported: bool,
   href: string.isRequired,
   type: string.isRequired,
+  index: number,
+};
+
+IncludeContainer.defaultProps = {
+  isAmpSupported: false,
+  index: null,
 };
 
 export default IncludeContainer;
