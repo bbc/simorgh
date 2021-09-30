@@ -3670,7 +3670,9 @@ __metadata:
     case-sensitive-paths-webpack-plugin: ^2.3.0
     core-js: ^3.8.2
     css-loader: ^5.0.1
+    dotenv-webpack: ^7.0.0
     fork-ts-checker-webpack-plugin: ^6.0.4
+    fs-extra: ^9.0.1
     glob: ^7.1.6
     glob-promise: ^3.4.0
     html-webpack-plugin: ^5.0.0
@@ -4071,7 +4073,9 @@ __metadata:
     chalk: ^4.1.0
     core-js: ^3.8.2
     css-loader: ^5.0.1
+    dotenv-webpack: ^7.0.0
     express: ^4.17.1
+    file-loader: ^6.2.0
     file-system-cache: ^1.0.5
     find-up: ^5.0.0
     fs-extra: ^9.0.1
@@ -4084,6 +4088,7 @@ __metadata:
     telejson: ^5.3.2
     terser-webpack-plugin: ^5.0.3
     ts-dedent: ^2.0.0
+    url-loader: ^4.1.1
     util-deprecate: ^1.0.2
     webpack: ^5.9.0
     webpack-dev-middleware: ^4.1.0
@@ -9086,6 +9091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "dotenv-defaults@npm:2.0.2"
+  dependencies:
+    dotenv: ^8.2.0
+  checksum: c005960bd048e2189c4799e729c41f362e415e6e0b54313d3f31e853a84b049bf770b25cb21c112c2805bb13a8376edc9de451fb514abf8546392d327c27f6e5
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -9101,6 +9115,17 @@ __metadata:
   peerDependencies:
     webpack: ^1 || ^2 || ^3 || ^4
   checksum: 21bfe5dd6a669ad9a64669ed7ada53e0036f7c97f55c43c07dd846bf6ddb963224139a25c667346f1a168b0e59e560ae87eac642edb30947bb2fa4ec0017ecb7
+  languageName: node
+  linkType: hard
+
+"dotenv-webpack@npm:^7.0.0":
+  version: 7.0.3
+  resolution: "dotenv-webpack@npm:7.0.3"
+  dependencies:
+    dotenv-defaults: ^2.0.2
+  peerDependencies:
+    webpack: ^4 || ^5
+  checksum: d80dcbebe3b9e8f6251b3eb15647bb647bf358172ff21d2eaa4bb012afc9eaa7f4ba6c452f2dafd40afc96474e8c7ffbd21f0a2896eec244eff59a79e32c7716
   languageName: node
   linkType: hard
 
