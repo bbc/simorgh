@@ -5,7 +5,7 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@actions/core@npm:^1.2.4":
+"@actions/core@npm:^1.5.0":
   version: 1.6.0
   resolution: "@actions/core@npm:1.6.0"
   dependencies:
@@ -14,19 +14,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@actions/github@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@actions/github@npm:4.0.0"
+"@actions/github@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@actions/github@npm:5.0.0"
   dependencies:
-    "@actions/http-client": ^1.0.8
-    "@octokit/core": ^3.0.0
-    "@octokit/plugin-paginate-rest": ^2.2.3
-    "@octokit/plugin-rest-endpoint-methods": ^4.0.0
-  checksum: 0a1dd8e11bdeb746ca750e70daa4468202db32dbd7d09843e1cec202287ed836816d055f96ce44a0782117b84a04dd9037d9e038fe505b715f3f28fa231e041e
+    "@actions/http-client": ^1.0.11
+    "@octokit/core": ^3.4.0
+    "@octokit/plugin-paginate-rest": ^2.13.3
+    "@octokit/plugin-rest-endpoint-methods": ^5.1.1
+  checksum: d107bca856cb1460e8bd1558a8f4e031a402fad6b662dd5c538f0cd194f13802fb3d87da52fba22ec91ec495f72658304a5c667c3c55211e95f410aa54f972be
   languageName: node
   linkType: hard
 
-"@actions/http-client@npm:^1.0.11, @actions/http-client@npm:^1.0.8":
+"@actions/http-client@npm:^1.0.11":
   version: 1.0.11
   resolution: "@actions/http-client@npm:1.0.11"
   dependencies:
@@ -1589,7 +1589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-typescript@npm:^7.12.7":
+"@babel/preset-typescript@npm:^7.12.7, @babel/preset-typescript@npm:^7.15.0":
   version: 7.15.0
   resolution: "@babel/preset-typescript@npm:7.15.0"
   dependencies:
@@ -2212,7 +2212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromaui/localtunnel@npm:^2.0.2":
+"@chromaui/localtunnel@npm:^2.0.3":
   version: 2.0.4
   resolution: "@chromaui/localtunnel@npm:2.0.4"
   dependencies:
@@ -3049,7 +3049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^3.0.0":
+"@octokit/core@npm:^3.4.0":
   version: 3.5.1
   resolution: "@octokit/core@npm:3.5.1"
   dependencies:
@@ -3100,7 +3100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-paginate-rest@npm:^2.2.3":
+"@octokit/plugin-paginate-rest@npm:^2.13.3":
   version: 2.16.5
   resolution: "@octokit/plugin-paginate-rest@npm:2.16.5"
   dependencies:
@@ -3111,15 +3111,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/plugin-rest-endpoint-methods@npm:^4.0.0":
-  version: 4.15.1
-  resolution: "@octokit/plugin-rest-endpoint-methods@npm:4.15.1"
+"@octokit/plugin-rest-endpoint-methods@npm:^5.1.1":
+  version: 5.11.3
+  resolution: "@octokit/plugin-rest-endpoint-methods@npm:5.11.3"
   dependencies:
-    "@octokit/types": ^6.13.0
+    "@octokit/types": ^6.31.1
     deprecation: ^2.3.1
   peerDependencies:
     "@octokit/core": ">=3"
-  checksum: 6913c54997e90a7aa5edd43c696e592b55bf2956c22313d8fb2d32a65ee81702d5441aa52967f0e8b466214fa9a9735e72ad59817b620b33ce871dec05258e55
+  checksum: 9ffe12061e7cd193fa7ad852bd9214c64973b2218c9b4f8cb6ebe02e75fce4adb84c2e36cc4b0d3ebd98d0c6805119d387cbcaa174bfa506bb82d5836e013cfa
   languageName: node
   linkType: hard
 
@@ -3157,7 +3157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^6.13.0, @octokit/types@npm:^6.31.0":
+"@octokit/types@npm:^6.31.0, @octokit/types@npm:^6.31.1":
   version: 6.31.1
   resolution: "@octokit/types@npm:6.31.1"
   dependencies:
@@ -6439,7 +6439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async-retry@npm:^1.3.1":
+"async-retry@npm:^1.3.3":
   version: 1.3.3
   resolution: "async-retry@npm:1.3.3"
   dependencies:
@@ -7504,7 +7504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1":
+"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -7648,38 +7648,40 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:5.9.2":
-  version: 5.9.2
-  resolution: "chromatic@npm:5.9.2"
+"chromatic@npm:5.10.1":
+  version: 5.10.1
+  resolution: "chromatic@npm:5.10.1"
   dependencies:
-    "@actions/core": ^1.2.4
-    "@actions/github": ^4.0.0
-    "@babel/runtime": ^7.12.13
-    "@chromaui/localtunnel": ^2.0.2
-    async-retry: ^1.3.1
-    chalk: ^4.0.0
+    "@actions/core": ^1.5.0
+    "@actions/github": ^5.0.0
+    "@babel/preset-typescript": ^7.15.0
+    "@babel/runtime": ^7.15.3
+    "@chromaui/localtunnel": ^2.0.3
+    async-retry: ^1.3.3
+    chalk: ^4.1.2
     cross-spawn: ^7.0.2
-    debug: ^4.3.1
+    debug: ^4.3.2
     dotenv: ^8.2.0
     env-ci: ^5.0.2
     esm: ^3.2.25
     execa: ^5.0.0
     fake-tag: ^2.0.0
-    fs-extra: ^9.1.0
+    fs-extra: ^10.0.0
     https-proxy-agent: ^5.0.0
     jsonfile: ^6.0.1
     junit-report-builder: 2.1.0
     listr: 0.14.3
     meow: ^8.0.0
+    no-proxy: ^1.0.3
     node-ask: ^1.0.1
-    node-fetch: ^2.6.0
+    node-fetch: 2.6.0
     node-loggly-bulk: ^2.2.4
     p-limit: 3.1.0
     picomatch: 2.2.2
     pkg-up: ^3.1.0
     pluralize: ^8.0.0
     progress-stream: ^2.0.0
-    semver: ^7.3.4
+    semver: ^7.3.5
     slash: ^3.0.0
     string-argv: ^0.3.1
     strip-ansi: 6.0.0
@@ -7693,7 +7695,7 @@ __metadata:
     chroma: bin/register.js
     chromatic: bin/register.js
     chromatic-cli: bin/register.js
-  checksum: 395b78f107dd508371c6e7ac9f44ec5bce9e05d517c05d94a20137cde07d316d9dedfa32d1d8a646f657e384f68daf4ffd93700e31e769da6e6a854b6dbd67c3
+  checksum: 3cf2776eb04204a6641fde1712a85c1014e4e4a1664d1e8a837acebab7d447fb9ff7e3199bd3f5527bef50bcb24578ecfca8ea8694c874b30f50262ea726c850
   languageName: node
   linkType: hard
 
@@ -11170,6 +11172,17 @@ __metadata:
     path-is-absolute: ^1.0.0
     rimraf: ^2.2.8
   checksum: 6edfd65fc813baa27f1603778c0f5ec11f8c5006a20b920437813ee2023eba18aeec8bef1c89b2e6c84f9fc90fdc7c916f4a700466c8c69d22a35d018f2570f0
+  languageName: node
+  linkType: hard
+
+"fs-extra@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "fs-extra@npm:10.0.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: 5285a3d8f34b917cf2b66af8c231a40c1623626e9d701a20051d3337be16c6d7cac94441c8b3732d47a92a2a027886ca93c69b6a4ae6aee3c89650d2a8880c0a
   languageName: node
   linkType: hard
 
@@ -15746,6 +15759,19 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"no-proxy@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "no-proxy@npm:1.0.3"
+  dependencies:
+    url-parse: ^1.2.0
+    wildcard: ^1.1.2
+  dependenciesMeta:
+    url-parse:
+      optional: true
+  checksum: 66202601206a87fbc1cbf1df6f99c19db09b1563247c8e5bb74ebae2d124602d7bb743351313ecccddd23f94282fc4d54925c42b8c1a70c43c858ffbe1a1ccf9
+  languageName: node
+  linkType: hard
+
 "node-abi@npm:^2.7.0":
   version: 2.30.1
   resolution: "node-abi@npm:2.30.1"
@@ -15771,6 +15797,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"node-fetch@npm:2.6.0":
+  version: 2.6.0
+  resolution: "node-fetch@npm:2.6.0"
+  checksum: 2b741e9315c1c07df4a291d0b304892fa7e8d623fe789fedd53f9bcb8d09102b07591b4b93e552a65dfc457eee9d5d879d0440aefdb64f2d78e7cb78cbad28e9
+  languageName: node
+  linkType: hard
+
 "node-fetch@npm:2.6.1":
   version: 2.6.1
   resolution: "node-fetch@npm:2.6.1"
@@ -15778,7 +15811,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-fetch@npm:2.6.5, node-fetch@npm:^2.6.0":
+"node-fetch@npm:2.6.5":
   version: 2.6.5
   resolution: "node-fetch@npm:2.6.5"
   dependencies:
@@ -19330,7 +19363,7 @@ resolve@^2.0.0-next.3:
     babel-plugin-transform-react-remove-prop-types: 0.4.24
     brotli-webpack-plugin: 1.1.0
     chalk: 4.1.2
-    chromatic: 5.9.2
+    chromatic: 5.10.1
     chrome-launcher: 0.14.0
     cli-table: 0.3.6
     compression: 1.7.4
@@ -21431,7 +21464,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"url-parse@npm:1.5.3":
+"url-parse@npm:1.5.3, url-parse@npm:^1.2.0":
   version: 1.5.3
   resolution: "url-parse@npm:1.5.3"
   dependencies:
@@ -22343,6 +22376,13 @@ resolve@^2.0.0-next.3:
   dependencies:
     string-width: ^4.0.0
   checksum: 03db6c9d0af9329c37d74378ff1d91972b12553c7d72a6f4e8525fe61563fa7adb0b9d6e8d546b7e059688712ea874edd5ded475999abdeedf708de9849310e0
+  languageName: node
+  linkType: hard
+
+"wildcard@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "wildcard@npm:1.1.2"
+  checksum: f93bf48a23b7b776f7960fa7f252af55da265b4ce8127852e420f04a907b78073bc0412f74fc662f561667f3277473974f6553a260ece67f53b1975d128320ab
   languageName: node
   linkType: hard
 
