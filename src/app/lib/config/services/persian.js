@@ -68,7 +68,7 @@ export const service = {
       title: 'پادکست',
       brandTitle: 'به عبارت دیگر',
       brandDescription:
-        'Interviews with prominent politicians, writers and artists on BBC Persian TV.',
+        'گفتگو با چهارهای سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
       image: {
         src: 'http://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
         alt: 'پادکست',
