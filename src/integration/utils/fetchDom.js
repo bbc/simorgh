@@ -5,7 +5,7 @@ const retry = require('retry');
 
 const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
   new Promise((resolve, reject) => {
-    const oneSecond = 1000;
+    const oneSecond = 500;
     const operation = retry.operation({
       retries: 5,
       factor: 1,
