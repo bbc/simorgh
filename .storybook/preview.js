@@ -9,15 +9,15 @@ import isChromatic from 'chromatic/isChromatic';
 import { forceVisible } from 'react-lazyload';
 
 const fontPathMap = [
-  { prefix: 'F_ISKOOLA_POTA_BBC', path: 'fonts/IskoolaPota/' },
-  { prefix: 'F_LATHA', path: 'fonts/Latha/' },
   { prefix: 'F_MALLANNA', path: 'fonts/Mallanna/' },
   { prefix: 'F_NOTO_SANS_ETHIOPIC', path: 'fonts/NotoSansEthiopic/' },
+  { prefix: 'F_NOTO_SANS_TAMIL', path: 'fonts/NotoSansTamil/' },
+  { prefix: 'F_NOTO_SERIF_BENGALI', path: 'fonts/NotoSerifBengali/' },
+  { prefix: 'F_NOTO_SERIF_SINHALA', path: 'fonts/NotoSerifSinhala/' },
   { prefix: 'F_PADAUK', path: 'fonts/Padauk/' },
   { prefix: 'F_REITH_QALAM', path: 'fonts/ReithQalam/' },
   { prefix: 'F_REITH_SANS', path: 'fonts/Reith/' },
   { prefix: 'F_REITH_SERIF', path: 'fonts/Reith/' },
-  { prefix: 'F_SHONAR_BANGLA', path: 'fonts/ShonarBangla/' },
 ];
 
 addDecorator(story => {
