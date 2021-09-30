@@ -9,7 +9,7 @@ import {
   unorderedListBlock,
   textBlock,
   defaultIds,
-} from './fixtures';
+} from '../fixtures';
 import transformer from '.';
 
 const { media, group, list, headline, text } = defaultIds;
