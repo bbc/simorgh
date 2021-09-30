@@ -2,16 +2,16 @@
   "metadata": {
     "id": "urn:bbc:ares:ws_media:brand:bbc_somali_tv/w13xttqt",
     "locators": {
-      "pid": "w172xcmygv61j1y",
+      "pid": "w172xtqwwzg5r1l",
       "brandPid": "w13xttqt"
     },
     "type": "WSTV",
     "createdBy": "bbc_somali_tv",
     "language": "so",
-    "lastUpdated": 1607520246590,
-    "firstPublished": 1606236882000,
-    "lastPublished": 1606236882000,
-    "timestamp": 1606236882000,
+    "lastUpdated": 1633009054847,
+    "firstPublished": 1623887652000,
+    "lastPublished": 1623887652000,
+    "timestamp": 1623887652000,
     "options": {},
     "analyticsLabels": {
       "pageTitle": "Caawa Iyo Caalamka - BBC News Somali",
@@ -21,29 +21,28 @@
       "producer": "SOMALI"
     },
     "tags": {},
-    "version": "v1.3.11",
+    "version": "v1.3.13",
     "blockTypes": ["media"],
     "title": "Caawa Iyo Caalamka",
-    "releaseDateTimeStamp": 1607385600000,
-    "atiAnalytics": {}
+    "releaseDateTimeStamp": 1625097600000
   },
   "content": {
     "blocks": [
       {
-        "id": "w172xcmygv61j1y",
+        "id": "w172xtqwwzg5r1l",
         "subType": "episode",
         "format": "Video",
-        "title": "08/12/2020 GMT",
+        "title": "01/07/2021 GMT",
         "synopses": {
           "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
           "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
         },
-        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwwzg5r1l.jpg",
         "embedding": false,
         "advertising": false,
         "versions": [
           {
-            "versionId": "w1mshjj67z3jyzl",
+            "versionId": "w1msj13jxv0rkqg",
             "types": ["Original"],
             "duration": 1590,
             "durationISO8601": "PT26M30S",
@@ -53,8 +52,8 @@
               "nonUk": false,
               "world": true
             },
-            "availableUntil": 1618185600000,
-            "availableFrom": 1607448390000,
+            "availableUntil": 1649635200000,
+            "availableFrom": 1625160390000,
             "availabilityStatus": "available"
           }
         ],
@@ -69,24 +68,24 @@
       "headline": "Caawa Iyo Caalamka"
     },
     "locators": {
-      "pid": "w172xcmygv61j1y",
+      "pid": "w172xtqwwzg5r1l",
       "brandPid": "w13xttqt"
     },
     "media": {
-      "id": "w172xcmygv61j1y",
+      "id": "w172xtqwwzg5r1l",
       "subType": "episode",
       "format": "Video",
-      "title": "08/12/2020 GMT",
+      "title": "01/07/2021 GMT",
       "synopses": {
         "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
         "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
       },
-      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwwzg5r1l.jpg",
       "embedding": false,
       "advertising": false,
       "versions": [
         {
-          "versionId": "w1mshjj67z3jyzl",
+          "versionId": "w1msj13jxv0rkqg",
           "types": ["Original"],
           "duration": 1590,
           "durationISO8601": "PT26M30S",
@@ -96,8 +95,8 @@
             "nonUk": false,
             "world": true
           },
-          "availableUntil": 1618185600000,
-          "availableFrom": 1607448390000,
+          "availableUntil": 1649635200000,
+          "availableFrom": 1625160390000,
           "availabilityStatus": "available"
         }
       ],
@@ -108,20 +107,20 @@
     "indexImage": {
       "id": "",
       "subType": "index",
-      "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-      "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+      "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwwzg5r1l.jpg",
+      "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwwzg5r1l.jpg",
       "height": 0,
       "width": 0,
       "altText": null,
       "copyrightHolder": null,
       "type": "image"
     },
-    "releaseDateTimestamp": 1607385600000,
+    "releaseDateTimestamp": 1625097600000,
     "brand": {
       "pid": "w13xttqt",
       "title": "Caawa Iyo Caalamka"
     },
-    "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmygv61j1y",
+    "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqwwzg5r1l",
     "type": "ws_tv"
   },
   "relatedContent": {
@@ -140,24 +139,24 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmygv5ym4v",
+              "pid": "w172xtqwjq4hhbv",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmygv5ym4v",
+              "id": "w172xtqwjq4hhbv",
               "subType": "episode",
               "format": "Video",
-              "title": "07/12/2020 GMT",
+              "title": "25/06/2021 GMT",
               "synopses": {
                 "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
                 "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwjq4hhbv.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj67z3g22h",
+                  "versionId": "w1msj13jkkq2b0q",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -167,8 +166,8 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607361990000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1624641990000,
                   "availabilityStatus": "available"
                 }
               ],
@@ -179,20 +178,20 @@
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwjq4hhbv.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqwjq4hhbv.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607299200000,
+            "releaseDateTimestamp": 1624579200000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmygv5ym4v",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqwjq4hhbv",
             "type": "ws_tv"
           },
           {
@@ -200,24 +199,24 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmy3kwk25d",
+              "pid": "w172xtqw5ftqbr0",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmy3kwk25d",
+              "id": "w172xtqw5ftqbr0",
               "subType": "episode",
               "format": "Video",
-              "title": "04/12/2020 GMT",
+              "title": "18/06/2021 GMT",
               "synopses": {
                 "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
                 "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftqbr0.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5wpt1j31",
+                  "versionId": "w1msj13j69d95dw",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -227,32 +226,33 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607102790000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1624037190000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "Caawa Iyo Caalamka",
               "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftqbr0.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftqbr0.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1607040000000,
+            "releaseDateTimestamp": 1623974400000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmy3kwk25d",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqw5ftqbr0",
             "type": "ws_tv"
           },
           {
@@ -260,24 +260,24 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmy3kwg589",
+              "pid": "w172xtqw5ftmftx",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmy3kwg589",
+              "id": "w172xtqw5ftmftx",
               "subType": "episode",
               "format": "Video",
-              "title": "03/12/2020 GMT",
+              "title": "17/06/2021 GMT",
               "synopses": {
                 "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
                 "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftmftx.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5wpsym5y",
+                  "versionId": "w1msj13j69d68hs",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -287,32 +287,33 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1607016390000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1623950790000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "Caawa Iyo Caalamka",
               "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftmftx.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqw5ftmftx.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606953600000,
+            "releaseDateTimestamp": 1623888000000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmy3kwg589",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqw5ftmftx",
             "type": "ws_tv"
           },
           {
@@ -320,24 +321,24 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmy3kwc8c6",
+              "pid": "w172xtqvt5hv972",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmy3kwc8c6",
+              "id": "w172xtqvt5hv972",
               "subType": "episode",
               "format": "Video",
-              "title": "02/12/2020 GMT",
+              "title": "10/06/2021 GMT",
               "synopses": {
                 "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
                 "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvt5hv972.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5wpsvq8v",
+                  "versionId": "w1msj13hv12f3wy",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -347,8 +348,8 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1606929990000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1623345990000,
                   "availabilityStatus": "available"
                 }
               ],
@@ -359,20 +360,20 @@
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvt5hv972.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvt5hv972.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606867200000,
+            "releaseDateTimestamp": 1623283200000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmy3kwc8c6",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqvt5hv972",
             "type": "ws_tv"
           },
           {
@@ -380,24 +381,21 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmy3kw8cg3",
+              "pid": "w172xtqvfx651jb",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmy3kw8cg3",
+              "id": "w172xtqvfx651jb",
               "subType": "episode",
               "format": "Video",
-              "title": "01/12/2020 GMT",
-              "synopses": {
-                "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
-                "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "title": "04/06/2021 GMT",
+              "synopses": {},
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx651jb.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5wpsrtcr",
+                  "versionId": "w1msj13hgrrqw66",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -407,32 +405,33 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1606843590000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1622827590000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "Caawa Iyo Caalamka",
               "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx651jb.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx651jb.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606780800000,
+            "releaseDateTimestamp": 1622764800000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmy3kw8cg3",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqvfx651jb",
             "type": "ws_tv"
           },
           {
@@ -440,24 +439,21 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmy3kw5gk0",
+              "pid": "w172xtqvfx624m7",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmy3kw5gk0",
+              "id": "w172xtqvfx624m7",
               "subType": "episode",
               "format": "Video",
-              "title": "30/11/2020 GMT",
-              "synopses": {
-                "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
-                "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "title": "03/06/2021 GMT",
+              "synopses": {},
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx624m7.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5wpsnxgn",
+                  "versionId": "w1msj13hgrrmz93",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -467,32 +463,33 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1606757190000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1622741190000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "Caawa Iyo Caalamka",
               "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx624m7.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx624m7.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606694400000,
+            "releaseDateTimestamp": 1622678400000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmy3kw5gk0",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqvfx624m7",
             "type": "ws_tv"
           },
           {
@@ -500,24 +497,21 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmxr9krxkk",
+              "pid": "w172xtqvfx5wbt1",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmxr9krxkk",
+              "id": "w172xtqvfx5wbt1",
               "subType": "episode",
               "format": "Video",
-              "title": "27/11/2020 GMT",
-              "synopses": {
-                "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
-                "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
-              },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "title": "01/06/2021 GMT",
+              "synopses": {},
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx5wbt1.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5jfh8ch6",
+                  "versionId": "w1msj13hgrrg5gx",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -527,32 +521,33 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1606497990000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1622568390000,
                   "availabilityStatus": "available"
                 }
               ],
               "availability": "available",
               "smpKind": "programme",
+              "episodeTitle": "Caawa Iyo Caalamka",
               "type": "media"
             },
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx5wbt1.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqvfx5wbt1.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606435200000,
+            "releaseDateTimestamp": 1622505600000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmxr9krxkk",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqvfx5wbt1",
             "type": "ws_tv"
           },
           {
@@ -560,24 +555,24 @@
               "headline": "Caawa Iyo Caalamka"
             },
             "locators": {
-              "pid": "w172xcmxr9kp0ng",
+              "pid": "w172xtqsmkm89h4",
               "brandPid": "w13xttqt"
             },
             "media": {
-              "id": "w172xcmxr9kp0ng",
+              "id": "w172xtqsmkm89h4",
               "subType": "episode",
               "format": "Video",
-              "title": "26/11/2020 GMT",
+              "title": "30/04/2021 GMT",
               "synopses": {
                 "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
                 "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
               },
-              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqsmkm89h4.jpg",
               "embedding": false,
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshjj5jfh5gl3",
+                  "versionId": "w1msj13fnf5v450",
                   "types": ["Original"],
                   "duration": 1590,
                   "durationISO8601": "PT26M30S",
@@ -587,8 +582,8 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1618185600000,
-                  "availableFrom": 1606411590000,
+                  "availableUntil": 1649635200000,
+                  "availableFrom": 1619807475000,
                   "availabilityStatus": "available"
                 }
               ],
@@ -599,20 +594,80 @@
             "indexImage": {
               "id": "",
               "subType": "index",
-              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
-              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hm27g.png",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqsmkm89h4.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xtqsmkm89h4.jpg",
               "height": 0,
               "width": 0,
               "altText": null,
               "copyrightHolder": null,
               "type": "image"
             },
-            "releaseDateTimestamp": 1606348800000,
+            "releaseDateTimestamp": 1619740800000,
             "brand": {
               "pid": "w13xttqt",
               "title": "Caawa Iyo Caalamka"
             },
-            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmxr9kp0ng",
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xtqsmkm89h4",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Caawa Iyo Caalamka"
+            },
+            "locators": {
+              "pid": "w172xcmvxyzpcq5",
+              "brandPid": "w13xttqt"
+            },
+            "media": {
+              "id": "w172xcmvxyzpcq5",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/10/2020 GMT",
+              "synopses": {
+                "short": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka",
+                "medium": "Kala soco telefishinka BBC News Somali 30 daqiiqo oo isugu jira warar, wareysiyo & faallooyin ku saabsan Soomaaliya iyo Caalamka"
+              },
+              "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xcmvxyzpcq5.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjj3q2x5tmt",
+                  "types": ["Original"],
+                  "duration": 1590,
+                  "durationISO8601": "PT26M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1636565190000,
+                  "availableFrom": 1603301190000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xcmvxyzpcq5.jpg",
+              "path": "ichef.test.bbci.co.uk/images/ic/$recipe/legacy/episode/w172xcmvxyzpcq5.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1603238400000,
+            "brand": {
+              "pid": "w13xttqt",
+              "title": "Caawa Iyo Caalamka"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_somali_tv/w172xcmvxyzpcq5",
             "type": "ws_tv"
           }
         ]
