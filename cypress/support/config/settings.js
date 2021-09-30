@@ -2977,7 +2977,7 @@ module.exports = () => ({
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
               '/indonesia/podcasts/p02pc9v6/p096mj9z', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -6875,7 +6875,7 @@ module.exports = () => ({
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
