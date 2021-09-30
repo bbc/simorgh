@@ -2977,7 +2977,7 @@ module.exports = () => ({
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
               '/indonesia/podcasts/p02pc9v6/p096mj9z', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -4792,7 +4792,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -4818,7 +4818,7 @@ module.exports = () => ({
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
               '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -6875,7 +6875,7 @@ module.exports = () => ({
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
