@@ -1,0 +1,923 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:persian/magazine-57679929",
+      "locators": {
+        "assetUri": "/persian/magazine-57679929",
+        "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-57679929",
+        "curie": "http://www.bbc.co.uk/asset/818751ca-4701-4d7a-8256-9b3fb66fca26",
+        "assetId": "57679929"
+      },
+      "type": "STY",
+      "createdBy": "persian-v6",
+      "language": "fa",
+      "lastUpdated": 1632989982624,
+      "firstPublished": 1632989974000,
+      "lastPublished": 1632989974000,
+      "timestamp": 1632989974000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "ldp_tags": "Wellbeing~Food~Diet+&+nutrition",
+        "cps_asset_id": "57679929",
+        "ldp_ids": "72e4133e-bfa5-4611-8f62-dd745453a4f4~99fb9bbd-9150-4e13-a3ac-3fa0610683f8~b5a68823-bb0c-4229-b142-d6d5e09e113f",
+        "counterName": "persian.magazine.story.57679929.page",
+        "cps_asset_type": "sty"
+      },
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+          "categoryName": "Feature"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e1739461b000e9dabf6",
+            "campaignName": "WS - CS"
+          }
+        ],
+        "language": "fa",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+        "locator": "urn:bbc:cps:curie:asset:818751ca-4701-4d7a-8256-9b3fb66fca26",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+            "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+              "thingLabel": "سلامت",
+              "thingUri": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+              "thingId": "72e4133e-bfa5-4611-8f62-dd745453a4f4",
+              "thingType": [
+                "core:Theme",
+                "core:Thing",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q1077209",
+                "http://www.bbc.com/bitesize/tags/z8pvhcw#id",
+                "http://dbpedia.org/resource/Wellness_(alternative_medicine)"
+              ],
+              "thingEnglishLabel": "Wellbeing",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+              "thingLabel": "غذا",
+              "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+              "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q2095",
+                "http://dbpedia.org/resource/Food"
+              ],
+              "thingEnglishLabel": "Food",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+              "thingLabel": "رژیم غذایی",
+              "thingUri": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+              "thingId": "b5a68823-bb0c-4229-b142-d6d5e09e113f",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Diet"
+              ],
+              "thingEnglishLabel": "Diet & nutrition",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+              "thingLabel": "Feature",
+              "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+              "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [
+                "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+              ],
+              "thingEnglishLabel": "Feature",
+              "thingPreferredLabel": "Feature",
+              "thingLabelLanguage": "fa",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "tags": {
+        "about": [
+          {
+            "thingLabel": "سلامت",
+            "thingUri": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+            "thingId": "72e4133e-bfa5-4611-8f62-dd745453a4f4",
+            "thingType": [
+              "core:Theme",
+              "core:Thing",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q1077209",
+              "http://www.bbc.com/bitesize/tags/z8pvhcw#id",
+              "http://dbpedia.org/resource/Wellness_(alternative_medicine)"
+            ],
+            "topicName": "سلامت",
+            "topicId": "c772rjxx977t",
+            "curationList": [
+              {
+                "curationId": "f2692202-2715-4479-8f61-05577d5b8bad",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Wellbeing",
+            "thingLabelLanguage": "fa",
+            "thingPreferredLabel": "Wellbeing"
+          },
+          {
+            "thingLabel": "غذا",
+            "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+            "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q2095",
+              "http://dbpedia.org/resource/Food"
+            ],
+            "topicName": "غذا",
+            "topicId": "cz74knwd22zt",
+            "curationList": [
+              {
+                "curationId": "116d59d4-e780-4597-937d-e95188ced00b",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Food",
+            "thingLabelLanguage": "fa",
+            "thingPreferredLabel": "Food"
+          },
+          {
+            "thingLabel": "رژیم غذایی",
+            "thingUri": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+            "thingId": "b5a68823-bb0c-4229-b142-d6d5e09e113f",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Diet"
+            ],
+            "topicName": "رژیم غذایی",
+            "topicId": "ckdxnwv6gg7t",
+            "curationList": [
+              {
+                "curationId": "ee8571ca-4268-427b-bec5-bc8a3f23c46b",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Diet & nutrition",
+            "thingLabelLanguage": "fa",
+            "thingPreferredLabel": "Diet & nutrition"
+          }
+        ]
+      },
+      "version": "v1.3.13",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list",
+        "crosshead"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "PERSIAN",
+        "producerId": "69"
+      },
+      "readTime": 4,
+      "siteUri": "/persian",
+      "topics": [
+        {
+          "topicName": "سلامت",
+          "topicId": "c772rjxx977t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "f2692202-2715-4479-8f61-05577d5b8bad",
+              "curationType": "vivo-stream",
+              "position": 0,
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Theme",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+        },
+        {
+          "topicName": "رژیم غذایی",
+          "topicId": "ckdxnwv6gg7t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "ee8571ca-4268-427b-bec5-bc8a3f23c46b",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+        },
+        {
+          "topicName": "غذا",
+          "topicId": "cz74knwd22zt",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "116d59d4-e780-4597-937d-e95188ced00b",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+        }
+      ]
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "119168174",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/B852/production/_119168174_1.jpg",
+          "path": "/cpsprodpb/B852/production/_119168174_1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "دکتر کریس فن‌تولکین",
+          "caption": "دکتر کریس فن‌تولکین، مجری تلویزیونی، دست به چالشی زد که به مدت یک ماه فقط مواد غذایی فوق‌فراوری‌شده بخورد",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "<bold>بیش از نیمی از انرژی حاصل از مواد‌غذایی در بریتانیا از محصولات فوق‌فراوری‌شده تأمین می‌شود. کارشناسان بر این باورند که این نوع مواد‌غذایی باعث زیاد خوردن و افزایش وزن افراد می‌شود. در بریتانیا یک</bold><bold> نفر</bold><bold> از هر چهار بزرگسال و یکی از هر پنج کودک ده تا یازده سال چاق محسوب می‌شود.</bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "دکتر کریس فن‌تولکین، پزشک و مجری برنامه‌های تلویزیونی می‌گوید:&quot;می‌خواستم ببینم رژیم‌غذایی سرشار از مواد‌غذایی فوق‌فراوری‌شده چه اثری بر من می‌گذارد&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>persian/magazine-46620483</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "چهار تمرین ذهنی برای خوردن غذا‌های سالم‌تر",
+                    "headline": "چهار تمرین ذهنی برای خوردن غذا‌های سالم‌تر",
+                    "overtyped": "چهار تمرین ذهنی برای خوردن غذا‌های سالم‌تر"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/magazine-46620483"
+                  },
+                  "summary": "بر مبنای تحقیقی که محققان دانشگاه ییل اخیرا انجام دادند، یاد گرفتن چند توصیهٔ ساده به شما کمک می‌کند تا انتخاب‌های غذایی سالم‌تری داشته باشید. روش‌های آموزش ذهنی به افراد کمک می‌کند که میل و هوس خود را به غذا‌های ناسالم مهار کنند و بیشتر به غذاٰهای سالم روی آورند.",
+                  "timestamp": 1555515597000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/magazine-46620483",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "پژوهش‌هایی در زمینه اثر مواد‌غذایی فوق‌فراوری‌شده بر بدن انجام شده است، به‌ویژه در مورد کودکان و نوجوانان که بیش از میزان متوسط مصرف آن در بزرگسالان چنین خوراکی‌هایی مصرف می‌کنند.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "برای آزمایش، کریس مصرف روزانه معمول حدود ۳۰ درصد  مواد غذایی فوق‌فرآوری‌شده را در یک دوره چهارهفته‌ای به ۸۰ درصد رساند. او می‌گوید: &quot;ممکن است زیاد به نظر برسد اما این شیوهٔ تغذیهٔ یک‌پنجم افراد در بریتانیاست&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "\"احساس کردم ده سال پیر شدم\"",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "id": "119168177",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/12D82/production/_119168177_2.jpg",
+          "path": "/cpsprodpb/12D82/production/_119168177_2.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "دکتر کریس فن‌تولکین",
+          "caption": "برای این چالش، کریس به مدت یک ماه رژیم غذایی با بیش از ۸۰‌درصد مواد‌غذایی فوق ‌فراوری‌شده را شروع کرد که به نظر او همان شیوه تغذیه یک‌پنجم بریتانیایی‌هاست.",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "پس از گذشت یک ماه، کریس گفت دچار کم‌خوابی، سوزش معده، احساسات ناخوشایند، نگرانی، سستی و کاهش میل جنسی شده و علاوه بر همه اینها دچار یبوست شدید هم شده بود. او می‌گوید: &quot;احساس می‌کردم ده سال پیر شدم. باور نمی‌کردم همه این عوارض به دلیل آن رژیم غذایی باشد تا اینکه آن را قطع کردم&quot;.   ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "کریس پس از چهار هفته ۷ کیلو به وزنش اضافه شد و از وزن سالم به فردی که اضافه وزن دارد تبدیل شد. او می‌گوید: &quot;اگر اضافه وزنم با همان سرعت به مدت شش ماه ادامه پیدا می‌کرد حدود ۳۰ کیلو اضافه وزن پیدا می‌کردم&quot;. ماجرا به همین‌ها هم ختم نشد.    ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "اسکن فعالیت‌ مغزی کریس نشان داد که بخش‌های مربوط به پاداش در مغز  با مناطق  کنترل رفتار‌های خودکار و تکراری ارتباط پیدا کرده است.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "با اشاره به اینکه این واکنش مشابه همان پاسخ مغز به مصرف موادی است که به طور مرسوم آنها را مواد اعتیاد‌آور می‌نامیم، مانند سیگار، الکل و مواد مخدر، او ادامه می‌دهد: &quot;خوردن مواد‌غذایی فوق ‌فرآوری‌شده فرمانی بود که مغز به من می‌داد بی‌ آنکه خودم اصلاً بخواهم&quot;.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "119168179",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/17BA2/production/_119168179__104339016_gettyimages-928066088.jpg",
+          "path": "/cpsprodpb/17BA2/production/_119168179__104339016_gettyimages-928066088.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "رژیم غذایی",
+          "copyrightHolder": "Getty Images",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "این تغییرات در فعالیت مغز دائمی نبود، اما او می‌گوید &quot;اگر من توانستم چنین بلایی بر سر مغز ۴۲‌ساله خودم بیاورم، تصور کنید چنین رژیم‌غذایی چه بر سر مغز‌های حساس و در حال رشد کودکان می‌آورد&quot;.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "ما به درستی نمی‌دانیم چرا مواد‌غذایی فوق فرآوری شده چنین اثراتی دارند اما کریس می‌گوید به احتمال زیاد به دلیل ترکیب فرایند فرآوری و مواد‌غذایی موجود در آنهاست. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>رژیم غذایی چه تأثیری بر سلامت سیستم ایمنی بدن دارد؟</caption><url href=\"https://www.bbc.com/persian/magazine-52994679\" platform=\"highweb\"/><url href=\"https://www.bbc.com/persian/magazine-52994679\" platform=\"enhancedmobile\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<link><caption>بهترین رژیم غذایی کدام است؟</caption><url href=\"https://www.bbc.com/persian/science/2014/04/140330_me_what_diet_is_best_for_health\" platform=\"highweb\"/><url href=\"https://www.bbc.com/persian/science/2014/04/140330_me_what_diet_is_best_for_health\" platform=\"enhancedmobile\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>persian/magazine-53526570</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "آیا با رژیم غذایی می‌توان 'جوش غرور جوانی' را درمان کرد؟",
+                    "headline": "آیا با رژیم غذایی می‌توان آکنه را درمان کرد؟",
+                    "overtyped": "آیا با رژیم غذایی می‌توان 'جوش غرور جوانی' را درمان کرد؟"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/magazine-53526570"
+                  },
+                  "summary": "آیا تابه‌حال مواد غذایی خاصی را به رژیم غذایی خود اضافه یا از آن کم کرده‌اید به امید اینکه پوست صورت‌تان بهتر شود؟",
+                  "timestamp": 1596254860000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/magazine-53526570",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>persian/magazine-53444673</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "آیا رژیم غذایی بر سلامت روانی اثر می‌گذارد؟",
+                    "headline": "آیا رژیم غذایی بر سلامت روانی اثر می‌گذارد؟",
+                    "overtyped": "آیا رژیم غذایی بر سلامت روانی اثر می‌گذارد؟"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/magazine-53444673"
+                  },
+                  "summary": "شاید شما هم تصور ‌می‌کنید که سال ۲۰۲۰ آنطور که انتظار داشتید از آب درنیامده است. همانطور که اوضاع جهان به ناگهان دگرگون شده، احتمالا رژیم غذایی شما هم تغییر کرده است. آیا غذایی که می‌خورید علاوه بر جسم، بر روان شما هم اثر می‌گذارد؟",
+                  "timestamp": 1595305965000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                      "categoryName": "Feature"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/magazine-53444673",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>persian/magazine-51861437</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "آنچه می‌خورید می‌تواند استرس شما را کم ‌کند",
+                    "headline": "آنچه می‌خورید می‌تواند استرس شما را کم ‌کند",
+                    "overtyped": "آنچه می‌خورید می‌تواند استرس شما را کم ‌کند"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/magazine-51861437"
+                  },
+                  "summary": "به نظر کارشناسان، آنچه می‌خورید روی واکنش بدن در برابر استرس تاثیر می‌گذارد. پرهیز از مصرف بعضی خوراکی‌ها باعث کاهش استرس بر بدن و زندگی روزمرهٔ می‌شود.",
+                  "timestamp": 1584099593000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                      "categoryName": "Explainer"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/magazine-51861437",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "تأثیر بر مقدار خوردن ",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "کریس با دکتر کوین هال، استاد و پژوهشگر مؤسسه ملی بهداشت در این پژوهش همکاری کرده است. در این پژوهش، دکتر هال دو رژیم‌غذایی را آزمایش کرد که هر دو از نظر میزان چربی، قند، نمک و فیبر یکسان بودند اما یکی از آنها از مواد‌غذایی فرآوری‌نشده و دیگری با مواد‌غذایی حدود ۸۰‌درصد فرآوری‌شده تهیه شده بودند. شرکت‌کنندگان می‌توانستند هر مقدار که می‌خواهند بخورند تا زمانی که خودشان از خوردن دست می‌کشیدند. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "دکتر هال می‌گوید: &quot;در این پژوهش دریافتم که افرادی که رژیم غذایی با مواد‌غذایی فوق‌فرآوری‌شده داشتند روزانه حدود ۵۰۰ کالری بیشتر مواد‌‌غذایی مصرف می‌کردند و در طول دو هفته حدود یک کیلو اضافه وزن پیدا می‌کردند&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "آزمایش خون این افراد نشان داد که هورمون ایجاد‌کننده احساس گرسنگی در بدن کسانی که مواد‌غذایی فوق‌فرآوری‌شده مصرف کرده بودند افزایش و میزان هورمونی که باعث احساس سیری می‌شود کاهش پیدا می‌کرد.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "این نتایج تجربه کریس را تائید می‌کرد، در آزمایشی که انجام داد هورمون گرسنگی‌اش ۳۰درصد افزایش پیدا کرد که باعث مصرف بیشتر مواد‌غذایی می‌شد.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "هال همچنین دریافت که شرکت‌کنندگان در گروه رژیم‌غذایی فوق‌فرآوری‌شده تند‌تر از کسانی که رژیم‌غذایی کم‌فرآوری‌شده داشتند، غذا می‌خوردند که همین باعث مصرف کالری‌ بیشتر می‌شود.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "کریس هم این موضوع را تجربه کرد، مواد غذایی که &quot;جویدن و قورت‌دادن‌شان آسان بود&quot;. تحقیقات قبلی نشان داده است که آهسته غذا خوردن باعث کاهش میزان گرسنگی می‌شود.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "119168178",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/15492/production/_119168178_3.jpg",
+          "path": "/cpsprodpb/15492/production/_119168178_3.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "مواد غذایی فوق فراوری شده",
+          "copyrightHolder": "BBC",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>persian/world-52475322</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "کرونا؛ چگونه در ایام قرنطینه پرخوری نکنیم",
+                    "headline": "کرونا؛ چگونه در دوران قرنطینه کمتر ریزه خواری کنیم و سالم تر غذا بخوریم",
+                    "overtyped": "کرونا؛ چگونه در ایام قرنطینه پرخوری نکنیم"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/world-52475322"
+                  },
+                  "summary": "قرنطینه در دوران کرونا: توصیه های یک متخصص تغذیه برای سالم و کم خوردن در دورانی که استرس و اضطراب بالایی داریم.",
+                  "timestamp": 1588350864000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/world-52475322",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>persian/magazine-52690395</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "چه کنیم بچه‌ها اینقدر'هله‌هوله' نخورند",
+                    "headline": "چه کنیم بچه‌ها اینقدر'هله‌هوله' نخورند",
+                    "overtyped": "چه کنیم بچه‌ها اینقدر'هله‌هوله' نخورند"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/persian/magazine-52690395"
+                  },
+                  "summary": "با این ‌همه خوراکی‌هایی که دم دست بچه‌ها قرار دارد، چطور نو‌جوانان و بچه‌ها و والدین می‌توانند کاری کنند که غذاهای ناسالم یا \"هله‌هوله‌\"ها اینقدر جذاب نباشد؟",
+                  "timestamp": 1589990417000,
+                  "language": "fa",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                      "categoryName": "Explainer"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:persian/magazine-52690395",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "<bold>&quot;</bold><bold>دست کشیدن از خوردن سخت است&quot; </bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "کریس می‌گوید: &quot;من احساس می‌کردم خیلی بیش از قبل میل به خوردن دارم&quot;. تحقیقات قبلی نشان داده است که مواد‌غذایی مانند پیتزا‌های فوق ‌فرآوری‌شده، شکلات، چیپس و کیک باعث ایجاد ولع خوردن و فقدان کنترل و ناتوانی در دست‌کشیدن از خوردن می‌شود.   ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "شواهدی وجود دارد که مواد‌غذایی با کربو‌هیدرات‌ و چربی بالا (مانند بیشتر خوراکی‌های فوق ‌فرآوری‌شده) می‌توانند مراکز مربوط به پاداش، احساس و انگیزه را در مغز فعال کنند. در پژوهشی دریافتند که هرچه بیشتر تجربه پاداش در برابر مواد‌غذایی داشته باشیم برای رسیدن به همان میزان لذت مقدار بیشتری از آن مواد‌غذایی مصرف می‌کنیم.   ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "بسیاری از مواد‌غذایی فوق ‌فرآوری‌شده از انواع سیستم‌های کنترل کیفیت هم عبور می‌کنند تا &quot;عالی&quot; شوند.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "مزه، میزان نمک، احساس آن در دهان، جویدن و حتی صدایی که در هنگام خوردن تولید می‌کند به دقت تنظیم می‌شود.  ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "کریس می‌گوید: &quot;فکر کنم هیچ‌کس در هیچ کارخانه تولید مواد‌غذایی قصد ندارد چیزی تولید کند که باعث چاقی آدم‌ها شود اما عوارض جانبی مواد‌غذایی خوشمزه این است که نمی‌توان از آنها دست کشید&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "id": "119168180",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/1FFA/production/_119168180__112884553_060922492-1.jpg",
+          "path": "/cpsprodpb/1FFA/production/_119168180__112884553_060922492-1.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "رژیم غذایی",
+          "copyrightHolder": "Reuters",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "آیا باید از همه مواد‌غذایی فوق‌فراوری‌شده پرهیز کنیم؟ ",
+          "markupType": "plain_text",
+          "type": "crosshead"
+        },
+        {
+          "text": "مواد‌غذایی به گروه کم‌فرآوری‌شده (برای مثال گوجه‌فرنگی)، فرآوری‌شده (کنسرو گوجه‌فرنگی) و فوق‌فرآوری‌شده (سس‌گوجه‌فرنگی آماده) تقسیم می‌شود. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "بعضی از مواد‌غذایی فوق‌فرآوری‌شده سالم‌تر از مواد‌غذایی دیگر هستند. غلات کامل صبحانه، نان غلات کامل، کنسرو حبوبات پخته، نوشیدنی‌های بدون قند گیاهی یا تهیه‌شده از سویا همه مواد‌غذایی فوق‌فرآوری‌شده هستند اما موادمغذی مفیدی دارند. هم‌چنین سس‌های آمادهٔ پستا، غذا‌های آماده، گوشت‌های خمیری یا ورقه‌ای هم می‌توانند سالم باشند. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "بعضی از غذا‌های آماده، فوق‌فرآوری‌شده نیستند اما مواد‌ افزودنی و شیمیایی در آنها به کار رفته است که در غذای خانگی استفاده نمی‌شود. کریس می‌گوید: &quot;در دسترس بودن و راحتی و بازار انبوه مواد‌غذایی فوق‌فرآوری‌شده امکان حذف کامل آن را از رژیم غذایی تقریباً &quot;غیر‌ممکن&quot; می‌کند&quot;. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "به نظر متخصص تغذیه، رو هونتریس، هر چند رژیم غذایی با میزان بالایی مواد‌غذایی فوق‌فرآوری‌شده توصیه نمی‌شود اما مصرف گاه‌و‌بیگاه آنها هم خطری برای تندرستی ما ندارد. &quot; برای داشتن رژیم‌غذایی سالم باید تعادل را رعایت کرد&quot;.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<link><caption>خبرهای بیشتر را در کانال تلگرام بی‌‌بی‌سی فارسی دنبال کنید</caption><url href=\"https://t.me/bbcpersian\" platform=\"highweb\"/><url href=\"https://t.me/bbcpersian\" platform=\"enhancedmobile\"/></link>",
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "اگر یک ماه فقط مواد‌غذایی فوق فرآوری‌شده بخوریم چه بلایی سرمان می‌آید",
+        "headline": "اگر یک ماه فقط مواد‌غذایی فوق فرآوری‌شده بخوریم چه بلایی سرمان می‌آید"
+      },
+      "locators": {
+        "assetUri": "/persian/magazine-57679929",
+        "cpsUrn": "urn:bbc:content:assetUri:persian/magazine-57679929",
+        "curie": "http://www.bbc.co.uk/asset/818751ca-4701-4d7a-8256-9b3fb66fca26",
+        "assetId": "57679929"
+      },
+      "summary": "بیش از نیمی از انرژی حاصل از مواد‌غذایی در بریتانیا از محصولات فوق‌فراوری‌شده تأمین می‌شود. کارشناسان بر این باورند که این نوع مواد‌غذایی باعث زیاد خوردن و افزایش وزن افراد می‌شود. در بریتانیا یک نفر از هر چهار بزرگسال و یکی از هر پنج کودک ده تا یازده سال چاق محسوب می‌شود.",
+      "timestamp": 1632989974000,
+      "language": "fa",
+      "passport": {
+        "category": {
+          "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+          "categoryName": "Feature"
+        },
+        "campaigns": [
+          {
+            "campaignId": "5a988e1739461b000e9dabf6",
+            "campaignName": "WS - CS"
+          }
+        ],
+        "language": "fa",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+        "locator": "urn:bbc:cps:curie:asset:818751ca-4701-4d7a-8256-9b3fb66fca26",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/campaign",
+            "value": "http://www.bbc.co.uk/things/426b7f53-9faa-49a7-bb5b-aa15cbbfe4d5#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+              "thingLabel": "سلامت",
+              "thingUri": "http://www.bbc.co.uk/things/72e4133e-bfa5-4611-8f62-dd745453a4f4#id",
+              "thingId": "72e4133e-bfa5-4611-8f62-dd745453a4f4",
+              "thingType": [
+                "core:Theme",
+                "core:Thing",
+                "tagging:TagConcept"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q1077209",
+                "http://www.bbc.com/bitesize/tags/z8pvhcw#id",
+                "http://dbpedia.org/resource/Wellness_(alternative_medicine)"
+              ],
+              "thingEnglishLabel": "Wellbeing",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+              "thingLabel": "غذا",
+              "thingUri": "http://www.bbc.co.uk/things/99fb9bbd-9150-4e13-a3ac-3fa0610683f8#id",
+              "thingId": "99fb9bbd-9150-4e13-a3ac-3fa0610683f8",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q2095",
+                "http://dbpedia.org/resource/Food"
+              ],
+              "thingEnglishLabel": "Food",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+              "thingLabel": "رژیم غذایی",
+              "thingUri": "http://www.bbc.co.uk/things/b5a68823-bb0c-4229-b142-d6d5e09e113f#id",
+              "thingId": "b5a68823-bb0c-4229-b142-d6d5e09e113f",
+              "thingType": [
+                "core:Theme",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Diet"
+              ],
+              "thingEnglishLabel": "Diet & nutrition",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+              "thingLabel": "Feature",
+              "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
+              "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [
+                "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
+              ],
+              "thingEnglishLabel": "Feature",
+              "thingPreferredLabel": "Feature",
+              "thingLabelLanguage": "fa",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "indexImage": {
+        "id": "119168174",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/B852/production/_119168174_1.jpg",
+        "path": "/cpsprodpb/B852/production/_119168174_1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "دکتر کریس فن‌تولکین",
+        "copyrightHolder": "BBC",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:persian/magazine-57679929",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "مجله ‌بی‌بی‌سی",
+        "uri": "/persian/magazine",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Persian",
+        "uri": "/persian",
+        "type": "simple"
+      },
+      "groups": []
+    }
+  }
