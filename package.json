@@ -186,7 +186,7 @@
     "babel-plugin-transform-react-remove-prop-types": "0.4.24",
     "brotli-webpack-plugin": "1.1.0",
     "chalk": "4.1.2",
-    "chromatic": "5.10.1",
+    "chromatic": "6.0.0",
     "chrome-launcher": "0.14.0",
     "cli-table": "0.3.6",
     "compression-webpack-plugin": "9.0.0",
