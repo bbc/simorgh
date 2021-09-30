@@ -15,7 +15,7 @@
     "prismjs": "1.25.0",
     "react-is": "17.0.2",
     "trim": "0.0.3",
-    "web-vitals": "1.1.2"
+    "web-vitals": "1.1.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
