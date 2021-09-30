@@ -19,7 +19,7 @@ import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
 import disclaimer from '#containers/Disclaimer';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
