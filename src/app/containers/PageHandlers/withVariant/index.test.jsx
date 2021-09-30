@@ -28,7 +28,7 @@ describe('WithVariant', () => {
       render(
         <Router history={history}>
           <Route path="/:service">
-            <ComponentWithVariantRedirect match={match} />
+            <ComponentWithVariantRedirect match={match} service={service} />
           </Route>
         </Router>,
       );
@@ -50,7 +50,7 @@ describe('WithVariant', () => {
       render(
         <Router history={history}>
           <Route path="/:service">
-            <ComponentWithVariantRedirect match={match} />
+            <ComponentWithVariantRedirect match={match} service={service} />
           </Route>
         </Router>,
       );
@@ -72,7 +72,7 @@ describe('WithVariant', () => {
       render(
         <Router history={history}>
           <Route path="/:service">
-            <ComponentWithVariantRedirect match={match} />
+            <ComponentWithVariantRedirect match={match} service={service} />
           </Route>
         </Router>,
       );
@@ -94,7 +94,7 @@ describe('WithVariant', () => {
       render(
         <Router history={history}>
           <Route path="/:service">
-            <ComponentWithVariantRedirect match={match} />
+            <ComponentWithVariantRedirect match={match} service={service} />
           </Route>
         </Router>,
       );

@@ -4,7 +4,7 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import CpsTextContainer from './index';
+import TextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { paragraphBlock, fragmentBlock } from './fixtures';
 
@@ -24,10 +24,10 @@ const listBlock = (id = null, blocks, type = 'unorderedList') => ({
   },
 });
 
-describe('CpsTextContainer', () => {
+describe('TextContainer', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'undefined']);
-    isNull('should return null', <CpsTextContainer />);
+    isNull('should return null', <TextContainer />);
   });
 
   describe('with data', () => {
@@ -68,7 +68,7 @@ describe('CpsTextContainer', () => {
     shouldMatchSnapshot(
       'should render correctly',
       <ServiceContextProvider service="news">
-        <CpsTextContainer {...data} />
+        <TextContainer {...data} />
       </ServiceContextProvider>,
     );
   });
