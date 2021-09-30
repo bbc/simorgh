@@ -70,7 +70,7 @@ export const service = {
       brandDescription:
         'گفتگو با چهارهای سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
       image: {
-        src: 'http://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
         alt: 'پادکست',
       },
       linkLabel: {
