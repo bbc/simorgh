@@ -1700,6 +1700,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbc/gel-foundations@npm:7.0.0":
+  version: 7.0.0
+  resolution: "@bbc/gel-foundations@npm:7.0.0"
+  checksum: 7348015722b574a2572176061d41418dfb3a682c7e990344e5e246f94a1f4956da27e444a90de4766b8b53a359fe48860b24ef2e0aa20ee3d4e62562b928de74
+  languageName: node
+  linkType: hard
+
 "@bbc/moment-timezone-include@npm:1.1.8":
   version: 1.1.8
   resolution: "@bbc/moment-timezone-include@npm:1.1.8"
@@ -18940,7 +18947,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-react": 7.14.5
     "@babel/runtime": 7.14.8
     "@bbc/apache2-license-checker": 1.1.4
-    "@bbc/gel-foundations": 6.3.0
+    "@bbc/gel-foundations": 7.0.0
     "@bbc/moment-timezone-include": 1.1.8
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-brand": 7.3.10
