@@ -20,6 +20,11 @@ const externalLinks = {
         linkText: 'Arquivo completo',
         linkUrl: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
       },
+      {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/bbc-l%C3%AA/id1586358051',
+      },
     ],
   },
 };
