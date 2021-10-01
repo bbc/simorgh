@@ -14,17 +14,6 @@ import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
 
-const fonts = [
-  () =>
-    F_NOTO_SANS_TAMIL_BOLD(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
-    ),
-  () =>
-    F_NOTO_SANS_TAMIL_REGULAR(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSansTamil/v1.00/',
-    ),
-];
-
 export const service = {
   default: {
     lang: `ta`,
@@ -339,7 +328,7 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts,
+    fonts: [F_NOTO_SANS_TAMIL_BOLD, F_NOTO_SANS_TAMIL_REGULAR],
     timezone: 'GMT',
     navigation: [
       {
