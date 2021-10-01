@@ -1693,13 +1693,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/gel-foundations@npm:6.3.0":
-  version: 6.3.0
-  resolution: "@bbc/gel-foundations@npm:6.3.0"
-  checksum: a8a5979ef740e1365cdc530c62921a3033cf9331d2d75925ce462f1824b3b898fe3525b247d1df3579dfe10cd73595abb84a357fd54e0b52a50c2a80a0adca3e
-  languageName: node
-  linkType: hard
-
 "@bbc/gel-foundations@npm:7.0.0":
   version: 7.0.0
   resolution: "@bbc/gel-foundations@npm:7.0.0"
@@ -2116,16 +2109,6 @@ __metadata:
     "@bbc/gel-foundations": 7.0.0
     react-helmet: ^6.1.0
   checksum: 8db16501344182548e79b70761289c4319ca23e64da5ee7b86b8475b186989a5db51d0ca4579993ad32322bf41dd31b05d53dc5d8944e07301778a90541bd137
-  languageName: node
-  linkType: hard
-
-"@bbc/psammead-styles@npm:7.6.3":
-  version: 7.6.3
-  resolution: "@bbc/psammead-styles@npm:7.6.3"
-  peerDependencies:
-    "@emotion/react": ^11.1.4
-    react: ">=16.9.0"
-  checksum: 0b782d991dd1699ff250cc20855d4fe35d28735c1a5109f693d359b2060b3e940ace878aa354746482b67ff9888e9b56a69ec933a74986c4f7f37a3a637ace47
   languageName: node
   linkType: hard
 
@@ -19306,7 +19289,7 @@ resolve@^2.0.0-next.3:
     "@babel/preset-react": 7.14.5
     "@babel/runtime": 7.14.8
     "@bbc/apache2-license-checker": 1.1.4
-    "@bbc/gel-foundations": 6.3.0
+    "@bbc/gel-foundations": 7.0.0
     "@bbc/moment-timezone-include": 1.1.8
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-brand": 7.3.11
@@ -19339,7 +19322,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-story-promo": 8.0.29
     "@bbc/psammead-story-promo-list": 6.0.27
     "@bbc/psammead-storybook-helpers": 9.0.17
-    "@bbc/psammead-styles": 7.6.3
+    "@bbc/psammead-styles": 8.0.0
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/psammead-timestamp": 4.0.27
     "@bbc/psammead-timestamp-container": 5.0.38

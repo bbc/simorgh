@@ -71,7 +71,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
-    "@bbc/gel-foundations": "6.3.0",
+    "@bbc/gel-foundations": "7.0.0",
     "@bbc/moment-timezone-include": "1.1.8",
     "@bbc/psammead-assets": "3.1.9",
     "@bbc/psammead-brand": "7.3.11",
@@ -103,7 +103,7 @@
     "@bbc/psammead-social-embed": "3.3.8",
     "@bbc/psammead-story-promo": "8.0.29",
     "@bbc/psammead-story-promo-list": "6.0.27",
-    "@bbc/psammead-styles": "7.6.3",
+    "@bbc/psammead-styles": "8.0.0",
     "@bbc/psammead-timestamp": "4.0.27",
     "@bbc/psammead-timestamp-container": "5.0.38",
     "@bbc/psammead-topic-tags": "1.0.8",
