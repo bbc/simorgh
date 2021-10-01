@@ -39,14 +39,8 @@ const InlineDiv = styled.div`
 `;
 
 const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
-  const {
-    script,
-    service,
-    dir,
-    timezone,
-    datetimeLocale,
-    translations,
-  } = useContext(ServiceContext);
+  const { script, service, dir, timezone, datetimeLocale, translations } =
+    useContext(ServiceContext);
   const { isAmp, variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;

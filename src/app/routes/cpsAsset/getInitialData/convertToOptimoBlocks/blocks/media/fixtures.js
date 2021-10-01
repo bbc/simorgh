@@ -108,14 +108,12 @@ export const optimoVideoBlock = {
                               {
                                 model: {
                                   attributes: [],
-                                  text:
-                                    'Warning: Dis video fit make you feel one kain!',
+                                  text: 'Warning: Dis video fit make you feel one kain!',
                                 },
                                 type: 'fragment',
                               },
                             ],
-                            text:
-                              'Warning: Dis video fit make you feel one kain!',
+                            text: 'Warning: Dis video fit make you feel one kain!',
                           },
                           type: 'paragraph',
                         },

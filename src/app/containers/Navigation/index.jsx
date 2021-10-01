@@ -43,14 +43,8 @@ const renderListItems = (
 const NavigationContainer = () => {
   const { isAmp } = useContext(RequestContext);
 
-  const {
-    script,
-    translations,
-    navigation,
-    service,
-    dir,
-    theming,
-  } = useContext(ServiceContext);
+  const { script, translations, navigation, service, dir, theming } =
+    useContext(ServiceContext);
 
   const {
     brandBackgroundColour,

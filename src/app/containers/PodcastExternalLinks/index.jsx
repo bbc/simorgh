@@ -81,9 +81,8 @@ const StyledListItem = styled.li`
 `;
 
 const PodcastExternalLinks = ({ brandTitle, links }) => {
-  const { translations, service, script, dir, lang } = useContext(
-    ServiceContext,
-  );
+  const { translations, service, script, dir, lang } =
+    useContext(ServiceContext);
   const { externalLinkText } = useContext(ServiceContext);
 
   const eventTrackingData = {

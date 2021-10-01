@@ -82,14 +82,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     mediumSynopsis,
   } = pageData;
 
-  const {
-    lang,
-    timezone,
-    datetimeLocale,
-    service,
-    translations,
-    brandName,
-  } = useContext(ServiceContext);
+  const { lang, timezone, datetimeLocale, service, translations, brandName } =
+    useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
 

@@ -10,17 +10,20 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
  * @param {Function} Component A React component.
  * @param {Object} Configuration A configuration object.
  */
-const withContexts = (Component, { isAmp, service = 'news' }) => props => (
-  <RequestContextProvider
-    isAmp={isAmp}
-    pageType={STORY_PAGE}
-    service={service}
-    pathname="/pathname"
-  >
-    <ServiceContextProvider service={service}>
-      <Component {...props} />
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+const withContexts =
+  (Component, { isAmp, service = 'news' }) =>
+  props =>
+    (
+      <RequestContextProvider
+        isAmp={isAmp}
+        pageType={STORY_PAGE}
+        service={service}
+        pathname="/pathname"
+      >
+        <ServiceContextProvider service={service}>
+          <Component {...props} />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    );
 
 export default withContexts;
