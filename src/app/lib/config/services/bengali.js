@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { bengaliNotoSerif } from '@bbc/gel-foundations/scripts';
+import { bengali } from '@bbc/gel-foundations/scripts';
 import { bengali as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SERIF_BENGALI_BOLD,
@@ -13,17 +13,6 @@ import {
 import '@bbc/moment-timezone-include/tz/Asia/Dhaka';
 import '@bbc/psammead-locales/moment/bn';
 import withContext from '../../../contexts/utils/withContext';
-
-const fonts = [
-  () =>
-    F_NOTO_SERIF_BENGALI_BOLD(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
-    ),
-  () =>
-    F_NOTO_SERIF_BENGALI_REGULAR(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifBengali/v1.00/',
-    ),
-];
 
 export const service = {
   default: {
@@ -60,7 +49,7 @@ export const service = {
       'https://www.bbc.com/bengali/institutional-50409861#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/bengali/institutional-50409861',
     isTrustProjectParticipant: true,
-    script: bengaliNotoSerif,
+    script: bengali,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle:
@@ -332,7 +321,7 @@ export const service = {
       copyrightText:
         'বিবিসি। বাইরের কোন সাইটের তথ্যের জন্য বিবিসি দায়বদ্ধ নয়।',
     },
-    fonts,
+    fonts: [F_NOTO_SERIF_BENGALI_BOLD, F_NOTO_SERIF_BENGALI_REGULAR],
     timezone: 'Asia/Dhaka',
     navigation: [
       {
