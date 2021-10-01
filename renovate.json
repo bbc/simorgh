@@ -35,6 +35,10 @@
     {
       "matchPackageNames": ["web-vitals"],
       "allowedVersions": "1.1.1"
+    },
+    {
+      "matchPackageNames": ["@bbc/web-vitals"],
+      "allowedVersions": "1.0.8"
     }
   ]
 }
