@@ -6,13 +6,13 @@ jest.mock('fs', () => ({
 
 jest.mock('glob', () => ({
   sync: () => [
-    '/some-path/.storybook/static/fonts/IskoolaPota',
-    '/some-path/.storybook/static/fonts/IskoolaPota/bold.eot',
-    '/some-path/.storybook/static/fonts/IskoolaPota/bold.ttf',
-    '/some-path/.storybook/static/fonts/IskoolaPota/bold.woff',
-    '/some-path/.storybook/static/fonts/IskoolaPota/normal.eot',
-    '/some-path/.storybook/static/fonts/IskoolaPota/normal.ttf',
-    '/some-path/.storybook/static/fonts/IskoolaPota/normal.woff',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/bold.eot',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/bold.ttf',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/bold.woff',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/normal.eot',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/normal.ttf',
+    '/some-path/.storybook/static/fonts/NotoSerifSinhala/normal.woff',
   ],
 }));
 
@@ -28,7 +28,7 @@ it('should build the font preloads', () => {
     "
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/bold.eot\\"
+      href=\\"fonts/NotoSerifSinhala/bold.eot\\"
       as=\\"font\\"
       type=\\"font/eot\\"
       crossorigin=\\"anonymous\\"
@@ -36,7 +36,7 @@ it('should build the font preloads', () => {
 
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/bold.ttf\\"
+      href=\\"fonts/NotoSerifSinhala/bold.ttf\\"
       as=\\"font\\"
       type=\\"font/ttf\\"
       crossorigin=\\"anonymous\\"
@@ -44,7 +44,7 @@ it('should build the font preloads', () => {
 
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/bold.woff\\"
+      href=\\"fonts/NotoSerifSinhala/bold.woff\\"
       as=\\"font\\"
       type=\\"font/woff\\"
       crossorigin=\\"anonymous\\"
@@ -52,7 +52,7 @@ it('should build the font preloads', () => {
 
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/normal.eot\\"
+      href=\\"fonts/NotoSerifSinhala/normal.eot\\"
       as=\\"font\\"
       type=\\"font/eot\\"
       crossorigin=\\"anonymous\\"
@@ -60,7 +60,7 @@ it('should build the font preloads', () => {
 
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/normal.ttf\\"
+      href=\\"fonts/NotoSerifSinhala/normal.ttf\\"
       as=\\"font\\"
       type=\\"font/ttf\\"
       crossorigin=\\"anonymous\\"
@@ -68,7 +68,7 @@ it('should build the font preloads', () => {
 
     <link
       rel=\\"preload\\"
-      href=\\"fonts/IskoolaPota/normal.woff\\"
+      href=\\"fonts/NotoSerifSinhala/normal.woff\\"
       as=\\"font\\"
       type=\\"font/woff\\"
       crossorigin=\\"anonymous\\"
