@@ -4,13 +4,13 @@ import paragraph from '../Paragraph';
 import unorderedList from '../BulletedList';
 import Blocks from '../Blocks';
 
-const CpsTextContainer = ({ blocks, componentsToRender }) => {
+const TextContainer = ({ blocks, componentsToRender }) => {
   if (!blocks) return null;
 
   return <Blocks blocks={blocks} componentsToRender={componentsToRender} />;
 };
 
-export const CpsTextPropTypes = {
+export const TextPropTypes = {
   blocks: arrayOf(
     shape({
       type: string.isRequired,
@@ -18,12 +18,12 @@ export const CpsTextPropTypes = {
   ).isRequired,
 };
 
-CpsTextContainer.propTypes = {
-  ...CpsTextPropTypes,
+TextContainer.propTypes = {
+  ...TextPropTypes,
   componentsToRender: objectOf(elementType),
 };
 
-CpsTextContainer.defaultProps = {
+TextContainer.defaultProps = {
   componentsToRender: {
     paragraph,
     unorderedList,
@@ -31,4 +31,4 @@ CpsTextContainer.defaultProps = {
   },
 };
 
-export default CpsTextContainer;
+export default TextContainer;

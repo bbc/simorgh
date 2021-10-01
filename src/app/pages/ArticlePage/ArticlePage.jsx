@@ -26,7 +26,7 @@ import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
 import gist from '#containers/Gist';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
