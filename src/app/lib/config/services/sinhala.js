@@ -4,7 +4,7 @@ import {
   C_GHOST,
   C_POSTBOX_30,
 } from '@bbc/psammead-styles/colours';
-import { sinhaleseNotoSerif } from '@bbc/gel-foundations/scripts';
+import { sinhalese } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
   F_NOTO_SERIF_SINHALA_BOLD,
@@ -13,17 +13,6 @@ import {
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
 import withContext from '../../../contexts/utils/withContext';
-
-const fonts = [
-  () =>
-    F_NOTO_SERIF_SINHALA_BOLD(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/',
-    ),
-  () =>
-    F_NOTO_SERIF_SINHALA_REGULAR(
-      'https://ws-downloads.files.bbci.co.uk/fonts/NotoSerifSinhala/v1.00/',
-    ),
-];
 
 export const service = {
   default: {
@@ -60,7 +49,7 @@ export const service = {
       'https://www.bbc.com/sinhala/institutional-50288553#authorexpertise',
     publishingPrinciples: 'https://www.bbc.com/sinhala/institutional-50288553',
     isTrustProjectParticipant: true,
-    script: sinhaleseNotoSerif,
+    script: sinhalese,
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'මුල් පිටුව',
@@ -325,7 +314,7 @@ export const service = {
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts,
+    fonts: [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR],
     timezone: 'GMT',
     navigation: [
       {
