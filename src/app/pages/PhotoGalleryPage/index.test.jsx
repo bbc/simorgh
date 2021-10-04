@@ -11,7 +11,7 @@ import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
-import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
+import pglData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
@@ -119,20 +119,6 @@ describe('Photo Gallery Page', () => {
       expect(container).toMatchSnapshot();
     });
 
-    it('should match snapshot for PGL with about tags', async () => {
-      fetch.mockResponse(JSON.stringify(pglAboutData));
-      const { pageData } = await getInitialData({
-        path: 'some-cps-pgl-path',
-        pageType,
-      });
-
-      const { container } = render(
-        <Page pageData={pageData} service="afaanoromoo" />,
-      );
-
-      expect(container).toMatchSnapshot();
-    });
-
     it('should match snapshot for PGL with non-CPS onward journeys filtered', async () => {
       fetch.mockResponse(JSON.stringify(someCpsOnwardJourneys));
       const { pageData } = await getInitialData({
@@ -162,7 +148,7 @@ describe('Photo Gallery Page', () => {
   });
 
   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {
-    fetch.mockResponse(JSON.stringify(pglAboutData));
+    fetch.mockResponse(JSON.stringify(pglData));
     const { pageData } = await getInitialData({
       path: 'some-cps-pgl-path',
       pageType,
@@ -174,7 +160,7 @@ describe('Photo Gallery Page', () => {
   });
 
   it('should not show the pop-out timestamp when allowDateStamp is false', async () => {
-    fetch.mockResponse(JSON.stringify(pglAboutData));
+    fetch.mockResponse(JSON.stringify(pglData));
     const { pageData } = await getInitialData({
       path: 'some-cps-pgl-path',
       pageType,

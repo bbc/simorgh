@@ -45,7 +45,6 @@ import InlinePodcastPromo from '#containers/PodcastPromo/inline';
 import {
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
@@ -95,7 +94,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
   const mostReadInitialData = path(['mostRead'], pageData);
   const topStoriesInitialData = path(
     ['secondaryColumn', 'topStories'],
@@ -298,7 +296,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         lastPublished={lastPublished}
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
-        aboutTags={aboutTags}
         hasAppleItunesAppBanner
       />
       <LinkedData
@@ -309,7 +306,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />

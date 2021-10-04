@@ -43,20 +43,6 @@ export const optimoMetadataPropTypes = {
     category: string,
     genre: string,
   }),
-  tags: shape({
-    about: arrayOf(
-      shape({
-        thingUri: string,
-        topicId: string,
-        topicName: string,
-        curationType: arrayOf(string),
-        thingId: string,
-        thingLabel: string,
-        thingType: arrayOf(string),
-      }),
-    ),
-    mentions: arrayOf(shape({})),
-  }),
   version: string,
   blockTypes: arrayOf(string),
 };

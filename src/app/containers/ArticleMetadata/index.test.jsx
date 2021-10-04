@@ -39,8 +39,6 @@ const propsForNewsInternational = {
   firstPublished: getISOStringDate(articleDataNews.metadata.firstPublished),
   lastPublished: getISOStringDate(articleDataNews.metadata.lastPublished),
   section: articleDataNews.metadata.passport.genre,
-  aboutTags: articleDataNews.metadata.tags.about,
-  mentionsTags: articleDataNews.metadata.tags.mentions,
   lang: articleDataNews.metadata.passport.language,
   description: articleDataNews.promo.headlines.seoHeadline,
 };
@@ -147,8 +145,6 @@ shouldMatchSnapshot(
         articleDataPersian.metadata.lastPublished,
       )}
       section={articleDataPersian.metadata.passport.genre}
-      aboutTags={articleDataPersian.metadata.tags.about}
-      mentionsTags={articleDataPersian.metadata.tags.mentions}
       lang={articleDataPersian.metadata.passport.language}
       description={articleDataPersian.promo.headlines.seoHeadline}
     />

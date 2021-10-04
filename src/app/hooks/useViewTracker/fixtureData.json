@@ -52,40 +52,6 @@
       },
       "taggings": []
     },
-    "tags": {
-      "about": [
-        {
-          "curationList": [
-            {
-              "curationId": "30600bd9-ac23-45c9-948a-55fe7e115078",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingId": "3d5d5e30-dd50-4041-96d5-c970b20005b9",
-          "thingLabel": "Nigeria",
-          "thingSameAs": ["http://sws.geonames.org/2328926/"],
-          "thingType": ["Thing", "Place", "geoname:GeoTagConcept"],
-          "thingUri": "http://www.bbc.co.uk/things/3d5d5e30-dd50-4041-96d5-c970b20005b9#id",
-          "topicId": "c2dwqd1zr92t",
-          "topicName": "Nigeria"
-        },
-        {
-          "curationList": [
-            {
-              "curationId": "0d50dd92-bc57-4142-9487-d43f46026ad0",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingId": "7d65828a-85c1-41f4-96cf-c758da75e401",
-          "thingLabel": "Nigeria politics",
-          "thingSameAs": ["http://dbpedia.org/resource/Politics_of_Nigeria"],
-          "thingType": ["Thing", "Theme"],
-          "thingUri": "http://www.bbc.co.uk/things/7d65828a-85c1-41f4-96cf-c758da75e401#id",
-          "topicId": "c95y35z683nt",
-          "topicName": "Nigeria politics"
-        }
-      ]
-    },
     "timestamp": 1583349971000,
     "type": "STY",
     "version": "v1.1.6"

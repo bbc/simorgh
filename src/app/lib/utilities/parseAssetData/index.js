@@ -27,10 +27,6 @@ export const getFirstPublished = articleData =>
 export const getLastPublished = articleData =>
   getISOStringDate(path(['metadata', 'lastPublished'], articleData));
 
-export const getAboutTags = path(['metadata', 'tags', 'about']);
-
 export const getArticleSection = path(['metadata', 'passport', 'genre']);
-
-export const getMentions = path(['metadata', 'tags', 'mentions']);
 
 export const getLang = path(['metadata', 'passport', 'language']);

@@ -11,8 +11,6 @@ const ArticleMetadata = ({
   firstPublished,
   lastPublished,
   section,
-  aboutTags,
-  mentionsTags,
   lang,
   description,
   imageLocator,
@@ -29,8 +27,6 @@ const ArticleMetadata = ({
         lang={lang}
         description={description}
         openGraphType="article"
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
         image={brandedImage}
         imageAltText={imageAltText}
       >
@@ -61,8 +57,6 @@ ArticleMetadata.propTypes = {
   firstPublished: string.isRequired,
   lastPublished: string.isRequired,
   section: string,
-  aboutTags: arrayOf(tagPropTypes),
-  mentionsTags: arrayOf(tagPropTypes),
   lang: string.isRequired,
   description: string.isRequired,
   imageLocator: string,
@@ -72,8 +66,6 @@ ArticleMetadata.propTypes = {
 ArticleMetadata.defaultProps = {
   articleId: '',
   section: '',
-  aboutTags: [],
-  mentionsTags: [],
   imageLocator: null,
   imageAltText: null,
 };

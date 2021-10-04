@@ -27,8 +27,6 @@ const getArticleMetadataProps = data => ({
   lang: data.metadata.passport.language,
   description: getSummary(data),
   openGraphType: 'article',
-  aboutTags: articleDataNews.metadata.tags.about,
-  mentionsTags: articleDataNews.metadata.tags.mentions,
 });
 
 const newsArticleMetadataProps = getArticleMetadataProps(articleDataNews);
@@ -50,8 +48,6 @@ const MetadataWithContext = ({
   imageAltText,
   imageWidth,
   imageHeight,
-  aboutTags,
-  mentionsTags,
   hasAppleItunesAppBanner,
   /* eslint-enable react/prop-types */
 }) => (
@@ -70,8 +66,6 @@ const MetadataWithContext = ({
         lang={lang}
         description={description}
         openGraphType={openGraphType}
-        aboutTags={aboutTags}
-        mentionsTags={mentionsTags}
         image={image}
         imageAltText={imageAltText}
         imageHeight={imageHeight}
@@ -525,27 +519,6 @@ it('should render the twitter metatags', async () => {
   await waitFor(() => {
     const actual = Array.from(
       document.querySelectorAll('head > meta[name^="twitter"]'),
-    ).map(tag => ({
-      name: tag.getAttribute('name'),
-      content: tag.getAttribute('content'),
-    }));
-
-    expect(actual).toEqual(expected);
-  });
-});
-
-it('should render the LDP tags', async () => {
-  render(<CanonicalNewsInternationalOrigin />);
-
-  const expected = [
-    { content: 'Royal Wedding 2018', name: 'article:tag' },
-    { content: 'Duchess of Sussex', name: 'article:tag' },
-    { content: 'Queen Victoria', name: 'article:tag' },
-  ];
-
-  await waitFor(() => {
-    const actual = Array.from(
-      document.querySelectorAll('head > meta[name^="article:tag"]'),
     ).map(tag => ({
       name: tag.getAttribute('name'),
       content: tag.getAttribute('content'),

@@ -50,7 +50,6 @@
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
       },
-      "taggings": []
     },
     "tags": {
       "about": [
@@ -993,7 +992,6 @@
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
         "categoryName": "News"
       },
-      "taggings": []
     },
     "summary": "Oga Oshiomhole don cari di mata go Court of Appeal.",
     "timestamp": 1583349971000,
@@ -5460,7 +5458,6 @@
               "campaignName": "DigiHub"
             }
           ],
-          "taggings": []
         },
         "cpsType": "STY",
         "indexImage": {

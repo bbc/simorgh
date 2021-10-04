@@ -47,9 +47,7 @@ import {
   getSummary,
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
   getArticleSection,
-  getMentions,
   getLang,
 } from '#lib/utilities/parseAssetData';
 import filterForBlockType from '#lib/utilities/blockHandlers';
@@ -106,7 +104,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
 
   const promoImageBlocks = pathOr(
@@ -169,8 +166,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         firstPublished={firstPublished}
         lastPublished={lastPublished}
         section={getArticleSection(pageData)}
-        aboutTags={aboutTags}
-        mentionsTags={getMentions(pageData)}
         lang={getLang(pageData)}
         description={description}
         imageLocator={promoImage}
@@ -183,7 +178,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         headline={headline}
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags}
         imageLocator={promoImage}
       />
       <Main role="main">

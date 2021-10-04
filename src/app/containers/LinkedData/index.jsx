@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
 
@@ -15,7 +14,6 @@ const LinkedData = ({
   description,
   datePublished,
   dateModified,
-  aboutTags,
   entities,
   imageLocator,
 }) => {
@@ -88,7 +86,6 @@ const LinkedData = ({
     datePublished,
     dateModified,
     inLanguage,
-    ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
       author: {
         '@type': ORG_TYPE,
@@ -124,13 +121,6 @@ LinkedData.propTypes = {
   description: string,
   datePublished: string,
   dateModified: string,
-  aboutTags: arrayOf(
-    shape({
-      '@type': string,
-      name: string,
-      sameAs: arrayOf(string),
-    }),
-  ),
   // eslint-disable-next-line react/forbid-prop-types
   entities: arrayOf(object),
   imageLocator: string,
@@ -142,7 +132,6 @@ LinkedData.defaultProps = {
   description: undefined,
   datePublished: undefined,
   dateModified: undefined,
-  aboutTags: undefined,
   entities: [],
   imageLocator: undefined,
 };

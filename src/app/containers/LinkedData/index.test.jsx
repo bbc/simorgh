@@ -31,14 +31,6 @@ describe('LinkedData', () => {
     headline: 'Article Headline for SEO',
     datePublished: '2018-01-01T12:01:00.000Z',
     dateModified: '2018-01-01T13:00:00.000Z',
-    about: [
-      {
-        '@type': 'Thing',
-        name: 'Royal Wedding 2018',
-        sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
-      },
-      { '@type': 'Person', name: 'Duchess of Sussex' },
-    ],
   };
 
   const propsForRadio = {
@@ -59,14 +51,6 @@ describe('LinkedData', () => {
     datePublished: '2018-01-01T12:01:00.000Z',
     dateModified: '2018-01-01T13:00:00.000Z',
     description: 'Some photos in a gallery',
-    about: [
-      {
-        '@type': 'Thing',
-        name: 'Tag 1',
-        sameAs: ['http://dbpedia.org/resource/Queen_Victoria'],
-      },
-      { '@type': 'Person', name: 'A Person' },
-    ],
   };
 
   const propsForOndemandRadio = {

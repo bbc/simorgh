@@ -4,7 +4,6 @@ import {
   getPublishedDatetime,
   getContentId,
   LIBRARY_VERSION,
-  getThingAttributes,
 } from '#lib/analyticsUtils';
 
 export const buildCpsAssetPageATIParams = (
@@ -45,8 +44,6 @@ export const buildCpsAssetPageATIParams = (
   const isValidPage = page && typeof page === 'string' && page.includes('.');
   const chapter1 = isValidPage ? getChapter1(page) : false;
   const producerId = getProducer(atiAnalyticsProducerId);
-  const ldpThingIds = getThingAttributes('thingId', pageData);
-  const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
   const isLegacyAsset = url => url.split('/').length > 7;
 
   return {
@@ -64,8 +61,6 @@ export const buildCpsAssetPageATIParams = (
     timeUpdated: getPublishedDatetime('lastPublished', pageData),
     categoryName: path(['passport', 'category', 'categoryName'], metadata),
     campaigns: path(['passport', 'campaigns'], metadata),
-    ...(ldpThingIds && { ldpThingIds }),
-    ...(ldpThingLabels && { ldpThingLabels }),
     producerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,

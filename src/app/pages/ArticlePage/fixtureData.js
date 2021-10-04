@@ -57,53 +57,6 @@ const articleDataBuilder = (
   },
 });
 
-const presetThings = {
-  about: [
-    {
-      thingUri:
-        'http://www.bbc.co.uk/things/2351f2b2-ce36-4f44-996d-c3c4f7f90eaa#id',
-      topicId: 'cpwpy79d6dxt',
-      topicName: 'Royal Wedding 2018',
-      curationType: ['vivo-stream'],
-      thingId: '2351f2b2-ce36-4f44-996d-c3c4f7f90eaa',
-      thingLabel: 'Royal Wedding 2018',
-      thingEnglishLabel: 'Royal Wedding 2018',
-      thingType: ['Thing', 'Event'],
-      thingSameAs: [
-        'http://dbpedia.org/resource/Queen_Victoria',
-        'http://rdf.freebase.com/ns/m.0cw10',
-      ],
-    },
-    {
-      thingUri:
-        'http://www.bbc.co.uk/things/803eaeb9-c0c3-4f1b-9a66-90efac3df2dc#id',
-      topicId: 'cg3mq45zq4xt',
-      topicName: 'Duchess of Sussex',
-      curationType: ['vivo-stream'],
-      thingId: '803eaeb9-c0c3-4f1b-9a66-90efac3df2dc',
-      thingLabel: 'Duchess of Sussex',
-      thingEnglishLabel: 'Duchess of Sussex',
-      thingType: ['Person'],
-      thingSameAs: [],
-    },
-  ],
-  mentions: [
-    {
-      thingUri:
-        'http://www.bbc.co.uk/things/1efbf3e5-b330-49a1-b531-b507ab027c96#id',
-      thingId: '1efbf3e5-b330-49a1-b531-b507ab027c96',
-      thingLabel: 'Queen Victoria',
-      thingEnglishLabel: 'Queen Victoria',
-      thingType: ['Person', 'Thing'],
-    },
-  ],
-};
-
-const emptyThings = {
-  about: null,
-  mentions: null,
-};
-
 export const articleDataNews = articleDataBuilder(
   'c0000000001o',
   'News',
@@ -114,7 +67,6 @@ export const articleDataNews = articleDataBuilder(
   'Article Headline for SEO',
   'Article Headline for Promo',
   'Article summary.',
-  presetThings,
 );
 
 export const articleDataPersian = articleDataBuilder(
@@ -127,7 +79,6 @@ export const articleDataPersian = articleDataBuilder(
   'سرصفحه مقاله',
   'سرصفحه مقاله برای ارتقاء',
   'خلاصه مقاله',
-  emptyThings,
 );
 
 export const articleDataPidgin = articleDataBuilder(
@@ -140,5 +91,4 @@ export const articleDataPidgin = articleDataBuilder(
   'Article Headline for SEO in Pidgin',
   'Article Headline for Promo in Pidgin',
   'Article summary in Pidgin',
-  emptyThings,
 );

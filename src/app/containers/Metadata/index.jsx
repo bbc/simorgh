@@ -32,19 +32,12 @@ const iconSizes = {
   icon: ['72x72', '96x96', '192x192'],
 };
 
-const renderTags = tags =>
-  tags.map(({ thingLabel: content }) => (
-    <meta name="article:tag" content={content} key={content} />
-  ));
-
 const MetadataContainer = ({
   title,
   socialHeadline,
   lang,
   description,
   openGraphType,
-  aboutTags,
-  mentionsTags,
   image,
   imageAltText,
   imageWidth,
@@ -162,8 +155,6 @@ const MetadataContainer = ({
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
       <meta name="twitter:title" content={socialTitle} />
-      {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
-      {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
       {getIconLinks(service, iconSizes)}
       <link
@@ -193,8 +184,6 @@ MetadataContainer.propTypes = {
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
-  aboutTags: arrayOf(tagPropTypes),
-  mentionsTags: arrayOf(tagPropTypes),
   image: string,
   imageAltText: string,
   imageWidth: number,
@@ -205,8 +194,6 @@ MetadataContainer.propTypes = {
 
 MetadataContainer.defaultProps = {
   socialHeadline: null,
-  aboutTags: [],
-  mentionsTags: [],
   image: null,
   imageAltText: null,
   imageWidth: null,

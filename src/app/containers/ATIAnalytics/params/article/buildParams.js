@@ -3,7 +3,6 @@ import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
   LIBRARY_VERSION,
-  getThingAttributes,
 } from '../../../../lib/analyticsUtils';
 import {
   getLanguage,
@@ -27,8 +26,6 @@ export const buildArticleATIParams = (
     contentId: getContentId(articleData),
     contentType: 'article',
     language: getLanguage(articleData),
-    ldpThingIds: getThingAttributes('thingId', articleData),
-    ldpThingLabels: getThingAttributes('thingEnglishLabel', articleData),
     pageIdentifier: getPageIdentifier(service, articleData),
     pageTitle: getPromoHeadline(articleData),
     producerId: atiAnalyticsProducerId,

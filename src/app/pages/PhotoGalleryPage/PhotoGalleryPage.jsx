@@ -32,7 +32,6 @@ import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import {
-  getAboutTags,
   getFirstPublished,
   getLastPublished,
 } from '#lib/utilities/parseAssetData';
@@ -102,7 +101,6 @@ const PhotoGalleryPage = ({ pageData }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
 
   const componentsToRender = {
     fauxHeadline,
@@ -153,7 +151,6 @@ const PhotoGalleryPage = ({ pageData }) => {
         lastPublished={lastPublished}
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
-        aboutTags={aboutTags}
       />
       <LinkedData
         type="Article"
@@ -163,7 +160,6 @@ const PhotoGalleryPage = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />

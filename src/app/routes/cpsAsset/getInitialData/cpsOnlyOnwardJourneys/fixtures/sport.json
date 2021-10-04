@@ -44,32 +44,6 @@
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Sport",
       "locator": "urn:bbc:cps:curie:asset:9e2da26f-e230-412c-8b36-57be03f8ea7f",
       "availability": "AVAILABLE",
-      "taggings": [
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/4bdbf21d-d1ad-7147-ab08-612cd0dc20b4#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/b7498154-88a4-43ac-8790-c3bb93d5e18f#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/5cd4682a-7643-f445-8b1f-bcbaf450bc89#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-        }
-      ],
       "schemaVersion": "1.2.0",
       "publishedState": "PUBLISHED"
     },

@@ -13,7 +13,6 @@ const CpsMetadata = ({
   lastPublished,
   imageLocator,
   imageAltText,
-  aboutTags,
   hasAppleItunesAppBanner,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
@@ -29,7 +28,6 @@ const CpsMetadata = ({
       openGraphType="article"
       image={brandedImage}
       imageAltText={imageAltText}
-      aboutTags={aboutTags}
       hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     >
       <meta name="article:author" content={articleAuthor} />
@@ -58,14 +56,12 @@ CpsMetadata.propTypes = {
   lastPublished: string.isRequired,
   imageLocator: string,
   imageAltText: string,
-  aboutTags: arrayOf(tagPropTypes),
   hasAppleItunesAppBanner: bool,
 };
 
 CpsMetadata.defaultProps = {
   imageLocator: null,
   imageAltText: null,
-  aboutTags: [],
   hasAppleItunesAppBanner: false,
 };
 

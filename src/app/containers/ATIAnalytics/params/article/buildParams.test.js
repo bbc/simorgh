@@ -26,8 +26,6 @@ const validURLParams = {
   contentId: 'urn:bbc:optimo://www.bbc.co.uk',
   contentType: 'article',
   language: 'language',
-  ldpThingIds: 'thing+id+1~thing+id+2',
-  ldpThingLabels: 'thing+english+label+1~thing+english+label+2',
   pageIdentifier: 'service.articles.//www.bbc.co.uk.page',
   pageTitle: 'pageTitle',
   producerId: serviceContext.atiAnalyticsProducerId,
@@ -48,20 +46,6 @@ const article = {
     },
     passport: {
       language: 'language',
-    },
-    tags: {
-      about: [
-        {
-          thingId: 'thing id 1',
-          thingLabel: 'thing label 1',
-          thingEnglishLabel: 'thing english label 1',
-        },
-        {
-          thingId: 'thing id 2',
-          thingLabel: 'thing label 2',
-          thingEnglishLabel: 'thing english label 2',
-        },
-      ],
     },
     title: 'title',
   },

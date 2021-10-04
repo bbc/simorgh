@@ -35,7 +35,6 @@ import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
   getFirstPublished,
   getLastPublished,
-  getAboutTags,
 } from '#lib/utilities/parseAssetData';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -107,7 +106,6 @@ const MediaAssetPage = ({ pageData }) => {
   const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
-  const aboutTags = getAboutTags(pageData);
   const mostWatchedData = path(['mostWatched'], pageData);
 
   const componentsToRender = {
@@ -189,7 +187,6 @@ const MediaAssetPage = ({ pageData }) => {
         lastPublished={lastPublished}
         imageLocator={indexImageLocator}
         imageAltText={indexImageAltText}
-        aboutTags={aboutTags}
         hasAppleItunesAppBanner
       />
       <LinkedData
@@ -199,7 +196,6 @@ const MediaAssetPage = ({ pageData }) => {
         showAuthor
         datePublished={firstPublished}
         dateModified={lastPublished}
-        aboutTags={aboutTags}
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />

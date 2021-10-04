@@ -26,8 +26,6 @@ export const buildATIPageTrackPath = ({
   contentId,
   contentType,
   language,
-  ldpThingIds,
-  ldpThingLabels,
   pageIdentifier,
   pageTitle,
   producerId,
@@ -163,18 +161,6 @@ export const buildATIPageTrackPath = ({
       key: 'x12',
       description: 'updated time',
       value: timeUpdated,
-      wrap: true,
-    },
-    {
-      key: 'x13',
-      description: 'ldp things labels',
-      value: ldpThingLabels,
-      wrap: true,
-    },
-    {
-      key: 'x14',
-      description: 'ldp things ids',
-      value: ldpThingIds,
       wrap: true,
     },
     {

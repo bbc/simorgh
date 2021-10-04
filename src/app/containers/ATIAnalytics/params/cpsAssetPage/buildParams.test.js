@@ -63,9 +63,6 @@ const expectation = {
   service: 'service',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
-  ldpThingLabels: 'Technology~Nigeria',
-  ldpThingIds:
-    '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',
 };
 
 const expectationLegacy = {
@@ -99,9 +96,6 @@ const newsExpectation = {
   service: 'news',
   timePublished: analyticsUtils.getPublishedDatetime(),
   timeUpdated: analyticsUtils.getPublishedDatetime(),
-  ldpThingLabels: 'Technology~Nigeria',
-  ldpThingIds:
-    '31684f19-84d6-41f6-b033-7ae08098572a~3d5d5e30-dd50-4041-96d5-c970b20005b9',
 };
 
 describe('buildCpsAssetPageATIParams', () => {
