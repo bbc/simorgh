@@ -529,6 +529,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
+    ${'?at_medium=RSS'}       | ${'RSS'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
