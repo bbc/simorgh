@@ -44,7 +44,7 @@ describe('insertPodcastPromo', () => {
     ${9}     | ${[...Paragraphs(7), P(500), H, P(500), P(500)]} | ${9}
   `(
     '[scenario $scenario]: places podcast promo at correct index',
-    ({ scenario, inputBlocks, expectedIndex }) => {
+    ({ inputBlocks, expectedIndex }) => {
       const findPromoIndex = transformedData =>
         transformedData.content.blocks.findIndex(
           block => block.type === 'podcastPromo',
