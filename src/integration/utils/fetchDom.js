@@ -28,8 +28,9 @@ const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
           html,
           runScripts ? { runScripts: 'dangerously' } : {},
         );
-
-        resolve(dom);
+        setTimeout(() => {
+          resolve(dom);
+        }, 2000);
       } catch (error) {
         const isSocketHangUpError = error
           .toString()
