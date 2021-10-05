@@ -6,6 +6,8 @@ import {
   headlineBlock,
   unorderedListBlock,
   textBlock,
+  paragraphBlock,
+  emptyParagraphBlock,
   defaultIds,
 } from '../fixtures';
 
