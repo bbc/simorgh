@@ -162,11 +162,8 @@ describe('CanonicalChartbeatAnalytics', () => {
       );
     });
 
-    const [
-      [firstCall],
-      [secondCall],
-      [thirdCall],
-    ] = global.pSUPERFLY.virtualPage.mock.calls;
+    const [[firstCall], [secondCall], [thirdCall]] =
+      global.pSUPERFLY.virtualPage.mock.calls;
 
     expect(firstCall.virtualReferrer).toEqual('/page-A');
     expect(secondCall.virtualReferrer).toEqual('/page-B');

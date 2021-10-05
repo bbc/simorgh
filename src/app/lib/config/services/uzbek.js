@@ -139,8 +139,7 @@ export const service = {
               description: {
                 first: 'Биз ва бизнинг ҳамкорларимиз ',
                 linkText: 'кукисга',
-                last:
-                  ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
+                last: ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -157,10 +156,8 @@ export const service = {
                 para3:
                   'Веб саҳифамиз ишлаши учун биз сиз ҳақингизда чекланган маълумотларни сизнинг розилигингиз сақлаб қоламиз.',
                 para4: {
-                  text:
-                    'Сизнинг қурилмангизда веб саҳифамиз яхши ишлаши учун қандай муҳим маълумотлар сақланиши ҳақида кўпроқ маълумот',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Сизнинг қурилмангизда веб саҳифамиз яхши ишлаши учун қандай муҳим маълумотлар сақланиши ҳақида кўпроқ маълумот',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Биз сизнинг розилигингиз ва танловингиз маълумотларини ички хотирада сақлаймиз',
@@ -168,10 +165,8 @@ export const service = {
                 para6:
                   'Сиз AMP саҳифаларда дата тўплашга рози ва айни дамда Буюк Британия ташқарисида бўлсангиз биз рекламаларни сизга қанчалар алоқаси бор ёки йўқлигига қараб танлаб, тақдим қиламиз.',
                 para7: {
-                  text:
-                    'BBC ва реклама ҳамкорларимиз рекламаларни шахсийлаштиришга доир кўпроқ маълумот',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'BBC ва реклама ҳамкорларимиз рекламаларни шахсийлаштиришга доир кўпроқ маълумот',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Сизга мосланган рекламаларни қабул қилишни истамасангиз, марҳамат қилиб пастдаги "Дата тўплашни рад қилинг ва давом этинг" деган танловни босинг. Унутманг, сиз барибир рекламани кўрасиз, аммо у сиз учун мослаштирилмаган бўлади.',
@@ -186,16 +181,14 @@ export const service = {
               uk: {
                 first: 'Биз ',
                 linkText: 'кукидан',
-                last:
-                  ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
+                last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Биз ',
                 linkText: 'кукидан',
-                last:
-                  ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
+                last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -282,10 +275,8 @@ export const service = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-        text:
-          'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
         {
@@ -306,8 +297,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

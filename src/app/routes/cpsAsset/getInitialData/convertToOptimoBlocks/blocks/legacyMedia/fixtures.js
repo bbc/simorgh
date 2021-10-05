@@ -4,11 +4,9 @@ export const legacyMediaBlock = {
   format: 'video',
   aspectRatio: '16:9',
   live: false,
-  href:
-    'http://www.bbc.co.uk/russian/meta/dps/2016/05/emp/160505_v_diving_record.emp.xml',
+  href: 'http://www.bbc.co.uk/russian/meta/dps/2016/05/emp/160505_v_diving_record.emp.xml',
   image: {
-    href:
-      'http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
+    href: 'http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/05/05/160505093650_freediving_640x360_bbc_nocredit.jpg',
   },
   type: 'legacyMedia',
 };
