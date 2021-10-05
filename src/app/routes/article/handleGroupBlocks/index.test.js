@@ -10,6 +10,13 @@ import {
   textBlock,
   defaultIds,
 } from '../fixtures';
+import {
+  validateBlocksExcluded,
+  validateBlockExcluded,
+  validateBlocksIncluded,
+  validateBlockIncluded,
+  findBlock,
+} from '../testHelpers';
 import transformer from '.';
 
 const { media, group, list, headline, text } = defaultIds;
@@ -18,37 +25,6 @@ const getBlocks = path(['content', 'model', 'blocks']);
 
 const runTest = (fixture, ...tests) =>
   pipe(buildFixture, transformer, getBlocks, ...tests)(fixture);
-
-const findBlock = (id, blocks) => {
-  if (!blocks || !blocks.length) return null;
-
-  for (let i = 0; i < blocks.length; i += 1) {
-    if (blocks[i].id === id) return blocks[i];
-    const recursiveResult = findBlock(id, blocks[i].model?.blocks);
-    if (recursiveResult) return recursiveResult;
-  }
-  return null;
-};
-
-const validateBlockIncluded = id => blocks => {
-  expect(findBlock(id, blocks)).toBeTruthy();
-  return blocks;
-};
-
-const validateBlocksIncluded = (...ids) => blocks => {
-  ids.forEach(id => validateBlockIncluded(id)(blocks));
-  return blocks;
-};
-
-const validateBlockExcluded = id => blocks => {
-  expect(findBlock(id, blocks)).toBeFalsy();
-  return blocks;
-};
-
-const validateBlocksExcluded = (...ids) => blocks => {
-  ids.forEach(id => validateBlockExcluded(id)(blocks));
-  return blocks;
-};
 
 describe('Gist data selection', () => {
   it('does not remove unrelated blocks', () => {
