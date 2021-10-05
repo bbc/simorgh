@@ -32,13 +32,8 @@ const LiveRadioPage = ({ pageData }) => {
     masterBrand,
     radioScheduleData,
   } = pageData;
-  const {
-    script,
-    service,
-    lang,
-    liveRadioOverrides,
-    translations,
-  } = useContext(ServiceContext);
+  const { script, service, lang, liveRadioOverrides, translations } =
+    useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
   const assetId = 'liveradio';

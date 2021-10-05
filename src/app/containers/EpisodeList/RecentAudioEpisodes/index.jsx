@@ -47,14 +47,8 @@ const InlineDiv = styled.div`
 `;
 
 const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
-  const {
-    translations,
-    service,
-    script,
-    dir,
-    timezone,
-    datetimeLocale,
-  } = useContext(ServiceContext);
+  const { translations, service, script, dir, timezone, datetimeLocale } =
+    useContext(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
     campaignID:
@@ -102,11 +96,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
   const liProps = { 'data-e2e': 'recent-episodes-list-item' };
 
   return (
-    <Spacer
-      role="complementary"
-      aria-labelledby="recent-episodes"
-      ref={viewTrackerRef}
-    >
+    <Spacer role="complementary" aria-labelledby="recent-episodes">
       <StyledSectionLabel
         script={script}
         service={service}
@@ -124,7 +114,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         liProps={liProps}
       >
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id}>
+          <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}

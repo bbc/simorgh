@@ -14,12 +14,8 @@ export const buildCpsAssetPageATIParams = (
   contentType,
 ) => {
   const { platform, statsDestination } = requestContext;
-  const {
-    atiAnalyticsAppName,
-    atiAnalyticsProducerId,
-    service,
-    brandName,
-  } = serviceContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service, brandName } =
+    serviceContext;
 
   const { metadata, promo } = pageData;
 

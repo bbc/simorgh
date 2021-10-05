@@ -16,8 +16,7 @@ export default {
             url: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
             author_name: 'Miley Ray Cyrus',
             author_url: 'https://twitter.com/MileyCyrus',
-            html:
-              '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.</p>&mdash; Miley Ray Cyrus (@MileyCyrus) <a href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw">March 10, 2020</a></blockquote>',
+            html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.</p>&mdash; Miley Ray Cyrus (@MileyCyrus) <a href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw">March 10, 2020</a></blockquote>',
             width: 550,
             height: null,
             type: 'rich',
@@ -61,8 +60,7 @@ export default {
             author_url: 'https://www.youtube.com/user/BBCMundo',
             title:
               'Protestas en Chile: las grietas del modelo económico chileno',
-            html:
-              '<iframe width="480" height="270" src="https://www.youtube.com/embed/chiWVxreqhU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+            html: '<iframe width="480" height="270" src="https://www.youtube.com/embed/chiWVxreqhU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
             width: 480,
             height: 270,
             thumbnail_height: 360,

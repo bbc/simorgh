@@ -141,8 +141,7 @@ export const service = {
               description: {
                 first: 'We and our partners use technologies, like ',
                 linkText: 'cookies',
-                last:
-                  ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
+                last: ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -159,10 +158,8 @@ export const service = {
                 para3:
                   'To make our web pages work, we store some limited information ontop your device without your permision alias consent.',
                 para4: {
-                  text:
-                    'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences ontop your device.',
@@ -170,10 +167,8 @@ export const service = {
                 para6:
                   'Wen you agree to informate alias data collection on AMP pages you dey approve to allow us to display ads wey dey special and relevant to you when you dey outside of di UK.',
                 para7: {
-                  text:
-                    'Read more about how we personalise ads for di BBC and our advertising partners.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Read more about how we personalise ads for di BBC and our advertising partners.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'You fit choose not to receive personalised ads by clicking “Reject data collection and continue” wey dey below. Abeg note say you go still see advertising, but e no go dey personalised to you.',
@@ -188,16 +183,14 @@ export const service = {
               uk: {
                 first: 'We use ',
                 linkText: 'cookies',
-                last:
-                  ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
+                last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'We use ',
                 linkText: 'cookies',
-                last:
-                  ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
+                last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -310,8 +303,7 @@ export const service = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'De way wey we de take go external link.',
       },
       links: [
@@ -337,8 +329,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

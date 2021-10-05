@@ -145,8 +145,7 @@ export const service = {
               description: {
                 first: 'زموږ ملګري د ',
                 linkText: 'کوکیز',
-                last:
-                  ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
+                last: ' په څېر تکنالوژي کاروي او د براوزر ډېټا راټولوي. دا هر څه ستاسې د اسانۍ لپآره کېږي. که ورسره موافق یاست نو راته ولیکئ',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -163,10 +162,8 @@ export const service = {
                 para3:
                   'د دې لپاره چې زموږ پاڼه سم کار وکړي، موږ محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
                 para4: {
-                  text:
-                    'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'دلته لوستلی شئ چې موږ کوم محدود مالومات ستاسې له اجازې پرته ستاسې پر موبایل خوندي کوو',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'ستاسې د اجازې په اړه مالومات موږ ستاسې پر موبایل خوندي کوو',
@@ -174,10 +171,8 @@ export const service = {
                 para6:
                   'کله چې تاسې د مالوماتو ټولونې اجازه راکوئ، ورسره دا هم منئ چې کله له بریتانیا بهر زموږ پاڼه ګورئ نو موږ به اړوند اعلانونه درته ښکاره کوو',
                 para7: {
-                  text:
-                    'دلته ولولئ چې موږ بي بي سي کې او زموږ شریکان څه ډول تاسې ته اړوند اعلانونه ښکاره کوي.‌',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'دلته ولولئ چې موږ بي بي سي کې او زموږ شریکان څه ډول تاسې ته اړوند اعلانونه ښکاره کوي.‌',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'که نه غواړئ چې اړوند اعلانونه درته وښودل شي نو لاندې برخه کې د مالوماتو راټولېدو اجازه مه ورکوئ. خو پام مو وي چې اعلانونه به بیا هم در ښودل کېږي،‌ البته اړوند یا ستاسې په خوښه به نه وي.‌',
@@ -292,8 +287,7 @@ export const service = {
         text: 'ولې تاسې پر بي بي سي خبرونو باور کولی شئ',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'د نورو ویبپاڼو لینکولو په اړه زموږ تګلاره.',
       },
       links: [
@@ -319,8 +313,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

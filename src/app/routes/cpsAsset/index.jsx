@@ -1,6 +1,5 @@
-import React, { memo } from 'react';
+import React from 'react';
 import path from 'ramda/src/path';
-import pageIsSame from '../utils/pageIsSame';
 import getInitialData from './getInitialData';
 import {
   ErrorPage,
@@ -41,7 +40,7 @@ const CpsAsset = props => {
 export default {
   path: [cpsAssetPagePath, legacyAssetPagePath],
   exact: true,
-  component: memo(CpsAsset, pageIsSame),
+  component: CpsAsset,
   getInitialData,
   pageType: 'cpsAsset',
 };

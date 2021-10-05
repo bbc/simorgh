@@ -34,15 +34,8 @@ const ErrorMetadata = ({ dir, lang, messaging, brandName, themeColor }) => {
 };
 
 const ErrorPage = ({ errorCode }) => {
-  const {
-    brandName,
-    dir,
-    lang,
-    script,
-    service,
-    themeColor,
-    translations,
-  } = useContext(ServiceContext);
+  const { brandName, dir, lang, script, service, themeColor, translations } =
+    useContext(ServiceContext);
   const messaging = translations.error[errorCode] || translations.error[500];
 
   return (

@@ -35,20 +35,24 @@ const validateBlockIncluded = id => blocks => {
   return blocks;
 };
 
-const validateBlocksIncluded = (...ids) => blocks => {
-  ids.forEach(id => validateBlockIncluded(id)(blocks));
-  return blocks;
-};
+const validateBlocksIncluded =
+  (...ids) =>
+  blocks => {
+    ids.forEach(id => validateBlockIncluded(id)(blocks));
+    return blocks;
+  };
 
 const validateBlockExcluded = id => blocks => {
   expect(findBlock(id, blocks)).toBeFalsy();
   return blocks;
 };
 
-const validateBlocksExcluded = (...ids) => blocks => {
-  ids.forEach(id => validateBlockExcluded(id)(blocks));
-  return blocks;
-};
+const validateBlocksExcluded =
+  (...ids) =>
+  blocks => {
+    ids.forEach(id => validateBlockExcluded(id)(blocks));
+    return blocks;
+  };
 
 describe('Gist data selection', () => {
   it('does not remove unrelated blocks', () => {
@@ -242,10 +246,12 @@ describe('Gist block cleaning', () => {
   });
 });
 
-const validateBlockOrder = (...order) => blocks => {
-  order.forEach((id, position) => expect(blocks[position].id).toBe(id));
-  return blocks;
-};
+const validateBlockOrder =
+  (...order) =>
+  blocks => {
+    order.forEach((id, position) => expect(blocks[position].id).toBe(id));
+    return blocks;
+  };
 
 describe('Gist block positioning', () => {
   it('is moved to top when article has no headline', () => {

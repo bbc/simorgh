@@ -21,12 +21,8 @@ const useClickTrackerHandler = (props = {}) => {
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
   const eventTrackingContext = useContext(EventTrackingContext);
-  const {
-    pageIdentifier,
-    platform,
-    producerId,
-    statsDestination,
-  } = eventTrackingContext;
+  const { pageIdentifier, platform, producerId, statsDestination } =
+    eventTrackingContext;
   const campaignID = pathOr(
     path(['campaignID'], eventTrackingContext),
     ['campaignID'],
