@@ -19,8 +19,7 @@ describe('serialiseForScript', () => {
 
       expect(
         serialiseForScript({
-          html:
-            "<div>An include</div><script>console.log('An include');</script>",
+          html: "<div>An include</div><script>console.log('An include');</script>",
         }),
       ).toBe(
         '{"html":"\\u003cdiv>An include\\u003c/div>\\u003cscript>console.log(\'An include\');\\u003c/script>"}',

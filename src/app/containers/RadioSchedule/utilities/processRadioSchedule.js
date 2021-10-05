@@ -65,11 +65,8 @@ export default (data, service, currentTime) => {
   const processedSchedule =
     programsToShow &&
     programsToShow.map((program = {}) => {
-      const {
-        publishedTimeStart,
-        publishedTimeEnd,
-        publishedTimeDuration,
-      } = program;
+      const { publishedTimeStart, publishedTimeEnd, publishedTimeDuration } =
+        program;
 
       const brandTitle = path(['brand', 'title'], program);
       const currentState = getProgramState(

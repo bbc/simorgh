@@ -168,9 +168,8 @@ export const testsThatFollowSmokeTestConfig = ({
               );
 
               if (captionBlock) {
-                const {
-                  text,
-                } = captionBlock.model.blocks[0].model.blocks[0].model;
+                const { text } =
+                  captionBlock.model.blocks[0].model.blocks[0].model;
 
                 cy.get('figcaption')
                   .eq(1)

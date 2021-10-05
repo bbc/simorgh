@@ -111,8 +111,7 @@ module.exports = {
             type: 'cps',
           },
         ],
-        text:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <itemMeta>afrique/23248423</itemMeta> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu <itemMeta>afrique/23248423</itemMeta> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         type: 'paragraph',
       },
       {
@@ -206,20 +205,17 @@ module.exports = {
           },
           {
             markupType: 'candy_xml',
-            text:
-              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            text: '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
             markupType: 'candy_xml',
-            text:
-              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            text: '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
           {
             markupType: 'candy_xml',
-            text:
-              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            text: '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://bbc.com/pidgin" platform="highweb"/><url href="https://bbc.com/pidgin" platform="enhancedmobile"/></link>',
             type: 'listItem',
           },
         ],
@@ -229,8 +225,7 @@ module.exports = {
       {
         markupType: 'candy_xml',
         role: 'transmission-info',
-        text:
-          ' Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        text: ' Lorem ipsum dolor sit amet, <bold>consectetur</bold> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<bold> ullamco laboris nisi ut aliquip </bold>ex ea commodo consequat. Duis aute irure dolor in reprehenderit<italic> in voluptate velit esse cillum </italic>dolore &quot;eu fugiat nulla&quot; pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         type: 'paragraph',
       },
       {
@@ -238,11 +233,9 @@ module.exports = {
         caption: 'A pretty little butterfly & < >',
         copyrightHolder: 'Butterfly person',
         height: 360,
-        href:
-          'http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg',
+        href: 'http://b.files.bbci.co.uk/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg',
         id: '63724501',
-        path:
-          '/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg',
+        path: '/cpsdevpb/292E/test/_63724501_6123f323-6a92-461f-9fe7-749c0ddea04d.jpg',
         positionHint: 'full-width',
         subType: 'body',
         type: 'image',
@@ -253,8 +246,7 @@ module.exports = {
         caption: 'Psammead was named after the mythical sand creature',
         copyrightHolder: 'Google',
         height: 576,
-        href:
-          'http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg',
+        href: 'http://b.files.bbci.co.uk/5426/test/_63724512_psammead-closeup.jpg',
         id: '63724512',
         path: '/cpsdevpb/5426/test/_63724512_psammead-closeup.jpg',
         positionHint: 'full-width',
@@ -266,20 +258,17 @@ module.exports = {
         items: [
           {
             markupType: 'plain_text',
-            text:
-              'sunt in culpa qui officia deserunt mollit anim id est laborum',
+            text: 'sunt in culpa qui officia deserunt mollit anim id est laborum',
             type: 'listItem',
           },
           {
             markupType: 'plain_text',
-            text:
-              'sunt in culpa qui officia deserunt mollit anim id est laborum',
+            text: 'sunt in culpa qui officia deserunt mollit anim id est laborum',
             type: 'listItem',
           },
           {
             markupType: 'plain_text',
-            text:
-              'sunt in culpa qui officia deserunt mollit anim id est laborum',
+            text: 'sunt in culpa qui officia deserunt mollit anim id est laborum',
             type: 'listItem',
           },
         ],
@@ -466,8 +455,7 @@ module.exports = {
                 'Di attack happen for inside St. Philip Catholic Chirch Ozubulu',
               copyrightHolder: 'BBC',
               height: 351,
-              href:
-                'http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg',
+              href: 'http://b.files.bbci.co.uk/5C06/test/_63585532_ozubuluchurch.jpg',
               id: '63585532',
               path: '/cpsdevpb/5C06/test/_63585532_ozubuluchurch.jpg',
               subType: 'index',
@@ -496,8 +484,7 @@ module.exports = {
               caption: 'Homosexuality dey illegal for Nigeria',
               copyrightHolder: 'AFP',
               height: 351,
-              href:
-                'http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg',
+              href: 'http://b.files.bbci.co.uk/13644/test/_63582497_black-gay.jpg',
               id: '63582497',
               path: '/cpsdevpb/13644/test/_63582497_black-gay.jpg',
               subType: 'index',
@@ -541,8 +528,7 @@ module.exports = {
               caption: 'BBC Pidgin minute',
               copyrightHolder: 'BBC',
               height: 576,
-              href:
-                'http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png',
+              href: 'http://b.files.bbci.co.uk/B7E8/test/_63708074_mediaitem63708073.png',
               id: '63708074',
               path: '/cpsdevpb/B7E8/test/_63708074_mediaitem63708073.png',
               subType: 'index',

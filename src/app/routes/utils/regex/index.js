@@ -67,13 +67,11 @@ export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 export const mostWatchedDataPath = getMostWatchedDataRegex(allServices);
 export const mostWatchedPagePath = getMostWatchedPageRegex(allServices);
 
-export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
-  allServices,
-);
+export const secondaryColumnDataRegexPath =
+  getSecondaryColumnDataRegex(allServices);
 
-export const recommendationsDataRegex = getRecommendationsDataRegex(
-  allServices,
-);
+export const recommendationsDataRegex =
+  getRecommendationsDataRegex(allServices);
 
 export const IdxPagePath = getIdxPageRegex();
 export const IdxDataPath = `${IdxPagePath}.json`;
