@@ -139,8 +139,7 @@ export const service = {
                 first:
                   'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
                 linkText: 'cookies',
-                last:
-                  ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
+                last: ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -158,10 +157,8 @@ export const service = {
                 para3:
                   'Баракча тез жүктөлүшү үчүн сизден уруксат албай туруп телефонуңузга маалымат сакталат.',
                 para4: {
-                  text:
-                    'Баракча тез жүктөлүшү үчүн кандай маалымат сакталып жатканы тууралуу кеңири маалымат алыңыз.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Баракча тез жүктөлүшү үчүн кандай маалымат сакталып жатканы тууралуу кеңири маалымат алыңыз.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Ылайыктуу контент тууралуу маалымат телефонуңузда сакталат.',
@@ -169,10 +166,8 @@ export const service = {
                 para6:
                   'AMP баракчаларынан маалымат топтоого уруксат бергенде, Британиядан  тышкары мамлекеттерде жеке өзүңүзгө ылайыктуу жарнама сунуштоого дагы уруксат берип жатасыз.',
                 para7: {
-                  text:
-                    'Би-Би-Си баракчаларында жарнамалар жеке сизге ылайыктуу болгудай тандалганы тууралуу кеңири маалымат алыңыз.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Би-Би-Си баракчаларында жарнамалар жеке сизге ылайыктуу болгудай тандалганы тууралуу кеңири маалымат алыңыз.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Жеке сизге ылайыктуу жарнамалардан баш тарткыңыз келсе "Маалымат топтоого уруксат бербей улантууну" тандаңыз. Сиз жарнамаларды көрө бересиз, бирок алар жеке сизге ылайыкталган эмес.',
@@ -283,8 +278,7 @@ export const service = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -301,8 +295,7 @@ export const service = {
           text: 'Купуялык',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
@@ -311,8 +304,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

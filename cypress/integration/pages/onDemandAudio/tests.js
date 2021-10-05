@@ -94,24 +94,23 @@ export default ({ service, pageType, variant, isAmp }) => {
                     '[data-e2e=recent-episodes-list-item]',
                   );
 
-                  const renderedEpisodesArray = Array.prototype.slice.call(
-                    renderedEpisodes,
-                  );
+                  const renderedEpisodesArray =
+                    Array.prototype.slice.call(renderedEpisodes);
 
                   const renderedEpisodesInnerText = renderedEpisodesArray.map(
                     episode => episode.innerText,
                   );
 
-                  const convertTimestampsToLocaleString = recentEpisodesArray => {
-                    return recentEpisodesArray.map(episode => ({
-                      ...episode,
-                      timestamp: new Date(episode.timestamp).toLocaleString(),
-                    }));
-                  };
+                  const convertTimestampsToLocaleString =
+                    recentEpisodesArray => {
+                      return recentEpisodesArray.map(episode => ({
+                        ...episode,
+                        timestamp: new Date(episode.timestamp).toLocaleString(),
+                      }));
+                    };
 
-                  const cypressJsonResWithLocaleStringTimestamp = convertTimestampsToLocaleString(
-                    processedEpisodesData,
-                  );
+                  const cypressJsonResWithLocaleStringTimestamp =
+                    convertTimestampsToLocaleString(processedEpisodesData);
 
                   const simorghJsonResWithLocaleStringTimestamp =
                     !isAmp &&

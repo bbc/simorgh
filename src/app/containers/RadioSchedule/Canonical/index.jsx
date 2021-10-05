@@ -88,12 +88,8 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
 
   const [radioSchedule, setRadioSchedule] = useState(initialData);
 
-  const {
-    header,
-    frequenciesPageUrl,
-    frequenciesPageLabel,
-    durationLabel,
-  } = radioScheduleConfig;
+  const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
+    radioScheduleConfig;
 
   useEffect(() => {
     if (!radioSchedule) {

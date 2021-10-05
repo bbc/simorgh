@@ -61,9 +61,8 @@ const OnDemandHeadingContainer = ({
   darkMode,
   className,
 }) => {
-  const { script, service, timezone, datetimeLocale } = useContext(
-    ServiceContext,
-  );
+  const { script, service, timezone, datetimeLocale } =
+    useContext(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,

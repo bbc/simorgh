@@ -72,9 +72,8 @@ export const testsThatFollowSmokeTestConfig = ({
           const description =
             appConfig[config[service].name][variant].translations.error[404]
               .title;
-          const { title } = appConfig[config[service].name][
-            variant
-          ].translations.error[404];
+          const { title } =
+            appConfig[config[service].name][variant].translations.error[404];
           const pageTitle = `${title} - ${
             appConfig[config[service].name][variant].brandName
           }`;

@@ -150,9 +150,8 @@ const AdWithPlaceholder = props => {
 };
 
 const AmpAd = ({ slotType }) => {
-  const { translations, dir, script, service, showAdPlaceholder } = useContext(
-    ServiceContext,
-  );
+  const { translations, dir, script, service, showAdPlaceholder } =
+    useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const label = pathOr(
     'Advertisement',
