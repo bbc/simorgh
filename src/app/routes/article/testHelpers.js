@@ -14,11 +14,9 @@ export const validateBlockIncluded = id => blocks => {
   return blocks;
 };
 
-export const validateBlocksIncluded = 
-  (...ids) => 
-  blocks => {
-    ids.forEach(id => validateBlockIncluded(id)(blocks));
-    return blocks;
+export const validateBlocksIncluded = (...ids) => blocks => {
+  ids.forEach(id => validateBlockIncluded(id)(blocks));
+  return blocks;
 };
 
 export const validateBlockExcluded = id => blocks => {
@@ -26,9 +24,7 @@ export const validateBlockExcluded = id => blocks => {
   return blocks;
 };
 
-export const validateBlocksExcluded = 
-  (...ids) => 
-  blocks => {
-    ids.forEach(id => validateBlockExcluded(id)(blocks));
-    return blocks;
+export const validateBlocksExcluded = (...ids) => blocks => {
+  ids.forEach(id => validateBlockExcluded(id)(blocks));
+  return blocks;
 };
