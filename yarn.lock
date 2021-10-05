@@ -1768,16 +1768,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-byline@npm:3.0.27":
-  version: 3.0.27
-  resolution: "@bbc/psammead-byline@npm:3.0.27"
+"@bbc/psammead-byline@npm:3.0.28":
+  version: 3.0.28
+  resolution: "@bbc/psammead-byline@npm:3.0.28"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.0
   peerDependencies:
     "@emotion/styled": ^11.0.0
     react: ">=16.9.0"
-  checksum: ee5b7f841ef23c85e215d076cf9b23c4b0c5275fc4efd2afb42ef0b62de53a7b5a6d835c41c115b65109038c884d7f9403ef3b57786256a2af1b3fcce053730a
+  checksum: 4ce55e1df953f0ee2b2ffe6a7c756d620615ba4f7e39e27ce0247b2a76f610a47b51efe43279adec414826bc89eb9664f9a58fcd4abeace80b79f3f602022270
   languageName: node
   linkType: hard
 
@@ -18946,7 +18946,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-brand": 7.3.11
     "@bbc/psammead-bulleted-list": 3.1.8
     "@bbc/psammead-bulletin": 5.0.44
-    "@bbc/psammead-byline": 3.0.27
+    "@bbc/psammead-byline": 3.0.28
     "@bbc/psammead-calendars": 2.0.27
     "@bbc/psammead-caption": 4.1.22
     "@bbc/psammead-consent-banner": 5.5.11
