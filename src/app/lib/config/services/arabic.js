@@ -160,8 +160,7 @@ export const service = {
               description: {
                 first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
                 linkText: 'ملفات الارتباط',
-                last:
-                  '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                last: '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -178,20 +177,16 @@ export const service = {
                 para3:
                   'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
                 para4: {
-                  text:
-                    'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
                 heading3: 'شروط اختيارية لجمع المعلومات',
                 para6:
                   'في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.',
                 para7: {
-                  text:
-                    'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.\nيرجى ملاحظة أنكم ستستمرون في مشاهدة الإعلانات، ولكنها لن تكون اعلانات موجهة لكم بشكل مخصص.',
@@ -206,16 +201,14 @@ export const service = {
               uk: {
                 first: 'نستخدم ',
                 linkText: 'ملفات ارتباط',
-                last:
-                  ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'نستخدم ',
                 linkText: 'ملفات ارتباط',
-                last:
-                  ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -308,8 +301,7 @@ export const service = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
@@ -335,8 +327,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

@@ -41,14 +41,8 @@ const Placeholder = ({
   noJsClassName,
   noJsMessage,
 }) => {
-  const {
-    title,
-    datetime,
-    duration,
-    durationSpoken,
-    type,
-    guidanceMessage,
-  } = mediaInfo;
+  const { title, datetime, duration, durationSpoken, type, guidanceMessage } =
+    mediaInfo;
 
   return (
     <StyledPlaceholder

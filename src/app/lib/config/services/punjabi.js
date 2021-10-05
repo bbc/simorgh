@@ -137,8 +137,7 @@ export const service = {
                 first:
                   'ਅਸੀਂ ਅਤੇ ਸਾਡੇ ਭਾਈਵਾਲ ਤਕਨੀਕ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ, ਜਿਵੇਂ ਕਿ ',
                 linkText: 'ਕੁਕੀਜ਼',
-                last:
-                  ' ਅਤੇ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਆਨਲਾਈਨ ਤਜਰਬਾ ਦੇਣ ਲਈ ਤੇ ਤੁਹਾਨੂੰ ਦਿਖਾਈ ਗਈ ਸਾਮਗਰੀ ਅਤੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਨਿੱਜੀ ਕਰਨ ਲਈ ਬ੍ਰਾਊਜ਼ਰ ਡਾਟਾ ਨੂੰ ਇਕੱਠਾ ਕਰਦੇ ਹਾਂ। ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਸਾਨੂੰ ਦੱਸੋ।',
+                last: ' ਅਤੇ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਆਨਲਾਈਨ ਤਜਰਬਾ ਦੇਣ ਲਈ ਤੇ ਤੁਹਾਨੂੰ ਦਿਖਾਈ ਗਈ ਸਾਮਗਰੀ ਅਤੇ ਇਸ਼ਤਿਹਾਰਾਂ ਨੂੰ ਨਿੱਜੀ ਕਰਨ ਲਈ ਬ੍ਰਾਊਜ਼ਰ ਡਾਟਾ ਨੂੰ ਇਕੱਠਾ ਕਰਦੇ ਹਾਂ। ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਸਾਨੂੰ ਦੱਸੋ।',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -156,10 +155,8 @@ export const service = {
                 para3:
                   "ਆਪਣੀ ਵੈੱਬਸਾਈਟ ਦੇ ਠੀਕ ਕੰਮ ਕਰਨ ਲਈ ਸਾਨੂੰ ਸੀਮਤ ਪੱਧਰ 'ਤੇ ਤੁਹਾਡੇ ਡਿਵਾਈਸ 'ਤੇ ਕੁਝ ਜਾਣਕਾਰੀਆਂ ਸੇਵ ਕਰਨੀਆਂ ਪੈਂਦੀਆਂ ਹਨ ਜਿਸ ਲਈ ਅਸੀਂ ਤੁਹਾਡੇ ਤੋਂ ਮਨਜ਼ੂਰੀ ਨਹੀਂ ਮੰਗਦੇ।",
                 para4: {
-                  text:
-                    'ਉਨ੍ਹਾਂ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀਆਂ ਬਾਰੇ ਹੋਰ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ’ਤੇ ਸਟੋਰ ਕੀਤੀਆਂ ਹਨ ਤਾਂ ਕਿ ਪੇਜ ਠੀਕ ਦਿਖਾਈ ਦੇ ਸਕੇ।',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'ਉਨ੍ਹਾਂ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀਆਂ ਬਾਰੇ ਹੋਰ ਪੜ੍ਹੋ ਜੋ ਅਸੀਂ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ’ਤੇ ਸਟੋਰ ਕੀਤੀਆਂ ਹਨ ਤਾਂ ਕਿ ਪੇਜ ਠੀਕ ਦਿਖਾਈ ਦੇ ਸਕੇ।',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'ਅਸੀਂ ਤੁਹਾਡੀ ਮਨਜ਼ੂਰੀ ਅਤੇ ਪਸੰਦ ਨੂੰ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਦੇ ਲੋਕਲ ਸਟੋਰੇਜ ਵਿੱਚ ਸਟੋਰ ਕਰਦੇ ਹਾਂ।',
@@ -167,10 +164,8 @@ export const service = {
                 para6:
                   'ਜਦੋਂ ਤੁਸੀਂ ਸਾਡੇ ਏਐਮਪੀ ਡਾਟਾ ਨੂੰ ਮਨਜ਼ੂਰੀ ਦਿੰਦੇ ਹੋ ਤਾਂ ਇਸਦਾ ਅਰਥ ਹੁੰਦਾ ਹੈ ਕਿ ਤੁਸੀਂ ਸਾਨੂੰ ਆਪਣੀ ਰੁਚੀ ਦੇ ਇਸ਼ਤਿਹਾਰ ਦਿਖਾਉਣ ਦੀ ਮਨਜ਼ੂਰੀ ਦੇ ਰਹੇ ਹੋ। ਅਜਿਹਾ ਉਸ ਸਮੇਂ ਹੁੰਦਾ ਹੈ ਜਦੋਂ ਤੁਸੀਂ ਬ੍ਰਿਟੇਨ ਤੋਂ ਬਾਹਰ ਹੋਵੋਂ।',
                 para7: {
-                  text:
-                    'ਅਸੀਂ ਤੁਹਾਡੀ ਰੁਚੀ ਦੇ ਮੁਤਾਬਕ ਇਸ਼ਤਿਹਾਰ ਦੇਣ ਵਾਲਿਆਂ ਦੀ ਚੋਣ ਕਿਸ ਤਰ੍ਹਾਂ ਕਰਦੇ ਹਾਂ, ਇਹ ਜਾਣਨ ਲਈ ਹੋਰ ਪੜ੍ਹੋ।',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'ਅਸੀਂ ਤੁਹਾਡੀ ਰੁਚੀ ਦੇ ਮੁਤਾਬਕ ਇਸ਼ਤਿਹਾਰ ਦੇਣ ਵਾਲਿਆਂ ਦੀ ਚੋਣ ਕਿਸ ਤਰ੍ਹਾਂ ਕਰਦੇ ਹਾਂ, ਇਹ ਜਾਣਨ ਲਈ ਹੋਰ ਪੜ੍ਹੋ।',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'ਤੁਸੀਂ ਡਾਟਾ ਕਲੈਕਸ਼ਨ ਨੂੰ ਨਾਮਨਜ਼ੂਰ ਕਰਕੇ ਅੱਗੇ ਵੱਧਣ ਦਾ ਵਿਕਪਲ ਚੁਣਦੇ ਹੋ ਤਾਂ ਤੁਹਾਡੀ ਰੁਚੀ ਦੇ ਮੁਤਾਬਕ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ ਦਿਖਾਏ ਜਾਣਗੇ, ਪਰ ਇਸ਼ਤਿਹਾਰ ਤੁਹਾਨੂੰ ਫ਼ਿਰ ਵੀ ਦਿਖਾਏ ਜਾਣਗੇ ਪਰ ਉਹ ਪਰਸਨੇਲਾਈਜ਼ਡ ਨਹੀਂ ਹੋਣਗੇ।',
@@ -185,16 +180,14 @@ export const service = {
               uk: {
                 first: 'ਅਸੀਂ ਤੁੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਤਜਰਬਾ ਦੇਣ ਲਈ ',
                 linkText: 'ਕੁਕੀਜ਼',
-                last:
-                  ' ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ',
+                last: ' ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'ਅਸੀਂ ਤੁੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਤਜਰਬਾ ਦੇਣ ਲਈ ',
                 linkText: 'ਕੁਕੀਜ਼',
-                last:
-                  ' ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ',
+                last: ' ਦੀ ਵਰਤੋਂ ਕਰ ਰਹੇ ਹਾਂ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਸਾਨੂੰ ਦੱਸੋ ਕਿ ਤੁਸੀਂ ਇਨ੍ਹਾਂ ਸਾਰੀਆਂ ਕੁਕੀਜ਼ ਨਾਲ ਸਹਿਮਤ ਹੋ',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -297,8 +290,7 @@ export const service = {
         text: "ਤੁਸੀਂ ਬੀਬੀਸੀ 'ਤੇ ਕਿਉਂ ਵਿਸ਼ਵਾਸ਼ ਕਰ ਸਕਦੇ ਹੋ",
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ਬਾਹਰੀ ਲਿੰਕਿੰਗ ਲਈ ਸਾਡੇ ਤਰੀਕੇ ਬਾਰੇ ਪੜ੍ਹੋ',
       },
       links: [
@@ -324,8 +316,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

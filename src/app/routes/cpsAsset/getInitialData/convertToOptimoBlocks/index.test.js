@@ -29,8 +29,7 @@ describe('convertToOptimoBlocks', () => {
             type: 'paragraph',
           },
           {
-            text:
-              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://www.bbc.com/pidgin" platform="highweb"/><url href="https://www.bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            text: '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://www.bbc.com/pidgin" platform="highweb"/><url href="https://www.bbc.com/pidgin" platform="enhancedmobile"/></link>',
             markupType: 'candy_xml',
             type: 'paragraph',
           },
@@ -345,8 +344,7 @@ describe('convertToOptimoBlocks', () => {
                   alt: 'image alt text',
                   height: 1864,
                   layout: 'responsive',
-                  src:
-                    'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+                  src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
                   srcset:
                     'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
                   width: 1632,
@@ -368,8 +366,7 @@ describe('convertToOptimoBlocks', () => {
             },
             {
               model: {
-                href:
-                  '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+                href: '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
                 index: 5,
                 isAmpSupported: true,
                 type: 'vj',
@@ -378,8 +375,7 @@ describe('convertToOptimoBlocks', () => {
             },
             {
               model: {
-                href:
-                  '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
+                href: '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
                 index: 6,
                 isAmpSupported: true,
                 type: 'vj',

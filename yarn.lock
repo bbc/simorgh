@@ -1627,12 +1627,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:7.14.8":
-  version: 7.14.8
-  resolution: "@babel/runtime@npm:7.14.8"
+"@babel/runtime@npm:7.15.4, @babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.0, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.15.3, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.4.4, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.7.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+  version: 7.15.4
+  resolution: "@babel/runtime@npm:7.15.4"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: d2dd0ce51ddab78ac93928b04042425145d0dc8cc2b70150d47934f8703f55702eb0b2894f9bd47f66794ad04d8bb03a6a847d0138fbb7aa0b970b5ccd5cc8b7
+  checksum: c40825430400e47c19b97e4142d5315d2910305b9714d44a711472587ee2fd4521fdba5f02ddd9df3902f5e988d9854fa83f4da1e0c091f70f6983fa52480606
   languageName: node
   linkType: hard
 
@@ -7189,18 +7189,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.17.1":
-  version: 4.17.1
-  resolution: "browserslist@npm:4.17.1"
+"browserslist@npm:4.17.2":
+  version: 4.17.2
+  resolution: "browserslist@npm:4.17.2"
   dependencies:
-    caniuse-lite: ^1.0.30001259
-    electron-to-chromium: ^1.3.846
+    caniuse-lite: ^1.0.30001261
+    electron-to-chromium: ^1.3.854
     escalade: ^3.1.1
-    nanocolors: ^0.1.5
+    nanocolors: ^0.2.12
     node-releases: ^1.1.76
   bin:
     browserslist: cli.js
-  checksum: 7935fad6ad1ec6986e93854ea11c344b4fb0a8665a1501cf0a91cc832fd6a280ea147d2684b05520b70785c9ec88e746d6f5b0f8f0b70fc501b1684af5fc56dc
+  checksum: 9102023e8a8f541110c2905854d8398245811dfa6a02c3c94a0862c402f11fd42900cd595cb8494e5ee1104120b40e4721108219931bdbb4c59855f138e684da
   languageName: node
   linkType: hard
 
@@ -7458,10 +7458,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001259":
-  version: 1.0.30001261
-  resolution: "caniuse-lite@npm:1.0.30001261"
-  checksum: d894662312ecbdd772f0a258c4a45cac93605247b127b25649052353e0b981abfd0b445f469650943b612adc236fd510ae61c1293f3e77c68af7411d1b66574a
+"caniuse-lite@npm:^1.0.30001261":
+  version: 1.0.30001263
+  resolution: "caniuse-lite@npm:1.0.30001263"
+  checksum: 0657b995276a35aaa9ff6900b6e9d3876ef049c8d6065fe9f162cc0b9ac00d8b9c6e6740e87def73876a522dce8e9124170334c157cfbf5c383b7c6db79e520e
   languageName: node
   linkType: hard
 
@@ -7650,9 +7650,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:5.10.1":
-  version: 5.10.1
-  resolution: "chromatic@npm:5.10.1"
+"chromatic@npm:5.10.2":
+  version: 5.10.2
+  resolution: "chromatic@npm:5.10.2"
   dependencies:
     "@actions/core": ^1.5.0
     "@actions/github": ^5.0.0
@@ -7697,7 +7697,7 @@ __metadata:
     chroma: bin/register.js
     chromatic: bin/register.js
     chromatic-cli: bin/register.js
-  checksum: 3cf2776eb04204a6641fde1712a85c1014e4e4a1664d1e8a837acebab7d447fb9ff7e3199bd3f5527bef50bcb24578ecfca8ea8694c874b30f50262ea726c850
+  checksum: b99566b0dc7e630eba4a97189ba1adf8fcf884893accd5aefdc9b9f06ab8ede4ecc6f4a8a874ddbbd388379095ba413fe4eec82bcf48eb51eabf36e17297585b
   languageName: node
   linkType: hard
 
@@ -9561,10 +9561,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.846":
-  version: 1.3.853
-  resolution: "electron-to-chromium@npm:1.3.853"
-  checksum: 9a71823087b480cf53423a5cb3fe39dd8e84386c3b39ff6f14e0c05c9bfad0504722e86c0c84779b9aab911e9a19677da8d6f5bd8370a66800934da843d18f3d
+"electron-to-chromium@npm:^1.3.854":
+  version: 1.3.856
+  resolution: "electron-to-chromium@npm:1.3.856"
+  checksum: 3f46ab4d4698f931dcb4aa739728e8b38454ee7cd5a589e94cfbaabe11a8e15157df2e1d7c1df40110af041b931379df79cb73796b38b1ccfdd0b01a4f64cc76
   languageName: node
   linkType: hard
 
@@ -15665,10 +15665,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"nanocolors@npm:^0.1.5":
-  version: 0.1.12
-  resolution: "nanocolors@npm:0.1.12"
-  checksum: 2ce58f57006ddd1d2680d05fe21f54d858db8ba81bd13381598ddc546f7637e33c4407da2ea7da40ea1c96794250e7c14a4d00358b48eeae4d917d6a92bafe4c
+"nanocolors@npm:^0.2.12":
+  version: 0.2.12
+  resolution: "nanocolors@npm:0.2.12"
+  checksum: a34a63dcca29eede3db41afd1421f130423fc99e73f6c89166f57815bbf0441f02a6112651b068acfd309707215f48eec15dd38e790a8225d6762503a7c175c6
   languageName: node
   linkType: hard
 
@@ -17291,7 +17291,16 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.2.1, prettier@npm:~2.2.1":
+"prettier@npm:2.4.1":
+  version: 2.4.1
+  resolution: "prettier@npm:2.4.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
+  languageName: node
+  linkType: hard
+
+"prettier@npm:~2.2.1":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
   bin:
@@ -19289,7 +19298,7 @@ resolve@^2.0.0-next.3:
     "@babel/polyfill": 7.12.1
     "@babel/preset-env": 7.15.6
     "@babel/preset-react": 7.14.5
-    "@babel/runtime": 7.14.8
+    "@babel/runtime": 7.15.4
     "@bbc/apache2-license-checker": 1.1.4
     "@bbc/gel-foundations": 7.0.0
     "@bbc/moment-timezone-include": 1.1.8
@@ -19365,7 +19374,7 @@ resolve@^2.0.0-next.3:
     babel-plugin-transform-react-remove-prop-types: 0.4.24
     brotli-webpack-plugin: 1.1.0
     chalk: 4.1.2
-    chromatic: 5.10.1
+    chromatic: 5.10.2
     chrome-launcher: 0.14.0
     cli-table: 0.3.6
     compression: 1.7.4
@@ -19422,7 +19431,7 @@ resolve@^2.0.0-next.3:
     ora: 5.4.1
     path-to-regexp: 6.2.0
     polyfill-crypto.getrandomvalues: 1.0.0
-    prettier: 2.2.1
+    prettier: 2.4.1
     prop-types: 15.7.2
     ramda: 0.27.1
     react: 17.0.2

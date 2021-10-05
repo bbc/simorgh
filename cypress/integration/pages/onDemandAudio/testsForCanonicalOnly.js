@@ -41,10 +41,11 @@ export default ({ service, pageType, variant }) => {
             if (scheduleIsEnabled) {
               const masterBrand = jsonData.metadata.createdBy;
 
-              const schedulePath = `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
-                'bbc_afaanoromoo_radio',
-                'bbc_oromo_radio',
-              );
+              const schedulePath =
+                `/${service}/${masterBrand}/schedule.json${overrideRendererOnTest()}`.replace(
+                  'bbc_afaanoromoo_radio',
+                  'bbc_oromo_radio',
+                );
 
               cy.request(schedulePath).then(({ body: scheduleJson }) => {
                 const { schedules } = scheduleJson;

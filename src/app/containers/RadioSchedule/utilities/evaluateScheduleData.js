@@ -20,12 +20,8 @@ export const isScheduleDataComplete = ({
 };
 
 export const getIsProgramValid = logError => program => {
-  const {
-    urn,
-    publishedTimeStart,
-    publishedTimeEnd,
-    publishedTimeDuration,
-  } = program;
+  const { urn, publishedTimeStart, publishedTimeEnd, publishedTimeDuration } =
+    program;
   const broadcastPid = path(['broadcast', 'pid'], program);
   const brandTitle = path(['brand', 'title'], program);
   const brandPid = path(['brand', 'pid'], program);

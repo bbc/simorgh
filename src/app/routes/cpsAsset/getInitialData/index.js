@@ -30,12 +30,14 @@ import {
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
-export const only = (pageTypes, transformer) => (pageData, ...args) => {
-  const isCorrectPageType = pageTypes.includes(
-    path(['metadata', 'type'], pageData),
-  );
-  return isCorrectPageType ? transformer(pageData, ...args) : pageData;
-};
+export const only =
+  (pageTypes, transformer) =>
+  (pageData, ...args) => {
+    const isCorrectPageType = pageTypes.includes(
+      path(['metadata', 'type'], pageData),
+    );
+    return isCorrectPageType ? transformer(pageData, ...args) : pageData;
+  };
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
