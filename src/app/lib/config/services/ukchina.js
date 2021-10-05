@@ -72,8 +72,7 @@ export const service = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -95,8 +94,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -209,8 +207,7 @@ export const service = {
               description: {
                 first: '我们及合作伙伴使用例如',
                 linkText: 'cookies',
-                last:
-                  '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
+                last: '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -227,10 +224,8 @@ export const service = {
                 para3:
                   '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
                 para4: {
-                  text:
-                    '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
                 heading3: '可选项数据收集',
@@ -238,8 +233,7 @@ export const service = {
                   '认可AMP页面收集数据，也就是认可您在英国之外区域浏览页面时我们可以显示个人化的广告。',
                 para7: {
                   text: '阅读更多有关BBC及合作伙伴如何实现广告个人化的资讯',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   '您可以选择点击“拒绝数据收集并继续”，选择不接受个人化广告。请注意，这一选项并不意味着您将不再看到广告，只是您看到的广告将不具备个人化设置。',
@@ -337,8 +331,7 @@ export const service = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
@@ -360,8 +353,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -471,8 +463,7 @@ export const service = {
               description: {
                 first: '我們及合作夥伴使用例如',
                 linkText: 'cookies',
-                last:
-                  '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -489,10 +480,8 @@ export const service = {
                 para3:
                   '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
                 para4: {
-                  text:
-                    '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
                 heading3: '可選項數據收集',
@@ -500,8 +489,7 @@ export const service = {
                   '認可AMP頁面收集數據，也就是認可您在英國之外區域瀏覽頁面時我們可以顯示個人化的廣告。',
                 para7: {
                   text: '閲讀更多有關BBC及合作夥伴如何實現廣告個人化的咨訊',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   '您可以選擇點擊“拒絕數據收集並繼續”，選擇不接受個人化廣告。請注意，這一選項並不意味著您將不再看到廣告，只是您看到的廣告將不具備個人化設置。',
@@ -523,8 +511,7 @@ export const service = {
               international: {
                 first: '我們及合作夥伴使用例如',
                 linkText: 'cookies',
-                last:
-                  '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },

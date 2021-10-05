@@ -43,8 +43,7 @@ const fixtureData = [
                       type: 'paragraph',
                       id: 'h',
                       model: {
-                        text:
-                          'This component supports text bold, italic, bold-italic, links, and bold-italic-links',
+                        text: 'This component supports text bold, italic, bold-italic, links, and bold-italic-links',
                         blocks: [
                           {
                             type: 'fragment',
@@ -205,15 +204,13 @@ const fixtureData = [
                       type: 'paragraph',
                       id: 'z',
                       model: {
-                        text:
-                          'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
+                        text: 'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
                         blocks: [
                           {
                             type: 'fragment',
                             id: 'zz',
                             model: {
-                              text:
-                                'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
+                              text: 'If a sentence is added that is really, really, really long, the text will wrap onto the next line, which is hopefully the behaviour of this sentence right now!',
                               attributes: [],
                             },
                           },

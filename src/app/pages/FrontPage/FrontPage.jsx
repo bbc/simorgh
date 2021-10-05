@@ -58,12 +58,8 @@ MostReadWrapper.propTypes = {
 };
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    product,
-    serviceLocalizedName,
-    translations,
-    frontPageTitle,
-  } = useContext(ServiceContext);
+  const { product, serviceLocalizedName, translations, frontPageTitle } =
+    useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);

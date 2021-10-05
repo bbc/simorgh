@@ -141,8 +141,7 @@ export const service = {
               description: {
                 first: 'ہم اور ہمارے پارٹنر ٹیکنالوجی جیسے کہ ',
                 linkText: 'کوکیز',
-                last:
-                  ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
+                last: ' استعمال کرتے ہوئے براؤزنگ ڈیٹا جمع کرتے ہیں تاکہ آپ کو بہترین آن لائن تجربہ دے سکیں اور مواد اور اشتہارات کو آپ کے لیے مخصوص بنا سکیں۔ ہمیں بتائیے کہ آپ کو اس پر کوئی اعتراض تو نہیں۔',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -160,10 +159,8 @@ export const service = {
                 para3:
                   'اپنے ویب صفحات کو جاری رکھنے کے لیے ہم آپ کی رضامندی کے بغیر آپ کے ڈیوائس پر موجود کچھ محدود معلومات محفوظ کرتے ہیں۔',
                 para4: {
-                  text:
-                    'ان محدود معلومات کے بارے میں پڑھیے جو ہم اپنے ویب صفحات کو جاری رکھنے کے لیے محفوظ کرتے ہیں۔',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'ان محدود معلومات کے بارے میں پڑھیے جو ہم اپنے ویب صفحات کو جاری رکھنے کے لیے محفوظ کرتے ہیں۔',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'ہم آپ کے ڈیوائس  پر آپ کی رضامندی کی ترجیحات کو محفوظ کرنے کے لیے مقامی سٹوریج کا استعمال کرتے ہیں۔',
@@ -171,10 +168,8 @@ export const service = {
                 para6:
                   'جب آپ اے ایم پی پیجز پر ڈیٹا اکھٹا کرنے کی منظوری دیتے ہیں تو آپ ہمیں ان پرسنلائیزڈ اشتہارت کو ڈسپلے کرنے کی اجازت دیتے ہیں، جب آپ یو کے سے باہر ہوں، جو آپ سے متعلقہ ہوں۔',
                 para7: {
-                  text:
-                    'پڑھیے کہ بی بی سی اور ہمارے ایڈورٹائزنگ شراکت دار اشتہارات کو کیسے پرسنلائیز کرتے ہیں۔',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'پڑھیے کہ بی بی سی اور ہمارے ایڈورٹائزنگ شراکت دار اشتہارات کو کیسے پرسنلائیز کرتے ہیں۔',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'آپ پرسنلائیزڈ اشتہارات کی درخواست مسترد کر سکتے ہیں اس کے لیے آپ کو ذیل میں موجود ’ڈیٹا کلیکشن نامنظور اور جاری رکھیے‘ کو کلک کرنا ہو گا۔',
@@ -189,16 +184,14 @@ export const service = {
               uk: {
                 first: 'ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے ',
                 linkText: 'کوکیز',
-                last:
-                  ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
+                last: ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'ہم آپ کو بہترین آن لائن تجربہ دینے کے لیے ',
                 linkText: 'کوکیز',
-                last:
-                  ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
+                last: ' استعمال کرتے ہیں۔ برائے مہربانی ہمیں بتائیں کہ آپ ان تمام کوکیز کے استعمال سے متفق ہیں',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -279,8 +272,7 @@ export const service = {
         text: 'جانیے کہ آپ بی بی سی پر کیوں اعتماد کر سکتے ہیں',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'بیرونی لنکس کے بارے میں ہماری پالیسی.',
       },
       links: [
@@ -297,8 +289,7 @@ export const service = {
           text: 'پرائیویسی پالیسی',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'کوکیز',
         },
         {
@@ -307,8 +298,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

@@ -118,12 +118,10 @@ const useConsentBanner = () => {
 
     const userHasPrivacyCookie = isValidCookieValue(privacyCookie);
     const userHasPolicyCookie = isValidCookieValue(policyCookie);
-    const userHasLegacyPrivacyCookie = PRIVACY_COOKIE_LEGACY_VALUES.includes(
-      privacyCookie,
-    );
-    const userHasExplicitCookie = EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(
-      explicitCookie,
-    );
+    const userHasLegacyPrivacyCookie =
+      PRIVACY_COOKIE_LEGACY_VALUES.includes(privacyCookie);
+    const userHasExplicitCookie =
+      EXPLICIT_COOKIE_ACCEPTED_VALUES.includes(explicitCookie);
     const shouldShowCookieBanner = !userHasExplicitCookie;
     const shouldShowPrivacyBanner =
       !userHasPrivacyCookie || userHasLegacyPrivacyCookie;

@@ -121,8 +121,7 @@ describe('Click tracking', () => {
       origin: 'https://logws1363.ati-host.net',
       pathname: '/',
       searchParams: {
-        atc:
-          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -165,8 +164,7 @@ describe('Click tracking', () => {
       origin: 'https://logws1363.ati-host.net',
       pathname: '/',
       searchParams: {
-        atc:
-          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
@@ -213,8 +211,7 @@ describe('Click tracking', () => {
       origin: 'https://logws1363.ati-host.net',
       pathname: '/',
       searchParams: {
-        atc:
-          'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+        atc: 'PUB-[article-sty]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/),
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',
