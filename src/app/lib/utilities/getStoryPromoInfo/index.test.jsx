@@ -1,14 +1,12 @@
 import { getAssetTypeCode, getHeadline, getUrl, getIsLive } from '.';
 
 const assetTypeCode = {
-  name:
-    "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
+  name: "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
   summary: '',
   indexImage: {
     id: '98847234',
     subType: 'index',
-    href:
-      'http://c.files.bbci.co.uk/A90A/production/_98847234_istanbul.eski.jpg',
+    href: 'http://c.files.bbci.co.uk/A90A/production/_98847234_istanbul.eski.jpg',
     path: '/cpsprodpb/A90A/production/_98847234_istanbul.eski.jpg',
     height: 1152,
     width: 2048,
@@ -50,8 +48,7 @@ const noAssetTypeCode = {
   indexImage: {
     id: '107503429',
     subType: 'index',
-    href:
-      'http://c.files.bbci.co.uk/1690E/production/_107503429_mediaitem107503428.jpg',
+    href: 'http://c.files.bbci.co.uk/1690E/production/_107503429_mediaitem107503428.jpg',
     path: '/cpsprodpb/1690E/production/_107503429_mediaitem107503428.jpg',
     height: 1152,
     width: 2048,

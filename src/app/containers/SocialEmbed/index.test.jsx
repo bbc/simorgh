@@ -85,10 +85,8 @@ describe('SocialEmbedContainer', () => {
                         author_url: 'https://twitter.com/BBCNews',
                         provider_name: 'Twitter',
                         provider_url: 'https://twitter.com',
-                        url:
-                          'https://twitter.com/BBCNews/status/1384138850478346243',
-                        html:
-                          '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was &quot;indescribable&quot; <a href="https://t.co/xz93WmAdfR">https://t.co/xz93WmAdfR</a></p>&mdash; BBC News (UK) (@BBCNews) <a href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw">April 19, 2021</a></blockquote>\n',
+                        url: 'https://twitter.com/BBCNews/status/1384138850478346243',
+                        html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was &quot;indescribable&quot; <a href="https://t.co/xz93WmAdfR">https://t.co/xz93WmAdfR</a></p>&mdash; BBC News (UK) (@BBCNews) <a href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw">April 19, 2021</a></blockquote>\n',
                         width: 550,
                       },
                     },

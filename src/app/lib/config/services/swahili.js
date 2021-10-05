@@ -139,8 +139,7 @@ export const service = {
               description: {
                 first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
                 linkText: 'vidakuzi au cookies',
-                last:
-                  ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
+                last: ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -157,10 +156,8 @@ export const service = {
                 para3:
                   'Ili kuwezesha kurasa zetu kufanya kazi, tunahifadhi baadhi ya taarifa katika kifaa chako pasi na ridhaa yako.',
                 para4: {
-                  text:
-                    'Soma zaidi kuhusu taarifa muhimu tunazohifadhi katika kifaa chako ili kuwezesha kurasa zetu kufanya kazi.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Soma zaidi kuhusu taarifa muhimu tunazohifadhi katika kifaa chako ili kuwezesha kurasa zetu kufanya kazi.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Tunatumia hifadhi ya kifaa chako kuhifadhi mapendekezo yako ya ridhaa kwa kifaa hicho.',
@@ -168,10 +165,8 @@ export const service = {
                 para6:
                   'Unaporidhia kukusanywa kwa taarifa kupitia kurasa za AMP, pia unaridhia tukuoneshe matangazo ambayo yanaendana nawe ukiwa nje ya Uingereza.',
                 para7: {
-                  text:
-                    'Soma zaidi jinsi gani BBC na washirika wetu tunavyokuletea matangazo yanayoendana nawe.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Soma zaidi jinsi gani BBC na washirika wetu tunavyokuletea matangazo yanayoendana nawe.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Unaweza kukataa kupokea matangazo kwa kubofya "Kataa kukusanywa taarifa zako na uendelee" chini. Zingatia kuwa utaendelea kuona matangazo lakini hayatakuwa yale unayoendana nayo.',
@@ -186,16 +181,14 @@ export const service = {
               uk: {
                 first: 'Tunatumia ',
                 linkText: 'kuki',
-                last:
-                  ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
+                last: ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Tunatumia ',
                 linkText: 'kuki',
-                last:
-                  ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
+                last: ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -283,8 +276,7 @@ export const service = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [
@@ -310,8 +302,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

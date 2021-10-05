@@ -232,8 +232,7 @@ describe('Expected use', () => {
       origin: 'https://logws1363.ati-host.net',
       pathname: '/',
       searchParams: {
-        ati:
-          'PUB-[article-sty]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
+        ati: 'PUB-[article-sty]-[most-read]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[http://www.bbc.com/pidgin/tori-51745682]',
         hl: expect.stringMatching(/^.+?x.+?x.+?$/), // timestamp based value
         idclient: expect.stringMatching(/^.+?-.+?-.+?-.+?$/),
         lng: 'en-US',

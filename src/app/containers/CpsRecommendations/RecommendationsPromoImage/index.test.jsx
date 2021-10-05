@@ -5,8 +5,7 @@ import RecommendationsImage from '.';
 const indexFixtureData = {
   id: '111155484',
   subType: 'index',
-  href:
-    'http://c.files.bbci.co.uk/BD47/production/_111155484_mediaitem111155481.jpg',
+  href: 'http://c.files.bbci.co.uk/BD47/production/_111155484_mediaitem111155481.jpg',
   path: '/cpsprodpb/BD47/production/_111155484_mediaitem111155481.jpg',
   height: 549,
   width: 976,

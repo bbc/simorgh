@@ -24,13 +24,11 @@ describe('socialEmbed', () => {
                   author_url: 'https://twitter.com/MileyCyrus',
                   cache_age: '3153600000',
                   height: null,
-                  html:
-                    '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.</p>&mdash; Miley Ray Cyrus (@MileyCyrus) <a href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw">March 10, 2020</a></blockquote>',
+                  html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Australia: Due to the recommendations of local, state, federal and international government authorities, including the Center for Disease Control, to reduce potential health risks in response to the current global health crisis, we are no longer traveling to Aus for the show.</p>&mdash; Miley Ray Cyrus (@MileyCyrus) <a href="https://twitter.com/MileyCyrus/status/1237210910835392512?ref_src=twsrc%5Etfw">March 10, 2020</a></blockquote>',
                   provider_name: 'Twitter',
                   provider_url: 'https://twitter.com',
                   type: 'rich',
-                  url:
-                    'https://twitter.com/MileyCyrus/status/1237210910835392512',
+                  url: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
                   version: '1.0',
                   width: 550,
                 },
