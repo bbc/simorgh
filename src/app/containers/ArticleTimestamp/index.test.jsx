@@ -12,7 +12,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 const regexDate = /[0-9]{1,2} \w+ [0-9]{4}/;
 const regexDatetime = /[0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 
-const regexUpdatedDatetime = /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
+const regexUpdatedDatetime =
+  /Updated [0-9]{1,2} \w+ [0-9]{4}[,] [0-9]{2}[:][0-9]{2} \w+/;
 const regexUpdatedDate = /^Updated [0-9]{1,2} \w+ [0-9]{4}$/;
 
 // eslint-disable-next-line react/prop-types
@@ -98,13 +99,11 @@ describe('ArticleTimestamp', () => {
   describe('daylight savings time', () => {
     const daylightSavingsBehaviour = ({ descriptor, date, longName }) => {
       it(`should produce ${descriptor} as a descriptor when in ${longName}`, () => {
-        const [
-          moreThanTenHoursAgo,
-          mockCurrentTimestamp,
-        ] = sameDayTimestampsGenerator({
-          date,
-          intervals: [{ hours: 10, seconds: 25 }],
-        });
+        const [moreThanTenHoursAgo, mockCurrentTimestamp] =
+          sameDayTimestampsGenerator({
+            date,
+            intervals: [{ hours: 10, seconds: 25 }],
+          });
         Date.now = jest.fn(() => mockCurrentTimestamp);
         const { getByText } = render(
           <WrappedArticleTimestamp
@@ -235,13 +234,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps - published: date & time, updated: relative when both are today and < 10 hours ago', () => {
-    const [
-      fiveHoursAgo,
-      threeHoursAgo,
-      mockCurrentTimestamp,
-    ] = sameDayTimestampsGenerator({
-      intervals: [{ hours: 5 }, { hours: 3 }],
-    });
+    const [fiveHoursAgo, threeHoursAgo, mockCurrentTimestamp] =
+      sameDayTimestampsGenerator({
+        intervals: [{ hours: 5 }, { hours: 3 }],
+      });
     Date.now = jest.fn(() => mockCurrentTimestamp);
     const { getByText } = render(
       <WrappedArticleTimestamp
@@ -258,13 +254,10 @@ describe('ArticleTimestamp', () => {
   });
 
   it('should render two timestamps - published: date & time, updated: date & time when both are today and > 10 hours ago', () => {
-    const [
-      twelveHoursAgo,
-      elevenHoursAgo,
-      mockCurrentTimestamp,
-    ] = sameDayTimestampsGenerator({
-      intervals: [{ hours: 12 }, { hours: 11 }],
-    });
+    const [twelveHoursAgo, elevenHoursAgo, mockCurrentTimestamp] =
+      sameDayTimestampsGenerator({
+        intervals: [{ hours: 12 }, { hours: 11 }],
+      });
     Date.now = jest.fn(() => mockCurrentTimestamp);
     const { getAllByText } = render(
       <WrappedArticleTimestamp

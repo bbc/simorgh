@@ -4,40 +4,44 @@ import path from 'ramda/src/path';
 import pathEq from 'ramda/src/pathEq';
 import transformer from '.';
 
-const buildBlocks = (...blocks) => blocks.map(type => ({ type }));
-
 const buildPageFixture = blocks => ({
   content: {
     blocks,
   },
 });
 
-const [H, P, L] = ['heading', 'paragraph', 'list'];
+// Block Generators
+const H = { type: 'heading' };
+const P = (characterCount = 0) => ({
+  type: 'paragraph',
+  text: 'a'.repeat(characterCount),
+});
+const Paragraphs = length => Array(length).fill(P());
 
 describe('insertPodcastPromo', () => {
   it('adds a podcast promo block', () => {
-    const input = buildPageFixture(buildBlocks(P, P, P, P, P, P, P, P));
+    const input = buildPageFixture([...Paragraphs(7), P(500), P(500)]);
 
     const { paragraph: paragraphBlocks, podcastPromo: promoBlocks } = groupBy(
       path(['type']),
       transformer(input).content.blocks,
     );
 
-    expect(paragraphBlocks.length).toBe(8);
+    expect(paragraphBlocks.length).toBe(9);
     expect(promoBlocks.length).toBe(1);
   });
 
   it.each`
-    scenario | inputBlocks                                     | expectedIndex
-    ${1}     | ${buildBlocks()}                                | ${-1}
-    ${2}     | ${buildBlocks(P, P, P, P, P, P)}                | ${-1}
-    ${3}     | ${buildBlocks(P, P, P, P, P, P, P)}             | ${-1}
-    ${4}     | ${buildBlocks(P, P, P, P, P, P, P, H)}          | ${-1}
-    ${5}     | ${buildBlocks(P, P, P, P, P, P, P, P)}          | ${6}
-    ${6}     | ${buildBlocks(H, P, P, P, P, P, P, P, P)}       | ${7}
-    ${7}     | ${buildBlocks(P, P, P, P, P, P, P, P, L)}       | ${-1}
-    ${8}     | ${buildBlocks(P, P, P, P, P, P, P, P, L, P)}    | ${-1}
-    ${9}     | ${buildBlocks(P, P, P, P, P, P, P, P, L, P, P)} | ${9}
+    scenario | inputBlocks                                      | expectedIndex
+    ${1}     | ${[]}                                            | ${-1}
+    ${2}     | ${Paragraphs(6)}                                 | ${-1}
+    ${3}     | ${Paragraphs(7)}                                 | ${-1}
+    ${4}     | ${[...Paragraphs(7), P(1000)]}                   | ${7}
+    ${5}     | ${[...Paragraphs(7), P(500), P(500)]}            | ${7}
+    ${6}     | ${[H, ...Paragraphs(7), P(1000)]}                | ${8}
+    ${7}     | ${[...Paragraphs(7), P(500)]}                    | ${-1}
+    ${8}     | ${[...Paragraphs(7), P(500), H, P(500)]}         | ${-1}
+    ${9}     | ${[...Paragraphs(7), P(500), H, P(500), P(500)]} | ${9}
   `(
     '[scenario $scenario]: places podcast promo at correct index',
     ({ inputBlocks, expectedIndex }) => {
@@ -56,12 +60,12 @@ describe('insertPodcastPromo', () => {
   );
 
   it.each`
-    scenario | inputBlocks                                        | expectedIndex
-    ${1}     | ${buildBlocks(P, P, P, P, P, P, P, P, H)}          | ${9}
-    ${2}     | ${buildBlocks(P, P, P, P, P, P, P, P, P, H)}       | ${10}
-    ${3}     | ${buildBlocks(H, P, P, P, P, P, P, P, P)}          | ${-1}
-    ${4}     | ${buildBlocks(P, P, P, P, P, P, P, P, L, P, P)}    | ${-1}
-    ${5}     | ${buildBlocks(P, P, P, P, P, P, P, P, L, P, P, H)} | ${12}
+    scenario | inputBlocks                                         | expectedIndex
+    ${1}     | ${[...Paragraphs(7), P(1000), H]}                   | ${9}
+    ${2}     | ${[...Paragraphs(7), P(500), P(500), H]}            | ${10}
+    ${3}     | ${[H, ...Paragraphs(7), P(1000)]}                   | ${-1}
+    ${4}     | ${[...Paragraphs(7), H, P(500), P(500)]}            | ${-1}
+    ${5}     | ${[...Paragraphs(7), P(500), H, P(500), P(500), H]} | ${12}
   `(
     '[scenario $scenario]: updates simorghMetadata for subsequent block',
     ({ inputBlocks, expectedIndex }) => {

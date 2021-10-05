@@ -70,10 +70,8 @@ export default async ({
     });
     const scheduleIsEnabled = getScheduleToggle(toggles);
     const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
-    const {
-      enabled: showRecentEpisodes,
-      value: recentEpisodesLimit,
-    } = recentEpisodesToggle;
+    const { enabled: showRecentEpisodes, value: recentEpisodesLimit } =
+      recentEpisodesToggle;
 
     const { json, status } = scheduleIsEnabled
       ? await withRadioSchedule({

@@ -149,8 +149,7 @@ export const service = {
               description: {
                 first: 'Biz ve ortaklarımız ',
                 linkText: 'çerezleri gibi',
-                last:
-                  ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
+                last: ' teknolojiler kullanıyoruz ve size en iyi çevrimiçi hizmeti sunabilmek adına internet tarama verilerini topluyoruz. Bu yolla içerik ve reklamları kişiselleştiriyoruz. Eğer kabul ediyorsanız lütfen bizi bilgilendirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -167,10 +166,8 @@ export const service = {
                 para3:
                   'İnternet sayfalarımızın düzgün çalışabilmesi için sizin rıcanız olmadan sınırlı düzeyde veri toplamamız gerekiyor.',
                 para4: {
-                  text:
-                    'Sayfalarımızın çalışması için gereken veri toplama süreci hakkında detaylı bilgi almak için tıklayın.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Sayfalarımızın çalışması için gereken veri toplama süreci hakkında detaylı bilgi almak için tıklayın.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Lokal veri saklama yöntemi ile vermiş olduğunuz izinlerin bilgilerini telefonunuzda saklıyoruz.',
@@ -178,10 +175,8 @@ export const service = {
                 para6:
                   'AMP üzerinden veri toplamaya izin verdiğinizde kişiselleştirilmiş reklamların sunulmasına onay vermiş oluyorsunuz.',
                 para7: {
-                  text:
-                    "BBC'nin ve reklam ortaklarının kişiselleştirilmiş reklamları nasıl oluşturduğunu okumak için tıklayın.",
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: "BBC'nin ve reklam ortaklarının kişiselleştirilmiş reklamları nasıl oluşturduğunu okumak için tıklayın.",
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   "Kişiselleştirilmiş reklamları görmek istemiyorsanız 'Veri toplamayı reddet ve devam et' seçeneğini tıklayabilirsiniz. Yine de reklamları görmeye devam edeceksiniz ancak bu reklamlar kişiselleştirilmemiş olacak.",
@@ -196,16 +191,14 @@ export const service = {
               uk: {
                 first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
                 linkText: 'çerezler',
-                last:
-                  ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
+                last: ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Size en iyi çevrimiçi deneyimi sunabilmek için ',
                 linkText: 'çerezler',
-                last:
-                  ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
+                last: ' ullanıyoruz. Çerezleri kabul ediyorsanız lütfen bizi bilgilendirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -236,8 +229,7 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Video altyazısı: ',
-          text:
-            'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
+          text: 'Uyarı: Üçüncü tarafların sağladığı içerikte reklam bulunabilir.',
         },
         fallback: {
           text: 'İçerik bulunamadı',
@@ -287,8 +279,7 @@ export const service = {
         text: "Neden BBC'ye güvenebilirsiniz",
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Link verilen internet sitelerine yaklaşımımız.',
       },
       links: [
@@ -310,8 +301,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
