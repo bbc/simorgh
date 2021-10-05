@@ -5,6 +5,14 @@ import insert from 'ramda/src/insert';
 import slice from 'ramda/src/slice';
 import findNthIndex from '#lib/utilities/findNthIndex';
 
+// Podcast promos are inserted if the page content has a continuous sequence of paragraph blocks
+// These paragraph blocks must have a minimum character count in total to ensure there is
+// enough text to wrap around the promo component
+const MINIMUM_CHARACTER_COUNT = 940;
+
+// The earliest we can insert a podcast promo is next to the 8th paragraph
+const EARLIEST_PARAGRAPH_INSERTION_POINT = 8;
+
 const getBlocks = pathOr([], ['content', 'blocks']);
 const setBlocks = assocPath(['content', 'blocks']);
 const podcastPromoBlock = {
@@ -12,30 +20,41 @@ const podcastPromoBlock = {
   model: {},
 };
 
-const withListException = (blocks, targetIndex) => {
-  // We want to insert the podcast promo at the target index
-  // If the block that occurs 2 places later is not a list, we can continue with that plan
-  if (!pathEq([targetIndex + 2, 'type'], 'list', blocks)) return targetIndex;
+const isParagraphBlock = block => block.type === 'paragraph';
+const countParagraphCharacters = block => block.text?.length || 0;
 
-  // Otherwise, we need to check if the two blocks after that list are both paragraphs
-  // If either of them are NOT paragraphs, we do not add the podcast promo to the blocks
-  if (!pathEq([targetIndex + 3, 'type'], 'paragraph', blocks)) return -1;
-  if (!pathEq([targetIndex + 4, 'type'], 'paragraph', blocks)) return -1;
+// Find the starting point for the first continuous sequence of
+// text blocks that meet our requirements, or -1 if none do
+const getContinuousTextIndex = (blocks, startingIndex) => {
+  // The starting index of the sequence currently being considered
+  let sequenceStartPoint = startingIndex;
+  // Running total of how many characters this sequence contains
+  let characterCount = 0;
 
-  // If they're both paragraphs, we can position the promo after the list block,
-  // so it can float next to those two paragraphs
-  return targetIndex + 3;
+  for (let i = startingIndex; i < blocks.length; i += 1) {
+    // If the next block is a paragraph block, it gets added to our sequence
+    if (isParagraphBlock(blocks[i])) {
+      characterCount += countParagraphCharacters(blocks[i]);
+      if (characterCount >= MINIMUM_CHARACTER_COUNT) return sequenceStartPoint;
+    } else {
+      // If it is not a paragraph block, our sequence has ended and doesn't have
+      // enough characters.  Start evaluating the next sequence.
+      sequenceStartPoint = i + 1;
+      characterCount = 0;
+    }
+  }
+  return -1;
 };
 
 const getPromoPosition = pageData => {
   const blocks = getBlocks(pageData);
-  const targetIndex = findNthIndex(7, pathEq(['type'], 'paragraph'), blocks);
-
-  // Only add a promo if the block after the 7th paragraph is also a paragraph
-  if (!pathEq([targetIndex + 1, 'type'], 'paragraph', blocks)) return -1;
-
-  // If the block 2 blocks after the 7th paragraph is a list, try to put it after the list
-  return withListException(blocks, targetIndex);
+  const targetIndex = findNthIndex(
+    EARLIEST_PARAGRAPH_INSERTION_POINT,
+    pathEq(['type'], 'paragraph'),
+    blocks,
+  );
+  if (targetIndex < 0) return targetIndex;
+  return getContinuousTextIndex(blocks, targetIndex);
 };
 
 // The first non-paragraph block after the promo needs to be flagged so we can clear the float
