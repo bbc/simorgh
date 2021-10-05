@@ -94,7 +94,7 @@ if (onlyRunTests) {
           setTimeout(() => {
             spinner.stop();
             resolve();
-          }, 2000);
+          }, 5000);
         }),
     )
     .then(runTests)
