@@ -1,8 +1,7 @@
 export const cpsImageBlock = {
   id: '63724392',
   subType: 'photogallery',
-  href:
-    'http://b.files.bbci.co.uk/729E/test/_63724392_gettyimages-1098075358.jpg',
+  href: 'http://b.files.bbci.co.uk/729E/test/_63724392_gettyimages-1098075358.jpg',
   path: '/cpsdevpb/729E/test/_63724392_gettyimages-1098075358.jpg',
   height: 549,
   width: 976,

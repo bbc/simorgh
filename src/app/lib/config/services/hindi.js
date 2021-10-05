@@ -156,8 +156,7 @@ export const service = {
                 first:
                   'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
                 linkText: 'कुकीज़',
-                last:
-                  ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                last: ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -174,10 +173,8 @@ export const service = {
                 para3:
                   'अपनी वेबसाइट के ठीक से काम करने के लिए हमें सीमित स्तर पर कुछ जानकारियाँ सेव करनी पड़ती हैं जिसके लिए हम आपसे मंज़ूरी नहीं मांगते.',
                 para4: {
-                  text:
-                    'उन जरूरी जानकारी के बारे में और अधिक पढ़ें जो हमने आपके डिवाइस पर स्टोर किए हैं ताकि पेज ठीक से दिख सके.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'उन जरूरी जानकारी के बारे में और अधिक पढ़ें जो हमने आपके डिवाइस पर स्टोर किए हैं ताकि पेज ठीक से दिख सके.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'हमें आपकी मंज़ूरी और पसंद को आपकी डिवाइस के लोकल स्टोरेज में स्टोर करते हैं.',
@@ -185,10 +182,8 @@ export const service = {
                 para6:
                   'जब आप हमें एएमपी डेटा कलेक्शन की मंज़ूरी देते हैं तो इसका मतलब होता है कि आप हमें आपकी रुचि के विज्ञापन दिखाने की भी मंज़ूरी दे रहे हैं. ऐसा तभी होता है जब आप ब्रिटेन से बाहर हों.',
                 para7: {
-                  text:
-                    'हम आपकी रुचि के अनुरूप विज्ञापन और अपने विज्ञापनदाता कैसे चुनते हैं यह जानने के लिए और पढ़ें.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'हम आपकी रुचि के अनुरूप विज्ञापन और अपने विज्ञापनदाता कैसे चुनते हैं यह जानने के लिए और पढ़ें.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'आप डेटा कलेक्शन को नामंज़ूर करके आगे बढ़ने का विकल्प चुनते हैं तो आपकी रुचि के अनुरूप विज्ञापन नहीं दिखाए जाएँगे, लेकिन विज्ञापन आपको फिर भी दिखाए जाएँगे लेकिन वे पर्सनलाइज्ड नहीं होंगे.',
@@ -203,16 +198,14 @@ export const service = {
               uk: {
                 first: 'हम ',
                 linkText: 'कुकीज़',
-                last:
-                  ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                last: ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'हम ',
                 linkText: 'कुकीज़',
-                last:
-                  ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                last: ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -307,8 +300,7 @@ export const service = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
@@ -334,8 +326,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

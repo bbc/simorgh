@@ -55,9 +55,8 @@ const ScheduleItemHeader = ({
 }) => {
   const { linkComponent, linkComponentAttr, durationLabel } = props;
 
-  const { script, locale, service, timezone, dir, translations } = useContext(
-    ServiceContext,
-  );
+  const { script, locale, service, timezone, dir, translations } =
+    useContext(ServiceContext);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
   const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);

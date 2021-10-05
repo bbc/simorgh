@@ -94,9 +94,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for Canonical', async () => {
-    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
-      pashtoPageData,
-    );
+    const pashtoPageDataWithAvailableEpisode =
+      getAvailableEpisode(pashtoPageData);
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -112,9 +111,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should match snapshot for AMP', async () => {
-    const pashtoPageDataWithAvailableEpisode = getAvailableEpisode(
-      pashtoPageData,
-    );
+    const pashtoPageDataWithAvailableEpisode =
+      getAvailableEpisode(pashtoPageData);
     fetch.mockResponse(JSON.stringify(pashtoPageDataWithAvailableEpisode));
     fetch.mockResponse(JSON.stringify(pashtoPageData));
 
@@ -281,9 +279,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on canonical', async () => {
-    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
-      koreanPageData,
-    );
+    const koreanPageDataWithAvailableEpisode =
+      getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -302,9 +299,8 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on canonical using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
-      koreanPageData,
-    );
+    const koreanPageDataWithAvailableEpisode =
+      getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -322,9 +318,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should show the audio player on AMP', async () => {
-    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
-      koreanPageData,
-    );
+    const koreanPageDataWithAvailableEpisode =
+      getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -347,9 +342,8 @@ describe('OnDemand Radio Page ', () => {
 
   it('should show the audio player on AMP using no override on live', async () => {
     process.env.SIMORGH_APP_ENV = 'live';
-    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
-      koreanPageData,
-    );
+    const koreanPageDataWithAvailableEpisode =
+      getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -419,9 +413,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on canonical', async () => {
-    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
-      afaanoromooPageData,
-    );
+    const afaanPageDataWithAvailableEpisode =
+      getAvailableEpisode(afaanoromooPageData);
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -442,9 +435,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should return bbc_afaanoromoo_radio when the masterBrand is bbc_oromo_radio on AMP', async () => {
-    const afaanPageDataWithAvailableEpisode = getAvailableEpisode(
-      afaanoromooPageData,
-    );
+    const afaanPageDataWithAvailableEpisode =
+      getAvailableEpisode(afaanoromooPageData);
     fetch.mockResponse(JSON.stringify(afaanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
@@ -466,9 +458,8 @@ describe('OnDemand Radio Page ', () => {
   });
 
   it('should contain the translated iframe title', async () => {
-    const koreanPageDataWithAvailableEpisode = getAvailableEpisode(
-      koreanPageData,
-    );
+    const koreanPageDataWithAvailableEpisode =
+      getAvailableEpisode(koreanPageData);
     fetch.mockResponse(JSON.stringify(koreanPageDataWithAvailableEpisode));
     const { pageData } = await getInitialData({
       path: 'some-ondemand-radio-path',
