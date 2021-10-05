@@ -19455,10 +19455,10 @@ resolve@^2.0.0-next.3:
     url-parse: 1.5.3
     uuid: 8.3.2
     wait-on: 6.0.0
-    webpack: 5.56.1
+    webpack: 5.57.0
     webpack-bundle-analyzer: 4.4.2
     webpack-cli: 4.8.0
-    webpack-dev-server: 4.3.0
+    webpack-dev-server: 4.3.1
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
     winston: 3.3.3
@@ -22007,9 +22007,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.3.0":
-  version: 4.3.0
-  resolution: "webpack-dev-server@npm:4.3.0"
+"webpack-dev-server@npm:4.3.1":
+  version: 4.3.1
+  resolution: "webpack-dev-server@npm:4.3.1"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
@@ -22043,7 +22043,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: 7ee8ae969a1eff65caedc7dd935a3bf62f0ca21fdd5d169884cba525d9c970e551fa250f230bda0c57a76cd61411fae5bfcbc104bafff14c9cad7f4a6f9b0022
+  checksum: ce9d054c3de335df4cca4759aaff3a5291487c906b15bd3bb6e41de86e3784b307ae1e2cdd6403424567b0645a0dc6a9dd21b4839ba86176d5097664474d2b68
   languageName: node
   linkType: hard
 
@@ -22166,9 +22166,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.56.1":
-  version: 5.56.1
-  resolution: "webpack@npm:5.56.1"
+"webpack@npm:5.57.0":
+  version: 5.57.0
+  resolution: "webpack@npm:5.57.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -22199,7 +22199,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: e5ead673155a5e9667c8ae5413af18739335b067e03ae4e6daefbf9bf648321267abc706d3c756b17c9224c5e31762c0de212e700cca34ab4ee1e069e7806b8a
+  checksum: 06baeca4399326cbb08aa5503b52ff06dbc1311a170597873a11d5b34e362409666f618515ad0c4daf28d9bf0fe5ec43eeffb56273ed550b99d88eb975ab3e21
   languageName: node
   linkType: hard
 
