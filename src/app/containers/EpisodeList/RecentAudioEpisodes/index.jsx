@@ -47,14 +47,8 @@ const InlineDiv = styled.div`
 `;
 
 const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
-  const {
-    translations,
-    service,
-    script,
-    dir,
-    timezone,
-    datetimeLocale,
-  } = useContext(ServiceContext);
+  const { translations, service, script, dir, timezone, datetimeLocale } =
+    useContext(ServiceContext);
   const eventTrackingData = {
     componentName: 'episodes-audio',
     campaignID:

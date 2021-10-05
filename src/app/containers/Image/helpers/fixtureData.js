@@ -14,8 +14,7 @@ export const landscape = {
 };
 
 export const portrait = {
-  alt:
-    'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
+  alt: 'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
   attribution: 'BBC',
   locator: portraitImageLocator,
   width: 1024,

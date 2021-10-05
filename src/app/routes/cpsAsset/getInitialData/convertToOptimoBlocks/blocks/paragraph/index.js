@@ -8,10 +8,8 @@ const richTextTransforms = loadable(() =>
 );
 
 const convertParagraph = async block => {
-  const {
-    candyXmlToRichText,
-    stringToRichText,
-  } = await richTextTransforms.load();
+  const { candyXmlToRichText, stringToRichText } =
+    await richTextTransforms.load();
 
   const xmlWrapper = innerXML =>
     `<body><paragraph>${innerXML}</paragraph></body>`;

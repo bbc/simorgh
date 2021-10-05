@@ -155,8 +155,7 @@ export const service = {
                 first:
                   'Kami dan para mitra kami menggunakan teknologi, seperti ',
                 linkText: 'cookies',
-                last:
-                  ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+                last: ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -173,10 +172,8 @@ export const service = {
                 para3:
                   'Agar situs kami tetap berjalan, kami menyimpan sejumlah informasi terbatas dalam perangkat Anda tanpa persetujuan Anda.',
                 para4: {
-                  text:
-                    'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Kami menggunakan penyimpanan lokal untuk menyimpan preferensi yang Anda pilih dalam perangkat Anda.',
@@ -184,10 +181,8 @@ export const service = {
                 para6:
                   'Bila Anda menyetujui pengambilan data pada halaman AMP, Anda mengizinkan kami menampilkan preferensi iklan Anda, yang relevan bagi Anda bila Anda berada di luar Inggris.',
                 para7: {
-                  text:
-                    'Baca lebih lanjut bagaimana kami menyesuaikan iklan di BBC dan mitra-mira iklan kami.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Baca lebih lanjut bagaimana kami menyesuaikan iklan di BBC dan mitra-mira iklan kami.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Anda dapat memilih untuk tidak menerima iklan yang disesuaikan dengan pilihan Anda dengan mengeklik "Tolak pengambilan data dan lanjutkan" di bawah ini. Anda tetap dapat melihat iklan, namun tak sesuai dengan pilihan Anda.',
@@ -202,16 +197,14 @@ export const service = {
               uk: {
                 first: 'Kami menggunakan ',
                 linkText: 'cookies',
-                last:
-                  ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+                last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Kami menggunakan ',
                 linkText: 'cookies',
-                last:
-                  ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+                last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -224,8 +217,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
+        noJs: 'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
         contentExpired: 'Konten ini sudah tidak tersedia lagi.',
         contentNotYetAvailable: 'Program ini belum tersedia.',
         audio: 'Audio',
@@ -294,8 +286,7 @@ export const service = {
         text: 'Alasan Anda dapat mempercayai BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
+        href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
         text: 'Baca tentang peraturan baru terkait link eksternal.',
       },
       links: [
@@ -321,8 +312,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

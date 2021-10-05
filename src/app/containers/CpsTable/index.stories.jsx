@@ -23,11 +23,8 @@ export default {
 // Storybook's does not have a modern way to programmatically generate stores, so we
 // need to make this static rather than looping over the array
 // https://github.com/storybookjs/storybook/issues/9828#issuecomment-780969082
-const [
-  defaultTableFixture,
-  tableWithEmptyCell,
-  tableWithMultipleLinesOfText,
-] = fixtures;
+const [defaultTableFixture, tableWithEmptyCell, tableWithMultipleLinesOfText] =
+  fixtures;
 
 export const Table = () => <Component fixture={defaultTableFixture} />;
 export const TableWithEmptyCell = () => (

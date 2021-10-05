@@ -139,8 +139,7 @@ export const service = {
               description: {
                 first: 'We and our partners use technologies, such as ',
                 linkText: 'cookies',
-                last:
-                  ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
+                last: ', and collect browsing data to give you the best online experience and to personalise the content and advertising shown to you. Please let us know if you agree.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -157,10 +156,8 @@ export const service = {
                 para3:
                   'To make our web pages work, we store some limited information on your device without your consent.',
                 para4: {
-                  text:
-                    'Read more about the essential information we store on your device to make our web pages work.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Read more about the essential information we store on your device to make our web pages work.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'We use local storage to store your consent preferences on your device.',
@@ -168,10 +165,8 @@ export const service = {
                 para6:
                   'When you consent to data collection on AMP pages you are consenting to allow us to display personalised ads that are relevant to you when you are outside of the UK.',
                 para7: {
-                  text:
-                    'Read more about how we personalise ads in the BBC and our advertising partners.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Read more about how we personalise ads in the BBC and our advertising partners.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'You can choose not to receive personalised ads by clicking “Reject data collection and continue” below. Please note that you will still see advertising, but it will not be personalised to you.',
@@ -186,16 +181,14 @@ export const service = {
               uk: {
                 first: 'We use ',
                 linkText: 'cookies',
-                last:
-                  ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'We use ',
                 linkText: 'cookies',
-                last:
-                  ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
+                last: ' to give you the best online experience. Please let us know if you agree to all of these cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -208,8 +201,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'To play this content, please enable JavaScript, or try a different browser',
+        noJs: 'To play this content, please enable JavaScript, or try a different browser',
         contentExpired: 'This content is no longer available',
         audio: 'Audio',
         photogallery: 'Image gallery',
@@ -243,8 +235,7 @@ export const service = {
     },
     footer: {
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Read about our approach to external linking.',
       },
       links: [
@@ -274,8 +265,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
