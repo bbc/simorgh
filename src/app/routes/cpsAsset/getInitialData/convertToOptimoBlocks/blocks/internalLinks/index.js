@@ -27,7 +27,10 @@ const getUrl = path(['locators', 'href']);
 
 const getLinkText = path(['headlines', 'overtyped']);
 
-const itemIdEndsWith = string => ({ id }) => id.endsWith(string);
+const itemIdEndsWith =
+  string =>
+  ({ id }) =>
+    id.endsWith(string);
 
 const getItemMetadata = (id, metadata) => metadata.find(itemIdEndsWith(id));
 

@@ -7,11 +7,8 @@ export const buildTvRadioATIParams = (
   serviceContext,
 ) => {
   const { platform, statsDestination } = requestContext;
-  const {
-    atiAnalyticsAppName,
-    atiAnalyticsProducerId,
-    service,
-  } = serviceContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service } =
+    serviceContext;
 
   const { id, language, pageTitle, pageIdentifier, contentType } = pageData;
 

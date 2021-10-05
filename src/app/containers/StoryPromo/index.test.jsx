@@ -146,8 +146,9 @@ describe('StoryPromo Container', () => {
       ).container;
 
       assetTypeItem = deepClone(standardLinkItem);
-      assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-        .container;
+      assetTypeContainer = render(
+        <WrappedStoryPromo item={assetTypeItem} />,
+      ).container;
     });
 
     afterEach(cleanup);
@@ -278,8 +279,9 @@ describe('StoryPromo Container', () => {
       });
       it('should not include a headline element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('h3').length).toEqual(0);
@@ -295,8 +297,9 @@ describe('StoryPromo Container', () => {
 
       it('should not include any paragraph element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('p').length).toEqual(0);
@@ -311,8 +314,9 @@ describe('StoryPromo Container', () => {
 
       it('should not include a time element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('time').length).toEqual(
@@ -343,10 +347,8 @@ describe('StoryPromo Container', () => {
         const { container: newsContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="news" />,
         );
-        const {
-          textContent: newsTime,
-          dateTime: newsDate,
-        } = newsContainer.querySelector('time');
+        const { textContent: newsTime, dateTime: newsDate } =
+          newsContainer.querySelector('time');
 
         expect(newsTime).toEqual('5 August 2019');
         expect(newsDate).toEqual('2019-08-05');
@@ -354,10 +356,8 @@ describe('StoryPromo Container', () => {
         const { container: bengaliContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="bengali" />,
         );
-        const {
-          textContent: bengaliTime,
-          dateTime: bengaliDate,
-        } = bengaliContainer.querySelector('time');
+        const { textContent: bengaliTime, dateTime: bengaliDate } =
+          bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
         expect(bengaliDate).toEqual('2019-08-06');
       });
@@ -369,10 +369,8 @@ describe('StoryPromo Container', () => {
             serviceDatetimeLocale="fa"
           />,
         );
-        const {
-          textContent: newsTime,
-          dateTime: newsDate,
-        } = newsContainer.querySelector('time');
+        const { textContent: newsTime, dateTime: newsDate } =
+          newsContainer.querySelector('time');
 
         expect(newsTime).toEqual('۵ اوت ۲۰۱۹');
         expect(newsDate).toEqual('2019-08-05');
@@ -384,10 +382,8 @@ describe('StoryPromo Container', () => {
             serviceDatetimeLocale="uk"
           />,
         );
-        const {
-          textContent: bengaliTime,
-          dateTime: bengaliDate,
-        } = bengaliContainer.querySelector('time');
+        const { textContent: bengaliTime, dateTime: bengaliDate } =
+          bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('6 серпня 2019');
         expect(bengaliDate).toEqual('2019-08-06');
       });

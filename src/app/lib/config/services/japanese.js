@@ -136,8 +136,7 @@ export const service = {
               description: {
                 first: '本サイトおよび提携サイトは ',
                 linkText: 'クッキー',
-                last:
-                  ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
+                last: ' などの技術を使用し、あなたに最高のオンライン体験をご提供するためネット閲覧データを集め、あなたにあつらえてパーソナライズしたコンテンツや広告を表示します。これに同意するかお知らせください。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -154,10 +153,8 @@ export const service = {
                 para3:
                   'サイト上ページの機能維持のため、読者の方の同意なしでご使用端末について限定的な情報を保存しています。',
                 para4: {
-                  text:
-                    'サイト上のページを機能させるため保存する、読者の使用端末に関する必要不可欠な情報について、さらに読む。',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'サイト上のページを機能させるため保存する、読者の使用端末に関する必要不可欠な情報について、さらに読む。',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   '読者の使用端末の同意設定をローカル･ストレージに保存しています。',
@@ -165,10 +162,8 @@ export const service = {
                 para6:
                   'AMPページ上のデータ取得に同意した場合、イギリス国外において、読者の関心に関連するパーソナライズ広告の表示に同意したことになります。',
                 para7: {
-                  text:
-                    'BBCのパーソナライズ広告と広告パートナーについてもっと読む。',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'BBCのパーソナライズ広告と広告パートナーについてもっと読む。',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'パーソナライズ広告を拒否する場合はこの下の「データ取得を拒否して続ける」をクリックしてください。この場合、広告の表示は続きますが、パーソナライズはされません。',
@@ -183,16 +178,14 @@ export const service = {
               uk: {
                 first: '本サイトでは最高のオンライン体験をご提供するため ',
                 linkText: 'クッキー',
-                last:
-                  ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
+                last: ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: '本サイトでは最高のオンライン体験をご提供するため ',
                 linkText: 'クッキー',
-                last:
-                  ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
+                last: ' を使用しています。すべてのクッキー使用に同意するか教えてください。',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -294,8 +287,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

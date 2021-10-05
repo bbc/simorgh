@@ -83,8 +83,7 @@ export const service = {
         text: 'Zašto BBC zaslužuje vaše poverenje',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Pročitajte naša pravila o linkovanju drugih sajtova.',
       },
       links: [
@@ -110,8 +109,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -244,8 +242,7 @@ export const service = {
               description: {
                 first: 'Mi i naši partneri koristimo tehnologije poput ',
                 linkText: 'kolačića',
-                last:
-                  ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
+                last: ' i prikupljamo podatke pretraživača da bismo vam ponudili najkvalitetnije iskustvo na internetu i personalizovali sadržaj i oglase koji vam se prikazuju. Molimo vas da nas obavestite da li se slažete.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -262,10 +259,8 @@ export const service = {
                 para3:
                   'Da bi naše internet stranice funkcionisale, čuvamo određenu i ograničenu količinu podataka na vašem uređaju bez vaše saglasnosti.',
                 para4: {
-                  text:
-                    'Pročitajte više o neophodnim podacima koje čuvamo na vašem uređaju da bi naše stranice funkcionisale. (na engleskom jeziku)',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Pročitajte više o neophodnim podacima koje čuvamo na vašem uređaju da bi naše stranice funkcionisale. (na engleskom jeziku)',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Koristimo lokalne servere da bismo sačuvali vaše podatke o saglasnosti na vašem uređaju.',
@@ -273,10 +268,8 @@ export const service = {
                 para6:
                   'Kada pristanete na prikupljanje podataka na AMP stranicama, pristajete da nam dozvolite da vam prikažemo personalizovane oglase koji su važni za vas kada ste van Velike Britanije.',
                 para7: {
-                  text:
-                    'Pročitajte više o načinu na koji personalizujemo oglase na BBC-ju i kod naših partnerskih oglašivača.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Pročitajte više o načinu na koji personalizujemo oglase na BBC-ju i kod naših partnerskih oglašivača.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Možete da odaberete da ne dobijate personalizovane oglase ako kliknete na "Odbiti prikupljanje podataka i nastaviti" ispod. Molimo vas da uzmete u obzir da ćete i dalje videti oglase, ali neće biti personalizovani za vas.',
@@ -291,16 +284,14 @@ export const service = {
               uk: {
                 first: 'Koristimo ',
                 linkText: 'kolačiće',
-                last:
-                  ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
+                last: ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Koristimo ',
                 linkText: 'kolačiće',
-                last:
-                  ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
+                last: ' da bismo vam pružili najbolje iskustvo na internetu. Molimo vas da nas obavestite da li se slažete sa upotrebom svih kolačića.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -313,8 +304,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
+        noJs: 'Reprodukovanje multimedijskog sadržaja na vašem uređaju nije podržano',
         contentExpired: 'Ovaj sadržaj više nije dostupan.',
         contentNotYetAvailable:
           'Ovaj sadržaj još uvek nije dostupan za reprodukciju.',
@@ -387,8 +377,7 @@ export const service = {
         text: 'Зашто ББЦ заслужује ваше поверење',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Прочитајте наша правила о линковању других сајтова.',
       },
       links: [
@@ -414,8 +403,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -548,8 +536,7 @@ export const service = {
               description: {
                 first: 'Ми и наши партнери користимо технологије попут ',
                 linkText: 'колачиће',
-                last:
-                  ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
+                last: ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -566,10 +553,8 @@ export const service = {
                 para3:
                   'Да би наше интернет странице функционисале, чувамо одређену и ограничену количину података на вашем уређају без ваше сагласности.',
                 para4: {
-                  text:
-                    'Прочитајте више о неопходним подацима које чувамо на вашем уређају да би наше странице функционисале. (на енглеском језику)',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Прочитајте више о неопходним подацима које чувамо на вашем уређају да би наше странице функционисале. (на енглеском језику)',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Користимо локалне сервере да бисмо сачували ваше податке о сагласности на вашем уређају.',
@@ -577,10 +562,8 @@ export const service = {
                 para6:
                   'Када пристанете на прикупљање података на АМП страницама, пристајете да нам дозволите да вам прикажемо персонализоване огласе који су важни за вас када сте ван Велике Британије.',
                 para7: {
-                  text:
-                    'Прочитајте више о начину на који персонализујемо огласе на ББЦ-ју и код наших партнерских оглашавача.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Прочитајте више о начину на који персонализујемо огласе на ББЦ-ју и код наших партнерских оглашавача.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Можете да одаберете да не добијате персонализоване огласе ако кликнете на ”Одбити прикупљање података и наставити” испод. Молимо вас да узмете у обзир да ћете и даље видети огласе, али неће бити персонализовани за вас.',
@@ -595,16 +578,14 @@ export const service = {
               uk: {
                 first: 'Користимо ',
                 linkText: 'колачиће',
-                last:
-                  ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
+                last: ' да бисмо вам пружили најбоље искуство на интернету. Молимо вас да нас обавестите да ли се слажете са употребом свих колачића.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Ми и наши партнери користимо технологије попут ',
                 linkText: 'колачиће',
-                last:
-                  ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
+                last: ' и прикупљамо податке претраживача да бисмо вам понудили најквалитетније искуство на интернету и персонализовали садржај и огласе који вам се приказују. Молимо вас да нас обавестите да ли се слажете.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -617,8 +598,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
+        noJs: 'Репродуковање мултимедијског садржаја на вашем уређају није подржано',
         contentExpired: 'Овај садржај више није доступан.',
         contentNotYetAvailable:
           'Овај садржај још увек није доступан за репродукцију.',

@@ -361,8 +361,7 @@ describe('ATI Analytics Container', () => {
 
     it('should include the xto marketing string for a valid campaign type', () => {
       setWindowValue('location', {
-        href:
-          'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
+        href: 'https://localhost?at_medium=email&at_emailtype=acquisition&at_creation=my_creation',
       });
       const mockCanonical = jest.fn().mockReturnValue('canonical-return-value');
       canonical.default = mockCanonical;
