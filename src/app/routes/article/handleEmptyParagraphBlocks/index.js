@@ -5,14 +5,8 @@ const getBlocks = path(['content', 'model', 'blocks']);
 const setBlocks = assocPath(['content', 'model', 'blocks']);
 const setTextBlock = assocPath(['model', 'blocks']);
 
-const isEmptyFragment = block => {
-  return block.type === 'fragment' && !block.model.text;
-};
-
 const isEmptyParagraph = block => {
-  return (
-    block.type === 'paragraph' && block.model.blocks.every(isEmptyFragment)
-  );
+  return block.type === 'paragraph' && !block.model.text;
 };
 
 const removeEmptyParagraphsFromTextBlock = textBlock => {
