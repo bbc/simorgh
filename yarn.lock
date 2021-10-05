@@ -8326,10 +8326,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.18.1":
-  version: 3.18.1
-  resolution: "core-js@npm:3.18.1"
-  checksum: 89cac0fe657df722d10b0e658ee76af12a614c0a75fe3fb11e87c2e3f27f6d7e609e3bf40748da5d8feb055b0535766a583ff1d1ac89dba57105f6f1ad64dc21
+"core-js@npm:3.18.2":
+  version: 3.18.2
+  resolution: "core-js@npm:3.18.2"
+  checksum: 4a09d170d8135a1f1c458f6aef786ba18bfb81fa6dab106561dd5379b9d175400ed012c2a30eee921b6e5bd53842ce32fb02ffd57d2984e157de622d9439dc5c
   languageName: node
   linkType: hard
 
@@ -19380,7 +19380,7 @@ resolve@^2.0.0-next.3:
     compression: 1.7.4
     compression-webpack-plugin: 9.0.0
     copy-webpack-plugin: 9.0.1
-    core-js: 3.18.1
+    core-js: 3.18.2
     crypto: 1.0.1
     cypress: 8.5.0
     cypress-axe: 0.13.0
