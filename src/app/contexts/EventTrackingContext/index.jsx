@@ -63,11 +63,8 @@ export const EventTrackingContextProvider = ({ children, pageData }) => {
   }
 
   const campaignID = getCampaignID(requestContext.pageType);
-  const {
-    pageIdentifier,
-    platform,
-    statsDestination,
-  } = buildATIEventTrackingParams(pageData, requestContext, serviceContext);
+  const { pageIdentifier, platform, statsDestination } =
+    buildATIEventTrackingParams(pageData, requestContext, serviceContext);
   const trackingProps = {
     campaignID,
     pageIdentifier,

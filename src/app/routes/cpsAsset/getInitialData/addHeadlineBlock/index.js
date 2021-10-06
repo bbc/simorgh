@@ -30,11 +30,8 @@ const firstBlockIsVideo = blocks =>
 const insertHeadlineBlocks = originalJson => {
   const json = deepClone(originalJson);
   const type = path(['metadata', 'type'], json);
-  const {
-    fauxHeadlineBlock,
-    visuallyHiddenHeadlineBlock,
-    headlineBlock,
-  } = getHeadlineBlocks(json);
+  const { fauxHeadlineBlock, visuallyHiddenHeadlineBlock, headlineBlock } =
+    getHeadlineBlocks(json);
   const blocks = path(['content', 'model', 'blocks'], json);
 
   if (!blocks) {

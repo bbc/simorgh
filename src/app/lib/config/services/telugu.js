@@ -141,8 +141,7 @@ export const service = {
                 first:
                   'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
                 linkText: 'వంటి టెక్నాలజీలు',
-                last:
-                  ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                last: ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -159,10 +158,8 @@ export const service = {
                 para3:
                   'మా వెబ్ పేజీ పని చేసేందుకు మీ అనుమతి లేకుండానే మీ డివైస్‌లో కొంత పరిమితిలో సమాచారాన్ని స్టోర్ చేస్తాం.',
                 para4: {
-                  text:
-                    'మా వెబ్ పేజీలు పని చేసేందుకు మీ డివైస్‌లో స్టోర్ చేసిన అత్యవసర సమాచారం గురించి మరింత తెలుసుకోండి.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'మా వెబ్ పేజీలు పని చేసేందుకు మీ డివైస్‌లో స్టోర్ చేసిన అత్యవసర సమాచారం గురించి మరింత తెలుసుకోండి.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'మీరు అనుమతించిన మీ ప్రాధాన్యాలను మీ డివైస్‌లో స్టోర్ చేసేందుకు మేము లోకల్ స్టోరేజిని ఉపయోగిస్తాం.',
@@ -170,10 +167,8 @@ export const service = {
                 para6:
                   'మీరు AMP పేజీల్లో డేటా సేకరణకు అనుమతించారు అంటే.. మీరు బ్రిటన్‌ బయట నివసిస్తున్నప్పుడు కూడా మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనల్ని చూపించేందుకు మాకు అనుమతినిచ్చినట్లే.',
                 para7: {
-                  text:
-                    'బీబీసీ, బీబీసీ ప్రకటనల భాగస్వాములు మీ ఆసక్తి మేరకు ప్రత్యేకమైన ప్రకటనల్ని ఎలా రూపొందిస్తారో మరింత తెలుసుకోండి.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'బీబీసీ, బీబీసీ ప్రకటనల భాగస్వాములు మీ ఆసక్తి మేరకు ప్రత్యేకమైన ప్రకటనల్ని ఎలా రూపొందిస్తారో మరింత తెలుసుకోండి.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'కిందున్న “డేటా సేకరణకు తిరస్కరించి, కొనసాగండి”పై క్లిక్ చేసి మీకు మాత్రమే కనిపించే ప్రత్యేకమైన ప్రకటనలు కూడా రాకుండా చూసుకోవచ్చు. అయితే, ఇది క్లిక్ చేశాక కూడా ప్రకటనలు మీకు కనిపిస్తాయి కానీ అవి మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనలు కాదని గమనించాలి.',
@@ -188,16 +183,14 @@ export const service = {
               uk: {
                 first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
                 linkText: 'కుకీలు',
-                last:
-                  ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                last: ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
                 linkText: 'కుకీలు',
-                last:
-                  ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                last: ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -280,8 +273,7 @@ export const service = {
         text: 'మీరు బీబీసీని ఎందుకు నమ్ముతారు?',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి.',
       },
       links: [
@@ -307,8 +299,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

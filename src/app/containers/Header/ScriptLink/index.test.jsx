@@ -120,8 +120,7 @@ describe(`Script Link`, () => {
       },
       legacyAssetPage: {
         matchPath: legacyAssetPagePath,
-        path:
-          '/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
+        path: '/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         variantPath:
           '/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         serviceContext: ukChinaServiceConfig.trad,

@@ -40,6 +40,7 @@ const advertisingDirectives = {
     'https://secure-us.imrworldwide.com',
     'https://uaid-linkage.imrworldwide.com',
     'https://cloudapi.imrworldwide.com',
+    'https://*.redinuid.imrworldwide.com',
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',

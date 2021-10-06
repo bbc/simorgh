@@ -27,10 +27,8 @@ export default async ({ path: pathname, pageType, toggles }) => {
       pageType,
     });
     const recentEpisodesToggle = getRecentEpisodesToggle(toggles);
-    const {
-      enabled: showRecentEpisodes,
-      value: recentEpisodesLimit,
-    } = recentEpisodesToggle;
+    const { enabled: showRecentEpisodes, value: recentEpisodesLimit } =
+      recentEpisodesToggle;
 
     const get = pathWithLogging(getUrl(json), TV_MISSING_FIELD, json);
 
