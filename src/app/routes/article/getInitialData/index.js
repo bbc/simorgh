@@ -1,4 +1,5 @@
 import pipe from 'ramda/src/pipe';
+
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
