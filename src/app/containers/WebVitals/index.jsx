@@ -31,9 +31,9 @@ const WebVitals = () => {
   useEffect(() => {
     if (error) {
       // eslint-disable-next-line no-alert
-      window.alert(error);
+      window.alert(message);
     }
-  }, [error]);
+  }, [error, message]);
 
   if (error) {
     return (
