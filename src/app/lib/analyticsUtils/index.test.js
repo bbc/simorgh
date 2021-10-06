@@ -529,7 +529,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
-    ${'?at_medium=RSS'}       | ${'RSS'}
+    ${'?at_medium=rss'}       | ${'rss'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
@@ -539,11 +539,16 @@ describe('getCampaignType', () => {
 
     expect(campaignType).toEqual(expected);
   });
-});
 
+  it('should return campaign type of XTOR', () => {
+    setWindowValue('location', {
+      href: 'https://www.bbc.com/mundo#xtor',
+    });
 
     const campaignType = getCampaignType();
 
+    expect(campaignType).toEqual('XTOR');
+  });
 });
 
 describe('getAffiliateMarketingString', () => {
