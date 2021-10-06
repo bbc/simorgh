@@ -218,10 +218,12 @@ describe('Gist block cleaning', () => {
   });
 });
 
-const validateBlockOrder = (...order) => blocks => {
-  order.forEach((id, position) => expect(blocks[position].id).toBe(id));
-  return blocks;
-};
+const validateBlockOrder =
+  (...order) =>
+  blocks => {
+    order.forEach((id, position) => expect(blocks[position].id).toBe(id));
+    return blocks;
+  };
 
 describe('Gist block positioning', () => {
   it('is moved to top when article has no headline', () => {
