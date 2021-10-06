@@ -1,5 +1,5 @@
 // Hooks
-import { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import useWebVitals from '@bbc/web-vitals';
 import useToggle from '#hooks/useToggle';
 
@@ -26,7 +26,24 @@ const WebVitals = () => {
     reportParams: { pageType },
   };
 
-  useWebVitals(webVitalsConfig);
+  const { error, message } = useWebVitals(webVitalsConfig);
+
+  useEffect(() => {
+    if (error) {
+      // eslint-disable-next-line no-alert
+      window.alert(message);
+    }
+  }, [error, message]);
+
+  if (error) {
+    return (
+      <>
+        <p>{message}</p>
+        <p>{JSON.stringify(message)}</p>
+      </>
+    );
+  }
+
   return null;
 };
 
