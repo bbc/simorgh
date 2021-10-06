@@ -37,7 +37,7 @@ const {
 const SRC_RSS_FIXTURE = {
   key: 'src_medium',
   description: 'rss campaign prefix',
-  value: 'rss',
+  value: 'RSS',
   wrap: false,
 };
 
@@ -537,7 +537,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
-    ${'?at_medium=rss'}       | ${'rss'}
+    ${'?at_medium=RSS'}       | ${'RSS'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
@@ -560,12 +560,12 @@ describe('getCampaignType', () => {
 });
 
 describe('getRSSMarketingString', () => {
-  describe('"rss" prefix', () => {
+  describe.only('"RSS" prefix', () => {
     it('returns "src_medium" when marketing string is present in url', () => {
-      const href = 'https://www.bbc.com/mundo?at_medium=rss';
-      expect(getRSSMarketingString(href, 'rss')).toEqual([SRC_RSS_FIXTURE]);
+      const href = 'https://www.bbc.com/mundo?at_medium=RSS';
+      expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
     });
-    it('return null when campaign is not rss', () => {
+    it('return null when campaign is not RSS', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
       expect(getRSSMarketingString(href, 'affiliate')).toEqual(null);
     });
@@ -583,8 +583,8 @@ describe('getRSSMarketingString', () => {
     describe('with optional params', () => {
       it.each`
         expectation                                     | href                                                              | expectedValue
-        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=rss&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
-        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=rss&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
+        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=RSS&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
+        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=RSS&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
       `(
         'should return marketing string for $expectation',
         ({ href, expectedValue }) => {

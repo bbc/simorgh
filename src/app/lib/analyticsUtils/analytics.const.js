@@ -4,7 +4,7 @@ const SUPPORTED_MEDIUM_CAMPAIGN_TYPES = [
   'email',
   'display',
   'custom',
-  'rss',
+  'RSS',
 ];
 
 const MEDIUM_CAMPAIGN_IDENTIFIER = 'at_medium';

@@ -14,6 +14,7 @@ import {
   getEventInfo,
   getCampaignType,
   getATIMarketingString,
+  getRSSMarketingString,
 } from '#lib/analyticsUtils';
 
 /*
@@ -57,6 +58,8 @@ export const buildATIPageTrackPath = ({
   const x6Value = disableEncodingDueToAmpSubstitution
     ? referrer
     : referrer && encodeURIComponent(encodeURIComponent(referrer));
+
+  const rssMarketingString = getRSSMarketingString(href, campaignType);
 
   const pageViewBeaconValues = [
     {
@@ -212,7 +215,7 @@ export const buildATIPageTrackPath = ({
       // decoding of the ref parameter
       disableEncoding: true,
     },
-  ];
+  ].concat(rssMarketingString);
 
   return getAtiUrl(pageViewBeaconValues);
 };

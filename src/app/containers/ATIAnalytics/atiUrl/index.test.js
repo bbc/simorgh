@@ -20,12 +20,18 @@ const analyticsUtilFunctions = [
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'getAtUserId', source: genericLabelHelpers },
   { name: 'getATIMarketingString,', source: genericLabelHelpers },
+  { name: 'getRSSMarketingString', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
 
 const marketingCampaignFunc = {
   name: 'getCampaignType',
+  source: genericLabelHelpers,
+};
+
+const rssMarketingString = {
+  name: 'getRSSMarketingString',
   source: genericLabelHelpers,
 };
 
@@ -82,6 +88,29 @@ describe('getThingAttributes', () => {
     ];
 
     expect(queryParamsArray).toHaveLength(expectedValues.length);
+    expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
+  });
+
+  it('should call RSS marketing string function', () => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, null);
+    });
+
+    mockAndSet(marketingCampaignFunc, 'RSS');
+    mockAndSet(rssMarketingString, [
+      {
+        key: 'src_medium',
+        description: 'rss campaign prefix',
+        value: 'RSS',
+        wrap: false,
+      },
+    ]);
+
+    const queryParams = buildATIPageTrackPath({});
+
+    const queryParamsArray = splitUrl(queryParams);
+    const expectedValues = ['src_medium=RSS'];
+
     expectedValues.forEach(value => expect(queryParamsArray).toContain(value));
   });
 

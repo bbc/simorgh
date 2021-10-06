@@ -229,6 +229,7 @@ export const getContentId = (assetType, pageData) => {
 
 export const getAtiUrl = (data = []) => {
   const cleanedValues = data
+    .filter(pageViewBeaconValues => pageViewBeaconValues)
     .filter(({ value }) => value)
     .map(item => {
       const { value, disableEncoding } = item;
@@ -343,7 +344,7 @@ const buildRSSMarketingString = href => {
           {
             key: 'src_medium',
             description: 'rss campaign prefix',
-            value: getMarketingUrlParam(href, currVal),
+            value: 'RSS',
             wrap: false,
           },
         ];
@@ -364,7 +365,7 @@ const buildRSSMarketingString = href => {
 };
 
 export const getRSSMarketingString = (href, campaignType) =>
-  campaignType === 'rss' ? buildRSSMarketingString(href) : null;
+  campaignType === 'RSS' ? buildRSSMarketingString(href) : null;
 
 export const getAffiliateMarketingString = href =>
   buildMarketingString([
