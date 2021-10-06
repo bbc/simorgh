@@ -28,15 +28,8 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
 
 const HeaderContainer = () => {
   const { pageType, isAmp } = useContext(RequestContext);
-  const {
-    service,
-    script,
-    translations,
-    dir,
-    scriptLink,
-    lang,
-    serviceLang,
-  } = useContext(ServiceContext);
+  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+    useContext(ServiceContext);
   const { skipLinkText } = translations;
 
   // The article page toggles the nav bar based on environment

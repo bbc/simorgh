@@ -47,9 +47,8 @@ const LabelComponent = styled(SectionLabel)`
 `;
 
 const CpsRecommendations = ({ items }) => {
-  const { recommendations, translations, script, service, dir } = useContext(
-    ServiceContext,
-  );
+  const { recommendations, translations, script, service, dir } =
+    useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
   const labelId = 'recommendations-heading';
   const a11yAttributes = {

@@ -464,9 +464,8 @@ describe('getAtUserId', () => {
     Cookie.set('atuserid', { val: 'uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
-    const [
-      [cookieName, cookieValue, cookieOptions],
-    ] = cookieSetterSpy.mock.calls;
+    const [[cookieName, cookieValue, cookieOptions]] =
+      cookieSetterSpy.mock.calls;
 
     expect(atUserId).toEqual('uuid');
     expect(cookieName).toEqual('atuserid');
@@ -478,11 +477,11 @@ describe('getAtUserId', () => {
   });
 
   it('should create new user id if cookie does not exist and set the id in cookies', () => {
-    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const uuidRegex =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     const atUserId = getAtUserId();
-    const [
-      [cookieName, cookieValue, cookieOptions],
-    ] = cookieSetterSpy.mock.calls;
+    const [[cookieName, cookieValue, cookieOptions]] =
+      cookieSetterSpy.mock.calls;
 
     expect(atUserId).toMatch(uuidRegex);
     expect(cookieName).toEqual('atuserid');

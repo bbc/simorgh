@@ -25,9 +25,8 @@ const Wrapper = styled.time`
 `;
 
 const OnDemandFooterTimestamp = ({ releaseDateTimeStamp, darkMode }) => {
-  const { script, service, timezone, datetimeLocale } = useContext(
-    ServiceContext,
-  );
+  const { script, service, timezone, datetimeLocale } =
+    useContext(ServiceContext);
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,
     format: 'LL',

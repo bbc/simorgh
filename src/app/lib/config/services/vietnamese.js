@@ -138,8 +138,7 @@ export const service = {
               description: {
                 first: 'Chúng tôi và các đối tác dùng công nghệ, như ',
                 linkText: 'cookie',
-                last:
-                  ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
+                last: ', và thu thập dữ liệu browsing để cho bạn trải nghiệm online tốt nhất và cá nhân hóa nội dung và quảng cáo cho bạn. Xin cho chúng tôi biết bạn có đồng ý không.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -156,10 +155,8 @@ export const service = {
                 para3:
                   'Để làm cho các trang web của chúng tôi hoạt động, chúng tôi lưu trữ một số thông tin hạn chế trên thiết bị của bạn mà không có sự đồng ý của bạn.',
                 para4: {
-                  text:
-                    'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Đọc thêm về thông tin cần thiết mà chúng tôi lưu trữ trên thiết bị của bạn để làm cho các trang web của chúng tôi hoạt động.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Chúng tôi sử dụng bộ nhớ cục bộ để lưu trữ các tùy chọn đồng ý của bạn trên thiết bị của bạn.',
@@ -167,10 +164,8 @@ export const service = {
                 para6:
                   'Khi bạn đồng ý thu thập dữ liệu trên các trang AMP, bạn đồng ý cho phép chúng tôi hiển thị quảng cáo được cá nhân hóa có liên quan đến bạn khi bạn ở bên ngoài Vương quốc Anh.',
                 para7: {
-                  text:
-                    'Đọc thêm về cách chúng tôi cá nhân hóa quảng cáo trên BBC và các đối tác quảng cáo của chúng tôi.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Đọc thêm về cách chúng tôi cá nhân hóa quảng cáo trên BBC và các đối tác quảng cáo của chúng tôi.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Bạn có thể chọn không nhận quảng cáo được cá nhân hóa bằng cách nhấp vào Từ chối thu thập dữ liệu và tiếp tục "bên dưới. Xin lưu ý rằng bạn sẽ vẫn thấy quảng cáo, nhưng nó sẽ không được cá nhân hóa cho bạn.',
@@ -185,16 +180,14 @@ export const service = {
               uk: {
                 first: 'Chúng tôi dùng ',
                 linkText: 'cookie',
-                last:
-                  ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
+                last: ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Chúng tôi dùng ',
                 linkText: 'cookie',
-                last:
-                  ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
+                last: ' để cho bạn trải nghiệm online tốt nhất. Cho chúng tôi biết bạn đồng ý về mọi cookie này.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -270,8 +263,7 @@ export const service = {
         text: 'Tại sao bạn có thể tin tưởng BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Tìm hiểu cách chúng tôi tiếp cận việc dẫn tới trang ngoài',
       },
       links: [
@@ -288,8 +280,7 @@ export const service = {
           text: 'Chính sách riêng tư',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookie',
         },
         {
@@ -298,8 +289,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

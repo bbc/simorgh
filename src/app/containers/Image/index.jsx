@@ -43,13 +43,8 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
     return null;
   }
 
-  const {
-    locator,
-    originCode,
-    copyrightHolder,
-    height,
-    width,
-  } = rawImageBlock.model;
+  const { locator, originCode, copyrightHolder, height, width } =
+    rawImageBlock.model;
   const altText = getText(altTextBlock);
   const copyright = getCopyright(copyrightHolder);
   const ratio = (height / width) * 100;

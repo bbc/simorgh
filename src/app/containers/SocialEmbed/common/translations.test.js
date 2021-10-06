@@ -5,8 +5,7 @@ describe('createTranslations', () => {
     socialEmbed: {
       caption: {
         textPrefixVisuallyHidden: 'Título del video: ',
-        text:
-          'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
       },
       fallback: {
         text: 'Contenido no disponible',
@@ -26,8 +25,7 @@ describe('createTranslations', () => {
     expect(createTranslations({ translations, index: 1 })).toEqual({
       caption: {
         textPrefixVisuallyHidden: 'Título del video: ',
-        text:
-          'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
+        text: 'Advertencia: El contenido de sitios externos y terceras partes puede contener publicidad',
       },
       fallback: {
         text: 'Contenido no disponible',

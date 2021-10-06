@@ -41,8 +41,7 @@ describe('getEventTrackingData', () => {
   it('should return correct block and link event tracking data when there is an assetTypeCode', () => {
     const itemFixture = {
       assetTypeCode: 'PRO',
-      name:
-        'Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice',
+      name: 'Soy una mujer genocida y aún me persiguen los recuerdos de lo que hice',
       uri: '/mundo/noticias-internacional-53113381',
     };
     const expected = {

@@ -138,8 +138,7 @@ export const service = {
               description: {
                 first: 'BBC와 파트너사는 ',
                 linkText: '쿠키',
-                last:
-                  ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
+                last: ', 웹브라우징 데이터 수집과 같은 기술을 통해 이용자에게 최적의 온라인 경험과 맞춤 콘텐츠, 광고를 제공하고 있습니다. 이에 동의하십니까?',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -156,10 +155,8 @@ export const service = {
                 para3:
                   '홈페이지를 가동하기 위해 사용자의 동의 없이 기기의 정보를 제한적으로 저장합니다.',
                 para4: {
-                  text:
-                    '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: '홈페이지를 가동하기 위해 사용자 기기에서 저장하는 필수적인 정보에 대해 더 읽어보기',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   '사용자의 정보 수집 동의 여부는 로컬 스토리지에 저장됩니다.',
@@ -167,10 +164,8 @@ export const service = {
                 para6:
                   'AMP 데이터 수집에 동의하시면, 영국 밖에서 맞춤형 광고 수신에 동의하는 것입니다.',
                 para7: {
-                  text:
-                    'BBC와 파트너사의 맞춤형 광고 제공에 대해 더 자세히 알아보기',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'BBC와 파트너사의 맞춤형 광고 제공에 대해 더 자세히 알아보기',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   "맞춤형 광고를 보지 않기 위해선 '데이터 수집 거부하고 계속하기'를 클릭하시면 됩니다. 이 경우에 맞춤형 광고가 아닌 다른 광고는 제공될 수 있습니다.",
@@ -272,8 +267,7 @@ export const service = {
         text: 'BBC News를 신뢰할 수 있는 이유',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '외부 링크에 대한 본사 정책 보기',
       },
       links: [
@@ -299,8 +293,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
