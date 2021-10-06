@@ -329,6 +329,43 @@ const buildMarketingString = marketingValues =>
     .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
     .join('-');
 
+const buildRSSMarketingString = href => {
+  const { query, hash } = new Url(href, true);
+
+  const queryWithParams = hash ? parameteriseHash(hash) : query;
+
+  return Object.keys(queryWithParams).reduce((accum, currVal) => {
+    if (currVal.includes('at_')) {
+      const type = currVal.replace('at_', '');
+
+      if (type === 'medium') {
+        return [
+          {
+            key: 'src_medium',
+            description: 'rss campaign prefix',
+            value: getMarketingUrlParam(href, currVal),
+            wrap: false,
+          },
+        ];
+      }
+
+      return [
+        ...accum,
+        {
+          key: `src_${type}`,
+          description: `src_${type} field`,
+          value: getMarketingUrlParam(href, currVal),
+          wrap: false,
+        },
+      ];
+    }
+    return accum;
+  }, []);
+};
+
+export const getRSSMarketingString = (href, campaignType) =>
+  campaignType === 'rss' ? buildRSSMarketingString(href) : null;
+
 export const getAffiliateMarketingString = href =>
   buildMarketingString([
     {

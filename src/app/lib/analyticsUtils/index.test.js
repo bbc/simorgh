@@ -25,6 +25,7 @@ const {
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
+  getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -32,6 +33,13 @@ const {
   getDisplayMarketingString,
   getATIMarketingString,
 } = require('./index');
+
+const SRC_RSS_FIXTURE = {
+  key: 'src_medium',
+  description: 'rss campaign prefix',
+  value: 'rss',
+  wrap: false,
+};
 
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
@@ -548,6 +556,42 @@ describe('getCampaignType', () => {
     const campaignType = getCampaignType();
 
     expect(campaignType).toEqual('XTOR');
+  });
+});
+
+describe('getRSSMarketingString', () => {
+  describe('"rss" prefix', () => {
+    it('returns "src_medium" when marketing string is present in url', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=rss';
+      expect(getRSSMarketingString(href, 'rss')).toEqual([SRC_RSS_FIXTURE]);
+    });
+    it('return null when campaign is not rss', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, 'affiliate')).toEqual(null);
+    });
+
+    it('return null when campaign is null', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, null)).toEqual(null);
+    });
+
+    it('return null when campaign is undefined', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, undefined)).toEqual(null);
+    });
+
+    describe('with optional params', () => {
+      it.each`
+        expectation                                     | href                                                              | expectedValue
+        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=rss&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
+        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=rss&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
+      `(
+        'should return marketing string for $expectation',
+        ({ href, expectedValue }) => {
+          expect(getRSSMarketingString(href, 'rss')).toEqual(expectedValue);
+        },
+      );
+    });
   });
 });
 
