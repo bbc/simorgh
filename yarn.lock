@@ -21873,10 +21873,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:1.1.1":
-  version: 1.1.1
-  resolution: "web-vitals@npm:1.1.1"
-  checksum: d3caabe88577796795bfad3c24c4afe0e0b8a4fc44edd746f211cadd12b068a5cb060713f197785de454b072a29558d945de12272c90111a03f89a1c98553e89
+"web-vitals@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "web-vitals@npm:2.1.0"
+  checksum: 4381dcc999d2e267ab0df53da0e2c29c1152c3017bf6d58269e2f6a091bc10dd311260ecca3c2264af41eff04073c61fdcaf54a04553ad8ebfa617d6ba8d5ea4
   languageName: node
   linkType: hard
 
