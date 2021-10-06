@@ -41,7 +41,7 @@ const WebVitalsWithContext = ({
   </ToggleContext.Provider>
 );
 
-describe.skip('WebVitals', () => {
+describe('WebVitals', () => {
   describe('calls the useWebVitals hook', () => {
     beforeEach(() => {
       process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT = 'endpoint';
