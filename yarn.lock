@@ -2192,16 +2192,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/web-vitals@npm:1.0.8":
-  version: 1.0.8
-  resolution: "@bbc/web-vitals@npm:1.0.8"
+"@bbc/web-vitals@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@bbc/web-vitals@npm:1.1.0"
   dependencies:
     cross-fetch: ^3.1.4
     react-adaptive-hooks: 0.0.8
-    web-vitals: ^1.1.1
+    web-vitals: ^2.0.0
   peerDependencies:
     react: ">=16.9.0"
-  checksum: c6703016055479c46f690fc99536e507a0725f14992ea51d825e18f89aab1e17ba63a01db074e93c2fda64d4ce7f294a9a7fca279218449a6a6ee556081ddfc9
+  checksum: 07cebe0bf6c2ad63092a603594b4c2d76b6eb8d27bf7e9ae392ad72d99cfa20814376d6ce49d4a3d9abbdfbc0d5d9a207e30cc868e96a44ca80b6ada5fadd4eb
   languageName: node
   linkType: hard
 
@@ -19317,7 +19317,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-topic-tags": 1.0.9
     "@bbc/psammead-useful-links": 3.0.29
     "@bbc/psammead-visually-hidden-text": 2.0.7
-    "@bbc/web-vitals": 1.0.8
+    "@bbc/web-vitals": 1.1.0
     "@emotion/babel-plugin": 11.3.0
     "@emotion/cache": 11.4.0
     "@emotion/jest": 11.3.0
@@ -21843,10 +21843,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:1.1.1":
-  version: 1.1.1
-  resolution: "web-vitals@npm:1.1.1"
-  checksum: d3caabe88577796795bfad3c24c4afe0e0b8a4fc44edd746f211cadd12b068a5cb060713f197785de454b072a29558d945de12272c90111a03f89a1c98553e89
+"web-vitals@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "web-vitals@npm:2.1.1"
+  checksum: 1bc9ec8574ae1c8d2f92d18acc940942818e64593f0bb438266b84ae5b50cde445ca8688ee609e3dff7e83165d1bd16d98ba842fb30d79e548510eabc54b5e6a
   languageName: node
   linkType: hard
 
