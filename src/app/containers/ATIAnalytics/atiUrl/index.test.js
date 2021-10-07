@@ -20,7 +20,6 @@ const analyticsUtilFunctions = [
   { name: 'getReferrer', source: genericLabelHelpers },
   { name: 'getAtUserId', source: genericLabelHelpers },
   { name: 'getATIMarketingString,', source: genericLabelHelpers },
-  { name: 'getRSSMarketingString', source: genericLabelHelpers },
   { name: 'isLocServeCookieSet', source: genericLabelHelpers },
   { name: 'sanitise', source: genericLabelHelpers },
 ];
@@ -30,31 +29,30 @@ const marketingCampaignFunc = {
   source: genericLabelHelpers,
 };
 
-const rssMarketingString = {
+const rssMarketingStringFunc = {
   name: 'getRSSMarketingString',
   source: genericLabelHelpers,
 };
 
 describe('getThingAttributes', () => {
   beforeEach(() => {
+    analyticsUtilFunctions.push(marketingCampaignFunc);
+    analyticsUtilFunctions.push(rssMarketingStringFunc);
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, null);
+    });
+    mockAndSet(rssMarketingStringFunc, []);
+  });
+
+  afterEach(() => {
     jest.resetAllMocks();
   });
 
   it('should not add empty or null values', () => {
-    analyticsUtilFunctions.push(marketingCampaignFunc);
-
-    analyticsUtilFunctions.forEach(func => {
-      mockAndSet(func, null);
-    });
-
     expect(buildATIPageTrackPath({})).toEqual('');
   });
 
   it('should take in optional props and add them as correct query params', () => {
-    analyticsUtilFunctions.forEach(func => {
-      mockAndSet(func, null);
-    });
-
     mockAndSet(marketingCampaignFunc, 'sl');
 
     const queryParams = buildATIPageTrackPath({
@@ -92,12 +90,8 @@ describe('getThingAttributes', () => {
   });
 
   it('should call RSS marketing string function', () => {
-    analyticsUtilFunctions.forEach(func => {
-      mockAndSet(func, null);
-    });
-
     mockAndSet(marketingCampaignFunc, 'RSS');
-    mockAndSet(rssMarketingString, [
+    mockAndSet(rssMarketingStringFunc, [
       {
         key: 'src_medium',
         description: 'rss campaign prefix',
@@ -151,6 +145,16 @@ describe('getThingAttributes', () => {
 });
 
 describe('buildATIEventTrackUrl', () => {
+  beforeEach(() => {
+    analyticsUtilFunctions.forEach(func => {
+      mockAndSet(func, func.name);
+    });
+  });
+
+  afterEach(() => {
+    jest.resetAllMocks();
+  });
+
   it('should return the right url', () => {
     process.env.SIMORGH_ATI_BASE_URL = 'http://foobar.com?';
     expect(

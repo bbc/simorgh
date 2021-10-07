@@ -59,8 +59,6 @@ export const buildATIPageTrackPath = ({
     ? referrer
     : referrer && encodeURIComponent(encodeURIComponent(referrer));
 
-  const rssMarketingString = getRSSMarketingString(href, campaignType);
-
   const pageViewBeaconValues = [
     {
       key: 's',
@@ -215,7 +213,8 @@ export const buildATIPageTrackPath = ({
       // decoding of the ref parameter
       disableEncoding: true,
     },
-  ].concat(rssMarketingString);
+    ...getRSSMarketingString(href, campaignType),
+  ];
 
   return getAtiUrl(pageViewBeaconValues);
 };

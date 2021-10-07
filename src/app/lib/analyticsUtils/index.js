@@ -229,7 +229,6 @@ export const getContentId = (assetType, pageData) => {
 
 export const getAtiUrl = (data = []) => {
   const cleanedValues = data
-    .filter(pageViewBeaconValues => pageViewBeaconValues)
     .filter(({ value }) => value)
     .map(item => {
       const { value, disableEncoding } = item;
@@ -365,7 +364,7 @@ const buildRSSMarketingString = href => {
 };
 
 export const getRSSMarketingString = (href, campaignType) =>
-  campaignType === 'RSS' ? buildRSSMarketingString(href) : null;
+  campaignType === 'RSS' ? buildRSSMarketingString(href) : [];
 
 export const getAffiliateMarketingString = href =>
   buildMarketingString([
@@ -600,9 +599,9 @@ export const getATIMarketingString = (href, campaignType) => {
   const isSupportedCampaign = campaignMapping =>
     campaignType.startsWith(campaignMapping);
 
-  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
-    campaignMapping => isSupportedCampaign(campaignMapping),
-  );
+  const selectedCampaignType = Object.keys(
+    supportedCampaignMappings,
+  ).find(campaignMapping => isSupportedCampaign(campaignMapping));
 
   return supportedCampaignMappings[selectedCampaignType]
     ? supportedCampaignMappings[selectedCampaignType]()

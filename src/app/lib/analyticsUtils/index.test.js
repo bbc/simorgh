@@ -464,8 +464,9 @@ describe('getAtUserId', () => {
     Cookie.set('atuserid', { val: 'uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
-    const [[cookieName, cookieValue, cookieOptions]] =
-      cookieSetterSpy.mock.calls;
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
 
     expect(atUserId).toEqual('uuid');
     expect(cookieName).toEqual('atuserid');
@@ -477,11 +478,11 @@ describe('getAtUserId', () => {
   });
 
   it('should create new user id if cookie does not exist and set the id in cookies', () => {
-    const uuidRegex =
-      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     const atUserId = getAtUserId();
-    const [[cookieName, cookieValue, cookieOptions]] =
-      cookieSetterSpy.mock.calls;
+    const [
+      [cookieName, cookieValue, cookieOptions],
+    ] = cookieSetterSpy.mock.calls;
 
     expect(atUserId).toMatch(uuidRegex);
     expect(cookieName).toEqual('atuserid');
@@ -564,19 +565,19 @@ describe('getRSSMarketingString', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=RSS';
       expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
     });
-    it('return null when campaign is not RSS', () => {
+    it('return empty array when campaign is not RSS', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-      expect(getRSSMarketingString(href, 'affiliate')).toEqual(null);
+      expect(getRSSMarketingString(href, 'affiliate')).toEqual([]);
     });
 
-    it('return null when campaign is null', () => {
+    it('return empty array when campaign is null', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-      expect(getRSSMarketingString(href, null)).toEqual(null);
+      expect(getRSSMarketingString(href, null)).toEqual([]);
     });
 
-    it('return null when campaign is undefined', () => {
+    it('return empty array when campaign is undefined', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
-      expect(getRSSMarketingString(href, undefined)).toEqual(null);
+      expect(getRSSMarketingString(href, undefined)).toEqual([]);
     });
 
     describe('with optional params', () => {
