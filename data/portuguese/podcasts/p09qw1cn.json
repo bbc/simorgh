@@ -1,0 +1,1387 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_brasil/p09qw1cn",
+      "locators": {
+        "pid": "p09xc0dx",
+        "brandPid": "p09qw1cn"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_brasil",
+      "language": "pt-br",
+      "lastUpdated": 1633082765552,
+      "firstPublished": 1632996588000,
+      "lastPublished": 1632996588000,
+      "timestamp": 1632996588000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "BBC Lê - BBC News Brasil",
+        "pageIdentifier": "portuguese.bbc_brasil.podcasts.programmes.p09qw1cn.page",
+        "producerId": "33",
+        "contentType": "player-episode",
+        "producer": "PORTUGUESE"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "BBC Lê",
+      "releaseDateTimeStamp": 1632960000000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09xc0dx",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "Trabalhando cerca de 12 horas por dia, jovens sacrificam sono para terem lazer à noite.",
+            "medium": "Trabalhando cerca de 12 horas por dia, seis dias por semana, jovens acabam tendo tempo de lazer apenas tarde da noite - mas, para isso, sacrificam horas preciosas de sono."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09xc0h7.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09xbyt0",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 704,
+              "durationISO8601": "PT11M44S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1632996900000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "O que é a 'vingança da hora de dormir' dos jovens que trabalham demais na China",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "BBC Lê"
+      },
+      "locators": {
+        "pid": "p09xc0dx",
+        "brandPid": "p09qw1cn"
+      },
+      "media": {
+        "id": "p09xc0dx",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Trabalhando cerca de 12 horas por dia, jovens sacrificam sono para terem lazer à noite.",
+          "medium": "Trabalhando cerca de 12 horas por dia, seis dias por semana, jovens acabam tendo tempo de lazer apenas tarde da noite - mas, para isso, sacrificam horas preciosas de sono."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09xc0h7.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09xbyt0",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 704,
+            "durationISO8601": "PT11M44S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1632996900000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "O que é a 'vingança da hora de dormir' dos jovens que trabalham demais na China",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p09xc0h7.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p09xc0h7.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1632960000000,
+      "brand": {
+        "pid": "p09qw1cn",
+        "title": "BBC Lê"
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09xc0dx",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Portuguese",
+        "uri": "/portuguese",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09x4jzn",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09x4jzn",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Ao incentivar famílias nucleares e monogâmicas, instituição moldou perfil psicológico.",
+                  "medium": "Professor de Harvard diz que, ao incentivar famílias nucleares e monogâmicas, instituição moldou perfil psicológico individualista e independente em culturas ocidentais."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09x4k3m.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09x4hzr",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 682,
+                    "durationISO8601": "PT11M22S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1632819600000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Como a 'mente ocidental' foi moldada pela Igreja Católica medieval",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09x4k3m.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09x4k3m.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632787200000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09x4jzn",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09wjwf5",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09wjwf5",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Santos e artistas deram a ela a imagem de 'sedutora'; mas será que foi isso mesmo?",
+                  "medium": "Bíblia diz que ela pediu a cabeça de João Batista após dançar para um rei; ao longo do tempo, sua imagem foi sensualizada e Salomé virou símbolo do poder de sedução feminino."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09wjwgy.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wjvqs",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 543,
+                    "durationISO8601": "PT9M3S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1632560400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Quem era Salomé, a menina que Santo Agostinho transformou em 'mulher sem-vergonha'",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09wjwgy.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09wjwgy.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632528000000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09wjwf5",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09wjvmg",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09wjvmg",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Americana partiu em caminhada marcada por percalços que durou mais de 6 anos.",
+                  "medium": "Em busca de 'conexões mais profundas', Angela Maxwell partiu em uma caminhada que durou mais de seis anos, foi marcada por muitos percalços e transformou sua vida."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09wjvnn.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wjpd9",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 540,
+                    "durationISO8601": "PT9M",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1632387600000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "A mulher que deu a volta ao mundo andando",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09wjvnn.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09wjvnn.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632355200000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09wjvmg",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09wh32z",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09wh32z",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Emoções não são fixas, variam com tempo, lugar e cultura - ou simplesmente desaparecem.",
+                  "medium": "Há uma tendência em achar que as emoções são fixas e compartilhadas por todos; mas elas variam com o tempo, lugar e mudanças culturais; e algumas simplesmente desaparecem."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09wh344.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wh2px",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 488,
+                    "durationISO8601": "PT8M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1632214800000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "7 emoções humanas do passado que já não sentimos mais",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09wh344.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09wh344.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632182400000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09wh32z",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09w8vw3",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09w8vw3",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Lia, Iryna e Olga têm características sexuais femininas e masculinas misturadas.",
+                  "medium": "Lia, Iryna e Olga têm características sexuais femininas e masculinas misturadas; essas são suas histórias de descoberta e aceitação."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w8vz5.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09w8v4x",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 942,
+                    "durationISO8601": "PT15M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631955600000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "'Era um menino e comecei a menstruar': os relatos de intersexuais, do espanto à aceitação",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09w8vz5.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09w8vz5.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631923200000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09w8vw3",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09w1g8d",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09w1g8d",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Pesquisa mostra que declínio do metabolismo começa bem mais tarde do que se pensava.",
+                  "medium": "Segundo pesquisa, feita com 6,4 mil pessoas, 'barriguinha da meia-idade' não pode ser atribuída a declínio do metabolismo, pois este começa bem mais tarde do que se pensava."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w1g9f.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09w1d8f",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 359,
+                    "durationISO8601": "PT5M59S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631782800000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Estudo revela idade em que metabolismo começa a cair",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09w1g9f.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09w1g9f.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631750400000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09w1g8d",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09vx5wy",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09vx5wy",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Para Craig Wright, os grandes gênios têm impacto por mais gente e por mais tempo.",
+                  "medium": "De acordo com historiador Craig Wright, no início de seu curso, maioria dos alunos dizem que gostariam de ser gênios, mas quando terminam, poucos mantêm esse desejo. Por quê?"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09vx5xy.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vx5p4",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 831,
+                    "durationISO8601": "PT13M51S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631610000000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "'Por que Lady Gaga é exemplo de genialidade e Michael Phelps, não': o que os gênios têm em comum, segundo professor de Yale",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09vx5xy.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09vx5xy.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631577600000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09vx5wy",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09vn2r8",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09vn2r8",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Há 20 anos, ataque deixou profundas marcas em brasileiros que estavam no WTC.",
+                  "medium": "No 20º aniversário de ataque que mudou a história mundial, brasileiros que estavam no World Trade Center e presenciaram o episódio relatam os efeitos que ele teve em suas vidas."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09vn2st.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vn1s2",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 874,
+                    "durationISO8601": "PT14M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631350800000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Testemunhas brasileiras relembram horror do 11 de Setembro: 'Vi o inimaginável e nunca mais fui o mesmo'",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09vn2st.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09vn2st.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631318400000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09vn2r8",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09vjk4t",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09vjk4t",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Choque de aviões contra prédios em NY lançou sequência que os reduziu a escombros.",
+                  "medium": "Colisão de dois aviões contra os edifícios mais altos de Nova York foi início de sequência de fatores que reduziram prédios icônicos a escombros."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09vjk6l.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vjj5w",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 503,
+                    "durationISO8601": "PT8M23S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631264400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "As 2 causas científicas para queda das torres do World Trade Center em 11 de setembro",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09vjk6l.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09vjk6l.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631232000000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09vjk4t",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09vdhts",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09vdhts",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Entender que a felicidade é um caminho e evitar sentimentos extremos estão entre dicas.",
+                  "medium": "Compreender a felicidade como um caminho, evitar sentimentos extremos e exercitar a alegria são algumas das chaves, segundo especialista."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09vdhvy.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vdh27",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 486,
+                    "durationISO8601": "PT8M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631178000000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "5 maneiras de ser mais feliz no trabalho (e por que Schopenhauer tinha razão)",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09vdhvy.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09vdhvy.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631145600000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09vdhts",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09v8r8g",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09v8r8g",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Estudo abre caminho para diagnóstico mais barato e precoce, o que é chave em tratamento.",
+                  "medium": "Estudo diz ser possível identificar doença a partir da forma como guiamos veículo e abre caminho para diagnóstico mais barato e precoce, o que pode ser chave no tratamento."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09v8r93.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09v8r37",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 551,
+                    "durationISO8601": "PT9M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631013540000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Como jeito de dirigir pode revelar sinais de Alzheimer",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09v8r93.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09v8r93.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630972800000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09v8r8g",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09tw61c",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09tw61c",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Era rica e famosa, mas frigidez a tornou pioneira na pesquisa da sexualidade feminina.",
+                  "medium": "Ela pertencia à realeza e era extremamente rica, mas sua curiosidade e frustrações a levaram a ser pioneira na pesquisa da sexualidade feminina — e discípula de Freud."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09tw652.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09tw7fb",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 700,
+                    "durationISO8601": "PT11M40S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630746000000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Quem foi Marie Bonaparte, a princesa pioneira em estudos sobre o orgasmo feminino",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09tw652.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09tw652.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630540800000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09tw61c",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09ttt6b",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09ttt6b",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Território que China vê como 'rebelde' é  principal produtor mundial de microchips.",
+                  "medium": "Relevância de Taiwan como principal produtor mundial de microchips faz China hesitar em eventualmente atacar território insular que vê como província rebelde, segundo autor."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09ttt6l.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09ttsff",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 817,
+                    "durationISO8601": "PT13M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630596000000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "O importante papel do 'escudo de silício' que protege Taiwan da China",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09ttt6l.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09ttt6l.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630540800000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09ttt6b",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09tmns9",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09tmns9",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Ouça depoimento de Lucy Adams, uma das milhares de pessoas que sofrem de covid longa.",
+                  "medium": "Repórter da BBC na Escócia é uma das centenas de milhares de pessoas que sofrem de covid longa, uma condição ainda pouco compreendida por médicos e cientistas."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09tmnss.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09tmms3",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1294,
+                    "durationISO8601": "PT21M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630400400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "'Vou melhorar algum dia?': a repórter da BBC que luta contra covid há mais de 1 ano",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09tmnss.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09tmnss.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630368000000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09tmns9",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09tdtxr",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09tdtxr",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Brasileiros relatam como é ser vítima em país com grave problema de bullying nas escolas.",
+                  "medium": "'Espere só que nós dois vamos matar você e arrancar o seu cérebro', dizia mensagem publicadas no Instagram por colegas de classe de adolescente brasileira."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09tdv38.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09tdpcr",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 694,
+                    "durationISO8601": "PT11M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630141200000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "'Minha filha adolescente foi ameaçada de morte': a luta de brasileiros contra bullying em escolas no Japão",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09tdv38.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09tdv38.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630108800000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09tdtxr",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09t7xfh",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09t7xfh",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Apesar de 'limpeza', é difícil impedir que micróbios peguem carona em missões ao planeta.",
+                  "medium": "Humanidade enviou dezenas de espaçonaves e módulos a Marte; apesar de procedimentos de 'limpeza',  sabemos que alguns micro-organismos podem ter sobrevivido à viagem."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t7xg4.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09t7w6k",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 781,
+                    "durationISO8601": "PT13M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629968400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Por que é provável que tenhamos 'contaminado' Marte com vida",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09t7xg4.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09t7xg4.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629936000000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09t7xfh",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09szkz7",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09szkz7",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Daniel Everett estudou costumes e língua dos pirahã e fez importante descoberta.",
+                  "medium": "Daniel Everett viveu décadas com povo pirahã estudando seus costumes e língua. Além de se tornar ateu, criou hipótese sobre história da linguística que desafia tese mais corrente."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t21kg.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09szkkq",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 593,
+                    "durationISO8601": "PT9M53S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629795600000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "O missionário que virou ateu ao viver com índios brasileiros e fez surpreendente 'descoberta' sobre história da linguagem",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09t21kg.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09t21kg.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629763200000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09szkz7",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09ss5hn",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09ss5hn",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Mulher desapareceu sem pistas em 2013, até inquilinos acharem tecido saindo da terra.",
+                  "medium": "Investigação de desaparecimento tinha sido arquivada em 2013; mas, trabalhando no jardim, novos inquilinos acharam pedaço de tecido saindo da terra."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t22cw.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09ss56l",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 816,
+                    "durationISO8601": "PT13M36S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629536400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "A família que alugou casa e achou proprietária desaparecida enterrada no jardim",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09t22cw.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09t22cw.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629504000000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09ss5hn",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09skbn9",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09skbn9",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Contra soviéticos, herói se une a rebeldes no Afeganistão, que depois formariam o Talebã.",
+                  "medium": "Em terceiro filme da franquia, Rambo se une a rebeldes no Afeganistão na luta contra os soviéticos — os mesmos rebeldes que depois formariam o Talebã."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t22h8.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09sk9lq",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 574,
+                    "durationISO8601": "PT9M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629363600000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Como filme 'Rambo 3' ajuda a explicar origem do Talebã",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09t22h8.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09t22h8.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629331200000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09skbn9",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "BBC Lê"
+              },
+              "locators": {
+                "pid": "p09sgjwh",
+                "brandPid": "p09qw1cn"
+              },
+              "media": {
+                "id": "p09sgjwh",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Cerveja não é ‘bebível’, mas tesouro está nas leveduras, que podem ser 'ressuscitadas'.",
+                  "medium": "Mergulhadores recuperaram garrafas de navio afundado em 1895; cerveja não é mais ‘bebível’, mas leveduras podem ser 'ressuscitadas' para produção de bebidas de alta qualidade."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09t22nd.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09sgjfm",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1146,
+                    "durationISO8601": "PT19M6S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629212700000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "O tesouro escondido em garrafas de cerveja em navio afundado há 120 anos",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09t22nd.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09t22nd.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629158400000,
+              "brand": {
+                "pid": "p09qw1cn",
+                "title": "BBC Lê"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_brasil/p09sgjwh",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }
