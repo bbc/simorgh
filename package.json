@@ -10,11 +10,13 @@
     "browserslist": "4.17.3",
     "css-what": "5.0.1",
     "glob-parent": "5.1.2",
+    "immer": "9.0.6",
     "moment": "2.29.1",
+    "node-fetch": "2.6.1",
+    "nth-check": "2.0.1",
     "prismjs": "1.25.0",
     "react-is": "17.0.2",
-    "trim": "0.0.3",
-    "web-vitals": "1.1.1"
+    "trim": "0.0.3"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -108,7 +110,7 @@
     "@bbc/psammead-topic-tags": "1.0.8",
     "@bbc/psammead-useful-links": "3.0.28",
     "@bbc/psammead-visually-hidden-text": "2.0.7",
-    "@bbc/web-vitals": "1.0.8",
+    "@bbc/web-vitals": "1.1.0",
     "@emotion/cache": "11.4.0",
     "@emotion/react": "11.4.1",
     "@emotion/server": "11.4.0",
