@@ -5,7 +5,7 @@ import bylineBlockPropTypes from '#models/propTypes/byline';
 import { GridItemMedium } from '#app/components/Grid';
 
 const BylineContainer = ({ blocks, className }) => {
-  const { service } = useContext(ServiceContext);
+  const { service, script } = useContext(ServiceContext);
 
   if (!blocks) {
     return null;
@@ -15,7 +15,7 @@ const BylineContainer = ({ blocks, className }) => {
 
   return (
     <GridItemMedium className={className}>
-      <Byline service={service} name={name} title={title} />
+      <Byline service={service} name={name} title={title} script={script} />
     </GridItemMedium>
   );
 };
