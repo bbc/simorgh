@@ -4749,7 +4749,7 @@ Object {
     "options": Object {
       "allowAdvertising": true,
     },
-    "summary": "BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News Azeri for the latest from Azerbaijan, Armenia, Georgia.",
+    "summary": "BBC News Azərbaycanca öz səhifələrində Azərbaycan və dünyadan bu günün xəbərləri və şərhlərini təqdim edir. Visit BBC News BBC News Azerbaijan for the latest from Azerbaijan, Armenia, Georgia.",
     "tags": Object {},
     "title": "Xəbərlər",
     "type": "IDX",
