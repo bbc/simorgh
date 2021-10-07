@@ -371,6 +371,18 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   return directives.prefetchSrc.canonicalLive;
 };
 
+const REPORT_TO_HEADER = {
+  group: 'worldsvc',
+  max_age: 2592000,
+  endpoints: [
+    {
+      url: 'https://reporting-endpoint-live-7piyvnsc3a-nw.a.run.app',
+      priority: 1,
+    },
+  ],
+  include_subdomains: true,
+};
+
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
@@ -384,13 +396,14 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
-    'report-to': 'default',
+    'report-to': REPORT_TO_HEADER.group,
     'upgrade-insecure-requests': [],
   },
 });
 
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
+  res.setHeader('report-to', JSON.stringify(REPORT_TO_HEADER));
 
   const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
   middleware(req, res, next);
