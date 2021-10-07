@@ -599,9 +599,9 @@ export const getATIMarketingString = (href, campaignType) => {
   const isSupportedCampaign = campaignMapping =>
     campaignType.startsWith(campaignMapping);
 
-    const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
-      campaignMapping => isSupportedCampaign(campaignMapping),
-    );
+  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
+    campaignMapping => isSupportedCampaign(campaignMapping),
+  );
 
   return supportedCampaignMappings[selectedCampaignType]
     ? supportedCampaignMappings[selectedCampaignType]()
