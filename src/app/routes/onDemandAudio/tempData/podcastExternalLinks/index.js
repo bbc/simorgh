@@ -6,20 +6,20 @@ import { PODCAST_SERVICE_MISSING } from '#lib/logger.const';
 const logger = nodeLogger(__filename);
 
 const podcastExternalLinks = {
-  arabic: () => import('./arabic.js'),
-  burmese: () => import('./burmese.js'),
-  gahuza: () => import('./gahuza.js'),
-  hausa: () => import('./hausa.js'),
-  hindi: () => import('./hindi.js'),
-  indonesia: () => import('./indonesia.js'),
-  kyrgyz: () => import('./kyrgyz.js'),
-  marathi: () => import('./marathi.js'),
-  nepali: () => import('./nepali.js'),
-  persian: () => import('./persian.js'),
-  portuguese: () => import('./portuguese.js'),
-  russian: () => import('./russian.js'),
-  ukrainian: () => import('./ukrainian.js'),
-  zhongwen: () => import('./zhongwen.js'),
+  arabic: () => import('./arabic'),
+  burmese: () => import('./burmese'),
+  gahuza: () => import('./gahuza'),
+  hausa: () => import('./hausa'),
+  hindi: () => import('./hindi'),
+  indonesia: () => import('./indonesia'),
+  kyrgyz: () => import('./kyrgyz'),
+  marathi: () => import('./marathi'),
+  nepali: () => import('./nepali'),
+  persian: () => import('./persian'),
+  portuguese: () => import('./portuguese'),
+  russian: () => import('./russian'),
+  ukrainian: () => import('./ukrainian'),
+  zhongwen: () => import('./zhongwen'),
 };
 
 const getRssLink = brandPid => ({
