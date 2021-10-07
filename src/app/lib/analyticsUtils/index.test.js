@@ -587,7 +587,7 @@ describe('getRSSMarketingString', () => {
       `(
         'should return marketing string for $expectation',
         ({ href, expectedValue }) => {
-          expect(getRSSMarketingString(href, 'rss')).toEqual(expectedValue);
+          expect(getRSSMarketingString(href, 'RSS')).toEqual(expectedValue);
         },
       );
     });
