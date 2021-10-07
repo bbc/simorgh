@@ -581,8 +581,7 @@ describe('cspHeader', () => {
               max_age: 2592000,
               endpoints: [
                 {
-                  url:
-                    'https://reporting-endpoint-live-7piyvnsc3a-nw.a.run.app',
+                  url: 'https://reporting-endpoint-live-7piyvnsc3a-nw.a.run.app',
                   priority: 1,
                 },
               ],
