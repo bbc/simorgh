@@ -17,6 +17,11 @@ const externalLinks = {
         linkUrl: 'https://open.spotify.com/show/54YV8Rd6zmvq9Ry55q9HQw',
       },
       {
+        linkText: 'Apple',
+        linkUrl:
+          'https://podcasts.apple.com/us/podcast/bbc-l%C3%AA/id1586358051',
+      },
+      {
         linkText: 'Arquivo completo',
         linkUrl: 'https://www.bbc.com/portuguese/topics/cxndrr1qgllt',
       },
