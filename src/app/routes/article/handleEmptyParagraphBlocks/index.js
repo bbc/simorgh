@@ -6,11 +6,11 @@ const setBlocks = assocPath(['content', 'model', 'blocks']);
 const setTextBlock = assocPath(['model', 'blocks']);
 
 const isEmptyParagraph = block => {
-  return block.type === 'paragraph' && !block.model.text;
+  return block.type === 'paragraph' && !block.model?.text;
 };
 
 const removeEmptyParagraphsFromTextBlock = textBlock => {
-  const cleanedTextData = textBlock.model.blocks.filter(
+  const cleanedTextData = textBlock.model?.blocks?.filter(
     block => !isEmptyParagraph(block),
   );
   return setTextBlock(cleanedTextData, textBlock);
