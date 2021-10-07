@@ -21874,9 +21874,9 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "web-vitals@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "web-vitals@npm:2.1.0"
-  checksum: 4381dcc999d2e267ab0df53da0e2c29c1152c3017bf6d58269e2f6a091bc10dd311260ecca3c2264af41eff04073c61fdcaf54a04553ad8ebfa617d6ba8d5ea4
+  version: 2.1.1
+  resolution: "web-vitals@npm:2.1.1"
+  checksum: 1bc9ec8574ae1c8d2f92d18acc940942818e64593f0bb438266b84ae5b50cde445ca8688ee609e3dff7e83165d1bd16d98ba842fb30d79e548510eabc54b5e6a
   languageName: node
   linkType: hard
 
