@@ -52,8 +52,8 @@ describe('Index Alsos', () => {
         );
 
         const firstListItem = container.querySelector('li');
-        const headline = firstListItem.getElementsByTagName('span')[2]
-          .innerHTML;
+        const headline =
+          firstListItem.getElementsByTagName('span')[2].innerHTML;
         expect(headline).toEqual('APC ba ta isa ta kore ni ba – Buba Galadima');
       });
 
@@ -67,8 +67,8 @@ describe('Index Alsos', () => {
         );
 
         const secondListItem = container.querySelectorAll('li')[1];
-        const headline = secondListItem.getElementsByTagName('span')[0]
-          .innerHTML;
+        const headline =
+          secondListItem.getElementsByTagName('span')[0].innerHTML;
         expect(headline).toEqual('Overtyped headline');
       });
 
@@ -98,8 +98,8 @@ describe('Index Alsos', () => {
         );
 
         const thirdListItem = container.querySelectorAll('li')[2];
-        const headline = thirdListItem.getElementsByTagName('span')[0]
-          .innerHTML;
+        const headline =
+          thirdListItem.getElementsByTagName('span')[0].innerHTML;
         expect(headline).toEqual('Promo link in Index Alsos');
       });
 

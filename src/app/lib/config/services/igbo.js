@@ -144,8 +144,7 @@ export const service = {
                 first:
                   'Anyị na ndị anyị na ha na-emekọrịta na-eji teknụzụdịka ',
                 linkText: 'cookies',
-                last:
-                  ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
+                last: ', were na-amịị ozi banyere gị iji were na-enye gị ụdị ihe ị chọrọ dịka o si gbasaa ihe akụkọ anyị na ozi azụmahịa anyị na-egosi gị. Biko me ka anyị mata ma ọ dị gị mma.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -162,20 +161,16 @@ export const service = {
                 para3:
                   "Ime ka peeji anyị rụọ ọrụ, anyị na-edowe ozi ụfọdụ n'ekwenti gị na-agwaghị gị.",
                 para4: {
-                  text:
-                    "Gụkọọ maka ozi dị mkpa anyị na-edowe n'igwe ekwenti gị n'iji me ka peeji websaịt anyị rụọ ọrụ.",
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: "Gụkọọ maka ozi dị mkpa anyị na-edowe n'igwe ekwenti gị n'iji me ka peeji websaịt anyị rụọ ọrụ.",
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: "Anyị na-edowe nnabata gị n'ime igwe ekwenti gị.",
                 heading3: 'Nnabata gị ma ịchọ',
                 para6:
                   "I kwete n'usoro inye ikikere ka e ji nara gị data na peeji AMP ị na-ekwete ka anyị gosi ngwa ahịa masịrị gị mgbe ị nọghị na UK.",
                 para7: {
-                  text:
-                    'Gụkọọ maka etu anyị na ndị otu anyị si egosi ahịa na BBC.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Gụkọọ maka etu anyị na ndị otu anyị si egosi ahịa na BBC.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'I nwereike ịghara ikwe ka i na-ahụ ngosi ahịa ma ị pịa "Ekweghị m ka anata data makwa gaa n\'ihu" n\'ala. Biko marakwa na ị ka ga-anahụ ngosi ahịa mana o nwereike ha agaghị amasị gị.',
@@ -190,16 +185,14 @@ export const service = {
               uk: {
                 first: 'Anyị na-eji ',
                 linkText: 'cookies',
-                last:
-                  ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
+                last: ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Anyị na-eji ',
                 linkText: 'cookies',
-                last:
-                  ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
+                last: ' enye gị nke kacha mkpa na ịntanetị. Biko me ka anyị mata ma i kwenyere.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -296,8 +289,7 @@ export const service = {
         text: 'Ihe mere ị ga-eji nwee ntụkwasiobi na BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Usoro anyị maka njikọ dị na mpụga.',
       },
       links: [
@@ -323,8 +315,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

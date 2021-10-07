@@ -10,13 +10,8 @@ const StyledBrand = styled(Brand)`
 `;
 
 const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
-  const {
-    product,
-    serviceLocalizedName,
-    brandSVG,
-    service,
-    theming,
-  } = useContext(ServiceContext);
+  const { product, serviceLocalizedName, brandSVG, service, theming } =
+    useContext(ServiceContext);
 
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
