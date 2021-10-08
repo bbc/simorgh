@@ -573,6 +573,9 @@ describe('cspHeader', () => {
         });
 
         it(`applies the correct report-to header`, () => {
+          process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
+          process.env.SIMORGH_CSP_REPORTING_ENDPOINT = 'mocked-value';
+
           injectCspHeader(req({ urlExample, originExample }), res, next);
 
           expect(headers['report-to']).toEqual(
@@ -581,7 +584,7 @@ describe('cspHeader', () => {
               max_age: 2592000,
               endpoints: [
                 {
-                  url: 'https://reporting-endpoint-live-7piyvnsc3a-nw.a.run.app',
+                  url: 'mocked-value',
                   priority: 1,
                 },
               ],

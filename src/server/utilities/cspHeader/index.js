@@ -9,6 +9,8 @@ import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
  * View the developer console for errors.
  */
 
+const REPORT_TO_GROUP_NAME = 'worldsvc';
+
 const advertisingDirectives = {
   connectSrc: [
     'https://csi.gstatic.com',
@@ -371,18 +373,6 @@ export const generatePrefetchSrc = ({ isAmp, isLive }) => {
   return directives.prefetchSrc.canonicalLive;
 };
 
-const REPORT_TO_HEADER = {
-  group: 'worldsvc',
-  max_age: 2592000,
-  endpoints: [
-    {
-      url: 'https://reporting-endpoint-live-7piyvnsc3a-nw.a.run.app',
-      priority: 1,
-    },
-  ],
-  include_subdomains: true,
-};
-
 const helmetCsp = ({ isAmp, isLive }) => ({
   directives: {
     'default-src': generateDefaultSrc(),
@@ -396,14 +386,28 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
-    'report-to': REPORT_TO_HEADER.group,
+    'report-to': REPORT_TO_GROUP_NAME,
     'upgrade-insecure-requests': [],
   },
 });
 
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
-  res.setHeader('report-to', JSON.stringify(REPORT_TO_HEADER));
+
+  res.setHeader(
+    'report-to',
+    JSON.stringify({
+      group: REPORT_TO_GROUP_NAME,
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
 
   const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
   middleware(req, res, next);
