@@ -57,12 +57,13 @@ const getBuildMetadata = () => {
   return buildMetadata;
 };
 
+/*
 const skipMiddleware = (_req, _res, next) => {
   next();
 };
+*/
 
-const injectCspHeaderProdBuild =
-  process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
+const injectCspHeaderProdBuild = injectCspHeader;
 
 server
   .disable('x-powered-by')
