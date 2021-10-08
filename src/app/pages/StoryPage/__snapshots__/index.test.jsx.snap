@@ -498,9 +498,17 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   line-height: 1.125rem;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-15 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -4676,9 +4684,17 @@ exports[`Story Page should render correctly when the secondary column data is no
   line-height: 1.125rem;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-15 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
@@ -7812,9 +7828,17 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   line-height: 1.125rem;
 }
 
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-15 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-15 {
     font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 
