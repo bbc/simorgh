@@ -24,6 +24,23 @@ export const paragraphBlock = ({ id = defaultIds.paragraph } = {}) => ({
   },
 });
 
+export const emptyParagraphBlock = ({ id = defaultIds.paragraph } = {}) => ({
+  type: 'paragraph',
+  id,
+  model: {
+    text: '',
+    blocks: [
+      {
+        type: 'fragment',
+        model: {
+          text: '',
+          attributes: [],
+        },
+      },
+    ],
+  },
+});
+
 export const unorderedListBlock = ({ id = defaultIds.list } = {}) => ({
   type: 'unorderedList',
   id,
