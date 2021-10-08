@@ -18,12 +18,26 @@ Cypress.on(`window:before:load`, win => {
 // We decided we could not invest any more time in the unexplained error as the test
 // successfully functioned with this specific error caught and discarded.
 // eslint-disable-next-line consistent-return
-Cypress.on('uncaught:exception', err => {
+Cypress.on('uncaught:exception', (err, runnable, promise) => {
   // returning false here prevents Cypress from failing the test
   if (
     err.message &&
     err.message.includes("Cannot read property 'postMessage' of undefined")
   ) {
+    return false;
+  }
+
+  /*
+    This is used to effectively ignore unhandle promise exceptions thrown in tests
+    Cypress will fail a test if this happens, causing E2E failures on Test and Live
+    Effort has been applied to source the cause of the errors on CodePipeline, as they do not occur locally or on Github Action builds,
+    however there is no clear indication of why they are happening as they only happen in one environment and intermittently
+    Linked issues below as a timeline of events:
+    
+    https://github.com/bbc/simorgh/issues/9178
+    https://github.com/bbc/simorgh/issues/9465
+  */
+  if (promise) {
     return false;
   }
 });
