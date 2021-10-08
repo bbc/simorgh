@@ -7,6 +7,7 @@
     "@emotion/serialize": "1.0.2",
     "@emotion/sheet": "1.0.2",
     "@emotion/utils": "1.0.0",
+    "ansi-regex": "5.0.1",
     "browserslist": "4.17.3",
     "css-what": "5.0.1",
     "glob-parent": "5.1.2",
