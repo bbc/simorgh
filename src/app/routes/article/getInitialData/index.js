@@ -2,6 +2,7 @@ import pipe from 'ramda/src/pipe';
 
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
+import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -13,6 +14,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 
 const transformJson = pipe(
   handleGroupBlocks,
+  handleEmptyParagraphBlocks,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
