@@ -52,8 +52,7 @@ const useClickTrackerHandler = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          const aTag = path(['currentTarget'], event).querySelector('a');
-          const nextPageUrl = path(['href'], aTag);
+          const nextPageUrl = path(['currentTarget', 'href'], event);
 
           event.stopPropagation();
           event.preventDefault();
