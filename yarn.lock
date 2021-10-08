@@ -15698,18 +15698,18 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"mocha-junit-reporter@npm:2.0.0":
-  version: 2.0.0
-  resolution: "mocha-junit-reporter@npm:2.0.0"
+"mocha-junit-reporter@npm:2.0.2":
+  version: 2.0.2
+  resolution: "mocha-junit-reporter@npm:2.0.2"
   dependencies:
     debug: ^2.2.0
     md5: ^2.1.0
     mkdirp: ~0.5.1
-    strip-ansi: ^4.0.0
+    strip-ansi: ^6.0.1
     xml: ^1.0.0
   peerDependencies:
     mocha: ">=2.2.5"
-  checksum: dbfe211c4131156e53b18002834e78f6306c136efe1fb5a16bdf6fd727cf7f9aeb9152a50cdae234cfb1a14e9bb72943b20ad21f33dc6d46ed8ada2c3f988ecb
+  checksum: 78505ab4c471a176ac27195d7a95034ff90e2a123ec79f762b588e845a40a5423821e6bbf444033931e60bcab9b4fdd57d08026cecef7c7e766fbd2334c43df4
   languageName: node
   linkType: hard
 
@@ -19606,7 +19606,7 @@ resolve@^2.0.0-next.3:
     lru-cache: 6.0.0
     minimist: 1.2.5
     mocha: 9.1.2
-    mocha-junit-reporter: 2.0.0
+    mocha-junit-reporter: 2.0.2
     moment: 2.29.1
     moment-timezone: 0.5.33
     morgan: 1.10.0
@@ -20318,7 +20318,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"strip-ansi@npm:6.0.1":
+"strip-ansi@npm:6.0.1, strip-ansi@npm:^6.0.1":
   version: 6.0.1
   resolution: "strip-ansi@npm:6.0.1"
   dependencies:
