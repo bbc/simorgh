@@ -14,11 +14,29 @@ import injectCspHeader, {
 
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
+// Express Fixtures
+const req = ({ urlExample = '', originExample = '' } = {}) => ({
+  url: urlExample,
+  headers: {
+    'user-agent': 'local-agent',
+    'bbc-origin': originExample,
+  },
+});
+
+let headers = {};
+
+const res = {
+  setHeader: (key, value) => {
+    headers[key] = value;
+  },
+};
+
 const next = jest.fn();
 
 describe('cspHeader', () => {
   afterEach(() => {
     jest.resetAllMocks();
+    headers = {};
   });
 
   afterAll(() => {
@@ -528,25 +546,9 @@ describe('cspHeader', () => {
         });
 
         it(`Then injectCspHeader middleware applies the correct Content-Security-Policy header`, () => {
-          const req = {
-            url: urlExample,
-            headers: {
-              'user-agent': 'local-agent',
-              'bbc-origin': originExample,
-            },
-          };
-
-          const headers = {};
-
-          const res = {
-            setHeader: (key, value) => {
-              headers[key] = value;
-            },
-          };
-
           process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
 
-          injectCspHeader(req, res, next);
+          injectCspHeader(req({ urlExample, originExample }), res, next);
 
           expect(next).toHaveBeenCalled();
 
@@ -562,11 +564,32 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
-            `report-to default;` +
+            `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(
             expectedCSPHeaderString,
+          );
+        });
+
+        it(`applies the correct report-to header`, () => {
+          process.env.SIMORGH_APP_ENV = isLive ? 'live' : 'test';
+          process.env.SIMORGH_CSP_REPORTING_ENDPOINT = 'mocked-value';
+
+          injectCspHeader(req({ urlExample, originExample }), res, next);
+
+          expect(headers['report-to']).toEqual(
+            JSON.stringify({
+              group: 'worldsvc',
+              max_age: 2592000,
+              endpoints: [
+                {
+                  url: 'mocked-value',
+                  priority: 1,
+                },
+              ],
+              include_subdomains: true,
+            }),
           );
         });
       });
