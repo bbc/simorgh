@@ -9,7 +9,7 @@ const CardTitle = styled.h3`
   display: inline-block;
   width: 145px;
   height: 20px;
-  margin: 4px 103.5px 5px 9.5px;
+  margin: 2px 103.5px 5px 9.5px;
   font-family: BBCReithSerif;
   font-size: 15px;
   font-weight: 500;
