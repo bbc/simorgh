@@ -25,6 +25,7 @@ const Heading = styled.h2`
 `;
 
 const Wrapper = styled.div`
+  padding: 5px 10.3px 4px 9px;
   margin: 0 0 ${GEL_SPACING_DBL};
 `;
 
