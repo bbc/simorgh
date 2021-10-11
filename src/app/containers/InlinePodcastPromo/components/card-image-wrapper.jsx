@@ -8,28 +8,9 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardImageWrapper = styled.div`
-  margin: ${GEL_SPACING} 0 ${GEL_SPACING} ${GEL_SPACING};
-
   width: 243px;
   height: 239px;
   margin: 8px 0 31px 8px;
-
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 6.5rem;
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    flex-basis: 6.8125rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    flex-basis: 11.125rem;
-    margin: 0;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin: 0;
-  }
 `;
 
 export default CardImageWrapper;

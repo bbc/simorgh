@@ -79,7 +79,7 @@ const Promo = () => {
       <PromoComponent.Title id="podcast-promo" dir={dir}>
         {podcastPromoTitle}
       </PromoComponent.Title>
-      {/* <PromoComponent.Card>
+      <PromoComponent.Card>
         <PromoComponent.Card.ImageWrapper>
           <ImageWithPlaceholder
             src={imgSrc}
@@ -92,7 +92,7 @@ const Promo = () => {
             lazyLoad
           />
         </PromoComponent.Card.ImageWrapper>
-        <PromoComponent.Card.Content>
+        {/* <PromoComponent.Card.Content>
           <PromoComponent.Card.Title>
             <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
               <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
@@ -106,8 +106,8 @@ const Promo = () => {
           <PromoComponent.Card.EpisodesText dir={dir}>
             {label}
           </PromoComponent.Card.EpisodesText>
-        </PromoComponent.Card.Content>
-      </PromoComponent.Card> */}
+        </PromoComponent.Card.Content> */}
+      </PromoComponent.Card>
     </PromoComponent>
   );
 };
