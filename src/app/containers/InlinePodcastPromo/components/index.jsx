@@ -23,8 +23,27 @@ const withPodcastContext = Component => props =>
   );
 
 const Wrapper = styled.section`
-  background-color: ${C_LUNAR};
-  padding: ${GEL_SPACING_DBL};
+  background: #f4f4f4;
+  float: left;
+  width: 115px;
+  height: 370px;
+  margin: 10px 6px 6px 8px;
+  padding: 12px 9.5px 8px 0.5px;
+
+  @media (min-width: 320px) {
+    width: 150px;
+    height: 350px;
+  }
+  @media (min-width: 360px) {
+    width: 175px;
+  }
+  @media (min-width: 400px) {
+  }
+  @media (min-width: 600px) {
+    width: 275px;
+    height: 425px;
+    margin: 11px 16px 31px 16px;
+  }
 `;
 
 const PodcastPromo = ({ script, service, children, ...props }) => (

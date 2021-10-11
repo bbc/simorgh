@@ -1,0 +1,636 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/news-58794792",
+    "locators": {
+      "assetUri": "/russian/news-58794792",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-58794792",
+      "curie": "http://www.bbc.co.uk/asset/8aec248e-7f68-4406-8f3b-d04879742211",
+      "assetId": "58794792"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1633614147274,
+    "firstPublished": 1633607526000,
+    "lastPublished": 1633607526000,
+    "timestamp": 1633607526000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Nobel+Prize",
+      "cps_asset_id": "58794792",
+      "ldp_ids": "a0c6ec08-49d9-48ab-b798-eefd6a252a5c",
+      "counterName": "russian.news.story.58794792.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:8aec248e-7f68-4406-8f3b-d04879742211",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+            "thingLabel": "Нобелевская премия",
+            "thingUri": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+            "thingId": "a0c6ec08-49d9-48ab-b798-eefd6a252a5c",
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Event"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Nobel_Prize"
+            ],
+            "thingEnglishLabel": "Nobel Prize",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ru",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Нобелевская премия",
+          "thingUri": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+          "thingId": "a0c6ec08-49d9-48ab-b798-eefd6a252a5c",
+          "thingType": [
+            "core:Thing",
+            "tagging:TagConcept",
+            "core:Event"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nobel_Prize"
+          ],
+          "topicName": "Нобелевская премия",
+          "topicId": "c4vmr0qmdqet",
+          "curationList": [
+            {
+              "curationId": "8526ae57-0741-4e36-b9f2-eef6304905dc",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Nobel Prize",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Nobel Prize"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "RUSSIAN",
+      "producerId": "75"
+    },
+    "readTime": 3,
+    "siteUri": "/russian",
+    "topics": [
+      {
+        "topicName": "Нобелевская премия",
+        "topicId": "c4vmr0qmdqet",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "8526ae57-0741-4e36-b9f2-eef6304905dc",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "tagging:TagConcept",
+          "core:Event"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "120890855",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/DA01/production/_120890855_p_site.png",
+        "path": "/cpsprodpb/DA01/production/_120890855_p_site.png",
+        "height": 549,
+        "width": 976,
+        "altText": "премия мира",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "На Нобелевскую премию мира, которую вручают 8 октября, множество претендентов - 329 кандидатов (234 человека; 95 организаций). Это третий показатель за всю историю премии, хотя он совсем ненамного больше, чем в прошлом году.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>russian/features-37585107</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Почему лауреаты Нобелевской премии становятся все старше?",
+                  "headline": "Почему лауреаты Нобелевской премии становятся все старше?",
+                  "overtyped": "Почему лауреаты Нобелевской премии становятся все старше?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/features-37585107"
+                },
+                "summary": "72 года - таков средний возраст объявленных лауреатов премии 2016 года. Но так было далеко не всегда. Почему же средний возраст обладателей престижной награды с каждым годом увеличивается?",
+                "timestamp": 1475840436000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/features-37585107",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Среди фаворитов - Грета Тунберг, Алексей Навальный и Светлана Тихановская.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Главные претенденты",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Безусловный фаворит у букмекеров - Всемирная организация здравоохранения. Номинацию ей принес проект COVAX, в котором участвует и &quot;вакцинный альянс&quot; Gavi. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Этот глобальный проект направлен на &quot;обеспечение быстрого и справедливого доступа к вакцинам против Covid-19 для всех стран, независимо от уровня доходов&quot; посредством оказания помощи в производстве и поставках. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "К концу 2021 года по этому проекту предполагается поставить около двух миллиардов доз разных вакцин, в том числе более половины - в 92 страны с низким уровнем доходов. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Следующим в списке фаворитов идут &quot;Репортеры без границ&quot;. Хенрик Урдал, директор Института исследования проблем мира в Осло, сказал в интервью агентству Рейтер: &quot;[Возможное награждение] - это отзвук многочисленных дебатов о важности независимого освещения событий и борьбы с фальшивыми новостями для демократического управления&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120879141",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/3775/production/_120879141_gettyimages-1235639930.jpg",
+        "path": "/cpsprodpb/3775/production/_120879141_gettyimages-1235639930.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Грета Тунберг",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Примерно поровну букмекеры оценивают шансы Навального, Алексея Светланы Тихановской и Греты Тунберг. Хенрик Урдал высоко оценивает шансы Тихановской &quot;как за ее конкретную роль в кампании за демократию в Беларуси, так и в качестве номинального лидера продемократического движения в Беларуси&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В списке возможных претендентов также фигурируют Джо Байден, Ангела Меркель и Билл Гейтс.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Свобода слова и климат",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Однако не все согласны с тем, что ВОЗ получит награду. Дэн Смит, директор Стокгольмского международного института исследования проблем мира, считает, что ВОЗ, которую бывший президент США Дональд Трамп обвинил в слишком тесных связях с Китаем, награду не получит, &quot;потому что ее роль остается спорной.&quot; Что же касается вакцин, то, по его мнению, для этого существует Нобелевская премия по медицине.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Нобелевская премия мира: шансы президентов</caption><url href=\"https://www.bbc.com/russian/international/2013/10/131010_nobel_prize_history\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/international/2013/10/131010_nobel_prize_history",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "&quot;Свобода СМИ или выдающийся журналист (или и то и другое) могут стать хорошим выбором, - сказал Смит в интервью Си-эн-эн. - Но я бы поставил изменение климата выше этого из-за его актуальности&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "120890986",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/10D2D/production/_120890986_nobel_peace_prize_russian_640-nc.jpg",
+        "path": "/cpsprodpb/10D2D/production/_120890986_nobel_peace_prize_russian_640-nc.jpg",
+        "height": 702,
+        "width": 640,
+        "altText": "Графика",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;Я полагаю, наиболее вероятной и очень желанной перспективой является вручение этой награды молодым активистам борьбы с изменением климата (включая Грету Тунберг, но только как одну из многих) со всего мира&quot;, - считает он.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Противоречивая премия",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Согласно завещанию Альфреда Нобеля, премия присуждается лицу или организации, &quot;кто больше и лучше всех потрудился для укрепления братства между народами, для того, чтобы распустить или сократить действующие армии, или тому, кто способствовал проведению мирных переговоров&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Елена Боннэр: Нобелевская премия мира потеряла авторитет</caption><url href=\"https://www.bbc.com/russian/russia/2010/12/101206_bonner_interview\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/russia/2010/12/101206_bonner_interview",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Сама премия и некоторые ее лауреаты, тем не менее, не раз вызывали противоречивую реакцию. Из недавних примеров на ум приходит Аун Сан Су Чжи, многолетний лидер бирманской оппозиции и лауреат премии мира 1991 года, репутация которой после прихода к власти оказалась безнадежно подорвана в глазах западной общественности из-за жестокого обращения с представителями мусульманской народности рохинджа.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В 2019 году Аун Сан Су Чжи пришлось выступать в Международном суде ООН в Гааге и отвечать на обвинения в геноциде рохинджа. Тогда же появились призывы лишить ее статуса нобелевского лауреата - однако Нобелевскую премию нельзя отозвать. Присужденная однажды, она так и остается навсегда связанной с именем конкретного человека.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Другой пример - премьер-министр Эфиопии Абий Ахмед Али. Его наградили премией в 2018 году за урегулирование конфликта с соседней Эритреей, а спустя два года в Эфиопии начался <link><caption>кровопролитный конфликт в Тыграе</caption><url href=\"https://www.bbc.com/russian/features-54979743\" platform=\"highweb\"/></link>.",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/features-54979743",
+        "type": "paragraph"
+      },
+      {
+        "id": "120879139",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/16C0D/production/_120879139_gettyimages-842549010.jpg",
+        "path": "/cpsprodpb/16C0D/production/_120879139_gettyimages-842549010.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Чучело Аун Сан Су Чжи с нобелевской медалью",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "В 1994 году лидер Организации освобождения Палестины Ясир Арафат разделил Премию мира с премьер-министром Израиля Ицхаком Рабином и министром иностранных дел Израиля Шимоном Пересом. Один из членов норвежского Нобелевского комитета Каре Кристиансен подал в отставку в знак протеста против награждения Арафата.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>Нобелевская премия мира: противоречивый голубь</caption><url href=\"https://www.bbc.com/russian/international/2015/10/151010_nobel_peace_controversy_history\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/international/2015/10/151010_nobel_peace_controversy_history",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "В 2009 году, к явному удивлению наблюдателей, лауреатом премии мира стал Барак Обама, лишь незадолго до этого возглавивший Соединенные Штаты. Обаму наградили авансом, признав его &quot;усилия по достижению мировой гармонии&quot;, а не конкретные достижения.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Одной из самых противоречивых стала премия мира 1973 года, которую получили госсекретарь США Генри Киссинджер и северовьетнамский политик Ле Дык Тхо за достижения Парижского соглашения по завершению войны во Вьетнаме. Война закончилась только через два года, а Ле Дык Тхо от премии отказался.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Кто получит Нобелевскую премию мира? В фаворитах ВОЗ, Грета, Навальный и Тихановская",
+      "headline": "Кто получит Нобелевскую премию мира? В фаворитах ВОЗ, Грета, Навальный и Тихановская"
+    },
+    "locators": {
+      "assetUri": "/russian/news-58794792",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-58794792",
+      "curie": "http://www.bbc.co.uk/asset/8aec248e-7f68-4406-8f3b-d04879742211",
+      "assetId": "58794792"
+    },
+    "summary": "Накануне вручения Нобелевской премии мира аналитики и букмекеры называют своих фаворитов на ее получение. Среди претендентов - Алексей Навальный, Светлана Тихановская и Грета Тунберг.",
+    "timestamp": 1633607526000,
+    "language": "ru",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:8aec248e-7f68-4406-8f3b-d04879742211",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+            "thingLabel": "Нобелевская премия",
+            "thingUri": "http://www.bbc.co.uk/things/a0c6ec08-49d9-48ab-b798-eefd6a252a5c#id",
+            "thingId": "a0c6ec08-49d9-48ab-b798-eefd6a252a5c",
+            "thingType": [
+              "core:Thing",
+              "tagging:TagConcept",
+              "core:Event"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Nobel_Prize"
+            ],
+            "thingEnglishLabel": "Nobel Prize",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ru",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "120890856",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/10111/production/_120890856_p_site.png",
+      "path": "/cpsprodpb/10111/production/_120890856_p_site.png",
+      "height": 549,
+      "width": 976,
+      "altText": "премия мира",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/news-58794792",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Новости",
+      "uri": "/russian/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Почему лауреаты Нобелевской премии становятся все старше?",
+              "headline": "Почему лауреаты Нобелевской премии становятся все старше?"
+            },
+            "locators": {
+              "assetUri": "/russian/features-37585107",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-37585107"
+            },
+            "summary": "72 года - таков средний возраст объявленных лауреатов премии 2016 года. Но так было далеко не всегда. Почему же средний возраст обладателей престижной награды с каждым годом увеличивается?",
+            "timestamp": 1475840436000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "91550187",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/13119/production/_91550187_thinkstockphotos-492789556.jpg",
+              "path": "/cpsprodpb/13119/production/_91550187_thinkstockphotos-492789556.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Профессор",
+              "copyrightHolder": "Thinkstock",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-37585107",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Трамп: мою Нобелевскую премию мира отдали другому",
+              "headline": "Трамп: я спас страну, а Нобелевскую премию дали не мне, а ее лидеру"
+            },
+            "locators": {
+              "assetUri": "/russian/news-51064588",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-51064588"
+            },
+            "summary": "Смысл слов Трампа сводится к тому, что война между Эфиопией и Эритреей прекратилась благодаря ему, и Нобелевскую премию мира за это зря вручили премьер-министру Эфиопии.",
+            "timestamp": 1578681460000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "110465147",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/121AC/production/_110465147_gettyimages-491868080.jpg",
+              "path": "/cpsprodpb/121AC/production/_110465147_gettyimages-491868080.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Donald Trump",
+              "copyrightHolder": "AFP",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-51064588",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Нобелевская премия мира присуждена премьер-министру Эфиопии Абию Ахмеду Али",
+              "headline": "Нобелевская премия мира присуждена премьер-министру Эфиопии Абию Ахмеду Али"
+            },
+            "locators": {
+              "assetUri": "/russian/news-50004453",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-50004453"
+            },
+            "summary": "Норвежский нобелевский комитет объявил лауреата Нобелевской премии мира-2019. Приз в 9 млн шведских крон получит эфиопский премьер-министр Абий Ахмед, в том числе за урегулирование конфликта с соседней Эритреей.",
+            "timestamp": 1570786622000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "109192771",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/4541/production/_109192771_057223513.jpg",
+              "path": "/cpsprodpb/4541/production/_109192771_057223513.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Абий Ахмед",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-50004453",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Нобелевская премия мира Кадырову. Откуда взялась эта новость 1 апреля",
+              "headline": "Нобелевская премия мира Кадырову. Откуда взялась эта новость 1 апреля"
+            },
+            "locators": {
+              "assetUri": "/russian/news-56589612",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-56589612"
+            },
+            "summary": "Глава Чечни Рамзан Кадыров выдвинут на Нобелевскую премию мира. Кажется, это не первоапрельская шутка - но тогда что же? И при чем тут Тамбов?",
+            "timestamp": 1617276473000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "117801363",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/8DD6/production/_117801363_tass_44727753.jpg",
+              "path": "/cpsprodpb/8DD6/production/_117801363_tass_44727753.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Март 2021 году. Рамзан Кадыров осматривает оружие, которые применяются в условиях Севера, перед учениями Росгвардии в Арктике",
+              "caption": "Март 2021 году. Рамзан Кадыров осматривает оружие, которые применяются в условиях Севера, перед учениями Росгвардии в Арктике",
+              "copyrightHolder": "Yelena Afonina/TASS",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-56589612",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

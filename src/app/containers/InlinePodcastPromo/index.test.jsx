@@ -23,7 +23,7 @@ const PromoWithContext = ({ service = 'russian', variant = null }) => (
   </ToggleContextProvider>
 );
 
-describe('PodcastPromo', () => {
+describe.only('PodcastPromo', () => {
   shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
 
   it('should show when all props are available', () => {

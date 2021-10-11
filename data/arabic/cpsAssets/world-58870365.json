@@ -1,0 +1,647 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:arabic/world-58870365",
+    "locators": {
+      "assetUri": "/arabic/world-58870365",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/world-58870365",
+      "curie": "http://www.bbc.co.uk/asset/21aff27e-21e5-4cfb-8602-a823d0536a40",
+      "assetId": "58870365"
+    },
+    "type": "STY",
+    "createdBy": "arabic-v6",
+    "language": "ar",
+    "lastUpdated": 1633949075338,
+    "firstPublished": 1633949065000,
+    "lastPublished": 1633949065000,
+    "timestamp": 1633949065000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "United+States~Nuclear+power~Law+and+order",
+      "cps_asset_id": "58870365",
+      "ldp_ids": "82857f8e-8134-462a-bb32-b7b14f4eab75~c191b8f2-d9db-49eb-9194-8980e1bf3661~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+      "counterName": "arabic.world.story.58870365.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "language": "ar",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+      "locator": "urn:bbc:cps:curie:asset:21aff27e-21e5-4cfb-8602-a823d0536a40",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/b2146e49-3a4b-49e0-adb4-86ca7225eac3#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "الولايات المتحدة",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/6252001/"
+            ],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+            "thingLabel": "الطاقة النووية",
+            "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+            "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Nuclear_power",
+              "http://www.wikidata.org/entity/Q12739"
+            ],
+            "thingEnglishLabel": "Nuclear power",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "thingLabel": "القانون",
+            "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Law"
+            ],
+            "thingEnglishLabel": "Law and order",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ar",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "الولايات المتحدة",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/6252001/"
+          ],
+          "topicName": "الولايات المتحدة",
+          "topicId": "cqywj95q3wpt",
+          "curationList": [
+            {
+              "curationId": "30b29b6d-441a-425f-82cc-4628dcfbd48b",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United States",
+          "thingLabelLanguage": "ar",
+          "thingPreferredLabel": "United States"
+        },
+        {
+          "thingLabel": "الطاقة النووية",
+          "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+          "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Nuclear_power",
+            "http://www.wikidata.org/entity/Q12739"
+          ],
+          "topicName": "الطاقة النووية",
+          "topicId": "cr50yv10gjpt",
+          "curationList": [
+            {
+              "curationId": "69e30691-f910-4201-ba79-c54c8881186e",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Nuclear power",
+          "thingLabelLanguage": "ar",
+          "thingPreferredLabel": "Nuclear power"
+        },
+        {
+          "thingLabel": "القانون",
+          "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+          "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Law"
+          ],
+          "topicName": "القانون",
+          "topicId": "cvjp21wwjk7t",
+          "curationList": [
+            {
+              "curationId": "00d8ff53-a294-4c63-bb6e-f6f4f072a0ac",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Law and order",
+          "thingLabelLanguage": "ar",
+          "thingPreferredLabel": "Law and order"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": [
+      "image",
+      "paragraph"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "ARABIC",
+      "producerId": "5"
+    },
+    "readTime": 1,
+    "siteUri": "/arabic",
+    "topics": [
+      {
+        "topicName": "الولايات المتحدة",
+        "topicId": "cqywj95q3wpt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "30b29b6d-441a-425f-82cc-4628dcfbd48b",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+      },
+      {
+        "topicName": "الطاقة النووية",
+        "topicId": "cr50yv10gjpt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "69e30691-f910-4201-ba79-c54c8881186e",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+      },
+      {
+        "topicName": "القانون",
+        "topicId": "cvjp21wwjk7t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "00d8ff53-a294-4c63-bb6e-f6f4f072a0ac",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "121020388",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/158EE/production/_121020388_2c177326-170a-425b-80af-6c0921fdb3af.jpg",
+        "path": "/cpsprodpb/158EE/production/_121020388_2c177326-170a-425b-80af-6c0921fdb3af.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "غواصة نووية أمريكية",
+        "caption": "الزوجان متهمان بمحاولة بيع بيانات سرية خاصة بغواصات نووية أمريكية لدولة أجنبية",
+        "copyrightHolder": "US NAVY/THIEP VAN NGUYEN II",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "اتُهم مهندس نووي في البحرية الأمريكية وزوجته بمحاولة بيع أسرار نووية لما ظنّا أنه ممثل دولة أجنبية. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "واعتُقل جوناثان تويبي وزوجته ديانا في ولاية فرجينيا الغربية أمس الأول السبت، بحسب ما أعلنت وزارة العدل الأمريكية.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ويواجه الزوجان اتهاما بمحاولة بيع بيانات سرية خاصة بتصميم غواصات نووية لشخص ظنّا أنه يمثل دولة أخرى، ولكنه لم يكن في واقع الأمر سوى ضابط سري في مكتب التحقيقات الفيدرالي (إف بي آي).",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وقد حاول المتهمان تخبئة البيانات السرية داخل شطيرة زبدة فول سوداني مرة، وداخل عبوة علكة مرة أخرى. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وبحسب بيان وزارة العدل، فإن تويبي (42 سنة) وزوجته ديانا (45) وُجّهت إليهما اتهامات بموجب قانون الطاقة الذرية.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وعمل تويبي مهندسا في برنامج الدفع النووي بالبحرية الأمريكية، وكان يحمل تصريحا من الأمن القومي. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وقالت وزراة العدل إن تويبي في أبريل/نيسان 2020 أرسل طردًا إلى حكومة أجنبية يحتوي معلومات سرية ورسالة تشي بوجود علاقة سرية، وأن بإمكانهم شراء مزيد من المعلومات منه.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ثم بعد ذلك، شرع الزوجان في مراسلة أحد الأشخاص باستخدام بريد إلكتروني مشفّر، وفي ظنهما آنذاك أن هذا الشخص يمثل حكومة أجنبية، بينما كان في الحقيقة ضابطا بمكتب التحقيقات الفيدرالي، بحسب البيان.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "كما يواجه الزوجان اتهاما بأنهما، وبعد عدة أشهر، أبرما صفقة لتقديم معلومات سرية مقابل الحصول على عملة مشفرة تبلغ قيمتها نحو 100 ألف دولار.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وفي يونيو/حزيران الماضي، سافر جوناثان وديانا تويبي إلى ولاية فرجينيا الغربية لتسليم المعلومات.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وبينما قامت ديانا بدور المراقب للأجواء، قام جوناثان &quot;بوضع شريحة إس دي (ذاكرة تخزين) داخل نصف شطيرة زبدة فول سوداني&quot;، وذلك في مكان تم الاتفاق عليه سلفا، بحسب بيان وزارة العدل.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وبعد أن استلم ضابط مكتب التحقيقات الفيدرالي الشريحة المتفق عليها، دفع المبلغ المتفق عليه ليتلقى في المقابل مفتاح التشفير حتى يتمكن من الوصول للبيانات على الشريحة والتي وُجدت عليها معلومات سرية &quot;تتعلق بغواصات نووية&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وفي أغسطس/آب سلّم الزوجان المزيد من المعلومات السرية للضابط نفسه، ولكنهما أخفيا الشريحة هذه المرة داخل عبوة علكة.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "وكان أمس الأول، السبت، هو الموعد الثالث بين الزوجين والضابط لتسليم مزيد من المعلومات السرية، ولكن مكتب التحقيقات الفيدرالي قرّر إلقاء القبض عليهما.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ومن المقرر أن يمثل الزوجان تويبي أمام محكمة فيدرالية غدًا الثلاثاء الموافق 12 أكتوبر/تشرين الأول.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "زوجان أمريكيان يبيعان معلومات نووية سرية لعميل في \"الأف بي آي\"",
+      "headline": "زوجان أمريكيان يبيعان معلومات نووية سرية لعميل في مكتب التحقيقات الفيدرالي"
+    },
+    "locators": {
+      "assetUri": "/arabic/world-58870365",
+      "cpsUrn": "urn:bbc:content:assetUri:arabic/world-58870365",
+      "curie": "http://www.bbc.co.uk/asset/21aff27e-21e5-4cfb-8602-a823d0536a40",
+      "assetId": "58870365"
+    },
+    "summary": "مهندس نووي في البحرية الأمريكية وزوجته متهمان بمحاولة بيع معلومات نووية سرية لمن ظنّا أنه ممثل لدولة أجنبية في حين أنه لم يكن في واقع الأمر غير ضابط في مكتب التحقيقات الفيدرالي.",
+    "timestamp": 1633949065000,
+    "language": "ar",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3139461b000e9dabf9",
+          "campaignName": "WS - Divert me"
+        }
+      ],
+      "language": "ar",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Arabic",
+      "locator": "urn:bbc:cps:curie:asset:21aff27e-21e5-4cfb-8602-a823d0536a40",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/e1deed1e-0cab-4965-8e92-897b195f7a47#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/b2146e49-3a4b-49e0-adb4-86ca7225eac3#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "الولايات المتحدة",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Place",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/6252001/"
+            ],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+            "thingLabel": "الطاقة النووية",
+            "thingUri": "http://www.bbc.co.uk/things/c191b8f2-d9db-49eb-9194-8980e1bf3661#id",
+            "thingId": "c191b8f2-d9db-49eb-9194-8980e1bf3661",
+            "thingType": [
+              "core:Theme",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Nuclear_power",
+              "http://www.wikidata.org/entity/Q12739"
+            ],
+            "thingEnglishLabel": "Nuclear power",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "thingLabel": "القانون",
+            "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Law"
+            ],
+            "thingEnglishLabel": "Law and order",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": [
+              "tagging:TagConcept",
+              "tagging:Format"
+            ],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ar",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "121020389",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/17FFE/production/_121020389_2c177326-170a-425b-80af-6c0921fdb3af.jpg",
+      "path": "/cpsprodpb/17FFE/production/_121020389_2c177326-170a-425b-80af-6c0921fdb3af.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "الزوجان متهمان بمحاولة بيع بيانات سرية خاصة بغواصات نووية أمريكية لدولة أجنبية",
+      "copyrightHolder": "US NAVY/THIEP VAN NGUYEN II",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:arabic/world-58870365",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "أخبار العالم",
+      "uri": "/arabic/world",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "صفقة غواصات نووية بريطانية أمريكية لأستراليا تثير غضبا فرنسيا ومخاوف صينية",
+              "headline": "صفقة غواصات نووية بريطانية أمريكية لأستراليا تثير غضبا فرنسيا ومخاوف صينية"
+            },
+            "locators": {
+              "assetUri": "/arabic/tv-and-radio-58589312",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/tv-and-radio-58589312"
+            },
+            "summary": "فرنسا تصف تخلي أستراليا عن صفقة غواصات تقليدية معها بأنه \"طعنة في الظهر\" بعد الإعلان عن صفقة جديدة تصنع بموجبها بريطانيا والولايات المتحدة غواصات تعمل بالطاقة النووية لصالح أستراليا.",
+            "timestamp": 1631807184000,
+            "language": "ar",
+            "cpsType": "MAP",
+            "media": {
+              "id": "58589313",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p09w57q4",
+              "entityType": "Clip",
+              "caption": "صفقة غواصات نووية بريطانية أمريكية لأستراليا تثير غضبا فرنسيا ومخاوف صينية",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "120591244",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/ACBB/production/_120591244_p09w57r6.jpg",
+              "path": "/cpsprodpb/ACBB/production/_120591244_p09w57r6.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "صفقة غواصات نووية بريطانية أمريكية لأستراليا تثير غضبا فرنسيا ومخاوف صينية",
+              "caption": "صفقة غواصات نووية بريطانية أمريكية لأستراليا تثير غضبا فرنسيا ومخاوف صينية",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:arabic/tv-and-radio-58589312",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "تضرر غواصة نووية أمريكية إثر اصطدامها بـ\"جسم مجهول\"",
+              "headline": "تضرر غواصة نووية تابعة لها إثر اصطدامها بـ\"جسم مجهول\" قرب بحر الصين الجنوبي"
+            },
+            "locators": {
+              "assetUri": "/arabic/world-58819731",
+              "cpsUrn": "urn:bbc:content:assetUri:/arabic/world-58819731"
+            },
+            "summary": "البحرية الأمريكية تكشف عن إصابة إحدى غواصاتها التي تعمل بالطاقة النووية بأضرار إثر اصطدامها بجسم تحت الماء بالقرب من بحر الصين الجنوبي.",
+            "timestamp": 1633649585000,
+            "language": "ar",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "120879417",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/11749/production/_120879417_gettyimages-957005780.jpg",
+              "path": "/cpsprodpb/11749/production/_120879417_gettyimages-957005780.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "غواصة \"يو إس إس كونيتيكت\" في قاعدة كيتساب-بريمرتون في واشنطن عام 2018",
+              "caption": "قالت البحرية الأمريكية إن الغواصة \"يو إس إس كونيتيكت\" آمنة ومستقرة ولم تحدث إصابات خطيرة (صورة أرشيفية)",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:arabic/world-58819731",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -69,47 +69,46 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <ResponsivePodcastPromoWrapper ref={viewTrackerRef}>
-      <PromoComponent
-        script={script}
-        service={service}
-        role="region"
-        aria-labelledby="podcast-promo"
-      >
-        <PromoComponent.Title id="podcast-promo" dir={dir}>
-          {podcastPromoTitle}
-        </PromoComponent.Title>
-        <PromoComponent.Card>
-          <PromoComponent.Card.ImageWrapper>
-            <ImageWithPlaceholder
-              src={imgSrc}
-              srcset={srcset}
-              sizes={sizes}
-              alt={alt}
-              height={1}
-              width={1}
-              ratio={100}
-              lazyLoad
-            />
-          </PromoComponent.Card.ImageWrapper>
-          <PromoComponent.Card.Content>
-            <PromoComponent.Card.Title>
-              <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
-                <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                  {podcastBrandTitle}
-                </span>
-              </PromoComponent.Card.Link>
-            </PromoComponent.Card.Title>
-            <PromoComponent.Card.Description>
-              {description}
-            </PromoComponent.Card.Description>
-            <PromoComponent.Card.EpisodesText dir={dir}>
-              {label}
-            </PromoComponent.Card.EpisodesText>
-          </PromoComponent.Card.Content>
-        </PromoComponent.Card>
-      </PromoComponent>
-    </ResponsivePodcastPromoWrapper>
+    <PromoComponent
+      ref={viewTrackerRef}
+      script={script}
+      service={service}
+      role="region"
+      aria-labelledby="podcast-promo"
+    >
+      <PromoComponent.Title id="podcast-promo" dir={dir}>
+        {podcastPromoTitle}
+      </PromoComponent.Title>
+      {/* <PromoComponent.Card>
+        <PromoComponent.Card.ImageWrapper>
+          <ImageWithPlaceholder
+            src={imgSrc}
+            srcset={srcset}
+            sizes={sizes}
+            alt={alt}
+            height={1}
+            width={1}
+            ratio={100}
+            lazyLoad
+          />
+        </PromoComponent.Card.ImageWrapper>
+        <PromoComponent.Card.Content>
+          <PromoComponent.Card.Title>
+            <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
+              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+                {podcastBrandTitle}
+              </span>
+            </PromoComponent.Card.Link>
+          </PromoComponent.Card.Title>
+          <PromoComponent.Card.Description>
+            {description}
+          </PromoComponent.Card.Description>
+          <PromoComponent.Card.EpisodesText dir={dir}>
+            {label}
+          </PromoComponent.Card.EpisodesText>
+        </PromoComponent.Card.Content>
+      </PromoComponent.Card> */}
+    </PromoComponent>
   );
 };
 

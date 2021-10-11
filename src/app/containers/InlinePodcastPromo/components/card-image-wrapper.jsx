@@ -9,7 +9,11 @@ import {
 
 const CardImageWrapper = styled.div`
   margin: ${GEL_SPACING} 0 ${GEL_SPACING} ${GEL_SPACING};
-  display: none;
+
+  width: 243px;
+  height: 239px;
+  margin: 8px 0 31px 8px;
+
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     display: block;
     flex-grow: 0;
