@@ -92,7 +92,7 @@ const Promo = () => {
             lazyLoad
           />
         </PromoComponent.Card.ImageWrapper>
-        {/* <PromoComponent.Card.Content>
+        <PromoComponent.Card.Content>
           <PromoComponent.Card.Title>
             <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
               <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
@@ -100,13 +100,13 @@ const Promo = () => {
               </span>
             </PromoComponent.Card.Link>
           </PromoComponent.Card.Title>
-          <PromoComponent.Card.Description>
+          {/* <PromoComponent.Card.Description>
             {description}
           </PromoComponent.Card.Description>
           <PromoComponent.Card.EpisodesText dir={dir}>
             {label}
-          </PromoComponent.Card.EpisodesText>
-        </PromoComponent.Card.Content> */}
+          </PromoComponent.Card.EpisodesText> */}
+        </PromoComponent.Card.Content>
       </PromoComponent.Card>
     </PromoComponent>
   );

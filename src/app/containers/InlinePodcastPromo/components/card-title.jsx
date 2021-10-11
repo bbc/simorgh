@@ -5,11 +5,19 @@ import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 
 const CardTitle = styled.h3`
-  ${({ script }) => getPica(script)}
   ${({ service }) => getSerifMedium(service)}
-  margin-top: 0;
-  margin-bottom: ${GEL_SPACING};
-  color: ${C_EBON};
+  display: inline-block;
+  width: 145px;
+  height: 20px;
+  margin: 4px 103.5px 5px 9.5px;
+  font-family: BBCReithSerif;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #222;
 `;
 
 export default CardTitle;

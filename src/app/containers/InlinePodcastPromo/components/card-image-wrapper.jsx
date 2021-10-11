@@ -8,9 +8,10 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardImageWrapper = styled.div`
+  display: inline-block;
   width: 243px;
   height: 239px;
-  margin: 8px 0 31px 8px;
+  margin: 8px 0 0 8px;
 `;
 
 export default CardImageWrapper;
