@@ -3,6 +3,7 @@ import { C_GHOST, C_EBON } from '@bbc/psammead-styles/colours';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 const Card = styled.div`
+  display: inline-block;
   width: 258px;
   height: 366px;
   margin: 11px 0 0 8px;
