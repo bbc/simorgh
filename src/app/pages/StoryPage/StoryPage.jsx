@@ -40,7 +40,7 @@ import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
-import InlinePodcastPromo from '#containers/PodcastPromo/inline';
+import InlinePodcastPromo from '#containers/InlinePodcastPromo/components/card';
 
 import {
   getFirstPublished,
