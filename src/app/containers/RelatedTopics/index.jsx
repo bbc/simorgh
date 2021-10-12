@@ -118,7 +118,7 @@ RelatedTopics.defaultProps = {
   mobileDivider: true,
   bar: true,
   className: null,
-  backgroundColour: C_WHITE,
+  backgroundColour: null,
 };
 
 export default RelatedTopics;

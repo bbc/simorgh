@@ -24,7 +24,6 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
-import { C_GHOST } from '@bbc/psammead-styles/colours';
 
 import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
@@ -281,7 +280,7 @@ CpsOnwardJourney.defaultProps = {
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
-  sectionLabelBackground: C_GHOST,
+  sectionLabelBackground: null,
   skipLink: null,
   eventTrackingData: null,
 };
