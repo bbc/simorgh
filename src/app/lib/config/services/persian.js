@@ -66,15 +66,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'داستان انقلاب به روایت بی‌ بی سی',
-      brandDescription: 'مجموعه داستان انقلاب از آرشیو رادیوی بی بی سی',
+      brandTitle: 'به عبارت دیگر',
+      brandDescription:
+        'گفتگو با چهارهای سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0703j1b.jpg',
-        alt: 'داستان انقلاب به روایت بی‌ بی سی',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
+        alt: 'پادکست',
       },
       linkLabel: {
         text: 'برنامه ها',
-        href: 'https://www.bbc.com/persian/podcasts/p0703hz7',
+        href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
       },
     },
     translations: {
