@@ -40,6 +40,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
 import {
   getArticleId,
   getHeadline,
@@ -55,7 +56,9 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 
-import ArticlePageGrid, { Primary, Secondary } from './ArticlePageGrid';
+import SecondaryColumn from './SecondaryColumn';
+
+import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 
 const componentsToRender = {
   headline: headings,
@@ -189,7 +192,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               />
             )}
           </Primary>
-          <Secondary>Hello World</Secondary>
+          <SecondaryColumn pageData={pageData} />
         </ArticlePageGrid>
       </Main>
 

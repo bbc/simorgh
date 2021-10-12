@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, oneOf, oneOfType } from 'prop-types';
+import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import { pathOr } from 'ramda';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { C_WHITE } from '@bbc/psammead-styles/colours';
+
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
@@ -72,7 +74,11 @@ PromoComponent.defaultProps = {
   dir: 'ltr',
 };
 
-const FeaturesAnalysis = ({ content, parentColumns }) => {
+const FeaturesAnalysis = ({
+  content,
+  parentColumns,
+  sectionLabelBackground,
+}) => {
   const { translations } = useContext(ServiceContext);
 
   const title = pathOr(
@@ -90,6 +96,7 @@ const FeaturesAnalysis = ({ content, parentColumns }) => {
       promoComponent={PromoComponent}
       promoListComponent={PromoListComponent}
       columnType="secondary"
+      sectionLabelBackground={sectionLabelBackground}
     />
   );
 };
@@ -104,11 +111,13 @@ FeaturesAnalysis.propTypes = {
     group4: number,
     group5: number,
   }),
+  sectionLabelBackground: string,
 };
 
 FeaturesAnalysis.defaultProps = {
   content: [],
   parentColumns: null,
+  sectionLabelBackground: C_WHITE,
 };
 
 export default FeaturesAnalysis;

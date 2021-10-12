@@ -8,50 +8,15 @@ import { GEL_SPACING_QUAD } from '@bbc/gel-foundations/spacings';
 
 import Grid, { GelPageGrid } from '#components/Grid';
 
-const gridColumns = {
-  group0: 8,
-  group1: 8,
-  group2: 8,
-  group3: 8,
-  group4: 12,
-  group5: 12,
-};
+const gridConfig = (...values) =>
+  Object.fromEntries(values.map((value, index) => [`group${index}`, value]));
 
-const gridMargins = {
-  group0: false,
-  group1: false,
-  group2: false,
-  group3: false,
-  group4: true,
-  group5: true,
-};
+const gridColumns = gridConfig(8, 8, 8, 8, 12, 12);
+const gridMargins = gridConfig(false, false, false, false, true, true);
+const gridOffset = gridConfig(0, 0, 0, 0, 0, 0);
 
-const gridOffset = {
-  group0: 0,
-  group1: 0,
-  group2: 0,
-  group3: 0,
-  group4: 0,
-  group5: 0,
-};
-
-const gridColsMain = {
-  group0: 8,
-  group1: 8,
-  group2: 8,
-  group3: 8,
-  group4: 8,
-  group5: 8,
-};
-
-const gridColsSecondary = {
-  group0: 8,
-  group1: 8,
-  group2: 8,
-  group3: 8,
-  group4: 4,
-  group5: 4,
-};
+const gridColumnsPrimary = gridConfig(8, 8, 8, 8, 8, 8);
+export const gridColumnsSecondary = gridConfig(8, 8, 8, 8, 4, 4);
 
 const StyledGelPageGrid = styled(GelPageGrid)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -83,7 +48,7 @@ const GridPrimaryColumn = styled(Grid)`
 export const Primary = props => (
   <GridPrimaryColumn
     item
-    columns={gridColsMain}
+    columns={gridColumnsPrimary}
     startOffset={gridOffset}
     parentColumns={gridColumns}
     {...props}
@@ -99,7 +64,7 @@ const GridSecondaryColumn = styled(Grid)`
 export const Secondary = props => (
   <GridSecondaryColumn
     item
-    columns={gridColsSecondary}
+    columns={gridColumnsSecondary}
     startOffset={gridOffset}
     parentColumns={gridColumns}
     {...props}
