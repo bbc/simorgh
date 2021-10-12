@@ -34,7 +34,7 @@ const SecondaryColumn = ({ pageData }) => {
   return (
     <Secondary>
       {topStoriesContent && (
-        <ResponsiveComponentWrapper>
+        <ResponsiveComponentWrapper data-testid="top-stories">
           <TopStories
             content={topStoriesContent}
             parentColumns={gridColumnsSecondary}
@@ -43,7 +43,7 @@ const SecondaryColumn = ({ pageData }) => {
         </ResponsiveComponentWrapper>
       )}
       {featuresContent && (
-        <ResponsiveComponentWrapper>
+        <ResponsiveComponentWrapper data-testid="features">
           <FeaturesAnalysis
             content={featuresContent}
             parentColumns={gridColumnsSecondary}
