@@ -4,8 +4,6 @@ import articleJson from '#data/pidgin/articles/cwl08rd38l6o.json';
 import secondaryColumnJson from '#data/pidgin/secondaryColumn/index.json';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
-// fetch.mockResponse(JSON.stringify(articleJson));
-
 it('should return essential data for a page to render', async () => {
   fetchMock.mock(
     'http://localhost/pidgin/articles/mock-article-path.json',
