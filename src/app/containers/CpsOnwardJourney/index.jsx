@@ -203,8 +203,6 @@ const CpsOnwardJourney = ({
   const hasSingleContent = content.length === 1;
   const [singleContent] = content;
 
-  console.log('slb', sectionLabelBackground);
-
   return (
     <CpsOnwardJourneyWrapper>
       <OptionallyRenderedSkipWrapper skipLink={skipLink} service={service}>
