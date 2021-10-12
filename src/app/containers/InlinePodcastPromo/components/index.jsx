@@ -28,7 +28,7 @@ const Wrapper = styled.section`
   width: 115px;
   height: 370px;
   margin: 10px 6px 6px 8px;
-  padding: 12px 9.5px 8px 0.5px;
+  padding: 12px 9.5px 8px 9.5px;
 
   @media (min-width: 320px) {
     width: 150px;
@@ -43,7 +43,7 @@ const Wrapper = styled.section`
     width: 275px;
     height: auto;
     margin: 11px 16px 31px 16px;
-    padding: 12px 9.5px 8px 0.5px;
+    padding: 12px 9.5px 8px 9.5px;
   }
 `;
 

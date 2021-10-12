@@ -6,7 +6,7 @@ const Card = styled.div`
   position: relative;
   width: 258px;
   height: auto;
-  margin: 11px 0 0 8px;
+  margin: 11px 0 0 0;
   padding: 0 7px 13px 0;
   box-shadow: 0 0 5px 5px rgba(34, 34, 34, 0.03);
   background-color: ${C_GHOST};

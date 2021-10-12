@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
@@ -24,17 +23,11 @@ const Heading = styled.h2`
   }
 `;
 
-const Wrapper = styled.div`
-  padding: 5px 10.3px 0px 9px;
-`;
-
 const Title = ({ children, ...props }) => (
-  <Wrapper>
-    <Heading {...props}>
-      {mediaIcons.podcast}
-      {children}
-    </Heading>
-  </Wrapper>
+  <Heading {...props}>
+    {mediaIcons.podcast}
+    {children}
+  </Heading>
 );
 
 Title.propTypes = {
