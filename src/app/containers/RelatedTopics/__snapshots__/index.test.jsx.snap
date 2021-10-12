@@ -119,7 +119,6 @@ exports[`Expected use should render correctly with a single tag 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #FFFFFF;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -398,7 +397,6 @@ exports[`Expected use should render correctly with multiple tags 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #FFFFFF;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
