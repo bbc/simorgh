@@ -7,6 +7,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`
@@ -29,6 +30,7 @@ const MostReadSectionLabel = ({ mobileDivider }) => {
       service={service}
       dir={dir}
       mobileDivider={mobileDivider}
+      backgroundColor={C_GREY_2}
     >
       {header}
     </SectionLabelWithMargin>
