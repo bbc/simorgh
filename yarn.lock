@@ -2338,9 +2338,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-topic-tags@npm:1.0.9":
-  version: 1.0.9
-  resolution: "@bbc/psammead-topic-tags@npm:1.0.9"
+"@bbc/psammead-topic-tags@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@bbc/psammead-topic-tags@npm:1.1.0"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.1
@@ -2348,7 +2348,7 @@ __metadata:
     "@emotion/styled": ^11.1.5
     prop-types: ^15.6.2
     react: ">=16.9.0"
-  checksum: 888217c4e1a7ee3b1b2e105a7defdaa19c6214cfe47872ac779ec528982721dae00c6bdb6c822b537d04966d7bb31e05b34595533a8fa53560ac1c563a71a1ae
+  checksum: 19099dc85b407d63e19fda943582bc8fb6a52c17c244f0829832729378ceae1c822d71eff74eb69d4982a86514dedaffb8611e320949dd8240b6475259b8e55c
   languageName: node
   linkType: hard
 
@@ -19479,7 +19479,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-test-helpers": 6.0.5
     "@bbc/psammead-timestamp": 4.0.28
     "@bbc/psammead-timestamp-container": 5.0.39
-    "@bbc/psammead-topic-tags": 1.0.9
+    "@bbc/psammead-topic-tags": 1.1.0
     "@bbc/psammead-useful-links": 3.0.29
     "@bbc/psammead-visually-hidden-text": 2.0.7
     "@bbc/web-vitals": 1.1.0
