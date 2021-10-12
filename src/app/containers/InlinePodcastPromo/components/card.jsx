@@ -10,6 +10,12 @@ const Card = styled.div`
   padding: 0 7px 13px 0;
   box-shadow: 0 0 5px 5px rgba(34, 34, 34, 0.03);
   background-color: ${C_GHOST};
+
+  &:hover {
+    .podcast-promo--hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 export default Card;
