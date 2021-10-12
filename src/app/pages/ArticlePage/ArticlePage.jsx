@@ -99,10 +99,10 @@ const Main = styled.main`
 `;
 
 const StyledRelatedTopics = styled(RelatedTopics)`
-  margin-top: ${GEL_SPACING_DBL};
+  margin: ${GEL_SPACING_DBL};
   padding-bottom: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
+    margin: ${GEL_SPACING_QUAD} 0;
     padding-bottom: ${GEL_SPACING_QUAD};
   }
 `;
@@ -185,7 +185,6 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               <StyledRelatedTopics
                 topics={topics}
                 mobileDivider={false}
-                bar
                 backgroundColour={C_GREY_2}
               />
             )}

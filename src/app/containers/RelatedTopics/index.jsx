@@ -70,7 +70,11 @@ const RelatedTopics = ({
         >
           {heading}
         </StyledSectionLabel>
-        <TopicTags service={service} script={script}>
+        <TopicTags
+          service={service}
+          script={script}
+          tagBackgroundColour={C_WHITE}
+        >
           {topics.length === 1 ? (
             <TopicTag
               name={topics[0].topicName}
