@@ -1,0 +1,1388 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_persian_radio/p036kbdd",
+      "locators": {
+        "pid": "p09x79bd",
+        "brandPid": "p036kbdd"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_persian_radio",
+      "language": "fa",
+      "lastUpdated": 1632997887139,
+      "firstPublished": 1632902691000,
+      "lastPublished": 1632902691000,
+      "timestamp": 1632902691000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "به عبارت دیگر - BBC News فارسی",
+        "pageIdentifier": "persian.bbc_persian_radio.podcasts.programmes.p036kbdd.page",
+        "producerId": "69",
+        "contentType": "player-episode",
+        "producer": "PERSIAN"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "به عبارت دیگر",
+      "releaseDateTimeStamp": 1632873600000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09x79bd",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "سمیع مهدی، روزنامه‌نگار برجسته و برنده جایزه مرکز بین‌المللی خبرنگاران",
+            "long": "با روی کار آمدن مجدد طالبان جامعهٔ ژورنالیست‌های افغانستان به شدت نگران پایمال شدن دستاوردهای بیست سال گذشته‌اند: شمار زیادی نشریه، کانال‌های متعدد تلویزیونی و رادیویی، و قانون‌هایی در جهت تثبیت و پاسداری از آزادی بیان. سمیع مهدی ژورنالیست برجسته و برندهٔ جایزۀ مرکز بین‌المللی خبرنگاران که خود در بیست سال گذشته در شکوفائی ژورنالیسم کشورش نقش مؤثری داشته، هم نگران است و هم امیدوار به آینده:‌ «فکر می‌کنم طالبان درسی که از دهه نود گرفتند...این است که در انزوا امکان ادامه حکومت ندارند» و « طالبها اگر تمام فضا را هم در افغانستان ببندند، کار خبرنگاران افغانستان در بیرون از مرزها ادامه خواهد یافت». سمیع مهدی این هفته در برنامه به عبارت دیگر."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09x78qb",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 1628,
+              "durationISO8601": "PT27M8S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1632902580000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "سمیع مهدی، بلاتکلیفی ژورنالیسم در افغانستان و نگرانی‌ها",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "به عبارت دیگر"
+      },
+      "locators": {
+        "pid": "p09x79bd",
+        "brandPid": "p036kbdd"
+      },
+      "media": {
+        "id": "p09x79bd",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "سمیع مهدی، روزنامه‌نگار برجسته و برنده جایزه مرکز بین‌المللی خبرنگاران",
+          "long": "با روی کار آمدن مجدد طالبان جامعهٔ ژورنالیست‌های افغانستان به شدت نگران پایمال شدن دستاوردهای بیست سال گذشته‌اند: شمار زیادی نشریه، کانال‌های متعدد تلویزیونی و رادیویی، و قانون‌هایی در جهت تثبیت و پاسداری از آزادی بیان. سمیع مهدی ژورنالیست برجسته و برندهٔ جایزۀ مرکز بین‌المللی خبرنگاران که خود در بیست سال گذشته در شکوفائی ژورنالیسم کشورش نقش مؤثری داشته، هم نگران است و هم امیدوار به آینده:‌ «فکر می‌کنم طالبان درسی که از دهه نود گرفتند...این است که در انزوا امکان ادامه حکومت ندارند» و « طالبها اگر تمام فضا را هم در افغانستان ببندند، کار خبرنگاران افغانستان در بیرون از مرزها ادامه خواهد یافت». سمیع مهدی این هفته در برنامه به عبارت دیگر."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09x78qb",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 1628,
+            "durationISO8601": "PT27M8S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1632902580000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "سمیع مهدی، بلاتکلیفی ژورنالیسم در افغانستان و نگرانی‌ها",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1632873600000,
+      "brand": {
+        "pid": "p036kbdd",
+        "title": "به عبارت دیگر"
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09x79bd",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Persian",
+        "uri": "/persian",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09wm3kc",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09wm3kc",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "با پیروزی مجدد طالبان برافغانستان، اهل موسیقی کشور بشدت نگران آینده این هنر مردمی هستند.",
+                  "long": "با پیروزی مجدد طالبان برافغانستان، اهل موسیقی کشور بشدت نگران آینده این هنر مردمی هستند. احمد ناصر سرمست ، بنیانگذار و رئیس انستیتوی ملی موسیقی افغانستان که با تلاش‌های بی وقفه‌اش موسیقی کشور در سالهای گذشته دورهٔ‌ نوینی را آغاز کرد باور دارد که:« هیچکسی توان خفه‌کردن موسیقی را نداشته و نخواهد داشت. موسیقی همیشه جزء جدایی‌ناپذیر جامعه فرهنگی و اجتماعی افغانستان بوده، این جزء جدایی‌ناپذیر جامعه افغانستان باقی می‌ماند» آینده موسیقی افغانستان از نگاه احمدناصر سرمست در گفت و گو با عنایت فانی در برنامه به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09wm3cq",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1598,
+                    "durationISO8601": "PT26M38S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1632297840000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "ترس و امید اهل موسیقی افغانستان؛ احمد ناصر سرمست",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1632268800000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09wm3kc",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09vzzpy",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09vzzpy",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "نگاهی به آینده مبهم زنان افغانستان از زبان امیلیا اسپارتاک در برنامه به عبارت دیگر",
+                  "long": "مقامات مختلف طالبان مرتب تکرار کرده‌اند که زنها می‌توانند در همهٔ سطوح به جز به عنوان وزیر فعال باشند. ولی چرا کسی وعده های طالبان را باور نمی‌کند؟ امیلیا اسپارتاک که فعالیت‌های طولانی سیاسی‌ در جنبش زنان افغانستان را با سازماندهی و شرکت در اعتراضات دانشجویی به جنگ ویتنام شروع کرد و بعدها یکی از فعالان سازمان دمکراتیک زنان افغانستان شد، می‌گوید که «می‌گن تصمیم بر این است که زنان سهم گیرند در کار، اما در یک چوکات شریعت اسلامی و شریعت اسلامی ... اینجا در افغانستان...مشکل بسیار خاص خود را دارد... زنهای افغانستان از تجربه حاکمیت اول (طالبان) تجربه خیلی خرابی دارند». نگاهی به آینده مبهم زنان افغانستان از زبان امیلیا اسپارتاک در برنامه این هفته به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vzzbt",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1608,
+                    "durationISO8601": "PT26M48S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631695560000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "آینده پرابهام زنان افغانستان؛ امیلیا اسپارتاک",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631664000000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09vzzpy",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09vc1d4",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09vc1d4",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "باز پخش گفت‌و‌گو با فهیم دشتی روزنامه‌نگار و شاهد ترور احمد شاه مسعود دربرنامه این هفته",
+                  "long": "فهیم دشتی روزنامه نگار برجسته‌ای بود که از جوانی همواره در میدان مبارزه حضور داشت. تا زمان ترور احمدشاه مسعود در کنار او در پنجشیر، از سال ۲۰۰۱ به بعد قلم بدست در کابل و پس از ورود دوباره طالبان به کابل به همراه احمد مسعود دوباره در پنجشیر پرچم مبارزه را بلند کرد، جایی که در درگیری‌های نظامی کشته شد. فهیم دشتی تا پایان عمر عمیقا به آرمان های فرمانده‌اش احمد شاه مسعود وفادار بود. او در جریان ترور مسعود زخمی شد. ۹ سال پیش او در گفت و گو با برنامه به عبارت دیگر در مقابل سوالی که اگر هنگام انفجار برج های دوقلو در نیویورک «آمرصاحب» (فرمانده احمدشاه مسعود) زنده بود او در برابر واکنش امریکا چه سیاستی پیش می‌گرفت گفت: «حضور خارجی‌ها در افغانستان ناممکن بود، یک... دوم یک حلقه فاسدی که...برافغانستان حکومت می‌کنه...به هیچ عنوان نمی‌توانست در قدرت حضور بیابد». باز پخش این گفت‌و‌گو در برنامه به عبارت دیگر این هفته."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vc110",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1557,
+                    "durationISO8601": "PT25M57S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1631089620000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "یاور اسطوره پنجشیر که در پنجشیر کشته شد؛ فهیم دشتی",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631059200000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09vc1d4",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09ttfvn",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09ttfvn",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Why Kabul fell without any resistance?",
+                  "long": "Was the fall of Kabul a result of a behind the scene deal between Americans and Taleban or the American were cheated by Taleban? Now that Taleban are in control what should and can be done to protect millions of Afghans who are living in fear and are in hiding?\nSoon after Taleban took Kabul, Sir Nicholas Kay, the former UK ambassador to Afghanistan said: “I hang my head in shame at what is happening in Afghanistan”.\nWhy in his view the Americans withdrew from Afghanistan with lightning speed and paved the way for Taleban to take over? He is the guest in this episode of Be-Ebarate-Digar."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09ttfsq",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1692,
+                    "durationISO8601": "PT28M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630545660000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Be-Ebarate-Digar: Sir Nicholas Kay",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630540800000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09ttfvn",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09ttfbl",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09ttfbl",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "زمینهٔ حاکم‌شدن دوباره طالبان درافغانستان چگونه فراهم شد؟‌",
+                  "long": "زمینهٔ حاکم‌شدن دوباره طالبان درافغانستان چگونه فراهم شد؟‌ سِر نیکلاس کی، سفیر پیشین بریتانیا در افغانستان و نمایندهٔ ارشد پیشین ناتو در کابل که در باره شرایط امروز افغانستان گفته شرمسار است، می‌گوید مشکل از توافق‌نامه صلح با طالبان شروع شد: «مشکل این بود که توافقی که ... امضا کردند، توافقی بسیار ضعیف و به سود طالبان بود. هیچ قید و شرط سیاسی که به راه‌حلی سیاسی میان دولت افغانستان و طالبان منجر بشه در اون ذکر نشده بود». سِر نیکلاس کی مهمان برنامه به عبارت دیگر این هفته است."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09ttf9l",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1587,
+                    "durationISO8601": "PT26M27S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1630543920000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "سر نیکلاس کی، سفیر پیشین بریتانیا در افغانستان",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1630540800000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09ttfbl",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09t43dz",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09t43dz",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "لطیف پدرام سیاستمدار، شاعر و رئیس حزب کنگرهٔ ملی افغانستان،مهمان این برنامه به عبارت دیگر",
+                  "long": "لطیف پدرام سیاستمدار،  شاعر و رئیس حزب کنگرهٔ ملی افغانستان و مهمان این برنامه به عبارت دیگر، یکی از اعضای هیئتی از سیاستمداران افغان است که در همان روز تسخیر کابل توسط طالبان با طرح‌هایی برای صلح و مذاکره با مقامات ارشد پاکستان وارد آن کشور شدند: «همه ما یک نظر خیلی مشخص داشتیم...و آن این بود که خشونت نشود درافغانستان یک، و افغانستان باید غیر متمرکز بشود...» وظیفه‌ای که به نظر آقای پدرام عمدتا بر دوش خود مردم افغانستان است: «خوب این وظیفه رهبران سیاسی افغان افغانستان است که باید در کابل کنفرانس بگیرند، اعلام موضع بکنند و بگویند که بله ما می خواهیم یک...دولت غیر متمرکز بسازیم». طرح‌های این گروه چه بود؟ و آیا با تسلط کامل طالبان بر افغانستان این مذاکرات تاثیری بر اوضاع خواهد داشت؟ \nلطیف پدرام در این برنامه به عبارت دیگر از این مذاکرات می‌گوید"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09t431f",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1605,
+                    "durationISO8601": "PT26M45S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629879480000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "لطیف پدرام، رئیس کنگره ملی افغانستان",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629849600000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09t43dz",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09sj3f9",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09sj3f9",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "«ما زنان در بیست سال گذشته بلد شدیم که چطورشبیه یک آهواز درون برکه پراز تمساح آب بخوریم»",
+                  "long": "«ما زنان در بیست سال گذشته بلد شدیم که چطور شبیه یک آهو از درون برکه پر از تمساح آب بخوریم». این جمله‌ای است از ویدا ساغری از فعالان حقوق زنان افغانستان در گفت و گو با عنایت فانی با این امید که زنان کشورش در دوره پیش رو همچنان به مبارزه برای احقاق حقوق خود ادامه دهند، بویژه حقوقی که در بیست سال گذشته، هم در قانون اساسی افغانستان و هم در قوانین مدنی آن کشور بدست آمد و باعث درخشش زنان بسیاری در عرصه های مختلف سیاسی و اجتماعی شد. این‌روزها با تسلط سریع و کامل طالبان بر افغانستان آینده زنان و حقوق آنها مانند بسیاری مسائل دیگر جامعه در ابهام است. ویدا ساغری امیدوار است که جهان کشورش را برای حفظ حقوق بشر یاری دهد: « وظیفه جهان یک وظیفه حقوق‌بشری است...افغانستان را از نگاه حقوق بشر تنها نگذارند». گفت و گو با ویدا ساغری پیش از تسلط کامل طالبان بر افغانستان ضبط شده است."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09sj306",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1625,
+                    "durationISO8601": "PT27M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1629276660000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "ویدا ساغری: سرنوشت دستاوردهای زنان افغانستان در دوره پیش رو",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629244800000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09sj3f9",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09rz4sf",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09rz4sf",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "آیا باید درانتظار خوزستان‌های جدیدی بود؟‌ کاوه مدنی",
+                  "long": "آیا ایران باید در انتظار خوزستان‌های جدیدی باشد؟ دکتر کاوه مدنی، یکی از متخصصان برجسته محیط زیست و مدیریت آب با شهرت جهانی معتقد است: \"ما همین الان هم شاهد خوزستان‌های دیگری هستیم و بودیم و سالها ما ندیدیم...بعضی وقتها، بعضی اتفاقات موجب میشن که شما این درد را ببینی...\" و \"بحث توسعه نامتوازن اصلا درد مملکت است و وقتی بحث توسعه متوازن داشته باشی، حتما تبعیض داری\" . کاوه مدنی که مدتی با سمت معاون سازمان محیط زیست، سمت استادی در لندن را رها کرده و به ایران برگشت اما دوباره ناچار به ترک کشور شد در برنامه به عبارت دیگر این هفته در گفت و گو با عنایت فانی می‌گوید که بیشتر\"خرد جمعی\" این وضع را در ایران شکل داده، \"باید روی کاهش مصرف تمرکز کرد و شرایط جدید را پذیرفت\"."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09rz4br",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1627,
+                    "durationISO8601": "PT27M7S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1628704020000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "آیا باید درانتظار خوزستان‌های جدیدی بود؟‌ کاوه مدنی",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1628640000000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09rz4sf",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09qmhmf",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09qmhmf",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "بیست سال بعد از سرنگونی حکومت طالبان انگار افغانستان به سرجای اول خود برگشته است",
+                  "long": "بیست سال بعد از سرنگونی حکومت طالبان انگار افغانستان به سرجای اول خود برگشته است.  مذاکرات صلح به نتیجه نرسیده و کابینهٔ اشرف غنی نه فقط در مقابله با فساد اداری ناموفق بوده بلکه خود با اتهاماتی رو به روست.\nدکتر فضل محمود فضلی، رئیس عمومی اداره امور ریاست جمهوری و یکی از افراد برجسته و بسیار نزدیک به رئیس جمهوری است. او که متهم به بودن یک ضلع در مثلث قدرت سه نفره در حکومت است، به پرسش‌های عنایت فانی در این موارد پاسخ می‌دهد: «منبع فساد تنها حکومت نبود. ما اینجا سیاسیونی داشتیم که در آغاز نظام فعلی با جامعه جهانی کمک کردند...که آنها هیچوقت آماده به شفافیت حساب‌دهی و مبارزه با فساد نبودند». فضل محمود فضلی در برنامه این هفته به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09qmfn8",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1625,
+                    "durationISO8601": "PT27M5S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1627461360000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "افغانستان؛ بازگشت به بیست سال پیش؟ فضل محمود فضلی",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1627430400000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09qmhmf",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09pzy4b",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09pzy4b",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "بخش دوم گفت و گو با محمد امینی در برنامه به عبارت دیگر این هفته.",
+                  "long": "چرا رضاشاه به آرمان ساختن دولت ملی مشروطه وفادار ماند ولی به آمال دیگر مشروطه‌خواهان-پایان دادن به خودکامگی- نه تنها ‌توجهی نکرد، بلکه خود به مستبدی خودکامه تبدیل شد؟ و آیا این خودکامگی روند مدرنیزاسیون ایران را کند کرد یا به آن سرعت بخشید؟ محمد امینی پژوهشگر تاریخ ایران می‌گوید: «آدمی مانند رضاشاه که در فرهنگ مشروطه‌خواهی پرورش نیافته بود با دمکراسی میانه‌ای نداشت...آدم بسیار با هوشی بود...ایران‌دوست بود و می‌خواست ایران پیشرفت پیدا بکنه اما زیر سایه چکمه‌های او». بخش دوم گفت و گو با محمد امینی در برنامه به عبارت دیگر این هفته."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09pzxw6",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1562,
+                    "durationISO8601": "PT26M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626856440000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "رضاشاه و آرمان‌های مشروطه‌- محمد امینی، بخش دوم",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626825600000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09pzy4b",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09pcn6h",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09pcn6h",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "بخش اول گفت‌وگو با محمد امینی در این برنامه به عبارت دیگر",
+                  "long": "آیا ظهوررضاشاه نقطه عطفی در توسعه مدنی ایران در قرن چهاردهم خورشیدی بود یا عاملی بازدارنده در مقابل آزادی‌خواهی مشروطه‌طلبان؟ و چرا اندیشه جمهوری‌خواهی آن دوران عمری کوتاه داشت و به خودکامگی منجر شد؟ محمد امینی، پژوهشگر تاریخ ایران و نویسنده باور دارد که « برای انجام این پروژه‌های مدرن‌سازی به یک سرپرستی جدی نیازمند بودیم و این سرپرستی قدرتمند را دولت رضاشاه بوجود آورد» و «این جمهوری که در آن هنگام در ایران مطرح شد در برابر دمکراسی بود، یعنی جمهوری دمکراتیک نبود». بخش اول گفت‌وگو با محمد امینی در این برنامه به عبارت دیگر"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09pcmbv",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1578,
+                    "durationISO8601": "PT26M18S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626251220000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "ظهور رضاشاه: نقطه عطفی در توسعه مدنی یا ترمزی برای آزادی‌خواهی؟ محمد امینی، بخش اول",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626220800000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09pcn6h",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09nn9l8",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09nn9l8",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "آینده جامعه و کشور ایران از نگاه حاتم قادری در برنامه این هفته به عبارت دیگر",
+                  "long": "آیا نتیجه‌ انتخابات اخیر ایران و یکدست شدن حکومت می‌تواند آنطور که طیف موسوم به اصول‌گرا با شادی می‌گوید منجر به برون‌رفت جامعه ایران از بحران‌ها و نابسامانی‌ها شود؟ حاتم قادری، استاد پیشین دانشگاه تربیت مدرس و پژوهشگر فلسفۀ سیاسی از جمله کسانی است که برخلاف این آینده کشور را تیره و تار می بیند: «الان جامعه شکاف‌های اجتماعی گسترده‌ای را تجربه می‌کند و این می‌تواند تبعات بدی داشته باشد. همین اتفاق زمان شاه هم بود».  و «مسئولان نظام از جمله خود آقای خامنه‌ای هم خوب می‌دانند که چه آینده تلخ و تیره‌ای چه در انتظار نظام و چه جامعه ایران و چه کلیت سرزمین ایرانه». این استاد دانشگاه در پیش‌بینی خود پا را از این هم فراتر می‌گذارد: «ما یک مقدار دوران موقعیت‌بندی تاریخی‌مون را برای رسیدن به یک جامعه دموکراتیک از دست دادیم». آینده جامعه و کشور ایران از نگاه حاتم قادری در برنامه این هفته به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09nn820",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1614,
+                    "durationISO8601": "PT26M54S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1625646720000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "آینده جامعه و کشور ایران بعد از انتخابات؛ حاتم قادری",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1625616000000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09nn9l8",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09my0bt",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09my0bt",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "پرویز کاردان؛ چهرۀ ماندگار هنرهای نمایشی - به عبارت دیگر ویژه",
+                  "long": "پرویز کاردان،  چهرۀ ماندگار تئاتر، سینما و تلویزیون ایران اخیرا در سن ۸۴ سالگی بر اثر سکته قلبی در لس‌آنجلس آمریکا درگذشت. او که در نوجوانی پایش با کار تحقیقی مختصری در بارۀ خیمه‌شب بازی سنتی شیرازی به ادارۀ فرهنگ و هنر و از آنجا به ادارۀ تئاتر باز شده بود، بعد از اجراهای متعدد تئاتری از جمله از اولین اجراهای در بستۀ ژان پل سارتر و در انتظار گودوی سموئل بکت به تلویزیون رفت و در آنجا هم کارنامۀ درخشانی از خود به جا گذاشت. نام پرویز کاردان بخصوص با خلق سریال‌های پربیننده تلویزیونی پیش از انقلاب، کارگردانی و بازی در آنها و خلق تیپ‌های پرطرفداری در هنر نمایشی ایران مثل سرکار استوار، قاطبه و مراد برقی گره خورده است. این چهره نامدار و محبوب تلویزیون، بعد از انقلاب ایران را ترک کرد و تا پایان زندگی در لس‌آنجلس به فعالیت‌های هنریش در حد ممکن ادامه داد. او پنج سال پیش از مرگش در یک گفت وگوی ویژه با عنایت فانی از برنامه به عبارت دیگر در مورد مشکلات کار در خارج از کشور گفت: «من همیشه سعی می کنم روی پاهام بایستم نه روی زانوهام و روی پاهام ایستادم». بازپخش این گفت و گو در برنامه به عبارت دیگر این هفته."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09my04w",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1649,
+                    "durationISO8601": "PT27M29S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1625038140000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "چهرۀ ماندگار هنرهای نمایشی ایران؛ پرویز کاردان",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1625011200000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09my0bt",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09m9c9l",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09m9c9l",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "چرا مردم پیروجوان هزاره مدتی است در افغانستان آماج خشن‌ترین حملاتندوهدفمند کشته می‌شوند‌",
+                  "long": "چرا مردم پیر و جوان هزاره مدتی است در افغانستان آماج خشن‌ترین حملاتند وهدفمند کشته می‌شوند؟‌ آیا این کشتارها آنطور که طرفداران «کمپین به نسل‌کشی قوم هزاره پایان دهید» می‌گویند، به معنی نسل کشی است؟‌ مهمان این برنامه به عبارت دیگر، محمد‌امین احمدی، استاد دانشگاه ابن‌سینای کابل و عضو هیئت  مذاکره‌کننده صلح با طالبان باور دارد که: «فقط یک عنصر در این نوع کشتارها قابلیت تحقیق بیشتر دارد و آن اینکه آیا قصد خاص مبنی بر نابودسازی جزئی یا کلی این قوم در انجام این اعمال هدفمند وجود دارد یا ندارد» و می افزاید که «اساسا این نوع خشونت‌ها...در تاریخ و فرهنگ به یک نوعی ریشه دارد». محمد‌امین احمدی مهمان برنامه به عبارت دیگر این هفته است."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09m9b8x",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1622,
+                    "durationISO8601": "PT27M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1624447200000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "کشتار هدفمند مردم هزاره در افغانستان؛ امین احمدی",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1624406400000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09m9c9l",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09m980h",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09m980h",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "سلول انفرادی، مصداق شکنجه سفید؛ نرگس محمدی، بخش دوم",
+                  "long": "نرگس محمدی، فعال حقوق بشر که بخشی از دوران زندان خود را در سلول انفرادی گذرانده، آن را مصداق شکنجه سفید می‌خواند:‌ «سلول انفرادی در واقع بخشی از اون شکنجه سفید، فرد محبوس در سلول انفرادی را به تردید و تزلزل رسوندنه و متاسفانه این اتفاق برای بسیاری از آدمها می‌افته». در بخش دوم گفت و گو با عنایت فانی، نرگس محمدی از تاثیرات سلول انفرادی بر روح و روان زندانی و آمال و آرزوهایش برای تحقق جامعه مدنی در ایران می‌گوید."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09m976j",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 2041,
+                    "durationISO8601": "PT34M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1624444680000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "سلول انفرادی، مصداق شکنجه سفید؛ نرگس محمدی، بخش دوم",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1624406400000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09m980h",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09m94xv",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09m94xv",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "نرگس محمدی بخش زیادی از عمرش را به سبب فعالیت‌های حقوق بشری در زندان گذرانده",
+                  "long": "نرگس محمدی بخش زیادی از عمرش را به سبب فعالیت‌های حقوق بشری در زندان گذرانده و چندماه پیش بعد از تحمل پنج سال و نیم حبس ممتد، بخشی از آن در انفرادی و همراه با محرومیت‌های گوناگون دیگراز زندان آزاد شد. « من فعالیت دیگه‌ای جز فعالیت برای حقوق بشر و تحقق صلح نداشتم و بر اساس همون من را محکوم کردند». با وجود آزادی او هنوز اجازه خروج از ایران برای دیدار با فرزندان و همسر خود را نیافته است: « ببینید وقتی که من این‌بار به انفرادی رفتم...شرایط مشابه همون سال ۱۳۹۱ بود...ولی این‌بار من مادر بودم و بچه من مریض بود و هیچ تماس تلفنی برای من برقرار نمی‌کردند...» این همه پایداری و تعهد به حقوق بشر از کجا سرچشمه می گیرد؟ بخش اول گفت و گو با نرگس محمدی در برنامه این هفته به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09m93cb",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1571,
+                    "durationISO8601": "PT26M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1624442640000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "نرگس محمدی؛ نماد پایداری برای تحقق صلح و حقوق بشر",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1624406400000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09m94xv",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09k9dqd",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09k9dqd",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "جنگ بی‌پایان در فلسطین؛ آیا آتش‌بسی که حالا برقرار ‌شده پایدار است؟",
+                  "long": "شعله‌های آتش جنگی که دهه‌هاست در سرزمین فلسطین افروخته شده هر چند یکبار زبانه می کشد، آتشی که همین چند هفته پیش  دوباره شعله کشید و منجر به مرگ ۲۴۸ فلسطینی در نوار غزه و ۱۳ نفر در اسرائیل شد. آیا آتش‌بسی که حالا برقرار ‌شده پایدار است؟ حسام زُملط، نماینده تشکیلات خودگردان فلسطین در لندن می‌گوید: \"ما به عنوان دولت فلسطینی وضعیت موجود در مناطق اشغالی رو به دیوان کیفری بین‌المللی ارجاع دادیم...چه کسانی سد راه تلاش‌های ما در دیوان کیفری بین‌المللی می‌شوند؟ آمریکا، بریتانیا.  نخست‌وزیر انگلیس، آقای جانسون، نامه‌ای نوشت به گروه‌های لابی اسرائیلی ... و گفت که ما نباید اسرائیل رو به دیوان کیفری بین‌المللی ببریم...ما از این ‌بی خیالی بین‌المللی خسته و بیزاریم. خسته و بیزار\".\nاگر بازیگران اصلی این جنگ تشکیلات حماس در نوار غزه و نتانیاهو، نخست‌وزیر اسرائیل هستند، آیا تشکیلات خودگردان فلسطین که روزی  آوازه‌اش در مبارزه با اسرائیل بسیار بلند بود، به ورطه‌ی بی‌اعتباری سیاسی افتاده؟ گفت و گوی استیون سکر از بخش جهانی بی بی سی با حسام زُملط در روزهای جنگ اخیر در برنامه به عبارت دیگر این هفته."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09k9crr",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1515,
+                    "durationISO8601": "PT25M15S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1622625960000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "جنگ بی‌پایان در فلسطین؛ حسام زُملط",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1622592000000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09k9dqd",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09jmp44",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09jmp44",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "مذاکرات ایران و آمریکا؛ موفق یا دشوار؟",
+                  "medium": "مذاکرات ایران و آمریکا بواسطه چند دولت اروپایی‌ در وین هنوز به نتیجه‌ای نرسیده است. در حالیکه ایران در مورد نتیجه این گفت‌و‌گوها همواره اظهار خوشبینی کرده است.",
+                  "long": "مذاکرات ایران و آمریکا بواسطه چند دولت اروپایی‌ در وین هنوز به نتیجه‌ای نرسیده است. در حالیکه ایران در مورد نتیجه این گفت‌و‌گوها همواره اظهار خوشبینی کرده، مقامات آمریکایی اغلب به پیچیده بودن آن اشاره دارند. آنتونی کوردزمن، رئیس موسسه برک در اندیشکده مطالعات استراتژیک واشینگتن و نویسنده کتابها و مقالات متعدد در مورد خاورمیانه و ایران، چند ماه پیش از شروع مذاکرات آن را دشوار توصیف کرده بود:‌ \"موضوع فقط این نیست که حالا ایران موشک‌هایی به مراتب قوی‌تر از زمانی داره که مذاکرات برای توافق آغاز شد. بلکه این هم هست که ایران می‌تونه به اهداف استراتژیک تا اندازه‌ای آسیب برسونه\". عنایت فانی در این برنامه به عبارت دیگر با آنتونی کوردزمن در مورد این مذاکرات به گفت و گو نشسته است."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09jmn9y",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1519,
+                    "durationISO8601": "PT25M19S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1622019780000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "مذاکرات ایران و آمریکا؛ موفق یا دشوار؟ آنتونی کوردزمن",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1621987200000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09jmp44",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09hzpld",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09hzpld",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "چه چیز باعث شد ایران وعربستان پای میز مذاکره بنشینند?",
+                  "long": "چه چیز باعث شد ایران وعربستان پای میز مذاکره بنشینند واگر این مذاکرات به نتیجه برسد چه حاصلی برای دو کشور خواهد داشت و چه تاثیری بر منطقه؟ خالد الدخیل استاد علوم سیاسی در دانشگاه ریاض و متفکر اصلاح‌طلب عربستانی باور دارد که \"ما دهه‌هاست که در این منطقه جنگ داشته‌ایم و این وضع هیچ‌وقت به حل مشکلی منجر نشده، بلکه اوضاع رو بدتر و بدتر کرده\". و\"ما خیلی چیزها داریم، ایرانی‌ها خیلی چیزها دارند؛ از جنبه‌ی اقتصادی، منابع طبیعی، منابع انسانی  که می‌تونیم ازشون بهره‌برداری کنیم. ... می‌تونیم به توسعه‌ی همدیگه کمک کنیم ...اما حالا ما از همه‌ اینها، از همه‌ این منابع، به دلیل مشکلات سیاسی، به دلیل نیروهای شبه‌نظامی و این جنگ‌ها محروم شده‌ایم\". گفت و گو با خالد الدخیل در برنامه این هفته به عبارت دیگر."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09hzn7q",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1602,
+                    "durationISO8601": "PT26M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1621415820000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "مذاکرات ایران و عربستان؛ خالد الدخیل",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1621382400000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09hzpld",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "به عبارت دیگر"
+              },
+              "locators": {
+                "pid": "p09hbj88",
+                "brandPid": "p036kbdd"
+              },
+              "media": {
+                "id": "p09hbj88",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "آیا می‌توان کودتای هفت ثور ۱۳۵۷ در افغانستان را تحول نامید؟",
+                  "long": "آیا می‌توان کودتای هفت ثور (اردیبهشت) ۱۳۵۷ و به قدرت رسیدن حزب چپگرای دمکراتیک خلق افغانستان که متمایل به شوروی بود را تحول نامید و آیا با آن دگرگونی، ساختار سیاسی افغانستان و جامعه آن کشور تغییری بنیادی کرد؟‌ زهرا لطفی، پژوهشگر و مدرس پیشین دانشگاه ابن‌سینای کابل که رساله دکترای خود را در مورد زمینه‌ به قدرت رسیدن این حزب نوشته، آن را یک تحول با پیامدهای جدی می‌داند: \"بله، بخاطر اینکه جامعه افغانستان به ناگهان دچار یک دگرگونی و تحول میشه. تحول را اگر به معنای مثبت اون خیلی زیاد نگیریم، بخاطر اینکه ما شاهد پیامدهای منفی این دگرگونی هم هستیم\". برنامه این هفته به عبارت دیگر به گفت و گوی عنایت فانی با زهرا لطفی اختصاص دارد."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09hbhgz",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1628,
+                    "durationISO8601": "PT27M8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1620812460000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "افغانستان و حزب دمکراتیک خلق؛ زهرا لطفی",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p036kbjs.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1620777600000,
+              "brand": {
+                "pid": "p036kbdd",
+                "title": "به عبارت دیگر"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_persian_radio/p09hbj88",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }
