@@ -6,7 +6,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
-const CardContent = styled.div`
-`;
+const CardContent = styled.div``;
 
 export default CardContent;

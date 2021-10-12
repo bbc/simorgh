@@ -23,8 +23,8 @@ const withPodcastContext = Component => props =>
   );
 
 const Wrapper = styled.section`
+  ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: #f4f4f4;
-  float: left;
   width: 115px;
   height: 370px;
   margin: 10px 6px 6px 8px;

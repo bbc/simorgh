@@ -75,6 +75,7 @@ const Promo = () => {
       service={service}
       role="region"
       aria-labelledby="podcast-promo"
+      dir={dir}
     >
       <PromoComponent.Title id="podcast-promo" dir={dir}>
         {podcastPromoTitle}
@@ -100,10 +101,10 @@ const Promo = () => {
               </span>
             </PromoComponent.Card.Link>
           </PromoComponent.Card.Title>
-          {/* <PromoComponent.Card.Description>
+          <PromoComponent.Card.Description>
             {description}
           </PromoComponent.Card.Description>
-          <PromoComponent.Card.EpisodesText dir={dir}>
+          {/* <PromoComponent.Card.EpisodesText dir={dir}>
             {label}
           </PromoComponent.Card.EpisodesText> */}
         </PromoComponent.Card.Content>

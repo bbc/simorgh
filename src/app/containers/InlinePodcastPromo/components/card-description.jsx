@@ -7,9 +7,11 @@ import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 const CardDescription = styled.p`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  max-width: 30rem;
-  color: ${C_METAL};
-  margin-top: ${GEL_SPACING};
+  width: 235px;
+  height: 54px;
+  margin: 5px 0 6px;
+  line-height: 1.2;
+  color: #6e6e73;
 `;
 
 export default CardDescription;
