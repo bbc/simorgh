@@ -104,9 +104,9 @@ const Promo = () => {
           <PromoComponent.Card.Description>
             {description}
           </PromoComponent.Card.Description>
-          {/* <PromoComponent.Card.EpisodesText dir={dir}>
+          <PromoComponent.Card.EpisodesText dir={dir}>
             {label}
-          </PromoComponent.Card.EpisodesText> */}
+          </PromoComponent.Card.EpisodesText>
         </PromoComponent.Card.Content>
       </PromoComponent.Card>
     </PromoComponent>

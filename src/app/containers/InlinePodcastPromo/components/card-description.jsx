@@ -8,8 +8,8 @@ const CardDescription = styled.p`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   width: 235px;
-  height: 54px;
-  margin: 5px 0 6px;
+  height: auto;
+  margin: 5px 9.5px 10.4px 9.5px;
   line-height: 1.2;
   color: #6e6e73;
 `;

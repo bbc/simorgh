@@ -41,7 +41,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 600px) {
     width: 275px;
-    height: 425px;
+    height: auto;
     margin: 11px 16px 31px 16px;
     padding: 12px 9.5px 8px 0.5px;
   }
