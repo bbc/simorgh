@@ -280,7 +280,7 @@ CpsOnwardJourney.defaultProps = {
   parentColumns: null,
   sectionLabelOverrideAs: null,
   sectionLabelBar: true,
-  sectionLabelBackground: null,
+  sectionLabelBackground: undefined,
   skipLink: null,
   eventTrackingData: null,
 };

@@ -116,7 +116,7 @@ FeaturesAnalysis.propTypes = {
 FeaturesAnalysis.defaultProps = {
   content: [],
   parentColumns: null,
-  sectionLabelBackground: null,
+  sectionLabelBackground: undefined,
 };
 
 export default FeaturesAnalysis;

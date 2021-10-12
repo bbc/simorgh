@@ -1699,6 +1699,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -2151,51 +2152,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
 @media (min-width: 63rem) {
   .emotion-464 {
     margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-476 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-476 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-476 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-476 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-476 {
-    padding-right: 1rem;
   }
 }
 
@@ -3793,7 +3749,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                             class="emotion-199 emotion-200"
                           >
                             <span
-                              class="emotion-476 emotion-202"
+                              class="emotion-201 emotion-202"
                               dir="ltr"
                               id="Most-Read"
                             >
@@ -9214,6 +9170,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -9648,51 +9605,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
 @media (min-width: 63rem) {
   .emotion-473 {
     margin-bottom: 1.5rem;
-  }
-}
-
-.emotion-485 {
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: #FDFDFD;
-  margin: 1rem 0;
-  padding-right: 0.5rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-485 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-485 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-485 {
-    margin: 0;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-485 {
-    padding-right: 1rem;
   }
 }
 
@@ -11327,7 +11239,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                             class="emotion-200 emotion-201"
                           >
                             <span
-                              class="emotion-485 emotion-203"
+                              class="emotion-202 emotion-203"
                               dir="ltr"
                               id="Most-Read"
                             >

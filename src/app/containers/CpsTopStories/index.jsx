@@ -109,7 +109,7 @@ TopStories.propTypes = {
 TopStories.defaultProps = {
   content: [],
   parentColumns: null,
-  sectionLabelBackground: null,
+  sectionLabelBackground: undefined,
 };
 
 export default TopStories;

@@ -315,6 +315,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
@@ -1258,6 +1259,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #FDFDFD;
   margin: 1rem 0;
   padding-right: 0.5rem;
   display: -webkit-box;
