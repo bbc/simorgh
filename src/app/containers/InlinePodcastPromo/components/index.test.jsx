@@ -18,8 +18,8 @@ const assertTypeOfElement = (Component, type) => {
 };
 
 describe('Podcast Promo', () => {
-  describe('Title', () => {
-    assertTypeOfElement(PodcastPromo.Title, 'h2');
+  describe.only('Title', () => {
+    assertTypeOfElement(PodcastPromo.Title, 'strong');
     shouldMatchSnapshot(
       'should match snapshot',
       <PodcastPromo.Title script={scripts.latin} service="russian" dir="ltr">

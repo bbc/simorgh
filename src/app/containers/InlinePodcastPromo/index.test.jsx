@@ -47,10 +47,10 @@ describe.only('PodcastPromo', () => {
     expect(getByRole('region')).toBeInTheDocument();
   });
 
-  it('should render podcast in a h2 element', () => {
+  it('should render podcast in a strong element', () => {
     const { getByText } = render(<PromoWithContext />);
 
-    expect(getByText('Подкаст').closest('h2')).toBeInTheDocument();
+    expect(getByText('Подкаст').closest('strong')).toBeInTheDocument();
   });
 
   it('should render the section header/label', () => {
@@ -58,23 +58,15 @@ describe.only('PodcastPromo', () => {
     const section = getByRole('region');
     const ariaLabelledByAttr = section.getAttribute('aria-labelledby');
 
-    expect(getByText('Подкаст').closest('h2').getAttribute('id')).toEqual(
+    expect(getByText('Подкаст').closest('strong').getAttribute('id')).toEqual(
       ariaLabelledByAttr,
     );
   });
 
-  it('should render the title text in a h3 element', () => {
+  it.only('should render the title text in a <a> element', () => {
     const { getByText } = render(<PromoWithContext />);
 
-    expect(getByText('Что это было?').closest('h3')).toBeInTheDocument();
-  });
-
-  it('should render the link inside the h3 element and should wrap the title text', () => {
-    const { getByText } = render(<PromoWithContext />);
-
-    expect(
-      getByText('Что это было?').closest('a').closest('h3'),
-    ).toBeInTheDocument();
+    expect(getByText('Что это было?').closest('a')).toBeInTheDocument();
   });
 
   it('should render the description in a paragraph element', () => {

@@ -94,13 +94,11 @@ const Promo = () => {
           />
         </PromoComponent.Card.ImageWrapper>
         <PromoComponent.Card.Content>
-          <PromoComponent.Card.Title>
-            <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
-              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                {podcastBrandTitle}
-              </span>
-            </PromoComponent.Card.Link>
-          </PromoComponent.Card.Title>
+          <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
+            <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+              {podcastBrandTitle}
+            </span>
+          </PromoComponent.Card.Link>
           <PromoComponent.Card.Description>
             {description}
           </PromoComponent.Card.Description>

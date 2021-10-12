@@ -10,7 +10,6 @@ import Card from './card';
 import CardContent from './card-content';
 import CardLink from './card-link';
 import CardImageWrapper from './card-image-wrapper';
-import CardTitle from './card-title';
 import CardDescription from './card-description';
 import CardEpisodesText from './card-episodes-text';
 
@@ -55,10 +54,9 @@ const PodcastPromo = ({ script, service, children, ...props }) => (
 
 PodcastPromo.Title = withPodcastContext(Title);
 PodcastPromo.Card = Card;
-PodcastPromo.Card.Link = CardLink;
+PodcastPromo.Card.Link = withPodcastContext(CardLink);
 PodcastPromo.Card.ImageWrapper = CardImageWrapper;
 PodcastPromo.Card.Content = CardContent;
-PodcastPromo.Card.Title = withPodcastContext(CardTitle);
 PodcastPromo.Card.Description = withPodcastContext(CardDescription);
 PodcastPromo.Card.EpisodesText = withPodcastContext(CardEpisodesText);
 

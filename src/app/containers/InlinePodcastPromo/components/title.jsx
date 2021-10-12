@@ -6,7 +6,7 @@ import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 
-const Heading = styled.h2`
+const Heading = styled.strong`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
   display: inline;
