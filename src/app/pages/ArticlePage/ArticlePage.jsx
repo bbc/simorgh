@@ -176,9 +176,9 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <Main role="main">
-        <ArticlePageGrid>
-          <Primary>
+      <ArticlePageGrid>
+        <Primary>
+          <Main role="main">
             <Disclaimer />
             <Blocks
               blocks={path(['content', 'model', 'blocks'], pageData)}
@@ -191,10 +191,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
                 backgroundColour={C_GREY_2}
               />
             )}
-          </Primary>
-          <SecondaryColumn pageData={pageData} />
-        </ArticlePageGrid>
-      </Main>
+          </Main>
+        </Primary>
+        <SecondaryColumn pageData={pageData} />
+      </ArticlePageGrid>
 
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}

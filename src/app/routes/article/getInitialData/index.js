@@ -33,7 +33,7 @@ const validateResponse = ({ status, json }) => {
 
 const fetchSecondaryColumn = async ({ service, variant }) => {
   const path = variant
-    ? `/${service}/${variant}/sty-secondary-column`
+    ? `/${service}/sty-secondary-column/${variant}`
     : `/${service}/sty-secondary-column`;
 
   return fetchPageData({ path, timeout: SECONDARY_DATA_TIMEOUT })
