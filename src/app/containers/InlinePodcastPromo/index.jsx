@@ -33,7 +33,7 @@ const Promo = () => {
   const alt = path(['image', 'alt'], podcastPromo);
   const url = path(['linkLabel', 'href'], podcastPromo);
   const label = path(['linkLabel', 'text'], podcastPromo);
-  // const { text, endTextVisuallyHidden } = path(['skipLink'], podcastPromo);
+  const { text, endTextVisuallyHidden } = path(['skipLink'], podcastPromo);
 
   const terms = {
     '%title%': podcastPromoTitle,
@@ -42,8 +42,8 @@ const Promo = () => {
   const skipLink = {
     endTextId: `end-of-podcasts`,
     terms,
-    text: 'this is a test',
-    endTextVisuallyHidden: 'test',
+    text,
+    endTextVisuallyHidden,
   };
 
   const showPromo = [

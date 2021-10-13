@@ -60,11 +60,9 @@ describe('PodcastPromo', () => {
     const skipLink = links[0];
 
     expect(skipLink.getAttribute('href')).toEqual('#end-of-podcasts');
-    // Need to change this to match the text we have in skiplink.
-    // Currently, there is no skiplink in podcasts config.
-    // expect(skipLink.textContent).toEqual(
-    //   'Saltar Quizás también te interese y continuar leyendo',
-    // );
+    expect(skipLink.textContent).toEqual(
+      'Пропустить Подкаст и продолжить чтение.',
+    );
   });
 
   it('should render the section header/label', () => {
