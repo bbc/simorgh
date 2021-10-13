@@ -4,15 +4,19 @@ import styled from '@emotion/styled';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
+import { GEL_GROUP_2_SCREEN_WIDTH_MIN, GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 const EpisodesText = styled.p`
   display: inline;
   ${({ script }) => getPica(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_METAL};
-  margin: 0 14px 0 14px;
   > svg {
     fill: currentColor;
     color: unset;
@@ -21,6 +25,14 @@ const EpisodesText = styled.p`
     position: relative;
     bottom: 0.125rem;
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
+  }
+
+  @media (min-width: 23.4rem) {
+    margin: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING_HLF_TRPL};
   }
 `;
 

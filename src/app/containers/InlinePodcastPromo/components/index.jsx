@@ -3,7 +3,19 @@ import styled from '@emotion/styled';
 import { string, shape, arrayOf, element } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_B_MIN_WIDTH,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 
 import Title from './title';
 import Card from './card';
@@ -23,26 +35,26 @@ const withPodcastContext = Component => props =>
 
 const Wrapper = styled.section`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
-  background: #f4f4f4;
+  background: ${C_LUNAR};
   width: 115px;
-  height: 370px;
-  margin: 10px 6px 6px 8px;
-  padding: 12px 9.5px 8px 9.5px;
+  height: auto;
 
-  @media (min-width: 320px) {
-    width: 150px;
-    height: 350px;
+  @media (min-width: 23.4rem) {
+    width: 10.9rem;
+    margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
-  @media (min-width: 360px) {
-    width: 175px;
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 10.9rem;
+    margin: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_HLF_TRPL};
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
-  @media (min-width: 400px) {
-  }
-  @media (min-width: 600px) {
-    width: 275px;
-    height: auto;
-    margin: 11px 16px 31px 16px;
-    padding: 12px 9.5px 8px 9.5px;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    width: 17.2rem;
+    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 `;
 
