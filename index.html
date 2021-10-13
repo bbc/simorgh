@@ -12,6 +12,15 @@
   /* eslint-disable no-underscore-dangle */
   /* HELLO WORLD */
   /* BLAH BLAH BLAH */
+
+  try{
+    if (window.location.href==='https://bbc.github.io/simorgh/') {
+      window.location.href = 'https://latest--5d28eb3fe163f6002046d6fa.chromatic.com'; 
+    }
+  } catch(e){
+    console.warn('unable to connect to chromatic host, you are currenty visualizing an older version of storybook')
+  }
+
   try {
     if (window.top !== window) {
       window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.top.__REACT_DEVTOOLS_GLOBAL_HOOK__;
