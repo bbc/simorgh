@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { C_METAL, C_EBON } from '@bbc/psammead-styles/colours';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -24,8 +25,12 @@ const CardLink = styled.a`
     z-index: 1;
   }
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
-    margin: 0 10px;
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    margin: 0 ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    margin: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

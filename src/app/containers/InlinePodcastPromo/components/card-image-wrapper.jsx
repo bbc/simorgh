@@ -8,15 +8,21 @@ import {
 const CardImageWrapper = styled.div`
   display: inline-block;
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
-    width: 8.9rem;
-    height: 8.8rem;
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    width: 7.25rem;
+    height: 7.12rem;
+    margin: ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    width: 8.93rem;
+    height: 8.81rem;
     margin: ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 15.2rem;
-    height: 14.2rem;
+    width: 15.18rem;
+    height: 14.93rem;
     margin: ${GEL_SPACING};
   }
 `;

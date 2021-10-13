@@ -20,13 +20,18 @@ const CardDescription = styled.p`
   line-height: 1.2;
   color: ${C_METAL};
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
-    width: 9rem;
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    width: 7.18rem;
+    margin: 1px ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    width: 9.06rem;
     margin: ${GEL_SPACING_HLF} 10px ${GEL_SPACING} 10px;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 14.7rem;
+    width: 14.68rem;
     margin: ${GEL_SPACING_HLF} 10px ${GEL_SPACING_HLF_TRPL} 10px;
   }
 `;

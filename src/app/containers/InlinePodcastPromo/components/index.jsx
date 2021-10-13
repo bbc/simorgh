@@ -38,21 +38,30 @@ const Wrapper = styled.section`
   background: ${C_LUNAR};
   height: auto;
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
-    width: 10.9rem;
-    margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    width: 9.25rem;
+    margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_QUAD} ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    width: 10.93rem;
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
+      ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    width: 10.9rem;
-    margin: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_HLF_TRPL};
+    width: 10.93rem;
+    margin: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD}
+      ${GEL_SPACING_HLF_TRPL};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 17.2rem;
-    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD} ${GEL_SPACING_DBL};
+    width: 17.25rem;
+    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD}
+      ${GEL_SPACING_DBL};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 `;

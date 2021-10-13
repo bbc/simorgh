@@ -30,7 +30,11 @@ const EpisodesText = styled.p`
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
   }
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    margin: 0 ${GEL_SPACING_HLF_TRPL};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
     margin: 0 ${GEL_SPACING};
   }
 
