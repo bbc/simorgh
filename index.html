@@ -21,9 +21,7 @@
     <script>
       //Redirect to Chromatic Host
       try{
-        if (window.location.href==='https://bbc.github.io/simorgh/') {
-          window.location.href = 'https://latest--5d28eb3fe163f6002046d6fa.chromatic.com'; 
-        }
+        window.location.href = 'https://latest--5d28eb3fe163f6002046d6fa.chromatic.com'; 
       } catch(e){
         console.warn('unable to connect to chromatic host')
       }
