@@ -14,6 +14,7 @@ const CardLink = styled.a`
   ${({ service }) => getSerifMedium(service)}
   line-height: 1.33;
   color: ${C_EBON};
+  margin: 0 ${GEL_SPACING};
   text-decoration: none;
   :before {
     position: absolute;

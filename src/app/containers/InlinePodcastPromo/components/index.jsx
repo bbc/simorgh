@@ -11,8 +11,9 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import {
-  GEL_GROUP_B_MIN_WIDTH,
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -37,6 +38,12 @@ const Wrapper = styled.section`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: ${C_LUNAR};
   height: auto;
+
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    width: 100%;
+    margin: ${GEL_SPACING_DBL} 0;
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 7.06rem;

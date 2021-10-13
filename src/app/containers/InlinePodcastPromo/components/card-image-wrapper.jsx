@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -8,6 +9,10 @@ import {
 
 const CardImageWrapper = styled.div`
   display: inline-block;
+
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    display: none;
+  }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 5.12rem;

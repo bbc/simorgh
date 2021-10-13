@@ -11,6 +11,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -21,6 +22,7 @@ const EpisodesText = styled.p`
   ${({ script }) => getPica(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_METAL};
+  margin: 0 ${GEL_SPACING};
   > svg {
     fill: currentColor;
     color: unset;
@@ -29,6 +31,10 @@ const EpisodesText = styled.p`
     position: relative;
     bottom: 0.125rem;
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
+  }
+
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_SPACING_HLF_TRPL};
   }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {

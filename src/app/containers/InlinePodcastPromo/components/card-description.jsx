@@ -16,7 +16,7 @@ import {
 const CardDescription = styled.p`
   ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  width: 235px;
+  margin: ${GEL_SPACING};
   height: auto;
   line-height: 1.2;
   color: ${C_METAL};
