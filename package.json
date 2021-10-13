@@ -73,6 +73,7 @@
   },
   "homepage": "https://github.com/bbc/simorgh#readme",
   "dependencies": {
+    "@ampproject/toolbox-optimizer": "^2.8.3",
     "@bbc/gel-foundations": "7.0.0",
     "@bbc/moment-timezone-include": "1.1.8",
     "@bbc/psammead-assets": "3.1.9",
