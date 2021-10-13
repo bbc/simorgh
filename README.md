@@ -5,7 +5,7 @@
 [![dependencies Status](https://david-dm.org/bbc/simorgh/status.svg)](https://david-dm.org/bbc/simorgh)
 [![devDependencies Status](https://david-dm.org/bbc/simorgh/dev-status.svg)](https://david-dm.org/bbc/simorgh?type=dev)
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
-[![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
+[![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://latest--5d28eb3fe163f6002046d6fa.chromatic.com)
 
 BBC World Service News websites are rendered using Simorgh, a ReactJS based Single Page Application which also builds Accelerated Mobile Pages (AMP) for every regular HTML page that it renders. Simorgh also renders AMP pages for BBC Public Service News and BBC Sport.
 
