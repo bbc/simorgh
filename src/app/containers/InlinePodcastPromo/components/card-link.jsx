@@ -4,6 +4,7 @@ import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -23,6 +24,10 @@ const CardLink = styled.a`
     content: '';
     overflow: hidden;
     z-index: 1;
+  }
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    margin: 0 ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {

@@ -1,12 +1,19 @@
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardImageWrapper = styled.div`
   display: inline-block;
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    width: 5.62rem;
+    height: 5.56rem;
+    margin: ${GEL_SPACING};
+  }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 7.25rem;

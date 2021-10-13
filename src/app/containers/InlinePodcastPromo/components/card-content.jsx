@@ -1,11 +1,16 @@
 import styled from '@emotion/styled';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardContent = styled.div`
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    padding-bottom: ${GEL_SPACING};
+  }
+
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     padding-bottom: ${GEL_SPACING};
   }

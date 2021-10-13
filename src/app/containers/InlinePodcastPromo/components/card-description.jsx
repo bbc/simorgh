@@ -8,6 +8,7 @@ import {
   GEL_SPACING_HLF_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -19,10 +20,16 @@ const CardDescription = styled.p`
   height: auto;
   line-height: 1.2;
   color: ${C_METAL};
+  overflow-wrap: break-word;
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    width: 5.56rem;
+    margin: ${GEL_SPACING};
+  }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 7.18rem;
-    margin: 1px ${GEL_SPACING};
+    margin: ${GEL_SPACING};
   }
 
   @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {

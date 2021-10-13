@@ -38,6 +38,13 @@ const Wrapper = styled.section`
   background: ${C_LUNAR};
   height: auto;
 
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    width: 7.62rem;
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
+      ${GEL_SPACING};
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 9.25rem;
     margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_QUAD} ${GEL_SPACING};
