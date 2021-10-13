@@ -31,6 +31,10 @@ const EpisodesText = styled.p`
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
   }
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING};
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     margin: 0 ${GEL_SPACING};
   }

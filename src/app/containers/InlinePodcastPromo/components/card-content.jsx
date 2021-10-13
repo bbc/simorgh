@@ -7,6 +7,10 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 
 const CardContent = styled.div`
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    padding-bottom: ${GEL_SPACING};
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     padding-bottom: ${GEL_SPACING};
   }

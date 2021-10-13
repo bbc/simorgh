@@ -26,6 +26,10 @@ const CardLink = styled.a`
     z-index: 1;
   }
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING};
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     margin: 0 ${GEL_SPACING};
   }

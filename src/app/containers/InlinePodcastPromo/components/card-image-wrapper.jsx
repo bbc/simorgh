@@ -9,6 +9,12 @@ import {
 const CardImageWrapper = styled.div`
   display: inline-block;
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 5.12rem;
+    height: 5rem;
+    margin: ${GEL_SPACING};
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     width: 5.62rem;
     height: 5.56rem;

@@ -22,6 +22,11 @@ const CardDescription = styled.p`
   color: ${C_METAL};
   overflow-wrap: break-word;
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 5rem;
+    margin: ${GEL_SPACING};
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     width: 5.56rem;
     margin: ${GEL_SPACING};

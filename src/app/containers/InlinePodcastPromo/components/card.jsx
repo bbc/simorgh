@@ -13,6 +13,11 @@ const Card = styled.div`
   box-shadow: 0 0 5px 5px rgba(34, 34, 34, 0.03);
   background-color: ${C_GHOST};
 
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 6.06rem;
+    margin: ${GEL_SPACING_DBL} 0 0 0;
+  }
+
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     width: 6.56rem;
     margin: ${GEL_SPACING_DBL} 0 0 0;
