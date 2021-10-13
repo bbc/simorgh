@@ -77,6 +77,10 @@ export const service = {
         text: 'برنامه ها',
         href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
       },
+      skipLink: {
+        text: 'از %title% رد شوید و به خواندن ادامه دهید',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
     },
     translations: {
       ads: {

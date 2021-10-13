@@ -83,6 +83,10 @@ export const service = {
         text: 'Episódios',
         href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
       },
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
     },
     translations: {
       ads: {
