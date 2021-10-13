@@ -329,6 +329,10 @@ const buildMarketingString = marketingValues =>
     .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
     .join('-');
 
+/*
+ * RSS marketing string uses v2 full-custom campaigns which uses specifies that parameters are in the format "src_myproperty: myvalue" for each property in the campaign.
+ * more information at https://developers.atinternet-solutions.com/as2-tagging-en/javascript-en/campaigns-javascript-en/marketing-campaigns-v2/?kw=at_custom#full-custom-campaigns_13
+ */
 const buildRSSMarketingString = href => {
   const { query, hash } = new Url(href, true);
 
