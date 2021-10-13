@@ -21,9 +21,6 @@ const getSrcFromSize = (url, size) => {
   return `${src} ${size}w`;
 };
 
-const endTextId = 'end-of-recommendations';
-
-
 const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
 
@@ -48,8 +45,6 @@ const Promo = () => {
     text: 'this is a test',
     endTextVisuallyHidden: 'test',
   };
-
-  console.log("THIS IS SKIP LINK >>>>>> ", podcastPromo, path(['skipLink'], podcastPromo));
 
   const showPromo = [
     podcastBrandTitle,
