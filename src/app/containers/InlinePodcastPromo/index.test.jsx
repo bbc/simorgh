@@ -23,7 +23,7 @@ const PromoWithContext = ({ service = 'russian', variant = null }) => (
   </ToggleContextProvider>
 );
 
-describe.only('PodcastPromo', () => {
+describe('PodcastPromo', () => {
   shouldMatchSnapshot('Should render correctly', <PromoWithContext />);
 
   it('should show when all props are available', () => {
@@ -53,6 +53,20 @@ describe.only('PodcastPromo', () => {
     expect(getByText('Подкаст').closest('strong')).toBeInTheDocument();
   });
 
+  it('should contain a link to skip to end of podcast component', () => {
+    const { container } = render(<PromoWithContext />);
+
+    const links = container.querySelectorAll('a');
+    const skipLink = links[0];
+
+    expect(skipLink.getAttribute('href')).toEqual('#end-of-podcasts');
+    // Need to change this to match the text we have in skiplink.
+    // Currently, there is no skiplink in podcasts config.
+    // expect(skipLink.textContent).toEqual(
+    //   'Saltar Quizás también te interese y continuar leyendo',
+    // );
+  });
+
   it('should render the section header/label', () => {
     const { getByRole, getByText } = render(<PromoWithContext />);
     const section = getByRole('region');
@@ -63,7 +77,7 @@ describe.only('PodcastPromo', () => {
     );
   });
 
-  it.only('should render the title text in a <a> element', () => {
+  it('should render the title text in a <a> element', () => {
     const { getByText } = render(<PromoWithContext />);
 
     expect(getByText('Что это было?').closest('a')).toBeInTheDocument();

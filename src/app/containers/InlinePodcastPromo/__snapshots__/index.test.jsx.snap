@@ -33,6 +33,53 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
+}
+
+.emotion-4 {
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  background-color: #FFFFFF;
+  border: 0.125rem solid #222222;
+  color: #222222;
+  display: block;
+  left: 0;
+  line-height: 1;
+  padding: 0.75rem;
+  position: absolute;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-4 {
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    font-size: 0.8125rem;
+  }
+}
+
+.emotion-4:not(:focus):not(:active) {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
+}
+
+.emotion-6 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -43,20 +90,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-2 {
+  .emotion-6 {
     font-size: 1.125rem;
     line-height: 1.375rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-2 {
+  .emotion-6 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
-.emotion-2>svg {
+.emotion-6>svg {
   margin-left: 0;
   width: 1.375rem;
   height: 1.375rem;
@@ -66,7 +113,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-4 {
+.emotion-8 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -75,7 +122,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   height: 1rem;
 }
 
-.emotion-6 {
+.emotion-10 {
   position: relative;
   width: 258px;
   height: auto;
@@ -85,14 +132,19 @@ exports[`PodcastPromo Should render correctly 1`] = `
   background-color: #FDFDFD;
 }
 
-.emotion-8 {
+.emotion-10:hover .podcast-promo--hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-12 {
   display: inline-block;
   width: 243px;
   height: 239px;
   margin: 8px 0 0 8px;
 }
 
-.emotion-10 {
+.emotion-14 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -107,20 +159,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-14 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-10 {
+  .emotion-14 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-14 {
+.emotion-18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
@@ -130,29 +182,26 @@ exports[`PodcastPromo Should render correctly 1`] = `
   height: 20px;
   margin: 2px 9.5px 5px 9.5px;
   line-height: 1.33;
+  color: #222222;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-14 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-14 {
+  .emotion-18 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-16 {
-  color: #222222;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-16:before {
+.emotion-18:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -163,16 +212,16 @@ exports[`PodcastPromo Should render correctly 1`] = `
   z-index: 1;
 }
 
-.emotion-16:visited .podcast-promo--visited {
+.emotion-18:visited .podcast-promo--visited {
   color: #6E6E73;
 }
 
-.emotion-16:focus .podcast-promo--focus {
+.emotion-18:focus .podcast-promo--focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-18 {
+.emotion-20 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -186,20 +235,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
+  .emotion-20 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-18 {
+  .emotion-20 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
-.emotion-20 {
+.emotion-22 {
   display: inline;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -211,20 +260,20 @@ exports[`PodcastPromo Should render correctly 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-22 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-20>svg {
+.emotion-22>svg {
   fill: currentColor;
   color: unset;
   width: 1rem;
@@ -234,13 +283,24 @@ exports[`PodcastPromo Should render correctly 1`] = `
   right: 0.1875rem;
 }
 
-.emotion-22 {
+.emotion-24 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
   fill: currentColor;
   width: 1rem;
   height: 1rem;
+}
+
+.emotion-26 {
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  margin: 0;
 }
 
 <div>
@@ -250,54 +310,60 @@ exports[`PodcastPromo Should render correctly 1`] = `
     dir="ltr"
     role="region"
   >
-    <h2
-      class="emotion-2 emotion-3"
-      dir="ltr"
-      id="podcast-promo"
-    >
-      <svg
-        aria-hidden="true"
-        class="emotion-4 emotion-5"
-        focusable="false"
-        height="32"
-        viewBox="0 0 32 32"
-        width="32"
-      >
-        <path
-          d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
-        />
-      </svg>
-      Подкаст
-    </h2>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-2 emotion-3"
     >
+      <a
+        class="emotion-4 emotion-5"
+        href="#end-of-podcasts"
+      >
+        this is a test
+      </a>
+      <strong
+        class="emotion-6 emotion-7"
+        dir="ltr"
+        id="podcast-promo"
+      >
+        <svg
+          aria-hidden="true"
+          class="emotion-8 emotion-9"
+          focusable="false"
+          height="32"
+          viewBox="0 0 32 32"
+          width="32"
+        >
+          <path
+            d="M18.7,31h-5.3l-2.3-10.4C12.3,19.5,14,19,16,19s3.7,0.5,4.9,1.7L18.7,31z M22,8.2c-1.7-1.7-3.9-2.5-6.1-2.5s-4.4,0.9-6,2.5 l1.7,1.7c1.2-1.2,2.7-1.8,4.3-1.8s3.1,0.6,4.3,1.8L22,8.2z M25.5,4.9c-2.6-2.7-6.1-4-9.5-4S9.1,2.3,6.5,4.9l1.7,1.7 c2.1-2.1,4.9-3.2,7.7-3.2c2.8,0,5.6,1.1,7.8,3.2L25.5,4.9z M12.4,14c0,2,1.5,3.6,3.6,3.6c2,0,3.6-1.5,3.6-3.6 c0-2.1-1.5-3.6-3.6-3.6C13.9,10.4,12.4,11.9,12.4,14z"
+          />
+        </svg>
+        Подкаст
+      </strong>
       <div
-        class="emotion-8 emotion-9"
+        class="emotion-10 emotion-11"
       >
         <div
-          class="emotion-10 emotion-11"
-          data-e2e="image-placeholder"
-          style="padding-bottom: 100%;"
+          class="emotion-12 emotion-13"
         >
           <div
-            class="lazyload-wrapper "
+            class="emotion-14 emotion-15"
+            data-e2e="image-placeholder"
+            style="padding-bottom: 100%;"
           >
             <div
-              class="lazyload-placeholder"
-            />
+              class="lazyload-wrapper "
+            >
+              <div
+                class="lazyload-placeholder"
+              />
+            </div>
+            <noscript />
           </div>
-          <noscript />
         </div>
-      </div>
-      <div
-        class="emotion-12 emotion-13"
-      >
-        <h3
-          class="emotion-14 emotion-15"
+        <div
+          class="emotion-16 emotion-17"
         >
           <a
-            class="emotion-16 emotion-17"
+            class="emotion-18 emotion-19"
             href="https://www.bbc.com/russian/media-47937790"
           >
             <span
@@ -306,37 +372,44 @@ exports[`PodcastPromo Should render correctly 1`] = `
               Что это было?
             </span>
           </a>
-        </h3>
-        <p
-          class="emotion-18 emotion-19"
-        >
-          Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
-        </p>
-        <p
-          class="emotion-20 emotion-21"
-          dir="ltr"
-        >
-          <svg
-            aria-hidden="true"
-            class="emotion-22 emotion-23"
-            focusable="false"
-            height="32"
-            viewBox="0 0 32 32"
-            width="32"
+          <p
+            class="emotion-20 emotion-21"
           >
-            <polygon
-              points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
-            />
-            <polygon
-              points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
-            />
-            <path
-              d="M0,32H24V8H0ZM4,12H20V28H4Z"
-            />
-          </svg>
-          эпизоды
-        </p>
+            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
+          </p>
+          <p
+            class="emotion-22 emotion-23"
+            dir="ltr"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-24 emotion-25"
+              focusable="false"
+              height="32"
+              viewBox="0 0 32 32"
+              width="32"
+            >
+              <polygon
+                points="4 6 11.1 6 26 6 26 28 28 28 28 4 4 4 4 6"
+              />
+              <polygon
+                points="8 0 8 2 30 2 30 24 32 24 32 0 8 0"
+              />
+              <path
+                d="M0,32H24V8H0ZM4,12H20V28H4Z"
+              />
+            </svg>
+            эпизоды
+          </p>
+        </div>
       </div>
+      <p
+        class="emotion-26 emotion-27"
+        id="end-of-podcasts"
+        tabindex="-1"
+      >
+        test
+      </p>
     </div>
   </section>
 </div>

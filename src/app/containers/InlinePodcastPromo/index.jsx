@@ -14,21 +14,15 @@ import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 const getSrcFromSize = (url, size) => {
   const src = url.replace('$recipe', `${size}x${size}`);
   return `${src} ${size}w`;
 };
 
-const ResponsivePodcastPromoWrapper = styled.div`
-  margin-top: ${GEL_SPACING_TRPL};
-  margin-bottom: ${GEL_SPACING_TRPL};
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: 0;
-    margin-bottom: ${GEL_SPACING};
-    padding: ${GEL_SPACING_DBL};
-  }
-`;
+const endTextId = 'end-of-recommendations';
+
 
 const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
@@ -42,6 +36,20 @@ const Promo = () => {
   const alt = path(['image', 'alt'], podcastPromo);
   const url = path(['linkLabel', 'href'], podcastPromo);
   const label = path(['linkLabel', 'text'], podcastPromo);
+  // const { text, endTextVisuallyHidden } = path(['skipLink'], podcastPromo);
+
+  const terms = {
+    '%title%': podcastPromoTitle,
+  };
+
+  const skipLink = {
+    endTextId: `end-of-podcasts`,
+    terms,
+    text: 'this is a test',
+    endTextVisuallyHidden: 'test',
+  };
+
+  console.log("THIS IS SKIP LINK >>>>>> ", podcastPromo, path(['skipLink'], podcastPromo));
 
   const showPromo = [
     podcastBrandTitle,
@@ -77,36 +85,38 @@ const Promo = () => {
       aria-labelledby="podcast-promo"
       dir={dir}
     >
-      <PromoComponent.Title id="podcast-promo" dir={dir}>
-        {podcastPromoTitle}
-      </PromoComponent.Title>
-      <PromoComponent.Card>
-        <PromoComponent.Card.ImageWrapper>
-          <ImageWithPlaceholder
-            src={imgSrc}
-            srcset={srcset}
-            sizes={sizes}
-            alt={alt}
-            height={1}
-            width={1}
-            ratio={100}
-            lazyLoad
-          />
-        </PromoComponent.Card.ImageWrapper>
-        <PromoComponent.Card.Content>
-          <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
-            <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-              {podcastBrandTitle}
-            </span>
-          </PromoComponent.Card.Link>
-          <PromoComponent.Card.Description>
-            {description}
-          </PromoComponent.Card.Description>
-          <PromoComponent.Card.EpisodesText dir={dir}>
-            {label}
-          </PromoComponent.Card.EpisodesText>
-        </PromoComponent.Card.Content>
-      </PromoComponent.Card>
+      <SkipLinkWrapper service={service} {...skipLink}>
+        <PromoComponent.Title id="podcast-promo" dir={dir}>
+          {podcastPromoTitle}
+        </PromoComponent.Title>
+        <PromoComponent.Card>
+          <PromoComponent.Card.ImageWrapper>
+            <ImageWithPlaceholder
+              src={imgSrc}
+              srcset={srcset}
+              sizes={sizes}
+              alt={alt}
+              height={1}
+              width={1}
+              ratio={100}
+              lazyLoad
+            />
+          </PromoComponent.Card.ImageWrapper>
+          <PromoComponent.Card.Content>
+            <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
+              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+                {podcastBrandTitle}
+              </span>
+            </PromoComponent.Card.Link>
+            <PromoComponent.Card.Description>
+              {description}
+            </PromoComponent.Card.Description>
+            <PromoComponent.Card.EpisodesText dir={dir}>
+              {label}
+            </PromoComponent.Card.EpisodesText>
+          </PromoComponent.Card.Content>
+        </PromoComponent.Card>
+      </SkipLinkWrapper>
     </PromoComponent>
   );
 };
