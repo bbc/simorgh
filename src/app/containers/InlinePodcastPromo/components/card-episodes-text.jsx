@@ -10,7 +10,10 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { C_METAL } from '@bbc/psammead-styles/colours';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN, GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_GROUP_B_MIN_WIDTH,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 
 const EpisodesText = styled.p`
   display: inline;
@@ -27,7 +30,7 @@ const EpisodesText = styled.p`
     ${({ dir }) => (dir === 'ltr' ? `right: 0.1875rem;` : `left: 0.1875rem;`)}
   }
 
-  @media (min-width: 23.4rem) {
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
     margin: 0 ${GEL_SPACING};
   }
 

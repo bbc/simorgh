@@ -36,10 +36,9 @@ const withPodcastContext = Component => props =>
 const Wrapper = styled.section`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: ${C_LUNAR};
-  width: 115px;
   height: auto;
 
-  @media (min-width: 23.4rem) {
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 3.4rem)) {
     width: 10.9rem;
     margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_TRPL} ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
