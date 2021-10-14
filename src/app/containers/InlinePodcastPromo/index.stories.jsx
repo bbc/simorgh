@@ -22,6 +22,10 @@ const serviceContextMock = {
       href: 'https://www.bbc.co.uk/sounds/brand/m000gkf5',
       text: 'Episodes',
     },
+    skipLink: {
+      text: 'Пропустить %title% и продолжить чтение.',
+      endTextVisuallyHidden: 'Конец истории %title%',
+    },
   },
 };
 
@@ -38,7 +42,7 @@ const Component = () => (
 );
 
 export default {
-  title: 'Containers/Podcast Promo',
+  title: 'Containers/Inline Podcast Promo',
   Component,
 };
 
