@@ -5,7 +5,7 @@ import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
-import isChromatic from 'chromatic/isChromatic';
+import isChromatic from 'chromatic';
 import { forceVisible } from 'react-lazyload';
 
 const fontPathMap = [
