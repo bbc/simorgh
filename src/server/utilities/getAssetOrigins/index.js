@@ -5,11 +5,18 @@ const FONTS_ORIGINS = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
 ];
-const COOKIE_ORIGIN = 'https://cookie-oven.api.bbc.co.uk';
 
 const getAssetOrigins = service => {
+  const COOKIE_ORIGINS =
+    process.env.SIMORGH_APP_ENV === 'live'
+      ? ['https://www.bbc.com/cookieoven', 'https://www.bbc.co.uk/cookieoven']
+      : [
+          'https://www.test.bbc.com/cookieoven',
+          'https://www.test.bbc.co.uk/cookieoven',
+        ];
+
   const assetOrigins = [
-    COOKIE_ORIGIN,
+    ...COOKIE_ORIGINS,
     IMAGES_ORIGIN,
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     process.env.SIMORGH_ATI_BASE_URL,
