@@ -13,6 +13,12 @@ import {
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
+
+import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
+
+const logger = nodeLogger(__filename);
 
 const transformJson = pipe(
   handleGroupBlocks,
@@ -32,13 +38,21 @@ const validateResponse = ({ status, json }) => {
 };
 
 const fetchSecondaryColumn = async ({ service, variant }) => {
-  const path = variant
-    ? `/${service}/sty-secondary-column/${variant}`
-    : `/${service}/sty-secondary-column`;
+  const path = getSecondaryColumnUrl({ service, variant });
 
-  return fetchPageData({ path, timeout: SECONDARY_DATA_TIMEOUT })
-    .then(validateResponse)
-    .catch(() => {});
+  try {
+    const response = await fetchPageData({
+      path,
+      timeout: SECONDARY_DATA_TIMEOUT,
+    });
+    return validateResponse(response);
+  } catch (error) {
+    logger.error(DATA_FETCH_ERROR_SECONDARY_COLUMN, {
+      service,
+      error,
+    });
+    return null;
+  }
 };
 
 const fetcher = ({ path, pageType, service, variant }) =>
