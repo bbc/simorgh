@@ -19,7 +19,7 @@ class IntegrationTestEnvironment extends JsdomEnvironment {
 
     this.pageType = camelCaseToText(pageType);
     this.service = service;
-    this.runScripts = runScripts !== 'false';
+    this.runScripts = runScripts === 'true';
     this.displayAds = displayAds === 'true';
     this.url = `http://localhost:7080${pathname}${
       platform === 'amp' ? '.amp' : ''
