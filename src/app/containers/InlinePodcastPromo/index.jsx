@@ -1,13 +1,5 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from '@emotion/styled';
-
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-  GEL_SPACING_TRPL,
-} from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import PromoComponent from './components';
@@ -33,6 +25,28 @@ const Promo = () => {
   const alt = path(['image', 'alt'], podcastPromo);
   const url = path(['linkLabel', 'href'], podcastPromo);
   const label = path(['linkLabel', 'text'], podcastPromo);
+
+  const eventTrackingData = {
+    componentName: 'promo-podcast',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+
+  const showPromo = [
+    podcastBrandTitle,
+    podcastPromoTitle,
+    description,
+    img,
+    alt,
+    url,
+    label,
+  ].every(Boolean);
+
+  if (!showPromo) {
+    return null;
+  }
+
   const { text, endTextVisuallyHidden } = path(['skipLink'], podcastPromo);
 
   const terms = {
@@ -45,27 +59,6 @@ const Promo = () => {
     text,
     endTextVisuallyHidden,
   };
-
-  const showPromo = [
-    podcastBrandTitle,
-    podcastPromoTitle,
-    description,
-    img,
-    alt,
-    url,
-    label,
-  ].every(Boolean);
-
-  const eventTrackingData = {
-    componentName: 'promo-podcast',
-  };
-
-  const viewTrackerRef = useViewTracker(eventTrackingData);
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
-
-  if (!showPromo) {
-    return null;
-  }
 
   const imgSrc = img.replace('$recipe', '512x512');
   const srcset = getSrcSet(img, [128, 240, 480]);

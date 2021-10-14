@@ -203,7 +203,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     disclaimer: props => (
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
-    podcastPromo: InlinePodcastPromo,
+    podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
   };
 
   const StyledTimestamp = styled(Timestamp)`

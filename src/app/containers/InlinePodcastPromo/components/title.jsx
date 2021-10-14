@@ -9,7 +9,7 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 const Heading = styled.strong`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  display: inline;
+  display: block;
   color: ${C_EBON};
 
   > svg {

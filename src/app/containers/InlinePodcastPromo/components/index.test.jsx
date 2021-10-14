@@ -18,7 +18,7 @@ const assertTypeOfElement = (Component, type) => {
 };
 
 describe('Podcast Promo', () => {
-  describe.only('Title', () => {
+  describe('Title', () => {
     assertTypeOfElement(PodcastPromo.Title, 'strong');
     shouldMatchSnapshot(
       'should match snapshot',
@@ -29,7 +29,7 @@ describe('Podcast Promo', () => {
   });
 
   describe('Card', () => {
-    assertTypeOfElement(PodcastPromo.Title, 'div');
+    assertTypeOfElement(PodcastPromo.Card, 'div');
     shouldMatchSnapshot(
       'should match snapshot',
       <PodcastPromo.Card>Content</PodcastPromo.Card>,
@@ -41,16 +41,6 @@ describe('Podcast Promo', () => {
     shouldMatchSnapshot(
       'should match snapshot',
       <PodcastPromo.Card.Content>Content</PodcastPromo.Card.Content>,
-    );
-  });
-
-  describe('Card Title', () => {
-    assertTypeOfElement(PodcastPromo.Card.Title, 'h3');
-    shouldMatchSnapshot(
-      'should match snapshot',
-      <PodcastPromo.Card.Title script={scripts.latin} service="russian">
-        Content
-      </PodcastPromo.Card.Title>,
     );
   });
 

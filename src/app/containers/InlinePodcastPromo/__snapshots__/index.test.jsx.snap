@@ -3,32 +3,63 @@
 exports[`PodcastPromo Should render correctly 1`] = `
 .emotion-0 {
   float: right;
-  background: #f4f4f4;
-  width: 115px;
-  height: 370px;
-  margin: 10px 6px 6px 8px;
-  padding: 12px 9.5px 8px 9.5px;
+  background: #F2F2F2;
+  height: auto;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 14.9375rem) {
   .emotion-0 {
-    width: 150px;
-    height: 350px;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem 0.5rem;
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 15rem) {
   .emotion-0 {
-    width: 175px;
+    width: 7.06rem;
+    margin: 1.5rem 4px 1.5rem 4px;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: calc(15rem + 1.25rem)) {
   .emotion-0 {
-    width: 275px;
-    height: auto;
-    margin: 11px 16px 31px 16px;
-    padding: 12px 9.5px 8px 9.5px;
+    width: 7.62rem;
+    margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-0 {
+    width: 9.25rem;
+    margin: 1rem 0.5rem 2rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-0 {
+    width: 10.93rem;
+    margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    width: 10.93rem;
+    margin: 1rem 1rem 2rem 0.75rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    width: 17.25rem;
+    margin: 0.75rem 1rem 2rem 1rem;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
 }
 
@@ -85,7 +116,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  display: inline;
+  display: block;
   color: #222222;
 }
 
@@ -124,12 +155,47 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 .emotion-10 {
   position: relative;
-  width: 258px;
   height: auto;
-  margin: 11px 0 0 0;
-  padding: 0 7px 13px 0;
+  margin: 1rem 0 0 0;
   box-shadow: 0 0 5px 5px rgba(34, 34, 34, 0.03);
   background-color: #FDFDFD;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-10 {
+    width: calc(100-7) %;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-10 {
+    width: 6.06rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-10 {
+    width: 6.56rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-10 {
+    width: 8.25rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-10 {
+    width: 9.93rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-10 {
+    width: 16.12rem;
+  }
 }
 
 .emotion-10:hover .podcast-promo--hover {
@@ -139,9 +205,52 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 .emotion-12 {
   display: inline-block;
-  width: 243px;
-  height: 239px;
-  margin: 8px 0 0 8px;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-12 {
+    display: none;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-12 {
+    width: 5.12rem;
+    height: 5rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-12 {
+    width: 5.62rem;
+    height: 5.56rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-12 {
+    width: 7.25rem;
+    height: 7.12rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-12 {
+    width: 8.93rem;
+    height: 8.81rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-12 {
+    width: 15.18rem;
+    height: 14.93rem;
+    margin: 0.5rem;
+  }
 }
 
 .emotion-14 {
@@ -172,17 +281,46 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 15rem) {
+  .emotion-16 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-16 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-16 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-16 {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-16 {
+    padding-bottom: 0.5rem;
+  }
+}
+
 .emotion-18 {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
-  width: 145px;
-  height: 20px;
-  margin: 2px 9.5px 5px 9.5px;
+  display: block;
   line-height: 1.33;
   color: #222222;
+  margin: 0 0.5rem;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -212,6 +350,36 @@ exports[`PodcastPromo Should render correctly 1`] = `
   z-index: 1;
 }
 
+@media (min-width: 15rem) {
+  .emotion-18 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-18 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-18 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-18 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-18 {
+    margin: 0 10px;
+  }
+}
+
 .emotion-18:visited .podcast-promo--visited {
   color: #6E6E73;
 }
@@ -227,11 +395,11 @@ exports[`PodcastPromo Should render correctly 1`] = `
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 235px;
+  margin: 0.5rem;
   height: auto;
-  margin: 5px 9.5px 10.4px 9.5px;
   line-height: 1.2;
-  color: #6e6e73;
+  color: #6E6E73;
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -248,6 +416,41 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
+@media (min-width: 15rem) {
+  .emotion-20 {
+    width: 5rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-20 {
+    width: 5.56rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-20 {
+    width: 7.18rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-20 {
+    width: 9.06rem;
+    margin: 0.25rem 10px 0.5rem 10px;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    width: 14.68rem;
+    margin: 0.25rem 10px 0.75rem 10px;
+  }
+}
+
 .emotion-22 {
   display: inline;
   font-size: 0.9375rem;
@@ -256,7 +459,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
-  margin: 0 14px 0 14px;
+  margin: 0 0.5rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -281,6 +484,42 @@ exports[`PodcastPromo Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
+}
+
+@media (max-width: 14.9375rem) {
+  .emotion-22 {
+    margin: 0 0.75rem;
+  }
+}
+
+@media (min-width: 15rem) {
+  .emotion-22 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: calc(15rem + 1.25rem)) {
+  .emotion-22 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .emotion-22 {
+    margin: 0 0.75rem;
+  }
+}
+
+@media (min-width: calc(20rem + 2.5rem)) {
+  .emotion-22 {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-22 {
+    margin: 0 0.75rem;
+  }
 }
 
 .emotion-24 {
@@ -317,7 +556,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
         class="emotion-4 emotion-5"
         href="#end-of-podcasts"
       >
-        this is a test
+        Пропустить Подкаст и продолжить чтение.
       </a>
       <strong
         class="emotion-6 emotion-7"
@@ -408,7 +647,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
         id="end-of-podcasts"
         tabindex="-1"
       >
-        test
+        Конец истории Подкаст
       </p>
     </div>
   </section>

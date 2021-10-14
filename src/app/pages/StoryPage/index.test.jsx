@@ -24,7 +24,8 @@ import pidginSecondaryColumnData from '#data/pidgin/secondaryColumn/index.json';
 import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
-import russianPageData from '#data/russian/cpsAssets/news-55041160';
+import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
+import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import russianMostReadData from '#data/russian/mostRead/index.json';
 import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
@@ -558,7 +559,100 @@ describe('Story Page', () => {
       },
     };
 
-    fetchMock.mock('http://localhost/some-cps-sty-path.json', russianPageData);
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithInlinePromo,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    const { getAllByRole } = render(
+      <Page
+        pageData={pageData}
+        service="russian"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const regions = getAllByRole('region');
+    expect(regions.length).toEqual(5);
+
+    const fourthRegion = regions[3];
+    expect(fourthRegion.getAttribute('aria-labelledby')).toEqual(
+      'podcast-promo',
+    );
+  });
+
+  it.skip('should render the inline podcast promo component on russian pages with a paragraph of 940 character and after 8th paragraph', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      podcastPromo: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithInlinePromo,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    const { getAllByRole } = render(
+      <Page
+        pageData={pageData}
+        service="russian"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const regions = getAllByRole('region');
+    expect(regions.length).toEqual(5);
+
+    const fourthRegion = regions[0];
+    expect(fourthRegion.getAttribute('aria-labelledby')).toEqual(
+      'podcast-promo',
+    );
+  });
+
+  it.skip('should not render the inline podcast promo component on russian pages with a paragraph of less than 940 character and after 8th paragraph', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      podcastPromo: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithoutInlinePromo,
+    );
     fetchMock.mock(
       'http://localhost/russian/mostread.json',
       russianMostReadData,
@@ -585,10 +679,45 @@ describe('Story Page', () => {
 
     const regions = getAllByRole('region');
     expect(regions.length).toEqual(4);
+  });
 
-    const thirdRegion = regions[2];
-    expect(thirdRegion.getAttribute('aria-labelledby')).toEqual(
-      'podcast-promo',
+  it.skip('should not render the inline podcast promo component on russian pages with a paragraph of 940 character or more but no 8th paragraph', async () => {
+    process.env.SIMORGH_APP_ENV = 'test';
+    const toggles = {
+      podcastPromo: {
+        enabled: true,
+      },
+    };
+
+    fetchMock.mock(
+      'http://localhost/some-cps-sty-path.json',
+      russianPageDataWithoutInlinePromo,
     );
+    fetchMock.mock(
+      'http://localhost/russian/mostread.json',
+      russianMostReadData,
+    );
+    fetchMock.mock(
+      'http://localhost/russian/sty-secondary-column.json',
+      russianSecondaryColumnData,
+    );
+
+    const { pageData } = await getInitialData({
+      path: '/some-cps-sty-path',
+      service: 'russian',
+      pageType,
+    });
+
+    const { getAllByRole } = render(
+      <Page
+        pageData={pageData}
+        service="russian"
+        toggles={toggles}
+        showAdsBasedOnLocation
+      />,
+    );
+
+    const regions = getAllByRole('region');
+    expect(regions.length).toEqual(4);
   });
 });

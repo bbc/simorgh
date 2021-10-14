@@ -12,6 +12,7 @@ import {
 const CardLink = styled.a`
   ${({ script }) => getPica(script)}
   ${({ service }) => getSerifMedium(service)}
+  display: block;
   line-height: 1.33;
   color: ${C_EBON};
   margin: 0 ${GEL_SPACING};
