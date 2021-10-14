@@ -15,6 +15,7 @@ export default async policy => {
     try {
       await Promise.all(cookieOvenEndpoints.map(endpoint => fetch(endpoint)));
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e);
     }
   }
