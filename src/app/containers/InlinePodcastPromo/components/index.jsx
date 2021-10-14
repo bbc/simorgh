@@ -5,10 +5,8 @@ import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
-  GEL_SPACING_HLF_TRPL,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
@@ -60,7 +58,8 @@ const Wrapper = styled.section`
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 9.25rem;
-    margin: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING_QUAD} ${GEL_SPACING};
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
+      ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
@@ -73,14 +72,14 @@ const Wrapper = styled.section`
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 10.93rem;
-    margin: ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD}
-      ${GEL_SPACING_HLF_TRPL};
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
+      ${GEL_SPACING};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 17.25rem;
-    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_QUAD}
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}
       ${GEL_SPACING_DBL};
     padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
