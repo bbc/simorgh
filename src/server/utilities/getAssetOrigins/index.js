@@ -1,4 +1,5 @@
 import services from '../serviceConfigs';
+import isLiveEnv from '#lib/utilities/isLive';
 
 const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
 const FONTS_ORIGINS = [
@@ -7,13 +8,12 @@ const FONTS_ORIGINS = [
 ];
 
 const getAssetOrigins = service => {
-  const COOKIE_ORIGINS =
-    process.env.SIMORGH_APP_ENV === 'live'
-      ? ['https://www.bbc.com/cookieoven', 'https://www.bbc.co.uk/cookieoven']
-      : [
-          'https://www.test.bbc.com/cookieoven',
-          'https://www.test.bbc.co.uk/cookieoven',
-        ];
+  const COOKIE_ORIGINS = isLiveEnv()
+    ? ['https://www.bbc.com/cookieoven', 'https://www.bbc.co.uk/cookieoven']
+    : [
+        'https://www.test.bbc.com/cookieoven',
+        'https://www.test.bbc.co.uk/cookieoven',
+      ];
 
   const assetOrigins = [
     ...COOKIE_ORIGINS,
