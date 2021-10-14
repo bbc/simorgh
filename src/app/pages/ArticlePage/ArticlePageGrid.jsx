@@ -12,7 +12,7 @@ const gridConfig = (...values) =>
   Object.fromEntries(values.map((value, index) => [`group${index}`, value]));
 
 const gridColumns = gridConfig(8, 8, 8, 8, 12, 12);
-const gridMargins = gridConfig(false, false, false, false, false, false);
+const gridMargins = gridConfig(false, false, false, false, true, true);
 const gridOffset = gridConfig(0, 0, 0, 0, 0, 0);
 
 const gridColumnsPrimary = gridConfig(8, 8, 8, 8, 8, 8);
@@ -31,12 +31,6 @@ const ArticlePageGrid = props => (
 export default ArticlePageGrid;
 
 const GridPrimaryColumn = styled(Grid)`
-  @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    width: 100%;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 100%;
-  }
   padding-bottom: ${GEL_SPACING_QUAD};
 `;
 
