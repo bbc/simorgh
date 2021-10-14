@@ -3734,7 +3734,6 @@ exports[`Media Asset Page should render component 1`] = `
                 <h2
                   class="emotion-37 emotion-38"
                   id="This-is-a-heading-<->"
-                  tabindex="-1"
                 >
                   This is a heading & &lt; &gt;
                 </h2>
@@ -3746,7 +3745,6 @@ exports[`Media Asset Page should render component 1`] = `
                 <h2
                   class="emotion-37 emotion-38"
                   id="This-is-a-subheading-<->"
-                  tabindex="-1"
                 >
                   This is a subheading & &lt; &gt;
                 </h2>
@@ -3758,7 +3756,6 @@ exports[`Media Asset Page should render component 1`] = `
                 <h2
                   class="emotion-37 emotion-38"
                   id="This-is-a-crosshead-<->"
-                  tabindex="-1"
                 >
                   This is a crosshead & &lt; &gt;
                 </h2>

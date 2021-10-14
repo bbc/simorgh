@@ -2872,7 +2872,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <h2
                       class="emotion-153 emotion-154"
                       id="This-is-a-heading"
-                      tabindex="-1"
                     >
                       This is a heading!
                     </h2>
@@ -2884,7 +2883,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <h2
                       class="emotion-153 emotion-154"
                       id="This-is-a-subheading"
-                      tabindex="-1"
                     >
                       This is a subheading!
                     </h2>
@@ -2907,7 +2905,6 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                     <h2
                       class="emotion-153 emotion-154"
                       id="This-is-a-crosshead"
-                      tabindex="-1"
                     >
                       This is a crosshead!
                     </h2>
@@ -6793,7 +6790,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <h2
                       class="emotion-158 emotion-159"
                       id="This-is-a-heading"
-                      tabindex="-1"
                     >
                       This is a heading!
                     </h2>
@@ -6816,7 +6812,6 @@ exports[`Story Page should render correctly when the secondary column data is no
                     <h2
                       class="emotion-158 emotion-159"
                       id="This-is-a-crosshead"
-                      tabindex="-1"
                     >
                       This is a crosshead!
                     </h2>
@@ -10337,7 +10332,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <h2
                       class="emotion-158 emotion-159"
                       id="This-is-a-heading"
-                      tabindex="-1"
                     >
                       This is a heading!
                     </h2>
@@ -10360,7 +10354,6 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                     <h2
                       class="emotion-158 emotion-159"
                       id="This-is-a-crosshead"
-                      tabindex="-1"
                     >
                       This is a crosshead!
                     </h2>
