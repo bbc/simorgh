@@ -12,7 +12,7 @@ const gridConfig = (...values) =>
   Object.fromEntries(values.map((value, index) => [`group${index}`, value]));
 
 const gridColumns = gridConfig(8, 8, 8, 8, 12, 12);
-const gridMargins = gridConfig(false, false, false, false, true, true);
+const gridMargins = gridConfig(false, false, false, false, false, false);
 const gridOffset = gridConfig(0, 0, 0, 0, 0, 0);
 
 const gridColumnsPrimary = gridConfig(8, 8, 8, 8, 8, 8);
@@ -25,12 +25,7 @@ const StyledGelPageGrid = styled(GelPageGrid)`
 `;
 
 const ArticlePageGrid = props => (
-  <StyledGelPageGrid
-    enableGelGutters
-    columns={gridColumns}
-    margins={gridMargins}
-    {...props}
-  />
+  <StyledGelPageGrid columns={gridColumns} margins={gridMargins} {...props} />
 );
 
 export default ArticlePageGrid;
