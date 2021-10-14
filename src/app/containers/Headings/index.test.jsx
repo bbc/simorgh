@@ -198,4 +198,32 @@ describe('Headings', () => {
       });
     });
   });
+
+  describe('headline in the middle of content', () => {
+    const data = {
+      blocks: blocksSingleFragment('Sample headline', [], 2),
+      type: 'headline',
+    };
+
+    it('should <strong> element', () => {
+      const { getByText } = render(
+        <HeadingsContainerWithContext data={data} />,
+      );
+      expect(getByText('Sample headline').nodeName).toBe('STRONG');
+    });
+
+    it('should not have tabIndex', () => {
+      const { getByText } = render(
+        <HeadingsContainerWithContext data={data} />,
+      );
+      expect(getByText('Sample headline')).not.toHaveAttribute('tabindex');
+    });
+
+    it('should not have id', () => {
+      const { getByText } = render(
+        <HeadingsContainerWithContext data={data} />,
+      );
+      expect(getByText('Sample headline')).not.toHaveAttribute('id');
+    });
+  });
 });
