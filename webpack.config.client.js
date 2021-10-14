@@ -38,7 +38,7 @@ module.exports = ({
     process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
   const clientConfig = {
-    target: ['web', 'es5'], // compile for browser environment
+    target: ['web', 'es2017'], // compile for browser environment
     entry: START_DEV_SERVER
       ? ['webpack/hot/only-dev-server', './src/client']
       : ['./src/poly', './src/client'],
@@ -59,7 +59,11 @@ module.exports = ({
         stream: require.resolve('stream-browserify'),
       },
     },
+    experiments: {
+      outputModule: true,
+    },
     output: {
+      module: true,
       path: resolvePath('build/public'),
       /**
        * Need unhashed client bundle when running dev server.
@@ -81,6 +85,7 @@ module.exports = ({
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
+            ecma: 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
           },
