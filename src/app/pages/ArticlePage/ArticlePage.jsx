@@ -184,14 +184,14 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               blocks={path(['content', 'model', 'blocks'], pageData)}
               componentsToRender={componentsToRender}
             />
-            {showRelatedTopics && topics && (
-              <StyledRelatedTopics
-                topics={topics}
-                mobileDivider={false}
-                backgroundColour={C_GREY_2}
-              />
-            )}
           </Main>
+          {showRelatedTopics && topics && (
+            <StyledRelatedTopics
+              topics={topics}
+              mobileDivider={false}
+              backgroundColour={C_GREY_2}
+            />
+          )}
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>
