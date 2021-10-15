@@ -16,7 +16,7 @@ const Card = styled.div`
   background-color: ${C_GHOST};
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    width: calc(100-7) %;
+    width: calc(100 - 7) %;
     padding: ${GEL_SPACING} 0;
   }
 
