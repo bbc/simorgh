@@ -75,7 +75,7 @@ const Wrapper = styled.section`
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 17.25rem;
-    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}${GEL_SPACING};
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL};
   }
 `;
 
