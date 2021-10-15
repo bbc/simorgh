@@ -66,7 +66,7 @@ describe('Podcast Promo', () => {
     assertTypeOfElement(PodcastPromo.Card.Link, 'a');
     shouldMatchSnapshot(
       'should match snapshot',
-      <PodcastPromo.Card.Link href="https://www.bbc.com">
+      <PodcastPromo.Card.Link href="https://www.bbc.com" script={scripts.latin}>
         Content
       </PodcastPromo.Card.Link>,
     );

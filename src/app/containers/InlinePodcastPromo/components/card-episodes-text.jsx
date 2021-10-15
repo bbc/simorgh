@@ -22,7 +22,6 @@ const EpisodesText = styled.p`
   ${({ script }) => getPica(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_METAL};
-  margin: 0 ${GEL_SPACING};
   > svg {
     fill: currentColor;
     color: unset;

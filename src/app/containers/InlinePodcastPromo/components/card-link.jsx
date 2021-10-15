@@ -33,15 +33,15 @@ const CardLink = styled.a`
   }
 
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
-    margin: 0 ${GEL_SPACING};
+    margin: 0 10px;
   }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    margin: 0 ${GEL_SPACING};
+    margin: 0 10px;
   }
 
   @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
-    margin: 0 ${GEL_SPACING};
+    margin: 0 10px;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {

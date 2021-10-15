@@ -35,6 +35,7 @@ const withPodcastContext = Component => props =>
 const Wrapper = styled.section`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: ${C_LUNAR};
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   height: auto;
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
@@ -46,42 +47,35 @@ const Wrapper = styled.section`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 7.06rem;
     margin: ${GEL_SPACING_TRPL} 4px ${GEL_SPACING_TRPL} 4px;
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     width: 7.62rem;
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
       ${GEL_SPACING};
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 9.25rem;
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
       ${GEL_SPACING};
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
     width: 10.93rem;
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
       ${GEL_SPACING};
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     width: 10.93rem;
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}
       ${GEL_SPACING};
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 17.25rem;
-    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL}
-      ${GEL_SPACING_DBL};
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING} ${GEL_SPACING_TRPL}${GEL_SPACING};
   }
 `;
 

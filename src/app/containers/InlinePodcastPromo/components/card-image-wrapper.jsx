@@ -9,6 +9,7 @@ import {
 
 const CardImageWrapper = styled.div`
   display: inline-block;
+  margin: ${GEL_SPACING};
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: none;
@@ -17,31 +18,26 @@ const CardImageWrapper = styled.div`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 5.12rem;
     height: 5rem;
-    margin: ${GEL_SPACING};
   }
 
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
     width: 5.62rem;
     height: 5.56rem;
-    margin: ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 7.25rem;
     height: 7.12rem;
-    margin: ${GEL_SPACING};
   }
 
   @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
     width: 8.93rem;
     height: 8.81rem;
-    margin: ${GEL_SPACING};
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 15.18rem;
     height: 14.93rem;
-    margin: ${GEL_SPACING};
   }
 `;
 
