@@ -41,6 +41,7 @@ import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
 import PodcastPromo from '#containers/PodcastPromo';
 import InlinePodcastPromo from '#containers/InlinePodcastPromo';
+import isLive from '#lib/utilities/isLive';
 
 import {
   getFirstPublished,
@@ -363,7 +364,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {podcastPromoEnabled && <PodcastPromo />}
+          {isLive() && podcastPromoEnabled && <PodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis
