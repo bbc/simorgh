@@ -158,7 +158,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 
 @media (max-width: 14.9375rem) {
   .emotion-10 {
-    width: calc(100-7) %;
+    width: calc(100 - 7) %;
     padding: 0.5rem 0;
   }
 }

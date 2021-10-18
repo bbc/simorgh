@@ -346,7 +346,7 @@ exports[`Podcast Promo Card should match snapshot 1`] = `
 
 @media (max-width: 14.9375rem) {
   .emotion-0 {
-    width: calc(100-7) %;
+    width: calc(100 - 7) %;
     padding: 0.5rem 0;
   }
 }

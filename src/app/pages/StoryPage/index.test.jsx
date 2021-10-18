@@ -551,7 +551,7 @@ describe('Story Page', () => {
     expect(adBootstrap).not.toBeInTheDocument();
   });
 
-  it.skip('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
+  it('should render the inline podcast promo component on russian pages with a paragraph of 940 characters and after 8th paragraph', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
@@ -588,7 +588,7 @@ describe('Story Page', () => {
     );
 
     const regions = getAllByRole('region');
-    expect(regions.length).toEqual(5);
+    expect(regions.length).toEqual(4);
 
     const fourthRegion = regions[0];
     expect(fourthRegion.getAttribute('aria-labelledby')).toEqual(
@@ -596,7 +596,7 @@ describe('Story Page', () => {
     );
   });
 
-  it.skip('should not render the inline podcast promo component on russian pages with a paragraph of less than 940 characters and after 8th paragraph', async () => {
+  it('should not render the inline podcast promo component on russian pages with paragraphs of less than 940 characters', async () => {
     process.env.SIMORGH_APP_ENV = 'test';
     const toggles = {
       podcastPromo: {
@@ -633,46 +633,12 @@ describe('Story Page', () => {
     );
 
     const regions = getAllByRole('region');
-    expect(regions.length).toEqual(4);
-  });
+    expect(regions.length).toEqual(3);
 
-  it.skip('should not render the inline podcast promo component on russian pages with a paragraph of 940 characters or more but no 8th paragraph', async () => {
-    process.env.SIMORGH_APP_ENV = 'test';
-    const toggles = {
-      podcastPromo: {
-        enabled: true,
-      },
-    };
-
-    fetchMock.mock(
-      'http://localhost/some-cps-sty-path.json',
-      russianPageDataWithoutInlinePromo,
+    regions.forEach(region =>
+      expect(region.getAttribute('aria-labelledby')).not.toEqual(
+        'podcast-promo',
+      ),
     );
-    fetchMock.mock(
-      'http://localhost/russian/mostread.json',
-      russianMostReadData,
-    );
-    fetchMock.mock(
-      'http://localhost/russian/sty-secondary-column.json',
-      russianSecondaryColumnData,
-    );
-
-    const { pageData } = await getInitialData({
-      path: '/some-cps-sty-path',
-      service: 'russian',
-      pageType,
-    });
-
-    const { getAllByRole } = render(
-      <Page
-        pageData={pageData}
-        service="russian"
-        toggles={toggles}
-        showAdsBasedOnLocation
-      />,
-    );
-
-    const regions = getAllByRole('region');
-    expect(regions.length).toEqual(4);
   });
 });

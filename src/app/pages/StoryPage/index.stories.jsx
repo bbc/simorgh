@@ -57,15 +57,7 @@ const Component = ({ pageData, service }) => (
             pageType="STY"
             bbcOrigin="https://www.test.bbc.com"
           >
-            <Page
-              pageType={STORY_PAGE}
-              isAmp={false}
-              pathname="/path"
-              status={200}
-              pageData={pageData}
-              service={service}
-              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-            />
+            <Page pageData={pageData} />
           </RequestContextProvider>
         </UserContextProvider>
       </ServiceContextProvider>
