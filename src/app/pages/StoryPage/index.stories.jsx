@@ -47,28 +47,30 @@ const toggleState = {
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ pageData, service }) => (
-  <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
-    <ServiceContextProvider service={service}>
-      <UserContextProvider>
-        <RequestContextProvider
-          isAmp={false}
-          service={service}
-          pageType="STY"
-          bbcOrigin="https://www.test.bbc.com"
-        >
-          <Page
-            pageType={STORY_PAGE}
+  <BrowserRouter>
+    <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
+      <ServiceContextProvider service={service}>
+        <UserContextProvider>
+          <RequestContextProvider
             isAmp={false}
-            pathname="/path"
-            status={200}
-            pageData={pageData}
             service={service}
-            mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-          />
-        </RequestContextProvider>
-      </UserContextProvider>
-    </ServiceContextProvider>
-  </ToggleContext.Provider>
+            pageType="STY"
+            bbcOrigin="https://www.test.bbc.com"
+          >
+            <Page
+              pageType={STORY_PAGE}
+              isAmp={false}
+              pathname="/path"
+              status={200}
+              pageData={pageData}
+              service={service}
+              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
+            />
+          </RequestContextProvider>
+        </UserContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </BrowserRouter>
 );
 
 export default {
