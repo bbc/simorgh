@@ -16,6 +16,7 @@ import {
   getATIMarketingString,
   getRSSMarketingString,
 } from '#lib/analyticsUtils';
+import isLive from '#lib/utilities/isLive';
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -58,6 +59,10 @@ export const buildATIPageTrackPath = ({
   const x6Value = disableEncodingDueToAmpSubstitution
     ? referrer
     : referrer && encodeURIComponent(encodeURIComponent(referrer));
+
+  const rssMarketingString = isLive()
+    ? []
+    : getRSSMarketingString(href, campaignType);
 
   const pageViewBeaconValues = [
     {
@@ -213,7 +218,7 @@ export const buildATIPageTrackPath = ({
       // decoding of the ref parameter
       disableEncoding: true,
     },
-    ...getRSSMarketingString(href, campaignType),
+    ...rssMarketingString,
   ];
 
   return getAtiUrl(pageViewBeaconValues);
