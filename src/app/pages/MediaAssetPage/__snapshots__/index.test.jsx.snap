@@ -1203,7 +1203,6 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 dir="ltr"
               >
                 <strong
-                  aria-hidden="true"
                   class="emotion-21 emotion-22 emotion-23"
                 >
                   Ўзбек деҳқонининг косаси нега оқармайдиshort
@@ -3689,7 +3688,6 @@ exports[`Media Asset Page should render component 1`] = `
                 dir="ltr"
               >
                 <strong
-                  aria-hidden="true"
                   class="emotion-21 emotion-22 emotion-23"
                 >
                   Simorgh: Media Pod Build First CPS Media Asset Page in Simorgh & &lt; &gt;
