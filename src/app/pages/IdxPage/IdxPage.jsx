@@ -14,6 +14,7 @@ import {
   GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import MetadataContainer from '#containers/Metadata';
 import LinkedData from '#containers/LinkedData';
@@ -54,7 +55,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const MostReadWrapper = ({ children }) => (
   <IdxMostReadSection>
-    <MostReadSectionLabel />
+    <MostReadSectionLabel backgroundColor={C_GHOST} />
     {children}
   </IdxMostReadSection>
 );

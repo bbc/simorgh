@@ -10,6 +10,7 @@ const logCodes = {
   // Data fetch
   DATA_FETCH_RESPONSE_TIME: 'data_fetch_response_time',
   DATA_FETCH_ERROR: 'data_fetch_error',
+  DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
 
