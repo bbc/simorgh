@@ -16,11 +16,11 @@ const Page = withPageWrapper(ArticlePageComponent);
 const ComponentWithContext = () => (
   <ToggleContextProvider>
     {/* Service set to pidgin to enable most read. Article data is in english */}
-    <ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service="news">
       <RequestContextProvider
         isAmp={false}
         pageType={ARTICLE_PAGE}
-        service="pidgin"
+        service="news"
       >
         <UserContextProvider>
           <MemoryRouter>
