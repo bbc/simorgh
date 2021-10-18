@@ -66,7 +66,7 @@ const RelatedTopics = ({
           dir={dir}
           labelId="related-topics"
           mobileDivider={mobileDivider}
-          backgroundColor={backgroundColour}
+          {...(backgroundColour && { backgroundColor: backgroundColour })}
         >
           {heading}
         </StyledSectionLabel>
