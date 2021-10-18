@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { bool } from 'prop-types';
+import { bool, string } from 'prop-types';
 import styled from '@emotion/styled';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
@@ -16,7 +16,7 @@ const SectionLabelWithMargin = styled(SectionLabel)`
   }
 `;
 
-const MostReadSectionLabel = ({ mobileDivider }) => {
+const MostReadSectionLabel = ({ mobileDivider, backgroundColor }) => {
   const {
     service,
     script,
@@ -30,7 +30,7 @@ const MostReadSectionLabel = ({ mobileDivider }) => {
       service={service}
       dir={dir}
       mobileDivider={mobileDivider}
-      backgroundColor={C_GREY_2}
+      backgroundColor={backgroundColor}
     >
       {header}
     </SectionLabelWithMargin>
@@ -39,10 +39,12 @@ const MostReadSectionLabel = ({ mobileDivider }) => {
 
 MostReadSectionLabel.propTypes = {
   mobileDivider: bool,
+  backgroundColor: string,
 };
 
 MostReadSectionLabel.defaultProps = {
   mobileDivider: true,
+  backgroundColor: C_GREY_2,
 };
 
 export default MostReadSectionLabel;
