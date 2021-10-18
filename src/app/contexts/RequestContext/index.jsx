@@ -19,6 +19,12 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
+  CPS_SHORT_ARTICLE_PAGE,
+  CPS_MEDIUM_ARTICLE_PAGE,
+  CPS_LONG_ARTICLE_PAGE,
+  CPS_MAP,
+  RADIO_PAGE,
+  PODCAST_PAGE,
 } from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
@@ -94,6 +100,12 @@ RequestContextProvider.propTypes = {
     CORRESPONDENT_STORY_PAGE,
     PHOTO_GALLERY_PAGE,
     INDEX_PAGE,
+    CPS_SHORT_ARTICLE_PAGE,
+    CPS_MEDIUM_ARTICLE_PAGE,
+    CPS_LONG_ARTICLE_PAGE,
+    CPS_MAP,
+    RADIO_PAGE,
+    PODCAST_PAGE,
   ]).isRequired,
   service: string.isRequired,
   statusCode: number,
