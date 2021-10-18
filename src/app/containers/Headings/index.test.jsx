@@ -205,6 +205,13 @@ describe('Headings', () => {
       type: 'headline',
     };
 
+    it('should render headline in the middle of content', () => {
+      const { container } = render(
+        <HeadingsContainerWithContext data={data} />,
+      );
+      expect(container).toMatchSnapshot();
+    });
+
     it('should <strong> element', () => {
       const { getByText } = render(
         <HeadingsContainerWithContext data={data} />,
