@@ -3,7 +3,7 @@ import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
-import { StoryPage } from '..';
+import StoryPage from './StoryPage';
 import mundoPageData from './fixtureData/mundo';
 import persianPageData from './fixtureData/persian';
 import russianPageData from './fixtureData/russian';
@@ -12,6 +12,7 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { UserContextProvider } from '#contexts/UserContext';
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const showTopStories = boolean('Show Top Stories', true);
@@ -44,18 +45,17 @@ const toggleState = {
 // eslint-disable-next-line react/prop-types
 const Component = ({ pageData, service }) => (
   <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
-    <ServiceContextProvider
-      // eslint-disable-next-line react/prop-types
-      pageLang={pageData.metadata.language}
-      service={service}
-    >
-      <RequestContextProvider
-        bbcOrigin="https://www.test.bbc.co.uk"
-        service={service}
-        statusCode={200}
-        showAdsBasedOnLocation={false}
-      >
-        <BrowserRouter>
+    <ServiceContextProvider service={service}>
+      <UserContextProvider>
+        <RequestContextProvider
+          isAmp={false}
+          service={service}
+          platform="canonical"
+          pathname="/pathname"
+          id="c3wmq4d1y3wo"
+          pageType="STY"
+          bbcOrigin="https://www.test.bbc.com"
+        >
           <StoryPage
             pageType={STORY_PAGE}
             isAmp={false}
@@ -65,8 +65,8 @@ const Component = ({ pageData, service }) => (
             service={service}
             mostReadEndpointOverride="./data/mundo/mostRead/index.json"
           />
-        </BrowserRouter>
-      </RequestContextProvider>
+        </RequestContextProvider>
+      </UserContextProvider>
     </ServiceContextProvider>
   </ToggleContext.Provider>
 );
