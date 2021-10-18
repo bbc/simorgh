@@ -2,16 +2,53 @@
 import { useContext } from 'react';
 import useWebVitals from '@bbc/web-vitals';
 import useToggle from '#hooks/useToggle';
+import * as pageTypes from '#app/routes/utils/pageTypes';
 
 // Contexts
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 
+const getPageType = ({ pathname, pageType }) => {
+  if (pathname.includes('mundo/noticias-58794908')) {
+    return pageTypes.CPS_LONG_ARTICLE_WITH_PNG_AND_VISJO;
+  }
+  if (pathname.includes('mundo/noticias-internacional-58438104')) {
+    return pageTypes.CPS_LONG_ARTICLE_YOUTUBE_EMBED;
+  }
+  if (pathname.includes('afrique/monde-58789009')) {
+    return pageTypes.CPS_MEDIUM_ARTICLE;
+  }
+  if (pathname.includes('azeri/region-58669082')) {
+    return pageTypes.CPS_SHORT_ARTICLE_YOUTUBE_EMBED;
+  }
+  if (pathname.includes('tigrinya/news-58783556')) {
+    return pageTypes.CPS_SHORT_ARTICLE;
+  }
+  if (pathname.includes('arabic') && pageType === pageTypes.FRONT_PAGE) {
+    return pageTypes.HOMEPAGE_LONG;
+  }
+  if (pathname.includes('kyrgyz') && pageType === pageTypes.FRONT_PAGE) {
+    return pageTypes.HOMEPAGE_SHORT;
+  }
+  if (pathname.includes('igbo/afirika-57779401')) {
+    return pageTypes.MEDIA_ASSET_AUDIO;
+  }
+  if (pathname.includes('mundo/noticias-58743232')) {
+    return pageTypes.MEDIA_ASSET_VIDEO;
+  }
+  if (pathname.includes('pashto/bbc_pashto_radio/w172y3g04r45lx2')) {
+    return pageTypes.RADIO_PAGE;
+  }
+  if (pathname.includes('persian/podcasts/p0703hz7')) {
+    return pageTypes.PODCAST_PAGE;
+  }
+  return pageType;
+};
+
 const WebVitals = () => {
   const { personalisationEnabled } = useContext(UserContext);
-  const { pageType } = useContext(RequestContext);
+  const data = useContext(RequestContext);
   const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
-
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
 
@@ -23,7 +60,7 @@ const WebVitals = () => {
     enabled: isWebVitalsEnabled,
     reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
     sampleRate,
-    reportParams: { pageType },
+    reportParams: { pageType: getPageType(data) },
   };
 
   useWebVitals(webVitalsConfig);
