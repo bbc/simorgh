@@ -6,7 +6,12 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { StoryPage } from '..';
 import mundoPageData from './fixtureData/mundo';
 import persianPageData from './fixtureData/persian';
+import russianPageData from './fixtureData/russian';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const showTopStories = boolean('Show Top Stories', true);
@@ -30,19 +35,40 @@ const withSecondaryColumnsKnob = pageData => storyFn => {
   return storyFn(storyProps);
 };
 
+const toggleState = {
+  podcastPromo: {
+    enabled: true,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
 const Component = ({ pageData, service }) => (
-  <BrowserRouter>
-    <StoryPage
-      pageType={STORY_PAGE}
-      isAmp={false}
-      pathname="/path"
-      status={200}
-      pageData={pageData}
+  <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
+    <ServiceContextProvider
+      // eslint-disable-next-line react/prop-types
+      pageLang={pageData.metadata.language}
       service={service}
-      mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-    />
-  </BrowserRouter>
+    >
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        service={service}
+        statusCode={200}
+        showAdsBasedOnLocation={false}
+      >
+        <BrowserRouter>
+          <StoryPage
+            pageType={STORY_PAGE}
+            isAmp={false}
+            pathname="/path"
+            status={200}
+            pageData={pageData}
+            service={service}
+            mostReadEndpointOverride="./data/mundo/mostRead/index.json"
+          />
+        </BrowserRouter>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContext.Provider>
 );
 
 export default {
@@ -65,3 +91,9 @@ export const Persian = props => (
 );
 
 Persian.decorators = [withSecondaryColumnsKnob(persianPageData)];
+
+export const Russian = props => (
+  <Component service="russian" pageData={russianPageData} {...props} />
+);
+
+Russian.decorators = [withSecondaryColumnsKnob(russianPageData)];
