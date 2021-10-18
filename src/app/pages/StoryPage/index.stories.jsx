@@ -13,6 +13,9 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+
+const Page = withPageWrapper(StoryPage);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const showTopStories = boolean('Show Top Stories', true);
@@ -50,13 +53,10 @@ const Component = ({ pageData, service }) => (
         <RequestContextProvider
           isAmp={false}
           service={service}
-          platform="canonical"
-          pathname="/pathname"
-          id="c3wmq4d1y3wo"
           pageType="STY"
           bbcOrigin="https://www.test.bbc.com"
         >
-          <StoryPage
+          <Page
             pageType={STORY_PAGE}
             isAmp={false}
             pathname="/path"
