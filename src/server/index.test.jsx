@@ -7,8 +7,7 @@ import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
 import Document from './Document/component';
 import routes from '../app/routes';
-import { localBaseUrl } from '../testHelpers/config';
-import services from './utilities/serviceConfigs';
+import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
@@ -100,21 +99,7 @@ const testRenderedData =
   async () => {
     const { text, status } = await makeRequest(url);
 
-    const assetOrigins = [
-      'https://cookie-oven.api.bbc.co.uk',
-      'https://ichef.bbci.co.uk',
-      localBaseUrl,
-      'https://logws1363.ati-host.net?',
-    ];
-
-    const config = services[service];
-    const { fonts } = config[variant || 'default'];
-    if (fonts && fonts.length > 0) {
-      assetOrigins.push(
-        'https://gel.files.bbci.co.uk',
-        'https://ws-downloads.files.bbci.co.uk',
-      );
-    }
+    const assetOrigins = getAssetOrigins(service);
 
     expect(status).toBe(200);
 
@@ -1311,6 +1296,8 @@ describe('Server', () => {
       it('should respond with rendered data', async () => {
         const { text, status } = await makeRequest(`/${service}/foobar`);
 
+        const assetOrigins = getAssetOrigins(service);
+
         expect(status).toBe(404);
 
         expect(reactDomServer.renderToString).toHaveBeenCalled();
@@ -1322,12 +1309,7 @@ describe('Server', () => {
               ids: [],
               html: '<h1>Mock app</h1>',
             }}
-            assetOrigins={[
-              'https://cookie-oven.api.bbc.co.uk',
-              'https://ichef.bbci.co.uk',
-              localBaseUrl,
-              'https://logws1363.ati-host.net?',
-            ]}
+            assetOrigins={assetOrigins}
             data={dataResponse}
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
