@@ -10,7 +10,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 
-import { C_WHITE } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -38,6 +37,7 @@ const RelatedTopics = ({
   bar,
   className,
   backgroundColour,
+  tagBackgroundColour,
 }) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
@@ -73,7 +73,7 @@ const RelatedTopics = ({
         <TopicTags
           service={service}
           script={script}
-          tagBackgroundColour={C_WHITE}
+          {...(tagBackgroundColour && { tagBackgroundColour })}
         >
           {topics.length === 1 ? (
             <TopicTag
@@ -111,6 +111,7 @@ RelatedTopics.propTypes = {
   bar: bool,
   className: string,
   backgroundColour: string,
+  tagBackgroundColour: string,
 };
 
 RelatedTopics.defaultProps = {
@@ -119,6 +120,7 @@ RelatedTopics.defaultProps = {
   bar: true,
   className: null,
   backgroundColour: null,
+  tagBackgroundColour: null,
 };
 
 export default RelatedTopics;
