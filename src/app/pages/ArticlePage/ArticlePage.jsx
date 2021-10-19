@@ -20,7 +20,7 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -190,6 +190,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               topics={topics}
               mobileDivider={false}
               backgroundColour={C_GREY_2}
+              tagBackgroundColour={C_WHITE}
             />
           )}
         </Primary>
