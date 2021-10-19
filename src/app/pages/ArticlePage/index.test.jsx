@@ -220,3 +220,21 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
+
+it('should render the top stories and features when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+  const { getByTestId } = render(
+    <Context service="news">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByTestId('top-stories')).toBeInTheDocument();
+  expect(getByTestId('features')).toBeInTheDocument();
+});
