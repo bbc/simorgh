@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Headings headline in the middle of content should render headline in the middle of content 1`] = `
+exports[`Headings in the middle of articles should render correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;

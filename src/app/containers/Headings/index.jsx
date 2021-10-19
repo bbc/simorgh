@@ -60,7 +60,7 @@ const HeadingsContainer = ({ blocks, type }) => {
   const headingProps = {
     id: isHeading ? headingId : subHeadingId,
     as: isHeading && !isFirstBlock ? 'strong' : null,
-    tabIndex: isFirstBlock ? '-1' : null,
+    tabIndex: isHeading && !isFirstBlock ? null : '-1',
   };
 
   return (

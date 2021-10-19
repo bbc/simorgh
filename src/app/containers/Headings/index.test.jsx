@@ -199,34 +199,34 @@ describe('Headings', () => {
     });
   });
 
-  describe('headline in the middle of content', () => {
+  describe('in the middle of articles', () => {
     const data = {
       blocks: blocksSingleFragment('Sample headline', [], 2),
       type: 'headline',
     };
 
-    it('should render headline in the middle of content', () => {
+    it('should render correctly', () => {
       const { container } = render(
         <HeadingsContainerWithContext data={data} />,
       );
       expect(container).toMatchSnapshot();
     });
 
-    it('should <strong> element', () => {
+    it('should use <strong> element', () => {
       const { getByText } = render(
         <HeadingsContainerWithContext data={data} />,
       );
       expect(getByText('Sample headline').nodeName).toBe('STRONG');
     });
 
-    it('should not have tabIndex', () => {
+    it('should not have a tab index', () => {
       const { getByText } = render(
         <HeadingsContainerWithContext data={data} />,
       );
       expect(getByText('Sample headline')).not.toHaveAttribute('tabindex');
     });
 
-    it('should not have id', () => {
+    it('should not have an id', () => {
       const { getByText } = render(
         <HeadingsContainerWithContext data={data} />,
       );

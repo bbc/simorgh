@@ -226,11 +226,7 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
 });
 
 it('should render a news article with headline in the middle correctly', async () => {
-  const headline = blockContainingText(
-    'headline',
-    'Article Headline for SEO',
-    1,
-  );
+  const headline = blockContainingText('headline', 'Article Headline', 1);
 
   const articleWithSummaryHeadlineInTheMiddle = {
     ...articleDataNews,
@@ -254,11 +250,46 @@ it('should render a news article with headline in the middle correctly', async (
         ],
       },
     },
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'Article Headline',
+        promoHeadline: 'Article Headline for Promo',
+      },
+    },
   };
 
   const { container } = render(
     <Context service="news">
       <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render a news article without promo headline correctly', async () => {
+  const articleWithoutHeadline = {
+    ...articleDataNews,
+    content: {
+      model: {
+        blocks: [singleTextBlock('Paragraph 1', 2)],
+      },
+    },
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'Article Headline',
+        promoHeadline: 'Article Headline for Promo',
+      },
+    },
+  };
+
+  const { container } = render(
+    <Context service="news">
+      <ArticlePage pageData={articleWithoutHeadline} />
     </Context>,
   );
 
