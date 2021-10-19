@@ -4328,19 +4328,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:8.10.0":
-  version: 8.10.0
-  resolution: "@testing-library/dom@npm:8.10.0"
+"@testing-library/dom@npm:8.10.1":
+  version: 8.10.1
+  resolution: "@testing-library/dom@npm:8.10.1"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
     "@types/aria-query": ^4.2.0
     aria-query: ^5.0.0
     chalk: ^4.1.0
-    dom-accessibility-api: ^0.5.6
+    dom-accessibility-api: ^0.5.9
     lz-string: ^1.4.4
     pretty-format: ^27.0.2
-  checksum: df9e25c44c8bda6da6c5b690c458963320384b1af6e4ed29b709888bcd32a5be40cc7d17fdd0605435ff9438f2ca6151d918abc90941b2b5c2871c2f9c759d84
+  checksum: c11da16d981d4479fa18b2e90a62d2c19871da414016a4f80136394cf35e833ca4de4b56a64225f6bd5d3a13842176236d3508d217e3858c5e2ef35a3f391d5b
   languageName: node
   linkType: hard
 
@@ -4412,14 +4412,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:13.4.1":
-  version: 13.4.1
-  resolution: "@testing-library/user-event@npm:13.4.1"
+"@testing-library/user-event@npm:13.5.0":
+  version: 13.5.0
+  resolution: "@testing-library/user-event@npm:13.5.0"
   dependencies:
     "@babel/runtime": ^7.12.5
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: eaf7ae61ffc8574a57121f56491b3fffbd00260617754c874084b500d2b176a90b3c63bc79dde5db04e93240df29e2d0162f05f753dca4aa51abdc7d847eda12
+  checksum: 16319de685fbb7008f1ba667928f458b2d08196918002daca56996de80ef35e6d9de26e9e1ece7d00a004692b95a597cf9142fff0dc53f2f51606a776584f549
   languageName: node
   linkType: hard
 
@@ -8835,6 +8835,13 @@ __metadata:
   version: 0.5.7
   resolution: "dom-accessibility-api@npm:0.5.7"
   checksum: 16161688087510bc31e9103be3a0b0b7d3b044fd4ca03059ac97950f391958008198627c688bd94346757169de91c2500903b14ee9e420c006961a25770b8c62
+  languageName: node
+  linkType: hard
+
+"dom-accessibility-api@npm:^0.5.9":
+  version: 0.5.9
+  resolution: "dom-accessibility-api@npm:0.5.9"
+  checksum: 3988bd1c58e115e972179b9ef881e65ab5da9c2e9d08f4e9646870301971fb0c72d0e0866559e0c06b91b9da6f1fed2f31f0fcbf0b6cffd959b01c0601da2c56
   languageName: node
   linkType: hard
 
@@ -18599,11 +18606,11 @@ resolve@^2.0.0-next.3:
     "@storybook/manager-webpack5": 6.3.12
     "@storybook/react": 6.3.12
     "@storybook/theming": 6.3.12
-    "@testing-library/dom": 8.10.0
+    "@testing-library/dom": 8.10.1
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.1.2
     "@testing-library/react-hooks": 7.0.2
-    "@testing-library/user-event": 13.4.1
+    "@testing-library/user-event": 13.5.0
     amphtml-validator: 1.0.35
     aws-embedded-metrics: 2.0.4
     babel-eslint: 10.1.0
