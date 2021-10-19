@@ -8131,11 +8131,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   height: 0.75rem;
 }
 
-.emotion-38 {
-  display: inline;
-  vertical-align: middle;
-}
-
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -8243,9 +8238,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 >
                   Vidio, 
                 </span>
-                <span
-                  class="emotion-38 emotion-39"
-                >
+                <span>
                   APC ba ta isa ta kore ni ba – Buba Galadima
                 </span>
               </span>
@@ -8259,9 +8252,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               class="emotion-28 emotion-29"
               href="/hausa/labarai-42837051"
             >
-              <span
-                class="emotion-38 emotion-39"
-              >
+              <span>
                 Overtyped headline
               </span>
             </a>
@@ -8274,9 +8265,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               class="emotion-28 emotion-29"
               href="https://www.bbc.com/persian"
             >
-              <span
-                class="emotion-38 emotion-39"
-              >
+              <span>
                 Promo link in Index Alsos
               </span>
             </a>
