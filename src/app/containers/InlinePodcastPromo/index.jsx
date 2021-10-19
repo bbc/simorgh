@@ -1,8 +1,26 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import path from 'ramda/src/path';
+import {
+  GEL_SPACING_HLF,
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_0_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_B_MIN_WIDTH,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import { getPica } from '@bbc/gel-foundations/typography';
+import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import PromoComponent from './components';
+import PromoComponent from '../PodcastPromo/components';
+import Title from './components/title';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
@@ -12,6 +30,151 @@ const getSrcFromSize = (url, size) => {
   const src = url.replace('$recipe', `${size}x${size}`);
   return `${src} ${size}w`;
 };
+
+const ResponsivePodcastPromoWrapper = styled.div`
+  ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
+  background: ${C_LUNAR};
+  height: auto;
+
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    width: 100%;
+    margin: ${GEL_SPACING_DBL} 0;
+    padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    width: 7.06rem;
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_HLF};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    width: 7.62rem;
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    width: 9.25rem;
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    width: 10.93rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: 10.93rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    width: 17.25rem;
+    margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL};
+  }
+`;
+
+const StyledPromoComponent = styled(PromoComponent)`
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+`;
+
+const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
+  display: inline-block;
+  margin: ${GEL_SPACING};
+
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    display: none;
+  }
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    display: inline-block;
+    width: 5.12rem;
+  }
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    display: inline-block;
+    width: 5.62rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    display: inline-block;
+    width: 7.25rem;
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    display: inline-block;
+    width: 8.93rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    display: inline-block;
+    margin: ${GEL_SPACING};
+    width: 15.18rem;
+  }
+`;
+
+const StyledCardWrapper = styled(PromoComponent.Card)`
+  display: block;
+`;
+
+const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    padding: ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
+  }
+`;
+
+const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
+  margin: ${GEL_SPACING} 0;
+  overflow-wrap: break-word;
+`;
+
+const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
+  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
+    margin: 0 ${GEL_SPACING_HLF};
+  }
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    margin: 0;
+  }
+
+  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+    margin: 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+    margin: 0 ${GEL_SPACING_HLF};
+  }
+
+  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+    margin: 0;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 ${GEL_SPACING_HLF};
+  }
+`;
+
+const StyledCardLink = styled(PromoComponent.Card.Link)`
+  ${({ script }) => getPica(script)}
+  ${({ service }) => getSerifMedium(service)}
+  display: block;
+`;
 
 const getSrcSet = (url, sizes) =>
   sizes.map(size => getSrcFromSize(url, size)).join(',');
@@ -65,47 +228,52 @@ const Promo = () => {
   const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
-    <PromoComponent
-      ref={viewTrackerRef}
-      script={script}
-      service={service}
-      role="region"
-      aria-labelledby="podcast-promo"
-      dir={dir}
-    >
-      <SkipLinkWrapper service={service} {...skipLink}>
-        <PromoComponent.Title id="podcast-promo" dir={dir}>
-          {podcastPromoTitle}
-        </PromoComponent.Title>
-        <PromoComponent.Card>
-          <PromoComponent.Card.ImageWrapper>
-            <ImageWithPlaceholder
-              src={imgSrc}
-              srcset={srcset}
-              sizes={sizes}
-              alt={alt}
-              height={1}
-              width={1}
-              ratio={100}
-              lazyLoad
-            />
-          </PromoComponent.Card.ImageWrapper>
-          <PromoComponent.Card.Content>
-            <PromoComponent.Card.Link href={url} onClick={clickTrackerRef}>
-              <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
-                {podcastBrandTitle}
-              </span>
-            </PromoComponent.Card.Link>
-            <PromoComponent.Card.Description>
-              {description}
-            </PromoComponent.Card.Description>
-            <PromoComponent.Card.EpisodesText dir={dir}>
-              {label}
-            </PromoComponent.Card.EpisodesText>
-          </PromoComponent.Card.Content>
-        </PromoComponent.Card>
-      </SkipLinkWrapper>
-    </PromoComponent>
+    <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
+      <StyledPromoComponent
+        script={script}
+        service={service}
+        role="region"
+        aria-labelledby="podcast-promo"
+      >
+        <SkipLinkWrapper service={service} {...skipLink}>
+          <Title id="podcast-promo" dir={dir} script={script} service={service}>
+            {podcastPromoTitle}
+          </Title>
+          <StyledCardWrapper>
+            <StyledImageWrapper>
+              <ImageWithPlaceholder
+                src={imgSrc}
+                srcset={srcset}
+                sizes={sizes}
+                alt={alt}
+                height={1}
+                width={1}
+                ratio={100}
+                lazyLoad
+              />
+            </StyledImageWrapper>
+            <StyledCardContentWrapper>
+              <StyledCardLink
+                href={url}
+                onClick={clickTrackerRef}
+                script={script}
+                service={service}
+              >
+                <span className="podcast-promo--hover podcast-promo--focus podcast-promo--visited">
+                  {podcastBrandTitle}
+                </span>
+              </StyledCardLink>
+              <StyledCardDescriptionWrapper>
+                {description}
+              </StyledCardDescriptionWrapper>
+              <StyledEpisodeTextWrapper dir={dir}>
+                {label}
+              </StyledEpisodeTextWrapper>
+            </StyledCardContentWrapper>
+          </StyledCardWrapper>
+        </SkipLinkWrapper>
+      </StyledPromoComponent>
+    </ResponsivePodcastPromoWrapper>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { node } from 'prop-types';
 import { mediaIcons } from '@bbc/psammead-assets/svgs';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { getGreatPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { C_EBON } from '@bbc/psammead-styles/colours';
@@ -9,7 +10,7 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 const Heading = styled.strong`
   ${({ script }) => getGreatPrimer(script)}
   ${({ service }) => getSansRegular(service)}
-  display: block;
+  display: inline;
   color: ${C_EBON};
 
   > svg {
@@ -23,11 +24,17 @@ const Heading = styled.strong`
   }
 `;
 
+const Wrapper = styled.div`
+  margin: 0 0 ${GEL_SPACING_DBL};
+`;
+
 const Title = ({ children, ...props }) => (
-  <Heading {...props}>
-    {mediaIcons.podcast}
-    {children}
-  </Heading>
+  <Wrapper>
+    <Heading {...props}>
+      {mediaIcons.podcast}
+      {children}
+    </Heading>
+  </Wrapper>
 );
 
 Title.propTypes = {
