@@ -54,7 +54,7 @@ const HeadingsContainer = ({ blocks, type }) => {
     <Blocks blocks={arrayOfFragments} componentsToRender={componentsToRender} />
   );
 
-  const headingId = isFirstBlock ? 'content' : null;
+  const headingId = isFirstBlock ? 'content' : null; // Used for the skiplink
   const subHeadingId = sanitiseSubheadline(type, text);
   const isHeading = type === 'headline';
   const headingProps = {

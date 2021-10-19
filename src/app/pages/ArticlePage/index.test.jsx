@@ -281,7 +281,7 @@ it('should render a news article without promo headline correctly', async () => 
     promo: {
       ...articleDataNews.promo,
       headlines: {
-        seoHeadline: 'Article Headline',
+        seoHeadline: 'Article Headline s',
         promoHeadline: 'Article Headline for Promo',
       },
     },
