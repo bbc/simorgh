@@ -297,3 +297,21 @@ it('should render a news article without promo headline correctly', async () => 
     expect(container).toMatchSnapshot();
   });
 });
+
+it('should render the top stories and features when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+  const { getByTestId } = render(
+    <Context service="news">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByTestId('top-stories')).toBeInTheDocument();
+  expect(getByTestId('features')).toBeInTheDocument();
+});

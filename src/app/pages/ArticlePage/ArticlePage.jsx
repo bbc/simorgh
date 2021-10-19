@@ -21,8 +21,8 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -32,8 +32,7 @@ import text from '#containers/Text';
 import Image from '#containers/Image';
 import Disclaimer from '#containers/Disclaimer';
 import Blocks from '#containers/Blocks';
-import timestamp from '#containers/ArticleTimestamp';
-import { GelPageGrid, GridItemLarge } from '#components/Grid';
+import Timestamp from '#containers/ArticleTimestamp';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
@@ -43,6 +42,7 @@ import MostReadContainer from '#containers/MostRead';
 import MostReadSection from '#containers/MostRead/section';
 import MostReadSectionLabel from '#containers/MostRead/label';
 import SocialEmbedContainer from '#containers/SocialEmbed';
+
 import {
   getArticleId,
   getHeadline,
@@ -58,6 +58,10 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 
+import SecondaryColumn from './SecondaryColumn';
+
+import ArticlePageGrid, { Primary } from './ArticlePageGrid';
+
 const componentsToRender = {
   headline: headings,
   subheadline: headings,
@@ -65,39 +69,45 @@ const componentsToRender = {
   video: articleMediaPlayer,
   text,
   image: props => <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />,
-  timestamp,
+  timestamp: props => <Timestamp {...props} popOut={false} />,
   social: SocialEmbedContainer,
   group: gist,
 };
 
+const Wrapper = styled.div`
+  background-color: ${C_GREY_2};
+`;
+
 const ArticlePageMostReadSection = styled(MostReadSection)`
   @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_BELOW_400PX} ${GEL_SPACING_TRPL};
+    margin: 0 ${GEL_MARGIN_BELOW_400PX} 0 ${GEL_MARGIN_BELOW_400PX};
+    padding-bottom: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUAD};
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
+    padding-bottom: ${GEL_SPACING_QUAD};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) and (max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MAX}) {
-    margin: 0 ${GEL_MARGIN_ABOVE_400PX} ${GEL_SPACING_QUIN};
+    margin: 0 ${GEL_MARGIN_ABOVE_400PX} 0 ${GEL_MARGIN_ABOVE_400PX};
+    padding-bottom: ${GEL_SPACING_QUIN};
   }
   @media (min-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN}) {
     width: 100%; /* Needed for IE11 */
-    margin: 0 auto ${GEL_SPACING_TRPL};
-    padding: 0 ${GEL_SPACING_DBL};
+    margin: 0 auto;
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_TRPL};
     max-width: ${GEL_GROUP_5_SCREEN_WIDTH_MIN};
   }
 `;
 
 const Main = styled.main`
-  background-color: ${C_GREY_2};
   padding-bottom: ${GEL_SPACING_TRPL};
 `;
 
 const StyledRelatedTopics = styled(RelatedTopics)`
-  margin-top: ${GEL_SPACING_DBL};
+  margin: ${GEL_SPACING_DBL};
   padding-bottom: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    margin-top: ${GEL_SPACING_QUAD};
+    margin: ${GEL_SPACING_QUAD} 0;
     padding-bottom: ${GEL_SPACING_QUAD};
   }
 `;
@@ -140,28 +150,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
-  const ArticlePageGrid = ({ children }) => (
-    <GelPageGrid
-      enableGelGutters
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 8,
-        group5: 20,
-      }}
-    >
-      {children}
-    </GelPageGrid>
-  );
-
-  ArticlePageGrid.propTypes = {
-    children: node.isRequired,
-  };
-
   return (
-    <>
+    <Wrapper>
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
@@ -190,37 +180,37 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         aboutTags={aboutTags}
         imageLocator={promoImage}
       />
-      <Main role="main">
-        <ArticlePageGrid>
-          {!startsWithHeading && (
-            <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
-              {headline}
-            </VisuallyHiddenText>
-          )}
-          <Disclaimer />
-          <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-        </ArticlePageGrid>
-      </Main>
-
-      {showRelatedTopics && topics && (
-        <ArticlePageGrid>
-          <GridItemLarge>
+      <ArticlePageGrid>
+        <Primary>
+          <Main role="main">
+            <Disclaimer />
+            {!startsWithHeading && (
+              <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
+                {headline}
+              </VisuallyHiddenText>
+            )}
+            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+          </Main>
+          {showRelatedTopics && topics && (
             <StyledRelatedTopics
               topics={topics}
               mobileDivider={false}
-              bar={false}
+              backgroundColour={C_GREY_2}
+              tagBackgroundColour={C_WHITE}
             />
-          </GridItemLarge>
-        </ArticlePageGrid>
-      )}
+          )}
+        </Primary>
+        <SecondaryColumn pageData={pageData} />
+      </ArticlePageGrid>
 
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
       />
-    </>
+    </Wrapper>
   );
 };
+
 ArticlePage.propTypes = {
   pageData: articleDataPropTypes.isRequired,
   mostReadEndpointOverride: string,
