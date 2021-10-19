@@ -8,20 +8,24 @@ import { UserContextProvider } from '#contexts/UserContext';
 import ArticlePageComponent from './ArticlePage';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
+import secondaryColumn from '#data/news/secondaryColumn';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+
+const Page = withPageWrapper(ArticlePageComponent);
 
 const ComponentWithContext = () => (
   <ToggleContextProvider>
     {/* Service set to pidgin to enable most read. Article data is in english */}
-    <ServiceContextProvider service="pidgin">
+    <ServiceContextProvider service="news">
       <RequestContextProvider
         isAmp={false}
         pageType={ARTICLE_PAGE}
-        service="pidgin"
+        service="news"
       >
         <UserContextProvider>
           <MemoryRouter>
-            <ArticlePageComponent
-              pageData={articleData}
+            <Page
+              pageData={{ ...articleData, secondaryColumn }}
               mostReadEndpointOverride="./data/news/mostRead/index.json"
             />
           </MemoryRouter>

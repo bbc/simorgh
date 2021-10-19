@@ -9,6 +9,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
+
 import { ServiceContext } from '#app/contexts/ServiceContext';
 import { RequestContext } from '#app/contexts/RequestContext';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
@@ -30,7 +31,14 @@ const StyledSectionLabel = styled(SectionLabel)`
   }
 `;
 
-const RelatedTopics = ({ topics, mobileDivider, bar, className }) => {
+const RelatedTopics = ({
+  topics,
+  mobileDivider,
+  bar,
+  className,
+  backgroundColour,
+  tagBackgroundColour,
+}) => {
   const { service, script, translations, dir } = useContext(ServiceContext);
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
@@ -58,10 +66,15 @@ const RelatedTopics = ({ topics, mobileDivider, bar, className }) => {
           dir={dir}
           labelId="related-topics"
           mobileDivider={mobileDivider}
+          {...(backgroundColour && { backgroundColor: backgroundColour })}
         >
           {heading}
         </StyledSectionLabel>
-        <TopicTags service={service} script={script}>
+        <TopicTags
+          service={service}
+          script={script}
+          {...(tagBackgroundColour && { tagBackgroundColour })}
+        >
           {topics.length === 1 ? (
             <TopicTag
               name={topics[0].topicName}
@@ -97,6 +110,8 @@ RelatedTopics.propTypes = {
   mobileDivider: bool,
   bar: bool,
   className: string,
+  backgroundColour: string,
+  tagBackgroundColour: string,
 };
 
 RelatedTopics.defaultProps = {
@@ -104,6 +119,8 @@ RelatedTopics.defaultProps = {
   mobileDivider: true,
   bar: true,
   className: null,
+  backgroundColour: null,
+  tagBackgroundColour: null,
 };
 
 export default RelatedTopics;

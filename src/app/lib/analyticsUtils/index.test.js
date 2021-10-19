@@ -25,6 +25,7 @@ const {
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
+  getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -32,6 +33,13 @@ const {
   getDisplayMarketingString,
   getATIMarketingString,
 } = require('./index');
+
+const SRC_RSS_FIXTURE = {
+  key: 'src_medium',
+  description: 'rss campaign prefix',
+  value: 'RSS',
+  wrap: false,
+};
 
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
@@ -522,6 +530,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
+    ${'?at_medium=RSS'}       | ${'RSS'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
@@ -540,6 +549,42 @@ describe('getCampaignType', () => {
     const campaignType = getCampaignType();
 
     expect(campaignType).toEqual('XTOR');
+  });
+});
+
+describe('getRSSMarketingString', () => {
+  describe.only('"RSS" prefix', () => {
+    it('returns "src_medium" when marketing string is present in url', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=RSS';
+      expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
+    });
+    it('return empty array when campaign is not RSS', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, 'affiliate')).toEqual([]);
+    });
+
+    it('return empty array when campaign is null', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, null)).toEqual([]);
+    });
+
+    it('return empty array when campaign is undefined', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, undefined)).toEqual([]);
+    });
+
+    describe('with optional params', () => {
+      it.each`
+        expectation                                     | href                                                              | expectedValue
+        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=RSS&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
+        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=RSS&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
+      `(
+        'should return marketing string for $expectation',
+        ({ href, expectedValue }) => {
+          expect(getRSSMarketingString(href, 'RSS')).toEqual(expectedValue);
+        },
+      );
+    });
   });
 });
 
