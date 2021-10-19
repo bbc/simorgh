@@ -1903,21 +1903,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-bulletin@npm:5.0.45":
-  version: 5.0.45
-  resolution: "@bbc/psammead-bulletin@npm:5.0.45"
+"@bbc/psammead-bulletin@npm:5.0.46":
+  version: 5.0.46
+  resolution: "@bbc/psammead-bulletin@npm:5.0.46"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-live-label": 2.0.30
-    "@bbc/psammead-story-promo": 8.0.30
+    "@bbc/psammead-story-promo": 8.0.31
     "@bbc/psammead-styles": 8.0.1
     "@bbc/psammead-visually-hidden-text": 2.0.7
   peerDependencies:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 83359b6734e863eedf55b3623ef56b5641cdde58a27234152fc172791d32728fcdb5e4945e8326f0537e5277d41a6035dd1115831e2773a87906a15c6182b4e4
+  checksum: b5c62118bd5849279480b3a117d820ccbc923e58fadbd89a22893ef6c11213669b9c93037e06199650cf69ac12dfc9a9cbe4d2513bbf79a44dca58db2f1482b5
   languageName: node
   linkType: hard
 
@@ -2240,9 +2240,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-story-promo@npm:8.0.30":
-  version: 8.0.30
-  resolution: "@bbc/psammead-story-promo@npm:8.0.30"
+"@bbc/psammead-story-promo@npm:8.0.31":
+  version: 8.0.31
+  resolution: "@bbc/psammead-story-promo@npm:8.0.31"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.1
@@ -2251,7 +2251,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 9b59dc613c9e98b15db4c9eb217fca0b14d73f0fd6a855450a16ad73d1dd518a2d49e846ad570fed84df62fc5aa0e2de192e5d9eb13e322f19fb889c82bc99b6
+  checksum: 7e58e06784494377f58848d0feb7741876dfb320a79fd89423ec025e4902693ec8d34fa40e7f0b3bb73a21a74b8e0047184335fec904f81437171fb94a86ad65
   languageName: node
   linkType: hard
 
@@ -18551,7 +18551,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-brand": 7.3.12
     "@bbc/psammead-bulleted-list": 3.1.9
-    "@bbc/psammead-bulletin": 5.0.45
+    "@bbc/psammead-bulletin": 5.0.46
     "@bbc/psammead-byline": 3.0.29
     "@bbc/psammead-calendars": 2.0.27
     "@bbc/psammead-caption": 4.1.23
@@ -18576,7 +18576,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-script-link": 3.0.29
     "@bbc/psammead-section-label": 7.1.10
     "@bbc/psammead-social-embed": 3.3.9
-    "@bbc/psammead-story-promo": 8.0.30
+    "@bbc/psammead-story-promo": 8.0.31
     "@bbc/psammead-story-promo-list": 6.0.28
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-styles": 8.0.1
