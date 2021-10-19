@@ -2380,7 +2380,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
         id="content"
         tabindex="-1"
       >
-        Article Headline
+        SEO Headline
       </h1>
       <div
         class="emotion-7 emotion-4"
@@ -2660,7 +2660,7 @@ exports[`should render a news article without promo headline correctly 1`] = `
         id="content"
         tabindex="-1"
       >
-        Article Headline
+        SEO Headline
       </h1>
       <div
         class="emotion-7 emotion-4"

@@ -253,8 +253,8 @@ it('should render a news article with headline in the middle correctly', async (
     promo: {
       ...articleDataNews.promo,
       headlines: {
-        seoHeadline: 'Article Headline',
-        promoHeadline: 'Article Headline for Promo',
+        seoHeadline: 'SEO Headline',
+        promoHeadline: 'Promo Headline',
       },
     },
   };
@@ -281,8 +281,8 @@ it('should render a news article without promo headline correctly', async () => 
     promo: {
       ...articleDataNews.promo,
       headlines: {
-        seoHeadline: 'Article Headline',
-        promoHeadline: 'Article Headline for Promo',
+        seoHeadline: 'SEO Headline',
+        promoHeadline: 'Promo Headline',
       },
     },
   };
