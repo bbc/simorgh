@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 import useWebVitals from '@bbc/web-vitals';
 import useToggle from '#hooks/useToggle';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import {
   CPS_LONG_ARTICLE_WITH_PNG_AND_VISJO,
   CPS_LONG_ARTICLE_YOUTUBE_EMBED,
@@ -20,7 +21,7 @@ import {
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 
-const getPageType = ({ pathname, pageType, routeType }) => {
+const getPageType = ({ pathname, pageType }) => {
   if (typeof pathname === 'string') {
     if (pathname.includes('mundo/noticias-58794908')) {
       return CPS_LONG_ARTICLE_WITH_PNG_AND_VISJO;
@@ -37,10 +38,10 @@ const getPageType = ({ pathname, pageType, routeType }) => {
     if (pathname.includes('tigrinya/news-58783556')) {
       return CPS_SHORT_ARTICLE;
     }
-    if (pathname.includes('arabic') && pageType === routeType.FRONT_PAGE) {
+    if (pathname.includes('arabic') && pageType === FRONT_PAGE) {
       return HOMEPAGE_LONG;
     }
-    if (pathname.includes('kyrgyz') && pageType === routeType.FRONT_PAGE) {
+    if (pathname.includes('kyrgyz') && pageType === FRONT_PAGE) {
       return HOMEPAGE_SHORT;
     }
     if (pathname.includes('igbo/afirika-57779401')) {
@@ -62,7 +63,6 @@ const getPageType = ({ pathname, pageType, routeType }) => {
 const WebVitals = () => {
   const { personalisationEnabled } = useContext(UserContext);
   const requestContextData = useContext(RequestContext);
-  const { routeType } = useContext(RequestContext);
   const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
@@ -75,7 +75,7 @@ const WebVitals = () => {
     enabled: isWebVitalsEnabled,
     reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
     sampleRate,
-    reportParams: { pageType: getPageType(requestContextData, routeType) },
+    reportParams: { pageType: getPageType(requestContextData) },
   };
 
   useWebVitals(webVitalsConfig);
