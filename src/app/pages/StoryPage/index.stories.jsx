@@ -54,7 +54,7 @@ const Component = ({ pageData, service }) => (
           <RequestContextProvider
             isAmp={false}
             service={service}
-            pageType="STY"
+            pageType={STORY_PAGE}
             bbcOrigin="https://www.test.bbc.com"
           >
             <Page pageData={pageData} />
