@@ -20,7 +20,7 @@ import {
 import { UserContext } from '#contexts/UserContext';
 import { RequestContext } from '#contexts/RequestContext';
 
-const getPageType = ({ pathname, pageType }) => {
+const getPageType = ({ pathname, pageType, routeType }) => {
   if (typeof pathname === 'string') {
     if (pathname.includes('mundo/noticias-58794908')) {
       return CPS_LONG_ARTICLE_WITH_PNG_AND_VISJO;
@@ -37,10 +37,10 @@ const getPageType = ({ pathname, pageType }) => {
     if (pathname.includes('tigrinya/news-58783556')) {
       return CPS_SHORT_ARTICLE;
     }
-    if (pathname.includes('arabic') && pageType === pageType.FRONT_PAGE) {
+    if (pathname.includes('arabic') && pageType === routeType.FRONT_PAGE) {
       return HOMEPAGE_LONG;
     }
-    if (pathname.includes('kyrgyz') && pageType === pageType.FRONT_PAGE) {
+    if (pathname.includes('kyrgyz') && pageType === routeType.FRONT_PAGE) {
       return HOMEPAGE_SHORT;
     }
     if (pathname.includes('igbo/afirika-57779401')) {
@@ -62,6 +62,7 @@ const getPageType = ({ pathname, pageType }) => {
 const WebVitals = () => {
   const { personalisationEnabled } = useContext(UserContext);
   const requestContextData = useContext(RequestContext);
+  const { routeType } = useContext(RequestContext);
   const { enabled, value: toggleSampleRate } = useToggle('webVitalsMonitoring');
   // Checks if readers have opted into performance tracking and if the feature toggle is enabled
   const isWebVitalsEnabled = personalisationEnabled && enabled;
@@ -74,7 +75,7 @@ const WebVitals = () => {
     enabled: isWebVitalsEnabled,
     reportingEndpoint: process.env.SIMORGH_WEBVITALS_REPORTING_ENDPOINT,
     sampleRate,
-    reportParams: { pageType: getPageType(requestContextData) },
+    reportParams: { pageType: getPageType(requestContextData, routeType) },
   };
 
   useWebVitals(webVitalsConfig);
