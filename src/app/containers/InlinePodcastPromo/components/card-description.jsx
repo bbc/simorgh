@@ -29,17 +29,14 @@ const CardDescription = styled.p`
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     width: 7.18rem;
-    margin: ${GEL_SPACING} 10px;
   }
 
   @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
     width: 9.06rem;
-    margin: ${GEL_SPACING} 10px;
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     width: 14.68rem;
-    margin: ${GEL_SPACING} 10px;
   }
 `;
 

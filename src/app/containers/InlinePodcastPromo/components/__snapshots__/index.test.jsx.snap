@@ -58,21 +58,18 @@ exports[`Podcast Promo Card Description should match snapshot 1`] = `
 @media (min-width: 20rem) {
   .emotion-0 {
     width: 7.18rem;
-    margin: 0.5rem 10px;
   }
 }
 
 @media (min-width: calc(20rem + 2.5rem)) {
   .emotion-0 {
     width: 9.06rem;
-    margin: 0.5rem 10px;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
     width: 14.68rem;
-    margin: 0.5rem 10px;
   }
 }
 
@@ -293,24 +290,6 @@ exports[`Podcast Promo Card Link should match snapshot 1`] = `
 }
 
 @media (min-width: calc(15rem + 1.25rem)) {
-  .emotion-0 {
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: 20rem) {
-  .emotion-0 {
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: calc(20rem + 2.5rem)) {
-  .emotion-0 {
-    margin: 0 10px;
-  }
-}
-
-@media (min-width: 37.5rem) {
   .emotion-0 {
     margin: 0 10px;
   }

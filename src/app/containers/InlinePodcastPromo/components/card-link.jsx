@@ -3,11 +3,7 @@ import { C_METAL, C_EBON } from '@bbc/psammead-styles/colours';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_B_MIN_WIDTH,
-  GEL_GROUP_3_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/breakpoints';
+import { GEL_GROUP_1_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 const CardLink = styled.a`
   ${({ script }) => getPica(script)}
@@ -33,18 +29,6 @@ const CardLink = styled.a`
   }
 
   @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
-    margin: 0 10px;
-  }
-
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    margin: 0 10px;
-  }
-
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
-    margin: 0 10px;
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     margin: 0 10px;
   }
 
