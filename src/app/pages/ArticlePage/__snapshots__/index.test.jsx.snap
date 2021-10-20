@@ -2806,7 +2806,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 </div>
 `;
 
-exports[`should render a news article without promo headline correctly 1`] = `
+exports[`should render a news article without headline correctly 1`] = `
 .emotion-0 {
   background-color: #F6F6F6;
 }
@@ -3173,7 +3173,7 @@ exports[`should render a news article without promo headline correctly 1`] = `
             id="content"
             tabindex="-1"
           >
-            SEO Headline
+            Article Headline
           </h1>
           <div
             class="emotion-12 emotion-4"

@@ -270,7 +270,7 @@ it('should render a news article with headline in the middle correctly', async (
   });
 });
 
-it('should render a news article without promo headline correctly', async () => {
+it('should render a news article without headline correctly', async () => {
   const articleWithoutHeadline = {
     ...articleDataNews,
     content: {
@@ -281,7 +281,7 @@ it('should render a news article without promo headline correctly', async () => 
     promo: {
       ...articleDataNews.promo,
       headlines: {
-        seoHeadline: 'SEO Headline',
+        seoHeadline: 'Article Headline',
         promoHeadline: 'Promo Headline',
       },
     },
