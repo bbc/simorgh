@@ -6,7 +6,7 @@ import WithTimeMachine from '#testHelpers/withTimeMachine';
 import StoryPage from './StoryPage';
 import mundoPageData from './fixtureData/mundo';
 import persianPageData from './fixtureData/persian';
-import russianPageData from './fixtureData/russian';
+import portuguesePageData from './fixtureData/portuguese';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -86,8 +86,8 @@ export const Persian = props => (
 
 Persian.decorators = [withSecondaryColumnsKnob(persianPageData)];
 
-export const Russian = props => (
-  <Component service="russian" pageData={russianPageData} {...props} />
+export const Portuguese = props => (
+  <Component service="portuguese" pageData={portuguesePageData} {...props} />
 );
 
-Russian.decorators = [withSecondaryColumnsKnob(russianPageData)];
+Portuguese.decorators = [withSecondaryColumnsKnob(portuguesePageData)];
