@@ -116,6 +116,11 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
   height: 0.75rem;
 }
 
+.emotion-18 {
+  display: inline;
+  vertical-align: middle;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -169,7 +174,9 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
             >
               Bidiyo, 
             </span>
-            <span>
+            <span
+              class="emotion-18 emotion-19"
+            >
               APC ba ta isa ta kore ni ba – Buba Galadima
             </span>
           </span>
@@ -183,7 +190,9 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
           class="emotion-8 emotion-9"
           href="/hausa/labarai-42837051"
         >
-          <span>
+          <span
+            class="emotion-18 emotion-19"
+          >
             Overtyped headline
           </span>
         </a>
@@ -196,7 +205,9 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
           class="emotion-8 emotion-9"
           href="https://www.bbc.com/persian"
         >
-          <span>
+          <span
+            class="emotion-18 emotion-19"
+          >
             Promo link in Index Alsos
           </span>
         </a>
@@ -316,6 +327,11 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
   height: 0.75rem;
 }
 
+.emotion-16 {
+  display: inline;
+  vertical-align: middle;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -364,7 +380,9 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
           >
             Bidiyo, 
           </span>
-          <span>
+          <span
+            class="emotion-16 emotion-17"
+          >
             APC ba ta isa ta kore ni ba – Buba Galadima
           </span>
         </span>

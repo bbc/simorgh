@@ -4968,7 +4968,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   margin: 0;
 }
 
-.emotion-55 {
+.emotion-53 {
+  display: inline;
+  vertical-align: middle;
+}
+
+.emotion-57 {
   position: relative;
   z-index: 0;
   color: #3F3F42;
@@ -4976,30 +4981,30 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-55 {
+  .emotion-57 {
     margin-top: 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-55 {
+  .emotion-57 {
     margin-bottom: 1.5rem;
   }
 }
 
-.emotion-63 {
+.emotion-65 {
   color: #222222;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-63:focus,
-.emotion-63:hover {
+.emotion-65:focus,
+.emotion-65:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-71 {
+.emotion-73 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5021,33 +5026,33 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-71 {
+  .emotion-73 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-71 {
+  .emotion-73 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-71 {
+  .emotion-73 {
     margin: 0;
   }
 }
 
-.emotion-74 {
+.emotion-76 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-74 {
+  .emotion-76 {
     display: grid;
     position: initial;
     width: initial;
@@ -5055,7 +5060,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5063,7 +5068,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5071,7 +5076,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -5079,7 +5084,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -5087,7 +5092,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5095,7 +5100,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 80rem) {
-    .emotion-74 {
+    .emotion-76 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -5103,48 +5108,48 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 }
 
-.emotion-77 {
+.emotion-79 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-77 {
+  .emotion-79 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-77:last-child {
+.emotion-79:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-77 {
+  .emotion-79 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-77 {
+  .emotion-79 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-77:first-child {
+.emotion-79:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-77:first-child {
+  .emotion-79:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-77:last-child {
+.emotion-79:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5153,7 +5158,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5162,7 +5167,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5171,7 +5176,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5180,7 +5185,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5189,7 +5194,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 80rem) {
-  .emotion-77 {
+  .emotion-79 {
     width: calc(6/8*(100% - 8 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5198,94 +5203,94 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display: grid) {
-  .emotion-77 {
+  .emotion-79 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-77 {
+    .emotion-79 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 }
 
-.emotion-79 {
+.emotion-81 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-79 {
+  .emotion-81 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-79 {
+    .emotion-81 {
       grid-column-gap: 1rem;
     }
   }
 }
 
-.emotion-81 {
+.emotion-83 {
   display: inline-block;
   vertical-align: top;
   width: 100%;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-81 {
+  .emotion-83 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-81 {
+  .emotion-83 {
     width: 33.33%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-81 {
+  .emotion-83 {
     display: block;
     width: initial;
     padding: initial;
@@ -5296,14 +5301,14 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-81 {
+    .emotion-83 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-81 {
+    .emotion-83 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
@@ -5311,12 +5316,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-81>time {
+  .emotion-83>time {
     padding-bottom: 0.5rem;
   }
 }
 
-.emotion-83 {
+.emotion-85 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5328,20 +5333,20 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-83 {
+  .emotion-85 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-83 {
+  .emotion-85 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-87 {
+.emotion-89 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -5353,34 +5358,34 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-87 {
+  .emotion-89 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-87 {
+  .emotion-89 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-87 {
+  .emotion-89 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-87 {
+  .emotion-89 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-91 {
+.emotion-93 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5388,20 +5393,20 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-91 {
+  .emotion-93 {
     padding-right: 0.5rem;
     width: 50%;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-91 {
+  .emotion-93 {
     width: 66.67%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-91 {
+  .emotion-93 {
     width: initial;
     padding: 0;
     grid-template-columns: repeat(6, 1fr);
@@ -5409,62 +5414,62 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-91 {
+    .emotion-93 {
       grid-template-columns: repeat(3, 1fr);
       grid-column-end: span 3;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-91 {
+    .emotion-93 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-100 {
+.emotion-102 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-100 {
+  .emotion-102 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-100:last-child {
+.emotion-102:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-100 {
+  .emotion-102 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-100 {
+  .emotion-102 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-100:first-child {
+.emotion-102:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-100:first-child {
+  .emotion-102:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-100:last-child {
+.emotion-102:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5473,7 +5478,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5482,7 +5487,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5491,7 +5496,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5500,7 +5505,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5509,7 +5514,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 80rem) {
-  .emotion-100 {
+  .emotion-102 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5518,80 +5523,80 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display: grid) {
-  .emotion-100 {
+  .emotion-102 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-100 {
+    .emotion-102 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-102 {
+.emotion-104 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-102 {
+  .emotion-104 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-102 {
+    .emotion-104 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-102 {
+    .emotion-104 {
       display: block;
     }
   }
 }
 
-.emotion-104 {
+.emotion-106 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -5599,39 +5604,39 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 63rem) {
-  .emotion-104 {
+  .emotion-106 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-104 {
+  .emotion-106 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-110 {
+  .emotion-112 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-110>* {
+.emotion-112>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-110>* {
+  .emotion-112>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-112 {
+.emotion-114 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -5639,13 +5644,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-112 {
+  .emotion-114 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-112 {
+  .emotion-114 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -5653,7 +5658,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-112 {
+  .emotion-114 {
     display: block;
     width: initial;
     padding: initial;
@@ -5661,13 +5666,13 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
   }
 
   @media (min-width: 63rem) {
-    .emotion-112 {
+    .emotion-114 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-114 {
+.emotion-116 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -5679,61 +5684,61 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-114 {
+  .emotion-116 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-114 {
+  .emotion-116 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-395 {
+.emotion-397 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-395 {
+  .emotion-397 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-395:last-child {
+.emotion-397:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-395 {
+  .emotion-397 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-395 {
+  .emotion-397 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-395:first-child {
+.emotion-397:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-395:first-child {
+  .emotion-397:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-395:last-child {
+.emotion-397:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5742,7 +5747,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5751,7 +5756,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -5760,7 +5765,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5769,7 +5774,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5778,7 +5783,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @media (min-width: 80rem) {
-  .emotion-395 {
+  .emotion-397 {
     width: calc(8/8*(100% - 8 * 1rem) + 7 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -5787,49 +5792,49 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
 }
 
 @supports (display: grid) {
-  .emotion-395 {
+  .emotion-397 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-395 {
+    .emotion-397 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
     }
@@ -5964,7 +5969,9 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-51 emotion-52"
                     href="/ukrainian/features-russian-52633464"
                   >
-                    <span>
+                    <span
+                      class="emotion-53 emotion-54"
+                    >
                       Как Минск стал спасительным хабом для застрявших за рубежом украинцев
                     </span>
                   </a>
@@ -5980,7 +5987,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="emotion-55 emotion-7"
+          class="emotion-57 emotion-7"
         >
           <div
             class="emotion-8 emotion-9"
@@ -5992,7 +5999,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-12 emotion-13"
           >
             <a
-              class="emotion-63 emotion-64"
+              class="emotion-65 emotion-66"
               href="http://www.bbc.com/ukrainian/magazine_russian"
             >
               <span
@@ -6011,7 +6018,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="emotion-71 emotion-72"
+                    class="emotion-73 emotion-74"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -6022,24 +6029,24 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="emotion-73 emotion-74 emotion-75"
+          class="emotion-75 emotion-76 emotion-77"
           dir="ltr"
           role="list"
         >
           <li
-            class="emotion-73 emotion-77 emotion-78"
+            class="emotion-75 emotion-79 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-79 emotion-23"
+              class="emotion-81 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-81 emotion-36"
+                class="emotion-83 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-83 emotion-38"
+                  class="emotion-85 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6049,7 +6056,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Как справиться со скукой и стрессом во время карантина? Для кого-то лучшим "помощником" стал алкоголь.
                 </p>
@@ -6061,7 +6068,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="emotion-91 emotion-25"
+                class="emotion-93 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6088,15 +6095,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6116,16 +6123,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6135,7 +6142,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Личность человека не остается одинаковой на протяжении всей жизни, как считали ранее. Недавно исследователи выяснили - наш характер с возрастом улучшается.
                 </p>
@@ -6156,7 +6163,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="emotion-55 emotion-7"
+          class="emotion-57 emotion-7"
         >
           <div
             class="emotion-8 emotion-9"
@@ -6185,24 +6192,24 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="emotion-73 emotion-74 emotion-75"
+          class="emotion-75 emotion-76 emotion-77"
           dir="ltr"
           role="list"
         >
           <li
-            class="emotion-73 emotion-77 emotion-78"
+            class="emotion-75 emotion-79 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-79 emotion-23"
+              class="emotion-81 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-81 emotion-36"
+                class="emotion-83 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-83 emotion-38"
+                  class="emotion-85 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6212,7 +6219,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   На украинском сайте компании уже доступен перечень товаров и цены. С сегодняшнего дня можно делать заказы.
                 </p>
@@ -6224,7 +6231,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="emotion-91 emotion-25"
+                class="emotion-93 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6251,15 +6258,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6279,16 +6286,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6298,7 +6305,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Семья Робертсонов 38 дней дрейфовала в открытом океане, после того как их маленькую яхту перевернула и потопила косатка.
                 </p>
@@ -6312,15 +6319,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6340,16 +6347,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6359,7 +6366,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Многие украинцы из-за пандемии оказались заблокированными далеко за границей: из-за закрытия украинского неба добраться домой им очень сложно.
                 </p>
@@ -6373,15 +6380,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6401,16 +6408,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6420,7 +6427,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Мэр Киева Виталий Кличко заявил, что наземный транспорт в столице начнет восстанавливать нормальную работу с 22 мая, а об открытии метро с 25 мая он будет просить правительство. Все из-за транспортного коллапса.
                 </p>
@@ -6434,15 +6441,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6462,16 +6469,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6481,7 +6488,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Власти Швейцарии заявили, что бабушки и дедушки могут обнимать своих внуков в возрасте до 10 лет.
                 </p>
@@ -6495,15 +6502,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6523,16 +6530,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6542,7 +6549,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Могла ли эпидемия Covid-19 произойти из-за утечки вируса?
                 </p>
@@ -6556,15 +6563,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6584,16 +6591,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6603,7 +6610,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Кабинет министров отрабатывает возможность открыть рынки в стране на этой неделе.
                 </p>
@@ -6617,15 +6624,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6645,16 +6652,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6664,7 +6671,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Что можете сделать именно вы, чтобы остановить распространение неправдивой информации?
                 </p>
@@ -6678,15 +6685,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6706,16 +6713,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6725,7 +6732,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Почему один за другим в Украине происходят эти явления, с чем они связаны и когда закончатся?
                 </p>
@@ -6739,15 +6746,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6767,16 +6774,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6786,7 +6793,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Коронавирус распространился уже почти во всем мире. Так какие симптомы имеет эта болезнь и как от нее защититься?
                 </p>
@@ -6807,7 +6814,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="emotion-55 emotion-7"
+          class="emotion-57 emotion-7"
         >
           <div
             class="emotion-8 emotion-9"
@@ -6819,7 +6826,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             class="emotion-12 emotion-13"
           >
             <a
-              class="emotion-63 emotion-64"
+              class="emotion-65 emotion-66"
               href="http://www.bbc.com/ukrainian/russian/media/photogalleries"
             >
               <span
@@ -6838,7 +6845,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </span>
                   <span
                     aria-hidden="true"
-                    class="emotion-71 emotion-72"
+                    class="emotion-73 emotion-74"
                     dir="ltr"
                   >
                     Посмотреть все
@@ -6849,12 +6856,12 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="emotion-73 emotion-74 emotion-75"
+          class="emotion-75 emotion-76 emotion-77"
           dir="ltr"
           role="list"
         >
           <li
-            class="emotion-73 emotion-395 emotion-78"
+            class="emotion-75 emotion-397 emotion-80"
             dir="ltr"
           >
             <div
@@ -6915,15 +6922,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -6943,16 +6950,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -6962,7 +6969,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   .
                 </p>
@@ -6976,15 +6983,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7004,16 +7011,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7023,7 +7030,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   .
                 </p>
@@ -7037,15 +7044,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7065,16 +7072,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7084,7 +7091,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   В школу четырехлетнюю принцессу повели ее родители - принц Уильям и герцогиня Кейт, а также старший брат Джордж.
                 </p>
@@ -7098,15 +7105,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7126,16 +7133,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7145,7 +7152,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Задолго до того, как коты завоевали интернет, Уолтер Чандоха пленил мир своими фото. Он фотографировал пушистых моделей в течение 70 лет.
                 </p>
@@ -7166,7 +7173,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
         role="region"
       >
         <div
-          class="emotion-55 emotion-7"
+          class="emotion-57 emotion-7"
         >
           <div
             class="emotion-8 emotion-9"
@@ -7195,24 +7202,24 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
           </h2>
         </div>
         <ul
-          class="emotion-73 emotion-74 emotion-75"
+          class="emotion-75 emotion-76 emotion-77"
           dir="ltr"
           role="list"
         >
           <li
-            class="emotion-73 emotion-77 emotion-78"
+            class="emotion-75 emotion-79 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-79 emotion-23"
+              class="emotion-81 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-81 emotion-36"
+                class="emotion-83 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-83 emotion-38"
+                  class="emotion-85 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7222,7 +7229,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Максим Степанов - третий министр, возглавляющий Минздрав во время пандемии коронавируса. В интервью ВВС News Украина он прокомментировал конфликт вокруг закупок лекарств, а также рассказал, когда откроют детсады и когда медиками привезут костюмы из Китая.
                 </p>
@@ -7234,7 +7241,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 </time>
               </div>
               <div
-                class="emotion-91 emotion-25"
+                class="emotion-93 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7261,15 +7268,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7289,16 +7296,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7308,7 +7315,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   В соцсетях и некоторых СМИ решение немецкого регулятора называют победой, но действительно ли это победа?
                 </p>
@@ -7322,15 +7329,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7350,16 +7357,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7369,7 +7376,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Интересно, что тестирование прекратили не из-за их провала - а возможно, как раз наоборот.
                 </p>
@@ -7383,15 +7390,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7411,16 +7418,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7430,7 +7437,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Ученые пытаются найти метод лечения Covid-19 или разработать вакцину, которая позволила бы смягчить карантинные меры, включая социальное дистанцирование. Вероятным кандидатом в спасители человечества называют ламу.
                 </p>
@@ -7444,15 +7451,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7472,16 +7479,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7491,7 +7498,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Несмотря на то, что карантин, согласно решению правительства, будет действовать в Украине как минимум до 22 мая, ряд ограничений снимут уже с понедельника.
                 </p>
@@ -7505,15 +7512,15 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
             </div>
           </li>
           <li
-            class="emotion-73 emotion-100 emotion-78"
+            class="emotion-75 emotion-102 emotion-80"
             dir="ltr"
           >
             <div
-              class="emotion-102 emotion-23"
+              class="emotion-104 emotion-23"
               data-e2e="story-promo"
             >
               <div
-                class="emotion-104 emotion-25"
+                class="emotion-106 emotion-25"
                 dir="ltr"
               >
                 <div
@@ -7533,16 +7540,16 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     </div>
                   </div>
                   <div
-                    class="emotion-110 emotion-34"
+                    class="emotion-112 emotion-34"
                   />
                 </div>
               </div>
               <div
-                class="emotion-112 emotion-36"
+                class="emotion-114 emotion-36"
                 dir="ltr"
               >
                 <h3
-                  class="emotion-114 emotion-38"
+                  class="emotion-116 emotion-38"
                 >
                   <a
                     class="emotion-39 emotion-40"
@@ -7552,7 +7559,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   </a>
                 </h3>
                 <p
-                  class="emotion-87 emotion-42"
+                  class="emotion-89 emotion-42"
                 >
                   Одно из исследований выявило мутацию, которая, по словам ученых, может сделать коронавирус более заразным.
                 </p>

@@ -20,7 +20,6 @@ import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import PromoComponent from '../PodcastPromo/components';
-import Title from './components/title';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
@@ -35,12 +34,6 @@ const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: ${C_LUNAR};
   height: auto;
-
-  @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
-    width: 100%;
-    margin: ${GEL_SPACING_DBL} 0;
-    padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
-  }
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     width: 7.06rem;
@@ -107,10 +100,6 @@ const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
     margin: ${GEL_SPACING};
     width: 15.18rem;
   }
-`;
-
-const StyledCardWrapper = styled(PromoComponent.Card)`
-  display: block;
 `;
 
 const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
@@ -236,10 +225,10 @@ const Promo = () => {
         aria-labelledby="podcast-promo"
       >
         <SkipLinkWrapper service={service} {...skipLink}>
-          <Title id="podcast-promo" dir={dir} script={script} service={service}>
+          <PromoComponent.Title id="podcast-promo" dir={dir} as="strong">
             {podcastPromoTitle}
-          </Title>
-          <StyledCardWrapper>
+          </PromoComponent.Title>
+          <PromoComponent.Card inlinePromo>
             <StyledImageWrapper>
               <ImageWithPlaceholder
                 src={imgSrc}
@@ -270,7 +259,7 @@ const Promo = () => {
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>
-          </StyledCardWrapper>
+          </PromoComponent.Card>
         </SkipLinkWrapper>
       </StyledPromoComponent>
     </ResponsivePodcastPromoWrapper>
