@@ -4,6 +4,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
 .emotion-0 {
   float: right;
   background: #F2F2F2;
+  margin: 1.5rem 0;
   height: auto;
 }
 

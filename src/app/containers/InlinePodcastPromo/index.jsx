@@ -33,6 +33,7 @@ const getSrcFromSize = (url, size) => {
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
   background: ${C_LUNAR};
+  margin: ${GEL_SPACING_TRPL} 0;
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
