@@ -1,1441 +1,237 @@
 {
   "metadata": {
-    "id": "urn:bbc:ares::asset:portuguese/internacional-58982435",
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
     "locators": {
-      "assetUri": "/portuguese/internacional-58982435",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-58982435",
-      "curie": "http://www.bbc.co.uk/asset/53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
-      "assetId": "58982435"
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
+      "assetId": "23282671"
     },
-    "type": "STY",
+    "type": "MAP",
     "createdBy": "brasil-v6",
     "language": "pt-BR",
-    "lastUpdated": 1634737675499,
-    "firstPublished": 1634735720000,
-    "lastPublished": 1634735720000,
-    "timestamp": 1634735720000,
+    "lastUpdated": 1588335920162,
+    "firstPublished": 1585672938000,
+    "lastPublished": 1585672938000,
+    "timestamp": 1585672938000,
     "options": {
       "isIgorSeoTagsEnabled": false,
       "includeComments": false,
       "allowRightHandSide": true,
       "isFactCheck": false,
       "allowDateStamp": true,
-      "suitableForSyndication": true,
       "hasNewsTracker": false,
       "allowRelatedStoriesBox": true,
       "isKeyContent": false,
       "allowHeadline": true,
-      "allowAdvertising": true,
-      "hasContentWarning": false,
       "isBreakingNews": false,
       "allowPrintingSharingLinks": true
     },
     "analyticsLabels": {
-      "ldp_tags": "Brazil~Business~China~Economics~Trade~Latin+America",
-      "cps_asset_id": "58982435",
-      "ldp_ids": "15f1bcf6-b6ab-48e8-b708-efed41e43d31~2f2db234-3c2d-40a4-b4ac-eea661faadd0~6892384e-1966-4c03-9ce3-f694a8f9f69e~ca170ae3-99c1-48db-9b67-2866f85e7342~cec5d136-f83d-4e00-a3be-d22a7b89401f~e0d04166-b92f-468e-9e68-d5f9330e6ae7",
-      "contentId": "urn:bbc:cps:curie:asset:53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
-      "counterName": "portuguese.world.story.58982435.page",
-      "cps_asset_type": "sty"
+      "cps_asset_type": "map",
+      "counterName": "portuguese.media.media_asset.23282671.page",
+      "cps_asset_id": "23282671"
     },
     "passport": {
-      "campaigns": [
-        {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        },
-        {
-          "campaignId": "5a988e3e39461b000e9dabfb",
-          "campaignName": "WS - Keep me on trend"
-        }
-      ],
-      "language": "pt-br",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
-      "locator": "urn:bbc:cps:curie:asset:53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
-      "availability": "AVAILABLE",
-      "taggings": [
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-          "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
-          "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-        }
-      ],
-      "schemaVersion": "1.3.0",
-      "publishedState": "PUBLISHED",
-      "predicates": {
-        "about": [
-          {
-            "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-            "thingLabel": "Brasil",
-            "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-            "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
-            "thingType": [
-              "core:Place",
-              "core:Thing",
-              "tagging:TagConcept"
-            ],
-            "thingSameAs": [
-              "http://sws.geonames.org/3469034/"
-            ],
-            "thingEnglishLabel": "Brazil",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-            "thingLabel": "Negócios",
-            "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-            "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
-            "thingType": [
-              "core:Theme",
-              "tagging:TagConcept",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://www.wikidata.org/entity/Q21857788",
-              "http://dbpedia.org/resource/Business"
-            ],
-            "thingEnglishLabel": "Business",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-            "thingLabel": "China",
-            "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-            "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-            "thingType": [
-              "core:Thing",
-              "tagging:TagConcept",
-              "core:Place"
-            ],
-            "thingSameAs": [
-              "http://sws.geonames.org/1814991/",
-              "http://dbpedia.org/resource/China",
-              "http://www.wikidata.org/entity/Q148"
-            ],
-            "thingEnglishLabel": "China",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-            "thingLabel": "Economia",
-            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
-            "thingType": [
-              "core:Theme",
-              "core:Thing",
-              "tagging:TagConcept"
-            ],
-            "thingSameAs": [
-              "http://dbpedia.org/resource/Economy"
-            ],
-            "thingEnglishLabel": "Economics",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-            "thingLabel": "Comércio",
-            "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-            "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
-            "thingType": [
-              "tagging:TagConcept",
-              "core:Theme",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://dbpedia.org/resource/Trade"
-            ],
-            "thingEnglishLabel": "Trade",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-            "thingLabel": "América Latina",
-            "thingUri": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-            "thingId": "e0d04166-b92f-468e-9e68-d5f9330e6ae7",
-            "thingType": [
-              "core:Place",
-              "tagging:TagConcept",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://www.wikidata.org/entity/Q12585",
-              "http://dbpedia.org/resource/Latin_America"
-            ],
-            "thingEnglishLabel": "Latin America",
-            "type": "about"
-          }
-        ],
-        "formats": [
-          {
-            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-            "thingLabel": "Feature",
-            "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-            "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-            "thingType": [
-              "tagging:TagConcept",
-              "tagging:Format"
-            ],
-            "thingSameAs": [
-              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
-            ],
-            "thingEnglishLabel": "Feature",
-            "thingPreferredLabel": "Feature",
-            "thingLabelLanguage": "pt-br",
-            "type": "formats"
-          }
-        ]
-      }
+      "taggings": []
     },
-    "tags": {
-      "about": [
-        {
-          "thingLabel": "Brasil",
-          "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-          "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
-          "thingType": [
-            "core:Place",
-            "core:Thing",
-            "tagging:TagConcept"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/3469034/"
-          ],
-          "topicName": "Brasil",
-          "topicId": "cz74k717pw5t",
-          "curationList": [
-            {
-              "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Brazil",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "Brazil"
-        },
-        {
-          "thingLabel": "Negócios",
-          "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-          "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
-          "thingType": [
-            "core:Theme",
-            "tagging:TagConcept",
-            "core:Thing"
-          ],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q21857788",
-            "http://dbpedia.org/resource/Business"
-          ],
-          "topicName": "Negócios",
-          "topicId": "c95y35496y1t",
-          "curationList": [
-            {
-              "curationId": "b2122453-56d6-41f6-b3f6-3a3c09d70e3d",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Business",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "Business"
-        },
-        {
-          "thingLabel": "China",
-          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-          "thingType": [
-            "core:Thing",
-            "tagging:TagConcept",
-            "core:Place"
-          ],
-          "thingSameAs": [
-            "http://sws.geonames.org/1814991/",
-            "http://dbpedia.org/resource/China",
-            "http://www.wikidata.org/entity/Q148"
-          ],
-          "topicName": "China",
-          "topicId": "cdr56r2v966t",
-          "curationList": [
-            {
-              "curationId": "5ab58014-b5db-4972-bbcd-bb8c469e9385",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "China",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "China"
-        },
-        {
-          "thingLabel": "Economia",
-          "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-          "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
-          "thingType": [
-            "core:Theme",
-            "core:Thing",
-            "tagging:TagConcept"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Economy"
-          ],
-          "topicName": "Economia",
-          "topicId": "cvjp2jr0k9rt",
-          "curationList": [
-            {
-              "curationId": "19ccd297-ce26-4046-b0dc-b1a0bee26850",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Economics",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "Economics"
-        },
-        {
-          "thingLabel": "Comércio",
-          "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-          "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
-          "thingType": [
-            "tagging:TagConcept",
-            "core:Theme",
-            "core:Thing"
-          ],
-          "thingSameAs": [
-            "http://dbpedia.org/resource/Trade"
-          ],
-          "topicName": "Comércio",
-          "topicId": "c6vzyv58v4dt",
-          "curationList": [
-            {
-              "curationId": "463e10c8-d761-4000-a832-49ce2b338aab",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Trade",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "Trade"
-        },
-        {
-          "thingLabel": "América Latina",
-          "thingUri": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-          "thingId": "e0d04166-b92f-468e-9e68-d5f9330e6ae7",
-          "thingType": [
-            "core:Place",
-            "tagging:TagConcept",
-            "core:Thing"
-          ],
-          "thingSameAs": [
-            "http://www.wikidata.org/entity/Q12585",
-            "http://dbpedia.org/resource/Latin_America"
-          ],
-          "topicName": "América Latina",
-          "topicId": "c7zp5znpxnyt",
-          "curationList": [
-            {
-              "curationId": "435d9283-94a7-4dfd-8196-0f003606ffa5",
-              "curationType": "vivo-stream"
-            }
-          ],
-          "thingEnglishLabel": "Latin America",
-          "thingLabelLanguage": "pt-br",
-          "thingPreferredLabel": "Latin America"
-        }
-      ]
-    },
-    "version": "v1.3.13",
+    "tags": {},
+    "version": "v1.2.1",
     "blockTypes": [
-      "image",
+      "media",
       "paragraph",
-      "list",
-      "crosshead",
-      "social_embed"
+      "heading",
+      "image",
+      "subheading",
+      "list"
     ],
-    "includeComments": false,
-    "atiAnalytics": {
-      "producerName": "BRASIL",
-      "producerId": "33"
-    },
-    "readTime": 8,
-    "siteUri": "/portuguese",
-    "topics": [
-      {
-        "topicName": "Comércio",
-        "topicId": "c6vzyv58v4dt",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "463e10c8-d761-4000-a832-49ce2b338aab",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "tagging:TagConcept",
-          "core:Theme",
-          "core:Thing"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      },
-      {
-        "topicName": "América Latina",
-        "topicId": "c7zp5znpxnyt",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "435d9283-94a7-4dfd-8196-0f003606ffa5",
-            "curationType": "vivo-stream",
-            "position": 0,
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Place",
-          "tagging:TagConcept",
-          "core:Thing"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      },
-      {
-        "topicName": "Negócios",
-        "topicId": "c95y35496y1t",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "b2122453-56d6-41f6-b3f6-3a3c09d70e3d",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Theme",
-          "tagging:TagConcept",
-          "core:Thing"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      },
-      {
-        "topicName": "China",
-        "topicId": "cdr56r2v966t",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "5ab58014-b5db-4972-bbcd-bb8c469e9385",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Thing",
-          "tagging:TagConcept",
-          "core:Place"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      },
-      {
-        "topicName": "Economia",
-        "topicId": "cvjp2jr0k9rt",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "19ccd297-ce26-4046-b0dc-b1a0bee26850",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Theme",
-          "core:Thing",
-          "tagging:TagConcept"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      },
-      {
-        "topicName": "Brasil",
-        "topicId": "cz74k717pw5t",
-        "subjectList": [
-          {
-            "subjectId": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-            "subjectType": "tag"
-          }
-        ],
-        "curationList": [
-          {
-            "curationId": "bcf15bdb-b59d-4726-ba50-9eba0a3e90f2",
-            "curationType": "vivo-stream",
-            "visualProminence": "NORMAL"
-          }
-        ],
-        "types": [
-          "core:Place",
-          "core:Thing",
-          "tagging:TagConcept"
-        ],
-        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
-      }
-    ]
+    "includeComments": false
   },
   "content": {
     "blocks": [
       {
-        "id": "121000153",
+        "id": "p01kdbns",
+        "subType": "clip",
+        "format": "video",
+        "title": "How Germans remember the World Wars",
+        "synopses": {
+          "short": "Remembrance Day: How Germans remember the World Wars",
+          "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+          "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "How do Germans remember the World Wars?",
+        "versions": [
+          {
+            "versionId": "p01kdbnv",
+            "types": ["Original"],
+            "duration": 162,
+            "durationISO8601": "PT2M42S",
+            "warnings": {
+              "short": "Contains some strong language.",
+              "long": "Contains some strong language."
+            },
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": false,
+              "world": false
+            },
+            "availableFrom": 1541761851000
+          }
+        ],
+        "imageCopyright": "BBC",
+        "type": "media"
+      },
+      {
+        "text": "Já ouviu falar da cabra gnu, do macaco de orelhas vermelhas ou do monstro de Gila?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Eles podem ser os futuros ícones da conservação ambiental, de acordo com um estudo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os cientistas acreditam que estes animais pouco conhecidos são fundamentais para arrecadar dinheiro para proteger ecossistemas vulneráveis.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "As imagens de tigres e elefantes, que têm grande apelo junto ao público, são frequentemente selecionadas para campanhas de arrecadação de fundos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Heading",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "text text text text",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "63733272",
         "subType": "body",
-        "href": "http://c.files.bbci.co.uk/891C/production/_121000153_gettyimages-84173195.jpg",
-        "path": "/cpsprodpb/891C/production/_121000153_gettyimages-84173195.jpg",
+        "href": "http://b.files.bbci.co.uk/6A61/test/_63733272__110989783_animals-comp.jpg",
+        "path": "/cpsdevpb/6A61/test/_63733272__110989783_animals-comp.jpg",
         "height": 549,
         "width": 976,
-        "altText": "Buque carguero",
+        "altText": "Two photos of nice animals",
+        "caption": "Nice animals",
         "copyrightHolder": "Getty Images",
         "positionHint": "full-width",
-        "originCode": "cpsprodpb",
         "type": "image"
       },
       {
-        "text": "O porto de Pireus, na Grécia, considerado a grande porta de entrada dos produtos asiáticos na Europa, é um dos exemplos da expansão das empresas chinesas na rede portuária global.",
-        "role": "introduction",
+        "text": "Subheading",
         "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Depois da Grande Crise de 2008-2009, a Grécia teve de implementar reformas e privatizações para pagar suas dívidas depois de receber um resgate financeiro, promovido pela União Europeia. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Foi assim que uma gigante estatal chinesa viu uma oportunidade de entrar na indústria portuária de um país em crise.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A empresa Cosco adquiriu 51% de Pireus, num acordo que a autorizava a aumentar sua participação para 67% cinco anos depois. E foi exatamente isso que aconteceu, no início de outubro.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+        "type": "subheading"
       },
       {
         "numbered": false,
         "items": [
           {
-            "text": "<itemMeta>portuguese/internacional-58974918</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "O desafio triplo da economia dos EUA que ameaça retomada pós-pandemia",
-                  "headline": "O desafio triplo da economia dos EUA que ameaça retomada pós-pandemia",
-                  "overtyped": "O desafio triplo da economia dos EUA que ameaça retomada pós-pandemia"
-                },
-                "locators": {
-                  "href": "https://www.bbc.com/portuguese/internacional-58974918"
-                },
-                "summary": "O caminho para a recuperação econômica após o impacto da pandemia encontrou alguns obstáculos nos EUA. Quais são eles e como podemos seguir em frente?",
-                "timestamp": 1634721855000,
-                "language": "pt-BR",
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": [
-                    
-                  ]
-                },
-                "id": "urn:bbc:ares::asset:portuguese/internacional-58974918",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>portuguese/brasil-58099335</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Por que ataques de Bolsonaro à China não prejudicaram comércio com o Brasil",
-                  "headline": "Por que ataques de Bolsonaro à China não prejudicaram comércio com o Brasil",
-                  "overtyped": "Por que ataques de Bolsonaro à China não prejudicaram comércio com o Brasil"
-                },
-                "locators": {
-                  "href": "https://www.bbc.com/portuguese/brasil-58099335"
-                },
-                "summary": "Apesar de críticas ao gigante asiático, ações concretas do governo brasileiro indicaram \"mais continuidade do que ruptura na relação bilateral\", diz novo relatório.",
-                "timestamp": 1628158817000,
-                "language": "pt-BR",
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": [
-                    
-                  ]
-                },
-                "id": "urn:bbc:ares::asset:portuguese/brasil-58099335",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
-            "type": "listItem"
-          },
-          {
-            "text": "<itemMeta>portuguese/internacional-58966799</itemMeta>",
-            "meta": [
-              {
-                "headlines": {
-                  "shortHeadline": "Por que faltam tantos produtos no Brasil e no mundo",
-                  "headline": "Por que faltam tantos produtos no Brasil e no mundo",
-                  "overtyped": "Por que faltam tantos produtos no Brasil e no mundo"
-                },
-                "locators": {
-                  "href": "https://www.bbc.com/portuguese/internacional-58966799"
-                },
-                "summary": "Pessoas e empresas em todo o mundo estão enfrentando escassez de diversos produtos, desde carvão a café.",
-                "timestamp": 1634712850000,
-                "language": "pt-BR",
-                "passport": {
-                  "category": {
-                    "categoryId": "",
-                    "categoryName": ""
-                  },
-                  "taggings": [
-                    
-                  ]
-                },
-                "id": "urn:bbc:ares::asset:portuguese/internacional-58966799",
-                "type": "cps"
-              }
-            ],
-            "markupType": "candy_xml",
+            "text": "Conheça as 'superfrutas' encontradas na Mata Atlântica que pesquisadores tentam salvar da extinção",
+            "markupType": "plain_text",
             "type": "listItem"
           }
         ],
         "type": "list"
       },
       {
-        "text": "Com essa operação, Pequim agora administra um dos portos mais importantes do mundo, localizado na junção de Europa, Ásia e África.",
-        "markupType": "plain_text",
-        "type": "paragraph"
+        "numbered": false,
+        "items": [
+          {
+            "text": "Por que Greta Thunberg pode estar errada sobre estarmos diante da 'sexta extinção em massa na Terra'",
+            "markupType": "plain_text",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
       },
       {
-        "text": "A mesma empresa está em negociações para adquirir uma participação no porto de Hamburgo (Alemanha). Se for concretizada, será o oitavo grande investimento portuário da Cosco na Europa.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Outro gigante chinês do setor, o Shanghai International Port Group, acaba de assumir o controle do porto israelense de Haifa.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Esses são alguns dos capítulos mais recentes de uma longa história de expansão portuária, que nos últimos anos tem ocorrido no contexto da chamada Rota Marítima da Seda, iniciativa que faz parte de um plano mais amplo de investimento de capital chinês em obras de infraestrutura ao redor do mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Para conseguir esse objetivo, controlar as concessões portuárias em pontos geoestratégicos é fundamental, apontam analistas consultados pela BBC Mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Diferentes estimativas mostram que empresas do gigante asiático controlam atualmente cerca de cem portos em mais de 60 países. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Os portos de contêineres com investimento chinês tiveram um aumento em sua conexão de transporte marítimo acima da média&quot;, diz Jan Hoffmann, chefe da Unidade de Logística Comercial da Conferência das Nações Unidas sobre Comércio e Desenvolvimento (Unctad, na sigla em inglês).",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Isso representa uma vantagem sobre seus concorrentes que lhes permite avançar passo a passo na indústria portuária",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Esse aumento de conexão, explicou Hoffmann à BBC Mundo, ocorreu porque tratam-se geralmente de investimentos de grandes proporções ou porque as empresas chinesas levam seus próprios serviços a esse terminais.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Exibição de força",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "A partir de um ponto de vista histórico, Sam Beatson, professor do Departamento de Finanças, Risco e Bancos e em programas de mestrado em Administração de Empresas da Escola de Negócios da Universidade de Nottingham (NUBS), no Reino Unido, diz que as elites políticas e empresariais chinesas compreenderam que no passado perderam uma oportunidade de explorar e se desenvolver em outras partes do mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Até que reagiram, alguns anos atrás.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Por um lado, a China quer se expandir, influenciar e compensar esse tempo perdido. Por outro, claro, existe um desejo de exibir força, mas na minha opinião não existe nenhum desejo de fazer isso de uma maneira ameaçadora&quot;, afirmou à BBC Mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121152190",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/23A5/production/_121152190_7c94ba35-df8c-4c61-ab39-cfe7395ed126.jpg",
-        "path": "/cpsprodpb/23A5/production/_121152190_7c94ba35-df8c-4c61-ab39-cfe7395ed126.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "O presidente chinês, Xi Jinping, e o primeiro-ministro grego, Kyriakos Mitsotakis, no porto de Pireu (2019)",
-        "caption": "O presidente chinês, Xi Jinping, e o primeiro-ministro grego, Kyriakos Mitsotakis, no porto de Pireu",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "&quot;O elemento chave que impulsiona a estratégia portuária das empresas chinesas é um maior controle e eficiência em seus negócios marítimos globais e a busca de oportunidades para participar de projetos de desenvolvimento perto da China.&quot;",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Outros estudiosos, como James R. Holmes, professor de Estratégia Marítima na Escola de Guerra Naval dos Estados Unidos, têm uma perspectiva mais cuidadosa sobre o avanço chinês na rede portuária.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;O objetivo é criar um ciclo autossustentável entre o comércio, o poder militar e a influência diplomática&quot;, disse ele.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "O acesso a portos no exterior permite que a China desenvolva mais suas redes comerciais e aumente sua riqueza. Com isso, explica Holmes, o país reinveste parte desses fundos em suas forças navais, terrestres, aéreas e de mísseis de apoio.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ao ter um maior poder econômico, Pequim consegue &quot;uma alavanca diplomática para influenciar nas nações anfitriãs&quot;, onde funcionam os portos com capitais chineses, diz o especialista.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121000158",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/14C6C/production/_121000158_gettyimages-825399844.jpg",
-        "path": "/cpsprodpb/14C6C/production/_121000158_gettyimages-825399844.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "A base naval chinesa em Djibouti",
-        "caption": "A base naval chinesa em Djibouti, na entrada do Mar Vermelho e do Canal de Suez, causou polêmica",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "Esse é, por exemplo, o caso de Djibouti, país do leste africano localizado estrategicamente na entrada do Mar Vermelho, que leva ao Canal do Suez. Nessa pequena nação, que recebeu grandes investimentos de Pequim, um porto marítimo foi transformado na primeira base militar da China no exterior.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A militarização desse porto havia sido vista por alguns analistas como uma advertência diante dos interesses portuárias que a China possa ter em outros países, como Tanzânia, Emirados Árabes Unidos, Paquistão ou Mianmar.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pedras no caminho",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Décadas de crescimento económico e um forte impulso governamental permitiram à China posicionar-se no centro do comércio marítimo mundial, segundo uma análise do China Power Project, pertencente ao Centro de Estudos Estratégicos e Internacionais (CSIS, na sigla em inglês), com sede em Washington D.C. (EUA), intitulado <italic>Como a China influi na conectividade marítima global?</italic>.",
+        "text": "<italic>Mas essa abordagem tem sido criticada por negligenciar muitas outras espécies que precisam da nossa ajuda.</italic>",
         "markupType": "candy_xml",
         "type": "paragraph"
-      },
-      {
-        "text": "Sob o governo de Xi Jinping, as empresas estatais chinesas têm participado de projetos de investimento e construção de dezenas de portos em todo o mundo. Entretanto, muitos projetos apoiados pela China não têm decolado como se esperava, diz o estudo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121031808",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/13BAD/production/_121031808_gettyimages-1318249527.jpg",
-        "path": "/cpsprodpb/13BAD/production/_121031808_gettyimages-1318249527.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Operário da fábrica Cosco",
-        "caption": "CK Hutchison, Cosco e China Merchants são algumas das maiores empresas chinesas com portos no exterior",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "É o que acontece no porto de Gwadar, um componente chave do Corredor Econômico China-Paquistão, que tem sido subutilizado. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;O governo paquistanês teve de tomar medidas desesperadas no início de 2021 para reativar o porto&quot;, afirma a análise do CSIS.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "O documento também afirma que alguns projetos importantes ainda não se materializaram por completo, como o porto de Bagamoyo, na Tanzânia.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Outro aspecto das operações chinesas na indústria portuária, acrescenta a análise, está relacionado com os termos das negociações feitas com países endividados com Pequim.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121031810",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/0715/production/_121031810_gettyimages-464082420.jpg",
-        "path": "/cpsprodpb/0715/production/_121031810_gettyimages-464082420.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Porto de Hambantota, Sri Lanka",
-        "caption": "O Sri Lanka estava tão endividado com a China que em 2017 arrendou o porto de Hambantota por 99 anos em troca de uma redução da dívida",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "Nesse contexto está o porto de Hambantota, no Sri Lanka. O país asiático estava tão endividado com a China que em 2017 arrendou o porto aos chineses por 99 anos, em troca de uma redução da dívida.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A medida gerou preocupações sobre a influência econômica chinesa, diz o CSIS, e os potenciais riscos para países menores de firmar acordos custosos de desenvolvimento de infraestrutura com o gigante asiático.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "América Latina e Brasil",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Eleanor Hadland, analista sênior de terminais portuários da consultora internacional Drewry diz que, apesar de as operações chinesas na América Latina terem aumentado, elas ainda estão muito abaixo do que tem sido um fenômeno em outras partes do mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Os terminais de contêineres estiveram na primeira onda de privatizações de portos nos finais da década de 1990 e no início da de 2000&quot;, disse a especialista à BBC Mundo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nesses anos, entrou com força na região a Hutchilson Ports (subsidiária da CK Hutchison Ports), empresa chinesa que atualmente tem a maior presença na América Latina. É a gigante chinesa nos portos latino-americanos.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Anos depois entraram no mercado a Cosco e a China Merchants, mas o ritmo de expansão das empresas chinesas foi muito menor que no passado se deu em outros lugares.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A América Latina tornou-se um mercado secundário para os chineses, já que a Rota Marítima da Seda está mais concentrada em conectar a Europa e a Ásia e em projetos de desenvolvimento portuários na África.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Além disso, diz a analista, &quot;a oportunidade de os chineses ingressarem no mercado latino-americano vê-se limitada pelas taxas de crescimento mais baixas&quot; na região, algo que vem ocorrendo desde antes da pandemia de Covid-19.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121031812",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/5535/production/_121031812_gettyimages-907595626.jpg",
-        "path": "/cpsprodpb/5535/production/_121031812_gettyimages-907595626.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Puerto de Balboa, Panamá",
-        "caption": "Porto de Balboa, no Panamá, operado por capital chinês",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "O Brasil, entretanto, pode acabar sendo um caso diferente na região. &quot;Há uma nova série de privatizações de portos programadas no Brasil&quot;, das quais eventualmente os chineses podem participar.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Entretanto, outros interessados podem acabar assumindo esses projetos. &quot;Nós imaginamos que as considerações geopolíticas serão fundamentais para o governo brasileiro&quot;, afirma Hadland.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "\"Com mais concorrência, ganhamos todos\"",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "&quot;O melhor que pode acontecer à indústria e aos usuários é que haja operadores portuários de porte mundial competindo nos portos da região&quot;, diz José Antonio Pejovés, professor de Direito Marítimo na Faculdade de Direito da Universidade de Lima e fundador do Estudio Pejovés Marítimo, empresa de assessoria jurídica.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Se existe mais concorrência, ganhamos todos.&quot; A partir dessa perspectiva, o especialista afirmou, em conversa com a BBC Mundo, que a iniciativa da Rota da Seda &quot;é um projeto fabuloso&quot;.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Pejovés explica que os capitais chineses operam sob um esquema de concessões por um período de tempo determinado. São concessões de uso público, ou seja, eles estão obrigados a prestar serviços a todos os navios de carga que queiram utilizar sua infraestrutura.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;Não são terminais portuários dedicados somente aos interesses chineses.&quot;",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Estratégia \"comercial e política\"",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Evan Ellis, professor pesquisador de estudos latino-americanos do Instituto de Estudos Estratégicos da Escola de Guerra do Exército dos Estados Unidos, diz que para a China é fundamental ter um papel importante na conectividade global.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Sua estratégia mais ampla, disse Ellis à BBC Mundo, é tratar de assegurar seu acesso a mercados estratégicos para conseguir matérias-primas e vender seus produtos.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;As empresas chinesas querem os portos com a ideia de dominar toda a cadeia de suprimentos&quot; e assim não depender logisticamente de outras empresas.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121032010",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/03FF/production/_121032010_gettyimages-525328746.jpg",
-        "path": "/cpsprodpb/03FF/production/_121032010_gettyimages-525328746.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Contêineres no porto de Pireu",
-        "caption": "Na América Latina, as empresas chinesas controlam mais de 10 megaportos em 7 países",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "Mas, mesmo com objetivos principalmente econômicos, eles não deixam de ser estratégicos, diz o pesquisador.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;A influência econômica lhe dá poder para ter mais influência política e depois você usa essa influência política para conseguir mais vantagens econômicas. É um ciclo.&quot;",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "A partir dessa perspectiva, acrescenta Ellis, &quot;o controle dos portos é parte de uma guerra econômica e estratégica em que a China usa seu poder para conseguir mais mercados e impor pressão sobre a concorrência.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Grande projetos na região",
-        "markupType": "plain_text",
-        "type": "crosshead"
-      },
-      {
-        "text": "Um dos grandes portos cuja construção avança a passo firme é e Chancay, no Peru.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Operado pela chinesa Cosco, espera-se que o investimento total chegue aos US$ 3 bilhões quando as obras forem concluídas, em 2024.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Entre os grandes portos com investimentos chineses na América Latina e no Caribe estão ainda os de Enseada, Manzanillo, Lázaro Cárdennas e Veracruz, no México.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121032006",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/EA77/production/_121032006_gettyimages-664625844.jpg",
-        "path": "/cpsprodpb/EA77/production/_121032006_gettyimages-664625844.jpg",
-        "height": 549,
-        "width": 549,
-        "altText": "Puerto Lázaro Cárdenas, México",
-        "caption": "Lázaro Cárdenas é um dos quatro portos administrados por empresas chinesas no México",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "Nas Bahamas, o de Freeport; na Jamaica, o de Kingston; no Panamá, Balboa e Colón; na Argentina, o de Buenos Aires. E, no Brasil, o porto de Paranaguá, no Paraná - em que a China Merchants Port Holding Company (CMPort) adquiriu 90% dos Terminal de Contêineres de Paranaguá, em 2018. Paranaguá é o principal porto de exportação da soja brasileira, cuja maioria segue rumo à China.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Além deles, existe capital chinês em portos menores, alguns privados, ou em diferentes tipos de infraestrutura portuária.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Nem todas as iniciativas chinesas na região, porém, prosperaram. É o caso do megaprojeto impulsionado pela empresa Asia Pacific Xuanhao, que busca a criação de uma zona de livre comércio no sudeste de El Salvador, com acesso a Honduras e Nicarágua.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "O desenvolvimento inclui a reconstrução do porto de La Unión, a criação de um parque industrial, um aeroporto e zonas de desenvolvimento turístico, entre outros. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "&quot;É basicamente converter El Salvador em uma zona para a expansão comercial da China na América Central&quot;, afirma Ellis. ",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "121000156",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/FE4C/production/_121000156_gettyimages-1233706265-1.jpg",
-        "path": "/cpsprodpb/FE4C/production/_121000156_gettyimages-1233706265-1.jpg",
-        "height": 549,
-        "width": 976,
-        "altText": "Xi Jinping",
-        "caption": "Xi Jinping promoveu a construção de infraestrutura chinesa no exterior, no âmbito de sua iniciativa da nova Rota da Seda",
-        "copyrightHolder": "Getty Images",
-        "positionHint": "full-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "Embora a América Latina não esteja no centro da estratégia chinesa de investir em portos a nível global, de toda maneira trata-se de um mercado atraente, dizem os especialistas.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Mesmo estando a região mais na zona de influência dos Estados Unidos, por sua proximidade geográfica, não é um dado de pouca importância que o principal parceiro comercial da América do Sul seja a China.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Por enquanto, existem vários projetos portuários com capital chinês que estão sendo planejados pela região, mas as negociações costumam levar anos, considerando os gigantescos montantes envolvidos e as considerações políticas que cada governo faz quando deve firmar um acordo.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "text": "Ainda que se tratem de acordos comerciais, a questão estratégica dificilmente fica fora da balança.",
-        "markupType": "plain_text",
-        "type": "paragraph"
-      },
-      {
-        "id": "102788085",
-        "subType": "body",
-        "href": "http://c.files.bbci.co.uk/E2E8/production/_102788085_464x2_line.jpg",
-        "path": "/cpsprodpb/E2E8/production/_102788085_464x2_line.jpg",
-        "height": 2,
-        "width": 464,
-        "altText": "Rayita",
-        "copyrightHolder": "BBC",
-        "positionHint": "body-width",
-        "originCode": "cpsprodpb",
-        "type": "image"
-      },
-      {
-        "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
-        "markupType": "candy_xml",
-        "type": "paragraph"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=l6WFaKIgJf0",
-        "source": "youtube",
-        "embed": {
-          "oembed": {
-            "version": "1.0",
-            "title": "Afeganistão: o que é e o que deseja o Talebã",
-            "author_name": "BBC News Brasil",
-            "author_url": "https://www.youtube.com/user/BBCBrasil",
-            "provider_name": "YouTube",
-            "provider_url": "https://www.youtube.com/",
-            "thumbnail_url": "https://i.ytimg.com/vi/l6WFaKIgJf0/hqdefault.jpg",
-            "thumbnail_width": 480,
-            "thumbnail_height": 360,
-            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/l6WFaKIgJf0?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-            "width": 200,
-            "height": 113
-          },
-          "fallback_image": {
-            "fallback_image_width": 500,
-            "fallback_image_height": 269,
-            "alt_text": "YouTube post by BBC News Brasil: Afeganistão: o que é e o que deseja o Talebã"
-          }
-        },
-        "id": "l6WFaKIgJf0",
-        "type": "social_embed"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=4UUhsmhF7dc",
-        "source": "youtube",
-        "embed": {
-          "oembed": {
-            "version": "1.0",
-            "title": "Vídeo da BBC mostra execução pelo Talebã no Afeganistão",
-            "author_name": "BBC News Brasil",
-            "author_url": "https://www.youtube.com/user/BBCBrasil",
-            "provider_name": "YouTube",
-            "provider_url": "https://www.youtube.com/",
-            "thumbnail_url": "https://i.ytimg.com/vi/4UUhsmhF7dc/hqdefault.jpg",
-            "thumbnail_width": 480,
-            "thumbnail_height": 360,
-            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/4UUhsmhF7dc?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-            "width": 200,
-            "height": 113
-          },
-          "fallback_image": {
-            "fallback_image_width": 500,
-            "fallback_image_height": 269,
-            "alt_text": "YouTube post by BBC News Brasil: Vídeo da BBC mostra execução pelo Talebã no Afeganistão"
-          }
-        },
-        "id": "4UUhsmhF7dc",
-        "type": "social_embed"
-      },
-      {
-        "href": "https://www.youtube.com/watch?v=bGFbBPbZafQ",
-        "source": "youtube",
-        "embed": {
-          "oembed": {
-            "version": "1.0",
-            "title": "Afeganistão: como o Talebã avançou tão rapidamente após saída dos EUA",
-            "author_name": "BBC News Brasil",
-            "author_url": "https://www.youtube.com/user/BBCBrasil",
-            "provider_name": "YouTube",
-            "provider_url": "https://www.youtube.com/",
-            "thumbnail_url": "https://i.ytimg.com/vi/bGFbBPbZafQ/hqdefault.jpg",
-            "thumbnail_width": 480,
-            "thumbnail_height": 360,
-            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/bGFbBPbZafQ?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-            "width": 200,
-            "height": 113
-          },
-          "fallback_image": {
-            "fallback_image_width": 500,
-            "fallback_image_height": 269,
-            "alt_text": "YouTube post by BBC News Brasil: Afeganistão: como o Talebã avançou tão rapidamente após saída dos EUA"
-          }
-        },
-        "id": "bGFbBPbZafQ",
-        "type": "social_embed"
       }
     ]
   },
   "promo": {
     "headlines": {
-      "shortHeadline": "A estratégica rede de portos que a China controla no mundo e avança até no Brasil",
-      "headline": "A estratégica rede de portos que a China controla no mundo e avança até no Brasil"
+      "shortHeadline": "Brasil/Portuguese test MAP",
+      "headline": "Brasil/Portuguese test MAP"
     },
     "locators": {
-      "assetUri": "/portuguese/internacional-58982435",
-      "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-58982435",
-      "curie": "http://www.bbc.co.uk/asset/53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
-      "assetId": "58982435"
+      "assetUri": "/portuguese/media-23282671",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/media-23282671",
+      "curie": "http://www.bbc.co.uk/asset/a9601e04-929a-c74b-8198-cdbdfd3f046e",
+      "assetId": "23282671"
     },
-    "summary": "O gigante asiático deu um forte impulso à sua Rota da Seda Marítima para expandir sua influência nos oceanos do mundo. Na América Latina, as empresas chinesas controlam mais de 10 megaportos em sete países.",
-    "timestamp": 1634735720000,
+    "summary": "Can people in today's Germany mourn their dead without whitewashing their country's past?",
+    "timestamp": 1585672938000,
     "language": "pt-BR",
-    "byline": {
-      "name": "Cecilia Barría",
-      "title": "BBC News Mundo",
-      "persons": [
-        {
-          "name": "Cecilia Barría",
-          "function": "BBC News Mundo"
-        }
-      ]
-    },
     "passport": {
-      "campaigns": [
+      "taggings": []
+    },
+    "media": {
+      "id": "p01kdbns",
+      "subType": "clip",
+      "format": "video",
+      "title": "How Germans remember the World Wars",
+      "synopses": {
+        "short": "Remembrance Day: How Germans remember the World Wars",
+        "long": "Can people in today's Germany mourn their dead without whitewashing their country's past? We ask three Germans, ahead of the 100th anniversary of the end of World War One.",
+        "medium": "Can people in today's Germany mourn their dead without whitewashing their country's past?"
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01kdbpk.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "How do Germans remember the World Wars?",
+      "versions": [
         {
-          "campaignId": "5a988e3739461b000e9dabfa",
-          "campaignName": "WS - Give me perspective"
-        },
-        {
-          "campaignId": "5a988e3e39461b000e9dabfb",
-          "campaignName": "WS - Keep me on trend"
+          "versionId": "p01kdbnv",
+          "types": ["Original"],
+          "duration": 162,
+          "durationISO8601": "PT2M42S",
+          "warnings": {
+            "short": "Contains some strong language.",
+            "long": "Contains some strong language."
+          },
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": false,
+            "world": false
+          },
+          "availableFrom": 1541761851000
         }
       ],
-      "language": "pt-br",
-      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
-      "locator": "urn:bbc:cps:curie:asset:53a183aa-d2d1-4b9d-9b71-d99c0745cb44",
-      "availability": "AVAILABLE",
-      "taggings": [
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
-          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
-          "value": "http://www.bbc.co.uk/things/e2c286b3-665d-4806-87f5-c8b005938ba4#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
-          "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
-          "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
-          "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id"
-        },
-        {
-          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
-          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
-        }
-      ],
-      "schemaVersion": "1.3.0",
-      "publishedState": "PUBLISHED",
-      "predicates": {
-        "about": [
-          {
-            "value": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-            "thingLabel": "Brasil",
-            "thingUri": "http://www.bbc.co.uk/things/15f1bcf6-b6ab-48e8-b708-efed41e43d31#id",
-            "thingId": "15f1bcf6-b6ab-48e8-b708-efed41e43d31",
-            "thingType": [
-              "core:Place",
-              "core:Thing",
-              "tagging:TagConcept"
-            ],
-            "thingSameAs": [
-              "http://sws.geonames.org/3469034/"
-            ],
-            "thingEnglishLabel": "Brazil",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-            "thingLabel": "Negócios",
-            "thingUri": "http://www.bbc.co.uk/things/2f2db234-3c2d-40a4-b4ac-eea661faadd0#id",
-            "thingId": "2f2db234-3c2d-40a4-b4ac-eea661faadd0",
-            "thingType": [
-              "core:Theme",
-              "tagging:TagConcept",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://www.wikidata.org/entity/Q21857788",
-              "http://dbpedia.org/resource/Business"
-            ],
-            "thingEnglishLabel": "Business",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-            "thingLabel": "China",
-            "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
-            "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
-            "thingType": [
-              "core:Thing",
-              "tagging:TagConcept",
-              "core:Place"
-            ],
-            "thingSameAs": [
-              "http://sws.geonames.org/1814991/",
-              "http://dbpedia.org/resource/China",
-              "http://www.wikidata.org/entity/Q148"
-            ],
-            "thingEnglishLabel": "China",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-            "thingLabel": "Economia",
-            "thingUri": "http://www.bbc.co.uk/things/ca170ae3-99c1-48db-9b67-2866f85e7342#id",
-            "thingId": "ca170ae3-99c1-48db-9b67-2866f85e7342",
-            "thingType": [
-              "core:Theme",
-              "core:Thing",
-              "tagging:TagConcept"
-            ],
-            "thingSameAs": [
-              "http://dbpedia.org/resource/Economy"
-            ],
-            "thingEnglishLabel": "Economics",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-            "thingLabel": "Comércio",
-            "thingUri": "http://www.bbc.co.uk/things/cec5d136-f83d-4e00-a3be-d22a7b89401f#id",
-            "thingId": "cec5d136-f83d-4e00-a3be-d22a7b89401f",
-            "thingType": [
-              "tagging:TagConcept",
-              "core:Theme",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://dbpedia.org/resource/Trade"
-            ],
-            "thingEnglishLabel": "Trade",
-            "type": "about"
-          },
-          {
-            "value": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-            "thingLabel": "América Latina",
-            "thingUri": "http://www.bbc.co.uk/things/e0d04166-b92f-468e-9e68-d5f9330e6ae7#id",
-            "thingId": "e0d04166-b92f-468e-9e68-d5f9330e6ae7",
-            "thingType": [
-              "core:Place",
-              "tagging:TagConcept",
-              "core:Thing"
-            ],
-            "thingSameAs": [
-              "http://www.wikidata.org/entity/Q12585",
-              "http://dbpedia.org/resource/Latin_America"
-            ],
-            "thingEnglishLabel": "Latin America",
-            "type": "about"
-          }
-        ],
-        "formats": [
-          {
-            "value": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-            "thingLabel": "Feature",
-            "thingUri": "http://www.bbc.co.uk/things/8d1509ef-08ef-42bd-b831-82504eed9b8e#id",
-            "thingId": "8d1509ef-08ef-42bd-b831-82504eed9b8e",
-            "thingType": [
-              "tagging:TagConcept",
-              "tagging:Format"
-            ],
-            "thingSameAs": [
-              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature"
-            ],
-            "thingEnglishLabel": "Feature",
-            "thingPreferredLabel": "Feature",
-            "thingLabelLanguage": "pt-br",
-            "type": "formats"
-          }
-        ]
-      }
+      "imageCopyright": "BBC",
+      "type": "media"
     },
     "indexImage": {
-      "id": "121000160",
+      "id": "63733270",
       "subType": "index",
-      "href": "http://c.files.bbci.co.uk/17D4/production/_121000160_gettyimages-1052532580.jpg",
-      "path": "/cpsprodpb/17D4/production/_121000160_gettyimages-1052532580.jpg",
-      "height": 549,
-      "width": 976,
-      "altText": "Puerto de los Pirineos, en Grecia.",
-      "copyrightHolder": "Getty Images",
-      "originCode": "cpsprodpb",
+      "href": "http://b.files.bbci.co.uk/1C41/test/_63733270_p01kdbpk.jpg",
+      "path": "/cpsdevpb/1C41/test/_63733270_p01kdbpk.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Description of picture (ALT TEXT)",
+      "copyrightHolder": "BBC",
       "type": "image"
     },
-    "id": "urn:bbc:ares::asset:portuguese/internacional-58982435",
+    "id": "urn:bbc:ares::asset:portuguese/media-23282671",
     "type": "cps"
   },
   "relatedContent": {
     "section": {
       "subType": "index",
-      "name": "Internacional",
-      "uri": "/portuguese/internacional",
+      "name": "Media",
+      "uri": "/portuguese/media",
       "type": "simple"
     },
     "site": {
@@ -1444,94 +240,6 @@
       "uri": "/portuguese",
       "type": "simple"
     },
-    "groups": [
-      {
-        "type": "see-alsos",
-        "promos": [
-          {
-            "headlines": {
-              "shortHeadline": "O desafio triplo da economia dos EUA que ameaça retomada pós-pandemia",
-              "headline": "O desafio triplo da economia dos EUA que ameaça retomada pós-pandemia"
-            },
-            "locators": {
-              "assetUri": "/portuguese/internacional-58974918",
-              "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-58974918"
-            },
-            "summary": "O caminho para a recuperação econômica após o impacto da pandemia encontrou alguns obstáculos nos EUA. Quais são eles e como podemos seguir em frente?",
-            "timestamp": 1634721855000,
-            "language": "pt-BR",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "120249801",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/2A8E/production/_120249801_gettyimages-480919874.jpg",
-              "path": "/cpsprodpb/2A8E/production/_120249801_gettyimages-480919874.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Buque con contenedores",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:portuguese/internacional-58974918",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "Por que ataques de Bolsonaro à China não prejudicaram comércio com o Brasil",
-              "headline": "Por que ataques de Bolsonaro à China não prejudicaram comércio com o Brasil"
-            },
-            "locators": {
-              "assetUri": "/portuguese/brasil-58099335",
-              "cpsUrn": "urn:bbc:content:assetUri:/portuguese/brasil-58099335"
-            },
-            "summary": "Apesar de críticas ao gigante asiático, ações concretas do governo brasileiro indicaram \"mais continuidade do que ruptura na relação bilateral\", diz novo relatório.",
-            "timestamp": 1628158817000,
-            "language": "pt-BR",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "115758421",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/30C5/production/_115758421_gettyimages-1091311882.jpg",
-              "path": "/cpsprodpb/30C5/production/_115758421_gettyimages-1091311882.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Bandeiras da China e do Brasil",
-              "caption": "China é principal parceira comercial do Brasil desde 2009",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:portuguese/brasil-58099335",
-            "type": "cps"
-          },
-          {
-            "headlines": {
-              "shortHeadline": "Por que faltam tantos produtos no Brasil e no mundo",
-              "headline": "Por que faltam tantos produtos no Brasil e no mundo"
-            },
-            "locators": {
-              "assetUri": "/portuguese/internacional-58966799",
-              "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-58966799"
-            },
-            "summary": "Pessoas e empresas em todo o mundo estão enfrentando escassez de diversos produtos, desde carvão a café.",
-            "timestamp": 1634712850000,
-            "language": "pt-BR",
-            "cpsType": "STY",
-            "indexImage": {
-              "id": "121026047",
-              "subType": "index",
-              "href": "http://c.files.bbci.co.uk/1214E/production/_121026047_gettyimages-1225105951.jpg",
-              "path": "/cpsprodpb/1214E/production/_121026047_gettyimages-1225105951.jpg",
-              "height": 549,
-              "width": 976,
-              "altText": "Navios",
-              "copyrightHolder": "Getty Images",
-              "type": "image"
-            },
-            "id": "urn:bbc:ares::asset:portuguese/internacional-58966799",
-            "type": "cps"
-          }
-        ]
-      }
-    ]
+    "groups": []
   }
 }
