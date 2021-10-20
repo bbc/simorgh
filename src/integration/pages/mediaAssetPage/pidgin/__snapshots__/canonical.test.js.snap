@@ -155,14 +155,14 @@ Object {
 
 exports[`Canonical Media Asset Page Related Content should match text and url 3`] = `
 Object {
-  "text": "Image gallery,Kenya Elections Pictures: 8 August 2017",
+  "text": "Image gallery, Kenya Elections Pictures: 8 August 2017",
   "url": "/pidgin/23146654",
 }
 `;
 
 exports[`Canonical Media Asset Page Related Content should match text and url 4`] = `
 Object {
-  "text": "Make you listen,BBC News Pidgin One Minute News, Duration 0,15",
+  "text": "Make you listen, BBC News Pidgin One Minute News, Duration 0,15",
   "url": "/pidgin/media-23147054",
 }
 `;

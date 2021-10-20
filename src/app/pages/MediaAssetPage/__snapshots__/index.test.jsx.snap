@@ -4507,7 +4507,7 @@ exports[`Media Asset Page should render component 1`] = `
                               <span
                                 class="emotion-4 emotion-5"
                               >
-                                Image gallery,
+                                Image gallery, 
                               </span>
                               <span>
                                 Kenya Elections Pictures: 8 August 2017
@@ -4607,7 +4607,7 @@ exports[`Media Asset Page should render component 1`] = `
                               <span
                                 class="emotion-4 emotion-5"
                               >
-                                Make you listen,
+                                Make you listen, 
                               </span>
                               <span>
                                 BBC News Pidgin One Minute News
