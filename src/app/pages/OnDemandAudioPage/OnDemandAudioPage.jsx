@@ -265,11 +265,15 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         <span>text message two</span>
       </div>
 
+      <br />
+
       <div name="span with single nested span and no aria-labels">
         <span>
           <span>I am the child span</span>
         </span>
       </div>
+
+      <br />
 
       <div name="span with 2 nested span and no aria-labels">
         <span>
@@ -278,12 +282,16 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         </span>
       </div>
 
+      <br />
+
       <div name="span with 2 nested span and no aria-labels on parent">
         <span role="text">
           <span>Children one</span>
           <span>Children two</span>
         </span>
       </div>
+
+      <br />
 
       <div
         name="div with aria-label span with 2 nested span and no aria-labels on parent"
@@ -295,7 +303,21 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         </span>
       </div>
 
+      <br />
+
       <div name="one span, one visually hidden text and role text on parent span">
+        <span role="text">
+          <span>I am a children span</span>
+          <VisuallyHiddenText>I am hinned text</VisuallyHiddenText>
+        </span>
+      </div>
+
+      <br />
+
+      <div
+        name="div with area-lable and one span, one visually hidden text and role text on parent span"
+        aria-label="I am the parent division"
+      >
         <span role="text">
           <span>I am a children span</span>
           <VisuallyHiddenText>I am hinned text</VisuallyHiddenText>
