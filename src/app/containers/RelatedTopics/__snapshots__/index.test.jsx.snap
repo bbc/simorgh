@@ -3,26 +3,6 @@
 exports[`Expected use should render correctly with a single tag 1`] = `
 .emotion-0 {
   padding-bottom: 2.5rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 12.5rem;
-}
-
-@media (min-width: 15rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 9.813rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 8rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 8.5rem;
-  }
 }
 
 .emotion-3 {
@@ -302,26 +282,6 @@ exports[`Expected use should render correctly with a single tag 1`] = `
 exports[`Expected use should render correctly with multiple tags 1`] = `
 .emotion-0 {
   padding-bottom: 2.5rem;
-  content-visibility: auto;
-  contain-intrinsic-size: 12.5rem;
-}
-
-@media (min-width: 15rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 9.813rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 8rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-0 {
-    contain-intrinsic-size: 8.5rem;
-  }
 }
 
 .emotion-3 {
