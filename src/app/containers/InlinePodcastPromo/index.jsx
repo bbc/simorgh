@@ -111,22 +111,6 @@ const StyledCardContentWrapper = styled(PromoComponent.Card.Content)`
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
   }
-
-  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    padding: 0 ${GEL_SPACING} ${GEL_SPACING} ${GEL_SPACING};
-  }
 `;
 
 const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
