@@ -1,4 +1,7 @@
 import React, { useContext } from 'react';
+
+import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
@@ -256,6 +259,48 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       {radioScheduleData && (
         <RadioScheduleContainer initialData={radioScheduleData} />
       )}
+
+      <div name="2 spans in a row with no aria-labels">
+        <span>text message one</span>
+        <span>text message two</span>
+      </div>
+
+      <div name="span with single nested span and no aria-labels">
+        <span>
+          <span>I am the child span</span>
+        </span>
+      </div>
+
+      <div name="span with 2 nested span and no aria-labels">
+        <span>
+          <span>children one</span>
+          <span>children two</span>
+        </span>
+      </div>
+
+      <div name="span with 2 nested span and no aria-labels on parent">
+        <span role="text">
+          <span>Children one</span>
+          <span>Children two</span>
+        </span>
+      </div>
+
+      <div
+        name="div with aria-label span with 2 nested span and no aria-labels on parent"
+        aria-label="I am the parent div"
+      >
+        <span role="text">
+          <span>Children one</span>
+          <span>Children two</span>
+        </span>
+      </div>
+
+      <div name="one span, one visually hidden text and role text on parent span">
+        <span role="text">
+          <span>I am a children span</span>
+          <VisuallyHiddenText>I am hinned text</VisuallyHiddenText>
+        </span>
+      </div>
     </>
   );
 };
