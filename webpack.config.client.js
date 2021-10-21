@@ -43,7 +43,7 @@ module.exports = ({
       ? ['webpack/hot/only-dev-server', './src/client']
       : ['./src/poly', './src/client'],
     devServer: {
-      host: 'localhost',
+      host: '0.0.0.0',
       port: webpackDevServerPort,
       historyApiFallback: true,
       hot: true,
@@ -71,7 +71,7 @@ module.exports = ({
         : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
-        ? `http://localhost:${webpackDevServerPort}/`
+        ? `http://0.0.0.0:${webpackDevServerPort}/`
         : prodPublicPath,
     },
     optimization: {

@@ -261,15 +261,15 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       )}
 
       <div name="2 spans in a row with no aria-labels">
-        <span>text message one</span>
-        <span>text message two</span>
+        <span>text message one, </span>
+        <span>text message two, </span>
       </div>
 
       <br />
 
       <div name="span with single nested span and no aria-labels">
         <span>
-          <span>I am the child span</span>
+          <span>I am the child span, </span>
         </span>
       </div>
 
@@ -277,8 +277,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
       <div name="span with 2 nested span and no aria-labels">
         <span>
-          <span>children one</span>
-          <span>children two</span>
+          <span>children one, </span>
+          <span>children two, </span>
         </span>
       </div>
 
@@ -286,8 +286,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
       <div name="span with 2 nested span and no aria-labels on parent">
         <span role="text">
-          <span>Children one</span>
-          <span>Children two</span>
+          <span>Children one, </span>
+          <span>Children two, </span>
         </span>
       </div>
 
@@ -298,8 +298,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         aria-label="I am the parent div"
       >
         <span role="text">
-          <span>Children one</span>
-          <span>Children two</span>
+          <span>Children one, </span>
+          <span>Children two, </span>
         </span>
       </div>
 
@@ -307,8 +307,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
       <div name="one span, one visually hidden text and role text on parent span">
         <span role="text">
-          <span>I am a children span</span>
-          <VisuallyHiddenText>I am hinned text</VisuallyHiddenText>
+          <span>I am a children span, </span>
+          <VisuallyHiddenText>I am hinned text, </VisuallyHiddenText>
         </span>
       </div>
 
@@ -319,9 +319,59 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
         aria-label="I am the parent division"
       >
         <span role="text">
-          <span>I am a children span</span>
-          <VisuallyHiddenText>I am hinned text</VisuallyHiddenText>
+          <span>,I am a children span </span>
+          <VisuallyHiddenText>,I am hidded text </VisuallyHiddenText>
         </span>
+      </div>
+
+      <div name="a with nested span and area labels">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="a with nested span and area labels">
+        <a href="#" aria-label="This is a link">
+          <span role="text">
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="a with nested span and area labels">
+        <a role="link" href="#" aria-label="This is a link">
+          <span role="text">
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="a with nested span and area labels">
+        <a role="text" href="#" aria-label="This is a link">
+          <span>
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="a with nested span and area labels">
+        <a
+          role="link"
+          href="#"
+          aria-label="This is a link"
+          style={{ display: 'block' }}
+        >
+          <span role="text">
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
       </div>
     </>
   );
