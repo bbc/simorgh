@@ -6,10 +6,8 @@ import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
-  GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
 import { ServiceContext } from '#app/contexts/ServiceContext';
@@ -23,18 +21,6 @@ const eventTrackingData = {
 
 const StyledTopicsWrapper = styled.aside`
   padding-bottom: ${GEL_SPACING_QUIN};
-  content-visibility: auto;
-  contain-intrinsic-size: 12.5rem;
-
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    contain-intrinsic-size: 9.813rem;
-  }
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    contain-intrinsic-size: 8rem;
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    contain-intrinsic-size: 8.5rem;
-  }
 `;
 
 const StyledSectionLabel = styled(SectionLabel)`
