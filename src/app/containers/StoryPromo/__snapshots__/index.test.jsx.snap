@@ -395,8 +395,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             <span
               class="emotion-24 emotion-25"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -818,8 +817,7 @@ exports[`StoryPromo Container should render audio correctly for canonical 1`] = 
             <span
               class="emotion-24 emotion-25"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -1205,8 +1203,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
             <span
               class="emotion-8 emotion-9"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -1690,8 +1687,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
             <span
               class="emotion-24 emotion-25"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -2105,8 +2101,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             <span
               class="emotion-22 emotion-23"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -2513,8 +2508,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             <span
               class="emotion-22 emotion-23"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -2891,8 +2885,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
             <span
               class="emotion-8 emotion-9"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -3355,8 +3348,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
             <span
               class="emotion-22 emotion-23"
             >
-              Gee ntị
-              , 
+              Gee ntị, 
             </span>
             <span>
               An audio item
@@ -8131,11 +8123,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
   height: 0.75rem;
 }
 
-.emotion-38 {
-  display: inline;
-  vertical-align: middle;
-}
-
 <div>
   <div
     class="emotion-0 emotion-1"
@@ -8243,9 +8230,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 >
                   Vidio, 
                 </span>
-                <span
-                  class="emotion-38 emotion-39"
-                >
+                <span>
                   APC ba ta isa ta kore ni ba – Buba Galadima
                 </span>
               </span>
@@ -8259,9 +8244,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               class="emotion-28 emotion-29"
               href="/hausa/labarai-42837051"
             >
-              <span
-                class="emotion-38 emotion-39"
-              >
+              <span>
                 Overtyped headline
               </span>
             </a>
@@ -8274,9 +8257,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
               class="emotion-28 emotion-29"
               href="https://www.bbc.com/persian"
             >
-              <span
-                class="emotion-38 emotion-39"
-              >
+              <span>
                 Promo link in Index Alsos
               </span>
             </a>
@@ -13626,8 +13607,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             <span
               class="emotion-24 emotion-25"
             >
-              Vidio
-              , 
+              Vidio, 
             </span>
             <span>
               A video item
@@ -14046,8 +14026,7 @@ exports[`StoryPromo Container should render video correctly for canonical 1`] = 
             <span
               class="emotion-24 emotion-25"
             >
-              Vidio
-              , 
+              Vidio, 
             </span>
             <span>
               A video item
@@ -14433,8 +14412,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
             <span
               class="emotion-8 emotion-9"
             >
-              Vidio
-              , 
+              Vidio, 
             </span>
             <span>
               A video item
@@ -14912,8 +14890,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
             <span
               class="emotion-24 emotion-25"
             >
-              Vidio
-              , 
+              Vidio, 
             </span>
             <span>
               A video item
