@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
