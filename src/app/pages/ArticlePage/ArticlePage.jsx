@@ -21,12 +21,13 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
+import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
+import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
 import Image from '#containers/Image';
@@ -63,6 +64,7 @@ import SecondaryColumn from './SecondaryColumn';
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 
 const componentsToRender = {
+  visuallyHiddenHeadline,
   headline: headings,
   subheadline: headings,
   audio: articleMediaPlayer,
@@ -122,6 +124,16 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const topics = path(['metadata', 'topics'], pageData);
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+
+  const visuallyHiddenBlock = {
+    id: null,
+    model: { blocks: [singleTextBlock(headline)] },
+    type: 'visuallyHiddenHeadline',
+  };
+
+  const articleBlocks = startsWithHeading
+    ? blocks
+    : [visuallyHiddenBlock, ...blocks];
 
   const promoImageBlocks = pathOr(
     [],
@@ -184,12 +196,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <Primary>
           <Main role="main">
             <Disclaimer />
-            {!startsWithHeading && (
-              <VisuallyHiddenText as="h1" tabIndex="-1" id="content">
-                {headline}
-              </VisuallyHiddenText>
-            )}
-            <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+            <Blocks
+              blocks={articleBlocks}
+              componentsToRender={componentsToRender}
+            />
           </Main>
           {showRelatedTopics && topics && (
             <StyledRelatedTopics
