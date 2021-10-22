@@ -1,4 +1,4 @@
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
