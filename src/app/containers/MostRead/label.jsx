@@ -7,7 +7,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
-import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const SectionLabelWithMargin = styled(SectionLabel)`
@@ -44,7 +44,7 @@ MostReadSectionLabel.propTypes = {
 
 MostReadSectionLabel.defaultProps = {
   mobileDivider: true,
-  backgroundColor: C_GREY_2,
+  backgroundColor: C_GHOST,
 };
 
 export default MostReadSectionLabel;
