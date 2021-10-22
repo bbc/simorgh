@@ -75,6 +75,18 @@ const TestComponent = ({ hookProps }) => {
   );
 };
 
+const TestComponentSingleLink = ({ hookProps }) => {
+  const handleClick = useClickTrackerHandler(hookProps);
+
+  return (
+    <div data-testid="test-component">
+      <a href="https://bbc.com/pidgin" onClick={handleClick}>
+        Link
+      </a>
+    </div>
+  );
+};
+
 beforeEach(() => {
   jest.clearAllMocks();
   delete window.location;
@@ -236,7 +248,7 @@ describe('Click tracking', () => {
 
     const { getByText } = render(
       <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, href: url }} />
+        <TestComponentSingleLink hookProps={{ ...defaultProps, href: url }} />
       </WithContexts>,
     );
 
