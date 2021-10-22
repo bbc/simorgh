@@ -311,30 +311,6 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(15rem + 1.25rem)) {
-  .emotion-21 {
-    padding: 0 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 20rem) {
-  .emotion-21 {
-    padding: 0 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: calc(20rem + 2.5rem)) {
-  .emotion-21 {
-    padding: 0 0.5rem 0.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-21 {
-    padding: 0 0.5rem 0.5rem 0.5rem;
-  }
-}
-
 .emotion-23 {
   color: #222222;
   -webkit-text-decoration: none;
