@@ -419,6 +419,13 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
+        <a role="text" href="#" aria-label="This is a link">
+          <span>I am a link with role text</span>
+          <span>I am a link 2</span>
+        </a>
+      </div>
+
+      <div name="I give up">
         <a href="#" aria-label="This is a link">
           <span>I am a link</span>
           <span>I am a link 2</span>
@@ -427,14 +434,19 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
       <div name="I give up">
         <a href="#" aria-label="This is a link">
-          <span>I am a link</span><span>I am a link 2</span>
+          <span>
+            <span aria-hidden="true">I am a link hidden true</span>
+            <span>I am a link 2</span>
+            <span>I am a link 3</span>
+          </span>
         </a>
       </div>
 
       <div name="I give up">
         <a href="#" aria-label="This is a link">
-          <span>
-            <span>I am a link</span>
+          <span aria-hidden="true">
+            <span> fix </span>
+            <span> I am a link hidden true</span>
             <span>I am a link 2</span>
           </span>
         </a>
@@ -445,6 +457,48 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           <span>
             <span>I am a link</span>
           </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span>I am a link</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span>Nested spans link</span>
+          </span>
+          <span>
+            <span>I am a link</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span aria-hidden="true">I am a link hidden true</span>
+            <span>I am a link 2</span>
+            <span>I am a link 3</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <i>I am italic</i>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <i>I am italic</i>
+          <i>I am italic</i>
         </a>
       </div>
     </>
