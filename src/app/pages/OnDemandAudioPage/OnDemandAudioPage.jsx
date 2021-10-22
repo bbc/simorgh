@@ -373,6 +373,80 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
           </span>
         </a>
       </div>
+
+      <div name="Can't be asked">
+        <a
+          role="link"
+          href="#"
+          aria-label="This is a link"
+          style={{ display: 'block' }}
+        >
+          <span type="text">
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="Don't know where I am going">
+        <a
+          role="text"
+          href="#"
+          aria-label="This is a link"
+          style={{ display: 'block' }}
+        >
+          <span role="text">
+            <span>First child span</span>
+            <span>Second child span</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#">I am a link</a>
+      </div>
+
+      <div name="I give up">
+        <a href="#">
+          <span>I am a link</span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>I am a link</span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>I am a link</span>
+          <span>I am a link 2</span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>I am a link</span><span>I am a link 2</span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span>I am a link</span>
+            <span>I am a link 2</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#" aria-label="This is a link">
+          <span>
+            <span>I am a link</span>
+          </span>
+        </a>
+      </div>
     </>
   );
 };
