@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline, SubHeading } from '@bbc/psammead-headings';
