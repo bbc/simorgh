@@ -313,7 +313,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
+      'https://www.bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko',
     );
   });
 
