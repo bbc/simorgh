@@ -325,7 +325,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="a with nested span and area labels">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span>First child span</span>
             <span>Second child span</span>
@@ -334,7 +334,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="a with nested span and area labels">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span role="text">
             <span>First child span</span>
             <span>Second child span</span>
@@ -343,7 +343,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="a with nested span and area labels">
-        <a role="link" href="#" aria-label="This is a link">
+        <a role="link" href="#">
           <span role="text">
             <span>First child span</span>
             <span>Second child span</span>
@@ -352,7 +352,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="a with nested span and area labels">
-        <a role="text" href="#" aria-label="This is a link">
+        <a role="text" href="#">
           <span>
             <span>First child span</span>
             <span>Second child span</span>
@@ -413,27 +413,27 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>I am a link</span>
         </a>
       </div>
 
       <div name="I give up">
-        <a role="text" href="#" aria-label="This is a link">
+        <a role="text" href="#">
           <span>I am a link with role text</span>
           <span>I am a link 2</span>
         </a>
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>I am a link</span>
           <span>I am a link 2</span>
         </a>
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span aria-hidden="true">I am a link hidden true</span>
             <span>I am a link 2</span>
@@ -443,7 +443,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span aria-hidden="true">
             <span> fix </span>
             <span> I am a link hidden true</span>
@@ -453,7 +453,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span>I am a link</span>
           </span>
@@ -461,7 +461,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span>I am a link</span>
           </span>
@@ -469,7 +469,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span>Nested spans link</span>
           </span>
@@ -480,7 +480,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <span>
             <span aria-hidden="true">I am a link hidden true</span>
             <span>I am a link 2</span>
@@ -490,15 +490,47 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <i>I am italic</i>
         </a>
       </div>
 
       <div name="I give up">
-        <a href="#" aria-label="This is a link">
+        <a href="#">
           <i>I am italic</i>
           <i>I am italic</i>
+        </a>
+      </div>
+
+      <div name="with div elements">
+        <a href="#">
+          <div>I am italic</div>
+          <div>I am italic</div>
+        </a>
+      </div>
+
+      <a href="#" aria-labelledby="label-fix">
+        <span role="text" id="label-fix">
+          <span class="vh">Video,</span>
+          <span>Nicola and Dario love Talkback bug fixing</span>
+        </span>
+      </a>
+
+      <div name="I give up">
+        <a href="#">
+          <span>
+            <span>sap 1</span>
+            <span>sap 2</span>
+          </span>
+        </a>
+      </div>
+
+      <div name="I give up">
+        <a href="#">
+          <span role="text">
+            <span>role 1</span>
+            <span>role 2</span>
+          </span>
         </a>
       </div>
     </>
