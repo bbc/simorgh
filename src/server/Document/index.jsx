@@ -12,21 +12,15 @@ import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const extractChunk = bundleType => chunk => {
-  const commonAttributes = {
+  const { type, url } = chunk || {};
+
+  return {
     crossOrigin: 'anonymous',
     defer: true,
-    type: bundleType === 'modern' ? 'module' : null,
-    noModule: bundleType === 'legacy' ? true : null,
+    ...(url && { src: encodeChunkFilename(chunk) }),
+    ...(bundleType === 'modern' && type === 'mainAsset' && { type: 'module' }),
+    ...(bundleType === 'legacy' && { noModule: true }),
   };
-
-  if (chunk && chunk.url) {
-    return {
-      ...commonAttributes,
-      src: encodeChunkFilename(chunk),
-    };
-  }
-
-  return commonAttributes;
 };
 
 const renderDocument = async ({
