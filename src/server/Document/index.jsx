@@ -11,11 +11,12 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
-const extractChunk = type => chunk => {
+const extractChunk = bundleType => chunk => {
   const commonAttributes = {
     crossOrigin: 'anonymous',
     defer: true,
-    type,
+    type: bundleType === 'modern' ? 'module' : null,
+    noModule: bundleType === 'legacy' ? true : null,
   };
 
   if (chunk && chunk.url) {
@@ -78,10 +79,10 @@ const renderDocument = async ({
   }
 
   const modernScripts = modernExtractor.getScriptElements(
-    extractChunk('module'),
+    extractChunk('modern'),
   );
   const legacyScripts = legacyExtractor.getScriptElements(
-    extractChunk('nomodule'),
+    extractChunk('legacy'),
   );
 
   const headHelmet = Helmet.renderStatic();

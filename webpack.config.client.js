@@ -42,7 +42,7 @@ module.exports = ({
     chalk.bold(
       `\nInitialising build of the ${chalk.green(
         BUNDLE_TYPE,
-      )} JavaScript bundle. 🚀 \n`,
+      )} JavaScript bundle. 🏗️\n`,
     ),
   );
   const APP_ENV = SIMORGH_APP_ENV || 'live';
@@ -85,7 +85,7 @@ module.exports = ({
        */
       filename: START_DEV_SERVER
         ? 'static/js/[name].js'
-        : `static/js/[name].[chunkhash:8].js`, // hash based on the contents of the file
+        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
