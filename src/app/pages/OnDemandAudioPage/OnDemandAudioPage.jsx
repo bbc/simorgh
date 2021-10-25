@@ -1,7 +1,4 @@
 import React, { useContext } from 'react';
-
-import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-
 import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
