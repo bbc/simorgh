@@ -113,19 +113,20 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         ulProps={ulProps}
         liProps={liProps}
       >
-        {episodes.map(episode => (
+        {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}
+              index={`episodeLinkIndex-${index}`}
+              // aria-labelledby={`episodeLinkIndex-${index}`}
             >
               {/* these must be concatenated for screen reader UX */}
-              <span>
-                <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
-              </span>
+              <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
               </EpisodeList.Title>
+              <VisuallyHiddenText>, </VisuallyHiddenText>
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle ||
                   `${formattedTimestamp({
@@ -133,7 +134,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                     format: 'LL',
                   })}`}
               </EpisodeList.Description>
-              <VisuallyHiddenText aria-hidden="true">, </VisuallyHiddenText>
+              <VisuallyHiddenText>, </VisuallyHiddenText>
               <VisuallyHiddenText>
                 {` ${durationLabel} ${formatDuration({
                   duration: episode.duration,

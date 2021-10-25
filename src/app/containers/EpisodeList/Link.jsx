@@ -51,15 +51,21 @@ const StyledAnchor = styled.a`
   }
 `;
 
-const Link = ({ children, showMediaIndicator, dir, ...props }) => {
+const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
   return (
-    <StyledAnchor showMediaIndicator={showMediaIndicator} {...props}>
+    <StyledAnchor
+      showMediaIndicator={showMediaIndicator}
+      aria-labelledby={index}
+      {...props}
+    >
       {showMediaIndicator && (
         <MediaIndicatorWrapper dir={dir}>
           <MediaIndicator size="2.5rem" />
         </MediaIndicatorWrapper>
       )}
-      <span role="text">{children}</span>
+      <span role="text" id={index}>
+        {children}
+      </span>
     </StyledAnchor>
   );
 };
@@ -67,6 +73,7 @@ const Link = ({ children, showMediaIndicator, dir, ...props }) => {
 Link.propTypes = {
   children: node.isRequired,
   dir: string.isRequired,
+  index: string.isRequired,
   showMediaIndicator: bool,
 };
 
