@@ -11,6 +11,23 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
+const extractChunk = type => chunk => {
+  const commonAttributes = {
+    crossOrigin: 'anonymous',
+    defer: true,
+    type,
+  };
+
+  if (chunk && chunk.url) {
+    return {
+      ...commonAttributes,
+      src: encodeChunkFilename(chunk),
+    };
+  }
+
+  return commonAttributes;
+};
+
 const renderDocument = async ({
   bbcOrigin,
   data,
@@ -21,18 +38,21 @@ const renderDocument = async ({
 }) => {
   const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
-
-  const statsFile = path.resolve(
-    `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+  const modernStatsFile = path.resolve(
+    `${__dirname}/public/modern/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+  );
+  const legacyStatsFile = path.resolve(
+    `${__dirname}/public/legacy/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
 
-  const extractor = new ChunkExtractor({ statsFile });
+  const legacyExtractor = new ChunkExtractor({ statsFile: legacyStatsFile });
+  const modernExtractor = new ChunkExtractor({ statsFile: modernStatsFile });
 
   const context = {};
 
   const app = extractCritical(
     renderToString(
-      extractor.collectChunks(
+      modernExtractor.collectChunks(
         <CacheProvider value={cache}>
           <ServerApp
             location={url}
@@ -57,28 +77,20 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements(chunk => {
-    const commonAttributes = {
-      crossOrigin: 'anonymous',
-      defer: true,
-    };
-
-    if (chunk && chunk.url) {
-      return {
-        ...commonAttributes,
-        src: encodeChunkFilename(chunk),
-      };
-    }
-
-    return commonAttributes;
-  });
+  const modernScripts = modernExtractor.getScriptElements(
+    extractChunk('module'),
+  );
+  const legacyScripts = legacyExtractor.getScriptElements(
+    extractChunk('nomodule'),
+  );
 
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
-      scripts={scripts}
+      modernScripts={modernScripts}
+      legacyScripts={legacyScripts}
       app={app}
       data={data}
       helmet={headHelmet}

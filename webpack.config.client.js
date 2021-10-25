@@ -1,9 +1,10 @@
-/* eslint-disable global-require */
+/* eslint-disable global-require, no-console */
 /*
   A high level overview of our client-side JavaScript bundling strategy can be found here:
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
+const chalk = require('chalk');
 const fs = require('fs');
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -31,17 +32,29 @@ module.exports = ({
   START_DEV_SERVER,
   IS_PROD_PROFILE,
 }) => {
-  const APP_ENV = process.env.SIMORGH_APP_ENV || 'live';
+  const {
+    SIMORGH_APP_ENV,
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+    BUNDLE_TYPE,
+  } = process.env;
+  console.log(
+    chalk.bold(
+      `\nInitialising build of the ${chalk.green(
+        BUNDLE_TYPE,
+      )} JavaScript bundle. 🚀 \n`,
+    ),
+  );
+  const APP_ENV = SIMORGH_APP_ENV || 'live';
+  const IS_LEGACY = BUNDLE_TYPE === 'legacy';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
-  const prodPublicPath =
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+  const prodPublicPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${BUNDLE_TYPE}/`;
 
   const clientConfig = {
-    target: ['web', 'es5'], // compile for browser environment
+    target: ['web', IS_LEGACY ? 'es5' : 'es2017'], // compile for browser environment
     entry: START_DEV_SERVER
       ? ['webpack/hot/only-dev-server', './src/client']
-      : ['./src/poly', './src/client'],
+      : [IS_LEGACY && './src/poly', './src/client'].filter(Boolean),
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
@@ -59,8 +72,12 @@ module.exports = ({
         stream: require.resolve('stream-browserify'),
       },
     },
+    experiments: {
+      outputModule: true,
+    },
     output: {
-      path: resolvePath('build/public'),
+      module: true,
+      path: resolvePath(`build/public/${BUNDLE_TYPE}`),
       /**
        * Need unhashed client bundle when running dev server.
        * Though we're no longer using Razzle, there is a good explanation here:
@@ -68,7 +85,7 @@ module.exports = ({
        */
       filename: START_DEV_SERVER
         ? 'static/js/[name].js'
-        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
+        : `static/js/[name].[chunkhash:8].js`, // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
@@ -81,6 +98,7 @@ module.exports = ({
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
+            ecma: IS_LEGACY ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
           },

@@ -12,7 +12,15 @@ import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
+const Document = ({
+  assetOrigins,
+  app,
+  data,
+  helmet,
+  isAmp,
+  modernScripts,
+  legacyScripts,
+}) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -29,12 +37,6 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
   // In order to block relevant components rendering until we have AMP GeoIP information, we need to add
   // this class to the body of the document: https://amp.dev/documentation/components/amp-geo/#render-blocking
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
-
-  const scriptTags = (
-    <>
-      <IfAboveIE9>{scripts}</IfAboveIE9>
-    </>
-  );
 
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
@@ -87,7 +89,12 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
             }}
           />
         )}
-        {scriptsAllowed && scriptTags}
+        {scriptsAllowed && (
+          <>
+            <IfAboveIE9>{modernScripts}</IfAboveIE9>
+            <IfAboveIE9>{legacyScripts}</IfAboveIE9>
+          </>
+        )}
         {scriptsAllowed && (
           <script
             type="text/javascript"

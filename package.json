@@ -21,8 +21,8 @@
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
-    "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production webpack",
-    "build": "yarn build:local && node ./scripts/bundleSize/index.js",
+    "build:local": "rm -rf build && cp envConfig/local.env .env && NODE_ENV=production BUNDLE_TYPE=legacy webpack && NODE_ENV=production BUNDLE_TYPE=modern webpack",
+    "build": "yarn build:local",
     "build:profile": "rm -rf build && cp envConfig/local.env .env && IS_PROD_PROFILE=true NODE_ENV=production webpack",
     "build:live": "cp envConfig/live.env .env && NODE_ENV=production webpack",
     "build:live:debug": "rm -rf build && awk '{sub(/LOG_DIR=.+/,\"LOG_DIR='log'\")}1' envConfig/live.env > .env && NODE_ENV=production webpack",
@@ -56,7 +56,7 @@
     "test:linkey:cleanup": "find src/app/lib/config/services -type f -name '*.test.js' -delete",
     "updateMinorPatch": "rm -rf node_modules/ && yarn install && npm update && yarn install",
     "webpack:dev:client": "NODE_ENV=development webpack serve --hot --env config='client'",
-    "webpack:dev:server": "wait-on ./build/public/loadable-stats-local.json && NODE_ENV=development webpack --watch --env config='server'"
+    "webpack:dev:server": "wait-on ./build/public/modern/loadable-stats-local.json && NODE_ENV=development webpack --watch --env config='server'"
   },
   "repository": {
     "type": "git",
