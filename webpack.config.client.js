@@ -73,10 +73,10 @@ module.exports = ({
       },
     },
     experiments: {
-      outputModule: true,
+      outputModule: !IS_LEGACY,
     },
     output: {
-      module: true,
+      module: !IS_LEGACY,
       path: resolvePath(`build/public/${BUNDLE_TYPE}`),
       /**
        * Need unhashed client bundle when running dev server.

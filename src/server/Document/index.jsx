@@ -19,7 +19,7 @@ const extractChunk = bundleType => chunk => {
     defer: true,
     ...(url && { src: encodeChunkFilename(chunk) }),
     ...(bundleType === 'modern' && type === 'mainAsset' && { type: 'module' }),
-    ...(bundleType === 'legacy' && { noModule: true }),
+    ...(bundleType === 'legacy' && type === 'mainAsset' && { noModule: true }),
   };
 };
 
@@ -40,8 +40,14 @@ const renderDocument = async ({
     `${__dirname}/public/legacy/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
 
-  const legacyExtractor = new ChunkExtractor({ statsFile: legacyStatsFile });
-  const modernExtractor = new ChunkExtractor({ statsFile: modernStatsFile });
+  const legacyExtractor = new ChunkExtractor({
+    statsFile: legacyStatsFile,
+    namespace: 'legacy',
+  });
+  const modernExtractor = new ChunkExtractor({
+    statsFile: modernStatsFile,
+    namespace: 'modern',
+  });
 
   const context = {};
 
