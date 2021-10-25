@@ -119,7 +119,6 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}
               index={`episodeLinkIndex-${index}`}
-              // aria-labelledby={`episodeLinkIndex-${index}`}
             >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
