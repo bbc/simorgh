@@ -1,0 +1,828 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/features-54391793",
+    "locators": {
+      "assetUri": "/russian/features-54391793",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-54391793",
+      "curie": "http://www.bbc.co.uk/asset/dbf9afb1-eb69-4282-8a34-a791080b5e10",
+      "assetId": "54391793"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1621738969722,
+    "firstPublished": 1601701995000,
+    "lastPublished": 1601701995000,
+    "timestamp": 1601701995000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Literature~LGBT~Social+media",
+      "cps_asset_id": "54391793",
+      "ldp_ids": "0ddb2a64-18b7-4e25-9844-9f467489a53f~911f368c-e756-4ac3-9667-ec8900ceb4ce~ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+      "counterName": "russian.features.story.54391793.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+        "categoryName": "Analysis"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": [],
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+            "thingLabel": "Литература",
+            "thingUri": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+            "thingId": "0ddb2a64-18b7-4e25-9844-9f467489a53f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q8242",
+              "http://dbpedia.org/resource/Literature"
+            ],
+            "thingEnglishLabel": "Literature",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+            "thingLabel": "ЛГБТ",
+            "thingUri": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+            "thingId": "911f368c-e756-4ac3-9667-ec8900ceb4ce",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:TagConcept",
+              "tagging:Audience",
+              "tagging:AmbiguousTerm"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/LGBT",
+              "http://www.wikidata.org/entity/Q17884"
+            ],
+            "thingEnglishLabel": "LGBT",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingLabel": "Социальные сети",
+            "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Social_media",
+              "http://www.wikidata.org/entity/Q202833"
+            ],
+            "thingEnglishLabel": "Social media",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Литература",
+          "thingUri": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+          "thingId": "0ddb2a64-18b7-4e25-9844-9f467489a53f",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q8242",
+            "http://dbpedia.org/resource/Literature"
+          ],
+          "topicName": "Литература",
+          "topicId": "cxlx9qennyrt",
+          "curationList": [
+            {
+              "curationId": "79fdbca4-69c3-46ca-bc8f-12b1420977c4",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Literature",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Literature"
+        },
+        {
+          "thingLabel": "ЛГБТ",
+          "thingUri": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+          "thingId": "911f368c-e756-4ac3-9667-ec8900ceb4ce",
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:TagConcept",
+            "tagging:Audience",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/LGBT",
+            "http://www.wikidata.org/entity/Q17884"
+          ],
+          "topicName": "ЛГБТ",
+          "topicId": "cq04ne2m9xmt",
+          "curationList": [
+            {
+              "curationId": "3da3c668-2bb1-4879-a283-b025bc79112f",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "LGBT",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "LGBT"
+        },
+        {
+          "thingLabel": "Социальные сети",
+          "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+          "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Social_media",
+            "http://www.wikidata.org/entity/Q202833"
+          ],
+          "topicName": "Социальные сети",
+          "topicId": "c23520dr9rqt",
+          "curationList": [
+            {
+              "curationId": "c004033d-5f64-4395-9485-1368b144eea4",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Social media",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Social media"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "social_embed",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "RUSSIAN",
+      "producerId": "75"
+    },
+    "readTime": 6,
+    "siteUri": "/russian",
+    "topics": [
+      {
+        "topicName": "Социальные сети",
+        "topicId": "c23520dr9rqt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "c004033d-5f64-4395-9485-1368b144eea4",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      },
+      {
+        "topicName": "ЛГБТ",
+        "topicId": "cq04ne2m9xmt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "3da3c668-2bb1-4879-a283-b025bc79112f",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "core:Theme",
+          "tagging:TagConcept",
+          "tagging:Audience",
+          "tagging:AmbiguousTerm"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      },
+      {
+        "topicName": "Литература",
+        "topicId": "cxlx9qennyrt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "79fdbca4-69c3-46ca-bc8f-12b1420977c4",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "114734657",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1277B/production/_114734657_283c1cc4-c39a-4341-b681-d6d623a4c3f0.jpg",
+        "path": "/cpsprodpb/1277B/production/_114734657_283c1cc4-c39a-4341-b681-d6d623a4c3f0.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "J.K.Rowling",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Уже во второй раз в этом году британскую писательницу и автора серии книг о Гарри Поттере обвинили в трансфобии. Сначала это произошло после ее заявления о том, что половая принадлежность - неотъемлемая часть женской личности. Новая волна обвинений идет сейчас, после выхода ее новой книги, где главный персонаж совершает злодейства, переодеваясь в женскую одежду.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Десятки тысяч комментаторов посчитали, что Роулинг пренебрежительно отзывается о трансгендерных людях и не признает за ними право решать, к какому гендеру они себя относят. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Все началось с шутки в &quot;Твиттере&quot;. В июне Джоан Роулинг перепостила колонку, <link><caption>опубликованную </caption><url href=\"https://www.devex.com/news/sponsored/opinion-creating-a-more-equal-post-covid-19-world-for-people-who-menstruate-97312#.XtwLnv0aEeR.twitter\" platform=\"highweb\"/></link>в американском издании Devex под заголовком &quot;Как после эпидемии Covid-19 сделать мир более равным для людей, которые менструируют&quot;. В самой статье говорилось о мерах, которые можно предпринять для обеспечения &quot;людей, которые менструируют&quot; необходимыми предметами гигиены. Автор статьи уточнял, что в их число включены не только женщины, но и небинарные персоны - люди, которые не причисляют себя полностью ни к мужскому, ни к женскому гендеру. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "В своем комментарии к ссылке на статью Роулинг посмеялась над заголовком и заметила, что &quot;люди, которые менструируют&quot; могут называться только женщинами.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Люди, которые менструируют. Я уверена, что для таких людей было какое-то слово. Кто-нибудь, помогите. Жоншины? Жинсчины? Женстины?&quot; - написала она.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/jk_rowling/status/1269382518362509313?s=20",
+        "source": "twitter",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "author_name": "J.K. Rowling",
+            "author_url": "https://twitter.com/jk_rowling",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/jk_rowling/status/1269382518362509313",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">‘People who menstruate.’ I’m sure there used to be a word for those people. Someone help me out. Wumben? Wimpund? Woomud? <br><br>Opinion: Creating a more equal post-COVID-19 world for people who menstruate <a href=\"https://t.co/cVpZxG7gaA\">https://t.co/cVpZxG7gaA</a></p>&mdash; J.K. Rowling (@jk_rowling) <a href=\"https://twitter.com/jk_rowling/status/1269382518362509313?ref_src=twsrc%5Etfw\">June 6, 2020</a></blockquote>\n",
+            "width": 550
+          },
+          "fallback_image": {
+            "fallback_image_width": 465,
+            "fallback_image_height": 696,
+            "alt_text": "Twitter post by J.K. Rowling: ‘People who menstruate.’ I’m sure there used to be a word for those people. Someone help me out. Wumben? Wimpund? Woomud? Opinion: Creating a more equal post-COVID-19 world for people who menstruate "
+          }
+        },
+        "id": "1269382518362509313",
+        "type": "social_embed"
+      },
+      {
+        "text": "Кто и почему выступил против Роулинг? ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Сначала писательницу раскритиковали пользователи соцсетей - за негативное отношение к трансгендерным людям. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Затем на твиты и посты Роулинг отреагировали актеры, снимавшиеся в фильмах о Гарри Поттере. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "114734658",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/14E8B/production/_114734658_d9d6f842-ee45-46dd-b221-ef7b7e52cb21.jpg",
+        "path": "/cpsprodpb/14E8B/production/_114734658_d9d6f842-ee45-46dd-b221-ef7b7e52cb21.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "\"Harry Potter and the Prisoner of Azkaban\" London Premiere",
+        "caption": "Эмма Уотсон, Джоан Роулинг, Руперт Гринт и Дэниэл Рэдклифф на премьере фильма \"Гарри Поттер и узник Азкабана\" в Лондоне.",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Эмма Уотсон, исполнившая роль Гермоны <link><caption>написала</caption><url href=\"https://twitter.com/EmmaWatson/status/1270827488915214338\" platform=\"highweb\"/></link> целый тред в &quot;Твиттере&quot;, в котором сказала: &quot;Я хочу, чтобы мои трансподписчики знали, что я и множество других людей по всему миру видим вас, уважаем вас и любим вас такими, какие вы есть.&quot;",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Высказался и Дэниэл Рэдклифф, сыгравший роль самого Гарри Поттера. Он опубликовал свое заявление на сайте благотворительного фонда The Trevor Project, помогающего ЛГБТ+ молодежи. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Трансгендерные женщины являются женщинами. Любое заявление об обратном уничтожает идентичность и достоинство трансгендерных людей... Согласно данным The Trevor Project, 78 процентов трансгендерных или небинарных молодых людей заявили о том, что становились жертвами дискриминации из-за своей гендерной идентичности&quot;, - <link><caption>сказал </caption><url href=\"https://www.thetrevorproject.org/2020/06/08/daniel-radcliffe-responds-to-j-k-rowlings-tweets-on-gender-identity/\" platform=\"highweb\"/></link>актер. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Эдди Рэдмейн, игравший главную роль в серии &quot;Фантастические твари и где они обитают&quot; по сценарию Джоан Роулинг, тоже отреагировал на заявления писательницы: &quot;Я не согласен с комментариями Джо. Трансгендерные женщины являются женщинами, трансгендерные мужчины - мужчинами, и небинарные идентичности тоже существуют.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "114734659",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1759B/production/_114734659_94ad6ae9-aeaa-4a0a-8c4b-b7bc50c62ad6.jpg",
+        "path": "/cpsprodpb/1759B/production/_114734659_94ad6ae9-aeaa-4a0a-8c4b-b7bc50c62ad6.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Джоан Роулинг и Эдди Рэдмейн",
+        "caption": "Джоан Роулинг и Эдди Рэдмейн",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Что думает сама Роулинг? ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "В ответ на критику писательница опубликовала тред в &quot;Твиттере&quot;, где объяснила свою позицию по поводу трансгендерности в деталях. В частности, она <link><caption>уточнила</caption><url href=\"https://twitter.com/jk_rowling/status/1269389298664701952\" platform=\"highweb\"/></link>: &quot;Если не существует пола, то не существует и однополого влечения. Если не существует пола, то совместно прожитая реальность всех женщин в мире стирается. Я знаю и люблю трансгендерных людей, но уничтожение концепции пола отнимает у многих возможность осмысленно обсуждать свою жизнь.&quot; ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Через три дня Роулинг <link><caption>написала </caption><url href=\"https://www.jkrowling.com/opinions/j-k-rowling-writes-about-her-reasons-for-speaking-out-on-sex-and-gender-issues/\" platform=\"highweb\"/></link>длинный пост - на этот раз, уже на своем сайте. В посте она рассказала, что долго интересовалась вопросом гендерной идентичности. Она выразила обеспокоенность тем, что транс-активисты популяризуют понятие трансгендерности, делая его более привлекательным для детей и подростков.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Она также уточнила, что, несмотря на то, что хотела бы, чтобы трансгендерные женщины были в безопасности, она не хочет, чтобы из-за этого биологические женщины были в меньшей безопасности. По ее мнению, стирание границ между &quot;мужскими&quot; и &quot;женскими&quot; общественными пространствами - например, туалетами и раздевалками - создает опасность для женщин, которые могут пострадать. Она намекнула, что таким образом любой мужчина сможет назвать себя женщиной и зайти в женскую раздевалку, если ему захочется.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"Покойся с миром, Дж. К. Роулинг\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "На прошлой неделе в соцсетях набрал популярность хэштег #RIPJKRowling (&quot;Покойся с миром, Дж. К. Роулинг&quot;). ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Так пользователи &quot;Твиттера&quot; выразили свое негодование в связи с выходом новой книги писательницы - детектива под названием Troubled Blood (&quot;Дурная кровь&quot;), - которая усугубила ситуацию. В книге <link><caption>рассказывается</caption><url href=\"https://www.thetimes.co.uk/edition/scotland/row-over-jk-rowlings-new-novel-on-transvestite-killer-5f2hr0kdm?utm_medium=Social&amp;utm_source=Twitter#Echobox=1600157668\" platform=\"highweb\"/></link> о серийном убийце, который фетишизирует женскую одежду и переодевается в женщину, чтобы похищать своих жертв. Критики писательницы усмотрели в этом сюжете отголоски ее позиции о трансгендерных людях. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "114731991",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/4DC9/production/_114731991_hi063336791.jpg",
+        "path": "/cpsprodpb/4DC9/production/_114731991_hi063336791.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Books",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;В память о Дж. К. Роулинг. Она не умерла, но убила свою собственную карьеру своей гордой ненавистью к трансгендерным людям&quot;, - сказал один из пользователей &quot;Твиттера&quot;, прокомментировав свой выбор хэштега.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/memeforhire/status/1305540170817712133?s=20",
+        "source": "twitter",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "author_name": "patback",
+            "author_url": "https://twitter.com/memeforhire",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/memeforhire/status/1305540170817712133",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">in memory of jk rowling. she ain’t dead, but she killed her own career by proudly hating trans people &amp; no one would really miss her that much anyway <a href=\"https://twitter.com/hashtag/ripjkrowling?src=hash&amp;ref_src=twsrc%5Etfw\">#ripjkrowling</a> <a href=\"https://t.co/H6akxK0cVv\">pic.twitter.com/H6akxK0cVv</a></p>&mdash; patback (@memeforhire) <a href=\"https://twitter.com/memeforhire/status/1305540170817712133?ref_src=twsrc%5Etfw\">September 14, 2020</a></blockquote>\n",
+            "width": 550
+          },
+          "fallback_image": {
+            "fallback_image_width": 465,
+            "fallback_image_height": 587,
+            "alt_text": "Twitter post by patback: in memory of jk rowling. she ain’t dead, but she killed her own career by proudly hating trans people & no one would really miss her that much anyway #ripjkrowling "
+          }
+        },
+        "id": "1305540170817712133",
+        "type": "social_embed"
+      },
+      {
+        "text": "&quot;Я все еще не могу поверить, что Дж. К. Роулинг написала роман, который подразумевает, что транслюди могут быть злодеями&quot;, - <link><caption>написала </caption><url href=\"https://twitter.com/TitaniaMcGrath/status/1305867041337901056\" platform=\"highweb\"/></link>другая пользовательница.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Некоторые пользователи и СМИ обратили внимание на псевдоним, который Роулинг использовала для публикации серии криминальных романов, последним из которых и стала &quot;Дурная кровь&quot;. Романы подписаны именем Роберт Гэлбрейт; так звали американского психиатра, который экспериментировал с репаративной терапией, направленной на &quot;исцеление&quot; гомосексуальных людей. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Кто-нибудь может дать мне логическому объяснение, почему псевдоним Джоан Роулинг повторяет имя известного садистского психиатра, который открыто практиковал репаративную терапию?&quot; - <link><caption>пишет </caption><url href=\"https://twitter.com/Meow_Droid/status/1305800372171268096?s=20\" platform=\"highweb\"/></link>один из пользователей.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Кто поддержал писательницу?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Ответным хэштегом на критику Роулинг стал #IStandWithJKRowling (&quot;Я на стороне Дж. К. Роулинг&quot;). ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Спасибо за то, что продолжаете вдохновлять женщин. Вы даете нам смелость продолжать борьбу!&quot; - <link><caption>сказала </caption><url href=\"https://twitter.com/feminist_RACHEL/status/1308427257384448000?s=20\" platform=\"highweb\"/></link>одна из пользовательниц в &quot;Твиттере&quot;. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "27 сентября британское издание Sunday Times <link><caption>опубликовало </caption><url href=\"https://www.thetimes.co.uk/article/literati-rally-to-jk-rowlings-defence-in-row-over-cormoran-strike-book-vk5frvvj0\" platform=\"highweb\"/></link>открытое письмо более 50 знаменитостей, включая актеров, писателей и журналистов, которые выразили свою поддержку писательницы. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Среди подписавших письмо - британский писатель Иэн Макьюэн, актер Грифф Риз Джонс, актриса Франсес Барбер и драматург Том Стоппард.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Роулинг постоянно показывала себя как благородного и сочувствующего человека, и чудовищный хештэг #RIPJKRowling - всего лишь последний пример ненавистнических высказываний против нее и других женщин, которые позволяются и косвенно поощряются &quot;Твиттером&quot; и другими платформами&quot;, - говорится в обращении. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Что говорят в России?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Российские пользователи почти не придали значения заявлениям Роулинг о трансгендерных людях. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Обсуждение началось с <link><caption>твита </caption><url href=\"https://twitter.com/aem_tillmari/status/1308748721665048578\" platform=\"highweb\"/></link>Анны Марии Ефремовой, дочери осужденного актера Михаила Ефремова, которая согласилась с критикой Роулинг, но усомнилась, что ее вообще можно назвать феминисткой. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Её псевдоним Дж. К. Роулинг сформулирован именно так, потому что она не хотела, чтобы люди знали, что «Поттера» написала женщина&quot;, - сказала Ефремова. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Зато в комментариях под ее постом другая пользовательница, чей профиль сейчас закрыт, выразила мнение, что &quot;образ гоблинов у Роулинг построен на стереотипном образе еврея&quot;, и назвала писательницу &quot;юдофобкой&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/U8EQ5zFHVDHLTF6/status/1309024202033442818",
+        "source": "twitter",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "author_name": "Абракадабра",
+            "author_url": "https://twitter.com/U8EQ5zFHVDHLTF6",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/U8EQ5zFHVDHLTF6/status/1309024202033442818",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"ru\" dir=\"ltr\">Джоан Роулинг: описывает гоблинов как уродливых и жадных<br>SJW: ЭТО ЕРВРЕИ! 100% ЕВРЕИ! ГОРИ В АДУ, АНТИСЕМИТКА!<br>Евреи, которых только что сравнили с гоблинами: <a href=\"https://t.co/s13vquXpIQ\">pic.twitter.com/s13vquXpIQ</a></p>&mdash; Абракадабра (@U8EQ5zFHVDHLTF6) <a href=\"https://twitter.com/U8EQ5zFHVDHLTF6/status/1309024202033442818?ref_src=twsrc%5Etfw\">September 24, 2020</a></blockquote>\n",
+            "width": 550
+          },
+          "fallback_image": {
+            "fallback_image_width": 465,
+            "fallback_image_height": 783,
+            "alt_text": "Twitter post by Абракадабра: Джоан Роулинг: описывает гоблинов как уродливых и жадныхSJW: ЭТО ЕРВРЕИ! 100% ЕВРЕИ! ГОРИ В АДУ, АНТИСЕМИТКА!Евреи, которых только что сравнили с гоблинами: "
+          }
+        },
+        "id": "1309024202033442818",
+        "type": "social_embed"
+      },
+      {
+        "text": "В ответ на начавшиеся насмешки пользовательница привела кадр из &quot;Гарри Поттера&quot;, где на полу банка &quot;Гринготтс&quot;, которым управляют гоблины, видны шестиконечные звезды. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Насмешек от этого стало еще больше. Дело в том, что сцены в волшебном банке снимались в Доме Австралии на лондонской Стрэнд. Там на полу действительно шестиконечные звезды - на государственной символике, в том числе флаге, они символизируют шесть штатов Австралии.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "На этом в России дискуссия о Джоан Роулинг, по сути, завершилась.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/fe_city_boy/status/1309437052992327681",
+        "source": "twitter",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "author_name": "Денис Чужой",
+            "author_url": "https://twitter.com/fe_city_boy",
+            "provider_name": "Twitter",
+            "provider_url": "https://twitter.com",
+            "url": "https://twitter.com/fe_city_boy/status/1309437052992327681",
+            "html": "<blockquote class=\"twitter-tweet\"><p lang=\"ru\" dir=\"ltr\">Джоан Роулинг: Короче, роман про юных магов, смелость и дружбу<br>Издатель: Ага<br>Роулинг: И про то, что чистота крови не важна, важно, какой ты человек<br>Издатель: Отлично<br>Роулинг: И про то, как я ненавижу евреев<br>Издатель: Что?<br>Роулинг: Что?</p>&mdash; Денис Чужой (@fe_city_boy) <a href=\"https://twitter.com/fe_city_boy/status/1309437052992327681?ref_src=twsrc%5Etfw\">September 25, 2020</a></blockquote>\n",
+            "width": 550
+          },
+          "fallback_image": {
+            "fallback_image_width": 465,
+            "fallback_image_height": 385,
+            "alt_text": "Twitter post by Денис Чужой: Джоан Роулинг: Короче, роман про юных магов, смелость и дружбуИздатель: АгаРоулинг: И про то, что чистота крови не важна, важно, какой ты человекИздатель: ОтличноРоулинг: И про то, как я ненавижу евреевИздатель: Что?Роулинг: Что?"
+          }
+        },
+        "id": "1309437052992327681",
+        "type": "social_embed"
+      },
+      {
+        "text": "Так в чем все-таки проблема? ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Екатерина Мессорош, транс-активистка инициативной группы Т-Действие говорит, что шутка Роулинг - далеко не первое высказывание, которое можно описать как трансфобное.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Она объясняет, что Роулинг противоречит сама себе, когда говорит о том, что поддерживает права транслюдей, а потом заявляет о пользе репаративной терапии и отзывается о трансженщинах исключительно как о &quot;бывших мужчинах&quot;, которые представляют опасность для нее и других женщин в раздевалках и туалетах.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Надо понимать, что мнение Джоан - это мнение человека с огромной аудиторией и это мнение оказывает колоссальное влияние на общественный дискурс. Нельзя сказать, что её только лишь раскритиковали. Её слова и позицию поддержало большое количество людей,&quot; - говорит Екатерина. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Социолог и фем-активист Мира Тай соглашается, что высказывания Роулинг могут быть крайне вредны. Он указывает, что на данный момент &quot;не существует никаких доказательств того, что присутствие трансгендерных женщин в женских туалетах повышает риск насилия, но Роулинг и некоторые цитируемые ею активистки продолжают распространять подобные утверждения&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Он напоминает, что сами трансгендерные люди по всему миру до сих пор подвергаются опасности из-за своей гендерной идентичности: &quot;В феврале этого года в Челябинске <link><caption>был убит</caption><url href=\"https://www.transcoalition.net/transgender-man-was-murdered-in-chelyabinsk/\" platform=\"highweb\"/></link> мужчина - после того, как соседи случайно узнали о его трансгендерности. Два месяца назад стало известно о <link><caption>еще одном убийстве</caption><url href=\"https://rus.azattyq.org/a/russia-transgender--gruesome-murder--vulnerability-lgbt/30865642.html\" platform=\"highweb\"/></link> - в этот раз трансгендерной девушки-мигрантки. Этих смертей можно было бы избежать, если бы транслюдей перестали изображать как общественную угрозу и людей второго сорта.&quot;",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "Эксперт заключает, что высказывания Роулинг подогревают предрассудки против трансгендерных людей, учитывая ее миллионную аудиторию. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"Покойся с миром, Дж. К. Роулинг\". Кто и почему обвиняет писательницу в трансфобии",
+      "headline": "\"Покойся с миром, Дж. К. Роулинг\". Кто и почему обвиняет писательницу в трансфобии"
+    },
+    "locators": {
+      "assetUri": "/russian/features-54391793",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/features-54391793",
+      "curie": "http://www.bbc.co.uk/asset/dbf9afb1-eb69-4282-8a34-a791080b5e10",
+      "assetId": "54391793"
+    },
+    "summary": "Уже во второй раз в этом году британскую писательницу и автора серии книг о Гарри Поттере обвинили в трансфобии. Сначала это произошло после ее заявления о том, что половая принадлежность - неотъемлемая часть женской личности. Новая волна обвинений идет сейчас, после выхода ее новой книги, где главный персонаж совершает злодейства, переодеваясь в женскую одежду.",
+    "timestamp": 1601701995000,
+    "language": "ru",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+        "categoryName": "Analysis"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "taggings": [],
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+            "thingLabel": "Литература",
+            "thingUri": "http://www.bbc.co.uk/things/0ddb2a64-18b7-4e25-9844-9f467489a53f#id",
+            "thingId": "0ddb2a64-18b7-4e25-9844-9f467489a53f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q8242",
+              "http://dbpedia.org/resource/Literature"
+            ],
+            "thingEnglishLabel": "Literature",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+            "thingLabel": "ЛГБТ",
+            "thingUri": "http://www.bbc.co.uk/things/911f368c-e756-4ac3-9667-ec8900ceb4ce#id",
+            "thingId": "911f368c-e756-4ac3-9667-ec8900ceb4ce",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:TagConcept",
+              "tagging:Audience",
+              "tagging:AmbiguousTerm"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/LGBT",
+              "http://www.wikidata.org/entity/Q17884"
+            ],
+            "thingEnglishLabel": "LGBT",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingLabel": "Социальные сети",
+            "thingUri": "http://www.bbc.co.uk/things/ea2c5d34-4279-4e06-b69a-e699321d7f9f#id",
+            "thingId": "ea2c5d34-4279-4e06-b69a-e699321d7f9f",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Social_media",
+              "http://www.wikidata.org/entity/Q202833"
+            ],
+            "thingEnglishLabel": "Social media",
+            "type": "about"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "114731985",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/E621/production/_114731985_gettyimages-950047366.jpg",
+      "path": "/cpsprodpb/E621/production/_114731985_gettyimages-950047366.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "J.K.Rowling",
+      "copyrightHolder": "Bruce Glikas/FilmMagic/Getty",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/features-54391793",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Подробности",
+      "uri": "/russian/features",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Элли и Неле родились девочками. Потом стали мужчинами. А теперь они опять женщины",
+              "headline": "Элли и Неле родились девочками. Потом стали мужчинами. А теперь они опять женщины"
+            },
+            "locators": {
+              "assetUri": "/russian/features-51844590",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-51844590"
+            },
+            "summary": "Трансгендеры редко сожалеют о смене биологического пола. Но такое бывает. Именно это произошло с Элли и Неле , которые живут в Германии.",
+            "timestamp": 1584282682000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "111197122",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/56A3/production/_111197122_neele_ellie976549.jpg",
+              "path": "/cpsprodpb/56A3/production/_111197122_neele_ellie976549.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Неле и Элли",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-51844590",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Это фашизм\": как новый законопроект Мизулиной дискриминирует трансгендерных и интерсекс-людей",
+              "headline": "\"Это фашизм\": как новый законопроект Мизулиной дискриминирует трансгендерных и интерсекс-людей"
+            },
+            "locators": {
+              "assetUri": "/russian/features-53513349",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-53513349"
+            },
+            "summary": "Проект поправок в Семейный кодекс о запрете трансгендерным людям вступать в брак может привести к существенному ущемлению их прав, говорят юристы. Авторы законопроекта настаивают, что таким образом защищают детей. Русская служба Би-би-си изучила позиции сторон.",
+            "timestamp": 1595512359000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "113589077",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/12D2A/production/_113589077_d75575a9-6608-4a6b-a772-30021336857e.jpg",
+              "path": "/cpsprodpb/12D2A/production/_113589077_d75575a9-6608-4a6b-a772-30021336857e.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Торт",
+              "caption": "Поправка о запрете однополым парам заключать брак нужна, чтобы привести Семейный кодекс в соответствие с новой версией Конституции, говорят авторы",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-53513349",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

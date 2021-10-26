@@ -8,7 +8,7 @@ describe('getMostWatchEndpoint', () => {
   });
   it('should return test base path and append .json when env is test', () => {
     expect(getMostWatchedEndpoint({ service: 'hausa', env: 'test' })).toBe(
-      'https://www.test.bbc.com/hausa/mostwatched.json',
+      'https://test.bbc.com/hausa/mostwatched.json',
     );
   });
   it('should return live base path and append .json when env is live', () => {
