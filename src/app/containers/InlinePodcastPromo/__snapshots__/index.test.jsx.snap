@@ -15,9 +15,9 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(15rem + 1.25rem)) {
+@media (min-width: 16.25rem) {
   .emotion-0 {
-    width: 7.62rem;
+    width: 7.63rem;
     margin: 1.5rem 0.5rem;
   }
 }
@@ -28,15 +28,9 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(20rem + 2.5rem)) {
+@media (min-width: 22.5rem) {
   .emotion-0 {
-    width: 10.93rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-0 {
-    width: 10.93rem;
+    width: 10.94rem;
   }
 }
 
