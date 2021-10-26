@@ -48,14 +48,14 @@ const Document = ({
         {isAmp ? (
           <style
             amp-custom=""
-            data-emotion-css={ids.join(' ')}
+            data-emotion-css={['bbc', ...ids].join(' ')}
             dangerouslySetInnerHTML={{
               __html: css,
             }}
           />
         ) : (
           <style
-            data-emotion-css={ids.join(' ')}
+            data-emotion-css={['bbc', ...ids].join(' ')}
             dangerouslySetInnerHTML={{
               __html: css,
             }}
