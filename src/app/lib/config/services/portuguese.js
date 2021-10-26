@@ -76,7 +76,7 @@ export const service = {
       brandDescription:
         'A BBC lê para você algumas de suas melhores reportagens',
       image: {
-        src: 'https://ichef.bbc.co.uk/images/ic/448xn/p09qw181.jpg',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
         alt: 'BBC Lê',
       },
       linkLabel: {
