@@ -2,7 +2,6 @@
 import { pathOr } from 'ramda';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-import visitPage from '../../../support/helpers/visitPage';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
