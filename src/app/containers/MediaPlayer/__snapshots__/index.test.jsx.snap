@@ -268,7 +268,7 @@ exports[`MediaPlayer Does not Call the canonical placeholder when platform is ca
         allowfullscreen=""
         class="emotion-4 emotion-5"
         scrolling="no"
-        src="https://test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
+        src="https://www.test.bbc.com/ws/av-embeds/articles/c123456789o/p01k6msp/en-GB"
         title="Media player"
       />
       <noscript />

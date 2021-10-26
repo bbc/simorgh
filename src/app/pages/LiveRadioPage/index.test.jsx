@@ -100,7 +100,7 @@ describe('Radio Page Main', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+      'https://www.test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 
