@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { pathOr } from 'ramda';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
@@ -49,16 +48,14 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
 
     it('should render podcast promo if in json and should navigate to correct podcast page', () => {
       cy.log(service);
-      if (
-        Cypress.env('APP_ENV') !== 'local'
-      ) {
+      if (Cypress.env('APP_ENV') !== 'local') {
         cy.getToggles(service);
         cy.url().then(url => {
           const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
 
           const firstVisitedPage = url;
 
-          cy.request(getDataUrl(urlForData)).then(({ body }) => {
+          cy.request(getDataUrl(urlForData)).then(() => {
             cy.fixture(`toggles/${service}.json`).then(toggles => {
               const podcastPromoIsEnabled = path(
                 ['podcastPromo', 'enabled'],
@@ -70,36 +67,36 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
               if (podcastPromoIsEnabled) {
                 // Gets the podcast promo name
                 cy.get(
-                  `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`
+                  `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`,
                 ).then($tag => {
                   const podcastTitle = $tag.text();
                   cy.wrap(podcastTitle).as('podcastTitle');
                 });
                 // Clicks on the podcast promo link
                 cy.get(
-                  `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`)
-                  .click();
-                
-                // Waits for page load to allow Cypress to retrieve url 
+                  `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`,
+                ).click();
+
+                // Waits for page load to allow Cypress to retrieve url
                 // eslint-disable-next-line cypress/no-unnecessary-waiting
                 cy.wait(1000);
-              
+
                 cy.url().then(urlTwo => {
                   const isPodcastBrandPage = urlTwo.includes('/podcasts/');
 
                   // If link leads to a Podcast brand page, check the title is as expected
-                  // If link leads to a Podcast aggregate page, check the first link leads to podcast page 
+                  // If link leads to a Podcast aggregate page, check the first link leads to podcast page
                   if (isPodcastBrandPage) {
                     cy.get('@podcastTitle').then(title => {
-                    cy.get('h1').should('contain', title);
+                      cy.get('h1').should('contain', title);
                     });
                   } else {
-                    // This could fail if editorial chooses a MAP page to be the first promo link instead of a podcast page 
+                    // This could fail if editorial chooses a MAP page to be the first promo link instead of a podcast page
                     cy.get('[data-e2e=story-promo]')
-                    .first()
-                    .find('a')
-                    .invoke('attr', 'href')
-                    .should('contain','/podcasts/'); 
+                      .first()
+                      .find('a')
+                      .invoke('attr', 'href')
+                      .should('contain', '/podcasts/');
                   }
                 });
                 cy.visit(firstVisitedPage);
