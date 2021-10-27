@@ -1,7 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FooterContainer should render correctly 1`] = `
-.emotion-1 {
+.emotion-0 {
+  content-visibility: auto;
+  contain-intrinsic-size: 33.125rem;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 26.563rem;
+  }
+}
+
+@media (min-width: 20) {
+  .emotion-0 {
+    contain-intrinsic-size: 23.438rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 21.875rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 17.188rem;
+  }
+}
+
+.emotion-3 {
   background-color: #B80000;
   min-height: 2.5rem;
   width: 100%;
@@ -12,13 +41,13 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-1 {
+  .emotion-3 {
     min-height: 3.25rem;
     padding: 0 1rem;
   }
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -40,12 +69,12 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-3 {
+  .emotion-5 {
     display: block;
   }
 }
 
-.emotion-5 {
+.emotion-7 {
   display: inline-block;
   width: 100%;
   max-width: 10.496849999999998rem;
@@ -57,12 +86,12 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-5 {
+  .emotion-7 {
     display: block;
   }
 }
 
-.emotion-7 {
+.emotion-9 {
   box-sizing: content-box;
   color: #FFFFFF;
   fill: currentColor;
@@ -79,34 +108,34 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-7 {
+  .emotion-9 {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-7 {
+  .emotion-9 {
     padding-top: 1.25rem;
     padding-bottom: 1rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active),print {
-  .emotion-7 {
+  .emotion-9 {
     fill: windowText;
   }
 }
 
-.emotion-6:hover .emotion-7,
-.emotion-6:focus .emotion-7 {
+.emotion-8:hover .emotion-9,
+.emotion-8:focus .emotion-9 {
   -webkit-text-decoration: none;
   text-decoration: none;
   border-bottom: 0.25rem solid #FFFFFF;
   margin-bottom: -0.25rem;
 }
 
-.emotion-9 {
+.emotion-11 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -117,7 +146,7 @@ exports[`FooterContainer should render correctly 1`] = `
   margin: 0;
 }
 
-.emotion-11 {
+.emotion-13 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -125,23 +154,23 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (max-width: 25rem) {
-  .emotion-11 {
+  .emotion-13 {
     padding: 0 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-11 {
+  .emotion-13 {
     padding: 0 1rem;
   }
 }
 
-.emotion-13 {
+.emotion-15 {
   max-width: 80rem;
   margin: 0 auto;
 }
 
-.emotion-15 {
+.emotion-17 {
   border-bottom: 0.0625rem solid #3F3F42;
   -webkit-column-count: 4;
   column-count: 4;
@@ -151,14 +180,14 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-15 {
+  .emotion-17 {
     display: grid;
     grid-auto-flow: column;
   }
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-15 {
+  .emotion-17 {
     grid-auto-flow: row;
     -webkit-column-count: 1;
     column-count: 1;
@@ -166,7 +195,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 15rem) and (max-width: 37.4375rem) {
-  .emotion-15 {
+  .emotion-17 {
     grid-column-gap: 0.5rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(
@@ -179,7 +208,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-15 {
+  .emotion-17 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(
@@ -192,7 +221,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-15 {
+  .emotion-17 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(
@@ -205,7 +234,7 @@ exports[`FooterContainer should render correctly 1`] = `
 }
 
 @media (min-width: 80rem) {
-  .emotion-15 {
+  .emotion-17 {
     grid-column-gap: 1rem;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(
@@ -217,14 +246,14 @@ exports[`FooterContainer should render correctly 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   min-width: 50%;
   -webkit-column-gap: 1rem;
   column-gap: 1rem;
   break-inside: avoid-column;
 }
 
-.emotion-19 {
+.emotion-21 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -235,19 +264,19 @@ exports[`FooterContainer should render correctly 1`] = `
   text-decoration: none;
 }
 
-.emotion-19:hover,
-.emotion-19:focus {
+.emotion-21:hover,
+.emotion-21:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-21 {
+.emotion-23 {
   color: #FFFFFF;
   margin: 0;
   padding: 1rem 0;
 }
 
-.emotion-23 {
+.emotion-25 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -258,29 +287,30 @@ exports[`FooterContainer should render correctly 1`] = `
   text-decoration: none;
 }
 
-.emotion-23:hover,
-.emotion-23:focus {
+.emotion-25:hover,
+.emotion-25:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 <div>
   <footer
+    class="emotion-0 emotion-1"
     role="contentinfo"
   >
     <div
-      class="emotion-0 emotion-1 emotion-2"
+      class="emotion-2 emotion-3 emotion-4"
     >
       <div
-        class="emotion-3 emotion-4"
+        class="emotion-5 emotion-6"
       >
         <a
-          class="emotion-5 emotion-6"
+          class="emotion-7 emotion-8"
           href="/news"
         >
           <svg
             aria-hidden="true"
-            class="emotion-7 emotion-8"
+            class="emotion-9 emotion-10"
             focusable="false"
             height="24"
             viewBox="0 0 167.95 24"
@@ -301,7 +331,7 @@ exports[`FooterContainer should render correctly 1`] = `
             </g>
           </svg>
           <span
-            class="emotion-9 emotion-10"
+            class="emotion-11 emotion-12"
           >
             BBC News
           </span>
@@ -309,21 +339,21 @@ exports[`FooterContainer should render correctly 1`] = `
       </div>
     </div>
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-13 emotion-14"
     >
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-15 emotion-16"
       >
         <ul
-          class="emotion-15 emotion-16"
+          class="emotion-17 emotion-18"
           role="list"
         >
           <li
-            class="emotion-17 emotion-18"
+            class="emotion-19 emotion-20"
             role="listitem"
           >
             <a
-              class="emotion-19 emotion-20"
+              class="emotion-21 emotion-22"
               href="https://www.bbc.com/yoruba/institutional-48528718"
             >
               Why you can trust the BBC
@@ -331,7 +361,7 @@ exports[`FooterContainer should render correctly 1`] = `
           </li>
         </ul>
         <p
-          class="emotion-21 emotion-22"
+          class="emotion-23 emotion-24"
         >
           <span
             lang="en-GB"
@@ -342,7 +372,7 @@ exports[`FooterContainer should render correctly 1`] = `
           3000 BBC. The BBC is not responsible for the content of external sites.
            
           <a
-            class="emotion-23 emotion-20"
+            class="emotion-25 emotion-22"
             href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"
           >
             Read about our approach to external linking.

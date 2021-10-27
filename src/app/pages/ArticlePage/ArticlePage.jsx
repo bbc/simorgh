@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
 import {
@@ -21,10 +22,12 @@ import {
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
 import { C_GREY_2, C_WHITE } from '@bbc/psammead-styles/colours';
+import { singleTextBlock } from '#app/models/blocks';
 import { articleDataPropTypes } from '#models/propTypes/article';
 import ArticleMetadata from '#containers/ArticleMetadata';
 import { ServiceContext } from '#contexts/ServiceContext';
 import headings from '#containers/Headings';
+import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import gist from '#containers/Gist';
 import text from '#containers/Text';
 import Image from '#containers/Image';
@@ -61,6 +64,7 @@ import SecondaryColumn from './SecondaryColumn';
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 
 const componentsToRender = {
+  visuallyHiddenHeadline,
   headline: headings,
   subheadline: headings,
   audio: articleMediaPlayer,
@@ -118,6 +122,18 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = path(['metadata', 'topics'], pageData);
+  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
+
+  const visuallyHiddenBlock = {
+    id: null,
+    model: { blocks: [singleTextBlock(headline)] },
+    type: 'visuallyHiddenHeadline',
+  };
+
+  const articleBlocks = startsWithHeading
+    ? blocks
+    : [visuallyHiddenBlock, ...blocks];
 
   const promoImageBlocks = pathOr(
     [],
@@ -181,7 +197,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
           <Main role="main">
             <Disclaimer />
             <Blocks
-              blocks={path(['content', 'model', 'blocks'], pageData)}
+              blocks={articleBlocks}
               componentsToRender={componentsToRender}
             />
           </Main>
