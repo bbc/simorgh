@@ -282,8 +282,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      frequenciesPageUrl:
-        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
       durationLabel: 'المدة %duration%',
