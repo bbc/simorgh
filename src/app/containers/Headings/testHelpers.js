@@ -1,4 +1,4 @@
-const blocksSingleFragment = (text, attributes = []) => [
+const blocksSingleFragment = (text, attributes = [], position = 1) => [
   {
     type: 'text',
     model: {
@@ -21,6 +21,7 @@ const blocksSingleFragment = (text, attributes = []) => [
         },
       ],
     },
+    position: [position],
   },
 ];
 
