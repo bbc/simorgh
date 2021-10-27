@@ -68,7 +68,6 @@ const LinkContents = ({ item, isInline, index }) => {
     <span role="text" id={index}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
-      {console.log(content, 'content')}
       {offScreenDuration}
     </span>
   );
