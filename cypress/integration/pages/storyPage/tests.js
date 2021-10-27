@@ -1,4 +1,4 @@
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
 
@@ -51,7 +51,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       if (Cypress.env('APP_ENV') !== 'local') {
         cy.getToggles(service);
         cy.url().then(url => {
-          const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
+          const urlForData = url.replace('.amp', '');
 
           const firstVisitedPage = url;
 
