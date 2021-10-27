@@ -9,7 +9,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
 import { isPgl, isMap } from '../utilities';
 
-const LinkContents = ({ item, isInline }) => {
+const LinkContents = ({ item, isInline, index }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -65,9 +65,10 @@ const LinkContents = ({ item, isInline }) => {
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
+    <span role="text" id={index}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
+      {console.log(content, 'content')}
       {offScreenDuration}
     </span>
   );

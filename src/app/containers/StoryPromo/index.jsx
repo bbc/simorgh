@@ -157,7 +157,13 @@ const StoryPromoContainer = ({
     });
   }
 
-  const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
+  const linkcontents = (
+    <LinkContents
+      item={item}
+      isInline={!displayImage}
+      index={`storyPromoLinkText-${item.indexImage.id}`}
+    />
+  );
 
   if (!headline || !url) {
     return null;
@@ -188,6 +194,7 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
+          aria-labelledby={`storyPromoLinkText-${item.indexImage.id}`}
         >
           {isLive ? (
             <LiveLabel
