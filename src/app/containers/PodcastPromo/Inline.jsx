@@ -16,18 +16,14 @@ import {
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import getPromo from './shared';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import PromoComponent from '../PodcastPromo/components';
+import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
-
-const getSrcFromSize = (url, size) => {
-  const src = url.replace('$recipe', `${size}x${size}`);
-  return `${src} ${size}w`;
-};
 
 const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 const GEL_GROUP_B_WIDTH_360PX = '22.5rem';
@@ -148,35 +144,25 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   display: block;
 `;
 
-const getSrcSet = (url, sizes) =>
-  sizes.map(size => getSrcFromSize(url, size)).join(',');
-
 const Promo = () => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
-  const podcastPromoTitle = path(['title'], podcastPromo);
-  const podcastBrandTitle = path(['brandTitle'], podcastPromo);
-  const description = path(['brandDescription'], podcastPromo);
-  const img = path(['image', 'src'], podcastPromo);
-  const alt = path(['image', 'alt'], podcastPromo);
-  const url = path(['linkLabel', 'href'], podcastPromo);
-  const label = path(['linkLabel', 'text'], podcastPromo);
 
-  const eventTrackingData = {
-    componentName: 'promo-podcast',
-  };
-
-  const viewTrackerRef = useViewTracker(eventTrackingData);
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
-
-  const showPromo = [
-    podcastBrandTitle,
+  const {
     podcastPromoTitle,
+    podcastBrandTitle,
     description,
-    img,
+    imgSrc,
     alt,
     url,
     label,
-  ].every(Boolean);
+    showPromo,
+    eventTrackingData,
+    sizes,
+    srcset,
+  } = getPromo(podcastPromo);
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
   if (!showPromo) {
     return null;
@@ -194,10 +180,6 @@ const Promo = () => {
     text,
     endTextVisuallyHidden,
   };
-
-  const imgSrc = img.replace('$recipe', '512x512');
-  const srcset = getSrcSet(img, [128, 240, 480]);
-  const sizes = '(min-width: 1008px) 228px, 30vw';
 
   return (
     <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
