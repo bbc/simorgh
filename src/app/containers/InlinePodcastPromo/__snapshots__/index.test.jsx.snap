@@ -213,14 +213,14 @@ exports[`PodcastPromo Should render correctly 1`] = `
 @media (min-width: 15rem) {
   .emotion-17 {
     display: inline-block;
-    width: 5.12rem;
+    width: 5.13rem;
   }
 }
 
-@media (min-width: calc(15rem + 1.25rem)) {
+@media (min-width: 16.25rem) {
   .emotion-17 {
     display: inline-block;
-    width: 5.62rem;
+    width: 5.63rem;
   }
 }
 
@@ -231,10 +231,10 @@ exports[`PodcastPromo Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(20rem + 2.5rem)) {
+@media (min-width: 22.5rem) {
   .emotion-17 {
     display: inline-block;
-    width: 8.93rem;
+    width: 8.94rem;
   }
 }
 
@@ -242,7 +242,7 @@ exports[`PodcastPromo Should render correctly 1`] = `
   .emotion-17 {
     display: inline-block;
     margin: 0.5rem;
-    width: 15.18rem;
+    width: 15.19rem;
   }
 }
 

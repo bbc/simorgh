@@ -76,28 +76,28 @@ const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     display: inline-block;
-    width: 5.12rem;
+    width: 5.13rem; // 82px
   }
 
-  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
     display: inline-block;
-    width: 5.62rem;
+    width: 5.63rem; // 90px
   }
 
   @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
     display: inline-block;
-    width: 7.25rem;
+    width: 7.25rem; // 116px
   }
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+  @media (min-width: ${GEL_GROUP_B_WIDTH_360PX}) {
     display: inline-block;
-    width: 8.93rem;
+    width: 8.94rem; // 143px
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     display: inline-block;
     margin: ${GEL_SPACING};
-    width: 15.18rem;
+    width: 15.19rem; // 243px
   }
 `;
 
