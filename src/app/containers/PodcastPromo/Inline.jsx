@@ -35,7 +35,7 @@ const ResponsivePodcastPromoWrapper = styled.div`
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    width: 7.06rem; /* 133px */
+    width: 7.06rem; /* 113px */
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_HLF};
   }
 
@@ -121,7 +121,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
     margin: 0;
   }
 
-  @media (min-width: calc(${GEL_GROUP_1_SCREEN_WIDTH_MIN} + 1.25rem)) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
     margin: 0;
   }
 
@@ -129,7 +129,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
     margin: 0 ${GEL_SPACING_HLF};
   }
 
-  @media (min-width: calc(${GEL_GROUP_B_MIN_WIDTH}rem + 2.5rem)) {
+  @media (min-width: ${GEL_GROUP_B_WIDTH_360PX}) {
     margin: 0;
   }
 
