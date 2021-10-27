@@ -1407,7 +1407,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
       </div>
       <a
         class="emotion-184 emotion-185"
-        href="/arabic/institutional/2011/01/000000_frequencies_radio"
+        href="/arabic/tv-and-radio-57895092"
       >
         استقبال البث
       </a>
@@ -2823,7 +2823,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
       </div>
       <a
         class="emotion-184 emotion-185"
-        href="/arabic/institutional/2011/01/000000_frequencies_radio"
+        href="/arabic/tv-and-radio-57895092"
       >
         استقبال البث
       </a>

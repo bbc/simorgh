@@ -5,9 +5,9 @@ The `useClickTracker` hook handles:
 - Tracking when an element has been clicked
 - Sending the event to ATI
 
-`useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
+`useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 
-A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked component. Specifically the following are valid clicks:
+A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked element. Specifically the following are valid clicks:
 
 - ### General
   - Middle Click
@@ -26,7 +26,7 @@ A click event is sent to ATI when a user performs a valid click (as per [clickTy
   - Left click + shift + option
   - Left click + shift + option + cmd
 
-The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that component and any of its children. After the component has been clicked once, it will no longer send ATI requests on click.
+The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
 ### Usage
 
@@ -34,15 +34,15 @@ Here are some examples of how you could setup click tracking for a component.
 
 ⚠️ Remember to also implement [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
 
-1. Log a single click event for a single component on click.
+1. Log a single click event for a single element on click.
 2. Log a single click event whenever one of the child elements is clicked.
-3. Log separate click events for each of a number of components on click.
+3. Log separate click events for each of a number of elements on click.
 
 ```jsx
 const Promo = () => {
   /*
    * Example 1 - Log 1 click event when a component is clicked.
-   * In this example, one click event is triggered when the component is clicked.
+   * In this example, one click event is triggered when the a tag is is clicked within the component and it will bring the user to the linked page.
    */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
@@ -50,8 +50,8 @@ const Promo = () => {
   });
 
   return (
-    <div onClick={clickTrackerHandler}>
-      <a href="promo-link">Promoted content</a>
+    <div>
+      <a href="promo-link" onClick={clickTrackerHandler}>Promoted content</a>
     </div>
   )
 };
@@ -111,8 +111,8 @@ const TopStories = () => {
     });
 
     return (
-      <li onClick={clickTrackerHandler}>
-        <a href={url}>{title}</a>
+      <li>
+        <a href={url} onClick={clickTrackerHandler}>{title}</a>
       </li>,
     ),
   );
