@@ -306,6 +306,10 @@ export const service = {
         url: '/japanese/52137815',
       },
       {
+        title: '気候変動',
+        url: '/japanese/58771282',
+      },
+      {
         title: '日本',
         url: '/japanese/topics/cyx5k201n3qt',
       },
