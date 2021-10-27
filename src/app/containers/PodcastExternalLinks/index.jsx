@@ -123,7 +123,6 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
             <StyledListItem dir={dir} key={linkText} onClick={clickTrackerRef}>
               <Link
                 aria-labelledby={`externalLinkId-${linkText}`}
-                // aria-label={`${linkText}, ${brandTitle}${externalLinkText}`}
                 href={linkUrl}
                 service={service}
                 script={script}
