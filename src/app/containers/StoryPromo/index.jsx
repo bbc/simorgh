@@ -161,7 +161,7 @@ const StoryPromoContainer = ({
     <LinkContents
       item={item}
       isInline={!displayImage}
-      index={`storyPromoLinkText-${item.indexImage.id}`}
+      index={`storyPromoLinkText-${item.media.id}`}
     />
   );
 
@@ -194,7 +194,7 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
-          aria-labelledby={`storyPromoLinkText-${item.indexImage.id}`}
+          aria-labelledby={`storyPromoLinkText-${item.media.id}`}
         >
           {isLive ? (
             <LiveLabel
