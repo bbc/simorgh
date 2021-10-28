@@ -825,10 +825,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248"
                         class="emotion-40 emotion-41"
                         href="/pidgin/media-53580248"
                       >
                         <span
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248"
                           role="text"
                         >
                           <span
@@ -916,10 +918,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139"
                         class="emotion-40 emotion-41"
                         href="/pidgin/media-53591139"
                       >
                         <span
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139"
                           role="text"
                         >
                           <span
@@ -1007,10 +1011,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788"
                         class="emotion-40 emotion-41"
                         href="/pidgin/tori-53509788"
                       >
                         <span
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788"
                           role="text"
                         >
                           <span

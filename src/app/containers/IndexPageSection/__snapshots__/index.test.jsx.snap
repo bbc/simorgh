@@ -1018,6 +1018,7 @@ HTMLCollection [
                 class="emotion-37 emotion-38"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000001"
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
@@ -1079,6 +1080,7 @@ HTMLCollection [
                 class="emotion-60 emotion-38"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000002"
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
@@ -1140,6 +1142,7 @@ HTMLCollection [
                 class="emotion-60 emotion-38"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000003"
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
@@ -1201,6 +1204,7 @@ HTMLCollection [
                 class="emotion-60 emotion-38"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000004"
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
@@ -1262,6 +1266,7 @@ HTMLCollection [
                 class="emotion-60 emotion-38"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000005"
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
@@ -2324,6 +2329,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-39 emotion-40"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000001"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
@@ -2385,6 +2391,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-62 emotion-40"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000002"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
@@ -2446,6 +2453,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-62 emotion-40"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000003"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
@@ -2507,6 +2515,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-62 emotion-40"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000004"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
@@ -2568,6 +2577,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-62 emotion-40"
               >
                 <a
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000005"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
@@ -3557,6 +3567,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-26 emotion-27"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000001"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
@@ -3643,6 +3654,7 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-57 emotion-27"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000002"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
@@ -4180,6 +4192,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
             class="emotion-33 emotion-34"
           >
             <a
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000001"
               class="emotion-35 emotion-36"
               href="https://www.bbc.co.uk"
             >
@@ -5184,6 +5197,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-32 emotion-33"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000001"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
@@ -5245,6 +5259,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000002"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
@@ -5306,6 +5321,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000003"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
@@ -5367,6 +5383,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000004"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
@@ -5428,6 +5445,7 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/testasset-00000005"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
