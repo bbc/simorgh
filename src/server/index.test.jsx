@@ -14,6 +14,7 @@ import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import loggerMock from '#testHelpers/loggerMock';
 import { ROUTING_INFORMATION } from '#lib/logger.const';
 import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import ampHtmlResponse from './helpers';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -95,7 +96,7 @@ const makeRequest = async requestPath => request(server).get(requestPath);
 const QUERY_STRING = '?param=test&query=1';
 
 const testRenderedData =
-  ({ url, service, isAmp, successDataResponse, variant }) =>
+  ({ url, service, isAmp, successDataResponse, variant, expectedOutput }) =>
   async () => {
     const { text, status } = await makeRequest(url);
 
@@ -138,9 +139,7 @@ const testRenderedData =
 
     expect(getRouteProps).toHaveBeenCalledWith(url.split('?')[0]);
 
-    expect(text).toEqual(
-      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-    );
+    expect(text).toEqual(expectedOutput);
   };
 
 const assertNon200ResponseCustomMetrics = ({
@@ -159,7 +158,13 @@ const assertNon200ResponseCustomMetrics = ({
   });
 };
 
-const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
+const testFrontPages = ({
+  platform,
+  service,
+  variant,
+  queryString = '',
+  expectedOutput,
+}) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
   const serviceURL = `/${service}${
@@ -200,6 +205,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
           isAmp,
           successDataResponse,
           variant,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -220,9 +226,7 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(serviceURL);
           expect(status).toBe(404);
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
+          expect(text).toEqual(expectedOutput);
         });
 
         assertNon200ResponseCustomMetrics({
@@ -260,7 +264,13 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
   });
 };
 
-const testArticles = ({ platform, service, variant, queryString = '' }) => {
+const testArticles = ({
+  platform,
+  service,
+  variant,
+  queryString = '',
+  expectedOutput,
+}) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
 
@@ -300,6 +310,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
           isAmp,
           successDataResponse,
           variant,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -322,9 +333,7 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(articleURL);
           expect(status).toBe(404);
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
+          expect(text).toEqual(expectedOutput);
         });
 
         assertNon200ResponseCustomMetrics({
@@ -369,6 +378,7 @@ const testAssetPages = ({
   assetUri,
   variant,
   queryString = '',
+  expectedOutput,
 }) => {
   const isAmp = platform === 'amp';
   const extension = isAmp ? '.amp' : '';
@@ -408,6 +418,7 @@ const testAssetPages = ({
           isAmp,
           successDataResponse,
           variant,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -430,9 +441,7 @@ const testAssetPages = ({
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(articleURL);
           expect(status).toBe(404);
-          expect(text).toEqual(
-            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-          );
+          expect(text).toEqual(expectedOutput);
         });
 
         assertNon200ResponseCustomMetrics({
@@ -478,6 +487,7 @@ const testMediaPages = ({
   serviceId,
   mediaId,
   queryString = '',
+  expectedOutput,
 }) => {
   describe(`${platform} radio page - live radio`, () => {
     const isAmp = platform === 'amp';
@@ -513,6 +523,7 @@ const testMediaPages = ({
           service,
           isAmp,
           successDataResponse,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -534,9 +545,7 @@ const testMediaPages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
+        expect(text).toEqual(expectedOutput);
       });
 
       assertNon200ResponseCustomMetrics({
@@ -580,6 +589,7 @@ const testTvPages = ({
   brandEpisode,
   mediaId,
   queryString = '',
+  expectedOutput,
 }) => {
   describe(`${platform} tv brand page`, () => {
     const isAmp = platform === 'amp';
@@ -615,6 +625,7 @@ const testTvPages = ({
           service,
           isAmp,
           successDataResponse,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -636,9 +647,7 @@ const testTvPages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
+        expect(text).toEqual(expectedOutput);
       });
 
       assertNon200ResponseCustomMetrics({
@@ -682,6 +691,7 @@ const testOnDemandTvEpisodePages = ({
   brandEpisode,
   mediaId,
   queryString = '',
+  expectedOutput,
 }) => {
   describe(`${platform} tv episode page`, () => {
     const isAmp = platform === 'amp';
@@ -717,6 +727,7 @@ const testOnDemandTvEpisodePages = ({
           service,
           isAmp,
           successDataResponse,
+          expectedOutput,
         };
 
         it('should respond with rendered data', testRenderedData(configs));
@@ -738,9 +749,7 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(`/${service}`);
         expect(status).toBe(404);
-        expect(text).toEqual(
-          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-        );
+        expect(text).toEqual(expectedOutput);
       });
 
       assertNon200ResponseCustomMetrics({
@@ -1087,58 +1096,110 @@ describe('Server', () => {
     });
   });
 
-  testFrontPages({ platform: 'canonical', service: 'igbo' });
+  testFrontPages({
+    platform: 'canonical',
+    service: 'igbo',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+  });
   testFrontPages({
     platform: 'canonical',
     service: 'igbo',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
-  testFrontPages({ platform: 'amp', service: 'igbo' });
+  testFrontPages({
+    platform: 'amp',
+    service: 'igbo',
+    expectedOutput: ampHtmlResponse,
+  });
   testFrontPages({
     platform: 'amp',
     service: 'igbo',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
   testFrontPages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testFrontPages({
     platform: 'canonical',
     service: 'ukchina',
     variant: 'simp',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
-  testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
+  testFrontPages({
+    platform: 'amp',
+    service: 'serbian',
+    variant: 'lat',
+    expectedOutput: ampHtmlResponse,
+  });
   testFrontPages({
     platform: 'amp',
     service: 'serbian',
     variant: 'lat',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
 
-  testArticles({ platform: 'amp', service: 'news' });
-  testArticles({ platform: 'amp', service: 'news', queryString: QUERY_STRING });
-  testArticles({ platform: 'canonical', service: 'news' });
+  testArticles({
+    platform: 'amp',
+    service: 'news',
+    expectedOutput: ampHtmlResponse,
+  });
+  testArticles({
+    platform: 'amp',
+    service: 'news',
+    queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
+  });
+  testArticles({
+    platform: 'canonical',
+    service: 'news',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+  });
   testArticles({
     platform: 'canonical',
     service: 'news',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
-  testArticles({ platform: 'amp', service: 'zhongwen', variant: 'trad' });
+  testArticles({
+    platform: 'amp',
+    service: 'zhongwen',
+    variant: 'trad',
+    expectedOutput: ampHtmlResponse,
+  });
   testArticles({
     platform: 'amp',
     service: 'zhongwen',
     variant: 'trad',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
-  testArticles({ platform: 'canonical', service: 'zhongwen', variant: 'simp' });
+  testArticles({
+    platform: 'canonical',
+    service: 'zhongwen',
+    variant: 'simp',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+  });
   testArticles({
     platform: 'canonical',
     service: 'zhongwen',
     variant: 'simp',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   testMediaPages({
@@ -1146,6 +1207,7 @@ describe('Server', () => {
     service: 'korean',
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
+    expectedOutput: ampHtmlResponse,
   });
   testMediaPages({
     platform: 'amp',
@@ -1153,12 +1215,15 @@ describe('Server', () => {
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
   testMediaPages({
     platform: 'canonical',
     service: 'korean',
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testMediaPages({
     platform: 'canonical',
@@ -1166,6 +1231,8 @@ describe('Server', () => {
     serviceId: 'bbc_korean_radio',
     mediaId: 'liveradio',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   testTvPages({
@@ -1174,6 +1241,7 @@ describe('Server', () => {
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv_programmes',
     mediaId: 'p0340yr4',
+    expectedOutput: ampHtmlResponse,
   });
   testTvPages({
     platform: 'amp',
@@ -1182,6 +1250,7 @@ describe('Server', () => {
     brandEpisode: 'tv_programmes',
     mediaId: 'p0340yr4',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
   testTvPages({
     platform: 'canonical',
@@ -1189,6 +1258,8 @@ describe('Server', () => {
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv_programmes',
     mediaId: 'p0340yr4',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testTvPages({
     platform: 'canonical',
@@ -1197,6 +1268,8 @@ describe('Server', () => {
     brandEpisode: 'tv_programmes',
     mediaId: 'p0340yr4',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   testOnDemandTvEpisodePages({
@@ -1205,6 +1278,7 @@ describe('Server', () => {
     serviceId: 'bbc_pashto_tv',
     brandEpisode: 'tv',
     mediaId: 'w172xcldhhrhmcf',
+    expectedOutput: ampHtmlResponse,
   });
 
   testOnDemandTvEpisodePages({
@@ -1212,35 +1286,44 @@ describe('Server', () => {
     service: 'pashto',
     serviceId: 'bbc_pashto_tv',
     mediaId: 'w172xcldhhrhmcf',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   testAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
+    expectedOutput: ampHtmlResponse,
   });
   testAssetPages({
     platform: 'amp',
     service: 'pidgin',
     assetUri: 'tori-49450859',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
   testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testAssetPages({
     platform: 'canonical',
     service: 'pidgin',
     assetUri: 'tori-49450859',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testAssetPages({
     platform: 'amp',
     service: 'serbian',
     assetUri: 'srbija-49427344',
     variant: 'cyr',
+    expectedOutput: ampHtmlResponse,
   });
   testAssetPages({
     platform: 'canonical',
@@ -1248,6 +1331,8 @@ describe('Server', () => {
     assetUri: 'srbija-49427344',
     variant: 'cyr',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   // Legacy asset pages
@@ -1255,23 +1340,29 @@ describe('Server', () => {
     platform: 'amp',
     service: 'hausa',
     assetUri: 'multimedia/2012/07/120712_click',
+    expectedOutput: ampHtmlResponse,
   });
   testAssetPages({
     platform: 'amp',
     service: 'hausa',
     assetUri: 'multimedia/2012/07/120712_click',
     queryString: QUERY_STRING,
+    expectedOutput: ampHtmlResponse,
   });
   testAssetPages({
     platform: 'canonical',
     service: 'hausa',
     assetUri: 'multimedia/2012/07/120712_click',
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
   testAssetPages({
     platform: 'canonical',
     service: 'hausa',
     assetUri: 'multimedia/2012/07/120712_click',
     queryString: QUERY_STRING,
+    expectedOutput:
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
   });
 
   describe('Unknown routes', () => {
