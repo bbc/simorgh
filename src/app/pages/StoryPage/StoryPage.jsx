@@ -229,6 +229,9 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const StoryPageGrid = styled(GelPageGrid)`
     width: 100%; /* Needed for IE11 */
     margin: 0 auto;
+
+    // blah
+
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
     }
