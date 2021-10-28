@@ -191,11 +191,13 @@ server.get(
 
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
-      } else if (isAmp && result.html) {
-        const optimizedHtml = await ampOptimizer.transformHtml(result.html);
-        res.status(status).send(optimizedHtml);
       } else if (result.html) {
-        res.status(status).send(result.html);
+        if (isAmp) {
+          const optimizedHtml = await ampOptimizer.transformHtml(result.html);
+          res.status(status).send(optimizedHtml);
+        } else {
+          res.status(status).send(result.html);
+        }
       } else {
         throw new Error('unknown result');
       }
