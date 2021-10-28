@@ -766,12 +766,6 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
   }
 }
 
-@media (min-width: 20) {
-  .emotion-22 {
-    contain-intrinsic-size: 52.188rem;
-  }
-}
-
 @media (min-width: 25rem) {
   .emotion-22 {
     contain-intrinsic-size: 51.063rem;

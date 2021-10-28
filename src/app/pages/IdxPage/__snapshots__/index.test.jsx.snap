@@ -1124,12 +1124,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
   }
 }
 
-@media (min-width: 20) {
-  .emotion-240 {
-    contain-intrinsic-size: 52.188rem;
-  }
-}
-
 @media (min-width: 25rem) {
   .emotion-240 {
     contain-intrinsic-size: 51.063rem;

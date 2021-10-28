@@ -14,12 +14,6 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
   }
 }
 
-@media (min-width: 20) {
-  .emotion-0 {
-    contain-intrinsic-size: 52.188rem;
-  }
-}
-
 @media (min-width: 25rem) {
   .emotion-0 {
     contain-intrinsic-size: 51.063rem;
@@ -1459,12 +1453,6 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 @media (min-width: 15rem) {
   .emotion-0 {
     contain-intrinsic-size: 56.563rem;
-  }
-}
-
-@media (min-width: 20) {
-  .emotion-0 {
-    contain-intrinsic-size: 52.188rem;
   }
 }
 
