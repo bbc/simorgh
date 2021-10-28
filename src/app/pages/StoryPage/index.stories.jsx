@@ -43,6 +43,9 @@ const toggleState = {
   podcastPromo: {
     enabled: true,
   },
+  mostRead: {
+    enabled: true,
+  },
 };
 
 // eslint-disable-next-line react/prop-types
@@ -57,7 +60,10 @@ const Component = ({ pageData, service }) => (
             pageType={STORY_PAGE}
             bbcOrigin="https://www.test.bbc.com"
           >
-            <Page pageData={pageData} />
+            <Page
+              pageData={pageData}
+              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
+            />
           </RequestContextProvider>
         </UserContextProvider>
       </ServiceContextProvider>
