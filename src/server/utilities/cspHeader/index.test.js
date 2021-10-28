@@ -214,6 +214,9 @@ describe('cspHeader', () => {
       ],
       scriptSrcExpectation: [
         ...bbcDomains,
+        'https://assets.wearehearken.eu',
+        'https://modules.wearehearken.eu',
+        'https://ems.wearehearken.eu',
         'https://*.chartbeat.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
@@ -426,6 +429,9 @@ describe('cspHeader', () => {
       ],
       scriptSrcExpectation: [
         ...bbcDomains,
+        'https://assets.wearehearken.eu',
+        'https://modules.wearehearken.eu',
+        'https://ems.wearehearken.eu',
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',
