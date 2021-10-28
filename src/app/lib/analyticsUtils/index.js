@@ -329,6 +329,47 @@ const buildMarketingString = marketingValues =>
     .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
     .join('-');
 
+/*
+ * RSS marketing string uses v2 full-custom campaigns which uses specifies that parameters are in the format "src_myproperty: myvalue" for each property in the campaign.
+ * more information at https://developers.atinternet-solutions.com/as2-tagging-en/javascript-en/campaigns-javascript-en/marketing-campaigns-v2/?kw=at_custom#full-custom-campaigns_13
+ */
+const buildRSSMarketingString = href => {
+  const { query, hash } = new Url(href, true);
+
+  const queryWithParams = hash ? parameteriseHash(hash) : query;
+
+  return Object.keys(queryWithParams).reduce((accum, currVal) => {
+    if (currVal.includes('at_')) {
+      const type = currVal.replace('at_', '');
+
+      if (type === 'medium') {
+        return [
+          {
+            key: 'src_medium',
+            description: 'rss campaign prefix',
+            value: 'RSS',
+            wrap: false,
+          },
+        ];
+      }
+
+      return [
+        ...accum,
+        {
+          key: `src_${type}`,
+          description: `src_${type} field`,
+          value: getMarketingUrlParam(href, currVal),
+          wrap: false,
+        },
+      ];
+    }
+    return accum;
+  }, []);
+};
+
+export const getRSSMarketingString = (href, campaignType) =>
+  campaignType === 'RSS' ? buildRSSMarketingString(href) : [];
+
 export const getAffiliateMarketingString = href =>
   buildMarketingString([
     {

@@ -343,6 +343,10 @@ export const service = {
         url: '/mundo/internacional',
       },
       {
+        title: 'Medio ambiente',
+        url: '/mundo/noticias-58984987',
+      },
+      {
         title: 'Coronavirus',
         url: '/mundo/topics/c67q9nnn8z7t',
       },

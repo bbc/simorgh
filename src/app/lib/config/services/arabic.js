@@ -65,16 +65,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'بودكاست "عَلاقات"',
+      brandTitle: 'إكسترا ليفلز (Xtra Levels)',
       brandDescription:
-        'بودكاست أسبوعي يناقش العلاقات العاطفية باختلافها ويسلط الضوء على تحدياتها وحلولها المتاحة',
+        'بودكاست يسبر كون الألعاب الإلكترونية من خلال لاعبيه ومطوريه.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09m72gz.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg',
         alt: 'بودكاست "عَلاقات"',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p09m6x31',
+        href: 'https://www.bbc.com/arabic/podcasts/p09w8yvk',
       },
     },
     translations: {
@@ -282,8 +282,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      frequenciesPageUrl:
-        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
       durationLabel: 'المدة %duration%',

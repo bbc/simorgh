@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, oneOf, oneOfType } from 'prop-types';
-import { pathOr } from 'ramda';
+import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
@@ -74,7 +75,7 @@ PromoListComponent.defaultProps = {
   dir: 'ltr',
 };
 
-const TopStories = ({ content, parentColumns }) => {
+const TopStories = ({ content, parentColumns, sectionLabelBackground }) => {
   const { translations } = useContext(ServiceContext);
   const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
 
@@ -87,6 +88,7 @@ const TopStories = ({ content, parentColumns }) => {
       promoComponent={PromoComponent}
       promoListComponent={PromoListComponent}
       columnType="secondary"
+      sectionLabelBackground={sectionLabelBackground}
     />
   );
 };
@@ -101,11 +103,13 @@ TopStories.propTypes = {
     group4: number,
     group5: number,
   }),
+  sectionLabelBackground: string,
 };
 
 TopStories.defaultProps = {
   content: [],
   parentColumns: null,
+  sectionLabelBackground: undefined,
 };
 
 export default TopStories;

@@ -1,0 +1,1081 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:afrique/region-58708852",
+    "locators": {
+      "assetUri": "/afrique/region-58708852",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-58708852",
+      "curie": "http://www.bbc.co.uk/asset/902acacf-4b2a-44e7-a5f8-a5f342a60933",
+      "assetId": "58708852"
+    },
+    "type": "STY",
+    "createdBy": "afrique-v6",
+    "language": "fr",
+    "lastUpdated": 1632837464068,
+    "firstPublished": 1632837313000,
+    "lastPublished": 1632837313000,
+    "timestamp": 1632837313000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Women's+rights~Africa~Women~Abortion~Women's+health",
+      "cps_asset_id": "58708852",
+      "ldp_ids": "8abd564a-2b8e-401c-9916-34982cb67b55~d2c2ba68-f9ad-4185-a6d1-7f6437256735~e45cb5f8-3c87-4ebd-ac1c-058e9be22862~f16883ee-804f-43cd-8bc3-80d0fed59682~faa8885f-9e69-4c29-a8a5-516d508075dc",
+      "counterName": "afrique.africa.story.58708852.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "fr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+      "locator": "urn:bbc:cps:curie:asset:902acacf-4b2a-44e7-a5f8-a5f342a60933",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "thingLabel": "Droits des femmes",
+            "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Women%27s_rights",
+              "http://www.wikidata.org/entity/Q223569"
+            ],
+            "thingEnglishLabel": "Women's rights",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+            "thingLabel": "Afrique",
+            "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+            "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+            "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q15",
+              "http://dbpedia.org/resource/Africa",
+              "http://sws.geonames.org/6255146/"
+            ],
+            "thingEnglishLabel": "Africa",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+            "thingLabel": "Femmes",
+            "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+            "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q467",
+              "http://dbpedia.org/resource/Woman"
+            ],
+            "thingEnglishLabel": "Women",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+            "thingLabel": "Avortement",
+            "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+            "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Abortion",
+              "http://www.wikidata.org/entity/Q8452"
+            ],
+            "thingEnglishLabel": "Abortion",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+            "thingLabel": "Santé des femmes",
+            "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+            "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
+            "thingEnglishLabel": "Women's health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingLabel": "Explainer",
+            "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+            "thingType": ["tagging:Format", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+            ],
+            "thingEnglishLabel": "Explainer",
+            "thingPreferredLabel": "Explainer",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Droits des femmes",
+          "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+          "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Women%27s_rights",
+            "http://www.wikidata.org/entity/Q223569"
+          ],
+          "topicName": "Droits des femmes",
+          "topicId": "c7zp52p0n63t",
+          "curationList": [
+            {
+              "curationId": "f138ebac-3627-40a9-86fc-39dd0274053e",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Women's rights",
+          "thingLabelLanguage": "fr",
+          "thingPreferredLabel": "Women's rights"
+        },
+        {
+          "thingLabel": "Afrique",
+          "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+          "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+          "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q15",
+            "http://dbpedia.org/resource/Africa",
+            "http://sws.geonames.org/6255146/"
+          ],
+          "topicName": "Afrique",
+          "topicId": "c95y3ry6622t",
+          "curationList": [
+            {
+              "curationId": "bc99d5bb-c39d-4195-9ad9-6d9a28f35d01",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Africa",
+          "thingLabelLanguage": "fr",
+          "thingPreferredLabel": "Africa"
+        },
+        {
+          "thingLabel": "Femmes",
+          "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+          "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q467",
+            "http://dbpedia.org/resource/Woman"
+          ],
+          "topicName": "Femmes",
+          "topicId": "cqywjv1r1gvt",
+          "curationList": [
+            {
+              "curationId": "7738e0aa-6316-4226-b564-ca663976e621",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Women",
+          "thingLabelLanguage": "fr",
+          "thingPreferredLabel": "Women"
+        },
+        {
+          "thingLabel": "Avortement",
+          "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+          "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Abortion",
+            "http://www.wikidata.org/entity/Q8452"
+          ],
+          "topicName": "Avortement",
+          "topicId": "c95y3ry6d66t",
+          "curationList": [
+            {
+              "curationId": "8816e2ec-a188-4d00-9f7e-852055dff208",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Abortion",
+          "thingLabelLanguage": "fr",
+          "thingPreferredLabel": "Abortion"
+        },
+        {
+          "thingLabel": "Santé des femmes",
+          "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+          "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+          "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
+          "topicName": "Santé des femmes",
+          "topicId": "cxnykjyg67wt",
+          "curationList": [
+            {
+              "curationId": "fc51aa09-f9a7-4b1d-948a-6b71b2b2c127",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Women's health",
+          "thingLabelLanguage": "fr",
+          "thingPreferredLabel": "Women's health"
+        }
+      ]
+    },
+    "version": "v1.3.13",
+    "blockTypes": ["image", "paragraph", "list", "crosshead"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "AFRIQUE", "producerId": "3" },
+    "readTime": 3,
+    "siteUri": "/afrique",
+    "topics": [
+      {
+        "topicName": "Droits des femmes",
+        "topicId": "c7zp52p0n63t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f138ebac-3627-40a9-86fc-39dd0274053e",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+      },
+      {
+        "topicName": "Afrique",
+        "topicId": "c95y3ry6622t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "bc99d5bb-c39d-4195-9ad9-6d9a28f35d01",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Place", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+      },
+      {
+        "topicName": "Avortement",
+        "topicId": "c95y3ry6d66t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "8816e2ec-a188-4d00-9f7e-852055dff208",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+      },
+      {
+        "topicName": "Femmes",
+        "topicId": "cqywjv1r1gvt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7738e0aa-6316-4226-b564-ca663976e621",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+      },
+      {
+        "topicName": "Santé des femmes",
+        "topicId": "cxnykjyg67wt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "fc51aa09-f9a7-4b1d-948a-6b71b2b2c127",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "120715608",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/13B0B/production/_120715608_gettyimages-1139076008-2.jpg",
+        "path": "/cpsprodpb/13B0B/production/_120715608_gettyimages-1139076008-2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Une qctiviste brandit une pancarte sur laquelle on peut lire \"La stigmatisation tue, mettez fin aux mensonges\" lors d'une manifestation devant l'Assemblée du comté de la ville à Nairobi, le 24 avril 2019, pour demander le retrait de toute publicité contenant des informations trompeuses sur le droit constitutionnel à l'avortement.",
+        "caption": "Une activiste brandit une pancarte sur laquelle on peut lire \"La stigmatisation tue, mettez fin aux mensonges'' au Kenya",
+        "copyrightHolder": "SIMON MAINA/AFP via Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Le long combat des femmes africaines pour avoir accès à une interruption volontaire de grossesse sécurisée a encore de beaux jours.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dans la plupart des pays sur le continent, elles se battent pour le droit à l'avortement. Les associations de défense des droits des femmes en ont même fait une thématique récurrente de leur lutte.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Car si, les Etats africains se sont engagées à garantir leur droits et libertés en signant le protocole de Maputo, dans la pratique, peu d'entre eux mettent en œuvre cette convention qu'ils ont pourtant signée.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Le Protocole de Maputo, adopté en 2003, constitue l'un des premiers cadres juridiques pour la protection des droits et des libertés des femmes et des jeunes filles en Afrique.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Il reconnaît l'accès à un avortement médicalisé dans certaines conditions tel un droit humain dont les femmes doivent jouir sans restrictions. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": " Cependant sa mise en œuvre reste limitée sur le continent.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/monde-57991421</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Je ne savais pas que le retrait non consensuel du préservatif était un viol - jusqu'à ce que cela m'arrive",
+                  "headline": "Le retrait non consensuel du préservatif vu par deux femmes",
+                  "overtyped": "Je ne savais pas que le retrait non consensuel du préservatif était un viol - jusqu'à ce que cela m'arrive"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-57991421"
+                },
+                "summary": "Deux femmes partagent leur expérience du retrait non consensuel du préservatif pendant les rapports sexuels.",
+                "timestamp": 1627554621000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-57991421",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>afrique/monde-57853547</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "'Mon mari était un ange - puis il m'a violée'",
+                  "headline": "'Mon mari était un ange - puis il m'a violée'",
+                  "overtyped": "'Mon mari était un ange - puis il m'a violée' "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-57853547"
+                },
+                "summary": "Le viol conjugal a longtemps été un sujet tabou en Égypte, mais aujourd'hui, les victimes commencent à s'exprimer.",
+                "timestamp": 1626513282000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-57853547",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>afrique/monde-58281286</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "L'historique des allégations contre R. Kelly",
+                  "headline": "R. Kelly : l'historique des accusations portées contre lui",
+                  "overtyped": "L'historique des allégations contre R. Kelly "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-58281286"
+                },
+                "summary": "La star a été accusée d'avoir abusé sexuellement de quatre femmes, la dernière en date d'une longue série d'allégations.",
+                "timestamp": 1629541024000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-58281286",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Combien de pays ont signé le Protocole de Maputo ?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Cinquante-deux pays africains ont signé ou ratifié le Protocole de Maputo, mais sept d'entre eux (l'Angola, le Congo, l'Egypte, Madagascar, la Mauritanie, le Sénégal et la Sierra Léone) ont des lois en contradiction avec celui-ci.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ces dispositions réglementaires ne permettent pas l'interruption volontaire de grossesse dans aucun cas.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Les lois de certains de ces pays autorisent l'avortement uniquement pour sauver la vie de la femme. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Depuis l'adoption du protocole, quelques pays ( la Tunisie, l'Afrique du Sud , le Cap-Vert, le Mozambique, la Zambie...) ont réformé leurs lois afin de respecter- et dans un cas, de dépasser - les critères juridiques de l'Union africaine en matière d'avortement sans risque.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "L'UA autorise l'interruption volontaire de grossesse lorsque la vie ou la santé physique ou mentale de la femme est menacée et dans les cas de viol, d'inceste et de grave anomalie fœtale selon un rapport de 2020 de l'institut Guttmacher intitulé 'From Unsafe to Safe Abortion in Sub-Saharan Africa: Slow but Steady Progress'.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/region-55348734</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Est-ce la fin de l'amour exclusif à deux ?",
+                  "headline": "Polyamour: est-ce la fin de l'amour exclusif à deux ?",
+                  "overtyped": "Est-ce la fin de l'amour exclusif à deux ?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/region-55348734"
+                },
+                "summary": "De plus en plus de personnes tendent à remettre en cause la théorie qui voudrait que l'amour soit exclusif.",
+                "timestamp": 1608367986000,
+                "language": "fr",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/region-55348734",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Dans 28 autres pays, l'avortement est autorisé dans certaines circonstances, et non toutes celles qui sont énumérées dans le Protocole de Maputo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Plus globalement l'avortement est restreint dans la plupart des pays africains. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Certains pays disposent de lois écrites en matière d'avortement plus restrictives que les pratiques observées ou présumées. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dans d'autres, les lois en matière d'avortement sont vagues et sont sujettes à diverses interprétations.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/monde-58321229</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Ces célibataires qui détestent les femmes",
+                  "headline": "La face cachée des \"incels\", ces \"célibataires involontaires\" qui détestent les femmes",
+                  "overtyped": "Ces célibataires qui détestent les femmes"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-58321229"
+                },
+                "summary": "Ces groupes de jeunes misogynes qui se réunissent dans des forums de discussion sur Internet ont été associés à des actes de violence dans plusieurs pays.",
+                "timestamp": 1630172535000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-58321229",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "120709974",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/BB76/production/_120709974_gettyimages-1165234917.jpg",
+        "path": "/cpsprodpb/BB76/production/_120709974_gettyimages-1165234917.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Une femme qui pratique des avortements clandestines montre son matériel de travail",
+        "caption": "Une femme qui pratique des avortements clandestines montre son matériel de travail",
+        "copyrightHolder": "GIANLUIGI GUERCIA",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Les avortements sur le continent en chiffres",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Plus de 8 millions d'avortements ont lieu chaque année sur le continent africain dont les trois quarts sont réalisés dans des conditions non sécurisées, lit- on sur une fiche d'information du Population Reference Bureau.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Parmi toutes les régions au monde, l'Afrique possède, selon les estimations, le nombre le plus élevé de décès liés à des avortements, atteignant plus de 15 000 en 2017, représentant ainsi 7% des décès liés à la grossesse. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ces données ont été recueillies dans le cadre du projet Strenghening Evidence-Based Policy to Expand Access to Safe Abortion.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/monde-57839507</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "'J'aide les parents indiens à parler de sexualité'",
+                  "headline": "Comment parler de sexualité aux enfants",
+                  "overtyped": "'J'aide les parents indiens à parler de sexualité'"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-57839507"
+                },
+                "summary": "L'une des sexologues les plus populaires d'Inde affirme que les parents se tournent vers elle pour obtenir des conseils, car l'éducation sexuelle n'est pas très répandue dans les écoles.",
+                "timestamp": 1626424263000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-57839507",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "L'Organisation mondiale de la Santé considère qu'un avortement est sécurisé lorsqu'il est réalisé selon les directives de l'OMS par un prestataire qualifié utilisant une méthode recommandée par l'OMS appropriée à l'avancement de la grossesse. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "À l'échelle mondiale, environ 55% des avortements sont sécurisés. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "En Afrique, seuls 24% le sont.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Les avortements sont considérés comme non sécurisés lorsqu'ils sont réalisés par des personnes ne possédant pas les compétences ou les informations nécessaires ou dans un environnement ne répondant pas aux normes sanitaires minimales ou les deux.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/monde-55417952</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "\"Ma fille est la première de quatre générations de prostituées à aller à l'université et je suis tellement fière\"",
+                  "headline": "\"Ma fille est la première de quatre générations de prostituées à aller à l'université et je suis tellement fière\"",
+                  "overtyped": "\"Ma fille est la première de quatre générations de prostituées à aller à l'université et je suis tellement fière\""
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-55417952"
+                },
+                "summary": "Sa mère, sa grand-mère et son arrière-grand-mère étaient des prostituées, mais Karina Núñez a brisé la chaîne, même si elle continue de se battre pour les droits des femmes et des travailleuses du sexe.",
+                "timestamp": 1609425701000,
+                "language": "fr",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-55417952",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "120715614",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/A2B3/production/_120715614_gettyimages-1151874856-2.jpg",
+        "path": "/cpsprodpb/A2B3/production/_120715614_gettyimages-1151874856-2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Des manifestants au Maroc ont mené une action pour demander l'assouplissement d'une loi qui, selon eux, encourage les avortements clandestins et l'abandon d'enfants.",
+        "caption": "Des manifestants tiennent des pancartes près du parlement de la capitale marocaine Rabat, le 25 juin 2019, pour protester contre une loi sur l'avortement. - \"Article 453\", fait référence à une loi qui punit l'interruption volontaire de grossesse (IVG) de six mois à cinq ans de prison, sauf lorsque la santé de la mère est en danger.",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Un problème de santé publique",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "En 2019, l'Afrique subsaharienne présente le taux de létalité lié à l'avortement le plus élevé de toutes les régions du monde, avec environ 185 décès pour 100 000 avortements, soit un total de 15 000 décès évitables chaque année selon les chiffres compilés par le Guttmacher Institute. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Les efforts en cours pour améliorer la sécurité de l'avortement et élargir l'accès à des soins post-avortement de qualité ont probablement contribué à une baisse de deux cinquièmes de ce taux depuis 2000, où l'on estimait à 315 le nombre de femmes décédées pour 100 000 avortements.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/monde-58519640</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Ce à quoi ressemble vraiment le clitoris (et les similitudes frappantes avec le pénis)",
+                  "headline": "Anatomie : à quoi ressemble vraiment le clitoris (et ses ressemblances frappantes avec le pénis)",
+                  "overtyped": "Ce à quoi ressemble vraiment le clitoris (et les similitudes frappantes avec le pénis)"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/monde-58519640"
+                },
+                "summary": "Nous avons tendance à considérer le clitoris comme cette petite bosse qui dépasse à la jonction des petites lèvres, mais environ 90 % de sa structure se trouve à l'intérieur du corps. Si vous regardez la photo, vous verrez qu'il est très similaire au pénis.",
+                "timestamp": 1631729744000,
+                "language": "fr",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/monde-58519640",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Déterminer l'incidence de l'avortement dépend en grande partie de la légalité ou non de la procédure. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Là où les avortements sont légaux, ces procédures sont généralement recensées de manière officielle.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Néanmoins, dans les cas où les avortements sont restreints sur le plan juridique, ils ne sont pas facilement comptabilisés. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>afrique/region-58488953</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Hanna Paranta, féministe somalienne : \"ils utilisent Facebook pour me faire taire\"",
+                  "headline": "Hanna Paranta, féministe somalienne : \"ils utilisent Facebook pour me faire taire\"",
+                  "overtyped": "Hanna Paranta, féministe somalienne : \"ils utilisent Facebook pour me faire taire\""
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/afrique/region-58488953"
+                },
+                "summary": "Hanna Paranta qui a échappé à des tentatives d'assassinat, subit en ce moment des attaques en ligne pour avoir aidé des femmes victimes de violence",
+                "timestamp": 1631517262000,
+                "language": "fr",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:afrique/region-58488953",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Les données dont on dispose proviennent essentiellement de l'OMS et d'autres agences des Nations Unies et du Guttmacher Institute. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Elles conviennent que les rapports sur les avortements provoqués sont souvent imprécis dans la mesure où les statistiques nationales ne sont souvent pas disponibles et que les avortements sont insuffisamment rapportés dans les pays où l'avortement est restreint sur le plan juridique.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Protocole de Maputo, près de 20 ans après où en est-t-on?",
+      "headline": "Avortement médicalisé : près de 20 ans après le protocole de Maputo, où en est-t-on?"
+    },
+    "locators": {
+      "assetUri": "/afrique/region-58708852",
+      "cpsUrn": "urn:bbc:content:assetUri:afrique/region-58708852",
+      "curie": "http://www.bbc.co.uk/asset/902acacf-4b2a-44e7-a5f8-a5f342a60933",
+      "assetId": "58708852"
+    },
+    "summary": "L'Afrique reste largement réfractaire à l'avortement. Sur les plus de cinquante pays qui ont signé le protocole de Maputo en 2003, seul six autorisent l'interruption volontaire de grossesse.",
+    "timestamp": 1632837313000,
+    "language": "fr",
+    "byline": {
+      "name": "Awa  Cheikh Faye ",
+      "title": "Journaliste - BBC Afrique ",
+      "persons": [
+        { "name": "Awa Cheikh Faye", "function": "Journaliste - BBC Afrique" }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+        "categoryName": "Explainer"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "fr",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Afrique",
+      "locator": "urn:bbc:cps:curie:asset:902acacf-4b2a-44e7-a5f8-a5f342a60933",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/1fbdbd2c-ce85-467b-9547-e7276ebc3fce#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "thingLabel": "Droits des femmes",
+            "thingUri": "http://www.bbc.co.uk/things/8abd564a-2b8e-401c-9916-34982cb67b55#id",
+            "thingId": "8abd564a-2b8e-401c-9916-34982cb67b55",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Women%27s_rights",
+              "http://www.wikidata.org/entity/Q223569"
+            ],
+            "thingEnglishLabel": "Women's rights",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+            "thingLabel": "Afrique",
+            "thingUri": "http://www.bbc.co.uk/things/d2c2ba68-f9ad-4185-a6d1-7f6437256735#id",
+            "thingId": "d2c2ba68-f9ad-4185-a6d1-7f6437256735",
+            "thingType": ["core:Thing", "core:Place", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q15",
+              "http://dbpedia.org/resource/Africa",
+              "http://sws.geonames.org/6255146/"
+            ],
+            "thingEnglishLabel": "Africa",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+            "thingLabel": "Femmes",
+            "thingUri": "http://www.bbc.co.uk/things/e45cb5f8-3c87-4ebd-ac1c-058e9be22862#id",
+            "thingId": "e45cb5f8-3c87-4ebd-ac1c-058e9be22862",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q467",
+              "http://dbpedia.org/resource/Woman"
+            ],
+            "thingEnglishLabel": "Women",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+            "thingLabel": "Avortement",
+            "thingUri": "http://www.bbc.co.uk/things/f16883ee-804f-43cd-8bc3-80d0fed59682#id",
+            "thingId": "f16883ee-804f-43cd-8bc3-80d0fed59682",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Abortion",
+              "http://www.wikidata.org/entity/Q8452"
+            ],
+            "thingEnglishLabel": "Abortion",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+            "thingLabel": "Santé des femmes",
+            "thingUri": "http://www.bbc.co.uk/things/faa8885f-9e69-4c29-a8a5-516d508075dc#id",
+            "thingId": "faa8885f-9e69-4c29-a8a5-516d508075dc",
+            "thingType": ["tagging:TagConcept", "core:Theme", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q8031191"],
+            "thingEnglishLabel": "Women's health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingLabel": "Explainer",
+            "thingUri": "http://www.bbc.co.uk/things/bb3ead7c-eb94-453b-b9de-34a59aba2fbf#id",
+            "thingId": "bb3ead7c-eb94-453b-b9de-34a59aba2fbf",
+            "thingType": ["tagging:Format", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer"
+            ],
+            "thingEnglishLabel": "Explainer",
+            "thingPreferredLabel": "Explainer",
+            "thingLabelLanguage": "fr",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "120715608",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/13B0B/production/_120715608_gettyimages-1139076008-2.jpg",
+      "path": "/cpsprodpb/13B0B/production/_120715608_gettyimages-1139076008-2.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Une qctiviste brandit une pancarte sur laquelle on peut lire \"La stigmatisation tue, mettez fin aux mensonges\" lors d'une manifestation devant l'Assemblée du comté de la ville à Nairobi, le 24 avril 2019, pour demander le retrait de toute publicité contenant des informations trompeuses sur le droit constitutionnel à l'avortement.",
+      "caption": "Une activiste brandit une pancarte sur laquelle on peut lire \"La stigmatisation tue, mettez fin aux mensonges'' au Kenya",
+      "copyrightHolder": "SIMON MAINA/AFP via Getty Images",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:afrique/region-58708852",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Afrique",
+      "uri": "/afrique/region",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Afrique",
+      "uri": "/afrique",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

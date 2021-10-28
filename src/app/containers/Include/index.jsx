@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { string, bool, number } from 'prop-types';
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';

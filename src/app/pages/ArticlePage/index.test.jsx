@@ -13,7 +13,11 @@ import {
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
-import { textBlock } from '#models/blocks/index';
+import {
+  textBlock,
+  blockContainingText,
+  singleTextBlock,
+} from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
@@ -219,4 +223,95 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
+});
+
+it('should render a news article with headline in the middle correctly', async () => {
+  const headline = blockContainingText('headline', 'Article Headline', 1);
+
+  const articleWithSummaryHeadlineInTheMiddle = {
+    ...articleDataNews,
+    content: {
+      model: {
+        blocks: [
+          singleTextBlock('Paragraph above headline', 2),
+          {
+            ...headline,
+            model: {
+              ...headline.model,
+              blocks: [
+                {
+                  ...headline.model.blocks[0],
+                  position: [2, 1],
+                },
+              ],
+            },
+          },
+          singleTextBlock('Paragraph below headline', 3),
+        ],
+      },
+    },
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'SEO Headline',
+        promoHeadline: 'Promo Headline',
+      },
+    },
+  };
+
+  const { container } = render(
+    <Context service="news">
+      <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render a news article without headline correctly', async () => {
+  const articleWithoutHeadline = {
+    ...articleDataNews,
+    content: {
+      model: {
+        blocks: [singleTextBlock('Paragraph 1', 2)],
+      },
+    },
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'Article Headline',
+        promoHeadline: 'Promo Headline',
+      },
+    },
+  };
+
+  const { container } = render(
+    <Context service="news">
+      <ArticlePage pageData={articleWithoutHeadline} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render the top stories and features when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+  const { getByTestId } = render(
+    <Context service="news">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByTestId('top-stories')).toBeInTheDocument();
+  expect(getByTestId('features')).toBeInTheDocument();
 });
