@@ -74,7 +74,7 @@ export const service = {
       title: 'Podcast',
       brandTitle: 'BBC Lê',
       brandDescription:
-        'A BBC lê para você algumas de suas melhores reportagens',
+        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
       image: {
         src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
         alt: 'BBC Lê',
