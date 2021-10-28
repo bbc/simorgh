@@ -424,7 +424,7 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(15rem + 1.25rem)) {
+@media (min-width: 16.25rem) {
   .emotion-29 {
     margin: 0;
   }
@@ -436,7 +436,7 @@ exports[`Inline Should render correctly 1`] = `
   }
 }
 
-@media (min-width: calc(20rem + 2.5rem)) {
+@media (min-width: 22.5rem) {
   .emotion-29 {
     margin: 0;
   }
