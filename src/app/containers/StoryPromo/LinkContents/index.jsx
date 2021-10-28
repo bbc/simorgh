@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
-import { shape, bool } from 'prop-types';
+import { shape, bool, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
@@ -76,6 +76,7 @@ const LinkContents = ({ item, isInline, index }) => {
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
   isInline: bool,
+  index: string.isRequired,
 };
 
 LinkContents.defaultProps = {
