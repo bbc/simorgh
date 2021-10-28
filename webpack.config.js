@@ -123,6 +123,7 @@ module.exports = (shell = {}) => {
       IS_PROD,
       START_DEV_SERVER,
       IS_PROD_PROFILE,
+      BUNDLE_TYPE: 'modern',
     });
     return merge(baseConfig, specialisedConfig);
   };

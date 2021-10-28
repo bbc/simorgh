@@ -34,10 +34,10 @@ const renderDocument = async ({
   const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
   const modernStatsFile = path.resolve(
-    `${__dirname}/public/modern/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+    `${__dirname}/public/modern-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
   const legacyStatsFile = path.resolve(
-    `${__dirname}/public/legacy/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+    `${__dirname}/public/legacy-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
 
   const legacyExtractor = new ChunkExtractor({
