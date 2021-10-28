@@ -167,9 +167,6 @@ describe('cspHeader', () => {
       ],
       frameSrcExpectation: [
         ...bbcDomains,
-        'https://assets.wearehearken.eu',
-        'https://modules.wearehearken.eu',
-        'https://ems.wearehearken.eu',
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',
@@ -383,9 +380,6 @@ describe('cspHeader', () => {
       ],
       frameSrcExpectation: [
         ...bbcDomains,
-        'https://assets.wearehearken.eu',
-        'https://modules.wearehearken.eu',
-        'https://ems.wearehearken.eu',
         'https://chartbeat.com',
         'https://*.chartbeat.com',
         'https://www.youtube.com',

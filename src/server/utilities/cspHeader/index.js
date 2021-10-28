@@ -130,9 +130,6 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
-      'https://assets.wearehearken.eu',
-      'https://modules.wearehearken.eu',
-      'https://ems.wearehearken.eu',
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
@@ -157,9 +154,6 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
-      'https://assets.wearehearken.eu',
-      'https://modules.wearehearken.eu',
-      'https://ems.wearehearken.eu',
       'https://chartbeat.com',
       'https://*.chartbeat.com',
       'https://www.youtube.com', // Social Embeds
