@@ -4363,6 +4363,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="StoryPromoContainerId-urn:bbc:ares::asset:pidgin/tori-23145776"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23145776"
                           >
@@ -4419,6 +4420,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="StoryPromoContainerId-urn:bbc:ares::asset:pidgin/tori-23143754"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23143754"
                           >
@@ -4496,10 +4498,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="StoryPromoContainerId-urn:bbc:ares::asset:pidgin/23146654"
                             class="emotion-266 emotion-267"
                             href="/pidgin/23146654"
                           >
                             <span
+                              id="urn:bbc:ares::asset:pidgin/23146654"
                               role="text"
                             >
                               <span
@@ -4596,10 +4600,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="StoryPromoContainerId-urn:bbc:ares::asset:pidgin/media-23147054"
                             class="emotion-266 emotion-267"
                             href="/pidgin/media-23147054"
                           >
                             <span
+                              id="urn:bbc:ares::asset:pidgin/media-23147054"
                               role="text"
                             >
                               <span

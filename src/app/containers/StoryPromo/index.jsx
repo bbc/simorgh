@@ -188,6 +188,8 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
+          index={item.id}
+          aria-labelledby={`StoryPromoContainerId-${item.id}`}
         >
           {isLive ? (
             <LiveLabel

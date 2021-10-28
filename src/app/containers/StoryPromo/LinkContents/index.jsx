@@ -65,7 +65,7 @@ const LinkContents = ({ item, isInline }) => {
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
+    <span role="text" id={item.id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
       {offScreenDuration}
