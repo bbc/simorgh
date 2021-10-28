@@ -229,6 +229,9 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -248,6 +251,9 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
