@@ -42,7 +42,7 @@ describe('getPromo', () => {
     expect(actualPromo).toEqual(expected);
   });
 
-  it.only('should return empty object when promo is undefined', () => {
+  it('should return empty object when promo is undefined', () => {
     const actualPromo = getPromo(undefined);
     expect(actualPromo).toEqual({});
   });

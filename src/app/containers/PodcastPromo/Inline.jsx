@@ -10,7 +10,6 @@ import {
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MAX,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
-  GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { getPica } from '@bbc/gel-foundations/typography';
@@ -26,7 +25,8 @@ import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
 const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
-const GEL_GROUP_B_WIDTH_360PX = '22.5rem';
+const GEL_GROUP_1_WIDTH_320PX = '20rem';
+const GEL_GROUP_1_WIDTH_360PX = '22.5rem';
 
 const ResponsivePodcastPromoWrapper = styled.div`
   ${({ dir }) => (dir === 'ltr' ? 'float: right;' : 'float: left;')}
@@ -44,11 +44,11 @@ const ResponsivePodcastPromoWrapper = styled.div`
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING};
   }
 
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_320PX}) {
     width: 9.25rem; /* 148px */
   }
 
-  @media (min-width: ${GEL_GROUP_B_WIDTH_360PX}) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_360PX}) {
     width: 10.94rem; /* 175px */
   }
 
@@ -80,12 +80,12 @@ const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
     width: 5.63rem; /* 90px */
   }
 
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_320PX}) {
     display: inline-block;
     width: 7.25rem; /* 116px */
   }
 
-  @media (min-width: ${GEL_GROUP_B_WIDTH_360PX}) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_360PX}) {
     display: inline-block;
     width: 8.94rem; /* 143px */
   }
@@ -125,11 +125,11 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
     margin: 0;
   }
 
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}rem) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_320PX}) {
     margin: 0 ${GEL_SPACING_HLF};
   }
 
-  @media (min-width: ${GEL_GROUP_B_WIDTH_360PX}) {
+  @media (min-width: ${GEL_GROUP_1_WIDTH_360PX}) {
     margin: 0;
   }
 
@@ -175,7 +175,7 @@ const Promo = () => {
   };
 
   const skipLink = {
-    endTextId: `end-of-podcasts`,
+    endTextId: 'end-of-podcasts',
     terms,
     text,
     endTextVisuallyHidden,
