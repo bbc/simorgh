@@ -120,13 +120,14 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
       {hasMultipleLinks ? (
         <StyledList role="list">
           {links.map(({ linkText, linkUrl }) => (
-            <StyledListItem dir={dir} key={linkText} onClick={clickTrackerRef}>
+            <StyledListItem dir={dir} key={linkText}>
               <Link
                 aria-label={`${linkText}, ${brandTitle}${externalLinkText}`}
                 href={linkUrl}
                 service={service}
                 script={script}
                 dir={dir}
+                onClick={clickTrackerRef}
               >
                 <span role="text">
                   <span lang={ExternalLinkTextLangs[linkText] || lang}>

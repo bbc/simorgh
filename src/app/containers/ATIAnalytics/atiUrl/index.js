@@ -14,6 +14,7 @@ import {
   getEventInfo,
   getCampaignType,
   getATIMarketingString,
+  getRSSMarketingString,
 } from '#lib/analyticsUtils';
 
 /*
@@ -212,6 +213,7 @@ export const buildATIPageTrackPath = ({
       // decoding of the ref parameter
       disableEncoding: true,
     },
+    ...getRSSMarketingString(href, campaignType),
   ];
 
   return getAtiUrl(pageViewBeaconValues);
