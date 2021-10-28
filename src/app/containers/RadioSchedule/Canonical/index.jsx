@@ -4,7 +4,6 @@ import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
-  GEL_GROUP_B_MIN_WIDTH,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -39,10 +38,6 @@ const RadioScheduleSection = styled.section`
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
     contain-intrinsic-size: 56.563rem;
-  }
-
-  @media (min-width: ${GEL_GROUP_B_MIN_WIDTH}) {
-    contain-intrinsic-size: 52.188rem;
   }
 
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
