@@ -7196,10 +7196,10 @@ module.exports = () => ({
             paths: [
               '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
