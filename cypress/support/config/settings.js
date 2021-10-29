@@ -1472,10 +1472,10 @@ module.exports = () => ({
               '/burmese/podcasts/p02pc9lh', // Podcast brand
               '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       onDemandTV: {
         environments: {
