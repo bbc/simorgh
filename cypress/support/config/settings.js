@@ -6862,14 +6862,14 @@ module.exports = () => ({
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -6878,7 +6878,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -7199,7 +7199,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mediaAssetPage: {
         environments: {
