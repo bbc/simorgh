@@ -40,6 +40,12 @@ const withIds = {
   },
 };
 
+const noGroups = {
+  content: {
+    blah: [],
+  },
+};
+
 describe('addIdsToGroups rule', () => {
   it('should add ids to all content type items without ids', () => {
     const actual = addIdsToGroups(noId);
@@ -69,5 +75,11 @@ describe('addIdsToGroups rule', () => {
     const actual = addIdsToGroups(withIds);
 
     expect(actual).toEqual(withIds);
+  });
+
+  it('should return the same object if groups cannot be found', () => {
+    const actual = addIdsToGroups();
+
+    expect(actual).toEqual(noGroups);
   });
 });
