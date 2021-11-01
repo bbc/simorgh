@@ -938,6 +938,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="emotion-39 emotion-40"
               >
                 <span
+                  id="scheduleItem-p086pmsd"
                   role="text"
                 >
                   <span
@@ -1070,10 +1071,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpz"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
+                    id="scheduleItem-p086pjpz"
                     role="text"
                   >
                     <span
@@ -1200,10 +1203,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpx"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
+                    id="scheduleItem-p086pjpx"
                     role="text"
                   >
                     <span
@@ -1330,10 +1335,12 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpp"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
+                    id="scheduleItem-p086pjpp"
                     role="text"
                   >
                     <span
@@ -2354,6 +2361,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 class="emotion-39 emotion-40"
               >
                 <span
+                  id="scheduleItem-p086pmsd"
                   role="text"
                 >
                   <span
@@ -2486,10 +2494,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpz"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172x9qcpbyctzs"
                 >
                   <span
+                    id="scheduleItem-p086pjpz"
                     role="text"
                   >
                     <span
@@ -2616,10 +2626,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpx"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172xbf7kbvtt4h"
                 >
                   <span
+                    id="scheduleItem-p086pjpx"
                     role="text"
                   >
                     <span
@@ -2746,10 +2758,12 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                 class="emotion-80 emotion-40"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pjpp"
                   class="emotion-82 emotion-83"
                   href="/arabic/bbc_arabic_radio/w172xbdf3m84fx2"
                 >
                   <span
+                    id="scheduleItem-p086pjpp"
                     role="text"
                   >
                     <span
