@@ -4,9 +4,9 @@ import view from 'ramda/src/view';
 import set from 'ramda/src/set';
 
 const addIdsToItem =
-  ({ lens, recursive }) =>
+  ({ lens, propName, recursive }) =>
   item => {
-    const newItem = { id: uuid(), ...item };
+    const newItem = { [propName]: uuid(), ...item };
 
     if (recursive) {
       const nestedItems = view(lens, newItem);
@@ -23,10 +23,12 @@ const addIdsToItem =
     return newItem;
   };
 
-export default ({ pathToItems, recursive }) =>
+export default ({ pathToItems = [], propName = 'id', recursive = false }) =>
   json => {
     const lens = lensPath(pathToItems);
-    const newItems = view(lens, json).map(addIdsToItem({ lens, recursive }));
+    const newItems = view(lens, json).map(
+      addIdsToItem({ lens, propName, recursive }),
+    );
 
     return set(lens, newItems, json);
   };
