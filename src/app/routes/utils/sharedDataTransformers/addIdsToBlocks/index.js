@@ -1,50 +1,21 @@
-import { v4 as uuid } from 'uuid';
-import pipe from 'ramda/src/pipe';
-import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 
-let mapIdsToBlocks;
+import addIdsToItems from '../addIdsToItems';
 
-const getJsonContent = jsonRaw => pathOr(null, ['content'], jsonRaw);
+export default json => {
+  const content = path(['content'], json);
+  const newBlocks = addIdsToItems({
+    pathToItems: ['model', 'blocks'],
+    recursive: true,
+  })(content);
 
-const getBlocks = block => pathOr(null, ['model', 'blocks'], block);
-
-const addIdsToBlock = block => {
-  const blockWithId = { ...block, id: uuid() };
-  const nestedBlocks = getBlocks(blockWithId);
-
-  if (!nestedBlocks) {
-    return blockWithId;
-  }
-
-  return {
-    ...blockWithId,
-    model: {
-      ...blockWithId.model,
-      blocks: mapIdsToBlocks(nestedBlocks),
+  return mergeDeepLeft(
+    {
+      content: {
+        ...newBlocks,
+      },
     },
-  };
-};
-
-mapIdsToBlocks = blocks => blocks.map(addIdsToBlock);
-
-const mergeJsonRawWithBlocks = blocksWithIds => jsonRaw => ({
-  ...jsonRaw,
-  content: {
-    ...jsonRaw.content,
-    model: {
-      ...jsonRaw.content.model,
-      blocks: blocksWithIds,
-    },
-  },
-});
-
-export default jsonRaw => {
-  const addIdsToBlocks = pipe(
-    getJsonContent,
-    getBlocks,
-    mapIdsToBlocks,
-    mergeJsonRawWithBlocks,
-  )(jsonRaw);
-
-  return addIdsToBlocks(jsonRaw);
+    json,
+  );
 };
