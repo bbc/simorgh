@@ -17,7 +17,7 @@
     "nth-check": "2.0.1",
     "prismjs": "1.25.0",
     "react-is": "17.0.2",
-    "trim": "0.0.3"
+    "trim": "1.0.1"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -242,10 +242,10 @@
     "terser-webpack-plugin": "5.2.4",
     "timemachine": "0.3.2",
     "wait-on": "6.0.0",
-    "webpack": "5.59.1",
+    "webpack": "5.61.0",
     "webpack-bundle-analyzer": "4.5.0",
     "webpack-cli": "4.9.1",
-    "webpack-dev-server": "4.3.1",
+    "webpack-dev-server": "4.4.0",
     "webpack-merge": "5.8.0",
     "webpack-node-externals": "3.0.0",
     "yaml-js": "0.3.1"

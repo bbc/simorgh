@@ -72,6 +72,10 @@ export const service = {
         text: 'Episode',
         href: 'https://www.bbc.com/indonesia/podcasts/p02pc9v6',
       },
+      skipLink: {
+        text: 'Lewati %title% dan lanjutkan membaca',
+        endTextVisuallyHidden: 'Akhir dari %title%',
+      },
     },
     translations: {
       ads: {
