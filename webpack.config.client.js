@@ -4,7 +4,6 @@
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
  */
 
-const chalk = require('chalk');
 const fs = require('fs');
 const crypto = require('crypto');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -31,30 +30,24 @@ module.exports = ({
   IS_PROD,
   START_DEV_SERVER,
   IS_PROD_PROFILE,
+  BUNDLE_TYPE,
 }) => {
   const {
     SIMORGH_APP_ENV,
     SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
     SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
-    BUNDLE_TYPE,
   } = process.env;
-  console.log(
-    chalk.bold(
-      `\nInitialising build of the ${chalk.green(
-        BUNDLE_TYPE,
-      )} JavaScript bundle. 🏗️\n`,
-    ),
-  );
   const APP_ENV = SIMORGH_APP_ENV || 'live';
-  const IS_LEGACY = BUNDLE_TYPE === 'legacy';
+  const IS_LEGACY_WEB = BUNDLE_TYPE === 'legacy';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
-  const prodPublicPath = `${SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN}${SIMORGH_PUBLIC_STATIC_ASSETS_PATH}${BUNDLE_TYPE}/`;
+  const prodPublicPath =
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN + SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
   const clientConfig = {
-    target: ['web', IS_LEGACY ? 'es5' : 'es2017'], // compile for browser environment
+    target: ['web', IS_LEGACY_WEB ? 'es5' : 'es2017'], // compile for browser environment
     entry: START_DEV_SERVER
       ? ['webpack/hot/only-dev-server', './src/client']
-      : [IS_LEGACY && './src/poly', './src/client'].filter(Boolean),
+      : [IS_LEGACY_WEB && './src/poly', './src/client'].filter(Boolean),
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
@@ -73,19 +66,19 @@ module.exports = ({
       },
     },
     experiments: {
-      outputModule: !IS_LEGACY,
+      outputModule: !IS_LEGACY_WEB,
     },
     output: {
-      module: !IS_LEGACY,
-      path: resolvePath(`build/public/${BUNDLE_TYPE}`),
+      module: !IS_LEGACY_WEB,
+      path: resolvePath('build/public'),
       /**
        * Need unhashed client bundle when running dev server.
        * Though we're no longer using Razzle, there is a good explanation here:
        * https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
        */
       filename: START_DEV_SERVER
-        ? 'static/js/[name].js'
-        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
+        ? `static/js/${BUNDLE_TYPE}.[name].js`
+        : `static/js/${BUNDLE_TYPE}.[name].[chunkhash:8].js`, // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
@@ -98,7 +91,7 @@ module.exports = ({
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
-            ecma: IS_LEGACY ? 5 : 2017,
+            ecma: IS_LEGACY_WEB ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
           },
@@ -236,7 +229,7 @@ module.exports = ({
       // keep track of the generated chunks
       // this determines what scripts get put in the footer of the page
       new LoadablePlugin({
-        filename: `loadable-stats-${APP_ENV}.json`,
+        filename: `${BUNDLE_TYPE}-loadable-stats-${APP_ENV}.json`,
         writeToDisk: true,
       }),
     ],
