@@ -42,7 +42,9 @@ const withIds = {
 
 describe('addIdsToItems rule', () => {
   it('should add ids to all content type items without ids', () => {
-    const actual = addIdsToItems(noId);
+    const actual = addIdsToItems({
+      pathToItems: ['content', 'groups', 0, 'items'],
+    })(noId);
     const expected = {
       content: {
         groups: [
@@ -66,7 +68,9 @@ describe('addIdsToItems rule', () => {
   });
 
   it('should not add id to items with ids', () => {
-    const actual = addIdsToItems(withIds);
+    const actual = addIdsToItems({
+      pathToItems: ['content', 'groups', 0, 'items'],
+    })(withIds);
 
     expect(actual).toEqual(withIds);
   });

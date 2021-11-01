@@ -1,32 +1,32 @@
 import { v4 as uuid } from 'uuid';
-import pipe from 'ramda/src/pipe';
-import path from 'ramda/src/path';
+import lensPath from 'ramda/src/lensPath';
+import view from 'ramda/src/view';
+import set from 'ramda/src/set';
 
-const getGroups = path(['content', 'groups']);
+const addIdsToItem =
+  ({ lens, recursive }) =>
+  item => {
+    const newItem = { ...item, id: uuid() };
 
-const addIdToItem = ({ id, ...item }) => ({ ...item, id: id || uuid() });
+    if (recursive) {
+      const nestedItems = view(lens, newItem);
 
-const addIdsToGroupItems = ({ items, ...group }) => ({
-  ...group,
-  items: items && items.map(addIdToItem),
-});
+      if (nestedItems) {
+        return set(
+          lens,
+          nestedItems.map(addIdsToItem({ lens, recursive })),
+          newItem,
+        );
+      }
+    }
 
-const mapGroups = groups => groups.map(addIdsToGroupItems);
+    return newItem;
+  };
 
-const mergeContentWithAddedIdItems = itemsWithIds => jsonRaw => ({
-  ...jsonRaw,
-  content: {
-    ...path(['content'], jsonRaw),
-    groups: itemsWithIds,
-  },
-});
+export default ({ pathToItems, recursive }) =>
+  json => {
+    const lens = lensPath(pathToItems);
+    const newItems = view(lens, json).map(addIdsToItem({ lens, recursive }));
 
-export default jsonRaw => {
-  const addIdsToItems = pipe(
-    getGroups,
-    mapGroups,
-    mergeContentWithAddedIdItems,
-  )(jsonRaw);
-
-  return addIdsToItems(jsonRaw);
-};
+    return set(lens, newItems, json);
+  };

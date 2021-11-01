@@ -12,7 +12,7 @@ import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCo
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
-  addIdsToItems,
+  addIdsToItems({ pathToItems: ['content', 'groups'] }),
   squashTopStories,
   filterGroupsWithoutStraplines,
 );
