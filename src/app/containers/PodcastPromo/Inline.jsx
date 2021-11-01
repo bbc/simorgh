@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import {
   GEL_SPACING_HLF,
   GEL_SPACING,
@@ -168,17 +168,17 @@ const Promo = () => {
     return null;
   }
 
-  const { text, endTextVisuallyHidden } = path(['skipLink'], podcastPromo);
+  const { text, endTextVisuallyHidden } = pathOr(
+    {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
+    ['skipLink'],
+    podcastPromo,
+  );
 
   const terms = {
     '%title%': podcastPromoTitle,
-  };
-
-  const skipLink = {
-    endTextId: 'end-of-podcasts',
-    terms,
-    text,
-    endTextVisuallyHidden,
   };
 
   return (
@@ -189,7 +189,13 @@ const Promo = () => {
         role="region"
         aria-labelledby="podcast-promo"
       >
-        <SkipLinkWrapper service={service} {...skipLink}>
+        <SkipLinkWrapper
+          endTextId="end-of-podcasts"
+          terms={terms}
+          text={text}
+          endTextVisuallyHidden={endTextVisuallyHidden}
+          service={service}
+        >
           <PromoComponent.Title id="podcast-promo" dir={dir} as="strong">
             {podcastPromoTitle}
           </PromoComponent.Title>
