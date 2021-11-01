@@ -87,16 +87,15 @@ describe('Inline', () => {
     );
   });
 
-  it('should render when the skipLink object is missing from the service config', () => {
-    const { queryByText, getByText } = render(
+  it('should fall back to english when the skipLink object is missing from the service config', () => {
+    const { getByText } = render(
       <PromoWithContext
         inline
         serviceConfigTransformer={dissocPath(['podcastPromo', 'skipLink'])}
       />,
     );
 
-    expect(queryByText(skipLinkText)).not.toBeInTheDocument();
-
+    expect(getByText(`Skip ${title} and continue reading`)).toBeInTheDocument();
     expect(getByText(title)).toBeInTheDocument();
   });
 

@@ -144,13 +144,6 @@ const StyledCardLink = styled(PromoComponent.Card.Link)`
   display: block;
 `;
 
-const buildSkipLinkComponent = fields => props =>
-  Object.values(fields).every(Boolean) ? (
-    <SkipLinkWrapper {...fields} {...props} />
-  ) : (
-    <Fragment {...props} />
-  );
-
 const Promo = () => {
   const { podcastPromo, script, service, dir } = useContext(ServiceContext);
 
@@ -176,7 +169,10 @@ const Promo = () => {
   }
 
   const { text, endTextVisuallyHidden } = pathOr(
-    {},
+    {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of %title%',
+    },
     ['skipLink'],
     podcastPromo,
   );
@@ -184,14 +180,6 @@ const Promo = () => {
   const terms = {
     '%title%': podcastPromoTitle,
   };
-
-  const SkipLinkComponent = buildSkipLinkComponent({
-    endTextId: 'end-of-podcasts',
-    terms,
-    text,
-    endTextVisuallyHidden,
-    service,
-  });
 
   return (
     <ResponsivePodcastPromoWrapper ref={viewTrackerRef} dir={dir}>
@@ -201,7 +189,13 @@ const Promo = () => {
         role="region"
         aria-labelledby="podcast-promo"
       >
-        <SkipLinkComponent>
+        <SkipLinkWrapper
+          endTextId="end-of-podcasts"
+          terms={terms}
+          text={text}
+          endTextVisuallyHidden={endTextVisuallyHidden}
+          service={service}
+        >
           <PromoComponent.Title id="podcast-promo" dir={dir} as="strong">
             {podcastPromoTitle}
           </PromoComponent.Title>
@@ -237,7 +231,7 @@ const Promo = () => {
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>
           </PromoComponent.Card>
-        </SkipLinkComponent>
+        </SkipLinkWrapper>
       </StyledPromoComponent>
     </ResponsivePodcastPromoWrapper>
   );
