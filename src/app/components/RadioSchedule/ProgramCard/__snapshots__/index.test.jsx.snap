@@ -223,12 +223,12 @@ exports[`ProgramCard should render correctly for live 1`] = `
         class="emotion-4 emotion-5"
       >
         <a
-          aria-labelledby="scheduleItem-undefined"
+          aria-labelledby="scheduleItem-1"
           class="emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
-            id="scheduleItem-undefined"
+            id="scheduleItem-1"
             role="text"
           >
             <span
@@ -511,7 +511,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
         class="emotion-4 emotion-5"
       >
         <span
-          id="scheduleItem-undefined"
+          id="scheduleItem-1"
           role="text"
         >
           <span
@@ -804,12 +804,12 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
         class="emotion-4 emotion-5"
       >
         <a
-          aria-labelledby="scheduleItem-undefined"
+          aria-labelledby="scheduleItem-1"
           class="emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
-            id="scheduleItem-undefined"
+            id="scheduleItem-1"
             role="text"
           >
             <span
@@ -1096,12 +1096,12 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
         class="emotion-4 emotion-5"
       >
         <a
-          aria-labelledby="scheduleItem-undefined"
+          aria-labelledby="scheduleItem-1"
           class="emotion-6 emotion-7"
           href="/arabic/articles/c1er5mjnznzo"
         >
           <span
-            id="scheduleItem-undefined"
+            id="scheduleItem-1"
             role="text"
           >
             <span
@@ -1372,12 +1372,12 @@ exports[`ProgramCard should render correctly without summary 1`] = `
         class="emotion-4 emotion-5"
       >
         <a
-          aria-labelledby="scheduleItem-undefined"
+          aria-labelledby="scheduleItem-1"
           class="emotion-6 emotion-7"
           href="/news/articles/cn7k01xp8kxo"
         >
           <span
-            id="scheduleItem-undefined"
+            id="scheduleItem-1"
             role="text"
           >
             <span

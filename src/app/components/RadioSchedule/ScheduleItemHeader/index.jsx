@@ -161,7 +161,7 @@ ScheduleItemHeader.propTypes = {
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
-  id: string.isRequired,
+  id: string,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
@@ -169,6 +169,7 @@ ScheduleItemHeader.propTypes = {
 ScheduleItemHeader.defaultProps = {
   linkComponent: 'a',
   linkComponentAttr: 'href',
+  id: '1',
 };
 
 export default ScheduleItemHeader;
