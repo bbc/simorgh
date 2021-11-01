@@ -46,7 +46,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       });
     });
 
-    it('should render podcast promo if in json and should navigate to correct podcast page', () => {
+    it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
       cy.log(service);
       if (Cypress.env('APP_ENV') !== 'local') {
         cy.getToggles(service);
