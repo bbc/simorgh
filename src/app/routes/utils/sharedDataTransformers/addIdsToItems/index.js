@@ -6,7 +6,8 @@ import set from 'ramda/src/set';
 const addIdsToItem =
   ({ lens, propName, recursive }) =>
   item => {
-    const newItem = { [propName || 'id']: uuid(), ...item };
+    const [shortId] = uuid().split('-');
+    const newItem = { [propName || 'id']: shortId, ...item };
 
     if (recursive) {
       const nestedItems = view(lens, newItem);
