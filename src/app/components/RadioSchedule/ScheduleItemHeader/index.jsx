@@ -161,6 +161,7 @@ ScheduleItemHeader.propTypes = {
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
+  id: string.isRequired,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };

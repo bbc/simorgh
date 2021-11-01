@@ -129,6 +129,7 @@ ProgramCard.propTypes = {
     link: string.isRequired,
     brandTitle: string.isRequired,
   }).isRequired,
+  id: string.isRequired,
 };
 
 export default ProgramCard;
