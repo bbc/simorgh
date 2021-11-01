@@ -10,7 +10,7 @@
     "ansi-regex": "5.0.1",
     "browserslist": "4.17.5",
     "css-what": "5.1.0",
-    "glob-parent": "5.1.2",
+    "glob-parent": "6.0.2",
     "immer": "9.0.6",
     "moment": "2.29.1",
     "node-fetch": "2.6.5",
