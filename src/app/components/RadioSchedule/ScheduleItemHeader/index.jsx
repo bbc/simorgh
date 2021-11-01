@@ -51,6 +51,7 @@ const ScheduleItemHeader = ({
   brandTitle,
   startTime,
   duration,
+  id,
   ...props
 }) => {
   const { linkComponent, linkComponentAttr, durationLabel } = props;
@@ -105,7 +106,7 @@ const ScheduleItemHeader = ({
 
   const content = (
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
+    <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
       {isLive && (
         <LiveLabel
@@ -143,7 +144,11 @@ const ScheduleItemHeader = ({
   return state === 'next' ? (
     content
   ) : (
-    <StyledLink as={linkComponent} {...linkProps}>
+    <StyledLink
+      aria-labelledby={`scheduleItem-${id}`}
+      as={linkComponent}
+      {...linkProps}
+    >
       {content}
     </StyledLink>
   );

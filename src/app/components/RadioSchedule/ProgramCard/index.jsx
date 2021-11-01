@@ -77,7 +77,7 @@ const DurationWrapper = styled.time`
       : `padding-right: ${GEL_SPACING};`}
 `;
 
-const ProgramCard = ({ program, ...props }) => {
+const ProgramCard = ({ program, id, ...props }) => {
   const { service, script, locale, dir } = useContext(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
@@ -95,6 +95,7 @@ const ProgramCard = ({ program, ...props }) => {
             brandTitle={brandTitle}
             startTime={startTime}
             duration={duration}
+            id={id}
           />
         </StyledH3>
         {summary && (

@@ -79,7 +79,7 @@ const RadioSchedule = ({ schedule, ...props }) => {
           <StartTimeWrapper>
             <StartTime timestamp={program.startTime} />
           </StartTimeWrapper>
-          <ProgramCard {...props} program={program} />
+          <ProgramCard {...props} program={program} id={id} />
         </StyledFlexGrid>
       ))}
     </StyledGrid>
