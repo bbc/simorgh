@@ -68,6 +68,10 @@ const baseServiceConfig = {
       text: 'Випуски',
       href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
     },
+    skipLink: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
   },
   translations: {
     ads: {
