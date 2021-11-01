@@ -138,4 +138,12 @@ describe('addIdsToItems rule', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it('should return same object is path to items cannot be found', () => {
+    const actual = addIdsToItems({
+      pathToItems: ['content', 'blah'],
+    })(fixtureA);
+
+    expect(actual).toEqual(fixtureA);
+  });
 });

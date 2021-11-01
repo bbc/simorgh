@@ -27,9 +27,13 @@ const addIdsToItem =
 export default ({ pathToItems, propName, recursive }) =>
   json => {
     const lens = lensPath(pathToItems);
-    const newItems = view(lens, json).map(
-      addIdsToItem({ lens, propName, recursive }),
-    );
+    const items = view(lens, json);
 
-    return set(lens, newItems, json);
+    if (items) {
+      const newItems = items.map(addIdsToItem({ lens, propName, recursive }));
+
+      return set(lens, newItems, json);
+    }
+
+    return json;
   };
