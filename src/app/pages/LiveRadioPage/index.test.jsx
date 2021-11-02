@@ -17,7 +17,7 @@ const Page = ({ pageData, service, lang, isAmp = false }) => (
     <ToggleContextProvider>
       <ServiceContextProvider service={service} lang={lang}>
         <RequestContextProvider
-          bbcOrigin="https://test.bbc.com"
+          bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
           pageType={MEDIA_PAGE}
           pathname="/pathname"
@@ -100,7 +100,7 @@ describe('Radio Page Main', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
+      'https://www.test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live',
     );
   });
 

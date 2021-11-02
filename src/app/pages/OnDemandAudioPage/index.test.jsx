@@ -37,7 +37,7 @@ const Page = ({ pageData, service, isAmp = false, variant, lang }) => (
     <ToggleContextProvider>
       <ServiceContextProvider service={service} variant={variant} lang={lang}>
         <RequestContextProvider
-          bbcOrigin="https://test.bbc.com"
+          bbcOrigin="https://www.test.bbc.com"
           isAmp={isAmp}
           pageType={MEDIA_PAGE}
           pathname="/pathname"
@@ -293,7 +293,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://test.bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
+      'https://www.test.bbc.com/ws/av-embeds/media/korean/bbc_korean_radio/w3ct0kn5/ko?morph_env=live',
     );
   });
 
@@ -430,7 +430,7 @@ describe('OnDemand Radio Page ', () => {
       .getAttribute('src');
 
     expect(audioPlayerIframeSrc).toEqual(
-      'https://test.bbc.com/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
+      'https://www.test.bbc.com/ws/av-embeds/media/afaanoromoo/bbc_afaanoromoo_radio/w3ct0l8r/om?morph_env=live',
     );
   });
 
