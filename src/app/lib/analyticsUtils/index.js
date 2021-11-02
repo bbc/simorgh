@@ -189,15 +189,22 @@ export const getAtUserId = () => {
   if (isOperaProxy()) return null;
 
   const cookieName = 'atuserid';
-  const cookie = Cookie.getJSON(cookieName);
-  let val = pathOr(null, ['val'], cookie);
+  let cookie = Cookie.get(cookieName);
   const expires = 397; // expires in 13 months
 
-  if (!cookie || !val) {
-    val = uuid();
+  if (cookie) {
+    try {
+      cookie = JSON.parse(cookie);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+      cookie = null;
+    }
   }
 
-  Cookie.set(cookieName, { val }, { expires, path: '/' });
+  const val = path(['val'], cookie) || uuid();
+
+  Cookie.set(cookieName, JSON.stringify({ val }), { expires, path: '/' });
 
   return val;
 };
