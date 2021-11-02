@@ -127,7 +127,7 @@ const ScheduleItemHeader = ({
         </NextLabel>
       )}
       {brandTitle}
-      <VisuallyHiddenText>, {formattedStartTime}, </VisuallyHiddenText>
+      <VisuallyHiddenText>{`, ${formattedStartTime}, `}</VisuallyHiddenText>
       <TitleWrapper
         service={service}
         script={script}
