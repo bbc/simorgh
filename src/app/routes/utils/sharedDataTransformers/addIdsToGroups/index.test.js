@@ -78,7 +78,7 @@ describe('addIdsToGroups rule', () => {
   });
 
   it('should return the same object if groups cannot be found', () => {
-    const actual = addIdsToGroups();
+    const actual = addIdsToGroups(noGroups);
 
     expect(actual).toEqual(noGroups);
   });
