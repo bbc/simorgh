@@ -13,7 +13,6 @@ const link = 'www.bbc.co.uk';
 const brandTitle = 'BBC Xtra';
 const startTime = 1566914061212;
 const duration = 'PT30M';
-const id = 'testID1';
 
 const renderHeaderWithContext = () => (
   <ServiceContextProvider
@@ -29,7 +28,6 @@ const renderHeaderWithContext = () => (
       brandTitle={brandTitle}
       startTime={startTime}
       duration={duration}
-      id={id}
     />
   </ServiceContextProvider>
 );
