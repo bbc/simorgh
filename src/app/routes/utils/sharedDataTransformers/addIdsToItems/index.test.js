@@ -122,15 +122,15 @@ describe('addIdsToItems rule', () => {
   it('should add id to items with with the specified prop name', () => {
     const actual = addIdsToItems({
       pathToItems: ['content', 'model', 'blocks'],
-      propName: 'uniqueID',
+      customKeyName: 'custom',
     })(fixtureB);
     const expected = {
       content: {
         model: {
           blocks: [
-            { uniqueID: 'mockId', id: 'id' },
-            { uniqueID: 'mockId', id: 'id' },
-            { uniqueID: 'mockId', id: 'id' },
+            { custom: 'mockId', id: 'id' },
+            { custom: 'mockId', id: 'id' },
+            { custom: 'mockId', id: 'id' },
           ],
         },
       },
