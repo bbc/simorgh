@@ -138,6 +138,7 @@ describe('cspHeader', () => {
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
         ...bbcDomains,
+        'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
         'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net',
         'https://csi.gstatic.com',
@@ -214,6 +215,9 @@ describe('cspHeader', () => {
       ],
       scriptSrcExpectation: [
         ...bbcDomains,
+        'https://assets.wearehearken.eu',
+        'https://modules.wearehearken.eu',
+        'https://ems.wearehearken.eu',
         'https://*.chartbeat.com',
         'https://platform.twitter.com',
         'https://www.instagram.com',
@@ -347,6 +351,7 @@ describe('cspHeader', () => {
       childSrcExpectation: ["'self'"],
       connectSrcExpectation: [
         ...bbcDomains,
+        'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
         'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net',
@@ -426,6 +431,9 @@ describe('cspHeader', () => {
       ],
       scriptSrcExpectation: [
         ...bbcDomains,
+        'https://assets.wearehearken.eu',
+        'https://modules.wearehearken.eu',
+        'https://ems.wearehearken.eu',
         'https://*.chartbeat.com',
         'http://*.chartbeat.com',
         'http://localhost:1124',

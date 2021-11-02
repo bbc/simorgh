@@ -93,6 +93,7 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
+      'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
@@ -111,6 +112,7 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
+      'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
@@ -229,6 +231,9 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -248,6 +253,9 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
