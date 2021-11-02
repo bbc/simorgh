@@ -212,53 +212,39 @@ Object {
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Коронавірус",
-  "url": "/ukrainian/52118881",
+  "url": "/ukrainian/topics/c87z2kmre5nt",
 }
 `;
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
 Object {
-  "text": "Наука",
-  "url": "/ukrainian/topics/cyx5kzy4w5yt",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Технології",
-  "url": "/ukrainian/topics/cxnykv9q4kpt",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Здоров’я",
-  "url": "/ukrainian/topics/cwr9jqqqq13t",
-}
-`;
-
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Журнал",
+  "text": "Історії",
   "url": "/ukrainian/53725237",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Відео",
   "url": "/ukrainian/55425840",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Книга року BBC",
   "url": "/ukrainian/features-50320117",
 }
 `;
 
-exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Подкасти",
+  "url": "/ukrainian/podcasts/p09jsy3h",
+}
+`;
+
+exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
