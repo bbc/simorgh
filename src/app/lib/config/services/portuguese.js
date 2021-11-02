@@ -72,16 +72,20 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'Podcast',
-      brandTitle: 'Que História!',
+      brandTitle: 'BBC Lê',
       brandDescription:
-        'Incríveis histórias reais que nem a mente mais criativa poderia ter inventado',
+        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09dsdxd.jpg',
-        alt: 'Que História!',
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
+        alt: 'BBC Lê',
       },
       linkLabel: {
         text: 'Episódios',
-        href: 'https://www.bbc.com/portuguese/podcasts/p07r3r3t',
+        href: 'https://www.bbc.com/portuguese/podcasts/p09qw1cn',
+      },
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
       },
     },
     translations: {

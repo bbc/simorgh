@@ -151,7 +151,6 @@ exports[`FauxHeadline with headline data should render correctly 1`] = `
     dir="ltr"
   >
     <strong
-      aria-hidden="true"
       class="emotion-2 emotion-3 emotion-4"
     >
       This is a headline!
@@ -311,7 +310,6 @@ exports[`FauxHeadline with plain text headline should render <strong> containing
     dir="ltr"
   >
     <strong
-      aria-hidden="true"
       class="emotion-2 emotion-3 emotion-4"
     >
       Plain headline

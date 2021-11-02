@@ -1903,21 +1903,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-bulletin@npm:5.0.45":
-  version: 5.0.45
-  resolution: "@bbc/psammead-bulletin@npm:5.0.45"
+"@bbc/psammead-bulletin@npm:5.0.46":
+  version: 5.0.46
+  resolution: "@bbc/psammead-bulletin@npm:5.0.46"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-live-label": 2.0.30
-    "@bbc/psammead-story-promo": 8.0.30
+    "@bbc/psammead-story-promo": 8.0.31
     "@bbc/psammead-styles": 8.0.1
     "@bbc/psammead-visually-hidden-text": 2.0.7
   peerDependencies:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 83359b6734e863eedf55b3623ef56b5641cdde58a27234152fc172791d32728fcdb5e4945e8326f0537e5277d41a6035dd1115831e2773a87906a15c6182b4e4
+  checksum: b5c62118bd5849279480b3a117d820ccbc923e58fadbd89a22893ef6c11213669b9c93037e06199650cf69ac12dfc9a9cbe4d2513bbf79a44dca58db2f1482b5
   languageName: node
   linkType: hard
 
@@ -2240,9 +2240,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-story-promo@npm:8.0.30":
-  version: 8.0.30
-  resolution: "@bbc/psammead-story-promo@npm:8.0.30"
+"@bbc/psammead-story-promo@npm:8.0.31":
+  version: 8.0.31
+  resolution: "@bbc/psammead-story-promo@npm:8.0.31"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.1
@@ -2251,7 +2251,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: 9b59dc613c9e98b15db4c9eb217fca0b14d73f0fd6a855450a16ad73d1dd518a2d49e846ad570fed84df62fc5aa0e2de192e5d9eb13e322f19fb889c82bc99b6
+  checksum: 7e58e06784494377f58848d0feb7741876dfb320a79fd89423ec025e4902693ec8d34fa40e7f0b3bb73a21a74b8e0047184335fec904f81437171fb94a86ad65
   languageName: node
   linkType: hard
 
@@ -4328,19 +4328,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:8.10.0":
-  version: 8.10.0
-  resolution: "@testing-library/dom@npm:8.10.0"
+"@testing-library/dom@npm:8.10.1":
+  version: 8.10.1
+  resolution: "@testing-library/dom@npm:8.10.1"
   dependencies:
     "@babel/code-frame": ^7.10.4
     "@babel/runtime": ^7.12.5
     "@types/aria-query": ^4.2.0
     aria-query: ^5.0.0
     chalk: ^4.1.0
-    dom-accessibility-api: ^0.5.6
+    dom-accessibility-api: ^0.5.9
     lz-string: ^1.4.4
     pretty-format: ^27.0.2
-  checksum: df9e25c44c8bda6da6c5b690c458963320384b1af6e4ed29b709888bcd32a5be40cc7d17fdd0605435ff9438f2ca6151d918abc90941b2b5c2871c2f9c759d84
+  checksum: c11da16d981d4479fa18b2e90a62d2c19871da414016a4f80136394cf35e833ca4de4b56a64225f6bd5d3a13842176236d3508d217e3858c5e2ef35a3f391d5b
   languageName: node
   linkType: hard
 
@@ -4412,14 +4412,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:13.4.1":
-  version: 13.4.1
-  resolution: "@testing-library/user-event@npm:13.4.1"
+"@testing-library/user-event@npm:13.5.0":
+  version: 13.5.0
+  resolution: "@testing-library/user-event@npm:13.5.0"
   dependencies:
     "@babel/runtime": ^7.12.5
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: eaf7ae61ffc8574a57121f56491b3fffbd00260617754c874084b500d2b176a90b3c63bc79dde5db04e93240df29e2d0162f05f753dca4aa51abdc7d847eda12
+  checksum: 16319de685fbb7008f1ba667928f458b2d08196918002daca56996de80ef35e6d9de26e9e1ece7d00a004692b95a597cf9142fff0dc53f2f51606a776584f549
   languageName: node
   linkType: hard
 
@@ -6198,7 +6198,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:8.2.2, babel-loader@npm:^8.2.2":
+"babel-loader@npm:8.2.3":
+  version: 8.2.3
+  resolution: "babel-loader@npm:8.2.3"
+  dependencies:
+    find-cache-dir: ^3.3.1
+    loader-utils: ^1.4.0
+    make-dir: ^3.1.0
+    schema-utils: ^2.6.5
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    webpack: ">=2"
+  checksum: 78e1e1a91954d644b6ce66366834d4d245febbc0fde33e4e2831725e83d6e760d12b3a78e9534ce92af69067bef1d9d9674df36d8c1f20ee127bc2354b2203ba
+  languageName: node
+  linkType: hard
+
+"babel-loader@npm:^8.2.2":
   version: 8.2.2
   resolution: "babel-loader@npm:8.2.2"
   dependencies:
@@ -6808,18 +6823,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.17.4":
-  version: 4.17.4
-  resolution: "browserslist@npm:4.17.4"
+"browserslist@npm:4.17.5":
+  version: 4.17.5
+  resolution: "browserslist@npm:4.17.5"
   dependencies:
-    caniuse-lite: ^1.0.30001265
-    electron-to-chromium: ^1.3.867
+    caniuse-lite: ^1.0.30001271
+    electron-to-chromium: ^1.3.878
     escalade: ^3.1.1
-    node-releases: ^2.0.0
+    node-releases: ^2.0.1
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 830a25a70f33804ac4f5f884da3747028b9efe5190bf69ffe447d8651c8d09d91cfa1e534f2b71f06fbe13a3ce871cfcb416de498c726c91cad11818e80470e7
+  checksum: 0a1d762305c39dd317bb21e3159f44250bb1029a497f9a901ef5066f909263372eaacda58fd39174121c2741c0c32a7e6ace04df9172abe22c2fb69eba139a01
   languageName: node
   linkType: hard
 
@@ -7077,10 +7092,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001265":
-  version: 1.0.30001267
-  resolution: "caniuse-lite@npm:1.0.30001267"
-  checksum: 1a84f792a17a7819d42bed24eafe2a4832ab1f58937b6d65a9f43e9cdd2a3b10308e8bc2bbb3808f1df6b60940b1770b185c42370fa9dac2c8bc5c8a0363c158
+"caniuse-lite@npm:^1.0.30001271":
+  version: 1.0.30001271
+  resolution: "caniuse-lite@npm:1.0.30001271"
+  checksum: 0271e234e17c588fa203a34523f90c5a21ab62f41a2c3acabe96f0251593ac92f192cadd7a3dcbcf49bb28de4f57ca274d775c75700c3f38e9c42028d3becb0f
   languageName: node
   linkType: hard
 
@@ -7200,7 +7215,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:3.5.2, chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.4.1, chokidar@npm:^3.4.2, chokidar@npm:^3.5.1":
+"chokidar@npm:3.5.2, chokidar@npm:>=3.0.0 <4.0.0, chokidar@npm:^3.4.1, chokidar@npm:^3.4.2, chokidar@npm:^3.5.2":
   version: 3.5.2
   resolution: "chokidar@npm:3.5.2"
   dependencies:
@@ -8838,6 +8853,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-accessibility-api@npm:^0.5.9":
+  version: 0.5.9
+  resolution: "dom-accessibility-api@npm:0.5.9"
+  checksum: 3988bd1c58e115e972179b9ef881e65ab5da9c2e9d08f4e9646870301971fb0c72d0e0866559e0c06b91b9da6f1fed2f31f0fcbf0b6cffd959b01c0601da2c56
+  languageName: node
+  linkType: hard
+
 "dom-converter@npm:^0.2.0":
   version: 0.2.0
   resolution: "dom-converter@npm:0.2.0"
@@ -9101,10 +9123,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.867":
-  version: 1.3.868
-  resolution: "electron-to-chromium@npm:1.3.868"
-  checksum: d17ee086e6b9ce87859eaa1aa5ada8aa6c61f4db6d04872fa5140255ea19e01c31673d09fdbedf8bc5dc4a76da396b61408f5f10c7fd53d26dd0e4eeb5c46776
+"electron-to-chromium@npm:^1.3.878":
+  version: 1.3.878
+  resolution: "electron-to-chromium@npm:1.3.878"
+  checksum: d5b4ab14d4d82228a6730befef1c412a00be095566983a13fbf008ca0b15b6583f42c0c60a6ad35bdf5bfb92ee189fce66817698ef8d4360ae4182c14a0eff12
   languageName: node
   linkType: hard
 
@@ -11853,12 +11875,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:7.0.2":
-  version: 7.0.2
-  resolution: "husky@npm:7.0.2"
+"husky@npm:7.0.4":
+  version: 7.0.4
+  resolution: "husky@npm:7.0.4"
   bin:
     husky: lib/bin.js
-  checksum: 2ccfe6ddc51dc05ae8ea1e2fbb893344e93a813e00c595d6b5f5e704b7b998d6b0e2adda7c57f99b5e46a60dc07c7d860269a2ea91661c6bacef0eca8e0b8e96
+  checksum: c6ec4af63da2c9522da8674a20ad9b48362cc92704896cc8a58c6a2a39d797feb2b806f93fbd83a6d653fbdceb2c3b6e0b602c6b2e8565206ffc2882ef7db9e9
   languageName: node
   linkType: hard
 
@@ -15251,10 +15273,10 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "node-releases@npm:2.0.0"
-  checksum: 4342ab76816ad2c82826a74a2334e51f1d328e3d0ce505547a68d32c38d05d84affa1b5918650f205b32d0b80ab3a4870d8951489552a2ba6060ef7fd521c8de
+"node-releases@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "node-releases@npm:2.0.1"
+  checksum: b20dd8d4bced11f75060f0387e05e76b9dc4a0451f7bb3516eade6f50499ea7768ba95d8a60d520c193402df1e58cb3fe301510cc1c1ad68949c3d57b5149866
   languageName: node
   linkType: hard
 
@@ -18544,7 +18566,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-assets": 3.1.9
     "@bbc/psammead-brand": 7.3.12
     "@bbc/psammead-bulleted-list": 3.1.9
-    "@bbc/psammead-bulletin": 5.0.45
+    "@bbc/psammead-bulletin": 5.0.46
     "@bbc/psammead-byline": 3.0.29
     "@bbc/psammead-calendars": 2.0.27
     "@bbc/psammead-caption": 4.1.23
@@ -18569,7 +18591,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-script-link": 3.0.29
     "@bbc/psammead-section-label": 7.1.10
     "@bbc/psammead-social-embed": 3.3.9
-    "@bbc/psammead-story-promo": 8.0.30
+    "@bbc/psammead-story-promo": 8.0.31
     "@bbc/psammead-story-promo-list": 6.0.28
     "@bbc/psammead-storybook-helpers": 9.0.17
     "@bbc/psammead-styles": 8.0.1
@@ -18599,16 +18621,16 @@ resolve@^2.0.0-next.3:
     "@storybook/manager-webpack5": 6.3.12
     "@storybook/react": 6.3.12
     "@storybook/theming": 6.3.12
-    "@testing-library/dom": 8.10.0
+    "@testing-library/dom": 8.10.1
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.1.2
     "@testing-library/react-hooks": 7.0.2
-    "@testing-library/user-event": 13.4.1
+    "@testing-library/user-event": 13.5.0
     amphtml-validator: 1.0.35
     aws-embedded-metrics: 2.0.4
     babel-eslint: 10.1.0
     babel-jest: 26.6.3
-    babel-loader: 8.2.2
+    babel-loader: 8.2.3
     babel-plugin-dynamic-import-node: 2.3.3
     babel-plugin-transform-react-remove-prop-types: 0.4.24
     brotli-webpack-plugin: 1.1.0
@@ -18646,7 +18668,7 @@ resolve@^2.0.0-next.3:
     helmet: 4.6.0
     helmet-csp: 3.4.0
     history: 4.10.1
-    husky: 7.0.2
+    husky: 7.0.4
     inspectpack: 4.7.1
     intersection-observer: 0.12.0
     isarray: 2.0.5
@@ -18694,10 +18716,10 @@ resolve@^2.0.0-next.3:
     url-parse: 1.5.3
     uuid: 8.3.2
     wait-on: 6.0.0
-    webpack: 5.58.2
+    webpack: 5.61.0
     webpack-bundle-analyzer: 4.5.0
-    webpack-cli: 4.9.0
-    webpack-dev-server: 4.3.1
+    webpack-cli: 4.9.1
+    webpack-dev-server: 4.4.0
     webpack-merge: 5.8.0
     webpack-node-externals: 3.0.0
     winston: 3.3.3
@@ -20167,10 +20189,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"trim@npm:0.0.3":
-  version: 0.0.3
-  resolution: "trim@npm:0.0.3"
-  checksum: 9a059ba56d5e22c9e571798a7c63640cb25478c495d8a9d001f6352927207c6bd224018751a0c5145fbedc943ee2ebab1d7cc2e8ccba3121a51a7d3428dd879c
+"trim@npm:1.0.1":
+  version: 1.0.1
+  resolution: "trim@npm:1.0.1"
+  checksum: d7593f72edc1738218e94deeff54a9b81cb52b6448ef8a4d20015bd4581dadc3a636553fb06b1ab36d14e3803fd3138bd2b6da555de926abed33b0ae24f92879
   languageName: node
   linkType: hard
 
@@ -20787,7 +20809,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.0.3, v8-compile-cache@npm:^2.2.0, v8-compile-cache@npm:^2.3.0":
+"v8-compile-cache@npm:^2.0.3, v8-compile-cache@npm:^2.3.0":
   version: 2.3.0
   resolution: "v8-compile-cache@npm:2.3.0"
   checksum: adb0a271eaa2297f2f4c536acbfee872d0dd26ec2d76f66921aa7fc437319132773483344207bdbeee169225f4739016d8d2dbf0553913a52bb34da6d0334f8e
@@ -21117,9 +21139,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack-cli@npm:4.9.0":
-  version: 4.9.0
-  resolution: "webpack-cli@npm:4.9.0"
+"webpack-cli@npm:4.9.1":
+  version: 4.9.1
+  resolution: "webpack-cli@npm:4.9.1"
   dependencies:
     "@discoveryjs/json-ext": ^0.5.0
     "@webpack-cli/configtest": ^1.1.0
@@ -21132,7 +21154,6 @@ resolve@^2.0.0-next.3:
     import-local: ^3.0.2
     interpret: ^2.2.0
     rechoir: ^0.7.0
-    v8-compile-cache: ^2.2.0
     webpack-merge: ^5.7.3
   peerDependencies:
     webpack: 4.x.x || 5.x.x
@@ -21147,7 +21168,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack-cli: bin/cli.js
-  checksum: bc378a23773510c9a6a58669fe782f7849b50cbb78a948723583e7b059eae2f49888eb6dba398361af916b3d56195d99cdb494a595a2ecc95a5638e99b59c923
+  checksum: 2aff0349c15e54d616e1fd6dc1f59be16ec1a630f652f948c0b4b108776d1889446e3498e83d9d514bf1b28c5125a8b87c4aeb5dceb41b593ba90765af673c4f
   languageName: node
   linkType: hard
 
@@ -21197,13 +21218,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:4.3.1":
-  version: 4.3.1
-  resolution: "webpack-dev-server@npm:4.3.1"
+"webpack-dev-server@npm:4.4.0":
+  version: 4.4.0
+  resolution: "webpack-dev-server@npm:4.4.0"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
-    chokidar: ^3.5.1
+    chokidar: ^3.5.2
     colorette: ^2.0.10
     compression: ^1.7.4
     connect-history-api-fallback: ^1.6.0
@@ -21233,7 +21254,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: ce9d054c3de335df4cca4759aaff3a5291487c906b15bd3bb6e41de86e3784b307ae1e2cdd6403424567b0645a0dc6a9dd21b4839ba86176d5097664474d2b68
+  checksum: c317b5029b6f8caad47a257edb68b2dad5cd7087f4481ebda3359701c981037ce387486bdf992fb6e23213685d8e25e306b25a62541a42d0154562b1999563a5
   languageName: node
   linkType: hard
 
@@ -21356,9 +21377,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.58.2":
-  version: 5.58.2
-  resolution: "webpack@npm:5.58.2"
+"webpack@npm:5.61.0":
+  version: 5.61.0
+  resolution: "webpack@npm:5.61.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -21389,7 +21410,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 775da3b72c181204ca3f5200c144dde874fec8e059ba6c08dc9596e33e8408fd55c9c21ab5996124fe4b65963a54817bd4dfbb79fb89f307c9bf6054d69eaef5
+  checksum: 442958ec48645c9e612a2628a815c411cbc18289b5cc7b3d1b5d0f8e5b41606ed225decf4f3684edc365e6390867bded244d20387c70fbb630c0ac08443c34c8
   languageName: node
   linkType: hard
 
