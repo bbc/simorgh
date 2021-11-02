@@ -297,6 +297,10 @@ export const service = {
         text: 'эпизоды',
         href: 'https://www.bbc.com/russian/media-47937790',
       },
+      skipLink: {
+        text: 'Пропустить %title% и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории %title%',
+      },
     },
     disclaimer: {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
