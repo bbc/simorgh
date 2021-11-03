@@ -253,18 +253,12 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="group of residents"
   attribution="@twitterhandle"
-  class="i-amphtml-layout-responsive i-amphtml-layout-size-defined"
   height="549"
-  i-amphtml-layout="responsive"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/e49c/test/a0b28560-50a9-11e9-8100-2defb9ff0749.jpg 800w"
   width="976"
->
-  <i-amphtml-sizer
-    style="display:block;padding-top:56.25%"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"The Germans solving rising rents with people power"`;

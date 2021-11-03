@@ -491,16 +491,10 @@ exports[`Story Promo Image should match image 1`] = `
 <amp-img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
   attribution="Reuters"
-  class="i-amphtml-layout-responsive i-amphtml-layout-size-defined"
   height="549"
-  i-amphtml-layout="responsive"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg 660w"
   width="976"
->
-  <i-amphtml-sizer
-    style="display:block;padding-top:56.25%"
-  />
-</amp-img>
+/>
 `;
