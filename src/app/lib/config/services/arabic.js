@@ -76,6 +76,10 @@ export const service = {
         text: 'الحلقات',
         href: 'https://www.bbc.com/arabic/podcasts/p09w8yvk',
       },
+      skipLink: {
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
+      },
     },
     translations: {
       ads: {

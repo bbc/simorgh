@@ -595,8 +595,7 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
                 <span
                   class="emotion-10 emotion-11"
                 >
-                  Current page
-                  , 
+                  Current page, 
                 </span>
                 Home
               </span>
@@ -2427,8 +2426,7 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
                   <span
                     class="emotion-10 emotion-11"
                   >
-                    Current page
-                    , 
+                    Current page, 
                   </span>
                   Home
                 </span>

@@ -982,9 +982,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                   <span
                     class="emotion-41 emotion-42"
                   >
-                    , 
-                    09:00
-                    , 
+                    , 09:00, 
                   </span>
                   <span
                     class="emotion-47 emotion-48"
@@ -1111,9 +1109,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:59
-                      , 
+                      , 02:59, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
@@ -1241,9 +1237,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:30
-                      , 
+                      , 02:30, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
@@ -1371,9 +1365,7 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:00
-                      , 
+                      , 02:00, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
@@ -2424,9 +2416,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                   <span
                     class="emotion-41 emotion-42"
                   >
-                    , 
-                    09:00
-                    , 
+                    , 09:00, 
                   </span>
                   <span
                     class="emotion-47 emotion-48"
@@ -2553,9 +2543,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:59
-                      , 
+                      , 02:59, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
@@ -2683,9 +2671,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:30
-                      , 
+                      , 02:30, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
@@ -2813,9 +2799,7 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
                     <span
                       class="emotion-41 emotion-42"
                     >
-                      , 
-                      02:00
-                      , 
+                      , 02:00, 
                     </span>
                     <span
                       class="emotion-88 emotion-48"
