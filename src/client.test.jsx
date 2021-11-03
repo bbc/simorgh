@@ -1,8 +1,6 @@
 import React from 'react';
 import * as reactDom from 'react-dom';
 import { resetWindowValue, setWindowValue } from '@bbc/psammead-test-helpers';
-import { ClientApp } from './app/containers/App';
-import routes from './app/routes';
 import '#testHelpers/loggerMock';
 
 jest.mock('react-dom');
