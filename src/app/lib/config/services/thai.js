@@ -286,7 +286,7 @@ export const service = {
       },
       {
         title: 'วิดีโอ',
-        url: '/thai/other-news-56317806',
+        url: '/thai/media/video',
       },
       {
         title: 'ยอดนิยม',
