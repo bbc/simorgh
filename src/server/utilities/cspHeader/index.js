@@ -138,7 +138,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
-      'https://bbc.com', // Media Player
+      'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
@@ -162,7 +162,7 @@ const directives = {
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
       'https://syndication.twitter.com', // Social Embeds
-      'https://bbc.com', // Media Player
+      'https://www.bbc.com', // Media Player
       'https://bbc-maps.carto.com', // STY include maps
       'https://flo.uri.sh', // STY includes
       'https://www.riddle.com', // STY Includes
