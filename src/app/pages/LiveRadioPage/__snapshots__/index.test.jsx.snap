@@ -1630,7 +1630,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
               allowfullscreen=""
               class="emotion-20 emotion-21"
               scrolling="no"
-              src="https://test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
+              src="https://www.test.bbc.com/ws/av-embeds/media/bbc_afrique_radio/liveradio/fr?morph_env=live"
               title="Lecteur audio"
             />
             <noscript />
@@ -1750,9 +1750,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     <span
                       class="emotion-65 emotion-66"
                     >
-                      , 
-                      05:30
-                      , 
+                      , 05:30, 
                     </span>
                     <span
                       class="emotion-69 emotion-70"
@@ -1880,9 +1878,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     <span
                       class="emotion-65 emotion-66"
                     >
-                      , 
-                      05:16
-                      , 
+                      , 05:16, 
                     </span>
                     <span
                       class="emotion-69 emotion-70"
@@ -2010,9 +2006,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                     <span
                       class="emotion-65 emotion-66"
                     >
-                      , 
-                      05:15
-                      , 
+                      , 05:15, 
                     </span>
                     <span
                       class="emotion-69 emotion-70"
@@ -2143,9 +2137,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                   <span
                     class="emotion-65 emotion-66"
                   >
-                    , 
-                    09:00
-                    , 
+                    , 09:00, 
                   </span>
                   <span
                     class="emotion-192 emotion-70"
