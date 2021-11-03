@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ChunkExtractor } from '@loadable/server';
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
@@ -53,12 +53,18 @@ const renderDocument = async ({
     statsFile: modernStatsFile,
     namespace: 'modern',
   });
+  const commonLoadableState = {
+    addChunk(chunk) {
+      modernExtractor.addChunk(chunk);
+      legacyExtractor.addChunk(chunk);
+    },
+  };
 
   const context = {};
 
   const app = extractCritical(
     renderToString(
-      modernExtractor.collectChunks(
+      <ChunkExtractorManager extractor={commonLoadableState}>
         <CacheProvider value={cache}>
           <ServerApp
             location={url}
@@ -69,8 +75,8 @@ const renderDocument = async ({
             service={service}
             isAmp={isAmp}
           />
-        </CacheProvider>,
-      ),
+        </CacheProvider>
+      </ChunkExtractorManager>,
     ),
   );
 
