@@ -267,12 +267,18 @@ exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="قهوه"
   attribution="Getty Images"
+  class="i-amphtml-layout-responsive i-amphtml-layout-size-defined"
   height="576"
+  i-amphtml-layout="responsive"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/87F5/production/_103150843_mediaitem103146787.jpg 800w"
   width="1024"
-/>
+>
+  <i-amphtml-sizer
+    style="display:block;padding-top:56.25%"
+  />
+</amp-img>
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"پهپادی که برایتان قهوه می‌آورد"`;
