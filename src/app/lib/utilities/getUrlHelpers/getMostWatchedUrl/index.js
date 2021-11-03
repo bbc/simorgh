@@ -1,7 +1,7 @@
 const getBaseUrl = env =>
   ({
     live: 'https://www.bbc.com/',
-    test: 'https://test.bbc.com/',
+    test: 'https://www.test.bbc.com/',
   }[env] || '/');
 
 const getExtension = env => (env !== 'local' ? '.json' : '');
