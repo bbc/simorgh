@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import Figure from '@bbc/psammead-figure';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,

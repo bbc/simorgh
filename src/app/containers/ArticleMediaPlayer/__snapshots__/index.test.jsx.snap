@@ -94,12 +94,6 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
 }
 
 .emotion-2 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.emotion-4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
@@ -110,37 +104,33 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-2 emotion-3"
     >
-      <div
-        class="emotion-4 emotion-5"
+      <amp-iframe
+        allowfullscreen="allowfullscreen"
+        data-e2e="media-player"
+        frameborder="0"
+        layout="fill"
+        sandbox="allow-scripts allow-same-origin"
+        scrolling="no"
+        src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
+        title="Media player"
       >
-        <amp-iframe
-          allowfullscreen="allowfullscreen"
-          data-e2e="media-player"
-          frameborder="0"
+        <amp-img
+          alt=""
+          attribution=""
+          data-e2e="media-player__placeholder"
+          height="16"
           layout="fill"
-          sandbox="allow-scripts allow-same-origin"
-          scrolling="no"
-          src="https://polling.test.bbc.co.uk/ws/av-embeds/articles/c1234567890/p01k6msp/en-GB/amp"
-          title="Media player"
-        >
-          <amp-img
-            alt=""
-            attribution=""
-            data-e2e="media-player__placeholder"
-            height="16"
-            layout="fill"
-            placeholder="true"
-            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
-            width="9"
-          />
-          <noscript />
-        </amp-iframe>
-      </div>
-    </figure>
+          placeholder="true"
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+          srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+          width="9"
+        />
+        <noscript />
+      </amp-iframe>
+    </div>
   </div>
 </div>
 `;
@@ -239,18 +229,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 .emotion-2 {
-  margin: 0;
-  padding-bottom: 1.5rem;
-  width: 100%;
-}
-
-.emotion-4 {
   padding-top: 56.25%;
   position: relative;
   overflow: hidden;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: absolute;
   top: 0;
   left: 0;
@@ -259,12 +243,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   cursor: default;
 }
 
-.emotion-6:hover .emotion-14,
-.emotion-6:focus .emotion-14 {
+.emotion-4:hover .emotion-12,
+.emotion-4:focus .emotion-12 {
   background-color: #B80000;
 }
 
-.emotion-8 {
+.emotion-6 {
   font-family: ReithSans,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -279,32 +263,32 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 0.875rem;
   }
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-8 {
+  .emotion-6 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-8 {
+.no-js .emotion-6 {
   background-color: rgba(34, 34, 34, 0.75);
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .no-js .emotion-8 {
+  .no-js .emotion-6 {
     background-color: transparent;
   }
 }
 
-.no-js .emotion-8 .guidance-message {
+.no-js .emotion-6 .guidance-message {
   display: none;
 }
 
-.emotion-10 {
+.emotion-8 {
   display: block;
   font-weight: normal;
   padding: 0.5rem;
@@ -312,23 +296,23 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
 }
 
 @media screen and (-ms-high-contrast: active) {
-  .emotion-10 {
+  .emotion-8 {
     background-color: window;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-10 {
+  .emotion-8 {
     padding: 1rem;
   }
 }
 
-.emotion-12 {
+.emotion-10 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-15 {
+.emotion-13 {
   background-color: #222222;
   border: none;
   color: #FFFFFF;
@@ -348,18 +332,18 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   bottom: 0;
 }
 
-.emotion-15:hover,
-.emotion-15:focus {
+.emotion-13:hover,
+.emotion-13:focus {
   background-color: #B80000;
   -webkit-transition: background-color 300ms;
   transition: background-color 300ms;
 }
 
-.no-js .emotion-15 {
+.no-js .emotion-13 {
   display: none;
 }
 
-.emotion-17 {
+.emotion-15 {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
@@ -370,7 +354,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   margin: 0;
 }
 
-.emotion-19>svg {
+.emotion-17>svg {
   color: #FFFFFF;
   fill: currentColor;
   height: 1.5rem;
@@ -378,7 +362,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   width: 1.5rem;
 }
 
-.emotion-21 {
+.emotion-19 {
   vertical-align: middle;
   margin: 0 0.25rem;
   color: #222222;
@@ -387,12 +371,12 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
   height: 0.75rem;
 }
 
-.emotion-23 {
+.emotion-21 {
   display: block;
   margin-top: 0.5rem;
 }
 
-.emotion-25 {
+.emotion-23 {
   display: block;
   width: 100%;
   visibility: visible;
@@ -403,73 +387,69 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-2 emotion-3"
+      data-e2e="media-player"
     >
       <div
         class="emotion-4 emotion-5"
-        data-e2e="media-player"
+        data-e2e="media-player__placeholder"
       >
         <div
           class="emotion-6 emotion-7"
-          data-e2e="media-player__placeholder"
+          data-e2e="media-player__guidance"
         >
-          <div
-            class="emotion-8 emotion-9"
-            data-e2e="media-player__guidance"
+          <strong
+            aria-hidden="true"
+            class="guidance-message emotion-8 emotion-9"
           >
-            <strong
-              aria-hidden="true"
-              class="guidance-message emotion-10 emotion-11"
-            >
-              Contains strong language and adult humour.
-            </strong>
-            <noscript
-              class="emotion-12 emotion-13"
-            />
-          </div>
-          <button
-            class="emotion-14 emotion-15 emotion-16"
-          >
-            <span
-              class="emotion-17 emotion-18"
-            >
-              Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
-            </span>
-            <div
-              aria-hidden="true"
-              class="emotion-19 emotion-20"
-            >
-              <svg
-                aria-hidden="true"
-                class="emotion-21 emotion-22"
-                focusable="false"
-                height="12px"
-                viewBox="0 0 32 32"
-                width="12px"
-              >
-                <polygon
-                  points="3,32 29,16 3,0"
-                />
-              </svg>
-            </div>
-            <time
-              aria-hidden="true"
-              class="emotion-23 emotion-24"
-              datetime="PT3M11S"
-            >
-              03:11
-            </time>
-          </button>
-          <img
-            alt=""
-            class="emotion-25 emotion-26"
-            src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
-            srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+            Contains strong language and adult humour.
+          </strong>
+          <noscript
+            class="emotion-10 emotion-11"
           />
         </div>
+        <button
+          class="emotion-12 emotion-13 emotion-14"
+        >
+          <span
+            class="emotion-15 emotion-16"
+          >
+            Contains strong language and adult humour. Play video, "Five things ants can teach us about management", Duration 3,11
+          </span>
+          <div
+            aria-hidden="true"
+            class="emotion-17 emotion-18"
+          >
+            <svg
+              aria-hidden="true"
+              class="emotion-19 emotion-20"
+              focusable="false"
+              height="12px"
+              viewBox="0 0 32 32"
+              width="12px"
+            >
+              <polygon
+                points="3,32 29,16 3,0"
+              />
+            </svg>
+          </div>
+          <time
+            aria-hidden="true"
+            class="emotion-21 emotion-22"
+            datetime="PT3M11S"
+          >
+            03:11
+          </time>
+        </button>
+        <img
+          alt=""
+          class="emotion-23 emotion-24"
+          src="https://ichef.test.bbci.co.uk/images/ic/512xn/p01k6mtv.jpg"
+          srcset="https://ichef.test.bbci.co.uk/images/ic/240xn/p01k6mtv.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01k6mtv.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01k6mtv.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01k6mtv.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01k6mtv.jpg 800w"
+        />
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
