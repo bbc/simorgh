@@ -791,10 +791,11 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             <span
               lang="en-GB"
             >
-              BBC News
+              BBC News, 
             </span>
-            , 
-            Pidgin
+            <span>
+              Pidgin
+            </span>
           </span>
         </a>
         <a
@@ -1847,10 +1848,11 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             <span
               lang="en-GB"
             >
-              BBC News
+              BBC News, 
             </span>
-            , 
-            Pidgin
+            <span>
+              Pidgin
+            </span>
           </span>
         </a>
         <a
@@ -2903,10 +2905,11 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             <span
               lang="en-GB"
             >
-              BBC News
+              BBC News, 
             </span>
-            , 
-            Pidgin
+            <span>
+              Pidgin
+            </span>
           </span>
         </a>
         <a

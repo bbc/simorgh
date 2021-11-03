@@ -1942,16 +1942,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-brand@npm:7.3.12":
-  version: 7.3.12
-  resolution: "@bbc/psammead-brand@npm:7.3.12"
+"@bbc/psammead-brand@npm:7.3.13":
+  version: 7.3.13
+  resolution: "@bbc/psammead-brand@npm:7.3.13"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-visually-hidden-text": 2.0.7
   peerDependencies:
     "@emotion/styled": ^11.0.0
     react: ">=16.9.0"
-  checksum: 05f52f32cf45b494d98fea3a244bbbf03df2ec20d0ff1f9ed096374baf518dbc86e2cb746f84686ad11c5ff132b6622fd50b8f8a9729a2925007f8a0fe5eb711
+  checksum: b54f02582a28812b69369dd06418c9cf933ae2017365ca5d051d945b29d2a719683705ca2f06136409c6cdee09ba165f8101f2c41fd177de7037b1a9326e08d9
   languageName: node
   linkType: hard
 
@@ -2198,9 +2198,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-navigation@npm:9.2.12":
-  version: 9.2.12
-  resolution: "@bbc/psammead-navigation@npm:9.2.12"
+"@bbc/psammead-navigation@npm:9.2.13":
+  version: 9.2.13
+  resolution: "@bbc/psammead-navigation@npm:9.2.13"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-assets": 3.1.9
@@ -2210,7 +2210,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: c3ae36c970e6f6deb3367605b4013b6d2fcb4d69b955e0ab6ebd4b01a26f70705f4dbb2b321ea93083af75830423aa0045893f1d63ab509af9280b3f1f395895
+  checksum: 068d5b7b107a82d0e121e49249cbd6f361d71ae3a4b3062f2069f2a979aef33a6ef7c4865ea916303559727db2b7e32b29f5a660a3c53e865335b604ec43adec
   languageName: node
   linkType: hard
 
@@ -18774,7 +18774,7 @@ resolve@^2.0.0-next.3:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/moment-timezone-include": 1.1.8
     "@bbc/psammead-assets": 3.1.9
-    "@bbc/psammead-brand": 7.3.12
+    "@bbc/psammead-brand": 7.3.13
     "@bbc/psammead-bulleted-list": 3.1.9
     "@bbc/psammead-bulletin": 5.0.46
     "@bbc/psammead-byline": 3.0.29
@@ -18794,7 +18794,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-live-label": 2.0.30
     "@bbc/psammead-locales": 5.0.7
     "@bbc/psammead-media-indicator": 6.1.12
-    "@bbc/psammead-navigation": 9.2.12
+    "@bbc/psammead-navigation": 9.2.13
     "@bbc/psammead-paragraph": 4.0.27
     "@bbc/psammead-play-button": 3.0.31
     "@bbc/psammead-rich-text-transforms": 2.0.6
