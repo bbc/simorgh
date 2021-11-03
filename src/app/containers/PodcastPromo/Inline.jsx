@@ -12,7 +12,11 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
+import {
+  getPica,
+  getBrevier,
+  getLongPrimer,
+} from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import getPromo from './shared';
@@ -79,6 +83,7 @@ const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
+  ${({ script }) => getBrevier(script)}
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_SPACING_HLF};
   }
@@ -100,14 +105,19 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    ${({ script }) => getPica(script)}
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ script }) => getPica(script)}
+  ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSerifMedium(service)}
   display: block;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    ${({ script }) => getPica(script)}
+  }
 `;
 
 const Promo = () => {
@@ -192,7 +202,7 @@ const Promo = () => {
               <StyledCardDescriptionWrapper>
                 {description}
               </StyledCardDescriptionWrapper>
-              <StyledEpisodeTextWrapper dir={dir}>
+              <StyledEpisodeTextWrapper dir={dir} script={script}>
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>
