@@ -249,9 +249,7 @@ exports[`ProgramCard should render correctly for live 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              , 
-              14:54
-              , 
+              , 14:54, 
             </span>
             <span
               class="emotion-14 emotion-15"
@@ -527,9 +525,7 @@ exports[`ProgramCard should render correctly for next 1`] = `
           <span
             class="emotion-6 emotion-7"
           >
-            , 
-            14:54
-            , 
+            , 14:54, 
           </span>
           <span
             class="emotion-12 emotion-13"
@@ -816,9 +812,7 @@ exports[`ProgramCard should render correctly for onDemand 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              , 
-              14:54
-              , 
+              , 14:54, 
             </span>
             <span
               class="emotion-12 emotion-13"
@@ -1106,9 +1100,7 @@ exports[`ProgramCard should render correctly in RTL 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              , 
-              13:54
-              , 
+              , 13:54, 
             </span>
             <span
               class="emotion-12 emotion-13"
@@ -1391,9 +1383,7 @@ exports[`ProgramCard should render correctly without summary 1`] = `
             <span
               class="emotion-8 emotion-9"
             >
-              , 
-              14:54
-              , 
+              , 14:54, 
             </span>
             <span
               class="emotion-14 emotion-15"
