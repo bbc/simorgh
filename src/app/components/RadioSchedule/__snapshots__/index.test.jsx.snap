@@ -771,9 +771,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  14:54
-                  , 
+                  , 14:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -901,9 +899,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  14:54
-                  , 
+                  , 14:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -1031,9 +1027,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  14:54
-                  , 
+                  , 14:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -1164,9 +1158,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
               <span
                 class="emotion-26 emotion-27"
               >
-                , 
-                14:54
-                , 
+                , 14:54, 
               </span>
               <span
                 class="emotion-155 emotion-33"
@@ -1997,9 +1989,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  13:54
-                  , 
+                  , 13:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -2127,9 +2117,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  13:54
-                  , 
+                  , 13:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -2257,9 +2245,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
                 <span
                   class="emotion-26 emotion-27"
                 >
-                  , 
-                  13:54
-                  , 
+                  , 13:54, 
                 </span>
                 <span
                   class="emotion-32 emotion-33"
@@ -2390,9 +2376,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
               <span
                 class="emotion-26 emotion-27"
               >
-                , 
-                13:54
-                , 
+                , 13:54, 
               </span>
               <span
                 class="emotion-155 emotion-33"

@@ -72,6 +72,10 @@ export const service = {
         text: 'एपिसोड्स',
         href: 'https://www.bbc.com/hindi/podcasts/p05523zq',
       },
+      skipLink: {
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
+      },
     },
     translations: {
       ads: {

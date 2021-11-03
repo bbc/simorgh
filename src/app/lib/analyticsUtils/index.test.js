@@ -25,6 +25,7 @@ const {
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
+  getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -32,6 +33,13 @@ const {
   getDisplayMarketingString,
   getATIMarketingString,
 } = require('./index');
+
+const SRC_RSS_FIXTURE = {
+  key: 'src_medium',
+  description: 'rss campaign prefix',
+  value: 'RSS',
+  wrap: false,
+};
 
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
@@ -439,36 +447,30 @@ describe('getAtUserId', () => {
   });
 
   it('should return the AT user id', () => {
-    Cookie.set('atuserid', { val: 'uuid' });
+    Cookie.set('atuserid', { val: 'some-random-uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
-    const [[cookieName, cookieValue]] = cookieSetterSpy.mock.calls;
 
-    expect(atUserId).toEqual('uuid');
-    expect(cookieName).toEqual('atuserid');
-    expect(cookieValue).toEqual({
-      val: 'uuid',
-    });
-    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+    expect(atUserId).toEqual('some-random-uuid');
   });
 
-  it('should update the cookie expiration date when the AT user id is returned', () => {
-    Cookie.set('atuserid', { val: 'uuid' });
+  it('should store the existing AT user id as a stringified JSON value in cookies again so that we update the cookie expiration date', () => {
+    Cookie.set('atuserid', { val: 'some-random-uuid' });
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
     const [[cookieName, cookieValue, cookieOptions]] =
       cookieSetterSpy.mock.calls;
 
-    expect(atUserId).toEqual('uuid');
+    expect(atUserId).toEqual('some-random-uuid');
     expect(cookieName).toEqual('atuserid');
-    expect(cookieValue).toEqual({
-      val: 'uuid',
+    expect(JSON.parse(cookieValue)).toEqual({
+      val: atUserId,
     });
     expect(cookieOptions).toEqual({ expires: 397, path: '/' });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('should create new user id if cookie does not exist and set the id in cookies', () => {
+  it('should create a new AT user id if the atuserid cookie does not already exist and then store the id as a stringified JSON value in the cookies', () => {
     const uuidRegex =
       /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
     const atUserId = getAtUserId();
@@ -477,8 +479,8 @@ describe('getAtUserId', () => {
 
     expect(atUserId).toMatch(uuidRegex);
     expect(cookieName).toEqual('atuserid');
-    expect(cookieValue).toEqual({
-      val: expect.stringMatching(uuidRegex),
+    expect(JSON.parse(cookieValue)).toEqual({
+      val: atUserId,
     });
     expect(cookieOptions).toEqual({ expires: 397, path: '/' });
     expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
@@ -528,6 +530,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
+    ${'?at_medium=RSS'}       | ${'RSS'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
@@ -546,6 +549,42 @@ describe('getCampaignType', () => {
     const campaignType = getCampaignType();
 
     expect(campaignType).toEqual('XTOR');
+  });
+});
+
+describe('getRSSMarketingString', () => {
+  describe.only('"RSS" prefix', () => {
+    it('returns "src_medium" when marketing string is present in url', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=RSS';
+      expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
+    });
+    it('return empty array when campaign is not RSS', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, 'affiliate')).toEqual([]);
+    });
+
+    it('return empty array when campaign is null', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, null)).toEqual([]);
+    });
+
+    it('return empty array when campaign is undefined', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, undefined)).toEqual([]);
+    });
+
+    describe('with optional params', () => {
+      it.each`
+        expectation                                     | href                                                              | expectedValue
+        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=RSS&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
+        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=RSS&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
+      `(
+        'should return marketing string for $expectation',
+        ({ href, expectedValue }) => {
+          expect(getRSSMarketingString(href, 'RSS')).toEqual(expectedValue);
+        },
+      );
+    });
   });
 });
 

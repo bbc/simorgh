@@ -51,7 +51,7 @@ const FauxHeadlineContainer = ({ blocks }) => {
 
   return (
     <GridItemLarge>
-      <StyledFauxHeadline script={script} service={service} aria-hidden="true">
+      <StyledFauxHeadline script={script} service={service}>
         {renderText()}
       </StyledFauxHeadline>
     </GridItemLarge>

@@ -68,7 +68,7 @@ export const service = {
       title: 'پادکست',
       brandTitle: 'به عبارت دیگر',
       brandDescription:
-        'گفتگو با چهارهای سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
+        'گفتگو با چهره‌های سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
         alt: 'پادکست',
@@ -76,6 +76,10 @@ export const service = {
       linkLabel: {
         text: 'برنامه ها',
         href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
+      },
+      skipLink: {
+        text: 'از %title% رد شوید و به خواندن ادامه دهید',
+        endTextVisuallyHidden: 'پایان %title%',
       },
     },
     translations: {
