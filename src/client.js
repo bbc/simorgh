@@ -17,9 +17,16 @@ const root = document.getElementById('root');
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
-  loadableReady(() => {
+  const bundleType =
+    'noModule' in HTMLScriptElement.prototype ? 'modern' : 'legacy';
+  const handleLoadableReady = () => {
     hydrate(<ClientApp data={data} routes={routes} />, root);
-  });
+  };
+  const options = {
+    namespace: bundleType,
+  };
+
+  loadableReady(handleLoadableReady, options);
 } else {
   logger.warn(`
     Simorgh refused to hydrate.
