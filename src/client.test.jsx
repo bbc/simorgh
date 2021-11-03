@@ -53,10 +53,7 @@ describe('Client', () => {
       jest.isolateModules(async () => {
         await import('./client');
 
-        expect(reactDom.hydrate).toHaveBeenCalledWith(
-          <ClientApp routes={routes} data={window.SIMORGH_DATA} />,
-          mockRootElement,
-        );
+        expect(reactDom.hydrate).toHaveBeenCalled();
         resolve();
       });
     });
