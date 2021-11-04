@@ -1114,6 +1114,32 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
 .emotion-240 {
   background-color: #F2F2F2;
   padding: 0 1rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 59.375rem;
+}
+
+@media (min-width: 15rem) {
+  .emotion-240 {
+    contain-intrinsic-size: 56.563rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-240 {
+    contain-intrinsic-size: 51.063rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-240 {
+    contain-intrinsic-size: 30.75rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-240 {
+    contain-intrinsic-size: 21.25rem;
+  }
 }
 
 @media (max-width: 24.9375rem) {
@@ -3143,9 +3169,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       <span
                         class="emotion-91 emotion-92"
                       >
-                        , 
-                        ۰۹:۰۰
-                        , 
+                        , ۰۹:۰۰, 
                       </span>
                       <span
                         class="emotion-287 emotion-288"
@@ -3272,9 +3296,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         <span
                           class="emotion-91 emotion-92"
                         >
-                          , 
-                          ۰۵:۳۰
-                          , 
+                          , ۰۵:۳۰, 
                         </span>
                         <span
                           class="emotion-328 emotion-288"
@@ -3402,9 +3424,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         <span
                           class="emotion-91 emotion-92"
                         >
-                          , 
-                          ۰۲:۳۰
-                          , 
+                          , ۰۲:۳۰, 
                         </span>
                         <span
                           class="emotion-328 emotion-288"
@@ -3532,9 +3552,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                         <span
                           class="emotion-91 emotion-92"
                         >
-                          , 
-                          ۰۱:۳۰
-                          , 
+                          , ۰۱:۳۰, 
                         </span>
                         <span
                           class="emotion-328 emotion-288"

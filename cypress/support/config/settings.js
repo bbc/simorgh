@@ -1472,7 +1472,7 @@ module.exports = () => ({
               '/burmese/podcasts/p02pc9lh', // Podcast brand
               '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
@@ -2960,7 +2960,7 @@ module.exports = () => ({
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
               '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -2969,7 +2969,7 @@ module.exports = () => ({
               '/indonesia/podcasts/p02pc9v6', // Podcast Brand
               '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -5088,7 +5088,7 @@ module.exports = () => ({
               '/persian/podcasts/p02pc9wf', // Podcast Brand
               '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
@@ -5099,7 +5099,7 @@ module.exports = () => ({
               '/persian/podcasts/p02pc9wf', // Podcast Brand
               '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -5111,7 +5111,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandTV: {
         environments: {
@@ -6862,14 +6862,14 @@ module.exports = () => ({
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
               '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
@@ -6878,7 +6878,7 @@ module.exports = () => ({
             enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -7196,7 +7196,7 @@ module.exports = () => ({
             paths: [
               '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
