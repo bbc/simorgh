@@ -79,7 +79,6 @@ const renderDocument = async ({
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
-      scriptPreloads={scripts}
       scripts={scripts}
       links={links}
       app={app}
