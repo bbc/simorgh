@@ -204,7 +204,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Header I can see the branding
 
 exports[`AMP ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
 Object {
-  "text": "Новини",
+  "text": "Головна",
   "url": "/ukrainian",
 }
 `;
