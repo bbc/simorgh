@@ -7,7 +7,7 @@ export default json => {
   const content = path(['content'], json);
 
   if (content) {
-    const newBlocks = addIdsToItems({
+    const newContent = addIdsToItems({
       pathToItems: ['model', 'blocks'],
       recursive: true,
     })(content);
@@ -15,7 +15,7 @@ export default json => {
     return mergeDeepLeft(
       {
         content: {
-          ...newBlocks,
+          ...newContent,
         },
       },
       json,
