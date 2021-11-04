@@ -4,6 +4,8 @@ import { string } from 'prop-types';
 import styled from '@emotion/styled';
 import moment from 'moment';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -31,6 +33,24 @@ const logger = webLogger();
 const RadioScheduleSection = styled.section`
   background-color: ${C_LUNAR};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
+  content-visibility: auto;
+  contain-intrinsic-size: 59.375rem;
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 56.563rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 51.063rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 30.75rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 21.25rem;
+  }
 `;
 
 const RadioScheduleWrapper = styled.div`
