@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import Figure from '@bbc/psammead-figure';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -127,6 +128,12 @@ const MediaPlayerContainer = ({
     }
   `;
 
+  const MediaPlayerWrapper = styled.div`
+    margin: 0;
+    padding-bottom: ${GEL_SPACING_TRPL};
+    width: 100%;
+  `;
+
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
   const contentNotAvailableMessage = `This content is no longer available`;
 
@@ -172,33 +179,42 @@ const MediaPlayerContainer = ({
       <Caption block={captionBlock} type={mediaInfo.type} service={service} />
     ) : null;
 
+  const mediaPlayerType = () =>
+    isAmp ? (
+      <AmpMediaPlayer
+        src={embedSource}
+        placeholderSrc={placeholderSrc}
+        placeholderSrcset={placeholderSrcset}
+        title={iframeTitle}
+        noJsMessage={translatedNoJSMessage}
+        service={service}
+      />
+    ) : (
+      <CanonicalMediaPlayer
+        src={embedSource}
+        placeholderSrc={placeholderSrc}
+        placeholderSrcset={placeholderSrcset}
+        showPlaceholder={showPlaceholder}
+        title={iframeTitle}
+        service={service}
+        mediaInfo={mediaInfo}
+        noJsMessage={translatedNoJSMessage}
+        noJsClassName="no-js"
+        showLoadingImage={showLoadingImage}
+      />
+    );
+
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
-      {isAmp ? (
-        <AmpMediaPlayer
-          src={embedSource}
-          placeholderSrc={placeholderSrc}
-          placeholderSrcset={placeholderSrcset}
-          title={iframeTitle}
-          noJsMessage={translatedNoJSMessage}
-          service={service}
-        />
+      {showCaption && renderCaption() ? (
+        <Figure>
+          {mediaPlayerType()}
+          {showCaption && renderCaption()}
+        </Figure>
       ) : (
-        <CanonicalMediaPlayer
-          src={embedSource}
-          placeholderSrc={placeholderSrc}
-          placeholderSrcset={placeholderSrcset}
-          showPlaceholder={showPlaceholder}
-          title={iframeTitle}
-          service={service}
-          mediaInfo={mediaInfo}
-          noJsMessage={translatedNoJSMessage}
-          noJsClassName="no-js"
-          showLoadingImage={showLoadingImage}
-        />
+        <MediaPlayerWrapper>{mediaPlayerType()}</MediaPlayerWrapper>
       )}
-      {showCaption && renderCaption()}
     </>
   );
 };
