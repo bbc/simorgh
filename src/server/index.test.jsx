@@ -50,6 +50,7 @@ jest.mock('@loadable/server', () => ({
   ChunkExtractor: () => ({
     collectChunks: arg => arg,
     getScriptElements: () => '__mock_script_elements__',
+    getLinkElements: () => '__mock_link_elements__',
   }),
 }));
 
@@ -129,6 +130,7 @@ const testRenderedData =
         isAmp={isAmp}
         service={service}
         scripts="__mock_script_elements__"
+        links="__mock_link_elements__"
       />,
     );
 
@@ -1340,6 +1342,7 @@ describe('Server', () => {
             isAmp={isAmp}
             service={service}
             scripts="__mock_script_elements__"
+            links="__mock_link_elements__"
           />,
         );
 
