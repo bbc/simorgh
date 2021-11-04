@@ -434,21 +434,21 @@ exports[`Inline Should render correctly 1`] = `
 @media (min-width: 37.5rem) {
   .emotion-29 {
     font-size: 0.9375rem;
-    line-height: 1.25rem;
+    line-height: 1.125rem;
     margin: 0 0.25rem;
   }
 
   @media (min-width: 20rem) and (max-width: 37.4375rem) {
     .emotion-29 {
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
     }
   }
 
   @media (min-width: 37.5rem) {
     .emotion-29 {
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
     }
   }
 }

@@ -105,7 +105,7 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    ${({ script }) => getPica(script)}
+    ${({ script }) => getLongPrimer(script)}
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
