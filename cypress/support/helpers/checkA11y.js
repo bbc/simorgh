@@ -1,7 +1,7 @@
 const exclude = [
   // These elements can contain a11y violations as we have no control over what is rendered inside of them
   '.bbc-news-vj-embed-wrapper, [id^="include-"]', // VJ includes
-  '[class*=dotcom], [id*=dotcom], amp-ad, .i-amphtml-new-loader-ad-label', // GNL ads
+  '[class*=dotcom], [id*=dotcom], amp-ad', // GNL ads
 ];
 
 const logA11yViolations = violations => {
@@ -56,6 +56,14 @@ const checkA11y = () => {
          * Disabling this rule for now until we figure out why the ads container has the aria-hidden attribute.
          */
         id: 'aria-hidden-focus',
+        enabled: false,
+      },
+      {
+        /*
+         * Our ads containers sometimes cause a color contrast violation depending on what ad is loaded
+         * Disabling this rule for now as we cannot work out which class/element to exclude, and we carry out contrast checks in a11y swarms so this rule is not really needed
+         */
+        id: 'color-contrast',
         enabled: false,
       },
     ],
