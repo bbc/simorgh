@@ -73,12 +73,15 @@ const renderDocument = async ({
     return commonAttributes;
   });
 
+  const links = extractor.getLinkElements();
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
+      scriptPreloads={scripts}
       scripts={scripts}
+      links={links}
       app={app}
       data={data}
       helmet={headHelmet}
