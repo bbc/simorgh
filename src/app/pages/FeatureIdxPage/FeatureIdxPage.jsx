@@ -1,5 +1,4 @@
 import React, { useContext, Fragment } from 'react';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -24,9 +23,9 @@ const FeatureIdxPage = ({ pageData }) => {
   const { enabled: adsEnabled } = useToggle('ads');
 
   const groups = flattenGroups(pathOr([], ['content', 'groups'], pageData));
-  const title = path(['metadata', 'title'], pageData);
-  const summary = path(['metadata', 'summary'], pageData);
-  const seoTitle = path(['promo', 'name'], pageData);
+  const title = pageData?.metadata?.title;
+  const summary = pageData?.metadata?.summary;
+  const seoTitle = pageData?.promo?.name;
 
   const isCanonical = !isAmp;
 

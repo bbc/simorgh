@@ -10,7 +10,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { node } from 'prop-types';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -65,8 +64,8 @@ const getImageSizes = ({ blocks }) => {
     return null;
   }
   const rawImageBlock = filterForBlockType(blocks, 'rawImage');
-  const height = path(['model', 'height'], rawImageBlock);
-  const width = path(['model', 'width'], rawImageBlock);
+  const height = rawImageBlock?.model?.height;
+  const width = rawImageBlock?.model?.width;
   const isSquareImage = height === width;
   const isTallImage = height > width;
 
@@ -82,24 +81,24 @@ const getImageSizes = ({ blocks }) => {
 
 const PhotoGalleryPage = ({ pageData }) => {
   const { showRelatedTopics } = useContext(ServiceContext);
-  const title = path(['promo', 'headlines', 'headline'], pageData);
-  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
-  const summary = path(['promo', 'summary'], pageData);
-  const metadata = path(['metadata'], pageData);
-  const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
-  const assetUri = path(['locators', 'assetUri'], metadata);
+  const title = pageData?.promo?.headlines?.headline;
+  const shortHeadline = pageData?.promo?.headlines?.shortHeadline;
+  const summary = pageData?.promo?.summary;
+  const metadata = pageData?.metadata;
+  const allowDateStamp = metadata?.options?.allowDateStamp;
+  const assetUri = metadata?.locators?.assetUri;
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const relatedContent = pathOr(
     [],
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+  const indexImagePath = pageData?.promo?.indexImage?.path;
   const indexImageLocator = indexImagePath
     ? getImageParts(indexImagePath)[1]
     : null;
-  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
-  const topics = path(['metadata', 'topics'], pageData);
+  const indexImageAltText = pageData?.promo?.indexImage?.altText;
+  const topics = pageData?.metadata?.topics;
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);

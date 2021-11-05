@@ -1,5 +1,4 @@
 import React from 'react';
-import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -26,8 +25,8 @@ const ResponsiveComponentWrapper = styled.div`
 `;
 
 const SecondaryColumn = ({ pageData }) => {
-  const topStoriesContent = path(['secondaryColumn', 'topStories'], pageData);
-  const featuresContent = path(['secondaryColumn', 'features'], pageData);
+  const topStoriesContent = pageData?.secondaryColumn?.topStories;
+  const featuresContent = pageData?.secondaryColumn?.features;
 
   if (!topStoriesContent && !featuresContent) return null;
 

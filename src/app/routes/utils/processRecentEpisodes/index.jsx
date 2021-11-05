@@ -1,4 +1,3 @@
-import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 
 const validateEpisode = episode => {
@@ -39,7 +38,7 @@ const processRecentEpisodes = (
   pageData,
   { recentEpisodesLimit = 4, exclude = null } = {},
 ) =>
-  path(['relatedContent', 'groups', 0, 'promos'], pageData)
+  pageData?.relatedContent?.groups?.[0]?.promos
     .filter(validateEpisode)
     .filter(excludeEpisode(exclude))
     .map(formatEpisode)

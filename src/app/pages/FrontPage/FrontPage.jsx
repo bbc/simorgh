@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react';
 import { string, node } from 'prop-types';
-import path from 'ramda/src/path';
 import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -63,13 +62,13 @@ const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
     useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
-  const home = path(['home'], translations);
-  const groups = path(['content', 'groups'], pageData);
-  const lang = path(['metadata', 'language'], pageData);
-  const description = path(['metadata', 'summary'], pageData);
-  const seoTitle = path(['promo', 'name'], pageData);
-  const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioSchedulePosition = path(['radioSchedulePosition'], pageData);
+  const home = translations?.home;
+  const groups = pageData?.content?.groups;
+  const lang = pageData?.metadata?.language;
+  const description = pageData?.metadata?.summary;
+  const seoTitle = pageData?.promo?.name;
+  const radioScheduleData = pageData?.radioScheduleData;
+  const radioSchedulePosition = pageData?.radioSchedulePosition;
 
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
 

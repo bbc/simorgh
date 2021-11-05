@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { arrayOf, shape, node } from 'prop-types';
 import {
@@ -51,7 +50,7 @@ const MostWatchedPage = ({ pageData }) => {
     mostWatched: { header },
   } = useContext(ServiceContext);
 
-  const mostWatchedData = path(['mostWatched'], pageData);
+  const mostWatchedData = pageData?.mostWatched;
 
   const MostWatchedWrapper = ({ children }) => (
     <GelPageGrid

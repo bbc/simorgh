@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING,
@@ -45,7 +44,7 @@ const Wrapper = styled(GridItemLarge)`
 
 export default () => {
   const { translations, service } = useContext(ServiceContext);
-  const translatedText = path(['media', 'contentExpired'], translations);
+  const translatedText = translations?.media?.contentExpired;
   const message = 'This content is no longer available';
   const contentNotAvailableMessage = translatedText || message;
   const isNotTranslated =

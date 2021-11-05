@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import is from 'ramda/src/is';
 import styled from '@emotion/styled';
 import { shape, string, number, bool, func, node } from 'prop-types';
@@ -106,7 +105,7 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     externalLinks,
   } = pageData;
 
-  const pageType = path(['metadata', 'type'], pageData);
+  const pageType = pageData?.metadata?.type;
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();

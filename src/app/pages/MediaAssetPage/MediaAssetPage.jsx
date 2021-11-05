@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_DBL,
@@ -78,19 +77,19 @@ const MediaAssetPage = ({ pageData }) => {
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
-  const title = path(['promo', 'headlines', 'headline'], pageData);
-  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
-  const summary = path(['promo', 'summary'], pageData);
-  const metadata = path(['metadata'], pageData);
-  const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
-  const assetUri = path(['locators', 'assetUri'], metadata);
+  const title = pageData?.promo?.headlines?.headline;
+  const shortHeadline = pageData?.promo?.headlines?.shortHeadline;
+  const summary = pageData?.promo?.summary;
+  const metadata = pageData?.metadata;
+  const allowDateStamp = metadata?.options?.allowDateStamp;
+  const assetUri = metadata?.locators?.assetUri;
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const relatedContent = pathOr(
     [],
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const topics = path(['metadata', 'topics'], pageData);
+  const topics = pageData?.metadata?.topics;
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -104,11 +103,11 @@ const MediaAssetPage = ({ pageData }) => {
   const indexImageLocator = isLegacyMediaAssetPage()
     ? null
     : getIndexImageLocator();
-  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
+  const indexImageAltText = pageData?.promo?.indexImage?.altText;
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const mostWatchedData = path(['mostWatched'], pageData);
+  const mostWatchedData = pageData?.mostWatched;
 
   const componentsToRender = {
     fauxHeadline,

@@ -1,5 +1,4 @@
 import React, { useContext, Fragment } from 'react';
-import path from 'ramda/src/path';
 import styled from '@emotion/styled';
 import { node, string } from 'prop-types';
 import {
@@ -79,14 +78,14 @@ const IdxPage = ({
 }) => {
   const { mostRead, lang, radioSchedule } = useContext(ServiceContext);
 
-  const groups = path(['content', 'groups'], pageData);
-  const title = path(['metadata', 'title'], pageData);
-  const summary = path(['metadata', 'summary'], pageData);
-  const seoTitle = path(['promo', 'name'], pageData);
-  const radioScheduleData = path(['radioScheduleData'], pageData);
-  const radioScheduleOnIdxPage = path(['onIdxPage'], radioSchedule);
-  const mostReadOnIdxPage = path(['onIdxPage'], mostRead);
-  const radioScheduleIdxPosition = path(['idxPagePosition'], radioSchedule);
+  const groups = pageData?.content?.groups;
+  const title = pageData?.metadata?.title;
+  const summary = pageData?.metadata?.summary;
+  const seoTitle = pageData?.promo?.name;
+  const radioScheduleData = pageData?.radioScheduleData;
+  const radioScheduleOnIdxPage = radioSchedule?.onIdxPage;
+  const mostReadOnIdxPage = mostRead?.onIdxPage;
+  const radioScheduleIdxPosition = radioSchedule?.idxPagePosition;
 
   return (
     <>

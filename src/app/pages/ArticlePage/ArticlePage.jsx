@@ -121,7 +121,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const topics = path(['metadata', 'topics'], pageData);
+  const topics = pageData?.metadata?.topics;
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
 

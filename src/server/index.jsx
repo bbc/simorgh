@@ -1,6 +1,5 @@
 import express from 'express';
 import compression from 'compression';
-import ramdaPath from 'ramda/src/path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
@@ -162,7 +161,7 @@ server.get(
       const { status } = data;
       // Set derivedPageType based on returned page data
       if (status === OK) {
-        derivedPageType = ramdaPath(['pageData', 'metadata', 'type'], data);
+        derivedPageType = data?.pageData?.metadata?.type;
       } else {
         sendCustomMetric({
           metricName: NON_200_RESPONSE,

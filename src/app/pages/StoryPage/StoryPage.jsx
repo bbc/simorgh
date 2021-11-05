@@ -12,7 +12,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -75,38 +74,32 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     showRelatedTopics,
   } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
-  const title = path(['promo', 'headlines', 'headline'], pageData);
-  const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
-  const category = path(
-    ['promo', 'passport', 'category', 'categoryName'],
-    pageData,
-  );
-  const summary = path(['promo', 'summary'], pageData);
-  const metadata = path(['metadata'], pageData);
-  const allowDateStamp = path(['options', 'allowDateStamp'], metadata);
-  const assetUri = path(['locators', 'assetUri'], metadata);
+  const title = pageData?.promo?.headlines?.headline;
+  const shortHeadline = pageData?.promo?.headlines?.shortHeadline;
+  const category = pageData?.promo?.passport?.category?.categoryName;
+  const summary = pageData?.promo?.summary;
+  const metadata = pageData?.metadata;
+  const allowDateStamp = metadata?.options?.allowDateStamp;
+  const assetUri = metadata?.locators?.assetUri;
   const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
   const relatedContent = pathOr(
     [],
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
-  const indexImagePath = path(['promo', 'indexImage', 'path'], pageData);
+  const indexImagePath = pageData?.promo?.indexImage?.path;
   const indexImageLocator = indexImagePath
     ? getImageParts(indexImagePath)[1]
     : null;
-  const indexImageAltText = path(['promo', 'indexImage', 'altText'], pageData);
+  const indexImageAltText = pageData?.promo?.indexImage?.altText;
   const firstPublished = getFirstPublished(pageData);
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
-  const mostReadInitialData = path(['mostRead'], pageData);
-  const topStoriesInitialData = path(
-    ['secondaryColumn', 'topStories'],
-    pageData,
-  );
-  const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
-  const recommendationsInitialData = path(['recommendations'], pageData);
-  const topics = path(['metadata', 'topics'], pageData);
+  const mostReadInitialData = pageData?.mostRead;
+  const topStoriesInitialData = pageData?.secondaryColumn?.topStories;
+  const featuresInitialData = pageData?.secondaryColumn?.features;
+  const recommendationsInitialData = pageData?.recommendations;
+  const topics = pageData?.metadata?.topics;
 
   const gridColumns = {
     group0: 8,
@@ -157,7 +150,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const { enabled: adsEnabled } = useToggle('ads');
   const { enabled: podcastPromoEnabled } = useToggle('podcastPromo');
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
-  const adcampaign = path(['metadata', 'adCampaignKeyword'], pageData);
+  const adcampaign = pageData?.metadata?.adCampaignKeyword;
 
   /**
    * Should we display ads? We check:
@@ -166,7 +159,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
    * - iSite toggles are handled by the Ad container.
    */
   const isAdsEnabled = [
-    path(['metadata', 'options', 'allowAdvertising'], pageData),
+    pageData?.metadata?.options?.allowAdvertising,
     adsEnabled,
     showAdsBasedOnLocation,
   ].every(Boolean);

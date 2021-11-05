@@ -1,5 +1,4 @@
 import React from 'react';
-import path from 'ramda/src/path';
 import getInitialData from './getInitialData';
 import {
   ErrorPage,
@@ -20,7 +19,7 @@ import {
 
 // CPS Asset Mapping to PageType
 const CpsAsset = props => {
-  const type = path(['pageData', 'metadata', 'type'], props);
+  const type = props?.pageData?.metadata?.type;
 
   const PageType = {
     [STORY_PAGE]: StoryPage,
