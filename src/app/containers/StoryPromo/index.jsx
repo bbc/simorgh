@@ -163,7 +163,11 @@ const StoryPromoContainer = ({
     <LinkContents
       item={item}
       isInline={!displayImage}
-      index={`storyPromoLinkText-${item.id}`}
+      index={
+        item.a11yId
+          ? `storyPromoLinkText-${item.a11yId}`
+          : `storyPromoLinkText-${item.id}`
+      }
     />
   );
 
@@ -186,6 +190,7 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
+      {/* {console.log(item, 'StoryPromoitem__________')} */}
       <Headline
         script={script}
         service={service}
@@ -196,7 +201,11 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
-          aria-labelledby={`storyPromoLinkText-${item.id}`}
+          aria-labelledby={
+            item.a11yId
+              ? `storyPromoLinkText-${item.a11yId}`
+              : `storyPromoLinkText-${item.id}`
+          }
         >
           {isLive ? (
             <LiveLabel

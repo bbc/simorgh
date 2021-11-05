@@ -20,7 +20,7 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 `;
 
 const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
-  console.log('with a11yId', content);
+  // console.log('with a11yId', content);
   const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
