@@ -102,7 +102,6 @@ const StoryPromoContainer = ({
   eventTrackingData,
   labelId,
 }) => {
-  console.log('labelId', labelId);
   const {
     altCalendar,
     script,
@@ -166,7 +165,7 @@ const StoryPromoContainer = ({
       index={
         item.a11yId
           ? `storyPromoLinkText-${item.a11yId}`
-          : `storyPromoLinkText-${item.id}`
+          : `storyPromoLinkText-${item.id}${labelId}`
       }
     />
   );
@@ -190,7 +189,6 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      {/* {console.log(item, 'StoryPromoitem__________')} */}
       <Headline
         script={script}
         service={service}
@@ -204,7 +202,7 @@ const StoryPromoContainer = ({
           aria-labelledby={
             item.a11yId
               ? `storyPromoLinkText-${item.a11yId}`
-              : `storyPromoLinkText-${item.id}`
+              : `storyPromoLinkText-${item.id}${labelId}`
           }
         >
           {isLive ? (
@@ -312,6 +310,7 @@ StoryPromoContainer.propTypes = {
       format: string,
     }),
   }),
+  labelId: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -323,6 +322,7 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
+  labelId: 'unlabelledSection',
 };
 
 export default StoryPromoContainer;

@@ -15,7 +15,6 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 `;
 
 const MostWatched = ({ data, isMostWatchedPage }) => {
-  // console.log('with a11yId', data);
   const { mostWatched } = useContext(ServiceContext);
   const { header } = mostWatched;
 
