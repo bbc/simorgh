@@ -2446,7 +2446,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52735886"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52735886unlabelledSection"
                   class="emotion-39 emotion-40"
                   href="/persian/afghanistan-52735886"
                 >
@@ -2578,12 +2578,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-37 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52726383"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52726383unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52726383"
                   >
                     <span
-                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52726383"
+                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52726383unlabelledSection"
                       role="text"
                     >
                       <span
@@ -2687,12 +2687,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52710877"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52710877WatchListen"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52710877"
                   >
                     <span
-                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52710877"
+                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52710877WatchListen"
                       role="text"
                     >
                       <span
@@ -2796,12 +2796,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52699256"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52699256WatchListen"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52699256"
                   >
                     <span
-                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52699256"
+                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52699256WatchListen"
                       role="text"
                     >
                       <span
@@ -2905,12 +2905,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52651714"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52651714WatchListen"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52651714"
                   >
                     <span
-                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52651714"
+                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52651714WatchListen"
                       role="text"
                     >
                       <span
@@ -3014,12 +3014,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52640314"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52640314WatchListen"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52640314"
                   >
                     <span
-                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52640314"
+                      id="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52640314WatchListen"
                       role="text"
                     >
                       <span
@@ -3692,7 +3692,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-37 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52722865"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52722865unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52722865"
                   >
@@ -3754,7 +3754,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52697976"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52697976Features"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52697976"
                   >
@@ -3816,7 +3816,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/blog-viewpoints-52616632"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/blog-viewpoints-52616632Features"
                     class="emotion-39 emotion-40"
                     href="/persian/blog-viewpoints-52616632"
                   >
@@ -3878,7 +3878,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52700014"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/afghanistan-52700014Features"
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52700014"
                   >
@@ -3940,7 +3940,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-122 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/blog-viewpoints-52692067"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:persian/blog-viewpoints-52692067Features"
                     class="emotion-39 emotion-40"
                     href="/persian/blog-viewpoints-52692067"
                   >
@@ -5960,7 +5960,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52721557"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52721557unlabelledSection"
                   class="emotion-39 emotion-40"
                   href="/ukrainian/news-russian-52721557"
                 >
@@ -6072,7 +6072,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-83 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52261329"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52261329Verticals"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52261329"
                   >
@@ -6159,7 +6159,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52357130"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52357130unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52357130"
                   >
@@ -6237,7 +6237,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-83 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52663545"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52663545Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52663545"
                   >
@@ -6324,7 +6324,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/vert-fut-russian-52663551"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/vert-fut-russian-52663551unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/vert-fut-russian-52663551"
                   >
@@ -6386,7 +6386,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52633464"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52633464Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52633464"
                   >
@@ -6448,7 +6448,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52647120"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52647120Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52647120"
                   >
@@ -6510,7 +6510,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52493624"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52493624Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52493624"
                   >
@@ -6572,7 +6572,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52395098"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52395098Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52395098"
                   >
@@ -6634,7 +6634,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52443350"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52443350Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52443350"
                   >
@@ -6696,7 +6696,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52339462"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52339462Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52339462"
                   >
@@ -6758,7 +6758,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52336989"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52336989Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52336989"
                   >
@@ -6820,7 +6820,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52344279"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52344279Also-in-the-news"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52344279"
                   >
@@ -6936,7 +6936,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-37 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-50186307"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-50186307unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-50186307"
                   >
@@ -6998,7 +6998,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49780932"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49780932Picture-galleries"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49780932"
                   >
@@ -7060,7 +7060,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49621722"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49621722Picture-galleries"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49621722"
                   >
@@ -7122,7 +7122,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-49613573"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-49613573Picture-galleries"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-49613573"
                   >
@@ -7184,7 +7184,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49382281"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-49382281Picture-galleries"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49382281"
                   >
@@ -7262,7 +7262,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-83 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52653319"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52653319Features"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52653319"
                   >
@@ -7349,7 +7349,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52675911"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52675911unlabelledSection"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52675911"
                   >
@@ -7411,7 +7411,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52688931"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52688931Features"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52688931"
                   >
@@ -7473,7 +7473,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52620256"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52620256Features"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52620256"
                   >
@@ -7535,7 +7535,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52597888"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/news-russian-52597888Features"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52597888"
                   >
@@ -7597,7 +7597,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-114 emotion-38"
                 >
                   <a
-                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52573535"
+                    aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:ukrainian/features-russian-52573535Features"
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52573535"
                   >

@@ -4363,7 +4363,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23145776"
+                            aria-labelledby="storyPromoLinkText-83954f42"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23145776"
                           >
@@ -4420,7 +4420,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23143754"
+                            aria-labelledby="storyPromoLinkText-9a99a554"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23143754"
                           >
@@ -4498,12 +4498,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23146654"
+                            aria-labelledby="storyPromoLinkText-75b82af1"
                             class="emotion-266 emotion-267"
                             href="/pidgin/23146654"
                           >
                             <span
-                              id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23146654"
+                              id="storyPromoLinkText-75b82af1"
                               role="text"
                             >
                               <span
@@ -4600,12 +4600,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-23147054"
+                            aria-labelledby="storyPromoLinkText-18fd9946"
                             class="emotion-266 emotion-267"
                             href="/pidgin/media-23147054"
                           >
                             <span
-                              id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-23147054"
+                              id="storyPromoLinkText-18fd9946"
                               role="text"
                             >
                               <span

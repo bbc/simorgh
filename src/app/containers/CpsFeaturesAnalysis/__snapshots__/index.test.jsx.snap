@@ -696,7 +696,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-23252735"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-23252735unlabelledSection"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-23252735"
                 >
@@ -752,7 +752,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-49666505"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-49666505unlabelledSection"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-49666505"
                 >
@@ -1472,7 +1472,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="emotion-35 emotion-36"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-23252735"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/afirika-23252735unlabelledSection"
                   class="emotion-37 emotion-38"
                   href="/igbo/afirika-23252735"
                 >

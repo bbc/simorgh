@@ -351,12 +351,12 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
           class="emotion-14 emotion-15"
         >
           <a
-            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+            aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
             class="emotion-16 emotion-17"
             href="/pidgin/44508901"
           >
             <span
-              id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+              id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
               role="text"
             >
               <span>

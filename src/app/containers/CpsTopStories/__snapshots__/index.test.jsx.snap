@@ -615,7 +615,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="emotion-29 emotion-30"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:mundo/noticias-internacional-51939501"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:mundo/noticias-internacional-51939501unlabelledSection"
                   class="emotion-31 emotion-32"
                   href="/mundo/noticias-internacional-51939501"
                 >
@@ -646,7 +646,7 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="emotion-29 emotion-30"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-51945757"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-51945757unlabelledSection"
                   class="emotion-31 emotion-32"
                   href="/pidgin/tori-51945757"
                 >
@@ -1246,7 +1246,7 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 class="emotion-27 emotion-28"
               >
                 <a
-                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:mundo/noticias-internacional-51939501"
+                  aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:mundo/noticias-internacional-51939501unlabelledSection"
                   class="emotion-29 emotion-30"
                   href="/mundo/noticias-internacional-51939501"
                 >

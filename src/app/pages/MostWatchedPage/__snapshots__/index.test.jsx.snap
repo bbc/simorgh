@@ -825,12 +825,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
-                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248"
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248unlabelledSection"
                         class="emotion-40 emotion-41"
                         href="/pidgin/media-53580248"
                       >
                         <span
-                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248"
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53580248unlabelledSection"
                           role="text"
                         >
                           <span
@@ -918,12 +918,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
-                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139"
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139unlabelledSection"
                         class="emotion-40 emotion-41"
                         href="/pidgin/media-53591139"
                       >
                         <span
-                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139"
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-53591139unlabelledSection"
                           role="text"
                         >
                           <span
@@ -1011,12 +1011,12 @@ exports[`Most Watched Page Main should match snapshot for the Most Watched page 
                       class="emotion-38 emotion-39"
                     >
                       <a
-                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788"
+                        aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788unlabelledSection"
                         class="emotion-40 emotion-41"
                         href="/pidgin/tori-53509788"
                       >
                         <span
-                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788"
+                          id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-53509788unlabelledSection"
                           role="text"
                         >
                           <span

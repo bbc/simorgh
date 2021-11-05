@@ -427,12 +427,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
               class="emotion-21 emotion-22"
               href="/pidgin/44508901"
             >
               <span
-                id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+                id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
                 role="text"
               >
                 <span>
@@ -491,7 +491,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-46975713"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-46975713unlabelledSection"
               class="emotion-21 emotion-22"
               href="/pidgin/tori-46975713"
             >
@@ -548,7 +548,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-42494678"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-42494678unlabelledSection"
               class="emotion-21 emotion-22"
               href="/pidgin/tori-42494678"
             >
@@ -981,12 +981,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
               class="emotion-20 emotion-21"
               href="/pidgin/44508901"
             >
               <span
-                id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901"
+                id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/44508901unlabelledSection"
                 role="text"
               >
                 <span>
@@ -1045,7 +1045,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-46975713"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-46975713unlabelledSection"
               class="emotion-20 emotion-21"
               href="/pidgin/tori-46975713"
             >
@@ -1102,7 +1102,7 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
-              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-42494678"
+              aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-42494678unlabelledSection"
               class="emotion-20 emotion-21"
               href="/pidgin/tori-42494678"
             >
