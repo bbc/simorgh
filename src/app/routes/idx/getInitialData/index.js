@@ -4,7 +4,7 @@ import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
-import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
+import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGroups';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
@@ -14,7 +14,7 @@ import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
-  addIdsToItems,
+  addIdsToGroups,
   squashTopStories,
   filterGroupsWithoutStraplines,
 );

@@ -57,7 +57,7 @@ jest.mock('uuid', () => {
   return {
     v4: () => {
       x += 1;
-      return `mockid-${x}`;
+      return `mockid${x}`;
     },
   };
 });
