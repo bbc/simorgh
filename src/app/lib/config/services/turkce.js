@@ -348,7 +348,6 @@ export const service = {
         title: 'Teknoloji',
         url: '/turkce/topics/c2dwqnwkvnqt',
       },
-
     ],
   },
 };
