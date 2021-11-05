@@ -188,7 +188,7 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      {console.log(item, 'StoryPromoitem__________')}
+      {/* {console.log(item, 'StoryPromoitem__________')} */}
       <Headline
         script={script}
         service={service}
