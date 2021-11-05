@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
@@ -18,7 +20,14 @@ const root = document.getElementById('root');
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
   loadableReady(() => {
-    hydrate(<ClientApp data={data} routes={routes} />, root);
+    const cache = createCache({ key: 'bbc' });
+
+    hydrate(
+      <CacheProvider value={cache}>
+        <ClientApp data={data} routes={routes} />
+      </CacheProvider>,
+      root,
+    );
   });
 } else {
   logger.warn(`

@@ -196,4 +196,26 @@ describe('addIdsToBlocks rule', () => {
 
     expect(actual).toEqual(expected);
   });
+
+  it('should return the same object if content cannot be found', () => {
+    const noContentFixture = {
+      blah: [],
+    };
+    const actual = addIdsToBlocks(noContentFixture);
+
+    expect(actual).toEqual(noContentFixture);
+  });
+
+  it('should return the same object if blocks cannot be found', () => {
+    const noBlocksFixture = {
+      content: {
+        model: {
+          blah: [],
+        },
+      },
+    };
+    const actual = addIdsToBlocks(noBlocksFixture);
+
+    expect(actual).toEqual(noBlocksFixture);
+  });
 });
