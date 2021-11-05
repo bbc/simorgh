@@ -1,0 +1,682 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::asset:gahuza/amakuru-58660901",
+      "locators": {
+        "assetUri": "/gahuza/amakuru-58660901",
+        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-58660901",
+        "curie": "http://www.bbc.co.uk/asset/dc973340-817b-40cb-a8dc-ff8847b2997b",
+        "assetId": "58660901"
+      },
+      "type": "STY",
+      "createdBy": "gahuza-v6",
+      "language": "rw",
+      "lastUpdated": 1632457630135,
+      "firstPublished": 1632455177000,
+      "lastPublished": 1632455177000,
+      "timestamp": 1632455177000,
+      "options": {
+        "isIgorSeoTagsEnabled": false,
+        "includeComments": false,
+        "allowRightHandSide": true,
+        "isFactCheck": false,
+        "allowDateStamp": true,
+        "suitableForSyndication": true,
+        "hasNewsTracker": false,
+        "allowRelatedStoriesBox": true,
+        "isKeyContent": false,
+        "allowHeadline": true,
+        "allowAdvertising": true,
+        "hasContentWarning": false,
+        "isBreakingNews": false,
+        "allowPrintingSharingLinks": true
+      },
+      "analyticsLabels": {
+        "ldp_tags": "African+Great+Lakes~Rwanda~Law+and+order",
+        "cps_asset_id": "58660901",
+        "ldp_ids": "30ae1f57-adee-458c-86ca-a15489f23e43~8125f2a9-3259-4f35-ab75-d9a6577fdc88~d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+        "counterName": "gahuza.news.story.58660901.page",
+        "cps_asset_type": "sty"
+      },
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "rw",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+        "locator": "urn:bbc:cps:curie:asset:dc973340-817b-40cb-a8dc-ff8847b2997b",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+            "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+              "thingLabel": "Ibiyaga binini",
+              "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+              "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q87982"
+              ],
+              "thingEnglishLabel": "African Great Lakes",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+              "thingLabel": "Rwanda",
+              "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+              "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/49518/"
+              ],
+              "thingEnglishLabel": "Rwanda",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+              "thingLabel": "amategeko",
+              "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+              "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Law"
+              ],
+              "thingEnglishLabel": "Law and order",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "rw",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "tags": {
+        "about": [
+          {
+            "thingLabel": "Ibiyaga binini",
+            "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+            "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q87982"
+            ],
+            "topicName": "Ibiyaga binini",
+            "topicId": "c06gq67y3w5t",
+            "curationList": [
+              {
+                "curationId": "3a9ae586-b839-4e69-b36b-56dd8a70f64d",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "African Great Lakes",
+            "thingLabelLanguage": "rw",
+            "thingPreferredLabel": "African Great Lakes"
+          },
+          {
+            "thingLabel": "Rwanda",
+            "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+            "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+            "thingType": [
+              "core:Place",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://sws.geonames.org/49518/"
+            ],
+            "topicName": "Rwanda",
+            "topicId": "c340q4v3942t",
+            "curationList": [
+              {
+                "curationId": "aafe0848-80a9-4325-8b5d-de9d56d4bd64",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Rwanda",
+            "thingLabelLanguage": "rw",
+            "thingPreferredLabel": "Rwanda"
+          },
+          {
+            "thingLabel": "amategeko",
+            "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+            "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+            "thingType": [
+              "tagging:TagConcept",
+              "core:Theme",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Law"
+            ],
+            "topicName": "amategeko",
+            "topicId": "c06gq6n0q88t",
+            "curationList": [
+              {
+                "curationId": "9da9d5da-9554-4c15-980a-51b37b331b48",
+                "curationType": "vivo-stream"
+              }
+            ],
+            "thingEnglishLabel": "Law and order",
+            "thingLabelLanguage": "rw",
+            "thingPreferredLabel": "Law and order"
+          }
+        ]
+      },
+      "version": "v1.3.13",
+      "blockTypes": [
+        "image",
+        "paragraph",
+        "list"
+      ],
+      "includeComments": false,
+      "atiAnalytics": {
+        "producerName": "GAHUZA",
+        "producerId": "40"
+      },
+      "readTime": 2,
+      "siteUri": "/gahuza",
+      "topics": [
+        {
+          "topicName": "Ibiyaga binini",
+          "topicId": "c06gq67y3w5t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "3a9ae586-b839-4e69-b36b-56dd8a70f64d",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
+        },
+        {
+          "topicName": "amategeko",
+          "topicId": "c06gq6n0q88t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "9da9d5da-9554-4c15-980a-51b37b331b48",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
+        },
+        {
+          "topicName": "Rwanda",
+          "topicId": "c340q4v3942t",
+          "subjectList": [
+            {
+              "subjectId": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+              "subjectType": "tag"
+            }
+          ],
+          "curationList": [
+            {
+              "curationId": "aafe0848-80a9-4325-8b5d-de9d56d4bd64",
+              "curationType": "vivo-stream",
+              "visualProminence": "NORMAL"
+            }
+          ],
+          "types": [
+            "core:Place",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza"
+        }
+      ]
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "120451200",
+          "subType": "body",
+          "href": "http://c.files.bbci.co.uk/00D7/production/_120451200_4db44d51-7b59-47f6-97db-5ce7104ca9f0.jpg",
+          "path": "/cpsprodpb/00D7/production/_120451200_4db44d51-7b59-47f6-97db-5ce7104ca9f0.jpg",
+          "height": 549,
+          "width": 976,
+          "altText": "Christopher Kayumba ni umukuru w'ishyaka RPD ritaremerwa mu Rwanda",
+          "caption": "Christopher Kayumba ni umukuru w'ishyaka RPD ritaremerwa mu Rwanda",
+          "copyrightHolder": "CHRISTOPHER KAYUMBA/FACEBOOK",
+          "positionHint": "full-width",
+          "originCode": "cpsprodpb",
+          "type": "image"
+        },
+        {
+          "text": "<bold><italic>Jean Claude Mwambutsa/BBC Gahuzamiryango i Kigali</italic></bold>",
+          "markupType": "candy_xml",
+          "type": "paragraph"
+        },
+        {
+          "text": "Urukiko  rw'ibanze  rwa  Kicukiro  mu mujyi  wa  Kigali  rwasubitse  urubanza  rwa  Christopher Kayumba ukurikiranyweho  icyaha cyo gukoresha umuntu imibonano ku gahato.",
+          "role": "introduction",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Christopher Kayumba, wari  umaze  iminsi  mu  bitaro,  avuga  ko ubuzima bwe butamwemerera  kuburana  kandi  ko atabonye igihe  cyo  gusoma  dosiye  y'ibirego.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Uyu  mugabo  wigeze  kuba  umwarimu wa kaminuza,  avuga  ko ibyo ashinjwa  bihishe  impamvu  za politiki.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Mu masaha  y'igicamunsi  ku wa kane ni  bwo  inteko  y'umucamanza  umwe  n'umwanditsi  yatangije uru rubanza  rwabaye  mu  buryo  bw'ikoranabuhanga ababuranyi  bahuzwa  n'inzira  y'amashusho. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "numbered": false,
+          "items": [
+            {
+              "text": "<itemMeta>gahuza/amakuru-58591605</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Kayumba - ukomeje kwiyicisha inzara, yabajijwe n’ubushinjacyaha",
+                    "headline": "Rwanda: Christopher Kayumba uri kwiyicisha inzara aho afungiye yabajijwe n’ubushinjacyaha",
+                    "overtyped": "Kayumba - ukomeje kwiyicisha inzara, yabajijwe n’ubushinjacyaha"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/gahuza/amakuru-58591605"
+                  },
+                  "summary": "Dr Kayumba wafunzwe kuwa kane w'icyumweru gishize, ku mugoroba wa none ku wa kane ubushinjacyaha bwamusanze aho afungiye bumubaza ku byaha akekwaho byo gufata ku ngufu abagore babiri mu 2012 na 2017.",
+                  "timestamp": 1631855065000,
+                  "language": "rw",
+                  "passport": {
+                    "category": {
+                      "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                      "categoryName": "News"
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:gahuza/amakuru-58591605",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>gahuza/amakuru-58501820</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Rwanda: Umukuru w'umugambwe RPD arapfunzwe",
+                    "headline": "Rwanda: Umukuru w'umugambwe RPD Christopher Kayumba yahagaritswe",
+                    "overtyped": "Rwanda: Umukuru w'umugambwe RPD arapfunzwe. "
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/gahuza/amakuru-58501820"
+                  },
+                  "summary": "Itangazo rya RIB (Rwanda Investigation Bureau) ku rubuga rwa Twitter rivuga ko ryapfunze Dr Christopher rimwagiriza ivyaha vyo gukoresha imibonano mpuzabitsina abantu batandukanye ku gahato.",
+                  "timestamp": 1631195700000,
+                  "language": "rw",
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:gahuza/amakuru-58501820",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            },
+            {
+              "text": "<itemMeta>gahuza/amakuru-58536358</itemMeta>",
+              "meta": [
+                {
+                  "headlines": {
+                    "shortHeadline": "Christopher Kayumba yanze gusuzumwa",
+                    "headline": "Rwanda: Christopher Kayumba uri kwiyicisha inzara aho afungiye, yanze gusuzumwa na muganga",
+                    "overtyped": "Christopher Kayumba  yanze gusuzumwa"
+                  },
+                  "locators": {
+                    "href": "https://www.bbc.com/gahuza/amakuru-58536358"
+                  },
+                  "summary": "Christopher Kayumba yafunzwe kuwa kane nyuma yo kubazwa ku byaha - ahakana - byo gufata abagore babiri ku ngufu, umwungaranira avuga ko ari kwiyicisha inzara \"asaba uburenganzira bwe\".",
+                  "timestamp": 1631543099000,
+                  "language": "rw",
+                  "passport": {
+                    "category": {
+                      "categoryId": "",
+                      "categoryName": ""
+                    },
+                    "taggings": []
+                  },
+                  "id": "urn:bbc:ares::asset:gahuza/amakuru-58536358",
+                  "type": "cps"
+                }
+              ],
+              "markupType": "candy_xml",
+              "type": "listItem"
+            }
+          ],
+          "type": "list"
+        },
+        {
+          "text": "Ubwo  yari  ahawe  ijambo, Christopher  Kayumba  yasabye  ko  urubanza rwe  rusubikwa. Yabwiye umucamanza  ko  ubuzima bwe budahagaze neza  ndetse ko yari  amaze  iminsi  mu  bitaro.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Yabwiye  umucamanza  ko  muganga  yasabye  ko  yakwitabwaho  byihariye  kubera  uburwayi  afite.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Christopher  Kayumba yasabye guhabwa ibyumweru  bibiri  byo kwivuza  no  kureba  muri  dosiye y'ibirego.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Hari  hashize  iminsi  bivugwa ko uyu  Kayumba  ari mu myigaragambyo  yo  kwiyicisha  inzara  kandi  anafite  uburwayi  bwa  diyabete. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Kuri  iyi  nzitizi, ubushinjacyaha  bwavuze  ko  impamvu  y'uburwayi  idakwiye guhabwa agaciro  kuko  Kayumba  yavuye  mu  bitaro  bitegetswe  n'abaganga  babonaga  ko  yakize.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Gusa  ku  mpamvu  yo  guhabwa igihe  cyo  gusoma  dosiye, ubushinjacyaha  nabwo  bwemera  ko  ari  uburenganzira  bw'uregwa.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Gusa  bwavuze  ko  mu  kongera  igihe  hagomba  gutekerezwa ko  imanza  nk'izi  zigomba  kuburanishwa byihutirwa  kuko ari  iz'ifunga n'ifungura  ry'agateganyo zitagomba  kurenza  iminsi  ibiri  ikirego  kigejejwe mu  rukiko.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Nyuma  y'impaka  hagati  y'impande  zombi, umucamanza yategetse  ko ababuranyi  bazongera  kwitaba  urukiko  ku itariki  ya  28 z'uku kwezi kwa cyenda. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Icyo  gihe  haburanwa  ikibazo  cy'ifunga ry'agateganyo cyangwa se irekurwa ry'uregwa akaburana ari  hanze.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Ubwo  yatabwaga muri  yombi muri uku kwezi, urwego  rw'igihugu  rw'ubugenzacyaha (RIB) rwatangaje  ko  Kayumba  akurikiranyweho icyaha cyo gukoresha undi  imibonano mpuzabitsina ku  gahato.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Gusa Kayumba we  agahakana ibyo ashinjwa avuga  ko  byahimbwe  ku mpamvu  za politiki.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Christopher  Kayumba  yari  aherutse gushinga ishyaka Rwandese Platform for Democracy (RPD) ritaremerwa  mu gihugu.",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        },
+        {
+          "text": "Uyu  mugabo  yakunze  kumvikana anenga cyane  ishyaka riri  ku  butegetsi, impamvu bamwe basanga yaba ari  nyirabayazana y'ifungwa rye. ",
+          "markupType": "plain_text",
+          "type": "paragraph"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "shortHeadline": "Rwanda: Urubanza rwa Christopher Kayumba rwasubitswe",
+        "headline": "Rwanda: Urubanza rwa Christopher Kayumba wahoze ari umwarimu wa kaminuza rwasubitswe"
+      },
+      "locators": {
+        "assetUri": "/gahuza/amakuru-58660901",
+        "cpsUrn": "urn:bbc:content:assetUri:gahuza/amakuru-58660901",
+        "curie": "http://www.bbc.co.uk/asset/dc973340-817b-40cb-a8dc-ff8847b2997b",
+        "assetId": "58660901"
+      },
+      "summary": "Uyu ukuriye ishyaka RPD ritaremerwa mu gihugu, akurikiranyweho gukoresha umuntu imibonano ku gahato.",
+      "timestamp": 1632455177000,
+      "language": "rw",
+      "passport": {
+        "campaigns": [
+          {
+            "campaignId": "5a988e4739461b000e9dabfc",
+            "campaignName": "WS - Update me"
+          }
+        ],
+        "language": "rw",
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Gahuza",
+        "locator": "urn:bbc:cps:curie:asset:dc973340-817b-40cb-a8dc-ff8847b2997b",
+        "availability": "AVAILABLE",
+        "taggings": [
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+            "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+            "value": "http://www.bbc.co.uk/things/c8be50bc-7d45-43f5-8523-2207a650f600#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+            "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+            "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+          },
+          {
+            "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+            "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+          }
+        ],
+        "schemaVersion": "1.3.0",
+        "publishedState": "PUBLISHED",
+        "predicates": {
+          "about": [
+            {
+              "value": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+              "thingLabel": "Ibiyaga binini",
+              "thingUri": "http://www.bbc.co.uk/things/30ae1f57-adee-458c-86ca-a15489f23e43#id",
+              "thingId": "30ae1f57-adee-458c-86ca-a15489f23e43",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://www.wikidata.org/entity/Q87982"
+              ],
+              "thingEnglishLabel": "African Great Lakes",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+              "thingLabel": "Rwanda",
+              "thingUri": "http://www.bbc.co.uk/things/8125f2a9-3259-4f35-ab75-d9a6577fdc88#id",
+              "thingId": "8125f2a9-3259-4f35-ab75-d9a6577fdc88",
+              "thingType": [
+                "core:Place",
+                "tagging:TagConcept",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://sws.geonames.org/49518/"
+              ],
+              "thingEnglishLabel": "Rwanda",
+              "type": "about"
+            },
+            {
+              "value": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+              "thingLabel": "amategeko",
+              "thingUri": "http://www.bbc.co.uk/things/d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa#id",
+              "thingId": "d94f45db-bb47-4e7b-b1a2-5bc3e6afd0aa",
+              "thingType": [
+                "tagging:TagConcept",
+                "core:Theme",
+                "core:Thing"
+              ],
+              "thingSameAs": [
+                "http://dbpedia.org/resource/Law"
+              ],
+              "thingEnglishLabel": "Law and order",
+              "type": "about"
+            }
+          ],
+          "formats": [
+            {
+              "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingLabel": "Report",
+              "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+              "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+              "thingType": [
+                "tagging:TagConcept",
+                "tagging:Format"
+              ],
+              "thingSameAs": [],
+              "thingEnglishLabel": "Report",
+              "thingPreferredLabel": "Report",
+              "thingLabelLanguage": "rw",
+              "type": "formats"
+            }
+          ]
+        }
+      },
+      "indexImage": {
+        "id": "120661521",
+        "subType": "index",
+        "href": "http://c.files.bbci.co.uk/30E4/production/_120661521_4db44d51-7b59-47f6-97db-5ce7104ca9f0.jpg",
+        "path": "/cpsprodpb/30E4/production/_120661521_4db44d51-7b59-47f6-97db-5ce7104ca9f0.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Christopher Kayumba ni umukuru w'ishyaka RPD ritaremerwa mu Rwanda",
+        "caption": "Christopher Kayumba ni umukuru w'ishyaka RPD ritaremerwa mu Rwanda",
+        "copyrightHolder": "CHRISTOPHER KAYUMBA/FACEBOOK",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      "id": "urn:bbc:ares::asset:gahuza/amakuru-58660901",
+      "type": "cps"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "Amakuru",
+        "uri": "/gahuza/amakuru",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Gahuza",
+        "uri": "/gahuza",
+        "type": "simple"
+      },
+      "groups": []
+    }
+  }

@@ -1,4 +1,4 @@
-import envConfig from '../../support/config/envs';
+import config from '../../support/config/services';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -11,52 +11,36 @@ export const testsThatFollowSmokeTestConfigForAllAMPPages = ({
   service,
   pageType,
 }) => {
-  describe(`Running testsForAllAMPPages for ${service} ${pageType}`, () => {
-    if (pageType !== 'errorPage404') {
-      it('should have an AMP attribute on the page', () => {
-        cy.get('html').should('have.attr', 'amp');
-      });
+  describe(`testsThatFollowSmokeTestConfigForAllAMPPages to run for ${service} ${pageType}`, () => {
+    describe('Header Tests', () => {
+      const serviceName = config[service].name;
+      // limit number of tests to 2 services for navigation toggling
+      const testMobileNav =
+        serviceName === 'ukchina' || serviceName === 'persian';
 
-      it('should load the core AMP scripts in the head', () => {
-        const ampScripts = [
-          'https://cdn.ampproject.org/v0.js',
-          'https://cdn.ampproject.org/v0/amp-geo-0.1.js',
-          'https://cdn.ampproject.org/v0/amp-consent-0.1.js',
-          'https://cdn.ampproject.org/v0/amp-analytics-0.1.js',
-        ];
+      if (testMobileNav) {
+        it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
+          cy.viewport(320, 480);
+          cy.get('nav')
+            .find('[data-e2e="scrollable-nav"]')
+            .should('be.visible');
 
-        ampScripts.forEach(script => {
-          cy.get(`head > script[src="${script}"]`);
-        });
-      });
+          cy.get('nav')
+            .find('[data-e2e="dropdown-nav"] ul')
+            .should('not.be.visible');
 
-      it('should include AMP elements with JSON configuration in the body', () => {
-        cy.get('body amp-geo > script[type="application/json"]');
-        cy.get('body amp-consent > script[type="application/json"]');
-      });
+          cy.get('nav button').click();
 
-      if (Cypress.env('SMOKE')) {
-        describe('ATI', () => {
-          it('should have an amp-analytics tag with the ati url', () => {
-            cy.hasAmpAnalyticsAtiUrl(envConfig.atiUrl);
-          });
+          cy.get('nav')
+            .find('[data-e2e="scrollable-nav"]')
+            .should('not.be.visible');
+
+          cy.get('nav')
+            .find('[data-e2e="dropdown-nav"] ul')
+            .should('be.visible');
         });
       }
-    }
-    if (['storyPage', 'photoGalleryPage'].includes(pageType)) {
-      describe('AMP Status', () => {
-        it('should return a 200 response', () => {
-          cy.testResponseCodeAndType(
-            `${Cypress.env('currentPath')}.amp`,
-            200,
-            'text/html',
-          );
-        });
-      });
-      it('should render at least one amp image', () => {
-        cy.get('figure').first().find('amp-img').should('be.visible');
-      });
-    }
+    });
   });
 };
 

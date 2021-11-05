@@ -5,7 +5,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
+
+const blockLevelEventTrackingData = {
+  componentName: 'most-read',
+};
 
 const MostReadContainer = ({
   mostReadEndpointOverride,
@@ -45,6 +49,7 @@ const MostReadContainer = ({
       wrapper={wrapper}
       columnLayout={columnLayout}
       size={size}
+      eventTrackingData={blockLevelEventTrackingData}
     />
   );
 };

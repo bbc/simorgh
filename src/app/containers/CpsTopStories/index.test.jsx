@@ -3,9 +3,11 @@ import { render, screen } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const renderTopStories = ({
@@ -17,12 +19,20 @@ const renderTopStories = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={content} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={content} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -36,12 +46,20 @@ const renderTopStoriesNull = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={[]} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={[]} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -56,12 +74,20 @@ const renderTopStoriesNoTitle = ({
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
         isAmp={false}
-        pageType="STY"
+        pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
         statusCode={200}
       >
-        <TopStories content={content} />
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: {
+              enabled: true,
+            },
+          }}
+        >
+          <TopStories content={content} />
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>,
   );
@@ -74,7 +100,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderTopStories();
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       topStories.length,
     );
 
@@ -90,7 +116,7 @@ describe('CpsRelatedContent', () => {
 
     const { asFragment } = renderTopStories({ content: topStoriesOneItem });
 
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       0,
     );
 
@@ -120,7 +146,7 @@ describe('CpsRelatedContent', () => {
 
   it('should not render Top Stories components if no data is passed', () => {
     renderTopStoriesNull();
-    expect(document.querySelectorAll(`li[class^='StoryPromoLi']`).length).toBe(
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
       0,
     );
   });

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ErrorPage from '.';
+import ErrorPage from './ErrorPage';
 
 describe('ErrorPage', () => {
   shouldMatchSnapshot(

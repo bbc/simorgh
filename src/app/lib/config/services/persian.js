@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { persian as brandSVG } from '@bbc/psammead-assets/svgs';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import {
-  F_NASSIM_PERSIAN_REGULAR,
-  F_NASSIM_PERSIAN_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import 'moment/locale/fa';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -12,10 +17,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'آگهی',
-    },
     lang: 'fa',
     product: 'BBC News',
     articleAuthor: 'https://www.facebook.com/bbcnews',
@@ -29,16 +30,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
-    externalLinkText: '، لینک خارجی',
+    externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
     videoCaptionOffscreenText: 'توضیح ویدئو، ',
     audioCaptionOffscreenText: 'توضیح صدا، ',
     defaultCaptionOffscreenText: 'توضیح، ',
     imageCopyrightOffscreenText: 'منبع تصویر، ',
     locale: 'fa',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'fa',
     datetimeLocale: 'fa',
     service: 'persian',
     serviceName: 'Persian',
+    languageName: 'Persian',
     altCalendar: jalaali,
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcpersian',
@@ -54,19 +58,47 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
+    },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پادکست',
+      brandTitle: 'به عبارت دیگر',
+      brandDescription:
+        'گفتگو با چهره‌های سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
+        alt: 'پادکست',
+      },
+      linkLabel: {
+        text: 'برنامه ها',
+        href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
+      },
+      skipLink: {
+        text: 'از %title% رد شوید و به خواندن ادامه دهید',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
     },
     translations: {
+      ads: {
+        advertisementLabel: 'آگهی',
+      },
       seeAll: 'بیشتر',
       home: 'صفحه اول',
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      relatedTopics: 'موضوعات مرتبط',
       navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',
         audioPlayer: 'پخش صدا',
         videoPlayer: 'پخش ویدیو',
       },
+      gist: 'خلاصه',
       error: {
         404: {
           statusCode: '۴۰۴',
@@ -123,40 +155,85 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'آیا با دریافت کوکی‌های ما موافقید؟',
-          description: {
-            uk: {
-              first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
-              linkText: 'کوکی',
-              last:
-                ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'پذیرش جمع آوری داده ها، و ادامه دادن',
+            reject: 'رد کردن جمع آوری داده ها و ادامه دادن',
+            initial: {
+              title:
+                'به ما اطلاع دهید که موافق جمع آوری داده ها در صفحات موبایلی پرشتاب (AMP) هستید',
+              description: {
+                first:
+                  'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
+                linkText: 'کوکی ها',
+                last: ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'مدیریت تنظیمات',
             },
-            international: {
-              first:
-                'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
-              linkText: 'کوکی ها',
-              last:
-                ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'مدیریت تنظیمات مربوط به رضایت در صفحات AMP',
+              description: {
+                para1:
+                  'این تنظیمات فقط برای صفحات AMP اعمال می شود. هنگامی که از صفحات غیر AMP در بی بی سی بازدید می کنید ممکن است از شما بخواهند که این تنظیمات را دوباره انجام دهید.',
+                para2:
+                  'صفحه موبایل سبک که از آن بازدید کرده اید با استفاده از فناوری Google AMP ساخته شده است.',
+                heading2: 'جمع آوری اطلاعات کاملاً ضروری',
+                para3:
+                  'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
+                para4: {
+                  text: 'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
+                heading3: 'جمع آوری اطلاعات اختیاری',
+                para6:
+                  'وقتی موافقت خود را برای جمع آوری داده ها در صفحات AMP اعلام می کنید، به ما اجازه می دهید تبلیغات شخصی شده مربوط به شما را هنگامی که خارج از بریتانیا هستنید، نمایش دهیم.',
+                para7: {
+                  text: 'درباره نحوه شخصی سازی تبلیغات در بی بی سی و شرکای تبلیغاتی ما بیشتر بخوانید.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'شما می توانید با کلیک "رد کردن جمع آوری داده ها و ادامه دادن" در زیر، تبلیغات شخصی را دریافت نکنید. لطفاً توجه داشته باشید که همچنان تبلیغات را مشاهده خواهید کرد، اما برای شما شخصی نخواهد شد.',
+                para9:
+                  'می توانید این تنظیمات را با کلیک کردن روی  "گزینه های مربوط به تبلیغات / اطلاعاتم را نفروشید" در پایین صفحه در هر زمان تغییر دهید."',
+              },
             },
           },
-          accept: 'بله، موافقم',
-          reject: 'خیر، بازگشت به صفحه تنظیمات',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'آیا با دریافت کوکی‌های ما موافقید؟',
+            description: {
+              uk: {
+                first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
+                linkText: 'کوکی',
+                last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
+                linkText: 'کوکی',
+                last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'بله، موافقم',
+            reject: 'خیر، بازگشت به صفحه تنظیمات',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
-        noJs:
-          'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
+        noJs: 'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         contentNotYetAvailable: 'این برنامه هم اکنون برای پخش آماده نیست.',
         audio: 'صدا',
         photogallery: 'عکس',
         video: 'ویدیو',
+        recentEpisodes: 'برنامه قبلی',
         bbc_persian_radio: {
           title: 'رادیو فارسی بی‌بی‌سی',
           subtitle:
@@ -174,11 +251,14 @@ export const service = {
         },
         listen: 'بشنوید',
         watch: 'ببینید',
+        listenLive: 'بشنوید - زنده',
+        listenNext: 'به بعدی گوش کنید',
         liveLabel: 'زنده',
         nextLabel: 'بعدی',
         previousRadioShow: 'برنامه رادیویی قبلی',
         nextRadioShow: 'برنامه رادیویی بعدی',
         duration: 'مدت',
+        podcastExternalLinks: 'این پادکست در این زمان قابل دسترس است',
       },
       socialEmbed: {
         caption: {
@@ -196,6 +276,11 @@ export const service = {
           endTextVisuallyHidden: 'پایان پست %provider_name%',
         },
       },
+      include: {
+        errorMessage:
+          'متأسفانه امکان نمایش این بخش از صفحه در موبایل وجود ندارد',
+        linkText: 'نسخه کامل و تمامی محتوا را ببینید',
+      },
       topStoriesTitle: 'مهمترین خبرها',
       featuresAnalysisTitle: 'گزارش و تحلیل',
     },
@@ -207,14 +292,17 @@ export const service = {
       hasMostRead: true,
       onIdxPage: true,
     },
+    mostWatched: {
+      header: 'پربیننده ترین',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      frontPagePosition: '',
       onIdxPage: true,
       idxPagePosition: 'Features',
       header: 'برنامه‌های رادیو',
-      durationLabel: 'مدت %duration%',
+      durationLabel: '%duration% المدة الزمنية',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -246,12 +334,12 @@ export const service = {
           text: 'کوکی ها',
         },
         {
-          href: 'https://www.bbc.com/persian/institutional-37542244',
+          href: 'https://www.bbc.co.uk/send/u50853555',
           text: 'تماس با بی بی سی',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -259,7 +347,7 @@ export const service = {
       copyrightText: 'بی بی سی. بی بی سی مسئول محتوای سایت های دیگر نیست.',
     },
     timezone: 'GMT',
-    fonts: [F_NASSIM_PERSIAN_REGULAR, F_NASSIM_PERSIAN_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     navigation: [
       {
         title: 'صفحه اول',
@@ -287,7 +375,7 @@ export const service = {
       },
       {
         title: 'ايران',
-        url: '/persian/iran',
+        url: '/persian/topics/ckdxnwvwwjnt',
       },
       {
         title: 'افغانستان',
@@ -295,27 +383,27 @@ export const service = {
       },
       {
         title: 'جهان',
-        url: '/persian/world',
+        url: '/persian/topics/c1d8ye58xl8t',
       },
       {
         title: 'هنر',
-        url: '/persian/arts',
+        url: '/persian/topics/c9wpm0epm45t',
       },
       {
         title: 'ورزش',
-        url: '/persian/sport',
+        url: '/persian/topics/cnq6879k7yjt',
       },
       {
         title: 'اقتصاد',
-        url: '/persian/business',
+        url: '/persian/topics/cl8l9mvlllqt',
       },
       {
         title: 'دانش',
-        url: '/persian/science',
+        url: '/persian/topics/ckdxnwr4r1yt',
       },
       {
         title: 'ناظران می‌گویند',
-        url: '/persian/blogs/viewpoints',
+        url: '/persian/blogs-54099951',
       },
     ],
   },

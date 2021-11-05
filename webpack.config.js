@@ -1,5 +1,5 @@
 /* eslint-disable import/no-dynamic-require, global-require */
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 const fs = require('fs');
 const path = require('path');
 const MomentTimezoneInclude = require('@bbc/moment-timezone-include');
@@ -11,7 +11,6 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 // `shell` parameter populated via CLI, e.g. --env.platform=web
 module.exports = (shell = {}) => {
   const IS_PROD = process.env.NODE_ENV === 'production';
-  const IS_CI = process.env.CI;
   const START_DEV_SERVER = !IS_PROD;
   const IS_PROD_PROFILE = process.env.IS_PROD_PROFILE === 'true';
   const CONFIG_FILE = shell.config;
@@ -34,7 +33,7 @@ module.exports = (shell = {}) => {
 
   const baseConfig = {
     mode: IS_PROD ? 'production' : 'development',
-    devtool: IS_PROD ? 'source-map' : 'cheap-eval-source-map',
+    devtool: IS_PROD ? 'source-map' : 'eval-source-map',
     resolve: {
       extensions: ['.js', '.jsx'], // resolves `import '../Foo'` to `../Foo/index.jsx`
       alias: {
@@ -48,10 +47,13 @@ module.exports = (shell = {}) => {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
         }),
+        'safe-buffer': path.resolve(__dirname, 'node_modules/safe-buffer'),
       },
     },
     devServer: {
-      stats,
+      devMiddleware: {
+        stats,
+      },
     },
     stats,
     node: {
@@ -119,7 +121,6 @@ module.exports = (shell = {}) => {
     const specialisedConfig = require(`./webpack.config.${app}.js`)({
       resolvePath,
       IS_PROD,
-      IS_CI,
       START_DEV_SERVER,
       IS_PROD_PROFILE,
     });

@@ -12,10 +12,10 @@ import {
   sanitise,
   getAtiUrl,
   getEventInfo,
-  getProducer,
+  getCampaignType,
+  getATIMarketingString,
+  getRSSMarketingString,
 } from '#lib/analyticsUtils';
-
-const spaceRegex = / /g;
 
 /*
  * For AMP pages, certain browser and device values are determined
@@ -44,19 +44,28 @@ export const buildATIPageTrackPath = ({
 }) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
+  const campaignType = getCampaignType();
+
+  // on AMP, variable substitutions are used in the value and they cannot be
+  // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
+  const disableEncodingDueToAmpSubstitution = platform === 'amp';
 
   // We use amp variable substitutes to get the href and referrer and these cannot be manipulated
   // For canonical, we have a requirement to encode the x5 and x6 value twice. Source issue: https://github.com/bbc/simorgh/pull/6593
-  const x5Value = platform === 'amp' ? href : href && encodeURIComponent(href);
-  const x6Value =
-    platform === 'amp' ? referrer : referrer && encodeURIComponent(referrer);
+  const x5Value = disableEncodingDueToAmpSubstitution
+    ? href
+    : href && encodeURIComponent(encodeURIComponent(href));
+  const x6Value = disableEncodingDueToAmpSubstitution
+    ? referrer
+    : referrer && encodeURIComponent(encodeURIComponent(referrer));
 
   const pageViewBeaconValues = [
     {
       key: 's',
       description: 'destination',
-      value: getDestination(statsDestination),
+      value: getDestination(platform, statsDestination),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'idclient',
@@ -81,24 +90,28 @@ export const buildATIPageTrackPath = ({
       description: 'screen resolution & colour depth',
       value: getScreenInfo(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 're',
       description: 'browser/viewport resolution',
       value: getBrowserViewPort(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'hl',
       description: 'time',
       value: getCurrentTime(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'lng',
       description: 'device language',
       value: getDeviceLanguage(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     { key: 'x1', description: 'content id', value: contentId, wrap: true },
     {
@@ -119,12 +132,14 @@ export const buildATIPageTrackPath = ({
       description: 'url',
       value: x5Value,
       wrap: true,
+      disableEncoding: true,
     },
     {
       key: 'x6',
       description: 'referrer url',
       value: x6Value,
       wrap: true,
+      disableEncoding: true,
     },
     { key: 'x7', description: 'content type', value: contentType, wrap: true },
     {
@@ -167,7 +182,7 @@ export const buildATIPageTrackPath = ({
       key: 'x16',
       description: 'campaigns',
       value: (Array.isArray(campaigns) ? campaigns : [])
-        .map(campaign => campaign.campaignName.replace(spaceRegex, '%20'))
+        .map(({ campaignName }) => campaignName)
         .join('~'),
       wrap: true,
     },
@@ -184,11 +199,21 @@ export const buildATIPageTrackPath = ({
       wrap: true,
     },
     {
+      key: 'xto',
+      description: 'marketing campaign',
+      value: getATIMarketingString(href, campaignType),
+      wrap: false,
+    },
+    {
       key: 'ref',
       description: 'referrer url',
       value: getReferrer(platform, origin, previousPath),
       wrap: false,
+      // disable encoding for this parameter as ati does not appear to support
+      // decoding of the ref parameter
+      disableEncoding: true,
     },
+    ...getRSSMarketingString(href, campaignType),
   ];
 
   return getAtiUrl(pageViewBeaconValues);
@@ -196,25 +221,39 @@ export const buildATIPageTrackPath = ({
 
 export const buildATIEventTrackUrl = ({
   pageIdentifier,
-  service,
+  producerId,
   platform,
   statsDestination,
   componentName,
-  componentInfo,
+  campaignID,
+  format,
   type,
+  advertiserID,
+  url,
 }) => {
+  // on AMP, variable substitutions are used in the value and they cannot be
+  // encoded: https://github.com/ampproject/amphtml/blob/master/spec/amp-var-substitutions.md
+  const disableEncodingDueToAmpSubstitution = platform === 'amp';
+
   const eventPublisher = type === 'view' ? 'ati' : 'atc';
   const eventTrackingBeaconValues = [
     {
+      key: 'idclient',
+      description: 'at user id',
+      value: getAtUserId(),
+      wrap: false,
+    },
+    {
       key: 's',
       description: 'destination',
-      value: getDestination(statsDestination),
+      value: getDestination(platform, statsDestination),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 's2',
       description: 'producer',
-      value: getProducer(service),
+      value: producerId,
       wrap: false,
     },
     {
@@ -228,34 +267,42 @@ export const buildATIEventTrackUrl = ({
       description: 'screen resolution & colour depth',
       value: getScreenInfo(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 're',
       description: 'browser/viewport resolution',
       value: getBrowserViewPort(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'hl',
       description: 'time',
       value: getCurrentTime(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: 'lng',
       description: 'device language',
       value: getDeviceLanguage(platform),
       wrap: false,
+      disableEncoding: disableEncodingDueToAmpSubstitution,
     },
     {
       key: eventPublisher,
       description: 'event publisher',
-      value: getEventInfo(pageIdentifier, {
-        service,
+      value: getEventInfo({
+        campaignID,
         componentName,
-        componentInfo,
-        type: type || '',
+        format,
+        pageIdentifier,
+        advertiserID,
+        url,
       }),
+      wrap: false,
+      disableEncoding: true,
     },
   ];
 

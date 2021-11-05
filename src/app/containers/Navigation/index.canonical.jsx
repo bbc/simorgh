@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import Navigation from '@bbc/psammead-navigation';
 import { node, string, shape } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
@@ -9,7 +9,7 @@ import {
   CanonicalMenuButton,
 } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-import useMediaQuery from '#lib/utilities/useMediaQuery';
+import useMediaQuery from '#hooks/useMediaQuery';
 
 const ScrollableWrapper = styled.div`
   position: relative;
@@ -22,6 +22,10 @@ const CanonicalNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
+  brandBackgroundColour,
+  brandForegroundColour,
+  brandHighlightColour,
+  brandBorderColour,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -32,7 +36,16 @@ const CanonicalNavigationContainer = ({
   });
 
   return (
-    <Navigation script={script} service={service} dir={dir} isOpen={isOpen}>
+    <Navigation
+      script={script}
+      service={service}
+      dir={dir}
+      isOpen={isOpen}
+      brandBackgroundColour={brandBackgroundColour}
+      brandForegroundColour={brandForegroundColour}
+      brandHighlightColour={brandHighlightColour}
+      brandBorderColour={brandBorderColour}
+    >
       <ScrollableWrapper>
         <CanonicalMenuButton
           announcedText={menuAnnouncedText}
@@ -42,7 +55,13 @@ const CanonicalNavigationContainer = ({
           script={script}
         />
         {!isOpen && (
-          <ScrollableNavigation dir={dir}>
+          <ScrollableNavigation
+            dir={dir}
+            brandBackgroundColour={brandBackgroundColour}
+            brandForegroundColour={brandForegroundColour}
+            brandHighlightColour={brandHighlightColour}
+            brandBorderColour={brandBorderColour}
+          >
             {scrollableListItems}
           </ScrollableNavigation>
         )}
@@ -59,6 +78,10 @@ CanonicalNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
+  brandBackgroundColour: string.isRequired,
+  brandForegroundColour: string.isRequired,
+  brandHighlightColour: string.isRequired,
+  brandBorderColour: string.isRequired,
 };
 
 export default CanonicalNavigationContainer;

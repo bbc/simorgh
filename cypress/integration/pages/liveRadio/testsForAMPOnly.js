@@ -1,6 +1,7 @@
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import envConfig from '../../../support/config/envs';
-import getEmbedUrl from './helper';
+import getEmbedUrl from '../../../support/helpers/getEmbedUrl';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
@@ -20,8 +21,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       let embedUrl;
 
       beforeEach(() => {
-        cy.request(`${Cypress.env('currentPath')}.json`).then(({ body }) => {
-          embedUrl = getEmbedUrl(body, lang);
+        cy.request(getDataUrl(Cypress.env('currentPath'))).then(({ body }) => {
+          embedUrl = getEmbedUrl(body, lang, true);
         });
       });
 
@@ -36,16 +37,13 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
       });
 
       it('embed URL should be reachable', () => {
-        cy.testResponseCodeAndType(embedUrl, 200, 'text/html');
-      });
-    });
-
-    describe('Chartbeat', () => {
-      if (envConfig.chartbeatEnabled) {
-        it('should have chartbeat config UID', () => {
-          cy.hasAmpChartbeatConfigUid();
+        cy.testResponseCodeAndTypeRetry({
+          path: embedUrl,
+          responseCode: 200,
+          type: 'text/html',
+          allowFallback: true,
         });
-      }
+      });
     });
   });
 

@@ -1,78 +1,110 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import onClient from '#lib/utilities/onClient';
-import { getQueryString, getUrlPath } from '#lib/utilities/urlParser';
-import getBaseUrl from './utils/getBaseUrl';
-import isLive from '#lib/utilities/isLive';
 import {
+  DATA_FETCH_RESPONSE_TIME,
   DATA_REQUEST_RECEIVED,
   DATA_NOT_FOUND,
   DATA_FETCH_ERROR,
 } from '#lib/logger.const';
+import {
+  OK,
+  NOT_FOUND,
+  UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
+} from '#lib/statusCodes.const';
+import getErrorStatusCode from './utils/getErrorStatusCode';
+import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import onClient from '#lib/utilities/onClient';
+import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);
-const STATUS_OK = 200;
-const STATUS_BAD_GATEWAY = 502;
-const STATUS_INTERNAL_SERVER_ERROR = 500;
-const STATUS_NOT_FOUND = 404;
-const upstreamStatusCodesToPropagate = [STATUS_OK, STATUS_NOT_FOUND];
 
-const ampRegex = /.amp$/;
+/**
+ * An isomorphic fetch wrapper for pages, with error and log handling.
+ * @param {string} path The URL of a resource to fetch.
+ * @param {number} timeout Optional parameter to provide a custom timeout
+ * for request for 'secondary data'. The fetch timeout defaults to the 'primary
+ * data' timeout if this is not provided.
+ * Timeout values here: https://github.com/bbc/simorgh/blob/latest/src/app/lib/utilities/getFetchTimeouts/index.js
+ * @param {...string} loggerArgs Additional arguments for richer logging.
+ */
+const fetchPageData = async ({
+  path,
+  timeout,
+  shouldLogFetchTime = !onClient(),
+  ...loggerArgs
+}) => {
+  const url = path.startsWith('http') ? path : getUrl(path);
+  const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
+  const fetchOptions = {
+    headers: {
+      'User-Agent': 'Simorgh/ws-web-rendering',
+    },
+    timeout: effectiveTimeout,
+  };
 
-const baseUrl = onClient()
-  ? getBaseUrl(window.location.origin)
-  : process.env.SIMORGH_BASE_URL;
+  logger.info(DATA_REQUEST_RECEIVED, {
+    data: url,
+    path,
+    ...loggerArgs,
+  });
 
-export const getUrl = pathname => {
-  if (!pathname) return '';
+  const canDetermineFetchTime = process && typeof process.hrtime === 'function';
 
-  const params = isLive() ? '' : getQueryString(pathname);
-  const basePath = getUrlPath(pathname);
+  try {
+    const startHrTime = canDetermineFetchTime ? process.hrtime() : [0, 0];
+    const response = await fetch(url, fetchOptions);
+    const { status } = response;
 
-  return `${baseUrl}${basePath.replace(ampRegex, '')}.json${params}`; // Remove .amp at the end of pathnames for AMP pages.
-};
-
-const handleResponse = url => async response => {
-  const { status } = response;
-
-  if (upstreamStatusCodesToPropagate.includes(status)) {
-    if (status === STATUS_NOT_FOUND) {
-      logger.error(DATA_NOT_FOUND, {
-        url,
+    if (shouldLogFetchTime && canDetermineFetchTime) {
+      const NS_PER_SEC = 1e9;
+      const elapsedHrTime = process.hrtime(startHrTime);
+      logger.info(DATA_FETCH_RESPONSE_TIME, {
+        path,
         status,
+        nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+        ...loggerArgs,
       });
     }
 
-    return {
-      status,
-      ...(status === STATUS_OK && {
-        json: await response.json(),
-      }),
-    };
+    if (status === OK) {
+      const json = await response.json();
+
+      return {
+        status,
+        json,
+      };
+    }
+
+    const error = new Error();
+
+    if (status === NOT_FOUND) {
+      error.message = DATA_NOT_FOUND;
+      error.status = NOT_FOUND;
+    } else {
+      error.message = `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`;
+    }
+
+    throw error;
+  } catch (aresError) {
+    const { message, status } = aresError;
+    const simorghError = new Error(message);
+
+    if (UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH.includes(status)) {
+      simorghError.status = status;
+    } else {
+      simorghError.status = getErrorStatusCode();
+    }
+
+    logger.error(DATA_FETCH_ERROR, {
+      data: url,
+      status: simorghError.status,
+      error: message,
+      path,
+      ...loggerArgs,
+    });
+
+    throw simorghError;
   }
-
-  throw new Error(
-    `Unexpected upstream response (HTTP status code ${status}) when requesting ${url}`,
-  );
 };
 
-const handleError = e => {
-  const error = e.toString();
-
-  logger.error(DATA_FETCH_ERROR, { error });
-
-  return {
-    error,
-    status: onClient() ? STATUS_BAD_GATEWAY : STATUS_INTERNAL_SERVER_ERROR,
-  };
-};
-
-const fetchData = pathname => {
-  const url = getUrl(pathname);
-
-  logger.info(DATA_REQUEST_RECEIVED, { url });
-
-  return fetch(url).then(handleResponse(url)).catch(handleError);
-};
-
-export default fetchData;
+export default fetchPageData;

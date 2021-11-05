@@ -1,0 +1,243 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+        "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+        "id": "63738052",
+        "path": "/cpsdevpb/61FB/test/_63738052__111923538_gettyimages-645263470.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "В 1925 году в крохотном городке Ном на краю Аляски разгорелась эпидемия дифтерии. Чтобы доставить жителям спасительную сыворотку, 20 командам ездовых собак пришлось преодолеть более 1000 километров по снегу и льду.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Говорят, собака - наш лучший друг. Но иногда она - и наш спаситель.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Из всех собак, принявших участие в эстафете по доставке сыворотки жителям Нома, особо отличились две - сибирские хаски по имени Балто и Того.",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/bbcukrainian/status/1284454744178790400?s=20",
+        "id": "1284454744178790400",
+        "source": "twitter",
+        "type": "social_embed"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Сегодня собаки этой породы соревнуются в увлекательных гонках на санях, превосходя в физической выносливости многих выдающихся атлетов-людей.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
+        "caption": "Игривость, близкий контакт с человеком и отсутствие агрессии - черты, приобретенные хаски в результате вековой селекции",
+        "copyrightHolder": "Getty Images",
+        "height": 549,
+        "href": "http://b.files.bbci.co.uk/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+        "id": "63738057",
+        "path": "/cpsdevpb/1254B/test/_63738057__111923677_gettyimages-645262664.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Как им это удается?",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</caption><altText>Собаки, обувь и пальто: что нужно дезинфицировать во времена коронавируса?</altText><url href=\"https://www.bbc.com/ukrainian/features-russian-52171582\" platform=\"highweb\"/></link>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "text": "<link><caption>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</caption><altText>Собаки могут &quot;предвидеть&quot; приступ эпилепсии у человека</altText><url href=\"https://www.bbc.com/ukrainian/news-russian-47746156\" platform=\"highweb\"/></link>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+        "type": "paragraph"
+      },
+      {
+        "href": "/include/vjamericas/176-eclipse-lookup/mundo/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-werty/venta-app_eclipse-mundo_bjd2w.png",
+        "platform": "highweb",
+        "required": false,
+        "title": "Visual journalism include",
+        "type": "include"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+        "type": "paragraph"
+      },
+      {
+        "advertising": true,
+        "caption": "They may be tiny, but us humans could learn a thing or two from ants.",
+        "embedding": true,
+        "format": "video",
+        "id": "p01k6msm",
+        "imageCopyright": "BBC",
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01k6mtv.jpg",
+        "subType": "clip",
+        "synopses": {
+          "short": "They may be tiny, but us humans could learn a thing or two from ants."
+        },
+        "title": "Five things ants can teach us about management",
+        "type": "media",
+        "versions": [
+          {
+            "availableFrom": 1540218932000,
+            "availableTerritories": {
+              "nonUk": true,
+              "uk": true
+            },
+            "duration": 191,
+            "durationISO8601": "PT3M11S",
+            "types": [
+              "Original"
+            ],
+            "versionId": "p01k6msp",
+            "warnings": {
+              "long": "Contains strong language and adult humour.",
+              "short": "Contains strong language and adult humour."
+            }
+          }
+        ]
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Хаски привез из Сибири торговец мехом Уильям Гусак в начале XX века, когда на северо-западе Канады в Юконе бушевала &quot;золотая лихорадка&quot;. Гусака поразила порода этих ездовых собак, которыми пользовались чукчи.",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "ukrainian.ukraine_in_russian.story.23333960.page",
+      "cps_asset_id": "23333960",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {
+      "producerId": "94",
+      "producerName": "UKRAINIAN"
+    },
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "social_embed",
+      "list",
+      "include",
+      "media"
+    ],
+    "createdBy": "ukrainian-v6",
+    "firstPublished": 1595581985000,
+    "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
+    "includeComments": false,
+    "language": "ru",
+    "lastPublished": 1595581985000,
+    "lastUpdated": 1595590887785,
+    "locators": {
+      "assetId": "23333960",
+      "assetUri": "/ukrainian/news-russian-23333960",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
+      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "tags": {},
+    "timestamp": 1595581985000,
+    "type": "STY",
+    "version": "v1.3.2"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Test for Russian lang Ukrainian stories",
+      "shortHeadline": "Test for Russian lang Ukrainian stories"
+    },
+    "id": "urn:bbc:ares::asset:ukrainian/news-russian-23333960",
+    "indexImage": {
+      "altText": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+      "caption": "Бег в упряжке - это прежде всего игра, ведь собака не получает немедленного вознаграждения",
+      "copyrightHolder": "Getty Images",
+      "height": 549,
+      "href": "http://b.files.bbci.co.uk/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+      "id": "63738056",
+      "path": "/cpsdevpb/FE3B/test/_63738056__111923538_gettyimages-645263470.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "language": "ru",
+    "locators": {
+      "assetId": "23333960",
+      "assetUri": "/ukrainian/news-russian-23333960",
+      "cpsUrn": "urn:bbc:content:assetUri:ukrainian/news-russian-23333960",
+      "curie": "http://www.bbc.co.uk/asset/d19f66fe-8b1b-4413-b360-a2f1cc53e160"
+    },
+    "summary": "Test for Russian lang Ukrainian stories",
+    "timestamp": 1595581985000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "name": "Собаки могут \"предвидеть\" приступ эпилепсии у человека",
+            "type": "link",
+            "uri": "https://www.bbc.com/ukrainian/news-russian-47746156"
+          }
+        ],
+        "type": "related-urls"
+      }
+    ],
+    "section": {
+      "name": "РУС",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/ukrainian/ukraine_in_russian"
+    },
+    "site": {
+      "name": "BBC Україна",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/ukrainian"
+    }
+  }
+}

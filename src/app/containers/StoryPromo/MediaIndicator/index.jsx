@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment-timezone';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
@@ -9,6 +9,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
+import { isPgl, isMap } from '../utilities';
 
 const getAssetContentTypes = item => {
   const type = pathOr('', ['contentType'], item);
@@ -26,15 +27,16 @@ const getAssetContentTypes = item => {
 };
 
 const getCpsMediaTypes = item => {
-  const isPGL = path(['cpsType'], item) === 'PGL';
-  const isCpsMedia = path(['cpsType'], item) === 'MAP';
-  const hasMediaInfo = path(['media'], item);
+  const isPhotoGallery = isPgl(item);
+  const isMedia = isMap(item);
 
   // Only build a media indicator if this is a photo gallery or media item
-  if (!isPGL && (!isCpsMedia || !hasMediaInfo)) {
+  if (!isPhotoGallery && !isMedia) {
     return null;
   }
-  const type = isPGL ? 'photogallery' : path(['media', 'format'], item);
+  const type = isPhotoGallery
+    ? 'photogallery'
+    : path(['media', 'format'], item);
   return type || null;
 };
 

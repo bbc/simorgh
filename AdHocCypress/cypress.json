@@ -1,0 +1,11 @@
+{
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "chromeWebSecurity": false,
+  "env": {
+    "APP_ENV": "local"
+  },
+  "ignoreTestFiles": [
+    "**/**/config.js"
+  ]
+}

@@ -1,0 +1,19 @@
+name: Auto Cancel Previous CI Runs
+on:
+  create:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - latest
+jobs:
+  cleanup-runs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rokroskar/workflow-run-cleanup-action@master
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+    if: "github.ref != 'refs/heads/latest'"

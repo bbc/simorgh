@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07grf73",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07hbbnq"
+    },
+    "media_type": "audio_video",
+    "title": "Sudan's Livestream Massacre",
+    "short_synopsis": "This is the story of a massacre, told through the phone cameras of those who kept filming.",
+    "medium_synopsis": "On June 3, 2019, there was a massacre on the streets of Khartoum. This is the story of that massacre, told through the phone cameras of those who kept filming.",
+    "long_synopsis": "On June 3, 2019, there was a massacre on the streets of Sudan’s capital, Khartoum. This is the story of that massacre, told through the phone cameras of those who kept filming, even as they came under live fire.\n\nBBC Africa Eye has now analysed more than 300 videos shot in Khartoum on June 3rd. Using these videos, we can bring you a shocking, street-level view of the violence that was inflicted on protesters that morning - and the first direct testimony from men who say they took part in this attack. \n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.com/africaeye\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Sudan's Livestream Massacre"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07grf75",
+        "duration": 1081,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

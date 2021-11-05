@@ -1,0 +1,547 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_tv/w13xttlw",
+    "locators": { "pid": "w172xf1dvp99qwz", "brandPid": "w13xttlw" },
+    "type": "WSTV",
+    "createdBy": "bbc_hindi_tv",
+    "language": "hi",
+    "lastUpdated": 1608630366103,
+    "firstPublished": 1605542168000,
+    "lastPublished": 1605542168000,
+    "timestamp": 1605542168000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "दुनिया - BBC News हिंदी",
+      "pageIdentifier": "hindi.bbc_hindi_tv.tv_programmes.w13xttlw.page",
+      "producerId": "52",
+      "contentType": "player-episode",
+      "producer": "HINDI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "दुनिया",
+    "releaseDateTimeStamp": 1608508800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xf1dvp99qwz",
+        "subType": "episode",
+        "format": "Video",
+        "title": "21/12/2020 GMT",
+        "synopses": {
+          "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+          "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshkxyc78sj4h",
+            "types": ["Original"],
+            "duration": 1192,
+            "durationISO8601": "PT19M52S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608569390000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "दुनिया" },
+    "locators": { "pid": "w172xf1dvp99qwz", "brandPid": "w13xttlw" },
+    "media": {
+      "id": "w172xf1dvp99qwz",
+      "subType": "episode",
+      "format": "Video",
+      "title": "21/12/2020 GMT",
+      "synopses": {
+        "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+        "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshkxyc78sj4h",
+          "types": ["Original"],
+          "duration": 1192,
+          "durationISO8601": "PT19M52S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608569390000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608508800000,
+    "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dvp99qwz",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1dhdzx5xj", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1dhdzx5xj",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxzyzcz51",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608310190000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzx5xj",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1dhdzt90f", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1dhdzt90f",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxzyz927y",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608223790000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzt90f",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1dhdzqd3b", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1dhdzqd3b",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxzyz65bv",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608137390000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzqd3b",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1dhdzmh67", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1dhdzmh67",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxzyz38fr",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608050990000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzmh67",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1dhdzjl94", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1dhdzjl94",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxzyz0cjn",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607964590000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1dhdzjl94",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1d44p419p", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1d44p419p",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxmpnltk6",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607705390000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44p419p",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1d44p14dl", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1d44p14dl",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxmpnhxn3",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607618990000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44p14dl",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "दुनिया" },
+            "locators": { "pid": "w172xf1d44ny7hh", "brandPid": "w13xttlw" },
+            "media": {
+              "id": "w172xf1d44ny7hh",
+              "subType": "episode",
+              "format": "Video",
+              "title": "09/12/2020 GMT",
+              "synopses": {
+                "short": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया",
+                "medium": "ताज़ा अंतरराष्ट्रीय, क्षेत्रीय ख़बरों और विश्लेषण के लिए देखिए बीबीसी दुनिया"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshkxxmpnf0r0",
+                  "types": ["Original"],
+                  "duration": 1192,
+                  "durationISO8601": "PT19M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607532590000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05hxwcn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607472000000,
+            "brand": { "pid": "w13xttlw", "title": "दुनिया" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_tv/w172xf1d44ny7hh",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

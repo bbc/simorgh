@@ -7,10 +7,9 @@ import {
 } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import CpsAssetMediaPlayerContainer from '.';
-import { defaultToggles } from '../MediaPlayer/fixtureData';
 import videoBlock from './fixtures';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */
@@ -25,17 +24,13 @@ const GenerateMediaPlayer = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="MAP"
+    pageType={MEDIA_ASSET_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
-      <ToggleContext.Provider
-        value={{ toggleState: defaultToggles, toggleDispatch: jest.fn() }}
-      >
-        <BrowserRouter>
-          <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
-        </BrowserRouter>
-      </ToggleContext.Provider>
+      <BrowserRouter>
+        <CpsAssetMediaPlayerContainer blocks={blocks} assetUri={assetUri} />
+      </BrowserRouter>
     </ServiceContextProvider>
   </RequestContextProvider>
 );

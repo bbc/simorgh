@@ -1,38 +1,79 @@
 import React from 'react';
-import { mount, render } from 'enzyme';
-import LazyLoad from 'react-lazyload';
+import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   ImageWithPlaceholder,
   AmpImageWithPlaceholder,
+  AmpImageWithPlaceholderPng,
   LazyLoadImageWithPlaceholder,
 } from './fixtureData';
 
 describe('ImageWithPlaceholder', () => {
-  it('should load lazyload component when lazyLoad prop is set to true', () => {
-    const wrapper = mount(<LazyLoadImageWithPlaceholder />).find(LazyLoad);
-    const {
-      offset,
-      once,
-      overflow,
-      resize,
-      scroll,
-      unmountIfInvisible,
-    } = wrapper.props();
+  it('should not load lazyload component when lazyLoad prop is set to false', async () => {
+    const { getByAltText } = render(
+      <LazyLoadImageWithPlaceholder lazyLoad={false} />,
+    );
 
-    expect(offset).toBe(250);
-    expect(once).toBe(true);
-    expect(overflow).toBe(false);
-    expect(resize).toBe(false);
-    expect(scroll).toBe(true);
-    expect(unmountIfInvisible).toBe(false);
-    expect(Object.keys(wrapper.props()).length).toBe(7);
+    expect(getByAltText('Pauline Clayton')).toBeInTheDocument();
   });
 
-  it('should render a lazyloaded image when lazyLoad set to true', () => {
-    // Render using enzyme to capture noscript contents
-    const container = render(<LazyLoadImageWithPlaceholder />);
-    expect(container).toMatchSnapshot();
+  it('should lazyload component when lazyLoad prop is set to true', async () => {
+    const { container, queryByAltText } = render(
+      <LazyLoadImageWithPlaceholder lazyLoad />,
+    );
+
+    expect(queryByAltText('Pauline Clayton')).not.toBeInTheDocument();
+    expect(container.querySelector('noscript')).toBeInTheDocument();
+  });
+
+  it('should add a link tag to the head of the document when preload is set to true', async () => {
+    render(<ImageWithPlaceholder preload />);
+
+    await waitFor(() => {
+      const preloadLink = document.querySelector('head link');
+      expect(preloadLink).toBeInTheDocument();
+      expect(preloadLink.rel).toEqual('preload');
+      expect(preloadLink.href).toEqual(
+        'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
+      );
+    });
+  });
+
+  it('should not add a link tag to the head of the document when preload is set to false', async () => {
+    render(<ImageWithPlaceholder preload={false} />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
+  });
+
+  it('should not add a link tag to the head of the document when rendering an AMP image', async () => {
+    render(<AmpImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('head link')).not.toBeInTheDocument();
+    });
+  });
+
+  it('should add a background color if image is not a jpg/jpeg AMP image', async () => {
+    render(<AmpImageWithPlaceholderPng />);
+
+    await waitFor(() => {
+      expect(document.querySelector('amp-img')).toHaveStyle({
+        backgroundColor: `${C_GHOST}`,
+      });
+    });
+  });
+
+  it('should not add a backgroundColor if image is a jpg/jpeg AMP image', async () => {
+    render(<AmpImageWithPlaceholder />);
+
+    await waitFor(() => {
+      expect(document.querySelector('amp-img')).not.toHaveStyle({
+        backgroundColor: `${C_GHOST}`,
+      });
+    });
   });
 
   shouldMatchSnapshot(

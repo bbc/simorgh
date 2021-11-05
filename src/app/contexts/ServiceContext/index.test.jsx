@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { cleanup, render, waitFor, act } from '@testing-library/react';
+import { cleanup, render, act } from '@testing-library/react';
 import services from '#server/utilities/serviceConfigs';
 
 // Unmock service context which is mocked globally in jest-setup.js
@@ -33,13 +33,14 @@ describe('ServiceContextProvider', () => {
           variant: variant === 'default' ? null : variant,
         };
 
-        const { container } = render(
-          <ServiceContextProvider {...serviceContextProps}>
-            <Component />
-          </ServiceContextProvider>,
-        );
-
-        await waitFor(() => container.querySelector('span'));
+        let container;
+        await act(async () => {
+          container = await render(
+            <ServiceContextProvider {...serviceContextProps}>
+              <Component />
+            </ServiceContextProvider>,
+          ).container;
+        });
 
         expect(container.firstChild.innerHTML).toEqual(
           services[service][variant].brandName,
@@ -80,8 +81,17 @@ describe('ServiceContextProvider', () => {
           'should load russian translations for main body translations',
         service: 'ukrainian',
         variant: undefined,
-        pathname: '/ukrainian/ukraine_in_russian',
-        expectedTranslation: 'Главное',
+        pageLang: 'ru',
+        expectedTranslation: 'Читайте также',
+        assertionValue: 'relatedContent',
+      },
+      {
+        description:
+          'should load ukrainian translations for secondary column translations',
+        service: 'ukrainian',
+        variant: undefined,
+        pageLang: 'ru',
+        expectedTranslation: 'Головне',
         assertionValue: 'topStoriesTitle',
       },
       {
@@ -89,7 +99,7 @@ describe('ServiceContextProvider', () => {
           'should load ukrainian translations for header/footer translations',
         service: 'ukrainian',
         variant: undefined,
-        pathname: '/ukrainian/ukraine_in_russian',
+        pageLang: 'ru',
         expectedTranslation: 'Розділи',
         assertionValue: 'navMenuText',
       },
@@ -97,7 +107,7 @@ describe('ServiceContextProvider', () => {
         description: 'should load default ukrainian translations',
         service: 'ukrainian',
         variant: undefined,
-        pathname: '/ukrainian/news-53134657',
+        pageLang: 'uk',
         expectedTranslation: 'Головне',
         assertionValue: 'topStoriesTitle',
       },
@@ -105,7 +115,7 @@ describe('ServiceContextProvider', () => {
       ({
         description,
         service,
-        pathname,
+        pageLang,
         expectedTranslation,
         assertionValue,
       }) => {
@@ -122,12 +132,11 @@ describe('ServiceContextProvider', () => {
           let container;
           await act(async () => {
             container = await render(
-              <ServiceContextProvider service={service} pathname={pathname}>
+              <ServiceContextProvider service={service} pageLang={pageLang}>
                 <Component />
               </ServiceContextProvider>,
             ).container;
           });
-
           expect(container.firstChild.innerHTML).toEqual(expectedTranslation);
         });
       },

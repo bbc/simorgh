@@ -1,0 +1,592 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_uzbek_tv/w13xttqv",
+    "locators": { "pid": "w172xcvcngjbyx7", "brandPid": "w13xttqv" },
+    "type": "WSTV",
+    "createdBy": "bbc_uzbek_tv",
+    "language": "uz",
+    "lastUpdated": 1608649311356,
+    "firstPublished": 1605621343000,
+    "lastPublished": 1605621343000,
+    "timestamp": 1605621343000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur - BBC News O'zbek",
+      "pageIdentifier": "uzbek.bbc_uzbek_tv.tv_programmes.w13xttqv.page",
+      "producerId": "96",
+      "contentType": "player-episode",
+      "producer": "UZBEK"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur",
+    "releaseDateTimeStamp": 1608595200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xcvcngjbyx7",
+        "subType": "episode",
+        "format": "Video",
+        "title": "22/12/2020 GMT",
+        "synopses": {
+          "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+          "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshjqmsvqz831",
+            "types": ["Original"],
+            "duration": 900,
+            "durationISO8601": "PT15M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608644700000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+    },
+    "locators": { "pid": "w172xcvcngjbyx7", "brandPid": "w13xttqv" },
+    "media": {
+      "id": "w172xcvcngjbyx7",
+      "subType": "episode",
+      "format": "Video",
+      "title": "22/12/2020 GMT",
+      "synopses": {
+        "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+        "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshjqmsvqz831",
+          "types": ["Original"],
+          "duration": 900,
+          "durationISO8601": "PT15M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608644700000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608595200000,
+    "brand": {
+      "pid": "w13xttqv",
+      "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvcngjbyx7",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Uzbek",
+      "uri": "/uzbek",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvcngj8204", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvcngj8204",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmsvqwc5y",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608558300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608508800000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvcngj8204",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvc966vj0p", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvc966vj0p",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmflfgt6h",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608299100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966vj0p",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvc966rm3l", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvc966rm3l",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmflfcx9d",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608212700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966rm3l",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvc966nq6h", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvc966nq6h",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmflf90d9",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608126300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966nq6h",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvc966kt9d", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvc966kt9d",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmflf63h6",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608039900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966kt9d",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvc966gxd9", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvc966gxd9",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqmflf36l3",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607953500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvc966gxd9",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvbxxx2cdv", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvbxxx2cdv",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqm2b3pnln",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607694300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvbxxx2cdv",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "locators": { "pid": "w172xcvbxxwzghr", "brandPid": "w13xttqv" },
+            "media": {
+              "id": "w172xcvbxxwzghr",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi.",
+                "medium": "Dastur haftada 5 kun - dushanbadan juma kuniga qadar Toshkent vaqti bilan soat 18.30 -18.40 da efirga uzatiladi."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjqm2b3lrpk",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607607900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hkfxs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": {
+              "pid": "w13xttqv",
+              "title": "Bi-bi-si O‘zbek - Afg‘oniston uchun TV dastur"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_uzbek_tv/w172xcvbxxwzghr",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

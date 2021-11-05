@@ -11,6 +11,8 @@ Please familiarise yourself with our:
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -55,7 +57,7 @@ NB there is further documentation colocated with relevant code. The above list i
 
 #### Unit Testing:
 
-- Unit testing is a mixture of Jest snapshot testing and enzyme assertion testing.
+- We use React Testing Library for writing our React component and custom hook unit tests.
 - We push automated testing as far down the testing pyramid as possible. This means that if something can be tested via unit tests, to ensure we have a test coverage of > 80% on this repo.
 - For strictly **presentational** components Snapshots tests must be present and assertion testing is desirable. Such types of components should be created in our [component library](https://github.com/bbc/psammead) not in the Simorgh repo.
 - For **containers** or otherwise logic handling code snapshot testing is not desirable and assertion testing is mandatory.

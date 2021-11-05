@@ -1,6 +1,7 @@
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
 
+import { blockContainingText } from '#app/models/blocks';
 import nodeLogger from '#lib/logger.node';
 import { MEDIA_MISSING_FIELD } from '#lib/logger.const';
 import getPlaceholderImageUrl, {
@@ -17,6 +18,7 @@ const generateVideoBlock = block => {
       ...pick(
         [
           'advertising',
+          'caption',
           'embedding',
           'format',
           'id',
@@ -104,6 +106,11 @@ const validateInputBlock = (block, aresResponse) => {
     .forEach(([issue]) => log(issue));
 };
 
+const captionBlock = ({ caption }) => {
+  if (!caption) return null;
+  return blockContainingText('caption', caption);
+};
+
 const convertMedia = (block, aresResponse) => {
   validateInputBlock(block, aresResponse);
   const convertedBlock = {
@@ -114,7 +121,11 @@ const convertMedia = (block, aresResponse) => {
         {
           type: 'aresMedia',
           model: {
-            blocks: [generateVideoBlock(block), generateImageBlock(block)],
+            blocks: [
+              generateVideoBlock(block),
+              generateImageBlock(block),
+              captionBlock(block),
+            ],
           },
         },
       ],

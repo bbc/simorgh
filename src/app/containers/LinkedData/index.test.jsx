@@ -4,15 +4,16 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import LinkedData from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ children, service }) => (
   <ServiceContextProvider service={service || 'news'}>
     <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
+      bbcOrigin="https://www.test.bbc.com"
       id="c0000000000o"
       isAmp={false}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       pathname="/pathname"
       service="news"
       statusCode={200}
@@ -78,7 +79,7 @@ describe('LinkedData', () => {
         description: 'د بي بي سي ورلډ سروس څخه پروګرام کول',
         duration: 'PT29M30S',
         embedURL:
-          'https://polling.test.bbc.co.uk/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
+          'https://test.bbc.com/ws/av-embeds/media/korean/externalId/id/ko?morph_env=live',
         thumbnailUrl:
           'https://ichef.bbci.co.uk/images/ic/1024x576/p063j1dv.jpg',
         uploadDate: '2020-04-23T15:30:00.000Z',

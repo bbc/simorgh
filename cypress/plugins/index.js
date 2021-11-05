@@ -14,5 +14,23 @@ module.exports = (on, config) => {
   console.log('\n\n\n\n\n');
   /* eslint-enable no-console */
 
+  // eslint-disable-next-line global-require
+  require('cypress-terminal-report/src/installLogsPrinter')(on);
+
+  on('task', {
+    log(message) {
+      // eslint-disable-next-line no-console
+      console.log(message);
+
+      return null;
+    },
+    table(message) {
+      // eslint-disable-next-line no-console
+      console.table(message);
+
+      return null;
+    },
+  });
+
   return config;
 };

@@ -1,0 +1,937 @@
+{
+  "content": {
+    "blocks": [
+      {
+        "altText": "Bakı küçələri",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/947E/production/_113241083_qfrstwdg.jpg",
+        "id": "113241083",
+        "path": "/cpsprodpb/947E/production/_113241083_qfrstwdg.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "role": "introduction",
+        "text": "Cümə günü Azərbaycanda koronavirus infeksiyasına daha 534 nəfərin yoluxması faktının qeydə alındığı bildirilib.  ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Nazirlər Kabineti yanında Operativ Qərargah 471 nəfərin sağaldığını, 6 nəfərin isə vəfat etdiyini açıqlayıb.  ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "İndiyə kimi Azərbaycanda 19801 nəfər koronavirus infeksiyasına yoluxub. Onlardan 11291 nəfəri sağalıb, 241 nəfər vəfat edib.  ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Bu günə olan aktiv xəstə sayı 8269 nəfərdir. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Operativ qərargahın məlumatına görə ötən müddət ölkə ərzində 509811 test aparılıb. Bugünkü test sayı isə 6846-dır. ",
+        "type": "paragraph"
+      },
+      {
+        "href": "/include/vjeurope/273/azeri/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-azerbaijan_covid/placehold-az_vpyaz.png/640x360&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-azerbaijan_covid/placehold-az_vpyaz.png",
+        "platform": "highweb",
+        "required": false,
+        "title": "Azərbaycanda koronavirus statistikası",
+        "type": "include"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Azərbaycanda ilk koronavirusa yoluxma halı 28 fevralda qeydə alınıb.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Martın 24-dən qüvvədə olan xüsusi karantin rejimi avqustun 1-dək uzadılıb. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Nazirlər Kabineti mayın 4-dən etibarən xüsusi karantin rejimini bir qədər yumşaldıb. İyun ayında isə qurum koronavirusun qarşısının alınması məqsədilə həftəsonları ev təcridi rejimi tətbiq etməyə başlayıb. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "İyunun 19-da xüsusi karantin rejimi 1 avqustadək uzadılıb və bəzi şəhər və rayonda ciddi rejim barədə qərar verilib.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "bu gün Azərbaycanda 583 nəfər yoluxub",
+        "copyrightHolder": "BBC",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/97E2/production/_113228883_078afb3f-1bc5-4a40-aea6-d254f450c917.jpg",
+        "id": "113228883",
+        "path": "/cpsprodpb/97E2/production/_113228883_078afb3f-1bc5-4a40-aea6-d254f450c917.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "altText": "koronavirus",
+        "copyrightHolder": "BBC",
+        "height": 76,
+        "href": "http://c.files.bbci.co.uk/78F9/production/_111196903_cps_web_banner_top_640x3-nc.png",
+        "id": "111196903",
+        "path": "/cpsprodpb/78F9/production/_111196903_cps_web_banner_top_640x3-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 640
+      },
+      {
+        "items": [
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Koronavirus nədir və nə dərəcədə narahat olmalı?",
+                  "overtyped": "Koronavirus: Nə dərəcədə narahat olmalı? ",
+                  "shortHeadline": "Koronavirus: nə dərəcədə narahat olmalı?"
+                },
+                "id": "urn:bbc:ares::asset:azeri/other-news-51242362",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/other-news-51242362"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "summary": "CoVİD-19 adı verilən koronavirus artıq Azərbaycan da daxil olmaqla, bir çox ölkə və ərazidə yayılıb, yüz minlərlə insan ölüb.",
+                "timestamp": 1591617137000,
+                "type": "cps"
+              }
+            ],
+            "text": "BİLİRSİNİZMİ? - <itemMeta>azeri/other-news-51242362</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Azərbaycanda koronavirusa yoluxma 20 minə yaxınlaşır, daha 6 nəfər ölüb",
+                  "overtyped": "SON RƏQƏMLƏR",
+                  "shortHeadline": "Azərbaycanda koronavirusa yoluxma 20 minə yaxınlaşır, daha 6 nəfər ölüb"
+                },
+                "id": "urn:bbc:ares::asset:azeri/azerbaijan-51876428",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/azerbaijan-51876428"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "summary": "Bu gün Azərbaycanda daha 534 nəfərin koronavirus infeksiyasına yoluxması faktı qeydə alınıb. İndiyədək koronavirusdan ölənlərin ümumi sayı 241-ə çatıb.",
+                "timestamp": 1593879300000,
+                "type": "cps"
+              }
+            ],
+            "text": "AZƏRBAYCANDA KORONAVİRUS-  <itemMeta>azeri/azerbaijan-51876428</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Koronavirus - dünya üzrə rəqəmlər bu səhifədə canlı yenilənir",
+                  "overtyped": "Koronavirus - dünya üzrə rəqəmlər bu səhifədə canlı yenilənir",
+                  "shortHeadline": "Koronavirus - dünya üzrə rəqəmlər bu səhifədə canlı yenilənir"
+                },
+                "id": "urn:bbc:ares::asset:azeri/international-52293078",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/international-52293078"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Interactive",
+                    "categoryName": "Interactive"
+                  },
+                  "taggings": []
+                },
+                "summary": "BBC koronavirusun hər ölkədə necə yayıldığını göstərmək üçün interaktiv xəritə hazırlayıb. Xəritəmiz hər gün müvafiq olaraq yenilənir.",
+                "timestamp": 1591369015000,
+                "type": "cps"
+              }
+            ],
+            "text": "DÜNYA XƏRİTƏSİ - <itemMeta>azeri/international-52293078</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Koronavirus: Qorunmaq üçün nə etməli?",
+                  "overtyped": "Koronavirus: Qorunmaq üçün nə etməli?",
+                  "shortHeadline": "Koronavirus: Qorunmaq üçün nə etməli?"
+                },
+                "id": "urn:bbc:ares::asset:azeri/azerbaijan-51800736",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/azerbaijan-51800736"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "summary": "Səhiyyə rəsmilərinin koronavirusa yoluxmamaq üçün məsləhətləri",
+                "timestamp": 1583764192000,
+                "type": "cps"
+              }
+            ],
+            "text": "QORUNMA YOLU - <itemMeta>azeri/azerbaijan-51800736</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Covid-19 və ibuprofen: koronavirusa qarşı dərmanlarla bağlı mif və həqiqətlər",
+                  "overtyped": "Covid-19 və ibuprofen: koronavirusa qarşı dərmanlarla bağlı mif və həqiqətlər  ",
+                  "shortHeadline": "Covid-19 və ibuprofen: koronavirusa qarşı dərmanlarla bağlı mif və həqiqətlər"
+                },
+                "id": "urn:bbc:ares::asset:azeri/other-news-52165042",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/other-news-52165042"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/FactCheck",
+                    "categoryName": "Fact Check"
+                  },
+                  "taggings": []
+                },
+                "summary": "Son zamanlar internetdə yayılan məlumatlarda iddia olunur ki, koronavirus simptomları vaxtı ibuprofen və iltihab əleyhinə olan digər dərmanları qəbul etmək olmaz. Həkimlərin tövsiyələriylə yanaşı bir çox saxta məlumatlar da ortaya çıxıb. Bəs görəsən nə baş verir və hansı xəbərlərə etibar etmək olar?",
+                "timestamp": 1586010264000,
+                "type": "cps"
+              }
+            ],
+            "text": "COVID-19 VƏ MİFLƏR - <itemMeta>azeri/other-news-52165042</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Koronavirus: maskaları kim, harada və necə taxmalı?",
+                  "overtyped": "Koronavirus: maskaları kim, harada və necə taxmalı?  ",
+                  "shortHeadline": "Koronavirus: maskaları kim, harada və necə taxmalı?"
+                },
+                "id": "urn:bbc:ares::asset:azeri/other-news-51644200",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/other-news-51644200"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "summary": "Üz maskalarının hansı növləri var, onlar nədən qoruyur və necə taxılmalıdır? BBC News Azərbaycanca bu suallara cavab axtarmağa çalışıb.",
+                "timestamp": 1582737196000,
+                "type": "cps"
+              }
+            ],
+            "text": "MASKALAR - <itemMeta>azeri/other-news-51644200</itemMeta>",
+            "type": "listItem"
+          },
+          {
+            "markupType": "candy_xml",
+            "meta": [
+              {
+                "headlines": {
+                  "headline": "Ramazanda koronavirus tədbirləri: Ümumdünya Səhiyyə Təşkilatı nələri tövsiyə edir?",
+                  "overtyped": "Ramazanda koronavirus tədbirləri: Ümumdünya Səhiyyə Təşkilatı nələri tövsiyə edir?",
+                  "shortHeadline": "Ramazanda koronavirus tədbirləri: Ümumdünya Səhiyyə Təşkilatı nələri tövsiyə edir?"
+                },
+                "id": "urn:bbc:ares::asset:azeri/other-news-52424371",
+                "language": "az",
+                "locators": {
+                  "href": "https://www.bbc.com/azeri/other-news-52424371"
+                },
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                    "categoryName": "Explainer"
+                  },
+                  "taggings": []
+                },
+                "summary": "Dünyadakı 1,8 milyard müsəlman Ramazan ayını koronavirus tədbirlərinin kölgəsində keçirəcək.",
+                "timestamp": 1587805061000,
+                "type": "cps"
+              }
+            ],
+            "text": "KORONAVİRUS VƏ ORUCLUQ -<itemMeta>azeri/other-news-52424371</itemMeta>",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "altText": "xətt",
+        "copyrightHolder": "BBC",
+        "height": 11,
+        "href": "http://c.files.bbci.co.uk/A009/production/_111196904_cps_web_banner_bottom_640x3-nc.png",
+        "id": "111196904",
+        "path": "/cpsprodpb/A009/production/_111196904_cps_web_banner_bottom_640x3-nc.png",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 640
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Operativ qərargah infeksiyanın yayılmasın yol verməmək üçün vətəndaşlardan bəzi tələblərin olduğunu açıqlayıb:",
+        "type": "paragraph"
+      },
+      {
+        "items": [
+          {
+            "markupType": "plain_text",
+            "text": "Özünütəcrid tədbirlərinə uyğun davranmaq, ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Yalnız ciddi ehtiyac yarandıqda evdən çıxmaq, ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Digər şəxslərlə minimum kontaktda olmaq, ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "İnsanların sıx toplaşdığı yerlərə getməmək, ",
+            "type": "listItem"
+          },
+          {
+            "markupType": "plain_text",
+            "text": "Mövcud preventiv tədbirlərin şərtlərinə ciddi əməl etmək ",
+            "type": "listItem"
+          }
+        ],
+        "numbered": false,
+        "type": "list"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hazırda Azərbaycanda koronavirusa yoluxma halları təkcə ölkəyə xaricdən gələn şəxslər arasında aşkar edilmir, həm də artıq ölkə daxilində insanların bir-birini yoluxdurması faktları aşkarlanır, qurum bəyan edib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Nazirlər Kabineti konkret şəhər və rayonların adını çəkməsə də, Azərbaycanın müxtəlif regionlarında yaşayan insanlar arasında da infeksiyaya yoluxma hallarının olduğunu bildirib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Rəsmilər bildiriblər ki, azyaşlı uşaqları olan ailələrə, yaşlılara, tibbi yardıma ehtiyacı olan şəxslərə, qadınlara üstünlük verilməklə məhdud çərçivədə və zəruri hallarda vətəndaşların müəyyən olunmuş qrafik çərçivəsində 14-21 gün müddətinə karantinə yerləşdirilməklə digər ölkələrdən Azərbaycana gətirilməsi davam edir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Xarici ölkələrdə qalan Azərbaycan vətəndaşlarından indiyədək təxminən 10 min nəfərin təxliyə edildiyi deyilir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "&quot;…Azsaylı bəzi şəxslərin, ehtiyacı olmadığı halda, təxliyədən sui-istifadə etmələri, təxliyə üçün təyyarə göndərilən zaman geri qayıtmaqdan imtina etmələri və sonradan təxliyə olunmaq üçün &quot;xüsusi&quot; təyyarə göndərilməsi iddiası ilə çıxış etmələri, xarici ölkələrdə COVİD-19 virusuna yoluxmuş şəxslərlə təmasları gizlətmələri, bu barədə yanlış məlumat vermələri və dövlət qurumlarının öz qanuni fəaliyyətini həyata keçirməsinə maneə olmaq və dövlətin gördüyü işlərə qarayaxma cəhdləri kimi təəssüf doğuran və məsuliyyətsiz hallar da vardır&quot;, - rəsmi məlumatlarda vurğulanıb.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hökumət koronavirusun ölkə ərazisində yayılmasının qarşısının alınması tədbirləri çərçivəsində vətəndaşların geri qaytarılması zamanı Azərbaycanda karantin üçün ayrılmış məntəqələrin insanları qəbuletmə imkanlarının əsas götürüldüyünü bildirib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Bəzi ölkələrdə hələ də təxliyəsini gözləyən azərbaycanlılar var.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "\"Tibb işçiləri qapı-qapı gəzməyəcək\"",
+        "type": "crosshead"
+      },
+      {
+        "altText": "Laboratoriya",
+        "copyrightHolder": "EPA",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/6D8E/production/_112564082__112029730_a63dedc3-5638-499d-a909-eb8ac08a5360.jpg",
+        "id": "112564082",
+        "path": "/cpsprodpb/6D8E/production/_112564082__112029730_a63dedc3-5638-499d-a909-eb8ac08a5360.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Mart ayının ortalarında Azərbaycanda ərazi üzrə sahə həkimlərinin və ya tibb bacılarının ev-ev gəzərək qeydiyyat apardıqları və sakinlərin hərarətini ölçmələri barədə məlumatlar barədə BBC News Azərbaycancaya məlumat daxil olub.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "TƏBİB-dən BBC News Azərbaycancaya bildirilib ki, Azərbaycanda tibb işçiləri sakinlərin vəziyyətini telefonla yoxlayacaq.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Bundan başqa, sosial mediada bəzi istifadəçilər bunun həmin işçilər üçün nə dərəcədə təhlükəsiz olmalarını sorğulayıb.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "TƏBİB-dən BBC News Azərbaycancaya verilən məlumata görə, həmin işçilərin təhlükəsizliyi ilə bağlı narahatlıq olmayıb. &quot;Onların maskaları olub&quot;, - qurum bildirib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Qurum daha ətraflı məlumat veriləcəyini qeyd edib.",
+        "type": "paragraph"
+      },
+      {
+        "altText": "Tibb işçisi",
+        "copyrightHolder": "Reuters",
+        "height": 549,
+        "href": "http://c.files.bbci.co.uk/47A6/production/_112424381__112401490_061557803-1.jpg",
+        "id": "112424381",
+        "path": "/cpsprodpb/47A6/production/_112424381__112401490_061557803-1.jpg",
+        "positionHint": "full-width",
+        "subType": "body",
+        "type": "image",
+        "width": 976
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hər gün neçə yeni yoluxma halı var?",
+        "type": "crosshead"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Hər gün koronavirusa yeni yoluxanlar olur.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Nazirlər Kabineti yanında Operativ Qərargah bildirib ki, xüsusi rejimli xəstəxanalara yerləşdirilən və müşahidə altında olan pasiyentlər özlərini normal hiss edirlər, səhhətləri stabildir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Artıq ölkədə koronavirus təkcə təxliyə edilən şəxslərdə yox, həm də ölkə daxilində də insanların bir-birini yoluxdurması faktları üzrə aşkarlanır.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "İndiyədək ölkəyə Almaniya, Fransa, Türkiyə və İrandan Azərbaycana qayıdan şəxslərdə koronavirus aşkarlanıb.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Azərbaycanda koronavirusla bağlı &quot;sosial təcrid&quot; tədbirləri barədə qərar qəbul edilib. Nazirlər Kabineti yanında Operativ Qərargahın qərarı ilə kütləvi tədbirlər təxirə salınıb və ya ləğv olunub.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Martın 14-də Neftçi futbol klubu öz fəaliyyətini dayandırması barədə açıqlama verib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Müvafiq tədbirlər barədə Müdafiə Nazirliyi də xəbər yayıb. Məlumata əsasən, Müdafiə Nazirliyində keçirilən müşavirədə kütləvi tədbirlərin məhdudlaşdırılması və valideynlərlə görüşlərin müvəqqəti dayandırılması barədə göstəriş verilib.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Martın 15-dən 19-dək &quot;ASAN xidmət&quot; və &quot;ASAN Kommunal&quot; mərkəzləri məhdud fəaliyyət göstərəcək, xidmətin saytında bildirilir.",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "plain_text",
+        "text": "Koronavirusa qarşı &quot;sosial izolyasiya&quot; tədbirləri barədə daha ətraflı bu keçiddən oxuyun:",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "<link><caption>Azərbaycanda koronavirus: Toy və yaslara qadağa, apteklər və mağazalar əvvəlki kimi işləyəcək</caption><url href=\"https://www.bbc.com/azeri/azerbaijan-51830059\" platform=\"highweb\"/></link>. ",
+        "type": "paragraph"
+      },
+      {
+        "markupType": "candy_xml",
+        "text": "Koronavirusla bağlı digər məlumatlarla <bold>BBC Ne</bold><bold>ws Az</bold><bold>ə</bold><bold>rbaycancan</bold><bold>ın</bold> müntəzəm yenilənən <link><caption>xüsusi səhifəsində</caption><url href=\"https://www.bbc.com/azeri/trending-51806144\" platform=\"highweb\"/></link> tanış ola bilərsiniz. ",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "metadata": {
+    "analyticsLabels": {
+      "counterName": "azeri.azerbaijan.story.51876428.page",
+      "cps_asset_id": "51876428",
+      "cps_asset_type": "sty"
+    },
+    "atiAnalytics": {
+      "producerId": "6",
+      "producerName": "AZERI"
+    },
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "include",
+      "list",
+      "crosshead"
+    ],
+    "createdBy": "azeri-v6",
+    "firstPublished": 1584180552000,
+    "id": "urn:bbc:ares::asset:azeri/azerbaijan-51876428",
+    "includeComments": false,
+    "language": "az",
+    "lastPublished": 1593879300000,
+    "lastUpdated": 1597231848380,
+    "locators": {
+      "assetId": "51876428",
+      "assetUri": "/azeri/azerbaijan-51876428",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-51876428",
+      "curie": "http://www.bbc.co.uk/asset/ab226468-b7ed-fc46-9a88-a40d8430ac9e"
+    },
+    "options": {
+      "allowAdvertising": true,
+      "allowDateStamp": true,
+      "allowHeadline": true,
+      "allowPrintingSharingLinks": true,
+      "allowRelatedStoriesBox": true,
+      "allowRightHandSide": true,
+      "hasContentWarning": false,
+      "hasNewsTracker": false,
+      "includeComments": false,
+      "isBreakingNews": false,
+      "isFactCheck": false,
+      "isIgorSeoTagsEnabled": false,
+      "isKeyContent": false,
+      "suitableForSyndication": true
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "readTime": 3,
+    "tags": {
+      "about": [
+        {
+          "curationList": [
+            {
+              "curationId": "75322881-0734-4d20-8822-499b41745d11",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Azerbaijan",
+          "thingId": "0f8e45e2-6499-44b1-be1f-1a3dd81e8af7",
+          "thingLabel": "Azərbaycan",
+          "thingSameAs": [
+            "http://sws.geonames.org/587116/"
+          ],
+          "thingType": [
+            "core:Place",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/0f8e45e2-6499-44b1-be1f-1a3dd81e8af7#id",
+          "topicId": "c7zp571g7y7t",
+          "topicName": "Azərbaycan"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "e896103e-8eb5-4371-a71f-43b60f722dd6",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Society",
+          "thingId": "5307a8d9-f620-40f5-92d4-f99c919a6ffa",
+          "thingLabel": "Cəmiyyət",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Society",
+            "http://www.wikidata.org/entity/Q8425"
+          ],
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/5307a8d9-f620-40f5-92d4-f99c919a6ffa#id",
+          "topicId": "cqywj91g14gt",
+          "topicName": "Cəmiyyət"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "07a4afba-16fd-4e48-b93f-1b2e36895b61",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus pandemic",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingLabel": "Koronavirus",
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q290805"
+          ],
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Event"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "topicId": "cezpvv57ymlt",
+          "topicName": "Koronavirus"
+        },
+        {
+          "curationList": [
+            {
+              "curationId": "95241bd8-7d8a-44f6-bf3d-74ed2f002f18",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Health",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingLabel": "Sağlamlıq",
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ],
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:TagConcept"
+          ],
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "topicId": "c6vzyk7592nt",
+          "topicName": "Sağlamlıq"
+        }
+      ]
+    },
+    "timestamp": 1593879300000,
+    "type": "STY",
+    "version": "v1.3.6"
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Azərbaycanda koronavirusa yoluxma 20 minə yaxınlaşır, daha 6 nəfər ölüb",
+      "shortHeadline": "Azərbaycanda koronavirusa yoluxma 20 minə yaxınlaşır, daha 6 nəfər ölüb"
+    },
+    "id": "urn:bbc:ares::asset:azeri/azerbaijan-51876428",
+    "indexImage": {
+      "altText": "Bakı küçələri",
+      "copyrightHolder": "BBC",
+      "height": 549,
+      "href": "http://c.files.bbci.co.uk/947E/production/_113241083_qfrstwdg.jpg",
+      "id": "113241083",
+      "path": "/cpsprodpb/947E/production/_113241083_qfrstwdg.jpg",
+      "subType": "index",
+      "type": "image",
+      "width": 976
+    },
+    "language": "az",
+    "locators": {
+      "assetId": "51876428",
+      "assetUri": "/azeri/azerbaijan-51876428",
+      "cpsUrn": "urn:bbc:content:assetUri:azeri/azerbaijan-51876428",
+      "curie": "http://www.bbc.co.uk/asset/ab226468-b7ed-fc46-9a88-a40d8430ac9e"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "summary": "Bu gün Azərbaycanda daha 534 nəfərin koronavirus infeksiyasına yoluxması faktı qeydə alınıb. İndiyədək koronavirusdan ölənlərin ümumi sayı 241-ə çatıb.",
+    "timestamp": 1593879300000,
+    "type": "cps"
+  },
+  "relatedContent": {
+    "groups": [
+      {
+        "promos": [
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Azərbaycanda koronavirus: toy və yaslara qadağa, apteklər və mağazalar əvvəlki kimi işləyəcək",
+              "shortHeadline": "Azərbaycanda koronavirus: toy və yaslara qadağa, apteklər və mağazalar əvvəlki kimi işləyəcək"
+            },
+            "id": "urn:bbc:ares::asset:azeri/azerbaijan-51830059",
+            "indexImage": {
+              "altText": "maskalı qız",
+              "copyrightHolder": "Aziz Karimov/Getty Images",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/F1B1/production/_111237816_gettyimages-1208414889.jpg",
+              "id": "111237816",
+              "path": "/cpsprodpb/F1B1/production/_111237816_gettyimages-1208414889.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/azerbaijan-51830059",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-51830059"
+            },
+            "summary": "Azərbaycanda koronavirusla bağlı ölkə boyunca \"sosial izolyasiya\" tədbirləri elan olunub. Buna görə bütün kütləvi tədbirlər, o cümlədən mədəni-idman tədbirləri təxirə salınır, artıq təyin olunmuş tədbirlərin tarixi dəyişdirilir.",
+            "timestamp": 1584120160000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Azərbaycanda koronavirus: 15 və 29 mart imtahanları təxirə salındı",
+              "shortHeadline": "Azərbaycanda koronavirus: 15 və 29 mart imtahanları təxirə salındı"
+            },
+            "id": "urn:bbc:ares::asset:azeri/azerbaijan-51784050",
+            "indexImage": {
+              "altText": "Universitet",
+              "copyrightHolder": "AFP",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/2F23/production/_98076021_4dfd9e21-7606-4a00-9135-996396dc45c4.jpg",
+              "id": "98076021",
+              "path": "/cpsprodpb/2F23/production/_98076021_4dfd9e21-7606-4a00-9135-996396dc45c4.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/azerbaijan-51784050",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/azerbaijan-51784050"
+            },
+            "summary": "Azərbaycanda daha iki imtahan - 15 mart və 29 mart tarixlərində keçirilməsi planlaşdırılan imtahanlar təxirə salınıb.",
+            "timestamp": 1583832594000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Böyük şəhərlərdə koronavirus: yoluxmadan yayınmaq olarmı?",
+              "shortHeadline": "Böyük şəhərlərdə koronavirus: yoluxmadan yayınmaq olarmı?"
+            },
+            "id": "urn:bbc:ares::asset:azeri/international-51707947",
+            "indexImage": {
+              "altText": "ученицы",
+              "copyrightHolder": "AFP",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/7996/production/_111062113_060247780-1.jpg",
+              "id": "111062113",
+              "path": "/cpsprodpb/7996/production/_111062113_060247780-1.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/international-51707947",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-51707947"
+            },
+            "summary": "Antarktidadan başqa, koronavirus artıq bütün qitələrdə aşkar edilib, son günlərdə isə digər ölkələrdə Çinin özündən daha sürətlə yayılmağa başlayıb.",
+            "timestamp": 1583150172000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Koronavirus: maskaları kim, harada və necə taxmalı?",
+              "shortHeadline": "Koronavirus: maskaları kim, harada və necə taxmalı?"
+            },
+            "id": "urn:bbc:ares::asset:azeri/other-news-51644200",
+            "indexImage": {
+              "altText": "Üzü maskalı şəxslər",
+              "copyrightHolder": "Aziz Karimov/Getty Images",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/0B9E/production/_111047920_gettyimages-1208414825-594x594.jpg",
+              "id": "111047920",
+              "path": "/cpsprodpb/0B9E/production/_111047920_gettyimages-1208414825-594x594.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/other-news-51644200",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/other-news-51644200"
+            },
+            "summary": "Üz maskalarının hansı növləri var, onlar nədən qoruyur və necə taxılmalıdır? BBC News Azərbaycanca bu suallara cavab axtarmağa çalışıb.",
+            "timestamp": 1582737196000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Koronavirus nədir və nə dərəcədə narahat olmalı?",
+              "shortHeadline": "Koronavirus: nə dərəcədə narahat olmalı?"
+            },
+            "id": "urn:bbc:ares::asset:azeri/other-news-51242362",
+            "indexImage": {
+              "altText": "koronavirus nədir",
+              "copyrightHolder": "BBC",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/DBEA/production/_111689265_index_symptoms_976_.png",
+              "id": "111689265",
+              "path": "/cpsprodpb/DBEA/production/_111689265_index_symptoms_976_.png",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/other-news-51242362",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/other-news-51242362"
+            },
+            "summary": "CoVİD-19 adı verilən koronavirus artıq Azərbaycan da daxil olmaqla, bir çox ölkə və ərazidə yayılıb, yüz minlərlə insan ölüb.",
+            "timestamp": 1591617137000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "ÜST: Dünya koronavirus barədə \"öyrənilməmiş ərazidədir\"",
+              "shortHeadline": "ÜST: Dünya koronavirus barədə \"öyrənilməmiş ərazidədir\""
+            },
+            "id": "urn:bbc:ares::asset:azeri/international-51702052",
+            "indexImage": {
+              "altText": "koronavirus",
+              "copyrightHolder": "Getty Images",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/DE45/production/_111110965_83536f2f-5783-4b78-bd78-68b04dbae67d.jpg",
+              "id": "111110965",
+              "path": "/cpsprodpb/DE45/production/_111110965_83536f2f-5783-4b78-bd78-68b04dbae67d.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/international-51702052",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-51702052"
+            },
+            "summary": "Ümumdünya Səhiyyə Təşkilatının baş direktoru Tedros Adhanom Ghebreyesus deyib ki, \"bütün dünya yeni koronavirus barədə öyrənilməmiş ərazidədir\".",
+            "timestamp": 1583212505000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "\"Öpüşməyin!\" Baş epidemioloq İbadulla Ağayev koronavirusa yoluxmamağın yollarını izah edir",
+              "shortHeadline": "\"Öpüşməyin!\" Baş epidemioloq İbadulla Ağayev koronavirusa yoluxmamağın yollarını izah edir"
+            },
+            "id": "urn:bbc:ares::asset:azeri/51683210",
+            "indexImage": {
+              "altText": "Koronavirus",
+              "copyrightHolder": "BBC",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/36CC/production/_111082041_untitled.png",
+              "id": "111082041",
+              "path": "/cpsprodpb/36CC/production/_111082041_untitled.png",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/51683210",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/51683210"
+            },
+            "summary": "Baş epidemioloq İbadulla Ağayev Azərbaycanda koronavirus epidemiyasının yayılması ilə bağlı Səadət Akifqızının suallarını cavablandırır.",
+            "timestamp": 1582917106000,
+            "type": "cps"
+          },
+          {
+            "cpsType": "STY",
+            "headlines": {
+              "headline": "Koronavirus: dünya pandemiyaya \"hazır olmalıdır\"",
+              "shortHeadline": "Koronavirus: dünya pandemiyaya \"hazır olmalıdır\""
+            },
+            "id": "urn:bbc:ares::asset:azeri/international-51624933",
+            "indexImage": {
+              "altText": "Ümumdünya Səhiyyə Təşkilatı bu gün Koronavirus pandemiyasına hazırlıqlı omağı bildirib",
+              "copyrightHolder": "Getty Images",
+              "height": 549,
+              "href": "http://c.files.bbci.co.uk/152E6/production/_110985768_65f0f77a-9461-4fae-8b9d-36bfd984c587.jpg",
+              "id": "110985768",
+              "path": "/cpsprodpb/152E6/production/_110985768_65f0f77a-9461-4fae-8b9d-36bfd984c587.jpg",
+              "subType": "index",
+              "type": "image",
+              "width": 976
+            },
+            "language": "az",
+            "locators": {
+              "assetUri": "/azeri/international-51624933",
+              "cpsUrn": "urn:bbc:content:assetUri:/azeri/international-51624933"
+            },
+            "summary": "ÜST bildirib ki, indi bu yayılmanı pandemiya adlandırmaq tezdir, lakin ölkələr buna \"hazırlıqlı olmalıdırlar\".",
+            "timestamp": 1582609184000,
+            "type": "cps"
+          }
+        ],
+        "type": "see-alsos"
+      }
+    ],
+    "section": {
+      "name": "Azərbaycan",
+      "subType": "index",
+      "type": "simple",
+      "uri": "/azeri/azerbaijan"
+    },
+    "site": {
+      "name": "BBC Azərbaycanca",
+      "subType": "site",
+      "type": "simple",
+      "uri": "/azeri"
+    }
+  }
+}

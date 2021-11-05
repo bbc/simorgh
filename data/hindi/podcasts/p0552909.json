@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_hindi_radio/p0552909",
+    "locators": { "pid": "p0964mwl", "brandPid": "p0552909" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_hindi_radio",
+    "language": "hi",
+    "lastUpdated": 1613045013730,
+    "firstPublished": 1612519843000,
+    "lastPublished": 1612519843000,
+    "timestamp": 1612519843000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "विवेचना - BBC News हिंदी",
+      "pageIdentifier": "hindi.bbc_hindi_radio.programmes.p0552909.page",
+      "producerId": "52",
+      "contentType": "player-episode",
+      "producer": "HINDI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "विवेचना",
+    "releaseDateTimeStamp": 1612483200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0964mwl",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "तीन दशक पहले लगभग 5 लाख किसानों ने महेंद्र सिंह टिकैत के साथ छह दिन तक प्रदर्शन किया था."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0964m98",
+            "types": ["Podcast"],
+            "duration": 760,
+            "durationISO8601": "PT12M40S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1612519740000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "जब लाखों किसानों ने दिल्ली के बोट क्लब पर दिया धरना",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "विवेचना" },
+    "locators": { "pid": "p0964mwl", "brandPid": "p0552909" },
+    "media": {
+      "id": "p0964mwl",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "तीन दशक पहले लगभग 5 लाख किसानों ने महेंद्र सिंह टिकैत के साथ छह दिन तक प्रदर्शन किया था."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0964m98",
+          "types": ["Podcast"],
+          "duration": 760,
+          "durationISO8601": "PT12M40S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableFrom": 1612519740000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "जब लाखों किसानों ने दिल्ली के बोट क्लब पर दिया धरना",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1612483200000,
+    "brand": { "pid": "p0552909", "title": "विवेचना" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0964mwl",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p095hng3", "brandPid": "p0552909" },
+            "media": {
+              "id": "p095hng3",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "वाजपेई के सचिव शक्ति सिन्हा बताते हैं कि किस तरह 1999 में वाजपेई सरकार एक वोट से गिरी."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p095hngr.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095hn1d",
+                  "types": ["Podcast"],
+                  "duration": 764,
+                  "durationISO8601": "PT12M44S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1611919620000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "जब मायावती चिल्लाई लाल बटन दबाओ",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p095hngr.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p095hngr.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611878400000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p095hng3",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p094tdl8", "brandPid": "p0552909" },
+            "media": {
+              "id": "p094tdl8",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "1941 में सुभाष चंद्र बोस अंग्रेज़ों के कड़े पहरे के बावजूद भारत से भागने में सफल हो गए थे."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p094tdmt.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p094td64",
+                  "types": ["Podcast"],
+                  "duration": 899,
+                  "durationISO8601": "PT14M59S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1611313620000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "कैसे झोंकी नेताजी ने अंग्रेज़ों की आंखों में धूल",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p094tdmt.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p094tdmt.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611273600000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p094tdl8",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p09430yt", "brandPid": "p0552909" },
+            "media": {
+              "id": "p09430yt",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "जनरल जैकब की पांचवीं पुण्यतिथि पर उन्हें याद कर रहे हैं रेहान फ़ज़ल विवेचना में."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09430pb",
+                  "types": ["Podcast"],
+                  "duration": 834,
+                  "durationISO8601": "PT13M54S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1610704260000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "जनरल जैकब जिन्होंने करवाया 93 हज़ार पाकिस्तानी सैनिकों का आत्मसमर्पण",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610668800000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p09430yt",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p093gbhn", "brandPid": "p0552909" },
+            "media": {
+              "id": "p093gbhn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "कौन थे किम इल संग और कैसा था उनके ज़माने का उत्तरी कोरिया ?"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p093gb3y",
+                  "types": ["Podcast"],
+                  "duration": 829,
+                  "durationISO8601": "PT13M49S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1610110260000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "उत्तर कोरिया में तानाशाही की नींव रखने वाले किम इल संग की कहानी",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610064000000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p093gbhn",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p092v1wf", "brandPid": "p0552909" },
+            "media": {
+              "id": "p092v1wf",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "14 वर्ष पूर्व 30 दिसंबर को इराक़ के पूर्व राष्ट्रपति सद्दाम हुसैन को फांसी दी गई थी."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p092v1rf",
+                  "types": ["Podcast"],
+                  "duration": 630,
+                  "durationISO8601": "PT10M30S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1609486080000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "कैसे बीते सद्दाम हुसैन के अंतिम दिन",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1609459200000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p092v1wf",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p092frrn", "brandPid": "p0552909" },
+            "media": {
+              "id": "p092frrn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "13 साल पहले 27 दिसंबर 2007 को बेनज़ीर भुट्टो की रावलपिंडी में हत्या कर दी गई थी."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p092frq5",
+                  "types": ["Podcast"],
+                  "duration": 822,
+                  "durationISO8601": "PT13M42S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1608881400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "बेनज़ीर भुट्टो की ज़िन्दगी के आख़िरी 18 घंटे",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p091hh9y.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608854400000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p092frrn",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p091vb53", "brandPid": "p0552909" },
+            "media": {
+              "id": "p091vb53",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "1971 के युद्ध की 49वीं बरसी पर उस घटना को याद कर रहे हैं रेहान फ़ज़ल."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p091vb5v.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p091v9y9",
+                  "types": ["Podcast"],
+                  "duration": 747,
+                  "durationISO8601": "PT12M27S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1608292080000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "जब अमरीका ने भारत को डराने के लिए सातवाँ बेड़ा भेजा",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p091vb5v.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p091vb5v.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p091vb53",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "विवेचना" },
+            "locators": { "pid": "p0914dsf", "brandPid": "p0552909" },
+            "media": {
+              "id": "p0914dsf",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "बराक ओबामा ने ‘अ प्रोमिस्ड लैंड’ में बताया है कि किस तरह लादेन को मारने की योजना बनी."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0914dtz.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0914dg3",
+                  "types": ["Podcast"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1607684940000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "इस तरह बनी थी ओसामा बिन लादेन को मारने की योजना",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0914dtz.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0914dtz.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "p0552909", "title": "विवेचना" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_hindi_radio/p0914dsf",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

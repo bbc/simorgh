@@ -1,18 +1,19 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
-const getConsentBanner = platform => (
+// eslint-disable-next-line react/prop-types
+const Component = ({ platform }) => (
   <ServiceContextProvider service="news">
     <RequestContextProvider
       platform={platform}
       isUK
       isAmp={platform === 'amp'}
       origin="https://www.bbc.co.uk"
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       id="c0000000000o"
       service="news"
       statsDestination="NEWS_PS_TEST"
@@ -25,9 +26,15 @@ const getConsentBanner = platform => (
   </ServiceContextProvider>
 );
 
-const stories = storiesOf('Containers|Consent Banner/', module).addParameters({
-  chromatic: { disable: true },
-});
+export default {
+  Component,
+  title: 'Containers/Consent Banner',
+  parameters: {
+    chromatic: { disable: true },
+  },
+};
 
-stories.addDecorator(AmpDecorator).add('amp', () => getConsentBanner('amp'));
-stories.add('canonical', () => getConsentBanner('canonical'));
+export const Canonical = () => <Component platform="canonical" />;
+
+export const Amp = () => <Component platform="amp" />;
+Amp.decorators = [AmpDecorator];

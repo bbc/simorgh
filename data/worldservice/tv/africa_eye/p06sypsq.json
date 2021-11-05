@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p06sypsq",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p06szxlh"
+    },
+    "media_type": "audio_video",
+    "title": "My Stolen Childhood",
+    "short_synopsis": "My stolen childhood: understanding the trokosi system - BBC Africa Eye documentary",
+    "medium_synopsis": "Thousands of women across West Africa have been enslaved by a centuries old practice called “trokosi”. Girls are forced to live and work with priests in religious shrines.",
+    "long_synopsis": "Thousands of women across West Africa have been enslaved by a centuries old practice called “trokosi”. Girls are forced to live and work with priests in religious shrines, for the rest of their lives, to “pay” for the sins of family members.  Although the practice has officially been banned in Ghana, it’s still happening there and in other parts of West Africa but on a smaller scale.\n\nTwenty years after she was freed from this practice, Brigitte Sossou Perenyi goes on a journey to understand what trokosi really is and why her family gave her away.\n\nSubscribe to our channel for more investigative journalism. Nothing stays hidden forever.\n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.com/africa\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "My Stolen Childhood"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p06sypsw",
+        "duration": 1535,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

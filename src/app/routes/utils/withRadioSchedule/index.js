@@ -1,6 +1,6 @@
 import 'isomorphic-fetch';
 import nodeLogger from '#lib/logger.node';
-import { getRadioScheduleEndpoint } from '#lib/utilities/getRadioSchedulesUrls';
+import { getRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { getQueryString } from '#lib/utilities/urlParser';
 import processRadioSchedule from '#containers/RadioSchedule/utilities/processRadioSchedule';
 import {
@@ -36,6 +36,7 @@ const withRadioSchedule = async ({
   service,
   path,
   radioService,
+  pageType,
 }) => {
   const { SIMORGH_APP_ENV, SIMORGH_BASE_URL } = process.env;
 
@@ -47,7 +48,10 @@ const withRadioSchedule = async ({
     baseUrl: SIMORGH_BASE_URL,
   });
 
-  logger.info(RADIO_SCHEDULE_REQUEST_RECEIVED, { url: radioScheduleUrl });
+  logger.info(RADIO_SCHEDULE_REQUEST_RECEIVED, {
+    url: radioScheduleUrl,
+    pageType,
+  });
   const radioSchedulePromise = fetchData(radioScheduleUrl);
 
   const [{ json: pageData, ...rest }, radioScheduleJson] = await Promise.all([

@@ -5,6 +5,7 @@ import * as getStatsPageIdentifier from './getStatsPageIdentifier';
 import * as getOriginContext from './getOriginContext';
 import * as getEnv from './getEnv';
 import * as getMetaUrls from './getMetaUrls';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const { RequestContextProvider, RequestContext } = require('./index');
 
@@ -44,12 +45,13 @@ const input = {
   bbcOrigin: 'bbcOrigin',
   id: 'id',
   isAmp: true,
-  pageType: 'frontPage',
+  pageType: FRONT_PAGE,
   service: 'service',
   statusCode: 200,
   pathname: '/current-path',
   previousPath: '/previous-path',
   variant: 'simp',
+  showAdsBasedOnLocation: true,
 };
 
 const expectedOutput = {
@@ -72,6 +74,9 @@ const expectedOutput = {
   ampUkLink: 'ampUkLink',
   canonicalNonUkLink: 'canonicalNonUkLink',
   ampNonUkLink: 'ampNonUkLink',
+  showAdsBasedOnLocation: input.showAdsBasedOnLocation,
+  service: 'service',
+  pathname: '/current-path',
 };
 
 describe('RequestContext', () => {
@@ -133,6 +138,24 @@ describe('RequestContext', () => {
         ...expectedOutput,
         isAmp: false,
         platform: 'canonical',
+      });
+    });
+
+    it('should return a PS statsDestination when isAmp is true and outside the UK', () => {
+      getOriginContext.default.mockReturnValue({
+        isUK: false,
+        origin: 'origin',
+      });
+      render(
+        <RequestContextProvider {...input}>
+          <Component />
+        </RequestContextProvider>,
+      );
+
+      expect(getStatsDestination.default).toHaveBeenCalledWith({
+        env: 'getEnv',
+        isUK: true,
+        service: 'service',
       });
     });
   });

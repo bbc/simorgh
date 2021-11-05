@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
-
+const fetch = require('isomorphic-fetch');
 const { JSDOM } = require('jsdom');
 const retry = require('retry');
 
-const faultTolerantDomFetch = (url, runScripts) =>
+const faultTolerantDomFetch = ({ url, runScripts, headers }) =>
   new Promise((resolve, reject) => {
     const oneSecond = 1000;
     const operation = retry.operation({
@@ -22,8 +22,10 @@ const faultTolerantDomFetch = (url, runScripts) =>
       }
 
       try {
-        const dom = await JSDOM.fromURL(
-          url,
+        const response = await fetch(url, headers && { headers });
+        const html = await response.text();
+        const dom = new JSDOM(
+          html,
           runScripts ? { runScripts: 'dangerously' } : {},
         );
 

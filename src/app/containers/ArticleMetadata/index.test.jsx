@@ -3,28 +3,32 @@ import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import ArticleMetadata from './index';
 import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const getISOStringDate = date => new Date(date).toISOString();
 
 // eslint-disable-next-line react/prop-types
 const Context = ({ service, children }) => (
   <ServiceContextProvider service={service}>
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={false}
-      pageType="article"
-      pathname="/pathname"
-      service={service}
-      statusCode={200}
-    >
-      {children}
-    </RequestContextProvider>
+    <ToggleContextProvider>
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={false}
+        pageType={ARTICLE_PAGE}
+        pathname="/pathname"
+        service={service}
+        statusCode={200}
+      >
+        {children}
+      </RequestContextProvider>
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
@@ -66,6 +70,40 @@ it('should render the article tags', async () => {
     }));
 
     expect(actual).toEqual(expected);
+  });
+});
+
+describe('ArticleMetadata get branded image', () => {
+  beforeEach(() => {
+    process.env.SIMORGH_ICHEF_BASE_URL = 'https://ichef.test.bbci.co.uk';
+    process.env.SIMORGH_APP_ENV = 'test';
+  });
+
+  afterEach(() => {
+    delete process.env.SIMORGH_APP_ENV;
+    delete process.env.SIMORGH_ICHEF_BASE_URL;
+  });
+
+  it('should render og:image if image provided', async () => {
+    render(
+      <Context service="news">
+        <ArticleMetadata
+          {...propsForNewsInternational}
+          imageLocator="c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg"
+          imageAltText="Mock Image Alt Text"
+        />
+      </Context>,
+    );
+
+    await waitFor(() => {
+      expect(
+        document
+          .querySelector('head > meta[property="og:image"]')
+          .getAttribute('content'),
+      ).toEqual(
+        'https://ichef.test.bbci.co.uk/news/1024/branded_news/c34e/live/fea48140-27e5-11eb-a689-1f68cd2c5502.jpg',
+      );
+    });
   });
 });
 

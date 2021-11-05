@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
 import ManifestContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -10,7 +10,7 @@ const contextStub = {
 };
 
 const mountManifest = context =>
-  mount(
+  render(
     <ServiceContext.Provider value={context}>
       <ManifestContainer />
     </ServiceContext.Provider>,

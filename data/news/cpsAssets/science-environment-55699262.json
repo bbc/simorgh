@@ -1,0 +1,800 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:news/science-environment-55699262",
+    "locators": {
+      "assetUri": "/news/science-environment-55699262",
+      "cpsUrn": "urn:bbc:content:assetUri:news/science-environment-55699262",
+      "curie": "http://www.bbc.co.uk/asset/de62c36a-48fb-4b27-a85f-0f7f18bf1e10",
+      "assetId": "55699262"
+    },
+    "type": "CSP",
+    "createdBy": "news",
+    "language": "en-gb",
+    "lastUpdated": 1610930676199,
+    "firstPublished": 1610924926000,
+    "lastPublished": 1610924926000,
+    "timestamp": 1610924926000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "csp",
+      "counterName": "news.science_and_environment.correspondent_story.55699262.page",
+      "cps_asset_id": "55699262"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:de62c36a-48fb-4b27-a85f-0f7f18bf1e10",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/3688347e-0b72-4f81-892e-02f0e83c3e1c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d8f5304f-1800-466a-b7d8-ec5de607ac5b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5cd0bcb1-519a-49f4-93f5-624cc14abee8#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c404c0a9-608c-4cc1-b172-ee027e024f76#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b2b806bf-f281-44e2-9768-4fa4da39271c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/90e896ec-eca6-454d-a90d-6e2be9d6bd21#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Commercial space travel",
+          "thingUri": "http://www.bbc.co.uk/things/5cd0bcb1-519a-49f4-93f5-624cc14abee8#id",
+          "thingId": "5cd0bcb1-519a-49f4-93f5-624cc14abee8",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Space_tourism",
+            "http://www.wikidata.org/entity/Q49390"
+          ],
+          "topicName": "Commercial space travel",
+          "topicId": "c4028d970e4t",
+          "curationList": [
+            {
+              "curationId": "c3827237-b2a9-4591-9116-5aee8202de07",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Commercial space travel"
+        },
+        {
+          "thingLabel": "Space exploration",
+          "thingUri": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+          "thingId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Theme"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q180046",
+            "http://dbpedia.org/resource/Space_exploration"
+          ],
+          "topicName": "Space exploration",
+          "topicId": "cvenzmgyww4t",
+          "curationList": [
+            {
+              "curationId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Space exploration"
+        },
+        {
+          "thingLabel": "Aerospace",
+          "thingUri": "http://www.bbc.co.uk/things/90e896ec-eca6-454d-a90d-6e2be9d6bd21#id",
+          "thingId": "90e896ec-eca6-454d-a90d-6e2be9d6bd21",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Theme"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Aerospace"
+          ],
+          "topicName": "Aerospace",
+          "topicId": "crr7mlg0dewt",
+          "curationList": [
+            {
+              "curationId": "90e896ec-eca6-454d-a90d-6e2be9d6bd21",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Aerospace"
+        },
+        {
+          "thingLabel": "Newquay",
+          "thingUri": "http://www.bbc.co.uk/things/b2b806bf-f281-44e2-9768-4fa4da39271c#id",
+          "thingId": "b2b806bf-f281-44e2-9768-4fa4da39271c",
+          "thingType": [
+            "core:Thing",
+            "core:Place",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://sws.geonames.org/2641589/"
+          ],
+          "topicName": "Newquay",
+          "topicId": "cmgm2706de0t",
+          "curationList": [
+            {
+              "curationId": "2641589",
+              "curationType": "location-stream"
+            }
+          ],
+          "thingEnglishLabel": "Newquay"
+        },
+        {
+          "thingLabel": "California",
+          "thingUri": "http://www.bbc.co.uk/things/c404c0a9-608c-4cc1-b172-ee027e024f76#id",
+          "thingId": "c404c0a9-608c-4cc1-b172-ee027e024f76",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/California",
+            "http://sws.geonames.org/5332921/",
+            "http://www.wikidata.org/entity/Q99"
+          ],
+          "topicName": "California",
+          "topicId": "cz4pr2gd5mzt",
+          "curationList": [
+            {
+              "curationId": "c404c0a9-608c-4cc1-b172-ee027e024f76",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "California"
+        },
+        {
+          "thingLabel": "Richard Branson",
+          "thingUri": "http://www.bbc.co.uk/things/d8f5304f-1800-466a-b7d8-ec5de607ac5b#id",
+          "thingId": "d8f5304f-1800-466a-b7d8-ec5de607ac5b",
+          "thingType": [
+            "core:Person",
+            "core:Thing",
+            "tagging:Agent",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Richard_Branson",
+            "http://musicbrainz.org/artist/6ea65dde-175f-4e33-999c-aa38cda7bf6a#_",
+            "http://www.wikidata.org/entity/Q194419",
+            "http://rdf.freebase.com/ns/m.0n839"
+          ],
+          "topicName": "Richard Branson",
+          "topicId": "cj27577mrjjt",
+          "curationList": [
+            {
+              "curationId": "27a1dbe4-b081-4bdf-8760-e54cbbbaabac",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Richard Branson"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "social_embed"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWS",
+      "producerId": "64",
+      "chapter": "science_and_environment"
+    },
+    "readTime": 3,
+    "siteUri": "/news",
+    "topics": [
+      {
+        "topicName": "Commercial space travel",
+        "topicId": "c4028d970e4t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5cd0bcb1-519a-49f4-93f5-624cc14abee8#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "c3827237-b2a9-4591-9116-5aee8202de07",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Richard Branson",
+        "topicId": "cj27577mrjjt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/d8f5304f-1800-466a-b7d8-ec5de607ac5b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "27a1dbe4-b081-4bdf-8760-e54cbbbaabac",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Person",
+          "core:Thing",
+          "tagging:Agent",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName": "Newquay",
+        "topicId": "cmgm2706de0t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/b2b806bf-f281-44e2-9768-4fa4da39271c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2641589",
+            "curationType": "location-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "core:Place",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName": "Aerospace",
+        "topicId": "crr7mlg0dewt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/90e896ec-eca6-454d-a90d-6e2be9d6bd21#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "90e896ec-eca6-454d-a90d-6e2be9d6bd21",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Thing",
+          "core:Theme"
+        ]
+      },
+      {
+        "topicName": "Space exploration",
+        "topicId": "cvenzmgyww4t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Thing",
+          "core:Theme"
+        ]
+      },
+      {
+        "topicName": "California",
+        "topicId": "cz4pr2gd5mzt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/c404c0a9-608c-4cc1-b172-ee027e024f76#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "c404c0a9-608c-4cc1-b172-ee027e024f76",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Place",
+          "core:Thing"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116558144",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/AC99/production/_116558144_ld2ignition2.jpg",
+        "path": "/cpsprodpb/AC99/production/_116558144_ld2ignition2.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "LauncherOne ignites its engine",
+        "caption": "Within seconds of being dropped, LauncherOne had ignited its engine",
+        "copyrightHolder": "Virgin Orbit",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Sir Richard Branson's rocket company Virgin Orbit has succeeded in putting its first satellites in space. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ten payloads in total were lofted on the same rocket, which was launched from under the wing of one of the entrepreneur's old 747 jumbos. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Sir Richard is hoping to tap into what is a growing market for small, lower-cost satellites. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "By using a jet plane as the launch platform, he can theoretically send up spacecraft from anywhere in the world. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "In reality, of course, his Virgin Orbit system has to be licensed in the locality where it is used, which at the moment is solely California. But there are well-advanced plans to bring the 747 and its rockets to Cornwall in south-west England, for example.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>news/science-environment-54583588</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Nasa's 'megarocket' engine test ends early",
+                  "headline": "SLS: Nasa's 'megarocket' engine test ends early",
+                  "overtyped": "Nasa's 'megarocket' engine test ends early"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/science-environment-54583588"
+                },
+                "summary": "A critical engine test for Nasa's new \"megarocket\" - the Space Launch System (SLS) - ends early.",
+                "timestamp": 1610852578000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/science-environment-54583588",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>news/science-environment-55665537</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "UK industry bids farewell to EU's Galileo system",
+                  "headline": "UK industry bids farewell to EU's Galileo system",
+                  "overtyped": "UK industry bids farewell to EU's Galileo system"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/science-environment-55665537"
+                },
+                "summary": "Spacecraft manufacturer SSTL ships its final navigation payloads for the Galileo sat-nav programme.",
+                "timestamp": 1610642817000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/science-environment-55665537",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>news/science-environment-55640447</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "EU must 'move at speed' on space broadband network",
+                  "headline": "EU must 'move at speed' on space broadband network",
+                  "overtyped": "EU must 'move at speed' on space broadband network"
+                },
+                "locators": {
+                  "href": "https://www.bbc.co.uk/news/science-environment-55640447"
+                },
+                "summary": "The European Commission sets ambitious targets for its satellite secure communications project.",
+                "timestamp": 1610488972000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:news/science-environment-55640447",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "112405464",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/B572/production/_112405464_virgin_satellite_launcher640-nc.png",
+        "path": "/cpsprodpb/B572/production/_112405464_virgin_satellite_launcher640-nc.png",
+        "height": 513,
+        "width": 640,
+        "altText": "Map",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Sunday's success was a big fillip for Sir Richard's team who had tried and failed to launch a rocket in May last year. That effort was thwarted by a breached propellant line feeding liquid oxygen to the booster's first-stage Newton-3 engine.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "No such problems occurred this time.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The modified 747, named Cosmic Girl, left its base in California's Mojave desert at 10:50 PST (18:50 UTC) to fly out over the Pacific Ocean. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "A little under 60 minutes later, and cruising at 35,000ft (10,500m), the jet banked hard to the right, dropping as it did so the 21m-long rocket that had been clamped to its underside. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Within seconds this booster, called LauncherOne, had ignited its engine and was climbing to space. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Correct deployment of the various spacecraft onboard at an altitude of roughly 500km was confirmed a couple of hours later.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;A new gateway to space has just sprung open,&quot; said Virgin Orbit CEO Dan Hart. &quot;That LauncherOne was able to successfully reach orbit today is a testament to this team's talent, precision, drive, and ingenuity.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "112405463",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/8E62/production/_112405463_virgin_satellite640-nc.png",
+        "path": "/cpsprodpb/8E62/production/_112405463_virgin_satellite640-nc.png",
+        "height": 615,
+        "width": 640,
+        "altText": "Rocket profile",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "116558143",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/8589/production/_116558143_ld2ignition.jpg",
+        "path": "/cpsprodpb/8589/production/_116558143_ld2ignition.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Chase plane watches rocket fly",
+        "caption": "LauncherOne's ascent photographed from a chase plane",
+        "copyrightHolder": "Virgin Orbit",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Sir Richard has been trying to find the right solution to get into the satellite launch business <link><caption>since 2009</caption><url href=\"http://news.bbc.co.uk/1/mobile/sci/tech/7862827.stm\" platform=\"highweb\"/></link>. His concrete proposal was first put before the public at the Farnborough International Air Show <link><caption>three years later</caption><url href=\"https://www.bbc.co.uk/news/science-environment-18801180\" platform=\"highweb\"/></link>.",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "There is an emerging market for small, lower-cost spacecraft, whose developers are seeking more flexible and affordable ways of getting their assets above the Earth.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://twitter.com/Virgin_Orbit/status/1350960438444511232?s=20",
+        "source": "twitter",
+        "id": "1350960438444511232",
+        "type": "social_embed"
+      },
+      {
+        "text": "Virgin Orbit is one of a number of companies now racing to meet this demand. Other contenders include the Rocket Lab outfit, which sends up its vehicles from a ground launch pad in New Zealand. But there are tens of other small rocket start-ups at various stages of maturation, and some of these plan to operate from the UK as well.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Virgin Orbit has achieved something many thought impossible. It was so inspiring to see our specially adapted Virgin Atlantic 747, Cosmic Girl, send the LauncherOne rocket soaring into orbit,&quot; Sir Richard said.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;This magnificent flight is the culmination of many years of hard work and will also unleash a whole new generation of innovators on the path to orbit. I can't wait to see the incredible missions Dan and the team will launch to change the world for good.&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116558140",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1059/production/_116558140_bd818287-e45e-437c-8393-687017c6c230.jpg",
+        "path": "/cpsprodpb/1059/production/_116558140_bd818287-e45e-437c-8393-687017c6c230.jpg",
+        "height": 351,
+        "width": 624,
+        "altText": "LauncherOne and Richard Branson",
+        "caption": "Sir Richard presented the LauncherOne concept at Farnborough in 2012",
+        "copyrightHolder": "AFP",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Will Whitehorn is the president of UKSpace, the trade body representing the space industry in Britain. He's also a former president of Virgin Galactic, Sir Richard's other space company which hopes soon to start flying fare-paying passengers above the atmosphere in a rocket plane.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "He said Virgin Orbit's success on Sunday was hugely significant.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;This is a momentous day for the small satellite world, as we will be able to launch satellites responsively; and for the UK this event promises sovereign launch capability very soon,&quot; he told BBC News.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;I plan to push hard for a launch from Cornwall to coincide with the G7 meeting this year if at all possible!&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "116558137",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/11DE1/production/_116558137_p1056368-1-scaled.jpg",
+        "path": "/cpsprodpb/11DE1/production/_116558137_p1056368-1-scaled.jpg",
+        "height": 600,
+        "width": 976,
+        "altText": "Small satellite",
+        "caption": "Sunday's payloads were mostly shoebox-sized and developed by universities",
+        "copyrightHolder": "Virgin Orbit",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "id": "112389389",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1805E/production/_112389389_52747769.jpg",
+        "path": "/cpsprodpb/1805E/production/_112389389_52747769.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Cosmic Girl",
+        "caption": "The air-launched system has the flexibility to operate anywhere - in theory",
+        "copyrightHolder": "Virgin Orbit",
+        "positionHint": "full-width",
+        "type": "image"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Branson's Virgin rocket takes satellites to orbit",
+      "headline": "Branson's Virgin rocket takes satellites to orbit"
+    },
+    "locators": {
+      "assetUri": "/news/science-environment-55699262",
+      "cpsUrn": "urn:bbc:content:assetUri:news/science-environment-55699262",
+      "curie": "http://www.bbc.co.uk/asset/de62c36a-48fb-4b27-a85f-0f7f18bf1e10",
+      "assetId": "55699262"
+    },
+    "summary": "Sir Richard Branson's rocket company succeeds in putting its first satellites in space.",
+    "timestamp": 1610924926000,
+    "language": "en-gb",
+    "byline": {
+      "name": "By Jonathan Amos",
+      "title": "BBC Science Correspondent",
+      "persons": [
+        {
+          "name": "Jonathan Amos",
+          "function": "Science correspondent",
+          "url": "/news/correspondents/jonathanamos",
+          "correspondentId": "jonathanamos",
+          "thumbnail": "http://c.files.bbci.co.uk/8C96/production/_112909953_89920812-8e2f-4f8c-840b-e741499a77c4.jpg",
+          "correspondentImage": {
+            "height": 200,
+            "width": 200,
+            "href": "http://c.files.bbci.co.uk/3E76/production/_112909951_jonathanamos.jpg",
+            "originCode": "cpsprodpb",
+            "altText": "Jonathan Amos, Science correspondent",
+            "copyrightHolder": "BBC",
+            "allowSyndication": true
+          },
+          "twitterName": "BBCAmos"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "language": "en-gb",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/News",
+      "locator": "urn:bbc:cps:curie:asset:de62c36a-48fb-4b27-a85f-0f7f18bf1e10",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/3688347e-0b72-4f81-892e-02f0e83c3e1c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/d8f5304f-1800-466a-b7d8-ec5de607ac5b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5cd0bcb1-519a-49f4-93f5-624cc14abee8#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c404c0a9-608c-4cc1-b172-ee027e024f76#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b2b806bf-f281-44e2-9768-4fa4da39271c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/90e896ec-eca6-454d-a90d-6e2be9d6bd21#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/84915d8d-467d-4c5e-88f7-bbb1bb5cf0dc#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "116558145",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/D3A9/production/_116558145_ld2ignition2.jpg",
+      "path": "/cpsprodpb/D3A9/production/_116558145_ld2ignition2.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "LauncherOne ignites its engine",
+      "caption": "Within seconds of being dropped, LauncherOne had ignited its engine",
+      "copyrightHolder": "Virgin Orbit",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:news/science-environment-55699262",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Science & Environment",
+      "uri": "/news/science_and_environment",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC News",
+      "uri": "/news",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -31,6 +31,11 @@ const relatedItems = [
     id: 'urn:bbc:ares::asset:hausa/labarai-42837051',
     type: 'cps',
   },
+  {
+    name: 'Promo link in Index Alsos',
+    type: 'link',
+    uri: 'https://www.bbc.com/persian',
+  },
 ];
 
 export default relatedItems;

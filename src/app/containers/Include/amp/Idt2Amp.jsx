@@ -1,18 +1,13 @@
 import React from 'react';
 import { string, shape, number } from 'prop-types';
-import styled from 'styled-components';
 import { AmpImg } from '@bbc/psammead-image';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
-
-const IncludeGrid = styled(GridItemConstrainedMedium)`
-  display: grid;
-`;
+import { GridItemMedium } from '#app/components/Grid';
 
 const Idt2Amp = ({ imageBlock }) =>
   imageBlock ? (
-    <IncludeGrid>
+    <GridItemMedium>
       <AmpImg {...imageBlock} />
-    </IncludeGrid>
+    </GridItemMedium>
   ) : null;
 
 Idt2Amp.propTypes = {

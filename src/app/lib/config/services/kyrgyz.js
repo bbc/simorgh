@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { kyrgyz as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Жарнама',
-    },
     lang: `ky`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Жаңылоо',
@@ -24,16 +25,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/kyrgyz.png',
     defaultImageAltText: 'BBC News Кыргыз КызMATы',
     dir: `ltr`,
-    externalLinkText: ', Би-Би-Сиден тышкары баракча',
+    externalLinkText: ', баракчалар',
     imageCaptionOffscreenText: 'Сүрөттүн түшүндүрмөсү, ',
     videoCaptionOffscreenText: 'Видеонун түшүндүрмөсү, ',
     audioCaptionOffscreenText: 'Аудионун түшүндүрмөсү, ',
     defaultCaptionOffscreenText: 'Түшүндүрмө, ',
     imageCopyrightOffscreenText: 'Сүрөттүн булагы, ',
     locale: `ky-KG`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ky',
     datetimeLocale: `ky`,
     service: 'kyrgyz',
     serviceName: 'News Кыргыз КызMATы',
+    languageName: 'Kyrgyz',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbckyrgyz',
     twitterSite: '@bbckyrgyz',
@@ -48,19 +52,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Жарнама',
+      },
       seeAll: 'Баарын көрүү',
       home: 'Башталгыч бет',
       currentPage: 'Ачылып турган баракча',
       skipLinkText: 'Сайтка өтүү',
       relatedContent: 'Тема боюнча башка макалалар',
+      relatedTopics: 'Тектеш темалар',
       navMenuText: 'Бөлүмдөр',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Корутунду',
       error: {
         404: {
           statusCode: '404',
@@ -116,29 +130,75 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Өзгөрүүлөргө макулсузбу?',
-          description: {
-            uk: {
-              first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
-              linkText: 'cookies',
-              last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Маалымат топтоого уруксат берип, улантуу',
+            reject: 'Маалымат топтоого уруксат бербей улантуу',
+            initial: {
+              title: 'AMP баракчаларынан маалымат топтоого уруксатпы?',
+              description: {
+                first:
+                  'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last: ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Тескөө',
             },
-            international: {
-              first:
-                'Биз жана өнөктөштөрүбүз сайтыбызда иштөөнү жакшыртуу үчүн ',
-              linkText: 'cookies',
-              last:
-                ' колдонуп, браузердеги маалыматты топтойт. Бул аркылуу сиз жактырган контент жана жарнамалар көрсөтүлөт. Буга макулсузбу?',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP баракчаларын тескөө',
+              description: {
+                para1:
+                  'Сиз тандаган тескөөлөр AMP баракчасына таандык. Би-Би-Синин AMP саналбаган баракчасына кирип калсаңыз, кайра тескөөгө туура келиши мүмкүн.',
+                para2:
+                  'Уюлдук телефондо тез жүктөлгөн атайын баракча Google AMP технологиясы менен жасалган.',
+                heading2:
+                  'Баракчаны иштетүүгө маанилүү болгон маалымат гана топтолду',
+                para3:
+                  'Баракча тез жүктөлүшү үчүн сизден уруксат албай туруп телефонуңузга маалымат сакталат.',
+                para4: {
+                  text: 'Баракча тез жүктөлүшү үчүн кандай маалымат сакталып жатканы тууралуу кеңири маалымат алыңыз.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Ылайыктуу контент тууралуу маалымат телефонуңузда сакталат.',
+                heading3: 'Кошумча маалымат чогултуу',
+                para6:
+                  'AMP баракчаларынан маалымат топтоого уруксат бергенде, Британиядан  тышкары мамлекеттерде жеке өзүңүзгө ылайыктуу жарнама сунуштоого дагы уруксат берип жатасыз.',
+                para7: {
+                  text: 'Би-Би-Си баракчаларында жарнамалар жеке сизге ылайыктуу болгудай тандалганы тууралуу кеңири маалымат алыңыз.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Жеке сизге ылайыктуу жарнамалардан баш тарткыңыз келсе "Маалымат топтоого уруксат бербей улантууну" тандаңыз. Сиз жарнамаларды көрө бересиз, бирок алар жеке сизге ылайыкталган эмес.',
+                para9:
+                  'Тескөөнү каалаган учурда өзгөртсөңүз болот. Ал үчүн баракчанын астындагы “Ad Choices / Do not sell my info” бөлүмүн каалаган учурда басып, өзүңүзгө ылайыктуу болгондой тескеп алууга мүмкүн.',
+              },
             },
           },
-          accept: 'Ооба, мен макулмун',
-          reject: 'Жок, мени жөндөө баракчасына алып бар',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Өзгөрүүлөргө макулсузбу?',
+            description: {
+              uk: {
+                first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Биздин сайтыбызда иштөөнү жакшыртуу үчүн ',
+                linkText: 'cookies',
+                last: ' колдонобуз. Cookies боюнча эрежелерге макулсузбу?',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ооба, мен макулмун',
+            reject: 'Жок, мени жөндөө баракчасына алып бар',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -158,13 +218,17 @@ export const service = {
           subtitle:
             'Би-Би-Си Кыргыз кызматынын эл аралык жаңылыктарын көрүңүз.',
         },
-        listen: 'Listen',
-        watch: 'Watch',
-        liveLabel: 'LIVE',
+        listen: 'Угуу',
+        watch: 'Көрүү',
+        listenLive: 'Түз ободо угуу',
+        listenNext: 'Кийнкисин угуңуз',
+        liveLabel: 'Түз ободо',
         nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        previousRadioShow: 'Мурдагы радио программа',
+        nextRadioShow: 'Кезектеги радио программа',
+        duration: 'Узактыгы',
+        recentEpisodes: 'Мурдагы берүүлөр',
+        podcastExternalLinks: 'Бул подкастты башка платформалардан дагы угуңуз',
       },
       socialEmbed: {
         caption: {
@@ -183,6 +247,10 @@ export const service = {
           endTextVisuallyHidden: '%provider_name% посттун аягы',
         },
       },
+      include: {
+        errorMessage: 'Кечиресиз, бул баракча мобилдик телефондо ачылбайт',
+        linkText: 'Башкы беттин толук версиясын ачыңыз',
+      },
       topStoriesTitle: 'Башкы кабарлар',
       featuresAnalysisTitle: 'Редактордун тандоосу',
     },
@@ -192,6 +260,11 @@ export const service = {
       lastUpdated: 'Акыркы жаңылоо:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Эң көп көрүлгөндөр',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -205,7 +278,7 @@ export const service = {
         text: 'Эмнеге BBC News ишенсе болот?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Башка интернет сайттардын мазмуну боюнча биздин позиция.',
       },
       links: [
@@ -222,17 +295,16 @@ export const service = {
           text: 'Купуялык',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/kyrgyz/institutional-38157284',
+          href: 'https://www.bbc.co.uk/send/u50853445',
           text: 'Би-Би-Си менен байланышыңыз',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -249,15 +321,11 @@ export const service = {
       },
       {
         title: 'Кыргызстан',
-        url: '/kyrgyz/kyrgyzstan',
+        url: '/kyrgyz/topics/cz74kjpyk07t',
       },
       {
         title: 'Дүйнө',
-        url: '/kyrgyz/world',
-      },
-      {
-        title: 'Сапар TV',
-        url: '/kyrgyz/sapartv',
+        url: '/kyrgyz/topics/ck2l9z012nkt',
       },
       {
         title: 'Видео',
@@ -265,15 +333,11 @@ export const service = {
       },
       {
         title: 'Маданият/Илим',
-        url: '/kyrgyz/entertainment',
+        url: '/kyrgyz/topics/czp8pjrkgp0t',
       },
       {
         title: 'Журнал',
-        url: '/kyrgyz/magazine',
-      },
-      {
-        title: 'Блог',
-        url: '/kyrgyz/blog',
+        url: '/kyrgyz/magazine-54071664',
       },
     ],
   },

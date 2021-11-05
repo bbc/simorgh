@@ -23,7 +23,7 @@ it('should return DOM from a given url path', async () => {
         `<html><head><title>Some HTML</title></head><body></body></html>`,
       ),
     );
-  const dom = await fetchDom('http://localhost:7080/some/path');
+  const dom = await fetchDom({ url: 'http://localhost:7080/some/path' });
   const pageTitle = dom.window.document.querySelector('title').textContent;
 
   expect(pageTitle).toBe('Some HTML');
@@ -41,7 +41,7 @@ it('should retry to render the DOM if socket hang up error occurs', async () => 
       ),
     );
 
-  const dom = await fetchDom('http://localhost:7080/some/path');
+  const dom = await fetchDom({ url: 'http://localhost:7080/some/path' });
   const pageTitle = dom.window.document.querySelector('title').textContent;
 
   expect(console.warn).toHaveBeenCalledWith(

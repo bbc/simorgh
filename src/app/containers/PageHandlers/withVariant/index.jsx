@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import React from 'react';
-import { useParams, useLocation, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import getVariantRedirectUrl from './getVariantRedirectUrl';
 
 const WithVariant = Component => {
   const VariantContainer = props => {
-    const { service, variant } = useParams();
-    const location = useLocation();
+    const { service, variant } = props;
 
     const { path, params } = pathOr({}, ['match'], props);
 
@@ -22,14 +21,16 @@ const WithVariant = Component => {
       return <Component {...props} />;
     }
 
-    return (
-      <Redirect
-        to={{
-          ...location,
-          pathname: redirectPath,
-        }}
-      />
-    );
+    return <Redirect to={redirectPath} />;
+  };
+
+  VariantContainer.propTypes = {
+    service: PropTypes.string.isRequired,
+    variant: PropTypes.string,
+  };
+
+  VariantContainer.defaultProps = {
+    variant: null,
   };
 
   return VariantContainer;

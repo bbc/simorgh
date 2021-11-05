@@ -13,7 +13,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/articles/c4g19kgl85ko'],
@@ -63,25 +63,33 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
+            paths: [
+              '/afaanoromoo/bbc_afaanoromoo_radio/liveradio?renderer_env=live',
+            ],
             enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/liveradio'],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // On Demand Brand
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wc0', // On Demand Episode
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/afaanoromoo/bbc_afaanoromoo_radio/programmes/w13xttnw', // On Demand Brand
+              '/afaanoromoo/bbc_afaanoromoo_radio/w3ct1wd4', // On Demand Episode
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/afaanoromoo/bbc_afaanoromoo_radio/w3cszx1y'],
@@ -108,6 +116,23 @@ module.exports = () => ({
           local: {
             paths: ['/afaanoromoo/23149891'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/afaanoromoo/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afaanoromoo/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afaanoromoo/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -164,6 +189,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afaanoromoo/sport-23125110'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afaanoromoo/sport-23125110'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   afrique: {
@@ -227,11 +288,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/afrique/bbc_afrique_radio/liveradio'],
-            enabled: false,
+            paths: ['/afrique/bbc_afrique_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/afrique/bbc_afrique_radio/liveradio'],
@@ -240,24 +301,24 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/afrique/bbc_afrique_radio/programmes/p030s6dq', // Brand
-              '/afrique/bbc_afrique_radio/w172xg2srnppw28', // Episode
+              '/afrique/bbc_afrique_radio/programmes/p030s6dq', // On Demand Brand
+              '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/afrique/bbc_afrique_radio/programmes/p030s6dq', // Brand
-              '/afrique/bbc_afrique_radio/w172xg2srnppw28', // Episode
+              '/afrique/bbc_afrique_radio/programmes/p030s6g6', // On Demand Brand
+              '/afrique/bbc_afrique_radio/w172y1g3d9108lh', // On Demand Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/afrique/bbc_afrique_radio/w172x601yx5z2n1'],
+            paths: ['/afrique/bbc_afrique_radio/w172xqydyfv659p'],
             enabled: true,
           },
         },
@@ -268,20 +329,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
+              '/afrique/bbc_afrique_tv/tv/w172xtjgc2szrpv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
               '/afrique/bbc_afrique_tv/tv_programmes/w13xttmz', // Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -293,14 +356,14 @@ module.exports = () => ({
               '/afrique/media-52121324', // CPS MAP
               '/afrique/institutionelles/2015/07/150714_hissene_habre_explainer', // TC2 MAP
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/afrique/region-23278969', // CPS MAP
               '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
@@ -308,6 +371,23 @@ module.exports = () => ({
               '/afrique/nos_emissions/2016/06/160622_tc2_testmap1', // TC2 MAP video
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/afrique/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afrique/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afrique/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -332,11 +412,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/afrique/monde-48370111'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/afrique/region-23268823'],
             enabled: false,
           },
           local: {
@@ -364,6 +444,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/afrique/48465371'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/afrique/sports-23071094'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/afrique/48465371'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   amharic: {
@@ -427,11 +543,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/amharic/bbc_amharic_radio/liveradio'],
-            enabled: false,
+            paths: ['/amharic/bbc_amharic_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/amharic/bbc_amharic_radio/liveradio'],
@@ -440,19 +556,19 @@ module.exports = () => ({
         },
         smoke: true,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/amharic/bbc_amharic_radio/programmes/w13xttnt', // Brand
-              '/amharic/bbc_amharic_radio/w3ct07cl', // Episode
+              '/amharic/bbc_amharic_radio/programmes/w13xttnt', // On Demand Brand
+              '/amharic/bbc_amharic_radio/w3ct1lqy', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/amharic/bbc_amharic_radio/programmes/w13xttnt', // Brand
-              '/amharic/bbc_amharic_radio/w3ct07cl', // Episode
+              '/amharic/bbc_amharic_radio/programmes/w13xttnt', // On Demand Brand
+              '/amharic/bbc_amharic_radio/w3ct1lqy', // On Demand Episode
             ],
             enabled: true,
           },
@@ -470,17 +586,34 @@ module.exports = () => ({
             paths: [
               '/amharic/news-51270657', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/amharic/news-23263266', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/amharic/news-23263266'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/amharic/media/video'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/amharic/media/video'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/amharic/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -536,7 +669,44 @@ module.exports = () => ({
         },
         smoke: false,
       },
+
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/amharic/23119145'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/amharic/23119145'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   arabic: {
@@ -600,11 +770,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/arabic/bbc_arabic_radio/liveradio'],
-            enabled: false,
+            paths: ['/arabic/bbc_arabic_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/arabic/bbc_arabic_radio/liveradio'],
@@ -613,18 +783,32 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/bbc_arabic_radio/programmes/p030vh2y', // On Demand Brand
+              '/arabic/bbc_arabic_radio/w172y3wn75cm441', // On Demand Episode
+              '/arabic/podcasts/p02pc9qc', // Podcast Brand
+              '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/arabic/bbc_arabic_radio/programmes/p030vh25', // On Demand Brand
+              '/arabic/bbc_arabic_radio/w172y3wn75cm441', // On Demand Episode
+              '/arabic/podcasts/p02pc9qc', // Podcast Brand
+              '/arabic/podcasts/p02pc9qc/p09kwwfs', // Podcast Episode
+            ],
+            enabled: true,
           },
           local: {
-            paths: ['/arabic/bbc_arabic_radio/w3ct01yb'],
+            paths: [
+              '/arabic/bbc_arabic_radio/w3ct01yb', // On Demand Episode
+              '/arabic/podcasts/p02pc9qc', // Podcast Brand
+              '/arabic/podcasts/p02pc9qc/p08wtg4d', // Podcast Episode
+            ],
             enabled: true,
           },
         },
@@ -657,6 +841,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/arabic/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/arabic/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/arabic/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -677,15 +878,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/arabic/sports-54278377'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/arabic/world-23349845'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/arabic/23298105'],
             enabled: false,
           },
         },
@@ -709,6 +910,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/arabic/magazine-54029177'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/arabic/23195478'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/arabic/magazine-54029177'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   azeri: {
@@ -769,7 +1006,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -793,6 +1030,23 @@ module.exports = () => ({
               '/azeri/multimedia/2015/08/150804_azeri_test', // TC2 MAP with video clip
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/azeri/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/azeri/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/azeri/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -849,6 +1103,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/azeri/azerbaijan-44208475'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/azeri/azerbaijan-23066612'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/azeri/azerbaijan-44208475'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   bengali: {
@@ -912,11 +1202,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/bengali/bbc_bangla_radio/liveradio'],
-            enabled: false,
+            paths: ['/bengali/bbc_bangla_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/bengali/bbc_bangla_radio/liveradio'],
@@ -925,21 +1215,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/bengali/bbc_bangla_radio/programmes/p030vjwg', // Brand
-              '/bengali/bbc_bangla_radio/w172xdwl3fhpwp5', // Episode
+              '/bengali/bbc_bangla_radio/programmes/p030vjwg', // On Demand Brand
+              '/bengali/bbc_bangla_radio/w172xwdq2b07ywv', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/bengali/bbc_bangla_radio/programmes/p030vjwg', // Brand
-              '/bengali/bbc_bangla_radio/w172xdwl3fhpwp5', // Episode
+              '/bengali/bbc_bangla_radio/programmes/p030vjwm', // On Demand Brand
+              '/bengali/bbc_bangla_radio/w172xwdq2b07ywv', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/bengali/bbc_bangla_radio/w172x0562jxntqx'],
@@ -975,6 +1265,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/bengali/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/bengali/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/bengali/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -995,11 +1302,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/bengali/news-54280809'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/bengali/23268280'],
             enabled: false,
           },
           local: {
@@ -1027,6 +1334,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/bengali/53988070'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/bengali/sport-23066929'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/bengali/53988070'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   burmese: {
@@ -1090,11 +1433,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/burmese/bbc_burmese_radio/liveradio'],
-            enabled: false,
+            paths: ['/burmese/bbc_burmese_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/burmese/bbc_burmese_radio/liveradio'],
@@ -1103,25 +1446,33 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/burmese/bbc_burmese_radio/programmes/p0340rnm', // Brand
-              '/burmese/bbc_burmese_radio/w3ct0b3p', // Episode
+              '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
+              '/burmese/bbc_burmese_radio/w3ct1m6n', // On Demand Episode
+              '/burmese/podcasts/p02pc9lh', // Podcast brand
+              '/burmese/podcasts/p02pc9lh/p09kzply', // Podcast Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
-              '/burmese/bbc_burmese_radio/programmes/p0340rnm', // Brand
-              '/burmese/bbc_burmese_radio/w3ct0b3p', // Episode
+              '/burmese/bbc_burmese_radio/programmes/p0340rnm', // On Demand Brand
+              '/burmese/bbc_burmese_radio/w3ct1m6n', // On Demand Episode
+              '/burmese/podcasts/p02pc9lh', // Podcast brand
+              '/burmese/podcasts/p02pc9lh/p09kzply', // Podcast Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/burmese/bbc_burmese_radio/w3csz62h'],
-            enabled: true,
+            paths: [
+              '/burmese/bbc_burmese_radio/w3csz62h', // On Demand Brand
+              '/burmese/podcasts/p02pc9lh', // Podcast brand
+              '/burmese/podcasts/p02pc9lh/p0967thw', // Podcast Episode
+            ],
+            enabled: false,
           },
         },
         smoke: false,
@@ -1131,18 +1482,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/burmese/bbc_burmese_tv/tv_programmes/w13xttn3', // Brand
+              '/burmese/bbc_burmese_tv/tv/w172xsxl59y5hdw', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/burmese/bbc_burmese_tv/tv/w172xbmg65lczy0', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1169,6 +1524,23 @@ module.exports = () => ({
               '/burmese/sport/2016/08/160811_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/burmese/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/burmese/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/burmese/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -1225,6 +1597,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/burmese/burma-50522534'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/burmese/sport-23068024'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/burmese/burma-50522534'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   cymrufyw: {
@@ -1269,13 +1677,37 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   gahuza: {
@@ -1342,7 +1774,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/gahuza/bbc_gahuza_radio/liveradio'],
+            paths: ['/gahuza/bbc_gahuza_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -1352,24 +1784,32 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // Brand
-              '/gahuza/bbc_gahuza_radio/w3ct0k5q', // Episode
+              '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
+              '/gahuza/bbc_gahuza_radio/w3ct1v5v', // On Demand Episode
+              '/gahuza/podcasts/p07yh8hb', // Podcast Brand
+              '/gahuza/podcasts/p07yh8hb/p09km4t4', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // Brand
-              '/gahuza/bbc_gahuza_radio/w3ct0k5q', // Episode
+              '/gahuza/bbc_gahuza_radio/programmes/p0340x2m', // On Demand Brand
+              '/gahuza/bbc_gahuza_radio/w3ct1v5v', // On Demand Episode
+              '/gahuza/podcasts/p07yh8hb', // Podcast Brand
+              '/gahuza/podcasts/p07yh8hb/p09km4t4', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
-            paths: ['/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz'],
+            paths: [
+              '/gahuza/bbc_gahuza_radio/w172x7rkcj6v0vz',
+              '/gahuza/podcasts/p07yh8hb', // Podcast Brand
+              '/gahuza/podcasts/p07yh8hb/p094vs2n', // Podcast Episode
+            ],
             enabled: true,
           },
         },
@@ -1401,6 +1841,23 @@ module.exports = () => ({
           },
         },
         smoke: true,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/gahuza/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gahuza/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gahuza/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -1454,6 +1911,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/gahuza/52551839'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gahuza/amakuru-23108776'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gahuza/52551839'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   gujarati: {
@@ -1514,7 +2007,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: undefined,
         smoke: false,
       },
@@ -1523,18 +2016,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+              '/gujarati/bbc_gujarati_tv/tv/w172xtmhvnb7snj', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/gujarati/bbc_gujarati_tv/tv_programmes/w13xttqr', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1556,6 +2053,23 @@ module.exports = () => ({
           local: {
             paths: ['/gujarati/other-news-23130286'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/gujarati/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gujarati/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gujarati/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -1612,6 +2126,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/gujarati/india-53920818'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/gujarati/india-23189893'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/gujarati/india-53920818'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   hausa: {
@@ -1675,11 +2225,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/hausa/bbc_hausa_radio/liveradio'],
-            enabled: false,
+            paths: ['/hausa/bbc_hausa_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/hausa/bbc_hausa_radio/liveradio'],
@@ -1688,24 +2238,32 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/hausa/bbc_hausa_radio/programmes/p030s4mh', // Brand
-              '/hausa/bbc_hausa_radio/w3ct0hlt', // Episode
+              '/hausa/bbc_hausa_radio/programmes/p030s4mh', // On Demand Brand
+              '/hausa/bbc_hausa_radio/w3ct1qzn', // On Demand Episode
+              '/hausa/podcasts/p08mlgcb', // Podcast Brand
+              '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/hausa/bbc_hausa_radio/programmes/p030s4mh', // Brand
-              '/hausa/bbc_hausa_radio/w3ct0hlt', // Episode
+              '/hausa/bbc_hausa_radio/programmes/p030s4mx', // On Demand Brand
+              '/hausa/bbc_hausa_radio/w3ct1033', // On Demand Episode
+              '/hausa/podcasts/p08mlgcb', // Podcast Brand
+              '/hausa/podcasts/p08mlgcb/p09l0fw6', // Podcast Episode
             ],
             enabled: true,
           },
           local: {
-            paths: ['/hausa/bbc_hausa_radio/w3cszrwm'],
+            paths: [
+              '/hausa/bbc_hausa_radio/w3cszrwm',
+              '/hausa/podcasts/p08mlgcb', // Podcast Brand
+              '/hausa/podcasts/p08mlgcb/p095k3hd', // Podcast Episode
+            ],
             enabled: true,
           },
         },
@@ -1716,18 +2274,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/hausa/bbc_hausa_tv/tv_programmes/w13xttn0', // Brand
+              '/hausa/bbc_hausa_tv/tv/w172xtnf6j8vmwq', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hausa/bbc_hausa_tv/tv/w172xcg0kg6vph8', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1757,6 +2319,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/hausa/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hausa/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['hausa/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1777,11 +2356,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/hausa/labarai-54292969'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/hausa/labarai-23190660'],
             enabled: false,
           },
           local: {
@@ -1809,6 +2388,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/hausa/labarai-52299135'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hausa/wasanni-23061643'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hausa/labarai-52299135'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   hindi: {
@@ -1859,7 +2474,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/hindi'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/hindi'],
@@ -1871,32 +2486,44 @@ module.exports = () => ({
       liveRadio: {
         environments: {
           live: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           test: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
             enabled: false,
           },
           local: {
-            paths: ['/hindi/bbc_hindi_radio/liveradio'],
-            enabled: true,
+            paths: [],
+            // route deprecated - hindi/bbc_hindi_radio/* will 404
+            enabled: false,
           },
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/podcasts/p0552909', // Podcast Brand
+              '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
+            ],
+            enabled: true,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/podcasts/p0552909', // Podcast Brand
+              '/hindi/podcasts/p0552909/p09kjqjm', // Podcast Episode
+            ],
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: [
+              '/hindi/podcasts/p0552909', // Podcast Brand
+              '/hindi/podcasts/p0552909/p0964mwl', // Podcast Episode
+            ],
             enabled: true,
           },
         },
@@ -1907,18 +2534,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+              '/hindi/bbc_hindi_tv/tv/w172xtp13fld5cp', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/hindi/bbc_hindi_tv/tv_programmes/w13xttlw', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -1949,6 +2580,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/hindi/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hindi/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hindi/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -1969,11 +2617,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/hindi/vert-fut-54127040'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/hindi/india-23240074'],
             enabled: false,
           },
           local: {
@@ -2001,6 +2649,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/hindi/india-53901953'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/hindi/india-23067562'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/hindi/india-53901953'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   igbo: {
@@ -2061,7 +2745,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2080,6 +2764,23 @@ module.exports = () => ({
           local: {
             paths: ['/igbo/media-23256786'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/igbo/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/igbo/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/igbo/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2136,6 +2837,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/igbo/media-23160433'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/igbo/media-23160433'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   indonesia: {
@@ -2199,11 +2936,13 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
-            enabled: false,
+            paths: [
+              '/indonesia/bbc_indonesian_radio/liveradio?renderer_env=live',
+            ],
+            enabled: true,
           },
           local: {
             paths: ['/indonesia/bbc_indonesian_radio/liveradio'],
@@ -2212,25 +2951,33 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
-              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // On Demand Brand
+              '/indonesia/bbc_indonesian_radio/w172xybnvm6718v', // On Demand Episode
+              '/indonesia/podcasts/p02pc9v6', // Podcast Brand
+              '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // Brand
-              '/indonesia/bbc_indonesian_radio/w172xh281s8mkhr', // Episode
+              '/indonesia/bbc_indonesian_radio/programmes/w13xtt0s', // On Demand Brand
+              '/indonesia/bbc_indonesian_radio/w172xybnvm6718v', // On Demand Episode
+              '/indonesia/podcasts/p02pc9v6', // Podcast Brand
+              '/indonesia/podcasts/p02pc9v6/p09l1mhb', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
-            paths: ['/indonesia/bbc_indonesian_radio/w172xh267fpn19l'],
-            enabled: true,
+            paths: [
+              '/indonesia/bbc_indonesian_radio/w172xh267fpn19l', // On Demand Episode
+              '/indonesia/podcasts/p02pc9v6', // Podcast Brand
+              '/indonesia/podcasts/p02pc9v6/p096mj9z', // Podcast Episode
+            ],
+            enabled: false,
           },
         },
         smoke: true,
@@ -2262,6 +3009,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/indonesia/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/indonesia/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/indonesia/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2282,11 +3046,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/indonesia/dunia-53413801'],
+            enabled: true,
           },
           test: {
-            paths: [],
+            paths: ['/indonesia/indonesia-23130787'],
             enabled: false,
           },
           local: {
@@ -2314,6 +3078,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/indonesia/laporan-khusus-53760712'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/indonesia/olahraga-23080621'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/indonesia/laporan-khusus-53760712'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   japanese: {
@@ -2374,7 +3174,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -2393,6 +3193,23 @@ module.exports = () => ({
           local: {
             paths: ['/japanese/video-23248670'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/japanese/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/japanese/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/japanese/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2417,15 +3234,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/japanese/53413346'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/japanese/23003063'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/japanese/world-23252833'],
             enabled: false,
           },
         },
@@ -2449,6 +3266,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/japanese/53969845'],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/japanese/53969845'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   korean: {
@@ -2515,7 +3368,7 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/korean/bbc_korean_radio/liveradio'],
+            paths: ['/korean/bbc_korean_radio/liveradio?renderer_env=live'],
             enabled: true,
           },
           local: {
@@ -2525,28 +3378,28 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/korean/bbc_korean_radio/programmes/w13xttll', // Brand
-              '/korean/bbc_korean_radio/w3ct0kqp', // Episode
+              '/korean/bbc_korean_radio/programmes/w13xttll', // On Demand Brand
+              '/korean/bbc_korean_radio/w3ct1vk5', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/korean/bbc_korean_radio/programmes/w13xttll', // Brand
-              '/korean/bbc_korean_radio/w3ct0kqp', // Episode
+              '/korean/bbc_korean_radio/programmes/w13xttlm', // On Demand Brand
+              '/korean/bbc_korean_radio/w3ct1vk5', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/korean/bbc_korean_radio/w3ct0kn5'],
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -2566,6 +3419,23 @@ module.exports = () => ({
           local: {
             paths: ['/korean/media-23248686'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/korean/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/korean/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/korean/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2622,6 +3492,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/korean/features-44652556'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/korean/features-23136351'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/korean/features-44652556'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   kyrgyz: {
@@ -2688,8 +3594,8 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
-            enabled: false,
+            paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/liveradio'],
@@ -2698,21 +3604,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // Brand
-              '/kyrgyz/bbc_kyrgyz_radio/w3ct0kxb', // Episode
+              '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // On Demand Brand
+              '/kyrgyz/bbc_kyrgyz_radio/w3ct1vw9', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // Brand
-              '/kyrgyz/bbc_kyrgyz_radio/w3ct0kxb', // Episode
+              '/kyrgyz/bbc_kyrgyz_radio/programmes/p0340xth', // On Demand Brand
+              '/kyrgyz/bbc_kyrgyz_radio/w3ct1vw9', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/kyrgyz/bbc_kyrgyz_radio/w3cszwmc'],
@@ -2726,18 +3632,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/kyrgyz/bbc_kyrgyz_tv/tv_programmes/w13xttqx', // Brand
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xtpn0bwv562', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/kyrgyz/bbc_kyrgyz_tv/tv/w172xcgmgcj9864', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -2764,6 +3674,23 @@ module.exports = () => ({
               // '/kyrgyz/multimedia/2015/03/150330_map_test', // TC2 MAP with audio clip
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/kyrgyz/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/kyrgyz/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -2820,6 +3747,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/kyrgyz/magazine-54071664'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/kyrgyz/world-23086329'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/kyrgyz/magazine-54071664'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   marathi: {
@@ -2880,7 +3843,31 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09kx7q9', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/marathi/podcasts/p09431p4', // Podcast Brand
+              '/marathi/podcasts/p09431p4/p09bplch', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+      },
       onDemandTV: {
         environments: {
           live: {
@@ -2923,6 +3910,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/marathi/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/marathi/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/marathi/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -2943,11 +3947,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/marathi/india-53414454'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/marathi/india-23126095'],
             enabled: false,
           },
           local: {
@@ -2975,6 +3979,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/marathi/india-53901688'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/marathi/23195696'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/marathi/india-53901688'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   mundo: {
@@ -3025,7 +4065,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/mundo'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo'],
@@ -3035,7 +4075,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3063,6 +4103,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/mundo/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/mundo/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3083,16 +4140,19 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/mundo/noticias-54274735'],
             enabled: false,
           },
           test: {
-            paths: [],
-            enabled: false,
+            paths: ['/mundo/23263889'],
+            enabled: true,
           },
           local: {
-            paths: ['/mundo/23263889'],
-            enabled: false,
+            paths: [
+              '/mundo/23263889',
+              '/mundo/noticias-internacional-51266689',
+            ],
+            enabled: true,
           },
         },
         smoke: true,
@@ -3115,6 +4175,60 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/mundo/noticias-internacional-53826365'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/mundo/noticias-internacional-23055705'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/mundo/noticias-internacional-53826365'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [
+              '/mundo/articles/cdwrpl7qwqqo',
+              '/mundo',
+              '/mundo/noticias-internacional-53826365',
+              '/mundo/popular/read',
+              '/mundo/media-52123665',
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/mundo/articles/ce42wzqr2mko',
+              '/mundo',
+              '/mundo/noticias-internacional-23055705',
+              '/mundo/popular/read',
+              '/mundo/media-23283126',
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/mundo/articles/ce42wzqr2mko',
+              '/mundo',
+              '/mundo/noticias-internacional-53826365',
+              '/mundo/popular/read',
+              '/mundo/media-23283126',
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   naidheachdan: {
@@ -3159,13 +4273,37 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   nepali: {
@@ -3229,11 +4367,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/nepali/bbc_nepali_radio/liveradio'],
-            enabled: false,
+            paths: ['/nepali/bbc_nepali_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/nepali/bbc_nepali_radio/liveradio'],
@@ -3242,24 +4380,32 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/nepali/bbc_nepali_radio/programmes/p0340xzt', // Brand
-              '/nepali/bbc_nepali_radio/w172xhtpmmq4yg4', // Episode
+              '/nepali/bbc_nepali_radio/programmes/p0340xzt', // On Demand Brand
+              '/nepali/bbc_nepali_radio/w172xzcfvptk838', // On Demand Episode
+              '/nepali/podcasts/p02pc9w3/p09j0dm5', // Podcast Episode
+              '/nepali/podcasts/p02pc9w3', // Podcast Brand
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/nepali/bbc_nepali_radio/programmes/p0340xzt', // Brand
-              '/nepali/bbc_nepali_radio/w172xhtpmmq4yg4', // Episode
+              '/nepali/bbc_nepali_radio/programmes/p0340xzt', // On Demand Brand
+              '/nepali/bbc_nepali_radio/w172xzcfvptk838', // On Demand Episode
+              '/nepali/podcasts/p02pc9w3/p09j0dm5', // Podcast Episode
+              '/nepali/podcasts/p02pc9w3', // Podcast Brand
             ],
             enabled: true,
           },
           local: {
-            paths: ['/nepali/bbc_nepali_radio/w172x83pnptp1s8'],
+            paths: [
+              '/nepali/bbc_nepali_radio/w172x83pnptp1s8',
+              '/nepali/podcasts/p02pc9w3/p086v2bv', // Podcast Episode
+              '/nepali/podcasts/p02pc9w3', // Podcast Brand
+            ],
             enabled: true,
           },
         },
@@ -3292,6 +4438,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/nepali/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/nepali/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/nepali/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3312,11 +4475,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/nepali/news-53409873'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/nepali/23210795'],
             enabled: false,
           },
           local: {
@@ -3344,6 +4507,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/nepali/media-54029171'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/nepali/news-23064489'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/nepali/media-54029171'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   news: {
@@ -3388,13 +4587,117 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/news/23393110'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/news/uk-56342465', '/news/technology-56294493'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [
+              '/news/articles/cj7xrxz0e8zo', // Article
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/news/articles/cn7k01xp8kxo', // Article
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/news/articles/cn7k01xp8kxo', // Article
+            ],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+    },
+  },
+  newsround: {
+    name: 'newsround',
+    font: undefined,
+    variant: 'default',
+    pageTypes: {
+      articles: { environments: undefined, smoke: false },
+      errorPage404: { environments: undefined, smoke: false },
+      frontPage: { environments: undefined, smoke: false },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
+      onDemandTV: { environments: undefined, smoke: false },
+      mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
+      photoGalleryPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: ['/newsround/56331357'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/newsround/23212028'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/newsround/56331357'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostReadPage: { environments: undefined, smoke: false },
+      idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   pashto: {
@@ -3458,11 +4761,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/pashto/bbc_pashto_radio/liveradio'],
-            enabled: false,
+            paths: ['/pashto/bbc_pashto_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/liveradio'],
@@ -3471,48 +4774,51 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
-              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // Episode
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Brand
+              '/pashto/bbc_pashto_radio/w3ct26m6', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // Brand
-              '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // Episode
+              '/pashto/bbc_pashto_radio/programmes/p0340ysc', // On Demand Brand
+              '/pashto/bbc_pashto_radio/w3ct26m6', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/pashto/bbc_pashto_radio/w3ct0lz1'],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       onDemandTV: {
         environments: {
           live: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xtq7x8660m1', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
               '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // Brand
+              '/pashto/bbc_pashto_tv/tv/w172xcldhhrhmcf', // Episode
             ],
-            enabled: true,
+            enabled: false,
           },
         },
         smoke: true,
@@ -3542,6 +4848,23 @@ module.exports = () => ({
           },
         },
         smoke: true,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/pashto/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pashto/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/pashto/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
       },
       photoGalleryPage: {
         environments: {
@@ -3595,6 +4918,80 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/pashto/columns-54029178'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pashto/sport-23079770'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/pashto/columns-54029178'],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [
+              // '/pashto/articles/c70970g2251o', // Article
+              // '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              // '/pashto/arts-and-literature-46787030', // CPS MAP
+              '/pashto/multimedia/2016/08/160827_gn_southafrica_female_farmer', // TC2 MAP
+              '/pashto/world-52873295', // CPS STY
+              '/pashto/arts-and-literature-50230813', // PGL
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
+              // '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              // '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              // '/pashto/popular/read', // Most Read
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              // '/pashto/articles/cyjmdl92z3ro', // Article
+              // '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              // '/pashto/media-23257523', // CPS MAP
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+              '/pashto/23289748', // CPS STY
+              '/pashto/23092924', // CPS PGL
+              '/pashto/bbc_pashto_radio/programmes/p0340yr4', // On Demand Radio Brand
+              // '/pashto/bbc_pashto_radio/w172xjclrg44rpx', // On Demand Radio Episode
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              // '', // On Demand TV Episode
+              // '/pashto/popular/read', // Most Read
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              // '/pashto/articles/c70970g2251o', // Article
+              // '/pashto', // Front Page
+              '/pashto/bbc_pashto_radio/liveradio', // Live Radio
+              // '/pashto/media-23257523', // CPS MAP
+              '/pashto/world/2016/09/160921_tc2_testmap1', // TC2 MAP
+              '/pashto/23289748', // CPS STY
+              '/pashto/arts-and-literature-50230813', // CPS PGL
+              // '', // On Demand Radio Brand
+              '/pashto/bbc_pashto_radio/w3ct2694', // On Demand Radio Episode
+              '/pashto/bbc_pashto_tv/tv_programmes/w13xttn4', // On Demand TV Brand
+              // '', // On Demand TV Episode
+              // '/pashto/popular/read', // Most Read
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   persian: {
@@ -3645,7 +5042,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/persian'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/persian'],
@@ -3665,8 +5062,8 @@ module.exports = () => ({
           },
           test: {
             paths: [
-              '/persian/bbc_persian_radio/liveradio',
-              '/persian/bbc_dari_radio/liveradio',
+              '/persian/bbc_persian_radio/liveradio?renderer_env=live',
+              '/persian/bbc_dari_radio/liveradio?renderer_env=live',
             ],
             enabled: true,
           },
@@ -3680,37 +5077,67 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/persian/bbc_dari_radio/programmes/p0340v0s', // Brand Dari
-              '/persian/bbc_persian_radio/programmes/p0340vyx', // Brand Persian
-              '/persian/bbc_dari_radio/w3ct0bst', // Episode Dari
-              '/persian/bbc_persian_radio/w3ct0s49', // Episode Persian
+              '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Brand Dari
+              '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Brand Persian
+              '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
+              '/persian/bbc_persian_radio/w3ct2cv6', // On Demand Episode Persian
+              '/persian/podcasts/p02pc9wf', // Podcast Brand
+              '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/persian/bbc_dari_radio/programmes/p0340v0s', // Brand Dari
-              '/persian/bbc_persian_radio/programmes/p0340vyx', // Brand Persian
-              '/persian/bbc_dari_radio/w3ct0bst', // Episode Dari
-              '/persian/bbc_persian_radio/w3ct0s49', // Episode Persian
+              '/persian/bbc_dari_radio/programmes/p0364sj5', // On Demand Brand Dari
+              '/persian/bbc_persian_radio/programmes/p0340vyw', // On Demand Brand Persian
+              '/persian/bbc_dari_radio/w172y2n5p9pfj6x', // On Demand Episode Dari
+              '/persian/bbc_persian_radio/w3ct2cv6', // On Demand Episode Persian
+              '/persian/podcasts/p02pc9wf', // Podcast Brand
+              '/persian/podcasts/p02pc9wf/p09knl1v', // Podcast Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: [
               '/persian/bbc_persian_radio/w172x32355t5635',
               '/persian/bbc_dari_radio/w3csz7mf',
+              '/persian/podcasts/p02pc9wf', // Podcast Brand
+              '/persian/podcasts/p02pc9wf/p095lyj1', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+        smoke: true,
+      },
+      onDemandTV: {
+        environments: {
+          live: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
+              '/persian/bbc_persian_tv/tv/w172xt4lj9yflqx', // Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/persian/bbc_persian_tv/tv_programmes/w13xttnr', // Brand
             ],
             enabled: true,
           },
         },
         smoke: false,
       },
-      onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
@@ -3739,6 +5166,23 @@ module.exports = () => ({
         },
         smoke: true,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/persian/media/video'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/persian/media/video'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/persian/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -3759,11 +5203,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/persian/world-features-54279309'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/persian/afghanistan-23292277'],
             enabled: false,
           },
           local: {
@@ -3806,6 +5250,85 @@ module.exports = () => ({
           },
         },
         smoke: true,
+      },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/persian/science-52004647'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/persian/23278332'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/persian/science-52004647'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [
+              // '/persian/articles/c7eel0lmr4do', // Article
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/magazine-49281981', // CPS PGL
+              // '/persian/world-51497110', // CPS MAP
+              // '/persian/media-49522521', // CPS MAP with live stream
+              // '/persian/world/2016/06/160613_om_naked_dining', // TC2 MAP
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
+              // '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
+              // '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              // '/persian/articles/cej3lzd5e0go', // Article
+              // '/persian', // Front Page
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/iran-23231114', // CPS MAP
+              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+              // '/persian/23104784', // CPS PGL
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/programmes/p0340v0s', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/programmes/p0340vyx', // On Demand Radio Brand
+              // '/persian/bbc_dari_radio/w3ct0bst', // On Demand Radio Episode
+              // '/persian/bbc_persian_radio/w3ct0s49', // On Demand Radio Episode
+            ],
+            enabled: false,
+          },
+          local: {
+            paths: [
+              // '/persian/articles/cej3lzd5e0go', // Article
+              // '/persian', // Front Page
+              // '/persian/afghanistan', // IDX
+              // '/persian/popular/read', // Most Read
+              // '/persian/iran-23231114', // CPS MAP
+              // '/persian/iran/2016/09/160907_tc2_testmap1', // TC2 MAP
+              // '/persian/magazine-49281981', // CPS PGL
+              // '/persian/arts-52166891', // CPS STY
+              // '/persian/bbc_persian_radio/liveradio', // Live Radio
+              // '/persian/bbc_dari_radio/liveradio', // Live Radio
+              // // '', // On Demand Radio Brand
+              // // '', // On Demand Radio Brand
+              // '/persian/bbc_persian_radio/w172x32355t5635', // On Demand Radio Episode
+              // '/persian/bbc_dari_radio/w3csz7mf', // On Demand Radio Episode
+            ],
+            enabled: false,
+          },
+        },
+        smoke: false,
       },
     },
   },
@@ -3867,7 +5390,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -3882,6 +5405,23 @@ module.exports = () => ({
           local: {
             paths: ['/pidgin/23248703'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/pidgin/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pidgin/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/pidgin/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -3938,6 +5478,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/pidgin/tori-23133559'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/pidgin/tori-23133559'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   portuguese: {
@@ -3988,7 +5564,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/portuguese'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/portuguese'],
@@ -3998,7 +5574,32 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p09clrrg', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p09clrrg', // Podcast Episode
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/portuguese/podcasts/p07r3r3t', // Podcast Brand
+              '/portuguese/podcasts/p07r3r3t/p083x9gr', // Podcast Episode
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4026,6 +5627,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/portuguese/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/portuguese/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/portuguese/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -4046,11 +5664,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/portuguese/vert-fut-54196350'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/portuguese/brasil-23241143'],
             enabled: false,
           },
           local: {
@@ -4078,6 +5696,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/portuguese/geral-51774675'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/portuguese/internacional-23049710'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/portuguese/geral-51774675'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   punjabi: {
@@ -4137,7 +5791,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4156,6 +5810,23 @@ module.exports = () => ({
           local: {
             paths: ['/punjabi/media-23248705'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/punjabi/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/punjabi/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/punjabi/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -4212,6 +5883,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/punjabi/india-53963142'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/punjabi/india-23131884'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/punjabi/india-53963142'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   russian: {
@@ -4258,31 +5965,59 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/russian'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/russian'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/russian'],
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: {
+        environments: {
+          live: {
+            paths: [
+              '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
+              '/russian/podcasts/p05607v8', // Podcast Brand
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: [
+              '/russian/podcasts/p05607v8/p06x0tn3', // Podcast Episode
+              '/russian/podcasts/p05607v8', // Podcast Brand
+            ],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/russian/podcasts/p05607v8/p06xlzvx', // Podcast Episode
+              '/russian/podcasts/p05607v8', // Podcast Brand
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/russian/av/media-45527896', // CPS video with redirect
+              '/russian/multimedia/2012/04/120411_v_titanic_last_survivor', // TC2 video
+            ],
+            enabled: true,
           },
           test: {
             paths: [
-              '/russian/av/media-52355574',
+              '/russian/av/media-23320267', // CPS video with redirect
               '/russian/news/2016/05/160510_tc2_testmap3', // TC2 video
             ],
             enabled: true,
@@ -4294,6 +6029,7 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: { environments: undefined, smoke: false }, // No Most Watched page for Russian
       photoGalleryPage: {
         environments: {
           live: {
@@ -4314,19 +6050,19 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
+            enabled: true,
           },
           test: {
-            paths: [],
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
             enabled: false,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: ['/russian/features-54391793', '/russian/news-55041160'],
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       mostReadPage: {
         environments: {
@@ -4346,6 +6082,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/russian/media-52418005'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/russian/sport-23045089'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/russian/media-52418005'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   scotland: {
@@ -4362,7 +6134,7 @@ module.exports = () => ({
           },
           test: {
             paths: ['/scotland/articles/czwj5l0n210o'],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/scotland/articles/czwj5l0n210o'],
@@ -4390,13 +6162,37 @@ module.exports = () => ({
       },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   serbianCyr: {
@@ -4457,7 +6253,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4474,6 +6270,23 @@ module.exports = () => ({
           local: {
             paths: ['/serbian/cyr/23279016'], // CPS video
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/cyr/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/cyr/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/cyr/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -4498,11 +6311,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/cyr/svet-53387433'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/cyr/srbija-23257689'],
             enabled: false,
           },
           local: {
@@ -4530,6 +6343,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/cyr/srbija-52197807'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/cyr/23163088'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/cyr/srbija-52197807'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   serbianLat: {
@@ -4590,7 +6439,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4607,6 +6456,23 @@ module.exports = () => ({
           local: {
             paths: ['/serbian/lat/23279016'], // CPS video
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/lat/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/lat/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/lat/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -4631,11 +6497,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/serbian/lat/srbija-53410255'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/serbian/lat/srbija-23257689'],
             enabled: false,
           },
           local: {
@@ -4663,6 +6529,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/serbian/lat/srbija-52197807'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/serbian/lat/23163088'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/serbian/lat/srbija-52197807'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   sinhala: {
@@ -4722,46 +6624,8 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      liveRadio: {
-        environments: {
-          live: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: false,
-          },
-          test: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: false,
-          },
-          local: {
-            paths: ['/sinhala/bbc_sinhala_radio/liveradio'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
-      onDemandRadio: {
-        environments: {
-          live: {
-            paths: [
-              '/sinhala/bbc_sinhala_radio/programmes/w13xtv4q', // Brand
-              '/sinhala/bbc_sinhala_radio/w3ct0w3s', // Episode
-            ],
-            enabled: true,
-          },
-          test: {
-            paths: [
-              '/sinhala/bbc_sinhala_radio/programmes/w13xtv4q', // Brand
-              '/sinhala/bbc_sinhala_radio/w3ct0w3s', // Episode
-            ],
-            enabled: true,
-          },
-          local: {
-            paths: ['/sinhala/bbc_sinhala_radio/w172x8zn8th1lwb'],
-            enabled: true,
-          },
-        },
-        smoke: false,
-      },
+      liveRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -4784,6 +6648,23 @@ module.exports = () => ({
               '/sinhala/23248970', // CPS MAP with audio clip
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/sinhala/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/sinhala/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/sinhala/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -4840,6 +6721,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/sinhala/51727586'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/sinhala/world-23030633'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/sinhala/51727586'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   somali: {
@@ -4902,11 +6819,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/somali/bbc_somali_radio/liveradio'],
-            enabled: false,
+            paths: ['/somali/bbc_somali_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/somali/bbc_somali_radio/liveradio'],
@@ -4915,14 +6832,20 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
-            paths: [],
+            paths: [
+              '/somali/bbc_somali_radio/programmes/p034117j', // On Demand Brand
+              '/somali/bbc_somali_radio/w172xzzpp131z23', // On Demand Episode
+            ],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: [
+              '/somali/bbc_somali_radio/programmes/p034117j', // On Demand Brand
+              '/somali/bbc_somali_radio/w172xzzpp131z23', // On Demand Episode
+            ],
             enabled: false,
           },
           local: {
@@ -4937,12 +6860,14 @@ module.exports = () => ({
           live: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
             enabled: false,
           },
           test: {
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
+              '/somali/bbc_somali_tv/tv/w172xtqvt5hrd9z', // Episode
             ],
             enabled: false,
           },
@@ -4950,10 +6875,10 @@ module.exports = () => ({
             paths: [
               '/somali/bbc_somali_tv/tv_programmes/w13xttqt', // Brand
             ],
-            enabled: true,
+            enabled: false,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mediaAssetPage: {
         environments: {
@@ -4977,6 +6902,23 @@ module.exports = () => ({
               '/somali/maqal_iyo_muuqaal/2016/06/160628_tc2_testmap1', // TC2 MAP with video clip
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/somali/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/somali/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/somali/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -5033,6 +6975,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/somali/war-53203408'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/somali/cayaaraha-23058016'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/somali/war-53203408'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   sport: {
@@ -5044,13 +7022,61 @@ module.exports = () => ({
       errorPage404: { environments: undefined, smoke: false },
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
-      storyPage: { environments: undefined, smoke: false },
+      storyPage: {
+        environments: {
+          live: {
+            paths: [
+              '/sport/rugby-union/56359986',
+              '/sport/golf/56318994',
+              '/sport/cricket/20256774',
+            ],
+            enabled: true,
+          },
+          test: {
+            paths: ['/sport/formula1/23355387', '/sport/tennis/23372108'],
+            enabled: true,
+          },
+          local: {
+            paths: [
+              '/sport/rugby-union/56359986',
+              '/sport/golf/56318994',
+              '/sport/cricket/20256774',
+            ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
       mostReadPage: { environments: undefined, smoke: false },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: undefined,
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   swahili: {
@@ -5114,11 +7140,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/swahili/bbc_swahili_radio/liveradio'],
-            enabled: false,
+            paths: ['/swahili/bbc_swahili_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/swahili/bbc_swahili_radio/liveradio'],
@@ -5127,19 +7153,19 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/swahili/bbc_swahili_radio/programmes/p03411mj', // Brand
-              '/swahili/bbc_swahili_radio/w172xjtmtqffpy9', // Episode
+              '/swahili/bbc_swahili_radio/programmes/p03411mj', // On Demand Brand
+              '/swahili/bbc_swahili_radio/w3ct1y1s', // On Demand Episode
             ],
             enabled: true,
           },
           test: {
             paths: [
-              '/swahili/bbc_swahili_radio/programmes/p03411mj', // Brand
-              '/swahili/bbc_swahili_radio/w172xjtmtqffpy9', // Episode
+              '/swahili/bbc_swahili_radio/programmes/p030s7gh', // On Demand Brand
+              '/swahili/bbc_swahili_radio/w3ct1y1s', // On Demand Episode
             ],
             enabled: true,
           },
@@ -5155,17 +7181,21 @@ module.exports = () => ({
           live: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/swahili/bbc_swahili_tv/tv_programmes/w13xttt3', // Brand
+              '/swahili/bbc_swahili_tv/tv/w172xcqlzkvx00n', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
+            paths: [
+              '/swahili/bbc_swahili_tv/tv/w172xcqnsxfj1bk', // Episode
+            ],
             enabled: false,
           },
         },
@@ -5192,6 +7222,23 @@ module.exports = () => ({
               // '/swahili/media-23268999', // CPS MAP with live stream
               '/swahili/michezo/2016/07/160712_tc2_testmap1', // TC2 MAP with video clip
             ],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/swahili/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/swahili/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/swahili/media/video'],
             enabled: true,
           },
         },
@@ -5249,6 +7296,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/swahili/habari-53516858'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/swahili/michezo-23111684'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/swahili/habari-53516858'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   tamil: {
@@ -5315,7 +7398,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/tamil/bbc_tamil_radio/liveradio'],
+            paths: ['/tamil/bbc_tamil_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -5325,21 +7408,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/tamil/bbc_tamil_radio/programmes/p03412jh', // Brand
-              '/tamil/bbc_tamil_radio/w172xjw92fy6vhm', // Episode
+              '/tamil/bbc_tamil_radio/programmes/p03412jh', // On Demand Brand
+              '/tamil/bbc_tamil_radio/w172y03bbzbnwc0', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/tamil/bbc_tamil_radio/programmes/p03412jh', // Brand
-              '/tamil/bbc_tamil_radio/w172xjw92fy6vhm', // Episode
+              '/tamil/bbc_tamil_radio/programmes/p03412jh', // On Demand Brand
+              '/tamil/bbc_tamil_radio/w172y03bbzbnwc0', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tamil/bbc_tamil_radio/w172x966tn9jwmh'],
@@ -5353,18 +7436,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+              '/tamil/bbc_tamil_tv/tv/w172xtv73yzc6mv', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/tamil/bbc_tamil_tv/tv_programmes/w13xttmy', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5395,6 +7482,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/tamil/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tamil/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tamil/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5415,11 +7519,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/tamil/india-53414170'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/tamil/23140134'],
             enabled: false,
           },
           local: {
@@ -5447,6 +7551,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/tamil/india-53903714'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tamil/global-23067400'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tamil/india-53903714'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   telugu: {
@@ -5507,24 +7647,28 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
             paths: [
-              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
-              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // On Demand Brand
+              '/telugu/bbc_telugu_tv/tv/w172xtxyt9k8y6p', // On Demand Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/telugu/bbc_telugu_tv/tv_programmes/w13xttld', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -5550,6 +7694,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/telugu/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/telugu/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/telugu/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -5570,11 +7731,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/telugu/india-53415434'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/telugu/23144024'],
             enabled: false,
           },
           local: {
@@ -5602,6 +7763,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/telugu/india-53944227'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/telugu/india-23128751'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/telugu/india-53944227'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   thai: {
@@ -5662,7 +7859,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5681,6 +7878,23 @@ module.exports = () => ({
           local: {
             paths: ['/thai/23122810'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/thai/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/thai/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/thai/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -5705,15 +7919,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/thai/international-53381389'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/thai/23124008'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/thai/international-23252825'],
             enabled: false,
           },
         },
@@ -5737,6 +7951,61 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/thai/international-48101964'],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: ['/thai/international-48101964'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [
+              '/thai/articles/czx7w3zyme1o', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/international-51285795', // CPS MAP with video clip
+              '/thai/thailand-49950038', // CPS PGL
+            ],
+            enabled: false,
+          },
+          test: {
+            paths: [
+              '/thai/articles/c442rl3md0eo', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/23122810', // CPS MAP
+              '/thai/international-23252840', // CPS PGL
+              // '', // CPS STY
+            ],
+            enabled: false,
+          },
+          local: {
+            paths: [
+              '/thai/articles/c442rl3md0eo', // Article
+              '/thai', // Front Page
+              '/thai/popular/read', // Most Read
+              '/thai/23122810', // CPS MAP
+              '/thai/thailand-49950038', // CPS PGL
+            ],
+            enabled: false,
+          },
+        },
+        smoke: true,
+      },
     },
   },
   tigrinya: {
@@ -5800,11 +8069,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
-            enabled: false,
+            paths: ['/tigrinya/bbc_tigrinya_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/bbc_tigrinya_radio/liveradio'],
@@ -5813,21 +8082,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // Brand
-              '/tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
+              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // On Demand Brand
+              '/tigrinya/bbc_tigrinya_radio/w3ct1xhz', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // Brand
-              '/tigrinya/bbc_tigrinya_radio/w3ct0p30', // Episode
+              '/tigrinya/bbc_tigrinya_radio/programmes/w13xttny', // On Demand Brand
+              '/tigrinya/bbc_tigrinya_radio/w3ct1xhz', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/tigrinya/bbc_tigrinya_radio/w3cszzz1'],
@@ -5849,11 +8118,28 @@ module.exports = () => ({
             paths: [
               '/tigrinya/news-23263262', // CPS MAP with video clip
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/tigrinya/news-23263262'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/tigrinya/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tigrinya/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tigrinya/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -5910,6 +8196,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/tigrinya/23124146'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/tigrinya/23124146'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   turkce: {
@@ -5970,7 +8292,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -5998,6 +8320,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/turkce/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/turkce/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/turkce/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6018,15 +8357,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/turkce/haberler-turkiye-53818555'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/turkce/23059095'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/turkce/haberler-dunya-53818547'],
             enabled: false,
           },
         },
@@ -6050,6 +8389,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/turkce/haberler-dunya-51801130'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/turkce/spor-23049925'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/turkce/haberler-dunya-51801130'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukchinaSimp: {
@@ -6110,7 +8485,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6134,6 +8509,23 @@ module.exports = () => ({
               '/ukchina/simp/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/simp/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/simp/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/simp/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -6190,6 +8582,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/simp/sport-23094383'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukchinaTrad: {
@@ -6250,7 +8678,7 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -6274,6 +8702,23 @@ module.exports = () => ({
               '/ukchina/trad/multimedia/2016/11/161104_tc2_testmap1', // TC2 video
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/trad/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/trad/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/trad/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -6330,6 +8775,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/ukchina/simp/in_depth/cluster_uk_election_2105'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukchina/trad/sport-23094383'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukchina/trad/in_depth/cluster_uk_election_2105'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukrainianRu: {
@@ -6359,12 +8840,33 @@ module.exports = () => ({
       frontPage: { environments: undefined, smoke: false },
       liveRadio: { environments: undefined, smoke: false },
       errorPage404: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: { environments: undefined, smoke: false },
+      mostWatchedPage: { environments: undefined, smoke: false },
       photoGalleryPage: { environments: undefined, smoke: false },
       storyPage: { environments: undefined, smoke: false },
       mostReadPage: { environments: undefined, smoke: false },
+      featureIndexPage: { environments: undefined, smoke: false },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   ukrainian: {
@@ -6425,24 +8927,28 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: {
         environments: {
           live: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/ukrainian/bbc_ukrainian_tv/tv_programmes/w13xttp9', // Brand
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xtvv0w8tq9m', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/ukrainian/bbc_ukrainian_tv/tv/w172xct4hclz27g', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -6476,6 +8982,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukrainian/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6496,15 +9019,15 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/ukrainian/features-53779581'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/ukrainian/23154182'],
             enabled: false,
           },
           local: {
-            paths: [],
+            paths: ['/ukrainian/23340963'],
             enabled: false,
           },
         },
@@ -6529,6 +9052,42 @@ module.exports = () => ({
       },
       idxPage: {
         environments: undefined,
+        smoke: false,
+      },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/ukrainian/53725237'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/ukrainian/23086477'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/ukrainian/53725237'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
         smoke: false,
       },
     },
@@ -6594,11 +9153,11 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: false,
+            enabled: true,
           },
           test: {
-            paths: ['/urdu/bbc_urdu_radio/liveradio'],
-            enabled: false,
+            paths: ['/urdu/bbc_urdu_radio/liveradio?renderer_env=live'],
+            enabled: true,
           },
           local: {
             paths: ['/urdu/bbc_urdu_radio/liveradio'],
@@ -6607,21 +9166,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/urdu/bbc_urdu_radio/programmes/p03413l5', // Brand
-              '/urdu/bbc_urdu_radio/w172xjzzxzyf8my', // Episode
+              '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
+              '/urdu/bbc_urdu_radio/w172y03qq2blt8p', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/urdu/bbc_urdu_radio/programmes/p03413l5', // Brand
-              '/urdu/bbc_urdu_radio/w172xjzzxzyf8my', // Episode
+              '/urdu/bbc_urdu_radio/programmes/p03413l5', // On Demand Brand
+              '/urdu/bbc_urdu_radio/w172y03qq2blt8p', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/urdu/bbc_urdu_radio/w172x9dx052c8sr'],
@@ -6635,18 +9194,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/urdu/bbc_urdu_tv/tv_programmes/w13xttn1', // Brand
+              '/urdu/bbc_urdu_tv/tv/w172xtwfxsl890n', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/urdu/bbc_urdu_tv/tv/w172xctrrk6t25t', // Episode
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -6677,6 +9240,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/urdu/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/urdu/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/urdu/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -6697,11 +9277,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/urdu/sport-54291601'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/urdu/science-23286193'],
             enabled: false,
           },
           local: {
@@ -6729,6 +9309,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/urdu/science-51314202'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/urdu/world-23075586'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/urdu/world-53692225'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   uzbek: {
@@ -6795,7 +9411,7 @@ module.exports = () => ({
             enabled: false,
           },
           test: {
-            paths: ['/uzbek/bbc_uzbek_radio/liveradio'],
+            paths: ['/uzbek/bbc_uzbek_radio/liveradio?renderer_env=live'],
             enabled: false,
           },
           local: {
@@ -6805,21 +9421,21 @@ module.exports = () => ({
         },
         smoke: false,
       },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // Brand
-              '/uzbek/bbc_uzbek_radio/w172xk0dnc7rzpp', // Episode
+              '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // On Demand Brand
+              '/uzbek/bbc_uzbek_radio/w172y044spy82mn', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           test: {
             paths: [
-              '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // Brand
-              '/uzbek/bbc_uzbek_radio/w172xk0dnc7rzpp', // Episode
+              '/uzbek/bbc_uzbek_radio/programmes/p03414fb', // On Demand Brand
+              '/uzbek/bbc_uzbek_radio/w172y044spy82mn', // On Demand Episode
             ],
-            enabled: true,
+            enabled: false,
           },
           local: {
             paths: ['/uzbek/bbc_uzbek_radio/w172x9f9qjcq3lm'],
@@ -6833,18 +9449,22 @@ module.exports = () => ({
           live: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
               '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+              '/uzbek/bbc_uzbek_tv/tv/w172xtx1tpwq8tz', // Episode
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
-            paths: [],
-            enabled: false,
+            paths: [
+              '/uzbek/bbc_uzbek_tv/tv_programmes/w13xttqv', // Brand
+            ],
+            enabled: true,
           },
         },
         smoke: false,
@@ -6875,6 +9495,23 @@ module.exports = () => ({
               '/uzbek/multimedia/2016/06/160610_tc2_testmap1', // TC2 MAP Cyrillic
             ],
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/uzbek/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/uzbek/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -6931,6 +9568,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/uzbek/52149619'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/uzbek/sport-23053653'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/uzbek/52149619'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   vietnamese: {
@@ -6991,7 +9664,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7019,6 +9692,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/vietnamese/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/vietnamese/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/vietnamese/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7039,11 +9729,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/vietnamese/world-53413742'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/vietnamese/forum-23080276'],
             enabled: false,
           },
           local: {
@@ -7071,6 +9761,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/vietnamese/magazine-54029179'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/vietnamese/sport-23079960'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/vietnamese/magazine-54029179'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   yoruba: {
@@ -7131,7 +9857,7 @@ module.exports = () => ({
         smoke: false,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: { environments: undefined, smoke: false },
+      onDemandAudio: { environments: undefined, smoke: false },
       onDemandTV: { environments: undefined, smoke: false },
       mediaAssetPage: {
         environments: {
@@ -7150,6 +9876,23 @@ module.exports = () => ({
           local: {
             paths: ['/yoruba/media-23256797'], // CPS MAP with video clip
             enabled: true,
+          },
+        },
+        smoke: false,
+      },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/yoruba/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/yoruba/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/yoruba/media/video'],
+            enabled: false,
           },
         },
         smoke: false,
@@ -7174,7 +9917,7 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: ['/yoruba/afrika-51998079'],
+            paths: ['/yoruba/afrika-58539527'],
             enabled: true,
           },
           test: {
@@ -7206,6 +9949,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: ['/yoruba/media-23159686'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/yoruba/media-23159686'],
+            enabled: true,
+          },
+        },
+        smoke: false,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   zhongwenSimp: {
@@ -7266,25 +10045,33 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
+              '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: false,
           },
           test: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/simp/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
+              '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
             ],
             enabled: false,
           },
           local: {
             paths: [
-              '/zhongwen/simp/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+              '/zhongwen/simp/bbc_cantonese_radio/w172xn6l7ng41qb', // Brand
+              '/zhongwen/simp/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/simp/podcasts/p02pc9xp', // Podcast Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -7316,6 +10103,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/simp/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/zhongwen/simp/media/video'],
+            enabled: true,
+          },
+          local: {
+            paths: ['/zhongwen/simp/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7336,11 +10140,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/zhongwen/simp/uk-54289474'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/simp/chinese-news-23263669'],
             enabled: false,
           },
           local: {
@@ -7368,6 +10172,42 @@ module.exports = () => ({
         smoke: true,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/simp/world-54547455'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/zhongwen/simp/23161271'],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: true,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
   zhongwenTrad: {
@@ -7428,25 +10268,33 @@ module.exports = () => ({
         smoke: true,
       },
       liveRadio: { environments: undefined, smoke: false },
-      onDemandRadio: {
+      onDemandAudio: {
         environments: {
           live: {
             paths: [
-              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
+              '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
+              '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
             ],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: [
-              '/zhongwen/trad/bbc_cantonese_radio/w172xf3rxfx25cj', // Brand
+              '/zhongwen/trad/bbc_cantonese_radio/programmes/p0340tsy', // On Demand Brand
+              '/zhongwen/trad/bbc_cantonese_radio/w172xwswq9t42v6', // On Demand Episode
+              '/zhongwen/trad/podcasts/p02pc9xp/p09kpm0x', // Podcast Episode
+              '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
             ],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
               '/zhongwen/trad/bbc_cantonese_radio/w172xf3r5x8hw4v', // Brand
+              '/zhongwen/trad/podcasts/p02pc9xp/p0968qrl', // Podcast Episode
+              '/zhongwen/trad/podcasts/p02pc9xp', // Podcast Brand
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: false,
@@ -7478,6 +10326,23 @@ module.exports = () => ({
         },
         smoke: false,
       },
+      mostWatchedPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/trad/media/video'],
+            enabled: false,
+          },
+          test: {
+            paths: ['/zhongwen/trad/media/video'],
+            enabled: false,
+          },
+          local: {
+            paths: ['/zhongwen/trad/media/video'],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
       photoGalleryPage: {
         environments: {
           live: {
@@ -7498,11 +10363,11 @@ module.exports = () => ({
       storyPage: {
         environments: {
           live: {
-            paths: [],
+            paths: ['/zhongwen/trad/uk-54289474'],
             enabled: false,
           },
           test: {
-            paths: [],
+            paths: ['/zhongwen/trad/chinese-news-23263669'],
             enabled: false,
           },
           local: {
@@ -7530,6 +10395,42 @@ module.exports = () => ({
         smoke: false,
       },
       idxPage: { environments: undefined, smoke: false },
+      featureIndexPage: {
+        environments: {
+          live: {
+            paths: ['/zhongwen/trad/world-54547455'],
+            enabled: true,
+          },
+          test: {
+            paths: ['/zhongwen/trad/23161271'],
+            enabled: true,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: true,
+      },
+    },
+    specialFeatures: {
+      cookieBanner: {
+        environments: {
+          live: {
+            paths: [],
+            enabled: false,
+          },
+          test: {
+            paths: [],
+            enabled: false,
+          },
+          local: {
+            paths: [],
+            enabled: false,
+          },
+        },
+        smoke: false,
+      },
     },
   },
 });

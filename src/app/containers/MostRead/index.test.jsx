@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import fetchMock from 'fetch-mock';
-import '@testing-library/jest-dom/extend-expect';
 import { setFreshPromoTimestamp } from './utilities/testHelpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import serbianLatMostReadData from '#data/serbian/mostRead/lat';
-import { getMostReadEndpoint } from '#lib/utilities/getMostReadUrls';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import MostReadContainer from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const MostReadWithContext = ({
@@ -29,7 +29,7 @@ const MostReadWithContext = ({
     <RequestContextProvider
       bbcOrigin={`http://localhost:7080/${service}`}
       isAmp={isAmp}
-      pageType="frontPage"
+      pageType={FRONT_PAGE}
       service={service}
       statusCode={200}
       pathname={`/${service}`}

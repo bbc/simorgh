@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, node, shape, arrayOf } from 'prop-types';
+import { string, node, shape, arrayOf, bool, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -9,9 +9,10 @@ import {
   renderAmpHtml,
   getAppleTouchUrl,
   renderAlternateLinks,
+  renderAppleItunesApp,
 } from './utils';
 
-const ENGLISH_SERVICES = ['news'];
+const ENGLISH_SERVICES = ['news', 'sport'];
 const FACEBOOK_ADMIN_ID = 100004154058350;
 const FACEBOOK_APP_ID = 1609039196070050;
 const FACEBOOK_PAGES =
@@ -23,6 +24,7 @@ const iconSizes = {
     '128x128',
     '144x144',
     '152x152',
+    '180x180',
     '192x192',
     '384x384',
     '512x512',
@@ -37,6 +39,7 @@ const renderTags = tags =>
 
 const MetadataContainer = ({
   title,
+  socialHeadline,
   lang,
   description,
   openGraphType,
@@ -44,7 +47,10 @@ const MetadataContainer = ({
   mentionsTags,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   children,
+  hasAppleItunesAppBanner,
 }) => {
   const {
     isAmp,
@@ -67,6 +73,7 @@ const MetadataContainer = ({
     themeColor,
     twitterCreator,
     twitterSite,
+    iTunesAppId,
   } = useContext(ServiceContext);
   const appleTouchIcon = getAppleTouchUrl(service);
   const isEnglishService = ENGLISH_SERVICES.includes(service);
@@ -98,6 +105,7 @@ const MetadataContainer = ({
   };
 
   const pageTitle = `${title} - ${brandName}`;
+  const socialTitle = `${socialHeadline || title} - ${brandName}`;
 
   const metaImage = image || defaultImage;
   const metaImageAltText = imageAltText || defaultImageAltText;
@@ -119,6 +127,12 @@ const MetadataContainer = ({
         !isEnglishService &&
         alternateLinksWsSites.map(renderAlternateLinks)}
       {renderAmpHtml(ampLink, isAmp)}
+      {renderAppleItunesApp({
+        iTunesAppId,
+        canonicalLink,
+        isAmp,
+        hasAppleItunesAppBanner,
+      })}
       <meta name="apple-mobile-web-app-title" content={brandName} />
       <meta name="application-name" content={brandName} />
       <meta name="description" content={description} />
@@ -134,9 +148,11 @@ const MetadataContainer = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={metaImage} />
       <meta property="og:image:alt" content={metaImageAltText} />
+      {imageWidth && <meta property="og:image:width" content={imageWidth} />}
+      {imageHeight && <meta property="og:image:height" content={imageHeight} />}
       <meta property="og:locale" content={locale} />
       <meta property="og:site_name" content={brandName} />
-      <meta property="og:title" content={pageTitle} />
+      <meta property="og:title" content={socialTitle} />
       <meta property="og:type" content={openGraphType} />
       <meta property="og:url" content={canonicalNonUkLink} />
       <meta name="twitter:card" content="summary_large_image" />
@@ -145,7 +161,7 @@ const MetadataContainer = ({
       <meta name="twitter:image:alt" content={metaImageAltText} />
       <meta name="twitter:image:src" content={metaImage} />
       <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:title" content={pageTitle} />
+      <meta name="twitter:title" content={socialTitle} />
       {Boolean(aboutTags && aboutTags.length) && renderTags(aboutTags)}
       {Boolean(mentionsTags && mentionsTags.length) && renderTags(mentionsTags)}
       <link rel="apple-touch-icon" href={appleTouchIcon} />
@@ -173,6 +189,7 @@ const tagPropTypes = shape({
 
 MetadataContainer.propTypes = {
   title: string.isRequired,
+  socialHeadline: string,
   lang: string.isRequired,
   description: string.isRequired,
   openGraphType: string.isRequired,
@@ -180,15 +197,22 @@ MetadataContainer.propTypes = {
   mentionsTags: arrayOf(tagPropTypes),
   image: string,
   imageAltText: string,
+  imageWidth: number,
+  imageHeight: number,
   children: node,
+  hasAppleItunesAppBanner: bool,
 };
 
 MetadataContainer.defaultProps = {
+  socialHeadline: null,
   aboutTags: [],
   mentionsTags: [],
   image: null,
   imageAltText: null,
+  imageWidth: null,
+  imageHeight: null,
   children: null,
+  hasAppleItunesAppBanner: false,
 };
 
 export default MetadataContainer;

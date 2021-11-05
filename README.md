@@ -1,6 +1,5 @@
 # Simorgh
 
-[![Build Status](https://travis-ci.org/bbc/simorgh.svg?branch=latest)](https://travis-ci.org/bbc/simorgh)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/test_coverage)](https://codeclimate.com/github/bbc/simorgh/test_coverage)
 [![Known Vulnerabilities](https://snyk.io/test/github/bbc/simorgh/badge.svg)](https://snyk.io/test/github/bbc/simorgh)
 [![dependencies Status](https://david-dm.org/bbc/simorgh/status.svg)](https://david-dm.org/bbc/simorgh)
@@ -8,11 +7,13 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbca275e184057982f27/maintainability)](https://codeclimate.com/github/bbc/simorgh/maintainability)
 [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://bbc.github.io/simorgh/)
 
-The BBC websites are being rebuilt from the bottom up as ReactJS based Single Page Applications, that will (eventually) also be fully fledged Progressive Web Apps. This application also builds Accelerated Mobile Pages for every regular HTML page that it renders.
+BBC World Service News websites are rendered using Simorgh, a ReactJS based Single Page Application which also builds Accelerated Mobile Pages (AMP) for every regular HTML page that it renders. Simorgh also renders AMP pages for BBC Public Service News and BBC Sport.
 
-Simorgh will be used across the BBC World Service News websites ([some are already live](https://github.com/bbc/simorgh/wiki/Simorgh-Pages)), with tens of millions of users, and growing very fast.
+Simorgh provides a fast and accessible web experience used by millions of people around the world each month ([see list of websites using Simorgh](https://github.com/bbc/simorgh/blob/latest/docs/Simorgh-Release-Info.md)). It is regularly maintained and well documented, and we welcome open source contributors.
 
-We lean heavily on the component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain. This library is also open source and used even more widely across the BBC.
+Simorgh is primarily maintained by BBC News Web Engineering teams. It delivers highly trusted news to readers all over the world, currently in ([41 languages](https://www.bbc.com/ws/languages)). We support a wide range of devices and care deeply about scale, performance, and accessibility. We work in agile, flexible teams, and have an exciting roadmap for future development.
+
+We use an open source component library called [Psammead](https://github.com/bbc/psammead/) that we also maintain.
 
 ## Documentation index
 
@@ -25,6 +26,8 @@ Please familiarise yourself with our:
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -74,6 +77,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withLoading
 - withError
 - withData
+- withHashChangeHandler
 
 #### withVariant
 
@@ -106,6 +110,10 @@ If error is set to true the Error component is returned, giving the user a visua
 #### withData
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
+
+#### withHashChangeHandler
+
+The withHashChangeHandler HOC is a wrapper applied to all pages that checks for changes to the URL hash value. Pages include accessibility controls to skip content should the user choose to do so, this utilises the URL hash to skip users to specific areas of the page. Due to the nature of the client side routing, changes to the URL results in a re-render. This causes some unsightly UI flickering for some components, specifically media and social embeds. This HOC applies checks to the URL so see if a re-render is necessary, or if not preventing a re-render using `React.memo`.
 
 ### Adding a new Page type
 
@@ -159,12 +167,20 @@ Install Node. [https://nodejs.org/en/](https://nodejs.org/en/). We use the versi
 nvm use
 ```
 
+#### Install Yarn
+
+The Simorgh project uses Yarn for package management. It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system. To install Yarn, run this command:
+
+```
+npm install --global yarn
+```
+
 Then you can run the following commands to install Simorgh
 
 ```
 git clone git@github.com:bbc/simorgh.git
 cd simorgh
-npm install
+yarn install
 ```
 
 ## Local Development
@@ -172,7 +188,7 @@ npm install
 To run this application locally, with hot-reloading, run
 
 ```
-npm run dev
+yarn dev
 ```
 
 The application will start on [http://localhost:7080](http://localhost:7080).
@@ -221,7 +237,7 @@ You can find other pages types by looking through our routes and their associate
 
 We use Storybook for developing components in isolation from the Simorgh Application. You can access this at [https://bbc.github.io/simorgh/](https://bbc.github.io/simorgh/)
 
-To run locally `npm run storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
+To run locally `yarn storybook`, it will then be available at [http://localhost:9001/](http://localhost:9001/). Introduction to and documentation for Storybook is here: [https://storybook.js.org/basics/introduction/](https://storybook.js.org/basics/introduction/).
 
 When viewing Video stories locally, make sure to use a BBC domain, as outlined in the [changing request location section](https://github.com/bbc/simorgh#changing-request-location). Video will not work in the hosted version of Storybook linked above for this reason.
 
@@ -229,12 +245,16 @@ We also use [Chromatic QA](https://docs.chromaticqa.com/) to run cross-browser t
 
 Please also note that if you would like to see the components rendered with our fonts, you will need to force a repaint of the canvas. This is because our fonts all have the `font-display` property of `optional` or `swap` in accordance with the respective loading strategies here: https://ws-downloads.files.bbci.co.uk/fonts/index.html. The easiest way to force a repaint is just to move the divider between the preview window the and `Knobs` section or resize the browser window.
 
+### Configuring the application to run on a local network
+
+If you want to host the application to be accessible through your local network, follow the instructions [here](https://github.com/bbc/simorgh/blob/latest/docs/A11y-Testing-Cross-Device.md).
+
 ## Production build locally
 
 To run this application locally with a production build, run:
-`npm run build && npm run start`.
+`yarn build && yarn start`.
 
-We use `npm run build` locally which bundles the application pointing at localhost for data and static assets.
+We use `yarn build` locally which bundles the application pointing at localhost for data and static assets.
 
 ## Using environment builds locally
 
@@ -244,14 +264,14 @@ To run TEST bundles on localhost:
 
 - In `envConfig/test.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-- Then run `rm -rf build && npm run build:test && npm run start`
+- Then run `rm -rf build && yarn build:test && yarn start`
 - Visit a test article: http://localhost:7080/news/articles/c0g992jmmkko
 
 To run LIVE bundles on localhost:
 
 - In `envConfig/live.env` change the values of:
   - `LOG_DIR='/var/log/simorgh'` to `LOG_DIR='log'`
-- Then run `rm -rf build && npm run build:live && npm run start`
+- Then run `rm -rf build && yarn build:live && yarn start`
 - Visit a live article: http://localhost:7080/news/articles/c8xxl4l3dzeo
 
 ## Changing request location
@@ -274,17 +294,17 @@ On deployment `make buildCi` is run in the CI environment which creates bundles 
 
 ### Bundle analysis reports
 
-Every run of `npm run build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
+Every run of `yarn build` will update the bundle analysis files in the repo. To view a breakdown of the bundle size, open the generated html report in a browser `./reports/webpackBundleReport.html` This is generated via `webpack-bundle-analyzer`. The data is also available as json `./reports/webpackBundleReport.json`.
 
 ## Tests
 
 ### Linting and unit tests
 
-We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `npm run test:lint`.
+We have linting with the [Airbnb styleguide](https://github.com/airbnb/javascript/tree/master/react) and we use [Prettier](https://github.com/prettier/prettier) as a code formatter. They can be run with `yarn test:lint`.
 
-We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `npm run test:unit`.
+We have [Jest](https://facebook.github.io/jest) unit tests that can be run with `yarn test:unit`.
 
-`npm test` runs both sets of these.
+`yarn test` runs both sets of these.
 
 ### End-to-end tests
 
@@ -293,14 +313,14 @@ We have [Jest](https://facebook.github.io/jest) unit tests that can be run with 
 We use [Cypress](https://www.cypress.io/) for our end-to-end tests. To run the [smoke tests](https://github.com/bbc/simorgh/tree/latest/cypress/integration#how-our-cypress-tests-work) locally, run this single command:
 
 ```
-npm run test:e2e
+yarn test:e2e
 ```
 
 It will spin up a production server on port 7080 and run the Cypress tests against that.
 To run the smoke tests interactively, run:
 
 ```
-npm run test:e2e:interactive
+yarn test:e2e:interactive
 ```
 
 This loads a user interface which easily allows for individual tests to be run alongside a visual stream of the browser, as the tests run.
@@ -309,7 +329,7 @@ This loads a user interface which easily allows for individual tests to be run a
 
 There are several environment variables you can use with our test suite, which are:
 
-| Environment variable  | Effect                                                                                                        | Possible values                                   |
+| Environment variable | Effect                                                                                                        | Possible values                                   |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | CYPRESS_ONLY_SERVICE | Restricts to running only the specified service                                                               | A single service i.e. `CYPRESS_ONLY_SERVICE=urdu` |
 | CYPRESS_APP_ENV      | Runs the tests in a specific environment                                                                      | `test`, `local`, `live`                           |
@@ -321,16 +341,16 @@ These commands can be run in combination.
 
 #### Full suite of tests
 
-The default way to run the e2e suite aka `npm run test:e2e` or `npm run test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
+The default way to run the e2e suite aka `yarn test:e2e` or `yarn test:e2e:interactive` runs a subset of our tests, otherwise know as _smoke tests_. To run the full suite:
 
-`CYPRESS_SMOKE=false npm run test:e2e`
+`CYPRESS_SMOKE=false yarn test:e2e`
 
 #### Limiting scope of runs
 
 Tests can be restricted to only run for a single service by specifying it using the `CYPRESS_ONLY_SERVICE` environment variable. For example:
 
 ```
-CYPRESS_ONLY_SERVICE=urdu npm run test:e2e
+CYPRESS_ONLY_SERVICE=urdu yarn test:e2e
 ```
 
 To run only a particular spec it is necessary to invoke Cypress directly. First ensure Simorgh is already running in another tab and then run (for example, to only run article tests):
@@ -350,7 +370,7 @@ Cypress .visit() function is locked to visiting a single domain per test. This b
 Here is an example command:
 
 ```
-CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true npm run cypress
+CYPRESS_APP_ENV=test CYPRESS_UK=true CYPRESS_SMOKE=true yarn cypress
 ```
 
 #### Running e2e outside EU
@@ -362,13 +382,13 @@ Running Cypress tests outside the EU will not show the EU consent banners on AMP
 An example command will be:
 
 ```
-CYPRESS_SKIP_EU=true npm run cypress:interactive
+CYPRESS_SKIP_EU=true yarn cypress:interactive
 ```
 
 The following command runs both simorgh and cypress:
 
 ```
-CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true npm run test:e2e
+CYPRESS_APP_ENV=local CYPRESS_UK=true CYPRESS_SMOKE=true yarn test:e2e
 ```
 
 CYPRESS_APP_ENV can also be set equal to 'test' and 'live'.

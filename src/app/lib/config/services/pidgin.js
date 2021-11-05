@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { pidgin as brandSVG } from '@bbc/psammead-assets/svgs';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import '@bbc/psammead-locales/moment/pcm';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Tori we dem pay for',
-    },
     lang: 'pcm',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'New Informate',
@@ -27,6 +28,7 @@ export const service = {
     datetimeLocale: 'pcm',
     service: 'pidgin',
     serviceName: 'Pidgin',
+    languageName: 'Nigerian Pidgin',
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/pidgin.png',
     defaultImageAltText: 'BBC News Pidgin',
     dir: 'ltr',
@@ -52,19 +54,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Tori we dem pay for',
+      },
       seeAll: 'See everitin',
       home: 'Home',
       currentPage: 'Page where you dey',
       skipLinkText: 'Waka go wetin de inside',
       relatedContent: 'Another thing we de for inside dis tori',
+      relatedTopics: 'Topics Wey Dem Resemble',
       navMenuText: 'Plenti seshon',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Summary',
       error: {
         404: {
           statusCode: '404',
@@ -120,29 +132,74 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Let us know say you agree to cookies',
-          description: {
-            uk: {
-              first: 'We use ',
-              linkText: 'cookies',
-              last:
-                ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Accept data collection and continue',
+            reject: 'Reject data collection and continue',
+            initial: {
+              title:
+                'Make we know weda you agree to informate [data] collection on AMP',
+              description: {
+                first: 'We and our partners use technologies, like ',
+                linkText: 'cookies',
+                last: ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Manage my settings',
             },
-            international: {
-              first: 'We and our partners use technologies, like ',
-              linkText: 'cookies',
-              last:
-                ', and collect browsing information to give you di best online experience and to make wetin dey inside personal and wetin pipo dey advertise appear for you. Abeg let us know if you agree.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Manage consent settings on AMP pages',
+              description: {
+                para1:
+                  'Dis settings apply to AMP pages only. You fit see kwesion wey dey ask you to set dis preferences again if you visit non-AMP BBC pages.',
+                para2:
+                  'Di lightweight mobile page you don visit na Google AMP technology dem use build am.',
+                heading2: 'Only for important informate alias data collection',
+                para3:
+                  'To make our web pages work, we store some limited information ontop your device without your permision alias consent.',
+                para4: {
+                  text: 'Read more about di very important alias essential information we store ontop your device to make our web page dem work.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'We use local storage to store your consent preferences ontop your device.',
+                heading3: 'Informate alias data collection wey dey optional.',
+                para6:
+                  'Wen you agree to informate alias data collection on AMP pages you dey approve to allow us to display ads wey dey special and relevant to you when you dey outside of di UK.',
+                para7: {
+                  text: 'Read more about how we personalise ads for di BBC and our advertising partners.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'You fit choose not to receive personalised ads by clicking “Reject data collection and continue” wey dey below. Abeg note say you go still see advertising, but e no go dey personalised to you.',
+                para9:
+                  'You fit change these settings by clicking “Ad Choices / Do not sell my info” inside di footer at any time.',
+              },
             },
           },
-          accept: 'Yes, I agree',
-          reject: 'No, cari me go settings',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Let us know say you agree to cookies',
+            description: {
+              uk: {
+                first: 'We use ',
+                linkText: 'cookies',
+                last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'We use ',
+                linkText: 'cookies',
+                last: ' to give you di best online experience. Abeg let us know if you gree to all od dif cookies dem.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Yes, I agree',
+            reject: 'No, cari me go settings',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -167,19 +224,24 @@ export const service = {
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
+          textPrefixVisuallyHidden: 'Wetin we call dis Video, ',
           text: 'Warning: Third party content may contain adverts',
         },
         fallback: {
           text: 'Content is not available',
           linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          linkTextSuffixVisuallyHidden: ', outside',
           warningText: 'De external site no concern BBC.',
         },
         skipLink: {
           text: 'Skip %provider_name% post',
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'Top Tori',
       featuresAnalysisTitle: 'Informate me',
@@ -189,6 +251,11 @@ export const service = {
       lastUpdated: 'De one we dem update for:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'De one we dem don look',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -203,15 +270,15 @@ export const service = {
       },
       {
         title: 'Nigeria',
-        url: '/pidgin/topics/3d5d5e30-dd50-4041-96d5-c970b20005b9',
+        url: '/pidgin/topics/c2dwqd1zr92t',
       },
       {
         title: 'Africa',
-        url: '/pidgin/topics/d2c2ba68-f9ad-4185-a6d1-7f6437256735',
+        url: '/pidgin/topics/c404v061z85t',
       },
       {
         title: 'World',
-        url: '/pidgin/world',
+        url: '/pidgin/topics/c0823e52dd0t',
       },
       {
         title: 'Video',
@@ -219,11 +286,11 @@ export const service = {
       },
       {
         title: 'Sport',
-        url: '/pidgin/topics/4063f80f-cccc-44c8-9449-5ca44e4c8592',
+        url: '/pidgin/topics/cjgn7gv77vrt',
       },
       {
         title: 'Entertainment',
-        url: '/pidgin/topics/1c3b60a9-14eb-484b-a750-9f5b1aeaac31',
+        url: '/pidgin/topics/cqywjyzk2vyt',
       },
       {
         title: 'Most popular',
@@ -236,7 +303,7 @@ export const service = {
         text: 'Why you fit trust BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'De way wey we de take go external link.',
       },
       links: [
@@ -257,12 +324,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/pidgin/institutional-42188215',
+          href: 'https://www.bbc.co.uk/send/u50853577',
           text: 'Call BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

@@ -1,11 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { string } from 'prop-types';
-import styled from 'styled-components';
-import pathOr from 'ramda/src/pathOr';
+import styled from '@emotion/styled';
 import moment from 'moment';
 import {
-  GEL_GROUP_1_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -15,16 +14,15 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_MARGIN_BELOW_400PX,
   GEL_MARGIN_ABOVE_400PX,
 } from '@bbc/gel-foundations/spacings';
 import { getLongPrimer } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
-import RadioSchedule from '@bbc/psammead-radio-schedule';
 import SectionLabel from '@bbc/psammead-section-label';
 import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import RadioSchedule from '#components/RadioSchedule';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
@@ -32,22 +30,26 @@ import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
 
 const logger = webLogger();
 
-const RadioScheduleSection = styled.section.attrs(() => ({
-  role: 'region',
-  'aria-labelledby': 'Radio-Schedule',
-}))`
+const RadioScheduleSection = styled.section`
   background-color: ${C_LUNAR};
   padding: 0 ${GEL_MARGIN_ABOVE_400PX};
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    /* To remove GEL Margins */
-    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_BELOW_400PX} 0;
-    padding: 0 ${GEL_MARGIN_BELOW_400PX};
+  content-visibility: auto;
+  contain-intrinsic-size: 59.375rem;
+
+  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 56.563rem;
   }
+
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_QUAD} -${GEL_MARGIN_ABOVE_400PX} 0;
+    contain-intrinsic-size: 51.063rem;
   }
+
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    margin: ${GEL_SPACING_TRPL} -${GEL_MARGIN_ABOVE_400PX} 0;
+    contain-intrinsic-size: 30.75rem;
+  }
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    contain-intrinsic-size: 21.25rem;
   }
 `;
 
@@ -69,6 +71,7 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
   width: 100%; /* Needed for IE11 */
   padding-top: ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 auto;
     padding-top: ${GEL_SPACING_TRPL};
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -78,8 +81,8 @@ const RadioScheduleSectionLabel = styled(SectionLabel)`
 `;
 
 const RadioFrequencyLink = styled.a`
-  ${({ script }) => script && getLongPrimer(script)};
-  ${({ service }) => service && getSansRegular(service)};
+  ${({ script }) => script && getLongPrimer(script)}
+  ${({ service }) => service && getSansRegular(service)}
   color: ${C_EBON};
   text-decoration: none;
 
@@ -93,30 +96,20 @@ const RadioFrequencyLink = styled.a`
   }
 `;
 
-const CanonicalRadioSchedule = ({ initialData, endpoint, lang }) => {
+const CanonicalRadioSchedule = ({ initialData, endpoint, lang, className }) => {
   const {
     service,
     script,
     dir,
-    timezone,
-    locale,
     radioSchedule: radioScheduleConfig = {},
-    translations,
   } = useContext(ServiceContext);
 
   const { timeOnServer } = useContext(RequestContext);
 
   const [radioSchedule, setRadioSchedule] = useState(initialData);
 
-  const {
-    header,
-    frequenciesPageUrl,
-    frequenciesPageLabel,
-    durationLabel,
-  } = radioScheduleConfig;
-
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-  const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
+  const { header, frequenciesPageUrl, frequenciesPageLabel, durationLabel } =
+    radioScheduleConfig;
 
   useEffect(() => {
     if (!radioSchedule) {
@@ -162,7 +155,12 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang }) => {
   }
 
   return (
-    <RadioScheduleSection {...(lang && { lang })}>
+    <RadioScheduleSection
+      className={className}
+      role="region"
+      aria-labelledby="Radio-Schedule"
+      {...(lang && { lang })}
+    >
       <RadioScheduleSectionLabel
         script={script}
         labelId="Radio-Schedule"
@@ -173,18 +171,8 @@ const CanonicalRadioSchedule = ({ initialData, endpoint, lang }) => {
       >
         {header}
       </RadioScheduleSectionLabel>
-      <RadioScheduleWrapper>
-        <RadioSchedule
-          schedules={radioSchedule}
-          locale={locale}
-          timezone={timezone}
-          script={script}
-          service={service}
-          dir={dir}
-          liveLabel={liveLabel}
-          nextLabel={nextLabel}
-          durationLabel={durationLabel}
-        />
+      <RadioScheduleWrapper data-e2e="radio-schedule">
+        <RadioSchedule schedule={radioSchedule} durationLabel={durationLabel} />
         {frequenciesPageUrl && (
           <RadioFrequencyLink
             href={frequenciesPageUrl}
@@ -203,11 +191,13 @@ CanonicalRadioSchedule.propTypes = {
   endpoint: string.isRequired,
   initialData: radioSchedulesShape,
   lang: string,
+  className: string,
 };
 
 CanonicalRadioSchedule.defaultProps = {
   initialData: undefined,
   lang: null,
+  className: '',
 };
 
 export default CanonicalRadioSchedule;

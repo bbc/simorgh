@@ -1,10 +1,10 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { string } from 'prop-types';
+import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
+import { GridItemMedium } from '#app/components/Grid';
 
 /**
  * Prevent Includes from being wider than their parent, whilst
@@ -16,7 +16,7 @@ const Include = styled.div`
   margin-bottom: ${GEL_SPACING_QUIN};
 `;
 
-const CanonicalIncludeContainer = ({ html, type }) => {
+const CanonicalIncludeContainer = ({ html, type, index }) => {
   const supportedTypes = ['idt1', 'vj'];
 
   if (!html || !supportedTypes.includes(type)) return null;
@@ -35,12 +35,8 @@ const CanonicalIncludeContainer = ({ html, type }) => {
 
   const configureAdditionalScripts = `require.config({ paths:${paths} });`;
 
-  const IncludeGrid = styled(GridItemConstrainedMedium)`
-    display: grid;
-  `;
-
   return (
-    <IncludeGrid>
+    <GridItemMedium>
       {requireIncludeTypes.includes(type) && (
         <Helmet>
           <script
@@ -53,14 +49,17 @@ const CanonicalIncludeContainer = ({ html, type }) => {
       <Include
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: html }}
+        id={`include-${index + 1}`}
+        tabIndex="-1"
       />
-    </IncludeGrid>
+    </GridItemMedium>
   );
 };
 
 CanonicalIncludeContainer.propTypes = {
   html: string,
   type: string.isRequired,
+  index: number.isRequired,
 };
 
 CanonicalIncludeContainer.defaultProps = {

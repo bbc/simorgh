@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { latinDiacritics } from '@bbc/gel-foundations/scripts';
 import {
   F_REITH_SANS_BOLD,
@@ -16,10 +21,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'Publicidade',
-    },
     lang: `pt-BR`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Atualizado',
@@ -41,9 +42,12 @@ export const service = {
     defaultCaptionOffscreenText: 'Legenda, ',
     imageCopyrightOffscreenText: 'Crédito, ',
     locale: `pt-BR`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'pt',
     datetimeLocale: `pt-br`,
     service: 'portuguese',
     serviceName: 'News Brasil',
+    languageName: 'Portuguese',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcbrasil',
     twitterSite: '@bbcbrasil',
@@ -60,19 +64,48 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
+    },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'BBC Lê',
+      brandDescription:
+        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
+        alt: 'BBC Lê',
+      },
+      linkLabel: {
+        text: 'Episódios',
+        href: 'https://www.bbc.com/portuguese/podcasts/p09qw1cn',
+      },
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Publicidade',
+      },
+      recommendationTitle: 'Talvez também te interesse',
       seeAll: 'Ver todos',
       home: 'Início',
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      relatedTopics: 'Tópicos relacionados',
       navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Pontos-chave',
       error: {
         404: {
           statusCode: '404',
@@ -128,34 +161,79 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Diga-nos se concorda com o uso de cookies',
-          description: {
-            uk: {
-              first: 'Nós usamos ',
-              linkText: 'cookies',
-              last:
-                ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Aceitar a coleta de dados e continuar',
+            reject: 'Rejeitar a coleta de dados e continuar',
+            initial: {
+              title:
+                'Diga-nos se concorda em ter seus dados coletados ao utilizar o AMP',
+              description: {
+                first: 'Nós e nossos parceiros utilizamos tecnologia do tipo ',
+                linkText: 'cookies',
+                last: ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Administre minhas configurações',
             },
-            international: {
-              first: 'Nós e nossos parceiros utilizamos tecnologia do tipo ',
-              linkText: 'cookies',
-              last:
-                ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                'Administre as configurações de consentimento nas páginas AMP',
+              description: {
+                para1:
+                  'Estas configurações se aplicam apenas às páginas AMP. Você poderá ter que configurar novamente suas preferências ao visitar páginas que não sejam do tipo AMP.',
+                para2:
+                  'A página móvel mais leve que você visitou foi criada com uso da tecnoclogia Google AMP.',
+                heading2: 'Coleta de dados necessária',
+                para3:
+                  'Para que nossas páginas possam funcionar, nós armazenamos em seu dispositivo uma pequena quantidade de informação sem o seu consentimento.',
+                para4: {
+                  text: 'Leia mais sobre a informação essencial que foi armazenada no seu dispositivo para que nossas páginas possam funcionar.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Nós utilizamos capacidade local de armazenamento para guardar no seu dispositivo as preferências de seu consentimento.',
+                heading3: 'Coleta de dados opcional',
+                para6:
+                  'Ao dar seu consentimento para a coleta de dados em páginas AMP você concorda que sejam exibidos anúncios comerciais personalizados relevantes a você ao acessar essas páginas fora do Reino Unido.',
+                para7: {
+                  text: 'Leia mais sobre como a BBC e seus parceiros comerciais personalisam anúncios comerciais.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Você pode escolher não receber anúncios comerciais personalizados ao clicar abaixo em "Rejeitar coleta de daos e continuar". Os anúncios comerciais ainda serão exibidos mas eles não serão personalizados.',
+                para9:
+                  'Você pode mudar essas configurações a qualquer momento clicando abaixo em "Escolha de Anúncios / Não venda minha informação".',
+              },
             },
           },
-          accept: 'Sim, concordo',
-          reject: 'Não concordo, volte para Configurações',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Diga-nos se concorda com o uso de cookies',
+            description: {
+              uk: {
+                first: 'Nós usamos ',
+                linkText: 'cookies',
+                last: ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Nós usamos ',
+                linkText: 'cookies',
+                last: ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Sim, concordo',
+            reject: 'Não concordo, volte para Configurações',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
-        noJs:
-          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        noJs: 'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         contentExpired: 'Este conteúdo não está mais disponível.',
         contentNotYetAvailable:
           'Este conteúdo ainda não está disponível para ser tocado.',
@@ -164,11 +242,15 @@ export const service = {
         video: 'Vídeo',
         listen: 'Listen',
         watch: 'Assista',
+        listenLive: 'Ouça ao vivo',
+        listenNext: 'Ouça o próximo',
         liveLabel: 'AO VIVO',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
+        recentEpisodes: 'Mais',
+        podcastExternalLinks: 'O podcast está disponível em',
       },
       socialEmbed: {
         caption: {
@@ -187,6 +269,12 @@ export const service = {
           endTextVisuallyHidden: 'Final de %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'Desculpe, mas não é possível exibir esta parte da história nesta página de acesso resumido de celular.',
+        linkText:
+          'Acesse a visão integral da página para visualizar todo o conteúdo.',
+      },
       topStoriesTitle: 'Principais notícias',
       featuresAnalysisTitle: 'Leia mais',
     },
@@ -197,11 +285,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Mais assistido',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -209,7 +306,7 @@ export const service = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [
@@ -230,12 +327,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/portuguese/institutional-36202456',
+          href: 'https://www.bbc.co.uk/send/u50853599',
           text: 'Fale com a BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -260,35 +357,31 @@ export const service = {
       },
       {
         title: 'Brasil',
-        url: '/portuguese/brasil',
+        url: '/portuguese/topics/cz74k717pw5t',
       },
       {
         title: 'Internacional',
-        url: '/portuguese/internacional',
+        url: '/portuguese/topics/cmdm4ynm24kt',
       },
       {
         title: 'Economia',
-        url: '/portuguese/topics/ca170ae3-99c1-48db-9b67-2866f85e7342',
+        url: '/portuguese/topics/cvjp2jr0k9rt',
       },
       {
         title: 'Saúde',
-        url: '/portuguese/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/portuguese/topics/c340q430z4vt',
       },
       {
         title: 'Ciência',
-        url: '/portuguese/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/portuguese/topics/cr50y580rjxt',
       },
       {
         title: 'Tecnologia',
-        url: '/portuguese/topics/31684f19-84d6-41f6-b033-7ae08098572a',
-      },
-      {
-        title: 'Aprenda Inglês',
-        url: '/portuguese/aprenda_ingles',
+        url: '/portuguese/topics/c404v027pd4t',
       },
       {
         title: '#SalaSocial',
-        url: '/portuguese/salasocial',
+        url: '/portuguese/topics/cx6pxx22x5pt',
       },
       {
         title: 'Vídeos',

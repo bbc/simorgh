@@ -264,4 +264,26 @@ describe('Timestamp rules', () => {
     });
     expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
   });
+
+  it('should put Timestamp block after group block', () => {
+    const fixtureData = {
+      metadata: {
+        firstPublished: 1514808060000,
+        lastPublished: 1514811600000,
+      },
+      content: {
+        model: {
+          blocks: [{ type: 'group' }, paragraphBlock],
+        },
+      },
+    };
+    const expectedTransform = Object.assign(deepClone(fixtureData), {
+      content: {
+        model: {
+          blocks: [{ type: 'group' }, generatedTimestampBlock, paragraphBlock],
+        },
+      },
+    });
+    expect(applyTimestampRules(fixtureData)).toEqual(expectedTransform);
+  });
 });

@@ -4,15 +4,17 @@ import fetchPageData from '#app/routes/utils/fetchPageData';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
-import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
+import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGroups';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
-  addIdsToItems,
+  addIdsToGroups,
   squashTopStories,
   filterGroupsWithoutStraplines,
 );
@@ -35,23 +37,26 @@ export const hasRadioSchedule = async (service, variant) => {
   return serviceHasRadioSchedule && radioScheduleOnIdx;
 };
 
-export default async ({ path, service, variant }) => {
-  const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
-  const pageDataPromise = fetchPageData(path);
+export default async ({ path, service, variant, pageType }) => {
+  try {
+    const pageHasRadioSchedule = await hasRadioSchedule(service, variant);
+    const pageDataPromise = fetchPageData({ path, pageType });
 
-  const { json, ...rest } = pageHasRadioSchedule
-    ? await withRadioSchedule({
-        pageDataPromise,
-        service,
-        path,
-        radioService: 'dari',
-      })
-    : await pageDataPromise;
+    const { json, status } = pageHasRadioSchedule
+      ? await withRadioSchedule({
+          pageDataPromise,
+          service,
+          path,
+          radioService: 'dari',
+          pageType: INDEX_PAGE,
+        })
+      : await pageDataPromise;
 
-  return {
-    ...rest,
-    ...(json && {
+    return {
+      status,
       pageData: transformJson(json),
-    }),
-  };
+    };
+  } catch ({ message, status = getErrorStatusCode() }) {
+    return { error: message, status };
+  }
 };

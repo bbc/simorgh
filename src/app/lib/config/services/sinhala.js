@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { sinhalese } from '@bbc/gel-foundations/scripts';
 import { sinhala as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_ISKOOLA_POTA_BBC_BOLD,
-  F_ISKOOLA_POTA_BBC_REGULAR,
+  F_NOTO_SERIF_SINHALA_BOLD,
+  F_NOTO_SERIF_SINHALA_REGULAR,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/si';
@@ -11,10 +16,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
-    },
     lang: `si`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'යාවත්කාලීනවී ඇත',
@@ -35,9 +36,12 @@ export const service = {
     defaultCaptionOffscreenText: 'ශීර්ෂ වැකිය, ',
     imageCopyrightOffscreenText: 'ඡායාරූප මූලාශ්‍රය, ',
     locale: `si-LK`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'si',
     datetimeLocale: `si`,
     service: 'sinhala',
     serviceName: 'Sinhala',
+    languageName: 'Sinhala',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsinhala',
     twitterSite: '@bbcsinhala',
@@ -52,19 +56,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'වෙළෙඳ දැන්වීමක් ',
+      },
       seeAll: 'සියල්ල දැකගන්න',
       home: 'මුල් පිටුව',
       currentPage: 'දැන් සිටින පිටුව',
       skipLinkText: 'අන්තර්ගතයට පිවිසෙන්න',
       relatedContent: 'මේ පුවතට සම්බන්ධ තවත් විස්තර',
+      relatedTopics: 'සබැඳි විෂයයන්',
       navMenuText: 'අංශ',
       mediaAssetPage: {
         mediaPlayer: 'මීඩියා ධාවකය',
         audioPlayer: 'හඬ වාදකය',
         videoPlayer: 'වීඩියෝ ධාවකය',
       },
+      gist: 'සාරාංශය',
       error: {
         404: {
           statusCode: '404',
@@ -121,29 +135,73 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'කුකීස් සමග එකඟවන්නේදැයි අපට දන්වන්න',
-          description: {
-            uk: {
-              first: 'අප කුකීස් ',
-              linkText: 'භාවිත කරන්නේ',
-              last:
-                ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'දත්ත රැස්කිරීම පිළිගෙන ඉදිරියට යන්න',
+            reject: 'දත්ත රැස්කිරීම ප්‍රතික්ෂේප කර ඉදිරියට යන්න',
+            initial: {
+              title: 'AMP හි දත්ත රැස්කිරීම සමග ඔබ එකඟ වන්නේ දැයි අපට දන්වන්න.',
+              description: {
+                first: 'අප සහ අපේ හවුල්කරුවන් කුකීස් ',
+                linkText: 'වැනි තාක්ෂණය',
+                last: ' භාවිත කරමින් බ්‍රවුසිං දත්ත රැස්කරන්නේ ඔබට හොඳම ඔන්ලයින් අත්දැකීම ලබාදීම සහ ඔබට පෙනෙන අන්තර්ගතය හා වෙළෙඳ ප්‍රචාරණ ඔබටම සමීප කිරීම සඳහාය. මීට ඔබ එකඟ නම් කරුණාකර ඒ බව අපට දන්වන්න.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'මගේ සැකසුම් කළමනාකරණය කරන්න',
             },
-            international: {
-              first: 'අප සහ අපේ හවුල්කරුවන් කුකීස් ',
-              linkText: 'වැනි තාක්ෂණය',
-              last:
-                ' භාවිත කරමින් බ්‍රවුසිං දත්ත රැස්කරන්නේ ඔබට හොඳම ඔන්ලයින් අත්දැකීම ලබාදීම සහ ඔබට පෙනෙන අන්තර්ගතය හා වෙළෙඳ ප්‍රචාරණ ඔබටම සමීප කිරීම සඳහාය. මීට ඔබ එකඟ නම් කරුණාකර ඒ බව අපට දන්වන්න.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP පිටුවල අනුමැතිය සඳහා වූ සැකසුම් කළමනාකරණය කරන්න',
+              description: {
+                para1:
+                  'මෙම සැකසුම් අදාළ වන්නේ AMP පිටු සඳහා පමණි. AMP නොවන BBC පිටු වෙත ඔබ පිවිසෙද්දී මෙම සැකසුම් රුචිකත්වය යළි සකසා ගන්න ලෙස ඉල්ලා සිටීමට ඉඩ තිබේ.',
+                para2:
+                  'ඔබ මේ පිවිසී සිටින ජංගම දුරකථන සැහැල්ලු පිටුව නිර්මාණය කර තිබෙන්නේ ගූගල් AMP තාක්ෂණය භාවිතයෙනි.',
+                heading2: 'අනිවාර්යයෙන් අවශ්‍ය දත්ත රැස්කිරීම',
+                para3:
+                  'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ අවසරයකින් තොරව සීමිත තොරතුරු ප්‍රමාණයක් අප විසින් ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කරනු ලැබේ.',
+                para4: {
+                  text: 'අපගේ වෙබ් පිටු ක්‍රියාකාරීවීම සඳහා, ඔබේ සන්නිවේදන මෙවලමේ අප විසින් ගබඩා කරනු ලබන අත්‍යවශ්‍ය තොරතුරු ගැන වැඩිදුර කියවන්න.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'ඔබේ අනුමැතිය ඇති රුචිකත්ව ඔබේ සන්නිවේදන මෙවලමේ ගබඩා කිරීම සඳහා එහි ඇති ඉඩකඩ අප විසින් භාවිත කරනු ලැබේ.',
+                heading3: 'විකල්ප දත්ත එකතුව',
+                para6:
+                  'AMP පිටුවල දත්ත රැස්කිරීම සඳහා ඔබ අනුමැතිය දෙනවිට, ඔබ එක්සත් රාජධානියෙන් බැහැර සිටින විට ඔබට අදාළවන දැන්වීම් ප්‍රදර්ශනය සඳහා ද ඔබගේ අනුමැතිය දෙනු ලබයි.',
+                para7: {
+                  text: 'බීබීසී තුළ සිටින අප සහ අපගේ දැන්වීම් හවුල්කරුවන් විසින් ඔබ වෙනුවෙන් ම දැන්වීම් වෙන් කෙරෙන්නේ කෙසේදැයි යන්න පිළිබඳ වැඩිදුර කියවන්න.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'පහතින් ඇති, "දත්ත රැස්කිරීම ප්‍රතික්ෂේප කර ඉදිරියට යන්න" ක්ලික් කිරීමෙන් වෙන් කෙරුණු දැන්වීම් නොලැබීම තෝරාගත හැක. තවදුරටත් දැන්වීම් දැකගත හැකි වුවත්, ඒවා ඔබ සඳහා වෙන් කර නොමැති බව කරුණාවෙන් සලකන්න.',
+                para9:
+                  'මෙහි පහළින් ඇති "දැන්වීම් රුචිකත්ව / මගේ තොරතුරු අලෙවි නොකරන්න" ක්ලික් කර ඕනෑම වේලාවක ඔබට මෙම සැකසුම් වෙනස් කළ හැකිය.',
+              },
             },
           },
-          accept: 'ඔව්, මම එකඟයි',
-          reject: 'නැහැ, සැකසුම වෙත මා ගෙනයන්න',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'කුකීස් සමග එකඟවන්නේදැයි අපට දන්වන්න',
+            description: {
+              uk: {
+                first: 'අප කුකීස් ',
+                linkText: 'භාවිත කරන්නේ',
+                last: ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'අප කුකීස් ',
+                linkText: 'භාවිත කරන්නේ',
+                last: ' හොඳම ඔන්ලයින් අත්දැකීම ඔබට ගෙන දීම සඳහාය. මේ කුකීස් සියල්ල සමග ඔබ එකඟදැයි කරුණාකර අපට දන්වන්න.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'ඔව්, මම එකඟයි',
+            reject: 'නැහැ, සැකසුම වෙත මා ගෙනයන්න',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -161,17 +219,18 @@ export const service = {
         },
         listen: 'සවන්දෙන්න',
         watch: 'නරඹන්න',
+        listenLive: 'සජීව ශ්‍රවණය',
         liveLabel: 'සජීවී.',
         nextLabel: 'NEXT',
         previousRadioShow: 'Previous radio show',
         nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        duration: 'ධාවන කාලය',
+        recentEpisodes: 'පෙර වැඩසටහන්',
       },
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'වීඩියෝ ශීර්ෂ වැකිය, ',
-          text:
-            'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
+          text: 'අනතුරු ඇඟවීමයි: බීබීසී නොවන වාර්තාවල වෙළෙඳ දැන්වීම් අඩංගු විය හැකිය',
         },
         fallback: {
           text: 'මෙහි අන්තර්ගතය නැත',
@@ -184,6 +243,11 @@ export const service = {
           endTextVisuallyHidden: 'End of %provider_name% post',
         },
       },
+      include: {
+        errorMessage:
+          'කණගාටුයි, මෙම සැහැල්ලු ජංගම පිටුව තුළ අපට ලිපියේ මෙම කොටස පෙන්විය නොහැක.',
+        linkText: 'අන්තර්ගතයේ සියල්ල දැක ගැනීමට පිටුවේ සම්පූර්ණ අනුවාදය බලන්න',
+      },
       topStoriesTitle: 'ප්‍රධාන පුවත',
       featuresAnalysisTitle: 'දැක්ම',
     },
@@ -193,6 +257,11 @@ export const service = {
       lastUpdated: 'අවසන් යාවත්කාලීනවීම:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'වැඩියෙන්ම නැරඹූ',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -206,7 +275,7 @@ export const service = {
         text: 'ඔබට බීබීසී විශ්වාස කළ හැක්කේ ඇයි',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'බාහිර යොමු කෙරෙහි අපගේ ප්‍රවේශය ගැන කියවන්න.',
       },
       links: [
@@ -223,19 +292,19 @@ export const service = {
           text: 'කුකීස්',
         },
         {
-          href: 'https://www.bbc.com/sinhala/institutional-36019593',
+          href: 'https://www.bbc.co.uk/send/u50853687',
           text: 'බීබීසී අමතන්න',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
       ],
       copyrightText: 'BBC. බාහිර වෙබ් අඩවිවල අන්තර්ගතයට බීබීසී වගකියනු නොලැබේ.',
     },
-    fonts: [F_ISKOOLA_POTA_BBC_BOLD, F_ISKOOLA_POTA_BBC_REGULAR],
+    fonts: [F_NOTO_SERIF_SINHALA_BOLD, F_NOTO_SERIF_SINHALA_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

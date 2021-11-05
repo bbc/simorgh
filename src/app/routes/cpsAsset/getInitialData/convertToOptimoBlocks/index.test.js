@@ -1,9 +1,5 @@
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before convertToOptimoBlocks
 import { CPSMediaBlock, optimoVideoBlock } from './blocks/media/fixtures';
-import {
-  legacyMediaBlock,
-  legacyOptimoVideoBlock,
-} from './blocks/legacyMedia/fixtures';
 import { CPSVersionBlock, optimoVersionBlock } from './blocks/version/fixtures';
 import {
   CPSUnorderedListBlock,
@@ -11,9 +7,11 @@ import {
   optimoUnorderedListBlock,
   optimoOrderedListBlock,
 } from './blocks/list/fixtures';
+import includeBlockData from './blocks/include/fixtures';
 import convertToOptimoBlocks from '.';
 import { optimoTextWithParagraph, optimoSubheadline } from './utils/helpers';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('convertToOptimoBlocks', () => {
   it('should convert CPS data into Optimo format', async () => {
@@ -31,8 +29,7 @@ describe('convertToOptimoBlocks', () => {
             type: 'paragraph',
           },
           {
-            text:
-              '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://www.bbc.com/pidgin" platform="highweb"/><url href="https://www.bbc.com/pidgin" platform="enhancedmobile"/></link>',
+            text: '<link><caption>this is the link text</caption><altText>this is the alt text </altText><url href="https://www.bbc.com/pidgin" platform="highweb"/><url href="https://www.bbc.com/pidgin" platform="enhancedmobile"/></link>',
             markupType: 'candy_xml',
             type: 'paragraph',
           },
@@ -40,7 +37,6 @@ describe('convertToOptimoBlocks', () => {
           CPSVersionBlock,
           CPSUnorderedListBlock,
           CPSOrderedListBlock,
-          legacyMediaBlock,
         ],
       },
     };
@@ -111,7 +107,6 @@ describe('convertToOptimoBlocks', () => {
             optimoVersionBlock,
             optimoUnorderedListBlock,
             optimoOrderedListBlock,
-            legacyOptimoVideoBlock,
           ],
         },
       },
@@ -301,7 +296,7 @@ describe('convertToOptimoBlocks', () => {
   it('should log info if block type is unsupported', async () => {
     const url = '/service/path/to/asset';
     const type = 'unsupported-type-name-here';
-    const assetType = 'MAP';
+    const assetType = MEDIA_ASSET_PAGE;
     const input = {
       metadata: {
         locators: { assetUri: url },
@@ -322,5 +317,76 @@ describe('convertToOptimoBlocks', () => {
       type,
       assetType,
     });
+  });
+
+  it('should render include blocks with correct index positions and omit non-supported/invalid includes', async () => {
+    process.env.SIMORGH_INCLUDES_BASE_URL = 'https://foobar.com/includes';
+    const pathname = 'https://www.bbc.com/service/foo';
+    const input = includeBlockData;
+
+    const expected = {
+      content: {
+        model: {
+          blocks: [
+            {
+              model: {
+                href: '/indepthtoolkit/quizzes/123-456',
+                index: 0,
+                isAmpSupported: false,
+                type: 'idt1',
+              },
+              type: 'include',
+            },
+            {
+              model: {
+                href: '/idt2/111-222-333-444-555',
+                imageBlock: {
+                  alt: 'image alt text',
+                  height: 1864,
+                  layout: 'responsive',
+                  src: 'https://foobar.com/includes/idt2/111-222-333-444-555/image/816',
+                  srcset:
+                    'https://foobar.com/includes/idt2/111-222-333-444-555/image/470 470w,https://foobar.com/includes/idt2/111-222-333-444-555/image/816 816w',
+                  width: 1632,
+                },
+                index: 1,
+                isAmpSupported: true,
+                type: 'idt2',
+              },
+              type: 'include',
+            },
+            {
+              model: {
+                href: '/include/111-222-333-444-555',
+                index: 2,
+                isAmpSupported: true,
+                type: 'vj',
+              },
+              type: 'include',
+            },
+            {
+              model: {
+                href: '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+                index: 5,
+                isAmpSupported: true,
+                type: 'vj',
+              },
+              type: 'include',
+            },
+            {
+              model: {
+                href: '/news/special/2016/newsspec_14813/content/iframe/gahuza/us-gop.inc?responsive=true&app-clickable=true&app-image=http://a.files.bbci.co.uk/worldservice/live/assets/images/2016/11/09/161109092836_us_election_2nddaymaps_winner_ws_62_v3.png',
+                index: 6,
+                isAmpSupported: true,
+                type: 'vj',
+              },
+              type: 'include',
+            },
+          ],
+        },
+      },
+    };
+
+    expect(await convertToOptimoBlocks(input, pathname)).toEqual(expected);
   });
 });

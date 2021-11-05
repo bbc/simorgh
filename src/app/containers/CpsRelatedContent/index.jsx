@@ -1,79 +1,40 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number } from 'prop-types';
-import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { pathOr } from 'ramda';
-
+import { arrayOf, shape, number, bool } from 'prop-types';
+import pathOr from 'ramda/src/pathOr';
+import styled from '@emotion/styled';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
-import StoryPromo from '../StoryPromo';
-import Grid from '../../components/Grid';
 import CpsOnwardJourney from '../CpsOnwardJourney';
+import RelatedContentPromo from './RelatedContentPromo';
+import RelatedContentPromoList from './RelatedContentPromoList';
 
-const CpsRelatedContent = ({ content, parentColumns }) => {
-  const { dir, translations } = useContext(ServiceContext);
+const eventTrackingData = {
+  block: {
+    componentName: 'related-content',
+  },
+};
+
+const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
+  margin-bottom: ${GEL_SPACING_DBL};
+`;
+
+const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
+  const { translations } = useContext(ServiceContext);
 
   const title = pathOr('Related Content', ['relatedContent'], translations);
 
-  const singleTransform = promo => (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 2,
-        group5: 2,
-      }}
-      enableGelGutters
-      dir={dir}
-    >
-      <StoryPromo item={promo} dir={dir} />
-    </Grid>
-  );
-
-  const listTransform = items => (
-    <Grid
-      columns={{
-        group0: 6,
-        group1: 6,
-        group2: 6,
-        group3: 6,
-        group4: 8,
-        group5: 8,
-      }}
-      as={StoryPromoUl}
-      enableGelGutters
-      dir={dir}
-    >
-      {items.map(item => (
-        <Grid
-          item
-          columns={{
-            group0: 6,
-            group1: 6,
-            group2: 6,
-            group3: 6,
-            group4: 4,
-            group5: 4,
-          }}
-          as={StoryPromoLi}
-          key={item.id || item.uri}
-          dir={dir}
-        >
-          <StoryPromo item={item} dir={dir} />
-        </Grid>
-      ))}
-    </Grid>
-  );
-
   return (
-    <CpsOnwardJourney
+    <StyledCpsOnwardJourney
       labelId="related-content-heading"
       title={title}
       content={content}
+      isMediaContent={isMediaContent}
       parentColumns={parentColumns}
-      singleTransform={singleTransform}
-      listTransform={listTransform}
+      promoComponent={RelatedContentPromo}
+      promoListComponent={RelatedContentPromoList}
+      columnType="secondary"
+      eventTrackingData={eventTrackingData}
     />
   );
 };
@@ -91,11 +52,13 @@ CpsRelatedContent.propTypes = {
     group4: number,
     group5: number,
   }),
+  isMediaContent: bool,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
+  isMediaContent: false,
 };
 
 export default CpsRelatedContent;

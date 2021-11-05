@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:newyddion/55702465",
+    "locators": {
+      "assetUri": "/newyddion/55702465",
+      "cpsUrn": "urn:bbc:content:assetUri:newyddion/55702465",
+      "curie": "http://www.bbc.co.uk/asset/fba1077e-03ab-4fa0-818b-ee12e17a909c",
+      "assetId": "55702465"
+    },
+    "type": "STY",
+    "createdBy": "newyddion-v6",
+    "language": "cy",
+    "lastUpdated": 1610971496319,
+    "firstPublished": 1610971282000,
+    "lastPublished": 1610971282000,
+    "timestamp": 1610971282000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "newyddion.story.55702465.page",
+      "cps_asset_id": "55702465"
+    },
+    "passport": {
+      "language": "cy",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+      "locator": "urn:bbc:cps:curie:asset:fba1077e-03ab-4fa0-818b-ee12e17a909c",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1be7a588-2e4e-45a1-8b19-68da9f147eeb#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4b819399-18d8-41e1-9e7e-4e97c817caa2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4f045458-b81c-48a3-8459-bf5abf7c6b6b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4b819399-18d8-41e1-9e7e-4e97c817caa2#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Cymdeithas Bêl-droed Cymru",
+          "thingUri": "http://www.bbc.co.uk/things/1be7a588-2e4e-45a1-8b19-68da9f147eeb#id",
+          "thingId": "1be7a588-2e4e-45a1-8b19-68da9f147eeb",
+          "thingType": [
+            "core:Thing",
+            "tagging:AmbiguousTerm",
+            "core:Organisation",
+            "tagging:Agent",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q275173"
+          ],
+          "topicName": "Cymdeithas Bêl-droed Cymru",
+          "topicId": "cgv0vw8z127t",
+          "curationList": [
+            {
+              "curationId": "4cbb3620-28c2-4cc7-9a5e-0d9adbebbf90",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Football Association of Wales"
+        },
+        {
+          "thingLabel": "Chwaraeon",
+          "thingUri": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+          "thingId": "4063f80f-cccc-44c8-9449-5ca44e4c8592",
+          "thingType": [
+            "core:Theme",
+            "core:Thing",
+            "tagging:TagConcept",
+            "tagging:Genre",
+            "tagging:AmbiguousTerm"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Sport"
+          ],
+          "topicName": "Chwaraeon",
+          "topicId": "cgxe5wzlre8t",
+          "curationList": [
+            {
+              "curationId": "70f6b6ae-1ee6-422d-a6f2-2747b7c34759",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Sport"
+        },
+        {
+          "thingLabel": "Tîm pêl-droed Cymru",
+          "thingUri": "http://www.bbc.co.uk/things/4f045458-b81c-48a3-8459-bf5abf7c6b6b#id",
+          "thingId": "4f045458-b81c-48a3-8459-bf5abf7c6b6b",
+          "thingType": [
+            "core:Organisation",
+            "tagging:TagConcept",
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "tagging:Agent"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q180857",
+            "http://dbpedia.org/resource/Wales_national_football_team",
+            "http://rdf.freebase.com/ns/m.02s2ys"
+          ],
+          "topicName": "Tîm pêl-droed Cymru",
+          "topicId": "cmldr7j1e9jt",
+          "curationList": [
+            {
+              "curationId": "2a0767e1-8bd8-4c14-97f4-45afbc4c7e52",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Wales"
+        },
+        {
+          "thingLabel": "Pêl-droed",
+          "thingUri": "http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id",
+          "thingId": "ba6e1118-f874-054e-b159-b797c16e9250",
+          "thingType": [
+            "core:Theme",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Association_football"
+          ],
+          "topicName": "Pêl-droed",
+          "topicId": "cd1x1mwq691t",
+          "curationList": [
+            {
+              "curationId": "323e0eaf-a619-4ca1-a783-4a5fef6905bf",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Football"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "WALES",
+      "producerId": "100"
+    },
+    "readTime": 1,
+    "siteUri": "/newyddion",
+    "topics": [
+      {
+        "topicName": "Pêl-droed",
+        "topicId": "cd1x1mwq691t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "323e0eaf-a619-4ca1-a783-4a5fef6905bf",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "core:Thing",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName": "Cymdeithas Bêl-droed Cymru",
+        "topicId": "cgv0vw8z127t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/1be7a588-2e4e-45a1-8b19-68da9f147eeb#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "4cbb3620-28c2-4cc7-9a5e-0d9adbebbf90",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Thing",
+          "tagging:AmbiguousTerm",
+          "core:Organisation",
+          "tagging:Agent",
+          "tagging:TagConcept"
+        ]
+      },
+      {
+        "topicName": "Chwaraeon",
+        "topicId": "cgxe5wzlre8t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "70f6b6ae-1ee6-422d-a6f2-2747b7c34759",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "core:Thing",
+          "tagging:TagConcept",
+          "tagging:Genre",
+          "tagging:AmbiguousTerm"
+        ]
+      },
+      {
+        "topicName": "Tîm pêl-droed Cymru",
+        "topicId": "cmldr7j1e9jt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/4f045458-b81c-48a3-8459-bf5abf7c6b6b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "2a0767e1-8bd8-4c14-97f4-45afbc4c7e52",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Organisation",
+          "tagging:TagConcept",
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "tagging:Agent"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116564936",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/F9CA/production/_116564936_mediaitem116564935.jpg",
+        "path": "/cpsprodpb/F9CA/production/_116564936_mediaitem116564935.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Jayne Ludlow",
+        "copyrightHolder": "cbdc",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Mae rheolwr tîm pêl-droed merched Cymru, Jayne Ludlow, wedi gadael ei swydd.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Cadarnhaodd Cymdeithas Bêl-droed Cymru ei bod wedi dod i gytundeb gyda Ludlow iddi adael swydd y rheolwr yn dilyn chwe blynedd wrth y llyw.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mae Ludlow wedi arwain y tîm cenedlaethol mewn tair ymgyrch ragbrofol, a sicrhau lle i Gymru yn 30 uchaf detholion y byd FIFA am y tro cyntaf.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Dywedodd Ludlow bod ei chyfnod &quot;cyffrous a bythgofiadwy&quot; yn y swydd wedi bod yn &quot;anrhydedd enfawr&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "'Heriau newydd'",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Ychwanegodd: &quot;Rydw i nawr yn edrych ymlaen at y dyfodol a heriau newydd, gan gynnwys bod yn rhan o dîm technegol uwch yn FIFA.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mae Ludlow wedi chwarae &quot;rhan enfawr&quot; wrth dyfu'r gêm dros Gymru, meddai prif weithredwr CBDC, Jonathan Ford.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Diolchodd iddi am ei &quot;gwaith diflino ac ymroddiad i bêl-droed yng Nghymru ar ac oddi ar y cae&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ychwanegodd CBDC y byddai'r gymdeithas yn dechrau proses recriwtio, gan edrych ymlaen at rownd ragbrofol Cwpan y Byd Merched 2023.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Jayne Ludlow yn gadael swydd rheolwr merched Cymru",
+      "headline": "Jayne Ludlow yn gadael swydd rheolwr merched Cymru"
+    },
+    "locators": {
+      "assetUri": "/newyddion/55702465",
+      "cpsUrn": "urn:bbc:content:assetUri:newyddion/55702465",
+      "curie": "http://www.bbc.co.uk/asset/fba1077e-03ab-4fa0-818b-ee12e17a909c",
+      "assetId": "55702465"
+    },
+    "summary": "Rheolwr tîm pêl-droed merched Cymru'n dweud bod ei chyfnod \"cyffrous a bythgofiadwy\" wedi dod i ben.",
+    "timestamp": 1610971282000,
+    "language": "cy",
+    "passport": {
+      "language": "cy",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/CymruFyw",
+      "locator": "urn:bbc:cps:curie:asset:fba1077e-03ab-4fa0-818b-ee12e17a909c",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1be7a588-2e4e-45a1-8b19-68da9f147eeb#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/ba6e1118-f874-054e-b159-b797c16e9250#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4b819399-18d8-41e1-9e7e-4e97c817caa2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4f045458-b81c-48a3-8459-bf5abf7c6b6b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4063f80f-cccc-44c8-9449-5ca44e4c8592#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/4b819399-18d8-41e1-9e7e-4e97c817caa2#id"
+        }
+      ],
+      "schemaVersion": "1.2.0",
+      "publishedState": "PUBLISHED"
+    },
+    "indexImage": {
+      "id": "116564937",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/120DA/production/_116564937_mediaitem116564935.jpg",
+      "path": "/cpsprodpb/120DA/production/_116564937_mediaitem116564935.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Jayne Ludlow",
+      "copyrightHolder": "cbdc",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:newyddion/55702465",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Newyddion a mwy",
+      "uri": "/newyddion/hafan",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Newyddion",
+      "uri": "/newyddion",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Pêl-droed yng Nghymru: Bwrw golwg dros 2020",
+              "headline": "Pêl-droed yng Nghymru: Edrych yn ôl ar y flwyddyn a fu"
+            },
+            "locators": {
+              "assetUri": "/newyddion/55478306",
+              "cpsUrn": "urn:bbc:content:assetUri:/newyddion/55478306"
+            },
+            "summary": "Blwyddyn wahanol iawn i'r arfer i bawb eleni, a dyw'r byd pêl-droed ddim yn wahanol o ran hynny.",
+            "timestamp": 1609323660000,
+            "language": "cy",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "116301049",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16F3A/production/_116301049_d1ab943b-e67a-436e-9bf0-3f17494b52a8.jpg",
+              "path": "/cpsprodpb/16F3A/production/_116301049_d1ab943b-e67a-436e-9bf0-3f17494b52a8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Neco",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:newyddion/55478306",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

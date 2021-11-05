@@ -1,10 +1,18 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
 import SocialEmbedContainer from '.';
-import withContexts from './testHelper';
-import { twitterBlock, twitterBlockNoEmbed } from './fixtures';
+import withContexts from './common/testHelper';
+import { twitterBlock } from './common/fixtures';
+
+/* eslint-disable react/prop-types */
+jest.mock('react-lazyload', () => {
+  return function MockedLazyload({ children }) {
+    return <>{children}</>;
+  };
+});
 
 describe('SocialEmbedContainer', () => {
   afterEach(() => {
@@ -17,7 +25,10 @@ describe('SocialEmbedContainer', () => {
         withContexts(SocialEmbedContainer, {
           isAmp: false,
           isEnabled: true,
-        })({ blocks: [twitterBlock] }),
+        })({
+          blocks: [twitterBlock],
+          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
+        }),
       );
       expect(container.firstChild).toMatchSnapshot();
       expect(
@@ -28,7 +39,7 @@ describe('SocialEmbedContainer', () => {
       expect(loggerMock.info).toHaveBeenCalledTimes(1);
       expect(loggerMock.info).toHaveBeenCalledWith(SOCIAL_EMBED_RENDERED, {
         provider: 'twitter',
-        href: 'https://twitter.com/MileyCyrus/status/1237210910835392512',
+        href: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
       });
       unmount();
       expect(
@@ -38,24 +49,59 @@ describe('SocialEmbedContainer', () => {
       ).toBeFalsy();
     });
 
-    it('should not render when disabled', () => {
-      const { container } = render(
+    it('should render the correct skip link text when indexOfType is provided (means this is one of multiple e.g. Twitter embeds in the article)', () => {
+      const { getByText } = render(
         withContexts(SocialEmbedContainer, {
           isAmp: false,
-          isEnabled: false,
-        })({ blocks: [twitterBlock] }),
+          isEnabled: true,
+        })({
+          blocks: [twitterBlock],
+          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
+        }),
       );
-      expect(container.firstChild).toBeNull();
-      expect(loggerMock.info).not.toHaveBeenCalled();
+
+      expect(getByText('End of Twitter content, 1')).toBeInTheDocument();
     });
 
-    shouldMatchSnapshot(
-      'should render correctly without an embed block',
-      withContexts(SocialEmbedContainer, {
-        isAmp: false,
-        isEnabled: true,
-      })({ blocks: [twitterBlockNoEmbed] }),
-    );
+    it('should render the correct skip link text when indexOfType is not provided (means this is the only e.g. Twitter embed in the article)', () => {
+      const { queryByText } = render(
+        withContexts(SocialEmbedContainer, {
+          isAmp: false,
+          isEnabled: true,
+        })({
+          blocks: [
+            {
+              type: 'renditions',
+              model: {
+                locator:
+                  'urn:bbc:optimo:social:2777c9b9-b3d3-4d53-b36c-be749aa528c9',
+                blocks: [
+                  {
+                    type: 'aresOEmbed',
+                    model: {
+                      oembed: {
+                        version: '1.0',
+                        author_name: 'BBC News (UK)',
+                        author_url: 'https://twitter.com/BBCNews',
+                        provider_name: 'Twitter',
+                        provider_url: 'https://twitter.com',
+                        url: 'https://twitter.com/BBCNews/status/1384138850478346243',
+                        html: '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Greta Thunberg says meeting fellow climate campaigner Sir David Attenborough was &quot;indescribable&quot; <a href="https://t.co/xz93WmAdfR">https://t.co/xz93WmAdfR</a></p>&mdash; BBC News (UK) (@BBCNews) <a href="https://twitter.com/BBCNews/status/1384138850478346243?ref_src=twsrc%5Etfw">April 19, 2021</a></blockquote>\n',
+                        width: 550,
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+          source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
+        }),
+      );
+
+      expect(queryByText('End of Twitter content, 1')).not.toBeInTheDocument();
+      expect(queryByText('End of Twitter content')).toBeInTheDocument();
+    });
   });
 
   describe('AMP', () => {
@@ -64,7 +110,10 @@ describe('SocialEmbedContainer', () => {
       withContexts(SocialEmbedContainer, {
         isAmp: true,
         isEnabled: true,
-      })({ blocks: [twitterBlock] }),
+      })({
+        blocks: [twitterBlock],
+        source: 'https://twitter.com/BBCNews/status/1384138850478346243?s=20',
+      }),
     );
   });
 });

@@ -1,24 +1,25 @@
 import getStatsPageIdentifier from '.';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('getStatsPageIdentifier', () => {
   const testScenarios = [
     {
       service: 'news',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
       id: 'c0000000000o',
       expected: 'news.articles.c0000000000o.page',
       summary: 'should return for News Article',
     },
     {
       service: 'persian',
-      pageType: 'article',
+      pageType: ARTICLE_PAGE,
       id: 'c0000000001o',
       expected: 'persian.articles.c0000000001o.page',
       summary: 'should return for WS Article',
     },
     {
       service: 'persian',
-      pageType: 'frontPage',
+      pageType: FRONT_PAGE,
       expected: 'persian.page',
       summary: 'should return for WS Front Page',
     },

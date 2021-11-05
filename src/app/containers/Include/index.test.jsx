@@ -8,6 +8,7 @@ import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
 import { INCLUDE_RENDERED } from '#lib/logger.const';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   include: {
@@ -29,26 +30,25 @@ const includeProps = {
     altText: 'some alt text',
     dimensions: {
       small: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150',
+        href: 'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/150',
         height: 400,
         width: 500,
       },
       medium: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350',
+        href: 'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/350',
         height: 600,
         width: 700,
       },
       large: {
-        href:
-          'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550',
+        href: 'https://www.example.com/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6/image/550',
         height: 800,
         width: 900,
       },
     },
   },
   type: 'idt2',
+  isAmpSupported: true,
+  index: 1,
   href: '/idt2/cb1a5166-cfbb-4520-bdac-6159299acff6',
 };
 
@@ -57,7 +57,7 @@ const MockContext = ({ toggleState, isAmp, children }) => (
   <RequestContextProvider
     bbcOrigin="https://www.test.bbc.com"
     isAmp={isAmp || false}
-    pageType="STY"
+    pageType={STORY_PAGE}
     service="news"
     statusCode={200}
     pathname="/pathname"
@@ -163,14 +163,14 @@ describe('IncludeContainer', () => {
 
   it('should render a VJ include on an Amp page with toggles enabled', () => {
     const vjProps = {
-      src:
-        'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      src: 'https://news.files.bbci.co.uk/include/newsspec/21841-green-diet/gahuza/app/amp?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
       image:
         'https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_cv_table_ws_640_3x-nc_v0mmu.png',
       imageHeight: '360',
       imageWidth: '640',
-      href:
-        '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      href: '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      isAmpSupported: true,
+      index: 1,
       type: 'vj',
     };
 
@@ -194,5 +194,27 @@ describe('IncludeContainer', () => {
       includeUrl:
         '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
     });
+  });
+
+  it('should render a fallback for VJs on an Amp page when isAmpSupported is set to false', () => {
+    const vjProps = {
+      href: '/include/newsspec/21841-green-diet/gahuza/app?responsive=true&newsapps=true&app-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png&app-clickable=true&amp-clickable=true&amp-image-height=360&amp-image-width=640&amp-image=https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png',
+      index: 0,
+      isAmpSupported: false,
+      type: 'vj',
+    };
+
+    const mockAmpFallback = jest.fn().mockReturnValue('VJ-Amp-fallback');
+    vjAmp.default = mockAmpFallback;
+
+    const { container } = render(
+      <IncludeContainerWithMockContext
+        toggleState={defaultToggleState}
+        isAmp
+        {...vjProps}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
   });
 });

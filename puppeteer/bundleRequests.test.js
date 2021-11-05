@@ -13,9 +13,22 @@ let browser;
 let page;
 let requests = [];
 
-const isJsBundle = (url) => url.includes(localBaseUrl);
+const isJsBundle = url => url.includes(localBaseUrl);
 
 jest.setTimeout(10000); // overriding the default jest timeout
+
+const getServiceBundleRegex = service => {
+  const SHARED_RUSSIAN_UKRAINIAN = 'shared-russian-ukrainian';
+
+  switch (service) {
+    case 'russian':
+      return SHARED_RUSSIAN_UKRAINIAN;
+    case 'ukrainian':
+      return `${service}|${SHARED_RUSSIAN_UKRAINIAN}`;
+    default:
+      return service;
+  }
+};
 
 describe('Js bundle requests', () => {
   beforeAll(async () => {
@@ -24,7 +37,7 @@ describe('Js bundle requests', () => {
     });
     page = await browser.newPage();
 
-    page.on('request', (request) => {
+    page.on('request', request => {
       requests.push(request.url());
     });
   });
@@ -33,14 +46,14 @@ describe('Js bundle requests', () => {
     await browser.close();
   });
 
-  Object.keys(config).forEach((service) => {
+  Object.keys(config).forEach(service => {
     Object.keys(config[service].pageTypes)
       .filter(
-        (pageType) =>
+        pageType =>
           shouldSmokeTest(pageType, service) &&
           serviceHasPageType(service, pageType),
       )
-      .forEach((pageType) => {
+      .forEach(pageType => {
         const paths = getPaths(service, pageType);
 
         if (paths.length > 0) {
@@ -58,13 +71,15 @@ describe('Js bundle requests', () => {
             });
 
             it('only loads expected js bundles', () => {
+              const serviceRegex = getServiceBundleRegex(config[service].name);
+
               requests
-                .filter((url) => url.endsWith('.js'))
+                .filter(url => url.endsWith('.js'))
                 .filter(isJsBundle)
-                .forEach((url) => {
+                .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${serviceRegex}|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
                       'g',
                     ),
                   );
@@ -72,12 +87,10 @@ describe('Js bundle requests', () => {
             });
 
             it('loads at least 1 service bundle', () => {
-              const serviceMatches = requests.filter((url) =>
+              const serviceRegex = getServiceBundleRegex(config[service].name);
+              const serviceMatches = requests.filter(url =>
                 url.match(
-                  new RegExp(
-                    `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
-                    'g',
-                  ),
+                  new RegExp(`(\\/static\\/js\\/${serviceRegex}.+?.js)`, 'g'),
                 ),
               );
 

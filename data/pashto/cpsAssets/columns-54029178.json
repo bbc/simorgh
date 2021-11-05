@@ -1,0 +1,776 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares::index:pashto/columns-54029178/desktop/domestic",
+      "locators": {
+        "assetUri": "/pashto/columns-54029178",
+        "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-54029178",
+        "curie": "http://www.bbc.co.uk/asset/cdf20a22-ff35-4100-9e9b-39bb0149be7d/desktop/domestic",
+        "assetId": "54029178"
+      },
+      "type": "FIX",
+      "createdBy": "pashto-v6",
+      "language": "ps",
+      "lastUpdated": 1599229672188,
+      "firstPublished": 1599229665000,
+      "lastPublished": 1599229666000,
+      "timestamp": 1599229665000,
+      "options": {
+        "allowAdvertising": true
+      },
+      "analyticsLabels": {
+        "cps_asset_type": "fix",
+        "counterName": "pashto.columns.feature_index.54029178.page",
+        "cps_asset_id": "54029178"
+      },
+      "tags": {},
+      "version": "v1.3.6",
+      "blockTypes": [
+        "lead-feature-now",
+        "container-guides",
+        "feature-main"
+      ],
+      "title": "کالم",
+      "summary": "کالم",
+      "atiAnalytics": {
+        "producerName": "PASHTO",
+        "producerId": "68"
+      }
+    },
+    "content": {
+      "groups": [
+        {
+          "type": "lead-feature-now",
+          "title": "Lead Feature",
+          "items": [
+            {
+              "headlines": {
+                "headline": "د مشورتي لویې جرګې پایلې او لاسته راوړنې"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53719412",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53719412",
+                "curie": "http://www.bbc.co.uk/asset/9b3e3b32-1cd5-437a-8655-7630e2405214",
+                "assetId": "53719412"
+              },
+              "summary": "د افغان ولسمشر لخوا د اختر مبارکۍ پیغام په لړ کې د سولې یوې بلې مشورتي لویې جرګې د رابللو اعلان د یو ستر بحث لامل وګرځېد. د بحث سرټکی د جرګې بنسټیزه موخه چې د طالبانو له لسټ سره سم د هغو وروستیو څلور سوه زندانیانو د خلاصون موضوع وه چې د حکومت د وینا مطابق په حق العبدي قضایاوو کې زندانیان وو.",
+              "timestamp": 1597049556000,
+              "language": "ps",
+              "byline": {
+                "name": "مشتاق  رحيم ",
+                "title": "څېړونکى",
+                "persons": [
+                  {
+                    "name": "مشتاق رحيم",
+                    "function": "څېړونکى"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3e39461b000e9dabfb",
+                    "campaignName": "WS - Keep me on trend"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113873537",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/11F41/production/_113873537_mediaitem113873536.jpg",
+                "path": "/cpsprodpb/11F41/production/_113873537_mediaitem113873536.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "جرګه",
+                "copyrightHolder": "GMIC",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53719412",
+              "type": "cps"
+            }
+          ],
+          "semanticGroupName": "Lead Feature"
+        },
+        {
+          "type": "container-guides",
+          "title": "Guides 1",
+          "items": [
+            {
+              "headlines": {
+                "headline": "د لايق هنري تصوير او شعري ځانګړتیاوې"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53670874",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53670874",
+                "curie": "http://www.bbc.co.uk/asset/94172a32-8b13-4c18-b4d4-98ba05205884",
+                "assetId": "53670874"
+              },
+              "summary": "غلام مجدد سيلمان لايق، سږکال ۹۰ کلن شو. هر هغه چا چې په ژوند کې يو ځل هم سيلمان لايق ليدلى وي، هغه هېرولى نه شي. د لطیف بهاند لیکنه.",
+              "timestamp": 1596696625000,
+              "language": "ps",
+              "byline": {
+                "name": "لطيف بهاند",
+                "title": "افغان ډيپلومات ",
+                "persons": [
+                  {
+                    "name": "لطيف بهاند",
+                    "function": "افغان ډيپلومات"
+                  }
+                ]
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113825400",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/01C4/production/_113825400_56608882_2444584888887956_4223676323559636992_n-1.jpg",
+                "path": "/cpsprodpb/01C4/production/_113825400_56608882_2444584888887956_4223676323559636992_n-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "لایق",
+                "copyrightHolder": "غرزی لایق",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53670874",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "ونړید غر له خپلو پټو زلزلو سره"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53619066",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53619066",
+                "curie": "http://www.bbc.co.uk/asset/7aeee9e4-3d41-4959-a616-a2d195a36cef",
+                "assetId": "53619066"
+              },
+              "summary": "د ۲۰۲۰ کال د جولای ۳۱ مه نېټه، زموږ د ادب او شاعرۍ لپاره تر ټوله توره تياره ورځ شوه. دې ورځ، د دې ژبې هنري روح بلې دنیا ته ولېږداوه.",
+              "timestamp": 1596248271000,
+              "language": "ps",
+              "byline": {
+                "name": "  ډاکټر لطیف بهاند",
+                "title": " مسکو",
+                "persons": [
+                  {
+                    "name": "آصف حسینی",
+                    "function": "پژوهش‌کر مطالعات صلح و منازعه"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113773528",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/14269/production/_113773528_whatsubject.jpg",
+                "path": "/cpsprodpb/14269/production/_113773528_whatsubject.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "لایق",
+                "caption": "ښاغلي لایق په ۱۳۴۵ کال کې د خلق جریدې له بندیدو وروسته د پرچم په نامه جریده خپره کړه، چې د دغه ګوند نشراتي ارګان بلل کېده.",
+                "copyrightHolder": "غرزی لایق",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53619066",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "عبدالسلام؛ پاکستانی نابغه چې د خپلې عقیدې له کبله هېر کړل شو"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53386912",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53386912",
+                "curie": "http://www.bbc.co.uk/asset/3259723f-39dc-46c7-b752-40301c659721",
+                "assetId": "53386912"
+              },
+              "summary": "پر ۱۹۷۹ کال پاکستاني پوه د فزیک نوبل جایزه وګټله. د ذرو فزیک د نظریې په هکله څېړنې یې ډېرې مهمې او د هیګز بوزون د موندلو لپاره یوه سریزه وه. هیګز بوزون هغه ذره ده چې د نورو ذرو کثافت ترې را وځي او بالاخره پر ۲۰۱۲ کال ولیدل شوه.",
+              "timestamp": 1594637197000,
+              "language": "ps",
+              "byline": {
+                "name": "ابیگیل بیل",
+                "title": "خبریاله",
+                "persons": [
+                  {
+                    "name": "Abigail Simmons",
+                    "function": "Education reporter"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2139461b000e9dabf7",
+                    "campaignName": "WS - Inspire me"
+                  },
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113294080",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1F71/production/_113294080_1.jpg",
+                "path": "/cpsprodpb/1F71/production/_113294080_1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "عبدالسلام",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53386912",
+              "type": "cps"
+            }
+          ],
+          "semanticGroupName": "Guides 1"
+        },
+        {
+          "type": "container-guides",
+          "title": "Guides 2",
+          "items": [
+            {
+              "headlines": {
+                "headline": "اوزون طبقه – ولې ویجاړېږي او څنګه ساتل کېدی شي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53323384",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53323384",
+                "curie": "http://www.bbc.co.uk/asset/46f53807-ad4d-411e-b07e-80b26107d437",
+                "assetId": "53323384"
+              },
+              "summary": "اقلیمي بدلون، چاپېریال ناولتیا، د شین پوړيز ګازونو تولید چې نړیوالې تودوخې سره تړاو لري د ساینسپوهانو، سیاستوالو او حتی د عامو خلکو د ډېرې پاملرنې او اندیښنې وړ ګرځېدلي.",
+              "timestamp": 1594167711000,
+              "language": "ps",
+              "byline": {
+                "name": "  نجیب الله ځيرک ",
+                "title": "امریکا",
+                "persons": [
+                  {
+                    "name": "آصف حسینی",
+                    "function": "پژوهش‌کر مطالعات صلح و منازعه"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                  "categoryName": "News"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e4739461b000e9dabfc",
+                    "campaignName": "WS - Update me"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113272206",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/EB43/production/_113272206_53323384.jpg",
+                "path": "/cpsprodpb/EB43/production/_113272206_53323384.jpg",
+                "height": 263,
+                "width": 468,
+                "altText": "س",
+                "copyrightHolder": "BBC",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53323384",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "پغمان کې زلزله؛ کابل ته یو بل خطر؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/afghanistan-53318834",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-53318834",
+                "curie": "http://www.bbc.co.uk/asset/2562b92d-9c8e-4777-8a7c-2c98f1945853",
+                "assetId": "53318834"
+              },
+              "summary": "دوشنبه ماسخوتن د رېکتر په کچه ۴.۶ درجې یوې زلزلې کابل ښار ولړزاوه چې مرکز یې هم د ښار شمال لوېدیځ ته د پغمان غرونو کې نږدې اوه کیلومتره ژور و. د ژوروالي کمښت او د ښار څنډو ته یې نږدېوالی سبب شو چې د زلزلې سره کابل ښاریان له دې زلزلې پیدا شوی غږ هم واوري.",
+              "timestamp": 1594116578000,
+              "language": "ps",
+              "byline": {
+                "name": "ابراهیم جعفري",
+                "title": "ځمکپوه",
+                "persons": [
+                  {
+                    "name": "ابراهیم جعفری",
+                    "function": "زمین شناس"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113265720",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/0AC4/production/_113265720_53318924.jpg",
+                "path": "/cpsprodpb/0AC4/production/_113265720_53318924.jpg",
+                "height": 868,
+                "width": 1544,
+                "altText": "مرکز این زلزله در حومه شهر کابل در کوه‌های پغمان ثبت شده است",
+                "caption": "مرکز این زلزله در حومه شهر کابل در کوه‌های پغمان ثبت شده است",
+                "copyrightHolder": "earthquake.usgs.gov/",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/afghanistan-53318834",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "د خلیلزاد وروستي سفر کې پر اقتصادي موضوعاتو تمرکز؛ امریکا څه ترلاسه کول غواړي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53309742",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53309742",
+                "curie": "http://www.bbc.co.uk/asset/2840a323-a955-4ab1-b50d-b43aafecb493",
+                "assetId": "53309742"
+              },
+              "summary": "سیمې ته د زلمي خلیلزاد د وروستي سفر په ترڅ کې د سولې اړوند د معمول خبرو اترو ترڅنګ یوه موضوع چې تر ډیره بریده نوې او متبارزه وه هغه پس له سولې افغانستان لپاره د اقتصادي برنامې او سیمه ییزه اقتصادي همکاري وه. خو دا نوې تګلاره په څه مانا ده، او امریکا سیمه کې څه ترلاسه کول غواړي؟",
+              "timestamp": 1594054195000,
+              "language": "ps",
+              "byline": {
+                "name": "  مشتاق رحیم",
+                "title": "د سولې او سیاسي چارو شنونکی",
+                "persons": [
+                  {
+                    "name": "آصف حسینی",
+                    "function": "پژوهش‌کر مطالعات صلح و منازعه"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113261170",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/1BCC/production/_113261170_d334c31e-b6c6-4e64-95fd-e15d6e639245.jpg",
+                "path": "/cpsprodpb/1BCC/production/_113261170_d334c31e-b6c6-4e64-95fd-e15d6e639245.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "زلمی",
+                "caption": "زلمی خلیلزاد دا ځل د سولې ترڅنګ پر اقتصادي موضوعاتو هم غږېدلی",
+                "copyrightHolder": "Khalilzad Twitter ",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53309742",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "کورونا وېروس او رواني روغتیا: پر افغان خبریالانو څه تېرېږي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53214049",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53214049",
+                "curie": "http://www.bbc.co.uk/asset/70e9c867-7403-4098-af1f-08135b3acdba",
+                "assetId": "53214049"
+              },
+              "summary": "'کوېډ ۱۹' نړیوالې وبا له خپرېدو سره سم د کره رپوټو او مالوماتو ترڅنګ ډېرې ویرې او ناسم خبرونه هم په خپرېدو شول. اندېښنې او بې باورۍ دومره ډېرې شوې چې ځېنو په کورونو کې خوراکي توکي زیرمه کړل، ان بډایه هېوادونو کې لویې مغازې تشې شوې. ښوونځي، پوهنتونونه او ډېرې ادارې وتړل شوې. خو ډاکټر، سرتېرى، پولیس او خبریالانو خپلو دندو ته دوام ورکړ.",
+              "timestamp": 1593360271000,
+              "language": "ps",
+              "byline": {
+                "name": "  نویده خوشبو",
+                "title": "لندن کې د ژورنالېزم پوهنځي محصله",
+                "persons": [
+                  {
+                    "name": "آصف حسینی",
+                    "function": "پژوهش‌کر مطالعات صلح و منازعه"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "113137008",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/138C9/production/_113137008_e209d181-b9bb-4782-bd57-f14548c46716.jpg",
+                "path": "/cpsprodpb/138C9/production/_113137008_e209d181-b9bb-4782-bd57-f14548c46716.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "کورونا",
+                "caption": "له تېرو څو میاشتو راهیسې افغان خبریالان هم د نړۍ ګڼو برخو کې د خپلو هم مسلکو په څېر د کورونا وېروس له خبرونو سره سروکار لري",
+                "copyrightHolder": "MUSKA SANGAR FACEBOK",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53214049",
+              "type": "cps"
+            }
+          ],
+          "semanticGroupName": "Guides 2"
+        },
+        {
+          "type": "feature-main",
+          "title": "Features and Analysis",
+          "items": [
+            {
+              "headlines": {
+                "headline": "افغانستان ته د پیسو نړیوال صندوق پور؛ ګټې او زیانونه"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53103419",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53103419",
+                "curie": "http://www.bbc.co.uk/asset/2b36de9a-b01c-4995-9aad-a19d6662a893",
+                "assetId": "53103419"
+              },
+              "summary": "افغان حکومت له پیسو نړیوال صندوق IMF نه له کورونا وېروس سره د مبارزې لپاره په تېره اپریل میاشت کې د ۲۲۰ میلیون ډالرو پور وغوښت او دغه صندوق منظور کړ.",
+              "timestamp": 1592538946000,
+              "language": "ps",
+              "byline": {
+                "name": "کامران ملک",
+                "title": "کابل مېشت اقتصاد پوه",
+                "persons": [
+                  {
+                    "name": "کامرون ویرک",
+                    "function": "خبرنگار بی‌بی‌سی"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "112974164",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/B443/production/_112974164_01bc5922-2e23-47f6-b46b-92b7486dbb19.jpg",
+                "path": "/cpsprodpb/B443/production/_112974164_01bc5922-2e23-47f6-b46b-92b7486dbb19.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "ډالر",
+                "copyrightHolder": "AFP",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53103419",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "افغان نجونې ولې په مستعارو نومونو فېسبوک کاروي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/afghanistan-53071312",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/afghanistan-53071312",
+                "curie": "http://www.bbc.co.uk/asset/addd04dc-a6de-234e-8f96-d97fa7e39e76",
+                "assetId": "53071312"
+              },
+              "summary": "د رسنیو مسله د اړیکو ده. سنتي رسنۍ لکه مجلې، تلویزیون، راډیو او نورې رسنۍ دا ځواک لري چې خلکو ته د تازه او اړینو پېښو او مسلو په اړه مالومات ورکړي.‌",
+              "timestamp": 1592328104000,
+              "language": "ps",
+              "byline": {
+                "name": "مینا نظري",
+                "title": "شاعره او لیکواله",
+                "persons": [
+                  {
+                    "name": "مینا نظري",
+                    "function": "شاعره او لیکواله"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                  "categoryName": "Analysis"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "112940866",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/104F4/production/_112940866_104108471_707652853345208_179040876738605811_n-1.jpg",
+                "path": "/cpsprodpb/104F4/production/_112940866_104108471_707652853345208_179040876738605811_n-1.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "افغانستان",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/afghanistan-53071312",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "\"غوا مې لاړه په ترپکو\": سندره، شعر او رنګونه د ماشوم پر روان څه اغېز کوي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-53044354",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-53044354",
+                "curie": "http://www.bbc.co.uk/asset/7631b308-791a-4e45-a710-e7f006194530",
+                "assetId": "53044354"
+              },
+              "summary": "د ماشوم ادبیاتو په تخلیقي برخه کې نظمونه ډېر مهم او ارزښتمن دي. د ماشومانو نظمونه له پخوا راهیسې په پښتني چاپيریال او ټولنه کې وو. ځينې یې ماشومانو خپله ایجاد کړي او یوه برخه یې بیا د میندو لخوا رامنځته شوي او ماشومان يې پرې نازولي دي. دا سندرې او شعرونه د ماشوم پر روان ژور اغېز لري.",
+              "timestamp": 1592219386000,
+              "language": "ps",
+              "byline": {
+                "name": "  مینا نظري",
+                "title": "شاعره او د ماشوم د ادبیاتو لیکواله",
+                "persons": [
+                  {
+                    "name": "آصف حسینی",
+                    "function": "پژوهش‌کر مطالعات صلح و منازعه"
+                  }
+                ]
+              },
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                  "categoryName": "Feature"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3139461b000e9dabf9",
+                    "campaignName": "WS - Divert me"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "112894679",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/17D71/production/_112894679_gettyimages-1137858388.jpg",
+                "path": "/cpsprodpb/17D71/production/_112894679_gettyimages-1137858388.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "غوا",
+                "caption": "\"غوا مې لاړه په ترپکو\" په پښتو کې د ماشومانو یوه تر ټولو مشهوره فولکلوریکه سندره ده",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-53044354",
+              "type": "cps"
+            },
+            {
+              "headlines": {
+                "headline": "د سعودي د تېلو کیسه: دا شتمني به تر څه وخت دوام وکړي؟"
+              },
+              "locators": {
+                "assetUri": "/pashto/columns-52994707",
+                "cpsUrn": "urn:bbc:content:assetUri:pashto/columns-52994707",
+                "curie": "http://www.bbc.co.uk/asset/08974147-3524-d544-b99e-a6938375a95f",
+                "assetId": "52994707"
+              },
+              "summary": "سعودي کې د لومړي ځل لپاره په ۱۹۳۸ مارچ کې په دمام سیمه کې یوې امریکايي کمپنۍ د ۱۴۴۰ متره ژوروالي نه تېل وایستل. له هماغه راهیسې سعودي د تېلو یو تر ټولو لوی تولیدوونکی هېود دی. خو پوښتنه دا ده چې دا شتمني به تر کومه وخته دوام وکړي؟",
+              "timestamp": 1591790522000,
+              "language": "ps",
+              "passport": {
+                "category": {
+                  "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Explainer",
+                  "categoryName": "Explainer"
+                },
+                "campaigns": [
+                  {
+                    "campaignId": "5a988e2939461b000e9dabf8",
+                    "campaignName": "WS - Educate me"
+                  },
+                  {
+                    "campaignId": "5a988e3739461b000e9dabfa",
+                    "campaignName": "WS - Give me perspective"
+                  }
+                ],
+                "taggings": []
+              },
+              "cpsType": "STY",
+              "indexImage": {
+                "id": "108873054",
+                "subType": "index",
+                "href": "http://c.files.bbci.co.uk/AFED/production/_108873054_gettyimages-73375788.jpg",
+                "path": "/cpsprodpb/AFED/production/_108873054_gettyimages-73375788.jpg",
+                "height": 549,
+                "width": 976,
+                "altText": "آرامکو",
+                "caption": "سعودي د تېلو یو تر ټولو لوی تولیدوونکی هېواد دی",
+                "copyrightHolder": "Getty Images",
+                "type": "image"
+              },
+              "options": {
+                "isBreakingNews": false,
+                "isFactCheck": false
+              },
+              "id": "urn:bbc:ares::asset:pashto/columns-52994707",
+              "type": "cps"
+            }
+          ],
+          "semanticGroupName": "Features and Analysis"
+        }
+      ]
+    },
+    "promo": {
+      "subType": "IDX",
+      "name": "کالم",
+      "uri": "/pashto/columns-54029178",
+      "id": "urn:bbc:ares::index:pashto/columns-54029178/desktop/domestic",
+      "type": "simple"
+    },
+    "relatedContent": {
+      "section": {
+        "subType": "index",
+        "name": "کالم",
+        "uri": "/pashto/columns",
+        "type": "simple"
+      },
+      "site": {
+        "subType": "site",
+        "name": "BBC Pashto",
+        "uri": "/pashto",
+        "type": "simple"
+      },
+      "groups": []
+    }
+  }

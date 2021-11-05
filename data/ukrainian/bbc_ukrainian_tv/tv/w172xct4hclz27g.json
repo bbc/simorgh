@@ -1,0 +1,557 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hclz27g",
+    "locators": { "pid": "w172xct4hclz27g", "brandPid": "w13xttp9" },
+    "type": "WSTV",
+    "createdBy": "bbc_ukrainian_tv",
+    "language": "uk",
+    "lastUpdated": 1608648799562,
+    "firstPublished": 1605293733000,
+    "lastPublished": 1605293733000,
+    "timestamp": 1605293733000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Випуск новин - BBC News Україна",
+      "pageIdentifier": "ukrainian.bbc_ukrainian_tv.tv.w172xct4hclz27g.page",
+      "producerId": "94",
+      "contentType": "player-episode",
+      "producer": "UKRAINIAN"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Випуск новин",
+    "releaseDateTimeStamp": 1608249600000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xct4hclz27g",
+        "subType": "episode",
+        "format": "Video",
+        "title": "18/12/2020 GMT",
+        "synopses": {
+          "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+          "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+          "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshjpdmrtlcf8",
+            "types": ["Original"],
+            "duration": 845,
+            "durationISO8601": "PT14M5S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608318840000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "Випуск новин" },
+    "locators": { "pid": "w172xct4hclz27g", "brandPid": "w13xttp9" },
+    "media": {
+      "id": "w172xct4hclz27g",
+      "subType": "episode",
+      "format": "Video",
+      "title": "18/12/2020 GMT",
+      "synopses": {
+        "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+        "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+        "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshjpdmrtlcf8",
+          "types": ["Original"],
+          "duration": 845,
+          "durationISO8601": "PT14M5S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608318840000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608249600000,
+    "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hclz27g",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Ukrainian",
+      "uri": "/ukrainian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct4vmxcm6x", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct4vmxcm6x",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpf013zxdq",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608578040000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608508800000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4vmxcm6x",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct4hclw5bc", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct4hclw5bc",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpdmrthgj5",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608232440000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hclw5bc",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct4hcls8f8", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct4hcls8f8",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpdmrtdkm2",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608146040000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hcls8f8",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct4hclpcj5", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct4hclpcj5",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpdmrt9npz",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608059640000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hclpcj5",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct4hcllgm2", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct4hcllgm2",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpdmrt6rsw",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607973240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct4hcllgm2",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct44395xmm", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct44395xmm",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpd8hht6tf",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607714040000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct44395xmm",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct443930qj", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct443930qj",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpd8hhq9xb",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607627640000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct443930qj",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Випуск новин" },
+            "locators": { "pid": "w172xct443903tf", "brandPid": "w13xttp9" },
+            "media": {
+              "id": "w172xct443903tf",
+              "subType": "episode",
+              "format": "Video",
+              "title": "09/12/2020 GMT",
+              "synopses": {
+                "short": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "medium": "ВВС News Україна розповідає про головні події дня на Громадському і на сайті bbc.ua",
+                "long": "З понеділка по п’ятницю ВВС News Україна розповідає про найбільш значущі події дня на телеканалі Громадське і на сайті bbc.ua."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjpd8hhmf07",
+                  "types": ["Original"],
+                  "duration": 845,
+                  "durationISO8601": "PT14M5S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607541240000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p060dm3n.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607472000000,
+            "brand": { "pid": "w13xttp9", "title": "Випуск новин" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_ukrainian_tv/w172xct443903tf",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

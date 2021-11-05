@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { LiveRadioPage } from '..';
@@ -10,6 +9,7 @@ import tigrinya from './fixtureData/tigrinya';
 import afaanoromoo from './fixtureData/afaanoromoo';
 import amharic from './fixtureData/amharic';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const liveRadioFixtures = {
   indonesia,
@@ -32,28 +32,38 @@ const matchFixtures = service => ({
   },
 });
 
-const status = 200;
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => (
+  <BrowserRouter>
+    <LiveRadioPage
+      match={matchFixtures(service)}
+      pageData={liveRadioFixtures[service]}
+      status={200}
+      service={service}
+      isAmp={false}
+      loading={false}
+      error=""
+      pageType={MEDIA_PAGE}
+    />
+  </BrowserRouter>
+);
 
-storiesOf('Pages|Radio Page', module)
-  .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-  .addDecorator(withKnobs)
-  .addDecorator(
+export default {
+  Component,
+  title: 'Pages/Radio Page',
+  decorators: [
+    withKnobs,
     withServicesKnob({
       defaultService: 'indonesia',
       services: Object.keys(liveRadioFixtures),
     }),
-  )
-  .add('default', ({ service }) => (
-    <BrowserRouter>
-      <LiveRadioPage
-        match={matchFixtures(service)}
-        pageData={liveRadioFixtures[service]}
-        status={status}
-        service={service}
-        isAmp={false}
-        loading={false}
-        error=""
-        pageType="media"
-      />
-    </BrowserRouter>
-  ));
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+  ],
+  parameters: {
+    chromatic: {
+      diffThreshold: 0.2,
+    },
+  },
+};
+
+export const Page = Component;

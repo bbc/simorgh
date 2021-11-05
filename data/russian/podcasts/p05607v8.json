@@ -1,0 +1,644 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_russian_radio/p05607v8",
+    "locators": {
+      "pid": "p06xlzvx",
+      "brandPid": "p05607v8"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_russian_radio",
+    "language": "ru",
+    "lastUpdated": 1613057240879,
+    "firstPublished": 1547043146000,
+    "lastPublished": 1547043146000,
+    "timestamp": 1547043146000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Радиоархив Русской службы Би-би-си - BBC News Русская служба",
+      "pageIdentifier": "russian.bbc_russian_radio.programmes.p05607v8.page",
+      "producerId": "75",
+      "contentType": "player-episode",
+      "producer": "RUSSIAN"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": [
+      "media"
+    ],
+    "title": "Радиоархив Русской службы Би-би-си",
+    "releaseDateTimeStamp": 1547164800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p06xlzvx",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+          "long": "“Киндертранспортом” называют в Великобритании операцию по вывозу еврейских детей из нацистской Германии и оккупированных ею стран.\nВ декабре 1938 года по инициативе британской общественной организации в страну с разрешения правительства стали приезжать еврейские дети, которых брали к себе жить британские семьи.\n\nРодителям же этих детей въезд был разрешен только при условии, что в Великобритании их ждет работа, так что большинство из них остались дома и позднее погибли. А почти десяти тысячам детей удалось спастись. \n\nЭвакуация продолжалась в течение 1939 года до последнего транспорта в мае 1940 года. \n\nВосемьдесят лет спустя усилия британских благотворительных организаций и помощь, которую они оказали еврейским детям, не теряет актуальности, когда многие дети беженцев из других стран мира, нуждаются в помощи недалеко от английских берегов.      \n\nПередача Джесси Кейнер рассказывает об этой операции, и о том, как в декабре 2008 года, семидесятилетие “Киндертранспорта” отмечалось в Лондоне. \n\nPhoto: Kindertransport Jewish refugees arrive in Britain\n01/07/1939\nCredit: Stephenson/Getty Images"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xlyvb.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p06xlz6f",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 778,
+            "durationISO8601": "PT12M58S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1547211600000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Вспоминая о “Киндертранспорте”",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "Радиоархив Русской службы Би-би-си"
+    },
+    "locators": {
+      "pid": "p06xlzvx",
+      "brandPid": "p05607v8"
+    },
+    "media": {
+      "id": "p06xlzvx",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+        "long": "“Киндертранспортом” называют в Великобритании операцию по вывозу еврейских детей из нацистской Германии и оккупированных ею стран.\nВ декабре 1938 года по инициативе британской общественной организации в страну с разрешения правительства стали приезжать еврейские дети, которых брали к себе жить британские семьи.\n\nРодителям же этих детей въезд был разрешен только при условии, что в Великобритании их ждет работа, так что большинство из них остались дома и позднее погибли. А почти десяти тысячам детей удалось спастись. \n\nЭвакуация продолжалась в течение 1939 года до последнего транспорта в мае 1940 года. \n\nВосемьдесят лет спустя усилия британских благотворительных организаций и помощь, которую они оказали еврейским детям, не теряет актуальности, когда многие дети беженцев из других стран мира, нуждаются в помощи недалеко от английских берегов.      \n\nПередача Джесси Кейнер рассказывает об этой операции, и о том, как в декабре 2008 года, семидесятилетие “Киндертранспорта” отмечалось в Лондоне. \n\nPhoto: Kindertransport Jewish refugees arrive in Britain\n01/07/1939\nCredit: Stephenson/Getty Images"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06xlyvb.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p06xlz6f",
+          "types": [
+            "Podcast"
+          ],
+          "duration": 778,
+          "durationISO8601": "PT12M58S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1547211600000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "Вспоминая о “Киндертранспорте”",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p06xlyvb.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p06xlyvb.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1547164800000,
+    "brand": {
+      "pid": "p05607v8",
+      "title": "Радиоархив Русской службы Би-би-си"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06xlzvx",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Russian",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06x0tn3",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06x0tn3",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "Сегодня в России считается модным приглашать для воспитания своих детей гувернантку, желательно английскую. Гувернантка - это молодая образованная женщина, которая ухаживает за детьми и помогает им с уроками. Главная ее задача - подготовить детей к жизни в американской или английской частной школе. \n\nВ советское время не было спроса на английских гувернанток, но до Октябрьской революции Россия была притягательным местом для молодых англичанок со средним образованием, но без финансовых средств, которые при этом не боялись рискнуть своей судьбой в далеких краях.      \n\nВ XIX веке Англия была главным поставщиком гувернанток по всему миру. Тысячи английских женщин, отправлявшихся работать заграницу, были своего рода пятой колонной британской империи. Ведь они, воспитывая детей в соответствии с английскими ценностями, невольно убеждали мир в превосходстве этой цивилизации. \n\nВ передаче “Английская гувернантка”, которую подготовили Дерек Миллер и Джесси Кейнер в 1998 году, опираясь на английскую и русскую художественную литературу, речь шла о том, что гувернантки сами были жертвами жестокости британской классовой системы, и им пришлось уезжать за границу из-за невыносимого социально-экономического положения дома.\n\nПередачу вела Ирина Львова.     \n\nsongs:\nI Whistle a Happy Tune,\nComposer: Rogers & Hammerstein,\nDecca Records.\n\nMy Favourite Things,\nComposer: Rogers & Hammerstein,\nConcord Music Publishing.\n\nHome Sweet Home,\nComposer: Henry Bishop."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06x0sll",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 1158,
+                  "durationISO8601": "PT19M18S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1546450140000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Английская гувернантка",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1546387200000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06x0tn3",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06vm5xl",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06vm5xl",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Из архива Русской службы Би-би-си: к 100-летию великого писателя ХХ века А. Солженицына",
+                "long": "В этой передаче литераторы Михаил Хейфец, Ефим Г. Эткинд, Вадим Медведев и Михаил Агурский говорят о культурной работе и общественной позиции Александра Солженицына с 1960-х годов до начала перестройки. \n\nПосле взлета популярности и признания в СССР и мире в 60-х, в 1970-е и 1980-е Солженицын оказался в вынужденной эмиграции и стал противоречивой фигурой для западной и русской зарубежной прессы.  \n\nТем временем, в конце 80-х, когда готовилась эта передача, советские читатели боролись с властью за право прочесть произведения Солженицына.  \n\nПередачу подготовила и провела Наталья Рубинштейн. Она вышла в 1988 году."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06vlstg",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 2032,
+                  "durationISO8601": "PT33M52S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1544803260000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Вокруг Солженицына",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1544745600000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06vm5xl",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06vm4sc",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06vm4sc",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Из архива Русской службы Би-би-си: к 100-летию великого писателя ХХ века А. Солженицына",
+                "long": "Программа Натальи Рубинштейн, вышедшая в 1988 году,  рассказывает о том, как Русская служба Би-би-си помогала Солженицыну доносить свои мысли и идеи до слушателей в Советском Союзе, власти которого делали все, чтобы максимально отдалить советскую публику от его творчества. \n\nОт нобелевской речи в 1974-м, четыре года спустя после того, как ему присудили премию по литературе,  до чтения повести “Один день Ивана Денисовича” в 1982-м, в передаче звучат редкие записи голоса самого Солженицына."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06vlsqs",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 2106,
+                  "durationISO8601": "PT35M6S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1544803200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Александр Солженицын и Би-би-си",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06vlxql.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1544745600000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06vm4sc",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06pbj4p",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06pbj4p",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "Программа посвященная памяти Олега Николаевича Ефремова, подготовил и вел Павел Асс вскоре после смерти знаменитого актера и режиссера в мае 2000 года. В ней Асс представил отрывки из разных интервью, которые он записал с Ефремовым в течении 11 лет с 1987 по 1998 в Англии и в США.  \n\nОлег Ефремов, был награжден множеством государственных премий за его деятельность в театре и кино, был создателем театра “Современник”.  С 1970 года он возглавлял МХАТ СССР имени Горького, и пол века преподавал актерское мастерство в школе студии МХАТа. Он был одним из основателей Союза театральных деятелей СССР и Народным депутатом СССР от творческих союзов.    \n \nВ этой записи он говорит об Иннокентии Смоктуновском, о Михаиле Чехове, и о провале первой постановки спектакля  “Чайка” Антона Чехова. Он также рассуждает о мастерстве актера и режиссера, и о том, что самое главное – жить и быть благодарным, что тебе дана жизнь!"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06pbhfx",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 884,
+                  "durationISO8601": "PT14M44S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1539964260000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Олег Ефремов  -  о жизни и о русском театре начала ХХ века",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1539907200000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06pbj4p",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06nq39v",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06nq39v",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "Программа об истории греко-католической или “униатской” церкви в Украине подготовила и вела Фаина Янова в 1996 году, когда исполнилось 400 лет с Брестской унии. \nВ 1596 году группа киевских епископов Константинопольской православной церкви, устранившись от московского патриархата, приняла католическое вероучение и перешла в подчинение папе римскому, сохранив при этом многие православные обряды.  Этот союз получил название \"Брестская уния\".\nО предпосылках и инициаторах этого церковного союза, а также об изменениях и проблемах, к которым он привел, в программе говорили украинские историки Роман Шуст и Олег Турий. \nПротивоположные взгляды о путях развития православия высказали епископ Августин Украинской православной церкви Московского патриархата и участник движения за восстановление \"униатской\" церкви Иван Байдар.\nВ конце передачи глава Украинской грекокатолической церкви архиепископ Владимир Стернюк рассуждал о том, как православная и грекокатолическая церкви могут найти понимание.          \nPhoto: Ukrainian Greek Catholic Church. Spas, Ukraine\nCredit: Klarqa"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06nq1kn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06nq0tz",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 1537,
+                  "durationISO8601": "PT25M37S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1539358560000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "400 лет “униатской” церкви",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06nq1kn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06nq1kn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1539302400000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06nq39v",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06n2khy",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06n2khy",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "6 октября исполняется 20 лет с тех пор как, в 1998 году, скончался Ролан Быков. Народный артист СССР, актер, режиссер и сценарист детского театра и кино, был известен своими ролями в детском кино, как, например, Бармалей в “Айболит 66”, и своим фильмом 1983 года, “Чучело”, которое стало культовым. \n\nВесной 1998 года, Русская служба Би-би-си пригласила Быкова, приехавшего в Лондон на презентацию фильма “Чучело”, принять участие в программе “Севаоборот”. Там он рассказывал о том, как он долго искал актрису на роль “Чучело” пока не нашел Кристину Орбакайте, о своей жизни в кино и в театре, и также читал стихи -  собственные и других поэтов."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06n2jpm",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 3107,
+                  "durationISO8601": "PT51M47S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1538755080000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Ролан Быков о том, как он нашел свое “Чучело”",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05607r8.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1538697600000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06n2khy",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06hrrr6",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06hrrr6",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "Демонстрация на Красной площади 25 августа 1968 года против введения войск стран Варшавского договора в Чехословакию стала легендой правозащитного, диссидентского движения в Советском союзе. \n\nВосемь человек, которые всего несколько минут держали плакаты со словами “Руки прочь от ЧССР!” и “За нашу и вашу свободу” на Лобном месте, расплатились личной свободой и карьерой за свой поступок. \n\nУчастники демонстрации Наталья Горбаневская и Павел Литвинов рассказали Вере Чалидзе о том, почему они вышли на Красную площадь. \n\nА переводчик Милан Дворжак и бард Александр Галич о том, почему они воспели этот подвиг. Программа вышла в эфир в августе 1998 года. \n\n\n\nPhoto: Red Square protest banner - For Your Freedom and Ours \n\nCredit: Memorial society archive"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hrp5t.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06hrqtg",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 1478,
+                  "durationISO8601": "PT24M38S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1534941000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Август 1968 года – часть 2. Воспоминания о демонстрации на Красной площади",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hrp5t.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hrp5t.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1535068800000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06hrrr6",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "Радиоархив Русской службы Би-би-си"
+            },
+            "locators": {
+              "pid": "p06hrqnj",
+              "brandPid": "p05607v8"
+            },
+            "media": {
+              "id": "p06hrqnj",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "Русская служба Би-би-си представляет уникальные записи из ее архива радиопрограмм",
+                "long": "Ночью с 20 по 21 августа 1968 года войска стран Варшавского договора вторглись в столицу Чехословакии, чтобы подавить Пражскую весну. \n\n\n\nСвидетели вторжения и драматических событий до и после появления танков на улицах Праги рассказывают о том, как перед их глазами попытки реформировать систему и построить социализм с человеческим лицом были разрушены советской властью. \n\n\n\nВ программе Веры Чалидзе, вышедшей в эфир в 1998 году, приняли участие писательница Здена Томин, историк Иван Савицкий, тогдашний член ЦК чехословацкой компартии Вацлав Славик и генерал Александр Майоров, командовавший во время вторжения в Чехословакию 38 армией. \n\n\n\nPhoto: Red Army tank on Prague street, 21 August 1968\n\nCredit: AFP/Getty Images"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hrpmq.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p06hrq15",
+                  "types": [
+                    "Podcast"
+                  ],
+                  "duration": 1448,
+                  "durationISO8601": "PT24M8S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1534528800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "Август 1968 года – часть 1. Воспоминания о подавлении Пражской весны",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hrpmq.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hrpmq.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1534464000000,
+            "brand": {
+              "pid": "p05607v8",
+              "title": "Радиоархив Русской службы Би-би-си"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p06hrqnj",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,37 +1,45 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { MemoryRouter } from 'react-router';
 import { withKnobs } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import ArticlePage from '.';
-
-// article c5jje4ejkqvo contains a Headline, a Paragraph, a timestamp
-// a Portrait Image with Caption, a Landscape Image with Caption and Square Image with Caption.
+import ArticlePageComponent from './ArticlePage';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
+import secondaryColumn from '#data/news/secondaryColumn';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 
-// Not all services have fixtures for article data yet
-// the service selector will be constrained to services that have article fixtures:
+const Page = withPageWrapper(ArticlePageComponent);
 
-storiesOf('Pages|Article Page', module)
-  .addDecorator(withKnobs)
-  .add('Articles', () => (
-    <ToggleContextProvider service="pidgin" origin="https://www.test.bbc.com">
-      {/* Service set to pidgin to enable most read. Article data is in english */}
-      <ServiceContextProvider service="pidgin">
-        <RequestContextProvider
-          isAmp={false}
-          pageType="article"
-          service="pidgin"
-        >
-          <UserContextProvider>
-            <ArticlePage
-              pageData={articleData}
+const ComponentWithContext = () => (
+  <ToggleContextProvider>
+    {/* Service set to pidgin to enable most read. Article data is in english */}
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        isAmp={false}
+        pageType={ARTICLE_PAGE}
+        service="news"
+      >
+        <UserContextProvider>
+          <MemoryRouter>
+            <Page
+              pageData={{ ...articleData, secondaryColumn }}
               mostReadEndpointOverride="./data/news/mostRead/index.json"
             />
-          </UserContextProvider>
-        </RequestContextProvider>
-      </ServiceContextProvider>
-    </ToggleContextProvider>
-  ));
+          </MemoryRouter>
+        </UserContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  </ToggleContextProvider>
+);
+
+export default {
+  Component: ComponentWithContext,
+  title: 'Pages/Article Page',
+  decorators: [withKnobs],
+};
+
+export const ArticlePage = ComponentWithContext;
+ArticlePage.storyName = 'Pages/Article Page';

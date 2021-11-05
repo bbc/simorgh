@@ -1,8 +1,14 @@
 import convertMedia from '.';
-import { legacyMediaBlock, legacyOptimoVideoBlock } from './fixtures';
+import {
+  legacyMedia,
+  legacyMediaBlock,
+  legacyOptimoVideoBlock,
+} from './fixtures';
 
 describe('convertMedia', () => {
   it('should convert a legacy `media` block format to Optimo `video` block format', () => {
-    expect(convertMedia(legacyMediaBlock)).toEqual(legacyOptimoVideoBlock);
+    expect(convertMedia(legacyMediaBlock, legacyMedia)).toEqual(
+      legacyOptimoVideoBlock,
+    );
   });
 });

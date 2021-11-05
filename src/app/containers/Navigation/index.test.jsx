@@ -5,6 +5,7 @@ import { service as newsConfig } from '#lib/config/services/news';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import Navigation from './index';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 describe('Navigation Container', () => {
   shouldMatchSnapshot(
@@ -14,7 +15,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/news"
@@ -31,7 +32,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/news"
@@ -48,7 +49,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/uk"
@@ -65,7 +66,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/uk"
@@ -82,7 +83,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/not-a-navigation-page"
@@ -99,7 +100,7 @@ describe('Navigation Container', () => {
         bbcOrigin="https://www.test.bbc.co.uk"
         id="c0000000000o"
         isAmp={false}
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
         statusCode={200}
         pathname="/not-a-navigation-page"
@@ -118,7 +119,7 @@ describe('Navigation Container', () => {
           bbcOrigin="https://www.test.bbc.co.uk"
           id="c0000000000o"
           isAmp={false}
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           service="news"
           statusCode={200}
           pathname="/news"

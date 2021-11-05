@@ -5,18 +5,34 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import isLive from '#lib/utilities/isLive';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+
+const publicServiceList = ['news', 'sport'];
+
+const publicServiceDataSlot = () =>
+  isLive()
+    ? '/4817/bbccom.live.site.amp.news'
+    : '/4817/bbccom.test.site.amp.news';
+
+const worldServiceDataSlot = service =>
+  isLive()
+    ? `/4817/bbcworldservice.live.site.${service}`
+    : '/4817/bbccom.test.site.amp.news';
 
 export const getDataSlot = service => {
-  const dataSlot = isLive()
-    ? `/4817/bbcworldservice.live.site.${service}`
-    : `/4817/bbccom.test.site.amp.news`;
-  return dataSlot;
+  const isPublicService = publicServiceList.includes(service);
+
+  if (isPublicService) {
+    return publicServiceDataSlot();
+  }
+
+  return worldServiceDataSlot(service);
 };
 
-const constructAdJsonData = ({ service, slotType }) => ({
+const constructAdJsonData = ({ service, slotType, assetType }) => ({
   targeting: {
     slot: slotType,
-    asset_type: 'index',
+    asset_type: assetType,
     channel: service,
   },
 });
@@ -28,6 +44,7 @@ const defaultAmpAdProps = service => ({
   'data-slot': getDataSlot(service),
   'data-amp-slot-index': '0',
   'data-a4a-upgrade-type': 'amp-ad-network-doubleclick-impl',
+  'data-multi-size-validation': 'false',
 });
 
 const slotConfigurations = {
@@ -54,10 +71,14 @@ const slotConfigurations = {
   },
 };
 
-const AdSlot = ({ service, slotType }) => {
+export const getAssetType = pageType =>
+  pageType === STORY_PAGE ? 'story' : 'index';
+
+const AdSlot = ({ service, slotType, pageType }) => {
   const { mobile, desktop } = slotConfigurations[slotType];
+  const assetType = getAssetType(pageType);
   const targetingJson = JSON.stringify(
-    constructAdJsonData({ service, slotType }),
+    constructAdJsonData({ service, slotType, assetType }),
   );
 
   return (
@@ -83,6 +104,7 @@ const AdSlot = ({ service, slotType }) => {
 AdSlot.propTypes = {
   service: string.isRequired,
   slotType: oneOf(['leaderboard', 'mpu']).isRequired,
+  pageType: string.isRequired,
 };
 
 export default AdSlot;

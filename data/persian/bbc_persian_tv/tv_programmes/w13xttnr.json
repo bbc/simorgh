@@ -1,0 +1,602 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_persian_tv/w13xttnr",
+    "locators": { "pid": "w172xbvv5r34mwy", "brandPid": "w13xttnr" },
+    "type": "WSTV",
+    "createdBy": "bbc_persian_tv",
+    "language": "fa",
+    "lastUpdated": 1608630797356,
+    "firstPublished": 1605585351000,
+    "lastPublished": 1605585351000,
+    "timestamp": 1605585351000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی - BBC News فارسی",
+      "pageIdentifier": "persian.bbc_persian_tv.tv_programmes.w13xttnr.page",
+      "producerId": "69",
+      "contentType": "player-episode",
+      "producer": "PERSIAN"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی",
+    "releaseDateTimeStamp": 1608595200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xbvv5r34mwy",
+        "subType": "episode",
+        "format": "Video",
+        "title": "22/12/2020 GMT",
+        "synopses": {
+          "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+          "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+          "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshhq9z6lg5fy",
+            "types": ["Original"],
+            "duration": 3600,
+            "durationISO8601": "PT1H",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608611400000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+    },
+    "locators": { "pid": "w172xbvv5r34mwy", "brandPid": "w13xttnr" },
+    "media": {
+      "id": "w172xbvv5r34mwy",
+      "subType": "episode",
+      "format": "Video",
+      "title": "22/12/2020 GMT",
+      "synopses": {
+        "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+        "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+        "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshhq9z6lg5fy",
+          "types": ["Original"],
+          "duration": 3600,
+          "durationISO8601": "PT1H",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608611400000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608595200000,
+    "brand": {
+      "pid": "w13xttnr",
+      "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvv5r34mwy",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvv5r31qzv", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvv5r31qzv",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9z6lc8jv",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608525000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608508800000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvv5r31qzv",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgstztl", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgstztl",
+              "subType": "episode",
+              "format": "Video",
+              "title": "20/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly94jcl",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608438600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608422400000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgstztl",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgsr2xh", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgsr2xh",
+              "subType": "episode",
+              "format": "Video",
+              "title": "19/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly91mgh",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608352200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608336000000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgsr2xh",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgsn60d", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgsn60d",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly8yqkd",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608265800000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgsn60d",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgsk939", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgsk939",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": " چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly8vtn9",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608179400000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgsk939",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgsgd66", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgsgd66",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": "چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly8rxr6",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608093000000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgsgd66",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgsch93", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgsch93",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": "چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly8p0v3",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608006600000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgsch93",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": {
+              "headline": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "locators": { "pid": "w172xbvttgs8ld0", "brandPid": "w13xttnr" },
+            "media": {
+              "id": "w172xbvttgs8ld0",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "medium": "مجله خبری رادیو بی‌بی‌سی فارسی، شامل تازه‌ترین خبرها، گزارش، گفتگو، تحلیل و تفسیر درباره رویدادهای ایران و جهان.",
+                "long": "چشم انداز بامدادی، مجله روزانه خبری بخش فارسی رادیو بی‌بی‌سی است. این برنامه شامل تازه‌ترین خبرهای روز ایران و جهان، به همراه گزارش، گفت وگو و تحلیل و تفسیر درباره رویدادهای ایران، منطقه و جهان است. این برنامه همزمان با پوشش خبرهای مهم سیاسی و اقتصادی ایران و جهان، در کنار مرور روزنامه‌‏های صبح ایران، به خبرها و موضوعات فرهنگی، هنری، اجتماعی و ورزشی نیز می‌پردازد."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshhq9ly8l3y0",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607920200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p05wwxds.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": {
+              "pid": "w13xttnr",
+              "title": "برنامه تصویری چشم انداز بامدادی رادیو بی‌بی‌سی"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_persian_tv/w172xbvttgs8ld0",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

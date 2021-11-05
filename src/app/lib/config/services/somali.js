@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { somali as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Mogadishu';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Xayeysiin',
-    },
     lang: `so`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Waa la cusbooneysiiyay',
@@ -24,16 +25,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/somali.png',
     defaultImageAltText: 'BBC News Somali',
     dir: `ltr`,
-    externalLinkText: ', Bogag kale',
+    externalLinkText: ', kale',
     imageCaptionOffscreenText: 'Qoraalka sawirka, ',
     videoCaptionOffscreenText: 'Qoraalka Muuqaalka, ',
     audioCaptionOffscreenText: 'Qoraalka Codka, ',
     defaultCaptionOffscreenText: 'Qoraal, ',
     imageCopyrightOffscreenText: 'Xigashada Sawirka, ',
     locale: `so-SO`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'so',
     datetimeLocale: `so`,
     service: 'somali',
     serviceName: 'Somali',
+    languageName: 'Somali',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcsomali',
     twitterSite: '@bbcsomali',
@@ -48,19 +52,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Xayeysiin',
+      },
       seeAll: 'Arag dhammaan',
       home: 'War',
       currentPage: 'Bogga hadda',
       skipLinkText: 'U gudub qaybta macluumaadka',
       relatedContent: 'Warar kale oo dheeraad ah oo la xiriira qodobkan',
+      relatedTopics: 'Mowduucyada la xiriira',
       navMenuText: 'Qaybaha',
       mediaAssetPage: {
         mediaPlayer: 'Ciyaaridda warbixinnada',
         audioPlayer: 'Ciyaaridda Codka',
         videoPlayer: 'Ciyaaridda Muuqaalka',
       },
+      gist: 'Kooban',
       error: {
         404: {
           statusCode: '404',
@@ -117,31 +131,76 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title:
-            'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
-          description: {
-            uk: {
-              first: 'Waxaan isticmaaleynaa lifaaq ',
-              linkText: 'cookies',
-              last:
-                ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Ogolow xog uruurinta horeyna u soco',
+            reject: 'Diid xog uruurinta horeyna u soco',
+            initial: {
+              title: 'Aan isla ogaano in aad ogoshahay xog uruurinta AMP',
+              description: {
+                first:
+                  'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
+                linkText: 'cookies',
+                last: ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Maareynta qeybteyda',
             },
-            international: {
-              first:
-                'Anaga iyo baraha aan ogolnahay nahay waxaan adeegsanaa teknolijiyad sida ',
-              linkText: 'cookies',
-              last:
-                ', waxaana uruurinaa xogta booqashada bogga si aan khibradda ugu fiican ee adeegsiga intarnet-ka aan kuu siino, si aan kugu soo gudbiyo warar iyo xayeysiinno adiga gaar kuu ah. Fadlan aan ogaano haddii aad aqbashay.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Maareynta qeybta ogolaanshaha ee bogagga AMP',
+              description: {
+                para1:
+                  'Qeybahan waxay quseeyaan bogagga AMP oo keli ah. Markale waa lagu weydiin karaa in aad wax ka bedesho, marka aad booqato bogagga BBC ee aan AMP ahayn.',
+                para2:
+                  'Bogagga fudud ee Mobile-ka ee aad booqatay waxaa lagu dhisay isticmaalka tiknolojiyadda Google AMP.',
+                heading2:
+                  'Wuxuu ku kooban yahay oo keli ah xogta aan laga maarmin.',
+                para3:
+                  'Si ay bogaggeena web-ka u shaqeeyaa, waxaan xog kooban ku keydineynaa qalabkaaga, adigoo aan ogolaan.',
+                para4: {
+                  text: 'Akhriso xog dheeraad ah oo ku saabsan macluumaadka muhiimka ah ee aan qalabkaaga ku keydineyno si aan uga shaqeysiiyo bogaggeena.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Waxaan isticmaaleynaa keydin gudaha ah si aan ogolaanshahaaga ugu keydino qalabkaaga gudihiisa.',
+                heading3: 'Xog uruurinta ikhtiyaariga ah',
+                para6:
+                  'Marka aad ogolaato xog uruurinta bogagga AMP waxaad ogolaaneysaa oo aad inoo fasexeysaa in aad ku tusno xayeysiin xiriir kula leh, marka aad ku sugan tahay meel ka baxsan UK.',
+                para7: {
+                  text: 'Akhriso xogta dheeraadka ah ee ku saabsan xayeysiinta xiriirka kula leh ee BBC iyo kuwa nagala shaqeeya xayeysiiska.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Waad dooran kartaa in aanan lagu soo gaarsiin xayeysiin xiriirka kula leh adigoo gujinaya "Diid xog uruurinta siina soco" ee hoose. Fadlan ogow weli waad arkeysaa xayeysiis, balse ma noqoneyso mid kula xiriirta.',
+                para9:
+                  'Waad bedeli kartaa qeybahan adigoo gujinaya "dookha xayeysiin / Ha iibin xogteyda" ee kuu soo muuqaneysa, markasta.',
+              },
             },
           },
-          accept: 'Haa, waan ogolaaday',
-          reject: 'Maya, igee settings-ka',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title:
+              'Aan ogaano in aad aqbashay qoraallada dheeriga ah ee cookies-ka',
+            description: {
+              uk: {
+                first: 'Waxaan isticmaaleynaa lifaaq ',
+                linkText: 'cookies',
+                last: ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Waxaan isticmaaleynaa lifaaq ',
+                linkText: 'cookies',
+                last: ' si aad nooga heshid khibradda ugu wanaagsan ee adeegsiga intarnet-ka. Fadlan aan ogaano haddii aad ogolaatay dhammaan cookies-kan.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Haa, waan ogolaaday',
+            reject: 'Maya, igee settings-ka',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -164,17 +223,18 @@ export const service = {
         },
         listen: 'Dhageyso',
         watch: 'Daawo',
+        listenLive: 'Toos u dhageyso',
         liveLabel: 'TOOS',
         nextLabel: 'Xiga',
         previousRadioShow: 'Barnaamijyadii hore ee Raadiyaha',
         nextRadioShow: 'Barnaamijka Xiga ee Raadiyaha',
         duration: 'Muddada',
+        recentEpisodes: 'Barnaamijyadii Hore',
       },
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Qoraalka Muuqaalka, ',
-          text:
-            'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
+          text: 'Digniin: Waxaa suuragal ah in macluumaadka dad kale ay ku jiraan xayaysiin',
         },
         fallback: {
           text: 'Macluumaadkan lama heli karo',
@@ -188,6 +248,11 @@ export const service = {
           endTextVisuallyHidden: 'Dhammaadka %provider_name% boggan',
         },
       },
+      include: {
+        errorMessage:
+          'Waanu ka xunnahay, qeybta kuma soo bandhigi karno bogga mobile-kaan',
+        linkText: 'Eeg qeybta bogga oo dhan, si xogta oo dhan aad u aragto.',
+      },
       topStoriesTitle: 'Wararka ugu waaweyn',
       featuresAnalysisTitle: 'Xul',
     },
@@ -198,10 +263,13 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Ugu daawasho badan',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       header: 'Barnaamijyada Idaacadda',
       durationLabel: 'Muddada %duration%',
     },
@@ -214,7 +282,7 @@ export const service = {
         text: 'Sababta aad ku aamini kartid BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Akhri xogta ku saabsan sida aan u abaarno bogagga dibadda.',
       },
       links: [
@@ -235,12 +303,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/somali/hayadeed-37098613',
+          href: 'https://www.bbc.co.uk/send/u50853709',
           text: 'La xiriir BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -256,20 +324,12 @@ export const service = {
         url: '/somali',
       },
       {
-        title: 'Warar dheeraad ah',
-        url: '/somali/war',
-      },
-      {
         title: 'Ganacsi',
-        url: '/somali/topics/2f2db234-3c2d-40a4-b4ac-eea661faadd0',
+        url: '/somali/topics/c2dwqd32v4yt',
       },
       {
         title: 'Cayaaraha',
-        url: '/somali/cayaaraha',
-      },
-      {
-        title: 'Aqoon Guud',
-        url: '/somali/aqoon_guud',
+        url: '/somali/topics/cpzd4zj1pn2t',
       },
       {
         title: 'Muuqaal',
@@ -277,7 +337,11 @@ export const service = {
       },
       {
         title: 'Barnaamijyada Idaacadda',
-        url: '/somali/ka_qayb_gal/programmes',
+        url: '/somali/media-54071665',
+      },
+      {
+        title: 'Barnaamijka Baafinta',
+        url: '/somali/war-48705502',
       },
     ],
   },

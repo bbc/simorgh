@@ -2,14 +2,21 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import HeaderContainer from './index';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
+import { UserContextProvider } from '#contexts/UserContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukrainianServiceConfig } from '#lib/config/services/ukrainian';
+import {
+  INDEX_PAGE,
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MEDIA_ASSET_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   navOnArticles: {
@@ -32,6 +39,7 @@ const HeaderContainerWithContext = ({
   serviceContext = pidginServiceConfig,
   bbcOrigin = 'https://www.test.bbc.com',
   variant = 'default',
+  isAmp = false,
 }) => (
   <ToggleContext.Provider
     value={{
@@ -41,7 +49,7 @@ const HeaderContainerWithContext = ({
   >
     <ServiceContext.Provider value={serviceContext[variant]}>
       <RequestContextProvider
-        isAmp={false}
+        isAmp={isAmp}
         pageType={pageType}
         service={service}
         statusCode={200}
@@ -49,7 +57,9 @@ const HeaderContainerWithContext = ({
         pathname="/pathname"
         variant={variant}
       >
-        <HeaderContainer />
+        <UserContextProvider>
+          <HeaderContainer />
+        </UserContextProvider>
       </RequestContextProvider>
     </ServiceContext.Provider>
   </ToggleContext.Provider>
@@ -60,7 +70,7 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for news article',
       HeaderContainerWithContext({
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         service: 'news',
       }),
     );
@@ -68,33 +78,33 @@ describe(`Header`, () => {
     shouldMatchSnapshot(
       'should render correctly for WS frontPage',
       HeaderContainerWithContext({
-        pageType: 'frontPage',
+        pageType: FRONT_PAGE,
       }),
     );
 
     shouldMatchSnapshot(
       'should render correctly for WS radio page',
       HeaderContainerWithContext({
-        pageType: 'media',
+        pageType: MEDIA_PAGE,
       }),
     );
   });
 
   describe('Assertions', () => {
     it('should output a nav bar for media asset pages', () => {
-      render(HeaderContainerWithContext({ pageType: 'MAP' }));
+      render(HeaderContainerWithContext({ pageType: MEDIA_ASSET_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
     it('should output a nav bar for articles', () => {
-      render(HeaderContainerWithContext({ pageType: 'article' }));
+      render(HeaderContainerWithContext({ pageType: ARTICLE_PAGE }));
       expect(document.querySelector(`header nav`)).not.toBeNull();
     });
 
     it('should render a Brand with a Skip to content link, linking to #content', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
         }),
       );
 
@@ -107,7 +117,7 @@ describe(`Header`, () => {
     it('should not render script link for a service without variants', () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'pidgin',
           serviceContext: pidginServiceConfig,
         }),
@@ -118,7 +128,7 @@ describe(`Header`, () => {
     it('should render script link for a service with variants', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'frontPage',
+          pageType: FRONT_PAGE,
           service: 'serbian',
           serviceContext: serbianServiceConfig,
           variant: 'cyr',
@@ -131,10 +141,10 @@ describe(`Header`, () => {
       expect(container.querySelectorAll(scriptLinkSelector).length).toBe(1);
     });
 
-    it('should render header with lang when headerFooterLang is defined', () => {
+    it('should render header with lang when serviceLang is defined', () => {
       const { container } = render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
@@ -150,7 +160,7 @@ describe(`Header`, () => {
     it('should render a skip to content link with lang', async () => {
       render(
         HeaderContainerWithContext({
-          pageType: 'IDX',
+          pageType: INDEX_PAGE,
           service: 'ukrainian',
           serviceContext: ukrainianServiceConfig,
           variant: 'ru-UA',
@@ -159,6 +169,60 @@ describe(`Header`, () => {
 
       const skipLink = document.querySelector("a[href$='#content']");
       expect(skipLink).toHaveAttribute('lang', 'ru-UA');
+    });
+
+    it('should focus on consent banner heading on mount', () => {
+      const initialFocusElement = document.activeElement;
+      const { getByText } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+      const pidginPrivacyHeading =
+        pidginServiceConfig.default.translations.consentBanner.privacy.title;
+      expect(document.activeElement).not.toBe(initialFocusElement);
+      expect(document.activeElement).toBe(getByText(pidginPrivacyHeading));
+    });
+
+    it('should focus on the brand link on cookie banner accept', () => {
+      const { getByText } = render(
+        HeaderContainerWithContext({
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      const pidginPrivacyAccept =
+        pidginServiceConfig.default.translations.consentBanner.privacy.accept;
+      const pidginCookieAccept =
+        pidginServiceConfig.default.translations.consentBanner.cookie.canonical
+          .accept;
+      const logoHref = pidginServiceConfig.default.navigation[0].url;
+
+      getByText(pidginPrivacyAccept).click();
+      getByText(pidginCookieAccept).click();
+
+      expect(document.activeElement).toBe(
+        document.querySelector(`a[href="${logoHref}"]`),
+      );
+    });
+
+    it("should render the brand link with an id of 'brandLink' on AMP", () => {
+      const { container } = render(
+        HeaderContainerWithContext({
+          isAmp: true,
+          pageType: INDEX_PAGE,
+          service: 'pidgin',
+          serviceContext: pidginServiceConfig,
+        }),
+      );
+
+      expect(container.querySelector('#brandLink')).toBe(
+        container.querySelector('a[href="/pidgin"]'),
+      );
     });
   });
 });

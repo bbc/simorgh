@@ -11,11 +11,12 @@ _A very high-level summary of easily-reproducible changes that can be understood
 ---
 
 - [ ] I have assigned myself to this PR and the corresponding issues
-- [ ] I have added labels to this PR for the relevant pod(s) affected by these changes
+- [ ] I have added the `cross-team` label to this PR if it requires visibility across World Service teams
 - [ ] I have assigned this PR to the Simorgh project
+- [ ] (BBC contributors only) This PR follows the [repository use guidelines](https://github.com/bbc/simorgh-infrastructure/blob/latest/documentation/repository-guidelines.md)
 
 **Testing:**
 
 - [ ] Automated (jest and/or cypress) tests added (for new features) or updated (for existing features)
-- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false npm run test:e2e:interactive`)
+- [ ] If necessary, I have run the local E2E non-smoke tests relevant to my changes (`CYPRESS_APP_ENV=local CYPRESS_SMOKE=false yarn test:e2e:interactive`)
 - [ ] This PR requires manual testing

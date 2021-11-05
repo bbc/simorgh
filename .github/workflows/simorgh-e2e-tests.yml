@@ -1,0 +1,29 @@
+name: Simorgh CI - Cypress E2E Tests
+on:
+  create:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - latest
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+      LOG_LEVEL: 'error'
+      CYPRESS_SKIP_EU: true
+      CYPRESS_SMOKE: true
+      CYPRESS_APP_ENV: 'local'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Simorgh E2Es
+        uses: cypress-io/github-action@v2
+        with:
+          build: yarn build
+          start: yarn start

@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { uzbek as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Реклама',
-    },
     lang: `uz-Cyrl`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'Янгиланди',
@@ -31,9 +32,12 @@ export const service = {
     defaultCaptionOffscreenText: 'Тагсўз, ',
     imageCopyrightOffscreenText: 'Сурат манбаси, ',
     locale: `uz-UZ`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uz',
     datetimeLocale: `uz`,
     service: 'uzbek',
     serviceName: 'Uzbek',
+    languageName: 'Uzbek',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcuzbek',
     twitterSite: '@bbcuzbek',
@@ -48,19 +52,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Реклама',
+      },
       seeAll: 'Ҳаммасини кўринг',
       home: 'Бош саҳифа',
       currentPage: 'Жорий саҳифа',
       skipLinkText: 'Саҳифага ўтиш',
       relatedContent: 'Бу мавзуда батафсилроқ',
+      relatedTopics: 'Алоқадор мавзулар',
       navMenuText: 'Бўлимлар',
       mediaAssetPage: {
         mediaPlayer: 'Медиа плейер',
         audioPlayer: 'Аудио плейер',
         videoPlayer: 'Видео плейер',
       },
+      gist: 'Хулоса',
       error: {
         404: {
           statusCode: '404',
@@ -117,29 +131,73 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Кукис(Cookies)га рози эканингизни билдиринг',
-          description: {
-            uk: {
-              first: 'Биз ',
-              linkText: 'кукидан',
-              last:
-                ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Дата тўплаш учун рухсат беринг ва давом этинг',
+            reject: 'Дата тўплашни рад этинг ва давом этинг',
+            initial: {
+              title: 'AMP учун дата йиғишга рухсат берасизми?',
+              description: {
+                first: 'Биз ва бизнинг ҳамкорларимиз ',
+                linkText: 'кукисга',
+                last: ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Танловларимни бошқаринг',
             },
-            international: {
-              first: 'Биз ва бизнинг ҳамкорларимиз ',
-              linkText: 'кукисга',
-              last:
-                ', сингари технологиядан фойдаланамиз ва уларни сизга янада яхшироқ онлайн маҳсулот тақдим этиш, контентни ва ҳамда сизга кўрсатилаётган рекламани айнан сизга мослаш мақсадида тўплаймиз. Агар рози бўлсангиз, марҳамат қилиб буни бизга маълум қилинг!',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP саҳифаларида розилик танловларини ўзгартириш',
+              description: {
+                para1:
+                  'Бу танловлар фақат AMP саҳифалари учун. AMP бўлмаган бошқа BBC саҳифиларига кирсангиз, сиз бу танловларни қайта ўрнатишингиз керак бўлади.',
+                para2:
+                  'Енгил очиладиган бу саҳифа Google AMP технологияси билан яратилган',
+                heading2: 'Шарт бўлган дата тўплаш',
+                para3:
+                  'Веб саҳифамиз ишлаши учун биз сиз ҳақингизда чекланган маълумотларни сизнинг розилигингиз сақлаб қоламиз.',
+                para4: {
+                  text: 'Сизнинг қурилмангизда веб саҳифамиз яхши ишлаши учун қандай муҳим маълумотлар сақланиши ҳақида кўпроқ маълумот',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Биз сизнинг розилигингиз ва танловингиз маълумотларини ички хотирада сақлаймиз',
+                heading3: 'Қўшимча, мажбурий бўлмаган дата тўплаш',
+                para6:
+                  'Сиз AMP саҳифаларда дата тўплашга рози ва айни дамда Буюк Британия ташқарисида бўлсангиз биз рекламаларни сизга қанчалар алоқаси бор ёки йўқлигига қараб танлаб, тақдим қиламиз.',
+                para7: {
+                  text: 'BBC ва реклама ҳамкорларимиз рекламаларни шахсийлаштиришга доир кўпроқ маълумот',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Сизга мосланган рекламаларни қабул қилишни истамасангиз, марҳамат қилиб пастдаги "Дата тўплашни рад қилинг ва давом этинг" деган танловни босинг. Унутманг, сиз барибир рекламани кўрасиз, аммо у сиз учун мослаштирилмаган бўлади.',
+                para9:
+                  'Сиз бу шартларни "Реклама танловлари/менинг маълумотларимни сотманг" деган бўлимда исталган вақтда ўзгартиришингиз мумкин.',
+              },
             },
           },
-          accept: 'Ҳа, мен розиман',
-          reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Кукис(Cookies)га рози эканингизни билдиринг',
+            description: {
+              uk: {
+                first: 'Биз ',
+                linkText: 'кукидан',
+                last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Биз ',
+                linkText: 'кукидан',
+                last: ' сизга янада яхшироқ онлайн имконият бериш мақсадида фойдаланамиз. Марҳамат қилиб ушбу барча кукиларга розилигингизни билдиринг.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ҳа, мен розиман',
+            reject: 'Йўқ, мени ўзгартириш саҳифасига етакланг',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -161,11 +219,13 @@ export const service = {
         },
         listen: 'Тингланг',
         watch: 'Кўринг',
+        listenLive: 'Жонли эфирда тингланг',
         liveLabel: 'ЖОНЛИ ЭФИР',
         nextLabel: 'NEXT',
         previousRadioShow: 'Аввалги радио дастур',
         nextRadioShow: 'Кейинги радио дастур',
         duration: 'Давомийлиги',
+        recentEpisodes: 'Олдинги дастурлар',
       },
       socialEmbed: {
         caption: {
@@ -183,6 +243,11 @@ export const service = {
           endTextVisuallyHidden: 'Охири %provider_name% пост',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Бош мақола',
       featuresAnalysisTitle: 'Муҳаррир танлови',
     },
@@ -192,6 +257,11 @@ export const service = {
       lastUpdated: 'Сўнгги янгиланиш:',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'Энг кўп кўрилган',
+      numberOfItems: 5,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -205,9 +275,8 @@ export const service = {
         text: 'Нега сиз Би-би-сига ишонишингиз мумкин?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
-        text:
-          'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'Ташқи линкларга бизнинг ёндашувимиз қандайлиги ҳақида маълумотга эга бўлинг',
       },
       links: [
         {
@@ -223,12 +292,12 @@ export const service = {
           text: 'Куки(Cookies)',
         },
         {
-          href: 'https://www.bbc.com/uzbek/institutional-36826360',
+          href: 'https://www.bbc.co.uk/send/u50853929',
           text: 'Би-би-си билан боғланиш',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -243,32 +312,28 @@ export const service = {
         url: '/uzbek',
       },
       {
-        title: 'Lotinda',
-        url: '/uzbek/lotin',
-      },
-      {
         title: 'Ўзбекистон',
-        url: '/uzbek/uzbekistan',
+        url: '/uzbek/topics/c8y949r98pgt',
       },
       {
         title: 'Минтақа',
-        url: '/uzbek/central_asia',
+        url: '/uzbek/topics/cwr9j9dz4gpt',
       },
       {
         title: 'Дунё',
-        url: '/uzbek/world',
+        url: '/uzbek/topics/cl8l9mved19t',
       },
       {
         title: 'Спорт',
-        url: '/uzbek/sport',
+        url: '/uzbek/topics/cxnykykk1zkt',
       },
       {
         title: 'Илм-Фан',
-        url: '/uzbek/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/uzbek/topics/cg7262681krt',
       },
       {
         title: 'Технология',
-        url: '/uzbek/topics/31684f19-84d6-41f6-b033-7ae08098572a',
+        url: '/uzbek/topics/cjgn7n7v3yjt',
       },
       {
         title: 'Видео',

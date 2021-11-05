@@ -25,6 +25,10 @@ const port = process.env.PORT || 7080;
 
 const startApplicationInstance = () => {
   const server = http.createServer(app);
+  // see https://github.com/bbc/simorgh-infrastructure/issues/1367#issuecomment-819314701
+  server.keepAliveTimeout = Number(process.env.SERVER_KEEP_ALIVE_TIMEOUT);
+  server.headersTimeout = Number(process.env.SERVER_HEADERS_TIMEOUT);
+
   let currentApp = app;
   server.listen(port, error => {
     if (error) {

@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p0706n42",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p070bsfl"
+    },
+    "media_type": "audio_video",
+    "title": "Sweet Sweet Codeine",
+    "short_synopsis": "In Nigeria, young people are addicted to codeine syrup, a medicine becoming a street drug.",
+    "medium_synopsis": "The Nigerian senate estimates that 3 million bottles of codeine are drunk daily in just two states – Kano and Jigawa. Who makes this syrup and who sells it to Nigeria’s students?",
+    "long_synopsis": "In Nigeria, thousands of young people are addicted to codeine cough syrup – a medicine that’s become a street drug.\n\nThe Nigerian senate estimates that 3 million bottles of codeine syrup are drunk every day in just two states – Kano and Jigawa. \n\nBut who makes this syrup? And who sells it to Nigeria’s students?\n\nBBC Africa Eye went undercover to investigate.\n\nYouTube: http://bit.ly/subscribetoafrica \nWebsite: https://www.bbc.co.uk/programmes/w13xttpn\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/ \nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Sweet Sweet Codeine"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p0706n4c",
+        "duration": 3173,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

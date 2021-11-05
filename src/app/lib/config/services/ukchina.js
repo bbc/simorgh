@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { noAscendersOrDescenders } from '@bbc/gel-foundations/scripts';
 import { ukchina as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -21,6 +26,7 @@ const baseServiceConfig = {
   datetimeLocale: `zh-cn`,
   service: 'ukchina',
   serviceName: 'UK China',
+  languageName: 'Chinese',
   themeColor: `${C_POSTBOX}`,
   twitterCreator: '@BBCChina',
   twitterSite: '@BBCChina',
@@ -32,7 +38,12 @@ const baseServiceConfig = {
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
+    brandForegroundColour: `${C_GHOST}`,
+    brandHighlightColour: `${C_WHITE}`,
+    brandBorderColour: `${C_POSTBOX_30}`,
   },
+  showAdPlaceholder: true,
+  showRelatedTopics: true,
   fonts: [],
   timezone: 'GMT',
 };
@@ -40,14 +51,12 @@ const baseServiceConfig = {
 export const service = {
   simp: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-      advertisementLabel: '广告',
-    },
-    externalLinkText: ', 外部链接',
+    externalLinkText: ', 外部',
     frontPageTitle: '主页',
     lang: `zh-hans`,
     locale: `zh-hans`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'zh-Hans',
     defaultCaptionOffscreenText: '说明文字, ',
     audioCaptionOffscreenText: '音频加注文字, ',
     videoCaptionOffscreenText: '视频加注文字, ',
@@ -63,7 +72,7 @@ export const service = {
         text: 'BBC值得信赖的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '阅读了解我们对待外部链接的做法。',
       },
       links: [
@@ -80,12 +89,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/ukchina/simp/institutional-38733406',
+          href: 'https://www.bbc.co.uk/send/u50853863',
           text: '联络BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -97,6 +106,11 @@ export const service = {
       lastUpdated: '最近更新: ',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: '热播',
+      numberOfItems: 5,
+      hasMostWatched: false,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -110,10 +124,6 @@ export const service = {
         url: '/ukchina/simp',
       },
       {
-        title: 'BBC精选',
-        url: '/ukchina/simp/horizon',
-      },
-      {
         title: '视频内容',
         url: '/ukchina/simp/media/video',
       },
@@ -123,17 +133,22 @@ export const service = {
       variant: 'trad',
     },
     translations: {
+      ads: {
+        advertisementLabel: '广告',
+      },
       seeAll: '浏览全部',
       home: '主页',
       currentPage: '目前页面',
       skipLinkText: '跳过此内容',
       relatedContent: '更多相关内容',
+      relatedTopics: '相关主题内容',
       navMenuText: '分类',
       mediaAssetPage: {
         mediaPlayer: '多媒体播放器',
         audioPlayer: '音频播放器',
         videoPlayer: '视频播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',
@@ -184,28 +199,72 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '请告知您认可接受Cookies',
-          description: {
-            uk: {
-              first: '我们使用',
-              linkText: 'cookies',
-              last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: '接受数据收集并继续',
+            reject: '拒绝数据收集并继续',
+            initial: {
+              title: '请告知是否允许我们在AMP收集数据',
+              description: {
+                first: '我们及合作伙伴使用例如',
+                linkText: 'cookies',
+                last: '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '管理我的设置',
             },
-            international: {
-              first: '我们及合作伙伴使用例如',
-              linkText: 'cookies',
-              last:
-                '的科技，收集浏览数据以便给您带来最佳上网体验，以及个人化内容和广告配置。请告知是否可以。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: '管理AMP页面认可授权设置',
+              description: {
+                para1:
+                  '上述设置仅用于AMP页面。如果您再度访问沒有AMP技术的BBC.com网页，也可能会被要求设定个人选项。',
+                para2:
+                  '您刚刚浏览的上述轻载移动页面，建立时使用了谷歌AMP技术。',
+                heading2: '仅限于必需数据收集',
+                para3:
+                  '为使网页运作正常，我们或在未争得许可时收集有限必要资讯。',
+                para4: {
+                  text: '阅读更多我们在您的浏览器上存储必需数据，以便页面正常运作的相关资讯',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: '我们使用本地存储，将选项存储于您的浏览工具上。',
+                heading3: '可选项数据收集',
+                para6:
+                  '认可AMP页面收集数据，也就是认可您在英国之外区域浏览页面时我们可以显示个人化的广告。',
+                para7: {
+                  text: '阅读更多有关BBC及合作伙伴如何实现广告个人化的资讯',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  '您可以选择点击“拒绝数据收集并继续”，选择不接受个人化广告。请注意，这一选项并不意味着您将不再看到广告，只是您看到的广告将不具备个人化设置。',
+                para9:
+                  '您可以点击页面下边“Ad Choices / Do not sell my info”选项，更改这些设置。',
+              },
             },
           },
-          accept: '可以，我同意',
-          reject: '不可，带我去设置页面',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: '请告知您认可接受Cookies',
+            description: {
+              uk: {
+                first: '我们使用',
+                linkText: 'cookies',
+                last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: '我们使用',
+                linkText: 'cookies',
+                last: '以便给您最好的网上体验。请告知您是否认同使cookies。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: '可以，我同意',
+            reject: '不可，带我去设置页面',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -222,6 +281,7 @@ export const service = {
         previousRadioShow: '上期广播节目',
         nextRadioShow: '下期广播节目',
         duration: '节目全长',
+        recentEpisodes: '存档节目',
       },
       socialEmbed: {
         caption: {
@@ -239,19 +299,22 @@ export const service = {
           endTextVisuallyHidden: '结尾 %provider_name% 帖子 ',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: '头条内容',
       featuresAnalysisTitle: '特别推荐',
     },
   },
   trad: {
     ...baseServiceConfig,
-    ads: {
-      hasAds: false,
-      advertisementLabel: '廣告',
-    },
     lang: `zh-hant`,
     locale: `zh-hant`,
-    externalLinkText: ', 外部鏈接',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'zh-Hant',
+    externalLinkText: ', 外部',
     frontPageTitle: '主頁',
     defaultCaptionOffscreenText: '說明文字, ',
     audioCaptionOffscreenText: '音頻加註文字，',
@@ -268,7 +331,7 @@ export const service = {
         text: 'BBC值得信賴的原因',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: '閱讀了解我們對待外部鏈接的做法。',
       },
       links: [
@@ -289,8 +352,8 @@ export const service = {
           text: '聯絡BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -303,6 +366,11 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: '熱播',
+      numberOfItems: 5,
+      hasMostWatched: false,
+    },
     recommendations: {
       hasStoryRecommendations: false,
     },
@@ -310,10 +378,6 @@ export const service = {
       {
         title: '主頁',
         url: '/ukchina/trad',
-      },
-      {
-        title: 'BBC精選',
-        url: '/ukchina/trad/horizon',
       },
       {
         title: '視頻內容',
@@ -325,17 +389,22 @@ export const service = {
       variant: 'simp',
     },
     translations: {
+      ads: {
+        advertisementLabel: '廣告',
+      },
       seeAll: '瀏覽全部',
       home: '主頁',
       currentPage: '目前頁面',
       skipLinkText: '跳過此內容',
       relatedContent: '更多相關內容',
+      relatedTopics: '相關主題內容',
       navMenuText: '分類',
       mediaAssetPage: {
         mediaPlayer: '多媒體播放器',
         audioPlayer: '音頻播放器',
         videoPlayer: '視頻播放器',
       },
+      gist: '概要',
       error: {
         404: {
           statusCode: '404',
@@ -386,28 +455,72 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: '請告知您認可接受Cookies',
-          description: {
-            uk: {
-              first: '我們使用',
-              linkText: 'cookies',
-              last: '以便給您最好的網上體驗。請告知您是否認同使cookies。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: '接受數據收集並繼續',
+            reject: '拒絕數據收集並繼續',
+            initial: {
+              title: '請告知是否允許我們在AMP收集數據',
+              description: {
+                first: '我們及合作夥伴使用例如',
+                linkText: 'cookies',
+                last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: '管理我的設置',
             },
-            international: {
-              first: '我們及合作夥伴使用例如',
-              linkText: 'cookies',
-              last:
-                '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: '管理AMP頁面認可授權設置',
+              description: {
+                para1:
+                  '上述設置僅用於AMP頁面。如果您再度訪問沒有AMP技術的BBC.com網頁，也可能會被要求設定個人選項。',
+                para2:
+                  '您剛剛瀏覽的上述輕載移動頁面，建立時使用了谷歌AMP技術。',
+                heading2: '僅限於必須數據收集',
+                para3:
+                  '為使網頁運作正常，我們或在未爭得許可時收集有限必要資訊。',
+                para4: {
+                  text: '閲讀更多我們在您的瀏覽器上存儲必需數據，以便頁面正常運作的相關資訊',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: '我們使用本地存儲，將選項存儲於您的瀏覽工具上。',
+                heading3: '可選項數據收集',
+                para6:
+                  '認可AMP頁面收集數據，也就是認可您在英國之外區域瀏覽頁面時我們可以顯示個人化的廣告。',
+                para7: {
+                  text: '閲讀更多有關BBC及合作夥伴如何實現廣告個人化的咨訊',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  '您可以選擇點擊“拒絕數據收集並繼續”，選擇不接受個人化廣告。請注意，這一選項並不意味著您將不再看到廣告，只是您看到的廣告將不具備個人化設置。',
+                para9:
+                  '您可以點擊頁面下邊“Ad Choices / Do not sell my info”選項，更改這些設置。',
+              },
             },
           },
-          accept: '可以，我同意',
-          reject: '不可，帶我去設置頁面',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: '請告知您認可接受Cookies',
+            description: {
+              uk: {
+                first: '我們使用',
+                linkText: 'cookies',
+                last: '以便給您最好的網上體驗。請告知您是否認同使cookies。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: '我們及合作夥伴使用例如',
+                linkText: 'cookies',
+                last: '的科技，收集瀏覽數據以便給您帶來最佳上網體驗，以及個人化內容和廣告配置。請告知是否可以。',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: '可以，我同意',
+            reject: '不可，帶我去設置頁面',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -424,6 +537,7 @@ export const service = {
         previousRadioShow: '上期廣播節目',
         nextRadioShow: '下期廣播節目',
         duration: '節目全長',
+        recentEpisodes: '存档节目',
       },
       socialEmbed: {
         caption: {
@@ -440,6 +554,11 @@ export const service = {
           text: '跳過 %provider_name% 帖子',
           endTextVisuallyHidden: '結尾 %provider_name% 帖子',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: '頭條內容',
       featuresAnalysisTitle: '特別推薦',

@@ -4,10 +4,16 @@ exports[`Amp Story Page Includes IDT2 I can see a fallback image 1`] = `
 <amp-img
   alt="Map: St. Albans"
   attribution=""
-  height="940"
+  class="i-amphtml-layout-responsive i-amphtml-layout-size-defined"
+  height="720"
+  i-amphtml-layout="responsive"
   layout="responsive"
-  src="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/470"
-  srcset="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/350 350w,https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/470 470w"
-  width="940"
-/>
+  src="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640"
+  srcset="https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/460 460w,https://www.test.bbc.com/ws/includes/idt2/3686672a-0a64-4cdb-91c6-ae9ed0f214f7/image/640 640w"
+  width="1280"
+>
+  <i-amphtml-sizer
+    style="display:block;padding-top:56.25%"
+  />
+</amp-img>
 `;

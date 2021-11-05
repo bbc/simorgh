@@ -1,12 +1,15 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import deepClone from 'ramda/src/clone';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -24,6 +27,7 @@ import {
   mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -44,18 +48,26 @@ const fixtures = {
 };
 
 // eslint-disable-next-line react/prop-types
-const WrappedStoryPromo = ({ service = 'igbo', platform, ...props }) => (
+const WrappedStoryPromo = ({ service, platform, ...props }) => (
   <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       service={service}
       statusCode={200}
       pathname="/pathname"
     >
-      <StoryPromoContainer {...props} />
+      <ToggleContextProvider
+        toggles={{
+          eventTracking: {
+            enabled: true,
+          },
+        }}
+      >
+        <StoryPromoContainer {...props} />
+      </ToggleContextProvider>
     </RequestContextProvider>
   </ServiceContextProvider>
 );
@@ -65,6 +77,7 @@ WrappedStoryPromo.defaultProps = {
 };
 
 describe('StoryPromo Container', () => {
+  suppressPropWarnings(['alsoItems', 'IndexAlsosContainer']);
   Object.entries(fixtures).forEach(([name, data]) => {
     shouldMatchSnapshot(
       `should render ${name} correctly for canonical`,
@@ -95,6 +108,26 @@ describe('StoryPromo Container', () => {
     />,
   );
 
+  shouldMatchSnapshot(
+    `should render full width promos correctly for canonical`,
+    <WrappedStoryPromo
+      platform="canonical"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
+    />,
+  );
+
+  shouldMatchSnapshot(
+    `should render full width promos correctly for amp`,
+    <WrappedStoryPromo
+      platform="amp"
+      item={completeItem}
+      promoType="top"
+      isSingleColumnLayout
+    />,
+  );
+
   describe('assertion tests', () => {
     let cpsItem;
     let overtypedSummaryItem;
@@ -113,8 +146,9 @@ describe('StoryPromo Container', () => {
       ).container;
 
       assetTypeItem = deepClone(standardLinkItem);
-      assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-        .container;
+      assetTypeContainer = render(
+        <WrappedStoryPromo item={assetTypeItem} />,
+      ).container;
     });
 
     afterEach(cleanup);
@@ -245,8 +279,9 @@ describe('StoryPromo Container', () => {
       });
       it('should not include a headline element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('h3').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('h3').length).toEqual(0);
@@ -262,8 +297,9 @@ describe('StoryPromo Container', () => {
 
       it('should not include any paragraph element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('p').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('p').length).toEqual(0);
@@ -278,8 +314,9 @@ describe('StoryPromo Container', () => {
 
       it('should not include a time element', () => {
         cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
-        assetTypeContainer = render(<WrappedStoryPromo item={assetTypeItem} />)
-          .container;
+        assetTypeContainer = render(
+          <WrappedStoryPromo item={assetTypeItem} />,
+        ).container;
 
         expect(cpsContainer.getElementsByTagName('time').length).toEqual(0);
         expect(assetTypeContainer.getElementsByTagName('time').length).toEqual(
@@ -306,14 +343,12 @@ describe('StoryPromo Container', () => {
         cpsItem.timestamp = 1565035200000;
       });
 
-      it('should show the correct local date', () => {
+      it('should show the correct local date without an overriden datetime locale', () => {
         const { container: newsContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="news" />,
         );
-        const {
-          textContent: newsTime,
-          dateTime: newsDate,
-        } = newsContainer.querySelector('time');
+        const { textContent: newsTime, dateTime: newsDate } =
+          newsContainer.querySelector('time');
 
         expect(newsTime).toEqual('5 August 2019');
         expect(newsDate).toEqual('2019-08-05');
@@ -321,23 +356,47 @@ describe('StoryPromo Container', () => {
         const { container: bengaliContainer } = render(
           <WrappedStoryPromo item={cpsItem} service="bengali" />,
         );
-        const {
-          textContent: bengaliTime,
-          dateTime: bengaliDate,
-        } = bengaliContainer.querySelector('time');
+        const { textContent: bengaliTime, dateTime: bengaliDate } =
+          bengaliContainer.querySelector('time');
         expect(bengaliTime).toEqual('৬ অগাস্ট ২০১৯');
+        expect(bengaliDate).toEqual('2019-08-06');
+      });
+      it('should show the correct local date with an overidden datetime locale', () => {
+        const { container: newsContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="news"
+            serviceDatetimeLocale="fa"
+          />,
+        );
+        const { textContent: newsTime, dateTime: newsDate } =
+          newsContainer.querySelector('time');
+
+        expect(newsTime).toEqual('۵ اوت ۲۰۱۹');
+        expect(newsDate).toEqual('2019-08-05');
+
+        const { container: bengaliContainer } = render(
+          <WrappedStoryPromo
+            item={cpsItem}
+            service="bengali"
+            serviceDatetimeLocale="uk"
+          />,
+        );
+        const { textContent: bengaliTime, dateTime: bengaliDate } =
+          bengaliContainer.querySelector('time');
+        expect(bengaliTime).toEqual('6 серпня 2019');
         expect(bengaliDate).toEqual('2019-08-06');
       });
     });
 
     describe('With Index Alsos', () => {
-      it('should render a list with two related items', () => {
+      it('should render a list with three related items', () => {
         const { container } = render(
           <WrappedStoryPromo item={indexAlsosItem} promoType="top" />,
         );
 
         expect(container.getElementsByTagName('ul')).toHaveLength(1);
-        expect(container.getElementsByTagName('li')).toHaveLength(2);
+        expect(container.getElementsByTagName('li')).toHaveLength(3);
       });
 
       it('should render a related item not contained within a list', () => {
@@ -389,23 +448,6 @@ describe('StoryPromo Container', () => {
         );
 
         expect(container.getElementsByTagName('h3').length).toEqual(0);
-      });
-    });
-
-    describe('Recommendation Promo', () => {
-      it('should render headline as a div instead of an h3', () => {
-        const { container } = render(
-          <WrappedStoryPromo
-            platform="canonical"
-            item={fixtures.standard}
-            isRecommendation
-          />,
-        );
-
-        expect(container.querySelector('h3')).toBeNull();
-        expect(container.querySelectorAll('div a')[0].innerHTML).toEqual(
-          cpsItem.headlines.headline,
-        );
       });
     });
   });

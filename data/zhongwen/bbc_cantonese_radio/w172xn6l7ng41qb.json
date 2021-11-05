@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6l7ng41qb",
+    "locators": { "pid": "w172xn6l7ng41qb", "brandPid": "p0340tsy" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_cantonese_radio",
+    "language": "zh",
+    "lastUpdated": 1608205401136,
+    "firstPublished": 1607821636000,
+    "lastPublished": 1607821636000,
+    "timestamp": 1607821636000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "時事一周 - BBC News 中文",
+      "pageIdentifier": "chinese.bbc_cantonese_radio.w172xn6l7ng41qb.page",
+      "producerId": "38",
+      "contentType": "player-episode",
+      "producer": "CHINESE"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "時事一周",
+    "releaseDateTimeStamp": 1607731200000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xn6l7ng41qb",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "12/12/2020 GMT",
+        "synopses": {
+          "short": "本周節目內容：新冠疫苗接種公義問題未解 | 香港國安抓捕持續　中美制裁交鋒 | Facebook遭遇大型反壟斷訴訟 | 英國生活點滴：倫敦過河交通史"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshv906yd1468",
+            "types": ["Original"],
+            "duration": 3600,
+            "durationISO8601": "PT1H",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1610409570000,
+            "availableFrom": 1607817570000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "時事一周 2020年12月12日 23:00 GMT",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "時事一周" },
+    "locators": { "pid": "w172xn6l7ng41qb", "brandPid": "p0340tsy" },
+    "media": {
+      "id": "w172xn6l7ng41qb",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "12/12/2020 GMT",
+      "synopses": {
+        "short": "本周節目內容：新冠疫苗接種公義問題未解 | 香港國安抓捕持續　中美制裁交鋒 | Facebook遭遇大型反壟斷訴訟 | 英國生活點滴：倫敦過河交通史"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshv906yd1468",
+          "types": ["Original"],
+          "duration": 3600,
+          "durationISO8601": "PT1H",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1610409570000,
+          "availableFrom": 1607817570000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "時事一周 2020年12月12日 23:00 GMT",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0919b16.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1607731200000,
+    "brand": { "pid": "p0340tsy", "title": "時事一周" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6l7ng41qb",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Chinese",
+      "uri": "/chinese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "時事一周" },
+            "locators": { "pid": "w172xn6kwd4bx3h", "brandPid": "p0340tsy" },
+            "media": {
+              "id": "w172xn6kwd4bx3h",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "05/12/2020 GMT",
+              "synopses": {
+                "short": "英國即將開始大規模疫苗注射；拜登透露對華新政；英國邊境準備好完全脫歐？",
+                "medium": "本周節目內容：英國即將開始大規模疫苗注射 | 拜登透露對華新政 | 英國邊境準備好完全脫歐？ | 英國生活點滴：盛極一時的南倫敦 | 專題：泡菜之爭 | 專題：007金眼睛墜落 | 記者來鴻：巴黎英文書店疫情中的緣份 | 華人談天下：台中交通新體驗"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshv8zvp27zlf",
+                  "types": ["Original"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1609804770000,
+                  "availableFrom": 1607212770000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2020年12月5日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p090mbt2.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607126400000,
+            "brand": { "pid": "p0340tsy", "title": "時事一周" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/w172xn6kwd4bx3h",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

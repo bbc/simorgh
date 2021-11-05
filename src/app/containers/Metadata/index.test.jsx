@@ -2,7 +2,12 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import MetadataContainer from './index';
-
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   articleDataNews,
@@ -43,37 +48,39 @@ const MetadataWithContext = ({
   openGraphType,
   image,
   imageAltText,
+  imageWidth,
+  imageHeight,
   aboutTags,
   mentionsTags,
+  hasAppleItunesAppBanner,
   /* eslint-enable react/prop-types */
-}) => {
-  const serviceConfig = services[service].default;
-
-  return (
-    <ServiceContextProvider {...serviceConfig}>
-      <RequestContextProvider
-        bbcOrigin={bbcOrigin}
-        id={id}
-        isAmp={platform === 'amp'}
-        pageType={pageType}
-        pathname={pathname}
-        service={service}
-        statusCode={200}
-      >
-        <MetadataContainer
-          title={title}
-          lang={lang}
-          description={description}
-          openGraphType={openGraphType}
-          aboutTags={aboutTags}
-          mentionsTags={mentionsTags}
-          image={image}
-          imageAltText={imageAltText}
-        />
-      </RequestContextProvider>
-    </ServiceContextProvider>
-  );
-};
+}) => (
+  <ServiceContextProvider service={service} pageLang={lang}>
+    <RequestContextProvider
+      bbcOrigin={bbcOrigin}
+      id={id}
+      isAmp={platform === 'amp'}
+      pageType={pageType}
+      pathname={pathname}
+      service={service}
+      statusCode={200}
+    >
+      <MetadataContainer
+        title={title}
+        lang={lang}
+        description={description}
+        openGraphType={openGraphType}
+        aboutTags={aboutTags}
+        mentionsTags={mentionsTags}
+        image={image}
+        imageAltText={imageAltText}
+        imageHeight={imageHeight}
+        imageWidth={imageWidth}
+        hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+      />
+    </RequestContextProvider>
+  </ServiceContextProvider>
+);
 
 const CanonicalNewsInternationalOrigin = () => (
   <MetadataWithContext
@@ -81,7 +88,7 @@ const CanonicalNewsInternationalOrigin = () => (
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o"
     {...newsArticleMetadataProps}
   />
@@ -92,10 +99,12 @@ const CanonicalMapInternationalOrigin = () => (
     service="pidgin"
     image="http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg"
     imageAltText="connectionAltText"
+    imageWidth={100}
+    imageHeight={200}
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="23248703"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/pigdin/23248703"
     {...newsArticleMetadataProps}
   />
@@ -134,7 +143,7 @@ it('should render the canonical link', async () => {
   });
 });
 
-it('should render the alternate links', async () => {
+it('should render the alternate links for article page', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
   const expected = [
@@ -164,6 +173,56 @@ it('should render the alternate links', async () => {
   });
 });
 
+it.each`
+  service    | pathName
+  ${'news'}  | ${'/news/56427710'}
+  ${'sport'} | ${'/sport/football/56427710'}
+`(
+  'should render the alternate links for $service story page',
+  async ({ service, pathName }) => {
+    render(
+      <MetadataWithContext
+        service={service}
+        bbcOrigin={dotComOrigin}
+        platform="canonical"
+        id="56427710"
+        pageType={STORY_PAGE}
+        pathname={pathName}
+        title="A story"
+        description="The story's description"
+        lang="en-GB"
+        openGraphType="article"
+      />,
+    );
+
+    const expected = [
+      {
+        href: `https://www.bbc.com${pathName}`,
+        hreflang: 'x-default',
+      },
+      {
+        href: `https://www.bbc.com${pathName}`,
+        hreflang: 'en',
+      },
+      {
+        href: `https://www.bbc.co.uk${pathName}`,
+        hreflang: 'en-gb',
+      },
+    ];
+
+    await waitFor(() => {
+      const actual = Array.from(
+        document.querySelectorAll('head > link[rel="alternate"]'),
+      ).map(tag => ({
+        href: tag.getAttribute('href'),
+        hreflang: tag.getAttribute('hreflang'),
+      }));
+
+      expect(actual).toEqual(expected);
+    });
+  },
+);
+
 it('should render the apple touch icons', async () => {
   render(<CanonicalNewsInternationalOrigin />);
 
@@ -173,43 +232,39 @@ it('should render the apple touch icons', async () => {
       sizes: null,
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-128x128.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
       sizes: '128x128',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
       sizes: '144x144',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-152x152.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
       sizes: '152x152',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
+      sizes: '180x180',
+    },
+    {
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-384x384.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
       sizes: '384x384',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-512x512.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png',
       sizes: '512x512',
     },
   ];
@@ -231,20 +286,17 @@ it('should render the icons', async () => {
 
   const expected = [
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-72x72.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
       type: 'image/png',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-96x96.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
       type: 'image/png',
     },
     {
-      href:
-        'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-192x192.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
       type: 'image/png',
     },
@@ -403,7 +455,7 @@ it('should render the msapplication meta tags', async () => {
 
     expect(tileColour).toEqual('#B80000');
     expect(tileImage).toEqual(
-      'https://news.files.bbci.co.uk/include/articles/public/news/images/icons/icon-144x144.png',
+      'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
     );
   });
 });
@@ -415,7 +467,7 @@ it('should render the OG metatags', async () => {
     { content: 'Article summary.', property: 'og:description' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       property: 'og:image',
     },
     { content: 'BBC News', property: 'og:image:alt' },
@@ -451,7 +503,7 @@ it('should render the twitter metatags', async () => {
     { content: 'BBC News', name: 'twitter:image:alt' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       name: 'twitter:image:src',
     },
     { content: '@BBCNews', name: 'twitter:site' },
@@ -540,6 +592,8 @@ it('should render the open graph image if provided', async () => {
         'http://ichef.test.bbci.co.uk/news/1024/branded_pidgin/6FC4/test/_63721682_p01kx435.jpg',
     },
     { property: 'og:image:alt', content: 'connectionAltText' },
+    { property: 'og:image:width', content: '100' },
+    { property: 'og:image:height', content: '200' },
     { name: 'twitter:image:alt', content: 'connectionAltText' },
     {
       name: 'twitter:image:src',
@@ -581,7 +635,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c0000000001o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/news/articles/c0000000001o.amp"
     {...newsArticleMetadataProps}
   />,
@@ -594,7 +648,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o"
     {...persianArticleMetadataProps}
   />,
@@ -607,7 +661,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotCoDotUKOrigin}
     platform="amp"
     id="c4vlle3q337o"
-    pageType="article"
+    pageType={ARTICLE_PAGE}
     pathname="/persian/articles/c4vlle3q337o.amp"
     {...persianArticleMetadataProps}
   />,
@@ -620,7 +674,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     pathname="/igbo"
     title="Ogbako"
     lang={frontPageData.metadata.language}
@@ -636,7 +690,7 @@ shouldMatchSnapshot(
     bbcOrigin={dotComOrigin}
     platform="canonical"
     id={null}
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/korean/bbc_korean_radio/liveradio"
     title={liveRadioPageData.promo.name}
     lang={liveRadioPageData.metadata.language}
@@ -644,3 +698,140 @@ shouldMatchSnapshot(
     openGraphType="website"
   />,
 );
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on canonical',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType={ARTICLE_PAGE}
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Ukrainian lang on Amp',
+  <MetadataWithContext
+    lang="uk"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType={ARTICLE_PAGE}
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on canonical',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="canonical"
+    id="news-53577781"
+    pageType={ARTICLE_PAGE}
+    pathname="/ukrainian/news-53577781"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+shouldMatchSnapshot(
+  'should match for Ukrainian STY with Russian lang on Amp',
+  <MetadataWithContext
+    lang="ru"
+    service="ukrainian"
+    bbcOrigin={dotComOrigin}
+    platform="amp"
+    id="news-53577781"
+    pageType={ARTICLE_PAGE}
+    pathname="/ukrainian/news-53577781.amp"
+    description="BBC Ukrainian"
+    openGraphType="website"
+    title="BBC Ukrainian"
+  />,
+);
+
+describe('apple-itunes-app meta tag', () => {
+  const CanonicalCPSAssetInternationalOrigin = ({
+    /* eslint-disable react/prop-types */
+    service,
+    platform,
+    hasAppleItunesAppBanner,
+    /* eslint-disable react/prop-types */
+  }) => (
+    <MetadataWithContext
+      service={service}
+      bbcOrigin={dotComOrigin}
+      platform={platform}
+      id="asset-12345678"
+      pageType={STORY_PAGE}
+      pathname={`/${service}/asset-12345678`}
+      {...newsArticleMetadataProps}
+      hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+    />
+  );
+
+  it.each`
+    service      | iTunesAppId
+    ${'arabic'}  | ${558497376}
+    ${'mundo'}   | ${515255747}
+    ${'russian'} | ${504278066}
+  `(
+    'should be rendered for $service because iTunesAppId is configured ($iTunesAppId) and hasAppleItunesAppBanner is true',
+    async ({ service, iTunesAppId }) => {
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          platform="canonical"
+          hasAppleItunesAppBanner
+        />,
+      );
+
+      await waitFor(() => {
+        const appleItunesApp = document.querySelector(
+          'head > meta[name=apple-itunes-app]',
+        );
+        expect(appleItunesApp).toBeInTheDocument();
+
+        const content = appleItunesApp.getAttribute('content');
+        expect(content).toEqual(
+          `app-id=${iTunesAppId}, app-argument=https://www.bbc.com/${service}/asset-12345678?utm_medium=banner&utm_content=apple-itunes-app`,
+        );
+      });
+    },
+  );
+
+  it.each`
+    service     | reason                                            | platform       | hasAppleItunesAppBanner
+    ${'arabic'} | ${'platform is AMP'}                              | ${'amp'}       | ${true}
+    ${'mundo'}  | ${'hasAppleItunesAppBanner is false'}             | ${'canonical'} | ${false}
+    ${'pidgin'} | ${'service does not have iTunesAppId configured'} | ${'canonical'} | ${true}
+  `(
+    `should not be rendered for $service because $reason`,
+    ({ service, platform, hasAppleItunesAppBanner }) => {
+      render(
+        <CanonicalCPSAssetInternationalOrigin
+          service={service}
+          platform={platform}
+          hasAppleItunesAppBanner={hasAppleItunesAppBanner}
+        />,
+      );
+
+      expect(
+        document.querySelector('head > meta[name=apple-itunes-app]'),
+      ).not.toBeInTheDocument();
+    },
+  );
+});

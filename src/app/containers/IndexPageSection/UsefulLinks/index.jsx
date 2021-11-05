@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape, arrayOf, string } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,

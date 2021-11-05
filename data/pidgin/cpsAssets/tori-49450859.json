@@ -30,6 +30,10 @@
       "counterName": "pidgin.news.media_asset.49450859.page",
       "cps_asset_id": "49450859"
     },
+    "atiAnalytics": {
+      "chapter": "overrideAtiChapter",
+      "producerId": "overrideProducerId"
+    },
     "passport": {
       "category": {
         "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",

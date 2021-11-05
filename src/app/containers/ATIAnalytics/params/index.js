@@ -15,19 +15,28 @@ import {
   buildMostReadATIUrl,
 } from './mostReadPage/buildParams';
 import {
+  buildMostWatchedATIParams,
+  buildMostWatchedATIUrl,
+} from './mostWatchedPage/buildParams';
+import {
   buildIndexPageATIParams,
   buildIndexPageATIUrl,
 } from './indexPage/buildParams';
 
 const ARTICLE_MEDIA_ASSET = 'article-media-asset';
 const ARTICLE_PHOTO_GALLERY = 'article-photo-gallery';
+const ARTICLE_CORRESPONDENT_PIECE = 'article-correspondent';
 
 const pageTypeUrlBuilders = {
   article: buildArticleATIUrl,
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(data, requestContext, serviceContext, 'article'),
   frontPage: buildIndexPageATIUrl,
   media: buildTvRadioATIUrl,
   mostRead: buildMostReadATIUrl,
+  mostWatched: buildMostWatchedATIUrl,
   IDX: buildIndexPageATIUrl,
+  FIX: buildIndexPageATIUrl,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIUrl(
       data,
@@ -41,6 +50,13 @@ const pageTypeUrlBuilders = {
       requestContext,
       serviceContext,
       ARTICLE_PHOTO_GALLERY,
+    ),
+  CSP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIUrl(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_CORRESPONDENT_PIECE,
     ),
 };
 
@@ -49,7 +65,9 @@ const pageTypeParamBuilders = {
   frontPage: buildIndexPageATIParams,
   media: buildTvRadioATIParams,
   mostRead: buildMostReadATIParams,
+  mostWatched: buildMostWatchedATIParams,
   IDX: buildIndexPageATIParams,
+  FIX: buildIndexPageATIParams,
   MAP: (data, requestContext, serviceContext) =>
     buildCpsAssetPageATIParams(
       data,
@@ -64,6 +82,15 @@ const pageTypeParamBuilders = {
       serviceContext,
       ARTICLE_PHOTO_GALLERY,
     ),
+  CSP: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(
+      data,
+      requestContext,
+      serviceContext,
+      ARTICLE_CORRESPONDENT_PIECE,
+    ),
+  STY: (data, requestContext, serviceContext) =>
+    buildCpsAssetPageATIParams(data, requestContext, serviceContext, 'article'),
 };
 
 const createBuilderFactory = (requestContext, pageTypeHandlers) => {
@@ -78,13 +105,26 @@ export const buildATIUrl = (data, requestContext, serviceContext) => {
   return buildUrl(data, requestContext, serviceContext);
 };
 
-export const buildATIClickParams = (data, requestContext, serviceContext) => {
-  const buildParams = createBuilderFactory(
-    requestContext,
-    pageTypeParamBuilders,
-  );
+export const buildATIEventTrackingParams = (
+  data,
+  requestContext,
+  serviceContext,
+) => {
+  try {
+    const buildParams = createBuilderFactory(
+      requestContext,
+      pageTypeParamBuilders,
+    );
 
-  return buildParams(data, requestContext, serviceContext);
+    return buildParams(data, requestContext, serviceContext);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(
+      `ATI Event Tracking Error: Could not parse tracking values from page data:\n${error.message}`,
+    );
+
+    return {};
+  }
 };
 
 export default buildATIUrl;

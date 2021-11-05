@@ -1,9 +1,14 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { arabic } from '@bbc/gel-foundations/scripts';
 import { arabic as brandSVG } from '@bbc/psammead-assets/svgs';
 import {
-  F_NASSIM_ARABIC_REGULAR,
-  F_NASSIM_ARABIC_BOLD,
+  F_REITH_QALAM_REGULAR,
+  F_REITH_QALAM_BOLD,
 } from '@bbc/psammead-styles/fonts';
 import '@bbc/psammead-locales/moment/ar';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -11,10 +16,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'إعلان',
-    },
     lang: 'ar',
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'جدّد في',
@@ -28,16 +29,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
-    externalLinkText: 'خارجي، ',
+    externalLinkText: '، خارجي ',
     imageCaptionOffscreenText: 'التعليق على الصورة، ',
     videoCaptionOffscreenText: 'التعليق على الفيديو، ',
     audioCaptionOffscreenText: 'التعليق على التسجيل الصوتي، ',
     defaultCaptionOffscreenText: 'التعليق، ',
     imageCopyrightOffscreenText: 'صدر الصورة، ',
     locale: 'ar',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ar',
     datetimeLocale: 'ar',
     service: 'arabic',
     serviceName: 'Arabic',
+    languageName: 'Arabic',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCArabic',
     twitterSite: '@BBCArabic',
@@ -49,22 +53,52 @@ export const service = {
     manifestPath: '/manifest.json',
     swPath: '/sw.js',
     frontPageTitle: 'الرئيسية',
+    iTunesAppId: 558497376,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
+    },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'البودكاست',
+      brandTitle: 'إكسترا ليفلز (Xtra Levels)',
+      brandDescription:
+        'بودكاست يسبر كون الألعاب الإلكترونية من خلال لاعبيه ومطوريه.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg',
+        alt: 'بودكاست "عَلاقات"',
+      },
+      linkLabel: {
+        text: 'الحلقات',
+        href: 'https://www.bbc.com/arabic/podcasts/p09w8yvk',
+      },
+      skipLink: {
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
+      },
     },
     translations: {
+      ads: {
+        advertisementLabel: 'إعلان',
+      },
+      recommendationTitle: 'مواضيع قد تهمك',
       seeAll: 'المزيد',
       home: 'الرئيسية',
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
+      relatedTopics: 'مواضيع ذات صلة',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
       },
+      gist: 'ملخص',
       error: {
         404: {
           statusCode: '404',
@@ -122,29 +156,72 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'أخبرنا عما إذا كنت توافق على تحميل الكوكيز',
-          description: {
-            uk: {
-              first: 'نستخدم ',
-              linkText: 'ملفات ارتباط',
-              last:
-                ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'وافق على جمع المعلومات واستمر',
+            reject: 'رفض جمع المعلومات واستمر',
+            initial: {
+              title: 'أعلمونا بموافقتكم على جمع المعلومات من خلال AMP',
+              description: {
+                first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
+                linkText: 'ملفات الارتباط',
+                last: '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'ادارة خياراتي',
             },
-            international: {
-              first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
-              linkText: 'ملفات الارتباط',
-              last:
-                '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'ادارة خيارات الموافقة في صفحات AMP',
+              description: {
+                para1:
+                  'تسري هذه الاعدادات على صفحات AMP فقط. قد يطلب منكم اعادة تحديد الاعدادات عند زيارتكم صفحات بي بي سي غير الخاضعة لـ AMP.',
+                para2:
+                  'الصفحة خفيفة الوزن والمخصصة للأجهزة المحمولة التي زرتموها انتجت باستخدام تقنية غوغل للـ AMP.',
+                heading2: 'جمع المعلومات ضروري جدا ولابد منه',
+                para3:
+                  'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
+                para4: {
+                  text: 'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
+                heading3: 'شروط اختيارية لجمع المعلومات',
+                para6:
+                  'في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.',
+                para7: {
+                  text: 'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.\nيرجى ملاحظة أنكم ستستمرون في مشاهدة الإعلانات، ولكنها لن تكون اعلانات موجهة لكم بشكل مخصص.',
+                para9:
+                  'يمكنكم تغيير هذه الإعدادات في أي وقت عن طريق النقر على "خيارات الإعلانات/ لا تبيعوا معلوماتي" الموجود في أسفل الصفحة.',
+              },
             },
           },
-          accept: 'نعم، موافق',
-          reject: 'كلا، أعدني إلى الإعدادات',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'أخبرنا عما إذا كنت توافق على تحميل الكوكيز',
+            description: {
+              uk: {
+                first: 'نستخدم ',
+                linkText: 'ملفات ارتباط',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'نستخدم ',
+                linkText: 'ملفات ارتباط',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'نعم، موافق',
+            reject: 'كلا، أعدني إلى الإعدادات',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -161,11 +238,15 @@ export const service = {
         },
         listen: 'استمع',
         watch: 'شاهد',
+        listenLive: 'استمع للبث المباشر',
+        listenNext: 'واصل الاستماع',
         liveLabel: 'مباشر',
         nextLabel: 'لاحق',
         previousRadioShow: 'البرنامج الإذاعي السابق',
         nextRadioShow: 'البرنامج الإذاعي اللاحق',
         duration: 'المدة',
+        recentEpisodes: 'البرامج السابقة',
+        podcastExternalLinks: 'هذا البودكاست متاح عبر',
       },
       socialEmbed: {
         caption: {
@@ -183,7 +264,12 @@ export const service = {
           endTextVisuallyHidden: 'نهاية %provider_name% مشاركة',
         },
       },
-      topStoriesTitle: 'الخبر الرئيسي',
+      include: {
+        errorMessage:
+          'للأسف ليس بمقدورنا إظهار هذا الجزء من القصة على هذه الصفحة الخفيفة من الموبايل ',
+        linkText: 'انظر في السخة الكاملة لترى المحتوى بأكمله',
+      },
+      topStoriesTitle: 'الأخبار الرئيسية',
       featuresAnalysisTitle: 'اخترنا لكم',
     },
     brandSVG,
@@ -193,18 +279,24 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'الأكثر مشاهدة',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
-      frequenciesPageUrl:
-        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
       durationLabel: 'المدة %duration%',
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -212,7 +304,7 @@ export const service = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
@@ -233,12 +325,12 @@ export const service = {
           text: 'ملفات الارتباط Cookies',
         },
         {
-          href: 'https://www.bbc.com/arabic/institutional-37731355',
+          href: 'https://www.bbc.co.uk/send/u50853203',
           text: 'اتصل بـ بي بي سي',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -246,7 +338,7 @@ export const service = {
       copyrightText:
         'بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية.',
     },
-    fonts: [F_NASSIM_ARABIC_REGULAR, F_NASSIM_ARABIC_BOLD],
+    fonts: [F_REITH_QALAM_REGULAR, F_REITH_QALAM_BOLD],
     timezone: 'GMT',
     navigation: [
       {
@@ -255,31 +347,31 @@ export const service = {
       },
       {
         title: 'شرق أوسط',
-        url: '/arabic/middleeast',
+        url: '/arabic/topics/ckdxnj6g4znt',
       },
       {
         title: 'عالم',
-        url: '/arabic/world',
+        url: '/arabic/topics/c719d2el19nt',
       },
       {
         title: 'علوم وتكنولوجيا',
-        url: '/arabic/scienceandtech',
+        url: '/arabic/topics/c719d2ely7xt',
       },
       {
         title: 'صحة',
-        url: '/arabic/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/arabic/topics/c95y3q70znjt',
       },
       {
         title: 'فيديو',
-        url: '/arabic/media',
+        url: '/arabic/media-54706728',
       },
       {
         title: 'صحافة',
-        url: '/arabic/inthepress',
+        url: '/arabic/topics/c08gmd9rp97t',
       },
       {
         title: 'ترند',
-        url: '/arabic/trending',
+        url: '/arabic/topics/c404vr23x4dt',
       },
       {
         title: 'تحقيقات',

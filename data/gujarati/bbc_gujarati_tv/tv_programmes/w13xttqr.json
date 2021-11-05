@@ -1,0 +1,547 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_gujarati_tv/w13xttqr",
+    "locators": { "pid": "w172xcf1d7w4xdw", "brandPid": "w13xttqr" },
+    "type": "WSTV",
+    "createdBy": "bbc_gujarati_tv",
+    "language": "gu",
+    "lastUpdated": 1608629614061,
+    "firstPublished": 1605535260000,
+    "lastPublished": 1605535260000,
+    "timestamp": 1605535260000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "સમાચાર - BBC News ગુજરાતી",
+      "pageIdentifier": "gujarati.bbc_gujarati_tv.tv_programmes.w13xttqr.page",
+      "producerId": "50",
+      "contentType": "player-episode",
+      "producer": "GUJARATI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "સમાચાર",
+    "releaseDateTimeStamp": 1608508800000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xcf1d7w4xdw",
+        "subType": "episode",
+        "format": "Video",
+        "title": "21/12/2020 GMT",
+        "synopses": {
+          "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+          "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshj96mhqsfhd",
+            "types": ["Original"],
+            "duration": 1680,
+            "durationISO8601": "PT28M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1608562680000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "સમાચાર" },
+    "locators": { "pid": "w172xcf1d7w4xdw", "brandPid": "w13xttqr" },
+    "media": {
+      "id": "w172xcf1d7w4xdw",
+      "subType": "episode",
+      "format": "Video",
+      "title": "21/12/2020 GMT",
+      "synopses": {
+        "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+        "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshj96mhqsfhd",
+          "types": ["Original"],
+          "duration": 1680,
+          "durationISO8601": "PT28M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1608562680000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1608508800000,
+    "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf1d7w4xdw",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Gujarati",
+      "uri": "/gujarati",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf10zkrcff", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf10zkrcff",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj9687fcwhy",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608303480000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf10zkrcff",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf10zkngjb", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf10zkngjb",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj9687f8zlv",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608217080000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf10zkngjb",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf10zkkkm7", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf10zkkkm7",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj9687f62pr",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608130680000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf10zkkkm7",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf10zkgnq4", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf10zkgnq4",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj9687f35sn",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608044280000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf10zkgnq4",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf10zkcrt1", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf10zkcrt1",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj9687f08wk",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607957880000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf10zkcrt1",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf0nq7z6tl", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf0nq7z6tl",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj95wz3lqx3",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607698680000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf0nq7z6tl",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf0nq7w9xh", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf0nq7w9xh",
+              "subType": "episode",
+              "format": "Video",
+              "title": "10/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj95wz3hv00",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607612280000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607558400000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf0nq7w9xh",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "સમાચાર" },
+            "locators": { "pid": "w172xcf0nq7sf0d", "brandPid": "w13xttqr" },
+            "media": {
+              "id": "w172xcf0nq7sf0d",
+              "subType": "episode",
+              "format": "Video",
+              "title": "09/12/2020 GMT",
+              "synopses": {
+                "short": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર.",
+                "medium": "આંતરરાષ્ટ્રીય, પ્રાદેશિક ખબર અને વિશ્લેષણ માટે જુઓ બીબીસી ગુજરાતી સમાચાર."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshj95wz3dy2x",
+                  "types": ["Original"],
+                  "duration": 1680,
+                  "durationISO8601": "PT28M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607525880000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b8mjb.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607472000000,
+            "brand": { "pid": "w13xttqr", "title": "સમાચાર" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_gujarati_tv/w172xcf0nq7sf0d",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

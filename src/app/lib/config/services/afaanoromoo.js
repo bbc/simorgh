@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { afaanoromoo as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Addis_Ababa';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Beeksiisa',
-    },
     lang: `om`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Haaromsameera',
@@ -32,9 +33,12 @@ export const service = {
     defaultCaptionOffscreenText: 'Ibsa suuraa/viidiyoo, ',
     imageCopyrightOffscreenText: 'Madda suuraa, ',
     locale: `om-ET`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'om',
     datetimeLocale: `om`,
     service: 'afaanoromoo',
     serviceName: 'Afaan Oromoo',
+    languageName: 'Oromo',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@BBCNews',
     twitterSite: '@BBCNews',
@@ -50,19 +54,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Beeksiisa',
+      },
       seeAll: 'Hunda ilaali',
       home: 'Oduu',
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Guduunfaa',
       error: {
         404: {
           statusCode: '404',
@@ -118,34 +132,80 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Kuus-yaadannoo waliin waliigalu kee haa beeknu',
-          description: {
-            uk: {
-              first: 'Kan nuti ',
-              linkText: 'kuus-yaadannoo fayyadamnu',
-              last:
-                ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Odeeffannoo walitti qabamuuf tole jedhaatii itti fufaa',
+            reject: 'Odeeffannoo walitti qabamuuf diduun itti fufaa',
+            initial: {
+              title:
+                "Fuula keenya salphaatti akka argattan gochuuf fayyadama slaphaa mobaayilii (AMP) irratti ragaa walitti akka qabnu waliigaltu yoo ta'e nu beeksiisaa.",
+              description: {
+                first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
+                linkText: 'kuus-yaadannoo',
+                last: ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: "Qindaa'inawwan filmaata fayyadamaa kiyyaa sirreessuuf",
             },
-            international: {
-              first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
-              linkText: 'kuus-yaadannoo',
-              last:
-                ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title:
+                "Fuulawwan salphaan banaman irratti qindaa'ina hayyamaa sirreessuuf",
+              description: {
+                para1:
+                  "Qindaa'inniwwan kunneenis fuulawwan salphaatti mobaayiliin saaqaman (AMP) qofaaf hojjatu. Fuula BBC non-AMP ta'an yoo saaqxatan akka irra deebiin filattan gaafatamuu mala.",
+                para2:
+                  'Kan saaqxan fuula haala salphaan teknolooojii Google tiin saaqamuudha.',
+                heading2: "Odeeffannoo walitti qabuun dirqama ta'e",
+                para3:
+                  "Marsariitiin keenya akka hojjatu taasisuuf, fedhii keessan malee odeeffannoo waa'ee meeshaa itti fayyadamtanii muraasa ni olkeenya.",
+                para4: {
+                  text: 'Marsariitiin keenyaa akka hojjatuuf odeeffannoo murteessoo meeshaa itti fayyadamtanii nuti olkeenyuu irratti caalaa dubbisaa.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  "Filannoo fedhii keessaanii meeshaa keessan irratti olkaa'uuf kuusaa naannootti fayyadamna.",
+                heading3: 'Odeeffannoo walitti qabuun dirqama hintaane',
+                para6:
+                  "Fuulawwan salphaatti saaqaman irratti odeeffannoon walitti akka qabamuuf tole yoo jettan, yoo UKn ala taataniitti beeksiisawwan isin ilaallatan isiniitti mul'isuuf hayyamtan jechuudha.",
+                para7: {
+                  text: 'BBC fi shariikoonni beeksiisaa keenya, attamiin beeksiisa isin ilaallatu akka hojjatan irratti caalaa dubbisaa.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  "Beeksiisawwan isin ilaalatu diduuf ''Reject data collection and continue'' asiin gadiitti cuqaasuu dandeessu. Maaloo ammalleen beeksiisa akka agartan garuu kan isin qofaa ilaalu akka hintaane hubadhaa.",
+                para9:
+                  "Yeroo kamiittu jaantoo keessatti ''Ad Choices / Do not sell my info'' cuqaasuun qindaa'ina kana geedaruu dandeessu.",
+              },
             },
           },
-          accept: 'Eyyee, walii nan gala.',
-          reject: 'Lakki, gara bakka itti argamuutti na geessi',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Kuus-yaadannoo waliin waliigalu kee haa beeknu',
+            description: {
+              uk: {
+                first: 'Kan nuti ',
+                linkText: 'kuus-yaadannoo fayyadamnu',
+                last: ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Kan nuti ',
+                linkText: 'kuus-yaadannoo fayyadamnu',
+                last: ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Eyyee, walii nan gala.',
+            reject: 'Lakki, gara bakka itti argamuutti na geessi',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
         noJs: "Meeshaan kee Miidiyaa taphachiisuu hin danda'u",
-        contentExpired: 'This content is no longer available',
+        contentExpired: 'Qabiyyee kun hinjiraatu',
         contentNotYetAvailable:
           'Qabiyyeen kun taphachuu kan hin jire dha ammayyuu.',
         audio: 'Sagalee',
@@ -153,28 +213,36 @@ export const service = {
         video: 'Viidiyoo',
         listen: 'Dhaggeeffadhaa',
         watch: 'Daawwadhu',
+        listenLive: 'Kallattiin caqasaa',
+        listenNext: 'Kan ittaanu caqasi',
         liveLabel: 'KALLATTIIN',
-        nextLabel: 'NEXT',
-        previousRadioShow: 'Previous radio show',
-        nextRadioShow: 'Next radio show',
-        duration: 'Duration',
+        nextLabel: 'KAN ITTAANU',
+        previousRadioShow: 'Sagantaa raadiyoo dabre',
+        nextRadioShow: 'Sagantaa raadiyoo itti aanu',
+        duration: 'Turtii',
+        recentEpisodes: 'Sagantaawwan darban',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: "Ibsa waa'ee viidiyoo, ",
+          text: 'Hubachiisa: qabiyyeen qaama sadaffaa beeksisa qabaachuu malu',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'Qabiyyeen kun hin argamne',
+          linkText: 'irratti dabalatan ilaali %provider_name%',
+          linkTextSuffixVisuallyHidden: ', alaan',
           warningText:
             "Qabiyyeewwan maddawwan alaa irraa ta'aniif BBCn itti gaafatamaa miti.",
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'Maxxansa %provider_name% irra dabri',
+          endTextVisuallyHidden: 'Xumura maxxansa %provider_name%',
         },
+      },
+      include: {
+        errorMessage:
+          'Dhiifama, odeessa kana keessaa kutaa kana, moobaayilarratti agarsiisuu hin dandeenyu',
+        linkText: 'Guutuu qabiyyee ilaaluuf fuula cufa ilaali',
       },
       topStoriesTitle: 'Isin hin darbiin',
       featuresAnalysisTitle: `Maaltu haasa'ama?`,
@@ -186,10 +254,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Hedduu kan ilaalaman',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Dhaggeeffadhaa',
+      durationLabel: 'Turtii %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -200,7 +273,7 @@ export const service = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
@@ -221,12 +294,12 @@ export const service = {
           text: 'Kuus-yaadannoo',
         },
         {
-          href: 'https://www.bbc.com/afaanoromoo/institutional-42228538',
+          href: 'https://www.bbc.co.uk/send/u50777768',
           text: 'BBC qunnami',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -242,7 +315,7 @@ export const service = {
       },
       {
         title: 'Itoophiyaa',
-        url: '/afaanoromoo/topics/e986aff5-6b26-4638-b468-371d1d9617b4',
+        url: '/afaanoromoo/topics/c2dwqdy81y1t',
       },
       {
         title: 'Viidiyoo',

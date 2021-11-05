@@ -8,14 +8,20 @@ import {
   getManifestRegex,
   getCpsAssetRegex,
   getLiveRadioRegex,
+  getPodcastEpisodeRegex,
+  getPodcastBrandRegex,
   getOnDemandRadioRegex,
   getOnDemandTvRegex,
   getErrorPageRegex,
   getLegacyAssetRegex,
   getMostReadPageRegex,
   getMostReadDataRegex,
+  getMostWatchedDataRegex,
+  getMostWatchedPageRegex,
   getIdxPageRegex,
   getSecondaryColumnDataRegex,
+  getRecommendationsDataRegex,
+  getAfricaEyeTVPageRegex,
 } from './utils';
 
 const allServices = Object.keys(services);
@@ -41,6 +47,12 @@ export const liveRadioDataPath = `${liveRadioPath}.json`;
 export const onDemandRadioPath = getOnDemandRadioRegex(allServices);
 export const onDemandRadioDataPath = `${onDemandRadioPath}.json`;
 
+export const podcastEpisodePath = getPodcastEpisodeRegex(allServices);
+export const podcastEpisodeDataPath = `${podcastEpisodePath}.json`;
+
+export const podcastBrandPath = getPodcastBrandRegex(allServices);
+export const podcastBrandDataPath = `${podcastBrandPath}.json`;
+
 export const onDemandTvPath = getOnDemandTvRegex(allServices);
 export const onDemandTvDataPath = `${onDemandTvPath}.json`;
 
@@ -52,9 +64,17 @@ export const legacyAssetPageDataPath = `${legacyAssetPagePath}.json`;
 export const mostReadPagePath = getMostReadPageRegex(allServices);
 export const mostReadDataRegexPath = getMostReadDataRegex(allServices);
 
-export const secondaryColumnDataRegexPath = getSecondaryColumnDataRegex(
-  allServices,
-);
+export const mostWatchedDataPath = getMostWatchedDataRegex(allServices);
+export const mostWatchedPagePath = getMostWatchedPageRegex(allServices);
+
+export const secondaryColumnDataRegexPath =
+  getSecondaryColumnDataRegex(allServices);
+
+export const recommendationsDataRegex =
+  getRecommendationsDataRegex(allServices);
 
 export const IdxPagePath = getIdxPageRegex();
 export const IdxDataPath = `${IdxPagePath}.json`;
+
+export const africaEyeTVPagePath = getAfricaEyeTVPageRegex();
+export const africaEyeTVDataPath = `${africaEyeTVPagePath}.json`;

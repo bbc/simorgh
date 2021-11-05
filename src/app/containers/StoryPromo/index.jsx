@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
+import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
+import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
@@ -8,12 +10,15 @@ import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
   getAssetTypeCode,
-  getHeadlineUrlAndLive,
+  getHeadline,
+  getUrl,
+  getIsLive,
 } from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
@@ -21,10 +26,19 @@ import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
+import { getHeadingTagOverride } from './utilities';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 
 const logger = loggerNode(__filename);
 
 const PROMO_TYPES = ['top', 'regular', 'leading'];
+
+const SingleColumnStoryPromo = styled(StoryPromo)`
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    display: grid;
+  }
+`;
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -41,7 +55,7 @@ const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = useLargeImages
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
-    : '(max-width: 1008px) 33vw, 237px';
+    : '(max-width: 1008px) 33vw, 321px';
   const DEFAULT_IMAGE_RES = 660;
   const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
@@ -83,7 +97,9 @@ const StoryPromoContainer = ({
   dir,
   displayImage,
   displaySummary,
-  isRecommendation,
+  isSingleColumnLayout,
+  serviceDatetimeLocale,
+  eventTrackingData,
 }) => {
   const {
     altCalendar,
@@ -93,6 +109,8 @@ const StoryPromoContainer = ({
     translations,
     timezone,
   } = useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -107,11 +125,9 @@ const StoryPromoContainer = ({
   const isContentTypeGuide =
     isAssetTypeCode === 'PRO' &&
     pathOr(null, ['contentType'], item) === 'Guide';
-
-  const { headline, url, isLive } = getHeadlineUrlAndLive(
-    item,
-    isAssetTypeCode,
-  );
+  const headline = getHeadline(item);
+  const url = getUrl(item);
+  const isLive = getIsLive(item);
 
   const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
   const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
@@ -131,13 +147,9 @@ const StoryPromoContainer = ({
   const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
 
   const displayTimestamp =
-    timestamp &&
-    !isStoryPromoPodcast &&
-    !isContentTypeGuide &&
-    !isRecommendation &&
-    !isLive;
+    timestamp && !isStoryPromoPodcast && !isContentTypeGuide && !isLive;
 
-  if (cpsType === 'MAP' && mediaStatuscode) {
+  if (cpsType === MEDIA_ASSET_PAGE && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
       url: pathOr(null, ['section', 'uri'], item),
       mediaStatuscode,
@@ -153,37 +165,46 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride =
-    isRecommendation || isContentTypeGuide ? 'div' : null;
+  const headingTagOverride = getHeadingTagOverride({
+    pageType,
+    isContentTypeGuide,
+  });
+
+  const locale = serviceDatetimeLocale || datetimeLocale;
+
+  const StyledLink = styled(Link)`
+    overflow-wrap: anywhere;
+  `;
 
   const Info = (
     <>
-      {headline && (
-        <Headline
-          script={script}
-          service={service}
-          promoType={promoType}
-          promoHasImage={displayImage}
-          as={headingTagOverride}
+      <Headline
+        script={script}
+        service={service}
+        promoType={promoType}
+        promoHasImage={displayImage}
+        as={headingTagOverride}
+      >
+        <StyledLink
+          href={url}
+          onClick={eventTrackingData ? handleClickTracking : null}
         >
-          <Link href={url}>
-            {isLive ? (
-              <LiveLabel
-                service={service}
-                dir={dir}
-                liveText={liveLabel}
-                ariaHidden={liveLabelIsEnglish}
-                offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              >
-                {linkcontents}
-              </LiveLabel>
-            ) : (
-              linkcontents
-            )}
-          </Link>
-        </Headline>
-      )}
-      {promoSummary && displaySummary && !isRecommendation && (
+          {isLive ? (
+            <LiveLabel
+              service={service}
+              dir={dir}
+              liveText={liveLabel}
+              ariaHidden={liveLabelIsEnglish}
+              offScreenText={liveLabelIsEnglish ? 'Live' : null}
+            >
+              {linkcontents}
+            </LiveLabel>
+          ) : (
+            linkcontents
+          )}
+        </StyledLink>
+      </Headline>
+      {promoSummary && displaySummary && (
         <Summary
           script={script}
           service={service}
@@ -196,7 +217,7 @@ const StoryPromoContainer = ({
       {displayTimestamp && (
         <Timestamp
           altCalendar={altCalendar}
-          locale={datetimeLocale}
+          locale={locale}
           timestamp={timestamp}
           dateTimeFormat="YYYY-MM-DD"
           format="LL"
@@ -237,8 +258,13 @@ const StoryPromoContainer = ({
     />
   );
 
+  const StoryPromoComponent = isSingleColumnLayout
+    ? SingleColumnStoryPromo
+    : StoryPromo;
+
   return (
-    <StoryPromo
+    <StoryPromoComponent
+      data-e2e="story-promo"
       image={Image}
       info={Info}
       mediaIndicator={MediaIndicator}
@@ -256,7 +282,18 @@ StoryPromoContainer.propTypes = {
   dir: oneOf(['ltr', 'rtl']),
   displayImage: bool,
   displaySummary: bool,
-  isRecommendation: bool,
+  isSingleColumnLayout: bool,
+  serviceDatetimeLocale: string,
+  eventTrackingData: shape({
+    block: shape({
+      componentName: string,
+    }),
+    link: shape({
+      componentName: string,
+      url: string,
+      format: string,
+    }),
+  }),
 };
 
 StoryPromoContainer.defaultProps = {
@@ -265,7 +302,9 @@ StoryPromoContainer.defaultProps = {
   dir: 'ltr',
   displayImage: true,
   displaySummary: true,
-  isRecommendation: false,
+  isSingleColumnLayout: false,
+  serviceDatetimeLocale: null,
+  eventTrackingData: null,
 };
 
 export default StoryPromoContainer;

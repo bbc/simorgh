@@ -95,30 +95,8 @@ describe('buildParams', () => {
         requestContext,
         serviceContext,
       );
-      expect(result).toEqual(
-        [
-          's=598285',
-          's2=atiAnalyticsProducerId',
-          'p=service.articles.//www.bbc.co.uk.page',
-          'r=0x0x24x24',
-          're=1024x768',
-          'hl=00-00-00',
-          'lng=en-US',
-          'x1=[urn:bbc:optimo://www.bbc.co.uk]',
-          'x2=[responsive]',
-          'x3=[atiAnalyticsAppName]',
-          'x4=[language]',
-          'x5=[http%253A%252F%252Flocalhost%252F]',
-          'x6=[originpreviousPath]',
-          'x7=[article]',
-          'x8=[simorgh]',
-          'x9=[pageTitle]',
-          'x11=[1970-01-01T00:00:00.000Z]',
-          'x12=[1970-01-01T00:00:00.000Z]',
-          'x13=[thing+english+label+1~thing+english+label+2]',
-          'x14=[thing+id+1~thing+id+2]',
-          'ref=originpreviousPath',
-        ].join('&'),
+      expect(result).toMatchInlineSnapshot(
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originpreviousPath]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originpreviousPath"`,
       );
     });
   });

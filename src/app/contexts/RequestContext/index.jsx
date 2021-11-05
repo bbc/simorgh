@@ -6,6 +6,20 @@ import getOriginContext from './getOriginContext';
 import getEnv from './getEnv';
 import getMetaUrls from './getMetaUrls';
 import variantPropType from '../../models/propTypes/variants';
+import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  MEDIA_PAGE,
+  MOST_READ_PAGE,
+  MOST_WATCHED_PAGE,
+  ERROR_PAGE,
+  INDEX_PAGE,
+  FEATURE_INDEX_PAGE,
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+  STORY_PAGE,
+  CORRESPONDENT_STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 export const RequestContext = React.createContext({});
 
@@ -21,12 +35,13 @@ export const RequestContextProvider = ({
   pathname,
   variant,
   timeOnServer,
+  showAdsBasedOnLocation,
 }) => {
   const { isUK, origin } = getOriginContext(bbcOrigin);
   const env = getEnv(origin);
   const platform = isAmp ? 'amp' : 'canonical';
   const statsDestination = getStatsDestination({
-    isUK,
+    isUK: platform === 'amp' ? true : isUK, // getDestination requires that statsDestination is a PS variant on AMP
     env,
     service,
   });
@@ -50,6 +65,9 @@ export const RequestContextProvider = ({
     previousPath,
     variant,
     timeOnServer,
+    showAdsBasedOnLocation,
+    service,
+    pathname,
     ...getMetaUrls(origin, pathname),
   };
 
@@ -64,16 +82,18 @@ RequestContextProvider.propTypes = {
   id: string,
   isAmp: bool.isRequired,
   pageType: oneOf([
-    'article',
-    'frontPage',
-    'media',
-    'mostRead',
-    'error',
-    'MAP',
-    'FIX',
-    'STY',
-    'PGL',
-    'IDX',
+    ARTICLE_PAGE,
+    FRONT_PAGE,
+    MEDIA_PAGE,
+    MOST_READ_PAGE,
+    MOST_WATCHED_PAGE,
+    ERROR_PAGE,
+    MEDIA_ASSET_PAGE,
+    FEATURE_INDEX_PAGE,
+    STORY_PAGE,
+    CORRESPONDENT_STORY_PAGE,
+    PHOTO_GALLERY_PAGE,
+    INDEX_PAGE,
   ]).isRequired,
   service: string.isRequired,
   statusCode: number,
@@ -81,6 +101,7 @@ RequestContextProvider.propTypes = {
   previousPath: string,
   variant: variantPropType,
   timeOnServer: number,
+  showAdsBasedOnLocation: bool,
 };
 
 RequestContextProvider.defaultProps = {
@@ -90,4 +111,5 @@ RequestContextProvider.defaultProps = {
   previousPath: null,
   variant: null,
   timeOnServer: null,
+  showAdsBasedOnLocation: false,
 };

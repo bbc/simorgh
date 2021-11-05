@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import { string, func, arrayOf, shape } from 'prop-types';
@@ -510,9 +510,11 @@ Object.keys(services).forEach(service => {
     .filter(variant => services[service][variant].datetimeLocale)
     .forEach(variant => {
       const serviceName = capitalizeService(service);
-      const { dir, lang, datetimeLocale: serviceLocale } = services[service][
-        variant
-      ];
+      const {
+        dir,
+        lang,
+        datetimeLocale: serviceLocale,
+      } = services[service][variant];
       const storyTitle = `${serviceName} - ${serviceLocale} ${
         variant !== 'default' ? `(${variant})` : ''
       }`;

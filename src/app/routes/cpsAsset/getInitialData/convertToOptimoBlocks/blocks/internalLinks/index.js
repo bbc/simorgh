@@ -27,7 +27,10 @@ const getUrl = path(['locators', 'href']);
 
 const getLinkText = path(['headlines', 'overtyped']);
 
-const itemIdEndsWith = string => ({ id }) => id.endsWith(string);
+const itemIdEndsWith =
+  string =>
+  ({ id }) =>
+    id.endsWith(string);
 
 const getItemMetadata = (id, metadata) => metadata.find(itemIdEndsWith(id));
 
@@ -52,8 +55,8 @@ const getLinkXML = (url, text) =>
 
 const replaceChevrons = text =>
   text
-    .replace('<', '&lt;')
-    .replace('>', '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
     .replace(/&(?!amp|gt|lt)/, '&amp;');
 
 const transformBlockText = (blockText, blockMeta) => {

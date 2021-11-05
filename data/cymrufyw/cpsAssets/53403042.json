@@ -1,0 +1,284 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:newyddion/53403042",
+    "locators": {
+      "assetUri": "/newyddion/53403042",
+      "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
+      "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
+      "assetId": "53403042"
+    },
+    "type": "CSP",
+    "createdBy": "newyddion-v6",
+    "language": "cy",
+    "lastUpdated": 1606843841021,
+    "firstPublished": 1594723545000,
+    "lastPublished": 1594723545000,
+    "timestamp": 1594723545000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "csp",
+      "counterName": "newyddion.gwleidyddiaeth.correspondent_story.53403042.page",
+      "cps_asset_id": "53403042"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Gwleidyddiaeth",
+          "thingUri": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+          "thingId": "75612fa6-147c-4a43-97fa-fcf70d9cced3",
+          "thingType": [
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Politics"
+          ],
+          "topicName": "Gwleidyddiaeth",
+          "topicId": "cjyqgz5kvryt",
+          "curationList": [
+            {
+              "curationId": "4f5e0352-b5fa-40a6-8f0c-b3c2260157ce",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Politics"
+        },
+        {
+          "thingLabel": "Datganoli",
+          "thingUri": "http://www.bbc.co.uk/things/dc9b2f0c-3528-4c7e-b078-4d3074f99a60#id",
+          "thingId": "dc9b2f0c-3528-4c7e-b078-4d3074f99a60",
+          "thingType": [
+            "core:Theme",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q744894",
+            "http://dbpedia.org/resource/Devolution_in_the_United_Kingdom"
+          ],
+          "topicName": "Datganoli",
+          "topicId": "c8xqxvg8ly4t",
+          "curationList": [
+            {
+              "curationId": "10e6982b-d217-4e3a-8590-d876338f88b8",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "UK devolution"
+        }
+      ]
+    },
+    "version": "v1.3.11",
+    "blockTypes": [
+      "paragraph"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "WALES",
+      "producerId": "100"
+    },
+    "readTime": 2,
+    "siteUri": "/newyddion",
+    "topics": [
+      {
+        "topicName": "Datganoli",
+        "topicId": "c8xqxvg8ly4t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/dc9b2f0c-3528-4c7e-b078-4d3074f99a60#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "10e6982b-d217-4e3a-8590-d876338f88b8",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "core:Theme",
+          "tagging:TagConcept",
+          "core:Thing"
+        ]
+      },
+      {
+        "topicName": "Gwleidyddiaeth",
+        "topicId": "cjyqgz5kvryt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/75612fa6-147c-4a43-97fa-fcf70d9cced3#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "4f5e0352-b5fa-40a6-8f0c-b3c2260157ce",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:TagConcept",
+          "core:Theme",
+          "core:Thing"
+        ]
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "text": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ar ôl blynyddoedd o frwydro yn y llysoedd gorfodwyd i'r archif genedlaethol gyhoeddi'r ohebiaeth rhwng Palas Buckingham a'r Llywodraethwr Cyffredinol adeg diswyddo'r Prif Weinidog Llafur Gough Whitlam yn 1975.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Roedd yr archif wedi dadlau mai gohebiaeth breifat oedd y 211 o lythyrau a gyhoeddwyd heddiw. Doedd dim modd eu rhyddhau felly heb gytundeb y Frenhines a doedd hithau neu ei swyddogion ddim yn fodlon rhoi'r caniatâd hwnnw.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "I haneswyr roedd y syniad y gallai dogfennau sydd yn greiddiol i hanes gwleidyddol Awstralia gael eu cadw'n ddirgel ar fympwy menyw ym mhendraw'r byd yn sarhaus. Am unwaith, yr haneswyr wnaeth ennill y ddadl. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nawr, mae'r llythyrau'n ddiddorol ynddyn nhw eu hun ond maen nhw hefyd yn rhybudd pwysig ynghylch y peryglon o gredu'n ormodol ar rym confensiynau mewn gwledydd sydd a'u cyfansoddiadau'n seiliedig ar gyfundrefn Westminster.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Cymerwch enghraifft. Does neb yn gwadu am eiliad bod gan y Goron, y Frenhines hynny yw, hawl didramgwydd i benodi a diswyddo Prif Weinidogion ond mae'r syniad y byddai Elisabeth II yn diswyddo Prif Weinidog oedd â chefnogaeth mwyafrif yn Nhŷ'r Cyffredin y tu hwnt o bob dychymyg.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ond dyna oedd yr union bŵer a ddefnyddiwyd gan Syr John Kerr i ddiswyddo Whitlam, ac mae'n brawf o ba mor beryglus yw credu na fydd pwerau sy'n bodoli ar bapur byth yn cael eu defnyddio.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mae hynny'n bwysig wrth i ni ystyried y tensiynau cynyddol rhwng llywodraeth y Deyrnas Unedig ar y naill law a llywodraethau Cymru a'r Alban ar y llall.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Priodolir y geiriau &quot;power devolved is power retained&quot; i Enoch Powell gan amlaf ond mae'r pwynt yn un digon amlwg. Mae San Steffan yn gallu cymryd yn ogystal â rhoi.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os ydy Boris Johnson o ddifri wrth ddweud y bydd Llywodraeth y Deyrnas Unedig yn adeiladu traffordd newydd i liniaru'r M4 yng Nghasnewydd mae modd iddi wneud hynny.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gallaf ddychmygu'n hawdd y dadleuon a fyddai'n cael eu defnyddio i gyfiawnhau cyflwyno deddfwriaeth yn San Steffan i sicrhau bod Llywodraeth y DU yn cael cyflawni prosiectau o 'bwys strategol i'r deyrnas gyfan'.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Yn yr un modd os ydy Llywodraeth y DU yn penderfynu mae hi, a hi'n unig, fydd yn llunio amodau a rheolau'r farchnad sengl newydd rhwng Cymru, yr Alban a Lloegr fydd angen ei chreu yn sgil Bregsit does 'na fawr ddim y gall Bae Caerdydd a Holyrood wneud ynghylch y peth.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Byddai, fe fyddai 'na lawer o weiddi a sgrechian ac argyfwng cyfansoddiadol go ddifrifol ond, fel y canfu Whitlam, diwedd y gân yw'r goron.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Diwedd y gân yw'r goron",
+      "headline": "Diwedd y gân yw'r goron"
+    },
+    "locators": {
+      "assetUri": "/newyddion/53403042",
+      "cpsUrn": "urn:bbc:content:assetUri:newyddion/53403042",
+      "curie": "http://www.bbc.co.uk/asset/2dd1cf1a-91f8-4aa5-b84f-a7567f762494",
+      "assetId": "53403042"
+    },
+    "summary": "I'r rheiny sydd, fel fi, yn ymddiddori yng ngwleidyddiaeth a hanes Awstralia mae heddiw yn ddiwrnod mawr a dweud y lleiaf.",
+    "timestamp": 1594723545000,
+    "language": "cy",
+    "byline": {
+      "name": "By Vaughan Roderick",
+      "title": "Golygydd Materion Cymreig y BBC",
+      "persons": [
+        {
+          "name": "Vaughan Roderick",
+          "function": "Golygydd Materion Cymreig y BBC",
+          "url": "/newyddion/correspondents/vaughanroderick",
+          "correspondentId": "vaughanroderick",
+          "thumbnail": "http://news.bbcimg.co.uk/media/images/66800000/jpg/_66800378_roderick144x104-gray.jpg"
+        }
+      ]
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "111079399",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/18445/production/_111079399_vaughanroderickmawr.jpg",
+      "path": "/cpsprodpb/18445/production/_111079399_vaughanroderickmawr.jpg",
+      "height": 675,
+      "width": 1200,
+      "altText": "vaughan",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:newyddion/53403042",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Gwleidyddiaeth",
+      "uri": "/newyddion/gwleidyddiaeth",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Newyddion",
+      "uri": "/newyddion",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

@@ -1,7 +1,9 @@
-import Enzyme, { shallow, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import fetch from 'jest-fetch-mock';
 import path from 'path';
+import { TextEncoder, TextDecoder } from 'util';
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 /*
  * Mock to avoid async behaviour in tests
@@ -21,11 +23,7 @@ window.matchMedia = jest.fn().mockImplementation(query => {
   };
 });
 
-Enzyme.configure({ adapter: new Adapter() });
-
 global.fetch = fetch;
-global.shallow = shallow;
-global.mount = mount;
 global.document.domain = 'www.bbc.com';
 
 process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN = 'http://localhost:7080';

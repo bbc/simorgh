@@ -1,57 +1,124 @@
 import React, { useContext } from 'react';
-import { shape, arrayOf, number, string } from 'prop-types';
-import { Headline, Link } from '@bbc/psammead-story-promo';
+import { arrayOf, shape } from 'prop-types';
+import styled from '@emotion/styled';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
+import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+import SectionLabel from '@bbc/psammead-section-label';
+import SkipLinkWrapper from '#components/SkipLinkWrapper';
 
+import { storyItem } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
-import Grid from '../../components/Grid';
+import { GridItemMediumNoMargin } from '#app/components/Grid';
+import RecommendationsPromoList from './RecommendationsPromoList';
+import RecommendationsPromo from './RecommendationsPromo';
 
-const CpsRecommendations = ({ items, parentColumns }) => {
-  const { recommendations, script, service } = useContext(ServiceContext);
+const RecommendationsWrapper = styled.div`
+  background-color: ${C_GHOST};
+  margin: ${GEL_SPACING_TRPL} 0;
+  padding: ${GEL_SPACING_DBL} ${GEL_SPACING};
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: 0 ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+  }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING_TRPL};
+    padding: ${GEL_SPACING_DBL} 0;
+  }
+`;
+
+const LabelComponent = styled(SectionLabel)`
+  margin: 0;
+  padding: 0;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    margin: 0 0 ${GEL_SPACING};
+  }
+`;
+
+const CpsRecommendations = ({ items }) => {
+  const { recommendations, translations, script, service, dir } =
+    useContext(ServiceContext);
   const { enabled } = useToggle('cpsRecommendations');
+  const labelId = 'recommendations-heading';
+  const a11yAttributes = {
+    as: 'section',
+    role: 'region',
+    'aria-labelledby': labelId,
+  };
 
   const { hasStoryRecommendations } = recommendations;
 
-  if (!hasStoryRecommendations || !enabled) return null;
+  if (!hasStoryRecommendations || !enabled || !items.length) return null;
+
+  const title = pathOr(
+    'You may also be interested in',
+    ['recommendationTitle'],
+    translations,
+  );
+
+  const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
+
+  const terms = {
+    '%title%': title,
+  };
+
+  const isSinglePromo = items.length === 1;
+
+  const endTextId = 'end-of-recommendations';
+
+  const skipLink = {
+    endTextId,
+    terms,
+    text,
+    endTextVisuallyHidden,
+  };
 
   return (
-    <Grid
-      columns={{
-        group0: 1,
-        group1: 1,
-        group2: 1,
-        group3: 1,
-        group4: 1,
-        group5: 1,
-      }}
-      parentColumns={parentColumns}
-      enableGelGutters
-    >
-      {items.map(({ shortHeadline, assetUri }) => (
-        <Headline script={script} service={service} key={assetUri}>
-          <Link href={assetUri}>{shortHeadline}</Link>
-        </Headline>
-      ))}
-    </Grid>
+    <GridItemMediumNoMargin>
+      <RecommendationsWrapper data-e2e={labelId} {...a11yAttributes}>
+        <SkipLinkWrapper service={service} {...skipLink}>
+          {title ? (
+            <LabelComponent
+              script={script}
+              service={service}
+              dir={dir}
+              labelId={labelId}
+              columnType="main"
+              overrideHeadingAs="strong"
+              bar={false}
+              backgroundColor={C_GHOST}
+            >
+              {title}
+            </LabelComponent>
+          ) : null}
+          {isSinglePromo ? (
+            <RecommendationsPromo promo={items[0]} />
+          ) : (
+            <RecommendationsPromoList promoItems={items} />
+          )}
+        </SkipLinkWrapper>
+      </RecommendationsWrapper>
+    </GridItemMediumNoMargin>
   );
 };
 
 export default CpsRecommendations;
 
 CpsRecommendations.propTypes = {
-  items: arrayOf(
-    shape({
-      assetUri: string.isRequired,
-      shortHeadline: string.isRequired,
-      imageHref: string.isRequired,
-    }),
-  ).isRequired,
-  parentColumns: shape({
-    group0: number,
-    group1: number,
-    group2: number,
-    group3: number,
-    group4: number,
-    group5: number,
-  }).isRequired,
+  items: arrayOf(shape(storyItem)),
+};
+
+CpsRecommendations.defaultProps = {
+  items: [],
 };

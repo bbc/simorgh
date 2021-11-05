@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import SkipLink from '@bbc/psammead-brand/skip-link';
 import BrandContainer from '../Brand';
 import NavigationContainer from '../Navigation';
@@ -7,56 +7,71 @@ import { RequestContext } from '#contexts/RequestContext';
 import ConsentBanner from '../ConsentBanner';
 import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
-import onClient from '#lib/utilities/onClient';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+
+// eslint-disable-next-line react/prop-types
+const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+  return (
+    <>
+      <ConsentBanner onDismissFocusRef={brandRef} />
+      <BrandContainer
+        borderBottom={borderBottom}
+        skipLink={skipLink}
+        scriptLink={scriptLink}
+        brandRef={brandRef}
+        linkId={linkId}
+      />
+    </>
+  );
+};
 
 const HeaderContainer = () => {
-  const { pageType } = useContext(RequestContext);
-  const {
-    service,
-    script,
-    translations,
-    dir,
-    scriptLink,
-    lang,
-    headerFooterLang,
-  } = useContext(ServiceContext);
+  const { pageType, isAmp } = useContext(RequestContext);
+  const { service, script, translations, dir, scriptLink, lang, serviceLang } =
+    useContext(ServiceContext);
   const { skipLinkText } = translations;
-  const borderBottom = pageType !== 'frontPage';
 
   // The article page toggles the nav bar based on environment
   const showNavOnArticles = useToggle('navOnArticles').enabled;
 
   // All other page types show the nav bar at all times
-  const showNav = showNavOnArticles || pageType !== 'article';
+  const showNav = showNavOnArticles || pageType !== ARTICLE_PAGE;
 
-  const isOperaMini = onClient() && window.operamini;
+  const isOperaMini = useOperaMiniDetection();
 
-  // 'headerFooterLang' value is only available in the Ukrainian config as our ukraine_in_russian pages will have
-  // a Ukrainian text for the header and footer but a Russian text for the main element.
-  // However, the skip to content link will also be in Russian, so we need to pass the `ru-UA` lang code to it.
-  const headerLangAttribute = headerFooterLang && { lang: headerFooterLang };
-  const skipLinkLangAttribute = headerLangAttribute && { lang };
+  const brandRef = useRef(null);
 
+  // `serviceLang` is defined when the language the page is written in is different to the
+  // language of the service. `serviceLang` is used to override the page language.
+  // However, the skip to content link remains set in the page language.
   const skipLink = !isOperaMini && (
     <SkipLink
       service={service}
       script={script}
       dir={dir}
       href="#content"
-      {...skipLinkLangAttribute}
+      lang={serviceLang && lang}
     >
-      {skipLinkText}
+      <div>{skipLinkText}</div>
     </SkipLink>
   );
 
   return (
-    <header role="banner" {...headerLangAttribute}>
-      <ConsentBanner />
-      <BrandContainer
-        borderBottom={borderBottom}
-        skipLink={skipLink}
-        scriptLink={scriptLink && <ScriptLink />}
-      />
+    <header role="banner" lang={serviceLang}>
+      {isAmp ? (
+        <Header
+          linkId="brandLink"
+          skipLink={skipLink}
+          scriptLink={scriptLink && <ScriptLink />}
+        />
+      ) : (
+        <Header
+          brandRef={brandRef}
+          skipLink={skipLink}
+          scriptLink={scriptLink && <ScriptLink />}
+        />
+      )}
       {showNav && <NavigationContainer />}
     </header>
   );

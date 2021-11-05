@@ -1,7 +1,12 @@
 import React from 'react';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_POSTBOX_30,
+  C_GHOST,
+} from '@bbc/psammead-styles/colours';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import AmpNavigation from './index.amp';
 import {
@@ -19,6 +24,10 @@ const navigation = (
     script={latin}
     service="news"
     dir="ltr"
+    brandBackgroundColour={C_POSTBOX}
+    brandForegroundColour={C_GHOST}
+    brandHighlightColour={C_WHITE}
+    brandBorderColour={C_POSTBOX_30}
   />
 );
 

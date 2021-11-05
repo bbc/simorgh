@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { thai } from '@bbc/gel-foundations/scripts';
 import { thai as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Bangkok';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'โฆษณา',
-    },
     lang: `th`,
     // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
     isoLang: `th`,
@@ -26,7 +27,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
-    externalLinkText: ', ลิงก์จากภายนอก',
+    externalLinkText: ', จากภายนอก',
     imageCaptionOffscreenText: 'คำบรรยายภาพ, ',
     videoCaptionOffscreenText: 'คำบรรยายวิดีโอ, ',
     audioCaptionOffscreenText: 'คำบรรยายเสียง, ',
@@ -36,6 +37,7 @@ export const service = {
     datetimeLocale: 'th',
     service: 'thai',
     serviceName: 'Thai',
+    languageName: 'Thai',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbc_thailand',
     twitterSite: '@bbc_thailand',
@@ -50,19 +52,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'โฆษณา',
+      },
       seeAll: 'ดูทั้งหมด',
       home: 'หน้าแรก',
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
+      relatedTopics: 'ข่าวที่เกี่ยวข้อง',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
         videoPlayer: 'วิดีโอ เพลเยอร์',
       },
+      gist: 'สรุป',
       error: {
         404: {
           statusCode: '404',
@@ -118,34 +130,78 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์',
-          description: {
-            uk: {
-              first: 'เราใช้ ',
-              linkText: 'คุกกีส์',
-              last:
-                ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'ยอมรับการเก็บข้อมูลและดูเว็บต่อ',
+            reject: 'ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ',
+            initial: {
+              title:
+                'กรุณาแจ้งให้เราทราบว่า คุณยอมรับการเก็บข้อมูลบนหน้าเว็บ AMP',
+              description: {
+                first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
+                linkText: 'คุกกีส์',
+                last: ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'จัดการการตั้งค่าของฉัน',
             },
-            international: {
-              first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
-              linkText: 'คุกกีส์',
-              last:
-                ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'จัดการการตั้งค่าความยินยอมบนหน้าเว็บ AMP',
+              description: {
+                para1:
+                  'การตั้งค่าเหล่านี้ใช้กับหน้าเว็บ AMP เท่านั้น คุณอาจถูกขอให้ตั้งค่าตัวเลือกเหล่านี้ใหม่อีกครั้ง หากเข้าชมหน้าเว็บอื่นของบีบีซีที่ไม่ใช่แบบ AMP',
+                para2:
+                  'หน้าเว็บน้ำหนักเบาสำหรับอุปกรณ์เคลื่อนที่ซึ่งคุณเพิ่งเข้าชมนั้น ถูกสร้างขึ้นโดยใช้เทคโนโลยี AMP ของกูเกิล',
+                heading2: 'จำเป็นต้องเก็บข้อมูลโดยเคร่งครัด',
+                para3:
+                  'เพื่อให้หน้าเว็บของเราทำงานได้ดี เราจึงต้องเก็บสารสนเทศบางอย่างในวงจำกัดไว้บนอุปกรณ์ของคุณ โดยไม่ได้ขอความยินยอมเสียก่อน',
+                para4: {
+                  text: 'อ่านเพิ่มเติมเกี่ยวกับสารสนเทศที่จำเป็นต่อการทำงานของหน้าเว็บ ซึ่งเราเก็บไว้บนอุปกรณ์ของคุณ',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'เราใช้ local storage เก็บรักษาข้อมูลตัวเลือกความยินยอมของคุณ บนอุปกรณ์ของคุณเอง',
+                heading3: 'ไม่บังคับเก็บข้อมูล',
+                para6:
+                  'เมื่อคุณยินยอมให้เก็บข้อมูลบนหน้าเว็บ AMP นั่นเท่ากับยินยอมให้เราแสดงโฆษณาที่คัดเลือกแล้วว่าเหมาะสมเฉพาะบุคคลและเกี่ยวข้องกับคุณ แม้ในเวลาที่คุณอยู่นอกสหราชอาณาจักร',
+                para7: {
+                  text: 'อ่านเพิ่มเติมว่าเราคัดเลือกโฆษณาที่เหมาะสมเฉพาะบุคคลอย่างไรในเว็บไซต์ของบีบีซี รวมทั้งพันธมิตรด้านการโฆษณาของเรา',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'คุณสามารถเลือกไม่รับข้อมูลโฆษณาเฉพาะบุคคลได้ โดยคลิกที่ “ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ” ตรงด้านล่าง โปรดทราบว่าคุณจะยังคงเห็นโฆษณาอยู่ แต่จะไม่ใช่โฆษณาที่ถูกคัดเลือกว่าเหมาะสมเฉพาะกับคุณเท่านั้น',
+                para9:
+                  'คุณสามารถเปลี่ยนการตั้งค่าเหล่านี้ได้โดยคลิกที่ "ตัวเลือกโฆษณา / ห้ามขายข้อมูลของฉัน" ที่ด้านล่างได้ทุกเวลา',
+              },
             },
           },
-          accept: 'ยอมรับ',
-          reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์',
+            description: {
+              uk: {
+                first: 'เราใช้ ',
+                linkText: 'คุกกีส์',
+                last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'เราใช้ ',
+                linkText: 'คุกกีส์',
+                last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'ยอมรับ',
+            reject: 'ไม่ยอมรับ ไปที่การตั้งค่า',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
-        noJs:
-          'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
+        noJs: 'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
         contentExpired: 'เนื้อหานี้ไม่เป็นที่ปรากฏแล้ว',
         contentNotYetAvailable: 'เนื้อหานี้ยังไม่พร้อมแสดง',
         audio: 'เสียง',
@@ -153,6 +209,7 @@ export const service = {
         video: 'วิดีโอ',
         listen: 'ฟัง',
         watch: 'ดูู',
+        listenLive: 'ฟัง สด',
         liveLabel: 'สด',
         nextLabel: 'ถัดไป',
         previousRadioShow: 'รายการวิทยุก่อนหน้า',
@@ -176,6 +233,11 @@ export const service = {
           endTextVisuallyHidden: 'สิ้นสุด %provider_name% โพสต์',
         },
       },
+      include: {
+        errorMessage:
+          'ขออภัย เราไม่สามารถแสดงส่วนนี้ของเรื่องได้บนหน้าโทรศัพท์ที่ใช้แอปอย่างง่าย',
+        linkText: 'ดูแบบเต็มเพื่อดูเนื้อหาทั้งหมด',
+      },
       topStoriesTitle: 'ข่าวเด่น',
       featuresAnalysisTitle: 'เรื่องน่าสนใจ',
     },
@@ -185,6 +247,11 @@ export const service = {
       lastUpdated: 'อัพเดทล่าสุดเมื่อเวลา',
       numberOfItems: 5,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'มียอดชมมากที่สุด',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -199,19 +266,23 @@ export const service = {
       },
       {
         title: 'ประเทศไทย',
-        url: '/thai/topics/1ed75fd4-f992-46db-9859-fb5a7c95da91',
+        url: '/thai/topics/cjgn73g98rqt',
       },
       {
         title: 'ต่างประเทศ',
-        url: '/thai/international',
+        url: '/thai/topics/c5v124k8lj7t',
       },
       {
         title: 'วิทยาศาสตร์',
-        url: '/thai/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+        url: '/thai/topics/c5qvp1q33p0t',
       },
       {
         title: 'สุขภาพ',
-        url: '/thai/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
+        url: '/thai/topics/cyx5kz25zxdt',
+      },
+      {
+        title: 'โควิด-19',
+        url: '/thai/other-news-56319853',
       },
       {
         title: 'วิดีโอ',
@@ -228,7 +299,7 @@ export const service = {
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี ได้',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก',
       },
       links: [
@@ -249,12 +320,12 @@ export const service = {
           text: 'คุกกีส์',
         },
         {
-          href: 'https://www.bbc.com/thai/institutional-37981748',
+          href: 'https://www.bbc.co.uk/send/u50853797',
           text: 'ติดต่อบีบีซี',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

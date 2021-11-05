@@ -14,7 +14,7 @@ const getBaseUrl = origin => {
     base = 'https://www.test.bbc';
   }
 
-  if (origin.includes('.co.uk')) {
+  if (origin.match(/\.co\.uk\/?$/)) {
     tld = '.co.uk';
   }
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
-import { matchSnapshotAsync } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
 import processRadioSchedule from '../utilities/processRadioSchedule';
 import CanonicalRadioSchedule from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 
@@ -15,7 +14,7 @@ const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 const RadioScheduleWithContext = ({ initialData, lang }) => (
   <RequestContextProvider
     isAmp={false}
-    pageType="frontPage"
+    pageType={FRONT_PAGE}
     service="arabic"
     pathname="/arabic"
     timeOnServer={Date.now()}
@@ -43,9 +42,13 @@ describe('Canonical RadioSchedule', () => {
         'arabic',
         Date.now(),
       );
-      await matchSnapshotAsync(
-        <RadioScheduleWithContext initialData={initialData} />,
-      );
+      let container;
+      await act(async () => {
+        container = render(
+          <RadioScheduleWithContext initialData={initialData} />,
+        ).container;
+      });
+      expect(container).toMatchSnapshot();
       expect(fetchMock.calls(endpoint).length).toBeFalsy();
     });
 
@@ -66,6 +69,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains less than 4 programs', async () => {
+      fetchMock.mock(endpoint, arabicRadioScheduleData.schedules.slice(0, 2));
       const initialData = processRadioSchedule(
         { schedules: arabicRadioScheduleData.schedules.slice(0, 2) },
         'arabic',
@@ -82,6 +86,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data contains no programs', async () => {
+      fetchMock.mock(endpoint, []);
       const initialData = processRadioSchedule(
         { schedules: [] },
         'arabic',
@@ -101,8 +106,13 @@ describe('Canonical RadioSchedule', () => {
   describe('Without initial data', () => {
     it('renders correctly for a service with a radio schedule and page frequency URL', async () => {
       fetchMock.mock(endpoint, arabicRadioScheduleData);
+      let container;
 
-      await matchSnapshotAsync(<RadioScheduleWithContext />);
+      await act(async () => {
+        container = await render(<RadioScheduleWithContext />).container;
+      });
+
+      expect(container).toMatchSnapshot();
       expect(fetchMock.calls(endpoint).length).toBeTruthy();
     });
 
@@ -155,6 +165,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data fetched returns non-ok status code', async () => {
+      global.console.error = jest.fn();
       fetchMock.mock(endpoint, 404);
       let container;
 
@@ -165,6 +176,7 @@ describe('Canonical RadioSchedule', () => {
     });
 
     it('does not render when data fetch is rejected', async () => {
+      global.console.error = jest.fn();
       fetchMock.mock(endpoint, {
         throws: 'Server not found',
       });

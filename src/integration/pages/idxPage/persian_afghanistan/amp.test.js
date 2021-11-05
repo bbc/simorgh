@@ -5,4 +5,6 @@
 
 import runAmpTests from '../ampTests';
 
-describe('AMP persian/afghanistan IDX page', runAmpTests);
+describe('AMP persian/afghanistan IDX page', () => {
+  runAmpTests(service);
+});

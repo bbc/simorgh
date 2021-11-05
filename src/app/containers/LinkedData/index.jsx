@@ -5,6 +5,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
 
 const LinkedData = ({
   showAuthor,
@@ -16,6 +17,7 @@ const LinkedData = ({
   dateModified,
   aboutTags,
   entities,
+  imageLocator,
 }) => {
   const {
     brandName,
@@ -23,6 +25,9 @@ const LinkedData = ({
     defaultImage,
     noBylinesPolicy,
     isTrustProjectParticipant,
+    service,
+    languageName,
+    lang,
   } = useContext(ServiceContext);
   const { canonicalNonUkLink } = useContext(RequestContext);
   const IMG_TYPE = 'ImageObject';
@@ -31,7 +36,12 @@ const LinkedData = ({
     : 'Organization';
   const WEB_PAGE_TYPE = 'WebPage';
   const AUTHOR_PUBLISHER_NAME = isTrustProjectParticipant ? brandName : 'BBC';
+  const LANGUAGE_TYPE = 'Language';
   const isNotRadioChannel = type !== 'RadioChannel';
+
+  const brandedIndexImage = imageLocator
+    ? getBrandedImage(imageLocator, service)
+    : null;
 
   const logo = {
     '@type': IMG_TYPE,
@@ -44,8 +54,10 @@ const LinkedData = ({
     '@type': IMG_TYPE,
     width: 1024,
     height: 576,
-    url: defaultImage,
+    url: brandedIndexImage || defaultImage,
   };
+
+  const thumbnailUrl = brandedIndexImage || defaultImage;
 
   const publisher = {
     '@type': ORG_TYPE,
@@ -59,16 +71,23 @@ const LinkedData = ({
     name: seoTitle,
   };
 
+  const inLanguage = {
+    '@type': LANGUAGE_TYPE,
+    name: languageName,
+    alternateName: lang,
+  };
+
   const linkedData = {
     '@type': type,
     url: canonicalNonUkLink,
-    ...(isNotRadioChannel && { publisher, thumbnailUrl: defaultImage }),
+    ...(isNotRadioChannel && { publisher, thumbnailUrl }),
     image,
     mainEntityOfPage,
     headline,
     description,
     datePublished,
     dateModified,
+    inLanguage,
     ...(aboutTags && { about: getAboutTagsContent(aboutTags) }),
     ...(showAuthor && {
       author: {
@@ -114,6 +133,7 @@ LinkedData.propTypes = {
   ),
   // eslint-disable-next-line react/forbid-prop-types
   entities: arrayOf(object),
+  imageLocator: string,
 };
 
 LinkedData.defaultProps = {
@@ -124,6 +144,7 @@ LinkedData.defaultProps = {
   dateModified: undefined,
   aboutTags: undefined,
   entities: [],
+  imageLocator: undefined,
 };
 
 export default LinkedData;

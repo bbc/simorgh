@@ -1,5 +1,5 @@
 import React, { useContext, Fragment } from 'react';
-import { arrayOf, shape, oneOf, number, string } from 'prop-types';
+import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '@bbc/psammead-media-indicator';
@@ -10,12 +10,16 @@ import {
   IndexAlsosLi,
 } from '@bbc/psammead-story-promo/index-alsos';
 import { ServiceContext } from '#contexts/ServiceContext';
+import {
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const MAX_NUM_INDEX_ALSOS = 3; // Cap the number of Index Alsos at 3.
 
 const getMediaType = (cpsType, mediaType) => {
-  const isPGL = cpsType === 'PGL';
-  const isMedia = cpsType === 'MAP';
+  const isPGL = cpsType === PHOTO_GALLERY_PAGE;
+  const isMedia = cpsType === MEDIA_ASSET_PAGE;
   const media = mediaType || 'Video';
 
   if (!isPGL && !isMedia) {
@@ -59,6 +63,26 @@ buildIndexAlsosMediaIndicator.defaultProps = {
   dir: 'ltr',
 };
 
+const extractLinkPromoData = item => {
+  const indexAlsoItem = {};
+  indexAlsoItem.id = pathOr(null, ['uri'], item);
+  indexAlsoItem.indexAlsoHeadline = pathOr(null, ['name'], item);
+  indexAlsoItem.url = pathOr(null, ['uri'], item);
+
+  return indexAlsoItem;
+};
+
+const extractAssetPromoData = item => {
+  const indexAlsoItem = {};
+  indexAlsoItem.id = pathOr(null, ['id'], item);
+  const assetHeadline = pathOr(null, ['headlines', 'headline'], item);
+  const overtypedHeadline = pathOr(null, ['headlines', 'overtyped'], item);
+  indexAlsoItem.indexAlsoHeadline = overtypedHeadline || assetHeadline;
+  indexAlsoItem.url = pathOr(null, ['locators', 'assetUri'], item);
+
+  return indexAlsoItem;
+};
+
 /*
  * When there are more than one Index Alsos, they should be wrapped in a list item `IndexAlsosLi` within an unordered list `IndexAlsosUl`.
  * On the other hand, when there is exactly one Index Also, it should use the `IndexAlso` component and it should not be contained within a list.
@@ -75,17 +99,16 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
     <IndexAlsos offScreenText={relatedContent} data-e2e="index-alsos">
       <IndexAlsosWrapper>
         {alsoItems.slice(0, MAX_NUM_INDEX_ALSOS).map(item => {
-          const { id, cpsType, mediaType } = item;
+          const { cpsType, mediaType } = item;
 
-          const headline = pathOr(null, ['headlines', 'headline'], item);
-          const overtypedHeadline = pathOr(
-            null,
-            ['headlines', 'overtyped'],
-            item,
-          );
-          const indexAlsoHeadline = overtypedHeadline || headline;
+          let indexAlsoData;
+          if (item.type === 'link') {
+            indexAlsoData = extractLinkPromoData(item);
+          } else {
+            indexAlsoData = extractAssetPromoData(item);
+          }
+          const { id, indexAlsoHeadline, url } = indexAlsoData;
 
-          const url = pathOr(null, ['locators', 'assetUri'], item);
           const indexAlsoMediaIndicator = buildIndexAlsosMediaIndicator({
             cpsType,
             mediaType,
@@ -115,7 +138,7 @@ const IndexAlsosContainer = ({ alsoItems, script, service, dir }) => {
   );
 };
 
-const alsoItemsPropTypes = shape({
+const assetPromoAlsoItemsPropTypes = shape({
   headlines: shape({
     headline: string.isRequired,
   }).isRequired,
@@ -130,8 +153,16 @@ const alsoItemsPropTypes = shape({
   type: string,
 });
 
+const linkPromoAlsoItemsPropTypes = shape({
+  name: string.isRequired,
+  url: string.isRequired,
+  id: string.isRequired,
+});
+
 IndexAlsosContainer.propTypes = {
-  alsoItems: arrayOf(alsoItemsPropTypes).isRequired,
+  alsoItems: arrayOf(
+    oneOfType([assetPromoAlsoItemsPropTypes, linkPromoAlsoItemsPropTypes]),
+  ).isRequired,
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   dir: oneOf(['ltr', 'rtl']),

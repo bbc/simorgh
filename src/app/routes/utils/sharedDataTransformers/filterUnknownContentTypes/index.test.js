@@ -1,6 +1,11 @@
 import filterUnknownContentTypes from '.';
 import azeriFixtureData from '#data/azeri/frontpage/index.json';
 import igboFixtureData from '#data/igbo/frontpage/index.json';
+import {
+  PHOTO_GALLERY_PAGE,
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 /*
  * CPS types
@@ -11,13 +16,13 @@ const cpsItems = [
     headlines: {
       headline: 'A very important story',
     },
-    cpsType: 'STY',
+    cpsType: STORY_PAGE,
   },
   {
     headlines: {
       headline: 'A very important map',
     },
-    cpsType: 'MAP',
+    cpsType: MEDIA_ASSET_PAGE,
   },
   {
     headlines: {
@@ -281,7 +286,7 @@ describe('filterUnknownContentTypes', () => {
                   headlines: {
                     headline: 'Group 1 - STY',
                   },
-                  cpsType: 'STY',
+                  cpsType: STORY_PAGE,
                 },
                 {
                   headlines: {
@@ -297,13 +302,13 @@ describe('filterUnknownContentTypes', () => {
                   headlines: {
                     headline: 'Group 2 - PGL',
                   },
-                  cpsType: 'PGL',
+                  cpsType: PHOTO_GALLERY_PAGE,
                 },
                 {
                   headlines: {
                     headline: 'Group 2 - MAP',
                   },
-                  cpsType: 'MAP',
+                  cpsType: MEDIA_ASSET_PAGE,
                 },
               ],
             },
@@ -319,7 +324,7 @@ describe('filterUnknownContentTypes', () => {
                   headlines: {
                     headline: 'Group 1 - STY',
                   },
-                  cpsType: 'STY',
+                  cpsType: STORY_PAGE,
                 },
               ],
             },
@@ -329,13 +334,13 @@ describe('filterUnknownContentTypes', () => {
                   headlines: {
                     headline: 'Group 2 - PGL',
                   },
-                  cpsType: 'PGL',
+                  cpsType: PHOTO_GALLERY_PAGE,
                 },
                 {
                   headlines: {
                     headline: 'Group 2 - MAP',
                   },
-                  cpsType: 'MAP',
+                  cpsType: MEDIA_ASSET_PAGE,
                 },
               ],
             },

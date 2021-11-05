@@ -4,7 +4,7 @@ const { exec, spawn } = require('child_process');
 const argv = require('minimist')(process.argv.slice(2));
 const ora = require('ora');
 
-const isCI = argv.ci;
+const onlyRunTests = Boolean(argv.onlyRunTests);
 const isDev = Boolean(argv.dev);
 process.env.DEV_MODE = isDev;
 
@@ -12,7 +12,8 @@ const getJestArgs = () =>
   process.argv
     .slice(2)
     .filter(flag => !flag.startsWith('--pageTypes='))
-    .filter(flag => !flag.startsWith('--dev'));
+    .filter(flag => !flag.startsWith('--dev'))
+    .filter(flag => !flag.startsWith('--onlyRunTests'));
 
 const getFilesToTest = pageTypes => {
   if (pageTypes) {
@@ -26,14 +27,14 @@ const filesToTest = getFilesToTest(argv.pageTypes);
 
 const stopApp = () =>
   new Promise(resolve => {
-    const child = exec('npm run stop');
+    const child = exec('yarn stop');
 
     child.on('exit', resolve);
   });
 
 const buildApp = () =>
   new Promise(resolve => {
-    const child = exec('npm run build:local');
+    const child = exec('yarn build:local');
 
     child.on('exit', resolve);
   });
@@ -41,7 +42,7 @@ const buildApp = () =>
 const startApp = () => {
   return new Promise(resolve => {
     const child = exec(
-      `npm run ${
+      `yarn ${
         isDev ? 'dev' : 'start'
       } & ./node_modules/.bin/wait-on -t 20000 http://localhost:7080/status`,
     );
@@ -51,18 +52,25 @@ const startApp = () => {
 };
 
 const runTests = () =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     const child = spawn(
       'jest',
       [filesToTest, '--runInBand', '--colors', ...getJestArgs()],
       { stdio: 'inherit' },
     );
-
-    child.on('exit', resolve);
+    child.on('exit', code => {
+      if (code === 1) {
+        reject();
+      } else {
+        resolve();
+      }
+    });
   });
 
-if (isCI) {
-  runTests();
+if (onlyRunTests) {
+  runTests().catch(() => {
+    process.exit(1);
+  });
 } else {
   const spinner = ora().start();
 
@@ -90,5 +98,9 @@ if (isCI) {
         }),
     )
     .then(runTests)
-    .then(stopApp);
+    .then(stopApp)
+    .catch(async () => {
+      await stopApp();
+      process.exit(1);
+    });
 }

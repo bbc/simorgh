@@ -2,9 +2,11 @@ import { matchRoutes } from 'react-router-config';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { variantSanitiser } from '#lib/utilities/variantHandler';
-import { fallbackAmpParam, fallbackServiceParam } from './routeFallbackParams';
+import fallbackServiceParam from './fallbackServiceParam';
+import isAmpPath from '#app/routes/utils/isAmpPath';
+import routes from '#app/routes';
 
-const getRouteProps = (routes, url) => {
+const getRouteProps = url => {
   const matchedRoutes = matchRoutes(routes, url);
 
   const route = path([0, 'route'], matchedRoutes);
@@ -15,12 +17,12 @@ const getRouteProps = (routes, url) => {
   const service = path(['service'], params);
   const variantPath = path(['variant'], params);
   const id = path(['id'], params);
-  const errorCode = path(['errorCode'], params);
   const assetUri = path(['assetUri'], params);
   const variant = variantSanitiser(variantPath);
+  const errorCode = path(['errorCode'], params);
 
   return {
-    isAmp: 'amp' in params ? !!amp : fallbackAmpParam(url),
+    isAmp: 'amp' in params ? !!amp : isAmpPath(url),
     service: service || fallbackServiceParam(url),
     variant,
     id,

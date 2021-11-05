@@ -1,0 +1,212 @@
+[
+  {
+    "headlines":{
+      "shortHeadline":"कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा",
+      "headline":"कोविड-19 महामारीः तो सबसे ज़्यादा मौतों की वजह वायरस नहीं होगा"
+    },
+    "locators":{
+      "assetUri":"/hindi/vert-fut-53035307",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/vert-fut-53035307",
+      "curie":"http://www.bbc.co.uk/asset/d581a169-118c-ac47-a910-7268cfb693de",
+      "assetId":"53035307"
+    },
+    "summary":"कोरोना वायरस की वजह से भुखमरी के कगार पर पहुंच सकती है दुनिया.",
+    "timestamp":1593077447000,
+    "language":"hi",
+    "byline":{
+      "name":"ज़ारिया गोर्वेट",
+      "title":" बीबीसी फ्यूचर",
+      "persons":[
+        {
+          "name":"Dan Egan",
+          "function":""
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName":"Feature"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"113093139",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/16BD3/production/_113093139_694cda5f-d84d-4d58-8459-62f6b47cea3c.jpg",
+      "path":"/cpsprodpb/16BD3/production/_113093139_694cda5f-d84d-4d58-8459-62f6b47cea3c.jpg",
+      "height":549,
+      "width":976,
+      "altText":"गोद में बच्चे को लिए मां",
+      "copyrightHolder":"EPA",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:hindi/vert-fut-53035307",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"कोरोना से मिले कौन से सबक़ हम याद रखेंगे?",
+      "headline":"कोरोना से मिले कौन से सबक़ हम याद रखेंगे?"
+    },
+    "locators":{
+      "assetUri":"/hindi/vert-fut-52698483",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/vert-fut-52698483",
+      "curie":"http://www.bbc.co.uk/asset/cd57d000-cf38-644f-8e4f-c1972661bdd8",
+      "assetId":"52698483"
+    },
+    "summary":"कोरोना वायरस के प्रकोप के बाद दुनिया बहुत बदल गई है लेकिन क्या आगे भी यह बदलाव जारी रहने वाला है.",
+    "timestamp":1589798376000,
+    "language":"hi",
+    "byline":{
+      "name":"मार्था हेनरिक्स",
+      "title":"बीबीसी फ़्यूचर",
+      "persons":[
+        {
+          "name":"Flora Carmichael & Marianna Spring",
+          "function":"BBC Trending"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"112327890",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/2690/production/_112327890_e3cee08f-e60a-4594-bc2c-e7b0cf81ea17.jpg",
+      "path":"/cpsprodpb/2690/production/_112327890_e3cee08f-e60a-4594-bc2c-e7b0cf81ea17.jpg",
+      "height":549,
+      "width":976,
+      "altText":"प्रकृति",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:hindi/vert-fut-52698483",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?",
+      "headline":"कोविड-19 के बाद हमारी यात्राएं कैसी होंगी?"
+    },
+    "locators":{
+      "assetUri":"/hindi/vert-tra-52355324",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/vert-tra-52355324",
+      "curie":"http://www.bbc.co.uk/asset/9710efef-20d2-dc46-bc7a-6b5486ad2daa",
+      "assetId":"52355324"
+    },
+    "summary":"ग़ैर-ज़रूरी यात्राओं पर पाबंदी और कुछ देशों में संपूर्ण लॉकडाउन के बाद हम क़ुदरत के वो रूप देख पा रहे हैं जो हमने ज़िंदगी में पहले कभी नहीं देखे थे.",
+    "timestamp":1587479220000,
+    "language":"hi",
+    "byline":{
+      "name":"क्लोई बर्ज",
+      "title":"बीबीसी ट्रैवल",
+      "persons":[
+        {
+          "name":"Abdujalil Abdurasulov",
+          "function":"BBC News Almata"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"111859395",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/E803/production/_111859395_285b90d5-9fbe-4420-96bb-34bb00f95d8d.jpg",
+      "path":"/cpsprodpb/E803/production/_111859395_285b90d5-9fbe-4420-96bb-34bb00f95d8d.jpg",
+      "height":549,
+      "width":976,
+      "altText":"प्राकृतिक दृश्य",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:hindi/vert-tra-52355324",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"शाकाहारी खाना क्या दुनिया को बचा सकता है?",
+      "headline":"शाकाहारी खाना क्या दुनिया को बचा सकता है?"
+    },
+    "locators":{
+      "assetUri":"/hindi/magazine-46920029",
+      "cpsUrn":"urn:bbc:content:assetUri:hindi/magazine-46920029",
+      "curie":"http://www.bbc.co.uk/asset/516de40c-38f0-9142-b54b-c876c42ab3ac",
+      "assetId":"46920029"
+    },
+    "summary":"दुनिया की सेहत सुधारने के लिए वैज्ञानिकों ने बनाया है ये डाइट प्लान.",
+    "timestamp":1587349867000,
+    "language":"hi",
+    "byline":{
+      "name":"जेम्स गैलाघर",
+      "title":"हेल्थ एडिटर, बीबीसी",
+      "persons":[
+        {
+          "name":"अनंत प्रकाश",
+          "function":"बीबीसी संवाददाता"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"Give me perspective"
+        },
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"Update me"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"105238116",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/EEFF/production/_105238116_427456ad-09c4-4909-86d2-0a44255e6970.jpg",
+      "path":"/cpsprodpb/EEFF/production/_105238116_427456ad-09c4-4909-86d2-0a44255e6970.jpg",
+      "height":549,
+      "width":976,
+      "altText":"खानपान",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:hindi/magazine-46920029",
+    "type":"cps"
+  }
+]

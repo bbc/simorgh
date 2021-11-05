@@ -7,7 +7,7 @@ import {
 } from '../utilities/scriptSwitchingJourneyActions';
 import {
   getPrivacyBannerAccept,
-  getCookieBannerAccept,
+  getCookieBannerAcceptCanonical,
 } from '../utilities/cookiePrivacyBanner';
 
 export default ({
@@ -30,7 +30,7 @@ export default ({
       getPrivacyBannerAccept(serviceId, variant).click();
 
       // Accept cookie banner
-      getCookieBannerAccept(serviceId, variant).click();
+      getCookieBannerAcceptCanonical(serviceId, variant).click();
 
       cy.log(
         `Asserting script switch button, url and document lang for variant: ${variant}`,

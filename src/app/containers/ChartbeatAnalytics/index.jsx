@@ -13,12 +13,12 @@ const ChartbeatAnalytics = ({ data }) => {
     brandName,
     chartbeatDomain,
     mostRead: { header: mostReadTitle },
+    mostWatched: { header: mostWatchedTitle },
   } = useContext(ServiceContext);
   const { sendCanonicalChartbeatBeacon } = useContext(UserContext);
   const { enabled } = useToggle('chartbeatAnalytics');
-  const { env, isAmp, platform, pageType, previousPath, origin } = useContext(
-    RequestContext,
-  );
+  const { env, isAmp, platform, pageType, previousPath, origin } =
+    useContext(RequestContext);
   const isAmpAndEnabled = isAmp && enabled;
   const isCanonicalAndEnabled = !isAmp && enabled;
 
@@ -34,6 +34,7 @@ const ChartbeatAnalytics = ({ data }) => {
     origin,
     previousPath,
     mostReadTitle,
+    mostWatchedTitle,
   };
 
   const chartbeatConfig = getConfig(configDependencies);

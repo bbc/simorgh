@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { string, arrayOf, shape } from 'prop-types';
+import { string, arrayOf, shape, bool } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Metadata from '../Metadata';
-import getBrandedImage from './utils/getBrandedImage';
+import getBrandedImage from '#lib/utilities/getBrandedImage';
 
 const CpsMetadata = ({
   title,
+  shortHeadline,
   language,
   description,
   firstPublished,
@@ -13,6 +14,7 @@ const CpsMetadata = ({
   imageLocator,
   imageAltText,
   aboutTags,
+  hasAppleItunesAppBanner,
 }) => {
   const { service, articleAuthor } = useContext(ServiceContext);
   const brandedImage = imageLocator
@@ -21,12 +23,14 @@ const CpsMetadata = ({
   return (
     <Metadata
       title={title}
+      socialHeadline={shortHeadline}
       lang={language}
       description={description}
       openGraphType="article"
       image={brandedImage}
       imageAltText={imageAltText}
       aboutTags={aboutTags}
+      hasAppleItunesAppBanner={hasAppleItunesAppBanner}
     >
       <meta name="article:author" content={articleAuthor} />
       <meta name="article:published_time" content={firstPublished} />
@@ -47,6 +51,7 @@ const tagPropTypes = shape({
 
 CpsMetadata.propTypes = {
   title: string.isRequired,
+  shortHeadline: string.isRequired,
   language: string.isRequired,
   description: string.isRequired,
   firstPublished: string.isRequired,
@@ -54,12 +59,14 @@ CpsMetadata.propTypes = {
   imageLocator: string,
   imageAltText: string,
   aboutTags: arrayOf(tagPropTypes),
+  hasAppleItunesAppBanner: bool,
 };
 
 CpsMetadata.defaultProps = {
   imageLocator: null,
   imageAltText: null,
   aboutTags: [],
+  hasAppleItunesAppBanner: false,
 };
 
 export default CpsMetadata;

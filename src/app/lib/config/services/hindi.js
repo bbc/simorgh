@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { hindi as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Kolkata';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: true,
-      advertisementLabel: 'विज्ञापन',
-    },
     lang: `hi`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'अपडेटेड',
@@ -24,16 +25,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hindi.png',
     defaultImageAltText: 'BBC News हिंदी',
     dir: `ltr`,
-    externalLinkText: ', बाहरी सामग्री',
+    externalLinkText: ', बाहरी',
     imageCaptionOffscreenText: 'इमेज कैप्शन, ',
     videoCaptionOffscreenText: 'वीडियो कैप्शन, ',
     audioCaptionOffscreenText: 'ऑडियो कैप्शन, ',
     defaultCaptionOffscreenText: 'कैप्शन, ',
     imageCopyrightOffscreenText: 'इमेज स्रोत, ',
     locale: `hi-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'hi',
     datetimeLocale: `hi`,
     service: 'hindi',
     serviceName: 'Hindi',
+    languageName: 'Hindi',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbchindi',
     twitterSite: '@bbchindi',
@@ -49,19 +53,48 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
+    },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'विवेचना',
+      brandDescription:
+        'नई रिलीज़ हुई फ़िल्मों की समीक्षा करता साप्ताहिक कार्यक्रम',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09kn96g.jpg',
+        alt: 'बीबीसी 70 एमएम',
+      },
+      linkLabel: {
+        text: 'एपिसोड्स',
+        href: 'https://www.bbc.com/hindi/podcasts/p05523zq',
+      },
+      skipLink: {
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
+      },
     },
     translations: {
+      ads: {
+        advertisementLabel: 'विज्ञापन',
+      },
+      recommendationTitle: 'और ये भी पढ़ें',
       seeAll: 'सब देखें',
       home: 'होम पेज',
       currentPage: 'मौजूदा पन्ना',
       skipLinkText: 'सामग्री को स्किप करें',
       relatedContent: 'संबंधित समाचार',
+      relatedTopics: 'मिलते-जुलते मुद्दे',
       navMenuText: 'सेक्शन',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिया प्लेयर',
         videoPlayer: 'वीडियो प्लेयर',
       },
+      gist: 'सारांश',
       error: {
         404: {
           statusCode: '404',
@@ -117,30 +150,75 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
-          description: {
-            uk: {
-              first: 'हम ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'डेटा कलेक्शन की मंजूरी दें और आगे बढ़ें',
+            reject: 'डेटा कलेक्शन को नामंज़ूर करें और आगे बढ़ें',
+            initial: {
+              title:
+                'हमें बताएँ कि आप एएमपी पर डेटा क्लेक्शन की सहमति दे रहे हैं',
+              description: {
+                first:
+                  'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
+                linkText: 'कुकीज़',
+                last: ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'सेटिंग्स मैनेज करें',
             },
-            international: {
-              first:
-                'हम और हमारे पार्टनर इस तरह की कुछ तकनीकों का इस्तेमाल करते हैं ',
-              linkText: 'कुकीज़',
-              last:
-                ' का इस्तेमाल करके हम आपके ब्राउज़िंग डेटा की ज़रिए आपको बेहतर और ख़ास तौर पर आपके लिए सेवाएं देेते हैं. इससे हमें आपको सही कंटेंट और उपयुक्त विज्ञापन दिखाने में मदद मिलती है. हमें बताएं कि क्या आप इस पर राज़ी हैं.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'एएमपी पेज की सेटिंग्स पर जाकर अपनी मंज़ूरी को मैनेज करें',
+              description: {
+                para1:
+                  'ये सेटिंग्स सिर्फ़ एएमपी पन्नों के लिए ही है, आपसे आपकी पसंद दोबारा पूछी जा सकती है अगर आप बिना एएमपी वाले बीबीसी पन्ने पर जाते हैं.',
+                para2:
+                  'जो हल्का मोबाइल पन्ना आप देख रहे हैं उसे गूगल की एएमपी टेक्नोलॉजी के ज़रिए बनाया गया है.',
+                heading2: 'पूरी तरह ज़रूरी डेटा क्लेक्शन',
+                para3:
+                  'अपनी वेबसाइट के ठीक से काम करने के लिए हमें सीमित स्तर पर कुछ जानकारियाँ सेव करनी पड़ती हैं जिसके लिए हम आपसे मंज़ूरी नहीं मांगते.',
+                para4: {
+                  text: 'उन जरूरी जानकारी के बारे में और अधिक पढ़ें जो हमने आपके डिवाइस पर स्टोर किए हैं ताकि पेज ठीक से दिख सके.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'हमें आपकी मंज़ूरी और पसंद को आपकी डिवाइस के लोकल स्टोरेज में स्टोर करते हैं.',
+                heading3: 'वैकल्पिक डेटा क्लेक्शन',
+                para6:
+                  'जब आप हमें एएमपी डेटा कलेक्शन की मंज़ूरी देते हैं तो इसका मतलब होता है कि आप हमें आपकी रुचि के विज्ञापन दिखाने की भी मंज़ूरी दे रहे हैं. ऐसा तभी होता है जब आप ब्रिटेन से बाहर हों.',
+                para7: {
+                  text: 'हम आपकी रुचि के अनुरूप विज्ञापन और अपने विज्ञापनदाता कैसे चुनते हैं यह जानने के लिए और पढ़ें.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'आप डेटा कलेक्शन को नामंज़ूर करके आगे बढ़ने का विकल्प चुनते हैं तो आपकी रुचि के अनुरूप विज्ञापन नहीं दिखाए जाएँगे, लेकिन विज्ञापन आपको फिर भी दिखाए जाएँगे लेकिन वे पर्सनलाइज्ड नहीं होंगे.',
+                para9:
+                  'आप एड च्वाइसेस वाले बटन पर क्लिक करके अपनी पसंद बदल सकते हैं. आप डो नॉट सेल माइ इनफ़ो वाले बटन पर कभी भी क्लिक कर सकते हैं.',
+              },
             },
           },
-          accept: 'हां, मैं राज़ी हूं',
-          reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'हमें बताएं कि आप कुकीज़ को लेकर सहमत हैं',
+            description: {
+              uk: {
+                first: 'हम ',
+                linkText: 'कुकीज़',
+                last: ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'हम ',
+                linkText: 'कुकीज़',
+                last: ' का इस्तेमाल आपको बेहतर ऑनलाइन सेवाएं देने के लिए करते हैं. हमें बताएं कि आप इन सभी कुकीज़ से सहमत हैं.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'हां, मैं राज़ी हूं',
+            reject: 'नहीं, मुझे सेटिंग्स पर ले चलें',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -162,11 +240,15 @@ export const service = {
         },
         listen: 'सुनिए',
         watch: 'देखिए',
+        listenLive: 'लाइव सुनें',
+        listenNext: 'इसके बाद सुनिए',
         liveLabel: 'लाइव',
         nextLabel: 'अगला',
         previousRadioShow: 'पिछला रेडियो शो',
         nextRadioShow: 'अगला रेडियो शो',
         duration: 'अवधि',
+        recentEpisodes: 'प्रसारण का समय',
+        podcastExternalLinks: 'ये पॉडकास्ट इन प्लेटफ़ॉर्म्स पर भी उपलब्ध है -',
       },
       socialEmbed: {
         caption: {
@@ -185,6 +267,12 @@ export const service = {
           endTextVisuallyHidden: 'पोस्ट %provider_name% समाप्त',
         },
       },
+      include: {
+        errorMessage:
+          'माफ़ी चाहते हैं, हम इस स्टोरी का कुछ हिस्सा लाइटवेट मोबाइल पेज पर नहीं दिखा सकते.',
+        linkText:
+          'आप अगर पूरी स्टोरी देखना चाहते हैं तो हमारे फुल वर्ज़न पर जाएं.',
+      },
       topStoriesTitle: 'टॉप स्टोरी',
       featuresAnalysisTitle: 'ज़रूर पढ़ें',
     },
@@ -195,11 +283,20 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'सबसे ज्यादा देखे गए',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: false,
     },
     recommendations: {
       hasStoryRecommendations: true,
+      skipLink: {
+        text: 'छोड़कर %title% आगे बढ़ें',
+        endTextVisuallyHidden: 'समाप्त',
+      },
     },
     footer: {
       trustProjectLink: {
@@ -207,7 +304,7 @@ export const service = {
         text: 'आप बीबीसी पर क्यों भरोसा कर सकते हैं',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाहरी साइटों का लिंक देने की हमारी नीति के बारे में पढ़ें.',
       },
       links: [
@@ -228,12 +325,12 @@ export const service = {
           text: 'कुकीज़',
         },
         {
-          href: 'https://www.bbc.com/hindi/institutional-37342616',
+          href: 'https://www.bbc.co.uk/send/u50853357',
           text: 'बीबीसी से संपर्क करें',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -254,35 +351,31 @@ export const service = {
       },
       {
         title: 'भारत',
-        url: '/hindi/india',
+        url: '/hindi/topics/ckdxnkz7607t',
       },
       {
         title: 'विदेश',
-        url: '/hindi/international',
+        url: '/hindi/topics/c9wpm0en87xt',
       },
       {
         title: 'मनोरंजन',
-        url: '/hindi/entertainment',
+        url: '/hindi/topics/c06gq3n0pp7t',
       },
       {
         title: 'खेल',
-        url: '/hindi/sport',
+        url: '/hindi/topics/cwr9j8g1kj9t',
       },
       {
         title: 'विज्ञान-टेक्नॉलॉजी',
-        url: '/hindi/science',
+        url: '/hindi/topics/c2lej0594knt',
       },
       {
         title: 'सोशल',
-        url: '/hindi/social',
+        url: '/hindi/topics/c2e4q0z9qznt',
       },
       {
         title: 'वीडियो',
         url: '/hindi/media/video',
-      },
-      {
-        title: 'बीबीसी स्पेशल',
-        url: '/hindi/in_depth',
       },
     ],
   },

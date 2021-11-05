@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { latinDiacritics } from '@bbc/gel-foundations/scripts';
-import { ServiceContext } from '#contexts/ServiceContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
-import recommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
+import ltrRecommendationsData from '#data/mundo/recommendations/index.json';
+import rtlRecommendationsData from '#data/arabic/recommendations/index.json';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import CpsRecommendations from '.';
 
@@ -18,29 +19,20 @@ const parentColumns = {
   group5: 12,
 };
 
-const renderContainer = (items, hasStoryRecommendations, toggleEnabled) => {
+const renderContainer = (items, service, toggleEnabled) => {
   const toggleState = {
     cpsRecommendations: {
       enabled: toggleEnabled,
     },
   };
   return render(
-    <ServiceContext.Provider
-      value={{
-        script: latinDiacritics,
-        service: 'mundo',
-        dir: 'ltr',
-        recommendations: {
-          hasStoryRecommendations,
-        },
-      }}
-    >
+    <ServiceContextProvider service={service}>
       <RequestContextProvider
         bbcOrigin="https://www.test.bbc.co.uk"
         isAmp={false}
-        pageType="STY"
-        pathname="/mundo/085965"
-        service="mundo"
+        pageType={STORY_PAGE}
+        pathname="/service/085965"
+        service={service}
         statusCode={200}
       >
         <ToggleContext.Provider
@@ -49,42 +41,110 @@ const renderContainer = (items, hasStoryRecommendations, toggleEnabled) => {
           <CpsRecommendations items={items} parentColumns={parentColumns} />
         </ToggleContext.Provider>
       </RequestContextProvider>
-    </ServiceContext.Provider>,
+    </ServiceContextProvider>,
   );
 };
 
 describe('CpsRecommendations', () => {
   it('should not render when cpsRecommendations toggle is disabled', () => {
     const toggleEnabled = false;
-    const hasStoryRecommendations = true;
-    const { items } = recommendationsData;
+
     const { container } = renderContainer(
-      items,
-      hasStoryRecommendations,
+      ltrRecommendationsData,
+      'mundo',
       toggleEnabled,
     );
     expect(container).toMatchSnapshot();
   });
-  it('should not render when the hasStoryRecommendations flag is disabled for the service', () => {
-    const hasStoryRecommendations = false;
+  it('should not render when the service does not support recommendations', () => {
     const toggleEnabled = true;
-    const { items } = recommendationsData;
+
     const { container } = renderContainer(
-      items,
-      hasStoryRecommendations,
+      ltrRecommendationsData,
+      'news',
       toggleEnabled,
     );
     expect(container).toMatchSnapshot();
   });
-  it('should render when cpsRecommendations toggle and hasStoryRecommendations flag are both true', () => {
+
+  it('should contain a region landmark role', () => {
     const toggleEnabled = true;
-    const hasStoryRecommendations = true;
-    const { items } = recommendationsData;
-    const { container } = renderContainer(
-      items,
-      hasStoryRecommendations,
+
+    const { getByRole } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
       toggleEnabled,
     );
+
+    const section = getByRole('region');
+    expect(section.getAttribute('aria-labelledby')).toBe(
+      'recommendations-heading',
+    );
+  });
+
+  it('should contain a link to skip to end of recommendations component', () => {
+    const toggleEnabled = true;
+
+    const { container } = renderContainer(
+      ltrRecommendationsData,
+      'mundo',
+      toggleEnabled,
+    );
+
+    const links = container.querySelectorAll('a');
+    const skipLink = links[0];
+
+    expect(skipLink.getAttribute('href')).toEqual('#end-of-recommendations');
+    expect(skipLink.textContent).toEqual(
+      'Saltar Quizás también te interese y continuar leyendo',
+    );
+  });
+
+  it('should not render a list when there is only one promo', () => {
+    const toggleEnabled = true;
+    const { queryByRole } = renderContainer(
+      [ltrRecommendationsData[0]],
+      'mundo',
+      toggleEnabled,
+    );
+
+    expect(queryByRole('list')).not.toBeInTheDocument();
+    expect(queryByRole('listitem')).not.toBeInTheDocument();
+  });
+
+  it('should not render when there is no recommendations data', () => {
+    const toggleEnabled = true;
+
+    const { container } = renderContainer([], 'mundo', toggleEnabled);
     expect(container).toMatchSnapshot();
+  });
+
+  describe('should render when cpsRecommendations toggle is enabled and the service supports recommendations', () => {
+    const toggleEnabled = true;
+
+    it('for multiple items', () => {
+      const { container } = renderContainer(
+        ltrRecommendationsData,
+        'mundo',
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
+    it('for a single item', () => {
+      const { container } = renderContainer(
+        [ltrRecommendationsData[0]],
+        'mundo',
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
+    it('for rtl service', () => {
+      const { container } = renderContainer(
+        rtlRecommendationsData,
+        'arabic',
+        toggleEnabled,
+      );
+      expect(container).toMatchSnapshot();
+    });
   });
 });

@@ -9,7 +9,7 @@ export const mediaPromoPropTypes = {
   type: string,
 };
 
-export const optimoPromoSummaryPropTypes = {
+export const optimoPromoHeadlineOrSummaryPropTypes = {
   blocks: arrayOf(
     shape({
       model: shape({
@@ -35,12 +35,15 @@ export const optimoPromoPropTypes = {
   id: string.isRequired,
   headlines: shape({
     seoHeadline: string.isRequired,
-    promoHeadline: string,
+    promoHeadline: oneOfType([
+      shape(optimoPromoHeadlineOrSummaryPropTypes),
+      string,
+    ]),
   }),
   locators: shape({
     optimoUrn: string.isRequired,
   }),
-  summary: oneOfType([shape(optimoPromoSummaryPropTypes), string]),
+  summary: oneOfType([shape(optimoPromoHeadlineOrSummaryPropTypes), string]),
   timestamp: number,
 };
 

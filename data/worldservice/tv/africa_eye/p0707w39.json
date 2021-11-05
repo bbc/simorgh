@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p0707w39",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p070byzh"
+    },
+    "media_type": "audio_video",
+    "title": "Anatomy of a Killing",
+    "short_synopsis": "The captives are blindfolded and shot 22 times: Africa Eye prove who's responsible for it.",
+    "medium_synopsis": "In July 2018 a horrifying video began to circulate on social media. Africa Eye prove exactly where this happened, when it happened, and who is responsible for the killings.",
+    "long_synopsis": "In July 2018 a horrifying video began to circulate on social media. It shows two women and two young children being led away at gunpoint by a group of Cameroonian soldiers. The captives are blindfolded, forced to the ground, and shot 22 times.\n \nThe government of Cameroon initially dismissed the video as “fake news.” But BBC Africa Eye, through forensic analysis of the footage, can prove exactly where this happened, when it happened, and who is responsible for the killings.\n \nWarning: this video contains disturbing content\n \nInvestigation by Aliaume Leroy and Ben Strick.\nProduced by Daniel Adamson and Aliaume Leroy.\nMotion Graphics: Tom Flannery \n\nYouTube: http://bit.ly/subscribetoafrica \nWebsite: https://www.bbc.co.uk/programmes/w13xttpn\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/ \nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Anatomy of a Killing"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p0707w3j",
+        "duration": 660,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

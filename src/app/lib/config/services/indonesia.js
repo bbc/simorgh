@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { indonesia as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Asia/Jakarta';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Iklan',
-    },
     lang: `id`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Diperbarui',
@@ -31,9 +32,12 @@ export const service = {
     defaultCaptionOffscreenText: 'Keterangan, ',
     imageCopyrightOffscreenText: 'Sumber gambar, ',
     locale: `id-ID`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'id',
     datetimeLocale: `id`,
     service: 'indonesia',
     serviceName: 'Indonesia',
+    languageName: 'Indonesian',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcindonesia',
     twitterSite: '@bbcindonesia',
@@ -49,19 +53,47 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
+    },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Dunia Pagi Ini BBC Indonesia',
+      brandDescription:
+        'BBC Indonesia mengudara pada Pukul 05.00 dan 06.00 WIB, Senin sampai Jumat',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lr8.jpg',
+        alt: 'Dunia Pagi Ini BBC Indonesia',
+      },
+      linkLabel: {
+        text: 'Episode',
+        href: 'https://www.bbc.com/indonesia/podcasts/p02pc9v6',
+      },
+      skipLink: {
+        text: 'Lewati %title% dan lanjutkan membaca',
+        endTextVisuallyHidden: 'Akhir dari %title%',
+      },
     },
     translations: {
+      ads: {
+        advertisementLabel: 'Iklan',
+      },
       seeAll: 'Lihat semua',
       home: 'Berita',
       currentPage: 'Halaman saat ini',
       skipLinkText: 'Langsung ke konten',
       relatedContent: 'Berita terkait',
+      relatedTopics: 'Topik terkait',
       navMenuText: 'Kategori',
       mediaAssetPage: {
         mediaPlayer: 'Pemutar Media',
         audioPlayer: 'Pemutar Audio',
         videoPlayer: 'Pemutar Video',
       },
+      gist: 'Rangkuman',
       error: {
         404: {
           statusCode: '404',
@@ -117,34 +149,79 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
-          description: {
-            uk: {
-              first: 'Kami menggunakan ',
-              linkText: 'cookies',
-              last:
-                ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Terima pengambilan data dan lanjutkan',
+            reject: 'Tolak pengambilan data dan lanjutkan',
+            initial: {
+              title:
+                'Beri tahu kami Anda jika setuju dengan pengambilan data melalui AMP.',
+              description: {
+                first:
+                  'Kami dan para mitra kami menggunakan teknologi, seperti ',
+                linkText: 'cookies',
+                last: ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Atur pengaturan saya',
             },
-            international: {
-              first: 'Kami dan para mitra kami menggunakan teknologi, seperti ',
-              linkText: 'cookies',
-              last:
-                ', dan mengumpulkan data rambanan untuk memberikan Anda pengalaman daring terbaik dengan konten dan iklan yang ditampilkan disesuaikan dengan keperluan Anda. Mohon beritahu kami bila Anda setuju.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Atur persetujuan pengaturan di halaman AMP',
+              description: {
+                para1:
+                  'Pengaturan itu berlaku pada halaman AMP saja. Anda mungkin akan ditanya lagi untuk mengatur preferensi ketika Anda mengunjungi halaman non-AMP BBC.',
+                para2:
+                  'Halaman ponsel yang Anda kunjungi dibuat dengan menggunakan teknologi AMP Google',
+                heading2: 'Pengambilan data sangat diperlukan',
+                para3:
+                  'Agar situs kami tetap berjalan, kami menyimpan sejumlah informasi terbatas dalam perangkat Anda tanpa persetujuan Anda.',
+                para4: {
+                  text: 'Baca lebih jauh tentang informasi penting yang kami simpan di perangkat Anda untuk memastikan situs kami berjalan.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Kami menggunakan penyimpanan lokal untuk menyimpan preferensi yang Anda pilih dalam perangkat Anda.',
+                heading3: 'Pengambilan data opsional',
+                para6:
+                  'Bila Anda menyetujui pengambilan data pada halaman AMP, Anda mengizinkan kami menampilkan preferensi iklan Anda, yang relevan bagi Anda bila Anda berada di luar Inggris.',
+                para7: {
+                  text: 'Baca lebih lanjut bagaimana kami menyesuaikan iklan di BBC dan mitra-mira iklan kami.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Anda dapat memilih untuk tidak menerima iklan yang disesuaikan dengan pilihan Anda dengan mengeklik "Tolak pengambilan data dan lanjutkan" di bawah ini. Anda tetap dapat melihat iklan, namun tak sesuai dengan pilihan Anda.',
+                para9:
+                  'Anda dapat mengubah pengaturan dengan mengeklik "Pilihan iklan/Jangan sebarkan informasi saya" di catatan kaki, kapan saja.',
+              },
             },
           },
-          accept: 'Ya, saya setuju',
-          reject: 'Tidak, tampilkan pengaturan',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Tolong beritahu kami apakah Anda setuju dengan cookies',
+            description: {
+              uk: {
+                first: 'Kami menggunakan ',
+                linkText: 'cookies',
+                last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Kami menggunakan ',
+                linkText: 'cookies',
+                last: ' untuk memberikan Anda pengalaman daring terbaik. Mohon beritahu kami, bila Anda setuju dengan semua cookies ini.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ya, saya setuju',
+            reject: 'Tidak, tampilkan pengaturan',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
-        noJs:
-          'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
+        noJs: 'Untuk memutar video ini, aktifkan JavaScript atau coba di mesin pencari lain',
         contentExpired: 'Konten ini sudah tidak tersedia lagi.',
         contentNotYetAvailable: 'Program ini belum tersedia.',
         audio: 'Audio',
@@ -152,11 +229,15 @@ export const service = {
         video: 'Video',
         listen: 'Dengar',
         watch: 'Tonton',
+        listenLive: 'Mendengarkan langsung',
+        listenNext: 'Dengar yang berikut',
         liveLabel: 'LANGSUNG',
-        nextLabel: 'NEXT',
+        nextLabel: 'BERIKUTNYA',
         previousRadioShow: 'Siaran radio sebelumnya',
         nextRadioShow: 'Siaran radio berikutnya',
         duration: 'Durasi',
+        recentEpisodes: 'Siaran sebelumnya',
+        podcastExternalLinks: 'Podcast ini juga tersedia di',
       },
       socialEmbed: {
         caption: {
@@ -175,6 +256,11 @@ export const service = {
           endTextVisuallyHidden: 'Lompati %provider_name% pesan',
         },
       },
+      include: {
+        errorMessage:
+          'Maaf, kami tidak dapat menampilkan bagian dari berita ini dalam versi ramah mobile',
+        linkText: 'Lihat versi lengkap di laman untuk melihat seluruh konten',
+      },
       topStoriesTitle: 'Berita Utama',
       featuresAnalysisTitle: 'Majalah',
     },
@@ -185,10 +271,15 @@ export const service = {
       numberOfItems: 10,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Terpopuler',
+      numberOfItems: 5,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: false,
-      durationLabel: 'Duration %duration%',
+      header: 'Siaran radio',
+      durationLabel: 'Durasi %duration%',
     },
     recommendations: {
       hasStoryRecommendations: false,
@@ -199,8 +290,7 @@ export const service = {
         text: 'Alasan Anda dapat mempercayai BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
+        href: 'https://www.bbc.com/indonesia/institutional/2011/02/000001_links',
         text: 'Baca tentang peraturan baru terkait link eksternal.',
       },
       links: [
@@ -221,12 +311,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/indonesia/institutional-37818427',
+          href: 'https://www.bbc.co.uk/send/u50853401',
           text: 'Hubungi BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

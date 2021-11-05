@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import AVPlayer from '.';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const GenerateFixtureData = ({
@@ -15,6 +16,7 @@ const GenerateFixtureData = ({
   type = 'video',
   embedUrl,
   iframeTitle = 'ویډیو پلیئر',
+  skin = 'classic',
 }) => (
   <RequestContextProvider
     isAmp={platform === 'amp'}
@@ -22,7 +24,7 @@ const GenerateFixtureData = ({
     statusCode={200}
     platform={platform}
     id="foo"
-    pageType="media"
+    pageType={MEDIA_PAGE}
     pathname="/pathname"
   >
     <ServiceContextProvider service="news">
@@ -34,6 +36,7 @@ const GenerateFixtureData = ({
           iframeTitle={iframeTitle}
           title={title}
           type={type}
+          skin={skin}
         />
       </BrowserRouter>
     </ServiceContextProvider>
@@ -43,7 +46,7 @@ const GenerateFixtureData = ({
 const AVPlayerCanonicalODTV = (
   <GenerateFixtureData
     platform="canonical"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
+    embedUrl="https://test.bbc.com/ws/av-embeds/media/pashto/bbc_pashto_tv/w172xcldhhrdqgb/ps?morph_env=live"
   />
 );
 
@@ -61,7 +64,7 @@ const AVPlayerAMPODRadio = (
 const AVPlayerLiveRadio = (
   <GenerateFixtureData
     platform="canonical"
-    embedUrl="https://polling.test.bbc.co.uk/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
+    embedUrl="https://test.bbc.com/ws/av-embeds/media/bbc_korean_radio/liveradio/ko"
     title="Live radio"
     type="audio"
     iframeTitle="오디오 플레이어"

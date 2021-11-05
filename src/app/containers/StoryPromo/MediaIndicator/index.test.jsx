@@ -1,7 +1,12 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
 import MediaIndicator from '.';
+import {
+  MEDIA_ASSET_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 
 const audioItem = {
   headlines: {
@@ -10,7 +15,7 @@ const audioItem = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'audio',
     versions: [
@@ -28,7 +33,7 @@ const videoItem = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'video',
     versions: [
@@ -46,7 +51,7 @@ const photogalleryItem = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'PGL',
+  cpsType: PHOTO_GALLERY_PAGE,
 };
 
 const nonMediaItem = {
@@ -60,10 +65,23 @@ const noDurationItem = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     format: 'video',
     versions: [{}],
+  },
+};
+
+const externalVpidNoCpsTypeItem = {
+  headlines: {
+    headline: 'A video item',
+  },
+  locators: {
+    assetUri: 'https://www.bbc.co.uk',
+  },
+  media: {
+    format: 'video',
+    type: 'external_vpid',
   },
 };
 
@@ -74,7 +92,7 @@ const noMediaObject = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
 };
 
 const noMediaFormat = {
@@ -84,7 +102,7 @@ const noMediaFormat = {
   locators: {
     assetUri: 'https://www.bbc.co.uk',
   },
-  cpsType: 'MAP',
+  cpsType: MEDIA_ASSET_PAGE,
   media: {
     versions: [
       {
@@ -145,6 +163,18 @@ describe('Story Promo Media Indicator', () => {
       service="news"
     />,
   );
+
+  it('should render correctly even without duration and cps type', () => {
+    const { container } = render(
+      <MediaIndicator
+        dir="ltr"
+        item={externalVpidNoCpsTypeItem}
+        script={latin}
+        service="news"
+      />,
+    );
+    expect(container.querySelector('div')).toBeInTheDocument();
+  });
 
   isNull(
     'should not render if item media object has no format',

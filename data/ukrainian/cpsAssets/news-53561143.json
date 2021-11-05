@@ -1,0 +1,297 @@
+{
+  "content":{
+    "blocks":[
+      {
+        "embed":{
+          "fallback_image":{
+            "alt_text":"YouTube post by BBC News Україна: Виробництво героїну стрімко зросло завдяки сонячним батареям. Погляд з Британії",
+            "fallback_image_height":269,
+            "fallback_image_width":500
+          },
+          "oembed":{
+            "author_name":"BBC News Україна",
+            "author_url":"https://www.youtube.com/user/UkrainianBBC",
+            "height":270,
+            "html":"<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/dPwOWy7GjM8?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "provider_name":"YouTube",
+            "provider_url":"https://www.youtube.com/",
+            "thumbnail_height":360,
+            "thumbnail_url":"https://i.ytimg.com/vi/dPwOWy7GjM8/hqdefault.jpg",
+            "thumbnail_width":480,
+            "title":"Виробництво героїну стрімко зросло завдяки сонячним батареям. Погляд з Британії",
+            "version":"1.0",
+            "width":480
+          }
+        },
+        "href":"https://www.youtube.com/watch?v=dPwOWy7GjM8&feature=youtu.be",
+        "id":"dPwOWy7GjM8",
+        "source":"youtube",
+        "type":"social_embed"
+      },
+      {
+        "markupType":"plain_text",
+        "role":"introduction",
+        "text":"Зелена енергетика - на службі криміналітету.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Приклад того, як новітні технології служать не лише силам прогресу, а й злочинності, виявило розслідування журналістів ВВС. ",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"За минулі 5 років афганські селяни, які вирощують опійний мак, перейшли на використання сонячних панелей. ",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Виробництво опіуму, а відтак і героїну виросло в кілька разів.  ",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"plain_text",
+        "text":"Про те, чим це загрожує Британії і Європі, кореспондентка ВВС News Україна Ірена Таранюк, розповідала в ефірі програми &quot;Факти&quot; з Оксаною Гутцайт на телеканалі ICTV.",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"candy_xml",
+        "text":"<italic>Це - фрагмент включення 27 липня.</italic>",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"candy_xml",
+        "text":"<italic>Ви також можете </italic><link><caption>подивитись включення на YouTube</caption><url href=\"https://www.youtube.com/watch?v=dPwOWy7GjM8&amp;feature=youtu.be\" platform=\"highweb\"/></link><italic>.</italic>",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"candy_xml",
+        "text":"<link><caption>Всі включення в партнерів на нашому YouTube</caption><url href=\"https://www.youtube.com/playlist?list=PL04AskXwevrj3cQmplOzoDQSYMdBSS1qJ\" platform=\"highweb\"/></link>. ",
+        "type":"paragraph"
+      },
+      {
+        "markupType":"candy_xml",
+        "text":"<italic>І підписуйтеся на </italic><link><caption>наш Youtube-канал</caption><url href=\"http://www.youtube.com/user/UkrainianBBC\" platform=\"highweb\"/></link><italic>!  </italic>",
+        "type":"paragraph"
+      }
+    ]
+  },
+  "metadata":{
+    "analyticsLabels":{
+      "counterName":"ukrainian.news.story.53561143.page",
+      "cps_asset_id":"53561143",
+      "cps_asset_type":"sty"
+    },
+    "atiAnalytics":{
+      "producerId":"94",
+      "producerName":"UKRAINIAN"
+    },
+    "blockTypes":[
+      "social_embed",
+      "paragraph"
+    ],
+    "createdBy":"ukrainian-v6",
+    "firstPublished":1595942713000,
+    "id":"urn:bbc:ares::asset:ukrainian/news-53561143",
+    "includeComments":false,
+    "language":"uk",
+    "lastPublished":1595942713000,
+    "lastUpdated":1595945068228,
+    "locators":{
+      "assetId":"53561143",
+      "assetUri":"/ukrainian/news-53561143",
+      "cpsUrn":"urn:bbc:content:assetUri:ukrainian/news-53561143",
+      "curie":"http://www.bbc.co.uk/asset/9e539daf-1d79-4630-900c-7db33c4bf1ac"
+    },
+    "options":{
+      "allowAdvertising":true,
+      "allowDateStamp":true,
+      "allowHeadline":true,
+      "allowPrintingSharingLinks":true,
+      "allowRelatedStoriesBox":true,
+      "allowRightHandSide":true,
+      "hasContentWarning":false,
+      "hasNewsTracker":false,
+      "includeComments":false,
+      "isBreakingNews":false,
+      "isFactCheck":false,
+      "isIgorSeoTagsEnabled":false,
+      "isKeyContent":false,
+      "suitableForSyndication":true
+    },
+    "passport":{
+      "campaigns":[
+        {
+          "campaignId":"5a988e2939461b000e9dabf8",
+          "campaignName":"WS - Educate me"
+        }
+      ],
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "taggings":[
+
+      ]
+    },
+    "tags":{
+      "about":[
+        {
+          "curationList":[
+            {
+              "curationId":"0a7394f6-125d-4892-a338-43d66113ec07",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Afghanistan",
+          "thingId":"1a5696c5-07d0-4a08-8b54-41ad5cd534b6",
+          "thingLabel":"Афганістан",
+          "thingSameAs":[
+            "http://sws.geonames.org/1149361/"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Place",
+            "core:Thing"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/1a5696c5-07d0-4a08-8b54-41ad5cd534b6#id",
+          "topicId":"cvjp20q59z6t",
+          "topicName":"Афганістан"
+        },
+        {
+          "curationList":[
+            {
+              "curationId":"5238251a-289b-4711-b859-41b9a01f87d8",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Drug use",
+          "thingId":"37cd3473-7b24-44b0-84c1-bf3c4801df5e",
+          "thingLabel":"Вживання наркотиків",
+          "thingSameAs":[
+            "http://www.wikidata.org/entity/Q7708739",
+            "http://dbpedia.org/resource/Recreational_drug_use"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Theme",
+            "core:Thing"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/37cd3473-7b24-44b0-84c1-bf3c4801df5e#id",
+          "topicId":"cwr9j9xxrxxt",
+          "topicName":"Вживання наркотиків"
+        },
+        {
+          "curationList":[
+            {
+              "curationId":"c6c0f417-e128-4bb8-91af-01574c1068c4",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Drugs trade",
+          "thingId":"4b4cca1c-d458-4310-819e-dd48572b12c4",
+          "thingLabel":"Наркоторгівля",
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Illegal_drug_trade"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Theme"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/4b4cca1c-d458-4310-819e-dd48572b12c4#id",
+          "topicId":"cwr9j9xxr90t",
+          "topicName":"Наркоторгівля"
+        },
+        {
+          "curationList":[
+            {
+              "curationId":"66aab782-10e3-47f5-a9cb-7432f6b24c83",
+              "curationType":"vivo-stream"
+            }
+          ],
+          "thingEnglishLabel":"Ukraine",
+          "thingId":"ee8750ed-a7fb-453f-bfca-2aa8b3fb064c",
+          "thingLabel":"Україна",
+          "thingSameAs":[
+            "http://dbpedia.org/resource/Ukraine",
+            "http://www.wikidata.org/entity/Q212",
+            "http://sws.geonames.org/690791/"
+          ],
+          "thingType":[
+            "tagging:TagConcept",
+            "core:Thing",
+            "core:Place"
+          ],
+          "thingUri":"http://www.bbc.co.uk/things/ee8750ed-a7fb-453f-bfca-2aa8b3fb064c#id",
+          "topicId":"c1gdqr12p11t",
+          "topicName":"Україна"
+        }
+      ]
+    },
+    "timestamp":1595942713000,
+    "type":"STY",
+    "version":"v1.3.2"
+  },
+  "promo":{
+    "headlines":{
+      "headline":"Виробництво героїну зросло завдяки сонячним батареям. Погляд з Британії",
+      "shortHeadline":"Виробництво героїну зросло завдяки сонячним батареям. Погляд з Британії"
+    },
+    "id":"urn:bbc:ares::asset:ukrainian/news-53561143",
+    "indexImage":{
+      "altText":"\"Сонячний\" героїн",
+      "caption":"Героїн",
+      "copyrightHolder":"BBC",
+      "height":1080,
+      "href":"http://c.files.bbci.co.uk/035A/production/_113685800_promo27.07.jpg",
+      "id":"113685800",
+      "path":"/cpsprodpb/035A/production/_113685800_promo27.07.jpg",
+      "subType":"index",
+      "type":"image",
+      "width":1920
+    },
+    "language":"uk",
+    "locators":{
+      "assetId":"53561143",
+      "assetUri":"/ukrainian/news-53561143",
+      "cpsUrn":"urn:bbc:content:assetUri:ukrainian/news-53561143",
+      "curie":"http://www.bbc.co.uk/asset/9e539daf-1d79-4630-900c-7db33c4bf1ac"
+    },
+    "passport":{
+      "campaigns":[
+        {
+          "campaignId":"5a988e2939461b000e9dabf8",
+          "campaignName":"WS - Educate me"
+        }
+      ],
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "taggings":[
+
+      ]
+    },
+    "summary":"Поля опійного маку в Афганістані виросли більш як удвічі завдяки зрошуванню на сонячних панелях.",
+    "timestamp":1595942713000,
+    "type":"cps"
+  },
+  "relatedContent":{
+    "groups":[
+
+    ],
+    "section":{
+      "name":"Новини",
+      "subType":"index",
+      "type":"simple",
+      "uri":"/ukrainian/news"
+    },
+    "site":{
+      "name":"BBC Україна",
+      "subType":"site",
+      "type":"simple",
+      "uri":"/ukrainian"
+    }
+  }
+}

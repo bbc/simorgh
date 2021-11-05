@@ -18,20 +18,19 @@ const getLoggingFunction = level =>
     [LOG_LEVELS.ERROR]: logger.error,
   }[level] || logger.info);
 
-const pathWithLogging = (url, logCategory, pageData) => (
-  fieldPath,
-  { logLevel = LOG_LEVELS.INFO } = {},
-) => {
-  const field = path(fieldPath, pageData);
-  if (isNil(field)) {
-    const loggingFunction = getLoggingFunction(logLevel);
-    loggingFunction(logCategory, {
-      url,
-      path: fieldPath,
-    });
-  }
+const pathWithLogging =
+  (url, logCategory, pageData) =>
+  (fieldPath, logLevel = LOG_LEVELS.INFO) => {
+    const field = path(fieldPath, pageData);
+    if (isNil(field)) {
+      const loggingFunction = getLoggingFunction(logLevel);
+      loggingFunction(logCategory, {
+        url,
+        path: fieldPath,
+      });
+    }
 
-  return field;
-};
+    return field;
+  };
 
 export default curry(pathWithLogging);

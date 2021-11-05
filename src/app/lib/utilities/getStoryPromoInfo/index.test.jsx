@@ -1,14 +1,12 @@
-import { getAssetTypeCode, getHeadlineUrlAndLive } from '.';
+import { getAssetTypeCode, getHeadline, getUrl, getIsLive } from '.';
 
 const assetTypeCode = {
-  name:
-    "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
+  name: "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
   summary: '',
   indexImage: {
     id: '98847234',
     subType: 'index',
-    href:
-      'http://c.files.bbci.co.uk/A90A/production/_98847234_istanbul.eski.jpg',
+    href: 'http://c.files.bbci.co.uk/A90A/production/_98847234_istanbul.eski.jpg',
     path: '/cpsprodpb/A90A/production/_98847234_istanbul.eski.jpg',
     height: 1152,
     width: 2048,
@@ -50,8 +48,7 @@ const noAssetTypeCode = {
   indexImage: {
     id: '107503429',
     subType: 'index',
-    href:
-      'http://c.files.bbci.co.uk/1690E/production/_107503429_mediaitem107503428.jpg',
+    href: 'http://c.files.bbci.co.uk/1690E/production/_107503429_mediaitem107503428.jpg',
     path: '/cpsprodpb/1690E/production/_107503429_mediaitem107503428.jpg',
     height: 1152,
     width: 2048,
@@ -68,96 +65,83 @@ const noAssetTypeCode = {
 };
 
 describe('getStoryPromoInfo', () => {
-  describe('assertions', () => {
-    describe('getAssetTypeCode', () => {
-      it('should return the assetTypeCode that is present', () => {
-        expect(getAssetTypeCode(assetTypeCode)).toEqual('PRO');
-      });
-
-      it('should return null if the assetTypeCode is not present', () => {
-        expect(getAssetTypeCode(noAssetTypeCode)).toEqual(null);
-      });
+  describe('getAssetTypeCode', () => {
+    it('should return the assetTypeCode that is present', () => {
+      expect(getAssetTypeCode(assetTypeCode)).toEqual('PRO');
     });
 
-    describe('getHeadlineUrlAndLive', () => {
-      it('should return the correct headline, url and null for assetTypeCode', () => {
-        expect(
-          getHeadlineUrlAndLive(assetTypeCode, getAssetTypeCode(assetTypeCode)),
-        ).toEqual({
-          headline:
-            "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
-          url: 'http://www.bbc.com/turkce/haberler-turkiye-42068713',
-          isLive: undefined,
-        });
-      });
+    it('should return null if the assetTypeCode is not present', () => {
+      expect(getAssetTypeCode(noAssetTypeCode)).toEqual(null);
+    });
+  });
 
-      it('should return the correct headline, url and isLive for noAssetTypeCode', () => {
-        expect(
-          getHeadlineUrlAndLive(
-            noAssetTypeCode,
-            getAssetTypeCode(noAssetTypeCode),
-          ),
-        ).toEqual({
-          headline:
-            "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
-          url: '/turkce/haberler-dunya-48735662',
-          isLive: false,
-        });
-      });
+  describe('getHeadline', () => {
+    it('should return the correct headline for assetTypeCode', () => {
+      expect(getHeadline(assetTypeCode)).toEqual(
+        "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
+      );
+    });
 
-      it('should return the correct headline, url and isLive for live asset', () => {
-        const liveAsset = { ...noAssetTypeCode, cpsType: 'LIV' };
-        expect(
-          getHeadlineUrlAndLive(liveAsset, getAssetTypeCode(liveAsset)),
-        ).toEqual({
-          headline:
-            "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
-          url: '/turkce/haberler-dunya-48735662',
-          isLive: true,
-        });
-      });
+    it('should return the correct headline for noAssetTypeCode', () => {
+      expect(getHeadline(noAssetTypeCode)).toEqual(
+        "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
+      );
+    });
 
-      it('should return null if headline is missing no asset type code', () => {
-        const noHeadline = { ...noAssetTypeCode, headlines: undefined };
-        expect(
-          getHeadlineUrlAndLive(noHeadline, getAssetTypeCode(noHeadline)),
-        ).toEqual({
-          headline: null,
-          url: '/turkce/haberler-dunya-48735662',
-          isLive: false,
-        });
-      });
+    it('should return the correct headline for live asset', () => {
+      const liveAsset = { ...noAssetTypeCode, cpsType: 'LIV' };
+      expect(getHeadline(liveAsset)).toEqual(
+        "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
+      );
+    });
 
-      it('should return null if url is missing no asset type code', () => {
-        const noUrl = { ...noAssetTypeCode, locators: undefined };
-        expect(getHeadlineUrlAndLive(noUrl, getAssetTypeCode(noUrl))).toEqual({
-          headline:
-            "Fotoğraflarla: Almanya'da iklim aktivistleri açık kömür madenine girdi",
-          url: null,
-          isLive: false,
-        });
-      });
+    it('should return null if headline is missing asset type code', () => {
+      const noHeadline = { ...assetTypeCode, name: undefined };
+      expect(getHeadline(noHeadline)).toEqual(null);
+    });
+  });
 
-      it('should return null if headline is missing asset type code', () => {
-        const noHeadline = { ...assetTypeCode, name: undefined };
-        expect(
-          getHeadlineUrlAndLive(noHeadline, getAssetTypeCode(noHeadline)),
-        ).toEqual({
-          headline: null,
-          url: 'http://www.bbc.com/turkce/haberler-turkiye-42068713',
-          isLive: undefined,
-        });
-      });
+  describe('getUrl', () => {
+    it('should return the correct url for assetTypeCode', () => {
+      expect(getUrl(assetTypeCode)).toEqual(
+        'http://www.bbc.com/turkce/haberler-turkiye-42068713',
+      );
+    });
 
-      it('should return null if url is missing asset type code', () => {
-        const noUrl = { ...assetTypeCode, uri: undefined };
-        expect(getHeadlineUrlAndLive(noUrl, getAssetTypeCode(noUrl))).toEqual({
-          headline:
-            "BBC'nin 60 yıllık Türkiye arşivlerini izleyicilerimizle buluşturuyoruz",
-          url: null,
-          isLive: undefined,
-        });
-      });
+    it('should return the correct url for noAssetTypeCode', () => {
+      expect(getUrl(noAssetTypeCode)).toEqual(
+        '/turkce/haberler-dunya-48735662',
+      );
+    });
+
+    it('should return the correct url for live asset', () => {
+      const liveAsset = { ...noAssetTypeCode, cpsType: 'LIV' };
+      expect(getUrl(liveAsset)).toEqual('/turkce/haberler-dunya-48735662');
+    });
+
+    it('should return null if url is missing no asset type code', () => {
+      const noUrl = { ...noAssetTypeCode, locators: undefined };
+      expect(getUrl(noUrl)).toEqual(null);
+    });
+
+    it('should return null if url is missing asset type code', () => {
+      const noUrl = { ...assetTypeCode, uri: undefined };
+      expect(getUrl(noUrl, getAssetTypeCode(noUrl))).toEqual(null);
+    });
+  });
+
+  describe('getIsLive', () => {
+    it('should return the correct isLive value for assetTypeCode', () => {
+      expect(getIsLive(assetTypeCode)).toEqual(false);
+    });
+
+    it('should return the correct isLive value for noAssetTypeCode', () => {
+      expect(getIsLive(noAssetTypeCode)).toEqual(false);
+    });
+
+    it('should return the correct isLive value for live asset', () => {
+      const liveAsset = { ...noAssetTypeCode, cpsType: 'LIV' };
+      expect(getIsLive(liveAsset)).toEqual(true);
     });
   });
 });

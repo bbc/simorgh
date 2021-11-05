@@ -7,7 +7,10 @@ const ServiceWorkerContainer = () => {
   const envIsProduction = process.env.NODE_ENV === 'production';
 
   useEffect(() => {
-    if (envIsProduction && onClient() && 'serviceWorker' in navigator) {
+    const shouldInstallServiceWorker =
+      envIsProduction && swPath && onClient() && 'serviceWorker' in navigator;
+
+    if (shouldInstallServiceWorker) {
       navigator.serviceWorker.register(`/${service}${swPath}`);
     }
   }, [envIsProduction, swPath, service]);

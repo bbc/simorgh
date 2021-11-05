@@ -16,7 +16,11 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
 
     if (errorPath) {
       it('should return a 404 error code', () => {
-        cy.testResponseCodeAndType(`${errorPath}.amp`, 404, 'text/html');
+        cy.testResponseCodeAndType({
+          path: `${errorPath}.amp`,
+          responseCode: 404,
+          type: 'text/html',
+        });
       });
     } else {
       describe(`No ${pageType} found for ${service}`, () => {});

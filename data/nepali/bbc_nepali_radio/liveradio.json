@@ -1,32 +1,9 @@
 {
-  "metadata": {
-    "id": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
-    "locators": {
-      "pipsUrn": "urn:bbc:pips:bbc_nepali_radio"
-    },
-    "type": "WS-LIVE",
-    "createdBy": "nepali",
-    "language": "ne",
-    "lastUpdated": 0,
-    "firstPublished": 0,
-    "lastPublished": 0,
-    "options": {},
-    "analyticsLabels": {
-      "pageTitle": "बीबीसी नेपाली रेडियो - BBC News नेपाली",
-      "pageIdentifier": "nepali.bbc_nepali_radio.liveradio.page",
-      "producerId": "63",
-      "contentType": "player-live",
-      "producer": "NEPALI"
-    },
-    "tags": {},
-    "version": "1.1.2",
-    "blockTypes": ["heading", "version", "paragraph"]
-  },
   "content": {
     "blocks": [
       {
-        "text": "बीबीसी नेपाली रेडियो",
         "markupType": "plain_text",
+        "text": "बीबीसी नेपाली रेडियो",
         "type": "heading"
       },
       {
@@ -34,34 +11,58 @@
         "type": "paragraph"
       },
       {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_nepali_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
         "available": true,
+        "caption": "",
+        "duration": "PT0S",
+        "embedding": false,
+        "externalId": "bbc_nepali_radio",
+        "format": "audio",
+        "id": "liveradio",
         "live": true,
+        "subType": "primary",
         "type": "version"
       }
     ]
   },
+  "metadata": {
+    "analyticsLabels": {
+      "contentType": "player-live",
+      "pageIdentifier": "nepali.bbc_nepali_radio.liveradio.page",
+      "pageTitle": "बीबीसी नेपाली रेडियो - BBC News नेपाली",
+      "producer": "NEPALI",
+      "producerId": "63"
+    },
+    "atiAnalytics": {},
+    "blockTypes": ["heading", "version", "paragraph"],
+    "createdBy": "nepali",
+    "firstPublished": 0,
+    "id": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
+    "language": "ne",
+    "lastPublished": 0,
+    "lastUpdated": 0,
+    "locators": {
+      "pipsUrn": "urn:bbc:pips:bbc_nepali_radio"
+    },
+    "options": {},
+    "tags": {},
+    "type": "WS-LIVE",
+    "version": "1.1.2"
+  },
   "promo": {
+    "contentType": "WS-LIVE",
+    "id": "urn:bbc:ares:ws_media:live:bbc_nepali_radio",
     "name": "बीबीसी नेपाली रेडियो",
     "summary": "नेपाली भाषामा बीबीसी विश्व सेवाको राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार तथा समसामयिक चर्चा, राष्ट्रिय तथा अन्तर्राष्ट्रिय समाचार विश्लेषण, समाचारमा रहेका व्यक्तित्वहरुसंगको अन्तर्वार्ता, साप्ताहिक बहस तथा छलफल, विज्ञान, स्वास्थ्य.",
-    "uri": "/nepali/bbc_nepali_radio/liveradio",
-    "contentType": "WS-LIVE",
-    "id": "urn:bbc:ares::ws_live:bbc_nepali_radio",
-    "type": "link"
+    "type": "link",
+    "uri": "/nepali/bbc_nepali_radio/liveradio"
   },
   "relatedContent": {
+    "groups": [],
     "site": {
-      "subType": "simple",
       "name": "nepali",
-      "uri": "/nepali",
-      "type": "simple"
-    },
-    "groups": []
+      "subType": "simple",
+      "type": "simple",
+      "uri": "/nepali"
+    }
   }
 }

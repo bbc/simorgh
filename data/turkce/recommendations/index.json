@@ -1,0 +1,187 @@
+[
+  {
+    "headlines":{
+      "shortHeadline":"Lübnan'da ekonomik kriz ülkeyi karanlığa gömdü",
+      "headline":"Lübnan'da ekonomik kriz ülkeyi karanlığa gömdü"
+    },
+    "locators":{
+      "assetUri":"/turkce/haberler-dunya-53444307",
+      "cpsUrn":"urn:bbc:content:assetUri:turkce/haberler-dunya-53444307",
+      "curie":"http://www.bbc.co.uk/asset/10f5ff5d-6872-43a9-a823-82365a0babff",
+      "assetId":"53444307"
+    },
+    "summary":"Lübnan'da elektrik kesintileri genelde şaşırılacak bir durum değil. Ama son dönemde evlerinde mum depolayan, geleneksel gaz lambalarını kullanan ve çalışmayan buzdolaplarında çürüyen gıdaları çöpe atmak zorunda kalanların sayısı artıyor. Ülkede derinleşen ekonomik krizin yansıması elektrik kesintilerinin artmasında görülüyor.",
+    "timestamp":1594979246000,
+    "language":"tr",
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e4739461b000e9dabfc",
+          "campaignName":"WS - Update me"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"113477784",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/BE89/production/_113477784_062382461-2.jpg",
+      "path":"/cpsprodpb/BE89/production/_113477784_062382461-2.jpg",
+      "height":549,
+      "width":976,
+      "altText":"70 yaşındaki Samira Hanna günde yalnızca 2 saat elektrik alabiliyor.",
+      "caption":"70 yaşındaki Samira Hanna günde yalnızca 2 saat elektrik alabiliyor.",
+      "copyrightHolder":"Reuters",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:turkce/haberler-dunya-53444307",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"Koronavirüs deneyimi akıllı şehirlerin kurulmasına nasıl yardımcı olabilir?",
+      "headline":"Koronavirüs: Salgında deneyimi akıllı şehirlerin kurulmasına nasıl yardımcı olabilir?"
+    },
+    "locators":{
+      "assetUri":"/turkce/haberler-53381944",
+      "cpsUrn":"urn:bbc:content:assetUri:turkce/haberler-53381944",
+      "curie":"http://www.bbc.co.uk/asset/b1ee09c9-c177-4217-aea4-b3aa876052e8",
+      "assetId":"53381944"
+    },
+    "summary":"Koronavirüs salgını nedeniyle uygulanan sokağa çıkma kısıtlamaları şehir yaşamı üzerinde önemli etkiler yaptı. Bu dönemde kullanıma sokulan teknolojiler ilerleyen zamanlarda şehirlerin daha akıllı hale gelmesine yol açabilir mi?",
+    "timestamp":1594563168000,
+    "language":"tr",
+    "byline":{
+      "name":"Jane Wakefield",
+      "title":"Teknoloji Muhabiri",
+      "persons":[
+        {
+          "name":"Jane Wakefield",
+          "function":"Technology reporter"
+        }
+      ]
+    },
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName":"News"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"113204225",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/CC10/production/_113204225_greencity.jpg",
+      "path":"/cpsprodpb/CC10/production/_113204225_greencity.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Cities with forest in foreground",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:turkce/haberler-53381944",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"Avrupa başkentleri ne durumda?",
+      "headline":"Koronavirüs: Avrupa başkentleri ne durumda?"
+    },
+    "locators":{
+      "assetUri":"/turkce/haberler-dunya-52056391",
+      "cpsUrn":"urn:bbc:content:assetUri:turkce/haberler-dunya-52056391",
+      "curie":"http://www.bbc.co.uk/asset/72612e4e-c025-0c42-8608-7bb22bd782f0",
+      "assetId":"52056391"
+    },
+    "summary":"Avrupalıların özgürlükleri kıta genelinde kısıtlanmış durumda. Yetkililer koronavirüsün yayılmasının önüne geçmek için önlem üzerine önlem alıyor. Avrupa başkentlerindeki BBC muhabirleri gözlemlerini aktarıyor.",
+    "timestamp":1585292692000,
+    "language":"tr",
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName":"Feature"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"111412640",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/120D/production/_111412640_budapest.jpg",
+      "path":"/cpsprodpb/120D/production/_111412640_budapest.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Winter in Budapest",
+      "caption":"As wintry conditions returned to Budapest, the government sought unlimited powers to tackle the crisis",
+      "copyrightHolder":"Andras Foldes",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:turkce/haberler-dunya-52056391",
+    "type":"cps"
+  },
+  {
+    "headlines":{
+      "shortHeadline":"Guatemala'nın beyaz bayrakları salgının ölümcül yan etkisine işaret ediyor: Açlık",
+      "headline":"Guatemala'nın beyaz bayrakları salgının ölümcül yan etkisine işaret ediyor: Açlık"
+    },
+    "locators":{
+      "assetUri":"/turkce/haberler-dunya-52798325",
+      "cpsUrn":"urn:bbc:content:assetUri:turkce/haberler-dunya-52798325",
+      "curie":"http://www.bbc.co.uk/asset/ec4cac30-a2cb-b146-bd2d-7acb72fe160a",
+      "assetId":"52798325"
+    },
+    "summary":"Koronavirüs salgını nedeniyle Guatemala'da uygulanan kısıtlamalar ülkenin ekonomisini durma noktasına getirdi. Ülkede açlık giderek artıyor.",
+    "timestamp":1590410265000,
+    "language":"tr",
+    "passport":{
+      "category":{
+        "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+        "categoryName":"Feature"
+      },
+      "campaigns":[
+        {
+          "campaignId":"5a988e3739461b000e9dabfa",
+          "campaignName":"WS - Give me perspective"
+        }
+      ],
+      "taggings":[
+
+      ]
+    },
+    "indexImage":{
+      "id":"112440370",
+      "subType":"index",
+      "href":"http://c.files.bbci.co.uk/1C88/production/_112440370_hi061245899.jpg",
+      "path":"/cpsprodpb/1C88/production/_112440370_hi061245899.jpg",
+      "height":549,
+      "width":976,
+      "altText":"Kırmızı ve beyaz bayraklar",
+      "caption":"Kırmızı ve beyaz bayraklar",
+      "copyrightHolder":"Getty Images",
+      "type":"image"
+    },
+    "id":"urn:bbc:ares::asset:turkce/haberler-dunya-52798325",
+    "type":"cps"
+  }
+]

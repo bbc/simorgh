@@ -24,6 +24,7 @@ Object {
 
 exports[`AMP Pashto On Demand TV Page AMP Geo config 1`] = `
 Object {
+  "AmpBind": true,
   "ISOCountryGroups": Object {
     "eea": Array [
       "at",
@@ -79,6 +80,14 @@ Object {
       "wf",
       "yt",
     ],
+    "gbOrUnknown": Array [
+      "gb",
+      "gg",
+      "im",
+      "je",
+      "uk",
+      "unknown",
+    ],
   },
 }
 `;
@@ -87,7 +96,7 @@ exports[`AMP Pashto On Demand TV Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn:bbc:pips:w172xcldhhrhmcf]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[نړۍ+دا+وخت+-+BBC+News+پښتو]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=68&p=pashto.bbc_pashto_tv.tv.w172xcldhhrhmcf.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Apips%3Aw172xcldhhrhmcf]&x2=[amp]&x3=[news-pashto]&x4=[ps]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[player-episode]&x8=[simorgh]&x9=[%D9%86%DA%93%DB%8D%2B%D8%AF%D8%A7%2B%D9%88%D8%AE%D8%AA%2B-%2BBBC%2BNews%2B%D9%BE%DA%9A%D8%AA%D9%88]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -112,6 +121,17 @@ Object {
     "title": "نړۍ دا وخت - BBC News پښتو",
     "uid": 50924,
     "virtualReferrer": "\${documentReferrer}",
+  },
+}
+`;
+
+exports[`AMP Pashto On Demand TV Page Analytics comscore 1`] = `
+Object {
+  "extraUrlParams": Object {
+    "comscorekw": "amp",
+  },
+  "vars": Object {
+    "c2": "17986528",
   },
 }
 `;

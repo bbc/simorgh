@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { any, objectOf } from 'prop-types';
+import { oneOfType, string, object } from 'prop-types';
 
 // eslint-disable-next-line import/prefer-default-export
 export const ComponentUsingContext = ({ context }) => {
@@ -17,5 +17,5 @@ export const ComponentUsingContext = ({ context }) => {
 };
 
 ComponentUsingContext.propTypes = {
-  context: objectOf(any).isRequired,
+  context: oneOfType([string, object]).isRequired,
 };

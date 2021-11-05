@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import ReactRouter from 'react-router-dom';
 import { ClientApp, ServerApp } from '.';
 import * as App from './App';
@@ -10,25 +9,15 @@ jest.mock('react-router-dom', () => ({
 }));
 jest.mock('./App', () => jest.fn(() => <>Mocked App component</>));
 
-const renderClientApp = () =>
-  render(<ClientApp data="someData!" routes={['someRoute']} />);
+const renderClientApp = () => render(<ClientApp data="someData!" />);
 
 const renderServerApp = () =>
-  render(
-    <ServerApp
-      data="somePassedData"
-      routes={['someRoute']}
-      bbcOrigin="https://www.bbc.com"
-    />,
-  );
+  render(<ServerApp data="somePassedData" bbcOrigin="https://www.bbc.com" />);
 
 describe('ClientApp', () => {
   it('App should be called with the correct props', () => {
     renderClientApp();
-    expect(App).toHaveBeenCalledWith(
-      { initialData: 'someData!', routes: ['someRoute'] },
-      {},
-    );
+    expect(App).toHaveBeenCalledWith({ initialData: 'someData!' }, {});
   });
 
   it('BrowserRouter should be called with the correct props', () => {
@@ -39,7 +28,6 @@ describe('ClientApp', () => {
       {
         children: expect.anything(),
         data: 'someData!',
-        routes: ['someRoute'],
       },
       {},
     );
@@ -50,6 +38,11 @@ describe('ClientApp', () => {
     const { getByText } = renderClientApp();
     expect(getByText('Mocked App component')).toBeInTheDocument();
   });
+
+  it('should catch exceptions', () => {
+    jest.mock('./App', () => jest.fn(() => throw Error('Error!')));
+    expect(renderClientApp).not.toThrow();
+  });
 });
 
 describe('ServerApp', () => {
@@ -58,7 +51,6 @@ describe('ServerApp', () => {
     expect(App).toHaveBeenCalledWith(
       {
         initialData: 'somePassedData',
-        routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
       },
       {},
@@ -73,7 +65,6 @@ describe('ServerApp', () => {
       {
         children: expect.anything(),
         data: 'somePassedData',
-        routes: ['someRoute'],
         bbcOrigin: 'https://www.bbc.com',
       },
       {},

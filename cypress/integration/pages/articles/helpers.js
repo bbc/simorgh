@@ -28,11 +28,14 @@ const getVideoPid = body => {
   return versions[0].versionId;
 };
 
-export const getVideoEmbedUrl = (body, language) =>
-  [
-    envConfig.avEmbedBaseUrl,
+export const getVideoEmbedUrl = (body, language, isAmp = false) => {
+  const embedUrl = [
+    isAmp ? envConfig.avEmbedBaseUrlAmp : envConfig.avEmbedBaseUrlCanonical,
     'ws/av-embeds/articles',
     getArticleId(body),
     getVideoPid(body),
     language,
   ].join('/');
+
+  return isAmp ? `${embedUrl}/amp` : embedUrl;
+};

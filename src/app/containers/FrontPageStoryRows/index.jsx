@@ -1,5 +1,4 @@
 import React from 'react';
-import Grid from '@bbc/psammead-grid';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import { StoryPromoLi } from '@bbc/psammead-story-promo-list';
 import {
@@ -8,6 +7,7 @@ import {
   regularStoryColumns,
   noImageStoryColumns,
 } from './storyColumns';
+import Grid from '#app/components/Grid';
 import { storyItem } from '#models/propTypes/storyItem';
 import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
@@ -79,7 +79,6 @@ export const TopRow = ({
       item
       columns={topStoryColumns}
       as={StoryPromoLi}
-      dir={dir}
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
@@ -111,7 +110,6 @@ export const LeadingRow = ({
       item
       columns={leadingStoryColumns}
       as={StoryPromoLi}
-      dir={dir}
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
@@ -121,7 +119,6 @@ export const LeadingRow = ({
       item
       columns={regularStoryColumns}
       as={StoryPromoLi}
-      dir={dir}
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
@@ -156,7 +153,6 @@ export const RegularRow = ({
           columns={displayImages ? regularStoryColumns : noImageStoryColumns}
           key={story.id}
           as={StoryPromoLi}
-          dir={dir}
           parentColumns={parentColumns}
           parentEnableGelGutters={parentEnableGelGutters}
           border={border}

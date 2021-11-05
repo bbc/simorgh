@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { swahili as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/Africa/Nairobi';
@@ -7,10 +12,6 @@ import withContext from '../../../contexts/utils/withContext';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'Matangazo',
-    },
     lang: `sw`,
     articleAuthor: 'https://www.facebook.com/bbcnews',
     articleTimestampPrefix: 'Imeboreshwa',
@@ -31,9 +32,12 @@ export const service = {
     defaultCaptionOffscreenText: 'Maelezo, ',
     imageCopyrightOffscreenText: 'Chanzo cha picha, ',
     locale: `sw-KE`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'sw',
     datetimeLocale: `sw`,
     service: 'swahili',
     serviceName: 'Swahili',
+    languageName: 'Swahili',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcswahili',
     twitterSite: '@bbcswahili',
@@ -48,19 +52,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'Matangazo',
+      },
       seeAll: 'Tazama zote',
       home: 'Habari',
       currentPage: 'Ukurasa uliopo ',
       skipLinkText: 'Ruka hadi maelezo',
       relatedContent: 'Maelezo zaidi kuhusu taarifa hii',
+      relatedTopics: 'Mada zinazohusiana',
       navMenuText: 'Yaliyomo',
       mediaAssetPage: {
         mediaPlayer: 'Kicheza Nyenzo',
         audioPlayer: 'Kicheza Sauti',
         videoPlayer: 'Kicheza Video',
       },
+      gist: 'Muhtasari',
       error: {
         404: {
           statusCode: '404',
@@ -116,29 +130,74 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'Tufahamishe iwapo unakubali kupokea cookies',
-          description: {
-            uk: {
-              first: 'Tunatumia ',
-              linkText: 'kuki',
-              last:
-                ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'Kubali kukusanywa taarifa zako na uendelee',
+            reject: 'Kataa kukusanywa taarifa zako na uendelee',
+            initial: {
+              title:
+                'Tufahamishe iwapo unakubali taarifa zako kukusanywa kupitia AMP',
+              description: {
+                first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
+                linkText: 'vidakuzi au cookies',
+                last: ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'Wezesha mpangilio wangu',
             },
-            international: {
-              first: 'Sisi na washirika wetu tunatumia teknolojia kama vile ',
-              linkText: 'vidakuzi au cookies',
-              last:
-                ', na tunakusanya data katika mtandao kukufanya ufurahie matumizi ya mtandao na kukupa taarifa zinazokuvutia na matangazo unayoyaona. Tafadhali tufahamishe iwapo unakubali.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'Wezesha mpangilio wa ridhaa katika kurasa za AMP',
+              description: {
+                para1:
+                  'Mpangilio huu utahusisha kurasa za AMP pekee. Unaweza kuulizwa juu ya mpangilio wako ukitembelea kurasa nyengine za bbc.com ambazo si za AMP.',
+                para2:
+                  'Ukurasa huu mwepesi wa simu uliotembelea umetengenezwa kutumia teknolojia ya Google AMP.',
+                heading2: 'Ni lazima kukusanya taarifa',
+                para3:
+                  'Ili kuwezesha kurasa zetu kufanya kazi, tunahifadhi baadhi ya taarifa katika kifaa chako pasi na ridhaa yako.',
+                para4: {
+                  text: 'Soma zaidi kuhusu taarifa muhimu tunazohifadhi katika kifaa chako ili kuwezesha kurasa zetu kufanya kazi.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'Tunatumia hifadhi ya kifaa chako kuhifadhi mapendekezo yako ya ridhaa kwa kifaa hicho.',
+                heading3: 'Ukusanyaji wa taarifa kwa hiyari',
+                para6:
+                  'Unaporidhia kukusanywa kwa taarifa kupitia kurasa za AMP, pia unaridhia tukuoneshe matangazo ambayo yanaendana nawe ukiwa nje ya Uingereza.',
+                para7: {
+                  text: 'Soma zaidi jinsi gani BBC na washirika wetu tunavyokuletea matangazo yanayoendana nawe.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'Unaweza kukataa kupokea matangazo kwa kubofya "Kataa kukusanywa taarifa zako na uendelee" chini. Zingatia kuwa utaendelea kuona matangazo lakini hayatakuwa yale unayoendana nayo.',
+                para9:
+                  'Unaweza kubadili mpangilio kwa kubofya "machuguo ya matangazo / Usiuze taarifa zangu" muda wowote ule.',
+              },
             },
           },
-          accept: 'Ndio, ninakubali',
-          reject: 'Hapana, nipeleke kwa mpangilio',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'Tufahamishe iwapo unakubali kupokea cookies',
+            description: {
+              uk: {
+                first: 'Tunatumia ',
+                linkText: 'kuki',
+                last: ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'Tunatumia ',
+                linkText: 'kuki',
+                last: ' kukufanya ufurahie mtandao. Tafadhali tufahamishe iwapo unakubali kupokea cookies au vidakuzi vyote hivi',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'Ndio, ninakubali',
+            reject: 'Hapana, nipeleke kwa mpangilio',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -165,6 +224,7 @@ export const service = {
         previousRadioShow: 'Kipindi kilichopita cha redio',
         nextRadioShow: 'Kipindi kijacho cha redio',
         duration: 'Muda',
+        recentEpisodes: 'Vipindi vilivyopita',
       },
       socialEmbed: {
         caption: {
@@ -182,6 +242,11 @@ export const service = {
           endTextVisuallyHidden: 'Mwisho wa %provider_name% ujumbe',
         },
       },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
+      },
       topStoriesTitle: 'Habari kuu',
       featuresAnalysisTitle: 'Gumzo mitandaoni',
     },
@@ -192,10 +257,13 @@ export const service = {
       numberOfItems: 5,
       hasMostRead: true,
     },
+    mostWatched: {
+      header: 'Iliyoangaliwa zaidi',
+      numberOfItems: 10,
+      hasMostWatched: true,
+    },
     radioSchedule: {
       hasRadioSchedule: true,
-      onFrontPage: true,
-      frontPagePosition: 'Features',
       header: 'Vipindi vya Redio',
       durationLabel: 'Muda %duration%',
     },
@@ -208,7 +276,7 @@ export const service = {
         text: 'Kwanini unaweza kuiamini BBC News',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Soma kuhusu mtazamo wetu wa viambatanishi vya nje.',
       },
       links: [
@@ -229,12 +297,12 @@ export const service = {
           text: 'Cookies',
         },
         {
-          href: 'https://www.bbc.com/swahili/taasisi-37100011',
+          href: 'https://www.bbc.co.uk/send/u50853731',
           text: 'Wasiliana na BBC',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -250,7 +318,7 @@ export const service = {
       },
       {
         title: 'Michezo',
-        url: '/swahili/michezo',
+        url: '/swahili/topics/ckdxndddjkxt',
       },
       {
         title: 'Video',
@@ -258,7 +326,7 @@ export const service = {
       },
       {
         title: 'Vipindi vya Redio',
-        url: '/swahili/kwa_kina/redio',
+        url: '/swahili/media-54071673',
       },
     ],
   },

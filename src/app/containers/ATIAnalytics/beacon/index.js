@@ -2,26 +2,33 @@ import sendBeacon from '../../../lib/analyticsUtils/sendBeacon';
 import { buildATIEventTrackUrl } from '../atiUrl';
 
 export const sendEventBeacon = async ({
+  campaignID,
   componentName,
+  format,
+  pageIdentifier,
+  platform,
+  producerId,
+  service,
+  statsDestination,
   type,
-  componentInfo,
-  ...params
+  advertiserID,
+  url,
 }) => {
-  const eventProps = {
-    ...params,
-    componentName,
-    componentInfo,
-    type,
-  };
-
-  const viewProps = {
-    ...eventProps,
-    type: 'view',
-  };
-  await Promise.all([
-    sendBeacon(buildATIEventTrackUrl(eventProps)), // event, e.g. click
-    sendBeacon(buildATIEventTrackUrl(viewProps)), // background event
-  ]);
+  await sendBeacon(
+    buildATIEventTrackUrl({
+      campaignID,
+      componentName,
+      format,
+      pageIdentifier,
+      platform,
+      producerId,
+      service,
+      statsDestination,
+      type,
+      advertiserID,
+      url,
+    }),
+  );
 };
 
 export default sendEventBeacon;

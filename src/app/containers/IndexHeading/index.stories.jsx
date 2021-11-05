@@ -1,16 +1,21 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import IndexHeadingContainer from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 
-storiesOf('Containers|Index Heading', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add('default', ({ service }) => (
-    <ServiceContextProvider service={service}>
-      <IndexHeadingContainer>Index Heading</IndexHeadingContainer>
-    </ServiceContextProvider>
-  ));
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => (
+  <ServiceContextProvider service={service}>
+    <IndexHeadingContainer>Index Heading</IndexHeadingContainer>
+  </ServiceContextProvider>
+);
+
+export default {
+  title: 'Containers/Index Heading',
+  Component,
+  parameters: { chromatic: { disable: true } },
+  decorators: [withKnobs, withServicesKnob()],
+};
+
+export const IndexHeading = Component;

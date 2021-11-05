@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { cyrillicAndLatin } from '@bbc/gel-foundations/scripts';
 import { ukrainian as brandSVG } from '@bbc/psammead-assets/svgs';
 import '@bbc/moment-timezone-include/tz/GMT';
@@ -6,13 +11,14 @@ import '@bbc/psammead-locales/moment/uk';
 import withContext from '../../../contexts/utils/withContext';
 import { mainTranslations as russianMainTranslations } from './russian';
 
+const secondaryColumnTranslations = {
+  topStoriesTitle: 'Головне',
+  featuresAnalysisTitle: 'Докладно',
+};
+
 const baseServiceConfig = {
-  ads: {
-    hasAds: false,
-    advertisementLabel: 'Реклама',
-  },
   articleAuthor: `http://www.facebook.com/bbcnews`,
-  articleTimestampPrefix: 'Оновлення даних: ',
+  articleTimestampPrefix: 'Оновлено: ',
   atiAnalyticsAppName: 'news-ukrainian',
   atiAnalyticsProducerId: '94',
   chartbeatDomain: 'ukrainian.bbc.co.uk',
@@ -22,7 +28,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
   dir: `ltr`,
-  externalLinkText: ', зовнішнє посилання',
+  externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',
   audioCaptionOffscreenText: 'Підпис до аудіо',
@@ -44,19 +50,44 @@ const baseServiceConfig = {
   theming: {
     brandBackgroundColour: `${C_POSTBOX}`,
     brandLogoColour: `${C_WHITE}`,
+    brandForegroundColour: `${C_GHOST}`,
+    brandHighlightColour: `${C_WHITE}`,
+    brandBorderColour: `${C_POSTBOX_30}`,
+  },
+  showAdPlaceholder: true,
+  showRelatedTopics: true,
+  podcastPromo: {
+    title: 'подкаст',
+    brandTitle: 'Що це було',
+    brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
+      alt: 'Що це було',
+    },
+    linkLabel: {
+      text: 'Випуски',
+      href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
+    },
+    skipLink: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
   },
   translations: {
+    ads: {
+      advertisementLabel: 'Реклама',
+    },
     seeAll: 'Подивитись все',
     home: 'Головна',
     currentPage: 'Поточна сторінка',
     skipLinkText: 'Перейти до змісту',
-    relatedContent: 'Статті на цю ж тему',
     navMenuText: 'Розділи',
     mediaAssetPage: {
       mediaPlayer: 'Медіаплеєр',
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    gist: 'Стисло',
     error: {
       404: {
         statusCode: '404',
@@ -113,30 +144,75 @@ const baseServiceConfig = {
         rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
       },
       cookie: {
-        title: 'Повідомити, що ви погоджуєтесь з використанням файлів cookies',
-        description: {
-          uk: {
-            first: 'Ми використовуємо ',
-            linkText: 'cookies',
-            last:
-              ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
-            linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+        amp: {
+          accept: 'Погодитися на збір даних та продовжити.',
+          reject: 'Відмовитися від збору даних та продовжити',
+          initial: {
+            title: 'Повідомте, що ви погоджуєтесь на збір даних на AMP',
+            description: {
+              first:
+                'Ми разом з нашими партнерами використовуємо технології, такі як ',
+              linkText: 'cookies',
+              last: ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+            manage: 'Керувати налаштуваннями',
           },
-          international: {
-            first:
-              'Ми разом з нашими партнерами використовуємо технології, такі як ',
-            linkText: 'cookies',
-            last:
-              ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
-            linkUrl:
-              'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          manage: {
+            title: 'Керувати налаштуваннями щодо згоди на АМР-сторінках',
+            description: {
+              para1:
+                'Ці налаштування стосуються лише сторінок AMP. Вас можуть попросити зазначити свої уподобання ще раз, якщо ви відвідуватимете інші сторінки bbc.com, які не є AMP-сторінками.',
+              para2:
+                'Мобільна сторінка, яку ви відвідували, створена за технологією Google AMP.',
+              heading2: "Обов'язковий збір даних",
+              para3:
+                'Щоб забезпечити роботу наших сторінок, ми зберігаємо обмежену інформацію на вашому пристрої без вашої згоди.',
+              para4: {
+                text: 'Тут можна почитати докладніше про необхідну інформацію, яку ми зберігаємо на вашому пристрої, щоб забезпечити роботу наших вебсторінок.',
+                url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+              },
+              para5:
+                "Ми використовуємо локальну пам'ять, щоб зберігати ваші уподобання щодо згоди на вашому пристрої.",
+              heading3: "Необов'язковий збір інформації",
+              para6:
+                'Коли ви даєте згоду на збір даних на сторінках AMP, ви погоджуєтеся дозволити показувати вам персоналізовану рекламу, актуальну для вас, коли ви перебуваєте за межами Великої Британії.',
+              para7: {
+                text: 'Докладніше про те, як ми персоналізуємо рекламу на BBC та у наших рекламних партнерів можна прочитати тут.',
+                url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+              },
+              para8:
+                'Ви можете не отримувати персоналізовану рекламу, натиснувши "Відмовитися від збору даних та продовжити" нижче. Зверніть увагу, що реклама все одно буде показуватися, але вона не буде персоналізованою для вас.',
+              para9:
+                'Ви можете змінити ці налаштування, натиснувши кнопку "Вибір реклами/Не продавати мою інформацію" в нижній частині сторінки у будь-який час.',
+            },
           },
         },
-        accept: 'Так, згоден',
-        reject: 'Ні, мені потрібно переглянути налаштування',
-        rejectUrl:
-          'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        canonical: {
+          title:
+            'Повідомити, що ви погоджуєтесь з використанням файлів cookies',
+          description: {
+            uk: {
+              first: 'Ми використовуємо ',
+              linkText: 'cookies',
+              last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+            international: {
+              first: 'Ми використовуємо ',
+              linkText: 'cookies',
+              last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
+              linkUrl:
+                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            },
+          },
+          accept: 'Так, згоден',
+          reject: 'Ні, мені потрібно переглянути налаштування',
+          rejectUrl:
+            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        },
       },
     },
     media: {
@@ -153,11 +229,15 @@ const baseServiceConfig = {
       },
       listen: 'Прослухати',
       watch: 'Дивитися',
+      listenLive: 'Слухати наживо',
+      listenNext: 'Слухати наступний',
       liveLabel: 'LIVE',
       nextLabel: 'NEXT',
       previousRadioShow: 'Попередня радіопрограма',
       nextRadioShow: 'Наступна радіопрограма',
       duration: 'Тривалість',
+      recentEpisodes: 'Більше',
+      podcastExternalLinks: 'Цей подкаст доступний у',
     },
     socialEmbed: {
       caption: {
@@ -175,8 +255,15 @@ const baseServiceConfig = {
         endTextVisuallyHidden: 'Кінець %provider_name% допису',
       },
     },
-    topStoriesTitle: 'Головне',
-    featuresAnalysisTitle: 'Докладно',
+    include: {
+      errorMessage:
+        'Вибачте, ми не можемо відобразити цю частину сторінки у мобільній версії.',
+      linkText:
+        'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
+    },
+    relatedContent: 'Статті на цю ж тему',
+    relatedTopics: 'Також на цю тему',
+    ...secondaryColumnTranslations,
   },
   brandSVG,
   mostRead: {
@@ -185,6 +272,11 @@ const baseServiceConfig = {
     numberOfItems: 10,
     hasMostRead: true,
     onIdxPage: false,
+  },
+  mostWatched: {
+    header: 'Найпопулярніше',
+    numberOfItems: 5,
+    hasMostWatched: false,
   },
   radioSchedule: {
     hasRadioSchedule: false,
@@ -199,7 +291,7 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href: 'https://www.bbc.co.uk/help/web/links/',
+      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [
@@ -216,12 +308,12 @@ const baseServiceConfig = {
         text: 'Cookies',
       },
       {
-        href: 'https://www.bbc.com/ukrainian/institutional-38146278',
+        href: 'https://www.bbc.co.uk/send/u50853885',
         text: "Зв'язатися з BBC",
       },
       {
-        href:
-          'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+        id: 'COOKIE_SETTINGS',
+        href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
         text: 'AdChoices / Do Not Sell My Info',
         lang: 'en-GB',
       },
@@ -237,31 +329,23 @@ const baseServiceConfig = {
     },
     {
       title: 'Коронавірус',
-      url: '/ukrainian/52118881',
+      url: '/ukrainian/topics/c87z2kmre5nt',
     },
     {
-      title: 'Наука',
-      url: '/ukrainian/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53',
+      title: 'Історії',
+      url: '/ukrainian/53725237',
     },
     {
-      title: 'Технології',
-      url: '/ukrainian/topics/31684f19-84d6-41f6-b033-7ae08098572a',
-    },
-    {
-      title: 'Здоров’я',
-      url: '/ukrainian/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2',
-    },
-    {
-      title: 'Журнал',
-      url: '/ukrainian/magazine',
+      title: 'Відео',
+      url: '/ukrainian/55425840',
     },
     {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
     },
     {
-      title: 'Блоги',
-      url: '/ukrainian/blogs',
+      title: 'Подкасти',
+      url: '/ukrainian/podcasts/p09jsy3h',
     },
     {
       title: 'РУС',
@@ -275,18 +359,27 @@ export const service = {
     ...baseServiceConfig,
     datetimeLocale: 'uk',
     locale: 'uk_UA',
+    languageName: 'Ukrainian',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'uk',
     lang: 'uk',
   },
   'ru-UA': {
     ...baseServiceConfig,
+    languageName: 'Russian',
     translations: {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
+      ...secondaryColumnTranslations,
+      relatedTopics: 'Темы',
     },
     datetimeLocale: 'ru',
+    serviceDatetimeLocale: 'uk',
     locale: 'ru_UA',
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'ru',
     lang: 'ru-UA',
-    headerFooterLang: 'uk',
+    serviceLang: 'uk',
   },
 };
 

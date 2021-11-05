@@ -1,12 +1,32 @@
-import React, { useContext } from 'react';
-import { string } from 'prop-types';
+import React, { useState, useContext } from 'react';
+import { string, bool, func, oneOf } from 'prop-types';
+import styled from '@emotion/styled';
 import {
-  CanonicalMediaPlayer,
-  AmpMediaPlayer,
-} from '@bbc/psammead-media-player';
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+  GEL_SPACING_QUAD,
+} from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
+
+import AudioLoader from '#components/MediaPlayer/AudioLoader';
+
+import { CanonicalMediaPlayer, AmpMediaPlayer } from '#components/MediaPlayer';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+
+const Wrapper = styled.div`
+  ${props => !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_DBL};`}
+
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
+    ${props =>
+      !props.hasBottomPadding && `padding-bottom: ${GEL_SPACING_TRPL};`}
+  }
+`;
 
 const AVPlayer = ({
   assetId,
@@ -17,6 +37,10 @@ const AVPlayer = ({
   type,
   skin,
   className,
+  hasBottomPadding,
+  showLoadingImage,
+  darkMode,
+  onMediaInitialised,
 }) => {
   const { translations, service } = useContext(ServiceContext);
   const { isAmp, platform } = useContext(RequestContext);
@@ -35,7 +59,7 @@ const AVPlayer = ({
   if (!isValidPlatform || !assetId) return null;
 
   return (
-    <div className={className}>
+    <Wrapper hasBottomPadding={hasBottomPadding} className={className}>
       {isAmp ? (
         <AmpMediaPlayer
           placeholderSrc={placeholderSrc}
@@ -48,6 +72,8 @@ const AVPlayer = ({
       ) : (
         <CanonicalMediaPlayer
           showPlaceholder={false}
+          showLoadingImage={showLoadingImage}
+          darkMode={darkMode}
           src={embedUrl}
           title={iframeTitle}
           skin={skin}
@@ -55,11 +81,24 @@ const AVPlayer = ({
           mediaInfo={mediaInfo}
           noJsMessage={noJsMessage}
           noJsClassName="no-js"
+          onMediaInitialised={onMediaInitialised}
         />
       )}
-    </div>
+    </Wrapper>
   );
 };
+
+const AudioPlayer = styled(AVPlayer)`
+  amp-iframe,
+  div > iframe {
+    width: calc(100% + ${GEL_SPACING_DBL});
+    margin: 0 -${GEL_SPACING};
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+      width: calc(100% + ${GEL_SPACING_QUAD});
+      margin: 0 -${GEL_SPACING_DBL};
+    }
+  }
+`;
 
 AVPlayer.propTypes = {
   embedUrl: string,
@@ -70,6 +109,10 @@ AVPlayer.propTypes = {
   iframeTitle: string,
   className: string,
   skin: string,
+  hasBottomPadding: bool,
+  showLoadingImage: bool,
+  darkMode: bool,
+  onMediaInitialised: func,
 };
 
 AVPlayer.defaultProps = {
@@ -81,6 +124,30 @@ AVPlayer.defaultProps = {
   iframeTitle: '',
   className: '',
   skin: 'classic',
+  hasBottomPadding: true,
+  showLoadingImage: false,
+  darkMode: false,
+  onMediaInitialised: () => {},
 };
 
-export default AVPlayer;
+const AVSelector = props => {
+  const { skin } = props;
+  const [isLoading, setIsLoading] = useState(true);
+  return skin === 'audio' ? (
+    <AudioLoader isLoading={isLoading}>
+      <AudioPlayer {...props} onMediaInitialised={() => setIsLoading(false)} />
+    </AudioLoader>
+  ) : (
+    <AVPlayer {...props} />
+  );
+};
+
+AVSelector.propTypes = {
+  skin: oneOf(['classic', 'audio']),
+};
+
+AVSelector.defaultProps = {
+  skin: 'classic',
+};
+
+export default AVSelector;

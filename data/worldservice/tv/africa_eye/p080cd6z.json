@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p080cd6z",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p080cfb7"
+    },
+    "media_type": "audio_video",
+    "title": "My Bloody Country",
+    "short_synopsis": "Jamal Osman has watched his country being torn apart by civil war for three decades.",
+    "medium_synopsis": "Jamal Osman meets alleged al-Shabab fighters in prison as well as a Jubbaland army unit made up of former al-Shabab members, now supporting the government.",
+    "long_synopsis": "Jamal Osman, a Somali journalist, has watched his country being torn apart by civil war for three decades.\n \nHe thought that in Kismayo, a city in Jubbaland, southern Somalia, he had found a society which offered up hope of an end to the cycle of violence.\n \nBut a horrific al-Shabab attack on the city’s Madina Hotel in July this year, which left 26 dead and 56 injured, shattered the fragile hope of lasting security in the region.\n \nAs part of Jamal’s journey into Jubbaland, he meets alleged al-Shabab fighters in prison as well as a Jubbaland army unit made up of former al-Shabab members, now supporting the government.\n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.co.uk/AfricaEye\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "My Bloody Country"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p080cd72",
+        "duration": 1705,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

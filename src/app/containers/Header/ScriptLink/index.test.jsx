@@ -3,7 +3,6 @@ import { node } from 'prop-types';
 import { MemoryRouter, Route } from 'react-router-dom';
 import { render, fireEvent } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import '@testing-library/jest-dom/extend-expect';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { UserContext } from '#contexts/UserContext';
@@ -121,8 +120,7 @@ describe(`Script Link`, () => {
       },
       legacyAssetPage: {
         matchPath: legacyAssetPagePath,
-        path:
-          '/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
+        path: '/ukchina/trad/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         variantPath:
           '/ukchina/simp/multimedia/2015/11/151120_video_100w_london_chinese_entrepreneurs',
         serviceContext: ukChinaServiceConfig.trad,
@@ -321,6 +319,6 @@ describe(`Script Link`, () => {
       frontPagePath,
       '/serbian/lat',
     );
-    expect(container).toBeEmpty();
+    expect(container).toBeEmptyDOMElement();
   });
 });

@@ -1,14 +1,15 @@
-import React from 'react';
-import { ChunkExtractor } from '@loadable/server';
 import path from 'path';
+import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
+import { ChunkExtractor } from '@loadable/server';
+import { CacheProvider } from '@emotion/react';
+import createEmotionServer from '@emotion/server/create-instance';
+import createCache from '@emotion/cache';
 import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
-
-import { getStyleTag } from '../styles';
 import DocumentComponent from './component';
+import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const renderDocument = async ({
   bbcOrigin,
@@ -18,7 +19,8 @@ const renderDocument = async ({
   service,
   url,
 }) => {
-  const sheet = new ServerStyleSheet();
+  const cache = createCache({ key: 'bbc' });
+  const { extractCritical } = createEmotionServer(cache);
 
   const statsFile = path.resolve(
     `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
@@ -28,18 +30,20 @@ const renderDocument = async ({
 
   const context = {};
 
-  const app = renderToString(
-    extractor.collectChunks(
-      sheet.collectStyles(
-        <ServerApp
-          location={url}
-          routes={routes}
-          data={data}
-          bbcOrigin={bbcOrigin}
-          context={context}
-          service={service}
-          isAmp={isAmp}
-        />,
+  const app = extractCritical(
+    renderToString(
+      extractor.collectChunks(
+        <CacheProvider value={cache}>
+          <ServerApp
+            location={url}
+            routes={routes}
+            data={data}
+            bbcOrigin={bbcOrigin}
+            context={context}
+            service={service}
+            isAmp={isAmp}
+          />
+        </CacheProvider>,
       ),
     ),
   );
@@ -53,11 +57,22 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements({
-    crossOrigin: 'anonymous',
-    type: 'text/javascript',
-    defer: true,
+  const scripts = extractor.getScriptElements(chunk => {
+    const commonAttributes = {
+      crossOrigin: 'anonymous',
+      defer: true,
+    };
+
+    if (chunk && chunk.url) {
+      return {
+        ...commonAttributes,
+        src: encodeChunkFilename(chunk),
+      };
+    }
+
+    return commonAttributes;
   });
+
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
@@ -66,7 +81,6 @@ const renderDocument = async ({
       scripts={scripts}
       app={app}
       data={data}
-      styleTags={getStyleTag(sheet, isAmp)}
       helmet={headHelmet}
       service={service}
       isAmp={isAmp}

@@ -1,77 +1,71 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
-import styled from 'styled-components';
+import is from 'ramda/src/is';
+import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
   CanonicalSocialEmbed,
 } from '@bbc/psammead-social-embed';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { GridItemMedium } from '#app/components/Grid';
+import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
 import { SOCIAL_EMBED_RENDERED } from '#lib/logger.const';
-import { GridItemConstrainedMedium } from '#lib/styledGrid';
-import useToggle from '#hooks/useToggle';
-import socialEmbedBlockPropTypes from '#models/propTypes/socialEmbed';
-import createTranslations from './translations';
+import createTranslations from './common/translations';
+import { LAZYLOAD_OFFSET, Wrapper } from './common/styles';
+import { getProviderFromSource, getIdFromSource } from './sourceHelpers';
 
 const logger = nodeLogger(__filename);
 
-/**
- * MAX_WIDTH ensures all provider embeds take up the same width.
- * NB Tweets max-out at 500px, which is represented as 31.25rem.
- */
-const MAX_WIDTH = '31.25rem';
-
-const Wrapper = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: ${GEL_SPACING_TRPL};
-  max-width: ${MAX_WIDTH};
-`;
-
-const SocialEmbedContainer = ({ blocks }) => {
+const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
 
-  if (!blocks || !enabled) return null;
+  if (!blocks || !source) return null;
 
-  const { type: provider, indexOfType, model } = blocks[0];
-  const index = indexOfType + 1;
+  const provider = getProviderFromSource(source);
+  const id = getIdFromSource(source);
 
-  const id = path(['id'], model);
-  const href = path(['href'], model);
-  if (!href) return null;
-
-  const oEmbed = path(['embed', 'oembed'], model);
+  const { model } = blocks[0];
+  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
+  const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
+  const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
 
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
     caption: captionTranslations,
-  } = createTranslations({ translations, index });
+  } = createTranslations({ translations, index: oEmbedPosition });
 
   const fallback = {
     ...fallbackTranslations,
-    linkHref: href,
+    linkHref: source,
   };
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `skip-%provider%-content-${index}`,
+    endTextId:
+      oEmbedPosition > 0
+        ? `end-of-%provider%-content-${oEmbedPosition}`
+        : `end-of-%provider%-content`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;
 
   logger.info(SOCIAL_EMBED_RENDERED, {
     provider,
-    href,
+    href: source,
   });
 
   return (
-    <GridItemConstrainedMedium>
-      <Wrapper provider={provider}>
+    <GridItemMedium>
+      <Wrapper
+        provider={provider}
+        data-e2e={`${provider}-embed-${source}`}
+        oEmbed={oEmbed}
+      >
         {isAmp ? (
           <AmpSocialEmbed
             provider={provider}
@@ -82,17 +76,19 @@ const SocialEmbedContainer = ({ blocks }) => {
             caption={caption}
           />
         ) : (
-          <CanonicalSocialEmbed
-            provider={provider}
-            service={service}
-            oEmbed={oEmbed}
-            fallback={fallback}
-            skipLink={skipLink}
-            caption={caption}
-          />
+          <Lazyload offset={LAZYLOAD_OFFSET} once height={oEmbed?.height}>
+            <CanonicalSocialEmbed
+              provider={provider}
+              service={service}
+              oEmbed={oEmbed}
+              fallback={fallback}
+              skipLink={skipLink}
+              caption={caption}
+            />
+          </Lazyload>
         )}
       </Wrapper>
-    </GridItemConstrainedMedium>
+    </GridItemMedium>
   );
 };
 

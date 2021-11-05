@@ -1,4 +1,9 @@
-import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
+import {
+  C_POSTBOX,
+  C_WHITE,
+  C_GHOST,
+  C_POSTBOX_30,
+} from '@bbc/psammead-styles/colours';
 import { devanagariAndGurmukhi } from '@bbc/gel-foundations/scripts';
 import { telugu as brandSVG } from '@bbc/psammead-assets/svgs';
 import { F_MALLANNA_REGULAR } from '@bbc/psammead-styles/fonts';
@@ -8,10 +13,6 @@ import 'moment/locale/te';
 
 export const service = {
   default: {
-    ads: {
-      hasAds: false,
-      advertisementLabel: 'వ్యాపార ప్రకటన',
-    },
     lang: `te`,
     articleAuthor: `https://www.facebook.com/bbcnews`,
     articleTimestampPrefix: 'అప్‌డేట్ అయ్యింది',
@@ -25,16 +26,19 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/telugu.png',
     defaultImageAltText: 'BBC News తెలుగు',
     dir: `ltr`,
-    externalLinkText: ', ఇతర కథనాలు',
+    externalLinkText: ', ఇతర',
     imageCaptionOffscreenText: 'ఫొటో క్యాప్షన్, ',
     videoCaptionOffscreenText: 'వీడియో క్యాప్షన్, ',
     audioCaptionOffscreenText: 'ఆడియో క్యాప్షన్, ',
     defaultCaptionOffscreenText: 'క్యాప్షన్, ',
     imageCopyrightOffscreenText: 'ఫొటో సోర్స్, ',
     locale: `te-IN`,
+    // valid ISO 639-1 code - this is not the same as lang! see explanation in #3405
+    isoLang: 'te',
     datetimeLocale: `te-in`,
     service: 'telugu',
     serviceName: 'Telugu',
+    languageName: 'Telugu',
     themeColor: `${C_POSTBOX}`,
     twitterCreator: '@bbcnewstelugu',
     twitterSite: '@bbcnewstelugu',
@@ -49,19 +53,29 @@ export const service = {
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
+      brandForegroundColour: `${C_GHOST}`,
+      brandHighlightColour: `${C_WHITE}`,
+      brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
+      ads: {
+        advertisementLabel: 'వ్యాపార ప్రకటన',
+      },
       seeAll: 'అన్నీ చూడండి',
       home: 'హోమ్',
       currentPage: 'ప్రస్తుత పేజీ',
       skipLinkText: 'కంటెంట్‌కు వెళ్లండి',
       relatedContent: 'సంబంధిత కథనాలు',
+      relatedTopics: 'సంబంధిత అంశాలు',
       navMenuText: 'విభాగాలు',
       mediaAssetPage: {
         mediaPlayer: 'మీడియా ప్లేయర్',
         audioPlayer: 'ఆడియో ప్లేయర్',
         videoPlayer: 'వీడియో ప్లేయర్',
       },
+      gist: 'సారాంశం',
       error: {
         404: {
           statusCode: '404',
@@ -117,30 +131,75 @@ export const service = {
           rejectUrl: 'https://www.bbc.co.uk/usingthebbc/your-data-matters',
         },
         cookie: {
-          title: 'మీరు కుకీస్‌ను అంగీకరిస్తే మాకు తెలియచేయండి',
-          description: {
-            uk: {
-              first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
-              linkText: 'కుకీలు',
-              last:
-                ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+          amp: {
+            accept: 'డేటా సేకరణకు అంగీకరించి, కొనసాగండి.',
+            reject: 'డేటా సేకరణకు నిరాకరించి, కొనసాగండి.',
+            initial: {
+              title:
+                'ఏఎంపీ (Accelerated Mobile Page)లో డేటా సేకరణకు మీ అంగీకారాన్ని మాకు తెలియజేయండి',
+              description: {
+                first:
+                  'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
+                linkText: 'వంటి టెక్నాలజీలు',
+                last: ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              manage: 'నా సెటింగ్స్‌ను మేనేజ్ చేయండి.',
             },
-            international: {
-              first:
-                'మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి, మీకు తగిన కంటెంట్‌ను, ప్రకటనలను అందించడానికి మేము, మా పార్ట్‌నర్లు ',
-              linkText: 'వంటి టెక్నాలజీలు',
-              last:
-                ' కుకీలు ఉపయోగించి, బ్రౌజింగ్ వివరాలను సేకరిస్తాం. మీరు దీనికి అంగీకరిస్తే మాకు తెలియచేయండి.',
-              linkUrl:
-                'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+            manage: {
+              title: 'AMP పేజీల్లో సమ్మతి సెటింగ్స్‌ను మేనేజ్ చేయండి.',
+              description: {
+                para1:
+                  'ఈ సెటింగ్స్ AMP పేజీలకు మాత్రమే వర్తిస్తాయి. మీరు AMP కాని బీబీసీ పేజీలను సందర్శించినప్పుడు మరోసారి మీ ప్రాధాన్యాల్ని సెట్ చెయ్యమని అడగవచ్చు.',
+                para2:
+                  'మీరు చూసిన లైట్‌వెయిట్ మొబైల్ పేజీ గూగుల్ AMP టెక్నాలజీని ఉపయోగించి రూపొందించారు.',
+                heading2: 'డేటా సేకరణ తప్పనిసరి',
+                para3:
+                  'మా వెబ్ పేజీ పని చేసేందుకు మీ అనుమతి లేకుండానే మీ డివైస్‌లో కొంత పరిమితిలో సమాచారాన్ని స్టోర్ చేస్తాం.',
+                para4: {
+                  text: 'మా వెబ్ పేజీలు పని చేసేందుకు మీ డివైస్‌లో స్టోర్ చేసిన అత్యవసర సమాచారం గురించి మరింత తెలుసుకోండి.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                },
+                para5:
+                  'మీరు అనుమతించిన మీ ప్రాధాన్యాలను మీ డివైస్‌లో స్టోర్ చేసేందుకు మేము లోకల్ స్టోరేజిని ఉపయోగిస్తాం.',
+                heading3: 'ఐచ్ఛిక సమాచార సేకరణ',
+                para6:
+                  'మీరు AMP పేజీల్లో డేటా సేకరణకు అనుమతించారు అంటే.. మీరు బ్రిటన్‌ బయట నివసిస్తున్నప్పుడు కూడా మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనల్ని చూపించేందుకు మాకు అనుమతినిచ్చినట్లే.',
+                para7: {
+                  text: 'బీబీసీ, బీబీసీ ప్రకటనల భాగస్వాములు మీ ఆసక్తి మేరకు ప్రత్యేకమైన ప్రకటనల్ని ఎలా రూపొందిస్తారో మరింత తెలుసుకోండి.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                },
+                para8:
+                  'కిందున్న “డేటా సేకరణకు తిరస్కరించి, కొనసాగండి”పై క్లిక్ చేసి మీకు మాత్రమే కనిపించే ప్రత్యేకమైన ప్రకటనలు కూడా రాకుండా చూసుకోవచ్చు. అయితే, ఇది క్లిక్ చేశాక కూడా ప్రకటనలు మీకు కనిపిస్తాయి కానీ అవి మీకు మాత్రమే ప్రత్యేకమైన ప్రకటనలు కాదని గమనించాలి.',
+                para9:
+                  'కిందున్న “ప్రకటన ఎంపిక/నా సమాచారాన్ని అమ్మొద్దు”పై క్లిక్ చేసి ఈ సెటింగ్‌లను మీరు ఎప్పుడైనా మార్చుకోవచ్చు.',
+              },
             },
           },
-          accept: 'అవును, అంగీకరిస్తున్నా',
-          reject: 'లేదు, నన్ను సెట్టింగ్స్ పేజీకి తీసుకెళ్లండి',
-          rejectUrl:
-            'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          canonical: {
+            title: 'మీరు కుకీస్‌ను అంగీకరిస్తే మాకు తెలియచేయండి',
+            description: {
+              uk: {
+                first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
+                linkText: 'కుకీలు',
+                last: ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+              international: {
+                first: 'మేం మీకు మంచి ఆన్‌లైన్ ఎక్స్‌పీరియన్స్ ఇవ్వడానికి ',
+                linkText: 'కుకీలు',
+                last: ' ఉపయోగిస్తాం. మీరు ఈ కుకీలన్నింటికి అంగీకరిస్తే మాకు తెలియచేయండి.',
+                linkUrl:
+                  'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
+              },
+            },
+            accept: 'అవును, అంగీకరిస్తున్నా',
+            reject: 'లేదు, నన్ను సెట్టింగ్స్ పేజీకి తీసుకెళ్లండి',
+            rejectUrl:
+              'https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          },
         },
       },
       media: {
@@ -158,27 +217,34 @@ export const service = {
         },
         listen: 'వినండి',
         watch: 'చూడండి',
+        listenLive: 'లైవ్ వినండి',
         liveLabel: 'లైవ్',
         nextLabel: 'NEXT',
         previousRadioShow: 'ఇంతకు ముందు రేడియో షో',
         nextRadioShow: 'తర్వాత రేడియో షో',
         duration: 'వ్యవధి',
+        recentEpisodes: 'ఇటీవలి ఎపిసోడ్లు',
       },
       socialEmbed: {
         caption: {
-          textPrefixVisuallyHidden: 'Video caption, ',
-          text: 'Warning: Third party content may contain adverts',
+          textPrefixVisuallyHidden: 'వీడియో క్యాప్షన్, ',
+          text: 'హెచ్చరిక: థర్డ్ పార్టీ కంటెంట్‌లో ప్రకటనలు ఉండొచ్చు',
         },
         fallback: {
-          text: 'Content is not available',
-          linkText: 'View content on %provider_name%',
-          linkTextSuffixVisuallyHidden: ', external',
+          text: 'కంటెంట్ అందుబాటులో లేదు',
+          linkText: 'మరింత సమాచారం కోసం %provider_name%',
+          linkTextSuffixVisuallyHidden: ', ఇతర కథనాలు',
           warningText: 'ఇతర వెబ్‌సైట్లలో సమాచారానికి బీబీసీ బాధ్యత వహించదు.',
         },
         skipLink: {
-          text: 'Skip %provider_name% post',
-          endTextVisuallyHidden: 'End of %provider_name% post',
+          text: 'పోస్ట్‌ %provider_name% స్కిప్ చేయండి',
+          endTextVisuallyHidden: 'పోస్ట్ of %provider_name% ముగిసింది',
         },
+      },
+      include: {
+        errorMessage:
+          'Sorry, we can’t display this part of the story on this lightweight mobile page.',
+        linkText: 'View the full version of the page to see all the content.',
       },
       topStoriesTitle: 'ముఖ్యమైన కథనాలు',
       featuresAnalysisTitle: 'ఫీచర్లు',
@@ -189,6 +255,11 @@ export const service = {
       lastUpdated: 'చివరిగా అప్‌డేట్ అయిన తేదీ:',
       numberOfItems: 10,
       hasMostRead: true,
+    },
+    mostWatched: {
+      header: 'ఎక్కువగా చూసినవి',
+      numberOfItems: 10,
+      hasMostWatched: true,
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -202,7 +273,7 @@ export const service = {
         text: 'మీరు బీబీసీని ఎందుకు నమ్ముతారు?',
       },
       externalLink: {
-        href: 'https://www.bbc.co.uk/help/web/links/',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ఇతర వెబ్‌సైట్లకు మా లింకింగ్ విధానం గురించి తెలుసుకోండి.',
       },
       links: [
@@ -223,12 +294,12 @@ export const service = {
           text: 'కుకీలు',
         },
         {
-          href: 'https://www.bbc.com/telugu/institutional-42227910',
+          href: 'https://www.bbc.co.uk/send/u50853775',
           text: 'బీబీసీని సంప్రదించండి',
         },
         {
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
+          id: 'COOKIE_SETTINGS',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -253,11 +324,11 @@ export const service = {
       },
       {
         title: 'జాతీయం',
-        url: '/telugu/topics/5a08f030-710f-4168-acee-67294a90fc75',
+        url: '/telugu/topics/c5qvp16w7dnt',
       },
       {
         title: 'అంతర్జాతీయం',
-        url: '/telugu/international',
+        url: '/telugu/topics/cvqxn2k1xvdt',
       },
     ],
   },

@@ -5,7 +5,7 @@ import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { ScrollableNavigation } from '@bbc/psammead-navigation/scrollable';
 import { AmpDropdown, AmpMenuButton } from '@bbc/psammead-navigation/dropdown';
 import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 const DROPDOWN_ID = 'si-nav-dropdown-menu';
 const NAVIGATION_ID = 'si-nav';
@@ -29,6 +29,10 @@ const AmpNavigationContainer = ({
   menuAnnouncedText,
   scrollableListItems,
   dropdownListItems,
+  brandBackgroundColour,
+  brandForegroundColour,
+  brandHighlightColour,
+  brandBorderColour,
 }) => (
   <Navigation
     script={script}
@@ -36,6 +40,10 @@ const AmpNavigationContainer = ({
     dir={dir}
     id={NAVIGATION_ID}
     ampOpenClass={OPEN_CLASS_NAME}
+    brandBackgroundColour={brandBackgroundColour}
+    brandForegroundColour={brandForegroundColour}
+    brandHighlightColour={brandHighlightColour}
+    brandBorderColour={brandBorderColour}
   >
     <AmpMenuButton
       announcedText={menuAnnouncedText}
@@ -49,10 +57,17 @@ const AmpNavigationContainer = ({
     />
     {/* Hidden attribute allows us to toggle visibility on the dropdown
     using AMP actions. */}
-    <AmpDropdown id={DROPDOWN_ID} hidden>
+    <AmpDropdown id={DROPDOWN_ID} data-e2e="dropdown-nav" hidden>
       {dropdownListItems}
     </AmpDropdown>
-    <StyledAmpScrollableNavigation dir={dir} id={SCROLLABLE_ID}>
+    <StyledAmpScrollableNavigation
+      dir={dir}
+      id={SCROLLABLE_ID}
+      brandBackgroundColour={brandBackgroundColour}
+      brandForegroundColour={brandForegroundColour}
+      brandHighlightColour={brandHighlightColour}
+      brandBorderColour={brandBorderColour}
+    >
       {scrollableListItems}
     </StyledAmpScrollableNavigation>
   </Navigation>
@@ -65,6 +80,10 @@ AmpNavigationContainer.propTypes = {
   scrollableListItems: node.isRequired,
   dropdownListItems: node.isRequired,
   menuAnnouncedText: string.isRequired,
+  brandBackgroundColour: string.isRequired,
+  brandForegroundColour: string.isRequired,
+  brandHighlightColour: string.isRequired,
+  brandBorderColour: string.isRequired,
 };
 
 export default AmpNavigationContainer;

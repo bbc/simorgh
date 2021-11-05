@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import ServiceWorkerContainer from './index';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -25,7 +25,7 @@ describe('Service Worker', () => {
   describe('on production environment', () => {
     it('should be installed', async () => {
       process.env.NODE_ENV = 'production';
-      wrapper = mount(
+      wrapper = render(
         <ServiceContext.Provider value={contextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
@@ -39,8 +39,24 @@ describe('Service Worker', () => {
   describe('on dev environment', () => {
     it('should not be installed', async () => {
       process.env.NODE_ENV = 'dev';
-      wrapper = mount(
+      wrapper = render(
         <ServiceContext.Provider value={contextStub}>
+          <ServiceWorkerContainer />
+        </ServiceContext.Provider>,
+      );
+      expect(navigator.serviceWorker.register).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('when swPath is not set (to disable the service worker)', () => {
+    it('should not be installed', async () => {
+      process.env.NODE_ENV = 'production';
+      const localContextStub = contextStub;
+
+      delete localContextStub.swPath;
+
+      wrapper = render(
+        <ServiceContext.Provider value={localContextStub}>
           <ServiceWorkerContainer />
         </ServiceContext.Provider>,
       );

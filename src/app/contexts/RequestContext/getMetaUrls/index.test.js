@@ -41,6 +41,26 @@ const tests = [
     assertion:
       'should return expected output for .com origin and serbian/lat pathname',
   },
+  {
+    origin: 'https://www.bbc.com',
+    pathname:
+      '/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese',
+    expected: {
+      canonicalLink:
+        'https://www.bbc.com/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese',
+      ampLink:
+        'https://www.bbc.com/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese.amp',
+      canonicalUkLink:
+        'https://www.bbc.co.uk/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese',
+      ampUkLink:
+        'https://www.bbc.co.uk/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese.amp',
+      canonicalNonUkLink:
+        'https://www.bbc.com/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese',
+      ampNonUkLink:
+        'https://www.bbc.com/zhongwen/trad/comments_on_china/2013/05/130515_coc_taiwanese_chinese.amp',
+    },
+    assertion: 'should return expected output for .com origin and pathname',
+  },
 ];
 
 tests.forEach(({ origin, pathname, expected, assertion }) => {

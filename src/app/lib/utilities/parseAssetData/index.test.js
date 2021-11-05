@@ -1,4 +1,4 @@
-import { mergeDeepLeft } from 'ramda';
+import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import {
   getHeadline,
   getFirstPublished,

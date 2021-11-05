@@ -6,7 +6,9 @@ import arabicMostReadData from '#data/arabic/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
 import nepaliMostReadData from '#data/nepali/mostRead';
 import kyrgyzMostReadData from '#data/kyrgyz/mostRead';
+import ukrainianMostReadData from '#data/ukrainian/mostRead';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import {
   setStalePromoTimestamp,
   setFreshPromoTimestamp,
@@ -17,6 +19,8 @@ import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 /* eslint-disable react/prop-types */
 const MostReadCanonicalWithContext = ({
@@ -24,13 +28,22 @@ const MostReadCanonicalWithContext = ({
   endpoint,
   initialData,
   wrapper,
+  pageLang,
+  eventTrackingData,
 }) => (
-  <ServiceContextProvider service={service}>
-    <CanonicalMostRead
-      endpoint={endpoint}
-      initialData={initialData}
-      wrapper={wrapper}
-    />
+  <ServiceContextProvider service={service} pageLang={pageLang}>
+    <ToggleContextProvider
+      toggles={{
+        eventTracking: { enabled: true },
+      }}
+    >
+      <CanonicalMostRead
+        endpoint={endpoint}
+        initialData={initialData}
+        wrapper={wrapper}
+        eventTrackingData={eventTrackingData}
+      />
+    </ToggleContextProvider>
   </ServiceContextProvider>
 );
 
@@ -156,6 +169,28 @@ describe('MostReadContainerCanonical', () => {
     });
   });
 
+  it(`should render ukrainian in russian most read with an overriden datetime locale`, async () => {
+    fetchMock.mock(
+      `www.test.bbc.com/ukrainian/mostread.json`,
+      setStalePromoTimestamp(ukrainianMostReadData),
+    );
+
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="ukrainian"
+          endpoint="www.test.bbc.com/ukrainian/mostread.json"
+          pageLang="ru"
+        />,
+      ).container;
+    });
+
+    expect(container.querySelectorAll('time')[0].textContent).toEqual(
+      'Останнє оновлення: 11 січня 1970',
+    );
+  });
+
   it(`should render with wrapper`, async () => {
     fetch.mockResponse(
       JSON.stringify(setFreshPromoTimestamp(nepaliMostReadData)),
@@ -198,7 +233,32 @@ describe('MostReadContainerCanonical', () => {
         />,
       ).container;
     });
-    expect(container).toBeEmpty();
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it(`should not render most read when no article data exists`, async () => {
+    const emptyMostRead = {
+      generated: '2021-08-03T12:18:51.749Z',
+      lastRecordTimeStamp: '2021-05-04T11:53:00Z',
+      firstRecordTimeStamp: '2021-05-04T11:38:00Z',
+      totalRecords: 0,
+      records: [],
+    };
+    fetchMock.mock(
+      `www.test.bbc.com/arabic/mostread.json`,
+      setStaleLastRecordTimeStamp(emptyMostRead),
+    );
+
+    let container;
+    await act(async () => {
+      container = await render(
+        <MostReadCanonicalWithContext
+          service="arabic"
+          endpoint="www.test.bbc.com/arabic/mostread.json"
+        />,
+      ).container;
+    });
+    expect(container).toBeEmptyDOMElement();
   });
 
   describe('Logging', () => {
@@ -234,6 +294,40 @@ describe('MostReadContainerCanonical', () => {
         error:
           'Error: Unexpected response (HTTP status code 500) when requesting www.test.bbc.com/pidgin/mostread.json',
       });
+    });
+  });
+
+  describe('Event Tracking', () => {
+    const blockLevelEventTrackingData = {
+      componentName: 'most-read',
+    };
+
+    it('should call the view tracking hook with the correct params', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(
+        <MostReadCanonicalWithContext
+          service="pidgin"
+          endpoint="www.test.bbc.com/pidgin/mostread.json"
+          initialData={pidginMostReadData}
+          eventTrackingData={blockLevelEventTrackingData}
+        />,
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
+    });
+
+    it('should call the click tracking hook with the correct params', () => {
+      const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+      render(
+        <MostReadCanonicalWithContext
+          service="pidgin"
+          endpoint="www.test.bbc.com/pidgin/mostread.json"
+          initialData={pidginMostReadData}
+          eventTrackingData={blockLevelEventTrackingData}
+        />,
+      );
+
+      expect(clickTrackerSpy).toHaveBeenCalledWith(blockLevelEventTrackingData);
     });
   });
 });

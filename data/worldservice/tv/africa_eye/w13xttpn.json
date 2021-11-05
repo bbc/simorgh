@@ -1,0 +1,71 @@
+
+{
+  "programme": {
+    "type": "brand",
+    "pid": "w13xttpn",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p06pqg80"
+    },
+    "media_type": null,
+    "title": "Africa Eye",
+    "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+    "medium_synopsis": "Original and high-impact BBC investigations from across Africa",
+    "long_synopsis": null,
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": ""
+    },
+    "aggregated_episode_count": 25,
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "links": [
+      {
+        "type": "miscellaneous",
+        "title": "BBC News Africa",
+        "url": "https://www.bbc.co.uk/news/world/africa"
+      },
+      {
+        "type": "miscellaneous",
+        "title": "Subscribe on YouTube",
+        "url": "http://bit.ly/subscribetoafrica"
+      },
+      {
+        "type": "miscellaneous",
+        "title": "Facebook",
+        "url": "https://www.facebook.com/bbcnewsafrica/"
+      },
+      {
+        "type": "miscellaneous",
+        "title": "Twitter",
+        "url": "https://www.twitter.com/bbcafrica/"
+      },
+      {
+        "type": "miscellaneous",
+        "title": "Instagram",
+        "url": "https://www.instagram.com/bbcafrica/"
+      }
+    ],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

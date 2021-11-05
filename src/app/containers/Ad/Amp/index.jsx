@@ -1,55 +1,65 @@
 import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import {
   AMP_ACCESS_JS,
   AMP_ADS_JS,
 } from '@bbc/psammead-assets/amp-boilerplate';
-import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-
-import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
+import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
+import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
 import AdSlot from './AdSlot';
+import { ampLeaderboardStyles, ampMpuStyles } from '../utilities/adSlotStyles';
 
-const FullWidthWrapper = styled.div`
+// styled-components removes non-standard attributes (such as AMP attributes) on
+// server rendering. spreading props like this allows us to add AMP attributes
+// to the element.
+const AccessDiv = props => <div {...props} />;
+
+const AdSection = styled.section`
   background-color: ${C_LUNAR_LIGHT};
+  margin-top: ${GEL_SPACING};
+`;
+
+const AdContainer = styled.div`
+  ${({ slotType }) =>
+    slotType === 'mpu' ? ampMpuStyles : ampLeaderboardStyles}
 `;
 
 const StyledWrapper = styled.div`
   margin: 0 auto; /* To centre page layout for Group 4+ */
   text-align: center;
-  padding-bottom: ${GEL_SPACING};
+`;
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-bottom: ${GEL_SPACING_DBL};
-    max-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN};
+// amp-geo adds geo group classes to the body of the document depending on
+// the user's location. It removes the `amp-geo-pending` class when geolocation
+// data is available.
+// setting display: none ensures ad requests within this component are not made.
+const DisplayWrapper = styled(AccessDiv)`
+  .amp-geo-pending &,
+  .amp-geo-group-gbOrUnknown & {
+    display: none;
+    visibility: hidden;
   }
 `;
 
-const StyledAd = styled.div`
-  display: inline-block;
-`;
-
-const StyledLink = styled.a.attrs({ tabIndex: '-1' })`
-  ${({ script }) => script && getMinion(script)};
+const StyledLink = styled.a`
+  ${({ script }) => script && getMinion(script)}
   ${({ service }) => getSansRegular(service)}
   color: ${C_RHINO};
   text-decoration: none;
   text-transform: uppercase;
   display: block;
   padding: ${GEL_SPACING} 0;
-  
+
   text-align: ${({ dir }) => (dir === 'ltr' ? `right` : `left`)};
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    padding-top: ${GEL_SPACING_DBL};
-  }
-  
   &:hover {
     text-decoration: underline;
   }
@@ -75,34 +85,100 @@ export const AMP_ACCESS_FETCH = service => {
   );
 };
 
+const AdContent = props => {
+  // eslint-disable-next-line react/prop-types
+  const { script, service, dir, label, slotType, pageType } = props;
+  return (
+    <>
+      <StyledLink
+        href={LABEL_LINK}
+        script={script}
+        service={service}
+        dir={dir}
+        tabIndex="-1"
+      >
+        {label}
+      </StyledLink>
+      <AdSlot service={service} slotType={slotType} pageType={pageType} />
+    </>
+  );
+};
+
+const AdWithoutPlaceholder = props => {
+  // eslint-disable-next-line react/prop-types
+  const { ariaLabel, slotType } = props;
+  return (
+    <DisplayWrapper amp-access="toggles.ads.enabled" amp-access-hide="true">
+      <AdSection
+        aria-label={ariaLabel}
+        role="region"
+        data-e2e="advertisement"
+        aria-hidden="true"
+      >
+        <AdContainer slotType={slotType}>
+          <StyledWrapper>
+            <AdContent {...props} />
+          </StyledWrapper>
+        </AdContainer>
+      </AdSection>
+    </DisplayWrapper>
+  );
+};
+
+const AdWithPlaceholder = props => {
+  // eslint-disable-next-line react/prop-types
+  const { ariaLabel, slotType } = props;
+  return (
+    <AdSection
+      aria-label={ariaLabel}
+      role="region"
+      data-e2e="advertisement"
+      aria-hidden="true"
+    >
+      <AdContainer slotType={slotType}>
+        <StyledWrapper>
+          <DisplayWrapper
+            amp-access="toggles.ads.enabled"
+            amp-access-hide="true"
+          >
+            <AdContent {...props} />
+          </DisplayWrapper>
+        </StyledWrapper>
+      </AdContainer>
+    </AdSection>
+  );
+};
+
 const AmpAd = ({ slotType }) => {
-  const { ads, dir, script, service } = useContext(ServiceContext);
-  const label = pathOr('Advertisement', ['advertisementLabel'], ads);
+  const { translations, dir, script, service, showAdPlaceholder } =
+    useContext(ServiceContext);
+  const { pageType } = useContext(RequestContext);
+  const label = pathOr(
+    'Advertisement',
+    ['ads', 'advertisementLabel'],
+    translations,
+  );
+  const ariaLabel = getAdsAriaLabel(label, dir, slotType);
+
+  const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
 
   return (
-    <div amp-access="toggles.ads.enabled" amp-access-hide="true">
-      <FullWidthWrapper>
-        <StyledWrapper>
-          <Helmet>
-            {AMP_ADS_JS}
-            {AMP_ACCESS_JS}
-            {AMP_ACCESS_FETCH(service)}
-          </Helmet>
-
-          <StyledAd>
-            <StyledLink
-              href={LABEL_LINK}
-              script={script}
-              service={service}
-              dir={dir}
-            >
-              {label}
-            </StyledLink>
-            <AdSlot service={service} slotType={slotType} />
-          </StyledAd>
-        </StyledWrapper>
-      </FullWidthWrapper>
-    </div>
+    <>
+      <Helmet>
+        {AMP_ADS_JS}
+        {AMP_ACCESS_JS}
+        {AMP_ACCESS_FETCH(service)}
+      </Helmet>
+      <Advert
+        service={service}
+        script={script}
+        dir={dir}
+        label={label}
+        pageType={pageType}
+        ariaLabel={ariaLabel}
+        slotType={slotType}
+      />
+    </>
   );
 };
 

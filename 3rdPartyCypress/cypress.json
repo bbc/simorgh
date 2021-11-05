@@ -1,4 +1,10 @@
 {
   "video": false,
-  "screenshotOnRunFailure": false
+  "screenshotOnRunFailure": false,
+  "env": {
+    "APP_ENV": "local"
+  },
+  "ignoreTestFiles": [
+    "**/**/config.js"
+  ]
 }

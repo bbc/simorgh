@@ -1,123 +1,107 @@
-import { useEffect, useState, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useLayoutEffect, useState, useRef } from 'react';
 import { renderRoutes } from 'react-router-config';
 import { withRouter } from 'react-router';
+import pick from 'ramda/src/pick';
+import mergeAll from 'ramda/src/mergeAll';
 import path from 'ramda/src/path';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import usePrevious from '#lib/utilities/usePrevious';
+import getToggles from '#lib/utilities/getToggles';
+import routes from '#app/routes';
 
-export const App = ({ routes, location, initialData, bbcOrigin, history }) => {
-  const {
+const mapToState = ({ pathname, initialData, routeProps, toggles }) => {
+  const pageType = path(['route', 'pageType'], routeProps);
+
+  return mergeAll([
+    pick(
+      ['service', 'isAmp', 'variant', 'id', 'assetUri', 'errorCode'],
+      routeProps,
+    ),
+    pick(
+      ['pageData', 'status', 'error', 'timeOnServer', 'errorCode'],
+      initialData,
+    ),
+    {
+      pathname,
+      pageType,
+      toggles,
+    },
+  ]);
+};
+
+const getNextPageState = async pathname => {
+  const routeProps = getRouteProps(pathname);
+  const { service, variant, route } = routeProps;
+  const { pageType, getInitialData } = route;
+  const toggles = await getToggles(service);
+  const initialData = await getInitialData({
+    path: pathname,
     service,
-    isAmp,
     variant,
-    id,
-    assetUri,
-    errorCode,
-    route: { pageType },
-  } = getRouteProps(routes, location.pathname);
-
-  const { pageData, status, error, timeOnServer } = initialData;
-
-  const [state, setState] = useState({
-    pageData,
-    status,
-    service,
-    variant,
-    id,
-    assetUri,
-    isAmp,
     pageType,
-    error,
-    loading: false,
-    errorCode: errorCode || initialData.errorCode,
-    timeOnServer,
+    toggles,
   });
 
-  const isInitialMount = useRef(true);
-  const shouldSetFocus = useRef(false);
+  return mapToState({ pathname, initialData, routeProps, toggles });
+};
+
+const setFocusOnMainHeading = () => {
+  const mainHeadingEl = document.querySelector('h1#content');
+
+  if (mainHeadingEl) {
+    mainHeadingEl.focus();
+  }
+};
+
+export const App = ({ location, initialData, bbcOrigin, history }) => {
+  const { pathname } = location;
+  const hasMounted = useRef(false);
+  const routeProps = getRouteProps(pathname);
+  const previousPath = useRef(null);
+  const { showAdsBasedOnLocation, toggles } = initialData;
+  const [state, setState] = useState(
+    mapToState({
+      pathname,
+      initialData,
+      routeProps,
+      toggles,
+    }),
+  );
+  const routeHasChanged = state.pathname !== pathname;
 
   useEffect(() => {
-    if (shouldSetFocus.current) {
-      const contentEl = document.querySelector('h1#content');
-      if (contentEl) {
-        contentEl.focus();
-      }
-      shouldSetFocus.current = false;
+    if (history.action === 'POP') {
+      previousPath.current = null; // clear the previous path on back clicks
     }
-  }, [state.loading, state.pageData]);
+    return () => {
+      previousPath.current = pathname;
+    };
+  }, [pathname, history]);
 
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
+    if (hasMounted.current) {
+      getNextPageState(pathname).then(setState);
     } else {
-      // Only update on subsequent page renders
-      const {
-        service: nextService,
-        variant: nextVariant,
-        id: nextId,
-        assetUri: nextAssetUri,
-        isAmp: nextIsAmp,
-        route,
-      } = getRouteProps(routes, location.pathname);
-
-      let loaderTimeout;
-      const loaderPromise = new Promise(resolve => {
-        loaderTimeout = setTimeout(resolve, 500);
-      });
-
-      loaderPromise.then(() => {
-        setState({
-          pageData: null,
-          status: null,
-          service: nextService,
-          variant: nextVariant,
-          id: nextId,
-          assetUri: nextAssetUri,
-          isAmp: nextIsAmp,
-          pageType: route.pageType,
-          loading: true,
-          error: null,
-          errorCode: null,
-          timeOnServer: null,
-        });
-      });
-
-      route
-        .getInitialData({
-          path: location.pathname,
-          service: nextService,
-          variant: nextVariant,
-        })
-        .then(data => {
-          clearTimeout(loaderTimeout);
-          shouldSetFocus.current = true;
-          setState({
-            service: nextService,
-            variant: nextVariant,
-            id: nextId,
-            assetUri: nextAssetUri,
-            isAmp: nextIsAmp,
-            pageType: route.pageType,
-            loading: false,
-            pageData: path(['pageData'], data),
-            status: path(['status'], data),
-            error: path(['error'], data),
-            errorCode: null,
-            timeOnServer: path(['timeOnServer'], data),
-          });
-        });
+      hasMounted.current = true;
     }
-  }, [routes, location.pathname]);
+  }, [pathname]);
 
-  const previousLocationPath = usePrevious(location.pathname);
+  useLayoutEffect(() => {
+    if (hasMounted.current) {
+      if (routeHasChanged) {
+        window.scrollTo(0, 0);
+      } else {
+        setFocusOnMainHeading();
+      }
+    }
+  }, [routeHasChanged]);
 
-  // clear the previous path on back clicks
-  const previousPath = history.action === 'POP' ? null : previousLocationPath;
   return renderRoutes(routes, {
     ...state,
     bbcOrigin,
-    pathname: location.pathname,
-    previousPath,
+    previousPath: previousPath.current,
+    loading: routeHasChanged,
+    showAdsBasedOnLocation,
   });
 };
 

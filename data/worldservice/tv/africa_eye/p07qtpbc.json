@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p07qtpbc",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p07qtqpt"
+    },
+    "media_type": "audio_video",
+    "title": "Sex for Grades: undercover inside Nigerian and Ghanaian universities",
+    "short_synopsis": "Africa Eye sent journalists undercover to capture footage of sexual harassment.",
+    "medium_synopsis": "After gathering dozens of testimonies, Africa Eye sent undercover journalists posing as students inside two West African universities to capture footage of sexual harassment.",
+    "long_synopsis": "Universities in Nigeria and Ghana have been plagued by stories of sexual harassment by lecturers and professors for decades. Allegations include a wide array of abuses, from blackmailing students for sex in exchange for marks and admission to lewd comments and grooming.\n \nAfter gathering dozens of testimonies, BBC Africa Eye sent undercover journalists posing as students inside the University of Lagos (UNILAG) and the University of Ghana to capture footage of the sexual harassment.  \n \nReporter Kiki Mordi, who knows first-hand how devastating sexual harassment can be, reveals what happens behind the closed doors of some of West Africa’s most prestigious universities.\n\nHow have you been impacted by our investigation into sex for grades? If you would like to share your experience with BBC Africa Eye, contact us here: https://bbc.in/2OrGddL\n\nFurther information and support for anyone affected by sexual assault can be found through the BBC Action Line: http://bit.ly/2IyHETP\n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.co.uk/africaeye\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Sex for Grades: undercover inside Nigerian and Ghanaian universities"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p07qtpbf",
+        "duration": 3231,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

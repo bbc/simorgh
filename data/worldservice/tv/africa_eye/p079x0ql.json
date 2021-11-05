@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p079x0ql",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p079x6fd"
+    },
+    "media_type": "audio_video",
+    "title": "Sudan’s Secret Hit Squads",
+    "short_synopsis": "Sudan’s Secret Hit Squads Used to Attack Protests",
+    "medium_synopsis": "What happens inside Sudan’s secret detention centres?",
+    "long_synopsis": "These are images Sudan’s government does not want you to see: teams of masked, plainclothes agents chasing down protesters, beating them, and dragging them off to secret detention centres in Khartoum.\n \nWho are these hit squads? Where are these detention centres? And what happens inside their walls?\n\nBBC Africa Eye has analysed dozens of dramatic videos filmed during the recent uprising, and spoken with witnesses who have survived torture at the hands of the Bashir regime. Some of these protesters tell us about a secret and widely feared holding facility – The Fridge – where the cold is used an instrument of torture.\n\nInvestigation led by:\nBenjamin Strick\nAbdulmoniem Suleiman\nKlaas Van Dijken \nAliaume Leroy  \n\nProduced and Edited by:\nSuzanne Vanhooymissen \nTom Flannery \nDaniel Adamson  \n\nSubscribe: http://bit.ly/subscribetoafrica\nWebsite: https://www.bbc.com/africa\nFacebook: https://www.facebook.com/bbcnewsafrica/\nTwitter: https://www.twitter.com/bbcafrica/\nInstagram: https://www.instagram.com/bbcafrica/",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Sudan’s Secret Hit Squads"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_webonly",
+        "key": "",
+        "title": "BBC"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p079x0qq",
+        "duration": 686,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

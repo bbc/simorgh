@@ -1,18 +1,23 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import Footer from '.';
+import FooterComponent from '.';
 
-storiesOf('Containers|Footer', module)
-  .addParameters({ chromatic: { disable: true } })
-  .addDecorator(withKnobs)
-  .addDecorator(withServicesKnob())
-  .add('default', ({ service }) => {
-    return (
-      <ServiceContextProvider service={service}>
-        <Footer />
-      </ServiceContextProvider>
-    );
-  });
+// eslint-disable-next-line react/prop-types
+const Component = ({ service }) => (
+  <ServiceContextProvider service={service}>
+    <FooterComponent />
+  </ServiceContextProvider>
+);
+
+export default {
+  title: 'Containers/Footer',
+  Component,
+  decorators: [withKnobs, withServicesKnob()],
+  parameters: {
+    chromatic: { disable: true },
+  },
+};
+
+export const Footer = props => <Component {...props} />;

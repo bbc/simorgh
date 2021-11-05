@@ -1,16 +1,20 @@
 version: 0.2
 
+env:
+  variables:
+    LOG_LEVEL: 'error'
+
 phases:
   install:
     runtime-versions:
       nodejs: 12
   pre_build:
     commands:
-      - npm ci
-      - npm run build
+      - ./scripts/installNodeModules.sh
+      - yarn build
   build:
     commands:
-      - npm run cypress:ci
+      - yarn cypress:ci
 reports:
   JunitReportsTest:
     files:

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const getIconAssetUrl = (service, size) =>
-  `https://news.files.bbci.co.uk/include/articles/public/${service}/images/icons/icon-${size}.png`;
+  `https://static.files.bbci.co.uk/ws/simorgh-assets/public/${service}/images/icons/icon-${size}.png`;
 
 const createIconLinks = (service, iconSizes, iconType) => {
   return iconSizes.map(size => {
@@ -60,3 +60,26 @@ export const renderAlternateLinks = link => (
     key={link.hrefLang}
   />
 );
+
+export const renderAppleItunesApp = ({
+  iTunesAppId,
+  canonicalLink,
+  isAmp,
+  hasAppleItunesAppBanner,
+}) => {
+  const isCanonical = !isAmp;
+
+  const shouldRender = [
+    iTunesAppId,
+    canonicalLink,
+    isCanonical,
+    hasAppleItunesAppBanner,
+  ].every(Boolean);
+
+  if (shouldRender) {
+    const content = `app-id=${iTunesAppId}, app-argument=${canonicalLink}?utm_medium=banner&utm_content=apple-itunes-app`;
+
+    return <meta name="apple-itunes-app" content={content} />;
+  }
+  return null;
+};

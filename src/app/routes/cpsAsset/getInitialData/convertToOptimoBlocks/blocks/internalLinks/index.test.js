@@ -100,8 +100,7 @@ const scenarios = [
         ['afrique/23248423', 'Hello'],
         ['afrique/23248424', 'World'],
       ),
-      text:
-        'Hello <itemMeta>afrique/23248423</itemMeta> World <itemMeta>afrique/23248424</itemMeta>',
+      text: 'Hello <itemMeta>afrique/23248423</itemMeta> World <itemMeta>afrique/23248424</itemMeta>',
     }),
     expectation: wrapBlock({
       meta: generateMeta(

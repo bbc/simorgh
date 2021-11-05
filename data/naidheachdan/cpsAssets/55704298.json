@@ -1,0 +1,173 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:naidheachdan/55704298",
+    "locators": {
+      "assetUri": "/naidheachdan/55704298",
+      "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
+      "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
+      "assetId": "55704298"
+    },
+    "type": "STY",
+    "createdBy": "naidheachdan-v6",
+    "language": "gd",
+    "lastUpdated": 1610967654334,
+    "firstPublished": 1610967647000,
+    "lastPublished": 1610967647000,
+    "timestamp": 1610967647000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "naidheachdan.story.55704298.page",
+      "cps_asset_id": "55704298"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "SCOTLAND",
+      "producerId": "79"
+    },
+    "readTime": 1,
+    "siteUri": "/naidheachdan"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116563758",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/14EE8/production/_116563758__113255509_edencourt.jpg",
+        "path": "/cpsprodpb/14EE8/production/_116563758__113255509_edencourt.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Taigh-cluiche Eden Court",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Gheibh Eden Court mu £800,000 de thaic-airgid a bharrachd bho Riaghaltas na h-Alba gus an cuideachadh le bhith a' dèiligeadh le buaidh a' Choròna-bhìorais. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Tha an t-airgead mar phàirt de mhaoineachadh luach £185 millean a chaidh ainmeachadh air a' mhìos a chaidh gus cuideachadh a thoirt do ghnìomhachasan ealain tron phandemic. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Seasmhachd",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Tha Eden Court am measg trì buidhnean a tha a' ruith ionadan ealain a fhuair taic a bharrachd.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Tha e a' ciallachadh gun urrainn dhuinn dìon a chur air obraichean&quot;, thuirt Seumas MacCoinnich Blackman.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Tha fhios againn gum bi sinn seasmhach a' dol a-steach ann an 2021&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Luchd-obrach",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "'S e Eden Court an t-ionad ealain a tha air aon làrach as motha ann an Alba.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "A-mach à còrr is 100 luchd-obrach, tha còrr is 90% dhiubh fhathast air sgeama fòrlaidh an Riaghaltais. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Chan eil ach naoinear againn an-dràsta a' ruith Eden Court&quot;, thuirt Mgr Blackman.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Tha cùisean suas is sìos dhan fheadhainn a tha a' feuchainn ri Eden Court a chumail a' dol. Ach tha sinn a' dèanamh a h-uile càil as urrainn dhuinn gus fosgladh a-rithist cho luath 's a bhios sin comasach&quot;, thuirt e.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court",
+      "headline": "Maoineachadh ùr \"a' cur dìon air obraichean\" aig Eden Court"
+    },
+    "locators": {
+      "assetUri": "/naidheachdan/55704298",
+      "cpsUrn": "urn:bbc:content:assetUri:naidheachdan/55704298",
+      "curie": "http://www.bbc.co.uk/asset/ef92c041-98ee-4b68-9760-93d39f663dfb",
+      "assetId": "55704298"
+    },
+    "summary": "Cuiridh maoineachadh ùr airson taigh-cluiche agus ionad-ealain Eden Court dìon air obraichean, a rèir àrd-oifigear na companaidh.",
+    "timestamp": 1610967647000,
+    "language": "gd",
+    "indexImage": {
+      "id": "116563759",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/175F8/production/_116563759__113255509_edencourt.jpg",
+      "path": "/cpsprodpb/175F8/production/_116563759__113255509_edencourt.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Taigh-cluiche Eden Court",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:naidheachdan/55704298",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Dachaigh",
+      "uri": "/naidheachdan/dachaigh",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Naidheachdan",
+      "uri": "/naidheachdan",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

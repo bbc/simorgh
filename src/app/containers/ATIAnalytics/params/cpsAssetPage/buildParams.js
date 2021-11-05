@@ -14,26 +14,33 @@ export const buildCpsAssetPageATIParams = (
   contentType,
 ) => {
   const { platform, statsDestination } = requestContext;
-  const {
-    atiAnalyticsAppName,
-    atiAnalyticsProducerId,
-    service,
-    brandName,
-  } = serviceContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, service, brandName } =
+    serviceContext;
 
   const { metadata, promo } = pageData;
 
   const getChapter1 = pageIdentifier => {
+    if (service === 'news') {
+      return path(['atiAnalytics', 'chapter'], metadata);
+    }
     const chapter = pageIdentifier.split('.')[1];
-    if (['media_asset'].includes(chapter)) {
+    if (['media_asset', 'story'].includes(chapter)) {
       return null;
     }
     return chapter;
   };
 
+  const getProducer = defaultProducer => {
+    if (['news', 'sport'].includes(service)) {
+      return path(['atiAnalytics', 'producerId'], metadata);
+    }
+    return defaultProducer;
+  };
+
   const page = path(['analyticsLabels', 'counterName'], metadata);
   const isValidPage = page && typeof page === 'string' && page.includes('.');
   const chapter1 = isValidPage ? getChapter1(page) : false;
+  const producerId = getProducer(atiAnalyticsProducerId);
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
   const isLegacyAsset = url => url.split('/').length > 7;
@@ -55,7 +62,7 @@ export const buildCpsAssetPageATIParams = (
     campaigns: path(['passport', 'campaigns'], metadata),
     ...(ldpThingIds && { ldpThingIds }),
     ...(ldpThingLabels && { ldpThingLabels }),
-    producerId: atiAnalyticsProducerId,
+    producerId,
     libraryVersion: LIBRARY_VERSION,
     statsDestination,
     platform,

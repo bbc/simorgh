@@ -5,7 +5,7 @@
     "type": "WSRADIO",
     "createdBy": "bbc_nepali_radio",
     "language": "ne",
-    "lastUpdated": 1589529870679,
+    "lastUpdated": 1608294455391,
     "firstPublished": 1582508121000,
     "lastPublished": 1582508121000,
     "timestamp": 1582508121000,
@@ -18,10 +18,11 @@
       "producer": "NEPALI"
     },
     "tags": {},
-    "version": "v1.3.0",
+    "version": "v1.3.11",
     "blockTypes": ["media"],
     "title": "विहानीपख",
-    "releaseDateTimeStamp": 1583452800000
+    "releaseDateTimeStamp": 1583452800000,
+    "atiAnalytics": {}
   },
   "content": {
     "blocks": [
@@ -38,6 +39,8 @@
         "embedding": false,
         "advertising": false,
         "versions": [],
+        "availability": "notAvailable",
+        "smpKind": "radioProgramme",
         "type": "media"
       }
     ]
@@ -58,6 +61,8 @@
       "embedding": false,
       "advertising": false,
       "versions": [],
+      "availability": "notAvailable",
+      "smpKind": "radioProgramme",
       "type": "media"
     },
     "indexImage": {
@@ -71,6 +76,7 @@
       "copyrightHolder": null,
       "type": "image"
     },
+    "releaseDateTimestamp": 1583452800000,
     "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
     "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172x83pnptp1s8",
     "type": "ws_radio"
@@ -88,12 +94,12 @@
         "promos": [
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtm2rj2htn", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9nh5s7tnv", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtm2rj2htn",
+              "id": "w172xp9nh5s7tnv",
               "subType": "episode",
               "format": "Audio",
-              "title": "15/05/2020 GMT",
+              "title": "18/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -103,7 +109,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqfnzvngn6",
+                  "versionId": "w1mshwd2ggq4x4s",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -113,10 +119,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592099070000,
-                  "availableFrom": 1589507070000
+                  "availableUntil": 1610847870000,
+                  "availableFrom": 1608255870000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -130,18 +139,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608249600000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rj2htn",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9nh5s7tnv",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtm2rhzlxk", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9nh5s4xrr", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtm2rhzlxk",
+              "id": "w172xp9nh5s4xrr",
               "subType": "episode",
               "format": "Audio",
-              "title": "14/05/2020 GMT",
+              "title": "17/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -151,7 +161,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqfnzvkkr3",
+                  "versionId": "w1mshwd2ggq207p",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -161,10 +171,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1592012670000,
-                  "availableFrom": 1589420670000
+                  "availableUntil": 1610761470000,
+                  "availableFrom": 1608169470000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -178,18 +191,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608163200000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhzlxk",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9nh5s4xrr",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtm2rhwq0g", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9nh5s20vn", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtm2rhwq0g",
+              "id": "w172xp9nh5s20vn",
               "subType": "episode",
               "format": "Audio",
-              "title": "13/05/2020 GMT",
+              "title": "16/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -199,7 +213,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqfnzvgnv0",
+                  "versionId": "w1mshwd2ggpz3bl",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -209,10 +223,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591926270000,
-                  "availableFrom": 1589334270000
+                  "availableUntil": 1610675070000,
+                  "availableFrom": 1608083070000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -226,18 +243,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1608076800000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhwq0g",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9nh5s20vn",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtm2rhst3c", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9nh5rz3yk", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtm2rhst3c",
+              "id": "w172xp9nh5rz3yk",
               "subType": "episode",
               "format": "Audio",
-              "title": "12/05/2020 GMT",
+              "title": "15/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -247,7 +265,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqfnzvcrxx",
+                  "versionId": "w1mshwd2ggpw6fh",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -257,10 +275,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591839870000,
-                  "availableFrom": 1589247870000
+                  "availableUntil": 1610588670000,
+                  "availableFrom": 1607996670000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -274,18 +295,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607990400000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhst3c",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9nh5rz3yk",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtm2rhpx68", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9nh5rw71g", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtm2rhpx68",
+              "id": "w172xp9nh5rw71g",
               "subType": "episode",
               "format": "Audio",
-              "title": "11/05/2020 GMT",
+              "title": "14/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -295,7 +317,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqfnzv8w0t",
+                  "versionId": "w1mshwd2ggps9jd",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -305,10 +327,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591753470000,
-                  "availableFrom": 1589161470000
+                  "availableUntil": 1610502270000,
+                  "availableFrom": 1607910270000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -322,18 +347,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607904000000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtm2rhpx68",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9nh5rw71g",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtlqh69c6t", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9n3xggp20", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtlqh69c6t",
+              "id": "w172xp9n3xggp20",
               "subType": "episode",
               "format": "Audio",
-              "title": "08/05/2020 GMT",
+              "title": "11/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -343,7 +369,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqf9qjwb1c",
+                  "versionId": "w1mshwd236dcrjy",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -353,10 +379,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591494270000,
-                  "availableFrom": 1588902270000
+                  "availableUntil": 1610243070000,
+                  "availableFrom": 1607651070000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -370,18 +399,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607644800000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh69c6t",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9n3xggp20",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtlqh66g9q", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9n3xgcs4x", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtlqh66g9q",
+              "id": "w172xp9n3xgcs4x",
               "subType": "episode",
               "format": "Audio",
-              "title": "07/05/2020 GMT",
+              "title": "10/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -391,7 +421,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqf9qjsf48",
+                  "versionId": "w1mshwd236d8vmv",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -401,10 +431,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591407870000,
-                  "availableFrom": 1588815870000
+                  "availableUntil": 1610156670000,
+                  "availableFrom": 1607564670000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -418,18 +451,19 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607558400000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh66g9q",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9n3xgcs4x",
             "type": "ws_radio"
           },
           {
             "headlines": { "headline": "विहानीपख" },
-            "locators": { "pid": "w172xhtlqh63kdm", "brandPid": "p0340xzt" },
+            "locators": { "pid": "w172xp9n3xg8w7t", "brandPid": "p0340xzt" },
             "media": {
-              "id": "w172xhtlqh63kdm",
+              "id": "w172xp9n3xg8w7t",
               "subType": "episode",
               "format": "Audio",
-              "title": "06/05/2020 GMT",
+              "title": "09/12/2020 GMT",
               "synopses": {
                 "short": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम",
                 "medium": "बीबीसी नेेपाली सेवाको हरेक दिन  विहान सवा सात बजे प्रसारण हुने कार्यक्रम"
@@ -439,7 +473,7 @@
               "advertising": false,
               "versions": [
                 {
-                  "versionId": "w1mshnqf9qjpj75",
+                  "versionId": "w1mshwd236d5yqr",
                   "types": ["Original"],
                   "duration": 900,
                   "durationISO8601": "PT15M",
@@ -449,10 +483,13 @@
                     "nonUk": false,
                     "world": true
                   },
-                  "availableUntil": 1591321470000,
-                  "availableFrom": 1588729470000
+                  "availableUntil": 1610070270000,
+                  "availableFrom": 1607478270000,
+                  "availabilityStatus": "available"
                 }
               ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
               "type": "media"
             },
             "indexImage": {
@@ -466,8 +503,9 @@
               "copyrightHolder": null,
               "type": "image"
             },
+            "releaseDateTimestamp": 1607472000000,
             "brand": { "pid": "p0340xzt", "title": "विहानीपख" },
-            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xhtlqh63kdm",
+            "id": "urn:bbc:ares:ws_media:page:bbc_nepali_radio/w172xp9n3xg8w7t",
             "type": "ws_radio"
           }
         ]

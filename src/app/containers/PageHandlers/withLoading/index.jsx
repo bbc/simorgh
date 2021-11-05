@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { bool, element } from 'prop-types';
-import { GridWrapper, GridItemConstrainedMedium } from '#lib/styledGrid';
+import styled from '@emotion/styled';
+import { GridWrapper, GridItemMedium } from '#app/components/Grid';
+
+let timeout;
+const LoadingMain = styled.main`
+  min-height: 100vh;
+`;
 
 const WithLoading = Component => {
   const LoadingContainer = ({ loading, ...props }) => {
+    const [showLoading, setShowLoading] = useState(false);
+    useEffect(() => {
+      if (loading) {
+        timeout = setTimeout(() => {
+          setShowLoading(true);
+        }, 500);
+      }
+      return () => clearTimeout(timeout);
+    }, [loading]);
+
     if (!loading) return <Component {...props} />;
+
     return (
-      <main role="main">
+      <LoadingMain role="main">
         <GridWrapper>
-          <GridItemConstrainedMedium />
+          <GridItemMedium>
+            {showLoading && <div data-testid="loading" />}
+          </GridItemMedium>
         </GridWrapper>
-      </main>
+      </LoadingMain>
     );
   };
 

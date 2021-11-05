@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
+import styled from '@emotion/styled';
 import Brand from '@bbc/psammead-brand';
-import { bool, node } from 'prop-types';
+import { bool, node, oneOfType, func, shape, any } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const BrandContainer = ({ skipLink, scriptLink, ...props }) => {
-  const {
-    product,
-    serviceLocalizedName,
-    brandSVG,
-    service,
-    theming,
-  } = useContext(ServiceContext);
+const StyledBrand = styled(Brand)`
+  position: relative;
+  z-index: 1;
+`;
+
+const BrandContainer = ({ skipLink, scriptLink, brandRef, ...props }) => {
+  const { product, serviceLocalizedName, brandSVG, service, theming } =
+    useContext(ServiceContext);
 
   const { brandBackgroundColour, brandLogoColour } = theming;
   const svgMaxHeight = 24;
@@ -20,7 +21,7 @@ const BrandContainer = ({ skipLink, scriptLink, ...props }) => {
   const maxWidth = svgRatio * svgMaxHeight;
 
   return (
-    <Brand
+    <StyledBrand
       backgroundColour={brandBackgroundColour}
       logoColour={brandLogoColour}
       product={product}
@@ -32,6 +33,7 @@ const BrandContainer = ({ skipLink, scriptLink, ...props }) => {
       url={`/${service}`}
       skipLink={skipLink}
       scriptLink={scriptLink}
+      ref={brandRef}
       {...props}
     />
   );
@@ -42,6 +44,8 @@ BrandContainer.propTypes = {
   borderBottom: bool,
   skipLink: node,
   scriptLink: node,
+  // eslint-disable-next-line react/forbid-prop-types
+  brandRef: oneOfType([func, shape({ current: any })]),
 };
 
 BrandContainer.defaultProps = {
@@ -49,6 +53,7 @@ BrandContainer.defaultProps = {
   borderBottom: false,
   skipLink: null,
   scriptLink: null,
+  brandRef: null,
 };
 
 export default BrandContainer;

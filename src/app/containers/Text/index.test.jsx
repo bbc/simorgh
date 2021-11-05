@@ -8,6 +8,22 @@ import TextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { paragraphBlock, fragmentBlock } from './fixtures';
 
+const listItemBlock = (id = null, listBlocks) => ({
+  id,
+  type: 'listItem',
+  model: {
+    blocks: listBlocks.map(blocks => paragraphBlock(id, blocks)),
+  },
+});
+
+const listBlock = (id = null, blocks, type = 'unorderedList') => ({
+  id,
+  type,
+  model: {
+    blocks: [...blocks],
+  },
+});
+
 describe('TextContainer', () => {
   describe('with no data', () => {
     suppressPropWarnings(['blocks', 'undefined']);
@@ -32,6 +48,20 @@ describe('TextContainer', () => {
         paragraphBlock('mock-id-5', [
           fragmentBlock('mock-id-5.1', 'This is a 5th paragraph block.'),
         ]),
+        listBlock('mock-id-6', [
+          listItemBlock('mock-id-6.1', [
+            [fragmentBlock('mock-id-6.1.1', 'This is a list item')],
+          ]),
+        ]),
+        listBlock(
+          'mock-id-7',
+          [
+            listItemBlock('mock-id-7.1', [
+              [fragmentBlock('mock-id-7.1.1', 'This is a list item')],
+            ]),
+          ],
+          'orderedList',
+        ),
       ],
     };
 

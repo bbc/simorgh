@@ -1,12 +1,13 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Grid from '@bbc/psammead-grid';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
+import Grid from '#app/components/Grid';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { topStoryColumns } from './storyColumns';
 import { TopRow, LeadingRow, RegularRow } from '.';
 import getNumberPromoFixtures from './testHelpers';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const TopRowStory = ({ dir, displayImages }) => (
@@ -35,7 +36,13 @@ const RegularRowStory = ({ dir, displayImages }) => (
   />
 );
 
-const getRow = (RowType, dir = 'ltr', displayImages = true) => {
+const selectDir = () => {
+  const isRtl = boolean('Right to Left', false);
+  return isRtl ? 'rtl' : 'ltr';
+};
+
+// eslint-disable-next-line react/prop-types
+const Component = ({ RowType, displayImages = true }) => {
   return (
     <ServiceContextProvider service="news">
       <RequestContextProvider
@@ -43,27 +50,35 @@ const getRow = (RowType, dir = 'ltr', displayImages = true) => {
         id="c0000000000o"
         isAmp={false}
         pathname="/pathname"
-        pageType="article"
+        pageType={ARTICLE_PAGE}
         service="news"
       >
-        <Grid enableGelGutters columns={topStoryColumns} dir={dir}>
-          <RowType dir={dir} displayImages={displayImages} />
-        </Grid>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <Grid enableGelGutters columns={topStoryColumns}>
+            <RowType dir={selectDir()} displayImages={displayImages} />
+          </Grid>
+        </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
   );
 };
 
-storiesOf('Containers|Front Page Story Row', module)
-  .addParameters({
+export default {
+  title: 'Containers/Front Page Story Row',
+  Component,
+  decorators: [withKnobs],
+  parameters: {
     chromatic: { disable: true },
-  })
-  .addDecorator(withKnobs)
-  .add('Top Row', () => getRow(TopRowStory))
-  .add('Leading Row', () => getRow(LeadingRowStory))
-  .add('Regular Row', () => getRow(RegularRowStory))
-  .add('NoImage Row', () => getRow(RegularRowStory, 'ltr', false))
-  .add('Top Row RTL', () => getRow(TopRowStory, 'rtl'))
-  .add('Leading Row RTL', () => getRow(LeadingRowStory, 'rtl'))
-  .add('Regular Row RTL', () => getRow(RegularRowStory, 'rtl'))
-  .add('NoImage Row RTL', () => getRow(RegularRowStory, 'rtl', false));
+  },
+};
+
+export const WithTopRow = () => <Component RowType={TopRowStory} />;
+export const WithLeadingRow = () => <Component RowType={LeadingRowStory} />;
+export const WithRegularRow = () => <Component RowType={RegularRowStory} />;
+export const WithNoImageRow = () => (
+  <Component RowType={RegularRowStory} displayImages={false} />
+);

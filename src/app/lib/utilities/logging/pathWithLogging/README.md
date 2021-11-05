@@ -26,24 +26,21 @@ return {
 }
 ```
 
-## Options
-The "getter" function returned from `pathWithLogging` has a second parameter, where the following options can be modified:
-
-##### `logLevel` (default: info)
+## Modifying Log Level
 The verbosity of the log message.  Logs are created with an `info` verbosity by default.  This can be modified by importing the `LOG_LEVELS` object from the module:
 
 ```javascript
 import pathWithLogging, { LOG_LEVELS } from './';
 ```
 
-and then specifying a different log level for any field
+and then specifying a different log level for any field as the second parameter of the getter
 
 ```javascript
 const get = pathWithLogging('/bbc_dari_radio/123', 'radio-field-missing', pageData);
 
 return {
   id: get(['metadata', 'id']),  //  Uses LOG_LEVELS.INFO
-  title: get(['metadata', 'title'], { logLevel: LOG_LEVELS.WARN }),
-  description: get(['metadata', 'title'], { logLevel: LOG_LEVELS.ERROR })
+  title: get(['metadata', 'title'], LOG_LEVELS.WARN),
+  description: get(['metadata', 'title'], LOG_LEVELS.ERROR)
 }
 ```

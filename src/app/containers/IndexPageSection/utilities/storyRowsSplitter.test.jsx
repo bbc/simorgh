@@ -14,6 +14,16 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [],
+      regularRows: [],
+      noImageRow: [],
+    },
   },
   1: {
     input: range(0, 1),
@@ -23,6 +33,16 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
+      firstRow: [0],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
       firstRow: [0],
       regularRows: [],
       noImageRow: [],
@@ -40,6 +60,16 @@ const numberOfStories = {
       regularRows: [],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0, 1],
+      regularRows: [],
+      noImageRow: [],
+    },
   },
   3: {
     input: range(0, 3),
@@ -49,6 +79,16 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
+      firstRow: [0, 1],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
       firstRow: [0, 1],
       regularRows: [],
       noImageRow: [],
@@ -66,6 +106,16 @@ const numberOfStories = {
       regularRows: [[0, 1, 2, 3]],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [],
+      regularRows: [[0, 1, 2, 3]],
+      noImageRow: [],
+    },
   },
   5: {
     input: range(0, 5),
@@ -75,6 +125,16 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
+      firstRow: [0],
+      regularRows: [[1, 2, 3, 4]],
+      noImageRow: [],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [[1, 2, 3, 4]],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
       firstRow: [0],
       regularRows: [[1, 2, 3, 4]],
       noImageRow: [],
@@ -92,6 +152,16 @@ const numberOfStories = {
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [[1, 2, 3, 4]],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0, 1],
+      regularRows: [[2, 3, 4, 5]],
+      noImageRow: [],
+    },
   },
   7: {
     input: range(0, 7),
@@ -105,6 +175,16 @@ const numberOfStories = {
       regularRows: [[2, 3, 4, 5]],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [[1, 2, 3, 4]],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0, 1],
+      regularRows: [[2, 3, 4, 5]],
+      noImageRow: [],
+    },
   },
   8: {
     input: range(0, 8),
@@ -114,6 +194,19 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
+      firstRow: [],
+      regularRows: [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
+      ],
+      noImageRow: [],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [[1, 2, 3, 4]],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
       firstRow: [],
       regularRows: [
         [0, 1, 2, 3],
@@ -140,6 +233,22 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+      ],
+      noImageRow: [],
+    },
   },
   10: {
     input: range(0, 10),
@@ -152,6 +261,22 @@ const numberOfStories = {
       noImageRow: [],
     },
     expectedNotFirstSection: {
+      firstRow: [0, 1],
+      regularRows: [
+        [2, 3, 4, 5],
+        [6, 7, 8, 9],
+      ],
+      noImageRow: [],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
       firstRow: [0, 1],
       regularRows: [
         [2, 3, 4, 5],
@@ -178,6 +303,22 @@ const numberOfStories = {
       ],
       noImageRow: [],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0, 1],
+      regularRows: [
+        [2, 3, 4, 5],
+        [6, 7, 8, 9],
+      ],
+      noImageRow: [],
+    },
   },
   12: {
     input: range(0, 12),
@@ -196,6 +337,23 @@ const numberOfStories = {
         [4, 5, 6, 7],
       ],
       noImageRow: [8, 9, 10, 11],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [],
+      regularRows: [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
+        [8, 9, 10, 11],
+      ],
+      noImageRow: [],
     },
   },
   13: {
@@ -216,6 +374,24 @@ const numberOfStories = {
       ],
       noImageRow: [9, 10, 11, 12],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+      ],
+      noImageRow: [],
+    },
   },
   14: {
     input: range(0, 14),
@@ -234,6 +410,24 @@ const numberOfStories = {
         [6, 7, 8, 9],
       ],
       noImageRow: [10, 11, 12, 13],
+    },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [0, 1],
+      regularRows: [
+        [2, 3, 4, 5],
+        [6, 7, 8, 9],
+        [10, 11, 12, 13],
+      ],
+      noImageRow: [],
     },
   },
   20: {
@@ -254,20 +448,67 @@ const numberOfStories = {
       ],
       noImageRow: [8, 9, 10, 11],
     },
+    expectedFirstSectionShowAllPromos: {
+      firstRow: [0],
+      regularRows: [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+      ],
+      noImageRow: [],
+    },
+    expectedNotFirstSectionShowAllPromos: {
+      firstRow: [],
+      regularRows: [
+        [0, 1, 2, 3],
+        [4, 5, 6, 7],
+        [8, 9, 10, 11],
+        [12, 13, 14, 15],
+        [16, 17, 18, 19],
+      ],
+      noImageRow: [],
+    },
   },
 };
 
 const rowsTest = value => {
-  it(`should return right splitting for ${value} stories for first section`, () => {
-    expect(getRows(numberOfStories[value].input, true)).toStrictEqual(
-      numberOfStories[value].expectedFirstSection,
-    );
+  describe('first section', () => {
+    it(`should correctly split ${value} stories`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      expect(getRows({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedFirstSection,
+      );
+    });
+
+    it(`should correctly split ${value} stories when showAllPromos is true`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = true;
+      const showAllPromos = true;
+      expect(getRows({ items, isFirstSection, showAllPromos })).toStrictEqual(
+        numberOfStories[value].expectedFirstSectionShowAllPromos,
+      );
+    });
   });
 
-  it(`should return right splitting for ${value} stories for non-first section`, () => {
-    expect(getRows(numberOfStories[value].input, false)).toStrictEqual(
-      numberOfStories[value].expectedNotFirstSection,
-    );
+  describe('non-first section', () => {
+    it(`should correctly split ${value} stories`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = false;
+      expect(getRows({ items, isFirstSection })).toStrictEqual(
+        numberOfStories[value].expectedNotFirstSection,
+      );
+    });
+
+    it(`should correctly split ${value} stories when showAllPromos is true`, () => {
+      const items = numberOfStories[value].input;
+      const isFirstSection = false;
+      const showAllPromos = true;
+      expect(getRows({ items, isFirstSection, showAllPromos })).toStrictEqual(
+        numberOfStories[value].expectedNotFirstSectionShowAllPromos,
+      );
+    });
   });
 };
 

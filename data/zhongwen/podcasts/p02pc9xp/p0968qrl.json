@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p0968qrl",
+    "locators": { "pid": "p0968qrl", "brandPid": "p02pc9xp" },
+    "type": "WSRADIO",
+    "createdBy": "bbc_cantonese_radio",
+    "language": "zh",
+    "lastUpdated": 1613058236139,
+    "firstPublished": 1612656433000,
+    "lastPublished": 1612656433000,
+    "timestamp": 1612656433000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "BBC 時事一周 Newsweek (Cantonese) - BBC News 中文",
+      "pageIdentifier": "chinese.bbc_cantonese_radio.p0968qrl.page",
+      "producerId": "38",
+      "contentType": "player-episode",
+      "producer": "CHINESE"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "BBC 時事一周 Newsweek (Cantonese)",
+    "releaseDateTimeStamp": 1612656000000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0968qrl",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "緬甸政變；中國抨擊BBC對新疆的報導；拜登總統表示繼續對中國強硬",
+          "medium": "本周節目內容：緬甸政變 | 中國抨擊BBC對新疆的報導 | 拜登總統表示繼續對中國強硬 | 英國生活點滴：小學入學前的準備 |專題： 「星艦」飛船再接再厲 | 專題：QR碼疫情期的進展 | 記者來鴻：加拿大原住民的龍蝦 | 華人談天下：從BNO問題到薯餅",
+          "long": "本周節目內容：緬甸政變 | 中國抨擊BBC對新疆的報導 | 拜登總統表示繼續對中國強硬 | 英國生活點滴：小學入學前的準備 |專題： 「星艦」飛船再接再厲 | 專題：QR碼疫情期的進展 | 記者來鴻：加拿大原住民的龍蝦 | 華人談天下：從BNO問題到薯餅"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0968qrt.jpg",
+        "embedding": true,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0968qpl",
+            "types": ["Podcast"],
+            "duration": 3599,
+            "durationISO8601": "PT59M59S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1615248360000,
+            "availableFrom": 1612656360000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "時事一周 2021年2月6日23:00 GMT",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+    "locators": { "pid": "p0968qrl", "brandPid": "p02pc9xp" },
+    "media": {
+      "id": "p0968qrl",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "緬甸政變；中國抨擊BBC對新疆的報導；拜登總統表示繼續對中國強硬",
+        "medium": "本周節目內容：緬甸政變 | 中國抨擊BBC對新疆的報導 | 拜登總統表示繼續對中國強硬 | 英國生活點滴：小學入學前的準備 |專題： 「星艦」飛船再接再厲 | 專題：QR碼疫情期的進展 | 記者來鴻：加拿大原住民的龍蝦 | 華人談天下：從BNO問題到薯餅",
+        "long": "本周節目內容：緬甸政變 | 中國抨擊BBC對新疆的報導 | 拜登總統表示繼續對中國強硬 | 英國生活點滴：小學入學前的準備 |專題： 「星艦」飛船再接再厲 | 專題：QR碼疫情期的進展 | 記者來鴻：加拿大原住民的龍蝦 | 華人談天下：從BNO問題到薯餅"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0968qrt.jpg",
+      "embedding": true,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0968qpl",
+          "types": ["Podcast"],
+          "duration": 3599,
+          "durationISO8601": "PT59M59S",
+          "warnings": {},
+          "availableTerritories": { "uk": true, "nonUk": true, "world": false },
+          "availableUntil": 1615248360000,
+          "availableFrom": 1612656360000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "時事一周 2021年2月6日23:00 GMT",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0968qrt.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0968qrt.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1612656000000,
+    "brand": {
+      "pid": "p02pc9xp",
+      "title": "BBC 時事一周 Newsweek (Cantonese)"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p0968qrl",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Chinese",
+      "uri": "/chinese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p095mrd6", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p095mrd6",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "英國2019冠狀病毒死難者超過十萬；拜登總統與普京總統首次對話；印度農民無序抗議的背後",
+                "medium": "本周節目內容：英國2019冠狀病毒死難者超過十萬 | 拜登總統與普京總統首次對話 | 印度農民無序抗議的背後 | 英國生活點滴：學校與居住地的關係 |專題： 令中國政府擔心的春運 | 專題：可以放在掌上的衛星 | 記者來鴻：伊朗暗殺異見者 | 華人談天下：台灣罷免制度的演變",
+                "long": "本周節目內容：英國2019冠狀病毒死難者超過十萬 | 拜登總統與普京總統首次對話 | 印度農民無序抗議的背後 | 英國生活點滴：學校與居住地的關係 |專題： 令中國政府擔心的春運 | 專題：可以放在掌上的衛星 | 記者來鴻：伊朗暗殺異見者 | 華人談天下：台灣罷免制度的演變"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p095mrdf.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p095mr8r",
+                  "types": ["Podcast"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614643560000,
+                  "availableFrom": 1612051560000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2021年1月30日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p095mrdf.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p095mrdf.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1612051200000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p095mrd6",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p094ysdy", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p094ysdy",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "美國總統拜登就職；特朗普政府同中國爭鬥到最後一日；世衛警告疫苗囤積問題",
+                "medium": "本周節目內容：美國總統拜登就職 | 特朗普政府同中國爭鬥到最後一日 | 世衛警告疫苗囤積問題 | 英國生活點滴：怎樣選一所好小學 |專題： 特朗普留下什麼？ | 專題：火龍果要改名 | 記者來鴻：製造疫苗冷藏櫃的工廠探秘 | 華人談天下：法國人對英國脫歐問題的看法",
+                "long": "本周節目內容：美國總統拜登就職 | 特朗普政府同中國爭鬥到最後一日 | 世衛警告疫苗囤積問題 | 英國生活點滴：怎樣選一所好小學 |專題： 特朗普留下什麼？ | 專題：火龍果要改名 | 記者來鴻：製造疫苗冷藏櫃的工廠探秘 | 華人談天下：法國人對英國脫歐問題的看法"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p094ysfk.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p094yscp",
+                  "types": ["Podcast"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1614038820000,
+                  "availableFrom": 1611446820000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2021年1月23日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p094ysfk.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p094ysfk.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1611446400000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p094ysdy",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p0947xxw", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p0947xxw",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "特朗普第二度受彈劾；美台交流欲斷未斷；世衛專家進入中國調查",
+                "medium": "本周節目內容：特朗普第二度受彈劾 | 美台交流欲斷未斷 | 世衛專家進入中國調查 | 英國生活點滴：英國中小學學制 |\n專題： 脫歐後的火腿三文治與香蕉 | 專題：王儲的地球\n | 記者來鴻：禁足令下的馬賽 | 華人談天下：澳洲人的婚禮",
+                "long": "本周節目內容：特朗普第二度受彈劾 | 美台交流欲斷未斷 | 世衛專家進入中國調查 | 英國生活點滴：英國中小學學制 |\n專題： 脫歐後的火腿三文治與香蕉 | 專題：王儲的地球\n | 記者來鴻：禁足令下的馬賽 | 華人談天下：澳洲人的婚禮"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0947xyf.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p0947xrv",
+                  "types": ["Podcast"],
+                  "duration": 3600,
+                  "durationISO8601": "PT1H",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableUntil": 1613433960000,
+                  "availableFrom": 1610841960000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一周 2021年1月16日23:00 GMT",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p0947xyf.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p0947xyf.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1610841600000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p0947xxw",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p06l9nvk", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p06l9nvk",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "北韓金正恩提出再唔特朗普；中俄頻繁互動意在抗美？；颱風、颶風面前不撤退的理由......",
+                "medium": "BBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。",
+                "long": "※ 北韓金正恩提出再唔特朗普\n\n※ 中俄頻繁互動意在抗美？\n\n※ 颱風、颶風面前不撤退的理由\n\n※ 專題：馬克思之鄉--德國特里爾\n\n※ 專題：拯救鹹海\n\n※ 華人談天下：法國開學　茲事體大\n\n \n\nBBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。\n\n\n\nPHOTO: A Korean People's Army (KPA) soldier leads a military band during an \"international march for peace, prosperity, and reunification of Korea\" on the outskirts of Pyongyang on September 11, 2018. (Photo by Ed JONES / AFP)"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06l9nw6.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2018年9月15日",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06l9nw6.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06l9nw6.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1537056000000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p06l9nvk",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p06k2cs7", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p06k2cs7",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "羅興亞危機一週年　聯合國猛批昂山素姬；特朗普：中美貿易戰阻礙北韓去核進程；俄國退休制度改革衝擊普京民望......",
+                "medium": "BBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。",
+                "long": "※ 羅興亞危機一週年　聯合國猛批昂山素姬\n\n※ 特朗普：中美貿易戰阻礙北韓去核進程\n\n※ 俄國退休制度改革衝擊普京民望\n\n※ 專題：印尼人為何不愛講印尼語\n\n※ 專題：被忽視的女性盆骨底健康\n\n※ 華人談天下：不討好的加拿大移民新政\n\n \n\nBBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。\n\n\n\nPHOTO: Rohingya refugee women hold placards as they take part in a protest at the Kutupalong refugee camp to mark the one-year anniversary of their exodus in Cox's Bazar, Bangladesh, August 25, 2018. REUTERS/Mohammad Ponir Hossain"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06k2csg.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2018年9月1日",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06k2csg.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06k2csg.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1535846400000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p06k2cs7",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p06jglnn", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p06jglnn",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "貿易談判無果中美互相加徵關稅；「掩口費」指控進迫特朗普；薩爾瓦多與台灣斷交……",
+                "medium": "BBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。",
+                "long": "※ 貿易談判無果　中美互相加徵關稅\n\n※ 「掩口費」指控進迫特朗普\n\n※ 薩爾瓦多與台灣斷交\n\n※ 專題：人類移民小行星可能嗎？\n\n※ 記者來鴻：走過500年風霜的賽馬場\n\n※ 华人谈天下：港式面包店在纽约没落\n\n \n\nBBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。\n\n\n\nPHOTO: Corn and soybean farmer William Hejl checks one of his soybean fields in Amenia, North Dakota, U.S., July 6, 2018. REUTERS/Dan Koeck\n\n(hi047974139.jpg)"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06jglnw.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2018年8月25日",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06jglnw.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06jglnw.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1535241600000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p06jglnn",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p06hvfqf", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p06hvfqf",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "聯合國前秘書長安南逝世；美國土耳其貿易戰惡化；意大利行車大橋崩塌……",
+                "medium": "BBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。",
+                "long": "※ 聯合國前秘書長安南逝世　享年80歲\n\n※ 美國土耳其貿易戰惡化\n\n※ 意大利行車大橋崩塌\n\n※ 專題：陸沉中的雅加達\n\n※ 專題：女子電競選手的辛酸\n\n※ 華人談天下：香港大學招生背後的貧富爭議\n\n \n\nBBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。\n\n\n\nPHOTO: Former UN secretary-general Kofi Annan receives the Bertelsmann foundation\"s Reinhard Mohn Prize in Guetersloh, western Germany on November 7, 2013. AFP PHOTO / CAROLINE SEIDEL"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06hvfqn.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2018年8月18日",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06hvfqn.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06hvfqn.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1534636800000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p06hvfqf",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": { "headline": "BBC 時事一周 Newsweek (Cantonese)" },
+            "locators": { "pid": "p06h74fk", "brandPid": "p02pc9xp" },
+            "media": {
+              "id": "p06h74fk",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "國際社會促請徹查也門空襲；美國特朗普政府恢復制裁伊朗；澳州大旱威脅糧食供應……",
+                "medium": "BBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。",
+                "long": "※ 國際社會促請徹查也門空襲\n\n※ 美國特朗普政府恢復制裁伊朗\n\n※ 澳州大旱威脅糧食供應\n\n※ 專題：老當益壯　南非自駕遊英國\n\n※ 專題：無法微笑怎麼辦？\n\n※ 華人談天下：巴黎竊賊前　中國遊客無懼色\n\n \n\nBBC時事一週──BBC國際台粵語節目，重溫一週國際大事，兩岸四地消息，英國境況。主要專題環節包括：記者來鴻、華人談天下、環宇風情、科技天地。\n\n\n\nPHOTO: The Jerry family farm \"Marlborough\", 40 km outside Coonabarabran, June 20, 2018 in Coonabarabran, Australia. (Brook Mitchell/Getty Images)"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p06h74fs.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [],
+              "availability": "notAvailable",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "時事一週 2018年8月11日",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p06h74fs.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p06h74fs.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1534032000000,
+            "brand": {
+              "pid": "p02pc9xp",
+              "title": "BBC 時事一周 Newsweek (Cantonese)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_cantonese_radio/p06h74fk",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

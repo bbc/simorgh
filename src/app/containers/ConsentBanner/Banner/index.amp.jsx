@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
 import { bool, string } from 'prop-types';
 import { ConsentBanner } from '@bbc/psammead-consent-banner';
+import AmpCookieBanner from './cookie.amp';
 import { ServiceContext } from '#contexts/ServiceContext';
 import BannerText from './Text';
 import getDataAttribute from './getDataAttribute';
 
-const Accept = (message, onClick, dataAttribute) => (
+const Button = (message, onClick, dataAttribute) => (
   <button type="button" on={onClick} {...dataAttribute}>
     {message}
   </button>
 );
 
-const Reject = (message, href, onClick, dataAttribute) => (
+const Anchor = (message, href, onClick, dataAttribute) => (
   <a href={href} on={onClick} {...dataAttribute}>
     {message}
   </a>
@@ -25,24 +26,44 @@ const AmpConsentBannerContainer = ({
   hidden,
 }) => {
   const { dir, translations, script, service } = useContext(ServiceContext);
-  const consentBannerConfig = translations.consentBanner[type];
 
   const dataAttribute = getDataAttribute(type);
 
-  return (
-    <ConsentBanner
-      dir={dir}
+  return type === 'cookie' ? (
+    <AmpCookieBanner
       id={promptId}
-      title={consentBannerConfig.title}
-      text={BannerText(consentBannerConfig.description)}
-      accept={Accept(
-        consentBannerConfig.accept,
+      translations={[
+        translations.consentBanner.cookie.amp.initial,
+        translations.consentBanner.cookie.amp.manage,
+      ]}
+      accept={Button(
+        translations.consentBanner.cookie.amp.accept,
         acceptAction,
         dataAttribute('accept'),
       )}
-      reject={Reject(
-        consentBannerConfig.reject,
-        consentBannerConfig.rejectUrl,
+      reject={Button(
+        translations.consentBanner.cookie.amp.reject,
+        rejectAction,
+        dataAttribute('reject'),
+      )}
+      hidden={hidden}
+      script={script}
+      service={service}
+    />
+  ) : (
+    <ConsentBanner
+      dir={dir}
+      id={promptId}
+      title={translations.consentBanner[type].title}
+      text={BannerText(translations.consentBanner[type].description)}
+      accept={Button(
+        translations.consentBanner[type].accept,
+        acceptAction,
+        dataAttribute('accept'),
+      )}
+      reject={Anchor(
+        translations.consentBanner[type].reject,
+        translations.consentBanner[type].rejectUrl,
         rejectAction,
         dataAttribute('reject'),
       )}

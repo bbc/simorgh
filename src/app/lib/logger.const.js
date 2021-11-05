@@ -8,7 +8,9 @@ const logCodes = {
   CLUSTER_PROCESS_EXIT: 'cluster_process_exit',
 
   // Data fetch
+  DATA_FETCH_RESPONSE_TIME: 'data_fetch_response_time',
   DATA_FETCH_ERROR: 'data_fetch_error',
+  DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
 
@@ -25,8 +27,12 @@ const logCodes = {
   MEDIA_MISSING_FIELD: 'media_missing_field',
   MEDIA_PLAYER_STATUS: 'media_player_status',
   RADIO_MISSING_FIELD: 'radio_missing_field',
+  PODCAST_MISSING_FIELD: 'podcast_missing_field',
   EPISODE_EXPIRED: 'episode_expired',
   EPISODE_NOT_YET_AVAILABLE: 'episode_not_yet_available',
+  UNRECOGNISED_EPISODE_AVAILABILITY: 'unrecognised_episode_availability',
+
+  PODCAST_SERVICE_MISSING: 'podcast_service_missing',
 
   // Translations
   NO_TRANSLATION_FOUND: 'no_translation_found',
@@ -46,14 +52,24 @@ const logCodes = {
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
 
+  // Config
+  CONFIG_REQUEST_RECEIVED: 'config_request_received',
+  CONFIG_FETCH_ERROR: 'config_fetch_error',
+  CONFIG_ERROR: 'config_error',
+
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
+  GIST_TRANSFORMATION_FAILED: 'gist_transformation_failed',
 
   // Most Read
   MOST_READ_FETCH_ERROR: 'most_read_fetch_error',
   MOST_READ_CLIENT_REQUEST: 'most_read_client_request',
   MOST_READ_DATA_INCOMPLETE: 'most_read_data_incomplete',
   MOST_READ_STALE_DATA: 'most_read_stale_data',
+
+  // Most Watched
+  MOST_WATCHED_PROCESS_ERROR: 'most_watched_process_error',
+  MOST_WATCHED_STALE_DATA: 'most_watched_stale_data',
 
   // Include
   INCLUDE_ERROR: 'include_error',
@@ -66,6 +82,9 @@ const logCodes = {
 
   // Social Embed
   SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
+
+  // Toggle API
+  TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 };
 
 module.exports = logCodes;

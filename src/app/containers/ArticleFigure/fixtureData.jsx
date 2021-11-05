@@ -1,9 +1,18 @@
 import React from 'react';
-import { any, bool, string, number, objectOf } from 'prop-types';
+import {
+  bool,
+  string,
+  number,
+  shape,
+  arrayOf,
+  oneOfType,
+  object,
+} from 'prop-types';
 import FigureContainer from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { blockContainingText } from '#models/blocks';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const imageAlt = 'Pauline Clayton';
 const imageHeight = 360;
@@ -159,7 +168,7 @@ const GenerateFixtureData = ({
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={platform === 'amp'}
-      pageType="article"
+      pageType={ARTICLE_PAGE}
       pathname="/pathname"
       service="news"
       statusCode={200}
@@ -181,7 +190,11 @@ const GenerateFixtureData = ({
 );
 
 GenerateFixtureData.propTypes = {
-  caption: objectOf(any),
+  caption: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }),
+  }),
   copyright: string,
   lazyLoad: bool,
   platform: string,

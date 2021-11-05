@@ -1,30 +1,6 @@
 {
-  "content": {
-    "blocks": [
-      {
-        "text": "Dhaggeeffadhaa",
-        "markupType": "plain_text",
-        "type": "heading"
-      },
-      {
-        "text": "Sagantaawwan keenya",
-        "type": "paragraph"
-      },
-      {
-        "id": "liveradio",
-        "subType": "primary",
-        "format": "audio",
-        "externalId": "bbc_oromo_radio",
-        "duration": "PT0S",
-        "caption": "",
-        "embedding": false,
-        "available": true,
-        "live": true,
-        "type": "version"
-      }
-    ]
-  },
-
+  "heading": "Dhaggeeffadhaa",
+  "bodySummary": "Sagantaawwan keenya",
   "masterBrand": "bbc_oromo_radio",
   "language": "om",
   "id": "urn:bbc:ares::ws_live:bbc_oromo_radio",
@@ -32,5 +8,43 @@
   "summary": "Sagantaawwan keenya",
   "pageTitle": "Dhaggeeffadhaa - BBC News Afaan Oromoo",
   "contentType": "player-live",
-  "pageIdentifier": "afaanoromoo.bbc_afaanoromoo_radio.liveradio.page"
+  "pageIdentifier": "afaanoromoo.bbc_afaanoromoo_radio.liveradio.page",
+  "radioScheduleData": [
+    {
+      "id": "p086qxcg",
+      "state": "onDemand",
+      "startTime": 1585255770000,
+      "link": "/afaanoromoo/bbc_oromo_radio/w3cszx49",
+      "brandTitle": "Oduu BBC Afaan Oromoo",
+      "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+      "duration": "PT15M"
+    },
+    {
+      "id": "p086qv8j",
+      "state": "onDemand",
+      "startTime": 1585253070000,
+      "link": "/afaanoromoo/bbc_oromo_radio/w3cszx0x",
+      "brandTitle": "Barnoota Ingilish BBC Afaan Oromoo",
+      "summary": "",
+      "duration": "PT5M"
+    },
+    {
+      "id": "p086qv8h",
+      "state": "onDemand",
+      "startTime": 1585252170000,
+      "link": "/afaanoromoo/bbc_oromo_radio/w3cszx49",
+      "brandTitle": "Oduu BBC Afaan Oromoo",
+      "summary": "Sagantaa Oduu fi Dhimmota Wayitaawoo daqiiqaa 15 ",
+      "duration": "PT15M"
+    },
+    {
+      "id": "p086qxch",
+      "state": "next",
+      "startTime": 1893488400000,
+      "link": "/afaanoromoo/bbc_oromo_radio/w3cszx0x",
+      "brandTitle": "Barnoota Ingilish BBC Afaan Oromoo",
+      "summary": "",
+      "duration": "PT5M"
+    }
+  ]
 }

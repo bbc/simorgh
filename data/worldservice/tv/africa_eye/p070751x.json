@@ -1,0 +1,81 @@
+{
+  "programme": {
+    "type": "clip",
+    "pid": "p070751x",
+    "expected_child_count": null,
+    "position": null,
+    "image": {
+      "pid": "p070c0wk"
+    },
+    "media_type": "audio_video",
+    "title": "Maid in Hell",
+    "short_synopsis": "Private recordings show a world of powerlessness and abuse, hidden behind closed doors.",
+    "medium_synopsis": "Many countries have banned the hiring of domestic help for countries in the Middle East who subscribe to “kafala”. Private video's show powerlessness and abuse behind closed doors.",
+    "long_synopsis": "Many African and Asian countries have banned the recruitment of domestic workers for countries in the Middle East who subscribe to the “kafala” system.\n\nUnder the system, foreign maids are legally bound to their employer and have limited rights.\n\nEmployers can take advantage of their position and many women are overworked, underpaid and physically abused.\n\nTestimonies from women who escaped and private recordings show a world of powerlessness and abuse, hidden behind closed doors.",
+    "first_broadcast_date": null,
+    "display_title": {
+      "title": "Africa Eye",
+      "subtitle": "Maid in Hell"
+    },
+    "ownership": {
+      "service": {
+        "type": null,
+        "id": "bbc_world_service_tv",
+        "key": "worldservicetv",
+        "title": "BBC World Service TV"
+      }
+    },
+    "parent": {
+      "programme": {
+        "type": "brand",
+        "pid": "w13xttpn",
+        "title": "Africa Eye",
+        "short_synopsis": "Original and high-impact BBC investigations from across Africa",
+        "media_type": null,
+        "position": null,
+        "image": {
+          "pid": "p06pqg80"
+        },
+        "expected_child_count": null,
+        "first_broadcast_date": null,
+        "aggregated_episode_count": 25,
+        "ownership": {
+          "service": {
+            "type": null,
+            "id": "bbc_world_service_tv",
+            "key": "worldservicetv",
+            "title": "BBC World Service TV"
+          }
+        }
+      }
+    },
+    "peers": {
+      "previous": null,
+      "next": null
+    },
+    "versions": [
+      {
+        "canonical": 1,
+        "pid": "p0707521",
+        "duration": 308,
+        "types": [
+          "Original version"
+        ]
+      }
+    ],
+    "links": [],
+    "supporting_content_items": [],
+    "categories": [
+      {
+        "type": "genre",
+        "id": "C00079",
+        "key": "news",
+        "title": "News",
+        "narrower": [],
+        "broader": {},
+        "has_topic_page": false,
+        "sameAs": null
+      }
+    ]
+  }
+}

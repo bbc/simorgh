@@ -24,7 +24,8 @@ const cpsOnlyOnwardJourneys = json => {
 
       return [...acc, seeAlsoGroupCpsOnly];
     }
-    return [...acc, group];
+    // omit group if not type 'see-alsos'
+    return acc;
   }, []);
 
   const { relatedContent } = json;

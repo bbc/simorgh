@@ -1,15 +1,15 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
-import VisuallyHiddenHeadlineContainer from '.';
+import Component from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
-const headline = blocksSingleFragment('This is a headline.', []);
+export default {
+  title: 'Containers/Visually Hidden Headline',
+  Component,
+};
 
-storiesOf('Containers|VisuallyHiddenHeadline', module)
-  .addParameters({ chromatic: { disable: true } })
-  .add('default VisuallyHiddenHeadline', () => (
-    <VisuallyHiddenHeadlineContainer
-      type="visuallyHiddenHeadline"
-      blocks={headline}
-    />
-  ));
+export const VisuallyHiddenHeadline = () => (
+  <Component
+    type="visuallyHiddenHeadline"
+    blocks={blocksSingleFragment('This is a headline.', [])}
+  />
+);

@@ -48,3 +48,75 @@ We have one other cypress test suite for E2Es of 3rd party systems, the success 
 We have a really custom way our approaching our E2E tests with a [comprehensive README.md](https://github.com/bbc/simorgh/blob/latest/cypress/integration/README.md).
 
 We also have [a very limited Puppeteer test suite](https://github.com/bbc/simorgh/tree/latest/puppeteer) for when we go beyond Cypress' functional limits.
+
+## Toggles
+
+If you need the values of feature toggles from the toggles service to determine if you should test for e.g. a component showing/not showing on a page then you can make use of the `cy.getToggles` custom Cypress command found in [cypress/support/commands/toggles.js](https://github.com/bbc/simorgh/blob/latest/cypress/support/commands/toggles.js)
+
+The `cy.getToggles` command has a required `service` argument.
+
+The command fetches toggles for the passed in `service` and creates a fixture by writing the `response.body.toggles` json to a file in `cypress/fixtures/toggles/` and then creates an alias from the fixture called `@toggles` that you can use in tests to get the toggles values.
+
+You can use `cy.get('@toggles')` or access the alias using `this` in the `it` callback function.
+
+Everything in `cypress/fixtures/toggles/` is in `.gitignore` so it isn't added to source control.
+
+The `cy.getToggles` is memoized meaning it won't fetch from the toggles service multiple times for the same service - it will fetch only once per service per test run to limit calls made to the toggles service.
+
+This is an example of how to use `cy.getToggles` in tests.
+
+```js
+export default ({ service }) => {
+  describe('A super cool feature', () => {
+    beforeEach(() => {
+      cy.getToggles(service);
+    });
+
+    it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', function test() {
+      const superCoolFeatureIsEnabled = path(
+        ['superCoolFeature', 'enabled'],
+        this.toggles,
+      );
+      const superCoolFeatureValue = path(
+        ['superCoolFeature', 'value'],
+        this.toggles,
+      );
+
+      if (
+        superCoolFeatureIsEnabled &&
+        superCoolFeatureValue === 'some-cool-value'
+      ) {
+        cy.get('[data-e2e=super-cool-feature]').should('exist');
+      } else {
+        cy.get('[data-e2e=super-cool-feature]').should('not.exist');
+      }
+    });
+  });
+};
+```
+
+**NB** In the example above, the `it` callback function is using the standard function syntax. Using arrow functions to access aliases via `this` won’t work because of the lexical binding of this - https://docs.cypress.io/api/commands/as.html#Fixture. If you'd rather have consistency and use an arrow function then you can still do so but you have to use `cy.get('@toggles')` and introduce async code handling with `.then` and with that comes more callback nesting. Here is the same test written with an arrow function.
+
+```js
+it('should show/not show the super cool feature depending if the toggle is enabled for the service and the value is "some-cool-value"', () => {
+  cy.get('@toggles').then(toggles => {
+    const superCoolFeatureIsEnabled = path(
+      ['superCoolFeature', 'enabled'],
+      this.toggles,
+    );
+    const superCoolFeatureValue = path(
+      ['superCoolFeature', 'value'],
+      this.toggles,
+    );
+
+    if (
+      superCoolFeatureIsEnabled &&
+      superCoolFeatureValue === 'some-cool-value'
+    ) {
+      cy.get('[data-e2e=super-cool-feature]').should('exist');
+    } else {
+      cy.get('[data-e2e=super-cool-feature]').should('not.exist');
+    }
+  });
+});
+```

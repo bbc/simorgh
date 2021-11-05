@@ -20,10 +20,10 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
        * And therefore stops `node_modules` being watched for file changes
        */
       nodeExternals({
-        whitelist: ['webpack/hot/poll?100'],
+        allowlist: ['webpack/hot/poll?100'],
       }),
     ],
-    watch: true,
+
     node: {
       /**
        * Override webpacks default handling of __dirname
@@ -42,10 +42,10 @@ module.exports = ({ resolvePath, START_DEV_SERVER }) => {
   };
 
   if (START_DEV_SERVER) {
-    const StartServerPlugin = require('start-server-webpack-plugin');
+    const StartServerPlugin = require('start-server-nestjs-webpack-plugin');
     serverConfig.plugins = [
       new webpack.HotModuleReplacementPlugin(),
-      new StartServerPlugin('server.js'), // only start the server if we've run `npm run dev`
+      new StartServerPlugin('server.js'), // only start the server if we've run `yarn dev`
     ];
   }
 

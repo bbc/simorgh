@@ -10,6 +10,7 @@ import * as requestContextImports from '#contexts/RequestContext';
 import * as serviceContextImports from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
+import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 
@@ -45,9 +46,15 @@ describe('withContexts HOC', () => {
     id: 'c0000000000o',
     service: 'news',
     isAmp: true,
-    pageType: 'article',
+    pageType: ARTICLE_PAGE,
     pathname: '/pathname',
     status: 200,
+    showAdsBasedOnLocation: true,
+    toggles: {
+      testToggle: {
+        enabled: false,
+      },
+    },
   };
 
   shouldMatchSnapshot(
@@ -72,7 +79,7 @@ describe('withContexts HOC', () => {
       jest.clearAllMocks();
     });
 
-    const pageTypes = ['article', 'frontPage', 'chicken'];
+    const pageTypes = [ARTICLE_PAGE, FRONT_PAGE, 'chicken'];
 
     pageTypes.forEach(pageType => {
       it(`passing pageType==${pageType} should pass along`, () => {
@@ -84,6 +91,12 @@ describe('withContexts HOC', () => {
           pageType,
           pathname: '/pathname',
           status: 200,
+          showAdsBasedOnLocation: true,
+          toggles: {
+            testToggle: {
+              enabled: false,
+            },
+          },
         };
         render(<ContextsHOC {...fixture} />);
         expect(requestContextSpy).toHaveBeenCalled();
@@ -108,10 +121,16 @@ describe('withContexts HOC', () => {
         id: 'c0000000000o',
         service: 'zhongwen',
         isAmp: true,
-        pageType: 'article',
+        pageType: ARTICLE_PAGE,
         pathname: '/pathname',
         variant: 'trad',
         status: 200,
+        showAdsBasedOnLocation: true,
+        toggles: {
+          testToggle: {
+            enabled: false,
+          },
+        },
       };
 
       render(<ContextsHOC {...fixture} />);

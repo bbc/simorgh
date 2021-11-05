@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:newsround/55701600",
+    "locators": {
+      "assetUri": "/newsround/55701600",
+      "cpsUrn": "urn:bbc:content:assetUri:newsround/55701600",
+      "curie": "http://www.bbc.co.uk/asset/070a7a68-267e-4899-b614-b2f3a34bfcc1",
+      "assetId": "55701600"
+    },
+    "type": "STY",
+    "createdBy": "newsround-v6",
+    "language": "en-gb",
+    "lastUpdated": 1610962802784,
+    "firstPublished": 1610962527000,
+    "lastPublished": 1610962527000,
+    "timestamp": 1610962527000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": false,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": false
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "newsround.story.55701600.page",
+      "cps_asset_id": "55701600"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "pullOut",
+      "crosshead"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "NEWSROUND",
+      "producerId": "65"
+    },
+    "readTime": 1,
+    "siteUri": "/newsround"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "116557844",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/AF4B/production/_116557844_hi065198635.jpg",
+        "path": "/cpsprodpb/AF4B/production/_116557844_hi065198635.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "A man in St Albans receives a vaccine dose",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "The UK's <link><caption>fight against the coronavirus</caption><url href=\"https://www.bbc.co.uk/newsround/51877454\" platform=\"highweb\"/></link> will take big steps forward this week as ten new mass-vaccination centres open around the country from Monday. ",
+        "role": "introduction",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newsround/51877454",
+        "type": "paragraph"
+      },
+      {
+        "text": "It is thought it will mean thousands more people will be able to receive their vaccine each week. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "So far over 3.5 million elderly and vulnerable people have already had their first dose of the <link><caption>vaccination.</caption><url href=\"https://www.bbc.co.uk/newsround/51312911\" platform=\"highweb\"/></link>",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newsround/51312911",
+        "type": "paragraph"
+      },
+      {
+        "text": "From Monday, those aged 70 and over, as well as those listed as clinically extremely vulnerable, will be offered the jab. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "title": "More like this",
+        "size": "wide",
+        "elements": [
+          {
+            "text": "<itemMeta>newsround/51312911</itemMeta>",
+            "role": "link-promotion",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Coronavirus: How do vaccines work?",
+                  "headline": "Coronavirus: Is there a coronavirus vaccine and how do vaccines work?",
+                  "overtyped": "Coronavirus: How do vaccines work? "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/newsround/51312911"
+                },
+                "summary": "There are lots of different ways to fight a virus, but right now scientists around the world are using ground-breaking technology to try to find an effective vaccine for coronavirus. Read this Newsround guide to find out more about vaccines and how long it could take to create one for coronavirus.",
+                "timestamp": 1605775445000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:newsround/51312911",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>newsround/54086737</itemMeta>",
+            "role": "link-promotion",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Coronavirus and lockdowns: What is the latest?",
+                  "headline": "Coronavirus and lockdowns: What is the latest?",
+                  "overtyped": "Coronavirus and lockdowns: What is the latest?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/newsround/54086737"
+                },
+                "summary": "Scientists and governments are working hard to stop the spread of the coronavirus. Here's the latest on what's being done about it.",
+                "timestamp": 1610123431000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:newsround/54086737",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>newsround/54842722</itemMeta>",
+            "role": "link-promotion",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "What are the coronavirus rules where you live?",
+                  "headline": "Coronavirus restrictions: What are the lockdown rules where you live?",
+                  "overtyped": "What are the coronavirus rules where you live?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/newsround/54842722"
+                },
+                "summary": "It can be hard to keep up with what the rules are around the UK and what you can and can't do - so try our handy guide",
+                "timestamp": 1609347812000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:newsround/54842722",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          },
+          {
+            "text": "<itemMeta>newsround/51896156</itemMeta>",
+            "role": "link-promotion",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "How to look after your wellbeing right now",
+                  "headline": "Coronavirus: How to support your wellbeing at the moment",
+                  "overtyped": "How to look after your wellbeing right now"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/newsround/51896156"
+                },
+                "summary": "It's normal to feel worried and concerned about the way we're living right now - here are some tips to help you look after both your physical and mental health during lockdown.",
+                "timestamp": 1609834327000,
+                "language": "en-gb",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:newsround/51896156",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "paragraph"
+          }
+        ],
+        "type": "pullOut"
+      },
+      {
+        "text": "'Huge progress'",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "116559996",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1116B/production/_116559996_a9601e1d-70ad-416e-8703-4b0da0931e24.jpg",
+        "path": "/cpsprodpb/1116B/production/_116559996_a9601e1d-70ad-416e-8703-4b0da0931e24.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Vaccination centre in Salisbury Cathedral",
+        "caption": "The amazing Salisbury Cathedral in Wiltshire has been transformed into a vaccination hub.",
+        "copyrightHolder": "PA Media",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "It is hoped more than 15 million of the most vulnerable people in the UK will have had the vaccine by February 15, 2021. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "The Prime Minister Boris Johnson has said the UK is making &quot;huge progress in our fight against the virus&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "But he urged people to stick to the <link><caption>current lockdown rules</caption><url href=\"https://www.bbc.co.uk/newsround/55545003\" platform=\"highweb\"/></link> with hospitals in England under a lot of pressure due to the number of patients with Covid-19. ",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/newsround/55545003",
+        "type": "paragraph"
+      },
+      {
+        "title": "The ten new mass vaccination sites are:",
+        "size": "wide",
+        "elements": [
+          {
+            "text": "• Bournemouth International Centre, Dorset",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Taunton Racecourse, Somerset",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Blackburn Cathedral, Lancashire",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Salt Hill Activity Centre, Berkshire",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Norwich Food Court, Norfolk",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• The Lodge in Wickford, Essex",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Princess Royal Sports Arena, Boston, Lincolnshire",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• St Helens Rugby Ground, Merseyside",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• The park-and-ride at Askham Bar, York",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "• Olympic Office Centre in Wembley, north London",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          },
+          {
+            "text": "The seven existing ones are in Birmingham, Bristol, London, Manchester, Newcastle, Stevenage and Surrey.",
+            "markupType": "plain_text",
+            "type": "paragraph"
+          }
+        ],
+        "type": "pullOut"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "New mass vaccination centres to help give out Covid jab",
+      "headline": "Coronavirus vaccine: New mass vaccination centres to help deliver Covid jab"
+    },
+    "locators": {
+      "assetUri": "/newsround/55701600",
+      "cpsUrn": "urn:bbc:content:assetUri:newsround/55701600",
+      "curie": "http://www.bbc.co.uk/asset/070a7a68-267e-4899-b614-b2f3a34bfcc1",
+      "assetId": "55701600"
+    },
+    "summary": "The UK's fight against the coronavirus will take big steps forward this week as ten new mass-vaccination centres open",
+    "timestamp": 1610962527000,
+    "language": "en-gb",
+    "indexImage": {
+      "id": "116557844",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/AF4B/production/_116557844_hi065198635.jpg",
+      "path": "/cpsprodpb/AF4B/production/_116557844_hi065198635.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "A man in St Albans receives a vaccine dose",
+      "copyrightHolder": "Reuters",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:newsround/55701600",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Home",
+      "uri": "/newsround/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "CBBC Newsround",
+      "uri": "/newsround",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

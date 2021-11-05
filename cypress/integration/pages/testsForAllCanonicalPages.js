@@ -24,55 +24,31 @@ export const testsThatFollowSmokeTestConfigForAllCanonicalPages = ({
           });
         });
       }
-      it('should only have expected bundle script tags', () => {
-        cy.get('script[src]').each($p => {
-          if ($p.attr('src').includes(envConfig.assetOrigin)) {
-            return expect($p.attr('src')).to.match(
-              new RegExp(
-                `(\\/static\\/js\\/(main|vendor|${config[service].name})-\\w+\\.\\w+\\.js)`,
-                'g',
-              ),
-            );
-          }
-          return null;
-        });
-      });
-
-      it('should have 1 bundle for its service', () => {
-        let matches = 0;
-
-        cy.get('script[src]')
-          .each($p => {
-            const match = $p
-              .attr('src')
-              .match(
-                new RegExp(
-                  `(\\/static\\/js\\/${config[service].name}-\\w+\\.\\w+\\.js)`,
-                  'g',
-                ),
-              );
-
-            if (match) {
-              matches += 1;
-            }
-          })
-          .then(() => {
-            expect(matches).to.equal(1);
-          });
-      });
-      if (['photoGalleryPage', 'storyPage'].includes(pageType)) {
-        describe('CPS PGL and STY Tests', () => {
-          it('should render at least one image', () => {
-            cy.get('figure').first().find('img').should('be.visible');
-          });
-        });
-      }
     });
   }
-  describe(`Canonical Tests`, () => {
-    it('should not have an AMP attribute on the page', () => {
-      cy.get('html').should('not.have.attr', 'amp');
-    });
+
+  describe('Header Tests', () => {
+    const serviceName = config[service].name;
+    // limit number of tests to 2 services for navigation toggling
+    const testMobileNav =
+      serviceName === 'ukchina' || serviceName === 'persian';
+
+    if (testMobileNav) {
+      it('should show dropdown menu and hide scrollable menu when menu button is clicked', () => {
+        cy.viewport(320, 480);
+        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('be.visible');
+
+        cy.get('nav')
+          .find('[data-e2e="dropdown-nav"] ul')
+          .should('not.be.visible');
+
+        cy.get('nav button').click();
+
+        cy.get('nav').find('[data-e2e="scrollable-nav"]').should('not.exist');
+
+        cy.get('nav').find('[data-e2e="dropdown-nav"] ul').should('be.visible');
+      });
+    }
   });
 };
 

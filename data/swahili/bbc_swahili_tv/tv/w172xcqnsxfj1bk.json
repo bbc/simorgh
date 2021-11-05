@@ -1,0 +1,547 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqnsxfj1bk",
+    "locators": { "pid": "w172xcqnsxfj1bk", "brandPid": "w13xttt3" },
+    "type": "WSTV",
+    "createdBy": "bbc_swahili_tv",
+    "language": "sw",
+    "lastUpdated": 1608646858577,
+    "firstPublished": 1605016425000,
+    "lastPublished": 1605016425000,
+    "timestamp": 1605016425000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "Mitikasi Leo - BBC News Swahili",
+      "pageIdentifier": "swahili.bbc_swahili_tv.tv.w172xcqnsxfj1bk.page",
+      "producerId": "86",
+      "contentType": "player-episode",
+      "producer": "SWAHILI"
+    },
+    "tags": {},
+    "version": "v1.3.11",
+    "blockTypes": ["media"],
+    "title": "Mitikasi Leo",
+    "releaseDateTimeStamp": 1606176000000,
+    "atiAnalytics": {}
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "w172xcqnsxfj1bk",
+        "subType": "episode",
+        "format": "Video",
+        "title": "24/11/2020 GMT",
+        "synopses": {
+          "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+          "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "w1mshjlxl1c0h86",
+            "types": ["Original"],
+            "duration": 900,
+            "durationISO8601": "PT15M",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": false,
+              "nonUk": false,
+              "world": true
+            },
+            "availableUntil": 1618185600000,
+            "availableFrom": 1606225500000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "programme",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": { "headline": "Mitikasi Leo" },
+    "locators": { "pid": "w172xcqnsxfj1bk", "brandPid": "w13xttt3" },
+    "media": {
+      "id": "w172xcqnsxfj1bk",
+      "subType": "episode",
+      "format": "Video",
+      "title": "24/11/2020 GMT",
+      "synopses": {
+        "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+        "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "w1mshjlxl1c0h86",
+          "types": ["Original"],
+          "duration": 900,
+          "durationISO8601": "PT15M",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": false,
+            "nonUk": false,
+            "world": true
+          },
+          "availableUntil": 1618185600000,
+          "availableFrom": 1606225500000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1606176000000,
+    "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+    "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqnsxfj1bk",
+    "type": "ws_tv"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Swahili",
+      "uri": "/swahili",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqq7zpmmrx", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqq7zpmmrx",
+              "subType": "episode",
+              "format": "Video",
+              "title": "22/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlz13m42pk",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608644700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608595200000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqq7zpmmrx",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqq7zpjqvt", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqq7zpjqvt",
+              "subType": "episode",
+              "format": "Video",
+              "title": "21/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlz13m15sg",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608558300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608508800000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqq7zpjqvt",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpwqd45wc", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpwqd45wc",
+              "subType": "episode",
+              "format": "Video",
+              "title": "18/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlynv9mmt0",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608299100000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608249600000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpwqd45wc",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpwqd18z8", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpwqd18z8",
+              "subType": "episode",
+              "format": "Video",
+              "title": "17/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlynv9jqwx",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608212700000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608163200000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpwqd18z8",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpwqcyd25", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpwqcyd25",
+              "subType": "episode",
+              "format": "Video",
+              "title": "16/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlynv9ftzt",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608126300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1608076800000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpwqcyd25",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpwqcvh52", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpwqcvh52",
+              "subType": "episode",
+              "format": "Video",
+              "title": "15/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlynv9by2q",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1608039900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607990400000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpwqcvh52",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpwqcrl7z", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpwqcrl7z",
+              "subType": "episode",
+              "format": "Video",
+              "title": "14/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjlynv9815m",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607953500000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607904000000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpwqcrl7z",
+            "type": "ws_tv"
+          },
+          {
+            "headlines": { "headline": "Mitikasi Leo" },
+            "locators": { "pid": "w172xcqpjg2c18j", "brandPid": "w13xttt3" },
+            "media": {
+              "id": "w172xcqpjg2c18j",
+              "subType": "episode",
+              "format": "Video",
+              "title": "11/12/2020 GMT",
+              "synopses": {
+                "short": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku",
+                "medium": "Ina taarifa za biashara, uchambuzi na maoni ya wataalam wa 100bora kila siku"
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "w1mshjly9kzvh65",
+                  "types": ["Original"],
+                  "duration": 900,
+                  "durationISO8601": "PT15M",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": false,
+                    "nonUk": false,
+                    "world": true
+                  },
+                  "availableUntil": 1618185600000,
+                  "availableFrom": 1607694300000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p08b2knp.png",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1607644800000,
+            "brand": { "pid": "w13xttt3", "title": "Mitikasi Leo" },
+            "id": "urn:bbc:ares:ws_media:page:bbc_swahili_tv/w172xcqpjg2c18j",
+            "type": "ws_tv"
+          }
+        ]
+      }
+    ]
+  }
+}

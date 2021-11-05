@@ -5,12 +5,13 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import WithPageWrapper from '.';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const dataProps = {
   isAmp: false,
   service: 'news',
   status: 200,
-  route: { pageType: 'article' },
+  route: { pageType: ARTICLE_PAGE },
 };
 
 // eslint-disable-next-line react/prop-types
@@ -40,7 +41,7 @@ describe('with pageWrapper', () => {
       <ServiceContextProvider service="news">
         <RequestContextProvider
           isAmp={false}
-          pageType="article"
+          pageType={ARTICLE_PAGE}
           service="news"
           statusCode={200}
           bbcOrigin="https://www.test.bbc.com"

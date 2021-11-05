@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/23219699",
+    "locators": {
+      "assetUri": "/russian/23219699",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
+      "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5",
+      "assetId": "23219699"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1594988722118,
+    "firstPublished": 1539689568000,
+    "lastPublished": 1539689568000,
+    "timestamp": 1539689568000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "sty",
+      "counterName": "russian.story.23219699.page",
+      "cps_asset_id": "23219699"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Россия",
+          "thingUri": "http://www.bbc.co.uk/things/39267b85-1784-4f4b-80ed-f8cb4a35f337#id",
+          "thingId": "39267b85-1784-4f4b-80ed-f8cb4a35f337",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/2017370/"],
+          "topicName": "Россия",
+          "topicId": "cw6eyw7m0m1t",
+          "curationList": [
+            {
+              "curationId": "3d1d4d60-3a85-42d9-9559-41b3291908dc",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Russia"
+        }
+      ]
+    },
+    "version": "v1.3.2",
+    "blockTypes": ["image", "paragraph"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "RUSSIAN", "producerId": "75" }
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "63692491",
+        "subType": "body",
+        "href": "http://b.files.bbci.co.uk/4BE5/test/_63692491_040867809-1.jpg",
+        "path": "/cpsdevpb/4BE5/test/_63692491_040867809-1.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
+        "caption": "Cats all over the world live in boxes",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "type": "image"
+      },
+      {
+        "text": "В понедельник, 15 октября, стало известно, что полицейские задержали предполагаемого четвертого участника банды. Девушка, которой во время нападений было 17 лет, по данным следствия, предлагала секс жертвам и заманивала их на встречу с неонацистами.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Убийство в промышленном районе",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Всех подозреваемых в нападениях местная полиция окончательно установила только после гибели одной из жертв. Тело 32-летнего Ваги Залибекяна обнаружили утром 1 октября 2016 года в промышленном районе на юге Омска.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Суд отменил десятилетний срок скинхеду Марцинкевичу по кличке Тесак",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В Германии раскрыли неонацистскую группировку &quot;Революция Хемниц&quot;. Она готовила нападения на мигрантов",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Участники &quot;банды ГТА&quot; получили пожизненные сроки за убийства водителей",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "У мужчины был успешный бизнес - своя фирма по ремонту дорог. Накануне гибели Залибекян отправился на свидание с девушкой, с которой познакомился в социальных сетях, писала &quot;Комсомольская правда&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Вместо девушки на встречу пришли участники банды. Бизнесмен получил несколько ножевых ранений. Добили мужчину ударами по голове прикладом винтовки. Участники банды к тому времени уже находились под подозрением у полицейских, утверждает КП. По данным издания, их телефоны прослушивались.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Также на сайте",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Сторонники финансовой пирамиды &quot;Кэшбери&quot; объявили войну блогерам и СМИ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В разговорах между участниками якобы прозвучало: &quot;*** **** [убили выходца с Кавказа], нужно искать алиби&quot;. Мужчины обсудили, где спрятать оружие и вещи, которые были на них во время убийства, и повезли улики к своему знакомому. В этот момент их задержали.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В следственном комитете тогда сообщили о задержании двух подозреваемых. Не называя имен, в ведомстве уточнили, что обоим по 24 года, один из них - студент местного вуза, а второй - &quot;неработающий молодой человек, имеющий звание кандидата в мастера спорта по рукопашному бою&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Боец, студент и заключенный",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Предположительный руководитель группы - 24-летний Никита Федоненко - с подросткового возраста серьезно занимался единоборствами. По данным новостного сайта &quot;СуперОмск&quot;, он состоял в местном отделении &quot;Федерации смешанного боевого единоборства ММА&quot; и получал на ринге награды.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В 2013 году Федоненко занял второе место на &quot;Кубке золотого шлема&quot; - международных соревнованиях по панкратиону, проводящихся в Омске. На соревнованиях он тогда представлял местную академию МВД, в которой проходил обучение.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Академию Федоненко не закончил. По одним данным, он сам решил отказаться от учебы в пользу работы и ушел в патрульно-постовую службу. По другим - был отчислен из-за неуспеваемости.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Службу в полиции вскоре тоже пришлось оставить: Федоненко не смог сдать необходимый экзамен, пишет КП. По сведениям газеты, бывший полицейский никогда не скрывал своих взглядов и на своих страницах в соцсетях &quot;с 15 лет открыто выражал ненависть к нерусским&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Вторым подозреваемым был ровесник Федоненко Александр Безбородов. На момент задержания он учился на третьем курсе одного из технических вузов в Омске. Третий обвиняемый - Александр Ландин - во время задержания остальных уже находился под стражей: его как раз судили за другое преступление.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "17-летний парень в 2015 году избил битой знакомую девушку и бросил ее на месте преступления. Девушка выжила, а Ландин получил три года лишения свободы",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Рейды&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Почти год трое мужчин выслеживали выходцев из стран Средний Азии и кавказских регионов, вооружившись винтовкой, ножом, битой и газовым баллончиком. Помимо убийства в деле еще пять эпизодов с избиениями.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Брат одного из пострадавших во время судебного заседания 15 октября описал столкновение с участниками банды так:",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Мы с моим двоюродным братом Азаматом шли по улице ... Невдалеке от нас стояло трое молодых людей. Поравнялись с ним и тут один из них, вот этот (указывает на Никиту Федоненко), не сказав ни слова, просто без причины, ударил брата в лицо. От удара тот упал. Тогда этот парень сел ему на грудь и стал избивать. Второй (Александр Безбородов) стал бегать вокруг Азамата и пинать его. Пока били матерились и кричали, мол казахи убирайтесь из этого города. Я был в шоке, потом смотрю третий из этой компании (Александр Ланбин) направился в мою сторону&quot;, - приводит слова Данияра К. &quot;Супер Омск&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Данияру К. удалось убежать от преследователя.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "После одного из таких &quot;рейдов&quot; участникам банды пришлось сменить тактику. Во время нападения на помощь жертве пришли друзья. Безбородов и Федоненко убежали, а Ландин в результате этого отпора оказался в больнице.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Тогда, пишут местные СМИ, банда решила выманивать своих жертв. В соцсетях бал создан аккаунт вымышленной девушки. Переписку с мужчинами, по данным следствия, вела Регина Микуличева, которой тогда было 17 лет.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Откуда именно взялась девушка - неясно. По данным КП, ее обязанностью было созваниваться с будущими жертвами и назначать свидания, на которые приходили остальные участники.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;СуперОмск&quot; уточняет, что в деле Микуличева &quot;обозначена статусом &quot;проститутка&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Суд над участниками банды начался еще в мае. Однако вскоре судье пришлось объявить перерыв в деле - Микуличева пропала из города.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По данным местных СМИ, во время расследования почти все фигуранты находились на свободе. Единственным подозреваемым, содержавшимся под стражей, был уже осужденный за нападение на девушку Ландин.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Остальные трое были под подпиской о невыезде или же под домашним арестом. Микуличева пропала из города уже ко второму заседанию по делу.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В течение нескольких месяцев девушку искала полиция. Во время слушаний 15 октября председательствующий в процессе судья сообщил, что Микуличева задержана и уже доставлена в Омск.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "В Омске судят банду националистов во главе с бойцом ММА.",
+      "headline": "В Омске судят банду националистов во главе с бойцом ММА. Что о ней известно?"
+    },
+    "locators": {
+      "assetUri": "/russian/23219699",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/23219699",
+      "curie": "http://www.bbc.co.uk/asset/7b4af3d0-75dd-fd44-ab78-5886867301a5",
+      "assetId": "23219699"
+    },
+    "summary": "Четверых жителей Омска судят за серию нападений на выходцев с Кавказа и стран Средней Азии, одно из которых закончилось убийством. Бандой руководил бывший полицейский и боец MMA Никита Федоненко, считает следствие.",
+    "timestamp": 1539689568000,
+    "language": "ru",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "taggings": []
+    },
+    "indexImage": {
+      "id": "63692492",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/72F5/test/_63692492_040867809-1.jpg",
+      "path": "/cpsdevpb/72F5/test/_63692492_040867809-1.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "A feral street kitten pops its head out of a cardboard box on the Greek island of Kos",
+      "caption": "Cats all over the world live in boxes",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/23219699",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Главная",
+      "uri": "/russian/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "name": "Cat was poisoned with antifreeze",
+            "uri": "http://www.bbc.co.uk/news/uk-england-somerset-16936764",
+            "type": "link"
+          }
+        ]
+      }
+    ]
+  }
+}
