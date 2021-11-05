@@ -100,7 +100,9 @@ const StoryPromoContainer = ({
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
+  labelId,
 }) => {
+  console.log('labelId', labelId);
   const {
     altCalendar,
     script,
