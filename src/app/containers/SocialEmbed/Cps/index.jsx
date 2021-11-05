@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
@@ -25,12 +24,12 @@ const CpsSocialEmbedContainer = ({ blocks }) => {
   const { type: provider, indexOfType, model } = blocks[0];
   const index = indexOfType + 1;
 
-  const id = path(['id'], model);
-  const href = path(['href'], model);
+  const id = model?.id;
+  const href = model?.href;
 
   if (!href) return null;
 
-  const oEmbed = path(['embed', 'oembed'], model);
+  const oEmbed = model?.embed?.oembed;
 
   const {
     fallback: fallbackTranslations,

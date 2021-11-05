@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import { string, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import {
@@ -68,11 +67,11 @@ const CpsAssetMediaPlayer = ({
   if (!assetUri) return null;
   const mediaBlock = filterForBlockType(blocks, 'aresMedia');
   const metadataBlock = filterForBlockType(
-    path(['model', 'blocks'], mediaBlock),
+    mediaBlock?.model?.blocks,
     'aresMediaMetadata',
   );
 
-  const available = path(['model', 'available'], metadataBlock);
+  const available = metadataBlock?.model?.available;
   return (
     <Wrapper hasBottomPadding={hasBottomPadding} dir={dir}>
       <MediaPlayerContainer

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -35,10 +34,7 @@ const StyledFauxHeadline = styled(FauxHeadline)`
 const FauxHeadlineContainer = ({ blocks }) => {
   const { script, service } = useContext(ServiceContext);
 
-  const arrayOfFragments = path(
-    ['0', 'model', 'blocks', '0', 'model', 'blocks'],
-    blocks,
-  );
+  const arrayOfFragments = blocks?.[0]?.model?.blocks?.[0]?.model?.blocks;
 
   if (!arrayOfFragments || !Array.isArray(arrayOfFragments)) {
     return null;

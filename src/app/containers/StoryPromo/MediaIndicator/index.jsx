@@ -5,7 +5,6 @@ import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -34,14 +33,12 @@ const getCpsMediaTypes = item => {
   if (!isPhotoGallery && !isMedia) {
     return null;
   }
-  const type = isPhotoGallery
-    ? 'photogallery'
-    : path(['media', 'format'], item);
+  const type = isPhotoGallery ? 'photogallery' : item?.media?.format;
   return type || null;
 };
 
 const getMediaType = item => {
-  const isAssetTypeMedia = path(['assetTypeCode'], item);
+  const isAssetTypeMedia = item?.assetTypeCode;
   return isAssetTypeMedia ? getAssetContentTypes(item) : getCpsMediaTypes(item);
 };
 
@@ -57,7 +54,7 @@ const MediaIndicatorContainer = ({ item, script, service, dir, isInline }) => {
   }
 
   // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = path(['media', 'versions', 0, 'duration'], item);
+  const rawDuration = item?.media?.versions?.[0]?.duration;
 
   if (rawDuration && !isInline) {
     const duration = moment.duration(rawDuration, 'seconds');

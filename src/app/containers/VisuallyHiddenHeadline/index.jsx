@@ -1,5 +1,4 @@
 import React from 'react';
-import path from 'ramda/src/path';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
@@ -9,7 +8,7 @@ const VisuallyHiddenHeadline = props => (
 );
 
 const VisuallyHiddenHeadlineContainer = ({ blocks }) => {
-  const { text } = path(['0', 'model', 'blocks', '0', 'model'], blocks);
+  const { text } = blocks?.[0]?.model?.blocks?.[0]?.model;
 
   if (!text) {
     return null;

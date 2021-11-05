@@ -3,7 +3,6 @@ import { string, bool } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
 import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
 import Figure from '@bbc/psammead-figure';
 import {
   GEL_SPACING_DBL,
@@ -53,7 +52,7 @@ const MediaPlayerContainer = ({
   const aresMediaBlock = filterForBlockType(blocks, 'aresMedia');
   const articleCaptionBlock = filterForBlockType(blocks, 'caption');
   const cpsCaptionBlock = filterForBlockType(
-    path(['model', 'blocks'], aresMediaBlock),
+    aresMediaBlock?.model?.blocks,
     'caption',
   );
   const captionBlock = articleCaptionBlock || cpsCaptionBlock;
@@ -67,23 +66,13 @@ const MediaPlayerContainer = ({
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
     aresMediaBlock,
   );
-  const versionId = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'versionId'],
-    aresMediaBlock,
-  );
-  const blockId = path(
-    ['model', 'blocks', 0, 'model', 'blockId'],
-    aresMediaBlock,
-  );
+  const versionId =
+    aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.versionId;
+  const blockId = aresMediaBlock?.model?.blocks?.[0]?.model?.blockId;
 
-  const format = path(
-    ['model', 'blocks', 0, 'model', 'format'],
-    aresMediaBlock,
-  );
-  const rawDuration = path(
-    ['model', 'blocks', 0, 'model', 'versions', 0, 'duration'],
-    aresMediaBlock,
-  );
+  const format = aresMediaBlock?.model?.blocks?.[0]?.model?.format;
+  const rawDuration =
+    aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.duration;
   const duration = moment.duration(rawDuration, 'seconds');
   const durationSpokenPrefix = pathOr(
     'Duration',
@@ -93,21 +82,17 @@ const MediaPlayerContainer = ({
   const separator = ',';
 
   const mediaInfo = {
-    title: path(['model', 'blocks', 0, 'model', 'title'], aresMediaBlock),
+    title: aresMediaBlock?.model?.blocks?.[0]?.model?.title,
     duration: formatDuration({ duration, padMinutes: true }),
     durationSpoken: `${durationSpokenPrefix} ${formatDuration({
       duration,
       separator,
     })}`,
-    datetime: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'durationISO8601'],
-      aresMediaBlock,
-    ),
+    datetime:
+      aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.durationISO8601,
     type: format === 'audio' ? 'audio' : 'video',
-    guidanceMessage: path(
-      ['model', 'blocks', 0, 'model', 'versions', 0, 'warnings', 'short'],
-      aresMediaBlock,
-    ),
+    guidanceMessage:
+      aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.warnings?.short,
   };
 
   const placeholderSrcset = getPlaceholderSrcSet({ originCode, locator });
@@ -131,12 +116,10 @@ const MediaPlayerContainer = ({
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
   const contentNotAvailableMessage = `This content is no longer available`;
 
-  const translatedNoJSMessage =
-    path(['media', 'noJs'], translations) || noJsMessage;
+  const translatedNoJSMessage = translations?.media?.noJs || noJsMessage;
 
   const translatedExpiredContentMessage =
-    path(['media', 'contentExpired'], translations) ||
-    contentNotAvailableMessage;
+    translations?.media?.contentExpired || contentNotAvailableMessage;
 
   const mediaIsValid = available && (versionId || blockId);
   if (!mediaIsValid) {

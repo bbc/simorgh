@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { bool } from 'prop-types';
-import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
 import styled from '@emotion/styled';
 
@@ -51,7 +50,7 @@ const DisclaimerComponent = ({ increasePaddingOnDesktop }) => {
         script={script}
         increasePaddingOnDesktop={increasePaddingOnDesktop}
       >
-        {path(['text'], disclaimer)}
+        {disclaimer?.text}
       </Inner>
     </GridItemLarge>
   );

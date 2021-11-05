@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
-import path from 'ramda/src/path';
 
 import {
   objectOf,
@@ -30,9 +29,7 @@ const Blocks = ({ blocks, componentsToRender }) =>
       return null;
     }
 
-    const Wrapper = path(['simorghMetadata', 'clear'], block)
-      ? Clearer
-      : Fragment;
+    const Wrapper = block?.simorghMetadata?.clear ? Clearer : Fragment;
 
     const { type: typeOfPreviousBlock } = blocks[index - 1] || {};
     return (

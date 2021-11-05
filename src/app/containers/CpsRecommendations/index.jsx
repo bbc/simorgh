@@ -7,7 +7,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
-import path from 'ramda/src/path';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
@@ -67,7 +66,7 @@ const CpsRecommendations = ({ items }) => {
     translations,
   );
 
-  const { text, endTextVisuallyHidden } = path(['skipLink'], recommendations);
+  const { text, endTextVisuallyHidden } = recommendations?.skipLink;
 
   const terms = {
     '%title%': title,

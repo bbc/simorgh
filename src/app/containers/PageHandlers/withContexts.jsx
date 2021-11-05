@@ -1,6 +1,5 @@
 import React from 'react';
 import { bool, element, string, number, object } from 'prop-types';
-import path from 'ramda/src/path';
 import variantPropType from '#models/propTypes/variants';
 import { pageDataPropType } from '#models/propTypes/data';
 
@@ -34,7 +33,7 @@ const WithContexts = Component => {
         <ServiceContextProvider
           service={service}
           variant={variant}
-          pageLang={path(['metadata', 'language'], pageData)}
+          pageLang={pageData?.metadata?.language}
         >
           <RequestContextProvider
             bbcOrigin={bbcOrigin}

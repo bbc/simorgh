@@ -29,8 +29,8 @@ const SocialEmbedContainer = ({ blocks, source }) => {
   const id = getIdFromSource(source);
 
   const { model } = blocks[0];
-  const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-  const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
+  const oEmbed = model?.blocks?.[0]?.model?.oembed;
+  const oEmbedIndexOfType = oEmbed?.indexOfType;
   const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
 
   const {
