@@ -95,17 +95,6 @@ const makeRequest = async requestPath => request(server).get(requestPath);
 
 const QUERY_STRING = '?param=test&query=1';
 
-const assertValidRenderedText = (isAmp, text) => {
-  if (isAmp) {
-    expect(text).toContain('transformed="self;v=1"');
-    expect(text).toContain('<html amp');
-  } else {
-    expect(text).toEqual(
-      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
-    );
-  }
-};
-
 const testRenderedData =
   ({ url, service, isAmp, successDataResponse, variant }) =>
   async () => {
@@ -151,7 +140,9 @@ const testRenderedData =
 
     expect(getRouteProps).toHaveBeenCalledWith(url.split('?')[0]);
 
-    assertValidRenderedText(isAmp, text);
+    expect(text).toEqual(
+      '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+    );
   };
 
 const assertNon200ResponseCustomMetrics = ({
@@ -231,7 +222,9 @@ const testFrontPages = ({ platform, service, variant, queryString = '' }) => {
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(serviceURL);
           expect(status).toBe(404);
-          assertValidRenderedText(isAmp, text);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
         });
 
         assertNon200ResponseCustomMetrics({
@@ -331,7 +324,9 @@ const testArticles = ({ platform, service, variant, queryString = '' }) => {
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(articleURL);
           expect(status).toBe(404);
-          assertValidRenderedText(isAmp, text);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
         });
 
         assertNon200ResponseCustomMetrics({
@@ -437,7 +432,9 @@ const testAssetPages = ({
         it('should respond with a rendered 404', async () => {
           const { status, text } = await makeRequest(articleURL);
           expect(status).toBe(404);
-          assertValidRenderedText(isAmp, text);
+          expect(text).toEqual(
+            '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+          );
         });
 
         assertNon200ResponseCustomMetrics({
@@ -539,7 +536,9 @@ const testMediaPages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
-        assertValidRenderedText(isAmp, text);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
 
       assertNon200ResponseCustomMetrics({
@@ -639,7 +638,9 @@ const testTvPages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(mediaPageURL);
         expect(status).toBe(404);
-        assertValidRenderedText(isAmp, text);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
 
       assertNon200ResponseCustomMetrics({
@@ -739,7 +740,9 @@ const testOnDemandTvEpisodePages = ({
       it('should respond with a rendered 404', async () => {
         const { status, text } = await makeRequest(`/${service}`);
         expect(status).toBe(404);
-        assertValidRenderedText(isAmp, text);
+        expect(text).toEqual(
+          '<!doctype html><html><body><h1>Mock app</h1></body></html>',
+        );
       });
 
       assertNon200ResponseCustomMetrics({
@@ -1086,19 +1089,13 @@ describe('Server', () => {
     });
   });
 
-  testFrontPages({
-    platform: 'canonical',
-    service: 'igbo',
-  });
+  testFrontPages({ platform: 'canonical', service: 'igbo' });
   testFrontPages({
     platform: 'canonical',
     service: 'igbo',
     queryString: QUERY_STRING,
   });
-  testFrontPages({
-    platform: 'amp',
-    service: 'igbo',
-  });
+  testFrontPages({ platform: 'amp', service: 'igbo' });
   testFrontPages({
     platform: 'amp',
     service: 'igbo',
@@ -1115,11 +1112,7 @@ describe('Server', () => {
     variant: 'simp',
     queryString: QUERY_STRING,
   });
-  testFrontPages({
-    platform: 'amp',
-    service: 'serbian',
-    variant: 'lat',
-  });
+  testFrontPages({ platform: 'amp', service: 'serbian', variant: 'lat' });
   testFrontPages({
     platform: 'amp',
     service: 'serbian',
@@ -1127,40 +1120,22 @@ describe('Server', () => {
     queryString: QUERY_STRING,
   });
 
-  testArticles({
-    platform: 'amp',
-    service: 'news',
-  });
-  testArticles({
-    platform: 'amp',
-    service: 'news',
-    queryString: QUERY_STRING,
-  });
-  testArticles({
-    platform: 'canonical',
-    service: 'news',
-  });
+  testArticles({ platform: 'amp', service: 'news' });
+  testArticles({ platform: 'amp', service: 'news', queryString: QUERY_STRING });
+  testArticles({ platform: 'canonical', service: 'news' });
   testArticles({
     platform: 'canonical',
     service: 'news',
     queryString: QUERY_STRING,
   });
-  testArticles({
-    platform: 'amp',
-    service: 'zhongwen',
-    variant: 'trad',
-  });
+  testArticles({ platform: 'amp', service: 'zhongwen', variant: 'trad' });
   testArticles({
     platform: 'amp',
     service: 'zhongwen',
     variant: 'trad',
     queryString: QUERY_STRING,
   });
-  testArticles({
-    platform: 'canonical',
-    service: 'zhongwen',
-    variant: 'simp',
-  });
+  testArticles({ platform: 'canonical', service: 'zhongwen', variant: 'simp' });
   testArticles({
     platform: 'canonical',
     service: 'zhongwen',
