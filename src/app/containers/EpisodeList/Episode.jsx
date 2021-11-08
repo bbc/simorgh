@@ -7,7 +7,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import pathOr from 'ramda/src/pathOr';
 import Image from './Image';
 import { withEpisodeContext } from './helpers';
 
@@ -30,7 +29,7 @@ const TextWrapper = styled.div`
 `;
 
 const Episode = forwardRef(({ children, dir }, ref) => {
-  const showMediaIndicator = pathOr({}, '0', children).type !== Image;
+  const showMediaIndicator = (children?.[0] || {}).type !== Image;
 
   return (
     <Wrapper

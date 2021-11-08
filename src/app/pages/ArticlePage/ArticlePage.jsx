@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
 import { string, node } from 'prop-types';
@@ -121,7 +120,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const lastPublished = getLastPublished(pageData);
   const aboutTags = getAboutTags(pageData);
   const topics = pageData?.metadata?.topics;
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
+  const blocks = pageData?.content?.model?.blocks || [];
   const startsWithHeading = propEq('type', 'headline')(blocks[0] || {});
 
   const visuallyHiddenBlock = {
@@ -134,11 +133,8 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     ? blocks
     : [visuallyHiddenBlock, ...blocks];
 
-  const promoImageBlocks = pathOr(
-    [],
-    ['promo', 'images', 'defaultPromoImage', 'blocks'],
-    pageData,
-  );
+  const promoImageBlocks =
+    pageData?.promo?.images?.defaultPromoImage?.blocks || [];
 
   const promoImageAltText = filterForBlockType(promoImageBlocks, 'altText')
     ?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;

@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { string, bool } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import moment from 'moment-timezone';
-import pathOr from 'ramda/src/pathOr';
 import Figure from '@bbc/psammead-figure';
 import {
   GEL_SPACING_DBL,
@@ -61,11 +60,8 @@ const MediaPlayerContainer = ({
     return null;
   }
 
-  const { originCode, locator } = pathOr(
-    {},
-    ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],
-    aresMediaBlock,
-  );
+  const { originCode, locator } =
+    aresMediaBlock?.model?.blocks?.[1]?.model?.blocks?.[0]?.model || {};
   const versionId =
     aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.versionId;
   const blockId = aresMediaBlock?.model?.blocks?.[0]?.model?.blockId;

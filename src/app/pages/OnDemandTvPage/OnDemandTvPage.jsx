@@ -8,7 +8,6 @@ import {
   GEL_SPACING_QUAD,
   GEL_SPACING_QUIN,
 } from '@bbc/gel-foundations/spacings';
-import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
@@ -104,11 +103,8 @@ const OnDemandTvPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     queryString: location.search,
   });
 
-  const iframeTitle = pathOr(
-    'Video player',
-    ['mediaAssetPage', 'videoPlayer'],
-    translations,
-  );
+  const iframeTitle =
+    translations?.mediaAssetPage?.videoPlayer || 'Video player';
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle

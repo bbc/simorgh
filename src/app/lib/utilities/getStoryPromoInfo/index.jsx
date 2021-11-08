@@ -4,15 +4,13 @@ export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);
 
 export const getHeadline = item =>
   getAssetTypeCode(item) !== null
-    ? pathOr(null, ['name'], item)
-    : pathOr(null, ['headlines', 'headline'], item);
+    ? item?.name || null
+    : item?.headlines?.headline || null;
 
 export const getUrl = item =>
   getAssetTypeCode(item) !== null
-    ? pathOr(null, ['uri'], item)
-    : pathOr(null, ['locators', 'assetUri'], item);
+    ? item?.uri || null
+    : item?.locators?.assetUri || null;
 
 export const getIsLive = item =>
-  getAssetTypeCode(item) === null
-    ? pathOr(false, ['cpsType'], item) === 'LIV'
-    : false;
+  getAssetTypeCode(item) === null ? item?.cpsType || false === 'LIV' : false;

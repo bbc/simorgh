@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { string, shape } from 'prop-types';
 import { Headline } from '@bbc/psammead-headings';
-import pathOr from 'ramda/src/pathOr';
 import Paragraph from '@bbc/psammead-paragraph';
 import { useLocation } from 'react-router-dom';
 import ATIAnalytics from '../../containers/ATIAnalytics';
@@ -49,11 +48,8 @@ const LiveRadioPage = ({ pageData }) => {
     isAmp,
     queryString: location.search,
   });
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+  const iframeTitle =
+    translations?.mediaAssetPage?.audioPlayer || 'Audio player';
   const hasRadioScheduleData = Boolean(radioScheduleData);
 
   return (

@@ -5,13 +5,12 @@ import { shape, string, oneOf, oneOfType, bool } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import { GEL_SPACING_HLF } from '@bbc/gel-foundations/spacings';
-import pathOr from 'ramda/src/pathOr';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import formatDuration from '#lib/utilities/formatDuration';
 import { isPgl, isMap } from '../utilities';
 
 const getAssetContentTypes = item => {
-  const type = pathOr('', ['contentType'], item);
+  const type = item?.contentType || item?.[''];
   const mediaContentTypesMapping = {
     Audio: 'audio',
     Gallery: 'photogallery',

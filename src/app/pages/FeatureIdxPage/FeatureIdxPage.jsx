@@ -1,5 +1,4 @@
 import React, { useContext, Fragment } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import MetadataContainer from '#containers/Metadata';
@@ -22,7 +21,7 @@ const FeatureIdxPage = ({ pageData }) => {
   const { isAmp, showAdsBasedOnLocation } = useContext(RequestContext);
   const { enabled: adsEnabled } = useToggle('ads');
 
-  const groups = flattenGroups(pathOr([], ['content', 'groups'], pageData));
+  const groups = flattenGroups(pageData?.content?.groups || []);
   const title = pageData?.metadata?.title;
   const summary = pageData?.metadata?.summary;
   const seoTitle = pageData?.promo?.name;

@@ -12,7 +12,6 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
-import pathOr from 'ramda/src/pathOr';
 import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
@@ -81,12 +80,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const metadata = pageData?.metadata;
   const allowDateStamp = metadata?.options?.allowDateStamp;
   const assetUri = metadata?.locators?.assetUri;
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const relatedContent = pathOr(
-    [],
-    ['relatedContent', 'groups', 0, 'promos'],
-    pageData,
-  );
+  const blocks = pageData?.content?.model?.blocks || [];
+  const relatedContent = pageData?.relatedContent?.gorups?.[0]?.promos || [];
   const indexImagePath = pageData?.promo?.indexImage?.path;
   const indexImageLocator = indexImagePath
     ? getImageParts(indexImagePath)[1]

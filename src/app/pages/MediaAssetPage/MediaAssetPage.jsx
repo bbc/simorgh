@@ -10,7 +10,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
 import MediaMessage from './MediaMessage';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
@@ -83,20 +82,12 @@ const MediaAssetPage = ({ pageData }) => {
   const metadata = pageData?.metadata;
   const allowDateStamp = metadata?.options?.allowDateStamp;
   const assetUri = metadata?.locators?.assetUri;
-  const blocks = pathOr([], ['content', 'model', 'blocks'], pageData);
-  const relatedContent = pathOr(
-    [],
-    ['relatedContent', 'groups', 0, 'promos'],
-    pageData,
-  );
+  const blocks = pageData?.content?.model?.blocks || [];
+  const relatedContent = pageData?.relatedContent?.groups?.[0]?.promos || [];
   const topics = pageData?.metadata?.topics;
 
   const getIndexImageLocator = () => {
-    const indexImagePath = pathOr(
-      '',
-      ['promo', 'indexImage', 'path'],
-      pageData,
-    );
+    const indexImagePath = pageData?.promo?.indexImage?.path || '';
     return last(getImageParts(indexImagePath));
   };
 

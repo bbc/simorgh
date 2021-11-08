@@ -8,7 +8,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MAX,
 } from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
-import pathOr from 'ramda/src/pathOr';
 import MetadataContainer from '../../containers/Metadata';
 import ATIAnalytics from '../../containers/ATIAnalytics';
 import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
@@ -127,11 +126,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
     queryString: location.search,
   });
 
-  const iframeTitle = pathOr(
-    'Audio player',
-    ['mediaAssetPage', 'audioPlayer'],
-    translations,
-  );
+  const iframeTitle =
+    translations?.mediaAssetPage?.audioPlayer || 'Audio player';
 
   const hasRecentEpisodes = recentEpisodes && Boolean(recentEpisodes.length);
   const metadataTitle = episodeTitle
