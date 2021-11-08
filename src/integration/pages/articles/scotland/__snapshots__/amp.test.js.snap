@@ -163,24 +163,18 @@ exports[`AMP Articles Footer I can see the footer copyright and external linking
 
 exports[`AMP Articles Header I can see the branding 1`] = `"BBC Scotland"`;
 
-exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France. The image is in the first three blocks and has this caption."`;
+exports[`AMP Articles Image Caption should match text 1`] = `"Image caption, This test image, copyright BBC, shows a map of France.  The image is in the first three blocks and has this caption."`;
 
 exports[`AMP Articles Image should match snapshot 1`] = `
 <amp-img
   alt="Map of France showing Paris and Cognac"
   attribution=""
-  class="i-amphtml-layout-responsive i-amphtml-layout-size-defined"
   height="351"
-  i-amphtml-layout="responsive"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg"
   srcset="https://ichef.bbci.co.uk/news/240/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/feb2/test/36ddabc0-d622-11e9-851e-f35866034a7a.jpg 624w"
   width="624"
->
-  <i-amphtml-sizer
-    style="display:block;padding-top:56.25%"
-  />
-</amp-img>
+/>
 `;
 
 exports[`AMP Articles Main heading should match text 1`] = `"This is the headline of this test article"`;
