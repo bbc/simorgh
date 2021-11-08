@@ -12,7 +12,15 @@ import serialiseForScript from '#lib/utilities/serialiseForScript';
 import ResourceHints from '#app/components/ResourceHints';
 import IfAboveIE9 from '#app/components/IfAboveIE9Comment';
 
-const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
+const Document = ({
+  assetOrigins,
+  app,
+  data,
+  helmet,
+  isAmp,
+  scripts,
+  links,
+}) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
   const meta = helmet.meta.toComponent();
   const title = helmet.title.toComponent();
@@ -40,6 +48,7 @@ const Document = ({ assetOrigins, app, data, helmet, isAmp, scripts }) => {
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
+        {links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
