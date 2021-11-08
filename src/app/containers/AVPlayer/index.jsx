@@ -50,9 +50,8 @@ const AVPlayer = ({
     type,
   };
   const noJsMessage =
-    translations?.[
-      `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`
-    ] || translations?.media?.noJs;
+    translations?.media?.noJs ||
+    `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
 
   if (!isValidPlatform || !assetId) return null;
 

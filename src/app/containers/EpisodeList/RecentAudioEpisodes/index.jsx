@@ -72,9 +72,9 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
     });
 
   const recentEpisodesTranslation =
-    translations?.['Recent Episodes'] || translations?.media?.recentEpisodes;
-  const durationLabel = translations?.Duration || translations?.media?.duration;
-  const audioLabel = translations?.Audio || translations?.media?.audio;
+    translations?.media?.recentEpisodes || 'Recent Episodes';
+  const durationLabel = translations?.media?.duration || 'Duration ';
+  const audioLabel = translations?.media?.audio || 'Audio';
   const getUrl = episodeId =>
     '/'.concat(
       [

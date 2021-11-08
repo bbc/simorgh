@@ -95,9 +95,7 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   if (!links.length) return null;
 
   const defaultTranslation = 'This podcast is also available on';
-  const title =
-    translations?.[defaultTranslation] ||
-    translations?.media?.PodcastExternalLinks;
+  const title = translations?.media?.PodcastExternalLinks || defaultTranslation;
   const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
 

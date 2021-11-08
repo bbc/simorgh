@@ -76,7 +76,7 @@ PromoListComponent.defaultProps = {
 
 const TopStories = ({ content, parentColumns, sectionLabelBackground }) => {
   const { translations } = useContext(ServiceContext);
-  const title = translations?.['Top Stories'] || translations?.topStoriesTitle;
+  const title = translations?.topStoriesTitle || 'Top Stories';
 
   return (
     <CpsOnwardJourney

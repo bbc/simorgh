@@ -87,7 +87,7 @@ const componentsToRender = (service, script, dir) => ({
 
 const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
-  const gistTitle = translations?.['At a glance'] || translations?.gist;
+  const gistTitle = translations?.gist || 'At a glance';
   return (
     <GridItemLarge role="region" aria-labelledby="gist-title">
       <GistWrapper service={service} script={script} dir={dir}>

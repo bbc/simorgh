@@ -170,8 +170,8 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   // If this is the 1st section and the strapline has a name field then it should render a visually hidden text
   // , otherwise render the strapline as it is
   const strapline = isFirstSection
-    ? group?.strapline?.name || group?.[topStoriesTitle]
-    : group?.strapline?.name || group?.[''];
+    ? group?.strapline?.name || topStoriesTitle
+    : group?.strapline?.name || '';
 
   const radioFilteredItems = removeFirstSlotRadioBulletin(group?.items || null);
 

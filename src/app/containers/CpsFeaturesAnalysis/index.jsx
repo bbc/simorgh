@@ -79,9 +79,7 @@ const FeaturesAnalysis = ({
 }) => {
   const { translations } = useContext(ServiceContext);
 
-  const title =
-    translations?.['Features & Analysis'] ||
-    translations?.featuresAnalysisTitle;
+  const title = translations?.featuresAnalysisTitle || 'Features & Analysis';
 
   return (
     <CpsOnwardJourney

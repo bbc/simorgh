@@ -21,8 +21,7 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
 const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
   const { translations } = useContext(ServiceContext);
 
-  const title =
-    translations?.['Related Content'] || translations.relatedContent;
+  const title = translations.relatedContent || 'Related Content';
 
   return (
     <StyledCpsOnwardJourney

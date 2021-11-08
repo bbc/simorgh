@@ -34,14 +34,12 @@ const IncludeContainer = props => {
   const { enabled } = useToggle('include');
 
   const errorMessage =
-    translations?.[
-      'Sorry, we can’t display this part of the story on this lightweight mobile page.'
-    ] || translations?.include?.errorMessage;
+    translations?.include?.errorMessage ||
+    'Sorry, we can’t display this part of the story on this lightweight mobile page.';
 
   const linkText =
-    translations?.[
-      'View the full version of the page to see all the content.'
-    ] || translations?.include?.linkText;
+    translations?.include?.linkText ||
+    'View the full version of the page to see all the content.';
 
   if (!enabled) return null;
   const { isAmpSupported, href, type, index } = props;

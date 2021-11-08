@@ -39,8 +39,7 @@ const CanonicalAd = ({ slotType, className }) => {
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
-  const label =
-    translations?.Advertisement || translations?.ads?.advertisementLabel;
+  const label = translations?.ads?.advertisementLabel || 'Advertisement';
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   useEffect(() => {

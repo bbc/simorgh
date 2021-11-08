@@ -45,13 +45,13 @@ const VideoErrorWrapper = styled.div`
 const getErrorMessage = (status, translations) => {
   if (status === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
     return (
-      translations?.['This content is no longer available'] ||
-      translations?.media?.contentExpired
+      translations?.media?.contentExpired ||
+      'This content is no longer available'
     );
   }
   return (
-    translations?.['This content is not yet available'] ||
-    translations?.media?.contentNotYetAvailable
+    translations?.media?.contentNotYetAvailable ||
+    'This content is not yet available'
   );
 };
 

@@ -152,8 +152,7 @@ const AmpAd = ({ slotType }) => {
   const { translations, dir, script, service, showAdPlaceholder } =
     useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const label =
-    translations?.Advertisement || translations?.ads?.advertisementLabel;
+  const label = translations?.ads?.advertisementLabel || 'Advertisement';
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;

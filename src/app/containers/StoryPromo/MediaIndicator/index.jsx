@@ -10,7 +10,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 import { isPgl, isMap } from '../utilities';
 
 const getAssetContentTypes = item => {
-  const type = item?.contentType || item?.[''];
+  const type = item?.contentType || '';
   const mediaContentTypesMapping = {
     Audio: 'audio',
     Gallery: 'photogallery',

@@ -54,9 +54,9 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
     });
 
   const recentEpisodesTranslation =
-    translations?.['Recent Episodes'] || translations?.media?.recentEpisodes;
-  const durationLabel = translations?.Duration || translations?.media?.duration;
-  const videoLabel = translations?.Video || translations?.media?.video;
+    translations?.media?.recentEpisodes || 'Recent Episodes';
+  const durationLabel = translations?.media?.duration || 'Duration';
+  const videoLabel = translations?.media?.video || 'Video';
   const getUrl = episodeId =>
     '/'.concat(
       [service, variant, masterBrand, 'tv', episodeId]

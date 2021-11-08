@@ -24,8 +24,7 @@ const useViewTracker = (props = {}) => {
   const eventTrackingContext = useContext(EventTrackingContext);
   const { pageIdentifier, platform, producerId, statsDestination } =
     eventTrackingContext;
-  const campaignID =
-    props?.(eventTrackingContext?.campaignID) || props?.campaignID;
+  const campaignID = props?.(eventTrackingContext?.campaignID) || 'campaignID';
   const { service } = useContext(ServiceContext);
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
