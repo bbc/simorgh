@@ -111,7 +111,7 @@ const StoryPromoContainer = ({
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const liveLabel = translations?.LIVE || translations?.media?.liveLabel;
+  const liveLabel = translations?.media?.liveLabel || 'LIVE';
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.

@@ -57,17 +57,15 @@ const ScheduleItemHeader = ({
   const { script, locale, service, timezone, dir, translations } =
     useContext(ServiceContext);
 
-  const liveLabel = translations?.LIVE || translations?.media?.liveLabel;
-  const nextLabel = translations?.NEXT || translations?.media?.nextLabel;
+  const liveLabel = translations?.media?.liveLabel || 'LIVE';
+  const nextLabel = translations?.media?.nextLabel || 'NEXT';
 
   const isLive = state === 'live';
   const isNext = state === 'next';
 
-  const listenLive =
-    translations?.['Listen Live'] || translations?.media?.listenLive;
-  const listen = translations?.Listen || translations?.media?.listen;
-  const listenNext =
-    translations?.['Listen Next'] || translations?.media?.listenNext;
+  const listenLive = translations?.media?.listenLive || 'Listen Live';
+  const listen = translations?.media?.listen || 'Listen';
+  const listenNext = translations?.media?.listenNext || 'Listen Next';
 
   const listenLabelTranslations = {
     live: listenLive,

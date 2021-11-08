@@ -74,9 +74,9 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   const contentType = item?.contentType || null;
   const mediaType = contentType === 'TVBulletin' ? 'video' : 'audio';
 
-  const watchText = translations?.Watch || translations?.media?.watch;
-  const listenText = translations?.Listen || translations?.media?.listen;
-  const liveText = translations?.LIVE || translations?.media?.liveLabel;
+  const watchText = translations?.media?.watch || 'Watch';
+  const listenText = translations?.media?.listen || 'Listen';
+  const liveText = translations?.media?.liveLabel || 'LIVE';
   const ctaText = contentType === 'TVBulletin' ? watchText : listenText;
   const ctaTextIsEnglish = ctaText === 'Watch' || ctaText === 'Listen';
 
