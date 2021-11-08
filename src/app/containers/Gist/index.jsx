@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import {
   GEL_SPACING_HLF,
@@ -88,7 +87,7 @@ const componentsToRender = (service, script, dir) => ({
 
 const Gist = ({ blocks }) => {
   const { service, script, dir, translations } = useContext(ServiceContext);
-  const gistTitle = pathOr('At a glance', ['gist'], translations);
+  const gistTitle = translations?.['At a glance'] || translations?.gist;
   return (
     <GridItemLarge role="region" aria-labelledby="gist-title">
       <GistWrapper service={service} script={script} dir={dir}>

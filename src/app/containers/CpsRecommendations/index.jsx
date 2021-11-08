@@ -6,7 +6,6 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import pathOr from 'ramda/src/pathOr';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
@@ -60,11 +59,9 @@ const CpsRecommendations = ({ items }) => {
 
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
-  const title = pathOr(
-    'You may also be interested in',
-    ['recommendationTitle'],
-    translations,
-  );
+  const title =
+    translations?.['You may also be interested in'] ||
+    translations?.recommendationsTitle;
 
   const { text, endTextVisuallyHidden } = recommendations?.skipLink;
 

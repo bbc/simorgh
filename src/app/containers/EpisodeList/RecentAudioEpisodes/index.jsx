@@ -2,7 +2,6 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, number } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import {
   formatDuration,
@@ -72,13 +71,10 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
       isRelative: false,
     });
 
-  const recentEpisodesTranslation = pathOr(
-    'Recent Episodes',
-    ['media', 'recentEpisodes'],
-    translations,
-  );
-  const durationLabel = pathOr('Duration', ['media', 'duration'], translations);
-  const audioLabel = pathOr('Audio', ['media', 'audio'], translations);
+  const recentEpisodesTranslation =
+    translations?.['Recent Episodes'] || translations?.media?.recentEpisodes;
+  const durationLabel = translations?.Duration || translations?.media?.duration;
+  const audioLabel = translations?.Audio || translations?.media?.audio;
   const getUrl = episodeId =>
     '/'.concat(
       [

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { string, bool, number } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 
 import EmbedError from '@bbc/psammead-embed-error';
 import nodeLogger from '#lib/logger.node';
@@ -34,17 +33,15 @@ const IncludeContainer = props => {
   const { translations } = useContext(ServiceContext);
   const { enabled } = useToggle('include');
 
-  const errorMessage = pathOr(
-    'Sorry, we can’t display this part of the story on this lightweight mobile page.',
-    ['include', 'errorMessage'],
-    translations,
-  );
+  const errorMessage =
+    translations?.[
+      'Sorry, we can’t display this part of the story on this lightweight mobile page.'
+    ] || translations?.include?.errorMessage;
 
-  const linkText = pathOr(
-    'View the full version of the page to see all the content.',
-    ['include', 'linkText'],
-    translations,
-  );
+  const linkText =
+    translations?.[
+      'View the full version of the page to see all the content.'
+    ] || translations?.include?.linkText;
 
   if (!enabled) return null;
   const { isAmpSupported, href, type, index } = props;

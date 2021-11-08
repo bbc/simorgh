@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { bool, shape, number } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
@@ -163,20 +162,18 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
   const sectionLabelId = idSanitiser(group.title);
   const { topStoriesTitle } = translations;
 
-  const isLink = pathOr(null, ['strapline', 'type'], group) === 'LINK';
-  const href = pathOr(null, ['strapline', 'links', 'mobile'], group);
-  const type = pathOr(null, ['type'], group);
-  const seeAll = pathOr(null, ['seeAll'], translations);
+  const isLink = (group?.strapline?.type || null) === 'LINK';
+  const href = group?.strapline?.links?.mobile || null;
+  const type = group?.type || null;
+  const seeAll = translations?.seeAll || null;
   const isFirstSection = sectionNumber === 0;
   // If this is the 1st section and the strapline has a name field then it should render a visually hidden text
   // , otherwise render the strapline as it is
   const strapline = isFirstSection
-    ? pathOr(topStoriesTitle, ['strapline', 'name'], group)
-    : pathOr('', ['strapline', 'name'], group);
+    ? group?.strapline?.name || group?.[topStoriesTitle]
+    : group?.strapline?.name || group?.[''];
 
-  const radioFilteredItems = removeFirstSlotRadioBulletin(
-    pathOr(null, ['items'], group),
-  );
+  const radioFilteredItems = removeFirstSlotRadioBulletin(group?.items || null);
 
   const bulletinFilteredItems = removeTVBulletinsIfNotAVLiveStream({
     items: radioFilteredItems,

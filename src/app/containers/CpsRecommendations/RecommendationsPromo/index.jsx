@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
@@ -91,9 +90,9 @@ const StyledHeadline = styled.div`
 const RecommendationsPromo = ({ promo, eventTrackingData }) => {
   const { script, service } = useContext(ServiceContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-  const headline = pathOr(null, ['headlines', 'headline'], promo);
-  const url = pathOr(null, ['locators', 'assetUri'], promo);
-  const indexImage = pathOr(null, ['indexImage'], promo);
+  const headline = promo?.headlines?.headline || null;
+  const url = promo?.locators?.assetUri || null;
+  const indexImage = promo?.indexImage || null;
 
   return (
     <Grid

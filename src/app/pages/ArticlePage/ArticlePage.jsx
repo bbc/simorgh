@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
@@ -141,15 +140,11 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     pageData,
   );
 
-  const promoImageAltText = path(
-    ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'text'],
-    filterForBlockType(promoImageBlocks, 'altText'),
-  );
+  const promoImageAltText = filterForBlockType(promoImageBlocks, 'altText')
+    ?.model?.blocks?.[0]?.model?.blocks?.[0]?.model?.text;
 
-  const promoImage = path(
-    ['model', 'locator'],
-    filterForBlockType(promoImageBlocks, 'rawImage'),
-  );
+  const promoImage = filterForBlockType(promoImageBlocks, 'rawImage')?.model
+    ?.locator;
 
   const MostReadWrapper = ({ children }) => (
     <ArticlePageMostReadSection>

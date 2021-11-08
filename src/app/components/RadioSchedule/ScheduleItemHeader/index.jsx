@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import { oneOfType, elementType, string, number } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
@@ -58,23 +57,17 @@ const ScheduleItemHeader = ({
   const { script, locale, service, timezone, dir, translations } =
     useContext(ServiceContext);
 
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
-  const nextLabel = pathOr('NEXT', ['media', 'nextLabel'], translations);
+  const liveLabel = translations?.LIVE || translations?.media?.liveLabel;
+  const nextLabel = translations?.NEXT || translations?.media?.nextLabel;
 
   const isLive = state === 'live';
   const isNext = state === 'next';
 
-  const listenLive = pathOr(
-    'Listen Live',
-    ['media', 'listenLive'],
-    translations,
-  );
-  const listen = pathOr('Listen', ['media', 'listen'], translations);
-  const listenNext = pathOr(
-    'Listen Next',
-    ['media', 'listenNext'],
-    translations,
-  );
+  const listenLive =
+    translations?.['Listen Live'] || translations?.media?.listenLive;
+  const listen = translations?.Listen || translations?.media?.listen;
+  const listenNext =
+    translations?.['Listen Next'] || translations?.media?.listenNext;
 
   const listenLabelTranslations = {
     live: listenLive,

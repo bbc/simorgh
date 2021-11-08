@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
@@ -77,7 +76,7 @@ PromoListComponent.defaultProps = {
 
 const TopStories = ({ content, parentColumns, sectionLabelBackground }) => {
   const { translations } = useContext(ServiceContext);
-  const title = pathOr('Top Stories', ['topStoriesTitle'], translations);
+  const title = translations?.['Top Stories'] || translations?.topStoriesTitle;
 
   return (
     <CpsOnwardJourney

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
@@ -80,11 +79,9 @@ const FeaturesAnalysis = ({
 }) => {
   const { translations } = useContext(ServiceContext);
 
-  const title = pathOr(
-    'Features & Analysis',
-    ['featuresAnalysisTitle'],
-    translations,
-  );
+  const title =
+    translations?.['Features & Analysis'] ||
+    translations?.featuresAnalysisTitle;
 
   return (
     <CpsOnwardJourney

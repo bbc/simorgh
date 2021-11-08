@@ -11,7 +11,6 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import pathOr from 'ramda/src/pathOr';
 
 import AudioLoader from '#components/MediaPlayer/AudioLoader';
 
@@ -50,11 +49,10 @@ const AVPlayer = ({
     title,
     type,
   };
-  const noJsMessage = pathOr(
-    `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`,
-    ['media', 'noJs'],
-    translations,
-  );
+  const noJsMessage =
+    translations?.[
+      `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`
+    ] || translations?.media?.noJs;
 
   if (!isValidPlatform || !assetId) return null;
 

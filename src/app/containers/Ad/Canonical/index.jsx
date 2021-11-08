@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import { oneOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
-import pathOr from 'ramda/src/pathOr';
 import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -40,11 +39,8 @@ const CanonicalAd = ({ slotType, className }) => {
   const location = useLocation();
   const queryString = location.search;
   const { translations, dir } = useContext(ServiceContext);
-  const label = pathOr(
-    'Advertisement',
-    ['ads', 'advertisementLabel'],
-    translations,
-  );
+  const label =
+    translations?.Advertisement || translations?.ads?.advertisementLabel;
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   useEffect(() => {

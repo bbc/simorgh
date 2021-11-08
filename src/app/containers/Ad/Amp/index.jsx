@@ -8,7 +8,6 @@ import {
 } from '@bbc/psammead-assets/amp-boilerplate';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR_LIGHT, C_RHINO } from '@bbc/psammead-styles/colours';
-import pathOr from 'ramda/src/pathOr';
 import { getMinion } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { RequestContext } from '#contexts/RequestContext';
@@ -153,11 +152,8 @@ const AmpAd = ({ slotType }) => {
   const { translations, dir, script, service, showAdPlaceholder } =
     useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const label = pathOr(
-    'Advertisement',
-    ['ads', 'advertisementLabel'],
-    translations,
-  );
+  const label =
+    translations?.Advertisement || translations?.ads?.advertisementLabel;
   const ariaLabel = getAdsAriaLabel(label, dir, slotType);
 
   const Advert = showAdPlaceholder ? AdWithPlaceholder : AdWithoutPlaceholder;
