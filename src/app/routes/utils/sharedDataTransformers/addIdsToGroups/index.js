@@ -4,18 +4,20 @@ import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import addIdsToItems from '../addIdsToItems';
 
 export default json => {
-  const content = path(['content'], json);
+  const groups = path(['content', 'groups'], json);
 
-  if (content) {
-    const newContent = addIdsToItems({
-      pathToItems: ['model', 'blocks'],
-      recursive: true,
-    })(content);
+  if (groups) {
+    const newGroups = groups.map(({ items, ...group }) => ({
+      ...group,
+      items: addIdsToItems({
+        pathToItems: [],
+      })(items),
+    }));
 
     return mergeDeepLeft(
       {
         content: {
-          ...newContent,
+          groups: newGroups,
         },
       },
       json,
