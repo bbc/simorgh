@@ -1,12 +1,9 @@
-import pathOr from 'ramda/src/pathOr';
-
 export const updateToggles = data => ({
   type: 'UPDATE_TOGGLE_STATE',
   data,
 });
 
-const adsEnabled = ({ data }) =>
-  pathOr(false, ['toggles', 'ads', 'enabled'], data);
+const adsEnabled = ({ data }) => data?.toggles?.ads?.enabled || false;
 
 export const toggleReducer = (toggleState, action) => {
   const { type, data } = action;

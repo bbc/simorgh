@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { node, shape, bool } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import styled from '@emotion/styled';
 import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
@@ -28,7 +27,7 @@ const PageWrapper = ({ children, pageData }) => {
   const { fonts: fontFunctions } = useContext(ServiceContext);
   const fonts = fontFunctions.map(getFonts => getFonts());
 
-  const isDarkMode = pathOr(false, ['darkMode'], pageData);
+  const isDarkMode = pageData?.darkMode || false;
 
   return (
     <>

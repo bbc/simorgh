@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { oneOf } from 'prop-types';
 import styled from '@emotion/styled';
-import pathOr from 'ramda/src/pathOr';
 import {
   GEL_SPACING,
   GEL_SPACING_DBL,
@@ -45,16 +44,14 @@ const VideoErrorWrapper = styled.div`
 
 const getErrorMessage = (status, translations) => {
   if (status === EPISODE_STATUS.EPISODE_IS_EXPIRED) {
-    return pathOr(
-      'This content is no longer available',
-      ['media', 'contentExpired'],
-      translations,
+    return (
+      translations?.['This content is no longer available'] ||
+      translations?.media?.contentExpired
     );
   }
-  return pathOr(
-    'This content is not yet available',
-    ['media', 'contentNotYetAvailable'],
-    translations,
+  return (
+    translations?.['This content is not yet available'] ||
+    translations?.media?.contentNotYetAvailable
   );
 };
 

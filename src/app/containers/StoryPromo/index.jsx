@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Timestamp from '@bbc/psammead-timestamp-container';
-import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
@@ -112,7 +111,7 @@ const StoryPromoContainer = ({
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const liveLabel = translations?.LIVE || translations?.media?.liveLabel;
 
   // As screenreaders mispronounce the word 'LIVE', we use visually hidden
   // text to read 'Live' instead, which screenreaders pronounce correctly.
@@ -120,38 +119,36 @@ const StoryPromoContainer = ({
 
   const isAssetTypeCode = getAssetTypeCode(item);
   const isStoryPromoPodcast =
-    isAssetTypeCode === 'PRO' &&
-    pathOr(null, ['contentType'], item) === 'Podcast';
+    isAssetTypeCode === 'PRO' && (item.contentType || null) === 'Podcast';
   const isContentTypeGuide =
-    isAssetTypeCode === 'PRO' &&
-    pathOr(null, ['contentType'], item) === 'Guide';
+    (isAssetTypeCode === 'PRO' && item?.contentType) || null === 'Guide';
   const headline = getHeadline(item);
   const url = getUrl(item);
   const isLive = getIsLive(item);
 
-  const overtypedSummary = pathOr(null, ['overtypedSummary'], item);
+  const overtypedSummary = item?.overtypedSummary || null;
   const hasWhiteSpaces = overtypedSummary && !overtypedSummary.trim().length;
 
   let promoSummary;
   if (overtypedSummary && !hasWhiteSpaces) {
     promoSummary = overtypedSummary;
   } else {
-    const summary = pathOr(null, ['summary'], item);
+    const summary = item?.summary || null;
     promoSummary = summary;
   }
 
-  const timestamp = pathOr(null, ['timestamp'], item);
-  const relatedItems = pathOr(null, ['relatedItems'], item);
-  const cpsType = pathOr(null, ['cpsType'], item);
+  const timestamp = item?.timestamp || null;
+  const relatedItems = item?.relatedItems || null;
+  const cpsType = item?.cpsType || null;
   // If mediaStatusCode is visible, there is an error in rendering the block
-  const mediaStatuscode = pathOr(null, ['media', 'statusCode'], item);
+  const mediaStatuscode = item?.media?.statusCode || null;
 
   const displayTimestamp =
     timestamp && !isStoryPromoPodcast && !isContentTypeGuide && !isLive;
 
   if (cpsType === MEDIA_ASSET_PAGE && mediaStatuscode) {
     logger.warn(MEDIA_MISSING, {
-      url: pathOr(null, ['section', 'uri'], item),
+      url: item?.section?.uri || null,
       mediaStatuscode,
       mediaBlock: item.media,
     });
@@ -239,7 +236,7 @@ const StoryPromoContainer = ({
     </>
   );
 
-  const imageValues = pathOr(null, ['indexImage'], item);
+  const imageValues = item?.indexImage || null;
   const Image = (
     <StoryPromoImage
       useLargeImages={useLargeImages}

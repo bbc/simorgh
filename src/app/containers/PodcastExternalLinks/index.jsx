@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React, { useContext } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { C_CLOUD_LIGHT, C_SHADOW } from '@bbc/psammead-styles/colours';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
@@ -96,11 +95,9 @@ const PodcastExternalLinks = ({ brandTitle, links }) => {
   if (!links.length) return null;
 
   const defaultTranslation = 'This podcast is also available on';
-  const title = pathOr(
-    defaultTranslation,
-    ['media', 'podcastExternalLinks'],
-    translations,
-  );
+  const title =
+    translations?.[defaultTranslation] ||
+    translations?.media?.PodcastExternalLinks;
   const hasMultipleLinks = links.length > 1;
   const firstLink = links[0];
 

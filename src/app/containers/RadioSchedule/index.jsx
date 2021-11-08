@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 import { string } from 'prop-types';
-import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
@@ -19,7 +18,7 @@ const RadioScheduleContainer = ({
   const { isAmp, env } = useContext(RequestContext);
   const { service, radioSchedule } = useContext(ServiceContext);
   const location = useLocation();
-  const hasRadioSchedule = pathOr(null, ['hasRadioSchedule'], radioSchedule);
+  const hasRadioSchedule = radioSchedule?.hasRadioSchedule || null;
   const radioScheduleEnabled = !isAmp && enabled && hasRadioSchedule;
 
   if (!radioScheduleEnabled) {

@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { TopicTag, TopicTags } from '@bbc/psammead-topic-tags';
-import pathOr from 'ramda/src/pathOr';
 import SectionLabel from '@bbc/psammead-section-label';
 import styled from '@emotion/styled';
 import { arrayOf, bool, shape, string } from 'prop-types';
@@ -43,8 +42,9 @@ const RelatedTopics = ({
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
-  const heading = pathOr('Related Topics', ['relatedTopics'], translations);
-  const topicsPath = pathOr('topics', ['topicsPath'], translations);
+  const heading =
+    translations?.['Related Topics'] || translations?.RelatedTopics;
+  const topicsPath = translations?.topics || translations?.topicPath;
 
   const getTopicPageUrl = id => {
     return variant

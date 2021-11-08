@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import { useContext, useCallback, useState } from 'react';
-import pathOr from 'ramda/src/pathOr';
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
@@ -21,11 +20,8 @@ const useClickTrackerHandler = (props = {}) => {
   const eventTrackingContext = useContext(EventTrackingContext);
   const { pageIdentifier, platform, producerId, statsDestination } =
     eventTrackingContext;
-  const campaignID = pathOr(
-    eventTrackingContext?.campaignID,
-    ['campaignID'],
-    props,
-  );
+  const campaignID =
+    props?.(eventTrackingContext?.campaignID) || props?.campaignID;
   const { service } = useContext(ServiceContext);
 
   return useCallback(

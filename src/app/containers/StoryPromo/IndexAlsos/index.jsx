@@ -1,7 +1,6 @@
 import React, { useContext, Fragment } from 'react';
 import { arrayOf, shape, oneOf, number, string, oneOfType } from 'prop-types';
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
-import pathOr from 'ramda/src/pathOr';
 import MediaIndicator from '@bbc/psammead-media-indicator';
 import {
   IndexAlsos,
@@ -65,20 +64,20 @@ buildIndexAlsosMediaIndicator.defaultProps = {
 
 const extractLinkPromoData = item => {
   const indexAlsoItem = {};
-  indexAlsoItem.id = pathOr(null, ['uri'], item);
-  indexAlsoItem.indexAlsoHeadline = pathOr(null, ['name'], item);
-  indexAlsoItem.url = pathOr(null, ['uri'], item);
+  indexAlsoItem.id = item?.uri || null;
+  indexAlsoItem.indexAlsoHeadline = item?.name || null;
+  indexAlsoItem.url = item?.uri || null;
 
   return indexAlsoItem;
 };
 
 const extractAssetPromoData = item => {
   const indexAlsoItem = {};
-  indexAlsoItem.id = pathOr(null, ['id'], item);
-  const assetHeadline = pathOr(null, ['headlines', 'headline'], item);
-  const overtypedHeadline = pathOr(null, ['headlines', 'overtyped'], item);
+  indexAlsoItem.id = item?.id || null;
+  const assetHeadline = item?.headlines?.headline || null;
+  const overtypedHeadline = item?.headlines?.overtyped || null;
   indexAlsoItem.indexAlsoHeadline = overtypedHeadline || assetHeadline;
-  indexAlsoItem.url = pathOr(null, ['locators', 'assetUri'], item);
+  indexAlsoItem.url = item?.locators?.assetUri || null;
 
   return indexAlsoItem;
 };

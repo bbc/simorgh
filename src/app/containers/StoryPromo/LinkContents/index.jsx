@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import moment from 'moment-timezone';
 import { shape, bool } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
 import { ServiceContext } from '#contexts/ServiceContext';
 import formatDuration from '#lib/utilities/formatDuration';
@@ -16,11 +15,11 @@ const LinkContents = ({ item, isInline }) => {
 
   const isMedia = isMap(item);
   const isPhotoGallery = isPgl(item);
-  const headlines = pathOr(null, ['headlines'], item);
+  const headlines = item?.headlines || null;
 
   const getContent = () => {
     if (headlines === null) {
-      return pathOr(null, ['name'], item);
+      return item?.name || null;
     }
     const { headline, overtyped } = headlines;
     return overtyped || headline;
@@ -37,7 +36,7 @@ const LinkContents = ({ item, isInline }) => {
       return 'photogallery';
     }
 
-    const mediaType = pathOr(null, ['media', 'format'], item);
+    const mediaType = item?.media?.format || null;
 
     return mediaType === 'audio' ? 'listen' : mediaType;
   };
@@ -45,7 +44,7 @@ const LinkContents = ({ item, isInline }) => {
   const type = getAnnouncedType();
 
   // Always gets the first version. Smarter logic may be needed in the future.
-  const rawDuration = pathOr(null, ['media', 'versions', 0, 'duration'], item);
+  const rawDuration = item?.media?.versions?.[0]?.duration || null;
   let offScreenDuration;
 
   if (rawDuration && !isInline) {

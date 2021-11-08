@@ -74,11 +74,8 @@ const MediaPlayerContainer = ({
   const rawDuration =
     aresMediaBlock?.model?.blocks?.[0]?.model?.versions?.[0]?.duration;
   const duration = moment.duration(rawDuration, 'seconds');
-  const durationSpokenPrefix = pathOr(
-    'Duration',
-    ['media', 'duration'],
-    translations,
-  );
+  const durationSpokenPrefix =
+    translations?.Duration || translations?.media?.duration;
   const separator = ',';
 
   const mediaInfo = {
@@ -145,11 +142,8 @@ const MediaPlayerContainer = ({
     queryString: location.search,
   });
 
-  const iframeTitle = pathOr(
-    'Media player',
-    ['mediaAssetPage', 'mediaPlayer'],
-    translations,
-  );
+  const iframeTitle =
+    translations?.['Media player'] || translations?.mediaAssetPage?.mediaPlayer;
 
   const renderCaption = () =>
     captionBlock ? (
