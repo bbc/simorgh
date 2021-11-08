@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
+import pathOr from 'ramda/src/pathOr';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
@@ -8,6 +9,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
 import { GridItemMedium } from '#app/components/Grid';
+import useViewTracker from '#hooks/useViewTracker';
 
 const componentsToRender = { listItem };
 
@@ -16,6 +18,11 @@ const StyledGridItemMedium = styled(GridItemMedium)`
 `;
 
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
+  const blockId = pathOr('null', [0, 'id'], blocks);
+  const eventTrackingData = {
+    componentName: blockId,
+  };
+  const viewRef = useViewTracker(eventTrackingData);
   const { script, service, dir } = useContext(ServiceContext);
 
   return (
@@ -25,6 +32,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         script={script}
         service={service}
         dir={dir}
+        ref={viewRef}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </BulletedList>
