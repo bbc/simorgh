@@ -10,7 +10,7 @@ import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 
 const logger = nodeLogger(__filename);
 
-const fetchMarkup = async url => {
+const fetchMarkup = async (url, assetId) => {
   logger.info(INCLUDE_REQUEST_RECEIVED, {
     url,
   });
@@ -23,6 +23,7 @@ const fetchMarkup = async url => {
       logger.error(INCLUDE_FETCH_ERROR, {
         status: res.status,
         url,
+        assetId,
       });
       return null;
     }

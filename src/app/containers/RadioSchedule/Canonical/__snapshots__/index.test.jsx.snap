@@ -4,6 +4,32 @@ exports[`Canonical RadioSchedule With initial data renders correctly for a servi
 .emotion-0 {
   background-color: #F2F2F2;
   padding: 0 1rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 59.375rem;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 56.563rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 51.063rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 30.75rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 21.25rem;
+  }
 }
 
 .emotion-3 {
@@ -1419,6 +1445,32 @@ exports[`Canonical RadioSchedule Without initial data renders correctly for a se
 .emotion-0 {
   background-color: #F2F2F2;
   padding: 0 1rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 59.375rem;
+}
+
+@media (min-width: 15rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 56.563rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 51.063rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 30.75rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-0 {
+    contain-intrinsic-size: 21.25rem;
+  }
 }
 
 .emotion-3 {
