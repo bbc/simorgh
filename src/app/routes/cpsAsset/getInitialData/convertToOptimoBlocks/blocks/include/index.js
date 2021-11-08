@@ -25,6 +25,7 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   // This will most likely change in issue #6784 so it is temporary for now
   const pathname = restParams[1];
   const blocks = path(['content', 'blocks'], pageData);
+  const assetId = path(['metadata', 'id'], pageData);
 
   const isAmp = isAmpPath(pathname);
 
@@ -53,7 +54,10 @@ const convertInclude = async (includeBlock, pageData, ...restParams) => {
   }
 
   if (!isAmp) {
-    html = await fetchMarkup(buildIncludeUrl(href, includeType, pathname));
+    html = await fetchMarkup(
+      buildIncludeUrl(href, includeType, pathname),
+      assetId,
+    );
   }
 
   const imageBlock = getImageBlock(includeType, includeBlock, isAmp);
