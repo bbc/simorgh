@@ -880,7 +880,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           class="emotion-46 emotion-47"
         >
           <a
-            aria-labelledby="storyPromoLinkText-e8ff5c18-8a14-46bf-8b26-2b2dfe8c2e78unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
@@ -1546,7 +1546,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-0dfecc39-fd91-4a2a-8764-557ad30ee85eunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
@@ -1655,7 +1655,7 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-42 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-bdaf0622-ba06-4589-b9ef-cfef8eee7d75unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
@@ -2469,7 +2469,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
-            aria-labelledby="storyPromoLinkText-3379e85d-2652-453b-ab6b-5c0d015f4574unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
@@ -2531,7 +2531,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
-            aria-labelledby="storyPromoLinkText-5f5fd9bb-5751-49fd-8c89-e7cf63a52d06unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
@@ -2593,7 +2593,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
-            aria-labelledby="storyPromoLinkText-c0f97753-f7f0-4c3f-9eab-5033c3deafe1unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
@@ -3047,7 +3047,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="storyPromoLinkText-c6f19c12-8997-4de1-bd9c-f49316b0a134unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
@@ -3131,7 +3131,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="storyPromoLinkText-ac1b209c-9c45-4611-bd3e-90ee7ddbbf9aunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-17 emotion-18"
             href="http://www.bbc.com/pidgin"
           >
@@ -3193,7 +3193,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="storyPromoLinkText-e3cc0ec5-f0c8-432b-a6a5-020cc930886funlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
@@ -3250,7 +3250,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="storyPromoLinkText-6598c1f3-d3b3-454e-a7de-b781c767f43dunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
@@ -4052,7 +4052,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
-            aria-labelledby="storyPromoLinkText-d97b6caa-de78-41e8-8c7c-fec690dd63ccunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
@@ -4084,7 +4084,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
-            aria-labelledby="storyPromoLinkText-e323938a-73fe-4129-bb39-4ff9f91dc5bbunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
@@ -4116,7 +4116,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
-            aria-labelledby="storyPromoLinkText-751ed7aa-47a1-4e78-8afc-1a103d979959unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
@@ -4531,7 +4531,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-b724157e-1727-41ca-8f0b-284505a88b4eunlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
@@ -4589,7 +4589,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-afce78d0-31e3-4e7f-82da-461d2b5775e6unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
@@ -4621,7 +4621,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-98934497-a061-4016-84e7-48d32b546b20unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
@@ -4653,7 +4653,7 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
-            aria-labelledby="storyPromoLinkText-d99dcccb-03d0-44a8-900e-20513e6267a7unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
@@ -5483,7 +5483,7 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
-            aria-labelledby="storyPromoLinkText-e26cc618-ee4c-4847-a3f0-b2aac1513f81unlabelledSection"
+            aria-labelledby="promo-link-unlabelled"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >

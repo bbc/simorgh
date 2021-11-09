@@ -3014,7 +3014,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182501unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182501"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182501"
                               >
@@ -3045,7 +3045,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/live/institutional-23162153unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledinstitutional-23162153"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/live/institutional-23162153"
                               >
@@ -3106,12 +3106,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23183171unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23183171"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23183171"
                               >
                                 <span
-                                  id="storyPromoLinkText-urn:bbc:ares::asset:igbo/23183171unlabelledSection"
+                                  id="promo-link-unlabelled23183171"
                                   role="text"
                                 >
                                   <span
@@ -3219,7 +3219,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182930unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182930"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182930"
                               >
@@ -3275,7 +3275,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182890unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182890"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182890"
                               >
@@ -3331,7 +3331,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182810unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182810"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182810"
                               >
@@ -3387,7 +3387,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182766unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182766"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182766"
                               >
@@ -3443,7 +3443,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182760unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182760"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182760"
                               >
@@ -3499,7 +3499,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23182710unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23182710"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182710"
                               >
@@ -3588,12 +3588,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23177465unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23177465"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23177465"
                               >
                                 <span
-                                  id="storyPromoLinkText-urn:bbc:ares::asset:igbo/23177465unlabelledSection"
+                                  id="promo-link-unlabelled23177465"
                                   role="text"
                                 >
                                   <span
@@ -3661,7 +3661,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23173771unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23173771"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23173771"
                               >
@@ -3717,7 +3717,7 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-284 emotion-212"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:igbo/23174391unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23174391"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23174391"
                               >
@@ -10481,7 +10481,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23248287unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23248287"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23248287"
                               >
@@ -10512,7 +10512,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23146434unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledtori-23146434"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146434"
                               >
@@ -10543,7 +10543,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-undefinedunlabelledSection"
+                                aria-labelledby="promo-link-unlabelled"
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.co.uk/news"
                               >
@@ -10644,7 +10644,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23146625unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledtori-23146625"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146625"
                               >
@@ -10730,12 +10730,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-23267821unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledmedia-23267821"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/media-23267821"
                               >
                                 <span
-                                  id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/media-23267821unlabelledSection"
+                                  id="promo-link-unlabelledmedia-23267821"
                                   role="text"
                                 >
                                   <span
@@ -10830,12 +10830,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23267823unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23267823"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23267823"
                               >
                                 <span
-                                  id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23267823unlabelledSection"
+                                  id="promo-link-unlabelled23267823"
                                   role="text"
                                 >
                                   <span
@@ -10898,7 +10898,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23169387unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledtori-23169387"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23169387"
                               >
@@ -10954,7 +10954,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:news/world-africa-23143884unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledworld-africa-23143884"
                                 class="emotion-214 emotion-215"
                                 href="/news/world-africa-23143884"
                               >
@@ -11010,7 +11010,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23146975unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledtori-23146975"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146975"
                               >
@@ -11066,7 +11066,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-undefinedunlabelledSection"
+                                aria-labelledby="promo-link-unlabelled"
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.com/pidgin/sport-51434980"
                               >
@@ -11122,7 +11122,7 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/tori-23145776unlabelledSection"
+                                aria-labelledby="promo-link-unlabelledtori-23145776"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23145776"
                               >
@@ -11207,12 +11207,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-277 emotion-213"
                             >
                               <a
-                                aria-labelledby="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23146654unlabelledSection"
+                                aria-labelledby="promo-link-unlabelled23146654"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23146654"
                               >
                                 <span
-                                  id="storyPromoLinkText-urn:bbc:ares::asset:pidgin/23146654unlabelledSection"
+                                  id="promo-link-unlabelled23146654"
                                   role="text"
                                 >
                                   <span

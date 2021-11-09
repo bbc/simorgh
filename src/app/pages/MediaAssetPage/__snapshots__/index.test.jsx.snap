@@ -4363,7 +4363,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-83954f42"
+                            aria-labelledby="promo-link-rel-contenttori-23145776"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23145776"
                           >
@@ -4420,7 +4420,7 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-9a99a554"
+                            aria-labelledby="promo-link-rel-contenttori-23143754"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23143754"
                           >
@@ -4498,12 +4498,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-75b82af1"
+                            aria-labelledby="promo-link-rel-content23146654"
                             class="emotion-266 emotion-267"
                             href="/pidgin/23146654"
                           >
                             <span
-                              id="storyPromoLinkText-75b82af1"
+                              id="promo-link-rel-content23146654"
                               role="text"
                             >
                               <span
@@ -4600,12 +4600,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-18fd9946"
+                            aria-labelledby="promo-link-rel-contentmedia-23147054"
                             class="emotion-266 emotion-267"
                             href="/pidgin/media-23147054"
                           >
                             <span
-                              id="storyPromoLinkText-18fd9946"
+                              id="promo-link-rel-contentmedia-23147054"
                               role="text"
                             >
                               <span

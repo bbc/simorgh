@@ -6351,12 +6351,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-235 emotion-236"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-8ad16800"
+                            aria-labelledby="promo-link-rel-contentmedia-45132087"
                             class="emotion-237 emotion-238"
                             href="/pidgin/media-45132087"
                           >
                             <span
-                              id="storyPromoLinkText-8ad16800"
+                              id="promo-link-rel-contentmedia-45132087"
                               role="text"
                             >
                               <span>
@@ -6436,12 +6436,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-235 emotion-236"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-b257cbc7"
+                            aria-labelledby="promo-link-rel-contenttori-45242255"
                             class="emotion-237 emotion-238"
                             href="/pidgin/tori-45242255"
                           >
                             <span
-                              id="storyPromoLinkText-b257cbc7"
+                              id="promo-link-rel-contenttori-45242255"
                               role="text"
                             >
                               <span
@@ -11291,7 +11291,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-e397b99c"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-44124647"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44124647"
                           >
@@ -11348,7 +11348,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-0fcba944"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-43540056"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43540056"
                           >
@@ -11405,7 +11405,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-8ac6f88d"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-44022776"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44022776"
                           >
@@ -11462,7 +11462,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-fee119b5"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-43713137"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43713137"
                           >
@@ -11519,7 +11519,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-77e1af14"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-37688691"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-37688691"
                           >
@@ -11576,12 +11576,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-07c40f7f"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-37691096"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-37691096"
                           >
                             <span
-                              id="storyPromoLinkText-07c40f7f"
+                              id="promo-link-rel-contentazerbaijan-37691096"
                               role="text"
                             >
                               <span>
@@ -11640,7 +11640,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-c857cc2d"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-43499221"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43499221"
                           >
@@ -11697,7 +11697,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-e9bfdf64"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-44004471"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44004471"
                           >
@@ -11754,7 +11754,7 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
-                            aria-labelledby="storyPromoLinkText-112af9b0"
+                            aria-labelledby="promo-link-rel-contentazerbaijan-43870815"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43870815"
                           >
