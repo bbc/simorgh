@@ -139,7 +139,7 @@ const MediaPlayerContainer = ({
   });
 
   const iframeTitle =
-    translations?.['Media player'] || translations?.mediaAssetPage?.mediaPlayer;
+    translations?.mediaAssetPage?.mediaPlayer || 'Media player';
 
   const renderCaption = () =>
     captionBlock ? (
