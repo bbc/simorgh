@@ -31,6 +31,8 @@ const largestPagePlusServiceBundleSize =
 const smallestPagePlusServiceBundleSize =
   smallestServiceBundleSize + smallestPageBundleSize;
 
+const removeBundleTypePrefix = name => name.replace('modern.', '');
+
 const serviceBundlesTable = new Table({
   head: ['Service name', 'bundles', 'Total size (kB)'],
 });
@@ -51,7 +53,7 @@ const pageBundlesTable = new Table({
 pageBundleData.forEach(
   ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
     const getFileInfo = ({ name, size }) =>
-      `${name.replace('modern.', '').slice(0, 10)}…${name.slice(
+      `${removeBundleTypePrefix(name).slice(0, 10)}…${name.slice(
         -6,
       )} (${size}kB)`;
 
@@ -70,7 +72,7 @@ pageBundleData.forEach(
 
 serviceBundleData.forEach(({ serviceName, bundles, totalSize }) => {
   const getFileInfo = ({ name, size }) =>
-    `${name.replace('modern.', '')} (${size}kB)`;
+    `${removeBundleTypePrefix(name)} (${size}kB)`;
 
   serviceBundlesTable.push([
     serviceName,
@@ -112,24 +114,32 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(chalk.bold('\nService bundles\n'));
+console.log(chalk.bold(`\n${chalk.green('MODERN')} service bundle sizes\n`));
 console.log(serviceBundlesTable.toString());
 
-console.log(chalk.bold('\n\nService bundles summary\n'));
+console.log(
+  chalk.bold(`\n\n${chalk.green('MODERN')} service bundle sizes summary\n`),
+);
 console.log(serviceSummaryTable.toString());
 
-console.log(chalk.bold('\n\nPage type bundles\n'));
+console.log(
+  chalk.bold(`\n\n${chalk.green('MODERN')} page type bundle sizes\n`),
+);
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
-    chalk.bold('\n\nPage bundles summary'),
+    chalk.bold(`\n\n${chalk.green('MODERN')} page bundle sizes summary`),
     chalk.cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
 console.log(pageSummaryTable.toString());
 
-console.log(chalk.bold('\n\nService + Page bundles summary\n'));
+console.log(
+  chalk.bold(
+    `\n\n${chalk.green('MODERN')} service + page bundle sizes summary\n`,
+  ),
+);
 console.log(servicePageSummaryTable.toString());
 
 const errors = [];
