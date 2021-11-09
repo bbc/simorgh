@@ -42,8 +42,8 @@ const RelatedTopics = ({
   const { variant } = useContext(RequestContext);
   const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const viewRef = useViewTracker(eventTrackingData);
-  const heading = translations?.RelatedTopics || 'Related Topics';
-  const topicsPath = translations?.topicPath || 'topics';
+  const heading = translations?.relatedTopics || 'Related Topics';
+  const topicsPath = translations?.topicsPath || 'topics';
 
   const getTopicPageUrl = id => {
     return variant
