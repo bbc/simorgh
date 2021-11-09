@@ -20,7 +20,8 @@ const StyledGridItemMedium = styled(GridItemMedium)`
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const blockId = pathOr('null', [0, 'id'], blocks);
   const eventTrackingData = {
-    componentName: blockId,
+    componentName: `bullet${blockId}`,
+    format: 'CHD=bullet',
   };
   const viewRef = useViewTracker(eventTrackingData);
   const { script, service, dir } = useContext(ServiceContext);
