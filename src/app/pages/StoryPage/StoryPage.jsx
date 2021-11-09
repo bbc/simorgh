@@ -81,7 +81,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const allowDateStamp = metadata?.options?.allowDateStamp;
   const assetUri = metadata?.locators?.assetUri;
   const blocks = pageData?.content?.model?.blocks || [];
-  const relatedContent = pageData?.relatedContent?.gorups?.[0]?.promos || [];
+  const relatedContent = pageData?.relatedContent?.groups?.[0]?.promos || [];
   const indexImagePath = pageData?.promo?.indexImage?.path;
   const indexImageLocator = indexImagePath
     ? getImageParts(indexImagePath)[1]
