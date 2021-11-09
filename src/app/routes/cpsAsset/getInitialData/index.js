@@ -1,7 +1,5 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
-import identity from 'ramda/src/identity';
-import isLive from '#lib/utilities/isLive';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -43,7 +41,7 @@ const formatPageData = pipe(
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
-  only([STORY_PAGE], isLive() ? identity : insertPodcastPromo),
+  only([STORY_PAGE], insertPodcastPromo),
 );
 
 const processOptimoBlocks = toggles =>
