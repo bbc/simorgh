@@ -137,7 +137,7 @@ module.exports = ({
               const rawRequest =
                 module.rawRequest &&
                 module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
-              if (rawRequest) return `${BUNDLE_TYPE}.${rawRequest}-lib`;
+              if (rawRequest) return `${rawRequest}-lib`;
 
               const identifier = module.identifier();
               const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
@@ -147,7 +147,7 @@ module.exports = ({
                 trimmedIdentifier &&
                 trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
 
-              return `${BUNDLE_TYPE}.${processedIdentifier || identifier}-lib`;
+              return `${processedIdentifier || identifier}-lib`;
             },
             priority: 30,
             minChunks: 1,

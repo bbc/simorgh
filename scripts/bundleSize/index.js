@@ -51,7 +51,9 @@ const pageBundlesTable = new Table({
 pageBundleData.forEach(
   ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
     const getFileInfo = ({ name, size }) =>
-      `${name.slice(0, 10)}…${name.slice(-6)} (${size}kB)`;
+      `${name.replace('modern.', '').slice(0, 10)}…${name.slice(
+        -6,
+      )} (${size}kB)`;
 
     pageBundlesTable.push([
       pageName,
@@ -67,7 +69,8 @@ pageBundleData.forEach(
 );
 
 serviceBundleData.forEach(({ serviceName, bundles, totalSize }) => {
-  const getFileInfo = ({ name, size }) => `${name} (${size}kB)`;
+  const getFileInfo = ({ name, size }) =>
+    `${name.replace('modern.', '')} (${size}kB)`;
 
   serviceBundlesTable.push([
     serviceName,
@@ -93,10 +96,12 @@ serviceSummaryTable.push(
 const servicePageSummaryTable = new Table();
 servicePageSummaryTable.push(
   {
-    'Smallest total bundle size (kB) (smallest service + smallest page)': smallestPagePlusServiceBundleSize,
+    'Smallest total bundle size (kB) (smallest service + smallest page)':
+      smallestPagePlusServiceBundleSize,
   },
   {
-    'Largest total bundle size (kB) (largest service + largest page)': largestPagePlusServiceBundleSize,
+    'Largest total bundle size (kB) (largest service + largest page)':
+      largestPagePlusServiceBundleSize,
   },
 );
 

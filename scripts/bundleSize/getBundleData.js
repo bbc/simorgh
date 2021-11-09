@@ -42,9 +42,9 @@ const getPageBundleData = () => {
     return bundlesData.reduce(
       ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
-        const isShared = name.startsWith('shared-');
-        const isLib = name.includes(/modern\..+?-lib/);
-        const isCommons = name.includes('modern.commons-');
+        const isShared = /^modern\.shared-/.test(name);
+        const isLib = /^modern\..+?-lib/.test(name);
+        const isCommons = /^modern\.commons-/.test(name);
 
         if (isLib) {
           lib.push(bundleData);
@@ -82,7 +82,7 @@ const getServiceBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
-        jsFiles.filter(file => file.includes(service)),
+        jsFiles.filter(file => file.includes(`modern.${service}`)),
       );
 
       return { serviceName: service, bundles: bundlesData };
