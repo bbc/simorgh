@@ -4,7 +4,6 @@ import ramdaPath from 'ramda/src/path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import AmpOptimizer from '@ampproject/toolbox-optimizer';
 import routes from '#app/routes';
 import {
   articleManifestPath,
@@ -64,8 +63,6 @@ const skipMiddleware = (_req, _res, next) => {
 
 const injectCspHeaderProdBuild =
   process.env.NODE_ENV !== 'production' ? skipMiddleware : injectCspHeader;
-
-const ampOptimizer = AmpOptimizer.create();
 
 server
   .disable('x-powered-by')
@@ -192,12 +189,7 @@ server.get(
       if (result.redirectUrl) {
         res.redirect(301, result.redirectUrl);
       } else if (result.html) {
-        if (isAmp) {
-          const optimizedHtml = await ampOptimizer.transformHtml(result.html);
-          res.status(status).send(optimizedHtml);
-        } else {
-          res.status(status).send(result.html);
-        }
+        res.status(status).send(result.html);
       } else {
         throw new Error('unknown result');
       }
