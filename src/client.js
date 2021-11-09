@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-filename-extension  */
 import React from 'react';
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
 import { loadableReady } from '@loadable/component';
 import { hydrate } from 'react-dom';
 import { ClientApp } from './app/containers/App';
@@ -8,25 +10,31 @@ import { template, templateStyles } from '#lib/joinUsTemplate';
 import loggerNode from '#lib/logger.node';
 
 const logger = loggerNode();
-
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
+const bundleType =
+  'noModule' in HTMLScriptElement.prototype ? 'modern' : 'legacy';
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
 // see a blank screen. Avoid this by only hydrating when the embedded page data
 // and window location agree what the path is. Otherwise, fallback to the SSR.
 if (window.SIMORGH_DATA.path === window.location.pathname) {
-  const bundleType =
-    'noModule' in HTMLScriptElement.prototype ? 'modern' : 'legacy';
-  const handleLoadableReady = () => {
-    hydrate(<ClientApp data={data} routes={routes} />, root);
-  };
-  const options = {
-    namespace: bundleType,
-  };
+  loadableReady(
+    () => {
+      const cache = createCache({ key: 'bbc' });
 
-  loadableReady(handleLoadableReady, options);
+      hydrate(
+        <CacheProvider value={cache}>
+          <ClientApp data={data} routes={routes} />
+        </CacheProvider>,
+        root,
+      );
+    },
+    {
+      namespace: bundleType, // execute the correct LOADABLE_CHUNKS found in json script tag
+    },
+  );
 } else {
   logger.warn(`
     Simorgh refused to hydrate.
