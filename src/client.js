@@ -12,8 +12,8 @@ import loggerNode from '#lib/logger.node';
 const logger = loggerNode();
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
-const bundleType =
-  'noModule' in HTMLScriptElement.prototype ? 'modern' : 'legacy';
+const browserSupportsNoModule = 'noModule' in document.createElement('script');
+const bundleToExecute = browserSupportsNoModule ? 'modern' : 'legacy';
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
@@ -32,7 +32,7 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
       );
     },
     {
-      namespace: bundleType, // execute the correct LOADABLE_CHUNKS found in json script tag
+      namespace: bundleToExecute, // execute the correct LOADABLE_CHUNKS found in json script tag
     },
   );
 } else {
