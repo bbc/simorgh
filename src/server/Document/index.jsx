@@ -62,7 +62,10 @@ const renderDocument = async ({
   const commonLoadableState = {
     addChunk(chunk) {
       modernExtractor.addChunk(chunk);
-      legacyExtractor.addChunk(chunk);
+
+      if (!isDev) {
+        legacyExtractor.addChunk(chunk);
+      }
     },
   };
 
