@@ -137,7 +137,7 @@ module.exports = ({
               const rawRequest =
                 module.rawRequest &&
                 module.rawRequest.replace(/^@(\w+)[/\\]/, '$1-');
-              if (rawRequest) return `${rawRequest}-lib`;
+              if (rawRequest) return `${BUNDLE_TYPE}.${rawRequest}-lib`;
 
               const identifier = module.identifier();
               const trimmedIdentifier = /(?:^|[/\\])node_modules[/\\](.*)/.exec(
@@ -147,7 +147,7 @@ module.exports = ({
                 trimmedIdentifier &&
                 trimmedIdentifier[1].replace(/^@(\w+)[/\\]/, '$1-');
 
-              return `${processedIdentifier || identifier}-lib`;
+              return `${BUNDLE_TYPE}.${processedIdentifier || identifier}-lib`;
             },
             priority: 30,
             minChunks: 1,
@@ -277,8 +277,8 @@ module.exports = ({
         defaultSizes: 'gzip',
         generateStatsFile: true,
         openAnalyzer: false,
-        reportFilename: '../../reports/webpackBundleReport.html',
-        statsFilename: '../../reports/webpackBundleReport.json',
+        reportFilename: `../../reports/${BUNDLE_TYPE}.webpackBundleReport.html`,
+        statsFilename: `../../reports/${BUNDLE_TYPE}.webpackBundleReport.json`,
       }),
     );
   }

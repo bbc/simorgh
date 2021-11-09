@@ -1,4 +1,4 @@
-const bundleReport = require('../../reports/webpackBundleReport.json');
+const bundleReport = require('../../reports/modern.webpackBundleReport.json');
 
 const extractBundlesForPageType = pageComponent => {
   const chunkGroup = bundleReport.namedChunkGroups[pageComponent];

@@ -27,10 +27,10 @@ const getBundlesData = bundles =>
 
 const getPageBundleData = () => {
   const main = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith('main-')),
+    jsFiles.filter(fileName => fileName.startsWith('modern.main-')),
   );
   const framework = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith('framework')),
+    jsFiles.filter(fileName => fileName.startsWith('modern.framework')),
   );
   const mainTotalSize = main.reduce((acc, { size }) => acc + size, 0);
   const frameworkTotalSize = framework.reduce((acc, { size }) => acc + size, 0);
@@ -43,8 +43,8 @@ const getPageBundleData = () => {
       ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
         const isShared = name.startsWith('shared-');
-        const isLib = name.includes('-lib');
-        const isCommons = name.includes('commons-');
+        const isLib = name.includes(/modern\..+?-lib/);
+        const isCommons = name.includes('modern.commons-');
 
         if (isLib) {
           lib.push(bundleData);
