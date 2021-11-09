@@ -71,6 +71,10 @@ module.exports = (shell = {}) => {
     plugins: [new MomentTimezoneInclude({ startYear: 2010, endYear: 2025 })],
     module: {
       rules: [
+        {
+          test: /\.worker\.js$/,
+          use: { loader: 'worker-loader' },
+        },
         // tell Webpack to use the .babelrc to know how to transform JS/JSX to ES2015 JS
         {
           test: /\.(js|jsx|mjs)$/,
