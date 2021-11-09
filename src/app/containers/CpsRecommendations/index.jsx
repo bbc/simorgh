@@ -60,7 +60,7 @@ const CpsRecommendations = ({ items }) => {
   if (!hasStoryRecommendations || !enabled || !items.length) return null;
 
   const title =
-    translations?.recommendationsTitle || 'You may also be interested in';
+    translations?.recommendationTitle || 'You may also be interested in';
 
   const { text, endTextVisuallyHidden } = recommendations?.skipLink;
 
