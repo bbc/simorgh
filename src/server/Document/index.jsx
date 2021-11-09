@@ -11,17 +11,23 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
-const extractChunk = bundleType => chunk => {
+const crossOrigin = 'anonymous';
+const getScriptAttributes = bundleType => chunk => {
   const { type, url } = chunk || {};
+  const MAIN_ASSET = 'mainAsset';
 
   return {
-    crossOrigin: 'anonymous',
+    crossOrigin,
     defer: true,
     ...(url && { src: encodeChunkFilename(chunk) }),
-    ...(bundleType === 'modern' && type === 'mainAsset' && { type: 'module' }),
-    ...(bundleType === 'legacy' && type === 'mainAsset' && { noModule: true }),
+    ...(bundleType === 'modern' && type === MAIN_ASSET && { type: 'module' }),
+    ...(bundleType === 'legacy' && type === MAIN_ASSET && { noModule: true }),
   };
 };
+const getLinkAttributes = chunk => ({
+  crossOrigin,
+  ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
+});
 
 const renderDocument = async ({
   bbcOrigin,
@@ -90,12 +96,12 @@ const renderDocument = async ({
   }
 
   const modernScripts = modernExtractor.getScriptElements(
-    extractChunk('modern'),
+    getScriptAttributes('modern'),
   );
   const legacyScripts =
-    !isDev && legacyExtractor.getScriptElements(extractChunk('legacy'));
+    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
 
-  const links = modernExtractor.getLinkElements(); // TODO investigate a way to conditionally preload modern/legacy scripts
+  const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
