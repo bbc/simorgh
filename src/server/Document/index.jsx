@@ -95,7 +95,7 @@ const renderDocument = async ({
   const legacyScripts =
     !isDev && legacyExtractor.getScriptElements(extractChunk('legacy'));
 
-  const links = modernScripts.getLinkElements(); // TODO investigate a way to conditionally preload modern/legacy scripts
+  const links = modernExtractor.getLinkElements(); // TODO investigate a way to conditionally preload modern/legacy scripts
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
