@@ -72,6 +72,7 @@ const RelatedContentPromoList = ({
             displaySummary={false}
             isSingleColumnLayout={isMediaContent}
             eventTrackingData={eventTrackingData}
+            labelId="rel-content"
           />
         </Grid>
       ))}

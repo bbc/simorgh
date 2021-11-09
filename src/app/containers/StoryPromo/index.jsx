@@ -40,6 +40,11 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
+const getLinkId = (assetUri, labelId) => {
+  const assetId = assetUri.split('/').pop();
+  return `promo-link-${labelId}${assetId || ''}`;
+};
+
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
@@ -112,6 +117,8 @@ const StoryPromoContainer = ({
   } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
+  const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const linkId = getLinkId(assetUri, labelId);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -159,15 +166,7 @@ const StoryPromoContainer = ({
   }
 
   const linkcontents = (
-    <LinkContents
-      item={item}
-      isInline={!displayImage}
-      index={
-        item.a11yId
-          ? `storyPromoLinkText-${item.a11yId}`
-          : `storyPromoLinkText-${item.id}${labelId}`
-      }
-    />
+    <LinkContents item={item} isInline={!displayImage} index={linkId} />
   );
 
   if (!headline || !url) {
@@ -189,6 +188,7 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
+      {console.log(labelId === 'rel-content' ? item : '')}
       <Headline
         script={script}
         service={service}
@@ -199,11 +199,7 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
-          aria-labelledby={
-            item.a11yId
-              ? `storyPromoLinkText-${item.a11yId}`
-              : `storyPromoLinkText-${item.id}${labelId}`
-          }
+          aria-labelledby={linkId}
         >
           {isLive ? (
             <LiveLabel
@@ -322,7 +318,7 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
-  labelId: 'unlabelledSection',
+  labelId: 'unlabelled',
 };
 
 export default StoryPromoContainer;
