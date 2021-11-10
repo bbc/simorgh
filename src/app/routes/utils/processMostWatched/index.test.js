@@ -73,8 +73,9 @@ describe('processMostWatched', () => {
     });
     expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
-      message:
-        "Cannot destructure property 'enabled' of '(intermediate value)(intermediate value)(intermediate value)' as it is undefined.",
+      message: expect.stringContaining(
+        "Cannot destructure property 'enabled' of",
+      ),
       service: 'pidgin',
       path: 'some-path',
     });
