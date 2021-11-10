@@ -28,7 +28,6 @@ import {
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
-import addIdsToRelatedContentGroups from '#app/routes/utils/sharedDataTransformers/addIdsToRelatedContentGroups';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 export const only =
@@ -41,7 +40,6 @@ export const only =
   };
 
 const formatPageData = pipe(
-  addIdsToRelatedContentGroups,
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
@@ -70,10 +68,7 @@ const processOptimoBlocks = toggles =>
 // This will most likely change in issue #6784 so it is temporary for now
 const transformJson = async (json, pathname, toggles) => {
   try {
-    console.log(JSON.stringify(json.relatedContent, null, 2));
-
     const formattedPageData = formatPageData(json);
-    console.log(JSON.stringify(formattedPageData.relatedContent, null, 2));
     const optimoBlocks = await convertToOptimoBlocks(
       formattedPageData,
       pathname,
