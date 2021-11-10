@@ -2,7 +2,6 @@ import pathOr from 'ramda/src/pathOr';
 import nodeLogger from '#lib/logger.node';
 import { MOST_WATCHED_PROCESS_ERROR } from '#lib/logger.const';
 import filterPopularStaleData from '#app/lib/utilities/filterPopularStaleData';
-import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
 
 const logger = nodeLogger(__filename);
 
@@ -58,12 +57,7 @@ const processMostWatched = ({ data, path, service, toggles, page }) => {
     .sort((a, b) => a.rank - b.rank)
     .map(item => item.promo);
 
-  const recordsWithIds = addIdsToItems({
-    pathToItems: [],
-    customKeyName: 'a11yId',
-  })(processedRecords);
-
-  return { ...data, mostWatched: recordsWithIds };
+  return { ...data, mostWatched: processedRecords };
 };
 
 export default processMostWatched;
