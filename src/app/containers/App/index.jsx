@@ -5,7 +5,12 @@
  */
 import React from 'react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
+import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
 import App from './App';
+
+const optimizely = createInstance({
+  sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
+});
 
 export class ClientApp extends React.Component {
   // Having an error boundary here means that if hydration fails, users are left with the server-rendered DOM
@@ -14,9 +19,11 @@ export class ClientApp extends React.Component {
 
   render() {
     return (
-      <BrowserRouter {...this.props}>
-        <App initialData={this.props.data} />
-      </BrowserRouter>
+      <OptimizelyProvider optimizely={optimizely}>
+        <BrowserRouter {...this.props}>
+          <App initialData={this.props.data} />
+        </BrowserRouter>
+      </OptimizelyProvider>
     );
   }
 }

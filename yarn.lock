@@ -3116,6 +3116,79 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@optimizely/js-sdk-datafile-manager@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "@optimizely/js-sdk-datafile-manager@npm:0.8.1"
+  dependencies:
+    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-utils": ^0.4.0
+    decompress-response: ^4.2.1
+  peerDependencies:
+    "@react-native-async-storage/async-storage": ^1.2.0
+  checksum: 762e876a3d2e53d0e53d034055ba80aac1280791f909f2229097b71140b23c8f2af57efc3bb67acea8be36369a00b382cea6e9f92243b3ce5db71e1b0db5196d
+  languageName: node
+  linkType: hard
+
+"@optimizely/js-sdk-event-processor@npm:^0.8.2":
+  version: 0.8.2
+  resolution: "@optimizely/js-sdk-event-processor@npm:0.8.2"
+  dependencies:
+    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-utils": ^0.4.0
+  peerDependencies:
+    "@react-native-async-storage/async-storage": ^1.2.0
+    "@react-native-community/netinfo": 5.9.4
+  checksum: f0eda015559627a50d462dc416580bf6ccda9dacf0f1f67806da6dcf012d6bb6accc7ba0e07bae6fec5dc2d3f865faca57cfc1a0f3df287db13cc171279bf04c
+  languageName: node
+  linkType: hard
+
+"@optimizely/js-sdk-logging@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@optimizely/js-sdk-logging@npm:0.1.0"
+  dependencies:
+    "@optimizely/js-sdk-utils": ^0.1.0
+  checksum: b1d2de26cf46e880ddc1d1fa2d4cae9711d7ba47a3914ec0f9537a9bcaf53f68e339bdb1f2af6c1c1fc122514b11634c7e4a4afa54e6f3836763d6fd90035088
+  languageName: node
+  linkType: hard
+
+"@optimizely/js-sdk-utils@npm:0.4.0":
+  version: 0.4.0
+  resolution: "@optimizely/js-sdk-utils@npm:0.4.0"
+  dependencies:
+    uuid: ^3.3.2
+  checksum: 899877189e6db2036572a07832adb807e5ed7c6a762ca3cf745c599c5eb1213c7d79ca7877fc6811383f36209cd7bb2e926265f635f4c88ca88903703bf5a9fb
+  languageName: node
+  linkType: hard
+
+"@optimizely/optimizely-sdk@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "@optimizely/optimizely-sdk@npm:4.7.0"
+  dependencies:
+    "@optimizely/js-sdk-datafile-manager": ^0.8.1
+    "@optimizely/js-sdk-event-processor": ^0.8.2
+    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-utils": ^0.4.0
+    json-schema: ^0.2.3
+    murmurhash: 0.0.2
+  checksum: 311aae2e1abe3a743ae64ee61d95aeba84c11410cc8a797dbc91fb79932b62352decc096add71612b5e3e9949380a238a91ad4b2438d047176301725a8755c36
+  languageName: node
+  linkType: hard
+
+"@optimizely/react-sdk@npm:2.7.0":
+  version: 2.7.0
+  resolution: "@optimizely/react-sdk@npm:2.7.0"
+  dependencies:
+    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/optimizely-sdk": ^4.7.0
+    hoist-non-react-statics: ^3.3.0
+    prop-types: ^15.6.2
+    utility-types: ^2.1.0 || ^3.0.0
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: f950df837f3c6ee0ca39c2c4b515131f032bb955a235e0df027817d374e8085041c06f82d07b8908e5fa5461656b5d474926c78c04bffbda3cd43bef0299d6d1
+  languageName: node
+  linkType: hard
+
 "@pmmmwh/react-refresh-webpack-plugin@npm:^0.4.3":
   version: 0.4.3
   resolution: "@pmmmwh/react-refresh-webpack-plugin@npm:0.4.3"
@@ -8391,7 +8464,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decompress-response@npm:^4.2.0":
+"decompress-response@npm:^4.2.0, decompress-response@npm:^4.2.1":
   version: 4.2.1
   resolution: "decompress-response@npm:4.2.1"
   dependencies:
@@ -13589,6 +13662,13 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
+"json-schema@npm:^0.2.3":
+  version: 0.2.5
+  resolution: "json-schema@npm:0.2.5"
+  checksum: 54871525a19997c824d98916fbbef3cb190638c62e5945412785f3c6d90faae7bfff5a1935355a51b979497a7e059a2013eab4a6de144097b9fa80a5be920fb3
+  languageName: node
+  linkType: hard
+
 "json-stable-stringify-without-jsonify@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1"
@@ -14989,6 +15069,13 @@ fsevents@^1.2.7:
     duplexer2: ^0.1.2
     object-assign: ^4.1.0
   checksum: 99cf8934714da7f9ce03e1f0a99621a41443217d80849c62e22b31b6ac356b9acd22f41e555fd7a759f1c7c9d3273e7abff2fb82dff8285f00a6a1022727e4ab
+  languageName: node
+  linkType: hard
+
+"murmurhash@npm:0.0.2":
+  version: 0.0.2
+  resolution: "murmurhash@npm:0.0.2"
+  checksum: e06d1e7cfdc39d742584d96af30e9b26bd44c995b9ced192b62c36b52898347ac28d32a9a94f5e0b286339d45657490ae32ed42ead75ef2a15aef9cfe386e5fa
   languageName: node
   linkType: hard
 
@@ -18542,6 +18629,7 @@ resolve@^2.0.0-next.3:
     "@loadable/component": 5.15.0
     "@loadable/server": 5.15.1
     "@loadable/webpack-plugin": 5.15.1
+    "@optimizely/react-sdk": 2.7.0
     "@storybook/addon-a11y": 6.3.12
     "@storybook/addon-controls": 6.3.12
     "@storybook/addon-docs": 6.3.12
@@ -20699,6 +20787,13 @@ resolve@^2.0.0-next.3:
   version: 0.4.0
   resolution: "utila@npm:0.4.0"
   checksum: 97ffd3bd2bb80c773429d3fb8396469115cd190dded1e733f190d8b602bd0a1bcd6216b7ce3c4395ee3c79e3c879c19d268dbaae3093564cb169ad1212d436f4
+  languageName: node
+  linkType: hard
+
+"utility-types@npm:^2.1.0 || ^3.0.0":
+  version: 3.10.0
+  resolution: "utility-types@npm:3.10.0"
+  checksum: 8f274415c6196ab62883b8bd98c9d2f8829b58016e4269aaa1ebd84184ac5dda7dc2ca45800c0d5e0e0650966ba063bf9a412aaeaea6850ca4440a391283d5c8
   languageName: node
   linkType: hard
 
