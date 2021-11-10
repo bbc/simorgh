@@ -166,7 +166,7 @@ const StoryPromoContainer = ({
   }
 
   const linkcontents = (
-    <LinkContents item={item} isInline={!displayImage} index={linkId} />
+    <LinkContents item={item} isInline={!displayImage} id={linkId} />
   );
 
   if (!headline || !url) {
@@ -188,7 +188,6 @@ const StoryPromoContainer = ({
 
   const Info = (
     <>
-      {console.log(labelId === 'rel-content' ? item : '')}
       <Headline
         script={script}
         service={service}

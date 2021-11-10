@@ -9,7 +9,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
 import { isPgl, isMap } from '../utilities';
 
-const LinkContents = ({ item, isInline, index }) => {
+const LinkContents = ({ item, isInline, id }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -29,7 +29,7 @@ const LinkContents = ({ item, isInline, index }) => {
   const content = getContent();
 
   if (!isPhotoGallery && !isMedia) {
-    return content;
+    return <span id={id}>{content}</span>;
   }
 
   const getAnnouncedType = () => {
@@ -65,7 +65,7 @@ const LinkContents = ({ item, isInline, index }) => {
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text" id={index}>
+    <span role="text" id={id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
       {offScreenDuration}
@@ -76,7 +76,7 @@ const LinkContents = ({ item, isInline, index }) => {
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
   isInline: bool,
-  index: string.isRequired,
+  id: string.isRequired,
 };
 
 LinkContents.defaultProps = {
