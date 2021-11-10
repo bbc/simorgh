@@ -32,7 +32,7 @@ if (window.SIMORGH_DATA.path === window.location.pathname) {
       );
     },
     {
-      namespace: bundleToExecute, // execute the correct LOADABLE_CHUNKS found in json script tag
+      namespace: bundleToExecute, // execute the correct __LOADABLE_REQUIRED_CHUNKS__ found in json script tag
     },
   );
 } else {
