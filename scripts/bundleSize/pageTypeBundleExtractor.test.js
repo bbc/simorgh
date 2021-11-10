@@ -1,7 +1,7 @@
 import { extractBundlesForPageType } from './pageTypeBundleExtractor';
 
 jest.mock(
-  '../../reports/webpackBundleReport.json',
+  '../../reports/modern.webpackBundleReport.json',
   () => ({
     namedChunkGroups: {
       main: {
@@ -62,27 +62,14 @@ describe('pageTypeBundleExtractor', () => {
   it('should extract bundles used for an ArticlePage', () => {
     const result = extractBundlesForPageType('ArticlePage');
     expect(result).toEqual([
-      'modern.../moment-lib.212f9c8c.js',
-      'modern.commons-d181e811.42cdf40b.js',
-      'modern.commons-9928543c.2fff1ff5.js',
-      'modern.commons-2940a8bc.ad237306.js',
-      'modern.commons-5e5cb6fb.d6a2afb9.js',
-      'modern.commons-49d0a293.af756902.js',
-      'modern.commons-0bc0478e.b187fe8c.js',
-      'modern.commons-3e10bc16.252ef05b.js',
-      'modern.commons-e019dbda.b142e344.js',
-      'modern.commons-3a4fa680.ec533bd0.js',
-      'modern.shared-FWdLnUxZzQhfvg8ZRBTcRcHoWFM=.e510ba99.js',
-      'modern.shared-D15LFDodghpFPDCJ4tqFQrR5l8=.8f125150.js',
-      'modern.shared-Ko9rY11YQkApbkFswrw8gtIkfTg=.ad07e38a.js',
-      'modern.shared-PiGpixEkUTFxLskJSgdQo5ywg=.e15265bc.js',
-      'modern.shared-gqrj5Fb+GJCWU1vRjtAbN45abxc=.cebe7179.js',
-      'modern.shared-IAa7MJhrtGKAf532hao4juW1y1U=.0eb91e19.js',
-      'modern.shared-wjUGgbn4DzcEiHTQ4fEzrOq1LvI=.fdb5b5c8.js',
-      'modern.shared-7Smd7t7AiBdYvRuvpWJCzblBok=.cb923af6.js',
-      'modern.shared-eu7JtSSIgojwDr7v7lDIAXIVYEM=.2a09972b.js',
-      'modern.shared-Gou77Zf00wqeK9QeihqKdgyM0s=.d22abbb4.js',
-      'modern.ArticlePage.cc68a980.js',
+      'modern.../moment-lib-87d47d0c.d5f3ec50.js',
+      'modern.commons-0f485567.d710e458.js',
+      'modern.commons-7d359b94.ced895c9.js',
+      'modern.commons-8493eda2.7bb97fc0.js',
+      'modern.commons-92a4fe01.6f43e2d7.js',
+      'modern.shared-UddsGWzeoXsaLwaRPMwTQELcfA=-31ecd969.898fb3aa.js',
+      'modern.shared-nj6qIml+EtJxDVgSunxJydSAIpY=-253ae210.3f8a9c3a.js',
+      'modern.ArticlePage-31ecd969.ee810b86.js',
     ]);
   });
 
