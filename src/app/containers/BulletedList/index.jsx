@@ -19,6 +19,12 @@ const StyledGridItemMedium = styled(GridItemMedium)`
 
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const blockId = pathOr('null', [0, 'id'], blocks);
+  const locator = pathOr(
+    'null',
+    [0, 'model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
+    blocks,
+  );
+
   const eventTrackingData = {
     componentName: `bullet${blockId}`,
     format: 'CHD=bullet',
