@@ -166,7 +166,11 @@ const StoryPromoContainer = ({
   }
 
   const linkcontents = (
-    <LinkContents item={item} isInline={!displayImage} id={linkId} />
+    <LinkContents
+      item={item}
+      isInline={!displayImage}
+      id={!isLive ? linkId : null}
+    />
   );
 
   if (!headline || !url) {
@@ -202,6 +206,7 @@ const StoryPromoContainer = ({
         >
           {isLive ? (
             <LiveLabel
+              id={linkId}
               service={service}
               dir={dir}
               liveText={liveLabel}
