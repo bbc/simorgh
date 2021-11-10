@@ -19,11 +19,11 @@ export class ClientApp extends React.Component {
 
   render() {
     return (
-      <OptimizelyProvider optimizely={optimizely}>
-        <BrowserRouter {...this.props}>
+      <BrowserRouter {...this.props}>
+        <OptimizelyProvider optimizely={optimizely}>
           <App initialData={this.props.data} />
-        </BrowserRouter>
-      </OptimizelyProvider>
+        </OptimizelyProvider>
+      </BrowserRouter>
     );
   }
 }
