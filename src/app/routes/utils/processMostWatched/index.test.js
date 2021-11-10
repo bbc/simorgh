@@ -10,6 +10,10 @@ const toggles = {
   mostPopularMedia: { enabled: true, value: '5' },
 };
 
+beforeEach(() => {
+  jest.clearAllMocks();
+});
+
 describe('processMostWatched', () => {
   it('should return null if data is null', () => {
     const data = processMostWatched({
@@ -69,7 +73,8 @@ describe('processMostWatched', () => {
     });
     expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
-      message: "Cannot read property 'enabled' of undefined",
+      message:
+        "Cannot destructure property 'enabled' of '(intermediate value)(intermediate value)(intermediate value)' as it is undefined.",
       service: 'pidgin',
       path: 'some-path',
     });

@@ -140,7 +140,7 @@ module.exports = (shell = {}) => {
     return [CLIENT_LEGACY, CLIENT_MODERN].map(mergeIntoBaseConfig);
   }
   if (CONFIG_FILE === 'server') {
-    return mergeIntoBaseConfig(['server']);
+    return mergeIntoBaseConfig(SERVER);
   }
 
   // else compile both (we've run `webpack` on its own)
