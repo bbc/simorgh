@@ -32,6 +32,11 @@ Simorgh uses Loadable Components (a library Simorgh uses for code-splitting) to 
 
 Because we make multiple releases per day with updated application and library (node_module) code we split our client-side JavaScript bundle into multiple chunks to improve cache efficiency so that the amount of cache-invalidated chunks after each deployment is kept to a minimum.
 
+### More on legacy vs modern bundles
+
+- [Publish, ship, and install modern JavaScript for faster applications](https://web.dev/publish-modern-javascript/)
+- [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
+
 ## Code-splitting
 
 Currently, our chunking strategy is as follows:
