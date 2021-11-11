@@ -179,41 +179,40 @@ const MediaPlayerContainer = ({
       <Caption block={captionBlock} type={mediaInfo.type} service={service} />
     ) : null;
 
-  const mediaPlayerType = () =>
-    isAmp ? (
-      <AmpMediaPlayer
-        src={embedSource}
-        placeholderSrc={placeholderSrc}
-        placeholderSrcset={placeholderSrcset}
-        title={iframeTitle}
-        noJsMessage={translatedNoJSMessage}
-        service={service}
-      />
-    ) : (
-      <CanonicalMediaPlayer
-        src={embedSource}
-        placeholderSrc={placeholderSrc}
-        placeholderSrcset={placeholderSrcset}
-        showPlaceholder={showPlaceholder}
-        title={iframeTitle}
-        service={service}
-        mediaInfo={mediaInfo}
-        noJsMessage={translatedNoJSMessage}
-        noJsClassName="no-js"
-        showLoadingImage={showLoadingImage}
-      />
-    );
+  const mediaPlayerType = isAmp ? (
+    <AmpMediaPlayer
+      src={embedSource}
+      placeholderSrc={placeholderSrc}
+      placeholderSrcset={placeholderSrcset}
+      title={iframeTitle}
+      noJsMessage={translatedNoJSMessage}
+      service={service}
+    />
+  ) : (
+    <CanonicalMediaPlayer
+      src={embedSource}
+      placeholderSrc={placeholderSrc}
+      placeholderSrcset={placeholderSrcset}
+      showPlaceholder={showPlaceholder}
+      title={iframeTitle}
+      service={service}
+      mediaInfo={mediaInfo}
+      noJsMessage={translatedNoJSMessage}
+      noJsClassName="no-js"
+      showLoadingImage={showLoadingImage}
+    />
+  );
 
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
       {showCaption && renderCaption() ? (
         <Figure>
-          {mediaPlayerType()}
+          {mediaPlayerType}
           {showCaption && renderCaption()}
         </Figure>
       ) : (
-        <MediaPlayerWrapper>{mediaPlayerType()}</MediaPlayerWrapper>
+        <MediaPlayerWrapper>{mediaPlayerType}</MediaPlayerWrapper>
       )}
     </>
   );
