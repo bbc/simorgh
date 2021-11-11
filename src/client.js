@@ -12,8 +12,8 @@ import loggerNode from '#lib/logger.node';
 const logger = loggerNode();
 const data = window.SIMORGH_DATA || {};
 const root = document.getElementById('root');
-const browserSupportsNoModule = 'noModule' in document.createElement('script');
-const bundleToExecute = browserSupportsNoModule ? 'modern' : 'legacy';
+const isModernBrowser = 'noModule' in document.createElement('script');
+const bundleToExecute = isModernBrowser ? 'modern' : 'legacy';
 
 // Only hydrate the client if we're on the expected path
 // When on an unknown route, the SSR would be discarded and the user would only
