@@ -174,7 +174,7 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const renderCaption = captionBlock ? (
+  const caption = captionBlock ? (
     <Caption block={captionBlock} type={mediaInfo.type} service={service} />
   ) : null;
 
@@ -205,10 +205,10 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
-      {showCaption && renderCaption ? (
+      {showCaption && caption ? (
         <Figure>
           {mediaPlayer}
-          {showCaption && renderCaption}
+          {showCaption && caption}
         </Figure>
       ) : (
         <MediaPlayerWrapper>{mediaPlayer}</MediaPlayerWrapper>
