@@ -10,7 +10,7 @@ Simorgh will conditionally load and execute all scripts prefixed with either `le
 
 ### How is this achieved in Simorgh?
 
-Simorgh uses Webpack to build 2 different client-side bundles. The client-side Webpack configuration is found in `webpack.client.js`. This config is run with a `BUNDLE_TYPE` variable that returns config for a `modern` or `legacy` browser. The Webpack config uses config from `.babelrc.js` to provide the appropriate JavaScript transformations and polyfills. `.babelrc.js` also needs to dynamically return modern or legacy config but does so using the `process.ENV` variable that is conditionally set using `envName` in Webpack config.
+Simorgh uses Webpack to build 2 different client-side bundles. The client-side Webpack configuration is found in `webpack.client.js`. This config is run with a `BUNDLE_TYPE` variable that returns config for a `modern` or `legacy` browser. The Webpack config uses config from `.babelrc.js` to provide the appropriate JavaScript transformations and polyfills. `.babelrc.js` also needs to dynamically return modern or legacy config but does so using the `process.ENV` variable that is conditionally set using `envName` in the `babel-loader` options in the Webpack config.
 
 Now that we have the mechanism for generating 2 separate bundles we need to include them in the HTML document. Both modern and legacy bundles need added to the document but the conditional loading and executing is handled using the [module/nomodule](https://3perf.com/blog/polyfills/#modulenomodule) pattern. For example:
 
