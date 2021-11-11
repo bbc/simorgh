@@ -55,7 +55,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
   return (
     <StyledAnchor
       showMediaIndicator={showMediaIndicator}
-      aria-labelledby={index}
+      aria-labelledby={`episodeLinkIndex-${index}`}
       {...props}
     >
       {showMediaIndicator && (
@@ -63,7 +63,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
           <MediaIndicator size="2.5rem" />
         </MediaIndicatorWrapper>
       )}
-      <span role="text" id={index}>
+      <span role="text" id={`episodeLinkIndex-${index}`}>
         {children}
       </span>
     </StyledAnchor>
