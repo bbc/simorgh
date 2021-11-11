@@ -27,7 +27,7 @@ Simorgh uses Loadable Components (a library Simorgh uses for code-splitting) to 
 ### Gotchas
 
 - Safari 10.1 supports modules, but does not support the `nomodule` attribute. This results in Safari downloading and executing both legacy and modern bundles. A polyfill has been included to prevent this behaviour.
-- IE11 downloads both modern and legacy bundles but only executes the legacy bundle. This worsens performance for IE11 users because they will have download almost twice the amount of JavaScript. IE11 accounts for around 0.06% of page visits across the World Service sites. Based on this we decided the impact is not high enough to prevent us from providing a better experience to the vast majority of users.
+- IE11 downloads both modern and legacy bundles but only executes the legacy bundle. This worsens performance for IE11 users because they will have to download almost twice the amount of JavaScript. IE11 accounts for around 0.06% of page visits across the World Service sites. Based on this we decided the impact is not high enough to prevent us from providing a better experience to the vast majority of users.
 - The Webpack dev server run using `yarn dev` currently only uses modern JavaScript. If you are cross-browser testing locally make sure that you build Simorgh with `yarn build` and start the Express server with `yarn start`.
 - The bundle analyser script that runs after builds and displays bundle size information by default will run on the modern bundle. If you would like to see bundle size information for the legacy bundle you can run a build (`yarn build`) and then run `bundleType=legacy node scripts/bundleSize`.
 
