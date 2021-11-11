@@ -30,14 +30,14 @@ Simorgh uses Loadable Components (a library Simorgh uses for code-splitting) to 
 - IE11 downloads both modern and legacy bundles but only executes the legacy bundle. This worsens performance for IE11 users because they will have download almost twice the amount of JavaScript. IE11 accounts for around 0.06% of page visits across the World Service sites. Based on this we decided the impact is not high enough to prevent us from providing a better experience to the vast majority of users.
 - The Webpack dev server run using `yarn dev` currently only uses modern JavaScript. If you are cross-browser testing locally make sure that you build Simorgh with `yarn build` and start the Express server with `yarn start`.
 
-Because we make multiple releases per day with updated application and library (node_module) code we split our client-side JavaScript bundle into multiple chunks to improve cache efficiency so that the amount of cache-invalidated chunks after each deployment is kept to a minimum.
-
 ### More on legacy vs modern bundles
 
 - [Publish, ship, and install modern JavaScript for faster applications](https://web.dev/publish-modern-javascript/)
 - [Deploying ES2015+ Code in Production Today](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)
 
 ## Code-splitting
+
+Because we make multiple releases per day with updated application and library (node_module) code we split our client-side JavaScript bundle into multiple chunks to improve cache efficiency so that the amount of cache-invalidated chunks after each deployment is kept to a minimum.
 
 Currently, our chunking strategy is as follows:
 
