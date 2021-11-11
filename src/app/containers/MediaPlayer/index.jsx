@@ -174,12 +174,11 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const renderCaption = () =>
-    captionBlock ? (
-      <Caption block={captionBlock} type={mediaInfo.type} service={service} />
-    ) : null;
+  const renderCaption = captionBlock ? (
+    <Caption block={captionBlock} type={mediaInfo.type} service={service} />
+  ) : null;
 
-  const mediaPlayerType = isAmp ? (
+  const mediaPlayer = isAmp ? (
     <AmpMediaPlayer
       src={embedSource}
       placeholderSrc={placeholderSrc}
@@ -206,13 +205,13 @@ const MediaPlayerContainer = ({
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
-      {showCaption && renderCaption() ? (
+      {showCaption && renderCaption ? (
         <Figure>
-          {mediaPlayerType}
-          {showCaption && renderCaption()}
+          {mediaPlayer}
+          {showCaption && renderCaption}
         </Figure>
       ) : (
-        <MediaPlayerWrapper>{mediaPlayerType}</MediaPlayerWrapper>
+        <MediaPlayerWrapper>{mediaPlayer}</MediaPlayerWrapper>
       )}
     </>
   );
