@@ -325,16 +325,20 @@ export const service = {
         url: '/turkce',
       },
       {
-        title: 'Video',
-        url: '/turkce/media/video',
-      },
-      {
-        title: 'Spor',
-        url: '/turkce/topics/c340qx04vwwt',
+        title: 'Türkiye',
+        url: '/turkce/topics/ckdxn2xk95gt',
       },
       {
         title: 'Ekonomi',
         url: '/turkce/topics/cg726y2k82dt',
+      },
+      {
+        title: 'Koronavirüs',
+        url: '/turkce/topics/ck0r47pk362t',
+      },
+      {
+        title: 'İngiltere',
+        url: '/turkce/topics/c95y3wy7842t',
       },
       {
         title: 'Bilim',
@@ -343,10 +347,6 @@ export const service = {
       {
         title: 'Teknoloji',
         url: '/turkce/topics/c2dwqnwkvnqt',
-      },
-      {
-        title: 'Sağlık',
-        url: '/turkce/topics/cnq68n6wgzdt',
       },
     ],
   },
