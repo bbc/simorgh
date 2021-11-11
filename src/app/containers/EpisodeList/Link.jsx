@@ -52,6 +52,7 @@ const StyledAnchor = styled.a`
 `;
 
 const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
+  console.log('index______', index);
   return (
     <StyledAnchor
       showMediaIndicator={showMediaIndicator}
