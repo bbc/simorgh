@@ -10,6 +10,7 @@ const createConsoleError = require('./createConsoleError');
 const { getPageBundleData, getServiceBundleData } = require('./getBundleData');
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
+const bundleType = process.env.bundleType || 'modern';
 const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
 const serviceBundlesTotals = serviceBundleData.map(
   ({ totalSize }) => totalSize,
@@ -31,7 +32,7 @@ const largestPagePlusServiceBundleSize =
 const smallestPagePlusServiceBundleSize =
   smallestServiceBundleSize + smallestPageBundleSize;
 
-const removeBundleTypePrefix = name => name.replace('modern.', '');
+const removeBundleTypePrefix = name => name.replace(`${bundleType}.`, '');
 
 const serviceBundlesTable = new Table({
   head: ['Service name', 'bundles', 'Total size (kB)'],
@@ -114,22 +115,34 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(chalk.bold(`\n${chalk.green('MODERN')} service bundle sizes\n`));
+console.log(
+  chalk.bold(
+    `\n${chalk.green(bundleType.toUpperCase())} service bundle sizes\n`,
+  ),
+);
 console.log(serviceBundlesTable.toString());
 
 console.log(
-  chalk.bold(`\n\n${chalk.green('MODERN')} service bundle sizes summary\n`),
+  chalk.bold(
+    `\n\n${chalk.green(
+      bundleType.toUpperCase(),
+    )} service bundle sizes summary\n`,
+  ),
 );
 console.log(serviceSummaryTable.toString());
 
 console.log(
-  chalk.bold(`\n\n${chalk.green('MODERN')} page type bundle sizes\n`),
+  chalk.bold(
+    `\n\n${chalk.green(bundleType.toUpperCase())} page type bundle sizes\n`,
+  ),
 );
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
-    chalk.bold(`\n\n${chalk.green('MODERN')} page bundle sizes summary`),
+    chalk.bold(
+      `\n\n${chalk.green(bundleType.toUpperCase())} page bundle sizes summary`,
+    ),
     chalk.cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
@@ -137,7 +150,9 @@ console.log(pageSummaryTable.toString());
 
 console.log(
   chalk.bold(
-    `\n\n${chalk.green('MODERN')} service + page bundle sizes summary\n`,
+    `\n\n${chalk.green(
+      bundleType.toUpperCase(),
+    )} service + page bundle sizes summary\n`,
   ),
 );
 console.log(servicePageSummaryTable.toString());
