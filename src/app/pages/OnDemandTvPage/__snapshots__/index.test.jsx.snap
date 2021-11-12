@@ -337,7 +337,7 @@ exports[`OnDemand TV Brand Page  Dark Mode Design - should match snapshot 1`] = 
   .emotion-21 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 
@@ -932,7 +932,7 @@ exports[`should show the expired content message if episode is expired 1`] = `
   .emotion-18 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 
@@ -1517,7 +1517,7 @@ exports[`should show the future content message if episode is not yet available 
   .emotion-18 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 
@@ -2102,7 +2102,7 @@ exports[`should show the future content message if episode is pending 1`] = `
   .emotion-18 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 

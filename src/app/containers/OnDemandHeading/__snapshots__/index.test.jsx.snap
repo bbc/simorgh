@@ -45,7 +45,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly - dark mode 
   .emotion-2 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 
@@ -193,7 +193,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
   .emotion-2 {
     padding-bottom: 1rem;
     word-break: break-word;
-    line-height: 2rem;
+    line-height: 1.09;
   }
 }
 
