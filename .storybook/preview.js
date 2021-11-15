@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/prefer-default-export, react/jsx-filename-extension */
 
 import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
@@ -8,6 +8,7 @@ import { forceVisible } from 'react-lazyload';
 
 import Fonts from './Fonts';
 
+// eslint-disable-next-line react/prop-types
 const Story = ({ story }) => {
   useEffect(() => {
     if (isChromatic()) {
