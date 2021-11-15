@@ -5,7 +5,7 @@ import isChromatic from 'chromatic/isChromatic';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 
-const fonts = [
+const fontPaths = [
   'fonts/Mallanna/normal.eot',
   'fonts/Mallanna/normal.ttf',
   'fonts/Mallanna/normal.woff',
