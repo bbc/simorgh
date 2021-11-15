@@ -10,6 +10,7 @@ import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
 import { GridItemMedium } from '#app/components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const componentsToRender = { listItem };
 
@@ -36,6 +37,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
   };
   const viewRef = useViewTracker(eventTrackingData);
   const { script, service, dir } = useContext(ServiceContext);
+  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
 
   return (
     <StyledGridItemMedium className={className}>
@@ -45,6 +47,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         service={service}
         dir={dir}
         ref={linkBlock ? viewRef : null}
+        onClick={clickTrackerRef}
       >
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
       </BulletedList>
