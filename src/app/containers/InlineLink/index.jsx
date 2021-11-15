@@ -14,6 +14,7 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 const componentsToRender = { fragment };
 
 const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
+  console.log('WE HAVE THE REST HERE >>>>> ', { blocks });
   const { externalLinkText } = useContext(ServiceContext);
   const regexp = pathToRegexp(articlePath, [], {
     start: false,
