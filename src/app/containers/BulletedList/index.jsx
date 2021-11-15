@@ -25,7 +25,6 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
       ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
       element,
     );
-
     return locator;
   });
 
