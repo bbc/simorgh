@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic/isChromatic';
@@ -9,13 +9,16 @@ import { forceVisible } from 'react-lazyload';
 import Fonts from './Fonts';
 
 const Story = ({ story }) => {
-  const [fontsReady, setFontsReady] = useState(false);
-  const handleFontsReady = () => setFontsReady(true);
+  useEffect(() => {
+    if (isChromatic()) {
+      forceVisible(); // force load all images
+    }
+  }, []);
 
   return (
     <>
-      <Fonts onReady={handleFontsReady} />
-      {fontsReady && story()}
+      <Fonts />
+      {story()}
     </>
   );
 };
