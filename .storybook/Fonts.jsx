@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 
-import React from 'react';
-import isChromatic from 'chromatic/isChromatic';
+import React, { useEffect } from 'react';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 
@@ -106,29 +105,39 @@ const fontPathMap = [
   { prefix: 'F_REITH_SERIF', path: 'fonts/Reith/' },
 ];
 
-const FontPreloads = () =>
-  fontPaths.map(fontPath => (
-    <link
-      rel="preload"
-      href={fontPath}
-      as="font"
-      type={`font/${fontPath.split('.')[1]}`}
-      crossorigin="anonymous"
-    />
-  ));
+const Fonts = ({ onReady }) => {
+  useEffect(() => {
+    const preloadFonts = async () => {
+      await Promise.all([
+        document.fonts.load('1rem ReithSerif'),
+        document.fonts.load('1rem ReithSans'),
+        document.fonts.load('1rem ReithSansCondensed'),
+        document.fonts.load('1rem Noto Serif Sinhala'),
+        document.fonts.load('1rem Noto Sans Tamil'),
+        document.fonts.load('1rem Mallanna'),
+        document.fonts.load('1rem Noto Sans Ethiopic'),
+        document.fonts.load('1rem Padauk'),
+        document.fonts.load('1rem Noto Serif Bengali'),
+        document.fonts.load('1rem BBC Reith Qalam'),
+      ]);
 
-const Fonts = () => (
-  <>
+      onReady();
+    };
+
+    preloadFonts();
+  }, []);
+
+  return (
     <GlobalStyles
       fonts={Object.values(fontFaces).map(fontFace => {
         const fontMap =
           fontPathMap.find(map => fontFace.name.startsWith(map.prefix)) ||
           fontPathMap[0];
+
         return fontFace(fontMap.path);
       })}
     />
-    {isChromatic() && <FontPreloads />}
-  </>
-);
+  );
+};
 
 export default Fonts;

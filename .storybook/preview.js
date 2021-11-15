@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import isChromatic from 'chromatic/isChromatic';
@@ -8,20 +8,19 @@ import { forceVisible } from 'react-lazyload';
 
 import Fonts from './Fonts';
 
-addDecorator(Story => {
-  useEffect(() => {
-    if (isChromatic()) {
-      forceVisible();
-    }
-  }, []);
+const Story = ({ story }) => {
+  const [fontsReady, setFontsReady] = useState(false);
+  const handleFontsReady = () => setFontsReady(true);
 
   return (
     <>
-      <Fonts />
-      <Story />
+      <Fonts onReady={handleFontsReady} />
+      {fontsReady && story()}
     </>
   );
-});
+};
+
+addDecorator(story => <Story story={story} />);
 
 const theme = create({
   base: 'light',
