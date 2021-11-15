@@ -5,6 +5,7 @@ import findIndex from 'ramda/src/findIndex';
 import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
+import { C_GHOST } from '@bbc/psammead-styles/colours';
 import { frontPageDataPropTypes } from '#models/propTypes/frontPage';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -40,7 +41,7 @@ const StyledRadioScheduleContainer = styled(RadioScheduleContainer)`
 
 const MostReadWrapper = ({ children }) => (
   <FrontPageMostReadSection>
-    <MostReadSectionLabel />
+    <MostReadSectionLabel backgroundColor={C_GHOST} />
     {children}
   </FrontPageMostReadSection>
 );
@@ -58,12 +59,8 @@ MostReadWrapper.propTypes = {
 };
 
 const FrontPage = ({ pageData, mostReadEndpointOverride }) => {
-  const {
-    product,
-    serviceLocalizedName,
-    translations,
-    frontPageTitle,
-  } = useContext(ServiceContext);
+  const { product, serviceLocalizedName, translations, frontPageTitle } =
+    useContext(ServiceContext);
 
   const { enabled: adsEnabled } = useToggle('ads');
   const home = path(['home'], translations);

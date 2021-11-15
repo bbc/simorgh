@@ -30,7 +30,7 @@ const getPageBundleData = () => {
     jsFiles.filter(fileName => fileName.startsWith('main-')),
   );
   const framework = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith('framework-')),
+    jsFiles.filter(fileName => fileName.startsWith('framework')),
   );
   const mainTotalSize = main.reduce((acc, { size }) => acc + size, 0);
   const frameworkTotalSize = framework.reduce((acc, { size }) => acc + size, 0);
@@ -43,7 +43,7 @@ const getPageBundleData = () => {
       ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
         const isShared = name.startsWith('shared-');
-        const isLib = name.includes('-lib-');
+        const isLib = name.includes('-lib');
         const isCommons = name.includes('commons-');
 
         if (isLib) {
@@ -82,7 +82,7 @@ const getServiceBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
-        jsFiles.filter(file => file.startsWith(service)),
+        jsFiles.filter(file => file.includes(service)),
       );
 
       return { serviceName: service, bundles: bundlesData };

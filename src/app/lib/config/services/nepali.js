@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/nepali.png',
     defaultImageAltText: 'BBC News नेपाली',
     dir: `ltr`,
-    externalLinkText: ', बाह्य सामग्री',
+    externalLinkText: ', बाह्य',
     imageCaptionOffscreenText: 'तस्बिरको क्याप्शन, ',
     videoCaptionOffscreenText: 'भिडिओ क्याप्शन सुरु हुँदैछ, ',
     audioCaptionOffscreenText: 'अडिओ क्याप्शन सुरु हुँदैछ, ',
@@ -56,6 +56,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'विज्ञापन',
@@ -65,12 +67,14 @@ export const service = {
       currentPage: 'अहिलेको पृष्ठ',
       skipLinkText: 'सामग्रीमा जानुहोस्',
       relatedContent: 'सम्बन्धित सामग्री',
+      relatedTopics: 'सम्बन्धित सामग्री',
       navMenuText: 'सूची',
       mediaAssetPage: {
         mediaPlayer: 'मिडिया प्लेअर',
         audioPlayer: 'अडिओ प्लेअर',
         videoPlayer: 'भिडिओ प्लेअर',
       },
+      gist: 'सारांश',
       error: {
         404: {
           statusCode: '४०४',
@@ -136,8 +140,7 @@ export const service = {
                 first:
                   'हामी र हाम्रा साझेदारहरू तपाईँको अनलाइन अनुभव अझ उपयोगी होओस्, तपाईँलाई प्रासंगिक सामग्री र विज्ञापन देखाउन ',
                 linkText: 'कुकीज',
-                last:
-                  'जस्ता प्रविधि प्रयोग गरेर तपाईँले हाम्रो साइटमा गरेका क्रियाकलापका जानकारी सङ्ग्रह गर्छौँ। कृपया तपाईँलाई यो कुरा मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
+                last: 'जस्ता प्रविधि प्रयोग गरेर तपाईँले हाम्रो साइटमा गरेका क्रियाकलापका जानकारी सङ्ग्रह गर्छौँ। कृपया तपाईँलाई यो कुरा मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -154,10 +157,8 @@ export const service = {
                 para3:
                   'हाम्रो वेब पेज काम गर्ने बनाउन हामीले तपाईँको सहमति विना नै तपाईँको उपकरणमा केही सिमित जानकारीहरू राखेका छौँ।',
                 para4: {
-                  text:
-                    'हाम्रो वेेब पेजलाई काम गर्ने बनाउन तपाईँको उपकरणमा राखिएको अति जरूरी जानकारीकाबारे यहाँ पढ्नुहोस्।',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'हाम्रो वेेब पेजलाई काम गर्ने बनाउन तपाईँको उपकरणमा राखिएको अति जरूरी जानकारीकाबारे यहाँ पढ्नुहोस्।',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'तपाईँँको उपकरणमा सहमति सम्बन्धी जानकारीकालागि हामीले लोकल स्टोरेज प्रयोग गर्ने गर्छौँ।',
@@ -165,10 +166,8 @@ export const service = {
                 para6:
                   'AMP पेेजहरूमा तपाईँले डेटा संकलनको अनुमित दिँदा तपाईँले हामीलाई व्यक्तिगत अनुकूलन गरिएको विज्ञापनहरू देखाउने अनुमित दिएको मानिनेछ। तपाईँ युके बाहिर रहँदा ती विज्ञापनहरू तपाईँ सान्दर्भिक हुनेछन्।',
                 para7: {
-                  text:
-                    'बीबीसी र हाम्रा विज्ञापन साझेदारहरूले विज्ञापनलाई कसरी व्यक्तिगत अनुकूलन गर्ने गर्छौँ भन्ने जान्न यहाँ पढ्नुहोस्।',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'बीबीसी र हाम्रा विज्ञापन साझेदारहरूले विज्ञापनलाई कसरी व्यक्तिगत अनुकूलन गर्ने गर्छौँ भन्ने जान्न यहाँ पढ्नुहोस्।',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'तपाईँलेे "डेेटा संकलनप्रति असहमत र अघि बढ्ने" विकल्पमा क्लिक गरेर व्यक्तिगत अनुकूलन गरिएका विज्ञापनहरू स्वीकार नगर्न सक्नुहुन्छ। तर तपाईँले अन्य विज्ञापन भने देख्न सक्नुहुन्छ ती भने तपाईँको रुचि अनुसारका नहुन सक्छन्।',
@@ -183,16 +182,14 @@ export const service = {
               uk: {
                 first: 'हामी तपाईँको अनलाइन अनुभव अझ उपयोगी होओस् भनेर ',
                 linkText: 'कुकीज',
-                last:
-                  ' प्रयोग गर्छौँ। कृपया तपाईँलाई कुकीज मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
+                last: ' प्रयोग गर्छौँ। कृपया तपाईँलाई कुकीज मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'हामी तपाईँको अनलाइन अनुभव अझ उपयोगी होओस् भनेर ',
                 linkText: 'कुकीज',
-                last:
-                  ' प्रयोग गर्छौँ। कृपया तपाईँलाई कुकीज मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
+                last: ' प्रयोग गर्छौँ। कृपया तपाईँलाई कुकीज मान्य छ भने हामीलाई जानकारी दिनुहोस्।',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -277,8 +274,7 @@ export const service = {
         text: 'बीबीसीको विश्वसनीयता',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाह्य वेबसाइटको लिङ्क प्रयोग सम्बन्धमा हाम्रो नीति पढ्नुहोस्।',
       },
       links: [
@@ -304,8 +300,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

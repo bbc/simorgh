@@ -58,6 +58,21 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'ပေါ့တ်ကာစ်',
+      brandTitle: 'Burmese Evening Podcast',
+      brandDescription: 'Up-to-date news and current affairs in Burmese',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lyd.jpg',
+        alt: 'Burmese Evening Podcast',
+      },
+      linkLabel: {
+        text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
+        href: 'https://www.bbc.com/burmese/podcasts/p02pc9lh',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'ကြော်ငြာ',
@@ -67,12 +82,14 @@ export const service = {
       currentPage: 'လက်ရှိကြည့်နေသော စာမျက်နှာ',
       skipLinkText: 'အကြောင်းအရာများဆီ ကျော်သွားရန်',
       relatedContent: 'ဒီသတင်းနဲ့ ပတ်သက်သမျှ',
+      relatedTopics: 'ဆက်စပ်အကြောင်းအရာများ',
       navMenuText: 'ကဏ္ဍများ',
       mediaAssetPage: {
         mediaPlayer: 'မီဒီယာ ပလေယာ',
         audioPlayer: 'အသံဖိုင်ပလေယာ',
         videoPlayer: 'ဗီဒီယို ပလေယာ',
       },
+      gist: 'အနှစ်ချုပ်',
       error: {
         404: {
           statusCode: '၄၀၄',
@@ -136,8 +153,7 @@ export const service = {
               description: {
                 first: 'ဘီဘီစီနှင့် ပါတနာများသည် ',
                 linkText: ' နှင့် ကွတ်ကီးများ ',
-                last:
-                  ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
+                last: ' သုံးသော နည်းပညာများဖြင့် ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးကြည့်နိုင်ရန်၊ မိမိတို့ ကြည့်လိုသည့် အကြောင်းအရာများကြည့်နိုင်ရန်၊ မိမိတို့နှင့် ကိုက်ညီမည့် ကြော်ငြာများကိုသာ ရရှိရန် အသုံးပြုသူ၏ သုံးစွဲပုံဒေတာများကို ကောက်ယူပါသည်။ ယင်းသို့ အသုံးပြုမှုကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -155,10 +171,8 @@ export const service = {
                 para3:
                   'မိမိတို့၏စာမျက်နှာများအလုပ်လုပ်နိုင်ရန် သင်အသုံးပြုသောစက်ထဲတွင် အချက်အလက်အနည်းငယ်ကို သင့်ခွင့်ပြုချက်မပါဘဲ သိုမှီးထားပါသည်။',
                 para4: {
-                  text:
-                    'မိမိတို့စာမျက်နှာများအလုပ်လုပ်ရန် မရှိမဖြစ်လိုအပ်သောအချက်များ သင့်စက်ထဲတွင် သိုမှီးထားခြင်းနှင့်ပတ်သက်၍ နောက်ထပ်သိလိုပါက ဖတ်ရှုရန်',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'မိမိတို့စာမျက်နှာများအလုပ်လုပ်ရန် မရှိမဖြစ်လိုအပ်သောအချက်များ သင့်စက်ထဲတွင် သိုမှီးထားခြင်းနှင့်ပတ်သက်၍ နောက်ထပ်သိလိုပါက ဖတ်ရှုရန်',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'သင်သဘောတူထားသောနှစ်ခြိုက်သည့်ပုံစံများကို သင့်စက်ထဲတွင် သိမ်းဆည်းထားပါသည်။',
@@ -166,10 +180,8 @@ export const service = {
                 para6:
                   'AMP စာမျက်နှာများပေါ်တွင်အချက်အလက်ကောက်ယူခြင်းကို သင့်ဘက်မှသဘောတူခဲ့လျှင် သင်ယူကေအပြင်ဘက်တွင်ရှိစဉ် သင့်အတွက်သီးသန့်ပို့သော ကြော်ငြာများကို ပြသရန်လည်း မိမိတို့အား သဘောတူ ခွင့်ပြုခြင်းဖြစ်ပါသည်။',
                 para7: {
-                  text:
-                    'ဘီဘီစီနှင့် မိမိတို့၏ မိတ်ဖက်ကြော်ငြာရှင်များက သီးသန့်ကြော်ငြာများမည်သို့ပြုလုပ်သည်ကို နောက်ထပ်ဖတ်ရှုရန်',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'ဘီဘီစီနှင့် မိမိတို့၏ မိတ်ဖက်ကြော်ငြာရှင်များက သီးသန့်ကြော်ငြာများမည်သို့ပြုလုပ်သည်ကို နောက်ထပ်ဖတ်ရှုရန်',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'မိမိအတွက်သီးသန့်ပေးပို့သော ကြော်ငြာများမရရှိလိုလျင် “အချက်အလက်ကောက်ခံခြင်းကို လက်မခံပဲ ဆက်ကြည့်မည်” ဆိုသောနေရာကို နှိပ်ပါ။ သင်ကြော်ငြာများကိုတော့ဆက်တွေ့နေရပါမည်၊ သို့သော်ကိုယ့်အတွက် သီးသန့်ပေးပို့မှုများရှိမည်မဟုတ်ပါ။',
@@ -185,8 +197,7 @@ export const service = {
                 first:
                   'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
                 linkText: 'နှင့် ကွတ်ကီးများ',
-                last:
-                  ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
+                last: ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -194,8 +205,7 @@ export const service = {
                 first:
                   'ပရိသတ်များ အွန်လိုင်းတွင် အကောင်းဆုံးသုံးနိုင်ရန် မိမိတို့ ',
                 linkText: 'နှင့် ကွတ်ကီးများ',
-                last:
-                  ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
+                last: ' ကို အသုံးပြုပါသည်။ ယင်းကွတ်ကီးများ အားလုံးကို သဘောတူမတူ ပြောပြပါ။',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -239,8 +249,7 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'ဗီဒီယို ပုံစာ - ',
-          text:
-            'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
+          text: 'သတိပေးချက်- ဘီဘီစီပြင်ပ ဝက်ဆိုက်များမှ ဖော်ပြချက်များတွင် ကြော်ငြာများပါနိုင်ပါသည်။',
         },
         fallback: {
           text: 'ကြည့်ရန် မရနိုင်သေးပါ။',
@@ -288,10 +297,8 @@ export const service = {
         text: 'ဘီဘီစီကို ဘာကြောင့် ယုံကြည်နိုင်သလဲ။',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-        text:
-          'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'ပြင်ပဝက်ဆိုက်များကို လင့် ထည့်ပေးခြင်းနှင့် ပတ်သက်သော ဘီဘီစီလုပ်ထုံးလုပ်နည်းကို ဖတ်ရန်။',
       },
       links: [
         {
@@ -312,8 +319,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

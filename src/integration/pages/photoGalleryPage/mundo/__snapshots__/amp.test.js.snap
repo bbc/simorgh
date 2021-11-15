@@ -98,7 +98,7 @@ exports[`AMP Photo Gallery Page Analytics ATI 1`] = `
 Object {
   "requests": Object {
     "base": "https://logws1363.ati-host.net?",
-    "pageview": "\${base}s=598343&s2=62&p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[R%C3%ADo%2B2016%2C%2Bel%2Bantes%2By%2Bel%2Bahora%3A%2Bc%C3%B3mo%2Bha%2Bcambiado%2Bla%2Bropa%2Bdeportiva%2Ben%2Bm%C3%A1s%2Bde%2Bun%2Bsiglo%2Bde%2Bjuegos%2Bol%C3%ADmpicos%2B-%2BBBC%2BNews%2BMundo]&x11=[2016-08-07T09%3A21%3A02.000Z]&x12=[2016-08-07T09%3A21%3A14.000Z]&x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]&ref=\${documentReferrer}",
+    "pageview": "\${base}s=598343&s2=62&p=sport%3A%3Amundo.sport.photo_gallery.36935058.page&r=\${screenWidth}x\${screenHeight}x\${screenColorDepth}&re=\${availableScreenWidth}x\${availableScreenHeight}&hl=\${timestamp}&lng=\${browserLanguage}&x1=[urn%3Abbc%3Acps%3A08e22e90-7361-cd47-b586-7cb53fc5a012]&x2=[amp]&x3=[news-mundo]&x4=[es]&x5=[\${sourceUrl}]&x6=[\${documentReferrer}]&x7=[article-photo-gallery]&x8=[simorgh]&x9=[R%C3%ADo%2B2016%2C%2Bel%2Bantes%2By%2Bel%2Bahora%3A%2Bc%C3%B3mo%2Bha%2Bcambiado%2Bla%2Bropa%2Bdeportiva%2Ben%2Bm%C3%A1s%2Bde%2Bun%2Bsiglo%2Bde%2Bjuegos%2Bol%C3%ADmpicos%2B-%2BBBC%2BNews%2BMundo]&x11=[2016-08-07T09%3A21%3A02.000Z]&x12=[2016-08-07T09%3A21%3A02.000Z]&x13=[Olympics~Brazil~Rio%2B2016~Sport]&x14=[0d205538-c52e-41c7-a4a1-50efd6c1da59~15f1bcf6-b6ab-48e8-b708-efed41e43d31~1d2e1514-faa8-425d-8481-a1cc4da6cc24~4063f80f-cccc-44c8-9449-5ca44e4c8592]&ref=\${documentReferrer}",
   },
   "transport": Object {
     "beacon": false,
@@ -230,64 +230,78 @@ Object {
 
 exports[`AMP Photo Gallery Page Header Navigation link should match text and url 4`] = `
 Object {
+  "text": "Medio ambiente",
+  "url": "/mundo/noticias-58984987",
+}
+`;
+
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 5`] = `
+Object {
   "text": "Coronavirus",
   "url": "/mundo/topics/c67q9nnn8z7t",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 5`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 6`] = `
 Object {
   "text": "Hay Festival",
   "url": "/mundo/noticias-36795069",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 6`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Economía",
   "url": "/mundo/topics/ca170ae3-99c1-48db-9b67-2866f85e7342",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 7`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Ciencia",
   "url": "/mundo/topics/0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 8`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 9`] = `
 Object {
   "text": "Salud",
   "url": "/mundo/topics/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 9`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 10`] = `
 Object {
   "text": "Cultura",
   "url": "/mundo/topics/6a73afa3-ea6b-45c1-80bb-49060b99f864",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 10`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
 Object {
   "text": "Tecnología",
   "url": "/mundo/topics/31684f19-84d6-41f6-b033-7ae08098572a",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 11`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 12`] = `
 Object {
   "text": "Video",
   "url": "/mundo/media/video",
 }
 `;
 
-exports[`AMP Photo Gallery Page Header Navigation link should match text and url 12`] = `
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 13`] = `
 Object {
   "text": "Centroamérica Cuenta",
   "url": "/mundo/noticias-43826245",
+}
+`;
+
+exports[`AMP Photo Gallery Page Header Navigation link should match text and url 14`] = `
+Object {
+  "text": "BBC Extra",
+  "url": "/mundo/noticias-48908206",
 }
 `;
 
@@ -398,22 +412,22 @@ Object {
       "about": Array [
         Object {
           "@type": "Thing",
-          "name": "Olympics",
+          "name": "Olimpiadas",
           "sameAs": Array [
             "http://dbpedia.org/resource/Summer_Olympic_Games",
           ],
         },
         Object {
-          "@type": "Thing",
-          "name": "Brazil",
+          "@type": "Place",
+          "name": "Brasil",
         },
         Object {
           "@type": "Thing",
-          "name": "Rio 2016",
+          "name": "Río 2016",
         },
         Object {
           "@type": "Thing",
-          "name": "Sport",
+          "name": "Deportes",
           "sameAs": Array [
             "http://dbpedia.org/resource/Sport",
           ],
@@ -430,7 +444,7 @@ Object {
         "name": "BBC News Mundo",
         "noBylinesPolicy": "https://www.bbc.com/mundo/institucional-51359666#authorexpertise",
       },
-      "dateModified": "2016-08-07T09:21:14.000Z",
+      "dateModified": "2016-08-07T09:21:02.000Z",
       "datePublished": "2016-08-07T09:21:02.000Z",
       "description": "La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo.",
       "headline": "Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos",

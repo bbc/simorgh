@@ -1,0 +1,394 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_gahuza_radio/p07yjlmf",
+      "locators": {
+        "pid": "p09wny96",
+        "brandPid": "p07yjlmf"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_gahuza_radio",
+      "language": "rw",
+      "lastUpdated": 1632490614901,
+      "firstPublished": 1632331245000,
+      "lastPublished": 1632331245000,
+      "timestamp": 1632331245000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "Ikiganiro cy’abagore - BBC News Gahuza",
+        "pageIdentifier": "gahuza.bbc_gahuza_radio.podcasts.programmes.p07yjlmf.page",
+        "producerId": "40",
+        "contentType": "player-episode",
+        "producer": "GAHUZA"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "Ikiganiro cy’abagore",
+      "releaseDateTimeStamp": 1632268800000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09wny96",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "Ikiganiro cy'abagore 22/09/2021"
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09wnxhh",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 333,
+              "durationISO8601": "PT5M33S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableUntil": 1634923080000,
+              "availableFrom": 1632331080000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "Ikiganiro cy'abagore 22/09/2021",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Ikiganiro cy’abagore"
+      },
+      "locators": {
+        "pid": "p09wny96",
+        "brandPid": "p07yjlmf"
+      },
+      "media": {
+        "id": "p09wny96",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Ikiganiro cy'abagore 22/09/2021"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09wnxhh",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 333,
+            "durationISO8601": "PT5M33S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableUntil": 1634923080000,
+            "availableFrom": 1632331080000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "Ikiganiro cy'abagore 22/09/2021",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1632268800000,
+      "brand": {
+        "pid": "p07yjlmf",
+        "title": "Ikiganiro cy’abagore"
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p09wny96",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Gahuza",
+        "uri": "/gahuza",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "Ikiganiro cy’abagore"
+              },
+              "locators": {
+                "pid": "p09w25m3",
+                "brandPid": "p07yjlmf"
+              },
+              "media": {
+                "id": "p09w25m3",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Kurikira ikiganiro cy'abagore kuri BBC Gahuzamiryango"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09w25hl",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 301,
+                    "durationISO8601": "PT5M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1634320320000,
+                    "availableFrom": 1631728320000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Ikiganiro cyo kuwa 15/09/2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631664000000,
+              "brand": {
+                "pid": "p07yjlmf",
+                "title": "Ikiganiro cy’abagore"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p09w25m3",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Ikiganiro cy’abagore"
+              },
+              "locators": {
+                "pid": "p09vj2qy",
+                "brandPid": "p07yjlmf"
+              },
+              "media": {
+                "id": "p09vj2qy",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Ikiganiro c'abagore buri munsi wa gatatu"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09vj2m2",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 342,
+                    "durationISO8601": "PT5M42S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1633787460000,
+                    "availableFrom": 1631195460000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Ikiganiro c'abagore 08/09/2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1631145600000,
+              "brand": {
+                "pid": "p07yjlmf",
+                "title": "Ikiganiro cy’abagore"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p09vj2qy",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Ikiganiro cy’abagore"
+              },
+              "locators": {
+                "pid": "p09t68zv",
+                "brandPid": "p07yjlmf"
+              },
+              "media": {
+                "id": "p09t68zv",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Kurikira ikiganiro cy'abagore kuri BBC Gahuzamiryango."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09t68t5",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 317,
+                    "durationISO8601": "PT5M17S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableUntil": 1632504480000,
+                    "availableFrom": 1629912480000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Ikiganiro cyo kuwa 25/08/2021",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1629849600000,
+              "brand": {
+                "pid": "p07yjlmf",
+                "title": "Ikiganiro cy’abagore"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p09t68zv",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Ikiganiro cy’abagore"
+              },
+              "locators": {
+                "pid": "p07yjmbx",
+                "brandPid": "p07yjlmf"
+              },
+              "media": {
+                "id": "p07yjmbx",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Ikiganiro cy’abagore kuri BBC Gahuzamiryango"
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p07yjk18",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 8,
+                    "durationISO8601": "PT8S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1576858920000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Welcome to Ikiganiro cy’abagore",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p082wkcz.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1576800000000,
+              "brand": {
+                "pid": "p07yjlmf",
+                "title": "Ikiganiro cy’abagore"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_gahuza_radio/p07yjmbx",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }

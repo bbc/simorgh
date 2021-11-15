@@ -58,6 +58,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Beeksiisa',
@@ -67,12 +69,14 @@ export const service = {
       currentPage: 'Fuula kan ammaa',
       skipLinkText: 'Qabiyyeetti darbi',
       relatedContent: 'Odeessa kana irratti dabalata',
+      relatedTopics: 'Mata dureewwan walitti dhiyaatan',
       navMenuText: 'Kutaawwan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Guduunfaa',
       error: {
         404: {
           statusCode: '404',
@@ -137,8 +141,7 @@ export const service = {
               description: {
                 first: 'Nutiifi michuuwwan keenya tekinikoota kan akka ',
                 linkText: 'kuus-yaadannoo',
-                last:
-                  ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
+                last: ", akkasumas muuxannoo toora interneetaa hunda caaluufi qabiyyee isaa akka fedha dhuunfaatti ta'u gochuu akkasumallee beekssisni sitti akka mul'atuuf daataa  ittiin barbaadan walitti qaba. Yoo itti walii galta ta'e nu beeksisi maaloo.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -156,10 +159,8 @@ export const service = {
                 para3:
                   "Marsariitiin keenya akka hojjatu taasisuuf, fedhii keessan malee odeeffannoo waa'ee meeshaa itti fayyadamtanii muraasa ni olkeenya.",
                 para4: {
-                  text:
-                    'Marsariitiin keenyaa akka hojjatuuf odeeffannoo murteessoo meeshaa itti fayyadamtanii nuti olkeenyuu irratti caalaa dubbisaa.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Marsariitiin keenyaa akka hojjatuuf odeeffannoo murteessoo meeshaa itti fayyadamtanii nuti olkeenyuu irratti caalaa dubbisaa.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   "Filannoo fedhii keessaanii meeshaa keessan irratti olkaa'uuf kuusaa naannootti fayyadamna.",
@@ -167,10 +168,8 @@ export const service = {
                 para6:
                   "Fuulawwan salphaatti saaqaman irratti odeeffannoon walitti akka qabamuuf tole yoo jettan, yoo UKn ala taataniitti beeksiisawwan isin ilaallatan isiniitti mul'isuuf hayyamtan jechuudha.",
                 para7: {
-                  text:
-                    'BBC fi shariikoonni beeksiisaa keenya, attamiin beeksiisa isin ilaallatu akka hojjatan irratti caalaa dubbisaa.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'BBC fi shariikoonni beeksiisaa keenya, attamiin beeksiisa isin ilaallatu akka hojjatan irratti caalaa dubbisaa.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   "Beeksiisawwan isin ilaalatu diduuf ''Reject data collection and continue'' asiin gadiitti cuqaasuu dandeessu. Maaloo ammalleen beeksiisa akka agartan garuu kan isin qofaa ilaalu akka hintaane hubadhaa.",
@@ -185,16 +184,14 @@ export const service = {
               uk: {
                 first: 'Kan nuti ',
                 linkText: 'kuus-yaadannoo fayyadamnu',
-                last:
-                  ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                last: ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Kan nuti ',
                 linkText: 'kuus-yaadannoo fayyadamnu',
-                last:
-                  ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
+                last: ' muuxannoo hunda caaluu toora internetaarratti isiniif kennuuf. Kuus-yaadannoo kan hunda waliin walii galuu kee mee haa barru.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -276,8 +273,7 @@ export const service = {
         text: 'BBC News maaliif amanuu dandeessa',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Gara geessituu alaatti akkaataa itti hojjennu dubbisi.',
       },
       links: [
@@ -303,8 +299,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

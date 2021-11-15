@@ -56,6 +56,21 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Ikiganiro cy’abagore',
+      brandDescription: 'Ikiganiro cy’abagore kuri BBC Gahuzamiryango',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p082wkdq.jpg',
+        alt: 'Ikiganiro cy’abagore',
+      },
+      linkLabel: {
+        text: 'Inkurikirane',
+        href: 'https://www.bbc.com/gahuza/podcasts/p07yjlmf',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Kwamamaza',
@@ -65,12 +80,14 @@ export const service = {
       currentPage: 'Uru rupapuro',
       skipLinkText: 'Simbira ku birimwo',
       relatedContent: 'Ibindi bisa n’ibi',
+      relatedTopics: 'Ibindi bisa n’ibi',
       navMenuText: 'Imice',
       mediaAssetPage: {
         mediaPlayer: 'Ibikinwa',
         audioPlayer: 'Kina amajwi',
         videoPlayer: 'Kina amasanamu',
       },
+      gist: 'Incamake',
       error: {
         404: {
           statusCode: '404',
@@ -134,8 +151,7 @@ export const service = {
               description: {
                 first: "Twebwe n'abo dukorana dukoresha ikoranabuhinga, nka ",
                 linkText: 'cookies',
-                last:
-                  ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
+                last: ", kandi tugatororokanya amakuru y'ibikorerwa kuri internet kugira tugufashe kworoherwa cane hamwe no kwihitiramwo ivyo uraba hamwe n'abarata ibidandazwa ushaka kubona. Tugusavye kutumenyesha ko uvyemeye.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -152,10 +168,8 @@ export const service = {
                 para3:
                   "Kugira impapuro z'urubuga rwacu zikore, turabika amakuru amwe amwe ku cuma cawe utarinze kubitwemerera.",
                 para4: {
-                  text:
-                    "Soma ibindi vyinshi ku makuru ya nkenerwa tubika ku cuma cawe kugira impapuro z'imbuga zacu zikore neza.",
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: "Soma ibindi vyinshi ku makuru ya nkenerwa tubika ku cuma cawe kugira impapuro z'imbuga zacu zikore neza.",
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Dukoresha ububiko bwawe kugira tubike ku cuma cawe ivyo ushima wemeye.',
@@ -163,10 +177,8 @@ export const service = {
                 para6:
                   "Iyo wemeye ikusanywa ry'ibikuranga ku mpapuro za AMP uba wemeye yuko uturetse tukakwereka ibirangishwa bikwerekeye iyo uri hanze y'Ubwongereza.",
                 para7: {
-                  text:
-                    "Soma ibindi vyinshi ku kuntu dutegura ibirangishwa bikwerekeye kuri BBC hamwe n'abarangisha dukorana.",
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: "Soma ibindi vyinshi ku kuntu dutegura ibirangishwa bikwerekeye kuri BBC hamwe n'abarangisha dukorana.",
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Urashobora guhitamwo kutaronswa ibirangishwa bikwerekeye mu gufyonda "Anka ikusanywa ry\'ibikuranga hanyuma ubandanye" aho munsi. Twokumenyesha yuko uzoguma ubona ibirangishwa, ariko ntibizoba bikwerekeye bwite.',
@@ -181,16 +193,14 @@ export const service = {
               uk: {
                 first: 'Dukoresha ',
                 linkText: 'cookies',
-                last:
-                  ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
+                last: ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Dukoresha ',
                 linkText: 'cookies',
-                last:
-                  ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
+                last: ' kugira woroherwe bishoboka kuri internet. Tugusavye kutumenyesha niba wemeye ibi vyose bijanye na cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -276,8 +286,7 @@ export const service = {
         text: 'Igituma ushobora kwizera BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: "Soma ibijanye n'aho duhagaze ku mihora ijana ahandi",
       },
       links: [
@@ -303,8 +312,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -335,7 +343,7 @@ export const service = {
         url: '/gahuza/topics/c5qvpq0jzy7t',
       },
       {
-        title: 'Video',
+        title: 'Amajwi n’amashusho',
         url: '/gahuza/media/video',
       },
     ],

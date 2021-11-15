@@ -1,12 +1,14 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
-import PodcastPromo from '.';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+
+import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 const serviceContextMock = {
   service: 'news',
   script: latin,
+  dir: 'ltr',
   podcastPromo: {
     title: 'Podcast',
     brandTitle: 'Sounds of the 90s with Fearne Cotton',
@@ -20,13 +22,30 @@ const serviceContextMock = {
       href: 'https://www.bbc.co.uk/sounds/brand/m000gkf5',
       text: 'Episodes',
     },
+    skipLink: {
+      text: 'Skip %title% and continue reading',
+      endTextVisuallyHidden: 'End of story %title%',
+    },
   },
 };
 
-storiesOf('Containers/PodcastPromo', module).add('default', () => {
-  return (
+// eslint-disable-next-line react/prop-types
+const Component = ({ inline = false }) => (
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+    }}
+  >
     <ServiceContext.Provider value={serviceContextMock}>
-      <PodcastPromo />
+      {inline ? <InlinePodcastPromo /> : <SecondaryColumnPodcastPromo />}
     </ServiceContext.Provider>
-  );
-});
+  </ToggleContextProvider>
+);
+
+export default {
+  title: 'Containers/Podcast Promo',
+  Component,
+};
+
+export const SecondaryColumnPromo = () => <Component />;
+export const InlinePromo = () => <Component inline />;

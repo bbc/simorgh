@@ -10,6 +10,7 @@ const logCodes = {
   // Data fetch
   DATA_FETCH_RESPONSE_TIME: 'data_fetch_response_time',
   DATA_FETCH_ERROR: 'data_fetch_error',
+  DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
 
@@ -58,6 +59,7 @@ const logCodes = {
 
   // Block Types
   UNSUPPORTED_BLOCK_TYPE: 'unsupported_block_type',
+  GIST_TRANSFORMATION_FAILED: 'gist_transformation_failed',
 
   // Most Read
   MOST_READ_FETCH_ERROR: 'most_read_fetch_error',
@@ -80,6 +82,9 @@ const logCodes = {
 
   // Social Embed
   SOCIAL_EMBED_RENDERED: 'social_embed_rendered',
+
+  // Toggle API
+  TOGGLE_API_RESPONSE_TIME: 'toggle_api_response_time',
 };
 
 module.exports = logCodes;

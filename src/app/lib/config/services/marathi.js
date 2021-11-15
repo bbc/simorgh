@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/marathi.png',
     defaultImageAltText: 'BBC News मराठी',
     dir: `ltr`,
-    externalLinkText: ', बाहेरचा मजकूर',
+    externalLinkText: ', बाहेर',
     imageCaptionOffscreenText: 'फोटो कॅप्शन, ',
     videoCaptionOffscreenText: 'व्हीडिओ कॅप्शन, ',
     audioCaptionOffscreenText: 'ऑडिओ कॅप्शन, ',
@@ -56,6 +56,21 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'पॉडकास्ट',
+      brandTitle: 'तीन गोष्टी',
+      brandDescription: 'दिवसभरातल्या कोरोना आणि इतर घडामोडींचा आढावा',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0940n6j.jpg',
+        alt: 'तीन गोष्टी',
+      },
+      linkLabel: {
+        text: 'भाग',
+        href: 'https://www.bbc.com/marathi/podcasts/p09431p4',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'जाहिरात',
@@ -65,12 +80,14 @@ export const service = {
       currentPage: 'सध्याचे पान',
       skipLinkText: 'थेट मजकुरावर जा',
       relatedContent: 'संबंधित मजकूर',
+      relatedTopics: 'संबंधित विषय',
       navMenuText: 'विभाग',
       mediaAssetPage: {
         mediaPlayer: 'मीडिया प्लेयर',
         audioPlayer: 'ऑडिओ प्लेयर',
         videoPlayer: 'व्हीडिओ प्लेयर',
       },
+      gist: 'थोडक्यात',
       error: {
         404: {
           statusCode: '404',
@@ -135,8 +152,7 @@ export const service = {
               description: {
                 first: 'आम्ही आणि आमचे सहकारी ',
                 linkText: 'कुकीज',
-                last:
-                  'सारखं तंत्रज्ञान वापरून तुमचा ब्राऊझिंग डेटा गोळा करत असतो, जेणेकरून तुमचा ऑनलाईन अनुभव सर्वोत्तम व्हावा आणि तुम्हाला खास तुमच्यासाठीचा मजकूर आणि अ‍ॅड दाखवता याव्यात. तुमची याला सहमती असल्याचं आम्हाला कळवा.',
+                last: 'सारखं तंत्रज्ञान वापरून तुमचा ब्राऊझिंग डेटा गोळा करत असतो, जेणेकरून तुमचा ऑनलाईन अनुभव सर्वोत्तम व्हावा आणि तुम्हाला खास तुमच्यासाठीचा मजकूर आणि अ‍ॅड दाखवता याव्यात. तुमची याला सहमती असल्याचं आम्हाला कळवा.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -153,10 +169,8 @@ export const service = {
                 para3:
                   'आमची वेबपेजेस सुलभपणे चालावीत यासाठी आम्ही मर्यादित प्रमाणात तुमच्या उपकरणाविषयीची काही माहिती विनाअनुमती साठवतो.',
                 para4: {
-                  text:
-                    'वेबपेजेस सुरळीतपणे चालावीत यासाठी तुमच्या उपकरणातील कोणती माहिती साठवली जाते याविषयी वाचा.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'वेबपेजेस सुरळीतपणे चालावीत यासाठी तुमच्या उपकरणातील कोणती माहिती साठवली जाते याविषयी वाचा.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'तुमच्या परवानगीचे पर्याय साठवण्यासाठी आम्ही तुमच्या उपकरणातील लोकल स्टोरेजचा वापर करतो.',
@@ -164,10 +178,8 @@ export const service = {
                 para6:
                   'जेव्हा तुम्ही युके बाहेर असताना AMP पानांसंदर्भातली माहिती गोळा करण्याची परवानगी देता, तेव्हा तुम्हाला विशिष्ट वैयक्तिक स्वरूपाच्या जाहिराती दाखवण्यात याव्यात यासाठी तुमची परवानगी आहे असा अर्थ होतो.',
                 para7: {
-                  text:
-                    'बीबीसी आणि आमचे जाहिरात पार्टनर वैयक्तिक स्वरूपाच्या जाहिराती कसे देतात याविषयी वाचा.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'बीबीसी आणि आमचे जाहिरात पार्टनर वैयक्तिक स्वरूपाच्या जाहिराती कसे देतात याविषयी वाचा.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   "वैयक्तिक स्वरूपाच्या जाहिराती दिसू नयेत यासाठी तुम्ही 'माहिती गोळा करू नका आणि पुढे सुरू ठेवा' हा पर्याय  निवडू शकता.",
@@ -182,16 +194,14 @@ export const service = {
               uk: {
                 first: 'आम्ही ',
                 linkText: 'कुकीज',
-                last:
-                  ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
+                last: ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'आम्ही ',
                 linkText: 'कुकीज',
-                last:
-                  ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
+                last: ' वापरून तुमचा ऑनलाईन अनुभव सर्वोत्तम करण्याचा प्रयत्न करतो. सर्व कुकीजच्या बाबतीत तुमची सहमती असल्याचं आम्हाला कळवा.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -276,8 +286,7 @@ export const service = {
         text: 'तुम्ही बीबीसीवर विश्वास ठेवू शकता कारण',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'बाह्य लिंक्सबद्दल आम्हाल काय वाटतं? इथे वाचा.',
       },
       links: [
@@ -299,8 +308,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

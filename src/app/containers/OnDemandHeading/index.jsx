@@ -3,30 +3,52 @@ import { string, number, bool } from 'prop-types';
 import styled from '@emotion/styled';
 import { Headline } from '@bbc/psammead-headings';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
-import { GEL_SPACING, GEL_SPACING_SEPT } from '@bbc/gel-foundations/spacings';
-import { MEDIA_QUERY_TYPOGRAPHY } from '@bbc/gel-foundations/breakpoints';
+import {
+  GEL_SPACING,
+  GEL_SPACING_DBL,
+  GEL_SPACING_TRPL,
+} from '@bbc/gel-foundations/spacings';
+import {
+  MEDIA_QUERY_TYPOGRAPHY,
+  GEL_GROUP_2_SCREEN_WIDTH_MAX,
+  GEL_GROUP_1_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/breakpoints';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
 import { getDoublePica, getParagon } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const BrandTitle = styled.span`
-  display: inline-block;
+  display: block;
+  line-height: 1;
   width: 100%;
   padding-bottom: ${GEL_SPACING};
   word-break: break-word;
   ${({ script, darkMode }) => (darkMode ? '' : script && getParagon(script))}
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
-    padding-bottom: 0;
+    padding-bottom: ${GEL_SPACING_DBL};
     word-break: break-word;
-    line-height: ${GEL_SPACING_SEPT};
+    line-height: 1.09;
   }
 `;
 
 const Subheading = styled.span`
+  display: inline-block;
+  margin: 0;
   ${({ script }) => script && getDoublePica(script)}
   ${({ service }) => getSansRegular(service)}
-  margin: 0;
+  @media (max-width: 22.5rem) and (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
+    font-size: 1.25rem;
+    line-height: ${GEL_SPACING_TRPL};
+  }
+  ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
+    font-size: ${GEL_SPACING_TRPL};
+    line-height: 1.75rem;
+  }
 `;
 
 const OnDemandHeadingContainer = ({
@@ -38,9 +60,8 @@ const OnDemandHeadingContainer = ({
   darkMode,
   className,
 }) => {
-  const { script, service, timezone, datetimeLocale } = useContext(
-    ServiceContext,
-  );
+  const { script, service, timezone, datetimeLocale } =
+    useContext(ServiceContext);
 
   const formattedTimestamp = formatUnixTimestamp({
     timestamp: releaseDateTimeStamp,

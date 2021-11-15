@@ -29,7 +29,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/arabic.png',
     defaultImageAltText: 'BBC News عربي',
     dir: 'rtl',
-    externalLinkText: 'خارجي، ',
+    externalLinkText: '، خارجي ',
     imageCaptionOffscreenText: 'التعليق على الصورة، ',
     videoCaptionOffscreenText: 'التعليق على الفيديو، ',
     audioCaptionOffscreenText: 'التعليق على التسجيل الصوتي، ',
@@ -61,6 +61,26 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'البودكاست',
+      brandTitle: 'إكسترا ليفلز (Xtra Levels)',
+      brandDescription:
+        'بودكاست يسبر كون الألعاب الإلكترونية من خلال لاعبيه ومطوريه.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg',
+        alt: 'بودكاست "عَلاقات"',
+      },
+      linkLabel: {
+        text: 'الحلقات',
+        href: 'https://www.bbc.com/arabic/podcasts/p09w8yvk',
+      },
+      skipLink: {
+        text: 'تخطى %title% وواصل القراءة',
+        endTextVisuallyHidden: '%title% نهاية',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'إعلان',
@@ -71,12 +91,14 @@ export const service = {
       currentPage: 'الصفحة الحالية',
       skipLinkText: 'إذهب الى المحتوى',
       relatedContent: 'المزيد حول هذه القصة',
+      relatedTopics: 'مواضيع ذات صلة',
       navMenuText: 'أقسام',
       mediaAssetPage: {
         mediaPlayer: 'مشغل وسائط',
         audioPlayer: 'مشغل ملف صوتي',
         videoPlayer: 'مشغل فيديو',
       },
+      gist: 'ملخص',
       error: {
         404: {
           statusCode: '404',
@@ -142,8 +164,7 @@ export const service = {
               description: {
                 first: 'نستخدم نحن وشركاؤنا تقنيات مثل ',
                 linkText: 'ملفات الارتباط',
-                last:
-                  '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
+                last: '، كما نقوم بجمع معلومات خاصة بالتصفح من أجل توفير أفضل خدمة رقمية ولجعل المحتوى والاعلانات، الموجهة إليك، شخصية. الرجاء إعلامنا إذا كنت موافقا على ذلك.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -160,20 +181,16 @@ export const service = {
                 para3:
                   'لأجل ضمان عمل صفحاتنا بشكل سلس ومقبول، نقوم بخزن بعض المعلومات المحدودة على أجهزتكم دون الحصول على موافقتكم.',
                 para4: {
-                  text:
-                    'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'إقرأوا المزيد عن المعلومات الضرورية والحيوية التي نقوم بخزنها على أجهزتكم من أجل ضمان عمل صفحاتنا بشكل جيد.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'نقوم بخزن أفضلياتكم التي صرحتم بها في أجهزتكم.',
                 heading3: 'شروط اختيارية لجمع المعلومات',
                 para6:
                   'في حال موافقتكم على جمع معلوماتكم من خلال صفحات AMP، فإنكم توافقون على إظهار إعلانات موجهة بشكل شخصي لها علاقة باهتماماتكم عندما تتصفحون هذه الصفحات خارج بريطانيا.',
                 para7: {
-                  text:
-                    'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'أقرأوا المزيد عن كيفية تخصيص الاعلانات من قبل بي بي سي وشركائها في مجال الإعلان.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'بإمكانكم اختيار تجنب استلام الإعلانات الشخصية عن طريق النقر على خيار "أرفض جمع المعلومات واستمر" أدناه.\nيرجى ملاحظة أنكم ستستمرون في مشاهدة الإعلانات، ولكنها لن تكون اعلانات موجهة لكم بشكل مخصص.',
@@ -188,16 +205,14 @@ export const service = {
               uk: {
                 first: 'نستخدم ',
                 linkText: 'ملفات ارتباط',
-                last:
-                  ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'نستخدم ',
                 linkText: 'ملفات ارتباط',
-                last:
-                  ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
+                last: ' لمنحك أفضل خدمة رقمية. الرجاء أحطنا علما إذا كنت توافق على تحميل كل هذه الملفات cookies .',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -271,8 +286,7 @@ export const service = {
     },
     radioSchedule: {
       hasRadioSchedule: true,
-      frequenciesPageUrl:
-        '/arabic/institutional/2011/01/000000_frequencies_radio',
+      frequenciesPageUrl: '/arabic/tv-and-radio-57895092',
       frequenciesPageLabel: 'استقبال البث',
       header: 'أحدث نشرة أخبار',
       durationLabel: 'المدة %duration%',
@@ -290,8 +304,7 @@ export const service = {
         text: 'لماذا يمكنك الاعتماد على أخبار بي بي سي',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'سياستنا بخصوص الروابط الخارجية.',
       },
       links: [
@@ -317,8 +330,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

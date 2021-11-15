@@ -38,6 +38,7 @@ const LinkContents = ({ item, isInline }) => {
     }
 
     const mediaType = pathOr(null, ['media', 'format'], item);
+
     return mediaType === 'audio' ? 'listen' : mediaType;
   };
 
@@ -59,12 +60,13 @@ const LinkContents = ({ item, isInline }) => {
       </VisuallyHiddenText>
     );
   }
+  const mediaType = mediaTranslations[type];
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text">
-      <VisuallyHiddenText>{mediaTranslations[type]}, </VisuallyHiddenText>
+      {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
       {offScreenDuration}
     </span>

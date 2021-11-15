@@ -230,6 +230,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 .emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -240,6 +241,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 
 @media (min-width: 37.5rem) {
   .emotion-9 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -248,11 +250,28 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 .emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -262,7 +281,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   flex-direction: column;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -282,7 +301,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -290,7 +309,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -310,39 +329,39 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
-.emotion-20 {
+.emotion-22 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 @supports (display: grid) {
-  .emotion-20 {
+  .emotion-22 {
     display: grid;
     position: initial;
     width: initial;
@@ -350,7 +369,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -358,7 +377,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -366,7 +385,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 0.5rem;
@@ -374,7 +393,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
       grid-column-gap: 1rem;
@@ -382,7 +401,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -390,7 +409,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 80rem) {
-    .emotion-20 {
+    .emotion-22 {
       grid-template-columns: repeat(8, 1fr);
       grid-column-end: span 8;
       grid-column-gap: 1rem;
@@ -398,121 +417,121 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 }
 
-.emotion-23 {
+.emotion-25 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-23 {
+  .emotion-25 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-23:last-child {
+.emotion-25:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-23 {
+  .emotion-25 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-23 {
+  .emotion-25 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-23:first-child {
+.emotion-25:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-23:first-child {
+  .emotion-25:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-23:last-child {
+.emotion-25:last-child {
   padding-bottom: 0;
 }
 
 @supports (display: grid) {
-  .emotion-23 {
+  .emotion-25 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-template-columns: repeat(4, 1fr);
       grid-column-end: span 4;
     }
   }
 }
 
-.emotion-25 {
+.emotion-27 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-25 {
+  .emotion-27 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-25 {
+    .emotion-27 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-25 {
+    .emotion-27 {
       display: block;
     }
   }
 }
 
-.emotion-27 {
+.emotion-29 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -520,24 +539,24 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @media (min-width: 63rem) {
-  .emotion-27 {
+  .emotion-29 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-27 {
+  .emotion-29 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-29 {
+.emotion-31 {
   position: relative;
 }
 
-.emotion-31 {
+.emotion-33 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -547,45 +566,44 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
-  .emotion-31 {
+  .emotion-33 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-31 {
+  .emotion-33 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-33 {
+  .emotion-35 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-33>* {
+.emotion-35>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-33>* {
+  .emotion-35>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -593,13 +611,13 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-37 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-35 {
+  .emotion-37 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -607,7 +625,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-35 {
+  .emotion-37 {
     display: block;
     width: initial;
     padding: initial;
@@ -615,13 +633,13 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   }
 
   @media (min-width: 63rem) {
-    .emotion-35 {
+    .emotion-37 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-37 {
+.emotion-39 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -633,20 +651,20 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-39 {
+.emotion-41 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -655,7 +673,7 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   overflow-wrap: anywhere;
 }
 
-.emotion-39:before {
+.emotion-41:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -667,25 +685,14 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
   z-index: 1;
 }
 
-.emotion-39:hover,
-.emotion-39:focus {
+.emotion-41:hover,
+.emotion-41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-39:visited {
+.emotion-41:visited {
   color: #6E6E73;
-}
-
-.emotion-41 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .emotion-43 {
@@ -729,17 +736,20 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         <div
           class="emotion-9 emotion-10"
         />
-        <h2
+        <div
           class="emotion-11 emotion-12"
+        />
+        <h2
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-17 emotion-18"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -750,28 +760,29 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
         </h2>
       </div>
       <ul
-        class="emotion-2 emotion-20 emotion-21"
+        class="emotion-2 emotion-22 emotion-23"
         dir="ltr"
         role="list"
       >
         <li
-          class="emotion-2 emotion-23 emotion-24"
+          class="emotion-2 emotion-25 emotion-26"
           dir="ltr"
         >
           <div
-            class="emotion-25 emotion-26"
+            class="emotion-27 emotion-28"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-27 emotion-28"
+              class="emotion-29 emotion-30"
               dir="ltr"
             >
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-31 emotion-32"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="emotion-33 emotion-34"
                   data-e2e="image-placeholder"
+                  style="padding-bottom: 56.25%;"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -782,29 +793,24 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-35 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-37 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-39 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-41 emotion-42"
                   href="/pidgin/44508901"
                 >
                   <span
                     role="text"
                   >
-                    <span
-                      class="emotion-41 emotion-42"
-                    >
-                      , 
-                    </span>
                     <span>
                       Meet boys who dey convert cassava to electricity
                     </span>
@@ -821,23 +827,24 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="emotion-2 emotion-23 emotion-24"
+          class="emotion-2 emotion-25 emotion-26"
           dir="ltr"
         >
           <div
-            class="emotion-25 emotion-26"
+            class="emotion-27 emotion-28"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-27 emotion-28"
+              class="emotion-29 emotion-30"
               dir="ltr"
             >
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-31 emotion-32"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="emotion-33 emotion-34"
                   data-e2e="image-placeholder"
+                  style="padding-bottom: 56.25%;"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -848,19 +855,19 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-35 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-37 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-39 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-41 emotion-42"
                   href="/pidgin/tori-46975713"
                 >
                   How light companies dey use estimated billing show Nigerians pepper
@@ -876,23 +883,24 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
           </div>
         </li>
         <li
-          class="emotion-2 emotion-23 emotion-24"
+          class="emotion-2 emotion-25 emotion-26"
           dir="ltr"
         >
           <div
-            class="emotion-25 emotion-26"
+            class="emotion-27 emotion-28"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-27 emotion-28"
+              class="emotion-29 emotion-30"
               dir="ltr"
             >
               <div
-                class="emotion-29 emotion-30"
+                class="emotion-31 emotion-32"
               >
                 <div
-                  class="emotion-31 emotion-32"
+                  class="emotion-33 emotion-34"
                   data-e2e="image-placeholder"
+                  style="padding-bottom: 56.25%;"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -903,19 +911,19 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                   </div>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-35 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-37 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-39 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  class="emotion-41 emotion-42"
                   href="/pidgin/tori-42494678"
                 >
                   Nigeria: Wetin 5,222 megawatts electric fit do?
@@ -1166,6 +1174,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 .emotion-9 {
   border-top: 0.0625rem solid #AEAEB5;
   z-index: -1;
+  display: none;
 }
 
 @media screen and (-ms-high-contrast: active) {
@@ -1176,6 +1185,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 
 @media (min-width: 37.5rem) {
   .emotion-9 {
+    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -1184,11 +1194,28 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 .emotion-11 {
+  border-top: 0.0625rem solid #AEAEB5;
+  z-index: -1;
+}
+
+@media screen and (-ms-high-contrast: active) {
+  .emotion-11 {
+    border-color: windowText;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-11 {
+    display: none;
+  }
+}
+
+.emotion-13 {
   margin: 0;
   padding: 0;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1198,7 +1225,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   flex-direction: column;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1218,7 +1245,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-15 {
+  .emotion-17 {
     -webkit-align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1226,7 +1253,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -1246,45 +1273,45 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.25rem;
     line-height: 1.5rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     margin: 0;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-17 {
+  .emotion-19 {
     padding-right: 1rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-19 {
+  .emotion-21 {
     padding-top: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-19 {
+  .emotion-21 {
     padding-bottom: 1.5rem;
   }
 }
 
 @supports (display: grid) {
-  .emotion-21 {
+  .emotion-23 {
     display: grid;
     position: initial;
     width: initial;
@@ -1292,7 +1319,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1300,7 +1327,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1308,7 +1335,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 0.5rem;
@@ -1316,7 +1343,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(1, 1fr);
       grid-column-end: span 1;
       grid-column-gap: 1rem;
@@ -1324,7 +1351,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -1332,7 +1359,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 80rem) {
-    .emotion-21 {
+    .emotion-23 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
       grid-column-gap: 1rem;
@@ -1340,31 +1367,31 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 }
 
-.emotion-23 {
+.emotion-25 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-23 {
+  .emotion-25 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-23 {
+    .emotion-25 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-23 {
+    .emotion-25 {
       display: block;
     }
   }
 }
 
-.emotion-25 {
+.emotion-27 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -1372,24 +1399,24 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width: 63rem) {
-  .emotion-25 {
+  .emotion-27 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-25 {
+  .emotion-27 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
-.emotion-27 {
+.emotion-29 {
   position: relative;
 }
 
-.emotion-29 {
+.emotion-31 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -1399,45 +1426,44 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   background-repeat: no-repeat;
   -webkit-background-size: 60px 17px;
   background-size: 60px 17px;
-  padding-bottom: 56.25%;
   width: 100%;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzkiIGhlaWdodD0iMTM2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgZmlsbD0iI0Q1RDBDRCI+PGc+PHBhdGggZD0iTTQ0OS41NTYgOTEuNTUzbC0yLjMxIDEuNDFjLTExLjE2NyA2LjgxOC0yMy4zMTMgMTAuNDc0LTM0LjM0NiAxMC40Ny0yMy42MS0uMDktMzkuMTYzLTE0LjA4My0zOS4yMjctMzQuNDUzLjAzLTE5LjkxOCAxNi4yNy0zNC42NjMgMzguNjMzLTM0LjcxOCAxMS4zODcuMDEgMjEuNzAzIDIuOTU0IDMzLjk2MiA5LjY3MmwyLjI1MSAxLjI0di0xOC4xOWwtLjk2Mi0uMzc3Yy0xMy44MjQtNS40NTgtMjQuNTMtNy44OS0zNS4xMDMtNy44ODQtMTYuMzQ2LS4wMDYtMzAuNTMzIDUuMzk0LTQwLjYzNyAxNC41NTctMTAuMTA1IDkuMTYzLTE2LjEwNiAyMi4xMDItMTYuMDk5IDM2Ljk1My4wMDggMTAuMzQ4IDQuMjc5IDIyLjQ4IDEzLjQyIDMyLjEwNSA5LjEyMSA5LjYyOCAyMy4xNjUgMTYuNjQ4IDQyLjQzIDE2LjYzOWguMDYzYzE1Ljk4IDAgMjcuMDYyLTMuNTYzIDM3LjA3NC04LjQ5MmwuODUxLS40MTRWOTEuNTUzek0zMzQgMTM1LjY5N2gxNDQuMTk1VjBIMzM0djEzNS42OTd6Ii8+PHBhdGggZD0iTTI3Ni45MzcgODkuOTY4Yy4wNDEtMTIuMzMtOC4xNzEtMjEuNjk2LTIxLjMwOC0yNS4zIDMuNTQ0LTEuODA5IDYuMzUtNC4wMjMgOC40MDQtNi43MjcgMi43NS0zLjYyMiA0LjA2MS04LjA2NCA0LjA0Ni0xMy4yMzUuMDE1LTYuMzU5LTIuNDg2LTEyLjgzOS03Ljg1OC0xNy42ODctNS4zNzItNC44NDctMTMuNTI2LTcuOTk3LTI0LjY1NC03Ljk5MUgyMDQuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMTY3IDEzNS42OThoMTQ0LjE5N1YwSDE2N3YxMzUuNjk3eiIvPjxwYXRoIGQ9Ik0xMDkuOTM3IDg5Ljk2OGMuMDQxLTEyLjMzLTguMTcxLTIxLjY5Ni0yMS4zMDgtMjUuMyAzLjU0NC0xLjgwOSA2LjM1LTQuMDIzIDguNDA0LTYuNzI3IDIuNzUtMy42MjIgNC4wNjEtOC4wNjQgNC4wNDYtMTMuMjM1LjAxNS02LjM1OS0yLjQ4Ni0xMi44MzktNy44NTgtMTcuNjg3LTUuMzcyLTQuODQ3LTEzLjUyNi03Ljk5Ny0yNC42NTQtNy45OTFIMzcuODN2OTcuNzI4aDM2LjA3M2MxMi44NyAwIDIxLjkwNi0zLjQ4MiAyNy43MjItOC42NSA1LjgxOC01LjE1NSA4LjMyLTExLjkxIDguMzEyLTE4LjEzOHpNMCAxMzUuNjk4aDE0NC4xOTdWMEgwdjEzNS42OTd6Ii8+PHBhdGggZD0iTTI1OC42NjIgODguMTk4Yy0uMDEzIDMuMjI5LTEuMDA3IDYuNDc1LTMuODk2IDkuMDExLTIuODg0IDIuNTM3LTcuODczIDQuNDYzLTE2LjEzMyA0LjQ2M0gyMjJWNzVoMTUuODkzYzcuNDExIDAgMTIuNjcgMS41MDIgMTUuOTY1IDMuODUgMy4yODkgMi4zNjIgNC43NzYgNS40NjMgNC44MDQgOS4zNDgiLz48cGF0aCBkPSJNOTEuNjYyIDg4LjE5OGMtLjAxMyAzLjIyOS0xLjAwNyA2LjQ3NS0zLjg5NiA5LjAxMS0yLjg4NCAyLjUzNy03Ljg3NCA0LjQ2My0xNi4xMzMgNC40NjNINTVWNzVoMTUuODkyYzcuNDEyIDAgMTIuNjcyIDEuNTAyIDE1Ljk2NiAzLjg1IDMuMjg5IDIuMzYyIDQuNzc2IDUuNDYzIDQuODA0IDkuMzQ4Ii8+PHBhdGggZD0iTTI0NS4xODYgNTUuNzljMy4wOTYtMi4yMzcgNC41OS01LjM4NiA0LjYxMy0xMC4xMjQtLjAxNS0zLjI1LS45NDMtNi4wMzMtMy4yODEtOC4xMTEtMi4zNDYtMi4wNzgtNi4zMy0zLjU1NS0xMi43NTQtMy41NTVIMjIydjI1LjI3NWg4LjA3NmM2Ljk4OC4wMDQgMTEuOTk4LTEuMjQzIDE1LjExLTMuNDg2Ii8+PHBhdGggZD0iTTc4LjE4NiA1NS43OWMzLjA5Ni0yLjIzNyA0LjU5LTUuMzg2IDQuNjEzLTEwLjEyNC0uMDE1LTMuMjUtLjk0My02LjAzMy0zLjI4Mi04LjExMUM3Ny4xNzIgMzUuNDc3IDczLjE4OCAzNCA2Ni43NjQgMzRINTV2MjUuMjc1aDguMDc2YzYuOTg4LjAwNCAxMS45OTgtMS4yNDMgMTUuMTEtMy40ODYiLz48L2c+PC9nPjwvZz48L3N2Zz4K);
 }
 
 @media (min-width: 25rem) {
-  .emotion-29 {
+  .emotion-31 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-29 {
+  .emotion-31 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-31 {
+  .emotion-33 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-31>* {
+.emotion-33>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-31>* {
+  .emotion-33>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -1445,13 +1471,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-35 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-33 {
+  .emotion-35 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -1459,7 +1485,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-33 {
+  .emotion-35 {
     display: block;
     width: initial;
     padding: initial;
@@ -1467,13 +1493,13 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   }
 
   @media (min-width: 63rem) {
-    .emotion-33 {
+    .emotion-35 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1485,20 +1511,20 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-35 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-37 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-37 {
+.emotion-39 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1507,7 +1533,7 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   overflow-wrap: anywhere;
 }
 
-.emotion-37:before {
+.emotion-39:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1519,25 +1545,14 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
   z-index: 1;
 }
 
-.emotion-37:hover,
-.emotion-37:focus {
+.emotion-39:hover,
+.emotion-39:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-37:visited {
+.emotion-39:visited {
   color: #6E6E73;
-}
-
-.emotion-39 {
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  margin: 0;
 }
 
 .emotion-41 {
@@ -1620,17 +1635,20 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         <div
           class="emotion-9 emotion-10"
         />
-        <h2
+        <div
           class="emotion-11 emotion-12"
+        />
+        <h2
+          class="emotion-13 emotion-14"
         >
           <span
-            class="emotion-13 emotion-14"
+            class="emotion-15 emotion-16"
           >
             <span
-              class="emotion-15 emotion-16"
+              class="emotion-17 emotion-18"
             >
               <span
-                class="emotion-17 emotion-18"
+                class="emotion-19 emotion-20"
                 dir="ltr"
                 id="related-content-heading"
               >
@@ -1641,26 +1659,27 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
         </h2>
       </div>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-21 emotion-22"
       >
         <div
-          class="emotion-21 emotion-2"
+          class="emotion-23 emotion-2"
           dir="ltr"
         >
           <div
-            class="emotion-23 emotion-24"
+            class="emotion-25 emotion-26"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-25 emotion-26"
+              class="emotion-27 emotion-28"
               dir="ltr"
             >
               <div
-                class="emotion-27 emotion-28"
+                class="emotion-29 emotion-30"
               >
                 <div
-                  class="emotion-29 emotion-30"
+                  class="emotion-31 emotion-32"
                   data-e2e="image-placeholder"
+                  style="padding-bottom: 56.25%;"
                 >
                   <div
                     class="lazyload-wrapper "
@@ -1671,29 +1690,24 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                   </div>
                 </div>
                 <div
-                  class="emotion-31 emotion-32"
+                  class="emotion-33 emotion-34"
                 />
               </div>
             </div>
             <div
-              class="emotion-33 emotion-34"
+              class="emotion-35 emotion-36"
               dir="ltr"
             >
               <h3
-                class="emotion-35 emotion-36"
+                class="emotion-37 emotion-38"
               >
                 <a
-                  class="emotion-37 emotion-38"
+                  class="emotion-39 emotion-40"
                   href="/pidgin/44508901"
                 >
                   <span
                     role="text"
                   >
-                    <span
-                      class="emotion-39 emotion-40"
-                    >
-                      , 
-                    </span>
                     <span>
                       Meet boys who dey convert cassava to electricity
                     </span>

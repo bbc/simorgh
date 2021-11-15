@@ -28,15 +28,13 @@ describe('addIdsToBlocks rule', () => {
                           id: 'mockId',
                           type: 'paragraph',
                           model: {
-                            text:
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit ©',
+                            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ©',
                             blocks: [
                               {
                                 id: 'mockId',
                                 type: 'fragment',
                                 model: {
-                                  text:
-                                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit ©',
+                                  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit ©',
                                   attributes: [],
                                 },
                               },
@@ -109,15 +107,13 @@ describe('addIdsToBlocks rule', () => {
                                 id: 'mockId',
                                 type: 'paragraph',
                                 model: {
-                                  text:
-                                    'Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.',
+                                  text: 'Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.',
                                   blocks: [
                                     {
                                       id: 'mockId',
                                       type: 'fragment',
                                       model: {
-                                        text:
-                                          'Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.',
+                                        text: 'Duis vitae ipsum hendrerit, commodo metus vel, mattis sapien. Proin eleifend vulputate porta. Curabitur mollis nunc nec felis ultricies, vitae tempor metus imperdiet.',
                                         attributes: [],
                                       },
                                     },
@@ -142,15 +138,13 @@ describe('addIdsToBlocks rule', () => {
                     id: 'mockId',
                     type: 'paragraph',
                     model: {
-                      text:
-                        'Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.',
+                      text: 'Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.',
                       blocks: [
                         {
                           id: 'mockId',
                           type: 'fragment',
                           model: {
-                            text:
-                              'Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.',
+                            text: 'Donec ut fermentum risus, eu sodales mauris. Quisque vitae est sed nisl tincidunt facilisis.Nec vulputate metus sagittis.',
                             attributes: [],
                           },
                         },
@@ -161,15 +155,13 @@ describe('addIdsToBlocks rule', () => {
                     id: 'mockId',
                     type: 'paragraph',
                     model: {
-                      text:
-                        'Quisque quis libero H2O bibendum, feugiat felis ut, dignissim tortor.',
+                      text: 'Quisque quis libero H2O bibendum, feugiat felis ut, dignissim tortor.',
                       blocks: [
                         {
                           id: 'mockId',
                           type: 'fragment',
                           model: {
-                            text:
-                              'Quisque quis libero H²0 bibendum, feugiat felis ut, dignissim tortor.',
+                            text: 'Quisque quis libero H²0 bibendum, feugiat felis ut, dignissim tortor.',
                             attributes: [],
                           },
                         },
@@ -180,15 +172,13 @@ describe('addIdsToBlocks rule', () => {
                     id: 'mockId',
                     type: 'paragraph',
                     model: {
-                      text:
-                        'Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.',
+                      text: 'Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.',
                       blocks: [
                         {
                           id: 'mockId',
                           type: 'fragment',
                           model: {
-                            text:
-                              'Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.',
+                            text: 'Mauris metus lectus, lacinia sit amet massa ut, interdum convallis ipsum.',
                             attributes: [],
                           },
                         },
@@ -205,5 +195,27 @@ describe('addIdsToBlocks rule', () => {
     const actual = addIdsToBlocks(articleJson);
 
     expect(actual).toEqual(expected);
+  });
+
+  it('should return the same object if content cannot be found', () => {
+    const noContentFixture = {
+      blah: [],
+    };
+    const actual = addIdsToBlocks(noContentFixture);
+
+    expect(actual).toEqual(noContentFixture);
+  });
+
+  it('should return the same object if blocks cannot be found', () => {
+    const noBlocksFixture = {
+      content: {
+        model: {
+          blah: [],
+        },
+      },
+    };
+    const actual = addIdsToBlocks(noBlocksFixture);
+
+    expect(actual).toEqual(noBlocksFixture);
   });
 });

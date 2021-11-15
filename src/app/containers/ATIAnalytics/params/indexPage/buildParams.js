@@ -14,12 +14,8 @@ export const buildIndexPageATIParams = (
   serviceContext,
 ) => {
   const { platform, statsDestination, pageType } = requestContext;
-  const {
-    atiAnalyticsAppName,
-    atiAnalyticsProducerId,
-    brandName,
-    service,
-  } = serviceContext;
+  const { atiAnalyticsAppName, atiAnalyticsProducerId, brandName, service } =
+    serviceContext;
 
   return {
     appName: atiAnalyticsAppName,

@@ -6,7 +6,10 @@ import {
 } from '@bbc/psammead-styles/colours';
 import { tamil } from '@bbc/gel-foundations/scripts';
 import { tamil as brandSVG } from '@bbc/psammead-assets/svgs';
-import { F_LATHA_BOLD, F_LATHA_REGULAR } from '@bbc/psammead-styles/fonts';
+import {
+  F_NOTO_SANS_TAMIL_BOLD,
+  F_NOTO_SANS_TAMIL_REGULAR,
+} from '@bbc/psammead-styles/fonts';
 import '@bbc/moment-timezone-include/tz/GMT';
 import '@bbc/psammead-locales/moment/ta';
 import withContext from '../../../contexts/utils/withContext';
@@ -26,7 +29,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/tamil.png',
     defaultImageAltText: 'BBC News தமிழ்',
     dir: `ltr`,
-    externalLinkText: ', வெளி இணைப்பு',
+    externalLinkText: ', வெளி',
     imageCaptionOffscreenText: 'படக்குறிப்பு, ',
     videoCaptionOffscreenText: 'காணொளிக் குறிப்பு, ',
     audioCaptionOffscreenText: 'கேட்பொலிக் குறிப்பு, ',
@@ -57,6 +60,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'விளம்பரம்',
@@ -66,12 +71,14 @@ export const service = {
       currentPage: 'தற்போதுள்ள பக்கம்',
       skipLinkText: 'உள்ளடக்கத்துக்குத் தாண்டிச் செல்க',
       relatedContent: 'தொடர்புடைய உள்ளடக்கம்',
+      relatedTopics: 'தொடர்புடைய தலைப்புகள்',
       navMenuText: 'பிரிவுகள்',
       mediaAssetPage: {
         mediaPlayer: 'ஊடக இயக்கி',
         audioPlayer: 'கேட்பொலி பிளேயர்',
         videoPlayer: 'காணொளி பிளேயர்',
       },
+      gist: 'முக்கிய சாராம்சம்',
       error: {
         404: {
           statusCode: '404',
@@ -138,8 +145,7 @@ export const service = {
                 first:
                   'உங்களுக்கு ஏற்றவாறு விளம்பரங்களையும், உள்ளடக்கங்களையும் காட்டி உங்களுக்கு சிறந்த இணைய அனுபவத்தை வழங்க நாங்களும், எங்கள் கூட்டாளிகளும் ',
                 linkText: 'குக்கிகள்',
-                last:
-                  ' போன்ற தொழில் நுட்பங்களை பயன்படுத்துகிறோம்; உங்கள் உலாவல் (பிரௌசிங்) தரவுகளையும் திரட்டுகிறோம். இவற்றுக்கு நீங்கள்உடன்படுகிறீர்களா என்பதை எங்களுக்குத் தெரிவியுங்கள்.',
+                last: ' போன்ற தொழில் நுட்பங்களை பயன்படுத்துகிறோம்; உங்கள் உலாவல் (பிரௌசிங்) தரவுகளையும் திரட்டுகிறோம். இவற்றுக்கு நீங்கள்உடன்படுகிறீர்களா என்பதை எங்களுக்குத் தெரிவியுங்கள்.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -156,10 +162,8 @@ export const service = {
                 para3:
                   'இணையப் பக்கங்கள் வேலை செய்வதற்காக உங்கள் ஒப்புதல் இல்லாமலேயே உங்கள் கருவியின் மிகச்சில தரவுகளை சேகரிப்போம்',
                 para4: {
-                  text:
-                    'இணையப் பக்கம் வேலை செய்ய அவசியமான தரவுகள் சேகரிக்கப்படுவது பற்றி மேலும் படிக்கவும்.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'இணையப் பக்கம் வேலை செய்ய அவசியமான தரவுகள் சேகரிக்கப்படுவது பற்றி மேலும் படிக்கவும்.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'உங்கள் ஒப்புதலுடன் சேகரிக்கப்படும் தரவுகளுக்கு உங்கள் கருவியின் சேமிப்பகத்தை பயன்படுத்துவோம்',
@@ -167,10 +171,8 @@ export const service = {
                 para6:
                   'AMP பக்கங்களில் தரவுகள் சேகரிப்புக்கு நீங்கள் ஒப்புக்கொண்டால் பிரிட்டனுக்கு வெளியே நீங்கள் இருக்கும்போது உங்களுக்கு ஏற்ற விளம்பரங்களை காட்ட நீங்கள் ஒப்புதல் தருகிறீர்கள்.',
                 para7: {
-                  text:
-                    'தனிநபருக்கு ஏற்ற விளம்பரங்களை பிபிசி மற்றும் அதன் கூட்டு நிறுவங்கள் காட்டுவது எப்படி என்பதை இங்கே படிக்கலாம் .',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'தனிநபருக்கு ஏற்ற விளம்பரங்களை பிபிசி மற்றும் அதன் கூட்டு நிறுவங்கள் காட்டுவது எப்படி என்பதை இங்கே படிக்கலாம் .',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   '"தரவுகள் சேகரிப்பை ஏற்றுக்கொள்ளாமல் தொடரவும்" எனும் கீழுள்ள தெரிவை தேர்ந்தெடுத்து நீங்கள் தனிப்பட்ட விளம்பரங்களை வருவதை தவிர்க்கலாம். இருந்தாலும் விளம்பரங்கள் வரும் என்பதை தயவு செய்து மனதில் கொள்ளவும். அவை உங்களுக்கு ஏற்ப இருக்காது.',
@@ -185,16 +187,14 @@ export const service = {
               uk: {
                 first: 'சிறந்த இணைய அனுபவத்தை உங்களுக்கு வழங்க நாங்கள் ',
                 linkText: 'குக்கிகளை',
-                last:
-                  ' பயன்படுத்துகிறோம். இந்த குக்கிகள் அனைத்தையும் நீங்கள் ஏற்கிறீர்களா என்பதை எங்களுக்குத் தெரியப்படுத்துங்கள். ',
+                last: ' பயன்படுத்துகிறோம். இந்த குக்கிகள் அனைத்தையும் நீங்கள் ஏற்கிறீர்களா என்பதை எங்களுக்குத் தெரியப்படுத்துங்கள். ',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'சிறந்த இணைய அனுபவத்தை உங்களுக்கு வழங்க நாங்கள் ',
                 linkText: 'குக்கிகளை',
-                last:
-                  ' பயன்படுத்துகிறோம். இந்த குக்கிகள் அனைத்தையும் நீங்கள் ஏற்கிறீர்களா என்பதை எங்களுக்குத் தெரியப்படுத்துங்கள். ',
+                last: ' பயன்படுத்துகிறோம். இந்த குக்கிகள் அனைத்தையும் நீங்கள் ஏற்கிறீர்களா என்பதை எங்களுக்குத் தெரியப்படுத்துங்கள். ',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -284,10 +284,8 @@ export const service = {
         text: 'நீங்கள் ஏன் பிபிசி மீது நம்பிக்கை வைக்க முடியும்?',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-        text:
-          'வெளியார் இணைப்புகள் தொடர்பான எங்கள் அணுகுமுறையைப் பற்றி படிக்கவும்.',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'வெளியார் இணைப்புகள் தொடர்பான எங்கள் அணுகுமுறையைப் பற்றி படிக்கவும்.',
       },
       links: [
         {
@@ -312,8 +310,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },
@@ -321,7 +318,7 @@ export const service = {
       copyrightText:
         'பிபிசி. வெளியார் இணைய தளங்களின் உள்ளடக்கத்துக்கு பிபிசி பொறுப்பாகாது.',
     },
-    fonts: [F_LATHA_BOLD, F_LATHA_REGULAR],
+    fonts: [F_NOTO_SANS_TAMIL_BOLD, F_NOTO_SANS_TAMIL_REGULAR],
     timezone: 'GMT',
     navigation: [
       {

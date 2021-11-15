@@ -60,6 +60,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'ማስታወቂያ',
@@ -69,12 +71,14 @@ export const service = {
       currentPage: 'መነሻ ገፅ',
       skipLinkText: 'ወደ ዋናው ይዘት ይለፉ',
       relatedContent: 'በዚህ ዘገባ ላይ ተጨማሪ መረጃ',
+      relatedTopics: 'ተያያዥ ርዕሶች',
       navMenuText: 'ክፍሎች',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'ጭምቅ ሃሳብ',
       error: {
         404: {
           statusCode: '404',
@@ -133,8 +137,7 @@ export const service = {
               description: {
                 first: 'እኛም ሆንን አጋሮቻችን ',
                 linkText: 'ኩኪዎችን',
-                last:
-                  'የመሳሰሉ ቴክኖሎጂዎችን የምንጠቀመውና መረጃዎችን የምንሰብስበው እርስዎ የሚፈልጉት መረጃና ማስታወቂያ ቅድሚያ እንዲደርስዎና የላቀ የድረገጽ አገልግሎት እንዲያገኙ ለማድረግ ነው። እባክዎ መስማማትዎን ያሳውቁን።',
+                last: 'የመሳሰሉ ቴክኖሎጂዎችን የምንጠቀመውና መረጃዎችን የምንሰብስበው እርስዎ የሚፈልጉት መረጃና ማስታወቂያ ቅድሚያ እንዲደርስዎና የላቀ የድረገጽ አገልግሎት እንዲያገኙ ለማድረግ ነው። እባክዎ መስማማትዎን ያሳውቁን።',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -150,20 +153,16 @@ export const service = {
                 para3:
                   'ድረ ገጻችን እንዲሰራ ለማድረግ የእርስዎ ፈቃድ ሳያስፈልግ የተወሰኑ መረጃዎችን በሚገለገሉበት መሳሪያ ላይ እናስቀምጣለን።',
                 para4: {
-                  text:
-                    'ድረ ገጻችን እንዲሰራ ለማድረግ በሚገለገሉበት መሳሪያ ላይ ያስቀመጥነውን ጠቃሚ መረጃን በተመለከተ ተጨማሪ ያንብቡ',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'ድረ ገጻችን እንዲሰራ ለማድረግ በሚገለገሉበት መሳሪያ ላይ ያስቀመጥነውን ጠቃሚ መረጃን በተመለከተ ተጨማሪ ያንብቡ',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'በመገልገያ መሳሪያዎ ላይ የስምምነት ምርጫዎችዎን እናስቀምጣለን።',
                 heading3: 'የግድ ያልሆነ መረጃ',
                 para6:
                   'በቀላሉ ገጻችንን ለመመልከት ሲስማሙ፤ ከዩናይትድ ኪንግደም ውጪ በሚሆኑበት ጊዜ እርስዎን የሚመለከቱ ማስታወቂያዎች እንዲደርስዎ ፈቃደኛ መሆንዎን ያመለክታል።',
                 para7: {
-                  text:
-                    'ቢቢሲ እና የማስታወቂያ አጋሮቹ ማስታወቂያዎችን እንዴት ግለሰቦችን የሚመለከቱ እንደሚያደርጉት የበለጠ ያንብቡ',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'ቢቢሲ እና የማስታወቂያ አጋሮቹ ማስታወቂያዎችን እንዴት ግለሰቦችን የሚመለከቱ እንደሚያደርጉት የበለጠ ያንብቡ',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'እርስዎን የሚመለከቱ ማስታወቂያዎች እንዲደርስዎ ካልፈለጉ ከታች ያለውን "ለሚሰበሰበው መረጃ ፈቃደኛ ሳይሆኑ ይቀጥሉ" የሚለውን ይጫኑ። ልብ ማለት ያለብዎ ነገር የማይመለከቱት እርስዎን የሚመለከቱ ማስታወቂያዎችን እንጂ ሌሎች ማስታወቂያዎችን መመልከትዎ አይቀርም።',
@@ -265,8 +264,7 @@ export const service = {
         text: 'ቢቢሲን ለምን ማመን እንደሚገባዎ',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ስለ ውጪ ሊንኮች ያለን አቀራረብ',
       },
       links: [
@@ -292,8 +290,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

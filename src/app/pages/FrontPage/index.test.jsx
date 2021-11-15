@@ -57,7 +57,7 @@ jest.mock('uuid', () => {
   return {
     v4: () => {
       x += 1;
-      return `mockid-${x}`;
+      return `mockid${x}`;
     },
   };
 });
@@ -148,8 +148,9 @@ describe('Front Page', () => {
 
       let container;
       await act(async () => {
-        container = render(<FrontPageWithContext pageData={pageData} />)
-          .container;
+        container = render(
+          <FrontPageWithContext pageData={pageData} />,
+        ).container;
       });
 
       const h1 = container.querySelector('h1');
@@ -184,8 +185,9 @@ describe('Front Page', () => {
 
       let container;
       await act(async () => {
-        container = render(<FrontPageWithContext pageData={pageData} />)
-          .container;
+        container = render(
+          <FrontPageWithContext pageData={pageData} />,
+        ).container;
       });
 
       const sections = container.querySelectorAll('section');

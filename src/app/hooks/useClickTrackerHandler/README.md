@@ -5,9 +5,9 @@ The `useClickTracker` hook handles:
 - Tracking when an element has been clicked
 - Sending the event to ATI
 
-`useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
+`useClickTracker` must be used in combination with [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of an element.
 
-A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked component. Specifically the following are valid clicks:
+A click event is sent to ATI when a user performs a valid click (as per [clickTypes.js](./clickTypes.js)) on a tracked element. Specifically the following are valid clicks:
 
 - ### General
   - Middle Click
@@ -26,7 +26,7 @@ A click event is sent to ATI when a user performs a valid click (as per [clickTy
   - Left click + shift + option
   - Left click + shift + option + cmd
 
-The hook returns an event handler which can be given to a component's `onClick` property to track clicks on that component and any of its children. After the component has been clicked once, it will no longer send ATI requests on click.
+The hook returns an event handler promise which can be given to a component's `onClick` property to track clicks on that element and any of its children. After the element has been clicked once, it will no longer send ATI requests on click.
 
 ### Usage
 
@@ -34,24 +34,24 @@ Here are some examples of how you could setup click tracking for a component.
 
 ⚠️ Remember to also implement [`useViewTracker`](https://github.com/bbc/simorgh/blob/latest/src/app/hooks/useViewTracker/index.jsx) so ATI can calculate the view/click ratio of a component.
 
-1. Log a single click event for a single component on click.
+1. Log a single click event for a single element on click.
 2. Log a single click event whenever one of the child elements is clicked.
-3. Log separate click events for each of a number of components on click.
+3. Log separate click events for each of a number of elements on click.
 
 ```jsx
 const Promo = () => {
   /*
    * Example 1 - Log 1 click event when a component is clicked.
-   * In this example, one click event is triggered when the component is clicked.
+   * In this example, one click event is triggered when the a tag is is clicked within the component and it will bring the user to the linked page.
    */
   const clickTrackerHandler = useClickTrackerHandler({
     componentName: 'promo',
-    href: 'promo-link',
+    url: 'promo-link',
   });
 
   return (
-    <div onClick={clickTrackerHandler}>
-      <a href="promo-link">Promoted content</a>
+    <div>
+      <a href="promo-link" onClick={clickTrackerHandler}>Promoted content</a>
     </div>
   )
 };
@@ -92,35 +92,35 @@ const TopStories = () => {
   const topStories = [
     {
       title: 'Top Story 1',
-      link: 'link-1',
+      url: 'link-1',
     },
     {
       title: 'Top Story 2',
-      link: 'link-2',
+      url: 'link-2',
     },
     {
       title: 'Top Story 3',
-      link: 'link-3',
+      url: 'link-3',
     },
   ];
-  const TopStory = ({ title, link }) => {
+  const TopStory = ({ title, url }) => {
 
     const clickTrackerHandler = useClickTrackerHandler({
       ...eventTrackingData,
-      href: link,
+      url,
     });
 
     return (
-      <li onClick={clickTrackerHandler}>
-        <a href={link}>{title}</a>
+      <li>
+        <a href={url} onClick={clickTrackerHandler}>{title}</a>
       </li>,
     ),
   );
 
   return (
     <ol>
-      {topStories.map(({ title, link }) => (
-        <TopStory title={title} link={link} />
+      {topStories.map(({ title, url }) => (
+        <TopStory title={title} url={url} />
       ))}
     </ol>
   );
@@ -129,8 +129,10 @@ const TopStories = () => {
 
 ### Props
 
-| Argument      | Type   | Required | Example                                                                                                                              |
-| ------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| componentName | string | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                    |
-| format        | string | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                       |
-| href          | string | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop. |
+| Argument          | Type    | Required | Example                                                                                                                                                                                                              |
+| ----------------- | ------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| campaignID        | string  | no       | Provide this to override the `campaignID` provided by the `EventTrackingContext` component. This is useful for specific campaigns where you want to use a custom campaign ID                                         |
+| componentName     | string  | yes      | The name of the component or an url encoded title of a promo e.g. `most_read` or `This%20is%20a%20promo%20title`.                                                                                                    |
+| format            | string  | no       | Can be used to track things like the position of a promo e.g. `[CHD=promo::2]`                                                                                                                                       |
+| url               | string  | no       | If the component being tracked changes the location of the user upon click then it's necessary to include the URL through this prop.                                                                                 |
+| preventNavigation | boolean | no       | Use this if you need to perform any additional tasks after sending the click event by setting to `true` and awaiting the event handler callback. Ensure you redirect the user to their destination when you are done |

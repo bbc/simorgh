@@ -1,14 +1,34 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render } from '@testing-library/react';
+import { latinDiacritics } from '@bbc/gel-foundations/scripts';
+import {
+  shouldMatchSnapshot,
+  suppressPropWarnings,
+} from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import {
+  ServiceContext,
+  ServiceContextProvider,
+} from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 import AdContainer from './index';
 
+const context = {
+  service: 'mundo',
+  script: latinDiacritics,
+  dir: 'ltr',
+  translations: {
+    ads: {
+      advertisementLabel: 'Publicidad',
+    },
+  },
+};
+
 describe('Ad Container', () => {
+  suppressPropWarnings(['isAmp', 'RequestContextProvider']);
   beforeAll(() => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-toggles-endpoint.bbc.co.uk';
 
@@ -43,7 +63,9 @@ describe('Ad Container', () => {
     describe('AMP', () => {
       shouldMatchSnapshot(
         'should correctly render a leaderboard ad',
-        <ServiceContextProvider service="mundo">
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: false, ...context }}
+        >
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
@@ -58,12 +80,14 @@ describe('Ad Container', () => {
               <AdContainer slotType="leaderboard" />
             </ToggleContext.Provider>
           </RequestContextProvider>
-        </ServiceContextProvider>,
+        </ServiceContext.Provider>,
       );
 
       shouldMatchSnapshot(
         'should correctly render an mpu ad',
-        <ServiceContextProvider service="mundo">
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: false, ...context }}
+        >
           <RequestContextProvider
             bbcOrigin="https://www.test.bbc.co.uk"
             id="c0000000000o"
@@ -78,7 +102,51 @@ describe('Ad Container', () => {
               <AdContainer slotType="mpu" />
             </ToggleContext.Provider>
           </RequestContextProvider>
-        </ServiceContextProvider>,
+        </ServiceContext.Provider>,
+      );
+
+      shouldMatchSnapshot(
+        'should render a leaderboard ad with placeholder when showAdPlaceholder in service config is true',
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+
+      shouldMatchSnapshot(
+        'should render a leaderboard ad without a placeholder when showAdPlaceholder in service config is false',
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: false, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
       );
     });
 
@@ -126,6 +194,68 @@ describe('Ad Container', () => {
           </RequestContextProvider>
         </ServiceContextProvider>,
       );
+    });
+  });
+
+  describe('when adsEnabled is false ', () => {
+    const toggleState = {
+      ampAds: {
+        enabled: false,
+      },
+      ads: {
+        enabled: false,
+      },
+    };
+
+    const mockToggleDispatch = jest.fn();
+
+    const toggleContextMock = {
+      toggleState,
+      toggleDispatch: mockToggleDispatch,
+    };
+    describe('should return null for AMP', () => {
+      const { container } = render(
+        <ServiceContext.Provider
+          value={{ showAdPlaceholder: true, ...context }}
+        >
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            isAmp
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+      expect(container).toBeEmptyDOMElement();
+    });
+
+    describe('should return null for canonical', () => {
+      const { container } = render(
+        <ServiceContext.Provider value={context}>
+          <RequestContextProvider
+            bbcOrigin="https://www.test.bbc.co.uk"
+            id="c0000000000o"
+            pageType={FRONT_PAGE}
+            service="mundo"
+            statusCode={200}
+            pathname="/mundo"
+            showAdsBasedOnLocation
+          >
+            <ToggleContext.Provider value={toggleContextMock}>
+              <AdContainer slotType="leaderboard" />
+            </ToggleContext.Provider>
+          </RequestContextProvider>
+        </ServiceContext.Provider>,
+      );
+      expect(container).toBeEmptyDOMElement();
     });
   });
 });

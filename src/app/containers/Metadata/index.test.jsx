@@ -232,48 +232,39 @@ it('should render the apple touch icons', async () => {
       sizes: null,
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-128x128.png',
       sizes: '128x128',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-144x144.png',
       sizes: '144x144',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-152x152.png',
       sizes: '152x152',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-180x180.png',
       sizes: '180x180',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-384x384.png',
       sizes: '384x384',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-512x512.png',
       sizes: '512x512',
     },
   ];
@@ -295,20 +286,17 @@ it('should render the icons', async () => {
 
   const expected = [
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-72x72.png',
       sizes: '72x72',
       type: 'image/png',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-96x96.png',
       sizes: '96x96',
       type: 'image/png',
     },
     {
-      href:
-        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
+      href: 'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/icons/icon-192x192.png',
       sizes: '192x192',
       type: 'image/png',
     },
@@ -479,7 +467,7 @@ it('should render the OG metatags', async () => {
     { content: 'Article summary.', property: 'og:description' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       property: 'og:image',
     },
     { content: 'BBC News', property: 'og:image:alt' },
@@ -515,7 +503,7 @@ it('should render the twitter metatags', async () => {
     { content: 'BBC News', name: 'twitter:image:alt' },
     {
       content:
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       name: 'twitter:image:src',
     },
     { content: '@BBCNews', name: 'twitter:site' },

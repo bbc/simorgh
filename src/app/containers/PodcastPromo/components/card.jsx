@@ -5,8 +5,9 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 const Card = styled.div`
   position: relative;
   background-color: ${C_GHOST};
-  display: flex;
-  box-shadow: 0 0 0.3125rem 0.3125rem ${C_EBON}08;
+  ${({ inlinePromo }) => (inlinePromo ? 'display: block;' : 'display: flex;')}
+  ${({ inlinePromo }) =>
+    inlinePromo ? '' : `box-shadow: 0 0 0.3125rem 0.3125rem ${C_EBON}08;`}
 
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     display: block;

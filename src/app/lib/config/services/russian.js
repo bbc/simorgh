@@ -57,8 +57,7 @@ const headerFooterTranslations = {
             first:
               'Мы вместе с нашими партнерами используем технологии, такие как ',
             linkText: 'cookies',
-            last:
-              ', а также собираем данные, чтобы вам было удобно пользоваться сайтом и чтобы содержание и реклама, которую вы видите, соответствовали вашим запросам. Пожалуйста, сообщите, согласны ли вы.',
+            last: ', а также собираем данные, чтобы вам было удобно пользоваться сайтом и чтобы содержание и реклама, которую вы видите, соответствовали вашим запросам. Пожалуйста, сообщите, согласны ли вы.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
@@ -75,10 +74,8 @@ const headerFooterTranslations = {
             para3:
               'Для того чтобы наши веб-страницы работали, мы храним ограниченную информацию о вашем девайсе без вашего согласия.',
             para4: {
-              text:
-                'Прочесть подробнее о базовой информации, которую мы храним на вашем устройстве, чтобы на нем отображались наши веб-страницы (на англ. языке).',
-              url:
-                'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+              text: 'Прочесть подробнее о базовой информации, которую мы храним на вашем устройстве, чтобы на нем отображались наши веб-страницы (на англ. языке).',
+              url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
             },
             para5:
               'Мы используем местные серверы для хранения согласованных вами преференций для вашего девайса.',
@@ -86,10 +83,8 @@ const headerFooterTranslations = {
             para6:
               'Когда вы даете согласие на сбор данных на AMP-странице, вы соглашаетесь на то, чтобы мы показывали вам рекламу, специально подобранную для вас, когда вы находитесь за пределами Великобритании.',
             para7: {
-              text:
-                'Прочесть подробнее о том, как BBC и его рекламные партнеры подбирают реламу для вас.',
-              url:
-                'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+              text: 'Прочесть подробнее о том, как BBC и его рекламные партнеры подбирают реламу для вас.',
+              url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
             },
             para8:
               'Вы можете отказаться от персонифицированной рекламы, кликнув на "Отказаться от сбора данных и продолжить" внизу. Пожалуйста, помните, что вы все равно будете получать рекламу, но она не будет подобрана под вас.',
@@ -104,16 +99,14 @@ const headerFooterTranslations = {
           uk: {
             first: 'Мы используем ',
             linkText: 'cookies',
-            last:
-              ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
+            last: ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
           international: {
             first: 'Мы используем ',
             linkText: 'cookies',
-            last:
-              ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
+            last: ', чтобы вам было удобно пользоваться сайтом. Сообщите нам, что вы согласны с использованием этих cookies.',
             linkUrl:
               'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
           },
@@ -135,11 +128,13 @@ export const mainTranslations = {
   seeAll: 'Посмотреть все',
   skipLinkText: 'Перейти к содержанию',
   relatedContent: 'Читайте также',
+  relatedTopics: 'Темы',
   mediaAssetPage: {
     mediaPlayer: 'Медиа плеер',
     audioPlayer: 'Аудио плеер',
     videoPlayer: 'Видео плеер',
   },
+  gist: 'Коротко',
   error: {
     404: {
       statusCode: '404',
@@ -172,8 +167,7 @@ export const mainTranslations = {
     },
   },
   media: {
-    noJs:
-      'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
+    noJs: 'Для просмотра этого контента вам надо включить JavaScript или использовать другой браузер',
     contentExpired: 'Контент больше не доступен.',
     contentNotYetAvailable: 'Эта передача еще не доступна для воспроизведения.',
     audio: 'Аудио',
@@ -244,7 +238,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/russian.png',
     defaultImageAltText: 'BBC News Русская служба',
     dir: `ltr`,
-    externalLinkText: ', внешняя ссылка',
+    externalLinkText: ', внешняя',
     imageCaptionOffscreenText: 'Подпись к фото, ',
     videoCaptionOffscreenText: 'Подпись к видео, ',
     audioCaptionOffscreenText: 'Подпись к аудио, ',
@@ -276,6 +270,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     brandSVG,
     mostRead: {
       header: 'Самое популярное',
@@ -292,15 +288,22 @@ export const service = {
       title: 'Подкаст',
       brandTitle: 'Что это было?',
       brandDescription:
-        'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.',
+        'Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/512x512/p0776f5z.jpg',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0776f5z.jpg',
         alt: 'Что это было?',
       },
       linkLabel: {
         text: 'эпизоды',
         href: 'https://www.bbc.com/russian/media-47937790',
       },
+      skipLink: {
+        text: 'Пропустить %title% и продолжить чтение.',
+        endTextVisuallyHidden: 'Конец истории %title%',
+      },
+    },
+    disclaimer: {
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim mattis enim, porta viverra nulla bibendum nec. In hac habitasse platea dictumst. Fusce dui urna, iaculis vel odio sed, faucibus ultricies turpis. Ut sit amet odio eu lectus rhoncus blandit. Donec porta dignissim fringilla. Integer vel erat tellus. Aenean nec dui sapien.',
     },
     radioSchedule: {
       hasRadioSchedule: false,
@@ -314,8 +317,7 @@ export const service = {
         text: 'Почему BBC News заслуживает доверия',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Познакомьтесь с нашими правилами внешних ссылок.',
       },
       links: [
@@ -341,8 +343,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

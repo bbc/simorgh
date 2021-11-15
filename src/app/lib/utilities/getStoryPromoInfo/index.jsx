@@ -2,22 +2,17 @@ import pathOr from 'ramda/src/pathOr';
 
 export const getAssetTypeCode = pathOr(null, ['assetTypeCode']);
 
-export const getHeadlineUrlAndLive = (item, isAssetTypeCode) => {
-  let headline;
-  let url;
-  let isLive;
+export const getHeadline = item =>
+  getAssetTypeCode(item) !== null
+    ? pathOr(null, ['name'], item)
+    : pathOr(null, ['headlines', 'headline'], item);
 
-  if (isAssetTypeCode !== null) {
-    headline = pathOr(null, ['name'], item);
-    url = pathOr(null, ['uri'], item);
-  } else {
-    headline = pathOr(null, ['headlines', 'headline'], item);
-    url = pathOr(null, ['locators', 'assetUri'], item);
-    isLive = pathOr(null, ['cpsType'], item) === 'LIV';
-  }
-  return {
-    headline,
-    url,
-    isLive,
-  };
-};
+export const getUrl = item =>
+  getAssetTypeCode(item) !== null
+    ? pathOr(null, ['uri'], item)
+    : pathOr(null, ['locators', 'assetUri'], item);
+
+export const getIsLive = item =>
+  getAssetTypeCode(item) === null
+    ? pathOr(false, ['cpsType'], item) === 'LIV'
+    : false;

@@ -1,12 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
-import { oneOf, string, elementType } from 'prop-types';
-import {
-  MostReadList,
-  MostReadItemWrapper,
-  MostReadRank,
-  MostReadLink,
-} from '@bbc/psammead-most-read';
+import { oneOf, string, elementType, shape } from 'prop-types';
+import { MostReadLink, MostReadItemWrapper } from './Item';
+import MostReadList from './List';
+import MostReadRank from './Rank';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
@@ -18,6 +15,7 @@ import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
+import useViewTracker from '#hooks/useViewTracker';
 
 const logger = nodeLogger(__filename);
 
@@ -27,6 +25,7 @@ const CanonicalMostRead = ({
   size,
   initialData,
   wrapper: Wrapper,
+  eventTrackingData,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const {
@@ -38,6 +37,7 @@ const CanonicalMostRead = ({
     timezone,
     mostRead: { lastUpdated, numberOfItems },
   } = useContext(ServiceContext);
+  const viewRef = useViewTracker(eventTrackingData);
 
   const filteredData = processMostRead({
     data: initialData,
@@ -94,7 +94,7 @@ const CanonicalMostRead = ({
     isAmp,
   ]);
 
-  if (!items) {
+  if (!items || items.length === 0) {
     return null;
   }
 
@@ -112,6 +112,7 @@ const CanonicalMostRead = ({
             dir={dir}
             key={item.id}
             columnLayout={columnLayout}
+            ref={viewRef}
           >
             <MostReadRank
               service={service}
@@ -129,6 +130,7 @@ const CanonicalMostRead = ({
               title={item.title}
               href={item.href}
               size={size}
+              eventTrackingData={eventTrackingData}
             >
               {shouldRenderLastUpdated(item.timestamp) && (
                 <LastUpdated
@@ -154,6 +156,9 @@ CanonicalMostRead.propTypes = {
   size: oneOf(['default', 'small']),
   initialData: mostReadShape,
   wrapper: elementType,
+  eventTrackingData: shape({
+    componentName: string,
+  }),
 };
 
 CanonicalMostRead.defaultProps = {
@@ -161,6 +166,7 @@ CanonicalMostRead.defaultProps = {
   size: 'default',
   initialData: null,
   wrapper: React.Fragment,
+  eventTrackingData: null,
 };
 
 export default CanonicalMostRead;

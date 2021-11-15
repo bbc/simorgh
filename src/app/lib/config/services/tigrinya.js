@@ -60,6 +60,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'መላለዪ',
@@ -69,6 +71,7 @@ export const service = {
       currentPage: 'ዘለኹሞ ገጽ',
       skipLinkText: 'ናብቲ ትሕዝቶ ቀጽሉ',
       relatedContent: 'ተዛማዲ ትሕዝቶ',
+      relatedTopics: 'ተዛማዲ ዛዕባታት',
       navMenuText: 'ክፍልታት',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
@@ -133,8 +136,7 @@ export const service = {
               description: {
                 first: 'ንሕናን መሻርኽትናን ከም ',
                 linkText: 'ኩኪስ',
-                last:
-                  "  ዝኣመሰሉ ቴክኖሎጂ ክንጥቀም ዘድልየና፡ ብዛዕባ ናይ ኢንተርነት ኣጠቓቕማኹም ሓበሬታ ብምውህላል ንዓኹም ውልቃዊ ኣገዳስነት ዘለዎ ትሕዝቶ ወይ መወዓውዒ ብዝበለጸ ኣገባብ ንምቕራብ'ዩ። ትሰማምዑ እንተ ዄንኩም ኣፍልጡና።",
+                last: "  ዝኣመሰሉ ቴክኖሎጂ ክንጥቀም ዘድልየና፡ ብዛዕባ ናይ ኢንተርነት ኣጠቓቕማኹም ሓበሬታ ብምውህላል ንዓኹም ውልቃዊ ኣገዳስነት ዘለዎ ትሕዝቶ ወይ መወዓውዒ ብዝበለጸ ኣገባብ ንምቕራብ'ዩ። ትሰማምዑ እንተ ዄንኩም ኣፍልጡና።",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -151,10 +153,8 @@ export const service = {
                 para3:
                   'ናይ መርበብ ገጻትና ብግቡእ ንክሰርሕ፡ ብዛዕባ እቲ ንገጻትና ንምክትታል ትጥቀምሉ መሳርሒታት ዉሱን ሓበሬታ ብዘይ ፍቓድኩም ንዕቅብ ኢና።',
                 para4: {
-                  text:
-                    'ብዛዕባ ናይ መርበብ ገጻትና ብግቡእ ክሰርሑ ንምግባር ዝሕግዘና ኣብቲ እትጥቀምሉ መሳርሒ እንዕቅቦ ኣገዳሲ ሓበሬታ ንምፍላጥ ኣብዚ ኣንብቡ።',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'ብዛዕባ ናይ መርበብ ገጻትና ብግቡእ ክሰርሑ ንምግባር ዝሕግዘና ኣብቲ እትጥቀምሉ መሳርሒ እንዕቅቦ ኣገዳሲ ሓበሬታ ንምፍላጥ ኣብዚ ኣንብቡ።',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'ንእተፍቅድዎ ምርጫታት ኣብቲ ኣብ መሳርሒኹም ዘሎ ማዕከን ኢና ንዕቅቦ',
                 heading3: 'ሓበሬታ ዝእከበሉ ኣማራጺ',
@@ -162,8 +162,7 @@ export const service = {
                   "ኣብ ተንቀሳቓሲ ቴለፎን ኣብ ዘሎ ገጽና ሓበሬታ ክንእክብ እንተ ኣፍቂድኩምልና፡ ካብ ብሪጣንያ ወጻኢ ኣብ እትህልውሉ ንውልቅኹም ጥራይ ዝምልከት መውዓውዒ ከነርእየኩም ኣፍቂድኩም ኣለኹም ማለት'ዩ።",
                 para7: {
                   text: 'ብዛዕባ ኣብ ቢቢሲ ዘለዉ ውልቃዊ መወዓውዒታትን መሸርኽትናን ንምፍላጥ ኣብዚ ኣንብቡ',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'ሓበሬታ ንምእካብ ፍቓደኛታት እንተ ዘይኴንኩም ቀጽሉ" ብምጥዋቕ ንውልቅኹም ጥራይ ዝምልከቱ መወዓውዒታት ከይትቕበሉ ክትውስኑ ትኽእሉ ኢኹም። ይኹን እምበር፡ ዋላ\'ኳ ንውልቅኹም ዝምልከቱ እንተዘይኮኑ መወዓውዒታት ከምእትርእዩ ከነዘኻኽር ንፈቱ።',
@@ -263,8 +262,7 @@ export const service = {
         text: 'ስለምንታይ ንቢቢሲ ክትኣምንዎ ከም እትኽእሉ',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'ብዛዕባ ምስ ናይ ደገ መርበባት እንገብሮ መላግቦታት ዘለና ኣረኣእያ ንምርዳእ ኣንብቡ።',
       },
       links: [
@@ -290,8 +288,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

@@ -1,72 +1,99 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
-import { StoryPage } from '..';
+import StoryPage from './StoryPage';
 import mundoPageData from './fixtureData/mundo';
 import persianPageData from './fixtureData/persian';
+import portuguesePageData from './fixtureData/portuguese';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
+import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContext } from '#contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { UserContextProvider } from '#contexts/UserContext';
+import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+
+const Page = withPageWrapper(StoryPage);
+
 const withSecondaryColumnsKnob = pageData => storyFn => {
-  const options = {
-    'without Top Stories': 'topStories',
-    'without Features': 'features',
-    'without Features & Top Stories': ['features', 'topStories'],
-    default: '',
-  };
-  const selectedColumns = select(
-    'Select secondary column options',
-    options,
-    '',
-    'STY-SECONDARY-COLUMN',
-  );
+  const showTopStories = boolean('Show Top Stories', true);
+  const showFeaturedStories = boolean('Show Featured Stories', true);
 
   const secondaryColumn = {
-    ...(!selectedColumns.includes('topStories') && {
+    ...(showTopStories && {
       topStories: pageData.secondaryColumn.features,
     }),
-    ...(!selectedColumns.includes('features') && {
+    ...(showFeaturedStories && {
       features: pageData.secondaryColumn.features,
     }),
   };
 
   const storyProps = {
-    data: {
+    pageData: {
       ...pageData,
       secondaryColumn,
     },
   };
   return storyFn(storyProps);
 };
-[
-  {
-    service: 'mundo',
-    pageData: mundoPageData,
+
+const toggleState = {
+  podcastPromo: {
+    enabled: true,
   },
-  {
-    service: 'persian',
-    pageData: persianPageData,
+  mostRead: {
+    enabled: true,
   },
-].forEach(({ service, pageData }) => {
-  return storiesOf('Pages/Story Page', module)
-    .addDecorator(story => <WithTimeMachine>{story()}</WithTimeMachine>)
-    .addDecorator(withKnobs)
-    .addDecorator(withSecondaryColumnsKnob(pageData))
-    .add(service, ({ data }) => {
-      return (
-        <BrowserRouter>
-          <StoryPage
-            pageType={STORY_PAGE}
+};
+
+// eslint-disable-next-line react/prop-types
+const Component = ({ pageData, service }) => (
+  <BrowserRouter>
+    <ToggleContext.Provider value={{ toggleState, toggleDispatch: () => {} }}>
+      <ServiceContextProvider service={service}>
+        <UserContextProvider>
+          <RequestContextProvider
             isAmp={false}
-            pathname="/path"
-            status={200}
-            pageData={data}
             service={service}
-            mostReadEndpointOverride="./data/mundo/mostRead/index.json"
-          />
-        </BrowserRouter>
-      );
-    });
-});
+            pageType={STORY_PAGE}
+            bbcOrigin="https://www.test.bbc.com"
+          >
+            <Page
+              pageData={pageData}
+              mostReadEndpointOverride="./data/mundo/mostRead/index.json"
+            />
+          </RequestContextProvider>
+        </UserContextProvider>
+      </ServiceContextProvider>
+    </ToggleContext.Provider>
+  </BrowserRouter>
+);
+
+export default {
+  Component,
+  title: 'Pages/Story Page',
+  decorators: [
+    withKnobs,
+    story => <WithTimeMachine>{story()}</WithTimeMachine>,
+  ],
+};
+
+export const Mundo = props => (
+  <Component service="mundo" pageData={mundoPageData} {...props} />
+);
+
+Mundo.decorators = [withSecondaryColumnsKnob(mundoPageData)];
+
+export const Persian = props => (
+  <Component service="persian" pageData={persianPageData} {...props} />
+);
+
+Persian.decorators = [withSecondaryColumnsKnob(persianPageData)];
+
+export const Portuguese = props => (
+  <Component service="portuguese" pageData={portuguesePageData} {...props} />
+);
+
+Portuguese.decorators = [withSecondaryColumnsKnob(portuguesePageData)];

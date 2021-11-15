@@ -56,6 +56,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Reklam',
@@ -65,12 +67,14 @@ export const service = {
       currentPage: 'Hazırda olduğunuz səhifə',
       skipLinkText: 'Mətnə keçid',
       relatedContent: 'Bu barədə daha geniş',
+      relatedTopics: 'Əlaqəli mövzular',
       navMenuText: 'Bölümlər',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Xülasə',
       error: {
         404: {
           statusCode: '404',
@@ -134,8 +138,7 @@ export const service = {
               description: {
                 first: 'Biz və partnyorlarımız ',
                 linkText: 'kukilər',
-                last:
-                  ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
+                last: ' kimi texnologiyalardan istifadə edərək sizə ən yaxşı onlayn təcrübəni vermək, məzmunu və reklamları sizə uyğunlaşdırmaq üçün brauzerinizdən axtarış məlumatlarını toplayırıq. Buna razı olduğunuzu, lütfən, bizə bildirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -152,10 +155,8 @@ export const service = {
                 para3:
                   'Veb səhifələrimizin işləməsi üçün bəzi məhdud məlumatları razılığınız olmadan cihazınızda saxlayırıq.',
                 para4: {
-                  text:
-                    'Veb səhifələrimizin işləməsi üçün cihazınızda saxladığımız lazımi məlumatlar haqqında daha ətraflı oxuyun.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Veb səhifələrimizin işləməsi üçün cihazınızda saxladığımız lazımi məlumatlar haqqında daha ətraflı oxuyun.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Seçim üstünlüklərinizi cihazınızda saxlamaq üçün lokal yaddaşdan istifadə edirik.',
@@ -163,10 +164,8 @@ export const service = {
                 para6:
                   'AMP səhifələrdə məlumatların toplanmasına razılıq verdiyinizdə Birləşmiş Krallığın xaricində olduğunuz vaxt sizə uyğun, fərdiləşdirilmiş reklamın göstərilməsinə icazə vermis olursunuz.',
                 para7: {
-                  text:
-                    'BBC-də və reklam partnyorlarımızda reklamı necə fərdiləşdirdiyimiz barədə daha ətraflı oxuyun.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'BBC-də və reklam partnyorlarımızda reklamı necə fərdiləşdirdiyimiz barədə daha ətraflı oxuyun.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Aşağıdakı “Məlumat toplanmasını rədd edin və davam edin” düyməsinə basaraq fərdi reklam almamağı seçə bilərsiniz. Lütfən nəzərə alın ki, bu halda fərdiləşdirilməmiş reklam hələ də görünəcək.',
@@ -181,16 +180,14 @@ export const service = {
               uk: {
                 first: 'Biz ',
                 linkText: 'kukilərdən',
-                last:
-                  ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
+                last: ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Biz ',
                 linkText: 'kukilərdən',
-                last:
-                  ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
+                last: ' sizə ən yaxşı onlayn təcrübəni vermək üçün istifadə edirik. Lütfən, bütün bu kukilərlə razı olduğunuzu bizə bildirin.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -267,8 +264,7 @@ export const service = {
         text: 'BBC News-a niyə etibar etməlisiniz',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Bizim kənar keçidlərə dair yanaşmamız barədə oxuyun.',
       },
       links: [
@@ -285,8 +281,7 @@ export const service = {
           text: 'Məxfilik siyasəti',
         },
         {
-          href:
-            'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
+          href: 'https://www.bbc.co.uk/privacy/cookies/managing/cookie-settings.html',
           text: 'Cookies',
         },
         {
@@ -295,8 +290,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

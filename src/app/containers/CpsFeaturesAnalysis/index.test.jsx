@@ -7,6 +7,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import * as viewTracking from '#hooks/useViewTracker';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -139,5 +141,44 @@ describe('CpsRelatedContent', () => {
   it('should render a default title if translations are not available', () => {
     renderFeaturesAnalysisNoTitle();
     expect(screen.getByText(`Features & Analysis`)).toBeTruthy();
+  });
+});
+
+describe('Event Tracking', () => {
+  it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
+    const expected = {
+      componentName: 'features',
+      preventNavigation: true,
+    };
+    const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+
+    renderFeaturesAnalysis();
+
+    const [
+      [blockLevelTrackingItem1],
+      [linkLevelTrackingItem1],
+
+      [blockLevelTrackingItem2],
+      [linkLevelTrackingItem2],
+    ] = clickTrackerSpy.mock.calls;
+
+    expect(blockLevelTrackingItem1).toEqual(expected);
+    expect(linkLevelTrackingItem1).toEqual({});
+
+    expect(blockLevelTrackingItem2).toEqual(expected);
+    expect(linkLevelTrackingItem2).toEqual({});
+  });
+
+  it('should implement 1 BLOCK level view tracker', () => {
+    const expected = {
+      componentName: 'features',
+    };
+    const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+    renderFeaturesAnalysis();
+
+    const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
+
+    expect(blockLevelTracking).toEqual(expected);
   });
 });

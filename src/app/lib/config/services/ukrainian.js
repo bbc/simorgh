@@ -28,7 +28,7 @@ const baseServiceConfig = {
   defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/ukrainian.png',
   defaultImageAltText: 'BBC News Україна',
   dir: `ltr`,
-  externalLinkText: ', зовнішнє посилання',
+  externalLinkText: ', зовнішнє',
   imageCaptionOffscreenText: 'Підпис до фото, ',
   videoCaptionOffscreenText: 'Підпис до відео, ',
   audioCaptionOffscreenText: 'Підпис до аудіо',
@@ -54,6 +54,25 @@ const baseServiceConfig = {
     brandHighlightColour: `${C_WHITE}`,
     brandBorderColour: `${C_POSTBOX_30}`,
   },
+  showAdPlaceholder: true,
+  showRelatedTopics: true,
+  podcastPromo: {
+    title: 'подкаст',
+    brandTitle: 'Що це було',
+    brandDescription: 'Головна історія тижня, яку пояснюють наші журналісти',
+    image: {
+      src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09jrvvq.jpg',
+      alt: 'Що це було',
+    },
+    linkLabel: {
+      text: 'Випуски',
+      href: 'https://www.bbc.com/ukrainian/podcasts/p09jsy3h',
+    },
+    skipLink: {
+      text: 'Пропустити %title% і продовжити',
+      endTextVisuallyHidden: 'Кінець %title%',
+    },
+  },
   translations: {
     ads: {
       advertisementLabel: 'Реклама',
@@ -68,6 +87,7 @@ const baseServiceConfig = {
       audioPlayer: 'Аудіоплеєр',
       videoPlayer: 'Відеоплеєр',
     },
+    gist: 'Стисло',
     error: {
       404: {
         statusCode: '404',
@@ -133,8 +153,7 @@ const baseServiceConfig = {
               first:
                 'Ми разом з нашими партнерами використовуємо технології, такі як ',
               linkText: 'cookies',
-              last:
-                ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
+              last: ', а також збираємо дані, щоб вам було зручно користуватися сайтом і щоб контент і реклама, яку ви бачите, відповідали вашим запитам. Будь ласка, повідомте, чи ви згодні.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -151,10 +170,8 @@ const baseServiceConfig = {
               para3:
                 'Щоб забезпечити роботу наших сторінок, ми зберігаємо обмежену інформацію на вашому пристрої без вашої згоди.',
               para4: {
-                text:
-                  'Тут можна почитати докладніше про необхідну інформацію, яку ми зберігаємо на вашому пристрої, щоб забезпечити роботу наших вебсторінок.',
-                url:
-                  'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                text: 'Тут можна почитати докладніше про необхідну інформацію, яку ми зберігаємо на вашому пристрої, щоб забезпечити роботу наших вебсторінок.',
+                url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
               },
               para5:
                 "Ми використовуємо локальну пам'ять, щоб зберігати ваші уподобання щодо згоди на вашому пристрої.",
@@ -162,10 +179,8 @@ const baseServiceConfig = {
               para6:
                 'Коли ви даєте згоду на збір даних на сторінках AMP, ви погоджуєтеся дозволити показувати вам персоналізовану рекламу, актуальну для вас, коли ви перебуваєте за межами Великої Британії.',
               para7: {
-                text:
-                  'Докладніше про те, як ми персоналізуємо рекламу на BBC та у наших рекламних партнерів можна прочитати тут.',
-                url:
-                  'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                text: 'Докладніше про те, як ми персоналізуємо рекламу на BBC та у наших рекламних партнерів можна прочитати тут.',
+                url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
               },
               para8:
                 'Ви можете не отримувати персоналізовану рекламу, натиснувши "Відмовитися від збору даних та продовжити" нижче. Зверніть увагу, що реклама все одно буде показуватися, але вона не буде персоналізованою для вас.',
@@ -181,16 +196,14 @@ const baseServiceConfig = {
             uk: {
               first: 'Ми використовуємо ',
               linkText: 'cookies',
-              last:
-                ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
+              last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
             international: {
               first: 'Ми використовуємо ',
               linkText: 'cookies',
-              last:
-                ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
+              last: ', щоб вам було зручно користуватися сайтом. Повідомте нам, що ви погоджуєтесь з використанням цих файлів cookies.',
               linkUrl:
                 'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
             },
@@ -249,6 +262,7 @@ const baseServiceConfig = {
         'Перегляньте повну версію сторінки, щоб побачити увесь контент.',
     },
     relatedContent: 'Статті на цю ж тему',
+    relatedTopics: 'Також на цю тему',
     ...secondaryColumnTranslations,
   },
   brandSVG,
@@ -277,8 +291,7 @@ const baseServiceConfig = {
       text: 'Чому BBC заслуговує на довіру',
     },
     externalLink: {
-      href:
-        'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+      href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
       text: 'Ознайомтеся з нашими правилами зовнішніх посилань.',
     },
     links: [
@@ -300,8 +313,7 @@ const baseServiceConfig = {
       },
       {
         id: 'COOKIE_SETTINGS',
-        href:
-          'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+        href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
         text: 'AdChoices / Do Not Sell My Info',
         lang: 'en-GB',
       },
@@ -312,27 +324,15 @@ const baseServiceConfig = {
   timezone: 'GMT',
   navigation: [
     {
-      title: 'Новини',
+      title: 'Головна',
       url: '/ukrainian',
     },
     {
       title: 'Коронавірус',
-      url: '/ukrainian/52118881',
+      url: '/ukrainian/topics/c87z2kmre5nt',
     },
     {
-      title: 'Наука',
-      url: '/ukrainian/topics/cyx5kzy4w5yt',
-    },
-    {
-      title: 'Технології',
-      url: '/ukrainian/topics/cxnykv9q4kpt',
-    },
-    {
-      title: 'Здоров’я',
-      url: '/ukrainian/topics/cwr9jqqqq13t',
-    },
-    {
-      title: 'Журнал',
+      title: 'Історії',
       url: '/ukrainian/53725237',
     },
     {
@@ -342,6 +342,10 @@ const baseServiceConfig = {
     {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
+    },
+    {
+      title: 'Подкасти',
+      url: '/ukrainian/podcasts/p09jsy3h',
     },
     {
       title: 'РУС',
@@ -367,6 +371,7 @@ export const service = {
       ...baseServiceConfig.translations,
       ...russianMainTranslations,
       ...secondaryColumnTranslations,
+      relatedTopics: 'Темы',
     },
     datetimeLocale: 'ru',
     serviceDatetimeLocale: 'uk',

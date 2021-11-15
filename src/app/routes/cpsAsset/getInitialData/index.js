@@ -6,11 +6,13 @@ import {
   addIdsToBlocks,
   applyBlockPositioning,
 } from '../../utils/sharedDataTransformers';
+import augmentWithDisclaimer from './augmentWithDisclaimer';
 import parseInternalLinks from './convertToOptimoBlocks/blocks/internalLinks';
 import addHeadlineBlock from './addHeadlineBlock';
 import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
+import insertPodcastPromo from './insertPodcastPromo';
 import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addMpuBlock from './addMpuBlock';
@@ -18,44 +20,58 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+
+export const only =
+  (pageTypes, transformer) =>
+  (pageData, ...args) => {
+    const isCorrectPageType = pageTypes.includes(
+      path(['metadata', 'type'], pageData),
+    );
+    return isCorrectPageType ? transformer(pageData, ...args) : pageData;
+  };
 
 const formatPageData = pipe(
   addAnalyticsCounterName,
   parseInternalLinks,
   timestampToMilliseconds,
+  only([STORY_PAGE], insertPodcastPromo),
 );
 
-export const only = (pageType, transformer) => (pageData, ...args) => {
-  const isCorrectPageType = path(['metadata', 'type'], pageData) === pageType;
-  return isCorrectPageType ? transformer(pageData, ...args) : pageData;
-};
-
-const processOptimoBlocks = pipe(
-  only(MEDIA_ASSET_PAGE, processUnavailableMedia),
-  addHeadlineBlock,
-  addSummaryBlock,
-  augmentWithTimestamp,
-  addBylineBlock,
-  addRecommendationsBlock,
-  addMpuBlock,
-  addIdsToBlocks,
-  applyBlockPositioning,
-  cpsOnlyOnwardJourneys,
-);
+const processOptimoBlocks = toggles =>
+  pipe(
+    only([MEDIA_ASSET_PAGE], processUnavailableMedia),
+    addHeadlineBlock,
+    addSummaryBlock,
+    augmentWithTimestamp,
+    only(
+      [MEDIA_ASSET_PAGE, STORY_PAGE, PHOTO_GALLERY_PAGE],
+      augmentWithDisclaimer(toggles),
+    ),
+    addBylineBlock,
+    addRecommendationsBlock,
+    addMpuBlock,
+    addIdsToBlocks,
+    applyBlockPositioning,
+    cpsOnlyOnwardJourneys,
+  );
 
 // Here pathname is passed as a prop specifically for CPS includes
 // This will most likely change in issue #6784 so it is temporary for now
-const transformJson = async (json, pathname) => {
+const transformJson = async (json, pathname, toggles) => {
   try {
     const formattedPageData = formatPageData(json);
     const optimoBlocks = await convertToOptimoBlocks(
       formattedPageData,
       pathname,
     );
-    return processOptimoBlocks(optimoBlocks);
+    return processOptimoBlocks(toggles)(optimoBlocks);
   } catch (e) {
     // We can arrive here if the CPS asset is a FIX page
     // TODO: consider checking if FIX then don't transform JSON
@@ -98,7 +114,7 @@ export default async ({
     return {
       status,
       pageData: {
-        ...(await transformJson(json, pathname)),
+        ...(await transformJson(json, pathname, toggles)),
         ...processedAdditionalData,
       },
     };

@@ -110,14 +110,8 @@ const OnDemandAudioPage = ({ pageData, mediaIsAvailable, MediaError }) => {
 
   const { isAmp } = useContext(RequestContext);
   const location = useLocation();
-  const {
-    dir,
-    liveRadioOverrides,
-    lang,
-    service,
-    translations,
-    serviceName,
-  } = useContext(ServiceContext);
+  const { dir, liveRadioOverrides, lang, service, translations, serviceName } =
+    useContext(ServiceContext);
   const oppDir = dir === 'rtl' ? 'ltr' : 'rtl';
 
   const mediaId = getMediaId({

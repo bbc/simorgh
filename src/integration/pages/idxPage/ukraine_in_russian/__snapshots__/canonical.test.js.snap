@@ -70,7 +70,7 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Header I can see the br
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 1`] = `
 Object {
-  "text": "Новини",
+  "text": "Головна",
   "url": "/ukrainian",
 }
 `;
@@ -78,53 +78,39 @@ Object {
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 2`] = `
 Object {
   "text": "Коронавірус",
-  "url": "/ukrainian/52118881",
+  "url": "/ukrainian/topics/c87z2kmre5nt",
 }
 `;
 
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 3`] = `
 Object {
-  "text": "Наука",
-  "url": "/ukrainian/topics/cyx5kzy4w5yt",
-}
-`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
-Object {
-  "text": "Технології",
-  "url": "/ukrainian/topics/cxnykv9q4kpt",
-}
-`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
-Object {
-  "text": "Здоров’я",
-  "url": "/ukrainian/topics/cwr9jqqqq13t",
-}
-`;
-
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
-Object {
-  "text": "Журнал",
+  "text": "Історії",
   "url": "/ukrainian/53725237",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 4`] = `
 Object {
   "text": "Відео",
   "url": "/ukrainian/55425840",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 8`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 5`] = `
 Object {
   "text": "Книга року BBC",
   "url": "/ukrainian/features-50320117",
 }
 `;
 
-exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 9`] = `
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 6`] = `
+Object {
+  "text": "Подкасти",
+  "url": "/ukrainian/podcasts/p09jsy3h",
+}
+`;
+
+exports[`Canonical ukrainian/ukraine_in_russian IDX page Header Navigation link should match text and url 7`] = `
 Object {
   "text": "Поточна сторінка, РУС",
   "url": "/ukrainian/ukraine_in_russian",
@@ -304,7 +290,8 @@ exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Headline sh
 exports[`Canonical ukrainian/ukraine_in_russian IDX page Story Promo Image should match image 1`] = `
 <img
   alt="Чоловік з келихом"
-  class="bbc-yfiktt e1enwo3v0"
+  class="eehpdyc0 bbc-100dhyn e1enwo3v0"
+  height="549"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
   srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/DE34/production/_111648865_1stimage.png 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/DE34/production/_111648865_1stimage.png 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/DE34/production/_111648865_1stimage.png 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/DE34/production/_111648865_1stimage.png 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/DE34/production/_111648865_1stimage.png 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/DE34/production/_111648865_1stimage.png 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png 660w"

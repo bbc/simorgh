@@ -6,13 +6,19 @@ const { webpackDirAlias } = require('../dirAlias');
 const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../src/app/**/**/*.stories.jsx'],
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
+    '@storybook/addon-docs',
+    '@storybook/addon-controls',
   ],
   webpackFinal: async config => {
+    config.target = ['web', 'es5'];
     config.plugins.push(
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
@@ -28,6 +34,9 @@ module.exports = {
           );
         },
       ),
+      new webpack.ProvidePlugin({
+        process: 'process/browser',
+      }),
     );
 
     config.resolve.extensions.push('.js', '.jsx'); // resolves `import '../Foo'` to `../Foo/index.jsx`

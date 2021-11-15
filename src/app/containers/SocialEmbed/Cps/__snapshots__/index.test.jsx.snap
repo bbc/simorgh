@@ -102,11 +102,9 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
 }
 
 .emotion-2 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
+  min-height: 14rem;
 }
 
 .emotion-4 {
@@ -181,7 +179,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
       >
         <a
           class="emotion-6 emotion-7"
-          href="#skip-twitter-content-2"
+          href="#end-of-twitter-content-2"
         >
           Skip Twitter content, 2
         </a>
@@ -193,7 +191,7 @@ exports[`CpsSocialEmbedContainer AMP should render correctly 1`] = `
         />
         <p
           class="emotion-8 emotion-9"
-          id="skip-twitter-content-2"
+          id="end-of-twitter-content-2"
           tabindex="-1"
         >
           End of Twitter content, 2
@@ -306,11 +304,9 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 }
 
 .emotion-2 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
-  min-height: 18.75rem;
+  min-height: 14rem;
 }
 
 .emotion-4 {
@@ -373,6 +369,10 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
 
 .emotion-8 .twitter-tweet {
   margin-top: 0!important;
+  margin-bottom: 10rem!important;
+}
+
+.emotion-8 .twitter-tweet-rendered {
   margin-bottom: 0!important;
 }
 
@@ -400,7 +400,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
     >
       <a
         class="emotion-6 emotion-7"
-        href="#skip-twitter-content-2"
+        href="#end-of-twitter-content-2"
       >
         Skip Twitter content, 2
       </a>
@@ -428,7 +428,7 @@ exports[`CpsSocialEmbedContainer Canonical should render and unmount correctly 1
       </div>
       <p
         class="emotion-10 emotion-11"
-        id="skip-twitter-content-2"
+        id="end-of-twitter-content-2"
         tabindex="-1"
       >
         End of Twitter content, 2
@@ -540,8 +540,6 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
 }
 
 .emotion-2 {
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 1.5rem;
   max-width: 31.25rem;
 }
@@ -672,7 +670,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
       >
         <a
           class="emotion-6 emotion-7"
-          href="#skip-twitter-content-1"
+          href="#end-of-twitter-content-1"
         >
           Skip Twitter content, 1
         </a>
@@ -691,7 +689,7 @@ exports[`CpsSocialEmbedContainer Canonical should render correctly without an em
         </div>
         <p
           class="emotion-10 emotion-11"
-          id="skip-twitter-content-1"
+          id="end-of-twitter-content-1"
           tabindex="-1"
         >
           End of Twitter content, 1

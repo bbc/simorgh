@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_arabic_radio/p09w8yvk",
+    "locators": {
+      "pid": "p09ykg0b",
+      "brandPid": "p09w8yvk"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_arabic_radio",
+    "language": "ar",
+    "lastUpdated": 1634650710187,
+    "firstPublished": 1634142010000,
+    "lastPublished": 1634142010000,
+    "timestamp": 1634142010000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "إكسترا ليفلز (Xtra Levels) - BBC News Arabic",
+      "pageIdentifier": "arabic.bbc_arabic_radio.podcasts.programmes.p09w8yvk.page",
+      "producerId": "5",
+      "contentType": "player-episode",
+      "producer": "ARABIC"
+    },
+    "tags": {},
+    "version": "v1.3.13",
+    "blockTypes": ["media"],
+    "title": "إكسترا ليفلز (Xtra Levels)",
+    "releaseDateTimeStamp": 1634256000000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p09ykg0b",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "كيف التحقت إينامي وموموكو بعالم الألعاب؟ وما التحديات التي تواجه اللاعبات في المغرب؟",
+          "long": "في هذه الحلقة من إكسترا ليفلز يمر محمد مطر على محطات تحول الألعاب الإلكترونية وتغير أبطالها من ذكور غالباً لتضم شخصيات من الجنسين، ويستضيف في دردشته إيمان أمزيل، التي تلقب نفسها بإينامي (eNami)، وهي أحد مؤسسي رابطة بطولات المغرب للألعاب الإلكترونية، باللإضافة إلى ممارستها التحليل الفني والتعليق على المباريات الإلكترونية، وكذلك هاجر أجعون، التي تلقب نفسها بموموكو (Momoko)، وهي صانعة محتوى في مجال الألعاب الإلكترونية، انتقلت من كونها لاعبة وستريمر تقدم عروض البث المباشر إلى أن تفرغت أكثر لإجراء الحوارات مع اللاعبين."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09yk8px",
+            "types": ["Podcast"],
+            "duration": 2267,
+            "durationISO8601": "PT37M47S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1634284800000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "إكسترا ليفلز: الأبطال المغامرون، ذكور أم إناث؟",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "إكسترا ليفلز (Xtra Levels)"
+    },
+    "locators": {
+      "pid": "p09ykg0b",
+      "brandPid": "p09w8yvk"
+    },
+    "media": {
+      "id": "p09ykg0b",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "كيف التحقت إينامي وموموكو بعالم الألعاب؟ وما التحديات التي تواجه اللاعبات في المغرب؟",
+        "long": "في هذه الحلقة من إكسترا ليفلز يمر محمد مطر على محطات تحول الألعاب الإلكترونية وتغير أبطالها من ذكور غالباً لتضم شخصيات من الجنسين، ويستضيف في دردشته إيمان أمزيل، التي تلقب نفسها بإينامي (eNami)، وهي أحد مؤسسي رابطة بطولات المغرب للألعاب الإلكترونية، باللإضافة إلى ممارستها التحليل الفني والتعليق على المباريات الإلكترونية، وكذلك هاجر أجعون، التي تلقب نفسها بموموكو (Momoko)، وهي صانعة محتوى في مجال الألعاب الإلكترونية، انتقلت من كونها لاعبة وستريمر تقدم عروض البث المباشر إلى أن تفرغت أكثر لإجراء الحوارات مع اللاعبين."
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p09yk8px",
+          "types": ["Podcast"],
+          "duration": 2267,
+          "durationISO8601": "PT37M47S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1634284800000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "إكسترا ليفلز: الأبطال المغامرون، ذكور أم إناث؟",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1634256000000,
+    "brand": {
+      "pid": "p09w8yvk",
+      "title": "إكسترا ليفلز (Xtra Levels)"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09ykg0b",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Arabic",
+      "uri": "/arabic",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": [
+          {
+            "headlines": {
+              "headline": "إكسترا ليفلز (Xtra Levels)"
+            },
+            "locators": {
+              "pid": "p09x843n",
+              "brandPid": "p09w8yvk"
+            },
+            "media": {
+              "id": "p09x843n",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "لماذا قرر أمجد الدويري ترك وظيفته لمشاركة ابنه (عبود) في اللعب؟ وكيف يحققان دخلاً وفيراً؟",
+                "long": "في هذه الحلقة من إكسترا ليفلز يسترجع محمد مطر ذكرياته مع عائلته بشأن العلاقة مع الألعاب الإلكترونية، ويستضيف في دردشته لاعباً مع والده، عبدالله الدويري المشهور باسم (عبود)، الذي يقدم عروض البث المباشر على الإنترنت أثناء ممارسته اللعب، بالاشتراك مع أبيه أمجد، الذي قرر ترك عمله الوظيفي لفترة للتفرغ للمهمة التي صارت تجني للأسرة دخلا وفيراً."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09x82fx",
+                  "types": ["Podcast"],
+                  "duration": 2049,
+                  "durationISO8601": "PT34M9S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1633075200000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "إكسترا ليفلز: تحدي الأب والابن",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1633046400000,
+            "brand": {
+              "pid": "p09w8yvk",
+              "title": "إكسترا ليفلز (Xtra Levels)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09x843n",
+            "type": "ws_radio"
+          },
+          {
+            "headlines": {
+              "headline": "إكسترا ليفلز (Xtra Levels)"
+            },
+            "locators": {
+              "pid": "p09w8zt9",
+              "brandPid": "p09w8yvk"
+            },
+            "media": {
+              "id": "p09w8zt9",
+              "subType": "episode",
+              "format": "Audio",
+              "title": "",
+              "synopses": {
+                "short": "حلقة ترويجية لبودكاست إكسترا ليفلز من بي بي سي عربي.",
+                "medium": "تجارب شخصية ودردشات مرتقبة مع لاعبين ومختصين في مجال الألعاب الإلكترونية، من إعداد وتقديم محمد مطر."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "embedding": false,
+              "advertising": false,
+              "versions": [
+                {
+                  "versionId": "p09w8y53",
+                  "types": ["Podcast"],
+                  "duration": 136,
+                  "durationISO8601": "PT2M16S",
+                  "warnings": {},
+                  "availableTerritories": {
+                    "uk": true,
+                    "nonUk": true,
+                    "world": false
+                  },
+                  "availableFrom": 1631892900000,
+                  "availabilityStatus": "available"
+                }
+              ],
+              "availability": "available",
+              "smpKind": "radioProgramme",
+              "episodeTitle": "إكسترا ليفلز: بضغطة زر ممكن تصير بطل!",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "",
+              "subType": "index",
+              "href": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "path": "ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg",
+              "height": 0,
+              "width": 0,
+              "altText": null,
+              "copyrightHolder": null,
+              "type": "image"
+            },
+            "releaseDateTimestamp": 1631836800000,
+            "brand": {
+              "pid": "p09w8yvk",
+              "title": "إكسترا ليفلز (Xtra Levels)"
+            },
+            "id": "urn:bbc:ares:ws_media:page:bbc_arabic_radio/p09w8zt9",
+            "type": "ws_radio"
+          }
+        ]
+      }
+    ]
+  }
+}

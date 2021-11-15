@@ -10,7 +10,7 @@ phases:
       nodejs: 12
   pre_build:
     commands:
-      - yarn ci
+      - ./scripts/installNodeModules.sh
       - yarn build
   build:
     commands:

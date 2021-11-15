@@ -32,6 +32,9 @@ export default {
   navOnArticles: {
     enabled: true,
   },
+  nielsenAnalytics: {
+    enabled: true,
+  },
   preloadLeadImage: {
     enabled: true,
   },
@@ -42,12 +45,6 @@ export default {
     enabled: true,
   },
   scriptLink: {
-    enabled: true,
-  },
-  cpsSocialEmbed: {
-    enabled: true,
-  },
-  socialEmbed: {
     enabled: true,
   },
   variantCookie: {

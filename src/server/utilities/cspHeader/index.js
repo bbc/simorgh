@@ -1,6 +1,6 @@
 import csp from 'helmet-csp';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import getOriginContext from '#contexts/RequestContext/getOriginContext';
+import isLiveEnv from '#lib/utilities/isLive';
 import { bbcDomains, advertisingServiceCountryDomains } from './domainLists';
 
 /*
@@ -38,6 +38,9 @@ const advertisingDirectives = {
     'https://pagead2.googlesyndication.com',
     'https://sb.scorecardresearch.com',
     'https://secure-us.imrworldwide.com',
+    'https://uaid-linkage.imrworldwide.com',
+    'https://cloudapi.imrworldwide.com',
+    'https://*.redinuid.imrworldwide.com',
     'https://*.g.doubleclick.net',
     'https://tpc.googlesyndication.com',
     'https://*.google.com',
@@ -90,6 +93,7 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
+      'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
@@ -108,6 +112,7 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
+      'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
@@ -226,6 +231,9 @@ const directives = {
     ],
     canonicalLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'https://platform.twitter.com', // Social Embeds
       'https://www.instagram.com', // Social Embeds
@@ -245,6 +253,9 @@ const directives = {
     ],
     canonicalNonLive: [
       ...bbcDomains,
+      'https://assets.wearehearken.eu',
+      'https://modules.wearehearken.eu',
+      'https://ems.wearehearken.eu',
       'https://*.chartbeat.com',
       'http://*.chartbeat.com', // for localhost canonical connecting via http
       'http://localhost:1124', // for localhost canonical JavaScript
@@ -381,6 +392,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
+    // The "default" report-to group header is injected by GTM
     'report-to': 'default',
     'upgrade-insecure-requests': [],
   },
@@ -388,13 +400,24 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
-  const originHeader = req.headers['bbc-origin'];
-  const { origin } = getOriginContext(originHeader);
 
-  const isLive =
-    origin === 'https://www.bbc.co.uk' || origin === 'https://www.bbc.com';
+  // We will switch our reporting to this soon, but GTM does not currently handle this header correctly
+  res.setHeader(
+    'report-to',
+    JSON.stringify({
+      group: 'worldsvc',
+      max_age: 2592000,
+      endpoints: [
+        {
+          url: process.env.SIMORGH_CSP_REPORTING_ENDPOINT,
+          priority: 1,
+        },
+      ],
+      include_subdomains: true,
+    }),
+  );
 
-  const middleware = csp(helmetCsp({ isAmp, isLive }));
+  const middleware = csp(helmetCsp({ isAmp, isLive: isLiveEnv() }));
   middleware(req, res, next);
 };
 

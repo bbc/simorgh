@@ -54,6 +54,8 @@ export const service = {
     script: latinDiacritics,
     manifestPath: '/articles/manifest.json',
     frontPageTitle: 'Dachaigh',
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     theming: {
       brandBackgroundColour: `${C_POSTBOX}`,
       brandLogoColour: `${C_WHITE}`,
@@ -70,12 +72,14 @@ export const service = {
       currentPage: 'An duilleag seo',
       skipLinkText: 'Air adhart',
       relatedContent: 'Co-cheangailte',
+      relatedTopics: 'Cuspairean Ceangailte',
       navMenuText: 'Earrannan',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'At a glance',
       error: {
         404: {
           statusCode: '404',
@@ -142,8 +146,7 @@ export const service = {
                 first:
                   "Bidh sinn agus ar luchd-pàirt a' cur teicneòlais an sàs, a leithid ",
                 linkText: 'dàta-brabhsair',
-                last:
-                  ", agus fiosrachadh mu bhrabhsadh 'son an t-seirbheis air loidhne as fheàrr a thoirt seachad agus 'son duilleagan agus sanasachd anns am bi ùidh agaibh a lìbhrigeadh. Leig fios dhuinn ma tha sibh ag aontachadh.",
+                last: ", agus fiosrachadh mu bhrabhsadh 'son an t-seirbheis air loidhne as fheàrr a thoirt seachad agus 'son duilleagan agus sanasachd anns am bi ùidh agaibh a lìbhrigeadh. Leig fios dhuinn ma tha sibh ag aontachadh.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -160,10 +163,8 @@ export const service = {
                 para3:
                   "Bidh sinn a' cumail rud beag fiosrachaidh air an inneal agad gun chead gus an obraich na duilleagan againn.",
                 para4: {
-                  text:
-                    "Leugh tuilleadh mun fhiosrachadh riatanach a tha sinn a' cumail air an inneal agad gus an obraich na duilleagan againn.",
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: "Leugh tuilleadh mun fhiosrachadh riatanach a tha sinn a' cumail air an inneal agad gus an obraich na duilleagan againn.",
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   "Tha sinn a' stòradh fiosrachaidh gu h-ionadail 'son na roghainnean agad a chumail air an inneal agad.",
@@ -171,10 +172,8 @@ export const service = {
                 para6:
                   "Tha cead do dhuilleagan AMP a' ciallachadh gu bheil thu a' toirt cead dhuinn sansachd a lìbhrigeadh a tha pearsanta dhut fhèin nuair a tha thu taobh a-muigh na RA.",
                 para7: {
-                  text:
-                    "Leugh tuilleadh mu mar a tha sinn a' lìbhrigeadh sanasachd pearsanta aig a' BhBC agus mun luchd-pàirt againn.",
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: "Leugh tuilleadh mu mar a tha sinn a' lìbhrigeadh sanasachd pearsanta aig a' BhBC agus mun luchd-pàirt againn.",
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Faodadh tu sanasachd phearsanta a sheachdnadh le a bhith a\' taghadh "Na gabh ri dàta pearsanta a chruinneachadh agus lean ort" gu h-ìosal. Thoireabh an aire gum faic thu sanasachd fhathast ach cha bhi i pearsanta.',
@@ -190,16 +189,14 @@ export const service = {
               uk: {
                 first: "Bidh sinn a' cleachdadh ",
                 linkText: 'dàta-brabhsair',
-                last:
-                  " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
+                last: " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: "Bidh sinn a' cleachdadh ",
                 linkText: 'dàta-brabhsair',
-                last:
-                  " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
+                last: " 'son an t-seirbheis as fheàrr air loidhne a thoirt dhuibh. Leig fios dhuinn ma tha sibh ag aontachadh ris an dàta-brabhsair uile.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -212,8 +209,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'To play this content, please enable JavaScript, or try a different browser',
+        noJs: 'To play this content, please enable JavaScript, or try a different browser',
         contentExpired: 'This content is no longer available',
         audio: 'Fuaim',
         photogallery: 'Gailearaidh dhealbhan',
@@ -226,6 +222,8 @@ export const service = {
         nextRadioShow: 'Next radio show',
         duration: 'Duration',
       },
+      topStoriesTitle: 'Prìomh Sgeulachdan',
+      featuresAnalysisTitle: 'Sgeulachdan Aithriseach',
     },
     brandSVG,
     mostRead: {
@@ -251,10 +249,8 @@ export const service = {
         text: 'Carson as urrainear earbsa a chur sa BhBC',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
-        text:
-          'Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        text: 'Leugh mun fheallsanachd againn mu cheangaileachan dhan taobh a-muigh',
       },
       links: [
         {
@@ -279,8 +275,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

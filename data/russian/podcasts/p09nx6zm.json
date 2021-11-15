@@ -1,0 +1,580 @@
+{
+    "metadata": {
+      "id": "urn:bbc:ares:ws_media:brand:bbc_russian_radio/p09nx6zm",
+      "locators": {
+        "pid": "p09p8k61",
+        "brandPid": "p09nx6zm"
+      },
+      "type": "WSRADIO",
+      "createdBy": "bbc_russian_radio",
+      "language": "ru",
+      "lastUpdated": 1626686926139,
+      "firstPublished": 1626200612000,
+      "lastPublished": 1626200612000,
+      "timestamp": 1626200612000,
+      "options": {},
+      "analyticsLabels": {
+        "pageTitle": "Пассажиры Йомей Мару - BBC News Русская служба",
+        "pageIdentifier": "russian.bbc_russian_radio.podcasts.programmes.p09nx6zm.page",
+        "producerId": "75",
+        "contentType": "player-episode",
+        "producer": "RUSSIAN"
+      },
+      "tags": {},
+      "version": "v1.3.13",
+      "blockTypes": [
+        "media"
+      ],
+      "title": "Пассажиры Йомей Мару",
+      "releaseDateTimeStamp": 1626134400000
+    },
+    "content": {
+      "blocks": [
+        {
+          "id": "p09p8k61",
+          "subType": "episode",
+          "format": "Audio",
+          "title": "",
+          "synopses": {
+            "short": "Серия, в которой колонисты возвращаются домой.",
+            "long": "Финал подкаста - колонисты возвращаются домой. Но возвращаются они не все. В советской России им предстоит на 50 лет забыть про свое путешествие, чтобы вспомнить о нем уже в старости - в 1970-е."
+          },
+          "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+          "embedding": false,
+          "advertising": false,
+          "versions": [
+            {
+              "versionId": "p09p8jzh",
+              "types": [
+                "Podcast"
+              ],
+              "duration": 2295,
+              "durationISO8601": "PT38M15S",
+              "warnings": {},
+              "availableTerritories": {
+                "uk": true,
+                "nonUk": true,
+                "world": false
+              },
+              "availableFrom": 1626198120000,
+              "availabilityStatus": "available"
+            }
+          ],
+          "availability": "available",
+          "smpKind": "radioProgramme",
+          "episodeTitle": "7. Почти взрослые",
+          "type": "media"
+        }
+      ]
+    },
+    "promo": {
+      "headlines": {
+        "headline": "Пассажиры Йомей Мару"
+      },
+      "locators": {
+        "pid": "p09p8k61",
+        "brandPid": "p09nx6zm"
+      },
+      "media": {
+        "id": "p09p8k61",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "Серия, в которой колонисты возвращаются домой.",
+          "long": "Финал подкаста - колонисты возвращаются домой. Но возвращаются они не все. В советской России им предстоит на 50 лет забыть про свое путешествие, чтобы вспомнить о нем уже в старости - в 1970-е."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p09p8jzh",
+            "types": [
+              "Podcast"
+            ],
+            "duration": 2295,
+            "durationISO8601": "PT38M15S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1626198120000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "7. Почти взрослые",
+        "type": "media"
+      },
+      "indexImage": {
+        "id": "",
+        "subType": "index",
+        "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+        "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+        "height": 0,
+        "width": 0,
+        "altText": null,
+        "copyrightHolder": null,
+        "type": "image"
+      },
+      "releaseDateTimestamp": 1626134400000,
+      "brand": {
+        "pid": "p09nx6zm",
+        "title": "Пассажиры Йомей Мару"
+      },
+      "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p8k61",
+      "type": "ws_radio"
+    },
+    "relatedContent": {
+      "site": {
+        "subType": "site",
+        "name": "Russian",
+        "uri": "/russian",
+        "type": "simple"
+      },
+      "groups": [
+        {
+          "type": "other-episode",
+          "promos": [
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7t2m",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7t2m",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой дети борются за право вернуться в Петроград.",
+                  "long": "Красный Крест сообщает детям, что их повезут не в Петроград, а во Францию. Дети становятся заложниками политических интриг.\nКолонист Юрий Заводчиков и несколько старших ребят протестуют против этого решения. Дети выступают на митинге в Мэдисон-сквер-гарден."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7snx",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1811,
+                    "durationISO8601": "PT30M11S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626182400000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "6. Бунтарь",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7t2m",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7sdx",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7sdx",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой дети поднимаются на борт “Йомей Мару”.",
+                  "long": "Во Владивостоке неспокойно, город постоянно переходит из рук в руки. Райли Аллену надо как можно скорее увезти колонистов от опасности, но все его планы срываются. \nНа помощь детям приходит капитан “Йомей Мару” Мотодзи Каяхара.\nЮрий Заводчиков оказался не готов к партизанской борьбе Исхудавший и оборванный он возвращается в колонию."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7rzv",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1742,
+                    "durationISO8601": "PT29M2S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626182220000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "5. Капитан",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7sdx",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7rjx",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7rjx",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой детям на помощь приходит журналист из Гонолулу.",
+                  "long": "Журналист из Гонолулу Райли Аллен отправляется в Россию в поисках приключений и находит их - ему предстоит взять на себя заботу о детях. \nВо Владивостоке происходит переворот, и бывший колонист Юрий Заводчиков переходит на сторону большевиков, а потом вступает в партизанский отряд, чтобы бороться с интервентами."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7p78",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1654,
+                    "durationISO8601": "PT27M34S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626181980000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "4. Редактор",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7rjx",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7qtz",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7qtz",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой детей спасают супруги-толстовцы.",
+                  "long": "Детей разбросало по всему южному Уралу. Они голодают и мерзнут. На их поиски бросается обрусевший англичанин, толстовец, вегетарианец и скрипач Альфред Сван с женой Катей. \nЮрий Заводчиков отделяется от колонии и отправляется служить на Белый флот."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7qfp",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1981,
+                    "durationISO8601": "PT33M1S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626181620000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "3. Толстовцы",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7qtz",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7nsc",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7nsc",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой родители пытаются спасти детей.",
+                  "long": "На выручку детям отправляются несколько родителей. Они планируют перейти линию фронта и вернуть детей домой.\nЭту группу возглавит виолончелист и сотрудник Русского музея Валерий Альбрехт. Он отец двух девочек, застрявших в колони - Тани и Насти Альбрехт.\nТем временем колонист Юрий Заводчиков вынужден сам добывать себе пропитание - он отправляется на заработки к уральским казакам."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7nkj",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1752,
+                    "durationISO8601": "PT29M12S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626180720000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "2. Виолончелист",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7nsc",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09p7mw1",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09p7mw1",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Серия, в которой дети едут в летний лагерь, но оказываются в ловушке.",
+                  "long": "1918 год. Почти тысяча детей едут из Петрограда в летний лагерь на Урал. Но Гражданская война отрезает детям путь домой и они оказываются за линией фронта на территории белых.\nГлавный герой подкаста - пятнадцатилетний колонист Юрий Заводчиков уезжает из Петрограда маменькиным сынком и на Урале сталкивается с ужасами Гражданской войны."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09p7mj3",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 1604,
+                    "durationISO8601": "PT26M44S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1626180060000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "1. Колонисты",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1626134400000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09p7mw1",
+              "type": "ws_radio"
+            },
+            {
+              "headlines": {
+                "headline": "Пассажиры Йомей Мару"
+              },
+              "locators": {
+                "pid": "p09nx779",
+                "brandPid": "p09nx6zm"
+              },
+              "media": {
+                "id": "p09nx779",
+                "subType": "episode",
+                "format": "Audio",
+                "title": "",
+                "synopses": {
+                  "short": "Приключенческий сериал о детях, которые объехали вокруг света, спасаясь от войны."
+                },
+                "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "embedding": false,
+                "advertising": false,
+                "versions": [
+                  {
+                    "versionId": "p09nx6rr",
+                    "types": [
+                      "Podcast"
+                    ],
+                    "duration": 97,
+                    "durationISO8601": "PT1M37S",
+                    "warnings": {},
+                    "availableTerritories": {
+                      "uk": true,
+                      "nonUk": true,
+                      "world": false
+                    },
+                    "availableFrom": 1625824320000,
+                    "availabilityStatus": "available"
+                  }
+                ],
+                "availability": "available",
+                "smpKind": "radioProgramme",
+                "episodeTitle": "Трейлер нового подкаста “Пассажиры Йомей Мару”",
+                "type": "media"
+              },
+              "indexImage": {
+                "id": "",
+                "subType": "index",
+                "href": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "path": "ichef.bbci.co.uk/images/ic/$recipe/p09nx6vm.jpg",
+                "height": 0,
+                "width": 0,
+                "altText": null,
+                "copyrightHolder": null,
+                "type": "image"
+              },
+              "releaseDateTimestamp": 1625788800000,
+              "brand": {
+                "pid": "p09nx6zm",
+                "title": "Пассажиры Йомей Мару"
+              },
+              "id": "urn:bbc:ares:ws_media:page:bbc_russian_radio/p09nx779",
+              "type": "ws_radio"
+            }
+          ]
+        }
+      ]
+    }
+  }

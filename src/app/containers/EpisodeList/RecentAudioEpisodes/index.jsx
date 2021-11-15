@@ -22,6 +22,8 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import EpisodeList from '#containers/EpisodeList';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 const Spacer = styled.aside`
   position: relative;
@@ -45,14 +47,18 @@ const InlineDiv = styled.div`
 `;
 
 const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
-  const {
-    translations,
-    service,
-    script,
-    dir,
-    timezone,
-    datetimeLocale,
-  } = useContext(ServiceContext);
+  const { translations, service, script, dir, timezone, datetimeLocale } =
+    useContext(ServiceContext);
+  const eventTrackingData = {
+    componentName: 'episodes-audio',
+    campaignID:
+      pageType === 'Podcast'
+        ? 'player-episode-podcast'
+        : 'player-episode-radio',
+  };
+
+  const viewTrackerRef = useViewTracker(eventTrackingData);
+  const clickTrackerHandler = useClickTrackerHandler(eventTrackingData);
   const { variant } = useContext(RequestContext);
 
   if (!episodes.length) return null;
@@ -108,8 +114,11 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         liProps={liProps}
       >
         {episodes.map(episode => (
-          <EpisodeList.Episode key={episode.id}>
-            <EpisodeList.Link href={getUrl(episode.id)}>
+          <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
+            <EpisodeList.Link
+              href={getUrl(episode.id)}
+              onClick={clickTrackerHandler}
+            >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">

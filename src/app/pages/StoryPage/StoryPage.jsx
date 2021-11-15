@@ -5,7 +5,7 @@ import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
-  GEL_SPACING_SEXT,
+  GEL_SPACING,
 } from '@bbc/gel-foundations/spacings';
 import SectionLabel from '@bbc/psammead-section-label';
 import {
@@ -14,14 +14,15 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
-import Grid, { GelPageGrid } from '#app/components/Grid';
+import Grid, { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import LinkedData from '#containers/LinkedData';
 import headings from '#containers/Headings';
+import Disclaimer from '#containers/Disclaimer';
 import Timestamp from '#containers/ArticleTimestamp';
-import text from '#containers/CpsText';
+import text from '#containers/Text';
 import Image from '#containers/Image';
 import MediaPlayer from '#containers/CpsAssetMediaPlayer';
 import Blocks from '#containers/Blocks';
@@ -34,10 +35,12 @@ import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
+import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import PodcastPromo from '#containers/PodcastPromo';
+import { InlinePodcastPromo } from '#containers/PodcastPromo';
+
 import {
   getFirstPublished,
   getLastPublished,
@@ -50,6 +53,8 @@ import AdContainer from '#containers/Ad';
 import CanonicalAdBootstrapJs from '#containers/Ad/Canonical/CanonicalAdBootstrapJs';
 import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
+import RelatedTopics from '#containers/RelatedTopics';
+import NielsenAnalytics from '#containers/NielsenAnalytics';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -63,6 +68,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     service,
     serviceLang,
     lang,
+    showRelatedTopics,
   } = useContext(ServiceContext);
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
@@ -96,6 +102,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   );
   const featuresInitialData = path(['secondaryColumn', 'features'], pageData);
   const recommendationsInitialData = path(['recommendations'], pageData);
+  const topics = path(['metadata', 'topics'], pageData);
 
   const gridColumns = {
     group0: 8,
@@ -166,7 +173,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image: props => <Image {...props} shouldPreload={preloadLeadImageToggle} />,
+    image: props => (
+      <Image
+        {...props}
+        sizes="(min-width: 1008px) 645px, 100vw"
+        shouldPreload={preloadLeadImageToggle}
+      />
+    ),
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
@@ -176,6 +189,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     byline: props => <StyledByline {...props} />,
     include: props => <Include {...props} />,
     social_embed: props => <CpsSocialEmbedContainer {...props} />,
+    table: props => <CpsTable {...props} />,
     mpu: props =>
       isAdsEnabled ? <MpuContainer {...props} slotType="mpu" /> : null,
     wsoj: props => (
@@ -185,6 +199,10 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
         items={recommendationsInitialData}
       />
     ),
+    disclaimer: props => (
+      <Disclaimer {...props} increasePaddingOnDesktop={false} />
+    ),
+    podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
   };
 
   const StyledTimestamp = styled(Timestamp)`
@@ -245,7 +263,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
   const ResponsiveComponentWrapper = styled.div`
     margin-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-      margin-bottom: ${GEL_SPACING_SEXT};
+      margin-bottom: ${GEL_SPACING};
       padding: ${GEL_SPACING_DBL};
     }
   `;
@@ -296,6 +314,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <ATIAnalytics data={pageData} />
       <ChartbeatAnalytics data={pageData} />
       <ComscoreAnalytics />
+      <NielsenAnalytics />
       {/* dotcom and dotcomConfig need to be setup before the main dotcom javascript file is loaded */}
       {isAdsEnabled && !isAmp && (
         <CanonicalAdBootstrapJs adcampaign={adcampaign} />
@@ -315,6 +334,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           <main role="main">
             <Blocks blocks={blocks} componentsToRender={componentsToRender} />
           </main>
+
+          {showRelatedTopics && topics && (
+            <GridItemLarge>
+              <RelatedTopics topics={topics} />
+            </GridItemLarge>
+          )}
+
           <CpsRelatedContent
             content={relatedContent}
             parentColumns={gridColsMain}
@@ -336,7 +362,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {podcastPromoEnabled && <PodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis

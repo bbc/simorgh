@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import path from 'ramda/src/path';
+import is from 'ramda/src/is';
 import Lazyload from 'react-lazyload';
 import {
   AmpSocialEmbed,
@@ -8,7 +9,6 @@ import {
 
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
-import useToggle from '#hooks/useToggle';
 import { GridItemMedium } from '#app/components/Grid';
 import { socialEmbedBlockPropTypes } from '#models/propTypes/socialEmbed';
 import nodeLogger from '#lib/logger.node';
@@ -22,23 +22,22 @@ const logger = nodeLogger(__filename);
 const SocialEmbedContainer = ({ blocks, source }) => {
   const { isAmp } = useContext(RequestContext);
   const { service, translations } = useContext(ServiceContext);
-  const { enabled } = useToggle('socialEmbed');
 
-  if (!blocks || !source || !enabled) return null;
+  if (!blocks || !source) return null;
 
   const provider = getProviderFromSource(source);
   const id = getIdFromSource(source);
 
   const { model } = blocks[0];
   const oEmbed = path(['blocks', 0, 'model', 'oembed'], model);
-
-  const index = id;
+  const oEmbedIndexOfType = path(['indexOfType'], oEmbed);
+  const oEmbedPosition = is(Number, oEmbedIndexOfType) && oEmbedIndexOfType + 1;
 
   const {
     fallback: fallbackTranslations,
     skipLink: skipLinkTranslations,
     caption: captionTranslations,
-  } = createTranslations({ translations, index });
+  } = createTranslations({ translations, index: oEmbedPosition });
 
   const fallback = {
     ...fallbackTranslations,
@@ -47,7 +46,10 @@ const SocialEmbedContainer = ({ blocks, source }) => {
 
   const skipLink = {
     ...skipLinkTranslations,
-    endTextId: `skip-%provider%-content-${index}`,
+    endTextId:
+      oEmbedPosition > 0
+        ? `end-of-%provider%-content-${oEmbedPosition}`
+        : `end-of-%provider%-content`,
   };
 
   const caption = provider === 'youtube' ? captionTranslations : null;

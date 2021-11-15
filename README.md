@@ -26,6 +26,8 @@ Please familiarise yourself with our:
 - [Github Project Board Guide](https://github.com/bbc/simorgh/blob/latest/docs/Project-Board-Guide.md)
 - [GPG Signing Guide](docs/GPG-Signing-Guide.md)
 - [Primary README](https://github.com/bbc/simorgh/blob/latest/README.md) (you are here)
+- [Recommended Tools](https://github.com/bbc/simorgh/blob/latest/docs/Recommended-Tools.md)
+- [Troubleshooting](https://github.com/bbc/simorgh/blob/latest/docs/Troubleshooting.md)
 
 NB there is further documentation colocated with relevant code. The above list is an index of the top-level documentation of our repo.
 
@@ -75,6 +77,7 @@ Each render is passed through a set of HOC's (Higher Order Components) to enhanc
 - withLoading
 - withError
 - withData
+- withHashChangeHandler
 
 #### withVariant
 
@@ -107,6 +110,10 @@ If error is set to true the Error component is returned, giving the user a visua
 #### withData
 
 Assuming the other HOC's have returned the original Article or FrontPage container the data HOC will run some validation checks on the JSON data passed in via the data prop. If all of the checks are satisfied the ArticleContainer will be returned with a single `pageData` prop. This pageData props will house the JSON data to be rendered e.g. the Optimo blocks for a given article.
+
+#### withHashChangeHandler
+
+The withHashChangeHandler HOC is a wrapper applied to all pages that checks for changes to the URL hash value. Pages include accessibility controls to skip content should the user choose to do so, this utilises the URL hash to skip users to specific areas of the page. Due to the nature of the client side routing, changes to the URL results in a re-render. This causes some unsightly UI flickering for some components, specifically media and social embeds. This HOC applies checks to the URL so see if a re-render is necessary, or if not preventing a re-render using `React.memo`.
 
 ### Adding a new Page type
 

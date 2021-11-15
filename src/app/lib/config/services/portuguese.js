@@ -68,6 +68,26 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'BBC Lê',
+      brandDescription:
+        'A equipe da BBC News Brasil lê para você algumas de suas melhores reportagens',
+      image: {
+        src: 'https://ichef.bbc.co.uk/images/ic/$recipe/p09qw181.jpg',
+        alt: 'BBC Lê',
+      },
+      linkLabel: {
+        text: 'Episódios',
+        href: 'https://www.bbc.com/portuguese/podcasts/p09qw1cn',
+      },
+      skipLink: {
+        text: 'Pule %title% e continue lendo',
+        endTextVisuallyHidden: 'Fim do %title%',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Publicidade',
@@ -78,12 +98,14 @@ export const service = {
       currentPage: 'Página atual',
       skipLinkText: 'Vá para o conteúdo',
       relatedContent: 'Histórias relacionadas',
+      relatedTopics: 'Tópicos relacionados',
       navMenuText: 'Seções',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Pontos-chave',
       error: {
         404: {
           statusCode: '404',
@@ -148,8 +170,7 @@ export const service = {
               description: {
                 first: 'Nós e nossos parceiros utilizamos tecnologia do tipo ',
                 linkText: 'cookies',
-                last:
-                  ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                last: ' e coletamos dados durante a navegação para lhe proporcionar a melhor experiência online e para personalizar o conteúdo e os anúncios publicitários que são exibidos para você. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -167,10 +188,8 @@ export const service = {
                 para3:
                   'Para que nossas páginas possam funcionar, nós armazenamos em seu dispositivo uma pequena quantidade de informação sem o seu consentimento.',
                 para4: {
-                  text:
-                    'Leia mais sobre a informação essencial que foi armazenada no seu dispositivo para que nossas páginas possam funcionar.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Leia mais sobre a informação essencial que foi armazenada no seu dispositivo para que nossas páginas possam funcionar.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Nós utilizamos capacidade local de armazenamento para guardar no seu dispositivo as preferências de seu consentimento.',
@@ -178,10 +197,8 @@ export const service = {
                 para6:
                   'Ao dar seu consentimento para a coleta de dados em páginas AMP você concorda que sejam exibidos anúncios comerciais personalizados relevantes a você ao acessar essas páginas fora do Reino Unido.',
                 para7: {
-                  text:
-                    'Leia mais sobre como a BBC e seus parceiros comerciais personalisam anúncios comerciais.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'Leia mais sobre como a BBC e seus parceiros comerciais personalisam anúncios comerciais.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Você pode escolher não receber anúncios comerciais personalizados ao clicar abaixo em "Rejeitar coleta de daos e continuar". Os anúncios comerciais ainda serão exibidos mas eles não serão personalizados.',
@@ -196,16 +213,14 @@ export const service = {
               uk: {
                 first: 'Nós usamos ',
                 linkText: 'cookies',
-                last:
-                  ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                last: ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Nós usamos ',
                 linkText: 'cookies',
-                last:
-                  ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
+                last: ' para lhe proporcionar a melhor experiência online. Diga-nos se concorda com o uso de todos estes tipos de cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -218,8 +233,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
+        noJs: 'A reprodução deste formato de vídeo não é compatível com seu dispositivo',
         contentExpired: 'Este conteúdo não está mais disponível.',
         contentNotYetAvailable:
           'Este conteúdo ainda não está disponível para ser tocado.',
@@ -292,8 +306,7 @@ export const service = {
         text: 'Por que você pode confiar na BBC',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Leia sobre nossa política em relação a links externos.',
       },
       links: [
@@ -319,8 +332,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

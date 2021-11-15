@@ -2,7 +2,6 @@ import React from 'react';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContext } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 /**
@@ -11,34 +10,20 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
  * @param {Function} Component A React component.
  * @param {Object} Configuration A configuration object.
  */
-const withContexts = (
-  Component,
-  { isAmp, isEnabled, service = 'news' },
-) => props => (
-  <RequestContextProvider
-    isAmp={isAmp}
-    pageType={STORY_PAGE}
-    service={service}
-    pathname="/pathname"
-  >
-    <ServiceContextProvider service={service}>
-      <ToggleContext.Provider
-        value={{
-          toggleState: {
-            cpsSocialEmbed: {
-              enabled: isEnabled,
-            },
-            socialEmbed: {
-              enabled: isEnabled,
-            },
-          },
-          toggleDispatch: () => {},
-        }}
+const withContexts =
+  (Component, { isAmp, service = 'news' }) =>
+  props =>
+    (
+      <RequestContextProvider
+        isAmp={isAmp}
+        pageType={STORY_PAGE}
+        service={service}
+        pathname="/pathname"
       >
-        <Component {...props} />
-      </ToggleContext.Provider>
-    </ServiceContextProvider>
-  </RequestContextProvider>
-);
+        <ServiceContextProvider service={service}>
+          <Component {...props} />
+        </ServiceContextProvider>
+      </RequestContextProvider>
+    );
 
 export default withContexts;

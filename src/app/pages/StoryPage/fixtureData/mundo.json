@@ -109,7 +109,33 @@
       "media",
       "include"
     ],
-    "includeComments": false
+    "includeComments": false,
+    "topics": [
+      {
+        "topicName": "Who let the dogs out?",
+        "topicId": "topic1"
+      },
+      {
+        "topicName": "Who?",
+        "topicId": "topic2"
+      },
+      {
+        "topicName": "Who?",
+        "topicId": "topic3"
+      },
+      {
+        "topicName": "Who?",
+        "topicId": "topic4"
+      },
+      {
+        "topicName": "Who?",
+        "topicId": "topic5"
+      },
+      {
+        "topicName": "Who?",
+        "topicId": "topic6"
+      }
+    ]
   },
   "relatedContent": {
     "groups": [

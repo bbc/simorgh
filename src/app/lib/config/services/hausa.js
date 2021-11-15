@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/hausa.png',
     defaultImageAltText: 'BBC News Hausa',
     dir: `ltr`,
-    externalLinkText: ', adireshin waje',
+    externalLinkText: ', waje',
     imageCaptionOffscreenText: 'Bayanan hoto, ',
     videoCaptionOffscreenText: 'Bayanan bidiyo, ',
     audioCaptionOffscreenText: 'Bayanan sauti',
@@ -56,6 +56,22 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'Podcast',
+      brandTitle: 'Korona: Ina Mafita?',
+      brandDescription:
+        'Shiri na musamman da sashen Hausa na BBC zai dinga kawo muku kan cutar Coronavirus',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p08mlbpj.jpg',
+        alt: 'Korona: Ina Mafita?',
+      },
+      linkLabel: {
+        text: 'Kashi-kashi',
+        href: 'https://www.bbc.com/hausa/podcasts/p08mlgcb',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'Talla',
@@ -65,12 +81,14 @@ export const service = {
       currentPage: 'Shafin da ake ciki',
       skipLinkText: 'Tsallaka zuwa abubuwan da ke ciki',
       relatedContent: 'Karin bayani',
+      relatedTopics: 'Labarai masu alaka',
       navMenuText: 'Sassa',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'Takaitacce',
       error: {
         404: {
           statusCode: '404',
@@ -133,8 +151,7 @@ export const service = {
                 first:
                   'Mu da sauran abokan hulda muna amfani da fasaha kamar adireshin waje, sannan mu ',
                 linkText: 'tattara',
-                last:
-                  ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
+                last: ' wasu bayanai game da ku duka domin mu samar maku da abubuwa masu kayatarwa a Intanet',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -151,20 +168,16 @@ export const service = {
                 para3:
                   'Domin shafukanmu su gudana, mun tattara wasu ƴan bayanai kan wayarku ba tare da izininku ba.',
                 para4: {
-                  text:
-                    'Karanta muhimman bayanan da muka tattara kan wayarku domin inganta shafukanmu.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'Karanta muhimman bayanan da muka tattara kan wayarku domin inganta shafukanmu.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5: 'Muna adana bayanan da kuka amice mu ɗauka na wayarku.',
                 heading3: 'Zaɓi kan tara bayanai',
                 para6:
                   'Idan kuka amince mu tattara bayanai a kanku a shafukan AMP, hakan na nufin kun amince mu nuna muku tallace-tallacen da suka dace da ku idan a wajen Burtaniya kuke.',
                 para7: {
-                  text:
-                    "Karanta ƙarin bayani kan yadda muke tsara tallace-tallace da suke dacewa da ra'ayinku a shafukan BBC da na abokan hulɗarmu.",
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: "Karanta ƙarin bayani kan yadda muke tsara tallace-tallace da suke dacewa da ra'ayinku a shafukan BBC da na abokan hulɗarmu.",
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   "Kuna da zaɓin ƙin turo muku da tallace-tallacen da suka dace da ra'ayinku ta hanyar latsa wajen da aka nemi amincewarku sannan ku ci gaba.",
@@ -179,16 +192,14 @@ export const service = {
               uk: {
                 first: 'Muna amfani da ',
                 linkText: "ka'idoji",
-                last:
-                  " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
+                last: " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Muna amfani da ',
                 linkText: "ka'idoji",
-                last:
-                  " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
+                last: " domin samar maku da abubuwa masu kayatarwa a Intanet. Muna rokonku da ku sanar da mu idan kun gamsu da duka wadannan ka'idoji.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -283,8 +294,7 @@ export const service = {
         text: 'Me ya sa za ku iya aminta da BBC',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Karanta hanyoyin da muke bi dangane da adireshin waje.',
       },
       links: [
@@ -310,8 +320,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

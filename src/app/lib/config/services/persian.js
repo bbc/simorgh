@@ -30,7 +30,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/persian.png',
     defaultImageAltText: 'BBC News فارسی',
     dir: 'rtl',
-    externalLinkText: '، لینک خارجی',
+    externalLinkText: '، خارجی',
     imageCaptionOffscreenText: 'توضیح تصویر، ',
     videoCaptionOffscreenText: 'توضیح ویدئو، ',
     audioCaptionOffscreenText: 'توضیح صدا، ',
@@ -62,6 +62,26 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
+    podcastPromo: {
+      title: 'پادکست',
+      brandTitle: 'به عبارت دیگر',
+      brandDescription:
+        'گفتگو با چهره‌های سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
+      image: {
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
+        alt: 'پادکست',
+      },
+      linkLabel: {
+        text: 'برنامه ها',
+        href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
+      },
+      skipLink: {
+        text: 'از %title% رد شوید و به خواندن ادامه دهید',
+        endTextVisuallyHidden: 'پایان %title%',
+      },
+    },
     translations: {
       ads: {
         advertisementLabel: 'آگهی',
@@ -71,12 +91,14 @@ export const service = {
       currentPage: 'صفحه فعلی',
       skipLinkText: 'مشاهده محتوا',
       relatedContent: 'مطالب مرتبط',
+      relatedTopics: 'موضوعات مرتبط',
       navMenuText: 'صفحه ها',
       mediaAssetPage: {
         mediaPlayer: 'پخش صدا و تصویر',
         audioPlayer: 'پخش صدا',
         videoPlayer: 'پخش ویدیو',
       },
+      gist: 'خلاصه',
       error: {
         404: {
           statusCode: '۴۰۴',
@@ -143,8 +165,7 @@ export const service = {
                 first:
                   'ما و شریکانمان برای اینکه خدمات آنلاین بهتری به شما ارائه کنیم و محتوای مورد نظرتان را به شما نشان دهیم از تکنولوژی‌هایی مانند ',
                 linkText: 'کوکی ها',
-                last:
-                  ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
+                last: ' یا برداشت از داده‌های مرورگر شما استفاده می‌کنیم؛ اگر موافق هستید تایید کنید',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -161,10 +182,8 @@ export const service = {
                 para3:
                   'برای کار با صفحات وب ما، ما اطلاعات محدودی را بدون رضایت شما در دستگاه شما ذخیره می کنیم.',
                 para4: {
-                  text:
-                    'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'درباره اطلاعات اساسی که برای کار با صفحات وب ما در دستگاه شما ذخیره می کنیم بیشتر بخوانید.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'ما اطلاعات مربوط به  رضایت یا عدم رضایت شما را به صورت محلی در دستگاهتان  ذخیره می کنیم.',
@@ -172,10 +191,8 @@ export const service = {
                 para6:
                   'وقتی موافقت خود را برای جمع آوری داده ها در صفحات AMP اعلام می کنید، به ما اجازه می دهید تبلیغات شخصی شده مربوط به شما را هنگامی که خارج از بریتانیا هستنید، نمایش دهیم.',
                 para7: {
-                  text:
-                    'درباره نحوه شخصی سازی تبلیغات در بی بی سی و شرکای تبلیغاتی ما بیشتر بخوانید.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'درباره نحوه شخصی سازی تبلیغات در بی بی سی و شرکای تبلیغاتی ما بیشتر بخوانید.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'شما می توانید با کلیک "رد کردن جمع آوری داده ها و ادامه دادن" در زیر، تبلیغات شخصی را دریافت نکنید. لطفاً توجه داشته باشید که همچنان تبلیغات را مشاهده خواهید کرد، اما برای شما شخصی نخواهد شد.',
@@ -190,16 +207,14 @@ export const service = {
               uk: {
                 first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
                 linkText: 'کوکی',
-                last:
-                  ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'ما برای بهبود استفاده شما از خدمات بی‌بی‌سی از ',
                 linkText: 'کوکی',
-                last:
-                  ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
+                last: ' استفاده می‌کنیم. اگر موافق هستید دریافت کوکی‌ها را تایید کنید',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -212,8 +227,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
+        noJs: 'برای پخش این فایل لطفا جاوا اسکریپت را فعال یا از یک مرورگر دیگر استفاده کنید.',
         contentExpired: 'این محتوا دیگر قابل دسترس نیست.',
         contentNotYetAvailable: 'این برنامه هم اکنون برای پخش آماده نیست.',
         audio: 'صدا',
@@ -325,8 +339,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

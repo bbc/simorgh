@@ -25,7 +25,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/afrique.png',
     defaultImageAltText: 'BBC News Afrique',
     dir: `ltr`,
-    externalLinkText: ', lien externe',
+    externalLinkText: ', externe',
     imageCaptionOffscreenText: 'Légende image, ',
     videoCaptionOffscreenText: 'Légende vidéo, ',
     audioCaptionOffscreenText: 'Légende audio, ',
@@ -57,6 +57,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: true,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Publicités',
@@ -66,12 +68,14 @@ export const service = {
       currentPage: 'Page en cours',
       skipLinkText: 'Aller au contenu',
       relatedContent: 'Lire plus',
+      relatedTopics: 'Sujets associés',
       navMenuText: 'Rubriques',
       mediaAssetPage: {
         mediaPlayer: 'Lecteur média',
         audioPlayer: 'Lecteur audio',
         videoPlayer: 'Lecteur vidéo',
       },
+      gist: 'Points clés',
       error: {
         404: {
           statusCode: '404',
@@ -140,8 +144,7 @@ export const service = {
                 first:
                   'Nous et nos partenaires utilisons des technologies, comme ',
                 linkText: 'cookies',
-                last:
-                  ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
+                last: ", et collectons des données de navigation pour vous offrir la meilleure expérience en ligne et pour personnaliser le contenu et la publicité qui vous sont présentés. Veuillez nous faire savoir si vous êtes d'accord.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -158,10 +161,8 @@ export const service = {
                 para3:
                   'Pour que nos pages web fonctionnent, nous stockons certaines informations limitées sur votre appareil sans votre consentement.',
                 para4: {
-                  text:
-                    'En savoir plus sur les informations essentielles que nous stockons sur votre appareil pour faire fonctionner nos pages web.',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'En savoir plus sur les informations essentielles que nous stockons sur votre appareil pour faire fonctionner nos pages web.',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'Nous utilisons le stockage local pour enregistrer vos préférences de consentement sur votre appareil.',
@@ -169,10 +170,8 @@ export const service = {
                 para6:
                   'Lorsque vous consentez à la collecte de données sur les pages AMP, vous nous autorisez à afficher des publicités personnalisées qui vous concernent lorsque vous êtes en dehors du Royaume-Uni.',
                 para7: {
-                  text:
-                    'En savoir plus sur la façon dont nous personnalisons les publicités à la BBC et chez nos partenaires publicitaires.',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'En savoir plus sur la façon dont nous personnalisons les publicités à la BBC et chez nos partenaires publicitaires.',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Vous pouvez choisir de ne pas recevoir d\'annonces personnalisées en cliquant sur "Refuser la collecte de données et continuer" ci-dessous. Veuillez noter que vous verrez toujours des annonces, mais qu\'elles ne seront pas personnalisées pour vous.',
@@ -187,16 +186,14 @@ export const service = {
               uk: {
                 first: 'Nous utilisons ',
                 linkText: 'cookies',
-                last:
-                  ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
+                last: ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'Nous utilisons ',
                 linkText: 'cookies',
-                last:
-                  ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
+                last: ' pour vous offrir la meilleur expérience en ligne. Veuillez nous faire savoir si vous acceptez tous ces cookies.',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -209,8 +206,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
+        noJs: 'Pour regarder ce contenu, veuillez activer JavaScript ou essayer un autre navigateur.',
         contentExpired: "Ce contenu n'est pas disponible",
         contentNotYetAvailable: 'Ce programme ne peut être joué maintenant.',
         audio: 'Audio',
@@ -238,8 +234,7 @@ export const service = {
       socialEmbed: {
         caption: {
           textPrefixVisuallyHidden: 'Légende vidéo, ',
-          text:
-            'Attention: le contenu externe peut contenir des messages publicitaires',
+          text: 'Attention: le contenu externe peut contenir des messages publicitaires',
         },
         fallback: {
           text: "Ce contenu n'est pas disponible",
@@ -287,8 +282,7 @@ export const service = {
         text: 'Pourquoi vous pouvez faire confiance à BBC News',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'Découvrez notre approche en matière de liens externes.',
       },
       links: [
@@ -314,8 +308,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

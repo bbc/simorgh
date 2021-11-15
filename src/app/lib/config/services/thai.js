@@ -27,7 +27,7 @@ export const service = {
     defaultImage: 'https://news.files.bbci.co.uk/ws/img/logos/og/thai.png',
     defaultImageAltText: 'BBC News ไทย',
     dir: `ltr`,
-    externalLinkText: ', ลิงก์จากภายนอก',
+    externalLinkText: ', จากภายนอก',
     imageCaptionOffscreenText: 'คำบรรยายภาพ, ',
     videoCaptionOffscreenText: 'คำบรรยายวิดีโอ, ',
     audioCaptionOffscreenText: 'คำบรรยายเสียง, ',
@@ -56,6 +56,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'โฆษณา',
@@ -65,12 +67,14 @@ export const service = {
       currentPage: 'หน้าปัจจุบัน',
       skipLinkText: 'ข้ามไปยังเนื้อหา',
       relatedContent: 'อ่านเรื่องที่เกี่ยวข้อง',
+      relatedTopics: 'ข่าวที่เกี่ยวข้อง',
       navMenuText: 'หมวดข่าว',
       mediaAssetPage: {
         mediaPlayer: 'มีเดีย เพลเยอร์',
         audioPlayer: 'ออดิโอ เพลเยอร์',
         videoPlayer: 'วิดีโอ เพลเยอร์',
       },
+      gist: 'สรุป',
       error: {
         404: {
           statusCode: '404',
@@ -135,8 +139,7 @@ export const service = {
               description: {
                 first: 'เราและพันธมิตรใช้เทคโนโลยี อย่างเช่น ',
                 linkText: 'คุกกีส์',
-                last:
-                  ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
+                last: ' และข้อมูลการเข้าเว็บไซต์ต่าง ๆ ที่ถูกจัดเก็บไว้ เพื่อทำให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ และทำให้เนื้อหาและโฆษณาที่คุณได้รับตรงกับความสนใจของคุณ กรุณาแจ้งให้เราทราบว่าคุณยอมรับหรือไม่',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -153,10 +156,8 @@ export const service = {
                 para3:
                   'เพื่อให้หน้าเว็บของเราทำงานได้ดี เราจึงต้องเก็บสารสนเทศบางอย่างในวงจำกัดไว้บนอุปกรณ์ของคุณ โดยไม่ได้ขอความยินยอมเสียก่อน',
                 para4: {
-                  text:
-                    'อ่านเพิ่มเติมเกี่ยวกับสารสนเทศที่จำเป็นต่อการทำงานของหน้าเว็บ ซึ่งเราเก็บไว้บนอุปกรณ์ของคุณ',
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: 'อ่านเพิ่มเติมเกี่ยวกับสารสนเทศที่จำเป็นต่อการทำงานของหน้าเว็บ ซึ่งเราเก็บไว้บนอุปกรณ์ของคุณ',
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   'เราใช้ local storage เก็บรักษาข้อมูลตัวเลือกความยินยอมของคุณ บนอุปกรณ์ของคุณเอง',
@@ -164,10 +165,8 @@ export const service = {
                 para6:
                   'เมื่อคุณยินยอมให้เก็บข้อมูลบนหน้าเว็บ AMP นั่นเท่ากับยินยอมให้เราแสดงโฆษณาที่คัดเลือกแล้วว่าเหมาะสมเฉพาะบุคคลและเกี่ยวข้องกับคุณ แม้ในเวลาที่คุณอยู่นอกสหราชอาณาจักร',
                 para7: {
-                  text:
-                    'อ่านเพิ่มเติมว่าเราคัดเลือกโฆษณาที่เหมาะสมเฉพาะบุคคลอย่างไรในเว็บไซต์ของบีบีซี รวมทั้งพันธมิตรด้านการโฆษณาของเรา',
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: 'อ่านเพิ่มเติมว่าเราคัดเลือกโฆษณาที่เหมาะสมเฉพาะบุคคลอย่างไรในเว็บไซต์ของบีบีซี รวมทั้งพันธมิตรด้านการโฆษณาของเรา',
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'คุณสามารถเลือกไม่รับข้อมูลโฆษณาเฉพาะบุคคลได้ โดยคลิกที่ “ปฏิเสธการเก็บข้อมูลและดูเว็บต่อ” ตรงด้านล่าง โปรดทราบว่าคุณจะยังคงเห็นโฆษณาอยู่ แต่จะไม่ใช่โฆษณาที่ถูกคัดเลือกว่าเหมาะสมเฉพาะกับคุณเท่านั้น',
@@ -182,16 +181,14 @@ export const service = {
               uk: {
                 first: 'เราใช้ ',
                 linkText: 'คุกกีส์',
-                last:
-                  ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+                last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
               international: {
                 first: 'เราใช้ ',
                 linkText: 'คุกกีส์',
-                last:
-                  ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
+                last: ' เพื่อให้คุณได้รับประสบการณ์ที่ดีที่สุดในโลกออนไลน์ กรุณาแจ้งให้เราทราบว่า คุณยอมรับคุกกีส์ทั้งหมดนี้',
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/',
               },
@@ -204,8 +201,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
+        noJs: 'โปรดเปิดการใช้งาน JavaScript หรือบราวเซอร์ต่างออกไป เพื่ดูเนื้อหานี้',
         contentExpired: 'เนื้อหานี้ไม่เป็นที่ปรากฏแล้ว',
         contentNotYetAvailable: 'เนื้อหานี้ยังไม่พร้อมแสดง',
         audio: 'เสียง',
@@ -290,7 +286,7 @@ export const service = {
       },
       {
         title: 'วิดีโอ',
-        url: '/thai/other-news-56317806',
+        url: '/thai/media/video',
       },
       {
         title: 'ยอดนิยม',
@@ -303,8 +299,7 @@ export const service = {
         text: 'ทำไมคุณจึงไว้วางใจ บีบีซี ได้',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: 'อ่านเกี่ยวกับแนวทางของเราในการติดต่อกับลิงก์ภายนอก',
       },
       links: [
@@ -330,8 +325,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

@@ -1,7 +1,5 @@
 import React from 'react';
-import { MemoryRouter } from 'react-router';
-import { render, waitFor, act } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
 import ArticlePage from './ArticlePage';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -15,7 +13,11 @@ import {
 import newsMostReadData from '#data/news/mostRead';
 import persianMostReadData from '#data/persian/mostRead';
 import pidginMostReadData from '#data/pidgin/mostRead';
-import { textBlock } from '#models/blocks/index';
+import {
+  textBlock,
+  blockContainingText,
+  singleTextBlock,
+} from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
@@ -40,7 +42,7 @@ const Context = ({ service, children }) => (
         service={service}
         statusCode={200}
       >
-        <MemoryRouter>{children}</MemoryRouter>
+        {children}
       </RequestContextProvider>
     </ServiceContextProvider>
   </ToggleContextProvider>
@@ -98,7 +100,7 @@ describe('ArticleMetadata get branded image', () => {
           .querySelector('meta[property="og:image"]')
           .getAttribute('content'),
       ).toEqual(
-        'https://www.bbc.co.uk/news/special/2015/newsspec_10857/bbc_news_logo.png',
+        'https://static.files.bbci.co.uk/ws/simorgh-assets/public/news/images/metadata/poster-1024x576.png',
       );
     });
   });
@@ -186,7 +188,9 @@ it('should render a news article correctly', async () => {
     </Context>,
   );
 
-  expect(container).toMatchSnapshot();
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
 });
 
 it('should render a rtl article (persian) with most read correctly', async () => {
@@ -220,98 +224,94 @@ it('should render a ltr article (pidgin) with most read correctly', async () => 
   expect(mostReadSection).not.toBeNull();
   expect(container).toMatchSnapshot();
 });
-it('should focus on id when anchor link is clicked', async () => {
-  const articleDataNewsWithSummary = mergeDeepLeft(
-    {
-      content: {
-        model: {
-          blocks: [
-            {
-              id: '1',
-              type: 'text',
-              model: {
-                blocks: [
-                  {
-                    id: '2',
-                    type: 'paragraph',
-                    model: {
-                      text: 'Anchor 1',
-                      blocks: [
-                        {
-                          id: '3',
-                          type: 'urlLink',
-                          model: {
-                            text: 'Anchor 1 link',
-                            blocks: [
-                              {
-                                id: '4',
-                                type: 'fragment',
-                                model: {
-                                  text: 'Anchor 1 link',
-                                  attributes: ['bold'],
-                                },
-                              },
-                            ],
-                            locator:
-                              'https://www.test.bbc.com/mundo/articles/ce4krqk1334o#Anchor-1',
-                            isExternal: false,
-                          },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
+
+it('should render a news article with headline in the middle correctly', async () => {
+  const headline = blockContainingText('headline', 'Article Headline', 1);
+
+  const articleWithSummaryHeadlineInTheMiddle = {
+    ...articleDataNews,
+    content: {
+      model: {
+        blocks: [
+          singleTextBlock('Paragraph above headline', 2),
+          {
+            ...headline,
+            model: {
+              ...headline.model,
+              blocks: [
+                {
+                  ...headline.model.blocks[0],
+                  position: [2, 1],
+                },
+              ],
             },
-            {
-              id: '5',
-              type: 'subheadline',
-              model: {
-                blocks: [
-                  {
-                    id: '6',
-                    type: 'text',
-                    model: {
-                      blocks: [
-                        {
-                          id: '7',
-                          type: 'paragraph',
-                          model: {
-                            text: 'Anchor 1',
-                            blocks: [
-                              {
-                                id: '8',
-                                type: 'fragment',
-                                model: {
-                                  text: 'Anchor 1 heading',
-                                  attributes: [],
-                                },
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    },
-                  },
-                ],
-              },
-            },
-          ],
-        },
+          },
+          singleTextBlock('Paragraph below headline', 3),
+        ],
       },
     },
-    articleDataNews,
-  );
-  const { getByText } = render(
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'SEO Headline',
+        promoHeadline: 'Promo Headline',
+      },
+    },
+  };
+
+  const { container } = render(
     <Context service="news">
-      <ArticlePage pageData={articleDataNewsWithSummary} />
+      <ArticlePage pageData={articleWithSummaryHeadlineInTheMiddle} />
     </Context>,
   );
-  const link = getByText('Anchor 1 link').closest('a');
-  const element = getByText('Anchor 1 heading');
-  window.HTMLElement.prototype.scrollIntoView = jest.fn();
-  expect(link.href).toContain(element.id);
-  act(() => userEvent.click(link));
-  expect(document.activeElement).toEqual(element);
-  expect(window.HTMLElement.prototype.scrollIntoView).toHaveBeenCalledTimes(1);
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render a news article without headline correctly', async () => {
+  const articleWithoutHeadline = {
+    ...articleDataNews,
+    content: {
+      model: {
+        blocks: [singleTextBlock('Paragraph 1', 2)],
+      },
+    },
+    promo: {
+      ...articleDataNews.promo,
+      headlines: {
+        seoHeadline: 'Article Headline',
+        promoHeadline: 'Promo Headline',
+      },
+    },
+  };
+
+  const { container } = render(
+    <Context service="news">
+      <ArticlePage pageData={articleWithoutHeadline} />
+    </Context>,
+  );
+
+  await waitFor(() => {
+    expect(container).toMatchSnapshot();
+  });
+});
+
+it('should render the top stories and features when passed', async () => {
+  const pageDataWithSecondaryColumn = {
+    ...articleDataNews,
+    secondaryColumn: {
+      topStories: [],
+      features: [],
+    },
+  };
+  const { getByTestId } = render(
+    <Context service="news">
+      <ArticlePage pageData={pageDataWithSecondaryColumn} />
+    </Context>,
+  );
+
+  expect(getByTestId('top-stories')).toBeInTheDocument();
+  expect(getByTestId('features')).toBeInTheDocument();
 });

@@ -61,6 +61,8 @@ export const service = {
       brandHighlightColour: `${C_WHITE}`,
       brandBorderColour: `${C_POSTBOX_30}`,
     },
+    showAdPlaceholder: false,
+    showRelatedTopics: true,
     translations: {
       ads: {
         advertisementLabel: 'Advertisement',
@@ -70,12 +72,15 @@ export const service = {
       currentPage: 'Y dudalen bresennol',
       skipLinkText: `Neidio i'r cynnwys`,
       relatedContent: 'Cynnwys perthnasol',
+      topicsPath: 'pynciau',
+      relatedTopics: 'Pynciau Cysylltiedig',
       navMenuText: 'Adrannau',
       mediaAssetPage: {
         mediaPlayer: 'Media player',
         audioPlayer: 'Audio player',
         videoPlayer: 'Video player',
       },
+      gist: 'At a glance',
       error: {
         404: {
           statusCode: '404',
@@ -140,8 +145,7 @@ export const service = {
                 first:
                   "Rydyn ni a'n partneriaid yn defnyddio dyfeisiau technolegol, fel ",
                 linkText: 'cwcis',
-                last:
-                  ", ac yn casglu data pori er mwyn rhoi'r profiad ar-lein gorau posib i chi, ac er mwyn personoleiddio’r cynnwys a'r hysbysebion sy’n cael eu cynnig i chi. Rhowch wybod os ydych yn cytuno.",
+                last: ", ac yn casglu data pori er mwyn rhoi'r profiad ar-lein gorau posib i chi, ac er mwyn personoleiddio’r cynnwys a'r hysbysebion sy’n cael eu cynnig i chi. Rhowch wybod os ydych yn cytuno.",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/cy/',
               },
@@ -158,10 +162,8 @@ export const service = {
                 para3:
                   "Er mwyn gwneud i'n tudalennau gwe weithio, ry'n ni'n storio peth gwybodaeth gyfyngedig ar eich dyfais heb eich caniatâd.",
                 para4: {
-                  text:
-                    "Darllen mwy am y wybodaeth hanfodol ry'n ni'n ei storio ar eich dyfais er mwyn i'n tudalennau gwe weithio.",
-                  url:
-                    'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
+                  text: "Darllen mwy am y wybodaeth hanfodol ry'n ni'n ei storio ar eich dyfais er mwyn i'n tudalennau gwe weithio.",
+                  url: 'https://www.bbc.co.uk/usingthebbc/strictly-necessary-cookies/',
                 },
                 para5:
                   "Ry'n ni'n defnyddio'r storfa leol i storio eich dewisiadau caniatâd ar eich dyfais.",
@@ -169,10 +171,8 @@ export const service = {
                 para6:
                   "Pan rydych chi'n caniatáu casglu data ar dudalennau AMP, rydych chi'n caniatáu i ni arddangos hysbysebion wedi eu personoleiddio sy’n berthnasol i chi pan rydych chi tu allan i'r DU.",
                 para7: {
-                  text:
-                    "Darllen mwy am sut ry'n ni'n personoleiddio hysbysebion yn y BBC a'n partneriaid hysbysebu.",
-                  url:
-                    'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+                  text: "Darllen mwy am sut ry'n ni'n personoleiddio hysbysebion yn y BBC a'n partneriaid hysbysebu.",
+                  url: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
                 },
                 para8:
                   'Gallwch ddewis peidio â derbyn hysbysebion wedi eu personoleiddio drwy glicio "Gwrthod y casglu data a pharhau" isod. Nodwch y byddwch chi\'n parhau i weld hysbysebion, ond ni fyddan nhw wedi eu personoleiddio i chi.',
@@ -187,16 +187,14 @@ export const service = {
               uk: {
                 first: "Rydyn ni'n defnyddio ",
                 linkText: 'cwcis',
-                last:
-                  " i roi'r profiad ar-lein gorau posib i chi. Gadewch i ni wybod os ydych chi'n cytuno i'r cwcis yma",
+                last: " i roi'r profiad ar-lein gorau posib i chi. Gadewch i ni wybod os ydych chi'n cytuno i'r cwcis yma",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/cy/',
               },
               international: {
                 first: "Rydyn ni'n defnyddio ",
                 linkText: 'cwcis',
-                last:
-                  " i roi'r profiad ar-lein gorau posib i chi. Gadewch i ni wybod os ydych chi'n cytuno i'r cwcis yma",
+                last: " i roi'r profiad ar-lein gorau posib i chi. Gadewch i ni wybod os ydych chi'n cytuno i'r cwcis yma",
                 linkUrl:
                   'https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/cy/',
               },
@@ -209,8 +207,7 @@ export const service = {
         },
       },
       media: {
-        noJs:
-          'To play this content, please enable JavaScript, or try a different browser',
+        noJs: 'To play this content, please enable JavaScript, or try a different browser',
         contentExpired: 'This content is no longer available',
         audio: 'Sain',
         photogallery: 'Oriel luniau',
@@ -248,8 +245,7 @@ export const service = {
         text: 'Pam y gallwch ymddiried yn BBC Cymru Fyw',
       },
       externalLink: {
-        href:
-          'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
+        href: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
         text: "Sut ry'n ni'n defnyddio dolenni allanol.",
       },
       links: [
@@ -271,8 +267,7 @@ export const service = {
         },
         {
           id: 'COOKIE_SETTINGS',
-          href:
-            'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
+          href: 'https://www.bbc.com/usingthebbc/cookies/how-does-the-bbc-use-cookies-for-advertising/',
           text: 'AdChoices / Do Not Sell My Info',
           lang: 'en-GB',
         },

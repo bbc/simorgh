@@ -6,6 +6,7 @@ import {
   GEL_SPACING_TRPL,
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
+import { node } from 'prop-types';
 import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -16,10 +17,11 @@ import MediaMessage from './MediaMessage';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
+import disclaimer from '#containers/Disclaimer';
 import headings from '#containers/Headings';
 import Timestamp from '#containers/ArticleTimestamp';
-import text from '#containers/CpsText';
-import image from '#containers/Image';
+import text from '#containers/Text';
+import Image from '#containers/Image';
 import ChartbeatAnalytics from '#containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import CpsAssetMediaPlayer from '#containers/CpsAssetMediaPlayer';
@@ -35,8 +37,10 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { GelPageGrid } from '#app/components/Grid';
+import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
+import RelatedTopics from '#containers/RelatedTopics';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {
@@ -48,7 +52,29 @@ const StyledTimestamp = styled(Timestamp)`
   }
 `;
 
+const MediaAssetPageGrid = ({ children, ...props }) => (
+  <GelPageGrid
+    enableGelGutters
+    columns={{
+      group0: 6,
+      group1: 6,
+      group2: 6,
+      group3: 6,
+      group4: 8,
+      group5: 20,
+    }}
+    {...props}
+  >
+    {children}
+  </GelPageGrid>
+);
+
+MediaAssetPageGrid.propTypes = {
+  children: node.isRequired,
+};
+
 const MediaAssetPage = ({ pageData }) => {
+  const { showRelatedTopics } = useContext(ServiceContext);
   const { canonicalLink, isAmp } = useContext(RequestContext);
   const isLegacyMediaAssetPage = () => canonicalLink.split('/').length > 7;
 
@@ -64,6 +90,7 @@ const MediaAssetPage = ({ pageData }) => {
     ['relatedContent', 'groups', 0, 'promos'],
     pageData,
   );
+  const topics = path(['metadata', 'topics'], pageData);
 
   const getIndexImageLocator = () => {
     const indexImagePath = pathOr(
@@ -89,7 +116,9 @@ const MediaAssetPage = ({ pageData }) => {
     headline: headings,
     subheadline: headings,
     text,
-    image,
+    image: props => (
+      <Image {...props} sizes="(min-width: 1008px) 760px, 100vw" />
+    ),
     timestamp: props =>
       allowDateStamp ? (
         <StyledTimestamp {...props} popOut={false} minutesTolerance={1} />
@@ -132,9 +161,10 @@ const MediaAssetPage = ({ pageData }) => {
       />
     ),
     unavailableMedia: MediaMessage,
+    disclaimer,
   };
 
-  const StyledGelPageGrid = styled(GelPageGrid)`
+  const StyledMediaAssetPageGrid = styled(MediaAssetPageGrid)`
     padding-bottom: ${GEL_SPACING_TRPL};
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
       width: 100%;
@@ -173,21 +203,17 @@ const MediaAssetPage = ({ pageData }) => {
         imageLocator={indexImageLocator}
       />
       <ATIAnalytics data={pageData} />
-      <StyledGelPageGrid
-        as="main"
-        role="main"
-        enableGelGutters
-        columns={{
-          group0: 6,
-          group1: 6,
-          group2: 6,
-          group3: 6,
-          group4: 8,
-          group5: 20,
-        }}
-      >
+      <StyledMediaAssetPageGrid as="main" role="main">
         <Blocks blocks={blocks} componentsToRender={componentsToRender} />
-      </StyledGelPageGrid>
+      </StyledMediaAssetPageGrid>
+
+      {showRelatedTopics && topics && (
+        <MediaAssetPageGrid>
+          <GridItemLarge>
+            <RelatedTopics topics={topics} />
+          </GridItemLarge>
+        </MediaAssetPageGrid>
+      )}
 
       <CpsRelatedContent content={relatedContent} isMediaContent />
       {!isAmp && (

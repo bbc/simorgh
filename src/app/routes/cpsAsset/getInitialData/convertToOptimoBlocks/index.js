@@ -1,5 +1,7 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
+import pick from 'ramda/src/pick';
+import identity from 'ramda/src/identity';
 import clone from '../../../utils/jsonClone';
 import paragraph from './blocks/paragraph';
 import media from './blocks/media';
@@ -10,6 +12,7 @@ import subheadline from './blocks/subheadline';
 import version from './blocks/version';
 import include from './blocks/include';
 import socialEmbed from './blocks/socialEmbed';
+import table from './blocks/table';
 import { UNSUPPORTED_BLOCK_TYPE } from '#lib/logger.const';
 
 const nodeLogger = require('#lib/logger.node');
@@ -40,6 +43,8 @@ const typesToConvert = {
   legacyMedia,
   include,
   social_embed: socialEmbed,
+  table,
+  podcastPromo: identity,
 };
 
 // Here pathname is passed as a prop specifically for CPS includes
@@ -63,6 +68,12 @@ const parseBlockByType = (block, json, assetType, pathname) => {
   return parsedBlock;
 };
 
+const transferSimorghMetadata = (originalBlocks, newBlocks) =>
+  newBlocks.map((newBlock, i) => {
+    if (!newBlock) return newBlock;
+    return { ...newBlock, ...pick(['simorghMetadata'], originalBlocks[i]) };
+  });
+
 const convertToOptimoBlocks = async (jsonRaw, pathname) => {
   const json = clone(jsonRaw);
   const assetType = path(['metadata', 'type'], json);
@@ -76,7 +87,7 @@ const convertToOptimoBlocks = async (jsonRaw, pathname) => {
     ...json,
     content: {
       model: {
-        blocks: parsedBlocks.filter(Boolean),
+        blocks: transferSimorghMetadata(blocks, parsedBlocks).filter(Boolean),
       },
     },
   };

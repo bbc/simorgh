@@ -189,15 +189,22 @@ export const getAtUserId = () => {
   if (isOperaProxy()) return null;
 
   const cookieName = 'atuserid';
-  const cookie = Cookie.getJSON(cookieName);
-  let val = pathOr(null, ['val'], cookie);
+  let cookie = Cookie.get(cookieName);
   const expires = 397; // expires in 13 months
 
-  if (!cookie || !val) {
-    val = uuid();
+  if (cookie) {
+    try {
+      cookie = JSON.parse(cookie);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+      cookie = null;
+    }
   }
 
-  Cookie.set(cookieName, { val }, { expires, path: '/' });
+  const val = path(['val'], cookie) || uuid();
+
+  Cookie.set(cookieName, JSON.stringify({ val }), { expires, path: '/' });
 
   return val;
 };
@@ -328,6 +335,47 @@ const buildMarketingString = marketingValues =>
   marketingValues
     .map(({ value, wrap }) => (wrap && value ? `[${value}]` : value))
     .join('-');
+
+/*
+ * RSS marketing string uses v2 full-custom campaigns which uses specifies that parameters are in the format "src_myproperty: myvalue" for each property in the campaign.
+ * more information at https://developers.atinternet-solutions.com/as2-tagging-en/javascript-en/campaigns-javascript-en/marketing-campaigns-v2/?kw=at_custom#full-custom-campaigns_13
+ */
+const buildRSSMarketingString = href => {
+  const { query, hash } = new Url(href, true);
+
+  const queryWithParams = hash ? parameteriseHash(hash) : query;
+
+  return Object.keys(queryWithParams).reduce((accum, currVal) => {
+    if (currVal.includes('at_')) {
+      const type = currVal.replace('at_', '');
+
+      if (type === 'medium') {
+        return [
+          {
+            key: 'src_medium',
+            description: 'rss campaign prefix',
+            value: 'RSS',
+            wrap: false,
+          },
+        ];
+      }
+
+      return [
+        ...accum,
+        {
+          key: `src_${type}`,
+          description: `src_${type} field`,
+          value: getMarketingUrlParam(href, currVal),
+          wrap: false,
+        },
+      ];
+    }
+    return accum;
+  }, []);
+};
+
+export const getRSSMarketingString = (href, campaignType) =>
+  campaignType === 'RSS' ? buildRSSMarketingString(href) : [];
 
 export const getAffiliateMarketingString = href =>
   buildMarketingString([
@@ -538,7 +586,13 @@ export const getCustomMarketingString = href =>
 export const getXtorMarketingString = href => {
   const field = 'xtor';
 
-  return getMarketingUrlParam(href, field) || null;
+  const { query, hash } = new Url(href, true);
+
+  const hashObject = hash ? parameteriseHash(hash) : '';
+
+  const queryWithParams = { ...query, ...hashObject };
+
+  return queryWithParams[field] || null;
 };
 
 export const getATIMarketingString = (href, campaignType) => {
@@ -556,9 +610,9 @@ export const getATIMarketingString = (href, campaignType) => {
   const isSupportedCampaign = campaignMapping =>
     campaignType.startsWith(campaignMapping);
 
-  const selectedCampaignType = Object.keys(
-    supportedCampaignMappings,
-  ).find(campaignMapping => isSupportedCampaign(campaignMapping));
+  const selectedCampaignType = Object.keys(supportedCampaignMappings).find(
+    campaignMapping => isSupportedCampaign(campaignMapping),
+  );
 
   return supportedCampaignMappings[selectedCampaignType]
     ? supportedCampaignMappings[selectedCampaignType]()

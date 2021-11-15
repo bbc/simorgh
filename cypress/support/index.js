@@ -1,3 +1,5 @@
+import 'cypress-axe';
+
 import './commands';
 
 Cypress.Screenshot.defaults({
@@ -5,7 +7,7 @@ Cypress.Screenshot.defaults({
 });
 
 Cypress.on(`window:before:load`, win => {
-  cy.stub(win.console, `error`, msg => {
+  cy.stub(win.console, `error`).callsFake(msg => {
     cy.now(`task`, `error`, msg);
     throw new Error(msg);
   });
@@ -25,16 +27,17 @@ Cypress.on('uncaught:exception', (err, runnable, promise) => {
     return false;
   }
 
+  /*
+    This is used to effectively ignore unhandle promise exceptions thrown in tests
+    Cypress will fail a test if this happens, causing E2E failures on Test and Live
+    Effort has been applied to source the cause of the errors on CodePipeline, as they do not occur locally or on Github Action builds,
+    however there is no clear indication of why they are happening as they only happen in one environment and intermittently
+    Linked issues below as a timeline of events:
+    
+    https://github.com/bbc/simorgh/issues/9178
+    https://github.com/bbc/simorgh/issues/9465
+  */
   if (promise) {
-    // When the exception originated from an unhandled promise
-    // rejection, prevent Cypress from failing the test.
-
-    // This feature was added in v7 - https://github.com/bbc/simorgh/pull/9026
-    // however it's failing our AMP ads tests on feature index pages.
-
-    // We should investigate this error when we have more time and
-    // potentially re-enable unhandled promise rejections failing tests
-    // Issue - https://github.com/bbc/simorgh/issues/9178
     return false;
   }
 });

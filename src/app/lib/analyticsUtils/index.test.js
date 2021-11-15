@@ -25,6 +25,7 @@ const {
   getThingAttributes,
   getXtorMarketingString,
   getCampaignType,
+  getRSSMarketingString,
   getAffiliateMarketingString,
   getSLMarketingString,
   getEmailMarketingString,
@@ -33,7 +34,12 @@ const {
   getATIMarketingString,
 } = require('./index');
 
-let locServeCookieValue;
+const SRC_RSS_FIXTURE = {
+  key: 'src_medium',
+  description: 'rss campaign prefix',
+  value: 'RSS',
+  wrap: false,
+};
 
 const returnsNullWhenOffClient = func => {
   describe('returns null when not on client', () => {
@@ -251,18 +257,15 @@ describe('getDeviceLanguage', () => {
 
 describe('isLocServeCookieSet', () => {
   beforeEach(() => {
-    jest.mock('js-cookie', () => jest.fn());
-    Cookie.get = jest.fn();
-    Cookie.get.mockImplementation(() => locServeCookieValue);
+    Cookie.remove('loc_serve');
   });
-
   // eslint-disable-next-line global-require
   returnsNullWhenOffClient(require('./index').isLocServeCookieSet);
 
   it('should return true if cookie is set', () => {
     const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
 
-    locServeCookieValue = 'value';
+    Cookie.set('loc_serve', 'value');
 
     const locServeCookie = isLocServeCookieSet();
 
@@ -271,8 +274,6 @@ describe('isLocServeCookieSet', () => {
 
   it('should return false if cookie is not set', () => {
     const { isLocServeCookieSet } = require('./index'); // eslint-disable-line global-require
-
-    locServeCookieValue = null;
 
     const locServeCookie = isLocServeCookieSet();
 
@@ -436,33 +437,53 @@ describe('getEventInfo', () => {
 });
 
 describe('getAtUserId', () => {
+  let cookieSetterSpy;
+
   returnsNullWhenOffClient(getAtUserId);
-
-  it('should return AT user id when found', () => {
-    Cookie.getJSON = jest.fn().mockReturnValue({ val: 'uuid' });
-
-    const id = getAtUserId();
-    expect(id).toEqual('uuid');
+  beforeEach(() => {
+    jest.clearAllMocks();
+    Cookie.remove('atuserid');
+    cookieSetterSpy = jest.spyOn(Cookie, 'set');
   });
 
-  it('should create new user id if cookie does not exist', () => {
-    Cookie.set = jest.fn();
-    Cookie.getJSON = jest.fn().mockReturnValue(null);
-    const val = '00000000-1111-aaaa-bbbb-1234567890ab';
+  it('should return the AT user id', () => {
+    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    cookieSetterSpy.mockClear();
+    const atUserId = getAtUserId();
 
-    let id = getAtUserId();
-    expect(id).not.toBeNull();
-    expect(id).not.toBe(val);
-    expect(id).toHaveLength(val.length);
-    expect(Cookie.set).toHaveBeenCalledWith(
-      'atuserid',
-      { val: id },
-      { expires: 397, path: '/' },
-    );
+    expect(atUserId).toEqual('some-random-uuid');
+  });
 
-    Cookie.getJSON = jest.fn().mockReturnValue({ val });
-    id = getAtUserId();
-    expect(id).toBe(val);
+  it('should store the existing AT user id as a stringified JSON value in cookies again so that we update the cookie expiration date', () => {
+    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    cookieSetterSpy.mockClear();
+    const atUserId = getAtUserId();
+    const [[cookieName, cookieValue, cookieOptions]] =
+      cookieSetterSpy.mock.calls;
+
+    expect(atUserId).toEqual('some-random-uuid');
+    expect(cookieName).toEqual('atuserid');
+    expect(JSON.parse(cookieValue)).toEqual({
+      val: atUserId,
+    });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should create a new AT user id if the atuserid cookie does not already exist and then store the id as a stringified JSON value in the cookies', () => {
+    const uuidRegex =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const atUserId = getAtUserId();
+    const [[cookieName, cookieValue, cookieOptions]] =
+      cookieSetterSpy.mock.calls;
+
+    expect(atUserId).toMatch(uuidRegex);
+    expect(cookieName).toEqual('atuserid');
+    expect(JSON.parse(cookieValue)).toEqual({
+      val: atUserId,
+    });
+    expect(cookieOptions).toEqual({ expires: 397, path: '/' });
+    expect(cookieSetterSpy).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -509,6 +530,7 @@ describe('getCampaignType', () => {
     ${'?at_medium=sl'}        | ${'sl'}
     ${'?at_medium=foo'}       | ${null}
     ${'?xtor=123'}            | ${'XTOR'}
+    ${'?at_medium=RSS'}       | ${'RSS'}
   `('should return a campaign type of $expected', ({ qsValue, expected }) => {
     setWindowValue('location', {
       href: `https://www.bbc.com/mundo${qsValue}`,
@@ -527,6 +549,42 @@ describe('getCampaignType', () => {
     const campaignType = getCampaignType();
 
     expect(campaignType).toEqual('XTOR');
+  });
+});
+
+describe('getRSSMarketingString', () => {
+  describe.only('"RSS" prefix', () => {
+    it('returns "src_medium" when marketing string is present in url', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=RSS';
+      expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
+    });
+    it('return empty array when campaign is not RSS', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, 'affiliate')).toEqual([]);
+    });
+
+    it('return empty array when campaign is null', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, null)).toEqual([]);
+    });
+
+    it('return empty array when campaign is undefined', () => {
+      const href = 'https://www.bbc.com/mundo?at_medium=affiliate';
+      expect(getRSSMarketingString(href, undefined)).toEqual([]);
+    });
+
+    describe('with optional params', () => {
+      it.each`
+        expectation                                     | href                                                              | expectedValue
+        ${'omits value if prefix "at_" is not present'} | ${'https://www.bbc.com/mundo?at_medium=RSS&someKey=someValue'}    | ${[SRC_RSS_FIXTURE]}
+        ${'the value of the "at_someKey" field'}        | ${'https://www.bbc.com/mundo?at_medium=RSS&at_someKey=someValue'} | ${[SRC_RSS_FIXTURE, { key: 'src_someKey', description: 'src_someKey field', value: 'someValue', wrap: false }]}
+      `(
+        'should return marketing string for $expectation',
+        ({ href, expectedValue }) => {
+          expect(getRSSMarketingString(href, 'RSS')).toEqual(expectedValue);
+        },
+      );
+    });
   });
 });
 
@@ -687,10 +745,11 @@ describe('getCustomMarketingString', () => {
 
 describe('getXtorMarketingString', () => {
   it.each`
-    expectation                                                               | href                                                      | expectedValue
-    ${'the value of the "xtor" field when it is a hash param from an anchor'} | ${'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030'} | ${'AD-3030'}
-    ${'the value of the xtor field when it is a query param'}                 | ${'https://www.bbc.com/mundo?xtor=AD-3030'}               | ${'AD-3030'}
-    ${'null when xtor param is not available'}                                | ${'https://www.bbc.com/mundo#at_medium'}                  | ${null}
+    expectation                                                                           | href                                                          | expectedValue
+    ${'the value of the "xtor" field when it is a hash param from an anchor'}             | ${'https://www.bbc.com/mundo/#at_medium=sl&xtor=AD-3030'}     | ${'AD-3030'}
+    ${'the value of the xtor field when xtor is a query param and there is a hash param'} | ${'https://www.bbc.com/mundo?xtor=AD-3030#at_medium=AD-3040'} | ${'AD-3030'}
+    ${'the value of the xtor field when it is a query param'}                             | ${'https://www.bbc.com/mundo?xtor=AD-3030'}                   | ${'AD-3030'}
+    ${'null when xtor param is not available'}                                            | ${'https://www.bbc.com/mundo#at_medium'}                      | ${null}
   `('should return $expectation', ({ href, expectedValue }) => {
     expect(getXtorMarketingString(href)).toEqual(expectedValue);
   });
