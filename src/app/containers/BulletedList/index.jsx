@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
-import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
@@ -28,7 +27,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
     return locator;
   });
 
-  const blockId = pathOr('null', ['id'], linkBlock);
+  const blockId = path(['id'], linkBlock);
 
   const eventTrackingData = {
     componentName: `bullet${blockId}`,
@@ -46,9 +45,15 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         service={service}
         dir={dir}
         ref={linkBlock ? viewRef : null}
-        onClick={clickTrackerRef}
+        onClick={linkBlock ? clickTrackerRef : null}
       >
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Blocks
+          blocks={blocks.map(block => ({
+            ...block,
+            model: { ...block.model, clickTracker: clickTrackerRef },
+          }))}
+          componentsToRender={componentsToRender}
+        />
       </BulletedList>
     </StyledGridItemMedium>
   );

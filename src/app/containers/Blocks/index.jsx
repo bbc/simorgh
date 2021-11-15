@@ -19,6 +19,7 @@ const Clearer = styled.div`
 const Blocks = ({ blocks, componentsToRender }) =>
   blocks.map((block, index) => {
     const { type, model, id, position } = block;
+    console.log(model);
 
     if (!componentsToRender || !type) {
       return null;
