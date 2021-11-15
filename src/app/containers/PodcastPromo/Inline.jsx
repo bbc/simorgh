@@ -12,7 +12,11 @@ import {
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { getPica } from '@bbc/gel-foundations/typography';
+import {
+  getPica,
+  getBrevier,
+  getLongPrimer,
+} from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
 import getPromo from './shared';
@@ -35,25 +39,15 @@ const ResponsivePodcastPromoWrapper = styled.div`
   height: auto;
 
   @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    width: 7.06rem; /* 113px */
+    width: 45%;
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_HLF};
   }
 
   @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    width: 7.63rem; /* 122px */
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING};
   }
 
-  @media (min-width: ${GEL_GROUP_1_WIDTH_320PX}) {
-    width: 9.25rem; /* 148px */
-  }
-
-  @media (min-width: ${GEL_GROUP_1_WIDTH_360PX}) {
-    width: 10.94rem; /* 175px */
-  }
-
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 17.25rem; /* 276px */
     margin: ${GEL_SPACING_TRPL} ${GEL_SPACING_DBL};
   }
 `;
@@ -64,36 +58,12 @@ const StyledPromoComponent = styled(PromoComponent)`
 
 const StyledImageWrapper = styled(PromoComponent.Card.ImageWrapper)`
   display: inline-block;
-  margin: ${GEL_SPACING};
+  width: 100%;
+  margin: 0;
+  padding: ${GEL_SPACING};
 
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     display: none;
-  }
-
-  @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}) {
-    display: inline-block;
-    width: 5.13rem; /* 82px */
-  }
-
-  @media (min-width: ${GEL_GROUP_1_WIDTH_260PX}) {
-    display: inline-block;
-    width: 5.63rem; /* 90px */
-  }
-
-  @media (min-width: ${GEL_GROUP_1_WIDTH_320PX}) {
-    display: inline-block;
-    width: 7.25rem; /* 116px */
-  }
-
-  @media (min-width: ${GEL_GROUP_1_WIDTH_360PX}) {
-    display: inline-block;
-    width: 8.94rem; /* 143px */
-  }
-
-  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    display: inline-block;
-    margin: ${GEL_SPACING};
-    width: 15.19rem; /* 243px */
   }
 `;
 
@@ -113,6 +83,7 @@ const StyledCardDescriptionWrapper = styled(PromoComponent.Card.Description)`
 `;
 
 const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
+  ${({ script }) => getBrevier(script)}
   @media (max-width: ${GEL_GROUP_0_SCREEN_WIDTH_MAX}) {
     margin: 0 ${GEL_SPACING_HLF};
   }
@@ -134,14 +105,19 @@ const StyledEpisodeTextWrapper = styled(PromoComponent.Card.EpisodesText)`
   }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    ${({ script }) => getLongPrimer(script)}
     margin: 0 ${GEL_SPACING_HLF};
   }
 `;
 
 const StyledCardLink = styled(PromoComponent.Card.Link)`
-  ${({ script }) => getPica(script)}
+  ${({ script }) => getLongPrimer(script)}
   ${({ service }) => getSerifMedium(service)}
   display: block;
+
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    ${({ script }) => getPica(script)}
+  }
 `;
 
 const Promo = () => {
@@ -226,7 +202,7 @@ const Promo = () => {
               <StyledCardDescriptionWrapper>
                 {description}
               </StyledCardDescriptionWrapper>
-              <StyledEpisodeTextWrapper dir={dir}>
+              <StyledEpisodeTextWrapper dir={dir} script={script}>
                 {label}
               </StyledEpisodeTextWrapper>
             </StyledCardContentWrapper>
