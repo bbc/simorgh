@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 
 import React, { useEffect } from 'react';
+import isChromatic from 'chromatic/isChromatic';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import * as fontFaces from '@bbc/psammead-styles/fonts';
 
@@ -121,7 +122,9 @@ const Fonts = ({ onReady }) => {
         document.fonts.load('1rem BBC Reith Qalam'),
       ]);
 
-      onReady();
+      if (isChromatic() && document.fonts) {
+        onReady();
+      }
     };
 
     preloadFonts();

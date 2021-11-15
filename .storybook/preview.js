@@ -30,7 +30,6 @@ const theme = create({
 
 export const parameters = {
   passArgsFirst: false,
-  layout: 'fullscreen',
   options: {
     panelPosition: 'right',
     sidebarAnimcations: true,
