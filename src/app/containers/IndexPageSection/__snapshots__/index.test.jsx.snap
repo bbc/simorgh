@@ -1022,7 +1022,11 @@ HTMLCollection [
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 1 headline
+                  <span
+                    id="promo-link-unlabelledwww.bbc.co.uk"
+                  >
+                    Top Story 1 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -1084,7 +1088,11 @@ HTMLCollection [
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 2 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -1146,7 +1154,11 @@ HTMLCollection [
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 3 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 3 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -1208,7 +1220,11 @@ HTMLCollection [
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 4 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 4 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -1270,7 +1286,11 @@ HTMLCollection [
                   class="emotion-39 emotion-40"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 5 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 5 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -2333,7 +2353,11 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 1 headline
+                  <span
+                    id="promo-link-unlabelledwww.bbc.co.uk"
+                  >
+                    Top Story 1 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -2395,7 +2419,11 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 2 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -2457,7 +2485,11 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 3 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 3 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -2519,7 +2551,11 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 4 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 4 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -2581,7 +2617,11 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 5 headline
+                  <span
+                    id="promo-link-Top-Storieswww.bbc.co.uk"
+                  >
+                    Top Story 5 headline
+                  </span>
                 </a>
               </h3>
               <p
@@ -3571,7 +3611,11 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 1 headline
+                <span
+                  id="promo-link-Top-Storieswww.bbc.co.uk"
+                >
+                  Top Story 1 headline
+                </span>
               </a>
             </h3>
             <p
@@ -3658,7 +3702,11 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 2 headline
+                <span
+                  id="promo-link-unlabelledwww.bbc.co.uk"
+                >
+                  Top Story 2 headline
+                </span>
               </a>
             </h3>
             <p
@@ -4196,7 +4244,11 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
               class="emotion-35 emotion-36"
               href="https://www.bbc.co.uk"
             >
-              Top Story 1 headline
+              <span
+                id="promo-link-unlabelledwww.bbc.co.uk"
+              >
+                Top Story 1 headline
+              </span>
             </a>
           </h3>
           <p
@@ -5201,7 +5253,11 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 1 headline
+                <span
+                  id="promo-link-unlabelledwww.bbc.co.uk"
+                >
+                  Top Story 1 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5263,7 +5319,11 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 2 headline
+                <span
+                  id="promo-link-Top-Storieswww.bbc.co.uk"
+                >
+                  Top Story 2 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5325,7 +5385,11 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 3 headline
+                <span
+                  id="promo-link-Top-Storieswww.bbc.co.uk"
+                >
+                  Top Story 3 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5387,7 +5451,11 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 4 headline
+                <span
+                  id="promo-link-Top-Storieswww.bbc.co.uk"
+                >
+                  Top Story 4 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5449,7 +5517,11 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 5 headline
+                <span
+                  id="promo-link-Top-Storieswww.bbc.co.uk"
+                >
+                  Top Story 5 headline
+                </span>
               </a>
             </h3>
             <p

@@ -884,7 +884,11 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-link-unlabelled"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <p
@@ -1550,7 +1554,11 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-link-unlabelled"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -1659,7 +1667,11 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-link-unlabelled"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <p
@@ -2473,7 +2485,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-link-unlabelled"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <p
@@ -2535,7 +2551,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
-            رمضان، عید اور سپیشل پکوان
+            <span
+              id="promo-link-unlabelled"
+            >
+              رمضان، عید اور سپیشل پکوان
+            </span>
           </a>
         </h3>
         <p
@@ -2597,7 +2617,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
-            کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            <span
+              id="promo-link-unlabelled"
+            >
+              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            </span>
           </a>
         </h3>
         <p
@@ -3051,7 +3075,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-link-unlabelled"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -3135,7 +3163,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             class="emotion-17 emotion-18"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-link-unlabelled"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <p
@@ -3197,7 +3229,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
-            World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            <span
+              id="promo-link-unlabelled"
+            >
+              World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            </span>
           </a>
         </h3>
         <time
@@ -3254,7 +3290,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
-            Select your best ever African 11 players for World Cup
+            <span
+              id="promo-link-unlabelled"
+            >
+              Select your best ever African 11 players for World Cup
+            </span>
           </a>
         </h3>
         <time
@@ -4056,7 +4096,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-link-unlabelled"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <time
@@ -4088,7 +4132,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
-            رمضان، عید اور سپیشل پکوان
+            <span
+              id="promo-link-unlabelled"
+            >
+              رمضان، عید اور سپیشل پکوان
+            </span>
           </a>
         </h3>
         <time
@@ -4120,7 +4168,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
-            کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            <span
+              id="promo-link-unlabelled"
+            >
+              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            </span>
           </a>
         </h3>
         <time
@@ -4535,7 +4587,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-link-unlabelled"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -4593,7 +4649,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-link-unlabelled"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <time
@@ -4625,7 +4685,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
-            World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            <span
+              id="promo-link-unlabelled"
+            >
+              World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            </span>
           </a>
         </h3>
         <time
@@ -4657,7 +4721,11 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
-            Select your best ever African 11 players for World Cup
+            <span
+              id="promo-link-unlabelled"
+            >
+              Select your best ever African 11 players for World Cup
+            </span>
           </a>
         </h3>
         <time
@@ -5487,7 +5555,11 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-link-unlabelled"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time

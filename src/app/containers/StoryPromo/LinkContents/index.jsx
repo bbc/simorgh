@@ -29,6 +29,7 @@ const LinkContents = ({ item, isInline, id }) => {
   const content = getContent();
 
   if (!isPhotoGallery && !isMedia) {
+    // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     return <span id={id}>{content}</span>;
   }
 
@@ -64,6 +65,7 @@ const LinkContents = ({ item, isInline, id }) => {
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
+    // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}

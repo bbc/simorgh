@@ -2450,7 +2450,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                   class="emotion-39 emotion-40"
                   href="/persian/afghanistan-52735886"
                 >
-                  رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد
+                  <span
+                    id="promo-link-unlabelledafghanistan-52735886"
+                  >
+                    رهبر طالبان به آمریکا: اجازه ندهید موافقتنامه‌مان با ناکامی رو به رو شود؛ ارگ: پیام رهبر طالبان ارزش ندارد
+                  </span>
                 </a>
               </h3>
               <p
@@ -3696,7 +3700,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52722865"
                   >
-                    پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
+                    <span
+                      id="promo-link-unlabelledafghanistan-52722865"
+                    >
+                      پشت پرده توافق غنی و عبدالله؛ مارشال شدن دوستم و ماجراهای دیگر
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -3758,7 +3766,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52697976"
                   >
-                    کرونا گردشگران را در افغانستان زمین‌گیر کرد
+                    <span
+                      id="promo-link-Featuresafghanistan-52697976"
+                    >
+                      کرونا گردشگران را در افغانستان زمین‌گیر کرد
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -3820,7 +3832,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-39 emotion-40"
                     href="/persian/blog-viewpoints-52616632"
                   >
-                    ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
+                    <span
+                      id="promo-link-Featuresblog-viewpoints-52616632"
+                    >
+                      ناظران می‌گویند؛ توافقنامه غنی و عبدالله؛ آخرین میخ بر تابوت دموکراسی افغانستان؟
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -3882,7 +3898,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-39 emotion-40"
                     href="/persian/afghanistan-52700014"
                   >
-                    توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
+                    <span
+                      id="promo-link-Featuresafghanistan-52700014"
+                    >
+                      توافق‌نامه غنی و عبدالله؛ اختلاف چه بود و چگونه حل شد؟
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -3944,7 +3964,11 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-39 emotion-40"
                     href="/persian/blog-viewpoints-52692067"
                   >
-                    'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
+                    <span
+                      id="promo-link-Featuresblog-viewpoints-52692067"
+                    >
+                      'آرمان ایران، داشتن نفوذ شبیه عراق در افغانستان نیست'
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -5964,7 +5988,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-39 emotion-40"
                   href="/ukrainian/news-russian-52721557"
                 >
-                  Правительство запустит общественный транспорт. Но не во всех областях
+                  <span
+                    id="promo-link-unlabellednews-russian-52721557"
+                  >
+                    Правительство запустит общественный транспорт. Но не во всех областях
+                  </span>
                 </a>
               </h3>
               <p
@@ -6076,7 +6104,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52261329"
                   >
-                    Как не спиться на карантине
+                    <span
+                      id="promo-link-Verticalsfeatures-russian-52261329"
+                    >
+                      Как не спиться на карантине
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6163,7 +6195,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52357130"
                   >
-                    Как наш характер меняется с возрастом. Спойлер - мы становимся добрее. Но почему?
+                    <span
+                      id="promo-link-unlabelledfeatures-russian-52357130"
+                    >
+                      Как наш характер меняется с возрастом. Спойлер - мы становимся добрее. Но почему?
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6241,7 +6277,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52663545"
                   >
-                    IKEA запустила продажи в Украине: как покупать и где получать
+                    <span
+                      id="promo-link-Also-in-the-newsnews-russian-52663545"
+                    >
+                      IKEA запустила продажи в Украине: как покупать и где получать
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6328,7 +6368,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/vert-fut-russian-52663551"
                   >
-                    38 дней в океане: как семья выжила после кораблекрушения
+                    <span
+                      id="promo-link-unlabelledvert-fut-russian-52663551"
+                    >
+                      38 дней в океане: как семья выжила после кораблекрушения
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6390,7 +6434,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52633464"
                   >
-                    Как Минск стал спасительным хабом для застрявших за рубежом украинцев
+                    <span
+                      id="promo-link-Also-in-the-newsfeatures-russian-52633464"
+                    >
+                      Как Минск стал спасительным хабом для застрявших за рубежом украинцев
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6452,7 +6500,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52647120"
                   >
-                    Кличко просит правительство открыть метро с 25 мая
+                    <span
+                      id="promo-link-Also-in-the-newsnews-russian-52647120"
+                    >
+                      Кличко просит правительство открыть метро с 25 мая
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6514,7 +6566,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52493624"
                   >
-                    Можно обнимать внуков: ученые говорят, что маленькие дети не передают коронавирус
+                    <span
+                      id="promo-link-Also-in-the-newsnews-russian-52493624"
+                    >
+                      Можно обнимать внуков: ученые говорят, что маленькие дети не передают коронавирус
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6576,7 +6632,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52395098"
                   >
-                    Мог ли коронавирус "убежать" из лаборатории?
+                    <span
+                      id="promo-link-Also-in-the-newsfeatures-russian-52395098"
+                    >
+                      Мог ли коронавирус "убежать" из лаборатории?
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6638,7 +6698,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52443350"
                   >
-                    Правительство хочет открыть сотни рынков - несмотря на карантин
+                    <span
+                      id="promo-link-Also-in-the-newsnews-russian-52443350"
+                    >
+                      Правительство хочет открыть сотни рынков - несмотря на карантин
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6700,7 +6764,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52339462"
                   >
-                    Фейки о коронавирусе в соцсетях: 7 правил информационной гигиены
+                    <span
+                      id="promo-link-Also-in-the-newsfeatures-russian-52339462"
+                    >
+                      Фейки о коронавирусе в соцсетях: 7 правил информационной гигиены
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6762,7 +6830,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52336989"
                   >
-                    Пожары, пылевая буря, смог: почему это происходит
+                    <span
+                      id="promo-link-Also-in-the-newsfeatures-russian-52336989"
+                    >
+                      Пожары, пылевая буря, смог: почему это происходит
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6824,7 +6896,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52344279"
                   >
-                    Какие симптомы коронавируса
+                    <span
+                      id="promo-link-Also-in-the-newsfeatures-russian-52344279"
+                    >
+                      Какие симптомы коронавируса
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -6940,7 +7016,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-50186307"
                   >
-                    Фотограф потратил год, чтобы сделать идеальное фото белок
+                    <span
+                      id="promo-link-unlabelledfeatures-russian-50186307"
+                    >
+                      Фотограф потратил год, чтобы сделать идеальное фото белок
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7002,7 +7082,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49780932"
                   >
-                    Украинка, фотографирующая сестер Кардашьян: в "голых" съемках главное - доверие
+                    <span
+                      id="promo-link-Picture-galleriesfeatures-russian-49780932"
+                    >
+                      Украинка, фотографирующая сестер Кардашьян: в "голых" съемках главное - доверие
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7064,7 +7148,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49621722"
                   >
-                    Вернувшиеся домой. Фото
+                    <span
+                      id="promo-link-Picture-galleriesfeatures-russian-49621722"
+                    >
+                      Вернувшиеся домой. Фото
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7126,7 +7214,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-49613573"
                   >
-                    Фото дня: принцесса Шарлотта впервые пошла в школу
+                    <span
+                      id="promo-link-Picture-galleriesnews-russian-49613573"
+                    >
+                      Фото дня: принцесса Шарлотта впервые пошла в школу
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7188,7 +7280,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-49382281"
                   >
-                    Человек, который сделал 90 тысяч фото котов
+                    <span
+                      id="promo-link-Picture-galleriesfeatures-russian-49382281"
+                    >
+                      Человек, который сделал 90 тысяч фото котов
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7266,7 +7362,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52653319"
                   >
-                    "Не надо шляться по брифингам!" Министр Степанов - своим оппонентам
+                    <span
+                      id="promo-link-Featuresfeatures-russian-52653319"
+                    >
+                      "Не надо шляться по брифингам!" Министр Степанов - своим оппонентам
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7353,7 +7453,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52675911"
                   >
-                    Действительно ли Германия заблокировала "Северный поток-2"? Объясняет Лана Зеркаль
+                    <span
+                      id="promo-link-unlabellednews-russian-52675911"
+                    >
+                      Действительно ли Германия заблокировала "Северный поток-2"? Объясняет Лана Зеркаль
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7415,7 +7519,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52688931"
                   >
-                    Клинические испытания ремдесивира для лечения Covid-19 свернули. Почему?
+                    <span
+                      id="promo-link-Featuresnews-russian-52688931"
+                    >
+                      Клинические испытания ремдесивира для лечения Covid-19 свернули. Почему?
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7477,7 +7585,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52620256"
                   >
-                    Лечение коронавируса при помощи антител: нас спасут ламы?
+                    <span
+                      id="promo-link-Featuresfeatures-russian-52620256"
+                    >
+                      Лечение коронавируса при помощи антител: нас спасут ламы?
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7539,7 +7651,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/news-russian-52597888"
                   >
-                    11 мая в Украине ослабляют карантин. Что разрешат, а что - нет
+                    <span
+                      id="promo-link-Featuresnews-russian-52597888"
+                    >
+                      11 мая в Украине ослабляют карантин. Что разрешат, а что - нет
+                    </span>
                   </a>
                 </h3>
                 <p
@@ -7601,7 +7717,11 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                     class="emotion-39 emotion-40"
                     href="/ukrainian/features-russian-52573535"
                   >
-                    Коронавирус мутирует: ученые думают о последствиях
+                    <span
+                      id="promo-link-Featuresfeatures-russian-52573535"
+                    >
+                      Коронавирус мутирует: ученые думают о последствиях
+                    </span>
                   </a>
                 </h3>
                 <p

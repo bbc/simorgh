@@ -3018,7 +3018,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182501"
                               >
-                                DSS: Wepụ aka enwe n'ofe na Benue
+                                <span
+                                  id="promo-link-unlabelled23182501"
+                                >
+                                  DSS: Wepụ aka enwe n'ofe na Benue
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3058,7 +3062,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   >
                                     AS E DE HAPPEN 
                                   </span>
-                                  Test m̀ịṅị̀ịọ́ụ̄ please ignore
+                                  <span>
+                                    Test m̀ịṅị̀ịọ́ụ̄ please ignore
+                                  </span>
                                 </span>
                               </a>
                             </h3>
@@ -3223,7 +3229,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182930"
                               >
-                                Lee ihe Barcelona mere Real Betis
+                                <span
+                                  id="promo-link-unlabelled23182930"
+                                >
+                                  Lee ihe Barcelona mere Real Betis
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3279,7 +3289,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182890"
                               >
-                                Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
+                                <span
+                                  id="promo-link-unlabelled23182890"
+                                >
+                                  Aubameyang nwere ike ifu ndị Arsenal ọnụ ego karịrị nderi pounds iri ise
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3335,7 +3349,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182810"
                               >
-                                "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
+                                <span
+                                  id="promo-link-unlabelled23182810"
+                                >
+                                  "Alexis Sanchez ga-abanye Manchester united ma ọ buru na....." Wenger
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3391,7 +3409,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182766"
                               >
-                                Dịka osi ga n'ime asọmpi Premier League
+                                <span
+                                  id="promo-link-unlabelled23182766"
+                                >
+                                  Dịka osi ga n'ime asọmpi Premier League
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3447,7 +3469,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182760"
                               >
-                                Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
+                                <span
+                                  id="promo-link-unlabelled23182760"
+                                >
+                                  Djokovic enwela mmeri Agbanyeghị ihe mmerụ ahụ
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3503,7 +3529,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182710"
                               >
-                                CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
+                                <span
+                                  id="promo-link-unlabelled23182710"
+                                >
+                                  CHAN: Naịjirịa na Guinea nọ na ịrụ Group C
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3665,7 +3695,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23173771"
                               >
-                                O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
+                                <span
+                                  id="promo-link-unlabelled23173771"
+                                >
+                                  O nwere ihe o mere ma Dino Melaye nọrọ n'egwu m?
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -3721,7 +3755,11 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23174391"
                               >
-                                Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
+                                <span
+                                  id="promo-link-unlabelled23174391"
+                                >
+                                  Ọkụ Festac: Ajọ ọnwụnwa nke keresimesi
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10485,7 +10523,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23248287"
                               >
-                                ATMs across the country
+                                <span
+                                  id="promo-link-unlabelled23248287"
+                                >
+                                  ATMs across the country
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10516,7 +10558,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146434"
                               >
-                                Jacob Zuma: Staying!!!
+                                <span
+                                  id="promo-link-unlabelledtori-23146434"
+                                >
+                                  Jacob Zuma: Staying!!!
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10547,7 +10593,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.co.uk/news"
                               >
-                                Feature promo
+                                <span
+                                  id="promo-link-unlabelled"
+                                >
+                                  Feature promo
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10648,7 +10698,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146625"
                               >
-                                How Lagos Dey Fight Lassa Fever
+                                <span
+                                  id="promo-link-unlabelledtori-23146625"
+                                >
+                                  How Lagos Dey Fight Lassa Fever
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10902,7 +10956,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23169387"
                               >
-                                Libya: omo ile Ghana márùndínláàdóje pada sile
+                                <span
+                                  id="promo-link-unlabelledtori-23169387"
+                                >
+                                  Libya: omo ile Ghana márùndínláàdóje pada sile
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -10958,7 +11016,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/news/world-africa-23143884"
                               >
-                                Like Scaramucci, Like Others
+                                <span
+                                  id="promo-link-unlabelledworld-africa-23143884"
+                                >
+                                  Like Scaramucci, Like Others
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -11014,7 +11076,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146975"
                               >
-                                Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
+                                <span
+                                  id="promo-link-unlabelledtori-23146975"
+                                >
+                                  Anambra Attack: 'My Friend Uchenna na Nice Girl'- Gabros
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -11070,7 +11136,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.com/pidgin/sport-51434980"
                               >
-                                Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
+                                <span
+                                  id="promo-link-unlabelled"
+                                >
+                                  Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -11126,7 +11196,11 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23145776"
                               >
-                                Anambra Church: Police Arrest 3
+                                <span
+                                  id="promo-link-unlabelledtori-23145776"
+                                >
+                                  Anambra Church: Police Arrest 3
+                                </span>
                               </a>
                             </h3>
                             <time
