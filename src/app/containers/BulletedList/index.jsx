@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import pathOr from 'ramda/src/pathOr';
+import path from 'ramda/src/path';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
@@ -20,8 +21,7 @@ const StyledGridItemMedium = styled(GridItemMedium)`
 
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const linkBlock = blocks.find(element => {
-    const locator = pathOr(
-      null,
+    const locator = path(
       ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
       element,
     );
