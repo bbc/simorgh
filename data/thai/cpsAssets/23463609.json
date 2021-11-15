@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:thai/23463609",
+    "locators": {
+      "assetUri": "/thai/23463609",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/23463609",
+      "curie": "http://www.bbc.co.uk/asset/8c121852-5633-4635-9a65-dadee1cfe842",
+      "assetId": "23463609"
+    },
+    "type": "MAP",
+    "createdBy": "thai-v6",
+    "language": "th",
+    "lastUpdated": 1635769269940,
+    "firstPublished": 1635769265000,
+    "lastPublished": 1635769265000,
+    "timestamp": 1635769265000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "counterName": "thai.media_asset.23463609.page",
+      "cps_asset_id": "23463609",
+      "contentId": "urn:bbc:cps:curie:asset:8c121852-5633-4635-9a65-dadee1cfe842"
+    },
+    "tags": {},
+    "version": "v1.3.14",
+    "blockTypes": ["media", "paragraph"],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "THAI",
+      "producerId": "90"
+    },
+    "readTime": 1,
+    "siteUri": "/thai"
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p01p5qfc",
+        "subType": "clip",
+        "format": "video",
+        "title": "Justin Trudeau wins Canadian election with minority government",
+        "synopses": {
+          "short": "Voters take to the polls in the Canadian election",
+          "long": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+          "medium": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+        },
+        "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Canada's general election took place on Monday 22 October",
+        "versions": [
+          {
+            "versionId": "p01p5qff",
+            "types": ["Original"],
+            "duration": 67,
+            "durationISO8601": "PT1M7S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1571751302000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Justin Trudeau wins Canadian election",
+      "headline": "Voters take to the polls in the Canadian election"
+    },
+    "locators": {
+      "assetUri": "/thai/23463609",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/23463609",
+      "curie": "http://www.bbc.co.uk/asset/8c121852-5633-4635-9a65-dadee1cfe842",
+      "assetId": "23463609"
+    },
+    "summary": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.",
+    "timestamp": 1635769265000,
+    "language": "th",
+    "media": {
+      "id": "p01p5qfc",
+      "subType": "clip",
+      "format": "video",
+      "title": "Justin Trudeau wins Canadian election with minority government",
+      "synopses": {
+        "short": "Voters take to the polls in the Canadian election",
+        "long": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote.Th BBC's Lyce Ducette reports.",
+        "medium": "Justin Trudeau has been re-elected prime minister of Canada with a reduced share of the vote."
+      },
+      "imageUrl": "ichef.test.bbci.co.uk/images/ic/$recipe/p01p5ql9.jpg",
+      "embedding": true,
+      "advertising": true,
+      "caption": "Canada's general election took place on Monday 22 October",
+      "versions": [
+        {
+          "versionId": "p01p5qff",
+          "types": ["Original"],
+          "duration": 67,
+          "durationISO8601": "PT1M7S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true
+          },
+          "availableFrom": 1571751302000
+        }
+      ],
+      "smpKind": "programme",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "63780399",
+      "subType": "index",
+      "href": "http://b.files.bbci.co.uk/183EC/test/_63780399_p01p5ql9.jpg",
+      "path": "/cpsdevpb/183EC/test/_63780399_p01p5ql9.jpg",
+      "height": 576,
+      "width": 1024,
+      "altText": "Keyframe #2",
+      "caption": "Justin Trudeau",
+      "copyrightHolder": "BBC",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:thai/23463609",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "หน้าแรก",
+      "uri": "/thai/front_page",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "บีบีซีไทย",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}
