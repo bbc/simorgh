@@ -39,11 +39,7 @@ import CpsTable from '#containers/CpsTable';
 import Byline from '#containers/Byline';
 import CpsSocialEmbedContainer from '#containers/SocialEmbed/Cps';
 import CpsRecommendations from '#containers/CpsRecommendations';
-import {
-  InlinePodcastPromo,
-  SecondaryColumnPodcastPromo,
-} from '#containers/PodcastPromo';
-import isLive from '#lib/utilities/isLive';
+import { InlinePodcastPromo } from '#containers/PodcastPromo';
 
 import {
   getFirstPublished,
@@ -366,7 +362,6 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
               />
             </ResponsiveComponentWrapper>
           )}
-          {isLive() && podcastPromoEnabled && <SecondaryColumnPodcastPromo />}
           {featuresInitialData && (
             <ResponsiveComponentWrapper>
               <FeaturesAnalysis
