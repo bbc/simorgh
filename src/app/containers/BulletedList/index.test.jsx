@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import { latin, arabic } from '@bbc/gel-foundations/scripts';
+import { arabic } from '@bbc/gel-foundations/scripts';
 import BulletedListContainer from './index';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { listItemB, listItemC, orderedList } from './fixtures';
@@ -35,7 +35,7 @@ describe('BulletedListContainer', () => {
       jest.clearAllMocks();
     });
 
-    it('should call the view tracking hook with the correct params with one lists', () => {
+    it('should call the view tracking hook with the correct params with one list', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(<BulletsWithContext blocks={orderedList.model.blocks} />);
 
