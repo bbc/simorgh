@@ -9,12 +9,11 @@ import inline from '../InlineContainer';
 const componentsToRender = { fragment, urlLink: InlineLink, inline };
 
 const BulletedListItemContainer = ({ blocks, clickTrackerRef }) => {
-  // blocks.map(block => ({ model: { clickTracker: clickTrackerRef, …model }, …block }))
   const contentBlocks = blocks.map(block => block.model.blocks).flat();
 
   const blockWithTrack = contentBlocks.map(block => ({
-    model: { clickTracker: clickTrackerRef, ...block.model },
     ...block,
+    model: { ...block.model, clickTrackerRef },
   }));
 
   return (
