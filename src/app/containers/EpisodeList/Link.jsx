@@ -52,10 +52,10 @@ const StyledAnchor = styled.a`
 `;
 
 const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
-  console.log('index______', index);
   return (
     <StyledAnchor
       showMediaIndicator={showMediaIndicator}
+      // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       aria-labelledby={`episodeLinkIndex-${index}`}
       {...props}
     >
@@ -64,7 +64,10 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
           <MediaIndicator size="2.5rem" />
         </MediaIndicatorWrapper>
       )}
-      <span role="text" id={`episodeLinkIndex-${index}`}>
+      <span
+        role="text"
+        id={`episodeLinkIndex-${index}`} // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      >
         {children}
       </span>
     </StyledAnchor>
