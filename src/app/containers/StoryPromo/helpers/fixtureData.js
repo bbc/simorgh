@@ -7,7 +7,7 @@ import relItems from '../IndexAlsos/relatedItems';
 
 export const completeItem = {
   headlines: {
-    headline: '<span>A headline</span>',
+    headline: 'A headline',
   },
   locators: {
     assetUri: 'https://www.bbc.co.uk',
