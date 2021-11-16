@@ -10,33 +10,19 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (min-width: 15rem) {
   .emotion-0 {
-    width: 7.06rem;
+    width: 45%;
     margin: 1.5rem 0.25rem;
   }
 }
 
 @media (min-width: 16.25rem) {
   .emotion-0 {
-    width: 7.63rem;
     margin: 1.5rem 0.5rem;
-  }
-}
-
-@media (min-width: 20rem) {
-  .emotion-0 {
-    width: 9.25rem;
-  }
-}
-
-@media (min-width: 22.5rem) {
-  .emotion-0 {
-    width: 10.94rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-0 {
-    width: 17.25rem;
     margin: 1.5rem 1rem;
   }
 }
@@ -162,7 +148,9 @@ exports[`Inline Should render correctly 1`] = `
   margin: 0.5rem 0 0.5rem 0.5rem;
   display: none;
   display: inline-block;
-  margin: 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 @media (min-width: 20rem) {
@@ -207,42 +195,6 @@ exports[`Inline Should render correctly 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-17 {
     display: none;
-  }
-}
-
-@media (min-width: 15rem) {
-  .emotion-17 {
-    display: inline-block;
-    width: 5.13rem;
-  }
-}
-
-@media (min-width: 16.25rem) {
-  .emotion-17 {
-    display: inline-block;
-    width: 5.63rem;
-  }
-}
-
-@media (min-width: 20rem) {
-  .emotion-17 {
-    display: inline-block;
-    width: 7.25rem;
-  }
-}
-
-@media (min-width: 22.5rem) {
-  .emotion-17 {
-    display: inline-block;
-    width: 8.94rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-17 {
-    display: inline-block;
-    margin: 0.5rem;
-    width: 15.19rem;
   }
 }
 
@@ -310,7 +262,7 @@ exports[`Inline Should render correctly 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   font-size: 0.9375rem;
-  line-height: 1.25rem;
+  line-height: 1.125rem;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -339,15 +291,36 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
   .emotion-23 {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
   .emotion-23 {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-23 {
+    font-size: 0.9375rem;
     line-height: 1.25rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-23 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-23 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
   }
 }
 
@@ -386,6 +359,8 @@ exports[`Inline Should render correctly 1`] = `
   font-weight: 400;
   font-style: normal;
   color: #6E6E73;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
@@ -410,6 +385,20 @@ exports[`Inline Should render correctly 1`] = `
   position: relative;
   bottom: 0.125rem;
   right: 0.1875rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-29 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-29 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
 }
 
 @media (max-width: 14.9375rem) {
@@ -444,7 +433,23 @@ exports[`Inline Should render correctly 1`] = `
 
 @media (min-width: 37.5rem) {
   .emotion-29 {
+    font-size: 0.9375rem;
+    line-height: 1.125rem;
     margin: 0 0.25rem;
+  }
+
+  @media (min-width: 20rem) and (max-width: 37.4375rem) {
+    .emotion-29 {
+      font-size: 0.9375rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  @media (min-width: 37.5rem) {
+    .emotion-29 {
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+    }
   }
 }
 
@@ -547,7 +552,7 @@ exports[`Inline Should render correctly 1`] = `
             <p
               class="emotion-25 emotion-26 emotion-27"
             >
-              Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
+              Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.
             </p>
             <p
               class="emotion-28 emotion-29 emotion-30"
@@ -958,7 +963,7 @@ exports[`SecondaryColumn Should render correctly 1`] = `
           <p
             class="emotion-22 emotion-23"
           >
-            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше. Никаких ненужных подробностей и передергиваний - только факты и взвешенная аналитика.
+            Мы быстро, просто и понятно объясняем, что случилось, почему это важно и что будет дальше.
           </p>
           <p
             class="emotion-24 emotion-25"

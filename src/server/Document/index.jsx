@@ -11,6 +11,19 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
+const crossOrigin = 'anonymous';
+
+const getScriptAttributes = chunk => ({
+  crossOrigin,
+  defer: true,
+  ...(chunk && chunk.url && { src: encodeChunkFilename(chunk) }),
+});
+
+const getLinkAttributes = chunk => ({
+  crossOrigin,
+  ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
+});
+
 const renderDocument = async ({
   bbcOrigin,
   data,
@@ -57,23 +70,8 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements(chunk => {
-    const commonAttributes = {
-      crossOrigin: 'anonymous',
-      defer: true,
-    };
-
-    if (chunk && chunk.url) {
-      return {
-        ...commonAttributes,
-        src: encodeChunkFilename(chunk),
-      };
-    }
-
-    return commonAttributes;
-  });
-
-  const links = extractor.getLinkElements();
+  const scripts = extractor.getScriptElements(getScriptAttributes);
+  const links = extractor.getLinkElements(getLinkAttributes);
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
