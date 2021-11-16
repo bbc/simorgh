@@ -95,6 +95,7 @@ const ProgramCard = ({ program, id, ...props }) => {
             brandTitle={brandTitle}
             startTime={startTime}
             duration={duration}
+            // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
             id={id}
           />
         </StyledH3>

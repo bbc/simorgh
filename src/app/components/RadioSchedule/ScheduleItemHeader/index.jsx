@@ -105,6 +105,7 @@ const ScheduleItemHeader = ({
   });
 
   const content = (
+    // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
     <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
@@ -145,6 +146,7 @@ const ScheduleItemHeader = ({
     content
   ) : (
     <StyledLink
+      // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
       aria-labelledby={`scheduleItem-${id}`}
       as={linkComponent}
       {...linkProps}
