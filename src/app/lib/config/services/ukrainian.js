@@ -324,7 +324,7 @@ const baseServiceConfig = {
   timezone: 'GMT',
   navigation: [
     {
-      title: 'Новини',
+      title: 'Головна',
       url: '/ukrainian',
     },
     {

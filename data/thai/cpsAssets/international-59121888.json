@@ -1,0 +1,1532 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:thai/international-59121888",
+    "locators": {
+      "assetUri": "/thai/international-59121888",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/international-59121888",
+      "curie": "http://www.bbc.co.uk/asset/a1d29da8-171e-4412-97c4-1f1185e942dd",
+      "assetId": "59121888"
+    },
+    "type": "STY",
+    "createdBy": "thai-v6",
+    "language": "th",
+    "lastUpdated": 1635861227686,
+    "firstPublished": 1635793625000,
+    "lastPublished": 1635793625000,
+    "timestamp": 1635793625000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Environment~Thailand~United+Kingdom~India~China~COP26~United+States~United+Nations~Climate+change",
+      "cps_asset_id": "59121888",
+      "ldp_ids": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f~1ed75fd4-f992-46db-9859-fb5a7c95da91~2e91364c-5c77-4660-b76e-d76202785e64~5a08f030-710f-4168-acee-67294a90fc75~6892384e-1966-4c03-9ce3-f694a8f9f69e~810f8876-9a4c-4872-95cc-0755c3711076~82857f8e-8134-462a-bb32-b7b14f4eab75~b79ae056-59b1-49c7-8630-50f7e223e906~e6369e45-f838-49cc-b5ac-857ed182e549",
+      "contentId": "urn:bbc:cps:curie:asset:a1d29da8-171e-4412-97c4-1f1185e942dd",
+      "counterName": "thai.international.story.59121888.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "th",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+      "locator": "urn:bbc:cps:curie:asset:a1d29da8-171e-4412-97c4-1f1185e942dd",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4efc9b72-ee98-40ad-b613-547f0260d317#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+            "thingLabel": "สิ่งแวดล้อม",
+            "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+            "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+            "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q43619",
+              "http://dbpedia.org/resource/Natural_environment"
+            ],
+            "thingEnglishLabel": "Environment",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+            "thingLabel": "ประเทศไทย",
+            "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+            "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/1605651/"],
+            "thingEnglishLabel": "Thailand",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+            "thingLabel": "สหราชอาณาจักร",
+            "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+            "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/2635167/"],
+            "thingEnglishLabel": "United Kingdom",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingLabel": "อินเดีย",
+            "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/India",
+              "http://sws.geonames.org/1269750/",
+              "http://www.wikidata.org/entity/Q668"
+            ],
+            "thingEnglishLabel": "India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "thingLabel": "ประเทศจีน",
+            "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "thingSameAs": [
+              "http://sws.geonames.org/1814991/",
+              "http://dbpedia.org/resource/China",
+              "http://www.wikidata.org/entity/Q148"
+            ],
+            "thingEnglishLabel": "China",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+            "thingLabel": "COP26",
+            "thingUri": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+            "thingId": "810f8876-9a4c-4872-95cc-0755c3711076",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/United_Nations_Climate_Change_conference",
+              "http://www.wikidata.org/entity/Q27887990"
+            ],
+            "thingEnglishLabel": "COP26",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "สหรัฐอเมริกา",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/6252001/"],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+            "thingLabel": "สหประชาชาติ",
+            "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+            "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
+            "thingType": [
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "tagging:Agent",
+              "core:Thing",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q1065",
+              "http://dbpedia.org/resource/United_Nations"
+            ],
+            "thingEnglishLabel": "United Nations",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+            "thingLabel": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+            "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+            "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q125928",
+              "http://dbpedia.org/resource/Climate_change"
+            ],
+            "thingEnglishLabel": "Climate change",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "th",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "สิ่งแวดล้อม",
+          "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+          "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q43619",
+            "http://dbpedia.org/resource/Natural_environment"
+          ],
+          "topicName": "สิ่งแวดล้อม",
+          "topicId": "c1gdqr2dxr8t",
+          "curationList": [
+            {
+              "curationId": "9805dbef-a104-43d9-9047-1b1906e07ce9",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Environment",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "Environment"
+        },
+        {
+          "thingLabel": "ประเทศไทย",
+          "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+          "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/1605651/"],
+          "topicName": "ประเทศไทย",
+          "topicId": "cjgn73g98rqt",
+          "curationList": [
+            {
+              "curationId": "81f2e8f7-89c1-4c7c-a720-2a22d6437226",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Thailand",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "Thailand"
+        },
+        {
+          "thingLabel": "สหราชอาณาจักร",
+          "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+          "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/2635167/"],
+          "topicName": "สหราชอาณาจักร",
+          "topicId": "c340qxrx3d9t",
+          "curationList": [
+            {
+              "curationId": "05a3ad59-9231-4a9d-ad8c-b8272efdc3fb",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United Kingdom",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "United Kingdom"
+        },
+        {
+          "thingLabel": "อินเดีย",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/India",
+            "http://sws.geonames.org/1269750/",
+            "http://www.wikidata.org/entity/Q668"
+          ],
+          "topicName": "อินเดีย",
+          "topicId": "cyx5kz2yw88t",
+          "curationList": [
+            {
+              "curationId": "51f2a23f-02ec-4347-a9ea-fd3b5be9ba36",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "India",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "India"
+        },
+        {
+          "thingLabel": "ประเทศจีน",
+          "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+          "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+          "thingSameAs": [
+            "http://sws.geonames.org/1814991/",
+            "http://dbpedia.org/resource/China",
+            "http://www.wikidata.org/entity/Q148"
+          ],
+          "topicName": "ประเทศจีน",
+          "topicId": "cxnykv3y1y6t",
+          "curationList": [
+            {
+              "curationId": "9f18332a-5260-4ff7-97c1-3b84c83197e6",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "China",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "China"
+        },
+        {
+          "thingLabel": "COP26",
+          "thingUri": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+          "thingId": "810f8876-9a4c-4872-95cc-0755c3711076",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/United_Nations_Climate_Change_conference",
+            "http://www.wikidata.org/entity/Q27887990"
+          ],
+          "topicName": "COP26",
+          "topicId": "c60nx0xn946t",
+          "curationList": [
+            {
+              "curationId": "d3fde0f8-4a0b-431e-a8c4-3d630b77819b",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "COP26",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "COP26"
+        },
+        {
+          "thingLabel": "สหรัฐอเมริกา",
+          "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+          "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/6252001/"],
+          "topicName": "สหรัฐอเมริกา",
+          "topicId": "cyx5kzxv6jgt",
+          "curationList": [
+            {
+              "curationId": "dc49ae37-3647-4b50-b100-bbb4c373f866",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United States",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "United States"
+        },
+        {
+          "thingLabel": "สหประชาชาติ",
+          "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+          "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
+          "thingType": [
+            "tagging:AmbiguousTerm",
+            "core:Organisation",
+            "tagging:Agent",
+            "core:Thing",
+            "tagging:TagConcept"
+          ],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q1065",
+            "http://dbpedia.org/resource/United_Nations"
+          ],
+          "topicName": "สหประชาชาติ",
+          "topicId": "cwr9jqrxq89t",
+          "curationList": [
+            {
+              "curationId": "1ae522d4-aa40-4399-8221-9cb8c0018964",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "United Nations",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "United Nations"
+        },
+        {
+          "thingLabel": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+          "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+          "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q125928",
+            "http://dbpedia.org/resource/Climate_change"
+          ],
+          "topicName": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+          "topicId": "c06gqj6zj07t",
+          "curationList": [
+            {
+              "curationId": "fe97eba6-c40c-47d6-9e5f-e0b1e283ceec",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Climate change",
+          "thingLabelLanguage": "th",
+          "thingPreferredLabel": "Climate change"
+        }
+      ]
+    },
+    "version": "v1.3.14",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "media",
+      "list",
+      "crosshead",
+      "social_embed"
+    ],
+    "includeComments": false,
+    "atiAnalytics": {
+      "producerName": "THAI",
+      "producerId": "90"
+    },
+    "readTime": 2,
+    "siteUri": "/thai",
+    "topics": [
+      {
+        "topicName": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "topicId": "c06gqj6zj07t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "fe97eba6-c40c-47d6-9e5f-e0b1e283ceec",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "สิ่งแวดล้อม",
+        "topicId": "c1gdqr2dxr8t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "9805dbef-a104-43d9-9047-1b1906e07ce9",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "สหราชอาณาจักร",
+        "topicId": "c340qxrx3d9t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "05a3ad59-9231-4a9d-ad8c-b8272efdc3fb",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "COP26",
+        "topicId": "c60nx0xn946t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "d3fde0f8-4a0b-431e-a8c4-3d630b77819b",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "ประเทศไทย",
+        "topicId": "cjgn73g98rqt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "81f2e8f7-89c1-4c7c-a720-2a22d6437226",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "สหประชาชาติ",
+        "topicId": "cwr9jqrxq89t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "1ae522d4-aa40-4399-8221-9cb8c0018964",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:AmbiguousTerm",
+          "core:Organisation",
+          "tagging:Agent",
+          "core:Thing",
+          "tagging:TagConcept"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "ประเทศจีน",
+        "topicId": "cxnykv3y1y6t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "9f18332a-5260-4ff7-97c1-3b84c83197e6",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Place"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "อินเดีย",
+        "topicId": "cyx5kz2yw88t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "51f2a23f-02ec-4347-a9ea-fd3b5be9ba36",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      },
+      {
+        "topicName": "สหรัฐอเมริกา",
+        "topicId": "cyx5kzxv6jgt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "dc49ae37-3647-4b50-b100-bbb4c373f866",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "121301271",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/433A/production/_121301271_hi071687273.jpg",
+        "path": "/cpsprodpb/433A/production/_121301271_hi071687273.jpg",
+        "height": 3003,
+        "width": 4352,
+        "altText": "เทียบคำสัญญานายกฯ ประยุทธ์ กับผู้นำชาติอื่นในเวที COP26",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "&quot;ผมมาร่วมประชุมวันนี้เพื่อเป็นการยืนยันว่าประเทศไทยให้ความสำคัญสูงสุดกับการแก้ไขปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ โดยไทยพร้อมร่วมมือกับทุกประเทศ และทุกภาคส่วนเพื่อบรรลุเป้าหมายร่วมกันในการแก้ปัญหาครั้งสำคัญที่สุดครั้งหนึ่งของโลก เพราะภารกิจนี้คือความเป็นความตายของโลกและอนาคตของลูกหลานของพวกเราทุกคน&quot; ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ย่อหน้าข้างบนคือคำกล่าวเริ่มต้นในสุนทรพจน์ความยาวราว 4 นาทีของ พล.อ. ประยุทธ์ จันทร์โอชา นายกรัฐมนตรีของไทย ที่เดินทางไปร่วมการประชุมรัฐภาคีกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศสมัยที่ 26 (COP26) ที่เมืองกลาสโกว์ ประเทศสกอตแลนด์ เมื่อ 1 พ.ย. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p0b1n7yp",
+        "subType": "clip",
+        "format": "video",
+        "title": "ประยุทธ์ บอกโลก \"ไทยให้ความสำคัญสูงสุดกับการแก้ไขปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ\"",
+        "synopses": {
+          "short": "โลกร้อน : คำสัญญารับมือการเปลี่ยนแปลงสภาพภูมิอากาศ ของนายกฯ ประยุทธ์ กับผู้นำชาติอื่น"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b1nbk8.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "โลกร้อน : คำสัญญารับมือการเปลี่ยนแปลงสภาพภูมิอากาศ ของนายกฯ ประยุทธ์ กับผู้นำชาติอื่น",
+        "versions": [
+          {
+            "versionId": "p0b1n7yy",
+            "types": ["Original"],
+            "duration": 76,
+            "durationISO8601": "PT1M16S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1635793672000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "พล.อ. ประยุทธ์ เป็นหนึ่งในผู้นำจากกว่า 120 ประเทศที่เดินทางมาร่วมการประชุมนี้ ที่นายบอริส จอห์นสัน นายกรัฐมนตรีสหราชอาณาจักรชาติเจ้าภาพเตือนว่า ตอนนี้โลกเหลือเวลาแค่ &quot;1 นาทีก่อนเที่ยงคืน&quot; แล้ว ซึ่งหมายถึง ห้วงเวลาสุดท้ายก่อนจะเกิดเหตุ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "หลายชาติที่ถูกกล่าวว่าว่าเป็นผู้ทำลายสิ่งแวดล้อมรายใหญ่ โดยเฉพาะ จีน อินเดีย และบราซิล กำลังเผชิญแรงกดดันเรื่องการใช้พลังงานถ่านหินและการตัดไม้ทำลายป่า ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "เป้าหมายในการจัดการการเปลี่ยนแปลงสภาพภูมิอากาศคือจำกัดอุณหภูมิเฉลี่ยโลกไม่ให้เกิน 1.5 องศาเซลเซียส หรืออย่างเลวร้ายที่สุดไม่เกิน 2 องศาเซลเซียส ก่อนถึงปี 2100 แต่สหประชาชาติเตือนว่า คำมั่นสัญญาที่ให้กันอยู่ตอนนี้จะทำให้โลกมีอุณหภูมิสูงขึ้นถึง 2.7 องศาเซลเซียส ซึ่งสหประชาชาติบอกว่าจะเป็น &quot;หายนะทางสภาพภูมิอากาศ&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>thai/international-59059419</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ท่าที่ไทยในการประชุมลดโลกร้อน COP26 สัญญาหรือตั้งใจจริง",
+                  "headline": "โลกร้อน: ไทยจะประกาศลดก๊าซเรือนกระจก 25% ในที่ประชุม COP26 แต่นักสิ่งแวดล้อมว่าน้อยไป",
+                  "overtyped": "ท่าที่ไทยในการประชุมลดโลกร้อน COP26 สัญญาหรือตั้งใจจริง"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/thai/international-59059419"
+                },
+                "summary": "สำรวจผลประกอบการลดก๊าซเรือนกระจกของไทยและเป้าหมายใหม่ที่คณะผู้แทนไทยจะไปประกาศในที่ประชุมโลกร้อน COP 26 ที่กลาสโกว์ สกอตแลนด์",
+                "timestamp": 1635327966000,
+                "language": "th",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:thai/international-59059419",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>thai/international-58875313</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "การประชุมด้านสภาพภูมิอากาศ COP26 คืออะไร",
+                  "headline": "โลกร้อน: การประชุมสุดยอดด้านสภาพภูมิอากาศ COP26 ที่กลาสโกว์คืออะไร",
+                  "overtyped": "การประชุมด้านสภาพภูมิอากาศ COP26 คืออะไร "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/thai/international-58875313"
+                },
+                "summary": "สหราชอาณาจักรเตรียมเป็นเจ้าภาพการประชุมสุดยอดที่ถูกมองกันว่าสำคัญมากต่อการควบคุมการเปลี่ยนแปลงสภาพภูมิอากาศของโลก",
+                "timestamp": 1634004879000,
+                "language": "th",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:thai/international-58875313",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>thai/international-59049755</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "เราช่วยลดการปล่อยคาร์บอนลงได้อย่างไร",
+                  "headline": "การเปลี่ยนแปลงสภาพภูมิอากาศ : ทดสอบความรู้ของคุณเกี่ยวกับวิธีการลดการปล่อยคาร์บอน",
+                  "overtyped": "เราช่วยลดการปล่อยคาร์บอนลงได้อย่างไร "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/thai/international-59049755"
+                },
+                "summary": "คุณรู้วิธีการต่าง ๆ ในการช่วยบรรเทาปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศมากแค่ไหน",
+                "timestamp": 1635399364000,
+                "language": "th",
+                "passport": {
+                  "category": {
+                    "categoryId": "",
+                    "categoryName": ""
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:thai/international-59049755",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "121304763",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/8F84/production/_121304763_1745420.jpg",
+        "path": "/cpsprodpb/8F84/production/_121304763_1745420.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "เทียบคำสัญญานายกฯ ประยุทธ์ กับผู้นำชาติอื่นในเวที COP26",
+        "copyrightHolder": "ทำเนียบรัฐบาล",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ในการประชุมครั้งนี้ นอกจากสหราชอาณาจักรในฐานะประเทศเจ้าภาพอยากให้ทุกประเทศตั้งเป้าลดปริมาณการปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ให้ได้ภายในปี 2050 ก็ต้องการได้คำมั่นสัญญาเป็นแผนอย่างเจาะจงเรื่องการเลิกใช้ถ่านหิน การเปลี่ยนไปใช้รถพลังงานไฟฟ้า และการอนุรักษ์ป่าไม้ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นอกจากนี้ ประเทศกำลังพัฒนาก็ต้องการจะได้รับเงิน 1 แสนล้านดอลลาร์สหรัฐ ซึ่งประเทศร่ำรวยเคยให้สัญญาไว้ให้เป็นงบประมาณรายปีที่จะช่วยปรับตัวรับกับอุณหภูมิโลกที่สูงขึ้น",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "121301268",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/150C2/production/_121301268_hi071686657.jpg",
+        "path": "/cpsprodpb/150C2/production/_121301268_hi071686657.jpg",
+        "height": 2715,
+        "width": 1916,
+        "altText": "นายกฯ ประยุทธ์",
+        "copyrightHolder": "Reuters",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "สุนทรพจน์นายกฯ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "พล.อ.ประยุทธ์ใช้เวลาไม่ถึง 4 นาที กล่าวสุนทรพจน์ 8 ข้อ ที่พูดถึงความสำเร็จของประเทศไทยในการทำความสัญญาที่ให้ว่า และความมุ่งมั่นในอนาคต พร้อมกับเรียกร้องให้นานาชาตร่วมกันแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศของโลก",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "พล.อ.ประยุทธ์กล่าวเป็นภาษาไทยว่า ในปัจจุบันไทยปล่อยก๊าซเรือนกระจกออกในปริมาณราว 0.72% ของการปล่อยก๊าซเรือนกระจกทั่วทั้งโลก แต่ประเทศไทยกลับเป็น 1 ใน 10 ประเทศที่ได้รับผลกระทบร้ายแรงที่สุดจากการเปลี่ยนแปลงสภาพภูมิอากาศ และนี่คือเหตุผลสำคัญที่เขาไปร่วมการประชุมสุดยอดเรื่องภูมิอากาศของสหประชาชาติที่กรุงปารีสเมื่อปี 2015 โดยไทยอยู่ในประเทศกลุ่มแรกที่ให้สัตยาบันเข้าเป็นภาคีของความตกลงปารีส",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "จากการจัดลำดับขององค์กร Climate Watch ในปี 2018 ไทยเป็นประเทศที่ปล่อยก๊าซเรือนกระจกมากเป็นอันดับที่ 20 ของโลก หรือคิดเป็นปริมาณ 0.8% ของก๊าซเรือนกระจกที่มีการปล่อยทั่วโลก ส่วนประเทศที่ปล่อยมากเป็นอันดับ 1 ของโลกคือจีนที่ (19.19%) รองลงมาคือสหรัฐอเมริกา (18.13%)",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "พล.อ.ประยุทธ์ ระบุว่าภายใต้กรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ ไทยได้กำหนดเป้าหมายแผนการดำเนินงานลดก๊าซเรือนกระจกที่เหมาะสมของประเทศ (Nationally Appropriate Mitigation Actions NAMAs) เพื่อลดการปล่อยก๊าซเรือนกระจกในภาคพลังงานและขนส่งอย่างน้อย 7% ภายในปี 2020 แต่ทว่าในปี 2019 ไทยสามารถลดก๊าซเรือนกระจกได้แล้ว 17% ซึ่งเกินเป้าหมายที่ตั้งไว้กว่า 2 เท่า และก่อนเวลาที่ได้กำหนดไว้มากกว่า 1 ปี",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นอกจากนี้ไทยยังเป็นประเทศแรก ๆ ที่จัดส่งการมีส่วนร่วมที่ประเทศกำหนดขึ้น (Nationally Determined Contributions - NDC) ฉบับปรับปรุงปี 2020 และจัดทำแผนงานต่าง ๆ ในระดับประเทศ และระดับท้องถิ่น ล่าสุด ไทยได้ส่งยุทธศาสตร์ระยะยาวในการพัฒนาแบบปล่อยก๊าซเรือนกระจกระดับต่ำให้กับที่ประชุมรัฐภาคีกรอบอนุสัญญาสหประชาชาติว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศ (UNFCCC) โดยไทยเป็นประเทศแรก ๆ ที่จัดทำยุทธศาสตร์นี้ ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;วันนี้ผมจึงมาพร้อมกับเจตนารมณ์ที่เป็นความท้าทายอย่างยิ่งว่าประเทศไทยจะยกระดับการแก้ไขปัญหาภูมิอากาศอย่างเต็มที่และด้วยทุกวิถีทาง เพื่อให้ประเทศไทยบรรลุเป้าหมายความเป็นกลางทางคาร์บอน ภายในปี 2050 และบรรลุเป้าหมายการปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ได้ในปี 2065 และด้วยการสนับสนุนทางด้านการเงินและเทคโนโลยีอย่างเต็มที่และเท่าเทียม รวมถึงการเสริมสร้างขีดความสามารถจากความร่วมมือระหว่างประเทศ และกลไกภายใต้กรอบอนุสัญญาฯ ผมมั่นใจว่าประเทศไทยก็จะสามารถยกระดับ NDC ของเราขึ้นเป็นร้อยละ 40 ได้ ซึ่งจะทำให้การปล่อยก๊าซเรือนกระจกสุทธิของไทยเป็นศูนย์ได้ภายในปี 2050&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>thai/features-51749984</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "ของเหลือทิ้งจากผลไม้กลิ่นแรง ใช้ทำอุปกรณ์กักเก็บพลังงาน-ชาร์จไฟได้เร็วขึ้น",
+                  "headline": "ของเหลือทิ้งจากผลไม้กลิ่นแรง ใช้ทำอุปกรณ์กักเก็บพลังงาน-ชาร์จไฟได้เร็วขึ้น",
+                  "overtyped": "ของเหลือทิ้งจากผลไม้กลิ่นแรง ใช้ทำอุปกรณ์กักเก็บพลังงาน-ชาร์จไฟได้เร็วขึ้น"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/thai/features-51749984"
+                },
+                "summary": "แกนกลางที่กินไม่ได้ในผลทุเรียนและขนุน สามารถนำมาผลิตเป็นตัวเก็บประจุยิ่งยวด (Ultracapacitor) ที่เป็นมิตรต่อสิ่งแวดล้อม",
+                "timestamp": 1583396070000,
+                "language": "th",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:thai/features-51749984",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>thai/international-48744913</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "อังกฤษทำได้ ผลิตไฟฟ้าจากเชื้อเพลิงสะอาดมากกว่าเชื้อเพลิงฟอสซิล",
+                  "headline": "อังกฤษผลิตไฟฟ้าจากเชื้อเพลิงสะอาดมากกว่าเชื้อเพลิงฟอสซิล",
+                  "overtyped": "อังกฤษทำได้ ผลิตไฟฟ้าจากเชื้อเพลิงสะอาดมากกว่าเชื้อเพลิงฟอสซิล"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/thai/international-48744913"
+                },
+                "summary": "อังกฤษประสบความสำเร็จเป็นครั้งแรกนับตั้งแต่ยุคปฏิวัติอุตสาหกรรม ในการผลิตไฟฟ้า ที่ได้จากแหล่งพลังงานที่ไม่ก่อมลพิษในสัดส่วนที่สูงกว่าพลังงานที่ได้จากเชื้อเพลิงฟอสซิล",
+                "timestamp": 1561371397000,
+                "language": "th",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:thai/international-48744913",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>ภูมิอากาศเปลี่ยนแปลงทำให้โลกมืดมัวลง ส่งผลอุณหภูมิยิ่งเพิ่มสูงขึ้นไปอีก</caption><url href=\"https://www.bbc.com/thai/international-58778599\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/thai/international-58778599",
+            "type": "listItem"
+          },
+          {
+            "text": "<link><caption>เกรียตา ทุนแบร์ย เรียกร้องผู้นำประเทศหยุดพูด แล้วลงมือแก้ปัญหาการเปลี่ยนแปลงสภาพภูมิอากาศ</caption><url href=\"https://www.bbc.com/thai/international-58744310\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/thai/international-58744310",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "109551098",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/15BB7/production/_109551098_f62b113c-5388-4516-aab1-af833760b5a0.jpg",
+        "path": "/cpsprodpb/15BB7/production/_109551098_f62b113c-5388-4516-aab1-af833760b5a0.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ศัพท์เทคนิคที่เรามักได้ยิน",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "<bold>COP26</bold> - COP ย่อมาจาก Conference of the Parties หรืออาจแปลได้ว่าการประชุมสมัชชาประเทศ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>ข้อตกลงปารีสฯ</bold> - ข้อตกลงปารีสว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศเมื่อปี 2015 เป็นครั้งแรกที่ประเทศต่าง ๆ ตกลงจะจัดการกับภาวะโลกร้อนและลดการปลดปล่อก๊าซเรือนกระจก",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>IPCC </bold>- คณะกรรมการระหว่างรัฐบาลว่าด้วยการเปลี่ยนแปลงสภาพภูมิอากาศของสหประชาชาติ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>1.5 องศาเซลเซียส</bold> - เป้าในการพยายามไม่ให้อุณหภูมิเฉลี่ยโลกเพิ่มขึ้นไม่เกิด 1.5 องศาเซลเซียสเมื่อเทียบกับช่วงก่อนการปฏิวัติอุตสาหกรรม นักวิทยาศาสตร์บอกว่าหากทำได้ โลกจะไม่เผชิญกับผลกระทบที่ร้ายแรงที่สุดจากการเปลี่ยนแปลงสภาพภูมิอากาศ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>ก๊าซเรือนกระจก</bold> - ประกอบด้วยก๊าซหลายชนิด ที่สำคัญคือ คาร์บอนไดออกไซด์ มีเทน ไนตรัสออกไซด์ ซัลเฟอร์เฮกซะฟลูออไรด์ โอโซน สารคลอโรฟลูออกโรคาร์บอน และฮาโลคาร์บอน ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "ก๊าซเหล่านี้สามารถเก็บกักรังสีความร้อนจากผิวโลก แล้วคายรังสีความร้อนนั้นกลับลงมา ทำให้อุณหภูมิบนผิวโลกร้อนขึ้นกว่าเดิม เปรียบเสมือนกระจกที่สะท้อนรังสีความร้อนไม่ให้ออกไปจากโลก จึงเรียกว่า &quot;ปรากฏการณ์เรือนกระจก&quot; (greenhouse effect) และเรียกการปล่อยก๊าซเรือนกระจกซึ่งมีหลายชนิดรวม ๆ ว่าการปล่อยคาร์บอน (carbon emission)",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "การเปลี่ยนแปลงสภาพภูมิอากาศเป็นผลพวงจากการเกิดภาวะโลกร้อน เพราะเมื่อรังสีความร้อนในบรรยากาศใกล้ผิวโลกถ่ายเทความร้อนนั้นให้แก่อากาศ ดินและน้ำ ก็ทำให้เกิดกระแสลม วัฏจักรของน้ำ ฝน พายุ ความเปลี่ยนแปลงของอุณหภูมิโลกจึงส่งผลให้สภาพอากาศแปรปรวนไปจากเดิม จนเป็นภัยธรรมชาติที่ส่งผลกระทบต่อหลายชีวิตในโลก ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "109551098",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/15BB7/production/_109551098_f62b113c-5388-4516-aab1-af833760b5a0.jpg",
+        "path": "/cpsprodpb/15BB7/production/_109551098_f62b113c-5388-4516-aab1-af833760b5a0.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "line",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "id": "121301273",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/915A/production/_121301273_fdhekb_vqasguu9.jpg",
+        "path": "/cpsprodpb/915A/production/_121301273_fdhekb_vqasguu9.jpg",
+        "height": 810,
+        "width": 1080,
+        "altText": "นายกฯ ประยุทธ์",
+        "caption": "นายกฯ ประยุทธ์ เข้าทักทาย นายกรัฐมนตรีจัสติน ทรูโด ของแคนาดา",
+        "copyrightHolder": "ไทยคู่ฟ้า",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "เป้าหมาย \"ไม่สอดคล้อง\" กับวิกฤต",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "ก่อนหน้านี้ คณะกรรมการนโยบายการเปลี่ยนแปลงสภาพภูมิอากาศแห่งชาติที่มี พล.อ.ประวิตร วงษ์สุวรรณ รองนายกรัฐมนตรีเป็นประธาน กำหนดเป้าหมายลดก๊าซเรือนกระจกจากระดับที่ปล่อยในปี 2005/2548 ลง 20-25% ภายในปี 2030/2573",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "เป้าหมายดังกล่าว ถูกวิจารณ์จากเครือข่ายองค์กรสิ่งแวดล้อมไทยที่ติดตามเรื่องโลกร้อนและการเปลี่ยนแปลงสภาพภูมิอากาศว่า &quot;ไม่สอดคล้องแล้วกับสถานการณ์วิกฤต&quot; และเสนอว่ารัฐบาลไทยควรกำหนดเป้าหมายใหม่ให้เท่าทันกับวิกฤตการณ์ คือ จากนี้เป็นต้นไป จะต้องปล่อยก๊าซเรือนกระจกให้น้อยกว่าปี 2019/2562 ซึ่งเป็นปีก่อนเกิดการะบาดของโควิด-19 และตั้งเป้าหมายลดการปล่อยก๊าซเรือนกระจกสุทธิลงถึง 50% ภายในปี 2030/2573",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ค.ศ. 2030 เป็นหมุดหมายสำคัญ ซึ่งสหราชอาณาจักรในฐานะประเทศเจ้าภาพต้องการให้ประเทศต่าง ๆ มีเป้าลดการปล่อยคาร์บอนให้มากที่สุด และอยากทุกประเทศให้คำมั่นสัญญาว่าภายในปี 2593 หรือ ค.ศ. 2050 จะให้ปริมาณการปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ให้ได้",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "จริยา เสนพงศ์ หัวหน้าทีมรณรงค์ด้านการเปลี่ยนผ่านพลังงาน กรีนพีซประเทศไทย บอกกับบีบีซีไทย ว่า เป้าหมายการลดก๊าซเรือนกระจกของไทยระยะ 10 ปีนั้น &quot;ไม่ได้มีความท้าทาย&quot; เลย และยังไม่มองไม่เห็นความชัดเจนของทางการไทยในการเปลี่ยนรูปแบบการพัฒนาประเทศเพื่อมุ่งสู่การปล่อยก๊าซเรือนกระจกให้น้อยที่สุด",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;เป้าหมายนี้ไม่ได้มีความท้าทายในการลดก๊าซคาร์บอนไดออกไซด์เลย เพราะเป็นการตั้งเป้าหมายในระดับที่ไทยทำได้แน่นอน เช่น การเพิ่มปริมาณการใช้พลังงานหมุนเวียน&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "สำหรับนักรณรงค์ด้านพลังงานอย่างจริยา เป้าหมายที่ท้าทายและจะพิสูจน์ความจริงจังของไทยในการลดก๊าซเรือนกระจกคือการ &quot;ปลดระวางโรงไฟฟ้าถ่านหิน&quot;  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "121304760",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1A54/production/_121304760_fdhek3kvkaiopxp.jpg",
+        "path": "/cpsprodpb/1A54/production/_121304760_fdhek3kvkaiopxp.jpg",
+        "height": 810,
+        "width": 1080,
+        "altText": "นายกฯ ประยุทธ์",
+        "caption": "นายกฯ ประยุทธ์ เข้าทักทาย อังเกลา แมร์เคิล นายกรัฐมนตรีเยอรมนี",
+        "copyrightHolder": "ไทยคู่ฟ้า",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "ก่อนหน้านี้ นายเกียรติชาย ไมตรีวงษ์ ผู้อำนวยการองค์การบริหารจัดการก๊าซเรือนกระจก (อบก.) ซึ่งเป็นองค์การมหาชนภายใต้การกำกับดูแลของกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม (ทส.) บอกกับบีบีซีไทยว่า หลังจากไทยเข้าร่วมความตกลงปารีสว่าด้วยการควบคุมอุณหภูมิของโลกไม่ให้สูงเกิน 2 องศาฯ และการจำกัดปริมาณก๊าซเรือนกระจก ไทยก็เริ่มดำเนินมาตรการต่าง ๆ ตามพันธสัญญา ซึ่งจากการประเมินเมื่อปี 2019/2562 พบว่าไทยสามารถลดก๊าซเรือนกระจกจากภาคพลังงานและการขนส่งได้ 64.2 ล้านตันคาร์บอนจากปีฐานในปี 2005/2548 หรือลดลง 17.5% จากปริมาณที่ปล่อยในปี 2005/2548 ซึ่งถือว่าบรรลุเป้าหมายในระยะแรก",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "แต่สิ่งที่ท้าทายในขณะนี้คือการบรรลุเป้าหมายในระยะที่ 2 ซึ่งรัฐบาลไทยได้กำหนดไว้ว่าจะลดการปล่อยก๊าซเรือนกระจกให้ได้ 20-25% จากปีฐาน 2548 หรือคิดเป็น 111-139 ตันคาร์บอนฯ ภายในปี 2573 และที่ยากยิ่งขึ้นไปอีกขั้นหนึ่งคือความตกลงปารีสกำหนดให้ประเทศที่ร่วมลงนามปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ (Net Zero) ภายในปี ค.ศ.2050 หรือภายในครึ่งแรกของศตวรรษนี้",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p0b1fdmk",
+        "subType": "clip",
+        "format": "video",
+        "title": "ยูเอ็นใช้ไดโนเสาร์ช่วยรณรงค์ เตือนมนุษย์ “อย่าเลือกการสูญพันธุ์”",
+        "synopses": {
+          "short": "โลกร้อน : สหประชาชาติปล่อยวิดีโอไดโนเสาร์บุกเตือนมนุษย์ “อย่าเลือกการสูญพันธุ์”"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b1fff0.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "โลกร้อน : สหประชาชาติปล่อยวิดีโอไดโนเสาร์บุกเตือนมนุษย์ “อย่าเลือกการสูญพันธุ์”",
+        "versions": [
+          {
+            "versionId": "p0b1fdmr",
+            "types": ["Original"],
+            "duration": 95,
+            "durationISO8601": "PT1M35S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true
+            },
+            "availableFrom": 1635701279000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "สหรัฐฯ สหราชอาณาจักร อินเดีย ว่าอย่างไร",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "เมื่อประธานาธิบดีสี จิ้นผิง ของจีนไม่ได้มาร่วมงาน แรงกดดันมหาศาลก็พุ่งไปยังสหรัฐอเมริกาในฐานะประเทศที่ปลดปล่อยก๊าซคาร์บอนไดออกไซด์มากเป็นอันดับที่ 2 ของโลกรองจากจีน โดยข้อมูลจากเมื่อปี 2019 ชี้ว่า สหรัฐฯ ปลดปล่อยคาร์บอนไดออกไซด์ถึง 5,107 เมกกะตัน ตามหลังจีนซึ่งปลดปล่อยถึง 11,535 เมกะตันต่อปี ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "แต่เมื่อย้อนมองถึงอดีตตั้งแต่หลายร้อยปีมาแล้ว ไม่มีประเทศไหนปลดปล่อยก๊าซคาร์บอนไดออกไซด์เท่าสหรัฐฯ โดยเว็บไซต์รวบรวมข้อมูล Our World in Data บอกว่าตั้งแต่ปี 1750 สหรัฐฯ ปล่อยคาร์บอนไดออกไซด์ถึง 410.2 พันล้านตัน ซึ่งมากกว่าจีนเกือบ 2 เท่า ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นายไบเดน บอกว่า นี่เป็นทศวรรษสำคัญที่เรามีโอกาสที่จะพิสูจน์ตัวเอง &quot;ไม่มีใครที่จะสามารถหลีกหนีสถานการณ์ที่เลวร้ายที่สุดได้… หากเราพลาดที่จะคว้าโอกาสนี้ไว้&quot; ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "แมตต์ แมคแกรธ ผู้สื่อข่าวด้านสิ่งแวดล้อมของบีบีซี บอกว่า ไบเดนยังไม่ได้เปิดเผยรายละเอียดของแผนมากนัก แต่ก็มีแผนยุทธศาสตร์ที่จะบรรลุเป้าการปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ให้ได้ภายในปี 2050 ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นอกจากนี้ เขายังได้ประกาศบริจาคเงินโดยยังได้เปิดเผยจำนวนต่อกองทุนเพื่อการปรับตัว (Adaptation Fund) เพื่อช่วยประเทศกำลังพัฒนาในการปรับตัวรับมือกับอุณหภูมิโลกที่สูงขึ้น ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ก่อนหน้านี้ นายกรัฐมนตรีบอริส จอห์นสัน ของสหราชอาณาจักร บอกกับบีบีซีว่า เขาไม่ได้สนับสนุนให้มีการสร้างเหมืองถ่านหินเพิ่ม แต่ก็บอกด้วยว่าอำนาจตัดสินใจอนุมติโครงการเสนอสร้างเหมืองถ่านหินที่มณฑลคัมเบรียทางตอนเหนือของอังกฤษที่เป็นที่ถกเถียงกันอยู่ไม่ได้อยู่ที่เขา",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นี่เป็นการแสดงความคิดเห็นของผู้นำสหราชอาณาจักรในเรื่องนี้อย่างชัดเจนที่สุดเท่าที่เคยมีมา และน่าจะเป็นแรงสำคัญในการเจรจาและโน้มน้าวให้ชาติอื่น ๆ ค่อยเลิกใช้ถ่านหิน ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ในสุนทรพจน์เปิดงาน นายจอห์นสันเปรียบผู้แทนเจรจาจากชาติต่าง ๆ ในการประชุมครั้งนี้ว่าเหมือนเจมส์ บอนด์ ที่กำลังถือระเบิดนับถอยหลังเวลาวันโลกาวินาศ ที่ต่างกันคือโศกนาฏกรรมครั้งนี้ไม่ใช่ภาพยนตร์แต่เป็นเรื่องจริง ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;...ตอนนี้เหลืออีกหนึ่งนาทีก่อนเที่ยงคืนของนาฬิกานับถอยหลังวันโลกาวินาศ และเราต้องลงมือจัดการเดี๋ยวนี้&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "นอกจากให้เลิกใช้ถ่ายหินแล้ว นายจอห์นสันต้องการให้ชาติต่าง ๆ ค่อย ๆ เลิกใช้รถยนต์ที่ใช้น้ำมัน และเริ่มฟื้นฟูป่าไม้ที่ถูกทำลายไป",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "ด้าน นายนเรนทรา โมดี นายกรัฐมนตรีของอินเดีย แถลงในที่ประชุมผู้นำว่าอินเดียจะปล่อยก๊าซเรือนกระจกสุทธิเป็นศูนย์ภายในปี 2070 ช้ากว่าที่จีนสัญญาไว้ถึง 10 ปี และ ช้ากว่าเป้าที่ประชุมสุดยอดตั้งไว้ถึง 20 ปี",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=oDVIA6xT2o8&t=67s",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "ภาวะโลกร้อนน่ากลัวจริงหรือ? - BBC News ไทย",
+            "author_name": "BBC News ไทย",
+            "author_url": "https://www.youtube.com/user/BBCThai",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/oDVIA6xT2o8/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/oDVIA6xT2o8?start=67&feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News ไทย: ภาวะโลกร้อนน่ากลัวจริงหรือ? - BBC News ไทย"
+          }
+        },
+        "id": "oDVIA6xT2o8",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "ประยุทธ์ บอก COP26 \"ไทยให้ความสำคัญสูงสุดกับการแก้ไขปัญหา\" โลกร้อน",
+      "headline": "โลกร้อน : คำสัญญารับมือการเปลี่ยนแปลงสภาพภูมิอากาศ ของนายกฯ ประยุทธ์ กับผู้นำชาติอื่นที่ COP26"
+    },
+    "locators": {
+      "assetUri": "/thai/international-59121888",
+      "cpsUrn": "urn:bbc:content:assetUri:thai/international-59121888",
+      "curie": "http://www.bbc.co.uk/asset/a1d29da8-171e-4412-97c4-1f1185e942dd",
+      "assetId": "59121888"
+    },
+    "summary": "\"ผมขอย้ำว่าเราทุกคนไม่มี 'แผนสอง' ในเรื่องการรักษาเยียวยาสภาพภูมิอากาศ เพราะเราจะไม่มี 'โลกที่สอง' ซึ่งเป็นบ้านของพวกเราเหมือนโลกนี้\"",
+    "timestamp": 1635793625000,
+    "language": "th",
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e2939461b000e9dabf8",
+          "campaignName": "WS - Educate me"
+        },
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "th",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Thai",
+      "locator": "urn:bbc:cps:curie:asset:a1d29da8-171e-4412-97c4-1f1185e942dd",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4efc9b72-ee98-40ad-b613-547f0260d317#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/b1a660eb-ef14-4645-b4cd-d7bd939ce443#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+            "thingLabel": "สิ่งแวดล้อม",
+            "thingUri": "http://www.bbc.co.uk/things/0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f#id",
+            "thingId": "0f37fb35-7f9e-4e49-b189-9d7f1d6fb11f",
+            "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q43619",
+              "http://dbpedia.org/resource/Natural_environment"
+            ],
+            "thingEnglishLabel": "Environment",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+            "thingLabel": "ประเทศไทย",
+            "thingUri": "http://www.bbc.co.uk/things/1ed75fd4-f992-46db-9859-fb5a7c95da91#id",
+            "thingId": "1ed75fd4-f992-46db-9859-fb5a7c95da91",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/1605651/"],
+            "thingEnglishLabel": "Thailand",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+            "thingLabel": "สหราชอาณาจักร",
+            "thingUri": "http://www.bbc.co.uk/things/2e91364c-5c77-4660-b76e-d76202785e64#id",
+            "thingId": "2e91364c-5c77-4660-b76e-d76202785e64",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/2635167/"],
+            "thingEnglishLabel": "United Kingdom",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingLabel": "อินเดีย",
+            "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/India",
+              "http://sws.geonames.org/1269750/",
+              "http://www.wikidata.org/entity/Q668"
+            ],
+            "thingEnglishLabel": "India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "thingLabel": "ประเทศจีน",
+            "thingUri": "http://www.bbc.co.uk/things/6892384e-1966-4c03-9ce3-f694a8f9f69e#id",
+            "thingId": "6892384e-1966-4c03-9ce3-f694a8f9f69e",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Place"],
+            "thingSameAs": [
+              "http://sws.geonames.org/1814991/",
+              "http://dbpedia.org/resource/China",
+              "http://www.wikidata.org/entity/Q148"
+            ],
+            "thingEnglishLabel": "China",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+            "thingLabel": "COP26",
+            "thingUri": "http://www.bbc.co.uk/things/810f8876-9a4c-4872-95cc-0755c3711076#id",
+            "thingId": "810f8876-9a4c-4872-95cc-0755c3711076",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/United_Nations_Climate_Change_conference",
+              "http://www.wikidata.org/entity/Q27887990"
+            ],
+            "thingEnglishLabel": "COP26",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingLabel": "สหรัฐอเมริกา",
+            "thingUri": "http://www.bbc.co.uk/things/82857f8e-8134-462a-bb32-b7b14f4eab75#id",
+            "thingId": "82857f8e-8134-462a-bb32-b7b14f4eab75",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/6252001/"],
+            "thingEnglishLabel": "United States",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+            "thingLabel": "สหประชาชาติ",
+            "thingUri": "http://www.bbc.co.uk/things/b79ae056-59b1-49c7-8630-50f7e223e906#id",
+            "thingId": "b79ae056-59b1-49c7-8630-50f7e223e906",
+            "thingType": [
+              "tagging:AmbiguousTerm",
+              "core:Organisation",
+              "tagging:Agent",
+              "core:Thing",
+              "tagging:TagConcept"
+            ],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q1065",
+              "http://dbpedia.org/resource/United_Nations"
+            ],
+            "thingEnglishLabel": "United Nations",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+            "thingLabel": "การเปลี่ยนแปลงสภาพภูมิอากาศ",
+            "thingUri": "http://www.bbc.co.uk/things/e6369e45-f838-49cc-b5ac-857ed182e549#id",
+            "thingId": "e6369e45-f838-49cc-b5ac-857ed182e549",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q125928",
+              "http://dbpedia.org/resource/Climate_change"
+            ],
+            "thingEnglishLabel": "Climate change",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "Report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "th",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "121307536",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/F852/production/_121307536_fdhekb_vqasguu9.jpg",
+      "path": "/cpsprodpb/F852/production/_121307536_fdhekb_vqasguu9.jpg",
+      "height": 608,
+      "width": 1080,
+      "altText": "นายกฯ ประยุทธ์",
+      "caption": "นายกฯ ประยุทธ์ เข้าทักทาย นายกรัฐมนตรีจัสติน ทรูโด ของแคนาดา",
+      "copyrightHolder": "ไทยคู่ฟ้า",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:thai/international-59121888",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "ต่างประเทศ",
+      "uri": "/thai/international",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "บีบีซีไทย",
+      "uri": "/thai",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "ท่าที่ไทยในการประชุมลดโลกร้อน COP26 สัญญาหรือตั้งใจจริง",
+              "headline": "โลกร้อน: ไทยจะประกาศลดก๊าซเรือนกระจก 25% ในที่ประชุม COP26 แต่นักสิ่งแวดล้อมว่าน้อยไป"
+            },
+            "locators": {
+              "assetUri": "/thai/international-59059419",
+              "cpsUrn": "urn:bbc:content:assetUri:/thai/international-59059419"
+            },
+            "summary": "สำรวจผลประกอบการลดก๊าซเรือนกระจกของไทยและเป้าหมายใหม่ที่คณะผู้แทนไทยจะไปประกาศในที่ประชุมโลกร้อน COP 26 ที่กลาสโกว์ สกอตแลนด์",
+            "timestamp": 1635327966000,
+            "language": "th",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "121234982",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/710F/production/_121234982_935e08e5-8287-4e52-9b76-3ca0028aa758.jpg",
+              "path": "/cpsprodpb/710F/production/_121234982_935e08e5-8287-4e52-9b76-3ca0028aa758.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "คนลุยน้ำท่วม",
+              "caption": "อุทกภัยที่เกิดถี่ขึ้นและรุนแรงขึ้นส่วนหนึ่งเป็นผลมาจากความแปรปรวนของสภาพภูมิอากาศ",
+              "copyrightHolder": "Thai News Pix",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:thai/international-59059419",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "การประชุมด้านสภาพภูมิอากาศ COP26 คืออะไร",
+              "headline": "โลกร้อน: การประชุมสุดยอดด้านสภาพภูมิอากาศ COP26 ที่กลาสโกว์คืออะไร"
+            },
+            "locators": {
+              "assetUri": "/thai/international-58875313",
+              "cpsUrn": "urn:bbc:content:assetUri:/thai/international-58875313"
+            },
+            "summary": "สหราชอาณาจักรเตรียมเป็นเจ้าภาพการประชุมสุดยอดที่ถูกมองกันว่าสำคัญมากต่อการควบคุมการเปลี่ยนแปลงสภาพภูมิอากาศของโลก",
+            "timestamp": 1634004879000,
+            "language": "th",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "121025161",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/3F18/production/_121025161_057537729.jpg",
+              "path": "/cpsprodpb/3F18/production/_121025161_057537729.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Wildfire in California",
+              "caption": "Wildfires could become more common in a warming world",
+              "copyrightHolder": "Reuters",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:thai/international-58875313",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
