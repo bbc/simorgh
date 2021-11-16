@@ -128,6 +128,12 @@ const MediaPlayerContainer = ({
     }
   `;
 
+  const MediaPlayerWrapper = styled.div`
+    margin: 0;
+    padding-bottom: ${GEL_SPACING_TRPL};
+    width: 100%;
+  `;
+
   const noJsMessage = `This ${mediaInfo.type} cannot play in your browser. Please enable JavaScript or try a different browser.`;
   const contentNotAvailableMessage = `This content is no longer available`;
 
@@ -168,40 +174,45 @@ const MediaPlayerContainer = ({
     translations,
   );
 
-  const renderCaption = () =>
-    captionBlock ? (
-      <Caption block={captionBlock} type={mediaInfo.type} service={service} />
-    ) : null;
+  const caption = captionBlock ? (
+    <Caption block={captionBlock} type={mediaInfo.type} service={service} />
+  ) : null;
+
+  const mediaPlayer = isAmp ? (
+    <AmpMediaPlayer
+      src={embedSource}
+      placeholderSrc={placeholderSrc}
+      placeholderSrcset={placeholderSrcset}
+      title={iframeTitle}
+      noJsMessage={translatedNoJSMessage}
+      service={service}
+    />
+  ) : (
+    <CanonicalMediaPlayer
+      src={embedSource}
+      placeholderSrc={placeholderSrc}
+      placeholderSrcset={placeholderSrcset}
+      showPlaceholder={showPlaceholder}
+      title={iframeTitle}
+      service={service}
+      mediaInfo={mediaInfo}
+      noJsMessage={translatedNoJSMessage}
+      noJsClassName="no-js"
+      showLoadingImage={showLoadingImage}
+    />
+  );
 
   return (
     <>
       <Metadata aresMediaBlock={aresMediaBlock} embedSource={embedSource} />
-      <Figure>
-        {isAmp ? (
-          <AmpMediaPlayer
-            src={embedSource}
-            placeholderSrc={placeholderSrc}
-            placeholderSrcset={placeholderSrcset}
-            title={iframeTitle}
-            noJsMessage={translatedNoJSMessage}
-            service={service}
-          />
-        ) : (
-          <CanonicalMediaPlayer
-            src={embedSource}
-            placeholderSrc={placeholderSrc}
-            placeholderSrcset={placeholderSrcset}
-            showPlaceholder={showPlaceholder}
-            title={iframeTitle}
-            service={service}
-            mediaInfo={mediaInfo}
-            noJsMessage={translatedNoJSMessage}
-            noJsClassName="no-js"
-            showLoadingImage={showLoadingImage}
-          />
-        )}
-        {showCaption && renderCaption()}
-      </Figure>
+      {showCaption && caption ? (
+        <Figure>
+          {mediaPlayer}
+          {showCaption && caption}
+        </Figure>
+      ) : (
+        <MediaPlayerWrapper>{mediaPlayer}</MediaPlayerWrapper>
+      )}
     </>
   );
 };

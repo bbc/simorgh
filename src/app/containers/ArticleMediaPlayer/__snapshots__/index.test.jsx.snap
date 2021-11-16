@@ -110,7 +110,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-2 emotion-3"
     >
       <div
@@ -140,7 +140,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
           <noscript />
         </amp-iframe>
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
@@ -403,7 +403,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-2 emotion-3"
     >
       <div
@@ -469,7 +469,7 @@ exports[`MediaPlayer Calls the canonical media player, with a placeholder 1`] = 
           />
         </div>
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
