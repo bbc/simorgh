@@ -139,7 +139,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-3 emotion-4"
     >
       <div
@@ -169,7 +169,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
           <noscript />
         </amp-iframe>
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
@@ -323,7 +323,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-3 emotion-4"
     >
       <div
@@ -340,7 +340,7 @@ exports[`MediaPlayer render canonical legacy media player 1`] = `
         />
         <noscript />
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
@@ -484,7 +484,7 @@ exports[`MediaPlayer render the amp player 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-3 emotion-4"
     >
       <div
@@ -514,7 +514,7 @@ exports[`MediaPlayer render the amp player 1`] = `
           <noscript />
         </amp-iframe>
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
@@ -668,7 +668,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
     class="emotion-0 emotion-1 emotion-2"
     dir="ltr"
   >
-    <figure
+    <div
       class="emotion-3 emotion-4"
     >
       <div
@@ -685,7 +685,7 @@ exports[`MediaPlayer render the canonical player without a placeholder 1`] = `
         />
         <noscript />
       </div>
-    </figure>
+    </div>
   </div>
 </div>
 `;
