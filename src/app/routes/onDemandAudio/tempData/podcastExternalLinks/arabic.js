@@ -7,8 +7,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/us/podcast/bbc-xtra/id262251878',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/bbc-xtra/id262251878',
       },
     ],
     p08z9x26: [
@@ -18,8 +17,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/ae/podcast/%D8%AE%D8%B1%D8%A7%D9%81%D8%A7%D8%AA/id1541601477',
+        linkUrl: 'https://podcasts.apple.com/ae/podcast/%D8%AE%D8%B1%D8%A7%D9%81%D8%A7%D8%AA/id1541601477',
       },
     ],
     p086jpqy: [
@@ -29,8 +27,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/gb/podcast/%D8%A7%D9%84%D9%86%D8%B4%D8%B1%D8%A9-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A%D8%A9-%D9%84%D9%81%D9%8A%D8%B1%D9%88%D8%B3-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7/id1502996667',
+        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D8%A7%D9%84%D9%86%D8%B4%D8%B1%D8%A9-%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A%D8%A9-%D9%84%D9%81%D9%8A%D8%B1%D9%88%D8%B3-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7/id1502996667',
       },
     ],
     p08gp8wx: [
@@ -40,8 +37,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/us/podcast/%D8%AE%D8%B1%D8%A7%D9%81%D8%A7%D8%AA-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7/id1518556307',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/%D8%AE%D8%B1%D8%A7%D9%81%D8%A7%D8%AA-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7/id1518556307',
       },
     ],
     p09cgw89: [
@@ -51,8 +47,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/us/podcast/%D8%A3%D8%A8%D8%B9%D8%A7%D8%AF-%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9/id1561146726',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/%D8%A3%D8%A8%D8%B9%D8%A7%D8%AF-%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9/id1561146726',
       },
     ],
     p09m6x31: [
@@ -62,8 +57,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/gb/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%B9-%D9%84%D8%A7%D9%82%D8%A7%D8%AA/id1573549106',
+        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%B9-%D9%84%D8%A7%D9%82%D8%A7%D8%AA/id1573549106',
       },
     ],
     p09w8yvk: [
@@ -73,8 +67,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/gb/podcast/%D8%A5%D9%83%D8%B3%D8%AA%D8%B1%D8%A7-%D9%84%D9%8A%D9%81%D9%84%D8%B2-xtra-levels/id1586351356',
+        linkUrl: 'https://podcasts.apple.com/gb/podcast/%D8%A5%D9%83%D8%B3%D8%AA%D8%B1%D8%A7-%D9%84%D9%8A%D9%81%D9%84%D8%B2-xtra-levels/id1586351356',
       },
     ],
     p0b3xdrj: [
@@ -84,8 +77,7 @@ const externalLinks = {
       },
       {
         linkText: 'Apple',
-        linkUrl: 
-          'https://podcasts.apple.com/us/podcast/%D9%85%D8%B1%D8%A7%D9%87%D9%82%D8%AA%D9%8A/id1595160361',
+        linkUrl: 'https://podcasts.apple.com/us/podcast/%D9%85%D8%B1%D8%A7%D9%87%D9%82%D8%AA%D9%8A/id1595160361',
       },
     ],
   },
