@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
-import { node, string, bool } from 'prop-types';
+import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
 import { C_METAL, C_POSTBOX, C_STONE } from '@bbc/psammead-styles/colours';
 import MediaIndicator from './MediaIndicator';
@@ -77,7 +77,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
 Link.propTypes = {
   children: node.isRequired,
   dir: string.isRequired,
-  index: string.isRequired,
+  index: number.isRequired,
   showMediaIndicator: bool,
 };
 
