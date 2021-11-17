@@ -20,7 +20,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}
-        linkId={linkId || 'BrandLink=topPage'}
+        linkId={linkId || 'topPage'}
       />
     </>
   );
