@@ -188,7 +188,6 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
-          aria-labelledby={`liveLabel-${url}`}
         >
           {isLive ? (
             <LiveLabel
@@ -197,7 +196,6 @@ const StoryPromoContainer = ({
               liveText={liveLabel}
               ariaHidden={liveLabelIsEnglish}
               offScreenText={liveLabelIsEnglish ? 'Live' : null}
-              id={`liveLabel-${url}`}
             >
               {linkcontents}
             </LiveLabel>

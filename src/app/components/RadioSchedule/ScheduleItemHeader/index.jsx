@@ -105,7 +105,7 @@ const ScheduleItemHeader = ({
 
   const content = (
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text" id={`liveLabel-${link}`}>
+    <span role="text">
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
       {isLive && (
         <LiveLabel
@@ -143,11 +143,7 @@ const ScheduleItemHeader = ({
   return state === 'next' ? (
     content
   ) : (
-    <StyledLink
-      ariaLabelledBy={`liveLabel-${link}`}
-      as={linkComponent}
-      {...linkProps}
-    >
+    <StyledLink as={linkComponent} {...linkProps}>
       {content}
     </StyledLink>
   );
