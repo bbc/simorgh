@@ -7,7 +7,6 @@ import {
   GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
-  GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import {
   MEDIA_QUERY_TYPOGRAPHY,
@@ -29,7 +28,7 @@ const BrandTitle = styled.span`
   ${MEDIA_QUERY_TYPOGRAPHY.LAPTOP_AND_LARGER} {
     padding-bottom: ${GEL_SPACING_DBL};
     word-break: break-word;
-    line-height: ${GEL_SPACING_QUAD};
+    line-height: 1.09;
   }
 `;
 

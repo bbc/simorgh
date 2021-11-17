@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares:ws_media:brand:bbc_marathi_audio/p0b1s4nm",
+    "locators": {
+      "pid": "p0b1s85n",
+      "brandPid": "p0b1s4nm"
+    },
+    "type": "WSRADIO",
+    "createdBy": "bbc_marathi_audio",
+    "language": "mr",
+    "lastUpdated": 1636648203620,
+    "firstPublished": 1635852965000,
+    "lastPublished": 1635852965000,
+    "timestamp": 1635852965000,
+    "options": {},
+    "analyticsLabels": {
+      "pageTitle": "गोष्ट दुनियेची - BBC News मराठी",
+      "pageIdentifier": "marathi.bbc_marathi_audio.podcasts.programmes.p0b1s4nm.page",
+      "producerId": "59",
+      "contentType": "player-episode",
+      "producer": "MARATHI"
+    },
+    "tags": {},
+    "version": "v1.3.14",
+    "blockTypes": ["media"],
+    "title": "गोष्ट दुनियेची",
+    "releaseDateTimeStamp": 1635811200000
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "p0b1s85n",
+        "subType": "episode",
+        "format": "Audio",
+        "title": "",
+        "synopses": {
+          "short": "गर्भपाताविषयी अमेरिकतील महिलांना भारतीय महिलांपेक्षा कमी हक्क?",
+          "medium": "आज अमेरिकेतील गर्भपाताच्या कायद्याचा इतिहास समजून घेत, आपण एका प्रश्नाचं उत्तर शोधणार आहोत - की गर्भपाताच्या बाबतीत अमेरिकेच्या तुलनेत भारतात महिलांची स्थिती चांगली आहे का?"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b1s6fz.jpg",
+        "embedding": false,
+        "advertising": false,
+        "versions": [
+          {
+            "versionId": "p0b1s7qz",
+            "types": ["Podcast"],
+            "duration": 1029,
+            "durationISO8601": "PT17M9S",
+            "warnings": {},
+            "availableTerritories": {
+              "uk": true,
+              "nonUk": true,
+              "world": false
+            },
+            "availableFrom": 1635852840000,
+            "availabilityStatus": "available"
+          }
+        ],
+        "availability": "available",
+        "smpKind": "radioProgramme",
+        "episodeTitle": "गर्भपाताचा निर्णय कुणाचा – महिलेचा की संविधानाचा?",
+        "type": "media"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "headline": "गोष्ट दुनियेची"
+    },
+    "locators": {
+      "pid": "p0b1s85n",
+      "brandPid": "p0b1s4nm"
+    },
+    "media": {
+      "id": "p0b1s85n",
+      "subType": "episode",
+      "format": "Audio",
+      "title": "",
+      "synopses": {
+        "short": "गर्भपाताविषयी अमेरिकतील महिलांना भारतीय महिलांपेक्षा कमी हक्क?",
+        "medium": "आज अमेरिकेतील गर्भपाताच्या कायद्याचा इतिहास समजून घेत, आपण एका प्रश्नाचं उत्तर शोधणार आहोत - की गर्भपाताच्या बाबतीत अमेरिकेच्या तुलनेत भारतात महिलांची स्थिती चांगली आहे का?"
+      },
+      "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0b1s6fz.jpg",
+      "embedding": false,
+      "advertising": false,
+      "versions": [
+        {
+          "versionId": "p0b1s7qz",
+          "types": ["Podcast"],
+          "duration": 1029,
+          "durationISO8601": "PT17M9S",
+          "warnings": {},
+          "availableTerritories": {
+            "uk": true,
+            "nonUk": true,
+            "world": false
+          },
+          "availableFrom": 1635852840000,
+          "availabilityStatus": "available"
+        }
+      ],
+      "availability": "available",
+      "smpKind": "radioProgramme",
+      "episodeTitle": "गर्भपाताचा निर्णय कुणाचा – महिलेचा की संविधानाचा?",
+      "type": "media"
+    },
+    "indexImage": {
+      "id": "",
+      "subType": "index",
+      "href": "ichef.bbci.co.uk/images/ic/$recipe/p0b1s6fz.jpg",
+      "path": "ichef.bbci.co.uk/images/ic/$recipe/p0b1s6fz.jpg",
+      "height": 0,
+      "width": 0,
+      "altText": null,
+      "copyrightHolder": null,
+      "type": "image"
+    },
+    "releaseDateTimestamp": 1635811200000,
+    "brand": {
+      "pid": "p0b1s4nm",
+      "title": "गोष्ट दुनियेची"
+    },
+    "id": "urn:bbc:ares:ws_media:page:bbc_marathi_audio/p0b1s85n",
+    "type": "ws_radio"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Marathi",
+      "uri": "/marathi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "other-episode",
+        "promos": []
+      }
+    ]
+  }
+}
