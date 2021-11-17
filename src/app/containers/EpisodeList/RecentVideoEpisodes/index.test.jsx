@@ -89,7 +89,7 @@ describe('Recent Video Episodes', () => {
     );
 
     const visuallyHiddenAudioLabel = getAllByText('Vidéo,');
-    const visuallyHiddenDate = getAllByText('Durée 15,00');
+    const visuallyHiddenDate = getAllByText(', Durée 15,00');
     expect(visuallyHiddenAudioLabel[0]).toBeInTheDocument();
     expect(visuallyHiddenDate[0]).toBeInTheDocument();
   });
