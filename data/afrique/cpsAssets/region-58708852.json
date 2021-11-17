@@ -10,7 +10,7 @@
     "type": "STY",
     "createdBy": "afrique-v6",
     "language": "fr",
-    "lastUpdated": 1632837464068,
+    "lastUpdated": 1636415910604,
     "firstPublished": 1632837313000,
     "lastPublished": 1632837313000,
     "timestamp": 1632837313000,
@@ -34,6 +34,7 @@
       "ldp_tags": "Women's+rights~Africa~Women~Abortion~Women's+health",
       "cps_asset_id": "58708852",
       "ldp_ids": "8abd564a-2b8e-401c-9916-34982cb67b55~d2c2ba68-f9ad-4185-a6d1-7f6437256735~e45cb5f8-3c87-4ebd-ac1c-058e9be22862~f16883ee-804f-43cd-8bc3-80d0fed59682~faa8885f-9e69-4c29-a8a5-516d508075dc",
+      "contentId": "urn:bbc:cps:curie:asset:902acacf-4b2a-44e7-a5f8-a5f342a60933",
       "counterName": "afrique.africa.story.58708852.page",
       "cps_asset_type": "sty"
     },
@@ -283,7 +284,7 @@
         }
       ]
     },
-    "version": "v1.3.13",
+    "version": "v1.3.14",
     "blockTypes": ["image", "paragraph", "list", "crosshead"],
     "includeComments": false,
     "atiAnalytics": { "producerName": "AFRIQUE", "producerId": "3" },
@@ -414,7 +415,7 @@
         "type": "paragraph"
       },
       {
-        "text": "Car si, les Etats africains se sont engagées à garantir leur droits et libertés en signant le protocole de Maputo, dans la pratique, peu d'entre eux mettent en œuvre cette convention qu'ils ont pourtant signée.",
+        "text": "Car si, les Etats africains se sont engagées à garantir leur droits et libertés en signant le protocole de Maputo, dans la pratique, peu d'entre eux mettent en œuvre cette convention.",
         "markupType": "plain_text",
         "type": "paragraph"
       },

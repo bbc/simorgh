@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/gahuza/video/2016/01/160108_australia_fire_video",
       "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2016/01/160108_australia_fire_video",
-      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e"
+      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e",
+      "assetId": "42074194"
     },
     "type": "MAP",
     "createdBy": "greatlakes",
     "language": "rw",
-    "lastUpdated": 1573763006651,
+    "lastUpdated": 1635883783266,
     "firstPublished": 1452280157000,
     "lastPublished": 1452280420000,
+    "timestamp": 1452280420000,
     "options": {
       "includeComments": false,
       "allowRightHandSide": true,
@@ -22,12 +24,16 @@
     },
     "analyticsLabels": {
       "cps_asset_type": "map",
-      "cps_asset_id": "42074194"
+      "cps_asset_id": "42074194",
+      "contentId": "urn:bbc:topcat:curie:asset:3ed6950e-b63b-11e5-b876-9dc73db9bd6e"
     },
     "tags": {},
-    "version": "v1.1.3",
+    "version": "v1.3.14",
     "blockTypes": ["media", "paragraph"],
-    "includeComments": false
+    "includeComments": false,
+    "atiAnalytics": {},
+    "readTime": 1,
+    "siteUri": "/gahuza"
   },
   "content": {
     "blocks": [
@@ -49,14 +55,11 @@
             "duration": 16,
             "durationISO8601": "PT16S",
             "warnings": {},
-            "availableTerritories": {
-              "uk": true,
-              "nonUk": true,
-              "world": false
-            },
+            "availableTerritories": { "uk": true, "nonUk": true },
             "availableFrom": 1452279148000
           }
         ],
+        "smpKind": "programme",
         "type": "media"
       },
       {
@@ -79,13 +82,12 @@
     "locators": {
       "assetUri": "/gahuza/video/2016/01/160108_australia_fire_video",
       "cpsUrn": "urn:bbc:content:assetUri:gahuza/video/2016/01/160108_australia_fire_video",
-      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e"
+      "curie": "http://www.bbc.co.uk/asset/3ed6950e-b63b-11e5-b876-9dc73db9bd6e",
+      "assetId": "42074194"
     },
     "summary": "Umuriro wahereye mw'ishamba atongoye umuji wa Yarloop",
-    "timestamp": 1573763006651,
-    "passport": {
-      "taggings": []
-    },
+    "timestamp": 1452280420000,
+    "language": "rw",
     "media": {
       "id": "p03dyj2x",
       "subType": "clip",
@@ -104,14 +106,11 @@
           "duration": 16,
           "durationISO8601": "PT16S",
           "warnings": {},
-          "availableTerritories": {
-            "uk": true,
-            "nonUk": true,
-            "world": false
-          },
+          "availableTerritories": { "uk": true, "nonUk": true },
           "availableFrom": 1452279148000
         }
       ],
+      "smpKind": "programme",
       "type": "media"
     },
     "indexImage": {

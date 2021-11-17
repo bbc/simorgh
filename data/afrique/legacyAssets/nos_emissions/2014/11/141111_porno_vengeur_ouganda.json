@@ -4,14 +4,16 @@
     "locators": {
       "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
       "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e",
+      "assetId": "35793410"
     },
     "type": "MAP",
     "createdBy": "afrique",
     "language": "fr",
-    "lastUpdated": 1550148508980,
-    "firstPublished": 1415728482,
-    "lastPublished": 1417671433,
+    "lastUpdated": 1635886166855,
+    "firstPublished": 1415728482000,
+    "lastPublished": 1415728482000,
+    "timestamp": 1415728482000,
     "options": {
       "includeComments": false,
       "allowDateStamp": true,
@@ -19,11 +21,18 @@
       "allowAdvertising": false,
       "isBreakingNews": false
     },
-    "analyticsLabels": { "cps_asset_id": "35793410", "cps_asset_type": "map" },
+    "analyticsLabels": {
+      "cps_asset_type": "map",
+      "cps_asset_id": "35793410",
+      "contentId": "urn:bbc:topcat:curie:asset:edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+    },
     "tags": {},
-    "version": "v1.0.0",
+    "version": "v1.3.14",
     "blockTypes": ["legacyMedia", "paragraph"],
-    "includeComments": false
+    "includeComments": false,
+    "atiAnalytics": {},
+    "readTime": 1,
+    "siteUri": "/afrique"
   },
   "content": {
     "blocks": [
@@ -31,9 +40,37 @@
         "id": "35793410",
         "subType": "primary",
         "format": "video",
+        "image": {
+          "id": "35793410",
+          "subType": "thumbnail",
+          "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+          "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+          "height": 360,
+          "width": 640,
+          "altText": "",
+          "copyrightHolder": "",
+          "type": "image"
+        },
         "aspectRatio": "16:9",
         "live": false,
         "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+        "playlist": [
+          {
+            "format": "mp4",
+            "bitrate": "168000",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_lo.mp4"
+          },
+          {
+            "format": "mp4",
+            "bitrate": "320000",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_med.mp4"
+          },
+          {
+            "format": "mp4",
+            "bitrate": "904000",
+            "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_hi.mp4"
+          }
+        ],
         "type": "legacyMedia"
       },
       {
@@ -86,18 +123,47 @@
     "locators": {
       "assetUri": "/afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
       "cpsUrn": "urn:bbc:content:assetUri:afrique/nos_emissions/2014/11/141111_porno_vengeur_ouganda",
-      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e"
+      "curie": "http://www.bbc.co.uk/asset/edf9ebc6-69ca-11e4-b167-0ea63db9bd6e",
+      "assetId": "35793410"
     },
     "summary": "Le \"porno vengeur\" arrive en Afrique. Première victime de marque de ce phénomène: une star ougandaise de la chanson, Desire Luzinda.",
-    "timestamp": 1550148508980,
-    "passport": {},
+    "timestamp": 1415728482000,
+    "language": "fr",
     "media": {
       "id": "35793410",
       "subType": "primary",
       "format": "video",
+      "image": {
+        "id": "35793410",
+        "subType": "thumbnail",
+        "href": "http://a.files.bbci.co.uk/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+        "path": "/amz/worldservice/live/assets/images/2014/11/11/141111174540_uganda_luzinda_640x360__nocredit.jpg",
+        "height": 360,
+        "width": 640,
+        "altText": "",
+        "copyrightHolder": "",
+        "type": "image"
+      },
       "aspectRatio": "16:9",
       "live": false,
       "href": "http://www.bbc.co.uk/afrique/meta/dps/2014/11/emp/141111_porno_vengeur_ouganda.emp.xml",
+      "playlist": [
+        {
+          "format": "mp4",
+          "bitrate": "168000",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_lo.mp4"
+        },
+        {
+          "format": "mp4",
+          "bitrate": "320000",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_med.mp4"
+        },
+        {
+          "format": "mp4",
+          "bitrate": "904000",
+          "url": "https://wsodprogrf.akamaized.net/afrique/dps/2014/11/afr_fuganda_web_f1439_f11_f11_141111_porno_vengeur_ouganda_16x9_hi.mp4"
+        }
+      ],
       "type": "legacyMedia"
     },
     "indexImage": {
