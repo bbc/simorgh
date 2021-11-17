@@ -585,11 +585,13 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="NavigationLinks-Home"
               class="emotion-71 emotion-72"
               href="/news"
             >
               <span
                 class="emotion-73 emotion-74"
+                id="NavigationLinks-Home"
                 role="text"
               >
                 <span
@@ -2416,11 +2418,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-labelledby="NavigationLinks-Home"
                 class="emotion-18 emotion-19"
                 href="/news"
               >
                 <span
                   class="emotion-20 emotion-21"
+                  id="NavigationLinks-Home"
                   role="text"
                 >
                   <span
