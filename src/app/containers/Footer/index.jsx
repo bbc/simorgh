@@ -47,7 +47,7 @@ const FooterContainer = () => {
 
   return (
     <StyledFooter role="contentinfo" lang={serviceLang}>
-      <BrandContainer borderTop />
+      <BrandContainer linkId="footer-brand" borderTop />
       <Footer
         isAmp={isAmp}
         links={links}
