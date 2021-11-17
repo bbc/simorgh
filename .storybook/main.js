@@ -19,6 +19,10 @@ module.exports = {
   ],
   webpackFinal: async config => {
     config.target = ['web', 'es5'];
+    config.module.rules.push({
+      test: /\.worker\.js$/,
+      use: { loader: 'worker-loader' },
+    });
     config.plugins.push(
       /*
        * This replaces calls to logger.node.js with logger.web.js, a client
