@@ -227,13 +227,6 @@ export const getPublishedDatetime = (attribute, data) => {
     : null;
 };
 
-export const getContentId = (assetType, pageData) => {
-  const curie = path(['metadata', 'locators', 'curie'], pageData);
-  const guid = curie.split('/').pop();
-  const contentId = `urn:bbc:${assetType}:`.concat(guid);
-  return contentId;
-};
-
 export const getAtiUrl = (data = []) => {
   const cleanedValues = data
     .filter(({ value }) => value)

@@ -2,7 +2,6 @@ import path from 'ramda/src/path';
 import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
-  getContentId,
   LIBRARY_VERSION,
   getThingAttributes,
 } from '#lib/analyticsUtils';
@@ -43,14 +42,10 @@ export const buildCpsAssetPageATIParams = (
   const producerId = getProducer(atiAnalyticsProducerId);
   const ldpThingIds = getThingAttributes('thingId', pageData);
   const ldpThingLabels = getThingAttributes('thingEnglishLabel', pageData);
-  const isLegacyAsset = url => url.split('/').length > 7;
 
   return {
     appName: atiAnalyticsAppName,
-    contentId: getContentId(
-      isLegacyAsset(requestContext.canonicalLink) ? 'topcat' : 'cps',
-      pageData,
-    ),
+    contentId: path(['analyticsLabels', 'contentId'], metadata),
     contentType,
     language: path(['language'], metadata),
     // Example page identifier: embedded_media::pidgin.embedded_media.media_asset.49529724.page
