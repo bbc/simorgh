@@ -121,9 +121,8 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               <EpisodeList.Description className="episode-list__description--hover episode-list__description--visited">
                 {episode.episodeTitle || formatDate(episode.timestamp)}
               </EpisodeList.Description>
-              <VisuallyHiddenText>, </VisuallyHiddenText>
               <VisuallyHiddenText>
-                {`${durationLabel} ${formatDuration({
+                {`, ${durationLabel} ${formatDuration({
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
                   locale: datetimeLocale,
