@@ -752,10 +752,10 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          aria-labelledby="BrandLink-topPageBrand"
+          aria-labelledby="BrandLink-BrandLink=topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
-          id="topPageBrand"
+          id="BrandLink=topPage"
         >
           <svg
             aria-hidden="true"
@@ -788,7 +788,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
-            id="BrandLink-topPageBrand"
+            id="BrandLink-BrandLink=topPage"
             role="text"
           >
             <span
@@ -1812,10 +1812,10 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          aria-labelledby="BrandLink-topPageBrand"
+          aria-labelledby="BrandLink-BrandLink=topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
-          id="topPageBrand"
+          id="BrandLink=topPage"
         >
           <svg
             aria-hidden="true"
@@ -1848,7 +1848,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
-            id="BrandLink-topPageBrand"
+            id="BrandLink-BrandLink=topPage"
             role="text"
           >
             <span
@@ -2872,10 +2872,10 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
-          aria-labelledby="BrandLink-topPageBrand"
+          aria-labelledby="BrandLink-BrandLink=topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
-          id="topPageBrand"
+          id="BrandLink=topPage"
         >
           <svg
             aria-hidden="true"
@@ -2908,7 +2908,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
-            id="BrandLink-topPageBrand"
+            id="BrandLink-BrandLink=topPage"
             role="text"
           >
             <span
