@@ -4989,7 +4989,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -5312,7 +5312,7 @@ exports[`StoryPromo Container should render full width promos correctly for cano
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -9789,7 +9789,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -10106,7 +10106,7 @@ exports[`StoryPromo Container should render standard correctly for canonical 1`]
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -10420,7 +10420,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -10766,7 +10766,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -12381,7 +12381,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -12698,7 +12698,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -13012,7 +13012,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>
@@ -13358,7 +13358,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
           <span
             id="promo-link-unlabelledwww.bbc.co.uk"
           >
-            &lt;span&gt;A headline&lt;/span&gt;
+            A headline
           </span>
         </a>
       </h3>

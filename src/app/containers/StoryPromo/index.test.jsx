@@ -154,11 +154,13 @@ describe('StoryPromo Container', () => {
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
+      const spanId = 'promo-link-unlabelledwww.bbc.co.uk';
+
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        cpsItem.headlines.headline,
+        `<span id=${spanId}>${cpsItem.headlines.headline}</span>`,
       );
       expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
-        cpsItem.summary,
+        `<span>${cpsItem.summary}</span>`,
       );
       expect(cpsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Mee 2019',
