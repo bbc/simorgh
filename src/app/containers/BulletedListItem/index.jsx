@@ -8,12 +8,12 @@ import inline from '../InlineContainer';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline };
 
-const BulletedListItemContainer = ({ blocks, clickTrackerRef }) => {
+const BulletedListItemContainer = ({ blocks, onClick }) => {
   const contentBlocks = blocks.map(block => block.model.blocks).flat();
 
   const blockWithTrack = contentBlocks.map(block => ({
     ...block,
-    model: { ...block.model, clickTrackerRef },
+    model: { ...block.model, onClick },
   }));
 
   return (

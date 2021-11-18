@@ -49,7 +49,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         <Blocks
           blocks={blocks.map(block => ({
             ...block,
-            model: { ...block.model, clickTrackerRef },
+            model: { ...block.model, onClick: clickTrackerRef },
           }))}
           componentsToRender={componentsToRender}
         />
