@@ -154,13 +154,20 @@ describe('StoryPromo Container', () => {
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
-      const spanId = 'promo-link-unlabelledwww.bbc.co.uk';
+      const assetUri = `${cpsItem.locators.assetUri}`;
+      const labelId = `unlabelled`;
 
+      const getLinkId = () => {
+        const splitUri = assetUri.split('/').pop();
+        return `promo-link-${labelId}${splitUri || ''}`;
+      };
+
+      const linkId = getLinkId(assetUri, labelId);
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        `<span id=${spanId}>${cpsItem.headlines.headline}</span>`,
+        `<span id="${linkId}">${cpsItem.headlines.headline}</span>`,
       );
       expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
-        `<span>${cpsItem.summary}</span>`,
+        cpsItem.summary,
       );
       expect(cpsContainer.getElementsByTagName('time')[0].innerHTML).toEqual(
         '2 Mee 2019',
@@ -171,7 +178,7 @@ describe('StoryPromo Container', () => {
       ).toEqual(itemWithOvertypedSummary.overtypedSummary);
 
       expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        assetTypeItem.name,
+        `<span id="promo-link-${labelId}">${assetTypeItem.name}</span>`,
       );
       expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         assetTypeItem.summary,
