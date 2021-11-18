@@ -136,11 +136,6 @@ describe('Error handling', () => {
 
     expect(trackingData).toEqual({});
     expect(errorMessage).toBeUndefined();
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining(
-        'ATI Event Tracking Error: Could not parse tracking values from page data:',
-      ),
-    );
     expect(global.fetch).not.toHaveBeenCalled();
   });
 
