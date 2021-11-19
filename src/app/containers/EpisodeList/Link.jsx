@@ -60,7 +60,7 @@ const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
       {...props}
     >
       {showMediaIndicator && (
-        <MediaIndicatorWrapper dir={dir}>
+        <MediaIndicatorWrapper dir={dir} aria-hidden="true">
           <MediaIndicator size="2.5rem" />
         </MediaIndicatorWrapper>
       )}
