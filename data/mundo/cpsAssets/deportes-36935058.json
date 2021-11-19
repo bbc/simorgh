@@ -32,7 +32,8 @@
      "analyticsLabels":{
         "cps_asset_type":"pgl",
         "counterName":"mundo.sport.photo_gallery.36935058.page",
-        "cps_asset_id":"36935058"
+        "cps_asset_id":"36935058",
+        "contentId": "urn:bbc:cps:curie:asset:08e22e90-7361-cd47-b586-7cb53fc5a012"
      },
      "tags":{
         "about":[

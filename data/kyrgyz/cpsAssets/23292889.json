@@ -33,7 +33,8 @@
     "analyticsLabels": {
       "cps_asset_type": "sty",
       "counterName": "kyrgyz.story.23292889.page",
-      "cps_asset_id": "23292889"
+      "cps_asset_id": "23292889",
+      "id": "urn:bbc:cps:curie:asset:bb9390aa-4b35-e448-b295-cbd7369fe457"
     },
     "passport": { "taggings": [] },
     "tags": {},

@@ -28,6 +28,7 @@
       "allowPrintingSharingLinks": true
     },
     "analyticsLabels": {
+      "contentId": "urn:bbc:cps:curie:asset:3A43667729-4c50-834f-a4b5-c0c95c3cafcf",
       "cps_asset_type": "map",
       "counterName": "persian.iran.media_asset.23231114.page",
       "cps_asset_id": "23231114"

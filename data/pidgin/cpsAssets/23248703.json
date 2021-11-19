@@ -502,6 +502,7 @@
   },
   "metadata": {
     "analyticsLabels": {
+      "contentId": "urn:bbc:cps:curie:asset:5679389a-3ea6-0b40-9de4-f4d33d6bcd9f",
       "counterName": "pidgin.media_asset.23248703.page",
       "cps_asset_id": "23248703",
       "cps_asset_type": "map"

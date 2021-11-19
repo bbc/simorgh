@@ -56,7 +56,11 @@
     ]
   },
   "metadata": {
-    "analyticsLabels": { "cps_asset_id": "17694217", "cps_asset_type": "map" },
+    "analyticsLabels": {
+      "contentId": "urn:bbc:topcat:curie:asset:22d6ef3c-8f6e-11e5-b707-b2517c19ac20",
+      "cps_asset_id": "17694217",
+      "cps_asset_type": "map"
+    },
     "blockTypes": ["legacyMedia", "paragraph"],
     "createdBy": "arabic_1024",
     "firstPublished": 1448014173000,
