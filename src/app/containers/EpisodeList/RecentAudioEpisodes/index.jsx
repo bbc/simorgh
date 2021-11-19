@@ -102,7 +102,6 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         service={service}
         dir={dir}
         bar={false}
-        aria-hidden="true"
         labelId="recent-episodes"
       >
         {recentEpisodesTranslation}
