@@ -417,6 +417,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -537,6 +538,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -647,6 +649,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -757,6 +760,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
