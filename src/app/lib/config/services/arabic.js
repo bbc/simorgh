@@ -65,16 +65,16 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'البودكاست',
-      brandTitle: 'إكسترا ليفلز (Xtra Levels)',
+      brandTitle: 'مراهقتي (Morahakaty)',
       brandDescription:
-        'بودكاست يسبر كون الألعاب الإلكترونية من خلال لاعبيه ومطوريه.',
+        'تابوهات المراهقة، من تقديم كريمة كواح و إعداد ميس باقي.',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p09w8ydf.jpg',
-        alt: 'بودكاست "عَلاقات"',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p0b3x87s.jpg',
+        alt: 'مراهقتي (Morahakaty)',
       },
       linkLabel: {
         text: 'الحلقات',
-        href: 'https://www.bbc.com/arabic/podcasts/p09w8yvk',
+        href: 'https://www.bbc.com/arabic/podcasts/p0b3xdrj',
       },
       skipLink: {
         text: 'تخطى %title% وواصل القراءة',
