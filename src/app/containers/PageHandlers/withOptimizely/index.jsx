@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
 
 const optimizely = createInstance({
@@ -8,12 +8,12 @@ const optimizely = createInstance({
 });
 
 const withOptimizely = Component => {
+  // const { service } = useContext(ServiceContext);
   return props => (
     <OptimizelyProvider
-      isServerSide
       optimizely={optimizely}
       user={{
-        id: 'default_user1',
+        id: 'default_user',
         attributes: {
           service: 'mundo',
         },

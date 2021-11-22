@@ -6,6 +6,5 @@ import withOptimizely from '#app/containers/PageHandlers/withOptimizely';
 export default withOptimizely(
   applyBasicPageHandlers({
     addVariantHandling: true,
-    optimizely: true,
   })(ArticlePage),
 );
