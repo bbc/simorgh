@@ -61,12 +61,12 @@ export const service = {
     showAdPlaceholder: false,
     showRelatedTopics: true,
     podcastPromo: {
-      title: 'ပေါ့တ်ကာစ်',
-      brandTitle: 'Burmese Evening Podcast',
-      brandDescription: 'Up-to-date news and current affairs in Burmese',
+      title: 'ပေါ့ဒ်ကတ်စ်',
+      brandTitle: 'ဘီဘီစီမြန်မာပိုင်း ညနေခင်းသတင်းအစီအစဉ်',
+      brandDescription: 'နောက်ဆုံးရ သတင်းနဲ့ မျက်မှောက်ရေးရာအစီအစဉ်များ',
       image: {
         src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lyd.jpg',
-        alt: 'Burmese Evening Podcast',
+        alt: 'ဘီဘီစီမြန်မာပိုင်း ညနေခင်းသတင်းအစီအစဉ်',
       },
       linkLabel: {
         text: 'ပေါ့ဒ်ကတ်စ်အစီအစဉ်များ',
