@@ -1,6 +1,11 @@
 import ArticlePage from './ArticlePage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-export default applyBasicPageHandlers({
-  addVariantHandling: true,
-})(ArticlePage);
+import withOptimizely from '#app/containers/PageHandlers/withOptimizely';
+
+export default withOptimizely(
+  applyBasicPageHandlers({
+    addVariantHandling: true,
+    optimizely: true,
+  })(ArticlePage),
+);
