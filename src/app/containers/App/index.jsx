@@ -3,13 +3,16 @@
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
-import React from 'react';
+import React, { useContext } from 'react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
 import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
+import { ServiceContext } from '#contexts/ServiceContext';
 import App from './App';
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
+  eventBatchSize: 100,
+  eventFlushInterval: 1000,
 });
 
 export class ClientApp extends React.Component {
@@ -19,7 +22,15 @@ export class ClientApp extends React.Component {
 
   render() {
     return (
-      <OptimizelyProvider optimizely={optimizely}>
+      <OptimizelyProvider
+        optimizely={optimizely}
+        user={{
+          id: 'default_user',
+          attributes: {
+            service: 'mundo',
+          }
+        }}
+      >
         <BrowserRouter {...this.props}>
           <App initialData={this.props.data} />
         </BrowserRouter>
@@ -29,7 +40,17 @@ export class ClientApp extends React.Component {
 }
 
 export const ServerApp = props => (
-  <StaticRouter {...props}>
-    <App initialData={props.data} bbcOrigin={props.bbcOrigin} />
-  </StaticRouter>
+  <OptimizelyProvider
+    optimizely={optimizely}
+    user={{
+      id: 'default_user1',
+      attributes: {
+        service: 'pidgin',
+      }
+    }}
+  >
+    <StaticRouter {...props}>
+      <App initialData={props.data} bbcOrigin={props.bbcOrigin} />
+    </StaticRouter>
+  </OptimizelyProvider>
 );

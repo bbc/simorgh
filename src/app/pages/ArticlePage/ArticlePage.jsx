@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { OptimizelyFeature } from '@optimizely/react-sdk';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
@@ -196,6 +197,15 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <Primary>
           <Main role="main">
             <Disclaimer />
+            <OptimizelyFeature feature="nwsrw_wsoj_ab_test_pidgin">
+              {isEnabled =>
+                isEnabled ? (
+                  <h1>Welcome to Pidgin 2.0</h1>
+                ) : (
+                  <h1>Welcome to Pidgin</h1>
+                )
+              }
+            </OptimizelyFeature>
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
