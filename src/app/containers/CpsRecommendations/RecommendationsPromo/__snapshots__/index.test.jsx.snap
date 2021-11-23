@@ -120,6 +120,12 @@ exports[`RecommendationsPromo it renders a Story Promo wrapped in a Grid compone
   height: 100%;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-8 {
+    width: calc(100% - 5rem);
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-8 {
     padding: 0 1rem;

@@ -237,6 +237,12 @@ exports[`RecommendationsPromoList it renders a list of Story Promos wrapped in G
   height: 100%;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-14 {
+    width: calc(100% - 5rem);
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-14 {
     padding: 0 1rem;
