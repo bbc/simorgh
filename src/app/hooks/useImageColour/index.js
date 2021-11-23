@@ -22,7 +22,7 @@ const useImageColour = (
 
   // If a minimumContrast value was set, we extract multiple colours from the
   // image to improve the chances we find one that meets the required ratio
-  const quantityOfColoursToExtract = minimumContrast <= 0 ? 1 : 10;
+  const quantityOfColoursToExtract = minimumContrast <= 0 ? 2 : 10;
 
   useEffect(() => {
     try {
