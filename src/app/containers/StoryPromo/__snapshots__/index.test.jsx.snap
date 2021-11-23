@@ -6872,6 +6872,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            id="promo-link-unlabelledwww.bbc.co.uk"
             role="text"
           >
             <span
@@ -7176,6 +7177,7 @@ exports[`StoryPromo Container should render live correctly for canonical 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            id="promo-link-unlabelledwww.bbc.co.uk"
             role="text"
           >
             <span
@@ -7477,6 +7479,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
           href="https://www.bbc.co.uk"
         >
           <span
+            id="promo-link-unlabelledwww.bbc.co.uk"
             role="text"
           >
             <span
@@ -7810,6 +7813,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
           href="https://www.bbc.co.uk"
         >
           <span
+            id="promo-link-unlabelledwww.bbc.co.uk"
             role="text"
           >
             <span
