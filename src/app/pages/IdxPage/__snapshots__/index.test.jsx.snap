@@ -3140,6 +3140,7 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-279 emotion-280"
                   >
                     <span
+                      id="scheduleItem-p086pmsf"
                       role="text"
                     >
                       <span
@@ -3270,10 +3271,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-320 emotion-280"
                   >
                     <a
+                      aria-labelledby="scheduleItem-p086pms9"
                       class="emotion-322 emotion-323"
                       href="/persian/bbc_dari_radio/w172x1rwggbcdq8"
                     >
                       <span
+                        id="scheduleItem-p086pms9"
                         role="text"
                       >
                         <span
@@ -3398,10 +3401,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-320 emotion-280"
                   >
                     <a
+                      aria-labelledby="scheduleItem-p086pjpq"
                       class="emotion-322 emotion-323"
                       href="/persian/bbc_dari_radio/w3csz8fk"
                     >
                       <span
+                        id="scheduleItem-p086pjpq"
                         role="text"
                       >
                         <span
@@ -3526,10 +3531,12 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                     class="emotion-320 emotion-280"
                   >
                     <a
+                      aria-labelledby="scheduleItem-p086phc8"
                       class="emotion-322 emotion-323"
                       href="/persian/bbc_dari_radio/w3csz7tn"
                     >
                       <span
+                        id="scheduleItem-p086phc8"
                         role="text"
                       >
                         <span
