@@ -139,7 +139,7 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
                   duration: episode.duration,
                   format: episode.duration.includes('H') ? 'h,mm,ss' : 'mm,ss',
                   locale: datetimeLocale,
-                })} `}
+                }).replace(/,/g, ' , ')} `}
               </VisuallyHiddenText>
               <EpisodeList.DateTimeDuration>
                 <span aria-hidden="true">
