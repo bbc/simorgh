@@ -21,6 +21,14 @@ export const hexToRgb = hex => {
     : null;
 };
 
+export const rgbToHex = ([r, g, b]) =>
+  `#${[r, g, b]
+    .map(x => {
+      const hex = x.toString(16);
+      return hex.length === 1 ? `0${hex}` : hex;
+    })
+    .join('')}`;
+
 // Relative Luminance is used to calculate contrast ratios
 // https://www.w3.org/TR/WCAG20-TECHS/G17.html
 export const getRelativeLuminance = components => {
@@ -59,27 +67,28 @@ export const selectColour = ({
   try {
     if (minimumContrast <= 0)
       return {
-        rgb: palette.Vibrant.rgb,
-        hex: palette.Vibrant.hex,
+        rgb: palette[0],
+        hex: rgbToHex(palette[0]),
       };
 
     const contrastColourLuminance = getRelativeLuminance(
       hexToRgb(contrastColour),
     );
 
-    const hasSufficientContrast = colour =>
-      contrastRatioFromLuminances(
-        contrastColourLuminance,
-        getRelativeLuminance(colour.rgb),
-      ) >= minimumContrast;
+    const hasSufficientContrast = colour => {
+      return (
+        contrastRatioFromLuminances(
+          contrastColourLuminance,
+          getRelativeLuminance(colour),
+        ) >= minimumContrast
+      );
+    };
 
-    const selectedColour = Object.keys(palette).find(key =>
-      hasSufficientContrast(palette[key]),
-    );
+    const selectedColour = palette.find(color => hasSufficientContrast(color));
 
     return {
-      hex: palette[selectedColour].hex,
-      rgb: palette[selectedColour].rgb,
+      rgb: selectedColour,
+      hex: rgbToHex(selectedColour),
     };
   } catch (e) {
     return {

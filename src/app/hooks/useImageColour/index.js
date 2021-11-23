@@ -1,7 +1,22 @@
 import { useState, useEffect } from 'react';
-import Vibrant from 'node-vibrant';
+import ColorThief from './colorthief';
 
 import { selectColour } from './utils';
+
+const getPalette = (url, count) =>
+  new Promise((resolve, reject) => {
+    const colorThief = new ColorThief();
+    const img = new Image();
+
+    img.addEventListener('load', () => {
+      console.log('LOADED');
+      resolve(colorThief.getPalette(img, count));
+    });
+
+    img.addEventListener('error', e => reject(e));
+    img.crossOrigin = 'Anonymous';
+    img.src = url;
+  });
 
 const useImageColour = (
   url,
@@ -23,18 +38,22 @@ const useImageColour = (
   useEffect(() => {
     try {
       setIsLoading(true);
-      Vibrant.from(url)
-        .getPalette()
-        .then(output => {
-          setPalette(output);
-          setIsLoading(false);
-          setError(null);
-        })
-        .catch(setErrorState);
+
+      /*
+        If we have to find a colour with a minimum contrast, we need to
+        extract multiple colours from the image, to improve our chances
+      */
+      const coloursToExtract = minimumContrast <= 0 ? 1 : 10;
+
+      getPalette(url, coloursToExtract).then(colours => {
+        setPalette(colours);
+        setIsLoading(false);
+        setError(null);
+      });
     } catch (err) {
       setErrorState();
     }
-  }, [url]);
+  }, [url, minimumContrast]);
 
   return {
     colour: selectColour({
