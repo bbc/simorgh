@@ -305,8 +305,10 @@ exports[`FooterContainer should render correctly 1`] = `
         class="emotion-5 emotion-6"
       >
         <a
+          aria-labelledby="BrandLink-footer"
           class="emotion-7 emotion-8"
           href="/news"
+          id="footer"
         >
           <svg
             aria-hidden="true"
@@ -332,6 +334,7 @@ exports[`FooterContainer should render correctly 1`] = `
           </svg>
           <span
             class="emotion-11 emotion-12"
+            id="BrandLink-footer"
           >
             BBC News
           </span>
