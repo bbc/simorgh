@@ -63,7 +63,7 @@ A boolean that will be true if the hook is currently analysing an image. Note th
 
 ###### `error`
 
-Will be null if no error has occured, or an error string if something has gone wrong. See the section on Error Handling below.
+Will be null if no error has occurred, or an error string if something has gone wrong. See the section on Error Handling below.
 
 ## Advanced Usage
 
