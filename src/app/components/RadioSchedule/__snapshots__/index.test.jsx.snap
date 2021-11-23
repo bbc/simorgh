@@ -745,10 +745,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-0"
               class="emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
+                id="scheduleItem-0"
                 role="text"
               >
                 <span
@@ -884,10 +886,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-1"
               class="emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
+                id="scheduleItem-1"
                 role="text"
               >
                 <span
@@ -1012,10 +1016,12 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-2"
               class="emotion-24 emotion-25"
               href="/news/articles/cn7k01xp8kxo"
             >
               <span
+                id="scheduleItem-2"
                 role="text"
               >
                 <span
@@ -1140,6 +1146,7 @@ exports[`RadioSchedule should render ltr radio schedules correctly 1`] = `
             class="emotion-147 emotion-23"
           >
             <span
+              id="scheduleItem-3"
               role="text"
             >
               <span
@@ -1963,10 +1970,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-0"
               class="emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
+                id="scheduleItem-0"
                 role="text"
               >
                 <span
@@ -2102,10 +2111,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-1"
               class="emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
+                id="scheduleItem-1"
                 role="text"
               >
                 <span
@@ -2230,10 +2241,12 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-22 emotion-23"
           >
             <a
+              aria-labelledby="scheduleItem-2"
               class="emotion-24 emotion-25"
               href="/arabic/articles/c1er5mjnznzo"
             >
               <span
+                id="scheduleItem-2"
                 role="text"
               >
                 <span
@@ -2358,6 +2371,7 @@ exports[`RadioSchedule should render rtl radio schedules correctly 1`] = `
             class="emotion-147 emotion-23"
           >
             <span
+              id="scheduleItem-3"
               role="text"
             >
               <span
