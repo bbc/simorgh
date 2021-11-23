@@ -74,6 +74,9 @@
     },
     "argparse@*": {
       "reason": "Licensed under Python-2.0; https://github.com/nodeca/argparse/blob/master/LICENSE"
+    },
+    "json-schema@*": {
+      "reason": "Licenced under BSD 3-Clause; https://github.com/kriszyp/json-schema/blob/master/LICENSE"
     }
   }
 }
