@@ -3,21 +3,6 @@ import ColorThief from './colorthief';
 
 import { selectColour } from './utils';
 
-const getPalette = (url, count) =>
-  new Promise((resolve, reject) => {
-    const colorThief = new ColorThief();
-    const img = new Image();
-
-    img.addEventListener('load', () => {
-      console.log('LOADED');
-      resolve(colorThief.getPalette(img, count));
-    });
-
-    img.addEventListener('error', e => reject(e));
-    img.crossOrigin = 'Anonymous';
-    img.src = url;
-  });
-
 const useImageColour = (
   url,
   {
@@ -35,25 +20,29 @@ const useImageColour = (
     setIsLoading(false);
   };
 
+  // If a minimumContrast value was set, we extract multiple colours from the
+  // image to improve the chances we find one that meets the required ratio
+  const quantityOfColoursToExtract = minimumContrast <= 0 ? 1 : 10;
+
   useEffect(() => {
     try {
       setIsLoading(true);
 
-      /*
-        If we have to find a colour with a minimum contrast, we need to
-        extract multiple colours from the image, to improve our chances
-      */
-      const coloursToExtract = minimumContrast <= 0 ? 1 : 10;
-
-      getPalette(url, coloursToExtract).then(colours => {
-        setPalette(colours);
+      const colorThief = new ColorThief();
+      const img = new Image();
+      img.addEventListener('load', () => {
+        setPalette(colorThief.getPalette(img, quantityOfColoursToExtract));
         setIsLoading(false);
         setError(null);
       });
+
+      img.addEventListener('error', setErrorState);
+      img.crossOrigin = 'Anonymous';
+      img.src = url;
     } catch (err) {
       setErrorState();
     }
-  }, [url, minimumContrast]);
+  }, [url, quantityOfColoursToExtract]);
 
   return {
     colour: selectColour({
