@@ -1004,8 +1004,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-topPage"
             class="emotion-23 emotion-24"
             href="/news"
+            id="topPage"
           >
             <svg
               aria-hidden="true"
@@ -1034,6 +1036,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-topPage"
             >
               BBC News
             </span>
@@ -1381,8 +1384,10 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-footer"
             class="emotion-23 emotion-24"
             href="/news"
+            id="footer"
           >
             <svg
               aria-hidden="true"
@@ -1411,6 +1416,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-footer"
             >
               BBC News
             </span>
