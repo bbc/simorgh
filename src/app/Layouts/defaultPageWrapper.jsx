@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { node, shape, bool } from 'prop-types';
+import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import styled from '@emotion/styled';
@@ -29,13 +30,14 @@ const PageWrapper = ({ children, pageData }) => {
   const fonts = fontFunctions.map(getFonts => getFonts());
 
   const isDarkMode = pathOr(false, ['darkMode'], pageData);
+  const pageType = path(['metadata', 'type'], pageData);
 
   return (
     <>
       <GlobalStyles fonts={fonts} />
       <ServiceWorkerContainer />
       <ManifestContainer />
-      <WebVitals />
+      <WebVitals pageType={pageType} />
       <Wrapper id="main-wrapper" darkMode={isDarkMode}>
         <HeaderContainer />
         <Content>{children}</Content>
