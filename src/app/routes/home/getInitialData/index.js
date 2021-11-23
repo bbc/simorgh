@@ -5,14 +5,14 @@ import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import filterUnknownContentTypes from '#app/routes/utils/sharedDataTransformers/filterUnknownContentTypes';
 import filterEmptyGroupItems from '#app/routes/utils/sharedDataTransformers/filterEmptyGroupItems';
 import squashTopStories from '#app/routes/utils/sharedDataTransformers/squashTopStories';
-import addIdsToItems from '#app/routes/utils/sharedDataTransformers/addIdsToItems';
+import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGroups';
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const transformJson = pipe(
   filterUnknownContentTypes,
   filterEmptyGroupItems,
-  addIdsToItems,
+  addIdsToGroups,
   squashTopStories,
   filterGroupsWithoutStraplines,
 );

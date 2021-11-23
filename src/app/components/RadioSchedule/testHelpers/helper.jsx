@@ -47,6 +47,7 @@ export const renderProgramCard = ({
   displaySummary = boolean('show summary', true),
   linkComponent = 'a',
   linkComponentAttr = 'href',
+  id,
 }) => {
   const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
 
@@ -65,6 +66,7 @@ export const renderProgramCard = ({
     brandTitle: text,
     summary: displaySummary ? longText : null,
     duration,
+    id,
   };
 
   return (
@@ -75,7 +77,7 @@ export const renderProgramCard = ({
       locale="ar"
       timezone={timezone}
     >
-      <ProgramCard program={program} {...props} />
+      <ProgramCard program={program} id={id} {...props} />
     </ServiceContextProvider>
   );
 };

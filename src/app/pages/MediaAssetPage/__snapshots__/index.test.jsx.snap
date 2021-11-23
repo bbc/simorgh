@@ -965,6 +965,12 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
   }
 }
 
+.emotion-111 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
+}
+
 @supports (display: grid) {
   .emotion-113 {
     display: grid;
@@ -1170,7 +1176,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 class="emotion-6 emotion-7 emotion-3"
                 dir="ltr"
               >
-                <figure
+                <div
                   class="emotion-9 emotion-10"
                 >
                   <div
@@ -1182,7 +1188,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
                       scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
+                      src="https://www.test.bbc.com/ws/av-embeds/cps/uzbek/sport-23248721/bbc_world_service_west_africa/uz-Cyrl"
                       title="Медиа плейер"
                     />
                     <div
@@ -1196,7 +1202,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                     </div>
                     <noscript />
                   </div>
-                </figure>
+                </div>
               </div>
               <div
                 class="emotion-19 emotion-3"
@@ -1462,7 +1468,7 @@ exports[`Media Asset Page AV player should render version (live audio stream) 1`
                 dir="ltr"
               >
                 <figure
-                  class="emotion-9 emotion-10"
+                  class="emotion-111 emotion-112"
                 >
                   <div
                     class="emotion-113 emotion-3"
@@ -2533,6 +2539,12 @@ exports[`Media Asset Page should render component 1`] = `
       grid-column-start: 5;
     }
   }
+}
+
+.emotion-165 {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 100%;
 }
 
 @supports (display: grid) {
@@ -3655,7 +3667,7 @@ exports[`Media Asset Page should render component 1`] = `
                 class="emotion-6 emotion-7 emotion-3"
                 dir="ltr"
               >
-                <figure
+                <div
                   class="emotion-9 emotion-10"
                 >
                   <div
@@ -3667,7 +3679,7 @@ exports[`Media Asset Page should render component 1`] = `
                       allowfullscreen=""
                       class="emotion-13 emotion-14"
                       scrolling="no"
-                      src="https://test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
+                      src="https://www.test.bbc.com/ws/av-embeds/cps/pidgin/23248703/p01kx42v/pcm"
                       title="Media player"
                     />
                     <div
@@ -3681,7 +3693,7 @@ exports[`Media Asset Page should render component 1`] = `
                     </div>
                     <noscript />
                   </div>
-                </figure>
+                </div>
               </div>
               <div
                 class="emotion-19 emotion-3"
@@ -4091,7 +4103,7 @@ exports[`Media Asset Page should render component 1`] = `
                 dir="ltr"
               >
                 <figure
-                  class="emotion-9 emotion-10"
+                  class="emotion-165 emotion-166"
                 >
                   <div
                     class="emotion-167 emotion-3"
@@ -4157,7 +4169,7 @@ exports[`Media Asset Page should render component 1`] = `
                 dir="ltr"
               >
                 <figure
-                  class="emotion-9 emotion-10"
+                  class="emotion-165 emotion-166"
                 >
                   <div
                     class="emotion-167 emotion-3"

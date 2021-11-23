@@ -324,27 +324,15 @@ const baseServiceConfig = {
   timezone: 'GMT',
   navigation: [
     {
-      title: 'Новини',
+      title: 'Головна',
       url: '/ukrainian',
     },
     {
       title: 'Коронавірус',
-      url: '/ukrainian/52118881',
+      url: '/ukrainian/topics/c87z2kmre5nt',
     },
     {
-      title: 'Наука',
-      url: '/ukrainian/topics/cyx5kzy4w5yt',
-    },
-    {
-      title: 'Технології',
-      url: '/ukrainian/topics/cxnykv9q4kpt',
-    },
-    {
-      title: 'Здоров’я',
-      url: '/ukrainian/topics/cwr9jqqqq13t',
-    },
-    {
-      title: 'Журнал',
+      title: 'Історії',
       url: '/ukrainian/53725237',
     },
     {
@@ -354,6 +342,10 @@ const baseServiceConfig = {
     {
       title: 'Книга року BBC',
       url: '/ukrainian/features-50320117',
+    },
+    {
+      title: 'Подкасти',
+      url: '/ukrainian/podcasts/p09jsy3h',
     },
     {
       title: 'РУС',
