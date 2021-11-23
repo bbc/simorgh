@@ -4,13 +4,13 @@ This is a hook that returns colour information for an image provided by a URL. T
 
 ![Screenshot](./screenshot.png)
 
-This hook is primarily a wrapper around node-vibrant: https://github.com/Vibrant-Colors/node-vibrant
+This hook is primarily a wrapper around colorthief: https://lokeshdhakar.com/projects/color-thief/
 
-It brings it into the react ecosystem, and changes the behaviour to better fit our requirements. The main differences between this and the base node-vibrant are:
+It brings it into the react ecosystem, and changes the behaviour to better fit our requirements. The main differences between this and the base colorthief are:
 
 - This hook will only return a single colour, rather than a full palette.
 - This hook is able to choose that colour based on contrast ratio calculations
-- This hook has some fallback behaviour to more gracefully deal with error states
+- This hook has some fallback behaviour to more gracefully deal with loading and error states
 
 ## Client Side Only
 
