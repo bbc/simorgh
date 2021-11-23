@@ -51,6 +51,7 @@ const ScheduleItemHeader = ({
   brandTitle,
   startTime,
   duration,
+  id,
   ...props
 }) => {
   const { linkComponent, linkComponentAttr, durationLabel } = props;
@@ -104,8 +105,9 @@ const ScheduleItemHeader = ({
   });
 
   const content = (
+    // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
+    <span role="text" id={`scheduleItem-${id}`}>
       <VisuallyHiddenText>{`${listenLabelTranslations[state]}, `}</VisuallyHiddenText>
       {isLive && (
         <LiveLabel
@@ -143,7 +145,12 @@ const ScheduleItemHeader = ({
   return state === 'next' ? (
     content
   ) : (
-    <StyledLink as={linkComponent} {...linkProps}>
+    <StyledLink
+      // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      aria-labelledby={`scheduleItem-${id}`}
+      as={linkComponent}
+      {...linkProps}
+    >
       {content}
     </StyledLink>
   );
@@ -156,6 +163,7 @@ ScheduleItemHeader.propTypes = {
   startTime: number.isRequired,
   durationLabel: string.isRequired,
   duration: string.isRequired,
+  id: string,
   linkComponent: oneOfType([elementType, string]),
   linkComponentAttr: string,
 };
@@ -163,6 +171,7 @@ ScheduleItemHeader.propTypes = {
 ScheduleItemHeader.defaultProps = {
   linkComponent: 'a',
   linkComponentAttr: 'href',
+  id: '1',
 };
 
 export default ScheduleItemHeader;

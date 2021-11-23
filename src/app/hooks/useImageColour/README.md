@@ -41,7 +41,7 @@ The first argument to the hook is a link to the image to be used.
 
 The hook accepts a second, optional argument. This argument can contain various configuration options:
 
-- `contrastColour` - A hexidecimal colour string, eg `"#ff0005"`. If provided, this colour will be used in the assessment of contrast requirements, as described below```
+- `contrastColour` - A hexidecimal colour string, eg `"#ff0005"`. If provided, this colour will be used in the assessment of contrast requirements, as described below.
 - `minimumContrast` - An integer that filters the returned colours to only those that meet this minimum contrast ratio value. Colours will be compared against the `constrastColour` above. If `contrastColour` is not provided, white (`#fff`) will be used.
 - `fallbackColour` - A hexidecimal colour string, eg `"#ff0005"` or RGB array, eg `[255, 0, 5]`. This will be returned when the hook is first loading, when it has encountered an error, when `disabled` is set to true, or when it was unable to find any colours that match the `minimumContrast` value.
 
@@ -63,7 +63,7 @@ A boolean that will be true if the hook is currently analysing an image. Note th
 
 ###### `error`
 
-Will be null if no error has occured, or an error string if something has gone wrong. See the section on Error Handling below.
+Will be null if no error has occurred, or an error string if something has gone wrong. See the section on Error Handling below.
 
 ## Advanced Usage
 

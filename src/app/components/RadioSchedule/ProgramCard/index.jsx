@@ -77,7 +77,7 @@ const DurationWrapper = styled.time`
       : `padding-right: ${GEL_SPACING};`}
 `;
 
-const ProgramCard = ({ program, ...props }) => {
+const ProgramCard = ({ program, id, ...props }) => {
   const { service, script, locale, dir } = useContext(ServiceContext);
   const { state, startTime, link, brandTitle, summary, duration } = program;
   return (
@@ -95,6 +95,8 @@ const ProgramCard = ({ program, ...props }) => {
             brandTitle={brandTitle}
             startTime={startTime}
             duration={duration}
+            // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+            id={id}
           />
         </StyledH3>
         {summary && (
@@ -128,6 +130,7 @@ ProgramCard.propTypes = {
     link: string.isRequired,
     brandTitle: string.isRequired,
   }).isRequired,
+  id: string.isRequired,
 };
 
 export default ProgramCard;
