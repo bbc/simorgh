@@ -124,6 +124,7 @@ exports[`BrandContainer should render correctly 1`] = `
       class="emotion-3 emotion-4"
     >
       <a
+        aria-labelledby="BrandLink-null"
         class="emotion-5 emotion-6"
         href="/news"
       >
@@ -154,6 +155,7 @@ exports[`BrandContainer should render correctly 1`] = `
         </svg>
         <span
           class="emotion-9 emotion-10"
+          id="BrandLink-null"
         >
           BBC News
         </span>

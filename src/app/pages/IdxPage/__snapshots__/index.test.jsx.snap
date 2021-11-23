@@ -5981,6 +5981,7 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                   class="emotion-49 emotion-50"
                 >
                   <a
+                    aria-labelledby="IndexAlsosLink-/ukrainian/features-russian-52633464"
                     class="emotion-51 emotion-52"
                     href="/ukrainian/features-russian-52633464"
                   >
