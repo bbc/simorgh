@@ -55,7 +55,10 @@ const FrostedGlassPromo = props => {
     <Wrapper href={url} onClick={onClick}>
       <ImageWithPlaceholder
         darkMode
-        {...pick(['src', 'srcset', 'sizes', 'alt', 'ratio', 'width'], image)}
+        {...pick(
+          ['src', 'srcset', 'sizes', 'alt', 'ratio', 'width', 'height'],
+          image,
+        )}
       />
       <FrostedGlassPanel image={image.smallSrc || image.src}>
         <Body script={script} service={service}>
@@ -77,6 +80,7 @@ FrostedGlassPromo.propTypes = {
     alt: string.isRequired,
     ratio: number.isRequired,
     width: number.isRequired,
+    height: number.isRequired,
     smallSrc: string,
     srcset: string,
     sizes: string,

@@ -10,7 +10,7 @@ import TimestampFooter from './TimestampFooter';
 
 const buildImageProperties = image => {
   if (!image) return null;
-  const { width, altText, path: url, copyright } = image;
+  const { width, height, altText, path: url, copyright } = image;
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
@@ -22,6 +22,7 @@ const buildImageProperties = image => {
     smallSrc: `https://ichef.bbci.co.uk/news/240${url}`,
     alt: altText,
     width,
+    height,
     copyright,
   };
 };

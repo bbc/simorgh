@@ -37,7 +37,10 @@ const Component = props => {
   );
   return (
     <Wrappers {...props}>
-      <Promo image={{ src: imageUrl, alt: '', width: 500, ratio: 52 }} url="#">
+      <Promo
+        image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
+        url="#"
+      >
         {mainBody}
       </Promo>
     </Wrappers>
