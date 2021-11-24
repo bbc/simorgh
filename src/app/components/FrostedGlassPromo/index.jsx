@@ -1,27 +1,23 @@
 import React, { useContext } from 'react';
+import { shape, node, string, number } from 'prop-types';
 import styled from '@emotion/styled';
+import pick from 'ramda/src/pick';
 
-import {
-  getSansRegular,
-  getSerifRegular,
-} from '@bbc/psammead-styles/font-styles';
+import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
 import FrostedGlassPanel from './FrostedGlassPanel';
 
 import ImageWithPlaceholder from '../../containers/ImageWithPlaceholder';
 
-const Wrapper = styled.div`
-  display: inline-block;
-  width: 300px;
-`;
+import withData from './withData';
 
-const Typo = styled.div`
+const Body = styled.div`
   ${({ service }) => service && getSerifRegular(service)}
   color: white;
-
   font-size: 0.9375rem;
   line-height: 1.33;
   padding: 0.625rem ${GEL_SPACING} 0 ${GEL_SPACING};
@@ -32,39 +28,64 @@ const Typo = styled.div`
   }
 `;
 
-const Meta = styled.div`
-  ${({ service }) => service && getSansRegular(service)}
-  color: white;
-
-  font-size: 0.8125rem;
-  padding: 0.625rem ${GEL_SPACING} ${GEL_SPACING_DBL} ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    font-size: 0.875rem;
-    padding: 0.625rem ${GEL_SPACING_DBL} ${GEL_SPACING_DBL} ${GEL_SPACING_DBL};
+const Wrapper = styled.a`
+  display: inline-block;
+  max-width: 400px;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    ${Body} {
+      text-decoration: underline;
+    }
   }
 `;
 
-const FrostedGlassPromo = ({ image, children, meta }) => {
+const FrostedGlassPromo = props => {
   const { script, service } = useContext(ServiceContext);
+  const { image, children, footer, url, eventTrackingData } = props;
+
+  const clickTracker = useClickTrackerHandler({
+    ...(eventTrackingData || {}),
+    url,
+  });
+
+  const onClick = eventTrackingData ? clickTracker : () => {};
+
   return (
-    <Wrapper>
+    <Wrapper href={url} onClick={onClick}>
       <ImageWithPlaceholder
-        src={image}
-        alt=""
-        width="100%"
-        ratio={56.25}
         darkMode
+        {...pick(['src', 'srcset', 'sizes', 'alt', 'ratio', 'width'], image)}
       />
-      <FrostedGlassPanel image={image}>
-        <Typo script={script} service={service}>
+      <FrostedGlassPanel image={image.smallSrc || image.src}>
+        <Body script={script} service={service}>
           {children}
-        </Typo>
-        <Meta script={script} service={service}>
-          {meta}
-        </Meta>
+        </Body>
+        {footer}
       </FrostedGlassPanel>
     </Wrapper>
   );
 };
 
-export default FrostedGlassPromo;
+FrostedGlassPromo.propTypes = {
+  children: node.isRequired,
+  url: string.isRequired,
+  footer: node,
+  eventTrackingData: shape({}),
+  image: shape({
+    src: string.isRequired,
+    alt: string.isRequired,
+    ratio: number.isRequired,
+    width: number.isRequired,
+    smallSrc: string,
+    srcset: string,
+    sizes: string,
+  }).isRequired,
+};
+
+FrostedGlassPromo.defaultProps = {
+  footer: null,
+  eventTrackingData: null,
+};
+
+export default withData(FrostedGlassPromo);

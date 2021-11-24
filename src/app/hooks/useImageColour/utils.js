@@ -59,12 +59,9 @@ export const contrastRatioFromLuminances = (l1, l2) =>
   (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
 // https://css-tricks.com/converting-color-spaces-in-javascript/#rgb-to-hsl
-export const getSaturation = ([_r, _g, _b]) => {
-  const r = _r / 255;
-  const g = _g / 255;
-  const b = _b / 255;
-  const colourMin = Math.min(r, g, b);
-  const colourMax = Math.max(r, g, b);
+const getSaturation = ([r, g, b]) => {
+  const colourMin = Math.min(r, g, b) / 255;
+  const colourMax = Math.max(r, g, b) / 255;
   const lightness = (colourMin + colourMax) / 2;
   const delta = colourMax - colourMin;
 

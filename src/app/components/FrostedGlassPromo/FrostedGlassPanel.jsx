@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { node, string } from 'prop-types';
+
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import useImageColour from '../../hooks/useImageColour';
 
 const BLUR_RADIUS = 10;
-const CHAMELEON_GREY_8 = '#202224';
+const FALLBACK_COLOUR = '#202224';
 
 const Wrapper = styled.div`
   position: relative;
@@ -30,12 +33,12 @@ const Background = styled.div`
     top: -${BLUR_RADIUS}px;
     left: 0;
     right: 0;
-    background: url('${({ src }) => src}');
+    background: ${FALLBACK_COLOUR} url('${({ image }) => image}');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    ${() => buildTransform()};
-    ${() => buildFilter()};
+    ${buildTransform()};
+    ${buildFilter()};
   }
 `;
 
@@ -46,31 +49,42 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   right: 0;
+  transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
-  @supports (${buildFilter()}) {
-    background: rgba(${({ colour }) => `${colour.join(',')}, 0.62`});
-  }
+  ${({ isLoading, colour }) =>
+    !isLoading &&
+    `
+      @supports (${buildFilter()}) {
+        background: rgba(${`${colour.join(',')}, 0.62`});
+      }
+    `}
 `;
 
 const Children = styled.div`
   position: relative;
   z-index: 3;
+  padding-bottom: ${GEL_SPACING_DBL};
 `;
 
-const FrostedGlassPromo = ({ image, children }) => {
-  const { colour } = useImageColour(image, {
-    fallbackColour: CHAMELEON_GREY_8,
+const FrostedGlassPanel = ({ image, children }) => {
+  const { isLoading, colour } = useImageColour(image, {
+    fallbackColour: FALLBACK_COLOUR,
     minimumContrast: 7,
     contrastColour: '#ffffff',
   });
 
   return (
     <Wrapper>
-      <Background src={image} />
-      <Overlay colour={colour.rgb} />
+      <Background image={image} />
+      <Overlay colour={colour.rgb} isLoading={isLoading} />
       <Children>{children}</Children>
     </Wrapper>
   );
 };
 
-export default FrostedGlassPromo;
+FrostedGlassPanel.propTypes = {
+  image: string.isRequired,
+  children: node.isRequired,
+};
+
+export default FrostedGlassPanel;

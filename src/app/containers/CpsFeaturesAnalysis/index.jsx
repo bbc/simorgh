@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
+import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import StoryPromo from '../StoryPromo';
+import _StoryPromo from '../StoryPromo';
+import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
 
 const eventTrackingData = {
@@ -15,6 +16,8 @@ const eventTrackingData = {
     componentName: 'features',
   },
 };
+
+const StoryPromo = isLive() ? _StoryPromo : FrostedGlassPromo;
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
