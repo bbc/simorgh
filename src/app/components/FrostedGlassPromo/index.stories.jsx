@@ -56,7 +56,7 @@ const WithCPSPromoData = props => {
 };
 
 export default {
-  title: 'Frosted Glass Promo',
+  title: 'Components/Frosted Glass Promo',
   Component,
   decorators: [withKnobs, withServicesKnob()],
 };

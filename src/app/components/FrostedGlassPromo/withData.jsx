@@ -28,7 +28,7 @@ const buildImageProperties = image => {
 };
 
 const cpsPromoFormatter = props => ({
-  children: path(['item', 'summary'], props),
+  children: path(['item', 'headlines', 'headline'], props),
   footer: (
     <TimestampFooter
       timestamp={path(['item', 'timestamp'], props)}

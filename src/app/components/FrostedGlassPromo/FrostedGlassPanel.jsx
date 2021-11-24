@@ -5,7 +5,7 @@ import { node, string } from 'prop-types';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import useImageColour from '../../hooks/useImageColour';
 
-const BLUR_RADIUS = 10;
+const BLUR_RADIUS = 15;
 const FALLBACK_COLOUR = '#202224';
 
 const Wrapper = styled.div`
@@ -13,19 +13,12 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
-const buildTransform = () => {
-  const scaleAmount = 1 + BLUR_RADIUS / 100;
-  const scaleX = `scaleX(${scaleAmount})`;
-  const scaleY = `scaleY(${-1 * scaleAmount})`;
-
-  return `transform: ${scaleX} ${scaleY}`;
-};
-
-const buildFilter = () => `filter: blur(${BLUR_RADIUS}px)`;
-
+const scaleAmount = 1 + BLUR_RADIUS / 100;
+const scaleX = `scaleX(${scaleAmount})`;
+const scaleY = `scaleY(${-1 * scaleAmount})`;
 const Background = styled.div`
   display: none;
-  @supports (${buildFilter()}) {
+  @supports (filter: blur(${BLUR_RADIUS}px)) {
     display: block;
     z-index: 1;
     position: absolute;
@@ -37,8 +30,8 @@ const Background = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    ${buildTransform()};
-    ${buildFilter()};
+    filter: blur(${BLUR_RADIUS}px);
+    transform: ${scaleX} ${scaleY};
   }
 `;
 
@@ -54,7 +47,7 @@ const Overlay = styled.div`
   ${({ isLoading, colour }) =>
     !isLoading &&
     `
-      @supports (${buildFilter()}) {
+      @supports (filter: blur(${BLUR_RADIUS}px) {
         background: rgba(${`${colour.join(',')}, 0.62`});
       }
     `}
@@ -69,7 +62,7 @@ const Children = styled.div`
 const FrostedGlassPanel = ({ image, children }) => {
   const { isLoading, colour } = useImageColour(image, {
     fallbackColour: FALLBACK_COLOUR,
-    minimumContrast: 7,
+    minimumContrast: 10,
     contrastColour: '#ffffff',
   });
 

@@ -58,13 +58,13 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   display: none;
 }
 
-@supports (filter: blur(10px)) {
+@supports (filter: blur(15px)) {
   .emotion-9 {
     display: block;
     z-index: 1;
     position: absolute;
     bottom: 0;
-    top: -10px;
+    top: -15px;
     left: 0;
     right: 0;
     background: #202224 url('https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg');
@@ -73,12 +73,12 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
     background-size: cover;
     -webkit-background-position: bottom;
     background-position: bottom;
-    -webkit-transform: scaleX(1.1) scaleY(-1.1);
-    -moz-transform: scaleX(1.1) scaleY(-1.1);
-    -ms-transform: scaleX(1.1) scaleY(-1.1);
-    transform: scaleX(1.1) scaleY(-1.1);
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    -webkit-transform: scaleX(1.15) scaleY(-1.15);
+    -moz-transform: scaleX(1.15) scaleY(-1.15);
+    -ms-transform: scaleX(1.15) scaleY(-1.15);
+    transform: scaleX(1.15) scaleY(-1.15);
   }
 }
 
@@ -217,13 +217,13 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   display: none;
 }
 
-@supports (filter: blur(10px)) {
+@supports (filter: blur(15px)) {
   .emotion-9 {
     display: block;
     z-index: 1;
     position: absolute;
     bottom: 0;
-    top: -10px;
+    top: -15px;
     left: 0;
     right: 0;
     background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg');
@@ -232,12 +232,12 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     background-size: cover;
     -webkit-background-position: bottom;
     background-position: bottom;
-    -webkit-transform: scaleX(1.1) scaleY(-1.1);
-    -moz-transform: scaleX(1.1) scaleY(-1.1);
-    -ms-transform: scaleX(1.1) scaleY(-1.1);
-    transform: scaleX(1.1) scaleY(-1.1);
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
+    -webkit-transform: scaleX(1.15) scaleY(-1.15);
+    -moz-transform: scaleX(1.15) scaleY(-1.15);
+    -ms-transform: scaleX(1.15) scaleY(-1.15);
+    transform: scaleX(1.15) scaleY(-1.15);
   }
 }
 
@@ -324,6 +324,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       <img
         alt="Orange 2"
         class="emotion-4 emotion-5 emotion-6"
+        height="549"
         sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
         src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
         srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
@@ -345,7 +346,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
         <div
           class="emotion-15 emotion-16"
         >
-          Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
+          El colorido encanto del arte callejero chilango 17
         </div>
         <time
           class="emotion-17 emotion-18 emotion-19"
