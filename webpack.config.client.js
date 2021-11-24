@@ -48,7 +48,10 @@ module.exports = ({
     target: ['web', IS_LEGACY_WEB ? 'es5' : 'es2017'], // compile for browser environment
     entry: START_DEV_SERVER
       ? ['webpack/hot/only-dev-server', './src/client']
-      : ['./src/poly', './src/client'],
+      : [
+          IS_LEGACY_WEB ? './src/poly/legacy.js' : './src/poly/modern.js',
+          './src/client',
+        ],
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
