@@ -12,10 +12,10 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 `;
-
 const scaleAmount = 1 + BLUR_RADIUS / 100;
 const scaleX = `scaleX(${scaleAmount})`;
 const scaleY = `scaleY(${-1 * scaleAmount})`;
+
 const Background = styled.div`
   display: none;
   @supports (filter: blur(${BLUR_RADIUS}px)) {
@@ -30,8 +30,8 @@ const Background = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    filter: blur(${BLUR_RADIUS}px);
     transform: ${scaleX} ${scaleY};
+    filter: blur(${BLUR_RADIUS}px);
   }
 `;
 
@@ -47,7 +47,7 @@ const Overlay = styled.div`
   ${({ isLoading, colour }) =>
     !isLoading &&
     `
-      @supports (filter: blur(${BLUR_RADIUS}px) {
+      @supports (filter: blur(${BLUR_RADIUS}px)) {
         background: rgba(${`${colour.join(',')}, 0.62`});
       }
     `}

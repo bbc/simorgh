@@ -73,12 +73,12 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
     background-size: cover;
     -webkit-background-position: bottom;
     background-position: bottom;
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
     -webkit-transform: scaleX(1.15) scaleY(-1.15);
     -moz-transform: scaleX(1.15) scaleY(-1.15);
     -ms-transform: scaleX(1.15) scaleY(-1.15);
     transform: scaleX(1.15) scaleY(-1.15);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
   }
 }
 
@@ -232,12 +232,12 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     background-size: cover;
     -webkit-background-position: bottom;
     background-position: bottom;
-    -webkit-filter: blur(15px);
-    filter: blur(15px);
     -webkit-transform: scaleX(1.15) scaleY(-1.15);
     -moz-transform: scaleX(1.15) scaleY(-1.15);
     -ms-transform: scaleX(1.15) scaleY(-1.15);
     transform: scaleX(1.15) scaleY(-1.15);
+    -webkit-filter: blur(15px);
+    filter: blur(15px);
   }
 }
 

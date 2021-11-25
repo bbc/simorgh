@@ -49,7 +49,7 @@ describe('Frosted Glass Promo', () => {
   it('should render the appropriate elements', () => {
     const { container, getByText } = render(<Component {...cpsPromoFixture} />);
     expect(getByText('5 mayo 2016'));
-    expect(getByText(cpsPromoFixture.item.summary));
+    expect(getByText(cpsPromoFixture.item.headlines.headline));
     expect(
       container.querySelector(
         `img[alt="${cpsPromoFixture.item.indexImage.altText}"]`,
