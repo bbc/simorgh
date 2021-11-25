@@ -8,7 +8,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
-import { promoProps, cpsPromoFixture } from './fixtures';
+import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
 
 import Promo from '.';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -46,7 +46,12 @@ describe('Frosted Glass Promo', () => {
     <Component {...cpsPromoFixture} />,
   );
 
-  it('should render the appropriate elements', () => {
+  shouldMatchSnapshot(
+    'when given props for a Link promo',
+    <Component {...linkPromoFixture} />,
+  );
+
+  it('should render the appropriate elements - CPS Promo', () => {
     const { container, getByText } = render(<Component {...cpsPromoFixture} />);
     expect(getByText('5 mayo 2016'));
     expect(getByText(cpsPromoFixture.item.headlines.headline));
@@ -59,6 +64,22 @@ describe('Frosted Glass Promo', () => {
       container.querySelector(
         `a[href="${cpsPromoFixture.item.locators.assetUri}"]`,
       ),
+    ).toBeInTheDocument();
+  });
+
+  it('should render the appropriate elements - Link Promo', () => {
+    const { container, getByText } = render(
+      <Component {...linkPromoFixture} service="pidgin" />,
+    );
+    expect(getByText('17th February 2020'));
+    expect(getByText(linkPromoFixture.item.summary));
+    expect(
+      container.querySelector(
+        `img[alt="${linkPromoFixture.item.indexImage.altText}"]`,
+      ),
+    ).toBeInTheDocument();
+    expect(
+      container.querySelector(`a[href="${linkPromoFixture.item.uri}"]`),
     ).toBeInTheDocument();
   });
 

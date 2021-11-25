@@ -40,8 +40,23 @@ const cpsPromoFormatter = props => ({
   eventTrackingData: path(['eventTrackingData', 'block'], props),
 });
 
+const linkPromoFormatter = props => ({
+  children: path(['item', 'name'], props),
+  footer: (
+    <TimestampFooter
+      timestamp={path(['item', 'timestamp'], props)}
+      serviceDatetimeLocale={path(['item', 'serviceDatetimeLocale'], props)}
+    />
+  ),
+  url: path(['item', 'uri'], props),
+  image: buildImageProperties(path(['item', 'indexImage'], props)),
+  eventTrackingData: path(['eventTrackingData', 'block'], props),
+});
+
 const normalise = props => {
   if (hasPath(['item', 'cpsType'], props)) return cpsPromoFormatter(props);
+  if (path(['item', 'assetTypeCode'], props) === 'PRO')
+    return linkPromoFormatter(props);
   return props;
 };
 

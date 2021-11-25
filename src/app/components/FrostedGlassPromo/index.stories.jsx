@@ -7,7 +7,7 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import Promo from '.';
-import { cpsPromoFixture } from './fixtures';
+import { cpsPromoFixture, linkPromoFixture } from './fixtures';
 
 // eslint-disable-next-line react/prop-types
 const Wrappers = ({ service, variant, children }) => {
@@ -55,6 +55,14 @@ const WithCPSPromoData = props => {
   );
 };
 
+const WithLinkPromoData = props => {
+  return (
+    <Wrappers {...props}>
+      <Promo {...linkPromoFixture} />
+    </Wrappers>
+  );
+};
+
 export default {
   title: 'Components/Frosted Glass Promo',
   Component,
@@ -63,3 +71,4 @@ export default {
 
 export const Standalone = Component;
 export const CPSPromo = WithCPSPromoData;
+export const LinkPromo = WithLinkPromoData;

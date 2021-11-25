@@ -11,6 +11,39 @@ export const promoProps = {
   },
 };
 
+export const linkPromoFixture = {
+  item: {
+    name: 'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
+    summary:
+      'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
+    indexImage: {
+      id: '63731494',
+      subType: 'index',
+      href: 'http://b.files.bbci.co.uk/C105/test/_63731494__110870927_climategrief5.jpg',
+      path: '/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg',
+      height: 351,
+      width: 624,
+      altText: 'E dey good for your',
+      caption: 'E dey good for your wellbeing to reconnect wit nature',
+      copyrightHolder: 'BBC',
+      type: 'image',
+    },
+    uri: 'https://www.bbc.com/pidgin/sport-51434980',
+    contentType: 'RadioBulletin',
+    assetTypeCode: 'PRO',
+    timestamp: 1581941235000,
+    type: 'link',
+  },
+  dir: 'ltr',
+  displayImage: true,
+  displaySummary: false,
+  eventTrackingData: {
+    block: {
+      componentName: 'features',
+    },
+  },
+};
+
 export const cpsPromoFixture = {
   item: {
     headlines: {
