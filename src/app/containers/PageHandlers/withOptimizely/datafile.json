@@ -1,0 +1,147 @@
+{
+   "version":"4",
+   "rollouts":[
+      {
+         "experiments":[
+            {
+               "status":"Running",
+               "audienceIds":[
+
+               ],
+               "variations":[
+                  {
+                     "variables":[
+
+                     ],
+                     "id":"20903550152",
+                     "key":"20903550152",
+                     "featureEnabled":true
+                  }
+               ],
+               "id":"20883682137",
+               "key":"20883682137",
+               "layerId":"20874151781",
+               "trafficAllocation":[
+                  {
+                     "entityId":"20903550152",
+                     "endOfRange":5000
+                  }
+               ],
+               "forcedVariations":{
+
+               }
+            }
+         ],
+         "id":"20874151781"
+      }
+   ],
+   "typedAudiences":[
+
+   ],
+   "anonymizeIP":true,
+   "projectId":"20897131008",
+   "variables":[
+
+   ],
+   "featureFlags":[
+      {
+         "experimentIds":[
+            "20890000893"
+         ],
+         "rolloutId":"20874151781",
+         "variables":[
+
+         ],
+         "id":"20889711106",
+         "key":"nwsrw_wsoj_ab_test_pidgin"
+      }
+   ],
+   "experiments":[
+      {
+         "status":"Running",
+         "audienceConditions":[
+            "or",
+            "20910382170"
+         ],
+         "audienceIds":[
+            "20910382170"
+         ],
+         "variations":[
+            {
+               "variables":[
+
+               ],
+               "id":"20887382488",
+               "key":"variation_1",
+               "featureEnabled":true
+            },
+            {
+               "variables":[
+
+               ],
+               "id":"20893880534",
+               "key":"variation_2",
+               "featureEnabled":false
+            }
+         ],
+         "id":"20890000893",
+         "key":"nwsrw_wsoj_ab_test_pidgin_test",
+         "layerId":"20920980218",
+         "trafficAllocation":[
+            {
+               "entityId":"20887382488",
+               "endOfRange":5000
+            },
+            {
+               "entityId":"20893880534",
+               "endOfRange":10000
+            }
+         ],
+         "forcedVariations":{
+
+         }
+      }
+   ],
+   "audiences":[
+      {
+         "id":"20910382170",
+         "conditions":"[\"and\", [\"or\", [\"or\", {\"match\": \"exact\", \"name\": \"service\", \"type\": \"custom_attribute\", \"value\": \"pidgin\"}]]]",
+         "name":"Pidgin"
+      },
+      {
+         "conditions":"[\"or\", {\"match\": \"exact\", \"name\": \"$opt_dummy_attribute\", \"type\": \"custom_attribute\", \"value\": \"$opt_dummy_value\"}]",
+         "id":"$opt_dummy_audience",
+         "name":"Optimizely-Generated Audience for Backwards Compatibility"
+      }
+   ],
+   "groups":[
+
+   ],
+   "sdkKey":"LptPKDnHyAFu9V12s5xCz",
+   "environmentKey":"development",
+   "attributes":[
+      {
+         "id":"20905100620",
+         "key":"service"
+      }
+   ],
+   "botFiltering":false,
+   "accountId":"4621041136",
+   "events":[
+      {
+         "experimentIds":[
+            "20890000893"
+         ],
+         "id":"20919220164",
+         "key":"test_visits"
+      },
+      {
+         "experimentIds":[
+
+         ],
+         "id":"20919831263",
+         "key":"Clicks on Top Stories"
+      }
+   ],
+   "revision":"32"
+}
