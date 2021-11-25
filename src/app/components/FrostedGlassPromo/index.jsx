@@ -30,6 +30,7 @@ const Body = styled.div`
 
 const Wrapper = styled.a`
   display: inline-block;
+  width: 100%;
   max-width: 400px;
   text-decoration: none;
   &:hover,

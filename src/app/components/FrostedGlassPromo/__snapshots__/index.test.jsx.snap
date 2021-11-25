@@ -3,6 +3,7 @@
 exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-0 {
   display: inline-block;
+  width: 100%;
   max-width: 400px;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -162,6 +163,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-0 {
   display: inline-block;
+  width: 100%;
   max-width: 400px;
   -webkit-text-decoration: none;
   text-decoration: none;
