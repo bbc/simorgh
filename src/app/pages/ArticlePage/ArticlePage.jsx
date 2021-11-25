@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { OptimizelyFeature } from '@optimizely/react-sdk';
+import React, { useContext, useState, useEffect } from 'react';
+import { useDecision } from '@optimizely/react-sdk';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
@@ -117,6 +117,9 @@ const StyledRelatedTopics = styled(RelatedTopics)`
 
 const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
   const { articleAuthor, showRelatedTopics } = useContext(ServiceContext);
+  const [decision, isClientReady, didTimeout] = useDecision(
+    'nwsrw_wsoj_ab_test_pidgin',
+  );
   const headline = getHeadline(pageData);
   const description = getSummary(pageData) || getHeadline(pageData);
   const firstPublished = getFirstPublished(pageData);
@@ -163,6 +166,27 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
     children: node.isRequired,
   };
 
+  console.log(isClientReady, decision.variationKey === 'variation_1');
+  console.log(decision);
+
+  const [titleVariation, setTitleVariation] = useState(null);
+
+  useEffect(() => {
+    if (isClientReady) {
+      setTitleVariation(decision.variationKey);
+    }
+  }, [isClientReady, decision.variationKey]);
+
+  let title = null;
+
+  if (titleVariation) {
+    if (titleVariation === 'variation_1') {
+      title = <h1>Welcome to Pidgin 2.0</h1>;
+    } else {
+      title = <h1>Welcome to Pidgin</h1>;
+    }
+  }
+
   return (
     <Wrapper>
       <ATIAnalytics data={pageData} />
@@ -197,15 +221,7 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
         <Primary>
           <Main role="main">
             <Disclaimer />
-            <OptimizelyFeature feature="nwsrw_wsoj_ab_test_pidgin">
-              {isEnabled =>
-                isEnabled ? (
-                  <h1>Welcome to Pidgin 2.0</h1>
-                ) : (
-                  <h1>Welcome to Pidgin</h1>
-                )
-              }
-            </OptimizelyFeature>
+            {title}
             <Blocks
               blocks={articleBlocks}
               componentsToRender={componentsToRender}
