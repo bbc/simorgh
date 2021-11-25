@@ -33,7 +33,7 @@ const PageWrapper = ({ children, pageData, status }) => {
   const isErrorPage = [404, 500].includes(status);
   const pageType = isErrorPage
     ? 'WS-ERROR-PAGE'
-    : path(['metadata', 'type'], status);
+    : path(['metadata', 'type'], pageData);
 
   return (
     <>
