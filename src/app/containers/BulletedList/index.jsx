@@ -12,20 +12,27 @@ import { GridItemMedium } from '#app/components/Grid';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
-const componentsToRender = { listItem };
-
 const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
+const getLinkBlock = path([
+  'model',
+  'blocks',
+  0,
+  'model',
+  'blocks',
+  0,
+  'model',
+  'locator',
+]);
+
+const withClickHandler = (Component, clickHandler) => props =>
+  <Component {...props} onClick={clickHandler} />;
+
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
-  const linkBlock = blocks.find(element => {
-    const locator = path(
-      ['model', 'blocks', 0, 'model', 'blocks', 0, 'model', 'locator'],
-      element,
-    );
-    return locator;
-  });
+  const linkBlock = blocks.find(getLinkBlock);
+  const hasLinkBlock = Boolean(linkBlock);
 
   const blockId = path(['id'], linkBlock);
 
@@ -35,7 +42,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
   };
   const viewRef = useViewTracker(eventTrackingData);
   const { script, service, dir } = useContext(ServiceContext);
-  const clickTrackerRef = useClickTrackerHandler(eventTrackingData);
+  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   return (
     <StyledGridItemMedium className={className}>
@@ -44,14 +51,15 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         script={script}
         service={service}
         dir={dir}
-        ref={linkBlock ? viewRef : null}
+        ref={hasLinkBlock ? viewRef : null}
       >
         <Blocks
-          blocks={blocks.map(block => ({
-            ...block,
-            model: { ...block.model, onClick: clickTrackerRef },
-          }))}
-          componentsToRender={componentsToRender}
+          blocks={blocks}
+          componentsToRender={{
+            listItem: hasLinkBlock
+              ? withClickHandler(listItem, handleClickTracking)
+              : listItem,
+          }}
         />
       </BulletedList>
     </StyledGridItemMedium>
