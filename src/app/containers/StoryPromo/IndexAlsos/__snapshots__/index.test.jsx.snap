@@ -182,7 +182,6 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         role="listitem"
       >
         <a
-          aria-labelledby="IndexAlsosLink-hausalabarai42837051"
           class="emotion-8 emotion-9"
           href="/hausa/labarai-42837051"
         >
@@ -196,7 +195,6 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         role="listitem"
       >
         <a
-          aria-labelledby="IndexAlsosLink-httpswwwbbccompersian"
           class="emotion-8 emotion-9"
           href="https://www.bbc.com/persian"
         >
