@@ -3,6 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import {
+  GEL_GROUP_1_SCREEN_WIDTH_MAX,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -44,6 +45,10 @@ const TextWrapper = styled.div`
   padding: 0 ${GEL_SPACING};
   vertical-align: top;
   height: 100%;
+
+  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
+    width: calc(100% - 5rem);
+  }
 
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
     padding: 0 ${GEL_SPACING_DBL};
