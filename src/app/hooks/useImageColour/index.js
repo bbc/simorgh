@@ -20,9 +20,8 @@ const useImageColour = (
     setIsLoading(false);
   };
 
-  // If a minimumContrast value was set, we extract multiple colours from the
-  // image to improve the chances we find one that meets the required ratio
-  const quantityOfColoursToExtract = minimumContrast <= 0 ? 2 : 10;
+  // We extract 10 colours to give us more opportunity to find the most vibrant one
+  const QUANTITY_OF_COLOURS_TO_EXTRACT = 10;
 
   useEffect(() => {
     try {
@@ -31,7 +30,7 @@ const useImageColour = (
       const colorThief = new ColorThief();
       const img = new Image();
       img.addEventListener('load', () => {
-        setPalette(colorThief.getPalette(img, quantityOfColoursToExtract));
+        setPalette(colorThief.getPalette(img, QUANTITY_OF_COLOURS_TO_EXTRACT));
         setIsLoading(false);
         setError(null);
       });
@@ -42,7 +41,7 @@ const useImageColour = (
     } catch (err) {
       setErrorState();
     }
-  }, [url, quantityOfColoursToExtract]);
+  }, [url]);
 
   return {
     colour: selectColour({
