@@ -18,7 +18,7 @@ const WebVitals = ({ pageType }) => {
   );
 
   const wsPageType = pageType
-    ? `WS-${pageType.split(' ').join('-').toUpperCase()}`
+    ? `WS-${pageType.replace(/\s+/g, '-').toUpperCase()}`
     : null;
 
   if (!wsPageType) {
