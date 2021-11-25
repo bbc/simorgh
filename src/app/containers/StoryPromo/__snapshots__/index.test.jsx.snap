@@ -8243,7 +8243,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              aria-labelledby="IndexAlsosLink-hausalabarai42837051"
               class="emotion-28 emotion-29"
               href="/hausa/labarai-42837051"
             >
@@ -8257,7 +8256,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              aria-labelledby="IndexAlsosLink-httpswwwbbccompersian"
               class="emotion-28 emotion-29"
               href="https://www.bbc.com/persian"
             >
