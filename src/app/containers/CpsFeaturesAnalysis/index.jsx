@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
+import { useDecision } from '@optimizely/react-sdk';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 
@@ -20,6 +21,26 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
 
+  const [decision, isClientReady, didTimeout] = useDecision(
+    'high_impact_feature_analysis_promo',
+  );
+
+  const [promoVariation, setPromoVariation] = useState(null);
+
+  useEffect(() => {
+    if (isClientReady) {
+      setPromoVariation(decision.variationKey);
+    }
+  }, [isClientReady, decision.variationKey]);
+
+  let frostedGlass = false;
+
+  if (promoVariation) {
+    if (promoVariation === 'variation_1') {
+      frostedGlass = true;
+    }
+  }
+
   return (
     <StoryPromoUl>
       {promoItems.map(item => (
@@ -31,6 +52,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
             eventTrackingData={eventTrackingData}
+            frostedGlass={frostedGlass}
           />
         </StoryPromoLi>
       ))}
