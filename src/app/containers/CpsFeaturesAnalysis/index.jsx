@@ -33,17 +33,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
     }
   }, [isClientReady, decision.variationKey, didTimeout]);
 
-  let frostedGlass = false;
+  let StoryPromoTest = promoItems.map(item => null);
 
   if (promoVariation) {
     if (promoVariation === 'variation_1') {
-      frostedGlass = true;
-    }
-  }
-
-  return (
-    <StoryPromoUl>
-      {promoItems.map(item => (
+      StoryPromoTest = promoItems.map(item => (
         <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
           <StoryPromo
             item={item}
@@ -52,12 +46,27 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
             eventTrackingData={eventTrackingData}
-            frostedGlass={frostedGlass}
+            frostedGlass
           />
         </StoryPromoLi>
-      ))}
-    </StoryPromoUl>
-  );
+      ));
+    } else {
+      StoryPromoTest = promoItems.map(item => (
+        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+          <StoryPromo
+            item={item}
+            dir={dir}
+            displayImage
+            displaySummary={false}
+            serviceDatetimeLocale={serviceDatetimeLocale}
+            eventTrackingData={eventTrackingData}
+          />
+        </StoryPromoLi>
+      ));
+    }
+  }
+
+  return <StoryPromoUl>{StoryPromoTest}</StoryPromoUl>;
 };
 
 PromoListComponent.propTypes = {
