@@ -28,10 +28,10 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const [promoVariation, setPromoVariation] = useState(null);
 
   useEffect(() => {
-    if (isClientReady) {
+    if (isClientReady && !didTimeout) {
       setPromoVariation(decision.variationKey);
     }
-  }, [isClientReady, decision.variationKey]);
+  }, [isClientReady, decision.variationKey, didTimeout]);
 
   let frostedGlass = false;
 
