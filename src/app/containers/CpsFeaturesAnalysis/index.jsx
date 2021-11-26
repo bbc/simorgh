@@ -24,10 +24,9 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
 
-  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
-
   const [decision, isClientReady, didTimeout] = useDecision(
     'high_impact_feature_analysis_promo',
+    { autoUpdate: true },
   );
 
   const [promoVariation, setPromoVariation] = useState(null);
@@ -38,11 +37,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
     }
   }, [isClientReady, decision.variationKey, didTimeout]);
 
-  let frostedGlass = false;
+  let StoryPromo = _StoryPromo;
 
   if (promoVariation) {
-    if (promoVariation === 'variation_1') {
-      frostedGlass = true;
+    if (promoVariation === 'variation_1' && !isAmp) {
+      StoryPromo = FrostedGlassPromo;
     }
   }
 
@@ -57,7 +56,6 @@ const PromoListComponent = ({ promoItems, dir }) => {
             displaySummary={false}
             serviceDatetimeLocale={serviceDatetimeLocale}
             eventTrackingData={eventTrackingData}
-            frostedGlass={frostedGlass}
           />
         </StoryPromoLi>
       ))}
