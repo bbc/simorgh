@@ -8196,7 +8196,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              aria-labelledby="IndexAlsosLink-/hausa/labarai-48916590"
+              aria-labelledby="IndexAlsosLink-hausalabarai48916590"
               class="emotion-28 emotion-29"
               href="/hausa/labarai-48916590"
             >
@@ -8224,7 +8224,7 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
                 </div>
               </div>
               <span
-                id="IndexAlsosLink-/hausa/labarai-48916590"
+                id="IndexAlsosLink-hausalabarai48916590"
                 role="text"
               >
                 <span
@@ -8243,7 +8243,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              aria-labelledby="IndexAlsosLink-/hausa/labarai-42837051"
               class="emotion-28 emotion-29"
               href="/hausa/labarai-42837051"
             >
@@ -8257,7 +8256,6 @@ exports[`StoryPromo Container should render multiple Index Alsos correctly for c
             role="listitem"
           >
             <a
-              aria-labelledby="IndexAlsosLink-https://www.bbc.com/persian"
               class="emotion-28 emotion-29"
               href="https://www.bbc.com/persian"
             >
