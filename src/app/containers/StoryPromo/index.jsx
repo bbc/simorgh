@@ -99,7 +99,6 @@ const StoryPromoContainer = ({
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
-  frostedGlass,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
@@ -245,12 +244,6 @@ const StoryPromoContainer = ({
     ? SingleColumnStoryPromo
     : StoryPromo;
 
-  let style = null;
-
-  if (frostedGlass === true) {
-    style = { backgroundColor: 'black' };
-  }
-
   return (
     <StoryPromoComponent
       data-e2e="story-promo"
@@ -260,7 +253,6 @@ const StoryPromoContainer = ({
       promoType={promoType}
       dir={dir}
       displayImage={displayImage}
-      style={style}
     />
   );
 };
@@ -284,7 +276,6 @@ StoryPromoContainer.propTypes = {
       format: string,
     }),
   }),
-  frostedGlass: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -296,7 +287,6 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
-  frostedGlass: false,
 };
 
 export default StoryPromoContainer;
