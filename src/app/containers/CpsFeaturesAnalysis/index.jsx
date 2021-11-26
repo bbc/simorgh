@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { useDecision } from '@optimizely/react-sdk';
+import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
@@ -12,6 +11,7 @@ import CpsOnwardJourney from '../CpsOnwardJourney';
 import _StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const eventTrackingData = {
   block: {
@@ -24,18 +24,9 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
 
-  const [decision, isClientReady, didTimeout] = useDecision(
+  const promoVariation = useOptimizelyVariation(
     'high_impact_feature_analysis_promo',
-    { autoUpdate: true },
   );
-
-  const [promoVariation, setPromoVariation] = useState(null);
-
-  useEffect(() => {
-    if (isClientReady && !didTimeout) {
-      setPromoVariation(decision.variationKey);
-    }
-  }, [isClientReady, decision.variationKey, didTimeout]);
 
   let StoryPromo = _StoryPromo;
 
@@ -79,7 +70,17 @@ const PromoComponent = ({ promo, dir }) => {
 
   const { isAmp } = useContext(RequestContext);
 
-  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
+  const promoVariation = useOptimizelyVariation(
+    'high_impact_feature_analysis_promo',
+  );
+
+  let StoryPromo = _StoryPromo;
+
+  if (promoVariation) {
+    if (promoVariation === 'variation_1' && !isAmp) {
+      StoryPromo = FrostedGlassPromo;
+    }
+  }
 
   return (
     <div ref={viewRef}>
