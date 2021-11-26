@@ -2,13 +2,15 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useDecision } from '@optimizely/react-sdk';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
+import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import StoryPromo from '../StoryPromo';
+import _StoryPromo from '../StoryPromo';
+import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
 
 const eventTrackingData = {
@@ -20,6 +22,9 @@ const eventTrackingData = {
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
+  const { isAmp } = useContext(RequestContext);
+
+  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
 
   const [decision, isClientReady, didTimeout] = useDecision(
     'high_impact_feature_analysis_promo',
@@ -73,6 +78,10 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
+
+  const { isAmp } = useContext(RequestContext);
+
+  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
 
   return (
     <div ref={viewRef}>
