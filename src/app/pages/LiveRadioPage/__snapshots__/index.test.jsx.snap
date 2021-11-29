@@ -1761,10 +1761,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 class="emotion-61 emotion-62"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pmts"
                   class="emotion-63 emotion-64"
                   href="/afrique/bbc_afrique_radio/w172x371xccjp2q"
                 >
                   <span
+                    id="scheduleItem-p086pmts"
                     role="text"
                   >
                     <span
@@ -1889,10 +1891,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 class="emotion-61 emotion-62"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pmv1"
                   class="emotion-63 emotion-64"
                   href="/afrique/bbc_afrique_radio/w172x6djbb3rg44"
                 >
                   <span
+                    id="scheduleItem-p086pmv1"
                     role="text"
                   >
                     <span
@@ -2017,10 +2021,12 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 class="emotion-61 emotion-62"
               >
                 <a
+                  aria-labelledby="scheduleItem-p086pmtq"
                   class="emotion-63 emotion-64"
                   href="/afrique/bbc_afrique_radio/w172x5n20y5f68g"
                 >
                   <span
+                    id="scheduleItem-p086pmtq"
                     role="text"
                   >
                     <span
@@ -2145,6 +2151,7 @@ exports[`Radio Page Main should match snapshot for Canonical 1`] = `
                 class="emotion-184 emotion-62"
               >
                 <span
+                  id="scheduleItem-p086pmtv"
                   role="text"
                 >
                   <span

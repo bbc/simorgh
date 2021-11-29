@@ -417,6 +417,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   height: 100%;
 }
 
+@media (max-width: 24.9375rem) {
+  .emotion-29 {
+    width: calc(100% - 5rem);
+  }
+}
+
 @media (min-width: 37.5rem) {
   .emotion-29 {
     padding: 0 1rem;
@@ -1123,6 +1129,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0 0.5rem;
   vertical-align: top;
   height: 100%;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-35 {
+    width: calc(100% - 5rem);
+  }
 }
 
 @media (min-width: 37.5rem) {
@@ -1984,6 +1996,12 @@ exports[`CpsRecommendations should render when cpsRecommendations toggle is enab
   padding: 0 0.5rem;
   vertical-align: top;
   height: 100%;
+}
+
+@media (max-width: 24.9375rem) {
+  .emotion-35 {
+    width: calc(100% - 5rem);
+  }
 }
 
 @media (min-width: 37.5rem) {

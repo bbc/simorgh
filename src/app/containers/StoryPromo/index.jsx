@@ -3,7 +3,6 @@ import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import Timestamp from '@bbc/psammead-timestamp-container';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -22,13 +21,13 @@ import {
 } from '#lib/utilities/getStoryPromoInfo';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
-import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
+import PromoTimestamp from './Timestamp';
 
 const logger = loggerNode(__filename);
 
@@ -100,16 +99,8 @@ const StoryPromoContainer = ({
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
-  frostedGlass,
 }) => {
-  const {
-    altCalendar,
-    script,
-    datetimeLocale,
-    service,
-    translations,
-    timezone,
-  } = useContext(ServiceContext);
+  const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
@@ -171,8 +162,6 @@ const StoryPromoContainer = ({
     isContentTypeGuide,
   });
 
-  const locale = serviceDatetimeLocale || datetimeLocale;
-
   const StyledLink = styled(Link)`
     overflow-wrap: anywhere;
   `;
@@ -216,17 +205,9 @@ const StoryPromoContainer = ({
         </Summary>
       )}
       {displayTimestamp && (
-        <Timestamp
-          altCalendar={altCalendar}
-          locale={locale}
+        <PromoTimestamp
           timestamp={timestamp}
-          dateTimeFormat="YYYY-MM-DD"
-          format="LL"
-          script={script}
-          padding={false}
-          service={service}
-          timezone={timezone}
-          isRelative={isTenHoursAgo(timestamp)}
+          serviceDatetimeLocale={serviceDatetimeLocale}
         />
       )}
       {promoType === 'top' && relatedItems && (
@@ -263,12 +244,6 @@ const StoryPromoContainer = ({
     ? SingleColumnStoryPromo
     : StoryPromo;
 
-  let style = null;
-
-  if (frostedGlass === true) {
-    style = { backgroundColor: 'black' };
-  }
-
   return (
     <StoryPromoComponent
       data-e2e="story-promo"
@@ -278,7 +253,6 @@ const StoryPromoContainer = ({
       promoType={promoType}
       dir={dir}
       displayImage={displayImage}
-      style={style}
     />
   );
 };
@@ -302,7 +276,6 @@ StoryPromoContainer.propTypes = {
       format: string,
     }),
   }),
-  frostedGlass: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -314,7 +287,6 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
-  frostedGlass: false,
 };
 
 export default StoryPromoContainer;
