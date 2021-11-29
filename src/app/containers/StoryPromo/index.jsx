@@ -109,7 +109,11 @@ const StoryPromoContainer = ({
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const assetUri = pathOr(
+    pathOr('', ['uri'], item),
+    ['locators', 'assetUri'],
+    item,
+  );
   const linkId = getLinkId(assetUri, labelId);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
