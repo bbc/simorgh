@@ -69,7 +69,7 @@ describe('processMostWatched', () => {
     });
     expect(data.mostWatched).toBe(null);
     expect(nodeLogger.warn).toHaveBeenCalledWith(MOST_WATCHED_PROCESS_ERROR, {
-      message: "Cannot read property 'enabled' of undefined",
+      message: "Cannot read properties of undefined (reading 'enabled')",
       service: 'pidgin',
       path: 'some-path',
     });
