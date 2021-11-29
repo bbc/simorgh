@@ -3,9 +3,8 @@
  * © Jordan Tart https://github.com/jtart
  * https://github.com/jtart/react-universal-app
  */
-import React, { useContext } from 'react';
+import React from 'react';
 import { StaticRouter, BrowserRouter } from 'react-router-dom';
-import { ServiceContext } from '#contexts/ServiceContext';
 import App from './App';
 
 export class ClientApp extends React.Component {

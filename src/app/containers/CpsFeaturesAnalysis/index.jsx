@@ -1,15 +1,16 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { useDecision } from '@optimizely/react-sdk';
+import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
-
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { RequestContext } from '#contexts/RequestContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
+import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const eventTrackingData = {
   block: {
@@ -33,20 +34,13 @@ const PromoPlaceholder = () => {
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
+  const { isAmp } = useContext(RequestContext);
 
-  const [decision, isClientReady, didTimeout] = useDecision(
+  const promoVariation = useOptimizelyVariation(
     'high_impact_feature_analysis_promo',
   );
 
-  const [promoVariation, setPromoVariation] = useState(null);
-
-  useEffect(() => {
-    if (isClientReady && !didTimeout) {
-      setPromoVariation(decision.variationKey);
-    }
-  }, [isClientReady, decision.variationKey, didTimeout]);
-
-  let StoryPromoTest = promoItems.map(item => <PromoPlaceholder/>);
+  let StoryPromoTest = promoItems.map(item => <PromoPlaceholder />);
 
   if (promoVariation) {
     if (promoVariation === 'variation_1') {
@@ -66,7 +60,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
     } else {
       StoryPromoTest = promoItems.map(item => (
         <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-          <StoryPromo
+          <FrostedGlassPromo
             item={item}
             dir={dir}
             displayImage
@@ -95,6 +89,20 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
+
+  const { isAmp } = useContext(RequestContext);
+
+  const promoVariation = useOptimizelyVariation(
+    'high_impact_feature_analysis_promo',
+  );
+
+  let StoryPromo = _StoryPromo;
+
+  if (promoVariation) {
+    if (promoVariation === 'variation_1' && !isAmp) {
+      StoryPromo = FrostedGlassPromo;
+    }
+  }
 
   return (
     <div ref={viewRef}>
