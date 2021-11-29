@@ -58,6 +58,27 @@ export const getRelativeLuminance = components => {
 export const contrastRatioFromLuminances = (l1, l2) =>
   (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
+// https://css-tricks.com/converting-color-spaces-in-javascript/#rgb-to-hsl
+const getSaturation = ([r, g, b]) => {
+  const colourMin = Math.min(r, g, b) / 255;
+  const colourMax = Math.max(r, g, b) / 255;
+  const lightness = (colourMin + colourMax) / 2;
+  const delta = colourMax - colourMin;
+
+  return delta === 0 ? 0 : delta / (1 - Math.abs(2 * lightness - 1));
+};
+
+const getMostVibrantColour = colours =>
+  colours
+    .map(colour => ({
+      rgb: colour,
+      hex: rgbToHex(colour),
+      saturation: getSaturation(colour),
+    }))
+    .reduce((prev, current) =>
+      prev.saturation > current.saturation ? prev : current,
+    );
+
 export const selectColour = ({
   palette,
   minimumContrast,
@@ -65,11 +86,9 @@ export const selectColour = ({
   fallbackColour,
 }) => {
   try {
-    if (minimumContrast <= 0)
-      return {
-        rgb: palette[0],
-        hex: rgbToHex(palette[0]),
-      };
+    if (minimumContrast <= 0) {
+      return getMostVibrantColour(palette);
+    }
 
     const contrastColourLuminance = getRelativeLuminance(
       hexToRgb(contrastColour),
@@ -84,12 +103,9 @@ export const selectColour = ({
       );
     };
 
-    const selectedColour = palette.find(color => hasSufficientContrast(color));
-
-    return {
-      rgb: selectedColour,
-      hex: rgbToHex(selectedColour),
-    };
+    return getMostVibrantColour(
+      palette.filter(color => hasSufficientContrast(color)),
+    );
   } catch (e) {
     return {
       isFallback: true,

@@ -97,12 +97,15 @@ describe('selectColour', () => {
     ${1}     | ${null}                     | ${1}            | ${'#000'}      | ${'fallback'}
     ${2}     | ${{ junk: 'value' }}        | ${1}            | ${'#000'}      | ${'fallback'}
     ${3}     | ${[]}                       | ${1}            | ${'#000'}      | ${'fallback'}
-    ${4}     | ${['#f00', '#ff0', '#fff']} | ${0}            | ${'#000'}      | ${'#ff0000'}
-    ${5}     | ${['#fff', '#ff0', '#f00']} | ${0}            | ${'#000'}      | ${'#ffffff'}
-    ${6}     | ${['#f00', '#ff0', '#fff']} | ${5}            | ${'#000'}      | ${'#ff0000'}
+    ${4}     | ${['#f00', '#ff0', '#fff']} | ${0}            | ${'#000'}      | ${'#ffff00'}
+    ${5}     | ${['#fff', '#ff0', '#f00']} | ${0}            | ${'#000'}      | ${'#ff0000'}
+    ${6}     | ${['#f00', '#ff0', '#fff']} | ${5}            | ${'#000'}      | ${'#ffff00'}
     ${7}     | ${['#f00', '#ff0', '#fff']} | ${15}           | ${'#000'}      | ${'#ffff00'}
     ${8}     | ${['#f00', '#ff0', '#fff']} | ${20}           | ${'#000'}      | ${'#ffffff'}
     ${9}     | ${['#f00', '#ff0', '#fff']} | ${50}           | ${'#000'}      | ${'fallback'}
+    ${10}    | ${['#fff', '#fef', '#fff']} | ${0}            | ${'#000'}      | ${'#ffeeff'}
+    ${11}    | ${['#fff', '#fff', '#fef']} | ${0}            | ${'#000'}      | ${'#ffeeff'}
+    ${12}    | ${['#fff', '#fef', '#fdf']} | ${0}            | ${'#000'}      | ${'#ffddff'}
   `(
     '[scenario $scenario]: selects an appropriate colour given a list of options and requirements',
     ({ options, minimumContrast, contrastColour, expectedResult }) => {

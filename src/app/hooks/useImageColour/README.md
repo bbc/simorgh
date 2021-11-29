@@ -10,6 +10,7 @@ It brings it into the react ecosystem, and changes the behaviour to better fit o
 
 - This hook will only return a single colour, rather than a full palette.
 - This hook is able to choose that colour based on contrast ratio calculations
+- This hook will return the most "vibrant" colour that meets the minimum contrast ratio
 - This hook has some fallback behaviour to more gracefully deal with loading and error states
 
 ## Client Side Only
