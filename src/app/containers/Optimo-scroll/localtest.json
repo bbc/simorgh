@@ -1,0 +1,15 @@
+{
+  "type": "links",
+
+  "type": "title",
+
+  "type": "link",
+  "locator": "urn:",
+  "type": "image",
+  "type": "text",
+
+  "type": "link",
+  "locator": "urn:",
+  "type": "image",
+  "type": "text"
+}
