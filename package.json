@@ -240,7 +240,7 @@
     "stylelint": "13.13.1",
     "stylelint-config-recommended": "5.0.0",
     "supertest": "6.1.6",
-    "terser-webpack-plugin": "5.2.4",
+    "terser-webpack-plugin": "5.2.5",
     "timemachine": "0.3.2",
     "wait-on": "6.0.0",
     "webpack": "5.64.2",
