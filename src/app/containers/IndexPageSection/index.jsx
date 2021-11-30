@@ -95,7 +95,13 @@ const parentGridColumns = {
   group5: 8,
 };
 
-const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
+const renderPromos = ({
+  items,
+  isFirstSection,
+  dir,
+  showAllPromos,
+  labelId,
+}) => {
   const rows = getRows({ items, isFirstSection, showAllPromos });
   const rowsDetails = getRowDetails(rows);
 
@@ -108,6 +114,7 @@ const renderPromos = ({ items, isFirstSection, dir, showAllPromos }) => {
     return (
       <row.RowComponent
         key={key}
+        labelId={labelId}
         stories={row.stories}
         isFirstSection={isFirstSection}
         displayImages={row.displayImages}
@@ -148,6 +155,7 @@ const sectionBody = ({
   isFirstSection,
   dir,
   showAllPromos,
+  labelId,
 }) => {
   if (group.semanticGroupName === 'Useful links') {
     return (
@@ -155,7 +163,13 @@ const sectionBody = ({
     );
   }
 
-  return renderPromos({ items, isFirstSection, dir, showAllPromos });
+  return renderPromos({
+    items,
+    isFirstSection,
+    dir,
+    showAllPromos,
+    labelId,
+  });
 };
 
 const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
@@ -233,6 +247,7 @@ const IndexPageSection = ({ bar, group, sectionNumber, showAllPromos }) => {
         isFirstSection,
         dir,
         showAllPromos,
+        labelId: sectionLabelId,
       })}
     </StyledSection>
   );
