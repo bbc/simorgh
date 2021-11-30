@@ -135,6 +135,7 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
         role="listitem"
       >
         <a
+          aria-labelledby="IndexAlsosLink-hausalabarai48916590"
           class="emotion-8 emotion-9"
           href="/hausa/labarai-48916590"
         >
@@ -162,6 +163,7 @@ exports[`Index Alsos Snapshots should render multiple correctly 1`] = `
             </div>
           </div>
           <span
+            id="IndexAlsosLink-hausalabarai48916590"
             role="text"
           >
             <span
@@ -330,6 +332,7 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
       class="emotion-4 emotion-5"
     >
       <a
+        aria-labelledby="IndexAlsosLink-hausalabarai48916590"
         class="emotion-6 emotion-7"
         href="/hausa/labarai-48916590"
       >
@@ -357,6 +360,7 @@ exports[`Index Alsos Snapshots should render one correctly 1`] = `
           </div>
         </div>
         <span
+          id="IndexAlsosLink-hausalabarai48916590"
           role="text"
         >
           <span
