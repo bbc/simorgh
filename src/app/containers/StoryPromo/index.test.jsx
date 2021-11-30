@@ -162,10 +162,11 @@ describe('StoryPromo Container', () => {
 
       const getLinkId = uriId => {
         const splitUri = uriId.split('/').pop();
-        return `promo-link-${labelId}${splitUri || ''}`;
+        const sanitisedId = splitUri.replace(/\W/g, '');
+        return `promo-link-${labelId}${sanitisedId || ''}`;
       };
 
-      const uriLabelId = getLinkId(uri, labelId);
+      const uriLabelId = getLinkId(uri);
       const assetUriId = getLinkId(assetUri);
 
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(

@@ -2915,12 +2915,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelledinstitutional-23162153"
+                                aria-labelledby="promo-link-unlabelledinstitutional23162153"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
-                                  id="promo-link-unlabelledinstitutional-23162153"
+                                  id="promo-link-unlabelledinstitutional23162153"
                                   role="text"
                                 >
                                   <span
@@ -9689,12 +9689,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelledtori-23146434"
+                                aria-labelledby="promo-link-unlabelledtori23146434"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
-                                  id="promo-link-unlabelledtori-23146434"
+                                  id="promo-link-unlabelledtori23146434"
                                 >
                                   Jacob Zuma: Staying!!!
                                 </span>

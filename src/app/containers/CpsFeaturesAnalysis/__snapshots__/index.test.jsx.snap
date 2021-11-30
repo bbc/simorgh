@@ -696,12 +696,12 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="promo-link-unlabelledafirika-23252735"
+                  aria-labelledby="promo-link-unlabelledafirika23252735"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-23252735"
                 >
                   <span
-                    id="promo-link-unlabelledafirika-23252735"
+                    id="promo-link-unlabelledafirika23252735"
                   >
                     STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                   </span>
@@ -756,12 +756,12 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
-                  aria-labelledby="promo-link-unlabelledafirika-49666505"
+                  aria-labelledby="promo-link-unlabelledafirika49666505"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-49666505"
                 >
                   <span
-                    id="promo-link-unlabelledafirika-49666505"
+                    id="promo-link-unlabelledafirika49666505"
                   >
                     Robert Mugabe: Zimbabwe eferela nwa amadi a aka
                   </span>
@@ -1480,12 +1480,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="emotion-35 emotion-36"
               >
                 <a
-                  aria-labelledby="promo-link-unlabelledafirika-23252735"
+                  aria-labelledby="promo-link-unlabelledafirika23252735"
                   class="emotion-37 emotion-38"
                   href="/igbo/afirika-23252735"
                 >
                   <span
-                    id="promo-link-unlabelledafirika-23252735"
+                    id="promo-link-unlabelledafirika23252735"
                   >
                     STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
                   </span>

@@ -41,7 +41,8 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
 
 const getLinkId = (assetUri, labelId) => {
   const assetId = assetUri.split('/').pop();
-  return `promo-link-${labelId}${assetId || ''}`;
+  const sanitisedId = assetId.replace(/\W/g, '');
+  return `promo-link-${labelId}${sanitisedId || ''}`;
 };
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
