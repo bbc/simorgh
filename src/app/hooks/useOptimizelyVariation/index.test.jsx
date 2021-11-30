@@ -1,27 +1,51 @@
-import React from 'react';
-import { useDecision } from '@optimizely/react-sdk';
+import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { renderHook } from '@testing-library/react-hooks';
-import withOptimizely from '#app/containers/PageHandlers/withOptimizely';
 import useOptimizelyVariation from '.';
 
-describe(useDecision, () => {
-  const useDecisionMock = jest.fn('useDecision');
+describe('useOptimizelyVariation', () => {
+  const useDecisionSpy = jest.spyOn(optimizelyReactSdk, 'useDecision');
 
-  const wrapper = ({ children }) => withOptimizely(children);
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-  afterEach(jest.clearAllMocks);
+  it('should return a variation string when the client is ready and not timed out', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, false]);
 
-  it('Test 1', () => {
-    useDecisionMock.mockReturnValue({
-      decision: { variationKey: '' },
-      isClientReady: true,
-      didTimeout: true,
-    });
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('correct_experiment_id'),
+    );
 
-    const { result } = renderHook(() => useOptimizelyVariation('foo'), {
-      wrapper,
-    });
+    expect(result.current).toEqual('control');
+  });
 
-    expect(result).toEqual(null);
+  it('should return a variation of null when the client is not ready and not timed out', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, false, false]);
+
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('correct_experiment_id'),
+    );
+
+    expect(result.current).toEqual(null);
+  });
+
+  it('should return a variation of null when the client is ready and but has timed out', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, true]);
+
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('correct_experiment_id'),
+    );
+
+    expect(result.current).toEqual(null);
+  });
+
+  it('should return a variation of null when a decision is not made', () => {
+    useDecisionSpy.mockReturnValue([{ variationKey: null }, true, false]);
+
+    const { result } = renderHook(() =>
+      useOptimizelyVariation('wrong_experiment_id'),
+    );
+
+    expect(result.current).toEqual(null);
   });
 });
