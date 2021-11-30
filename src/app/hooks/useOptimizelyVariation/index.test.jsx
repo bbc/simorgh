@@ -29,7 +29,7 @@ describe('useOptimizelyVariation', () => {
     expect(result.current).toEqual(null);
   });
 
-  it('should return a variation of null when the client is ready and but has timed out', () => {
+  it('should return a variation of null when the client is ready but has timed out', () => {
     useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, true]);
 
     const { result } = renderHook(() =>
