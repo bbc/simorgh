@@ -6,7 +6,6 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import pathOr from 'ramda/src/pathOr';
-import { string } from 'prop-types';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
