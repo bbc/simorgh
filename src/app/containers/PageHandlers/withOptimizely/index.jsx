@@ -19,9 +19,9 @@ const withOptimizely = Component => {
         isServerSide
         timeout={500}
         user={{
-          id: `${getAtUserId()}`,
+          id: getAtUserId(),
           attributes: {
-            service: `${service}`,
+            service,
           },
         }}
       >
