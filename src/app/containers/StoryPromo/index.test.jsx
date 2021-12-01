@@ -29,6 +29,7 @@ import {
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { getUniqueLinkId } from './utilities';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -156,17 +157,9 @@ describe('StoryPromo Container', () => {
 
     it('should render h3, a, p, time', () => {
       const labelId = `unlabelled`;
-      const assetUri = pathOr('', ['locators', 'assetUri'], cpsItem);
-      const uri = pathOr('', ['uri'], assetTypeItem);
 
-      const getLinkId = uriId => {
-        const splitUri = uriId.split('/').pop();
-        const sanitisedId = splitUri.replace(/\W/g, '');
-        return `promo-link-${labelId}${sanitisedId || ''}`;
-      };
-
-      const uriLabelId = getLinkId(uri);
-      const assetUriId = getLinkId(assetUri);
+      const uriLabelId = getUniqueLinkId(assetTypeItem, labelId);
+      const assetUriId = getUniqueLinkId(cpsItem, labelId);
 
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
