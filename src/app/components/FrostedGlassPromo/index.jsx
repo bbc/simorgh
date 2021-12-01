@@ -18,6 +18,7 @@ import withData from './withData';
 const Wrapper = styled.div`
   display: inline-block;
   position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: 400px;
   text-decoration: none;
@@ -26,19 +27,6 @@ const Wrapper = styled.div`
       text-decoration: underline;
     }
   }
-`;
-
-// This is an unfocusable element, hidden from screenreaders
-// This is to allow mouse users to click anywhere on the promo
-// But for keyboard and AT users, and scenarios where there is no CSS,
-// only the link inside the H3 should be interactive
-const ClickableArea = styled.a`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
 `;
 
 const H3 = styled.h3`
@@ -61,6 +49,15 @@ const A = styled.a`
   &:focus {
     text-decoration: underline;
   }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 `;
 
 const FrostedGlassPromo = props => {
@@ -76,12 +73,6 @@ const FrostedGlassPromo = props => {
 
   return (
     <Wrapper>
-      <ClickableArea
-        href={url}
-        onClick={onClick}
-        aria-hidden="true"
-        tabIndex="-1"
-      />
       <ImageWithPlaceholder
         darkMode
         {...pick(

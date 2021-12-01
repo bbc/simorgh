@@ -8,11 +8,6 @@ import useImageColour from '../../hooks/useImageColour';
 const BLUR_RADIUS = 15;
 const FALLBACK_COLOUR = '#202224';
 
-const Wrapper = styled.div`
-  position: relative;
-  overflow: hidden;
-`;
-
 const scaleAmount = 1 + BLUR_RADIUS / 100;
 const scaleX = `scaleX(${scaleAmount})`;
 const scaleY = `scaleY(${-1 * scaleAmount})`;
@@ -21,7 +16,7 @@ const Background = styled.div`
   display: none;
   @supports (filter: blur(${BLUR_RADIUS}px)) {
     display: block;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
     bottom: 0;
     top: -${BLUR_RADIUS}px;
@@ -37,8 +32,6 @@ const Background = styled.div`
 `;
 
 const Children = styled.div`
-  position: relative;
-  z-index: 3;
   padding-bottom: ${GEL_SPACING_DBL};
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
@@ -59,12 +52,12 @@ const FrostedGlassPanel = ({ image, children }) => {
   });
 
   return (
-    <Wrapper>
+    <div>
+      <Background image={image} />
       <Children colour={colour.rgb} isLoading={isLoading}>
         {children}
       </Children>
-      <Background image={image} />
-    </Wrapper>
+    </div>
   );
 };
 
