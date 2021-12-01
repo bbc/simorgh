@@ -1,9 +1,15 @@
-import { isMap, isPgl, getHeadingTagOverride } from '.';
+import { isMap, isPgl, getHeadingTagOverride, getUniqueLinkId } from '.';
 import {
   MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import {
+  completeItem,
+  standardLinkItem,
+  secondaryColumnNoAssetURI,
+  secondaryColumnContentType,
+} from '../helpers/fixtureData';
 
 describe('isMap', () => {
   it('should return true if cpsType is MAP', () => {
@@ -68,5 +74,38 @@ describe('getHeadingTagOverride', () => {
     const pageType = PHOTO_GALLERY_PAGE;
     const isContentTypeGuide = false;
     expect(getHeadingTagOverride({ pageType, isContentTypeGuide })).toBe(null);
+  });
+});
+
+describe('getUniqueLinkId', () => {
+  const labelId = 'unlabelled';
+  it('should return id of promo-link with contentType and URI if contentType exists', () => {
+    expect(getUniqueLinkId(secondaryColumnNoAssetURI, labelId)).toEqual(
+      'promo-link-unlabellednewsRadioBulletin',
+    );
+  });
+
+  it('should return id using URI if assetURI does not exist', () => {
+    expect(getUniqueLinkId(standardLinkItem, labelId)).toEqual(
+      'promo-link-unlabelledazeriText',
+    );
+  });
+
+  it('should return id using assetURI does not exist and contentType does not exist', () => {
+    expect(getUniqueLinkId(completeItem, labelId)).toEqual(
+      'promo-link-unlabelledwwwbbccouk',
+    );
+  });
+
+  it('should return id with contentType only if assetURI and URI do not exist', () => {
+    expect(getUniqueLinkId(secondaryColumnContentType, labelId)).toEqual(
+      'promo-link-unlabelledRadioBulletin',
+    );
+  });
+
+  it('should sanitise link from item and split from last forward slash', () => {
+    expect(
+      getUniqueLinkId({ locators: { assetUri: 'a/a/ab.b.b@c@c@c' } }, labelId),
+    ).toEqual('promo-link-unlabelledabbbccc');
   });
 });

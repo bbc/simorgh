@@ -9724,12 +9724,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabellednews"
+                                aria-labelledby="promo-link-unlabellednewsFeature"
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.co.uk/news"
                               >
                                 <span
-                                  id="promo-link-unlabellednews"
+                                  id="promo-link-unlabellednewsFeature"
                                 >
                                   Feature promo
                                 </span>
