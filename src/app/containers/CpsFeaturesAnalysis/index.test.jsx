@@ -9,6 +9,7 @@ import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import isLive from '#lib/utilities/isLive';
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -88,8 +89,12 @@ const renderFeaturesAnalysisNoTitle = ({
   );
 };
 
+jest.mock('#lib/utilities/isLive', () => jest.fn());
+
 describe('CpsRelatedContent', () => {
   it('should render Story Feature components when given appropriate data', () => {
+    isLive.mockImplementationOnce(() => true);
+
     // Ensure fixture still has features
     expect(features.length).toBe(2);
 
@@ -103,6 +108,8 @@ describe('CpsRelatedContent', () => {
   });
 
   it('should render Story Promo components without <ul> when given single item in collection', () => {
+    isLive.mockImplementationOnce(() => true);
+
     const topFeaturesOneItem = [features[0]];
 
     expect(features[0]).toBeTruthy();
@@ -146,6 +153,7 @@ describe('CpsRelatedContent', () => {
 
 describe('Event Tracking', () => {
   it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
+    isLive.mockImplementationOnce(() => true);
     const expected = {
       componentName: 'features',
       preventNavigation: true,
