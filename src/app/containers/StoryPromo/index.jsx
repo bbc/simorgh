@@ -39,6 +39,12 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
+const getLinkId = (assetUri, labelId) => {
+  const assetId = assetUri.split('/').pop();
+  const sanitisedId = assetId.replace(/\W/g, '');
+  return `promo-link-${labelId}${sanitisedId || ''}`;
+};
+
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
@@ -99,10 +105,17 @@ const StoryPromoContainer = ({
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
+  labelId,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
+  const assetUri = pathOr(
+    pathOr('', ['uri'], item),
+    ['locators', 'assetUri'],
+    item,
+  );
+  const linkId = getLinkId(assetUri, labelId);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -149,7 +162,14 @@ const StoryPromoContainer = ({
     });
   }
 
-  const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
+  const linkcontents = (
+    <LinkContents
+      item={item}
+      isInline={!displayImage}
+      // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      id={!isLive ? linkId : null}
+    />
+  );
 
   if (!headline || !url) {
     return null;
@@ -178,9 +198,12 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
+          // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+          aria-labelledby={linkId}
         >
           {isLive ? (
             <LiveLabel
+              id={linkId}
               service={service}
               dir={dir}
               liveText={liveLabel}
@@ -276,6 +299,7 @@ StoryPromoContainer.propTypes = {
       format: string,
     }),
   }),
+  labelId: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -287,6 +311,7 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
+  labelId: 'unlabelled',
 };
 
 export default StoryPromoContainer;
