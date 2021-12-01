@@ -20,7 +20,7 @@ describe('useOptimizelyVariation', () => {
   });
 
   it('should return a variation of null when the client is not ready and not timed out', () => {
-    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, false, false]);
+    useDecisionSpy.mockReturnValue([{ variationKey: null }, false, false]);
 
     const { result } = renderHook(() =>
       useOptimizelyVariation('correct_experiment_id'),
@@ -30,7 +30,7 @@ describe('useOptimizelyVariation', () => {
   });
 
   it('should return a variation of null when the client is ready but has timed out', () => {
-    useDecisionSpy.mockReturnValue([{ variationKey: 'control' }, true, true]);
+    useDecisionSpy.mockReturnValue([{ variationKey: null }, true, true]);
 
     const { result } = renderHook(() =>
       useOptimizelyVariation('correct_experiment_id'),
