@@ -12456,7 +12456,25 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"history@npm:4.10.1, history@npm:^4.9.0":
+"history@npm:5.0.0":
+  version: 5.0.0
+  resolution: "history@npm:5.0.0"
+  dependencies:
+    "@babel/runtime": ^7.7.6
+  checksum: 14eab13619b4d297eeda0ae7adcf2dd8e6cec48fc9fac903b8dfb626337f8f6fc12743c286be819885c71f522daf0e9e7f814aa126ae5e1b01ab4a3d6801b5f5
+  languageName: node
+  linkType: hard
+
+"history@npm:5.1.0, history@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "history@npm:5.1.0"
+  dependencies:
+    "@babel/runtime": ^7.7.6
+  checksum: c978710a188ee5ad5d2acf55721c77e27469578c891a66311e71e8920d1390d14476e39a6db07e0ab0f5f8d594f1f62eb55a1059c7549cde7795a36367df5869
+  languageName: node
+  linkType: hard
+
+"history@npm:^4.9.0":
   version: 4.10.1
   resolution: "history@npm:4.10.1"
   dependencies:
@@ -12467,24 +12485,6 @@ fsevents@^1.2.7:
     tiny-warning: ^1.0.0
     value-equal: ^1.0.1
   checksum: addd84bc4683929bae4400419b5af132ff4e4e9b311a0d4e224579ea8e184a6b80d7f72c55927e4fa117f69076a9e47ce082d8d0b422f1a9ddac7991490ca1d0
-  languageName: node
-  linkType: hard
-
-"history@npm:5.0.0":
-  version: 5.0.0
-  resolution: "history@npm:5.0.0"
-  dependencies:
-    "@babel/runtime": ^7.7.6
-  checksum: 14eab13619b4d297eeda0ae7adcf2dd8e6cec48fc9fac903b8dfb626337f8f6fc12743c286be819885c71f522daf0e9e7f814aa126ae5e1b01ab4a3d6801b5f5
-  languageName: node
-  linkType: hard
-
-"history@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "history@npm:5.1.0"
-  dependencies:
-    "@babel/runtime": ^7.7.6
-  checksum: c978710a188ee5ad5d2acf55721c77e27469578c891a66311e71e8920d1390d14476e39a6db07e0ab0f5f8d594f1f62eb55a1059c7549cde7795a36367df5869
   languageName: node
   linkType: hard
 
@@ -19631,7 +19631,7 @@ resolve@^2.0.0-next.3:
     gnu-terry-pratchett: 0.0.2
     helmet: 4.6.0
     helmet-csp: 3.4.0
-    history: 4.10.1
+    history: 5.1.0
     husky: 7.0.4
     inspectpack: 4.7.1
     intersection-observer: 0.12.0
