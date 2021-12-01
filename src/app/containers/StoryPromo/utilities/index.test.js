@@ -1,4 +1,3 @@
-import pathOr from 'ramda/src/pathOr';
 import { isMap, isPgl, getHeadingTagOverride, getUniqueLinkId } from '.';
 import {
   MOST_WATCHED_PAGE,
