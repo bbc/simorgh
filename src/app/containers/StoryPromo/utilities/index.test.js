@@ -7,7 +7,8 @@ import {
 import {
   completeItem,
   standardLinkItem,
-  secondaryColumnNoURI,
+  secondaryColumnNoAssetURI,
+  secondaryColumnContentType,
 } from '../helpers/fixtureData';
 
 describe('isMap', () => {
@@ -78,8 +79,8 @@ describe('getHeadingTagOverride', () => {
 
 describe('getUniqueLinkId', () => {
   const labelId = 'unlabelled';
-  it('should return id of promo-link with contentType if contentType exists', () => {
-    expect(getUniqueLinkId(secondaryColumnNoURI, labelId)).toEqual(
+  it('should return id of promo-link with contentType and URI if contentType exists', () => {
+    expect(getUniqueLinkId(secondaryColumnNoAssetURI, labelId)).toEqual(
       'promo-link-unlabellednewsRadioBulletin',
     );
   });
@@ -90,9 +91,15 @@ describe('getUniqueLinkId', () => {
     );
   });
 
-  it('should return id using assetURI does not exist', () => {
+  it('should return id using assetURI does not exist and contentType does not exist', () => {
     expect(getUniqueLinkId(completeItem, labelId)).toEqual(
       'promo-link-unlabelledwwwbbccouk',
+    );
+  });
+
+  it('should return id with contentType only if assetURI and URI do not exist', () => {
+    expect(getUniqueLinkId(secondaryColumnContentType, labelId)).toEqual(
+      'promo-link-unlabelledRadioBulletin',
     );
   });
 

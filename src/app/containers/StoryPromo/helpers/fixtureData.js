@@ -344,7 +344,7 @@ export const mapWithoutMediaError = {
   type: 'cps',
 };
 
-export const secondaryColumnNoURI = {
+export const secondaryColumnNoAssetURI = {
   name: 'Test Radio Bul promo Live',
   summary: 'Test Radio summary',
   indexImage: {
@@ -360,6 +360,28 @@ export const secondaryColumnNoURI = {
     type: 'image',
   },
   uri: 'https://www.bbc.co.uk/news',
+  contentType: 'RadioBulletin',
+  assetTypeCode: 'PRO',
+  timestamp: 1571655919000,
+  isLive: true,
+  type: 'link',
+};
+
+export const secondaryColumnContentType = {
+  name: 'Test Radio Bul promo Live',
+  summary: 'Test Radio summary',
+  indexImage: {
+    id: '63711781',
+    subType: 'index',
+    href: 'http://b.files.bbci.co.uk/4917/test/_63711781_clinton.jpg',
+    path: '/cpsdevpb/4917/test/_63711781_clinton.jpg',
+    height: 371,
+    width: 660,
+    altText: 'Clinton',
+    caption: 'Clinton',
+    copyrightHolder: 'BBC',
+    type: 'image',
+  },
   contentType: 'RadioBulletin',
   assetTypeCode: 'PRO',
   timestamp: 1571655919000,
