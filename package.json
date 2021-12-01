@@ -12,7 +12,7 @@
     "ansi-regex": "5.0.1",
     "browserslist": "4.18.1",
     "css-what": "5.1.0",
-    "glob-parent": "5.1.2",
+    "glob-parent": "6.0.2",
     "immer": "9.0.7",
     "json-schema": "0.4.0",
     "moment": "2.29.1",
