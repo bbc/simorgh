@@ -11,6 +11,8 @@ import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import isLive from '#lib/utilities/isLive';
 
+jest.mock('#hooks/useOptimizelyVariation');
+
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
@@ -93,6 +95,10 @@ jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 describe('CpsRelatedContent', () => {
   it('should render Story Feature components when given appropriate data', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
     isLive.mockImplementationOnce(() => true);
 
     // Ensure fixture still has features
