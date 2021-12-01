@@ -5,7 +5,6 @@ import {
   shouldMatchSnapshot,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import pathOr from 'ramda/src/pathOr';
 import loggerMock from '#testHelpers/loggerMock';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -155,21 +154,8 @@ describe('StoryPromo Container', () => {
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
-      const labelId = `unlabelled`;
-      const assetUri = pathOr('', ['locators', 'assetUri'], cpsItem);
-      const uri = pathOr('', ['uri'], assetTypeItem);
-
-      const getLinkId = uriId => {
-        const splitUri = uriId.split('/').pop();
-        const sanitisedId = splitUri.replace(/\W/g, '');
-        return `promo-link-${labelId}${sanitisedId || ''}`;
-      };
-
-      const uriLabelId = getLinkId(uri);
-      const assetUriId = getLinkId(assetUri);
-
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
+        cpsItem.headlines.headline,
       );
       expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         cpsItem.summary,
@@ -183,7 +169,7 @@ describe('StoryPromo Container', () => {
       ).toEqual(itemWithOvertypedSummary.overtypedSummary);
 
       expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        `<span id="${uriLabelId}">${assetTypeItem.name}</span>`,
+        assetTypeItem.name,
       );
       expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         assetTypeItem.summary,

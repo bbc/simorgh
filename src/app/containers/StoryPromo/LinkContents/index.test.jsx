@@ -84,9 +84,7 @@ describe('Story Promo Link Contents', () => {
   it("should render a story's headline as bare text", () => {
     const { container } = renderWithContext(<LinkContents item={item} />);
 
-    expect(container.innerHTML).toEqual(
-      `<span>${item.headlines.headline}</span>`,
-    );
+    expect(container.innerHTML).toEqual(item.headlines.headline);
   });
 
   it('should render overtyped headline if provided', () => {
@@ -95,7 +93,7 @@ describe('Story Promo Link Contents', () => {
     );
 
     expect(container.innerHTML).toEqual(
-      `<span>${itemWithOvertypedHeadline.headlines.overtyped}</span>`,
+      itemWithOvertypedHeadline.headlines.overtyped,
     );
   });
 
