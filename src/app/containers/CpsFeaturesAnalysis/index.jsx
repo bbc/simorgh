@@ -7,7 +7,7 @@ import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import _StoryPromo from '../StoryPromo';
+import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
@@ -27,26 +27,37 @@ const PromoListComponent = ({ promoItems, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  let StoryPromo = _StoryPromo;
+  let hasFrostedGlassPromo = false;
 
   if (promoVariation) {
     if (promoVariation === 'variation_1' && !isAmp) {
-      StoryPromo = FrostedGlassPromo;
+      hasFrostedGlassPromo = true;
     }
   }
 
   return (
     <StoryPromoUl>
-      {promoItems.map(item => (
+      {promoItems.map((item, i) => (
         <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-          <StoryPromo
-            item={item}
-            dir={dir}
-            displayImage
-            displaySummary={false}
-            serviceDatetimeLocale={serviceDatetimeLocale}
-            eventTrackingData={eventTrackingData}
-          />
+          {i === 0 && hasFrostedGlassPromo ? (
+            <FrostedGlassPromo
+              item={item}
+              dir={dir}
+              displayImage
+              displaySummary={false}
+              serviceDatetimeLocale={serviceDatetimeLocale}
+              eventTrackingData={eventTrackingData}
+            />
+          ) : (
+            <StoryPromo
+              item={item}
+              dir={dir}
+              displayImage
+              displaySummary={false}
+              serviceDatetimeLocale={serviceDatetimeLocale}
+              eventTrackingData={eventTrackingData}
+            />
+          )}
         </StoryPromoLi>
       ))}
     </StoryPromoUl>
@@ -73,17 +84,17 @@ const PromoComponent = ({ promo, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  let StoryPromo = _StoryPromo;
+  let StoryPromoHybrid = StoryPromo;
 
   if (promoVariation) {
     if (promoVariation === 'variation_1' && !isAmp) {
-      StoryPromo = FrostedGlassPromo;
+      StoryPromoHybrid = FrostedGlassPromo;
     }
   }
 
   return (
     <div ref={viewRef}>
-      <StoryPromo
+      <StoryPromoHybrid
         item={promo}
         dir={dir}
         displayImage
