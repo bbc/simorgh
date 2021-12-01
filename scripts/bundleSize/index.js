@@ -108,6 +108,7 @@ servicePageSummaryTable.push(
   },
 );
 
+const styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
@@ -115,34 +116,22 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(
-  chalk.bold(
-    `\n${chalk.green(bundleType.toUpperCase())} service bundle sizes\n`,
-  ),
-);
+console.log(chalk.bold(`\n${styledBundleTypeTitle} service bundle sizes\n`));
 console.log(serviceBundlesTable.toString());
 
 console.log(
-  chalk.bold(
-    `\n\n${chalk.green(
-      bundleType.toUpperCase(),
-    )} service bundle sizes summary\n`,
-  ),
+  chalk.bold(`\n\n${styledBundleTypeTitle} service bundle sizes summary\n`),
 );
 console.log(serviceSummaryTable.toString());
 
 console.log(
-  chalk.bold(
-    `\n\n${chalk.green(bundleType.toUpperCase())} page type bundle sizes\n`,
-  ),
+  chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
 );
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
-    chalk.bold(
-      `\n\n${chalk.green(bundleType.toUpperCase())} page bundle sizes summary`,
-    ),
+    chalk.bold(`\n\n${styledBundleTypeTitle} page bundle sizes summary`),
     chalk.cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
@@ -150,9 +139,7 @@ console.log(pageSummaryTable.toString());
 
 console.log(
   chalk.bold(
-    `\n\n${chalk.green(
-      bundleType.toUpperCase(),
-    )} service + page bundle sizes summary\n`,
+    `\n\n${styledBundleTypeTitle} service + page bundle sizes summary\n`,
   ),
 );
 console.log(servicePageSummaryTable.toString());
