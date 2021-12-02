@@ -24,7 +24,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { getHeadingTagOverride } from './utilities';
+import { getHeadingTagOverride, getUniqueLinkId } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 import PromoTimestamp from './Timestamp';
@@ -38,12 +38,6 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
     display: grid;
   }
 `;
-
-const getLinkId = (assetUri, labelId) => {
-  const assetId = assetUri.split('/').pop();
-  const sanitisedId = assetId.replace(/\W/g, '');
-  return `promo-link-${labelId}${sanitisedId || ''}`;
-};
 
 const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   if (!imageValues) {
@@ -110,12 +104,8 @@ const StoryPromoContainer = ({
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
-  const assetUri = pathOr(
-    pathOr('', ['uri'], item),
-    ['locators', 'assetUri'],
-    item,
-  );
-  const linkId = getLinkId(assetUri, labelId);
+
+  const linkId = getUniqueLinkId(item, labelId);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
