@@ -57,15 +57,12 @@ const StyledTimestamp = styled(Timestamp)`
 `;
 
 const SingleCard = ({ title, dateTime, href, dir }) => {
-  // eslint-disable-next-line no-param-reassign
-  dir = 'rtl';
   const { service, script } = useContext(ServiceContext);
 
   return (
     <SingleCardBox>
       <LinkWrapper href={href} service={service} script={script} dir={dir}>
-        dateTimadva,nsbvmn ,abmnvc bmnzbcvnm,bzxnmbvm nbvcnmzb,mnbczmn,bvmnb
-        cmn,b,cnzbcm,nvb
+        {title}
       </LinkWrapper>
       <StyledTimestamp
         datetime={dateTime}
@@ -73,7 +70,7 @@ const SingleCard = ({ title, dateTime, href, dir }) => {
         script={script}
         service={service}
       >
-        dateTimeds
+        {dateTime}
       </StyledTimestamp>
     </SingleCardBox>
   );
