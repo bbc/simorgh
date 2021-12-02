@@ -25,12 +25,15 @@ export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
 
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
 
-export const getUniqueLinkId = (item, labelId) => {
+export const buildUniquePromoId = (item, labelId) => {
+  const id = pathOr('', ['id'], item);
   const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const contentType = pathOr('', ['contentType'], item);
   const uri = pathOr('', ['uri'], item);
-  const uniqueId = assetUri || uri;
-  const assetId = uniqueId.split('/').pop();
-  const sanitisedId = assetId.replace(/\W/g, '');
-  return `promo-link-${labelId}${sanitisedId || ''}${contentType}`;
+  const assetId = (id || assetUri || uri).replace(/\W/g, '').split('/').pop();
+  const contentType = pathOr('', ['contentType'], item);
+
+  return ['promo', labelId, assetId, contentType]
+    .filter(Boolean)
+    .join('-')
+    .toLowerCase();
 };

@@ -1,4 +1,4 @@
-import { isMap, isPgl, getHeadingTagOverride, getUniqueLinkId } from '.';
+import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -77,35 +77,38 @@ describe('getHeadingTagOverride', () => {
   });
 });
 
-describe('getUniqueLinkId', () => {
+describe('buildUniquePromoId', () => {
   const labelId = 'unlabelled';
   it('should return id of promo-link with contentType and URI if contentType exists', () => {
-    expect(getUniqueLinkId(secondaryColumnNoAssetURI, labelId)).toEqual(
-      'promo-link-unlabellednewsRadioBulletin',
+    expect(buildUniquePromoId(secondaryColumnNoAssetURI, labelId)).toEqual(
+      'promo-unlabelled-httpswwwbbccouknews-radiobulletin',
     );
   });
 
   it('should return id using URI if assetURI does not exist', () => {
-    expect(getUniqueLinkId(standardLinkItem, labelId)).toEqual(
-      'promo-link-unlabelledazeriText',
+    expect(buildUniquePromoId(standardLinkItem, labelId)).toEqual(
+      'promo-unlabelled-httpwwwbbccomazeri-text',
     );
   });
 
   it('should return id using assetURI does not exist and contentType does not exist', () => {
-    expect(getUniqueLinkId(completeItem, labelId)).toEqual(
-      'promo-link-unlabelledwwwbbccouk',
+    expect(buildUniquePromoId(completeItem, labelId)).toEqual(
+      'promo-unlabelled-httpswwwbbccouk',
     );
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {
-    expect(getUniqueLinkId(secondaryColumnContentType, labelId)).toEqual(
-      'promo-link-unlabelledRadioBulletin',
+    expect(buildUniquePromoId(secondaryColumnContentType, labelId)).toEqual(
+      'promo-unlabelled-radiobulletin',
     );
   });
 
   it('should sanitise link from item and split from last forward slash', () => {
     expect(
-      getUniqueLinkId({ locators: { assetUri: 'a/a/ab.b.b@c@c@c' } }, labelId),
-    ).toEqual('promo-link-unlabelledabbbccc');
+      buildUniquePromoId(
+        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
+        labelId,
+      ),
+    ).toEqual('promo-unlabelled-aaabbbccc');
   });
 });

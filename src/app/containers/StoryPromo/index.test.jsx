@@ -28,7 +28,7 @@ import {
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { getUniqueLinkId } from './utilities';
+import { buildUniquePromoId } from './utilities';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -157,8 +157,8 @@ describe('StoryPromo Container', () => {
     it('should render h3, a, p, time', () => {
       const labelId = `unlabelled`;
 
-      const uriLabelId = getUniqueLinkId(assetTypeItem, labelId);
-      const assetUriId = getUniqueLinkId(cpsItem, labelId);
+      const uriLabelId = buildUniquePromoId(assetTypeItem, labelId);
+      const assetUriId = buildUniquePromoId(cpsItem, labelId);
 
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,

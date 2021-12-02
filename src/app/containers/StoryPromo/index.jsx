@@ -24,7 +24,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { getHeadingTagOverride, getUniqueLinkId } from './utilities';
+import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 import PromoTimestamp from './Timestamp';
@@ -105,7 +105,7 @@ const StoryPromoContainer = ({
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const linkId = getUniqueLinkId(item, labelId);
+  const linkId = buildUniquePromoId(item, labelId);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
