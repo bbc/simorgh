@@ -28,6 +28,7 @@ import {
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { getUniqueLinkId } from './utilities';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -154,8 +155,13 @@ describe('StoryPromo Container', () => {
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
+      const labelId = `unlabelled`;
+
+      const uriLabelId = getUniqueLinkId(assetTypeItem, labelId);
+      const assetUriId = getUniqueLinkId(cpsItem, labelId);
+
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        cpsItem.headlines.headline,
+        `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
       );
       expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         cpsItem.summary,
@@ -169,7 +175,7 @@ describe('StoryPromo Container', () => {
       ).toEqual(itemWithOvertypedSummary.overtypedSummary);
 
       expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        assetTypeItem.name,
+        `<span id="${uriLabelId}">${assetTypeItem.name}</span>`,
       );
       expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         assetTypeItem.summary,

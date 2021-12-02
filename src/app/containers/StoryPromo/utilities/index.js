@@ -24,3 +24,13 @@ export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
 };
 
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
+
+export const getUniqueLinkId = (item, labelId) => {
+  const assetUri = pathOr('', ['locators', 'assetUri'], item);
+  const contentType = pathOr('', ['contentType'], item);
+  const uri = pathOr('', ['uri'], item);
+  const uniqueId = assetUri || uri;
+  const assetId = uniqueId.split('/').pop();
+  const sanitisedId = assetId.replace(/\W/g, '');
+  return `promo-link-${labelId}${sanitisedId || ''}${contentType}`;
+};

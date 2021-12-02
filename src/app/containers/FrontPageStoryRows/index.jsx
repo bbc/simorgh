@@ -21,12 +21,14 @@ const renderPromo = ({
   isFirstSection = false,
   dir,
   displayImage = true,
+  labelId,
 }) => {
   const lazyLoadImage = !(promoType === 'top' && isFirstSection); // don't lazy load image if it is a top story
   const renderedPromo = isBulletin(item) ? (
     <BulletinContainer item={item} lazyLoadImage={lazyLoadImage} dir={dir} />
   ) : (
     <StoryPromoContainer
+      labelId={labelId}
       item={item}
       promoType={promoType}
       lazyLoadImage={lazyLoadImage}
@@ -61,6 +63,7 @@ export const TopRow = ({
   dir,
   parentColumns,
   parentEnableGelGutters,
+  labelId,
 }) => {
   if (sectionHasSingleStory) {
     return (
@@ -70,6 +73,7 @@ export const TopRow = ({
           promoType: 'top',
           isFirstSection,
           dir,
+          labelId,
         })}
       </>
     );
@@ -104,6 +108,7 @@ export const LeadingRow = ({
   dir,
   parentColumns,
   parentEnableGelGutters,
+  labelId,
 }) => (
   <>
     <Grid
@@ -113,7 +118,7 @@ export const LeadingRow = ({
       parentColumns={parentColumns}
       parentEnableGelGutters={parentEnableGelGutters}
     >
-      {renderPromo({ item: stories[0], promoType: 'leading', dir })}
+      {renderPromo({ item: stories[0], promoType: 'leading', dir, labelId })}
     </Grid>
     <Grid
       item
@@ -141,6 +146,7 @@ export const RegularRow = ({
   dir,
   parentColumns,
   parentEnableGelGutters,
+  labelId,
 }) => (
   <>
     {stories.map((story, i) => {
@@ -161,6 +167,7 @@ export const RegularRow = ({
             item: story,
             dir,
             displayImage: displayImages,
+            labelId,
           })}
         </Grid>
       );

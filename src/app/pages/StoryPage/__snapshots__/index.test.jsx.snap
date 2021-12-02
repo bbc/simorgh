@@ -2880,10 +2880,15 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabelled23182501"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182501"
                               >
-                                DSS: Wepụ aka enwe n'ofe na Benue
+                                <span
+                                  id="promo-link-unlabelled23182501"
+                                >
+                                  DSS: Wepụ aka enwe n'ofe na Benue
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -2910,10 +2915,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabelledinstitutional23162153"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
+                                  id="promo-link-unlabelledinstitutional23162153"
                                   role="text"
                                 >
                                   <span
@@ -2922,7 +2929,9 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                                   >
                                     AS E DE HAPPEN 
                                   </span>
-                                  Test m̀ịṅị̀ịọ́ụ̄ please ignore
+                                  <span>
+                                    Test m̀ịṅị̀ịọ́ụ̄ please ignore
+                                  </span>
                                 </span>
                               </a>
                             </h3>
@@ -2970,10 +2979,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabelled23183171"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23183171"
                               >
                                 <span
+                                  id="promo-link-unlabelled23183171"
                                   role="text"
                                 >
                                   <span
@@ -9643,10 +9654,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabelled23248287"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23248287"
                               >
-                                ATMs across the country
+                                <span
+                                  id="promo-link-unlabelled23248287"
+                                >
+                                  ATMs across the country
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -9673,10 +9689,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabelledtori23146434"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146434"
                               >
-                                Jacob Zuma: Staying!!!
+                                <span
+                                  id="promo-link-unlabelledtori23146434"
+                                >
+                                  Jacob Zuma: Staying!!!
+                                </span>
                               </a>
                             </h3>
                             <time
@@ -9703,10 +9724,15 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
+                                aria-labelledby="promo-link-unlabellednewsFeature"
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.co.uk/news"
                               >
-                                Feature promo
+                                <span
+                                  id="promo-link-unlabellednewsFeature"
+                                >
+                                  Feature promo
+                                </span>
                               </a>
                             </h3>
                             <time
