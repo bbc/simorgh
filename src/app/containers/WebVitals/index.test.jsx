@@ -10,7 +10,6 @@ import WebVitals from '.';
 // Contexts
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import { RequestContext } from '#contexts/RequestContext';
 
 // Mock the useWebVitals Hook
 jest.mock('@bbc/web-vitals');
@@ -29,15 +28,13 @@ const WebVitalsWithContext = ({
       },
     }}
   >
-    <RequestContext.Provider value={{ pageType }}>
-      <UserContext.Provider
-        value={{
-          personalisationEnabled,
-        }}
-      >
-        <WebVitals />
-      </UserContext.Provider>
-    </RequestContext.Provider>
+    <UserContext.Provider
+      value={{
+        personalisationEnabled,
+      }}
+    >
+      <WebVitals pageType={pageType} />
+    </UserContext.Provider>
   </ToggleContext.Provider>
 );
 
@@ -56,15 +53,40 @@ describe('WebVitals', () => {
 
     it.each`
       testDescription                                | testConfig                                                                                | webVitalsParams
-      ${'feature toggle and personalisation off'}    | ${{ featureToggle: false, personalisationEnabled: false, pageType: 'STY' }}               | ${{ enabled: false, reportParams: { pageType: 'STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
-      ${'feature toggle on and personalisation off'} | ${{ featureToggle: true, personalisationEnabled: false, pageType: 'STY' }}                | ${{ enabled: false, reportParams: { pageType: 'STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
-      ${'feature toggle off and personalisation on'} | ${{ featureToggle: false, personalisationEnabled: true, pageType: 'STY' }}                | ${{ enabled: false, reportParams: { pageType: 'STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
-      ${'feature toggle and personalisation on'}     | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY' }}                 | ${{ enabled: true, reportParams: { pageType: 'STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
-      ${'sample rate override'}                      | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY', sampleRate: 65 }} | ${{ enabled: true, reportParams: { pageType: 'STY' }, reportingEndpoint: 'endpoint', sampleRate: 65 }}
+      ${'feature toggle and personalisation off'}    | ${{ featureToggle: false, personalisationEnabled: false, pageType: 'STY' }}               | ${{ enabled: false, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
+      ${'feature toggle on and personalisation off'} | ${{ featureToggle: true, personalisationEnabled: false, pageType: 'STY' }}                | ${{ enabled: false, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
+      ${'feature toggle off and personalisation on'} | ${{ featureToggle: false, personalisationEnabled: true, pageType: 'STY' }}                | ${{ enabled: false, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
+      ${'feature toggle and personalisation on'}     | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY' }}                 | ${{ enabled: true, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 20 }}
+      ${'sample rate override'}                      | ${{ featureToggle: true, personalisationEnabled: true, pageType: 'STY', sampleRate: 65 }} | ${{ enabled: true, reportParams: { pageType: 'WS-STY' }, reportingEndpoint: 'endpoint', sampleRate: 65 }}
     `(`$testDescription`, ({ testConfig, webVitalsParams }) => {
       render(<WebVitalsWithContext {...testConfig} />);
 
       expect(useWebVitals).toBeCalledWith(webVitalsParams);
+    });
+
+    it('should log an error to the console if there is no page type data', () => {
+      const testConfig = {
+        featureToggle: true,
+        personalisationEnabled: true,
+      };
+      /* eslint-disable no-console */
+      const { error } = console.error;
+
+      console.error = jest.fn();
+
+      render(<WebVitalsWithContext {...testConfig} />);
+
+      expect(useWebVitals).toBeCalledWith({
+        enabled: true,
+        reportingEndpoint: 'endpoint',
+        sampleRate: 20,
+      });
+      expect(console.error).toHaveBeenCalledWith(
+        'Web Vitals error: No page type to report.',
+      );
+
+      console.error = error;
+      /* eslint-enable no-console */
     });
   });
 });

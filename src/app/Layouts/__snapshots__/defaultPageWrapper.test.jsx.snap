@@ -293,12 +293,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 .emotion-23 {
   display: inline-block;
   width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
+  max-width: 10.359862550698512rem;
+  min-width: 6.906575033799008rem;
+  -webkit-flex: 1 1 6.906575033799008rem;
+  -ms-flex: 1 1 6.906575033799008rem;
+  flex: 1 1 6.906575033799008rem;
+  -ms-flex-preferred-size: 10.359862550698512rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -315,12 +315,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
+  max-width: 10.359862550698512rem;
+  min-width: 6.906575033799008rem;
+  -webkit-flex: 1 1 6.906575033799008rem;
+  -ms-flex: 1 1 6.906575033799008rem;
+  flex: 1 1 6.906575033799008rem;
+  -ms-flex-preferred-size: 10.359862550698512rem;
 }
 
 @media (min-width: 25rem) {
@@ -1004,15 +1004,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-topPage"
             class="emotion-23 emotion-24"
             href="/news"
+            id="topPage"
           >
             <svg
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
               height="24"
-              viewBox="0 0 167.95 24"
+              viewBox="0 0 153.2569 22.19"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
@@ -1034,6 +1036,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-topPage"
             >
               BBC News
             </span>
@@ -1381,15 +1384,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-footer"
             class="emotion-23 emotion-24"
             href="/news"
+            id="footer"
           >
             <svg
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
               height="24"
-              viewBox="0 0 167.95 24"
+              viewBox="0 0 153.2569 22.19"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
@@ -1411,6 +1416,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-footer"
             >
               BBC News
             </span>

@@ -6351,10 +6351,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-235 emotion-236"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentmedia45132087"
                             class="emotion-237 emotion-238"
                             href="/pidgin/media-45132087"
                           >
                             <span
+                              id="promo-link-rel-contentmedia45132087"
                               role="text"
                             >
                               <span>
@@ -6434,10 +6436,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                           class="emotion-235 emotion-236"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contenttori45242255"
                             class="emotion-237 emotion-238"
                             href="/pidgin/tori-45242255"
                           >
                             <span
+                              id="promo-link-rel-contenttori45242255"
                               role="text"
                             >
                               <span
@@ -11287,10 +11291,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan44124647"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44124647"
                           >
-                            ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
+                            <span
+                              id="promo-link-rel-contentazerbaijan44124647"
+                            >
+                              ADR və Qazaxdan Qarsadək müsəlman dəhlizi ideyası
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11343,10 +11352,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan43540056"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43540056"
                           >
-                            ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                            <span
+                              id="promo-link-rel-contentazerbaijan43540056"
+                            >
+                              ADR-100: Türk Əsgəri üçün Cəbrayıl çörəyi
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11399,10 +11413,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan44022776"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44022776"
                           >
-                            Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                            <span
+                              id="promo-link-rel-contentazerbaijan44022776"
+                            >
+                              Borçalı: Tortdan hərəyə bir tikə - təkbaşına isə onu yemək olmaz
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11455,10 +11474,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan43713137"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43713137"
                           >
-                            Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                            <span
+                              id="promo-link-rel-contentazerbaijan43713137"
+                            >
+                              Cümhuriyyət hökuməti Azərbaycanı necə idarə edirdi? İlk 6 ayın hadisələri
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11511,10 +11535,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan37688691"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-37688691"
                           >
-                            1918-1991: Bir müstəqilliyin iki bəyanı
+                            <span
+                              id="promo-link-rel-contentazerbaijan37688691"
+                            >
+                              1918-1991: Bir müstəqilliyin iki bəyanı
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11567,10 +11596,12 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan37691096"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-37691096"
                           >
                             <span
+                              id="promo-link-rel-contentazerbaijan37691096"
                               role="text"
                             >
                               <span>
@@ -11629,10 +11660,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan43499221"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43499221"
                           >
-                            1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                            <span
+                              id="promo-link-rel-contentazerbaijan43499221"
+                            >
+                              1918-ci ilə baxış: Mayın 28-nə aparan o yaz günlərində həyat necə idi?
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11685,10 +11721,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan44004471"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-44004471"
                           >
-                            #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                            <span
+                              id="promo-link-rel-contentazerbaijan44004471"
+                            >
+                              #ADR100 Zaqatala: Azərbaycanın qalib gəldiyi mübahisə
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -11741,10 +11782,15 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                           class="emotion-449 emotion-450"
                         >
                           <a
+                            aria-labelledby="promo-link-rel-contentazerbaijan43870815"
                             class="emotion-451 emotion-452"
                             href="/azeri/azerbaijan-43870815"
                           >
-                            Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                            <span
+                              id="promo-link-rel-contentazerbaijan43870815"
+                            >
+                              Cümhuriyyət hökumətinin İranla əlaqələri necə idi?
+                            </span>
                           </a>
                         </h3>
                         <time

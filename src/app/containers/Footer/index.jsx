@@ -45,9 +45,11 @@ const FooterContainer = () => {
 
   const { externalLink, links, copyrightText, trustProjectLink } = footer;
 
+  // linkId="footer" is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+
   return (
     <StyledFooter role="contentinfo" lang={serviceLang}>
-      <BrandContainer borderTop />
+      <BrandContainer linkId="footer" borderTop />
       <Footer
         isAmp={isAmp}
         links={links}
