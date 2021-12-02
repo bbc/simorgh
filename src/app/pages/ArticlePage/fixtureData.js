@@ -21,6 +21,9 @@ const articleDataBuilder = (
     locators: {
       optimoUrn: `urn:bbc:optimo:asset:${id}`,
     },
+    analyticsLabels: {
+      contentId: 'urn:bbc:optimo:c0000000001o',
+    },
     type: 'article',
     createdBy,
     created: 1514808060000,
