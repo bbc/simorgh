@@ -80,35 +80,36 @@ describe('getHeadingTagOverride', () => {
 describe('buildUniquePromoId', () => {
   const labelId = 'unlabelled';
   it('should return id of promo-link with contentType and URI if contentType exists', () => {
-    expect(buildUniquePromoId(secondaryColumnNoAssetURI, labelId)).toEqual(
-      'promo-unlabelled-httpswwwbbccouknews-radiobulletin',
+    expect(buildUniquePromoId(labelId, secondaryColumnNoAssetURI, 0)).toEqual(
+      'promo-unlabelled-httpswwwbbccouknews-radiobulletin-1',
     );
   });
 
   it('should return id using URI if assetURI does not exist', () => {
-    expect(buildUniquePromoId(standardLinkItem, labelId)).toEqual(
-      'promo-unlabelled-httpwwwbbccomazeri-text',
+    expect(buildUniquePromoId(labelId, standardLinkItem, 1)).toEqual(
+      'promo-unlabelled-httpwwwbbccomazeri-text-2',
     );
   });
 
   it('should return id using assetURI does not exist and contentType does not exist', () => {
-    expect(buildUniquePromoId(completeItem, labelId)).toEqual(
-      'promo-unlabelled-httpswwwbbccouk',
+    expect(buildUniquePromoId(labelId, completeItem, 2)).toEqual(
+      'promo-unlabelled-httpswwwbbccouk-3',
     );
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {
-    expect(buildUniquePromoId(secondaryColumnContentType, labelId)).toEqual(
-      'promo-unlabelled-radiobulletin',
+    expect(buildUniquePromoId(labelId, secondaryColumnContentType, 3)).toEqual(
+      'promo-unlabelled-radiobulletin-4',
     );
   });
 
   it('should sanitise link from item and split from last forward slash', () => {
     expect(
       buildUniquePromoId(
-        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
         labelId,
+        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
+        4,
       ),
-    ).toEqual('promo-unlabelled-aaabbbccc');
+    ).toEqual('promo-unlabelled-aaabbbccc-5');
   });
 });
