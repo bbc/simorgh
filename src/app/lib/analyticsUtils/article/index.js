@@ -3,8 +3,7 @@ import pathOr from 'ramda/src/pathOr';
 const getOptimoUrn = articleData =>
   pathOr(null, ['metadata', 'locators', 'optimoUrn'], articleData);
 
-export const getContentId = articleData =>
-  pathOr(null, ['metadata', 'analyticsLabels', 'contentId'], articleData);
+export const getContentId = pathOr(null, ['metadata', 'analyticsLabels', 'contentId']);
 
 export const getOptimoId = articleData => {
   const optimoUrn = getOptimoUrn(articleData);
