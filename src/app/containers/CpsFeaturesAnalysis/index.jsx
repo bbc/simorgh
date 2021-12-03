@@ -27,10 +27,11 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   return (
     <StoryPromoUl>
-      {promoItems.map(item => (
+      {promoItems.map((item, index) => (
         <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
           <StoryPromo
             item={item}
+            index={index}
             dir={dir}
             displayImage
             displaySummary={false}

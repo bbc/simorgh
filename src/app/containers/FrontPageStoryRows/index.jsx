@@ -17,6 +17,7 @@ const isBulletin = item =>
 
 const renderPromo = ({
   item,
+  index,
   promoType = 'regular',
   isFirstSection = false,
   dir,
@@ -30,6 +31,7 @@ const renderPromo = ({
     <StoryPromoContainer
       labelId={labelId}
       item={item}
+      index={index}
       promoType={promoType}
       lazyLoadImage={lazyLoadImage}
       dir={dir}
@@ -164,6 +166,7 @@ export const RegularRow = ({
           border={border}
         >
           {renderPromo({
+            index: i,
             item: story,
             dir,
             displayImage: displayImages,
