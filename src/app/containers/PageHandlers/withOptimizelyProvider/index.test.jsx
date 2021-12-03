@@ -1,18 +1,49 @@
-// import React from 'react';
-// import {
-//   shouldMatchSnapshot,
-//   suppressPropWarnings,
-// } from '@bbc/psammead-test-helpers';
+import React from 'react';
+import * as optimizelyReactSdk from '@optimizely/react-sdk';
+import { render } from '@testing-library/react';
+import { latin } from '@bbc/gel-foundations/scripts';
+import withOptimizelyProvider from '.';
+import { ServiceContext } from '#contexts/ServiceContext';
 
-// import WithOptimizelyProvider from '.';
+describe('withOptimizelyProvider HOC', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
 
-// describe('withOptimizelyProvider HOC', () => {
-//   beforeEach(() => {
-//     jest.clearAllMocks();
-//   });
+  const optimizelyProviderSpy = jest.spyOn(
+    optimizelyReactSdk,
+    'OptimizelyProvider',
+  );
 
-//   const Component = () => <h1>Hola Optimizely</h1>;
-//   const WithOptimizelyProviderHOC = WithOptimizelyProvider(Component);
+  const props = {
+    bbcOrigin: 'https://www.bbc.com',
+    id: 'c0000000000o',
+    service: 'news',
+    isAmp: true,
+    pathname: '/pathname',
+    status: 200,
+    showAdsBasedOnLocation: true,
+    toggles: {
+      testToggle: {
+        enabled: false,
+      },
+    },
+  };
 
-//   it('should only render firstPublished timestamp for Igbo when lastPublished is less than 1 min later', async () => {});
-// });
+  it('should load Optimizely with correct params', () => {
+    const Component = () => <h1>Hola Optimizely</h1>;
+
+    const WithOptimizelyProviderHOC = withOptimizelyProvider(Component);
+
+    const TestComponent = () => (
+      <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+        <WithOptimizelyProviderHOC {...props} />
+      </ServiceContext.Provider>
+    );
+
+    const { container } = render(<TestComponent />);
+
+    expect(container).toMatchSnapshot();
+    expect(optimizelyProviderSpy).toHaveBeenCalledTimes(1);
+  });
+});
