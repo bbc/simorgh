@@ -2,12 +2,11 @@ import buildIChefUrl from '#lib/utilities/ichefURL';
 
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
 
-export const createSrcset = ({
+export const createSrcsets = ({
   originCode,
   locator,
   originalImageWidth,
   resolutions = DEFAULT_RESOLUTIONS,
-  isWebP,
 }) => {
   if (originCode === 'pips') {
     return null;
@@ -24,17 +23,31 @@ export const createSrcset = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  const urls = requiredResolutions.map(
-    resolution =>
-      `${buildIChefUrl({
-        originCode,
-        locator,
-        resolution,
-        isWebP,
-      })} ${resolution}w`,
-  );
+  const webpSrcset = requiredResolutions
+    .map(
+      resolution =>
+        `${buildIChefUrl({
+          originCode,
+          locator,
+          resolution,
+          isWebP: true,
+        })} ${resolution}w`,
+    )
+    .join(', ');
 
-  return urls.join(', ');
+  const fallbackSrcset = requiredResolutions
+    .map(
+      resolution =>
+        `${buildIChefUrl({
+          originCode,
+          locator,
+          resolution,
+          isWebP: false,
+        })} ${resolution}w`,
+    )
+    .join(', ');
+
+  return { webpSrcset, fallbackSrcset };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
   if (!originCode) return '';

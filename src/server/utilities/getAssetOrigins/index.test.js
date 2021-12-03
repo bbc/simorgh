@@ -40,7 +40,7 @@ describe('getAssetOrigins', () => {
 
     expect(getAssetOrigins('foobar')).toEqual([
       ...testCookieOrigins,
-      'https://ichef.bbci.co.uk',
+      'https://ichef.test.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
     ]);
@@ -62,7 +62,7 @@ describe('getAssetOrigins', () => {
 
     expect(getAssetOrigins('news')).toEqual([
       ...testCookieOrigins,
-      'https://ichef.bbci.co.uk',
+      'https://ichef.test.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
       ...fontOrigins,

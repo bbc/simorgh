@@ -1,7 +1,10 @@
 import services from '../serviceConfigs';
 import isLiveEnv from '#lib/utilities/isLive';
 
-const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
+const IMAGES_ORIGIN = isLiveEnv()
+  ? 'https://ichef.bbci.co.uk'
+  : 'https://ichef.test.bbci.co.uk';
+
 const FONTS_ORIGINS = [
   'https://gel.files.bbci.co.uk',
   'https://ws-downloads.files.bbci.co.uk',
