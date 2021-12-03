@@ -114,6 +114,7 @@ ImageWithPlaceholder.propTypes = {
   ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
+  fallbackSrcset: string,
   sizes: string,
   width: number.isRequired,
 };
@@ -128,6 +129,7 @@ ImageWithPlaceholder.defaultProps = {
   lazyLoad: false,
   preload: false,
   srcset: null,
+  fallbackSrcset: null,
   sizes: null,
 };
 
