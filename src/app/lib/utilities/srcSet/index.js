@@ -9,7 +9,7 @@ export const createSrcsets = ({
   resolutions = DEFAULT_RESOLUTIONS,
 }) => {
   if (originCode === 'pips') {
-    return null;
+    return { webpSrcset: null, fallbackSrcset: null };
   }
 
   const requiredResolutions = resolutions.filter(

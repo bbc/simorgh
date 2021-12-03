@@ -4,7 +4,7 @@ describe('create srcset', () => {
   const srcsetScenarios = [
     {
       originCode: 'test',
-      location: 'testland',
+      locator: 'testland',
       width: 1024,
       expected: {
         webpSrcset:
@@ -17,27 +17,27 @@ describe('create srcset', () => {
     },
     {
       originCode: 'pips',
-      location: 'testland',
+      locator: 'testland',
       width: 1024,
-      expected: null,
+      expected: { webpSrcset: null, fallbackSrcset: null },
       summary: 'should return null with pips originCode',
     },
     {
       originCode: 'test',
-      location: 'testland',
+      locator: 'testland',
       width: 640,
       expected: {
         webpSrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland.webp 240w, https://ichef.bbci.co.uk/news/320/test/testland.webp 320w, https://ichef.bbci.co.uk/news/480/test/testland.webp 480w, https://ichef.bbci.co.uk/news/624/test/testland.webp 624w, https://ichef.bbci.co.uk/news/800/test/testland.webp 800w',
+          'https://ichef.bbci.co.uk/news/240/test/testland.webp 240w, https://ichef.bbci.co.uk/news/320/test/testland.webp 320w, https://ichef.bbci.co.uk/news/480/test/testland.webp 480w, https://ichef.bbci.co.uk/news/624/test/testland.webp 624w, https://ichef.bbci.co.uk/news/640/test/testland.webp 640w',
         fallbackSrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/800/test/testland 800w',
+          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
       },
       summary:
         'width of 640 should return srcset with maximum allowed size of 640',
     },
     {
       originCode: 'test',
-      location: 'testland',
+      locator: 'testland',
       width: 2048,
       expected: {
         webpSrcset:
@@ -50,11 +50,11 @@ describe('create srcset', () => {
   ];
 
   srcsetScenarios.forEach(
-    ({ originCode, location, width, expected, summary }) => {
+    ({ originCode, locator, width, expected, summary }) => {
       it(summary, () => {
         const { webpSrcset, fallbackSrcset } = createSrcsets({
           originCode,
-          location,
+          locator,
           originalImageWidth: width,
         });
         expect(webpSrcset).toEqual(expected.webpSrcset);
