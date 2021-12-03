@@ -1033,12 +1033,12 @@ HTMLCollection [
                 class="emotion-39 emotion-40"
               >
                 <a
-                  aria-labelledby="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                  aria-labelledby="promo-1"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                    id="promo-1"
                   >
                     Top Story 1 headline
                   </span>
@@ -1099,12 +1099,12 @@ HTMLCollection [
                 class="emotion-62 emotion-40"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                  aria-labelledby="promo-top-stories-1"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                    id="promo-top-stories-1"
                   >
                     Top Story 2 headline
                   </span>
@@ -1165,12 +1165,12 @@ HTMLCollection [
                 class="emotion-62 emotion-40"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                  aria-labelledby="promo-top-stories-2"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                    id="promo-top-stories-2"
                   >
                     Top Story 3 headline
                   </span>
@@ -1231,12 +1231,12 @@ HTMLCollection [
                 class="emotion-62 emotion-40"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                  aria-labelledby="promo-top-stories-3"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                    id="promo-top-stories-3"
                   >
                     Top Story 4 headline
                   </span>
@@ -1297,12 +1297,12 @@ HTMLCollection [
                 class="emotion-62 emotion-40"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                  aria-labelledby="promo-top-stories-4"
                   class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                    id="promo-top-stories-4"
                   >
                     Top Story 5 headline
                   </span>
@@ -2379,12 +2379,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-41 emotion-42"
               >
                 <a
-                  aria-labelledby="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                  aria-labelledby="promo-1"
                   class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                    id="promo-1"
                   >
                     Top Story 1 headline
                   </span>
@@ -2445,12 +2445,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-64 emotion-42"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                  aria-labelledby="promo-top-stories-1"
                   class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                    id="promo-top-stories-1"
                   >
                     Top Story 2 headline
                   </span>
@@ -2511,12 +2511,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-64 emotion-42"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                  aria-labelledby="promo-top-stories-2"
                   class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                    id="promo-top-stories-2"
                   >
                     Top Story 3 headline
                   </span>
@@ -2577,12 +2577,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-64 emotion-42"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                  aria-labelledby="promo-top-stories-3"
                   class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                    id="promo-top-stories-3"
                   >
                     Top Story 4 headline
                   </span>
@@ -2643,12 +2643,12 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                 class="emotion-64 emotion-42"
               >
                 <a
-                  aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                  aria-labelledby="promo-top-stories-4"
                   class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
                   <span
-                    id="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                    id="promo-top-stories-4"
                   >
                     Top Story 5 headline
                   </span>
@@ -3637,12 +3637,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-26 emotion-27"
             >
               <a
-                aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000001"
+                aria-labelledby="promo-top-stories-1"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-top-stories-urnbbcaresassetigbotestasset00000001"
+                  id="promo-top-stories-1"
                 >
                   Top Story 1 headline
                 </span>
@@ -3728,12 +3728,12 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-57 emotion-27"
             >
               <a
-                aria-labelledby="promo-unlabelled-urnbbcaresassetigbotestasset00000002"
+                aria-labelledby="promo-1"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-unlabelled-urnbbcaresassetigbotestasset00000002"
+                  id="promo-1"
                 >
                   Top Story 2 headline
                 </span>
@@ -4285,12 +4285,12 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
             class="emotion-35 emotion-36"
           >
             <a
-              aria-labelledby="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+              aria-labelledby="promo-1"
               class="emotion-37 emotion-38"
               href="https://www.bbc.co.uk"
             >
               <span
-                id="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                id="promo-1"
               >
                 Top Story 1 headline
               </span>
@@ -5294,12 +5294,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-32 emotion-33"
             >
               <a
-                aria-labelledby="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                aria-labelledby="promo-1"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-unlabelled-urnbbcaresassetigbotestasset00000001"
+                  id="promo-1"
                 >
                   Top Story 1 headline
                 </span>
@@ -5360,12 +5360,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
-                aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                aria-labelledby="promo-top-stories-1"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-top-stories-urnbbcaresassetigbotestasset00000002"
+                  id="promo-top-stories-1"
                 >
                   Top Story 2 headline
                 </span>
@@ -5426,12 +5426,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
-                aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                aria-labelledby="promo-top-stories-2"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-top-stories-urnbbcaresassetigbotestasset00000003"
+                  id="promo-top-stories-2"
                 >
                   Top Story 3 headline
                 </span>
@@ -5492,12 +5492,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
-                aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                aria-labelledby="promo-top-stories-3"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-top-stories-urnbbcaresassetigbotestasset00000004"
+                  id="promo-top-stories-3"
                 >
                   Top Story 4 headline
                 </span>
@@ -5558,12 +5558,12 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
-                aria-labelledby="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                aria-labelledby="promo-top-stories-4"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
                 <span
-                  id="promo-top-stories-urnbbcaresassetigbotestasset00000005"
+                  id="promo-top-stories-4"
                 >
                   Top Story 5 headline
                 </span>

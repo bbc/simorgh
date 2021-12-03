@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -102,6 +102,7 @@ StoryPromoImage.defaultProps = {
 
 const StoryPromoContainer = ({
   item,
+  index,
   promoType,
   lazyLoadImage,
   dir,
@@ -116,7 +117,7 @@ const StoryPromoContainer = ({
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const linkId = buildUniquePromoId(item, labelId);
+  const linkId = buildUniquePromoId(labelId, item, index);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -301,6 +302,7 @@ StoryPromoContainer.propTypes = {
     }),
   }),
   labelId: string,
+  index: number,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -312,7 +314,8 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
-  labelId: 'unlabelled',
+  labelId: '',
+  index: 0,
 };
 
 export default StoryPromoContainer;

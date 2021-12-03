@@ -25,14 +25,15 @@ export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
 
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
 
-export const buildUniquePromoId = (item, labelId) => {
-  const id = pathOr('', ['id'], item);
-  const assetUri = pathOr('', ['locators', 'assetUri'], item);
-  const uri = pathOr('', ['uri'], item);
-  const assetId = (id || assetUri || uri).replace(/\W/g, '').split('/').pop();
-  const contentType = pathOr('', ['contentType'], item);
+export const buildUniquePromoId = (promoGroupId, promoItem, promoIndex = 0) => {
+  const assetUri = pathOr('', ['locators', 'assetUri'], promoItem);
+  const uri = pathOr('', ['uri'], promoItem);
+  const asset = assetUri || uri;
+  const assetParts = asset.split(/www\.bbc\.(co\.uk|com)/);
+  const assetId = assetParts[assetParts.length - 1].replace(/\W/g, '');
+  const contentType = pathOr('', ['contentType'], promoItem);
 
-  return ['promo', labelId, assetId, contentType]
+  return ['promo', promoGroupId, assetId, contentType, promoIndex + 1]
     .filter(Boolean)
     .join('-')
     .toLowerCase();
