@@ -1,9 +1,15 @@
-import { isMap, isPgl, getHeadingTagOverride } from '.';
+import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
   MEDIA_ASSET_PAGE,
 } from '#app/routes/utils/pageTypes';
+import {
+  completeItem,
+  standardLinkItem,
+  secondaryColumnNoAssetURI,
+  secondaryColumnContentType,
+} from '../helpers/fixtureData';
 
 describe('isMap', () => {
   it('should return true if cpsType is MAP', () => {
@@ -68,5 +74,42 @@ describe('getHeadingTagOverride', () => {
     const pageType = PHOTO_GALLERY_PAGE;
     const isContentTypeGuide = false;
     expect(getHeadingTagOverride({ pageType, isContentTypeGuide })).toBe(null);
+  });
+});
+
+describe('buildUniquePromoId', () => {
+  const labelId = 'test-group-id';
+  it('should return id of promo-link with contentType and URI if contentType exists', () => {
+    expect(buildUniquePromoId(labelId, secondaryColumnNoAssetURI, 0)).toEqual(
+      'promo-test-group-id-news-radiobulletin-1',
+    );
+  });
+
+  it('should return id using URI if assetURI does not exist', () => {
+    expect(buildUniquePromoId(labelId, standardLinkItem, 1)).toEqual(
+      'promo-test-group-id-azeri-text-2',
+    );
+  });
+
+  it('should return id using assetURI does not exist and contentType does not exist', () => {
+    expect(buildUniquePromoId(labelId, completeItem, 2)).toEqual(
+      'promo-test-group-id-3',
+    );
+  });
+
+  it('should return id with contentType only if assetURI and URI do not exist', () => {
+    expect(buildUniquePromoId(labelId, secondaryColumnContentType, 3)).toEqual(
+      'promo-test-group-id-radiobulletin-4',
+    );
+  });
+
+  it('should sanitise link from item and split from last forward slash', () => {
+    expect(
+      buildUniquePromoId(
+        labelId,
+        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
+        4,
+      ),
+    ).toEqual('promo-test-group-id-aaabbbccc-5');
   });
 });

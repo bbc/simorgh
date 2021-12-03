@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import moment from 'moment-timezone';
-import { shape, bool } from 'prop-types';
+import { shape, bool, string } from 'prop-types';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import pathOr from 'ramda/src/pathOr';
 import pick from 'ramda/src/pick';
@@ -9,7 +9,7 @@ import formatDuration from '#lib/utilities/formatDuration';
 import { storyItem } from '#models/propTypes/storyItem';
 import { isPgl, isMap } from '../utilities';
 
-const LinkContents = ({ item, isInline }) => {
+const LinkContents = ({ item, isInline, id }) => {
   const {
     translations: { media: mediaTranslations },
   } = useContext(ServiceContext);
@@ -29,7 +29,8 @@ const LinkContents = ({ item, isInline }) => {
   const content = getContent();
 
   if (!isPhotoGallery && !isMedia) {
-    return content;
+    // This span is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+    return <span id={id}>{content}</span>;
   }
 
   const getAnnouncedType = () => {
@@ -64,8 +65,9 @@ const LinkContents = ({ item, isInline }) => {
 
   return (
     // role="text" is required to correct a text splitting bug on iOS VoiceOver.
+    // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
     // eslint-disable-next-line jsx-a11y/aria-role
-    <span role="text">
+    <span role="text" id={id}>
       {mediaType && <VisuallyHiddenText>{`${mediaType}, `}</VisuallyHiddenText>}
       <span>{content}</span>
       {offScreenDuration}
@@ -76,6 +78,7 @@ const LinkContents = ({ item, isInline }) => {
 LinkContents.propTypes = {
   item: shape(pick(['cpsType', 'headlines', 'media'], storyItem)).isRequired,
   isInline: bool,
+  id: string.isRequired,
 };
 
 LinkContents.defaultProps = {

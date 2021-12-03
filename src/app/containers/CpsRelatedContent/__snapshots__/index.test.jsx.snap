@@ -805,10 +805,12 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="emotion-39 emotion-40"
               >
                 <a
+                  aria-labelledby="promo-rel-content-pidgin44508901-1"
                   class="emotion-41 emotion-42"
                   href="/pidgin/44508901"
                 >
                   <span
+                    id="promo-rel-content-pidgin44508901-1"
                     role="text"
                   >
                     <span>
@@ -867,10 +869,15 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="emotion-39 emotion-40"
               >
                 <a
+                  aria-labelledby="promo-rel-content-pidgintori46975713-2"
                   class="emotion-41 emotion-42"
                   href="/pidgin/tori-46975713"
                 >
-                  How light companies dey use estimated billing show Nigerians pepper
+                  <span
+                    id="promo-rel-content-pidgintori46975713-2"
+                  >
+                    How light companies dey use estimated billing show Nigerians pepper
+                  </span>
                 </a>
               </h3>
               <time
@@ -923,10 +930,15 @@ exports[`CpsRelatedContent should render Story Promo components when given appro
                 class="emotion-39 emotion-40"
               >
                 <a
+                  aria-labelledby="promo-rel-content-pidgintori42494678-3"
                   class="emotion-41 emotion-42"
                   href="/pidgin/tori-42494678"
                 >
-                  Nigeria: Wetin 5,222 megawatts electric fit do?
+                  <span
+                    id="promo-rel-content-pidgintori42494678-3"
+                  >
+                    Nigeria: Wetin 5,222 megawatts electric fit do?
+                  </span>
                 </a>
               </h3>
               <time
@@ -1702,10 +1714,12 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="emotion-37 emotion-38"
               >
                 <a
+                  aria-labelledby="promo-pidgin44508901-1"
                   class="emotion-39 emotion-40"
                   href="/pidgin/44508901"
                 >
                   <span
+                    id="promo-pidgin44508901-1"
                     role="text"
                   >
                     <span>

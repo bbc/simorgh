@@ -1,6 +1,8 @@
 {
   "metadata": {
-    "analyticsLabels": {},
+    "analyticsLabels": {
+      "contentId": "urn:bbc:optimo:asset:c5jje4ejkqvo"
+    },
     "blockTypes": [
       "headline",
       "text",

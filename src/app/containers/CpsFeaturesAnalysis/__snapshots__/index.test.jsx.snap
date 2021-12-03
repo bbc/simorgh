@@ -696,10 +696,15 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
+                  aria-labelledby="promo-igboafirika23252735-1"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-23252735"
                 >
-                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  <span
+                    id="promo-igboafirika23252735-1"
+                  >
+                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  </span>
                 </a>
               </h3>
               <time
@@ -751,10 +756,15 @@ exports[`CpsRelatedContent should render Story Feature components when given app
                 class="emotion-37 emotion-38"
               >
                 <a
+                  aria-labelledby="promo-igboafirika49666505-2"
                   class="emotion-39 emotion-40"
                   href="/igbo/afirika-49666505"
                 >
-                  Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                  <span
+                    id="promo-igboafirika49666505-2"
+                  >
+                    Robert Mugabe: Zimbabwe eferela nwa amadi a aka
+                  </span>
                 </a>
               </h3>
               <time
@@ -1470,10 +1480,15 @@ exports[`CpsRelatedContent should render Story Promo components without <ul> whe
                 class="emotion-35 emotion-36"
               >
                 <a
+                  aria-labelledby="promo-igboafirika23252735-1"
                   class="emotion-37 emotion-38"
                   href="/igbo/afirika-23252735"
                 >
-                  STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  <span
+                    id="promo-igboafirika23252735-1"
+                  >
+                    STY - Ọrụ bekee na ịrụrụ onwe gị ọrụ, kedụ nk?
+                  </span>
                 </a>
               </h3>
               <p

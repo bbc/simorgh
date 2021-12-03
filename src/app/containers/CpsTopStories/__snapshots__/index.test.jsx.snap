@@ -615,10 +615,15 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="emotion-29 emotion-30"
               >
                 <a
+                  aria-labelledby="promo-mundonoticiasinternacional51939501-1"
                   class="emotion-31 emotion-32"
                   href="/mundo/noticias-internacional-51939501"
                 >
-                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                  <span
+                    id="promo-mundonoticiasinternacional51939501-1"
+                  >
+                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                  </span>
                 </a>
               </h3>
               <time
@@ -645,10 +650,15 @@ exports[`CpsRelatedContent should render Top Stories components when given appro
                 class="emotion-29 emotion-30"
               >
                 <a
+                  aria-labelledby="promo-pidgintori51945757-1"
                   class="emotion-31 emotion-32"
                   href="/pidgin/tori-51945757"
                 >
-                  Nigeria don get five new cases of Coronavirus - See how e happun
+                  <span
+                    id="promo-pidgintori51945757-1"
+                  >
+                    Nigeria don get five new cases of Coronavirus - See how e happun
+                  </span>
                 </a>
               </h3>
               <time
@@ -1244,10 +1254,15 @@ exports[`CpsRelatedContent should render Top Stories components when without <ul
                 class="emotion-27 emotion-28"
               >
                 <a
+                  aria-labelledby="promo-mundonoticiasinternacional51939501-1"
                   class="emotion-29 emotion-30"
                   href="/mundo/noticias-internacional-51939501"
                 >
-                  China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                  <span
+                    id="promo-mundonoticiasinternacional51939501-1"
+                  >
+                    China dice tener una vacuna contra el nuevo coronavirus lista para pruebas en humanos
+                  </span>
                 </a>
               </h3>
               <time
