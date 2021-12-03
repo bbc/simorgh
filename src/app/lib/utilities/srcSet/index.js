@@ -6,18 +6,18 @@ export const createSrcsets = ({
   originCode,
   locator,
   originalImageWidth,
-  resolutions = DEFAULT_RESOLUTIONS,
+  imageResolutions = DEFAULT_RESOLUTIONS,
 }) => {
   if (originCode === 'pips') {
     return { webpSrcset: null, fallbackSrcset: null };
   }
 
-  const requiredResolutions = resolutions.filter(
+  const requiredResolutions = imageResolutions.filter(
     resolution => resolution <= originalImageWidth,
   );
 
   if (
-    originalImageWidth < resolutions[resolutions.length - 1] &&
+    originalImageWidth < imageResolutions[imageResolutions.length - 1] &&
     !requiredResolutions.includes(originalImageWidth)
   ) {
     requiredResolutions.push(originalImageWidth);

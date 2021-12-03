@@ -150,6 +150,7 @@ ArticleFigure.propTypes = {
   src: string.isRequired,
   type: string,
   srcset: string,
+  fallbackSrcset: string,
   sizes: string,
   width: number.isRequired,
   showCopyright: bool,
@@ -164,6 +165,7 @@ ArticleFigure.defaultProps = {
   preload: false,
   type: '',
   srcset: null,
+  fallbackSrcset: null,
   sizes: null,
   showCopyright: false,
 };
