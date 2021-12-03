@@ -1,8 +1,8 @@
 import StoryPage from './StoryPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
-import withOptimizely from '#app/containers/PageHandlers/withOptimizely';
+import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
 
 export default applyBasicPageHandlers({
   addVariantHandling: false,
-})(withOptimizely(StoryPage));
+})(withOptimizelyProvider(StoryPage));

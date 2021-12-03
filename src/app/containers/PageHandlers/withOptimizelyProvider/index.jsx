@@ -9,7 +9,7 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-const withOptimizely = Component => {
+const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
 
@@ -31,4 +31,4 @@ const withOptimizely = Component => {
   };
 };
 
-export default withOptimizely;
+export default withOptimizelyProvider;
