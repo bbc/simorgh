@@ -9,9 +9,10 @@ import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import isLive from '#lib/utilities/isLive';
 
-jest.mock('#hooks/useOptimizelyVariation');
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
@@ -94,12 +95,13 @@ const renderFeaturesAnalysisNoTitle = ({
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 describe('CpsRelatedContent', () => {
-  it('should render Story Feature components when given appropriate data', () => {
-    afterEach(() => {
-      jest.clearAllMocks();
-    });
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
+  it('should render Story Feature components when given appropriate data as the control variant', () => {
     isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue(null);
 
     // Ensure fixture still has features
     expect(features.length).toBe(2);
@@ -113,8 +115,44 @@ describe('CpsRelatedContent', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should render Story Promo components without <ul> when given single item in collection', () => {
+  it('should render Story Promo components without <ul> when given single item in collection as the control variant', () => {
     isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const topFeaturesOneItem = [features[0]];
+
+    expect(features[0]).toBeTruthy();
+
+    const { asFragment } = renderFeaturesAnalysis({
+      content: topFeaturesOneItem,
+    });
+
+    expect(document.querySelector(`li[class*='StoryPromoLi']`)).toBeNull();
+
+    expect(document.querySelector(`ul`)).toBeNull();
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Story Feature components when given appropriate data with the top level promo as variant_1', () => {
+    isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    // Ensure fixture still has features
+    expect(features.length).toBe(2);
+
+    const { asFragment } = renderFeaturesAnalysis();
+
+    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
+      features.length,
+    );
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should render Story Promo components without <ul> when given single item in collection with the top level promo as variant_1', () => {
+    isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue('variation_1');
 
     const topFeaturesOneItem = [features[0]];
 
@@ -160,6 +198,8 @@ describe('CpsRelatedContent', () => {
 describe('Event Tracking', () => {
   it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue(null);
+
     const expected = {
       componentName: 'features',
       preventNavigation: true,
