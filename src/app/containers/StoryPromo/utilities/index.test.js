@@ -1,4 +1,4 @@
-import { isMap, isPgl, getHeadingTagOverride, getUniqueLinkId } from '.';
+import { isMap, isPgl, getHeadingTagOverride, buildUniquePromoId } from '.';
 import {
   MOST_WATCHED_PAGE,
   PHOTO_GALLERY_PAGE,
@@ -77,35 +77,39 @@ describe('getHeadingTagOverride', () => {
   });
 });
 
-describe('getUniqueLinkId', () => {
-  const labelId = 'unlabelled';
+describe('buildUniquePromoId', () => {
+  const labelId = 'test-group-id';
   it('should return id of promo-link with contentType and URI if contentType exists', () => {
-    expect(getUniqueLinkId(secondaryColumnNoAssetURI, labelId)).toEqual(
-      'promo-link-unlabellednewsRadioBulletin',
+    expect(buildUniquePromoId(labelId, secondaryColumnNoAssetURI, 0)).toEqual(
+      'promo-test-group-id-news-radiobulletin-1',
     );
   });
 
   it('should return id using URI if assetURI does not exist', () => {
-    expect(getUniqueLinkId(standardLinkItem, labelId)).toEqual(
-      'promo-link-unlabelledazeriText',
+    expect(buildUniquePromoId(labelId, standardLinkItem, 1)).toEqual(
+      'promo-test-group-id-azeri-text-2',
     );
   });
 
   it('should return id using assetURI does not exist and contentType does not exist', () => {
-    expect(getUniqueLinkId(completeItem, labelId)).toEqual(
-      'promo-link-unlabelledwwwbbccouk',
+    expect(buildUniquePromoId(labelId, completeItem, 2)).toEqual(
+      'promo-test-group-id-3',
     );
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {
-    expect(getUniqueLinkId(secondaryColumnContentType, labelId)).toEqual(
-      'promo-link-unlabelledRadioBulletin',
+    expect(buildUniquePromoId(labelId, secondaryColumnContentType, 3)).toEqual(
+      'promo-test-group-id-radiobulletin-4',
     );
   });
 
   it('should sanitise link from item and split from last forward slash', () => {
     expect(
-      getUniqueLinkId({ locators: { assetUri: 'a/a/ab.b.b@c@c@c' } }, labelId),
-    ).toEqual('promo-link-unlabelledabbbccc');
+      buildUniquePromoId(
+        labelId,
+        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
+        4,
+      ),
+    ).toEqual('promo-test-group-id-aaabbbccc-5');
   });
 });
