@@ -28,7 +28,9 @@ export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
 export const buildUniquePromoId = (promoGroupId, promoItem, promoIndex = 0) => {
   const assetUri = pathOr('', ['locators', 'assetUri'], promoItem);
   const uri = pathOr('', ['uri'], promoItem);
-  const assetId = (assetUri || uri).replace(/\W/g, '').split('/').pop();
+  const asset = assetUri || uri;
+  const assetParts = asset.split(/www\.bbc\.(co\.uk|com)/);
+  const assetId = assetParts[assetParts.length - 1].replace(/\W/g, '');
   const contentType = pathOr('', ['contentType'], promoItem);
 
   return ['promo', promoGroupId, assetId, contentType, promoIndex + 1]
