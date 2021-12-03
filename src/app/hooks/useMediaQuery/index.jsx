@@ -6,8 +6,8 @@ const useMediaQuery = (query, handler) => {
 
     handler(mediaQueryList);
 
-    mediaQueryList.addEventListener(handler);
-    return () => mediaQueryList.removeEventListener(handler);
+    mediaQueryList.addEventListener('change', handler);
+    return () => mediaQueryList.removeEventListener('change', handler);
   }, [query, handler]);
 };
 
