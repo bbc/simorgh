@@ -39,12 +39,22 @@ const ImageWithPlaceholder = ({
   src,
   sizes,
   srcset,
+  fallbackSrcset,
   width,
   darkMode,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const imageProps = { alt, src, sizes, width, srcset, fade, height };
+  const imageProps = {
+    alt,
+    src,
+    sizes,
+    width,
+    srcset,
+    fallbackSrcset,
+    fade,
+    height,
+  };
   const imgType = src.split('.').pop();
   const imageToRender = (
     <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
@@ -77,6 +87,7 @@ const ImageWithPlaceholder = ({
             layout="responsive"
             src={src}
             srcset={srcset}
+            fallbackSrcset={fallbackSrcset}
             height={height}
             width={width}
             style={!isImgJpg ? { backgroundColor: C_GHOST } : null}

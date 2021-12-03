@@ -33,6 +33,7 @@ const ArticleFigure = ({
   captionBlock,
   type,
   srcset,
+  fallbackSrcset,
   sizes,
   showCopyright,
 }) => {
@@ -99,6 +100,7 @@ const ArticleFigure = ({
             preload={preload}
             fade={fade}
             srcset={srcset}
+            fallbackSrcset={fallbackSrcset}
             sizes={sizes}
           >
             {showCopyright && renderCopyright(copyright)}

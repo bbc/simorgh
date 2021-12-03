@@ -53,7 +53,17 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
     locator,
     resolution: DEFAULT_IMAGE_RES,
   });
-  const srcSet = createSrcset(originCode, locator, width);
+  const srcset = createSrcset({
+    originCode,
+    locator,
+    originalImageWidth: width,
+  });
+  const webpsrcset = createSrcset({
+    originCode,
+    locator,
+    originalImageWidth: width,
+    isWebP: true,
+  });
   const lazyLoad = shouldLazyLoad(position);
 
   let GridWrapper = GridItemLargeNoMargin;
@@ -75,7 +85,8 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
-        srcset={srcSet}
+        srcset={webpsrcset}
+        fallbackSrcset={srcset}
         sizes={sizes}
         showCopyright
         lazyLoad={lazyLoad}

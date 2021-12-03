@@ -40,7 +40,11 @@ describe('create srcset', () => {
   srcsetScenarios.forEach(
     ({ originCode, location, width, expected, summary }) => {
       it(summary, () => {
-        const srcset = createSrcset(originCode, location, width);
+        const srcset = createSrcset({
+          originCode,
+          location,
+          originalImageWidth: width,
+        });
         expect(srcset).toEqual(expected);
       });
     },

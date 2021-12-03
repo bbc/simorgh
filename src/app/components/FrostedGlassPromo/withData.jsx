@@ -16,7 +16,12 @@ const buildImageProperties = image => {
 
   return {
     ratio: 52,
-    srcset: createSrcset(originCode, locator, width, [280, 400]),
+    srcset: createSrcset({
+      originCode,
+      locator,
+      originalImageWidth: width,
+      imageResolutions: [280, 400],
+    }),
     sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
     src: `https://ichef.bbci.co.uk/news/400${url}`,
     smallSrc: `https://ichef.bbci.co.uk/news/240${url}`,
