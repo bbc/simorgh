@@ -74,6 +74,9 @@ const FrostedGlassPromo = props => {
 
   const onClick = eventTrackingData ? clickTracker : () => {};
 
+  // The ClickableArea component is an anchor ("a") element
+  // Anchors cannot be self-closing under the HTML spec
+  /* eslint-disable react/self-closing-comp */
   return (
     <Wrapper>
       <ClickableArea
@@ -81,7 +84,7 @@ const FrostedGlassPromo = props => {
         onClick={onClick}
         aria-hidden="true"
         tabIndex="-1"
-      />
+      ></ClickableArea>
       <ImageWithPlaceholder
         darkMode
         {...pick(
