@@ -51,7 +51,7 @@ const RelatedContentPromoList = ({
       as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
     >
-      {promoItems.map(item => (
+      {promoItems.map((item, index) => (
         <Grid
           item
           columns={{
@@ -68,6 +68,7 @@ const RelatedContentPromoList = ({
         >
           <StoryPromo
             item={item}
+            index={index}
             dir={dir}
             displaySummary={false}
             isSingleColumnLayout={isMediaContent}
