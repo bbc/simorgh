@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
 import SingleCard from './SingleCard';
-import data from './testData';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const Scroll = styled.div`
@@ -22,7 +21,7 @@ const Scroll = styled.div`
   }
 `;
 
-const ScrollablePromo = () => {
+const ScrollablePromo = ({ data }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const blocks = pathOr('', ['model', 'blocks'], data).slice(2);
 
