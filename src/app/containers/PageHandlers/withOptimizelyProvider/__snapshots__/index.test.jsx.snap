@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`withOptimizelyProvider HOC should load Optimizely with correct params 1`] = `
+<div>
+  <h1>
+    Hola Optimizely
+  </h1>
+</div>
+`;

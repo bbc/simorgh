@@ -11,8 +11,8 @@ describe('withOptimizelyProvider HOC', () => {
   });
 
   const optimizelyProviderSpy = jest.spyOn(
-    optimizelyReactSdk,
-    'OptimizelyProvider',
+    optimizelyReactSdk.OptimizelyProvider.prototype,
+    'render',
   );
 
   const props = {
