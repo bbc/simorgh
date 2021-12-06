@@ -18,7 +18,8 @@ const Document = ({
   data,
   helmet,
   isAmp,
-  scripts,
+  modernScripts,
+  legacyScripts,
   links,
 }) => {
   const htmlAttrs = helmet.htmlAttributes.toComponent();
@@ -39,11 +40,11 @@ const Document = ({
   const ampGeoPendingAttrs = isAmp && { className: 'amp-geo-pending' };
 
   const scriptTags = (
-    <>
-      <IfAboveIE9>{scripts}</IfAboveIE9>
-    </>
+    <IfAboveIE9>
+      {modernScripts}
+      {legacyScripts}
+    </IfAboveIE9>
   );
-
   return (
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>

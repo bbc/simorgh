@@ -278,12 +278,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -300,12 +300,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -762,7 +762,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -1338,12 +1338,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -1360,12 +1360,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -1822,7 +1822,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -2398,12 +2398,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -2420,12 +2420,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -2882,7 +2882,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g

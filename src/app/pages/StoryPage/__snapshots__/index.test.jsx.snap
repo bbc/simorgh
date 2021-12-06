@@ -2880,12 +2880,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelled23182501"
+                                aria-labelledby="promo-igbo23182501-1"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23182501"
                               >
                                 <span
-                                  id="promo-link-unlabelled23182501"
+                                  id="promo-igbo23182501-1"
                                 >
                                   DSS: Wepụ aka enwe n'ofe na Benue
                                 </span>
@@ -2915,12 +2915,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelledinstitutional-23162153"
+                                aria-labelledby="promo-igboliveinstitutional23162153-1"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/live/institutional-23162153"
                               >
                                 <span
-                                  id="promo-link-unlabelledinstitutional-23162153"
+                                  id="promo-igboliveinstitutional23162153-1"
                                   role="text"
                                 >
                                   <span
@@ -2979,12 +2979,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-211 emotion-212"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelled23183171"
+                                aria-labelledby="promo-igbo23183171-1"
                                 class="emotion-213 emotion-214"
                                 href="/igbo/23183171"
                               >
                                 <span
-                                  id="promo-link-unlabelled23183171"
+                                  id="promo-igbo23183171-1"
                                   role="text"
                                 >
                                   <span
@@ -9654,12 +9654,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelled23248287"
+                                aria-labelledby="promo-pidgin23248287-1"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/23248287"
                               >
                                 <span
-                                  id="promo-link-unlabelled23248287"
+                                  id="promo-pidgin23248287-1"
                                 >
                                   ATMs across the country
                                 </span>
@@ -9689,12 +9689,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelledtori-23146434"
+                                aria-labelledby="promo-pidgintori23146434-1"
                                 class="emotion-214 emotion-215"
                                 href="/pidgin/tori-23146434"
                               >
                                 <span
-                                  id="promo-link-unlabelledtori-23146434"
+                                  id="promo-pidgintori23146434-1"
                                 >
                                   Jacob Zuma: Staying!!!
                                 </span>
@@ -9724,12 +9724,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-212 emotion-213"
                             >
                               <a
-                                aria-labelledby="promo-link-unlabelled"
+                                aria-labelledby="promo-news-feature-1"
                                 class="emotion-214 emotion-215"
                                 href="https://www.bbc.co.uk/news"
                               >
                                 <span
-                                  id="promo-link-unlabelled"
+                                  id="promo-news-feature-1"
                                 >
                                   Feature promo
                                 </span>

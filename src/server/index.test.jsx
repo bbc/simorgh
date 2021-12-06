@@ -46,13 +46,18 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('@loadable/server', () => ({
-  ChunkExtractor: () => ({
-    collectChunks: arg => arg,
-    getScriptElements: () => '__mock_script_elements__',
-    getLinkElements: () => '__mock_link_elements__',
-  }),
-}));
+jest.mock('@loadable/server', () => {
+  class ChunkExtractor {
+    collectChunks = arg => arg;
+
+    getScriptElements = () => '__mock_script_elements__';
+
+    getLinkElements = () => '__mock_link_elements__';
+  }
+  return {
+    ChunkExtractor,
+  };
+});
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
@@ -118,7 +123,8 @@ const testRenderedData =
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
         service={service}
-        scripts="__mock_script_elements__"
+        legacyScripts="__mock_script_elements__"
+        modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
       />,
     );
@@ -1316,7 +1322,8 @@ describe('Server', () => {
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
             service={service}
-            scripts="__mock_script_elements__"
+            legacyScripts="__mock_script_elements__"
+            modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
           />,
         );

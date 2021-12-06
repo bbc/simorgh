@@ -11,7 +11,9 @@
     "firstPublished": 1568378189124,
     "lastPublished": 1568378189124,
     "options": {},
-    "analyticsLabels": {},
+    "analyticsLabels": {
+      "contentId": "urn:bbc:optimo:asset:czwj5l0n210o"
+    },
     "passport": {
       "language": "en-gb",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/BBCScotland"

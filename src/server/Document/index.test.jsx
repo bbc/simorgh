@@ -73,13 +73,15 @@ describe('Render Document', () => {
         data: { test: 'data' },
         helmet: undefined,
         isAmp: false,
-        scripts: '__mock_script_elements__',
+        legacyScripts: '__mock_script_elements__',
+        modernScripts: '__mock_script_elements__',
         links: '__mock_link_elements__',
         service: 'news',
       });
 
       expect(
-        server.renderToString.mock.calls[0][0].props.children.props,
+        server.renderToString.mock.calls[0][0].props.children.props.children
+          .props,
       ).toStrictEqual({
         bbcOrigin: 'https://www.test.bbc.co.uk',
         context: {},
@@ -90,8 +92,17 @@ describe('Render Document', () => {
         service: 'news',
       });
 
-      expect(ChunkExtractor).toHaveBeenCalledWith({
-        statsFile: `${__dirname}/public/loadable-stats-foobar.json`,
+      const [[legacyChunkExtractor], [modernChunkExtractor]] =
+        ChunkExtractor.mock.calls;
+
+      expect(legacyChunkExtractor).toEqual({
+        namespace: 'legacy',
+        statsFile: `${__dirname}/public/legacy-loadable-stats-foobar.json`,
+      });
+
+      expect(modernChunkExtractor).toEqual({
+        namespace: 'modern',
+        statsFile: `${__dirname}/public/modern-loadable-stats-foobar.json`,
       });
 
       done();
