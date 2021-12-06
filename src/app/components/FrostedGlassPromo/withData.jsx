@@ -5,6 +5,7 @@ import hasPath from 'ramda/src/hasPath';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import buildIChefURL from '#lib/utilities/ichefURL';
 
 import TimestampFooter from './TimestampFooter';
 
@@ -21,13 +22,25 @@ const buildImageProperties = image => {
     imageResolutions: [280, 400],
   });
 
+  const src = buildIChefURL({
+    originCode,
+    locator,
+    resolution: 400,
+  });
+
+  const smallSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: 240,
+  });
+
   return {
     ratio: 52,
     srcset: webpSrcset,
     fallbackSrcset,
     sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
-    src: `https://ichef.bbci.co.uk/news/400${url}`,
-    smallSrc: `https://ichef.bbci.co.uk/news/240${url}`,
+    src,
+    smallSrc,
     alt: altText,
     width,
     height,
