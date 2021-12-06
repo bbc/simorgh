@@ -3085,16 +3085,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-social-embed@npm:3.3.9":
-  version: 3.3.9
-  resolution: "@bbc/psammead-social-embed@npm:3.3.9"
+"@bbc/psammead-social-embed@npm:3.3.10":
+  version: 3.3.10
+  resolution: "@bbc/psammead-social-embed@npm:3.3.10"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-styles": 8.0.1
   peerDependencies:
     "@emotion/styled": ^11.0.0
     react: ">=16.9.0"
-  checksum: 812ec0a133a497aefab4280b93731b5a5376db1196a269ba1f8f88dc0d09a8ad205786fb75cd36973afcb489d1cca48bb3c9faa86afcc7ad12aa30521b7cf398
+  checksum: 4b8651b9f501a997cf3fbfce49c7e89f993ce575b3728924b3a015f3a0c28b2dedb23c9aaea3b94228bb7f37d9c9f4a1d0fabfed6d11f7fde6ac73637fc8f544
   languageName: node
   linkType: hard
 
@@ -19554,7 +19554,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-rich-text-transforms": 2.0.6
     "@bbc/psammead-script-link": 3.0.29
     "@bbc/psammead-section-label": 7.1.10
-    "@bbc/psammead-social-embed": 3.3.9
+    "@bbc/psammead-social-embed": 3.3.10
     "@bbc/psammead-story-promo": 8.0.34
     "@bbc/psammead-story-promo-list": 6.0.28
     "@bbc/psammead-storybook-helpers": 9.0.17
