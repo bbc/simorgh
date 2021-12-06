@@ -1,0 +1,380 @@
+{
+  "type": "links",
+  "model": {
+    "blocks": [
+      {
+        "type": "title",
+        "model": {
+          "blocks": [
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "More regional animal news",
+                      "blocks": [
+                        {
+                          "type": "fragment",
+                          "model": {
+                            "text": "More regional animal news",
+                            "attributes": []
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "link",
+        "model": {
+          "locator": "urn:bbc:optimo:asset:ce6r9ll70vno",
+          "blocks": [
+            {
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Gecko",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Gecko",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1116,
+                      "height": 627,
+                      "locator": "7270/live/1a468da0-2b67-11ec-98d0-0de234808d7a.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Ben Birchall/PA Wire",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
+                      "blocks": [
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
+                            "locator": "https://www.bbc.co.uk/news/articles/ce6r9ll70vno",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "link",
+        "model": {
+          "locator": "urn:bbc:optimo:asset:cvxyqn5v9w4o",
+          "blocks": [
+            {
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Ostrich the seal",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Ostrich the seal",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 973,
+                      "height": 547,
+                      "locator": "35f5/live/9b0bf570-2689-11ec-b4f3-e56245d61d2e.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Gavin Parsons",
+                      "suitableForSyndication": false
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "New seal hospital receives first patient",
+                      "blocks": [
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "New seal hospital receives first patient",
+                            "locator": "https://www.bbc.co.uk/news/articles/cvxyqn5v9w4o",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "New seal hospital receives first patient",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "link",
+        "model": {
+          "locator": "urn:bbc:optimo:asset:c9zdmm4yjnmo",
+          "blocks": [
+            {
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Galloway cattle",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Galloway cattle",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 1039,
+                      "height": 585,
+                      "locator": "0418/live/8e790530-1b8c-11ec-b58d-0dc41b3acd26.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "Mike Bolam",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
+                      "blocks": [
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
+                            "locator": "https://www.bbc.co.uk/news/articles/c9zdmm4yjnmo",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "link",
+        "model": {
+          "locator": "urn:bbc:optimo:asset:cxwz78vr9lyo",
+          "blocks": [
+            {
+              "type": "image",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "altText",
+                    "model": {
+                      "blocks": [
+                        {
+                          "type": "text",
+                          "model": {
+                            "blocks": [
+                              {
+                                "type": "paragraph",
+                                "model": {
+                                  "text": "Vlad the tiger undergoing medical procedure",
+                                  "blocks": [
+                                    {
+                                      "type": "fragment",
+                                      "model": {
+                                        "text": "Vlad the tiger undergoing medical procedure",
+                                        "attributes": []
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "rawImage",
+                    "model": {
+                      "width": 2838,
+                      "height": 1597,
+                      "locator": "a016/live/f93afa30-1705-11ec-bc9e-91e8bf899311.jpg",
+                      "originCode": "cpsprodpb",
+                      "copyrightHolder": "PA Media",
+                      "suitableForSyndication": true
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "text",
+              "model": {
+                "blocks": [
+                  {
+                    "type": "paragraph",
+                    "model": {
+                      "text": "Vlad the tiger 'annoyed but alert' after risky op",
+                      "blocks": [
+                        {
+                          "type": "urlLink",
+                          "model": {
+                            "text": "Vlad the tiger 'annoyed but alert' after risky op",
+                            "locator": "https://www.bbc.co.uk/news/articles/cxwz78vr9lyo",
+                            "blocks": [
+                              {
+                                "type": "fragment",
+                                "model": {
+                                  "text": "Vlad the tiger 'annoyed but alert' after risky op",
+                                  "attributes": []
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
