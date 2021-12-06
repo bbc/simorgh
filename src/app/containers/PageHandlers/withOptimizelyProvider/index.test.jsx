@@ -6,10 +6,6 @@ import withOptimizelyProvider from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 describe('withOptimizelyProvider HOC', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
   const optimizelyProviderSpy = jest.spyOn(
     optimizelyReactSdk.OptimizelyProvider.prototype,
     'render',
