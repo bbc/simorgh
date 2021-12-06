@@ -10,11 +10,18 @@ Helmet.canUseDOM = false;
 describe('Document Component', () => {
   const assetOrigins = ['http://example.com'];
   const data = { test: 'data' };
-  const scripts = (
+  const legacyScripts = (
     <>
-      <script src="main.js" />
-      <script src="vendor.js" />
-      <script src="igbo.js" />
+      <script src="legacy.main.js" />
+      <script src="legacy.vendor.js" />
+      <script src="legacy.igbo.js" />
+    </>
+  );
+  const modernScripts = (
+    <>
+      <script src="modern.main.js" />
+      <script src="modern.vendor.js" />
+      <script src="modern.igbo.js" />
     </>
   );
 
@@ -45,7 +52,8 @@ describe('Document Component', () => {
       }}
       data={{ ...data }}
       helmet={Helmet.renderStatic()}
-      scripts={scripts}
+      legacyScripts={legacyScripts}
+      modernScripts={modernScripts}
       service={service}
       isAmp={isAmp}
     />

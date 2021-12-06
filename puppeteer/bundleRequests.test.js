@@ -79,18 +79,21 @@ describe('Js bundle requests', () => {
                 .forEach(url => {
                   expect(url).toMatch(
                     new RegExp(
-                      `(\\/static\\/js\\/(?:comscore\\/)?(main|framework|commons|shared|${serviceRegex}|frosted_promo|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
+                      `(\\/static\\/js\\/(?:comscore\\/)?(modern.)?(main|framework|commons|shared|${serviceRegex}|frosted_promo|.+Page).+?.js)|(\\/static\\/.+?-lib.+?.js)`,
                       'g',
                     ),
                   );
                 });
             });
 
-            it('loads at least 1 service bundle', () => {
+            it('loads at least 1 modern service bundle', () => {
               const serviceRegex = getServiceBundleRegex(config[service].name);
               const serviceMatches = requests.filter(url =>
                 url.match(
-                  new RegExp(`(\\/static\\/js\\/${serviceRegex}.+?.js)`, 'g'),
+                  new RegExp(
+                    `(\\/static\\/js\\/modern.${serviceRegex}.+?.js)`,
+                    'g',
+                  ),
                 ),
               );
 

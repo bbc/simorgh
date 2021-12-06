@@ -10,6 +10,7 @@ const createConsoleError = require('./createConsoleError');
 const { getPageBundleData, getServiceBundleData } = require('./getBundleData');
 const { MIN_SIZE, MAX_SIZE } = require('./bundleSizeConfig');
 
+const bundleType = process.env.bundleType || 'modern';
 const serviceBundleData = sortByBundlesTotalAscending(getServiceBundleData());
 const serviceBundlesTotals = serviceBundleData.map(
   ({ totalSize }) => totalSize,
@@ -31,6 +32,8 @@ const largestPagePlusServiceBundleSize =
 const smallestPagePlusServiceBundleSize =
   smallestServiceBundleSize + smallestPageBundleSize;
 
+const removeBundleTypePrefix = name => name.replace(`${bundleType}.`, '');
+
 const serviceBundlesTable = new Table({
   head: ['Service name', 'bundles', 'Total size (kB)'],
 });
@@ -51,7 +54,9 @@ const pageBundlesTable = new Table({
 pageBundleData.forEach(
   ({ pageName, main, framework, lib, shared, commons, page, totalSize }) => {
     const getFileInfo = ({ name, size }) =>
-      `${name.slice(0, 10)}…${name.slice(-6)} (${size}kB)`;
+      `${removeBundleTypePrefix(name).slice(0, 10)}…${name.slice(
+        -6,
+      )} (${size}kB)`;
 
     pageBundlesTable.push([
       pageName,
@@ -67,7 +72,8 @@ pageBundleData.forEach(
 );
 
 serviceBundleData.forEach(({ serviceName, bundles, totalSize }) => {
-  const getFileInfo = ({ name, size }) => `${name} (${size}kB)`;
+  const getFileInfo = ({ name, size }) =>
+    `${removeBundleTypePrefix(name)} (${size}kB)`;
 
   serviceBundlesTable.push([
     serviceName,
@@ -93,13 +99,16 @@ serviceSummaryTable.push(
 const servicePageSummaryTable = new Table();
 servicePageSummaryTable.push(
   {
-    'Smallest total bundle size (kB) (smallest service + smallest page)': smallestPagePlusServiceBundleSize,
+    'Smallest total bundle size (kB) (smallest service + smallest page)':
+      smallestPagePlusServiceBundleSize,
   },
   {
-    'Largest total bundle size (kB) (largest service + largest page)': largestPagePlusServiceBundleSize,
+    'Largest total bundle size (kB) (largest service + largest page)':
+      largestPagePlusServiceBundleSize,
   },
 );
 
+const styledBundleTypeTitle = chalk.green(bundleType.toUpperCase());
 const spinner = ora({
   text: 'Analysing bundles...',
   color: 'magenta',
@@ -107,24 +116,32 @@ const spinner = ora({
 spinner.start();
 console.log(chalk.bold('\n\nResults'));
 
-console.log(chalk.bold('\nService bundles\n'));
+console.log(chalk.bold(`\n${styledBundleTypeTitle} service bundle sizes\n`));
 console.log(serviceBundlesTable.toString());
 
-console.log(chalk.bold('\n\nService bundles summary\n'));
+console.log(
+  chalk.bold(`\n\n${styledBundleTypeTitle} service bundle sizes summary\n`),
+);
 console.log(serviceSummaryTable.toString());
 
-console.log(chalk.bold('\n\nPage type bundles\n'));
+console.log(
+  chalk.bold(`\n\n${styledBundleTypeTitle} page type bundle sizes\n`),
+);
 console.log(pageBundlesTable.toString());
 
 console.log(
   [
-    chalk.bold('\n\nPage bundles summary'),
+    chalk.bold(`\n\n${styledBundleTypeTitle} page bundle sizes summary`),
     chalk.cyan.bold('(excludes service bundle)\n'),
   ].join(' '),
 );
 console.log(pageSummaryTable.toString());
 
-console.log(chalk.bold('\n\nService + Page bundles summary\n'));
+console.log(
+  chalk.bold(
+    `\n\n${styledBundleTypeTitle} service + page bundle sizes summary\n`,
+  ),
+);
 console.log(servicePageSummaryTable.toString());
 
 const errors = [];
