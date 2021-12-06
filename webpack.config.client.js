@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/* eslint-disable global-require, no-console */
 /*
   A high level overview of our client-side JavaScript bundling strategy can be found here:
   https://github.com/bbc/simorgh/blob/latest/docs/JavaScript-Bundling-Strategy.md
@@ -30,18 +30,28 @@ module.exports = ({
   IS_PROD,
   START_DEV_SERVER,
   IS_PROD_PROFILE,
+  BUNDLE_TYPE,
 }) => {
-  const APP_ENV = process.env.SIMORGH_APP_ENV || 'live';
+  const {
+    SIMORGH_APP_ENV,
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN,
+    SIMORGH_PUBLIC_STATIC_ASSETS_PATH,
+  } = process.env;
+  const APP_ENV = SIMORGH_APP_ENV || 'live';
+  const IS_LEGACY_WEB = BUNDLE_TYPE === 'legacy';
   const webpackDevServerPort = 1124; // arbitrarily picked. Has to be different to server port (7080)
   const prodPublicPath =
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN +
-    process.env.SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
+    SIMORGH_PUBLIC_STATIC_ASSETS_ORIGIN + SIMORGH_PUBLIC_STATIC_ASSETS_PATH;
 
   const clientConfig = {
-    target: ['web', 'es5'], // compile for browser environment
+    name: BUNDLE_TYPE,
+    target: ['web', IS_LEGACY_WEB ? 'es5' : 'es2017'], // compile for browser environment
     entry: START_DEV_SERVER
       ? ['webpack/hot/only-dev-server', './src/client']
-      : ['./src/poly', './src/client'],
+      : [
+          IS_LEGACY_WEB ? './src/poly/legacy.js' : './src/poly/modern.js',
+          './src/client',
+        ],
     devServer: {
       host: 'localhost',
       port: webpackDevServerPort,
@@ -59,7 +69,11 @@ module.exports = ({
         stream: require.resolve('stream-browserify'),
       },
     },
+    experiments: {
+      outputModule: !IS_LEGACY_WEB,
+    },
     output: {
+      module: !IS_LEGACY_WEB,
       path: resolvePath('build/public'),
       /**
        * Need unhashed client bundle when running dev server.
@@ -67,8 +81,8 @@ module.exports = ({
        * https://github.com/jaredpalmer/razzle/tree/master/packages/create-razzle-app/templates/default#how-razzle-works-the-secret-sauce
        */
       filename: START_DEV_SERVER
-        ? 'static/js/[name].js'
-        : 'static/js/[name].[chunkhash:8].js', // hash based on the contents of the file
+        ? `static/js/${BUNDLE_TYPE}.[name].js`
+        : `static/js/${BUNDLE_TYPE}.[name].[chunkhash:8].js`, // hash based on the contents of the file
       // need full URL for dev server & HMR: https://github.com/webpack/docs/wiki/webpack-dev-server#combining-with-an-existing-server
       publicPath: START_DEV_SERVER
         ? `http://localhost:${webpackDevServerPort}/`
@@ -81,6 +95,7 @@ module.exports = ({
           terserOptions: {
             // These options are enabled in production profile builds only and
             // prevent the discarding or mangling of class and function names.
+            ecma: IS_LEGACY_WEB ? 5 : 2017,
             keep_classnames: IS_PROD_PROFILE,
             keep_fnames: IS_PROD_PROFILE,
           },
@@ -218,7 +233,7 @@ module.exports = ({
       // keep track of the generated chunks
       // this determines what scripts get put in the footer of the page
       new LoadablePlugin({
-        filename: `loadable-stats-${APP_ENV}.json`,
+        filename: `${BUNDLE_TYPE}-loadable-stats-${APP_ENV}.json`,
         writeToDisk: true,
       }),
     ],
@@ -265,8 +280,8 @@ module.exports = ({
         defaultSizes: 'gzip',
         generateStatsFile: true,
         openAnalyzer: false,
-        reportFilename: '../../reports/webpackBundleReport.html',
-        statsFilename: '../../reports/webpackBundleReport.json',
+        reportFilename: `../../reports/${BUNDLE_TYPE}.webpackBundleReport.html`,
+        statsFilename: `../../reports/${BUNDLE_TYPE}.webpackBundleReport.json`,
       }),
     );
   }

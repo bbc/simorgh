@@ -26,16 +26,16 @@ jest.mock('./bundleSizeConfig', () => ({
 const setUpFSMocks = (service1FileSize, service2FileSize) => {
   beforeEach(() => {
     const bundles = [
-      'main-12345.js',
-      'service1-12345.12345.js',
-      'service2-12345.12345.js',
-      '1111-lib-1111.js',
-      'commons-1111.js',
-      'commons-2222.js',
-      'commons-3333.js',
-      'shared-1111.js',
-      'shared-2222.js',
-      'framework-1111.js',
+      'modern.main-12345.js',
+      'modern.service1-12345.12345.js',
+      'modern.service2-12345.12345.js',
+      'modern.1111-lib-1111.js',
+      'modern.commons-1111.js',
+      'modern.commons-2222.js',
+      'modern.commons-3333.js',
+      'modern.shared-1111.js',
+      'modern.shared-2222.js',
+      'modern.framework-1111.js',
     ];
     readdirSync.mockReturnValue(bundles);
 
@@ -140,7 +140,7 @@ describe('bundleSize', () => {
         "
 
         Results
-        Service bundles
+        MODERN service bundle sizes
         ┌──────────────┬─────────────────────────────────┬─────────────────┐
         │ Service name │ bundles                         │ Total size (kB) │
         ├──────────────┼─────────────────────────────────┼─────────────────┤
@@ -149,7 +149,7 @@ describe('bundleSize', () => {
         │ service2     │ service2-12345.12345.js (146kB) │ 146             │
         └──────────────┴─────────────────────────────────┴─────────────────┘
 
-        Service bundles summary
+        MODERN service bundle sizes summary
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 142 │
         ├─────────────────────────────────┼─────┤
@@ -158,7 +158,7 @@ describe('bundleSize', () => {
         │ Average total bundle size (kB)  │ 144 │
         └─────────────────────────────────┴─────┘
 
-        Page type bundles
+        MODERN page type bundle sizes
         ┌───────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬──────────────────────────┬─────────────────┐
         │ Page type         │ main                     │ framework                │ lib                      │ shared                   │ commons                  │ page                     │ Total size (kB) │
         ├───────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼──────────────────────────┼─────────────────┤
@@ -208,7 +208,7 @@ describe('bundleSize', () => {
         │                   │                          │                          │                          │ shared-333…333.js (39kB) │                          │                          │                 │
         └───────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴──────────────────────────┴─────────────────┘
 
-        Page bundles summary (excludes service bundle)
+        MODERN page bundle sizes summary (excludes service bundle)
         ┌─────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) │ 353 │
         ├─────────────────────────────────┼─────┤
@@ -217,7 +217,7 @@ describe('bundleSize', () => {
         │ Average total bundle size (kB)  │ 409 │
         └─────────────────────────────────┴─────┘
 
-        Service + Page bundles summary
+        MODERN service + page bundle sizes summary
         ┌────────────────────────────────────────────────────────────────────┬─────┐
         │ Smallest total bundle size (kB) (smallest service + smallest page) │ 495 │
         ├────────────────────────────────────────────────────────────────────┼─────┤
