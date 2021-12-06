@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
 import SingleCard from './SingleCard';
 import data from './testData';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const Scroll = styled.div`
   display: flex;
@@ -22,19 +23,21 @@ const Scroll = styled.div`
 `;
 
 const ScrollablePromo = () => {
-  // console.log(data);
+  const { script, service, dir } = useContext(ServiceContext);
   const blocks = pathOr('', ['model', 'blocks'], data).slice(2);
-  const dir = 'ltr';
+
+  // IF NO PROMO RETURN NULL
   return (
     <Scroll dir={dir} role="list">
       {blocks.map((card, index) => {
-        console.log(card);
         return (
           <SingleCard
             block={card}
             dir={dir}
             // eslint-disable-next-line react/no-array-index-key
             key={index}
+            script={script}
+            service={service}
           />
         );
       })}
