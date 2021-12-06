@@ -30,7 +30,19 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="9"
-      />
+      >
+        <amp-img
+          alt=""
+          attribution=""
+          data-e2e="media-player__placeholder"
+          fallback="true"
+          height="16"
+          layout="fill"
+          placeholder="true"
+          src="http://foo.bar/placeholder.png"
+          width="9"
+        />
+      </amp-img>
       <noscript />
     </amp-iframe>
   </div>
@@ -67,7 +79,19 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="16"
-      />
+      >
+        <amp-img
+          alt=""
+          attribution=""
+          data-e2e="media-player__placeholder"
+          fallback="true"
+          height="9"
+          layout="fill"
+          placeholder="true"
+          src="http://foo.bar/placeholder.png"
+          width="16"
+        />
+      </amp-img>
       <noscript />
     </amp-iframe>
   </div>
@@ -110,7 +134,19 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="9"
-      />
+      >
+        <amp-img
+          alt=""
+          attribution=""
+          data-e2e="media-player__placeholder"
+          fallback="true"
+          height="16"
+          layout="fill"
+          placeholder="true"
+          src="http://foo.bar/placeholder.png"
+          width="9"
+        />
+      </amp-img>
       <noscript />
     </amp-iframe>
   </div>

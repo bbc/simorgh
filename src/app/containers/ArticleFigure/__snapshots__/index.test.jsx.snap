@@ -422,7 +422,17 @@ exports[`ArticleFigure should render an AMP image with alt text 1`] = `
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
-          />
+          >
+            <amp-img
+              alt="Pauline Clayton"
+              attribution=""
+              fallback="true"
+              height="360"
+              layout="responsive"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width="640"
+            />
+          </amp-img>
         </div>
       </div>
     </div>
@@ -817,7 +827,17 @@ exports[`ArticleFigure should render an AMP image with caption and copyright 1`]
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
-          />
+          >
+            <amp-img
+              alt="Pauline Clayton"
+              attribution="Getty Images"
+              fallback="true"
+              height="360"
+              layout="responsive"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width="640"
+            />
+          </amp-img>
           <p
             class="emotion-8 emotion-9"
             role="text"
@@ -1227,7 +1247,17 @@ exports[`ArticleFigure should render an AMP image with caption text 1`] = `
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
-          />
+          >
+            <amp-img
+              alt="Pauline Clayton"
+              attribution=""
+              fallback="true"
+              height="360"
+              layout="responsive"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width="640"
+            />
+          </amp-img>
         </div>
       </div>
       <div
@@ -1644,7 +1674,17 @@ exports[`ArticleFigure should render an AMP image with caption text with inline 
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
-          />
+          >
+            <amp-img
+              alt="Pauline Clayton"
+              attribution=""
+              fallback="true"
+              height="360"
+              layout="responsive"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width="640"
+            />
+          </amp-img>
         </div>
       </div>
       <div
@@ -1910,7 +1950,17 @@ exports[`ArticleFigure should render an AMP image with copyright text 1`] = `
             layout="responsive"
             src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
             width="640"
-          />
+          >
+            <amp-img
+              alt="Pauline Clayton"
+              attribution="Getty Images"
+              fallback="true"
+              height="360"
+              layout="responsive"
+              src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+              width="640"
+            />
+          </amp-img>
           <p
             class="emotion-8 emotion-9"
             role="text"

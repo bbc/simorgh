@@ -165,7 +165,19 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
             src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
             srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
             width="9"
-          />
+          >
+            <amp-img
+              alt=""
+              attribution=""
+              data-e2e="media-player__placeholder"
+              fallback="true"
+              height="16"
+              layout="fill"
+              placeholder="true"
+              src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
+              width="9"
+            />
+          </amp-img>
           <noscript />
         </amp-iframe>
       </div>
@@ -510,7 +522,19 @@ exports[`MediaPlayer render the amp player 1`] = `
             src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
             srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
             width="9"
-          />
+          >
+            <amp-img
+              alt=""
+              attribution=""
+              data-e2e="media-player__placeholder"
+              fallback="true"
+              height="16"
+              layout="fill"
+              placeholder="true"
+              src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
+              width="9"
+            />
+          </amp-img>
           <noscript />
         </amp-iframe>
       </div>

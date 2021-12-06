@@ -859,7 +859,18 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                 srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
                 style="background-color: rgb(253, 253, 253);"
                 width="240"
-              />
+              >
+                <amp-img
+                  alt="BBC News پښتو"
+                  attribution=""
+                  fallback="true"
+                  height="240"
+                  layout="responsive"
+                  src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"
+                  style="background-color: rgb(253, 253, 253);"
+                  width="240"
+                />
+              </amp-img>
             </div>
           </div>
         </div>
@@ -923,7 +934,19 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
                 placeholder="true"
                 src="http://localhost:7080/images/amp_audio_placeholder.png"
                 width="9"
-              />
+              >
+                <amp-img
+                  alt=""
+                  attribution=""
+                  data-e2e="media-player__placeholder"
+                  fallback="true"
+                  height="16"
+                  layout="fill"
+                  placeholder="true"
+                  src="http://localhost:7080/images/amp_audio_placeholder.png"
+                  width="9"
+                />
+              </amp-img>
               <noscript />
             </amp-iframe>
           </div>

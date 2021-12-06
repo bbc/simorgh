@@ -23,7 +23,7 @@ describe('AmpIncludeContainer', () => {
   it('should render for a valid IDT2 include', async () => {
     const { container } = render(<Idt2Amp {...validIdt2Props} />);
 
-    expect(container.querySelectorAll('amp-img').length).toEqual(1);
+    expect(container.querySelectorAll('amp-img').length).toEqual(2);
     expect(container).toMatchSnapshot();
   });
 

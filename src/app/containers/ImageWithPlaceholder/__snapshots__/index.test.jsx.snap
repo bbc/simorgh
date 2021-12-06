@@ -87,9 +87,20 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
       height="360"
       layout="responsive"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
       width="640"
-    />
+    >
+      <amp-img
+        alt="Pauline Clayton"
+        attribution="Getty Images"
+        fallback="true"
+        height="360"
+        layout="responsive"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+        width="640"
+      />
+    </amp-img>
   </div>
 </div>
 `;
@@ -145,10 +156,12 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
       class="emotion-2 emotion-3"
     >
       <source
-        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
         type="image/webp"
       />
-      <source />
+      <source
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+      />
       <img
         alt="Pauline Clayton"
         class="emotion-4 emotion-5 emotion-6"
