@@ -16,7 +16,7 @@ export default {
   component: CanonicalMediaPlayer,
   parameters: {
     chromatic: {
-      diffThreshold: 0.2,
+      disable: true,
     },
     docs: { page: notes },
   },
@@ -123,7 +123,6 @@ export const AMP = () => (
   />
 );
 
-AMP.parameters = { chromatic: { disable: true } };
 AMP.decorators = [ampDecorator];
 
 export const AMPAudioSkin = () => (
