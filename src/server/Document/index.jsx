@@ -1,7 +1,7 @@
 import path from 'path';
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ChunkExtractor } from '@loadable/server';
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import { CacheProvider } from '@emotion/react';
 import createEmotionServer from '@emotion/server/create-instance';
 import createCache from '@emotion/cache';
@@ -12,13 +12,18 @@ import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
 const crossOrigin = 'anonymous';
+const getScriptAttributes = bundleType => chunk => {
+  const { type, url } = chunk || {};
+  const MAIN_ASSET = 'mainAsset';
 
-const getScriptAttributes = chunk => ({
-  crossOrigin,
-  defer: true,
-  ...(chunk && chunk.url && { src: encodeChunkFilename(chunk) }),
-});
-
+  return {
+    crossOrigin,
+    defer: true,
+    ...(url && { src: encodeChunkFilename(chunk) }),
+    ...(bundleType === 'modern' && type === MAIN_ASSET && { type: 'module' }),
+    ...(bundleType === 'legacy' && type === MAIN_ASSET && { noModule: true }),
+  };
+};
 const getLinkAttributes = chunk => ({
   crossOrigin,
   ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
@@ -32,20 +37,43 @@ const renderDocument = async ({
   service,
   url,
 }) => {
+  const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
-
-  const statsFile = path.resolve(
-    `${__dirname}/public/loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+  const modernStatsFile = path.resolve(
+    `${__dirname}/public/modern-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
   );
+  const legacyStatsFile =
+    !isDev &&
+    path.resolve(
+      `${__dirname}/public/legacy-loadable-stats-${process.env.SIMORGH_APP_ENV}.json`,
+    );
 
-  const extractor = new ChunkExtractor({ statsFile });
+  const legacyExtractor =
+    !isDev &&
+    new ChunkExtractor({
+      statsFile: legacyStatsFile,
+      namespace: 'legacy',
+    });
+  const modernExtractor = new ChunkExtractor({
+    statsFile: modernStatsFile,
+    namespace: 'modern',
+  });
+  const commonLoadableState = {
+    addChunk(chunk) {
+      modernExtractor.addChunk(chunk);
+
+      if (!isDev) {
+        legacyExtractor.addChunk(chunk);
+      }
+    },
+  };
 
   const context = {};
 
   const app = extractCritical(
     renderToString(
-      extractor.collectChunks(
+      <ChunkExtractorManager extractor={commonLoadableState}>
         <CacheProvider value={cache}>
           <ServerApp
             location={url}
@@ -56,8 +84,8 @@ const renderDocument = async ({
             service={service}
             isAmp={isAmp}
           />
-        </CacheProvider>,
-      ),
+        </CacheProvider>
+      </ChunkExtractorManager>,
     ),
   );
 
@@ -70,14 +98,20 @@ const renderDocument = async ({
     return { redirectUrl: context.url, html: null };
   }
 
-  const scripts = extractor.getScriptElements(getScriptAttributes);
-  const links = extractor.getLinkElements(getLinkAttributes);
+  const modernScripts = modernExtractor.getScriptElements(
+    getScriptAttributes('modern'),
+  );
+  const legacyScripts =
+    !isDev && legacyExtractor.getScriptElements(getScriptAttributes('legacy'));
+
+  const links = modernExtractor.getLinkElements(getLinkAttributes); // TODO investigate a way to conditionally preload modern/legacy scripts
   const headHelmet = Helmet.renderStatic();
   const assetOrigins = getAssetOrigins(service);
   const doc = renderToStaticMarkup(
     <DocumentComponent
       assetOrigins={assetOrigins}
-      scripts={scripts}
+      modernScripts={modernScripts}
+      legacyScripts={legacyScripts}
       links={links}
       app={app}
       data={data}
