@@ -28,7 +28,7 @@ import {
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { getUniqueLinkId } from './utilities';
+import { buildUniquePromoId } from './utilities';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -136,29 +136,30 @@ describe('StoryPromo Container', () => {
     let cpsContainer;
     let overtypedSummaryContainer;
     let assetTypeContainer;
+    const labelId = `test-group-id`;
 
     beforeEach(() => {
       cpsItem = deepClone(completeItem);
-      cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+      cpsContainer = render(
+        <WrappedStoryPromo item={cpsItem} labelId={labelId} />,
+      ).container;
 
       overtypedSummaryItem = deepClone(itemWithOvertypedSummary);
       overtypedSummaryContainer = render(
-        <WrappedStoryPromo item={overtypedSummaryItem} />,
+        <WrappedStoryPromo item={overtypedSummaryItem} labelId={labelId} />,
       ).container;
 
       assetTypeItem = deepClone(standardLinkItem);
       assetTypeContainer = render(
-        <WrappedStoryPromo item={assetTypeItem} />,
+        <WrappedStoryPromo item={assetTypeItem} labelId={labelId} />,
       ).container;
     });
 
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
-      const labelId = `unlabelled`;
-
-      const uriLabelId = getUniqueLinkId(assetTypeItem, labelId);
-      const assetUriId = getUniqueLinkId(cpsItem, labelId);
+      const uriLabelId = buildUniquePromoId(labelId, assetTypeItem);
+      const assetUriId = buildUniquePromoId(labelId, cpsItem);
 
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
