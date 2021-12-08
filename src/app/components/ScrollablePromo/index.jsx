@@ -29,6 +29,7 @@ const ScrollPromo = styled.div`
 `;
 
 const ScrollablePromo = ({ blocks }) => {
+  console.log(blocks);
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
   // IF NO PROMO RETURN NULL

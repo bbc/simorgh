@@ -4,14 +4,19 @@ import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import ScrollablePromo from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import data from './testData.json';
+import {
+  threeLinks,
+  oneLinkOnly,
+  moreThanThreeLinks,
+  twoLinksWithNoImages,
+} from './testData';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
 // eslint-disable-next-line react/prop-types
-const ScrollablePromoComponent = ({ service, script, dir }) => (
+const ScrollablePromoComponent = ({ data, service, script, dir }) => (
   <BackGround>
     <ServiceContextProvider service={service} script={script} dir={dir}>
       <ScrollablePromo blocks={data} />
@@ -25,4 +30,18 @@ export default {
   decorators: [withKnobs, withServicesKnob()],
 };
 
-export const Default = props => <ScrollablePromoComponent {...props} />;
+export const ThreeLinks = props => (
+  <ScrollablePromoComponent data={threeLinks} {...props} />
+);
+
+export const OnlyOneLink = props => (
+  <ScrollablePromoComponent data={oneLinkOnly} {...props} />
+);
+
+export const MoreThanThreeLinks = props => (
+  <ScrollablePromoComponent data={moreThanThreeLinks} {...props} />
+);
+
+export const NoImagesInData = props => (
+  <ScrollablePromoComponent data={twoLinksWithNoImages} {...props} />
+);
