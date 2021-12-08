@@ -10,11 +10,8 @@ import { ServiceContext } from '#contexts/ServiceContext';
 const ScrollPromo = styled.div`
   padding-bottom: ${GEL_SPACING_TRPL};
   display: flex;
-  overflow-wrap: anywhere;
-
-  align-content: ${({ dir }) => (dir === 'ltr' ? 'flex-start' : 'flex-end')};
-
-  width: inherit;
+  overflow-wrap: break-word;
+  gap: 16px;
 
   overflow-x: scroll;
 
