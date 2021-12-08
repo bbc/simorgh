@@ -63,6 +63,8 @@ import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
 
+import ScrollablePromo from '#app/components/ScrollablePromo';
+
 const componentsToRender = {
   visuallyHiddenHeadline,
   headline: headings,
@@ -74,6 +76,7 @@ const componentsToRender = {
   timestamp: props => <Timestamp {...props} popOut={false} />,
   social: SocialEmbedContainer,
   group: gist,
+  links: props => <ScrollablePromo {...props} />,
 };
 
 const Wrapper = styled.div`

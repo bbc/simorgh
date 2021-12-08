@@ -5,19 +5,16 @@ import { pathOr } from 'ramda';
 
 import { getPica } from '@bbc/gel-foundations/dist/typography';
 import { getSerifBold } from '@bbc/psammead-styles/dist/font-styles';
-import { GEL_GROUP_1_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
-import {
-  GEL_SPACING,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/dist/spacings';
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
 import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
 
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const C_GREY_8 = '#202224';
 // padding? widhth? height? different for phones?
 const SingleCardBox = styled.div`
-  box-sizing: border-box;
+  overflow: hidden;
 
   display: flex;
   flex-shrink: 0;
@@ -26,16 +23,11 @@ const SingleCardBox = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
 
-  width: 14.8125rem;
-  min-height: 5.75rem;
-  background-color: yellow;
-  padding: ${GEL_SPACING_DBL};
-  margin: 0 0 0 ${GEL_SPACING_DBL};
+  width: 205px;
+  background-color: #ffffff;
 
-  /* phone gap 8px */
-  @media (max-width: ${GEL_GROUP_1_SCREEN_WIDTH_MAX}) {
-    margin: 0 0 0 ${GEL_SPACING};
-  }
+  padding: 16px;
+  margin: 0 0 0 ${GEL_SPACING_DBL};
 
   /* gap for older browser */
   &: ${({ dir }) => (dir === 'ltr' ? 'first' : 'last')}-child {
@@ -55,6 +47,7 @@ const LinkWrapper = styled.a`
       : 'align-self:flex-end;direction: rtl;'}
 
   text-overflow: ellipsis;
+
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -74,39 +67,19 @@ const LinkWrapper = styled.a`
 `;
 
 const SingleCard = ({ block, dir, service, script }) => {
-  const title = pathOr(
-    '',
-    [
-      'model',
-      'blocks',
-      '1',
-      'model',
-      'blocks',
-      '0',
-      'model',
-      'blocks',
-      '0',
-      'model',
-      'text',
-    ],
-    block,
+  const textBlock = filterForBlockType(
+    pathOr({}, ['model', 'blocks'], block),
+    'text',
   );
   const href = pathOr(
     '',
-    [
-      'model',
-      'blocks',
-      '1',
-      'model',
-      'blocks',
-      '0',
-      'model',
-      'blocks',
-      '0',
-      'model',
-      'locator',
-    ],
-    block,
+    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'locator'],
+    textBlock,
+  );
+  const title = pathOr(
+    '',
+    ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
+    textBlock,
   );
 
   return (
