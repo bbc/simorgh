@@ -10,12 +10,12 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // eslint-disable-next-line react/prop-types
-const BulletsWithContext = ({ blocks }) => (
+const BulletsWithContext = ({ blocks, ...rest }) => (
   <ToggleContextProvider>
     <ServiceContext.Provider
       value={{ script: arabic, service: 'arabic', dir: 'rtl' }}
     >
-      <BulletedListContainer blocks={blocks} />
+      <BulletedListContainer blocks={blocks} position={rest.position} />
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -23,51 +23,73 @@ const BulletsWithContext = ({ blocks }) => (
 describe('BulletedListContainer', () => {
   shouldMatchSnapshot(
     'should render ltr correctly',
-    <BulletsWithContext blocks={orderedList.model.blocks} />,
+    <BulletsWithContext blocks={orderedList.model.blocks} position={[1, 1]} />,
   );
 
   shouldMatchSnapshot(
     'should render rtl correctly',
-    <BulletsWithContext blocks={orderedList.model.blocks} />,
+    <BulletsWithContext blocks={orderedList.model.blocks} position={[2, 1]} />,
   );
 
   describe('getEventTrackingData', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
+    const positionD = [3, 1];
+    const positionE = [4, 1];
 
     it('should call the view tracking hook with the correct params with one list', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-      render(<BulletsWithContext blocks={listItemD.model.blocks} />);
+      render(
+        <BulletsWithContext
+          blocks={listItemD.model.blocks}
+          position={positionD}
+        />,
+      );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bulletmock-id-d',
+        componentName: 'bullet301',
         format: 'CHD=bullet',
       });
     });
 
     it('should call the view tracking hook with the correct params with multiple lists', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
-      render(<BulletsWithContext blocks={listItemD.model.blocks} />);
-      render(<BulletsWithContext blocks={listItemE.model.blocks} />);
+      render(
+        <BulletsWithContext
+          blocks={listItemD.model.blocks}
+          position={positionD}
+        />,
+      );
+      render(
+        <BulletsWithContext
+          blocks={listItemE.model.blocks}
+          position={positionE}
+        />,
+      );
 
       expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
       expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bulletmock-id-d',
+        componentName: 'bullet301',
         format: 'CHD=bullet',
       });
       expect(viewTrackerSpy).toHaveBeenLastCalledWith({
-        componentName: 'bulletmock-id-e',
+        componentName: 'bullet401',
         format: 'CHD=bullet',
       });
     });
 
     it('should call the click tracking hook with the correct params', () => {
       const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
-      render(<BulletsWithContext blocks={listItemD.model.blocks} />);
+      render(
+        <BulletsWithContext
+          blocks={listItemD.model.blocks}
+          position={positionD}
+        />,
+      );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bulletmock-id-d',
+        componentName: 'bullet301',
         format: 'CHD=bullet',
       });
     });

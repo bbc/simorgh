@@ -1,7 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
 import path from 'ramda/src/path';
+import pathOr from 'ramda/src/pathOr';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
@@ -33,28 +34,12 @@ const withClickHandler = (Component, clickHandler) => props =>
 const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const linkBlock = blocks.find(getLinkBlock);
   const hasLinkBlock = Boolean(linkBlock);
-
-  const blockId = path(['id'], linkBlock);
-  // const componentName = `bullet${blockId}`;
-  // console.log('blocks', blocks);
-
-  // const [blockId, setBlockId] = useState(0);
-
-  // useEffect(() => {
-  //   if (hasLinkBlock) {
-  //     // setBlockId(blockId + 1);
-  //     setBlockId(blockId + 1);
-  //     console.log('if statement');
-  //   }
-  // }, [hasLinkBlock]);
-
-  // console.log('blockIndex', blockIndex);
-  // for each block that has a link block, give ID according to index e.g 0 is bullet01
-
-  // console.log('listLinkBlock', linkBlock);
+  const position = pathOr('', ['position'], rest);
+  const blockPosition = position.join(0, 1);
+  //   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
   const eventTrackingData = {
-    componentName: `bullet${blockId}`,
+    componentName: `bullet${blockPosition}`,
     format: 'CHD=bullet',
   };
   const viewRef = useViewTracker(eventTrackingData);
@@ -92,6 +77,6 @@ export const ListPropTypes = {
 
 BulletedListContainer.propTypes = { ...ListPropTypes };
 
-BulletedListContainer.defualtProps = { className: null };
+BulletedListContainer.defaultProps = { className: null };
 
 export default BulletedListContainer;
