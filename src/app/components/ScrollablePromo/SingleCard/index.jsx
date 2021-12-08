@@ -15,7 +15,7 @@ const C_GREY_8 = '#202224';
 // padding? widhth? height? different for phones?
 // IE NOT SUPPORT justify-content
 // IE NOT SUPPORT align-items
-const SingleCardBox = styled.div`
+const SingleCardBox = styled.li`
   display: flex;
   flex-shrink: 0;
   flex-direction: column;

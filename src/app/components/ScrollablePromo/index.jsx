@@ -6,7 +6,7 @@ import SingleCard from './SingleCard';
 import { GridItemMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const ScrollPromo = styled.div`
+const ScrollPromo = styled.ul`
   display: flex;
   overflow-wrap: anywhere;
 
