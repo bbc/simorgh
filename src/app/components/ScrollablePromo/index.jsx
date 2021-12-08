@@ -13,6 +13,10 @@ const ScrollPromo = styled.ul`
   overflow-wrap: break-word;
   gap: 16px;
 
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
   overflow-x: scroll;
 
   /* Avoid using smooth scrolling as it causes accessibility issues */
