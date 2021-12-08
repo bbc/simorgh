@@ -28,10 +28,6 @@ const ScrollPromo = styled.div`
   }
 `;
 
-const ScrollWrapper = styled.div`
-  position: relative;
-`;
-
 const ScrollablePromo = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);

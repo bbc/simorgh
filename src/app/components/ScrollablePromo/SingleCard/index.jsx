@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { string, oneOf, shape, object } from 'prop-types';
+import { object } from 'prop-types';
 import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
 
@@ -8,7 +8,6 @@ import { getSerifBold } from '@bbc/psammead-styles/dist/font-styles';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
 import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
 
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
@@ -36,13 +35,13 @@ const SingleCardBox = styled.div`
 `;
 
 // import Grey_8 in Psammead
-const LinkWrapper = styled.a`
+const Link = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifBold(service)};
 
   line-height: 1.25;
   ${({ dir }) =>
-    dir === 'ltr' ? 'align-self:flex-start;' : 'align-self:flex-end;'}
+    dir === 'ltr' ? 'justify-self:flex-start;' : 'justify-self:flex-end;'}
 
   text-overflow: ellipsis;
 
@@ -83,9 +82,9 @@ const SingleCard = ({ block }) => {
 
   return (
     <SingleCardBox dir={dir}>
-      <LinkWrapper href={href} service={service} script={script} dir={dir}>
+      <Link href={href} service={service} script={script} dir={dir}>
         {title}
-      </LinkWrapper>
+      </Link>
     </SingleCardBox>
   );
 };
