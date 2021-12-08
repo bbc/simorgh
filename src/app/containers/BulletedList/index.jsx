@@ -35,8 +35,7 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
   const linkBlock = blocks.find(getLinkBlock);
   const hasLinkBlock = Boolean(linkBlock);
   const position = pathOr('', ['position'], rest);
-  const blockPosition = position.join(0, 1);
-  //   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
+  const blockPosition = hasLinkBlock ? position.join(0, 1) : null;
 
   const eventTrackingData = {
     componentName: `bullet${blockPosition}`,
