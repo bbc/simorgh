@@ -14,6 +14,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 const C_GREY_8 = '#202224';
 // padding? widhth? height? different for phones?
 // IE NOT SUPPORT justify-content
+// IE NOT SUPPORT align-items
 const SingleCardBox = styled.div`
   display: flex;
   flex-shrink: 0;
@@ -38,6 +39,7 @@ const SingleCardBox = styled.div`
 const Link = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifBold(service)};
+  width: 100%;
 
   line-height: 1.25;
   ${({ dir }) =>
