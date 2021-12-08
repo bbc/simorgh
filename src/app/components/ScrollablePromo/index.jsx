@@ -7,7 +7,7 @@ import SingleCard from './SingleCard';
 import { GridItemMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const ScrollPromo = styled.div`
+const ScrollPromo = styled.ul`
   padding-bottom: ${GEL_SPACING_TRPL};
   display: flex;
   overflow-wrap: break-word;
