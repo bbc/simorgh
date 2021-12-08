@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   position: relative;
   overflow: hidden;
 `;
+
 const scaleAmount = 1 + BLUR_RADIUS / 100;
 const scaleX = `scaleX(${scaleAmount})`;
 const scaleY = `scaleY(${-1 * scaleAmount})`;
@@ -35,13 +36,10 @@ const Background = styled.div`
   }
 `;
 
-const Overlay = styled.div`
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+const Children = styled.div`
+  position: relative;
+  z-index: 3;
+  padding-bottom: ${GEL_SPACING_DBL};
   transition: background 0.5s ease-in-out;
   background: rgb(${({ colour }) => `${colour.join(',')}`});
   ${({ isLoading, colour }) =>
@@ -53,12 +51,6 @@ const Overlay = styled.div`
     `}
 `;
 
-const Children = styled.div`
-  position: relative;
-  z-index: 3;
-  padding-bottom: ${GEL_SPACING_DBL};
-`;
-
 const FrostedGlassPanel = ({ image, children }) => {
   const { isLoading, colour } = useImageColour(image, {
     fallbackColour: FALLBACK_COLOUR,
@@ -68,9 +60,10 @@ const FrostedGlassPanel = ({ image, children }) => {
 
   return (
     <Wrapper>
+      <Children colour={colour.rgb} isLoading={isLoading}>
+        {children}
+      </Children>
       <Background image={image} />
-      <Overlay colour={colour.rgb} isLoading={isLoading} />
-      <Children>{children}</Children>
     </Wrapper>
   );
 };
