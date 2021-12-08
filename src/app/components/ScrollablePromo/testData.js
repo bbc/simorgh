@@ -974,3 +974,193 @@ export const truncatedTextInSingleLink = [
     position: [8, 2],
   },
 ];
+
+export const arabicText = [
+  {
+    id: '0d7aadd6',
+    type: 'title',
+    model: {
+      blocks: [
+        {
+          id: '5d993f48',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: 'afe03471',
+                type: 'paragraph',
+                model: {
+                  text: 'RtoL links',
+                  blocks: [
+                    {
+                      id: '6116d28d',
+                      type: 'fragment',
+                      model: {
+                        text: 'RtoL links',
+                        attributes: [],
+                      },
+                      position: [3, 1, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 1, 1, 1],
+              },
+            ],
+          },
+          position: [3, 1, 1],
+        },
+      ],
+    },
+    position: [3, 1],
+  },
+  {
+    id: 'cd46e6ce',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin',
+      blocks: [
+        {
+          id: '49d593cf',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '17a114e5',
+                type: 'paragraph',
+                model: {
+                  text: 'الرابط 1',
+                  blocks: [
+                    {
+                      id: '518f41d5',
+                      type: 'urlLink',
+                      model: {
+                        text: 'الرابط 1',
+                        locator: 'https://www.bbc.co.uk/pidgin',
+                        blocks: [
+                          {
+                            id: 'a53a813a',
+                            type: 'fragment',
+                            model: {
+                              text: 'الرابط 1',
+                              attributes: [],
+                            },
+                            position: [3, 2, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [3, 2, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 2, 1, 1],
+              },
+            ],
+          },
+          position: [3, 2, 1],
+        },
+      ],
+    },
+    position: [3, 2],
+  },
+  {
+    id: '797df02f',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba',
+      blocks: [
+        {
+          id: 'b646e3ee',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '3a37671f',
+                type: 'paragraph',
+                model: {
+                  text: 'الرابط 2',
+                  blocks: [
+                    {
+                      id: 'f533639e',
+                      type: 'urlLink',
+                      model: {
+                        text: 'الرابط 2',
+                        locator: 'https://www.bbc.co.uk/yoruba',
+                        blocks: [
+                          {
+                            id: 'f11ff010',
+                            type: 'fragment',
+                            model: {
+                              text: 'الرابط 2',
+                              attributes: [],
+                            },
+                            position: [3, 3, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [3, 3, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 3, 1, 1],
+              },
+            ],
+          },
+          position: [3, 3, 1],
+        },
+      ],
+    },
+    position: [3, 3],
+  },
+  {
+    id: '8897bd31',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fbrasil',
+      blocks: [
+        {
+          id: 'a7fbaf66',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: 'afd40306',
+                type: 'paragraph',
+                model: {
+                  text: 'الرابط 3',
+                  blocks: [
+                    {
+                      id: '417a701d',
+                      type: 'urlLink',
+                      model: {
+                        text: 'الرابط 3',
+                        locator: 'https://www.bbc.co.uk/brasil',
+                        blocks: [
+                          {
+                            id: '9a7f43f5',
+                            type: 'fragment',
+                            model: {
+                              text: 'الرابط 3',
+                              attributes: [],
+                            },
+                            position: [3, 4, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [3, 4, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [3, 4, 1, 1],
+              },
+            ],
+          },
+          position: [3, 4, 1],
+        },
+      ],
+    },
+    position: [3, 4],
+  },
+];

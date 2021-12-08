@@ -10,6 +10,7 @@ import {
   moreThanThreeLinks,
   twoLinksWithNoImages,
   truncatedTextInSingleLink,
+  arabicText,
 } from './testData';
 
 const BackGround = styled.div`
@@ -49,4 +50,8 @@ export const NoImagesInData = props => (
 
 export const TruncatedTextInSingleLink = props => (
   <ScrollablePromoComponent data={truncatedTextInSingleLink} {...props} />
+);
+
+export const ArabicText = props => (
+  <ScrollablePromoComponent data={arabicText} {...props} />
 );
