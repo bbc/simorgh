@@ -8,14 +8,12 @@
     "type": "article",
     "createdBy": "Pidgin",
     "language": "pcm",
-    "lastUpdated": 1638873515964,
+    "lastUpdated": 1638962951452,
     "firstPublished": 1637670147913,
     "lastPublished": 1638873511565,
     "timestamp": 1638873511565,
     "options": {},
-    "analyticsLabels": {
-      "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko"
-    },
+    "analyticsLabels": { "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko" },
     "passport": {
       "language": "pcm",
       "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
@@ -106,10 +104,7 @@
                   "blocks": [
                     {
                       "type": "fragment",
-                      "model": {
-                        "text": "",
-                        "attributes": []
-                      }
+                      "model": { "text": "", "attributes": [] }
                     }
                   ]
                 }
@@ -425,13 +420,89 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": " Empty link box below (do not show)",
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " Empty link box below (do not show)",
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
                         "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Long headline ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Long headline ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                    "locator": "https://www.bbc.co.uk/yoruba",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
                       }
                     }
                   ]
@@ -724,10 +795,7 @@
                   "blocks": [
                     {
                       "type": "fragment",
-                      "model": {
-                        "text": "",
-                        "attributes": []
-                      }
+                      "model": { "text": "", "attributes": [] }
                     }
                   ]
                 }
@@ -914,18 +982,18 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Miundo homepage",
+                              "text": "Mundo homepage",
                               "blocks": [
                                 {
                                   "type": "urlLink",
                                   "model": {
-                                    "text": "Miundo homepage",
+                                    "text": "Mundo homepage",
                                     "locator": "https://www.bbc.co.uk/mundo",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "Miundo homepage",
+                                          "text": "Mundo homepage",
                                           "attributes": []
                                         }
                                       }
@@ -971,10 +1039,7 @@
                     "blocks": [
                       {
                         "type": "fragment",
-                        "model": {
-                          "text": "Test Links page",
-                          "attributes": []
-                        }
+                        "model": { "text": "Test Links page", "attributes": [] }
                       }
                     ]
                   }
@@ -1044,10 +1109,7 @@
                   "blocks": [
                     {
                       "type": "fragment",
-                      "model": {
-                        "text": "",
-                        "attributes": []
-                      }
+                      "model": { "text": "", "attributes": [] }
                     }
                   ]
                 }
