@@ -884,3 +884,93 @@ export const twoLinksWithNoImages = [
     position: [11, 3],
   },
 ];
+
+export const truncatedTextInSingleLink = [
+  {
+    id: '5d61cd4d',
+    type: 'title',
+    model: {
+      blocks: [
+        {
+          id: 'ae43bde9',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '0ed4ba3b',
+                type: 'paragraph',
+                model: {
+                  text: 'Long headline ',
+                  blocks: [
+                    {
+                      id: 'a58d6e0d',
+                      type: 'fragment',
+                      model: {
+                        text: 'Long headline ',
+                        attributes: [],
+                      },
+                      position: [8, 1, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [8, 1, 1, 1],
+              },
+            ],
+          },
+          position: [8, 1, 1],
+        },
+      ],
+    },
+    position: [8, 1],
+  },
+  {
+    id: '7a95c68b',
+    type: 'link',
+    model: {
+      locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba',
+      blocks: [
+        {
+          id: '45baebd4',
+          type: 'text',
+          model: {
+            blocks: [
+              {
+                id: '4ef372bc',
+                type: 'paragraph',
+                model: {
+                  text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                  blocks: [
+                    {
+                      id: 'eb171843',
+                      type: 'urlLink',
+                      model: {
+                        text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                        locator: 'https://www.bbc.co.uk/yoruba',
+                        blocks: [
+                          {
+                            id: '45829882',
+                            type: 'fragment',
+                            model: {
+                              text: 'This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ',
+                              attributes: [],
+                            },
+                            position: [8, 2, 1, 1, 1, 1],
+                          },
+                        ],
+                        isExternal: false,
+                      },
+                      position: [8, 2, 1, 1, 1],
+                    },
+                  ],
+                },
+                position: [8, 2, 1, 1],
+              },
+            ],
+          },
+          position: [8, 2, 1],
+        },
+      ],
+    },
+    position: [8, 2],
+  },
+];
