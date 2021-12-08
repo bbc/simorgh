@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import { array } from 'prop-types';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 
 import SingleCard from './SingleCard';
 import { GridItemMedium } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const ScrollPromo = styled.div`
+  padding-bottom: ${GEL_SPACING_TRPL};
   display: flex;
   overflow-wrap: anywhere;
 
@@ -29,7 +31,6 @@ const ScrollPromo = styled.div`
 `;
 
 const ScrollablePromo = ({ blocks }) => {
-  console.log(blocks);
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
   // IF NO PROMO RETURN NULL
