@@ -8,17 +8,14 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import data from './testData.json';
 
 const BackGround = styled.div`
-  width: 10000px;
-  height: 10000px;
-  background-color: ${C_GREY_6};
-  padding: 50rem;
+  background-color: #f6f6f6;
+  padding: 2rem;
 `;
-
 // eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ service, script, dir }) => (
   <BackGround>
     <ServiceContextProvider service={service} script={script} dir={dir}>
-      <ScrollablePromo data={data} />
+      <ScrollablePromo blocks={data} />
     </ServiceContextProvider>
   </BackGround>
 );

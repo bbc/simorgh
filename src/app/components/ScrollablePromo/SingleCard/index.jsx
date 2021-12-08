@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { string, oneOf, shape, object } from 'prop-types';
 import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
@@ -9,13 +9,13 @@ import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
 import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
 
 import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const C_GREY_8 = '#202224';
 // padding? widhth? height? different for phones?
+// IE NOT SUPPORT justify-content
 const SingleCardBox = styled.div`
-  overflow: hidden;
-
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
@@ -42,9 +42,7 @@ const LinkWrapper = styled.a`
 
   line-height: 1.25;
   ${({ dir }) =>
-    dir === 'ltr'
-      ? 'align-self:flex-start;direction: ltr;'
-      : 'align-self:flex-end;direction: rtl;'}
+    dir === 'ltr' ? 'align-self:flex-start;' : 'align-self:flex-end;'}
 
   text-overflow: ellipsis;
 
@@ -66,7 +64,8 @@ const LinkWrapper = styled.a`
   }
 `;
 
-const SingleCard = ({ block, dir, service, script }) => {
+const SingleCard = ({ block }) => {
+  const { script, service, dir } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
@@ -92,9 +91,6 @@ const SingleCard = ({ block, dir, service, script }) => {
 };
 
 SingleCard.propTypes = {
-  dir: oneOf(['ltr', 'rtl']).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   block: object.isRequired,
 };

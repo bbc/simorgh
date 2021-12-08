@@ -1,380 +1,248 @@
-{
-  "type": "links",
-  "model": {
-    "blocks": [
-      {
-        "type": "title",
-        "model": {
-          "blocks": [
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "More regional animal news",
-                      "blocks": [
-                        {
-                          "type": "fragment",
-                          "model": {
-                            "text": "More regional animal news",
-                            "attributes": []
-                          }
-                        }
-                      ]
+[
+  {
+    "id": "65244df2",
+    "type": "title",
+    "model": {
+      "blocks": [
+        {
+          "id": "ac758d53",
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "id": "dceb59b2",
+                "type": "paragraph",
+                "model": {
+                  "text": "Show all links (no images)",
+                  "blocks": [
+                    {
+                      "id": "a93c297a",
+                      "type": "fragment",
+                      "model": {
+                        "text": "Show all links (no images)",
+                        "attributes": []
+                      },
+                      "position": [4, 1, 1, 1, 1]
                     }
-                  }
-                ]
+                  ]
+                },
+                "position": [4, 1, 1, 1]
               }
-            }
-          ]
+            ]
+          },
+          "position": [4, 1, 1]
         }
-      },
-      {
-        "type": "link",
-        "model": {
-          "locator": "urn:bbc:optimo:asset:ce6r9ll70vno",
-          "blocks": [
-            {
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Gecko",
-                                  "blocks": [
-                                    {
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Gecko",
-                                        "attributes": []
-                                      }
-                                    }
-                                  ]
+      ]
+    },
+    "position": [4, 1]
+  },
+  {
+    "id": "9f20a126",
+    "type": "link",
+    "model": {
+      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
+      "blocks": [
+        {
+          "id": "ce117a2a",
+          "type": "image",
+          "model": {
+            "blocks": [
+              {
+                "id": "bd0ae1fb",
+                "type": "altText",
+                "model": {
+                  "blocks": [
+                    {
+                      "id": "cd3057ed",
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "id": "e90d411b",
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Image to ignore",
+                              "blocks": [
+                                {
+                                  "id": "74665eb7",
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Image to ignore",
+                                    "attributes": []
+                                  },
+                                  "position": [4, 2, 1, 1, 1, 1, 1]
                                 }
-                              }
-                            ]
+                              ]
+                            },
+                            "position": [4, 2, 1, 1, 1, 1]
                           }
-                        }
-                      ]
+                        ]
+                      },
+                      "position": [4, 2, 1, 1, 1]
                     }
-                  },
-                  {
-                    "type": "rawImage",
-                    "model": {
-                      "width": 1116,
-                      "height": 627,
-                      "locator": "7270/live/1a468da0-2b67-11ec-98d0-0de234808d7a.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "Ben Birchall/PA Wire",
-                      "suitableForSyndication": true
-                    }
-                  }
-                ]
+                  ]
+                },
+                "position": [4, 2, 1, 1]
+              },
+              {
+                "id": "30c25ace",
+                "type": "rawImage",
+                "model": {
+                  "width": 976,
+                  "height": 549,
+                  "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
+                  "imageType": "background",
+                  "originCode": "cpsdevpb",
+                  "copyrightHolder": "BBC"
+                },
+                "position": [4, 2, 1, 2]
               }
-            },
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
-                      "blocks": [
-                        {
-                          "type": "urlLink",
-                          "model": {
-                            "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
-                            "locator": "https://www.bbc.co.uk/news/articles/ce6r9ll70vno",
-                            "blocks": [
-                              {
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Reptiles housed by Jersey Zoo after oil spill reproduce",
-                                  "attributes": []
-                                }
-                              }
-                            ]
+            ]
+          },
+          "position": [4, 2, 1]
+        },
+        {
+          "id": "dce72a7b",
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "id": "9a484ba0",
+                "type": "paragraph",
+                "model": {
+                  "text": "Show headline",
+                  "blocks": [
+                    {
+                      "id": "bd64c9f2",
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Show headline",
+                        "locator": "https://www.bbc.co.uk/pidgin",
+                        "blocks": [
+                          {
+                            "id": "3fcfe68d",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Show headline",
+                              "attributes": []
+                            },
+                            "position": [4, 2, 2, 1, 1, 1]
                           }
-                        }
-                      ]
+                        ],
+                        "isExternal": false
+                      },
+                      "position": [4, 2, 2, 1, 1]
                     }
-                  }
-                ]
+                  ]
+                },
+                "position": [4, 2, 2, 1]
               }
-            }
-          ]
+            ]
+          },
+          "position": [4, 2, 2]
         }
-      },
-      {
-        "type": "link",
-        "model": {
-          "locator": "urn:bbc:optimo:asset:cvxyqn5v9w4o",
-          "blocks": [
-            {
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Ostrich the seal",
-                                  "blocks": [
-                                    {
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Ostrich the seal",
-                                        "attributes": []
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
+      ]
+    },
+    "position": [4, 2]
+  },
+  {
+    "id": "31553901",
+    "type": "link",
+    "model": {
+      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
+      "blocks": [
+        {
+          "id": "d7bff4c9",
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "id": "2d16f249",
+                "type": "paragraph",
+                "model": {
+                  "text": "Link with Headline",
+                  "blocks": [
+                    {
+                      "id": "8f2d3f60",
+                      "type": "urlLink",
+                      "model": {
+                        "text": "Link with Headline",
+                        "locator": "https://www.bbc.com/mundo",
+                        "blocks": [
+                          {
+                            "id": "5114f0ff",
+                            "type": "fragment",
+                            "model": {
+                              "text": "Link with Headline",
+                              "attributes": []
+                            },
+                            "position": [4, 3, 1, 1, 1, 1]
                           }
-                        }
-                      ]
+                        ],
+                        "isExternal": false
+                      },
+                      "position": [4, 3, 1, 1, 1]
                     }
-                  },
-                  {
-                    "type": "rawImage",
-                    "model": {
-                      "width": 973,
-                      "height": 547,
-                      "locator": "35f5/live/9b0bf570-2689-11ec-b4f3-e56245d61d2e.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "Gavin Parsons",
-                      "suitableForSyndication": false
-                    }
-                  }
-                ]
+                  ]
+                },
+                "position": [4, 3, 1, 1]
               }
-            },
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "New seal hospital receives first patient",
-                      "blocks": [
-                        {
-                          "type": "urlLink",
-                          "model": {
-                            "text": "New seal hospital receives first patient",
-                            "locator": "https://www.bbc.co.uk/news/articles/cvxyqn5v9w4o",
-                            "blocks": [
-                              {
-                                "type": "fragment",
-                                "model": {
-                                  "text": "New seal hospital receives first patient",
-                                  "attributes": []
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
+            ]
+          },
+          "position": [4, 3, 1]
         }
-      },
-      {
-        "type": "link",
-        "model": {
-          "locator": "urn:bbc:optimo:asset:c9zdmm4yjnmo",
-          "blocks": [
-            {
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Galloway cattle",
-                                  "blocks": [
-                                    {
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Galloway cattle",
-                                        "attributes": []
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
+      ]
+    },
+    "position": [4, 3]
+  },
+  {
+    "id": "5c979041",
+    "type": "link",
+    "model": {
+      "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
+      "blocks": [
+        {
+          "id": "7ad184aa",
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "id": "57c9fb66",
+                "type": "paragraph",
+                "model": {
+                  "text": "https://www.bbc.com/brasil",
+                  "blocks": [
+                    {
+                      "id": "a0f0efea",
+                      "type": "urlLink",
+                      "model": {
+                        "text": "https://www.bbc.com/brasil",
+                        "locator": "https://www.bbc.com/brasil",
+                        "blocks": [
+                          {
+                            "id": "883f74a8",
+                            "type": "fragment",
+                            "model": {
+                              "text": "https://www.bbc.com/brasil",
+                              "attributes": []
+                            },
+                            "position": [4, 4, 1, 1, 1, 1]
                           }
-                        }
-                      ]
+                        ],
+                        "isExternal": false
+                      },
+                      "position": [4, 4, 1, 1, 1]
                     }
-                  },
-                  {
-                    "type": "rawImage",
-                    "model": {
-                      "width": 1039,
-                      "height": 585,
-                      "locator": "0418/live/8e790530-1b8c-11ec-b58d-0dc41b3acd26.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "Mike Bolam",
-                      "suitableForSyndication": true
-                    }
-                  }
-                ]
+                  ]
+                },
+                "position": [4, 4, 1, 1]
               }
-            },
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
-                      "blocks": [
-                        {
-                          "type": "urlLink",
-                          "model": {
-                            "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
-                            "locator": "https://www.bbc.co.uk/news/articles/c9zdmm4yjnmo",
-                            "blocks": [
-                              {
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Cattle shepherded by GPS in flagship biodiversity scheme",
-                                  "attributes": []
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
+            ]
+          },
+          "position": [4, 4, 1]
         }
-      },
-      {
-        "type": "link",
-        "model": {
-          "locator": "urn:bbc:optimo:asset:cxwz78vr9lyo",
-          "blocks": [
-            {
-              "type": "image",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "altText",
-                    "model": {
-                      "blocks": [
-                        {
-                          "type": "text",
-                          "model": {
-                            "blocks": [
-                              {
-                                "type": "paragraph",
-                                "model": {
-                                  "text": "Vlad the tiger undergoing medical procedure",
-                                  "blocks": [
-                                    {
-                                      "type": "fragment",
-                                      "model": {
-                                        "text": "Vlad the tiger undergoing medical procedure",
-                                        "attributes": []
-                                      }
-                                    }
-                                  ]
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "type": "rawImage",
-                    "model": {
-                      "width": 2838,
-                      "height": 1597,
-                      "locator": "a016/live/f93afa30-1705-11ec-bc9e-91e8bf899311.jpg",
-                      "originCode": "cpsprodpb",
-                      "copyrightHolder": "PA Media",
-                      "suitableForSyndication": true
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "text",
-              "model": {
-                "blocks": [
-                  {
-                    "type": "paragraph",
-                    "model": {
-                      "text": "Vlad the tiger 'annoyed but alert' after risky op",
-                      "blocks": [
-                        {
-                          "type": "urlLink",
-                          "model": {
-                            "text": "Vlad the tiger 'annoyed but alert' after risky op",
-                            "locator": "https://www.bbc.co.uk/news/articles/cxwz78vr9lyo",
-                            "blocks": [
-                              {
-                                "type": "fragment",
-                                "model": {
-                                  "text": "Vlad the tiger 'annoyed but alert' after risky op",
-                                  "attributes": []
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
+      ]
+    },
+    "position": [4, 4]
   }
-}
+]

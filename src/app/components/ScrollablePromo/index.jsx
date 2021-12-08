@@ -33,7 +33,7 @@ const ScrollWrapper = styled.div`
 `;
 
 const ScrollablePromo = ({ blocks }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
   // IF NO PROMO RETURN NULL
   return (
@@ -43,11 +43,8 @@ const ScrollablePromo = ({ blocks }) => {
           return (
             <SingleCard
               block={block}
-              dir={dir}
               // eslint-disable-next-line react/no-array-index-key
               key={index}
-              script={script}
-              service={service}
             />
           );
         })}
