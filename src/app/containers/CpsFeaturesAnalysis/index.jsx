@@ -18,6 +18,8 @@ const eventTrackingData = {
   },
 };
 
+const HIGH_IMPACT_VARIATION = 'variation_1';
+
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
@@ -27,14 +29,21 @@ const PromoListComponent = ({ promoItems, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  const hasFrostedGlassPromo = promoVariation === 'variation_1' && !isAmp;
+  const isHighImpactVariation =
+    promoVariation === HIGH_IMPACT_VARIATION && !isAmp;
 
   return (
     <StoryPromoUl>
-      {promoItems.map((item, i) => (
-        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-          {i === 0 && hasFrostedGlassPromo ? (
-            <FrostedGlassPromo
+      {promoItems.map((item, promoIndex) => {
+        const isFirstPromo = promoIndex === 0;
+        const StoryPromoComponent =
+          isFirstPromo && isHighImpactVariation
+            ? FrostedGlassPromo
+            : StoryPromo;
+
+        return (
+          <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+            <StoryPromoComponent
               item={item}
               dir={dir}
               displayImage
@@ -42,18 +51,9 @@ const PromoListComponent = ({ promoItems, dir }) => {
               serviceDatetimeLocale={serviceDatetimeLocale}
               eventTrackingData={eventTrackingData}
             />
-          ) : (
-            <StoryPromo
-              item={item}
-              dir={dir}
-              displayImage
-              displaySummary={false}
-              serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingData}
-            />
-          )}
-        </StoryPromoLi>
-      ))}
+          </StoryPromoLi>
+        );
+      })}
     </StoryPromoUl>
   );
 };
@@ -78,17 +78,14 @@ const PromoComponent = ({ promo, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  let StoryPromoHybrid = StoryPromo;
-
-  if (promoVariation) {
-    if (promoVariation === 'variation_1' && !isAmp) {
-      StoryPromoHybrid = FrostedGlassPromo;
-    }
-  }
+  const StoryPromoComponent =
+    promoVariation === HIGH_IMPACT_VARIATION && !isAmp
+      ? FrostedGlassPromo
+      : StoryPromo;
 
   return (
     <div ref={viewRef}>
-      <StoryPromoHybrid
+      <StoryPromoComponent
         item={promo}
         dir={dir}
         displayImage
