@@ -51,7 +51,7 @@ const PromoList = ({ blocks }) => {
       {threeblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <StyledList key={index}>
+          <StyledList key={index} dir={dir}>
             <Promo block={block} />
           </StyledList>
         );
