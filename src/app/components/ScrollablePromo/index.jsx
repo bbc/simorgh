@@ -29,6 +29,7 @@ const ScrollablePromo = ({ blocks }) => {
     padding: ${GEL_SPACING_DBL};
     margin: 0;
     margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+    margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
 
     @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
       &:first-child {
