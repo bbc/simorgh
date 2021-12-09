@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { array } from 'prop-types';
 import styled from '@emotion/styled';
-
+import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
 import SingleCard from './SingleCard';
 import { GridItemMedium } from '#app/components/Grid';
 import ListCard from './ListCard';
@@ -16,8 +16,7 @@ const ScrollablePromo = ({ blocks }) => {
     width: 205px;
     background-color: #ffffff;
     padding: ${GEL_SPACING_DBL};
-    ${({ dir }) =>
-      `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
+    margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
     &:first-child {
       margin: 0;
     }
