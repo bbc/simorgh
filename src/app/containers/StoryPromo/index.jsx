@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType, string } from 'prop-types';
+import { shape, bool, oneOf, oneOfType, string, number } from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -24,7 +24,7 @@ import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
-import { getHeadingTagOverride } from './utilities';
+import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 import PromoTimestamp from './Timestamp';
@@ -91,6 +91,7 @@ StoryPromoImage.defaultProps = {
 
 const StoryPromoContainer = ({
   item,
+  index,
   promoType,
   lazyLoadImage,
   dir,
@@ -99,10 +100,13 @@ const StoryPromoContainer = ({
   isSingleColumnLayout,
   serviceDatetimeLocale,
   eventTrackingData,
+  labelId,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
+
+  const linkId = buildUniquePromoId(labelId, item, index);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -149,7 +153,14 @@ const StoryPromoContainer = ({
     });
   }
 
-  const linkcontents = <LinkContents item={item} isInline={!displayImage} />;
+  const linkcontents = (
+    <LinkContents
+      item={item}
+      isInline={!displayImage}
+      // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      id={!isLive ? linkId : null}
+    />
+  );
 
   if (!headline || !url) {
     return null;
@@ -178,9 +189,12 @@ const StoryPromoContainer = ({
         <StyledLink
           href={url}
           onClick={eventTrackingData ? handleClickTracking : null}
+          // Aria-labelledby a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+          aria-labelledby={linkId}
         >
           {isLive ? (
             <LiveLabel
+              id={linkId}
               service={service}
               dir={dir}
               liveText={liveLabel}
@@ -276,6 +290,8 @@ StoryPromoContainer.propTypes = {
       format: string,
     }),
   }),
+  labelId: string,
+  index: number,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -287,6 +303,8 @@ StoryPromoContainer.defaultProps = {
   isSingleColumnLayout: false,
   serviceDatetimeLocale: null,
   eventTrackingData: null,
+  labelId: '',
+  index: 0,
 };
 
 export default StoryPromoContainer;

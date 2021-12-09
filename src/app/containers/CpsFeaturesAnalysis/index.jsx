@@ -45,6 +45,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
           <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
             <StoryPromoComponent
               item={item}
+              index={promoIndex}
               dir={dir}
               displayImage
               displaySummary={false}

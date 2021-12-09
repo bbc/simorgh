@@ -3,6 +3,7 @@ const { extractBundlesForPageType } = require('./pageTypeBundleExtractor');
 
 // need fake Cypress in global scope to require service configs:
 global.Cypress = { env: () => ({}) };
+const bundleType = process.env.bundleType || 'modern';
 const cypressServiceConfigs = require('../../cypress/support/config/services');
 const { pages } = require('./pages');
 
@@ -27,10 +28,10 @@ const getBundlesData = bundles =>
 
 const getPageBundleData = () => {
   const main = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith('main-')),
+    jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.main-`)),
   );
   const framework = getBundlesData(
-    jsFiles.filter(fileName => fileName.startsWith('framework')),
+    jsFiles.filter(fileName => fileName.startsWith(`${bundleType}.framework`)),
   );
   const mainTotalSize = main.reduce((acc, { size }) => acc + size, 0);
   const frameworkTotalSize = framework.reduce((acc, { size }) => acc + size, 0);
@@ -42,9 +43,9 @@ const getPageBundleData = () => {
     return bundlesData.reduce(
       ({ lib, shared, page, commons, totalSize, ...rest }, { name, size }) => {
         const bundleData = { name, size };
-        const isShared = name.startsWith('shared-');
-        const isLib = name.includes('-lib');
-        const isCommons = name.includes('commons-');
+        const isShared = new RegExp(`^${bundleType}\\.shared-`).test(name);
+        const isLib = new RegExp(`^${bundleType}\\..+?-lib`).test(name);
+        const isCommons = new RegExp(`^${bundleType}\\.commons-`).test(name);
 
         if (isLib) {
           lib.push(bundleData);
@@ -82,7 +83,7 @@ const getServiceBundleData = () =>
   services
     .map(service => {
       const bundlesData = getBundlesData(
-        jsFiles.filter(file => file.includes(service)),
+        jsFiles.filter(file => file.startsWith(`${bundleType}.${service}`)),
       );
 
       return { serviceName: service, bundles: bundlesData };

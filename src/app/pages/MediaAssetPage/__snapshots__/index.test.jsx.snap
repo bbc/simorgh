@@ -4375,10 +4375,15 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="promo-rel-content-pidgintori23145776-1"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23145776"
                           >
-                            Police Arrest 3 ontop Anambra Church Attack
+                            <span
+                              id="promo-rel-content-pidgintori23145776-1"
+                            >
+                              Police Arrest 3 ontop Anambra Church Attack
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -4431,10 +4436,15 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="promo-rel-content-pidgintori23143754-2"
                             class="emotion-266 emotion-267"
                             href="/pidgin/tori-23143754"
                           >
-                            Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                            <span
+                              id="promo-rel-content-pidgintori23143754-2"
+                            >
+                              Lagos 'Gay' men Appear for Court, say Dem no dey Guilty
+                            </span>
                           </a>
                         </h3>
                         <time
@@ -4508,10 +4518,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="promo-rel-content-pidgin23146654-3"
                             class="emotion-266 emotion-267"
                             href="/pidgin/23146654"
                           >
                             <span
+                              id="promo-rel-content-pidgin23146654-3"
                               role="text"
                             >
                               <span
@@ -4608,10 +4620,12 @@ exports[`Media Asset Page should render component 1`] = `
                           class="emotion-264 emotion-265"
                         >
                           <a
+                            aria-labelledby="promo-rel-content-pidginmedia23147054-4"
                             class="emotion-266 emotion-267"
                             href="/pidgin/media-23147054"
                           >
                             <span
+                              id="promo-rel-content-pidginmedia23147054-4"
                               role="text"
                             >
                               <span

@@ -427,10 +427,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgin44508901-1"
               class="emotion-21 emotion-22"
               href="/pidgin/44508901"
             >
               <span
+                id="promo-rel-content-pidgin44508901-1"
                 role="text"
               >
                 <span>
@@ -489,10 +491,15 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgintori46975713-2"
               class="emotion-21 emotion-22"
               href="/pidgin/tori-46975713"
             >
-              How light companies dey use estimated billing show Nigerians pepper
+              <span
+                id="promo-rel-content-pidgintori46975713-2"
+              >
+                How light companies dey use estimated billing show Nigerians pepper
+              </span>
             </a>
           </h3>
           <time
@@ -545,10 +552,15 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for MAP pages
             class="emotion-19 emotion-20"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgintori42494678-3"
               class="emotion-21 emotion-22"
               href="/pidgin/tori-42494678"
             >
-              Nigeria: Wetin 5,222 megawatts electric fit do?
+              <span
+                id="promo-rel-content-pidgintori42494678-3"
+              >
+                Nigeria: Wetin 5,222 megawatts electric fit do?
+              </span>
             </a>
           </h3>
           <time
@@ -977,10 +989,12 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgin44508901-1"
               class="emotion-20 emotion-21"
               href="/pidgin/44508901"
             >
               <span
+                id="promo-rel-content-pidgin44508901-1"
                 role="text"
               >
                 <span>
@@ -1039,10 +1053,15 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgintori46975713-2"
               class="emotion-20 emotion-21"
               href="/pidgin/tori-46975713"
             >
-              How light companies dey use estimated billing show Nigerians pepper
+              <span
+                id="promo-rel-content-pidgintori46975713-2"
+              >
+                How light companies dey use estimated billing show Nigerians pepper
+              </span>
             </a>
           </h3>
           <time
@@ -1095,10 +1114,15 @@ exports[`RelatedContentPromoList it renders a list of Story Promos for STY pages
             class="emotion-18 emotion-19"
           >
             <a
+              aria-labelledby="promo-rel-content-pidgintori42494678-3"
               class="emotion-20 emotion-21"
               href="/pidgin/tori-42494678"
             >
-              Nigeria: Wetin 5,222 megawatts electric fit do?
+              <span
+                id="promo-rel-content-pidgintori42494678-3"
+              >
+                Nigeria: Wetin 5,222 megawatts electric fit do?
+              </span>
             </a>
           </h3>
           <time
