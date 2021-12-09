@@ -76,11 +76,11 @@ const PromoComponent = ({ promo, dir }) => {
     return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
   };
 
-  const PromoComponent = selectComponent();
+  const ChosenComponent = selectComponent();
 
   return (
     <div ref={viewRef}>
-      <PromoComponent
+      <ChosenComponent
         item={promo}
         dir={dir}
         displayImage
