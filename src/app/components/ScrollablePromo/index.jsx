@@ -14,7 +14,7 @@ const ScrollPromo = styled.ul`
   gap: 16px;
 
   list-style: none;
-  padding-left: 0;
+  ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
 
   overflow-x: scroll;
