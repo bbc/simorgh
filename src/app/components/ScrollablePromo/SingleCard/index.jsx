@@ -14,12 +14,6 @@ const C_GREY_8 = '#202224';
 // padding? widhth? height? different for phones?
 // IE NOT SUPPORT justify-content
 // IE NOT SUPPORT align-items
-const SingleCardBox = styled.li`
-  flex-shrink: 0;
-  width: 205px;
-  background-color: #ffffff;
-  padding: 16px;
-`;
 
 // import Grey_8 in Psammead
 const Link = styled.a`
@@ -64,11 +58,9 @@ const SingleCard = ({ block }) => {
   );
 
   return (
-    <SingleCardBox dir={dir}>
-      <Link href={href} service={service} script={script} dir={dir}>
-        {title}
-      </Link>
-    </SingleCardBox>
+    <Link href={href} service={service} script={script} dir={dir}>
+      {title}
+    </Link>
   );
 };
 
