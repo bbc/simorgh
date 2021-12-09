@@ -46,6 +46,10 @@ const toggleState = {
   mostRead: {
     enabled: true,
   },
+  frostedPromo: {
+    enabled: true,
+    value: 1,
+  },
 };
 
 // eslint-disable-next-line react/prop-types
