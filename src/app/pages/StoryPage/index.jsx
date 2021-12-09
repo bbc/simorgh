@@ -3,6 +3,8 @@ import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
 
+const OptimizelyStoryPage = withOptimizelyProvider(StoryPage);
+
 export default applyBasicPageHandlers({
   addVariantHandling: false,
-})(withOptimizelyProvider(StoryPage));
+})(OptimizelyStoryPage);
