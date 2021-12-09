@@ -33,13 +33,13 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   return (
     <StoryPromoUl>
-      {promoItems.map((item, index) => {
-        const Component = selectComponent(index);
+      {promoItems.map((item, promoIndex) => {
+        const PromoComponent = selectComponent(promoIndex);
         return (
           <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-            <Component
+            <PromoComponent
               item={item}
-              index={index}
+              index={promoIndex}
               dir={dir}
               displayImage
               displaySummary={false}
@@ -76,11 +76,11 @@ const PromoComponent = ({ promo, dir }) => {
     return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
   };
 
-  const Component = selectComponent();
+  const PromoComponent = selectComponent();
 
   return (
     <div ref={viewRef}>
-      <Component
+      <PromoComponent
         item={promo}
         dir={dir}
         displayImage
