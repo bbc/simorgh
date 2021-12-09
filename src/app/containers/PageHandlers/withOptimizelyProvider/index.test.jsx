@@ -29,17 +29,16 @@ describe('withOptimizelyProvider HOC', () => {
   it('should load Optimizely with correct params', () => {
     const Component = () => <h1>Hola Optimizely</h1>;
 
-    const WithOptimizelyProviderHOC = withOptimizelyProvider(Component);
+    const OptimizelyComponent = withOptimizelyProvider(Component);
 
     const TestComponent = () => (
       <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-        <WithOptimizelyProviderHOC {...props} />
+        <OptimizelyComponent {...props} />
       </ServiceContext.Provider>
     );
 
-    const { container } = render(<TestComponent />);
+    render(<TestComponent />);
 
-    expect(container).toMatchSnapshot();
     expect(optimizelyProviderSpy).toHaveBeenCalledTimes(1);
   });
 });
