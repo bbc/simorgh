@@ -115,7 +115,7 @@ FrostedGlassPromo.propTypes = {
   url: string.isRequired,
   footer: node,
   eventTrackingData: shape({}),
-  index: number.isRequired,
+  index: number,
   image: shape({
     src: string.isRequired,
     alt: string.isRequired,
@@ -131,6 +131,7 @@ FrostedGlassPromo.propTypes = {
 FrostedGlassPromo.defaultProps = {
   footer: null,
   eventTrackingData: null,
+  index: 0,
 };
 
 export default withData(FrostedGlassPromo);

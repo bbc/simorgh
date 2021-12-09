@@ -85,7 +85,6 @@ const PromoComponent = ({ promo, dir }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
-        index={0}
       />
     </div>
   );
