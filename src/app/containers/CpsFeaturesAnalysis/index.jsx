@@ -3,14 +3,14 @@ import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
-import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import CpsOnwardJourney from '../CpsOnwardJourney';
-import _StoryPromo from '../StoryPromo';
+import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
+import useToggle from '#hooks/useToggle';
 
 const eventTrackingData = {
   block: {
@@ -22,24 +22,33 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
+  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
+    useToggle('frostedPromo');
 
-  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
+  const selectComponent = index => {
+    if (isAmp) return StoryPromo;
+    if (!frostedPromoEnabled) return StoryPromo;
+    return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+  };
 
   return (
     <StoryPromoUl>
-      {promoItems.map((item, index) => (
-        <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-          <StoryPromo
-            item={item}
-            index={index}
-            dir={dir}
-            displayImage
-            displaySummary={false}
-            serviceDatetimeLocale={serviceDatetimeLocale}
-            eventTrackingData={eventTrackingData}
-          />
-        </StoryPromoLi>
-      ))}
+      {promoItems.map((item, promoIndex) => {
+        const PromoComponent = selectComponent(promoIndex);
+        return (
+          <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
+            <PromoComponent
+              item={item}
+              index={promoIndex}
+              dir={dir}
+              displayImage
+              displaySummary={false}
+              serviceDatetimeLocale={serviceDatetimeLocale}
+              eventTrackingData={eventTrackingData}
+            />
+          </StoryPromoLi>
+        );
+      })}
     </StoryPromoUl>
   );
 };
@@ -57,14 +66,21 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
-
   const { isAmp } = useContext(RequestContext);
+  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
+    useToggle('frostedPromo');
 
-  const StoryPromo = isAmp || isLive() ? _StoryPromo : FrostedGlassPromo;
+  const selectComponent = () => {
+    if (isAmp) return StoryPromo;
+    if (!frostedPromoEnabled) return StoryPromo;
+    return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+  };
+
+  const ChosenComponent = selectComponent();
 
   return (
     <div ref={viewRef}>
-      <StoryPromo
+      <ChosenComponent
         item={promo}
         dir={dir}
         displayImage
