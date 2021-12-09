@@ -11,7 +11,6 @@ const ScrollPromo = styled.ul`
   padding-bottom: ${GEL_SPACING_TRPL};
   display: flex;
   overflow-wrap: break-word;
-  gap: 16px;
 
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
