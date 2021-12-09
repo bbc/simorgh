@@ -148,13 +148,22 @@ exports[`Document Component should render correctly 1`] = `
       <!--[if !IE]&gt;&lt;!-->
     </div>
     <script
-      src="main.js"
+      src="modern.main.js"
     />
     <script
-      src="vendor.js"
+      src="modern.vendor.js"
     />
     <script
-      src="igbo.js"
+      src="modern.igbo.js"
+    />
+    <script
+      src="legacy.main.js"
+    />
+    <script
+      src="legacy.vendor.js"
+    />
+    <script
+      src="legacy.igbo.js"
     />
     <div>
       <!--&lt;![endif]-->

@@ -3539,12 +3539,16 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/kyrgyz/articles/c414v42gy75o'],
+            paths: [
+              '/kyrgyz/articles/c414v42gy75o',
+              '/kyrgyz/articles/c41knv20gk7o',
+              '/kyrgyz/articles/cpgx4k72wv4o',
+            ],
             enabled: true,
           },
           test: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/kyrgyz/articles/c3xd4xg3rm9o'],
@@ -4027,18 +4031,18 @@ module.exports = () => ({
         environments: {
           live: {
             paths: ['/mundo/articles/cdwrpl7qwqqo'],
-            enabled: false,
+            enabled: true,
           },
           test: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: ['/mundo/articles/ce42wzqr2mko'],
-            enabled: false,
+            enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       errorPage404: {
         environments: {
@@ -5003,7 +5007,10 @@ module.exports = () => ({
       articles: {
         environments: {
           live: {
-            paths: ['/persian/articles/c7eel0lmr4do'],
+            paths: [
+              '/persian/articles/c7eel0lmr4do',
+              '/persian/articles/cld9872jgyjo',
+            ],
             enabled: true,
           },
           test: {
@@ -5345,7 +5352,10 @@ module.exports = () => ({
             enabled: true,
           },
           test: {
-            paths: ['/pidgin/articles/cwl08rd38l6o'],
+            paths: [
+              '/pidgin/articles/cwl08rd38l6o',
+              '/pidgin/articles/crrrkxz2k0ko',
+            ],
             enabled: true,
           },
           local: {
