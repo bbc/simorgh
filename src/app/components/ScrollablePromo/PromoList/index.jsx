@@ -5,7 +5,7 @@ import {
   GEL_SPACING_DBL,
 } from '@bbc/gel-foundations/spacings';
 import { array } from 'prop-types';
-import SingleCard from '../SingleCard';
+import Promo from '../Promo';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const ScrollPromo = styled.ul`
@@ -18,7 +18,6 @@ const ScrollPromo = styled.ul`
   margin: 0;
 
   overflow-x: scroll;
-
   /* Avoid using smooth scrolling as it causes accessibility issues */
   scroll-behavior: auto;
   -webkit-overflow-scrolling: touch;
@@ -43,7 +42,7 @@ const StyledList = styled.li`
   }
 `;
 
-const ListCard = ({ blocks }) => {
+const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
 
@@ -51,12 +50,9 @@ const ListCard = ({ blocks }) => {
     <ScrollPromo dir={dir} role="list">
       {threeblocks.map((block, index) => {
         return (
-          <StyledList>
-            <SingleCard
-              block={block}
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
-            />
+          // eslint-disable-next-line react/no-array-index-key
+          <StyledList key={index}>
+            <Promo block={block} />
           </StyledList>
         );
       })}
@@ -64,8 +60,8 @@ const ListCard = ({ blocks }) => {
   );
 };
 
-ListCard.propTypes = {
+PromoList.propTypes = {
   blocks: array.isRequired,
 };
 
-export default ListCard;
+export default PromoList;

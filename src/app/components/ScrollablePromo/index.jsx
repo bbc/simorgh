@@ -3,12 +3,12 @@ import { array } from 'prop-types';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
 
-import SingleCard from './SingleCard';
+import Promo from './Promo';
 import { GridItemMedium } from '#app/components/Grid';
-import ListCard from './ListCard';
+import PromoList from './PromoList';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const SingleCardBox = styled.div`
+const PromoBox = styled.div`
   flex-shrink: 0;
   width: 205px;
   background-color: #ffffff;
@@ -28,11 +28,11 @@ const ScrollablePromo = ({ blocks }) => {
   return (
     <GridItemMedium>
       {isSingleItem ? (
-        <SingleCardBox dir={dir}>
-          <SingleCard block={blocks[1]} />
-        </SingleCardBox>
+        <PromoBox dir={dir}>
+          <Promo block={blocks[1]} />
+        </PromoBox>
       ) : (
-        <ListCard blocks={blocks} />
+        <PromoList blocks={blocks} />
       )}
     </GridItemMedium>
   );

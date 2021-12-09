@@ -11,11 +11,7 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const C_GREY_8 = '#202224';
-// padding? widhth? height? different for phones?
-// IE NOT SUPPORT justify-content
-// IE NOT SUPPORT align-items
 
-// import Grey_8 in Psammead
 const Link = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifBold(service)};
@@ -40,7 +36,7 @@ const Link = styled.a`
   }
 `;
 
-const SingleCard = ({ block }) => {
+const Promo = ({ block }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
@@ -64,9 +60,9 @@ const SingleCard = ({ block }) => {
   );
 };
 
-SingleCard.propTypes = {
+Promo.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   block: object.isRequired,
 };
 
-export default SingleCard;
+export default Promo;
