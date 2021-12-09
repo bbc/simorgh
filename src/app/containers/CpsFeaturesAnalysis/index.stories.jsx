@@ -28,6 +28,7 @@ const Component = ({
         <ToggleContextProvider
           toggles={{
             eventTracking: { enabled: false },
+            frostedPromo: { enabled: true, value: 1 },
           }}
         >
           <FeaturesAnalysis content={data} />
