@@ -27,13 +27,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  let hasFrostedGlassPromo = false;
-
-  if (promoVariation) {
-    if (promoVariation === 'variation_1' && !isAmp) {
-      hasFrostedGlassPromo = true;
-    }
-  }
+  const hasFrostedGlassPromo = promoVariation === 'variation_1' && !isAmp;
 
   return (
     <StoryPromoUl>
