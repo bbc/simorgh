@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import {
-  GEL_SPACING_TRPL,
-  GEL_SPACING_DBL,
-} from '@bbc/gel-foundations/spacings';
-import { array } from 'prop-types';
-import Promo from '../Promo';
+import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import { array, string } from 'prop-types';
+import PromoLink from '../PromoLink';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const ScrollPromo = styled.ul`
@@ -30,19 +27,8 @@ const ScrollPromo = styled.ul`
   }
 `;
 
-const StyledList = styled.li`
-  flex-shrink: 0;
-  width: 205px;
-  background-color: #ffffff;
-  padding: ${GEL_SPACING_DBL};
-  ${({ dir }) =>
-    `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
-  &:first-child {
-    margin: 0;
-  }
-`;
-
-const PromoList = ({ blocks }) => {
+const PromoList = ({ blocks, Ourstyle }) => {
+  const StyledList = styled.li(Ourstyle);
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
 
@@ -51,8 +37,8 @@ const PromoList = ({ blocks }) => {
       {threeblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <StyledList key={index} dir={dir}>
-            <Promo block={block} />
+          <StyledList key={index} dir={dir} Ourstyle={Ourstyle}>
+            <PromoLink block={block} />
           </StyledList>
         );
       })}
@@ -62,6 +48,7 @@ const PromoList = ({ blocks }) => {
 
 PromoList.propTypes = {
   blocks: array.isRequired,
+  Ourstyle: string.isRequired,
 };
 
 export default PromoList;

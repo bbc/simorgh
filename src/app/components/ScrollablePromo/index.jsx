@@ -1,40 +1,57 @@
 import React, { useContext } from 'react';
 import { array } from 'prop-types';
-import styled from '@emotion/styled';
-import { GEL_SPACING_DBL } from '@bbc/gel-foundations/dist/spacings';
+
+import {
+  GEL_SPACING_DBL,
+  GEL_SPACING,
+} from '@bbc/gel-foundations/dist/spacings';
+
+import {
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_4_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/dist/breakpoints';
 
 import Promo from './Promo';
-import { GridItemMedium } from '#app/components/Grid';
 import PromoList from './PromoList';
+
+import { GridItemMediumNoMargin } from '#app/components/Grid';
+
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const PromoBox = styled.div`
-  flex-shrink: 0;
-  width: 205px;
-  background-color: #ffffff;
-  padding: ${GEL_SPACING_DBL};
-  ${({ dir }) =>
-    `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
-  &:first-child {
-    margin: 0;
-  }
-`;
-
 const ScrollablePromo = ({ blocks }) => {
-  const isSingleItem = blocks.length === 2;
   const { dir } = useContext(ServiceContext);
+  const isSingleItem = blocks.length === 2;
+
+  const promoBox = `
+    flex-shrink: 0;
+    width: 205px;
+    background-color: #ffffff;
+    padding: ${GEL_SPACING_DBL};
+    margin: 0;
+    margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+
+    @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+      &:first-child {
+        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+      }
+    }
+
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+      &:first-child {
+        margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+      }
+    }
+  `;
 
   // IF NO PROMO RETURN NULL
   return (
-    <GridItemMedium>
+    <GridItemMediumNoMargin>
       {isSingleItem ? (
-        <PromoBox dir={dir}>
-          <Promo block={blocks[1]} />
-        </PromoBox>
+        <Promo block={blocks[1]} Ourstyle={promoBox} />
       ) : (
-        <PromoList blocks={blocks} />
+        <PromoList blocks={blocks} Ourstyle={promoBox} />
       )}
-    </GridItemMedium>
+    </GridItemMediumNoMargin>
   );
 };
 
