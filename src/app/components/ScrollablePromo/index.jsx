@@ -8,7 +8,7 @@ import { GridItemMedium } from '#app/components/Grid';
 import ListCard from './ListCard';
 import { ServiceContext } from '#contexts/ServiceContext';
 
-const SingleCardBox = styled.li`
+const SingleCardBox = styled.div`
   flex-shrink: 0;
   width: 205px;
   background-color: #ffffff;

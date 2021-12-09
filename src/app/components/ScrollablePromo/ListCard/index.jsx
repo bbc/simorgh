@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING_TRPL,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 import { array } from 'prop-types';
 import SingleCard from '../SingleCard';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -32,7 +35,12 @@ const StyledList = styled.li`
   flex-shrink: 0;
   width: 205px;
   background-color: #ffffff;
-  padding: 16px;
+  padding: ${GEL_SPACING_DBL};
+  ${({ dir }) =>
+    `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
+  &:first-child {
+    margin: 0;
+  }
 `;
 
 const ListCard = ({ blocks }) => {
