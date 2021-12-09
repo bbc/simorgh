@@ -11,11 +11,16 @@ const ScrollablePromo = ({ blocks }) => {
   const isSingleItem = blocks.length === 2;
   const { dir } = useContext(ServiceContext);
 
-  const SingleCardBox = styled.div`
+  const SingleCardBox = styled.li`
     flex-shrink: 0;
     width: 205px;
     background-color: #ffffff;
-    padding: 16px;
+    padding: ${GEL_SPACING_DBL};
+    ${({ dir }) =>
+      `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
+    &:first-child {
+      margin: 0;
+    }
   `;
 
   // IF NO PROMO RETURN NULL
