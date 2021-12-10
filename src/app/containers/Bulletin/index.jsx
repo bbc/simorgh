@@ -102,6 +102,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
+      ariaId={offScreenText}
     />
   );
 };

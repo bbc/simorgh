@@ -318,10 +318,12 @@ exports[`Bulletin Container snapshots should render a Live Radio bulletin correc
         dir="ltr"
       >
         <a
+          aria-labelledby="bulletin-GeentLive"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
+            id="bulletin-GeentLive"
             role="text"
           >
             <span
@@ -700,10 +702,12 @@ exports[`Bulletin Container snapshots should render a Live TV bulletin correctly
         dir="ltr"
       >
         <a
+          aria-labelledby="bulletin-LeeLive"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
+            id="bulletin-LeeLive"
             role="text"
           >
             <span
@@ -1067,10 +1071,12 @@ exports[`Bulletin Container snapshots should render a Radio bulletin correctly 1
         dir="ltr"
       >
         <a
+          aria-labelledby="bulletin-Geent"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
+            id="bulletin-Geent"
             role="text"
           >
             <span
@@ -1434,10 +1440,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin correctly 1`] 
         dir="ltr"
       >
         <a
+          aria-labelledby="bulletin-Lee"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
+            id="bulletin-Lee"
             role="text"
           >
             <span
@@ -1798,10 +1806,12 @@ exports[`Bulletin Container snapshots should render a TV bulletin with lang attr
         dir="ltr"
       >
         <a
+          aria-labelledby="bulletin-Watch"
           class="emotion-10 emotion-11"
           href="https://www.bbc.co.uk/news"
         >
           <span
+            id="bulletin-Watch"
             role="text"
           >
             <span
