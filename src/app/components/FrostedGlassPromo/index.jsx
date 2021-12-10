@@ -63,9 +63,15 @@ const A = styled.a`
   }
 `;
 
-const FrostedGlassPromo = props => {
+const FrostedGlassPromo = ({
+  image,
+  children,
+  footer,
+  url,
+  eventTrackingData,
+  index,
+}) => {
   const { script, service } = useContext(ServiceContext);
-  const { image, children, footer, url, eventTrackingData } = props;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -78,7 +84,7 @@ const FrostedGlassPromo = props => {
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <Wrapper>
+    <Wrapper data-testid={`frosted-promo-${index}`}>
       <ClickableArea
         href={url}
         onClick={onClick}
@@ -109,6 +115,7 @@ FrostedGlassPromo.propTypes = {
   url: string.isRequired,
   footer: node,
   eventTrackingData: shape({}),
+  index: number,
   image: shape({
     src: string.isRequired,
     alt: string.isRequired,
@@ -124,6 +131,7 @@ FrostedGlassPromo.propTypes = {
 FrostedGlassPromo.defaultProps = {
   footer: null,
   eventTrackingData: null,
+  index: 0,
 };
 
 export default withData(FrostedGlassPromo);

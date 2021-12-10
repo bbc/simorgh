@@ -134,6 +134,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-testid="frosted-promo-0"
   >
     <a
       aria-hidden="true"
@@ -347,6 +348,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-testid="frosted-promo-0"
   >
     <a
       aria-hidden="true"
@@ -568,6 +570,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 <div>
   <div
     class="emotion-0 emotion-1"
+    data-testid="frosted-promo-0"
   >
     <a
       aria-hidden="true"

@@ -14,7 +14,12 @@ import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 const Page = withPageWrapper(ArticlePageComponent);
 
 const ComponentWithContext = () => (
-  <ToggleContextProvider>
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+      frostedPromo: { enabled: true, value: 1 },
+    }}
+  >
     {/* Service set to pidgin to enable most read. Article data is in english */}
     <ServiceContextProvider service="news">
       <RequestContextProvider
@@ -42,4 +47,3 @@ export default {
 };
 
 export const ArticlePage = ComponentWithContext;
-ArticlePage.storyName = 'Pages/Article Page';
