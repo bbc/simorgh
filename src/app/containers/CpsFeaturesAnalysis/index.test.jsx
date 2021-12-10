@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -11,10 +12,16 @@ import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import isLive from '#lib/utilities/isLive';
 
+const toggleFixture = ({ frostedPromoCount = 0 } = {}) => ({
+  eventTracking: { enabled: true },
+  frostedPromo: { enabled: true, value: frostedPromoCount },
+});
+
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
@@ -26,11 +33,7 @@ const renderFeaturesAnalysis = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -40,6 +43,7 @@ const renderFeaturesAnalysis = ({
 
 const renderFeaturesAnalysisNull = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
@@ -51,11 +55,7 @@ const renderFeaturesAnalysisNull = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={[]} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -66,6 +66,7 @@ const renderFeaturesAnalysisNull = ({
 const renderFeaturesAnalysisNoTitle = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="news">
@@ -77,11 +78,7 @@ const renderFeaturesAnalysisNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -91,12 +88,13 @@ const renderFeaturesAnalysisNoTitle = ({
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
-describe('CpsRelatedContent', () => {
+describe('CpsFeaturesAnalysis', () => {
+  it('tests use a fixture that has multiple features', () => {
+    expect(features.length).toBeGreaterThan(1);
+  });
+
   it('should render Story Feature components when given appropriate data', () => {
     isLive.mockImplementationOnce(() => true);
-
-    // Ensure fixture still has features
-    expect(features.length).toBe(2);
 
     const { asFragment } = renderFeaturesAnalysis();
 
@@ -151,7 +149,7 @@ describe('CpsRelatedContent', () => {
   });
 });
 
-describe('Event Tracking', () => {
+describe('CpsFeaturesAnalysis - Event Tracking', () => {
   it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     isLive.mockImplementationOnce(() => true);
     const expected = {
@@ -188,5 +186,34 @@ describe('Event Tracking', () => {
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
     expect(blockLevelTracking).toEqual(expected);
+  });
+});
+
+const countFrostedPromos = container =>
+  container.querySelectorAll('[data-testid^=frosted-promo]').length;
+
+describe('CpsFeaturesAnalysis - Frosted Promos', () => {
+  it('should not render frosted promos by default', async () => {
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: null,
+    });
+
+    expect(countFrostedPromos(container)).toBe(0);
+  });
+
+  it('can render a single frosted promo', async () => {
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: 1,
+    });
+
+    expect(countFrostedPromos(container)).toBe(1);
+  });
+
+  it('can render multiple frosted promos', async () => {
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: features.length,
+    });
+
+    expect(countFrostedPromos(container)).toBe(features.length);
   });
 });
