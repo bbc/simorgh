@@ -3912,39 +3912,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@loadable/component@npm:5.15.0":
-  version: 5.15.0
-  resolution: "@loadable/component@npm:5.15.0"
+"@loadable/component@npm:5.15.2":
+  version: 5.15.2
+  resolution: "@loadable/component@npm:5.15.2"
   dependencies:
     "@babel/runtime": ^7.7.7
     hoist-non-react-statics: ^3.3.1
     react-is: ^16.12.0
   peerDependencies:
     react: ">=16.3.0"
-  checksum: 20d2836ea18431843ed25fa243f27d63a1a7bc9b541f12e7fdc95ed6be53311cd0f9467db293c4b7ea801c0950226abdcb4ea45aa7e13d5f2f728e70d1a4576e
+  checksum: dd027f3f9fb684613506fe48dcb656367a13731c139134fb71c2bc1734df4218fdb64e5ca80fa2575fdf52e1be0e0a2ec770f0ca77275706e66d1074d0835401
   languageName: node
   linkType: hard
 
-"@loadable/server@npm:5.15.1":
-  version: 5.15.1
-  resolution: "@loadable/server@npm:5.15.1"
+"@loadable/server@npm:5.15.2":
+  version: 5.15.2
+  resolution: "@loadable/server@npm:5.15.2"
   dependencies:
     lodash: ^4.17.15
   peerDependencies:
     "@loadable/component": ^5.0.1
     react: ">=16.3.0"
-  checksum: cd8ba04709bd66bad426619a160fc814a7e14fe2006b5a1a6e44ba7832b455a34354dc75f8101496e6d384f972ea30befcaa2c23e13db553d7fdb1ed191d1a94
+  checksum: 9f7188b4d79717dd058ed9064fcf8454f236dc2165280203110d34e8a7f63cbe8ba9ab77a337174108a150b05715b64b0131295a28b2866b320514299f35db29
   languageName: node
   linkType: hard
 
-"@loadable/webpack-plugin@npm:5.15.1":
-  version: 5.15.1
-  resolution: "@loadable/webpack-plugin@npm:5.15.1"
+"@loadable/webpack-plugin@npm:5.15.2":
+  version: 5.15.2
+  resolution: "@loadable/webpack-plugin@npm:5.15.2"
   dependencies:
     make-dir: ^3.0.2
   peerDependencies:
     webpack: ">=4.6.0"
-  checksum: e4edc018f8ecb759ffae0b9d3603a90d78947b71768dee930569848fb3f4b268a55fb555c82bb84fe4f8c87b7173c79cb08d71812db7f3f7c6296cc210f9d699
+  checksum: fee31c7f8c158c1cf987dee57e1a8e7b822decd004fd3c00895e30c6780584410d0199e44d10e7bf225ea30bed439404755272396d515d51a65f02e8e3ae1db0
   languageName: node
   linkType: hard
 
@@ -19691,9 +19691,9 @@ resolve@^2.0.0-next.3:
     "@emotion/server": 11.4.0
     "@emotion/styled": 11.6.0
     "@loadable/babel-plugin": 5.13.2
-    "@loadable/component": 5.15.0
-    "@loadable/server": 5.15.1
-    "@loadable/webpack-plugin": 5.15.1
+    "@loadable/component": 5.15.2
+    "@loadable/server": 5.15.2
+    "@loadable/webpack-plugin": 5.15.2
     "@optimizely/react-sdk": 2.7.0
     "@storybook/addon-a11y": 6.4.9
     "@storybook/addon-controls": 6.4.9
