@@ -153,6 +153,7 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://cdn.optimizely.com/',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -367,6 +368,7 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
+        'https://cdn.optimizely.com/',
         "'self'",
       ],
       defaultSrcExpectation: [
