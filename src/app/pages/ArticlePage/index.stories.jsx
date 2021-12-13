@@ -7,8 +7,8 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import ArticlePageComponent from './ArticlePage';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/news/articles/c5jje4ejkqvo';
-import secondaryColumn from '#data/news/secondaryColumn';
+import articleData from '#data/pidgin/articles/crrrkxz2k0ko';
+import secondaryColumn from '#data/pidgin/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 
 const Page = withPageWrapper(ArticlePageComponent);
@@ -21,17 +21,17 @@ const ComponentWithContext = () => (
     }}
   >
     {/* Service set to pidgin to enable most read. Article data is in english */}
-    <ServiceContextProvider service="news">
+    <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         isAmp={false}
         pageType={ARTICLE_PAGE}
-        service="news"
+        service="pidgin"
       >
         <UserContextProvider>
           <MemoryRouter>
             <Page
               pageData={{ ...articleData, secondaryColumn }}
-              mostReadEndpointOverride="./data/news/mostRead/index.json"
+              mostReadEndpointOverride="./data/pidgin/mostRead/index.json"
             />
           </MemoryRouter>
         </UserContextProvider>
