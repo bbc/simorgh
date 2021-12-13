@@ -26,12 +26,14 @@ const buildImageProperties = image => {
     originCode,
     locator,
     resolution: 400,
+    isWebP: true,
   });
 
   const smallSrc = buildIChefURL({
     originCode,
     locator,
     resolution: 240,
+    isWebP: true,
   });
 
   return {

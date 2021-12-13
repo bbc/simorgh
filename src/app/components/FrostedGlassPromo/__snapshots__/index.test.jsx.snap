@@ -345,7 +345,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -390,7 +390,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
           class="emotion-8 emotion-9 emotion-10"
           height="549"
           sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp"
           width="976"
         />
       </picture>
@@ -581,7 +581,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -626,7 +626,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
           class="emotion-8 emotion-9 emotion-10"
           height="351"
           sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp"
           width="624"
         />
       </picture>
