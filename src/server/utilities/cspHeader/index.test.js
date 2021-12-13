@@ -140,6 +140,7 @@ describe('cspHeader', () => {
         ...bbcDomains,
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
+        'https://cdn.optimizely.com/',
         'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
@@ -153,7 +154,6 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
-        'https://cdn.optimizely.com/',
         "'self'",
       ],
       defaultSrcExpectation: [
@@ -355,6 +355,7 @@ describe('cspHeader', () => {
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
+        'https://cdn.optimizely.com/',
         'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
@@ -368,7 +369,6 @@ describe('cspHeader', () => {
         'https://fundingchoicesmessages.google.com',
         'https://secure-dcr-cert.imrworldwide.com',
         'https://*.safeframe.googlesyndication.com',
-        'https://cdn.optimizely.com/',
         "'self'",
       ],
       defaultSrcExpectation: [
