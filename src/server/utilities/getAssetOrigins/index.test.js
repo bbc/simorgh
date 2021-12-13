@@ -40,7 +40,6 @@ describe('getAssetOrigins', () => {
 
     expect(getAssetOrigins('foobar')).toEqual([
       ...testCookieOrigins,
-      'https://ichef.test.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
     ]);
