@@ -3,6 +3,7 @@ import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
+import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -30,7 +31,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
   );
 
   const isHighImpactVariation =
-    promoVariation === HIGH_IMPACT_VARIATION && !isAmp;
+    promoVariation === HIGH_IMPACT_VARIATION && !isLive() && !isAmp;
 
   return (
     <StoryPromoUl>
@@ -80,7 +81,7 @@ const PromoComponent = ({ promo, dir }) => {
   );
 
   const StoryPromoComponent =
-    promoVariation === HIGH_IMPACT_VARIATION && !isAmp
+    promoVariation === HIGH_IMPACT_VARIATION && !isLive() && !isAmp
       ? FrostedGlassPromo
       : StoryPromo;
 
