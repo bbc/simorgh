@@ -44,6 +44,7 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   decorators: [withKnobs],
+  parameters: { layout: 'fullscreen' },
 };
 
 export const ArticlePage = ComponentWithContext;
