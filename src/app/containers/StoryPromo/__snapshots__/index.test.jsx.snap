@@ -342,7 +342,7 @@ exports[`StoryPromo Container should render audio correctly for amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -1269,7 +1269,7 @@ exports[`StoryPromo Container should render audio promoType leading on amp 1`] =
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -1662,7 +1662,7 @@ exports[`StoryPromo Container should render audio promoType top on amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -2095,7 +2095,7 @@ exports[`StoryPromo Container should render audio with no duration correctly for
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -2987,7 +2987,7 @@ exports[`StoryPromo Container should render audio with no duration promoType lea
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -3370,7 +3370,7 @@ exports[`StoryPromo Container should render audio with no duration promoType top
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -3735,7 +3735,7 @@ exports[`StoryPromo Container should render featureLink correctly for amp 1`] = 
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -4435,7 +4435,7 @@ exports[`StoryPromo Container should render featureLink promoType leading on amp
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -4734,7 +4734,7 @@ exports[`StoryPromo Container should render featureLink promoType top on amp 1`]
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -5070,7 +5070,7 @@ exports[`StoryPromo Container should render full width promos correctly for amp 
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -6966,7 +6966,7 @@ exports[`StoryPromo Container should render live correctly for amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -7645,7 +7645,7 @@ exports[`StoryPromo Container should render live promoType leading on amp 1`] = 
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -7929,7 +7929,7 @@ exports[`StoryPromo Container should render live promoType top on amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -9920,7 +9920,7 @@ exports[`StoryPromo Container should render standard correctly for amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -10620,7 +10620,7 @@ exports[`StoryPromo Container should render standard promoType leading on amp 1`
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -10919,7 +10919,7 @@ exports[`StoryPromo Container should render standard promoType top on amp 1`] = 
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -11249,7 +11249,7 @@ exports[`StoryPromo Container should render standardLink correctly for amp 1`] =
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -11949,7 +11949,7 @@ exports[`StoryPromo Container should render standardLink promoType leading on am
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -12248,7 +12248,7 @@ exports[`StoryPromo Container should render standardLink promoType top on amp 1`
             <amp-img
               alt="A lone Koala perches in a eucalyptus tree"
               attribution="BBC"
-              fallback="true"
+              fallback=""
               height="549"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsdevpb/14A31/test/_63692548_000327537-1.jpg"
@@ -12578,7 +12578,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary correctly f
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -13278,7 +13278,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType l
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -13577,7 +13577,7 @@ exports[`StoryPromo Container should render standardOvertypedSummary promoType t
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -13968,7 +13968,7 @@ exports[`StoryPromo Container should render video correctly for amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -14889,7 +14889,7 @@ exports[`StoryPromo Container should render video promoType leading on amp 1`] =
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
@@ -15279,7 +15279,7 @@ exports[`StoryPromo Container should render video promoType top on amp 1`] = `
             <amp-img
               alt="Image Alt text"
               attribution="Image provider"
-              fallback="true"
+              fallback=""
               height="1152"
               layout="responsive"
               src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
