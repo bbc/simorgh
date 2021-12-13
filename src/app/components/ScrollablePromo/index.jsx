@@ -8,6 +8,7 @@ import {
 
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
+  GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/dist/breakpoints';
 
@@ -24,23 +25,28 @@ const ScrollablePromo = ({ blocks }) => {
 
   const promoBox = `
     flex-shrink: 0;
-    width: 205px;
+    width: 237px;
     background-color: #ffffff;
     padding: ${GEL_SPACING_DBL};
     margin: 0;
-    margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+    margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
     margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
 
-    @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
       &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
       }
+    }
+
+    @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}){
+      width: 178px;
     }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
       &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+        margin:0;
       }
+      width: 211px;
     }
   `;
 

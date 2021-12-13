@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { pathOr } from 'ramda';
 
 import { getPica } from '@bbc/gel-foundations/dist/typography';
-import { getSerifBold } from '@bbc/psammead-styles/dist/font-styles';
+import { getSerifRegular } from '@bbc/psammead-styles/dist/font-styles';
 import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
 
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -12,9 +12,10 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const C_GREY_8 = '#202224';
 
+//Use Reith Medium instead of Reith Bold
 const Link = styled.a`
   ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSerifBold(service)};
+  ${({ service }) => service && getSerifRegular(service)};
   width: 100%;
 
   text-overflow: ellipsis;
@@ -38,6 +39,7 @@ const Link = styled.a`
 
 const PromoLink = ({ block }) => {
   const { script, service, dir } = useContext(ServiceContext);
+  console.log(getSerifRegular(service));
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
