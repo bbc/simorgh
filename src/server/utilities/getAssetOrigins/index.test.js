@@ -62,7 +62,6 @@ describe('getAssetOrigins', () => {
 
     expect(getAssetOrigins('news')).toEqual([
       ...testCookieOrigins,
-      'https://ichef.test.bbci.co.uk',
       'http://some.statichost.net',
       'http://some.ati.static.host.net',
       ...fontOrigins,
