@@ -8,6 +8,7 @@ import {
 } from '@bbc/gel-foundations/dist/spacings';
 
 import {
+  GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_1_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
@@ -32,6 +33,16 @@ const ScrollablePromo = ({ blocks }) => {
     padding: ${GEL_SPACING_DBL};
     margin: 0;
     margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING_DBL};
+
+    @media (min-width: 0){
+      &:first-child {
+        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+      }
+
+      &:last-child {
+        margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
+      }
+    }
 
     @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}){
       &:first-child {
