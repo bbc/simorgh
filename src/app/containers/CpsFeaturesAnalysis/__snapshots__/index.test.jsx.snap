@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CpsRelatedContent should render Story Feature components when given appropriate data 1`] = `
+exports[`CpsFeaturesAnalysis should render Story Feature components when given appropriate data 1`] = `
 <DocumentFragment>
   .emotion-1 {
   width: 100%;
@@ -782,7 +782,7 @@ exports[`CpsRelatedContent should render Story Feature components when given app
 </DocumentFragment>
 `;
 
-exports[`CpsRelatedContent should render Story Promo components without <ul> when given single item in collection 1`] = `
+exports[`CpsFeaturesAnalysis should render Story Promo components without <ul> when given single item in collection 1`] = `
 <DocumentFragment>
   .emotion-1 {
   width: 100%;
