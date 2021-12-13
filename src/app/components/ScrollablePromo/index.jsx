@@ -29,21 +29,14 @@ const ScrollablePromo = ({ blocks }) => {
     background-color: #ffffff;
     padding: ${GEL_SPACING_DBL};
     margin: 0;
-    margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
     margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
-
-    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-      &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
-      }
-    }
 
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}){
       width: 178px;
     }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-      &:first-child {
+      &:last-child {
         margin:0;
       }
       width: 211px;
