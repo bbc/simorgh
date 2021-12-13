@@ -14,8 +14,10 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 
-const Page = withPageWrapper(StoryPage);
+const PageWithOptimizely = withOptimizelyProvider(StoryPage, true);
+const Page = withPageWrapper(PageWithOptimizely);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const showTopStories = boolean('Show Top Stories', true);

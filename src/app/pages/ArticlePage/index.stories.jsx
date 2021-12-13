@@ -10,8 +10,10 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 
-const Page = withPageWrapper(ArticlePageComponent);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, true);
+const Page = withPageWrapper(PageWithOptimizely);
 
 const ComponentWithContext = () => (
   <ToggleContextProvider

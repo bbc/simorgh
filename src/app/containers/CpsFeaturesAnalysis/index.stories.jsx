@@ -7,6 +7,12 @@ import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+
+const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(
+  FeaturesAnalysis,
+  true,
+);
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -31,7 +37,7 @@ const Component = ({
             frostedPromo: { enabled: true, value: 1 },
           }}
         >
-          <FeaturesAnalysis content={data} />
+          <FeaturesAnalysisWithOptimizely content={data} />
         </ToggleContextProvider>
       </RequestContextProvider>
     </ServiceContextProvider>
