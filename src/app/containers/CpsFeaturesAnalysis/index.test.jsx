@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -99,12 +100,13 @@ describe('CpsRelatedContent', () => {
     jest.clearAllMocks();
   });
 
+  it('tests use a fixture that has multiple features', () => {
+    expect(features.length).toBeGreaterThan(1);
+  });
+
   it('should render Story Feature components when given appropriate data as the control variant', () => {
     isLive.mockImplementationOnce(() => true);
     useOptimizelyVariation.mockReturnValue(null);
-
-    // Ensure fixture still has features
-    expect(features.length).toBe(2);
 
     const { asFragment } = renderFeaturesAnalysis();
 
@@ -195,7 +197,7 @@ describe('CpsRelatedContent', () => {
   });
 });
 
-describe('Event Tracking', () => {
+describe('CpsFeaturesAnalysis - Event Tracking', () => {
   it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     isLive.mockImplementationOnce(() => true);
     useOptimizelyVariation.mockReturnValue(null);

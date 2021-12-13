@@ -73,7 +73,6 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
-
   const { isAmp } = useContext(RequestContext);
 
   const promoVariation = useOptimizelyVariation(
