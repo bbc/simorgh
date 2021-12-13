@@ -20,10 +20,10 @@ describe('AmpIncludeContainer', () => {
     jest.resetModules();
   });
 
-  it('should render for a valid IDT2 include', async () => {
+  it('should render for a valid IDT2 include without fallbackSrcset', async () => {
     const { container } = render(<Idt2Amp {...validIdt2Props} />);
 
-    expect(container.querySelectorAll('amp-img').length).toEqual(2);
+    expect(container.querySelectorAll('amp-img').length).toEqual(1);
     expect(container).toMatchSnapshot();
   });
 

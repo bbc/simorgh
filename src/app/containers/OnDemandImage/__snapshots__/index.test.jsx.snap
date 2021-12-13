@@ -68,9 +68,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
       >
         <source
           srcset="https://mock-url 128w,https://mock-url 240w,https://mock-url 480w"
-          type="image/webp"
         />
-        <source />
         <img
           alt="BBC News"
           class="emotion-6 emotion-7 emotion-8"

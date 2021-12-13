@@ -1162,7 +1162,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                         >
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
-                            type="image/webp"
                           />
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
@@ -3236,7 +3235,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                         >
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg.webp 800w"
-                            type="image/webp"
                           />
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/CB33/production/_97491025_img_1060.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/CB33/production/_97491025_img_1060.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/CB33/production/_97491025_img_1060.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/CB33/production/_97491025_img_1060.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/CB33/production/_97491025_img_1060.jpg 800w"
@@ -5762,7 +5760,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                         >
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg.webp 800w"
-                            type="image/webp"
                           />
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg 800w"
@@ -7565,7 +7562,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                         >
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg.webp 800w"
-                            type="image/webp"
                           />
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/1840E/test/_63724399_clinton.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/1840E/test/_63724399_clinton.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/1840E/test/_63724399_clinton.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/1840E/test/_63724399_clinton.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/1840E/test/_63724399_clinton.jpg 800w"
@@ -10039,7 +10035,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                         >
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg.webp 800w"
-                            type="image/webp"
                           />
                           <source
                             srcset="https://ichef.test.bbci.co.uk/news/240/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsprodpb/1DBC/production/_101621670_0-158827.jpg 800w"

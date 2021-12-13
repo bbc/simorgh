@@ -30,19 +30,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="9"
-      >
-        <amp-img
-          alt=""
-          attribution=""
-          data-e2e="media-player__placeholder"
-          fallback="true"
-          height="16"
-          layout="fill"
-          placeholder="true"
-          src="http://foo.bar/placeholder.png"
-          width="9"
-        />
-      </amp-img>
+      />
       <noscript />
     </amp-iframe>
   </div>
@@ -79,19 +67,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="16"
-      >
-        <amp-img
-          alt=""
-          attribution=""
-          data-e2e="media-player__placeholder"
-          fallback="true"
-          height="9"
-          layout="fill"
-          placeholder="true"
-          src="http://foo.bar/placeholder.png"
-          width="16"
-        />
-      </amp-img>
+      />
       <noscript />
     </amp-iframe>
   </div>
@@ -134,19 +110,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
         placeholder="true"
         src="http://foo.bar/placeholder.png"
         width="9"
-      >
-        <amp-img
-          alt=""
-          attribution=""
-          data-e2e="media-player__placeholder"
-          fallback="true"
-          height="16"
-          layout="fill"
-          placeholder="true"
-          src="http://foo.bar/placeholder.png"
-          width="9"
-        />
-      </amp-img>
+      />
       <noscript />
     </amp-iframe>
   </div>
@@ -323,9 +287,6 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
       <picture
         class="emotion-19 emotion-20"
       >
-        <source
-          type="image/webp"
-        />
         <source />
         <img
           alt=""
@@ -540,9 +501,6 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
       <picture
         class="emotion-21 emotion-22"
       >
-        <source
-          type="image/webp"
-        />
         <source />
         <img
           alt=""
@@ -725,9 +683,6 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
       <picture
         class="emotion-19 emotion-20"
       >
-        <source
-          type="image/webp"
-        />
         <source />
         <img
           alt=""
@@ -1035,9 +990,6 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
       <picture
         class="emotion-21 emotion-22"
       >
-        <source
-          type="image/webp"
-        />
         <source />
         <img
           alt=""
