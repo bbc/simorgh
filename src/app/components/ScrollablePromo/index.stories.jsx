@@ -11,7 +11,7 @@ import {
   twoLinksWithNoImages,
   truncatedTextInSingleLink,
   arabicText,
-} from './testData';
+} from './helpers/fixtureData';
 
 const BackGround = styled.div`
   background-color: #f6f6f6;

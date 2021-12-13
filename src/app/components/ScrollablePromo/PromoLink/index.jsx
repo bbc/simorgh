@@ -13,6 +13,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 const C_GREY_8 = '#202224';
 
 //Use Reith Medium instead of Reith Bold
+// font-weight: 500;
 const Link = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifRegular(service)};
@@ -39,7 +40,6 @@ const Link = styled.a`
 
 const PromoLink = ({ block }) => {
   const { script, service, dir } = useContext(ServiceContext);
-  console.log(getSerifRegular(service));
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
