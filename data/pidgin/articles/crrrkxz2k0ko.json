@@ -407,18 +407,18 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                              "text": "This is a normal length.",
                               "blocks": [
                                 {
                                   "type": "urlLink",
                                   "model": {
-                                    "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                    "text": "This is a normal length.",
                                     "locator": "https://www.bbc.co.uk/pidgin",
                                     "blocks": [
                                       {
                                         "type": "fragment",
                                         "model": {
-                                          "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                          "text": "This is a normal length.",
                                           "attributes": []
                                         }
                                       }
