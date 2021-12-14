@@ -60,7 +60,7 @@ const PromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block, Ourstyle }) => {
+const Promo = ({ block }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
@@ -77,7 +77,7 @@ const Promo = ({ block, Ourstyle }) => {
     textBlock,
   );
   return (
-    <PromoBox dir={dir} Ourstyle={Ourstyle}>
+    <PromoBox dir={dir}>
       <Link href={href} service={service} script={script} dir={dir}>
         {title}
       </Link>
@@ -88,7 +88,6 @@ const Promo = ({ block, Ourstyle }) => {
 Promo.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   block: object.isRequired,
-  Ourstyle: string.isRequired,
 };
 
 export default Promo;
