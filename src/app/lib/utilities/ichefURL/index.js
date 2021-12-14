@@ -1,3 +1,6 @@
+// List of originCodes that support webp on '/news/' iChef
+const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
+
 const buildPlaceholderSrc = (src, resolution) => {
   const parts = src.split('/');
   const [domain, media, imgService, width, ...extraParts] = parts;
@@ -32,7 +35,7 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
     locator,
   ].join('/');
 
-  if (isWebP) {
+  if (isWebP && WEBP_ORIGIN_CODES.includes(originCode)) {
     return `${url}.webp`;
   }
 
