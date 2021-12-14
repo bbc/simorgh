@@ -23,30 +23,20 @@ export const createSrcsets = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  const webpSrcset = requiredResolutions
-    .map(
-      resolution =>
-        `${buildIChefUrl({
-          originCode,
-          locator,
-          resolution,
-          isWebP: true,
-        })} ${resolution}w`,
-    )
-    .join(', ');
-
-  const fallbackSrcset = requiredResolutions
-    .map(
-      resolution =>
-        `${buildIChefUrl({
-          originCode,
-          locator,
-          resolution,
-          isWebP: false,
-        })} ${resolution}w`,
-    )
-    .join(', ');
-
+  const [webpSrcset, fallbackSrcset] = [true, false].map(isWebP =>
+    requiredResolutions
+      .map(
+        resolution =>
+          `${buildIChefUrl({
+            originCode,
+            locator,
+            resolution,
+            isWebP,
+          })} ${resolution}w`,
+      )
+      .join(', '),
+  );
+  console.log({ webpSrcset, fallbackSrcset });
   return { webpSrcset, fallbackSrcset };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
