@@ -8841,7 +8841,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/ukrainian/ukraine_in_russian'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -10015,7 +10015,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/articles/c3xd4x9prgyo/simp'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -10049,7 +10049,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/simp'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
