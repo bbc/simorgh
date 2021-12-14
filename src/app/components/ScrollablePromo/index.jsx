@@ -27,13 +27,13 @@ const ScrollablePromo = ({ blocks }) => {
   // IF NO PROMO RETURN NULL
   return (
     <GridItemMediumNoMargin>
-      <PromoWrapper dir={dir}>
-        {isSingleItem ? (
+      {isSingleItem ? (
+        <PromoWrapper dir={dir}>
           <Promo block={blocks[1]} />
-        ) : (
-          <PromoList blocks={blocks} />
-        )}
-      </PromoWrapper>
+        </PromoWrapper>
+      ) : (
+        <PromoList blocks={blocks} />
+      )}
     </GridItemMediumNoMargin>
   );
 };
