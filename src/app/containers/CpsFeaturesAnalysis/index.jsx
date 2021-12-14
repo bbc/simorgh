@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
 
 import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
@@ -12,6 +13,7 @@ import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import useMediaQuery from '#hooks/useMediaQuery';
 
 const eventTrackingData = {
   block: {
@@ -22,12 +24,19 @@ const eventTrackingData = {
 const HIGH_IMPACT_VARIATION = 'variation_1';
 
 const PromoListComponent = ({ promoItems, dir }) => {
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
 
+  const [mobile, setMobile] = useState(false);
+
+  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
+    setMobile(event.matches),
+  );
+
   const promoVariation = useOptimizelyVariation(
     'high_impact_feature_analysis_promo',
+    { service, mobile },
   );
 
   const isHighImpactVariation =
@@ -71,12 +80,19 @@ PromoListComponent.defaultProps = {
 };
 
 const PromoComponent = ({ promo, dir }) => {
-  const { serviceDatetimeLocale } = useContext(ServiceContext);
+  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
   const { isAmp } = useContext(RequestContext);
 
+  const [mobile, setMobile] = useState(false);
+
+  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
+    setMobile(event.matches),
+  );
+
   const promoVariation = useOptimizelyVariation(
     'high_impact_feature_analysis_promo',
+    { service, mobile },
   );
 
   const StoryPromoComponent =
