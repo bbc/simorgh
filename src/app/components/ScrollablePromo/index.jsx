@@ -34,17 +34,7 @@ const ScrollablePromo = ({ blocks }) => {
     margin: 0;
     margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING_DBL};
 
-    @media (min-width: 0){
-      &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-      }
-
-      &:last-child {
-        margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
-      }
-    }
-
-    @media (min-width: ${GEL_GROUP_1_SCREEN_WIDTH_MIN}){
+    @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
       &:first-child {
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
       }
@@ -58,10 +48,6 @@ const ScrollablePromo = ({ blocks }) => {
       &:first-child {
         margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
       }
-
-      &:last-child {
-        margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
-      }
     }
 
     @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}){
@@ -73,14 +59,11 @@ const ScrollablePromo = ({ blocks }) => {
     }
 
     @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+      width: 211px;
+      
       &:first-child {
         margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
       }
-
-      &:last-child {
-        margin-${dir === 'ltr' ? 'right' : 'left'}: 0;
-      }
-      width: 211px;
     }
   `;
 
