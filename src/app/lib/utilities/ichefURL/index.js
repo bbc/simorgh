@@ -35,7 +35,9 @@ const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
     locator,
   ].join('/');
 
-  if (isWebP && WEBP_ORIGIN_CODES.includes(originCode)) {
+  const isWebPSupported = isWebP && WEBP_ORIGIN_CODES.includes(originCode);
+
+  if (isWebPSupported) {
     return `${url}.webp`;
   }
 
