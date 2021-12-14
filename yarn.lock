@@ -3005,9 +3005,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-navigation@npm:9.2.15":
-  version: 9.2.15
-  resolution: "@bbc/psammead-navigation@npm:9.2.15"
+"@bbc/psammead-navigation@npm:9.2.16":
+  version: 9.2.16
+  resolution: "@bbc/psammead-navigation@npm:9.2.16"
   dependencies:
     "@bbc/gel-foundations": 7.0.0
     "@bbc/psammead-assets": 3.1.10
@@ -3017,7 +3017,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.7.2
     react: ">=16.9.0"
-  checksum: be6964772f74c71fb597223cb48fbdf659062d34a4a3ee896e8d451bd241bc8192c2c41fc1dcac9f330443636f04ac79d915a973fb9373384dc09f43b08e1225
+  checksum: 8c08640a3088d89520cc0172ab5134278038a03c4cff1cad3fc403ae5be1460de5c37f4ec145b54425f16116de38d1fd9686450f7799bac2aa22f7acb53c3280
   languageName: node
   linkType: hard
 
@@ -19586,7 +19586,7 @@ resolve@^2.0.0-next.3:
     "@bbc/psammead-live-label": 2.0.32
     "@bbc/psammead-locales": 5.0.7
     "@bbc/psammead-media-indicator": 6.1.13
-    "@bbc/psammead-navigation": 9.2.15
+    "@bbc/psammead-navigation": 9.2.16
     "@bbc/psammead-paragraph": 4.0.27
     "@bbc/psammead-play-button": 3.0.32
     "@bbc/psammead-rich-text-transforms": 2.0.6
