@@ -13,18 +13,19 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import isLive from '#lib/utilities/isLive';
 
-jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  isAmp = false,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
-        isAmp={false}
+        isAmp={isAmp}
         pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
@@ -95,80 +96,60 @@ const renderFeaturesAnalysisNoTitle = ({
 
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
-describe('CpsRelatedContent', () => {
-  afterEach(() => {
-    jest.clearAllMocks();
+describe('CpsFeaturesAnalysis', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
   });
 
   it('tests use a fixture that has multiple features', () => {
     expect(features.length).toBeGreaterThan(1);
   });
 
-  it('should render Story Feature components when given appropriate data as the control variant', () => {
-    isLive.mockImplementationOnce(() => true);
-    useOptimizelyVariation.mockReturnValue(null);
+  it('should render without the top high impact promo', () => {
+    const { queryAllByTestId } = renderFeaturesAnalysis();
 
-    const { asFragment } = renderFeaturesAnalysis();
-
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
-      features.length,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
   });
 
-  it('should render Story Promo components without <ul> when given single item in collection as the control variant', () => {
-    isLive.mockImplementationOnce(() => true);
-    useOptimizelyVariation.mockReturnValue(null);
-
-    const topFeaturesOneItem = [features[0]];
-
-    expect(features[0]).toBeTruthy();
-
-    const { asFragment } = renderFeaturesAnalysis({
-      content: topFeaturesOneItem,
-    });
-
-    expect(document.querySelector(`li[class*='StoryPromoLi']`)).toBeNull();
-
-    expect(document.querySelector(`ul`)).toBeNull();
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('should render Story Feature components when given appropriate data with the top level promo as variant_1', () => {
+  it('should not render the top high impact promo, when on the live environment', () => {
     isLive.mockImplementationOnce(() => true);
     useOptimizelyVariation.mockReturnValue('variation_1');
 
-    // Ensure fixture still has features
-    expect(features.length).toBe(2);
+    const { queryAllByTestId } = renderFeaturesAnalysis();
 
-    const { asFragment } = renderFeaturesAnalysis();
-
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
-      features.length,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
   });
 
-  it('should render Story Promo components without <ul> when given single item in collection with the top level promo as variant_1', () => {
-    isLive.mockImplementationOnce(() => true);
+  it('should not render the top high impact promo, when on amp', () => {
     useOptimizelyVariation.mockReturnValue('variation_1');
 
+    const { queryAllByTestId } = renderFeaturesAnalysis({ isAmp: true });
+
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
+  });
+
+  it('should render with the top high impact promo', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { queryAllByTestId } = renderFeaturesAnalysis();
+
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(1);
+  });
+
+  it('should render Story Promo component without a list when given a single item in the collection', () => {
     const topFeaturesOneItem = [features[0]];
 
-    expect(features[0]).toBeTruthy();
-
-    const { asFragment } = renderFeaturesAnalysis({
+    const { queryByRole } = renderFeaturesAnalysis({
       content: topFeaturesOneItem,
     });
 
-    expect(document.querySelector(`li[class*='StoryPromoLi']`)).toBeNull();
+    expect(queryByRole('list')).toBe(null);
+  });
 
-    expect(document.querySelector(`ul`)).toBeNull();
+  it('should render Story Promo component with a list when given multiple items in the collection', () => {
+    const { queryByRole } = renderFeaturesAnalysis();
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(queryByRole('list')).toBeTruthy();
   });
 
   it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {

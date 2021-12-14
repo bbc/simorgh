@@ -33,6 +33,8 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const isHighImpactVariation =
     promoVariation === HIGH_IMPACT_VARIATION && !isLive() && !isAmp;
 
+  // console.log(promoVariation === HIGH_IMPACT_VARIATION, !isLive(), !isAmp)
+
   return (
     <StoryPromoUl>
       {promoItems.map((item, promoIndex) => {
