@@ -30,6 +30,8 @@ const ScrollPromo = styled.ul`
 `;
 
 const StyledList = styled.li`
+  display: flex;
+  flex-shrink: 0;
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
     margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
     &:first-child {
