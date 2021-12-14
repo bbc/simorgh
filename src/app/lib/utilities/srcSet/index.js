@@ -36,7 +36,7 @@ export const createSrcsets = ({
       )
       .join(', '),
   );
-  console.log({ webpSrcset, fallbackSrcset });
+
   return { webpSrcset, fallbackSrcset };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
