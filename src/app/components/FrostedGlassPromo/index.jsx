@@ -5,7 +5,11 @@ import pick from 'ramda/src/pick';
 
 import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_SPACING,
+  GEL_SPACING_HLF_TRPL,
+  GEL_SPACING_DBL,
+} from '@bbc/gel-foundations/spacings';
 
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -52,20 +56,26 @@ const A = styled.a`
   color: white;
   font-size: 0.9375rem;
   line-height: 1.33;
-  padding: 0.625rem ${GEL_SPACING} 0 ${GEL_SPACING};
+  margin: 0.625rem ${GEL_SPACING} 0 ${GEL_SPACING};
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
     font-size: 1rem;
     line-height: 1.25;
-    padding: 0.875rem ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
+    margin: ${GEL_SPACING_HLF_TRPL} ${GEL_SPACING_DBL} 0 ${GEL_SPACING_DBL};
   }
   &:focus {
     text-decoration: underline;
   }
 `;
 
-const FrostedGlassPromo = props => {
+const FrostedGlassPromo = ({
+  image,
+  children,
+  footer,
+  url,
+  eventTrackingData,
+  index,
+}) => {
   const { script, service } = useContext(ServiceContext);
-  const { image, children, footer, url, eventTrackingData } = props;
 
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
@@ -78,7 +88,7 @@ const FrostedGlassPromo = props => {
   // Anchors cannot be self-closing under the HTML spec
   /* eslint-disable react/self-closing-comp */
   return (
-    <Wrapper>
+    <Wrapper data-testid={`frosted-promo-${index}`}>
       <ClickableArea
         href={url}
         onClick={onClick}
@@ -109,6 +119,7 @@ FrostedGlassPromo.propTypes = {
   url: string.isRequired,
   footer: node,
   eventTrackingData: shape({}),
+  index: number,
   image: shape({
     src: string.isRequired,
     alt: string.isRequired,
@@ -124,6 +135,7 @@ FrostedGlassPromo.propTypes = {
 FrostedGlassPromo.defaultProps = {
   footer: null,
   eventTrackingData: null,
+  index: 0,
 };
 
 export default withData(FrostedGlassPromo);
