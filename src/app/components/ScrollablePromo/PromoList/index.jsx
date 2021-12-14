@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
-import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
-import { array, string } from 'prop-types';
-import PromoLink from '../PromoLink';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
+import {
+  GEL_GROUP_0_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
+} from '@bbc/gel-foundations/dist/breakpoints';
+import { array } from 'prop-types';
+import Promo from '../Promo';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const ScrollPromo = styled.ul`
-  padding-bottom: ${GEL_SPACING_TRPL};
   display: flex;
   overflow-wrap: break-word;
-
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
@@ -27,8 +29,23 @@ const ScrollPromo = styled.ul`
   }
 `;
 
-const PromoList = ({ blocks, Ourstyle }) => {
-  const StyledList = styled.li(Ourstyle);
+const StyledList = styled.li`
+  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+    margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
+    &:first-child {
+      margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0;
+    }
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+    margin-${({ dir }) =>
+      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
+      &:first-child {
+        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0;
+      }
+  }
+`;
+
+const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
   const threeblocks = blocks.slice(1, 4);
 
@@ -37,8 +54,8 @@ const PromoList = ({ blocks, Ourstyle }) => {
       {threeblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <StyledList key={index} dir={dir} Ourstyle={Ourstyle}>
-            <PromoLink block={block} />
+          <StyledList key={index} dir={dir}>
+            <Promo block={block} />
           </StyledList>
         );
       })}
@@ -48,7 +65,6 @@ const PromoList = ({ blocks, Ourstyle }) => {
 
 PromoList.propTypes = {
   blocks: array.isRequired,
-  Ourstyle: string.isRequired,
 };
 
 export default PromoList;
