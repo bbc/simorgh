@@ -86,7 +86,6 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   // This offscreen text should come from a fully translated string.
   // https://github.com/bbc/simorgh/issues/5626
   const offScreenText = isLive ? `${ctaText} Live` : ctaText;
-
   return (
     <Bulletin
       script={script}
@@ -102,6 +101,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
+      ariaId={headline}
     />
   );
 };
