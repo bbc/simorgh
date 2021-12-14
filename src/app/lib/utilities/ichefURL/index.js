@@ -15,7 +15,7 @@ const buildPlaceholderSrc = (src, resolution) => {
   return newUrl.join('/');
 };
 
-const buildIChefURL = ({ originCode, locator, resolution, isWebP }) => {
+const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   if (originCode === 'pips') {
     return locator;
   }
