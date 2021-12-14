@@ -153,28 +153,25 @@ describe('CpsFeaturesAnalysis', () => {
   });
 
   it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {
-    renderFeaturesAnalysis();
-    expect(
-      document.querySelectorAll(
-        `section[role='region'][aria-labelledby="features-analysis-heading"]`,
-      ).length,
-    ).toBe(1);
-  });
+    const { queryByRole } = renderFeaturesAnalysis();
 
-  it('should have an [id] #features-analysis-heading', () => {
-    renderFeaturesAnalysis();
-    expect(document.querySelector(`#features-analysis-heading`)).toBeTruthy();
+    const region = queryByRole('region');
+
+    expect(region).toBeTruthy();
+    expect(region.getAttribute('aria-labelledby')).toBe(
+      'features-analysis-heading',
+    );
   });
 
   it('should not render Features and Analysis components if no data is passed', () => {
-    renderFeaturesAnalysisNull();
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
-      0,
-    );
+    const { queryAllByRole } = renderFeaturesAnalysisNull();
+
+    expect(queryAllByRole('listitem').length).toBe(0);
   });
+
   it('should render a default title if translations are not available', () => {
-    renderFeaturesAnalysisNoTitle();
-    expect(screen.getByText(`Features & Analysis`)).toBeTruthy();
+    const { queryByText } = renderFeaturesAnalysisNoTitle();
+    expect(queryByText('Features & Analysis')).toBeTruthy();
   });
 });
 
