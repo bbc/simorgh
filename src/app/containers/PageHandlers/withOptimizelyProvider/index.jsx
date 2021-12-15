@@ -5,7 +5,7 @@ import { getAtUserId } from '#lib/analyticsUtils';
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
-  eventBatchSize: 100,
+  eventBatchSize: 10,
   eventFlushInterval: 1000,
 });
 
