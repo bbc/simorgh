@@ -2,9 +2,10 @@ import React from 'react';
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
 
-import { createSrcset } from '#lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import buildIChefURL from '#lib/utilities/ichefURL';
 
 import TimestampFooter from './TimestampFooter';
 
@@ -14,12 +15,33 @@ const buildImageProperties = image => {
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
+  const { webpSrcset, fallbackSrcset } = createSrcsets({
+    originCode,
+    locator,
+    originalImageWidth: width,
+    imageResolutions: [280, 400],
+  });
+
+  const src = buildIChefURL({
+    originCode,
+    locator,
+    resolution: 400,
+  });
+
+  const smallSrc = buildIChefURL({
+    originCode,
+    locator,
+    resolution: 240,
+    isWebP: true,
+  });
+
   return {
     ratio: 52,
-    srcset: createSrcset(originCode, locator, width, [280, 400]),
+    srcset: webpSrcset,
+    fallbackSrcset,
     sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
-    src: `https://ichef.bbci.co.uk/news/400${url}`,
-    smallSrc: `https://ichef.bbci.co.uk/news/240${url}`,
+    src,
+    smallSrc,
     alt: altText,
     width,
     height,

@@ -33,6 +33,7 @@ const ArticleFigure = ({
   captionBlock,
   type,
   srcset,
+  fallbackSrcset,
   sizes,
   showCopyright,
 }) => {
@@ -99,6 +100,7 @@ const ArticleFigure = ({
             preload={preload}
             fade={fade}
             srcset={srcset}
+            fallbackSrcset={fallbackSrcset}
             sizes={sizes}
           >
             {showCopyright && renderCopyright(copyright)}
@@ -148,6 +150,7 @@ ArticleFigure.propTypes = {
   src: string.isRequired,
   type: string,
   srcset: string,
+  fallbackSrcset: string,
   sizes: string,
   width: number.isRequired,
   showCopyright: bool,
@@ -162,6 +165,7 @@ ArticleFigure.defaultProps = {
   preload: false,
   type: '',
   srcset: null,
+  fallbackSrcset: null,
   sizes: null,
   showCopyright: false,
 };
