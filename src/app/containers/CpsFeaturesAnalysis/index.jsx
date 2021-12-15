@@ -20,6 +20,7 @@ const eventTrackingData = {
   },
 };
 
+const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
 const HIGH_IMPACT_VARIATION = 'variation_1';
 
 const PromoListComponent = ({ promoItems, dir }) => {
@@ -27,9 +28,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
 
-  const promoVariation = useOptimizelyVariation(
-    'high_impact_feature_analysis_promo',
-  );
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
 
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
@@ -86,9 +85,7 @@ const PromoComponent = ({ promo, dir }) => {
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
 
-  const promoVariation = useOptimizelyVariation(
-    'high_impact_feature_analysis_promo',
-  );
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
 
   const selectComponent = () => {
     if (isAmp) return StoryPromo;
