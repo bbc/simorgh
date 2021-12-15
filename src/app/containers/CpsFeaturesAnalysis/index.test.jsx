@@ -15,10 +15,16 @@ import isLive from '#lib/utilities/isLive';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
+const toggleFixture = ({ frostedPromoCount = 0 } = {}) => ({
+  eventTracking: { enabled: true },
+  frostedPromo: { enabled: true, value: frostedPromoCount },
+});
+
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
   isAmp = false,
 } = {}) => {
   return render(
@@ -31,11 +37,7 @@ const renderFeaturesAnalysis = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -45,6 +47,7 @@ const renderFeaturesAnalysis = ({
 
 const renderFeaturesAnalysisNull = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
@@ -56,11 +59,7 @@ const renderFeaturesAnalysisNull = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={[]} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -71,6 +70,7 @@ const renderFeaturesAnalysisNull = ({
 const renderFeaturesAnalysisNoTitle = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
+  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="news">
@@ -82,11 +82,7 @@ const renderFeaturesAnalysisNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider
-          toggles={{
-            eventTracking: { enabled: true },
-          }}
-        >
+        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -214,5 +210,38 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
     const [[blockLevelTracking]] = viewTrackerSpy.mock.calls;
 
     expect(blockLevelTracking).toEqual(expected);
+  });
+});
+
+const countFrostedPromos = container =>
+  container.querySelectorAll('[data-testid^=frosted-promo]').length;
+
+describe('CpsFeaturesAnalysis - Frosted Promos', () => {
+  it('should not render frosted promos by default', async () => {
+    isLive.mockImplementationOnce(() => true);
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: null,
+    });
+
+    expect(countFrostedPromos(container)).toBe(0);
+  });
+
+  it('can render a single frosted promo', async () => {
+    isLive.mockImplementationOnce(() => true);
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: 1,
+    });
+
+    expect(countFrostedPromos(container)).toBe(1);
+  });
+
+  it('can render multiple frosted promos', async () => {
+    isLive.mockImplementation(() => true);
+
+    const { container } = renderFeaturesAnalysis({
+      frostedPromoCount: features.length,
+    });
+
+    expect(countFrostedPromos(container)).toBe(features.length);
   });
 });
