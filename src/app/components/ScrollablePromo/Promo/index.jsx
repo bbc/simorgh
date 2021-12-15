@@ -20,8 +20,8 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 const C_GREY_8 = '#202224';
 
 const Link = styled.a`
-  ${({ script }) => script && getPica(script)};
-  ${({ service }) => service && getSerifRegular(service)};
+  ${({ script }) => script && getPica(script)}
+  ${({ service }) => service && getSerifRegular(service)}
   width: 100%;
 
   text-overflow: ellipsis;
