@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { array } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import styled from '@emotion/styled';
+import isEmpty from 'ramda/src/isEmpty';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -22,6 +23,9 @@ const PromoWrapper = styled.div`
 
 const ScrollablePromo = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
+  if (isEmpty(blocks)) {
+    return null;
+  }
   const isSingleItem = blocks.length === 2;
 
   // IF NO PROMO RETURN NULL
@@ -39,7 +43,14 @@ const ScrollablePromo = ({ blocks }) => {
 };
 
 ScrollablePromo.propTypes = {
-  blocks: array.isRequired,
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }).isRequired,
+    }),
+  ).isRequired,
 };
 
 export default ScrollablePromo;

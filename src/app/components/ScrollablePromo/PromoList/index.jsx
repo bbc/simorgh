@@ -6,7 +6,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/dist/breakpoints';
-import { array } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import Promo from '../Promo';
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -78,7 +78,14 @@ const PromoList = ({ blocks }) => {
 };
 
 PromoList.propTypes = {
-  blocks: array.isRequired,
+  blocks: arrayOf(
+    shape({
+      type: string.isRequired,
+      model: shape({
+        blocks: arrayOf(oneOfType([string, object])),
+      }).isRequired,
+    }),
+  ).isRequired,
 };
 
 export default PromoList;

@@ -1164,3 +1164,54 @@ export const arabicText = [
     position: [3, 4],
   },
 ];
+
+export const PromoSingleBlock = {
+  id: 'f783bde4',
+  type: 'link',
+  model: {
+    locator: 'urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo',
+    blocks: [
+      {
+        id: '07bb30d5',
+        type: 'text',
+        model: {
+          blocks: [
+            {
+              id: '91046714',
+              type: 'paragraph',
+              model: {
+                text: 'This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.',
+                blocks: [
+                  {
+                    id: '5c980d47',
+                    type: 'urlLink',
+                    model: {
+                      text: 'This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.',
+                      locator: 'https://www.bbc.com/mundo',
+                      blocks: [
+                        {
+                          id: '683ec1db',
+                          type: 'fragment',
+                          model: {
+                            text: 'This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.',
+                            attributes: [],
+                          },
+                          position: [5, 3, 1, 1, 1, 1],
+                        },
+                      ],
+                      isExternal: false,
+                    },
+                    position: [5, 3, 1, 1, 1],
+                  },
+                ],
+              },
+              position: [5, 3, 1, 1],
+            },
+          ],
+        },
+        position: [5, 3, 1],
+      },
+    ],
+  },
+  position: [5, 3],
+};

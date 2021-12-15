@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { object, string } from 'prop-types';
+import { object } from 'prop-types';
 import styled from '@emotion/styled';
-import { pathOr } from 'ramda';
+import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/dist/typography';
 import { getSerifRegular } from '@bbc/psammead-styles/dist/font-styles';
 import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
@@ -19,8 +19,6 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 
 const C_GREY_8 = '#202224';
 
-// Use Reith Medium instead of Reith Bold
-// font-weight: 500;
 const Link = styled.a`
   ${({ script }) => script && getPica(script)};
   ${({ service }) => service && getSerifRegular(service)};
@@ -60,7 +58,7 @@ const PromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block, Ourstyle }) => {
+const Promo = ({ block }) => {
   const { script, service, dir } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
@@ -77,7 +75,7 @@ const Promo = ({ block, Ourstyle }) => {
     textBlock,
   );
   return (
-    <PromoBox dir={dir} Ourstyle={Ourstyle}>
+    <PromoBox dir={dir}>
       <Link href={href} service={service} script={script} dir={dir}>
         {title}
       </Link>
@@ -88,7 +86,6 @@ const Promo = ({ block, Ourstyle }) => {
 Promo.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   block: object.isRequired,
-  Ourstyle: string.isRequired,
 };
 
 export default Promo;
