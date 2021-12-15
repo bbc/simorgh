@@ -2,6 +2,28 @@ import buildIChefUrl from '#lib/utilities/ichefURL';
 
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
 
+const getMimeType = srcset => {
+  if (!srcset) return null;
+
+  const [firstSrcset] = srcset?.split(',');
+  const [firstSrcsetUrl] = firstSrcset?.split(' ');
+  const urlFileExtension = firstSrcsetUrl.split('.').pop();
+
+  switch (urlFileExtension) {
+    case 'webp':
+      return 'image/webp';
+    case 'jpg':
+    case 'jpeg':
+      return 'image/jpeg';
+    case 'png':
+      return 'image/png';
+    case 'gif':
+      return 'image/gif';
+    default:
+      return null;
+  }
+};
+
 export const createSrcsets = ({
   originCode,
   locator,
@@ -9,7 +31,7 @@ export const createSrcsets = ({
   imageResolutions = DEFAULT_RESOLUTIONS,
 }) => {
   if (originCode === 'pips') {
-    return { webpSrcset: null, fallbackSrcset: null };
+    return { primarySrcset: null, fallbackSrcset: null };
   }
 
   const requiredResolutions = imageResolutions.filter(
@@ -23,7 +45,7 @@ export const createSrcsets = ({
     requiredResolutions.push(originalImageWidth);
   }
 
-  const [webpSrcset, fallbackSrcset] = [true, false].map(isWebP =>
+  const [primarySrcset, fallbackSrcset] = [true, false].map(isWebP =>
     requiredResolutions
       .map(
         resolution =>
@@ -37,7 +59,12 @@ export const createSrcsets = ({
       .join(', '),
   );
 
-  return { webpSrcset, fallbackSrcset };
+  return {
+    primarySrcset,
+    primaryMimeType: getMimeType(primarySrcset),
+    fallbackSrcset,
+    fallbackMimeType: getMimeType(fallbackSrcset),
+  };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
   if (!originCode) return '';

@@ -34,6 +34,8 @@ const ArticleFigure = ({
   type,
   srcset,
   fallbackSrcset,
+  primaryMimeType,
+  fallbackMimeType,
   sizes,
   showCopyright,
 }) => {
@@ -101,6 +103,8 @@ const ArticleFigure = ({
             fade={fade}
             srcset={srcset}
             fallbackSrcset={fallbackSrcset}
+            primaryMimeType={primaryMimeType}
+            fallbackMimeType={fallbackMimeType}
             sizes={sizes}
           >
             {showCopyright && renderCopyright(copyright)}
@@ -151,6 +155,8 @@ ArticleFigure.propTypes = {
   type: string,
   srcset: string,
   fallbackSrcset: string,
+  primaryMimeType: string,
+  fallbackMimeType: string,
   sizes: string,
   width: number.isRequired,
   showCopyright: bool,
@@ -166,6 +172,8 @@ ArticleFigure.defaultProps = {
   type: '',
   srcset: null,
   fallbackSrcset: null,
+  primaryMimeType: null,
+  fallbackMimeType: null,
   sizes: null,
   showCopyright: false,
 };

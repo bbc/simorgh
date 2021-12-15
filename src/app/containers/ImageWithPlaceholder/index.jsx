@@ -40,6 +40,8 @@ const ImageWithPlaceholder = ({
   sizes,
   srcset,
   fallbackSrcset,
+  primaryMimeType,
+  fallbackMimeType,
   width,
   darkMode,
 }) => {
@@ -52,6 +54,8 @@ const ImageWithPlaceholder = ({
     width,
     srcset,
     fallbackSrcset,
+    primaryMimeType,
+    fallbackMimeType,
     fade,
     height,
   };
@@ -115,6 +119,8 @@ ImageWithPlaceholder.propTypes = {
   src: string.isRequired,
   srcset: string,
   fallbackSrcset: string,
+  primaryMimeType: string,
+  fallbackMimeType: string,
   sizes: string,
   width: number.isRequired,
 };
@@ -130,6 +136,8 @@ ImageWithPlaceholder.defaultProps = {
   preload: false,
   srcset: null,
   fallbackSrcset: null,
+  primaryMimeType: null,
+  fallbackMimeType: null,
   sizes: null,
 };
 

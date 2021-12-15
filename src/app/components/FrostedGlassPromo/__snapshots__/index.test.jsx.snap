@@ -381,9 +381,11 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       >
         <source
           srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
+          type="image/webp"
         />
         <source
           srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
+          type="image/jpeg"
         />
         <img
           alt="Orange 2"
@@ -617,9 +619,11 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       >
         <source
           srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
+          type="image/webp"
         />
         <source
           srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 400w"
+          type="image/jpeg"
         />
         <img
           alt="E dey good for your"
