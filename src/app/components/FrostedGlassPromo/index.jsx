@@ -98,7 +98,16 @@ const FrostedGlassPromo = ({
       <ImageWithPlaceholder
         darkMode
         {...pick(
-          ['src', 'srcset', 'sizes', 'alt', 'ratio', 'width', 'height'],
+          [
+            'src',
+            'srcset',
+            'fallbackSrcset',
+            'sizes',
+            'alt',
+            'ratio',
+            'width',
+            'height',
+          ],
           image,
         )}
       />

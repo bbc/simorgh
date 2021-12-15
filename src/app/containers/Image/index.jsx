@@ -7,7 +7,7 @@ import {
   GridItemMedium,
   GridItemSmall,
 } from '#app/components/Grid';
-import { createSrcset } from '#lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
 
@@ -53,7 +53,11 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
     locator,
     resolution: DEFAULT_IMAGE_RES,
   });
-  const srcSet = createSrcset(originCode, locator, width);
+  const { webpSrcset, fallbackSrcset } = createSrcsets({
+    originCode,
+    locator,
+    originalImageWidth: width,
+  });
   const lazyLoad = shouldLazyLoad(position);
 
   let GridWrapper = GridItemLargeNoMargin;
@@ -75,7 +79,8 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
-        srcset={srcSet}
+        srcset={webpSrcset}
+        fallbackSrcset={fallbackSrcset}
         sizes={sizes}
         showCopyright
         lazyLoad={lazyLoad}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AmpIncludeContainer should render for a valid IDT2 include 1`] = `
+exports[`AmpIncludeContainer should render for a valid IDT2 include without fallbackSrcset 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     padding: 0 0.5rem;

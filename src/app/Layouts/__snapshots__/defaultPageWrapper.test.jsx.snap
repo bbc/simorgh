@@ -1245,10 +1245,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-home"
                   class="emotion-97 emotion-98"
                   href="/news"
                 >
-                  Home
+                  <span
+                    id="dropdownNavigation-home"
+                  >
+                    Home
+                  </span>
                 </a>
               </li>
               <li
@@ -1256,10 +1261,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-uk"
                   class="emotion-97 emotion-98"
                   href="/news/uk"
                 >
-                  UK
+                  <span
+                    id="dropdownNavigation-uk"
+                  >
+                    UK
+                  </span>
                 </a>
               </li>
               <li
@@ -1267,10 +1277,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-world"
                   class="emotion-97 emotion-98"
                   href="/news/world"
                 >
-                  World
+                  <span
+                    id="dropdownNavigation-world"
+                  >
+                    World
+                  </span>
                 </a>
               </li>
               <li
@@ -1278,10 +1293,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-business"
                   class="emotion-97 emotion-98"
                   href="/news/business"
                 >
-                  Business
+                  <span
+                    id="dropdownNavigation-business"
+                  >
+                    Business
+                  </span>
                 </a>
               </li>
               <li
@@ -1289,10 +1309,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-politics"
                   class="emotion-97 emotion-98"
                   href="/news/politics"
                 >
-                  Politics
+                  <span
+                    id="dropdownNavigation-politics"
+                  >
+                    Politics
+                  </span>
                 </a>
               </li>
               <li
@@ -1300,10 +1325,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-tech"
                   class="emotion-97 emotion-98"
                   href="/news/technology"
                 >
-                  Tech
+                  <span
+                    id="dropdownNavigation-tech"
+                  >
+                    Tech
+                  </span>
                 </a>
               </li>
               <li
@@ -1311,10 +1341,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-science"
                   class="emotion-97 emotion-98"
                   href="/news/science_and_environment"
                 >
-                  Science
+                  <span
+                    id="dropdownNavigation-science"
+                  >
+                    Science
+                  </span>
                 </a>
               </li>
               <li
@@ -1322,10 +1357,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-health"
                   class="emotion-97 emotion-98"
                   href="/news/health"
                 >
-                  Health
+                  <span
+                    id="dropdownNavigation-health"
+                  >
+                    Health
+                  </span>
                 </a>
               </li>
               <li
@@ -1333,10 +1373,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-family-&-education"
                   class="emotion-97 emotion-98"
                   href="/news/education"
                 >
-                  Family & Education
+                  <span
+                    id="dropdownNavigation-family-&-education"
+                  >
+                    Family & Education
+                  </span>
                 </a>
               </li>
               <li
@@ -1344,10 +1389,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-entertainment-&-arts"
                   class="emotion-97 emotion-98"
                   href="/news/entertainment_and_arts"
                 >
-                  Entertainment & Arts
+                  <span
+                    id="dropdownNavigation-entertainment-&-arts"
+                  >
+                    Entertainment & Arts
+                  </span>
                 </a>
               </li>
               <li
@@ -1355,10 +1405,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-stories"
                   class="emotion-97 emotion-98"
                   href="/news/stories"
                 >
-                  Stories
+                  <span
+                    id="dropdownNavigation-stories"
+                  >
+                    Stories
+                  </span>
                 </a>
               </li>
             </ul>
