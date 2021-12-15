@@ -19,7 +19,7 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
         isServerSide
         timeout={500}
         user={{
-          id: noUserId === true ? null : getAtUserId(),
+          id: noUserId ? null : getAtUserId(),
           attributes: {
             service,
           },
