@@ -12,6 +12,7 @@ import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 import useViewTracker from '#hooks/useViewTracker';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import useToggle from '#hooks/useToggle';
 
 const eventTrackingData = {
   block: {
@@ -30,17 +31,25 @@ const PromoListComponent = ({ promoItems, dir }) => {
     'high_impact_feature_analysis_promo',
   );
 
-  const isHighImpactVariation =
-    promoVariation === HIGH_IMPACT_VARIATION && !isLive() && !isAmp;
+  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
+    useToggle('frostedPromo');
+
+  const selectComponent = index => {
+    if (isAmp) return StoryPromo;
+    if (isLive()) {
+      if (!frostedPromoEnabled) return StoryPromo;
+      return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+    }
+    if (index === 0 && promoVariation === HIGH_IMPACT_VARIATION) {
+      return FrostedGlassPromo;
+    }
+    return StoryPromo;
+  };
 
   return (
     <StoryPromoUl>
       {promoItems.map((item, promoIndex) => {
-        const isFirstPromo = promoIndex === 0;
-        const StoryPromoComponent =
-          isFirstPromo && isHighImpactVariation
-            ? FrostedGlassPromo
-            : StoryPromo;
+        const StoryPromoComponent = selectComponent(promoIndex);
 
         return (
           <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
@@ -74,15 +83,24 @@ const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData);
   const { isAmp } = useContext(RequestContext);
+  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
+    useToggle('frostedPromo');
 
   const promoVariation = useOptimizelyVariation(
     'high_impact_feature_analysis_promo',
   );
 
-  const StoryPromoComponent =
-    promoVariation === HIGH_IMPACT_VARIATION && !isLive() && !isAmp
-      ? FrostedGlassPromo
-      : StoryPromo;
+  const selectComponent = () => {
+    if (isAmp) return StoryPromo;
+    if (isLive()) {
+      if (!frostedPromoEnabled) return StoryPromo;
+      return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+    }
+    if (promoVariation === HIGH_IMPACT_VARIATION) return FrostedGlassPromo;
+    return StoryPromo;
+  };
+
+  const StoryPromoComponent = selectComponent();
 
   return (
     <div ref={viewRef}>
