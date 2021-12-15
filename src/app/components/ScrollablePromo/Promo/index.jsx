@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { object } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
-import { getPica } from '@bbc/gel-foundations/dist/typography';
-import { getSerifRegular } from '@bbc/psammead-styles/dist/font-styles';
-import { C_GREY_6 } from '@bbc/psammead-styles/dist/colours';
+import { getPica } from '@bbc/gel-foundations/typography';
+import { getSerifRegular } from '@bbc/psammead-styles/font-styles';
+import { C_GREY_6, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -45,16 +45,16 @@ const Link = styled.a`
 
 const PromoBox = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
-  background-color: #ffffff;
+  background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
-    width: 237px;
+    width: 14.8125rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
-    width: 178px;
+    width: 11.125rem;
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
-    width: 205px;
+    width: 12.6875rem;
   }
 `;
 
@@ -84,8 +84,11 @@ const Promo = ({ block }) => {
 };
 
 Promo.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  block: object.isRequired,
+  block: shape({
+    model: shape({
+      blocks: arrayOf(oneOfType([string, object])),
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Promo;

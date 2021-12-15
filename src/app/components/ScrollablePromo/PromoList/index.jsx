@@ -5,7 +5,7 @@ import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/dist/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import Promo from '../Promo';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -36,17 +36,18 @@ const StyledList = styled.li`
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
     margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
     &:first-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 8px;
+      margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
     }
     &:last-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'right' : 'left')}: 8px;
+      margin-${({ dir }) => (dir === 'ltr' ? 'right' : 'left')}: ${GEL_SPACING};
     }
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
     margin-${({ dir }) =>
       dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
       &:first-child {
-        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 16px;
+        margin-${({ dir }) =>
+          dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
       }
   }
 
@@ -54,7 +55,7 @@ const StyledList = styled.li`
     margin-${({ dir }) =>
       dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
       &:first-child {
-        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0px;
+        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0;
       }
   }
 `;

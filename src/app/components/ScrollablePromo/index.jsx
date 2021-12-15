@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
+import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import isEmpty from 'ramda/src/isEmpty';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
-} from '@bbc/gel-foundations/dist/breakpoints';
+} from '@bbc/gel-foundations/breakpoints';
 import Promo from './Promo';
 import PromoList from './PromoList';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 const PromoWrapper = styled.div`
-  ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 8px;`}
+  ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};`}
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 16px;`}
+    ${({ dir }) =>
+      `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};`}
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
