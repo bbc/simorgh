@@ -15,12 +15,13 @@ const buildImageProperties = image => {
   const originCode = getOriginCode(url);
   const locator = getLocator(url);
 
-  const { webpSrcset, fallbackSrcset } = createSrcsets({
-    originCode,
-    locator,
-    originalImageWidth: width,
-    imageResolutions: [280, 400],
-  });
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: width,
+      imageResolutions: [280, 400],
+    });
 
   const src = buildIChefURL({
     originCode,
@@ -37,11 +38,13 @@ const buildImageProperties = image => {
 
   return {
     ratio: 52,
-    srcset: webpSrcset,
+    srcset: primarySrcset,
     fallbackSrcset,
     sizes: '(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px',
     src,
     smallSrc,
+    primaryMimeType,
+    fallbackMimeType,
     alt: altText,
     width,
     height,

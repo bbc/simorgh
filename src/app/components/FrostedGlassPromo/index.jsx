@@ -102,6 +102,8 @@ const FrostedGlassPromo = ({
             'src',
             'srcset',
             'fallbackSrcset',
+            'primaryMimeType',
+            'fallbackMimeType',
             'sizes',
             'alt',
             'ratio',
