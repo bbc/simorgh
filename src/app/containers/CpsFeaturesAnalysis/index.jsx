@@ -17,6 +17,7 @@ import useToggle from '#hooks/useToggle';
 const eventTrackingData = {
   block: {
     componentName: 'features',
+    hasOptimizely: true,
   },
 };
 
@@ -60,6 +61,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
               eventTrackingData={eventTrackingData}
+              hasOptimizely
             />
           </StoryPromoLi>
         );
@@ -80,7 +82,7 @@ PromoListComponent.defaultProps = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
+  const viewRef = useViewTracker({ hasOptimizely: true });
   const { isAmp } = useContext(RequestContext);
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
@@ -106,6 +108,7 @@ const PromoComponent = ({ promo, dir }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
+        hasOptimizely
       />
     </div>
   );

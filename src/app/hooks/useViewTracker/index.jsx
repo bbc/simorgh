@@ -2,6 +2,7 @@ import { useContext, useEffect, useState, useRef } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import prop from 'ramda/src/prop';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
@@ -17,6 +18,7 @@ const useViewTracker = (props = {}) => {
   const format = path(['format'], props);
   const advertiserID = path(['advertiserID'], props);
   const url = path(['url'], props);
+  const hasOptimizely = path(['hasOptimizely'], props);
 
   const observer = useRef();
   const timer = useRef(null);
@@ -32,6 +34,8 @@ const useViewTracker = (props = {}) => {
     props,
   );
   const { service } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
+
   const initObserver = async () => {
     if (typeof window.IntersectionObserver === 'undefined') {
       // Polyfill IntersectionObserver, e.g. for IE11
@@ -69,6 +73,10 @@ const useViewTracker = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
+          if (hasOptimizely) {
+            optimizely.track('component_views');
+          }
+
           sendEventBeacon({
             campaignID,
             componentName,
@@ -110,6 +118,8 @@ const useViewTracker = (props = {}) => {
     eventSent,
     advertiserID,
     url,
+    optimizely,
+    hasOptimizely,
   ]);
 
   return async element => {
