@@ -136,8 +136,8 @@ ImageWithPlaceholder.defaultProps = {
   preload: false,
   srcset: null,
   fallbackSrcset: null,
-  primaryMimeType: null,
-  fallbackMimeType: null,
+  primaryMimeType: undefined,
+  fallbackMimeType: undefined,
   sizes: null,
 };
 

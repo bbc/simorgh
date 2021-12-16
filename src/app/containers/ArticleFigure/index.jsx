@@ -172,8 +172,8 @@ ArticleFigure.defaultProps = {
   type: '',
   srcset: null,
   fallbackSrcset: null,
-  primaryMimeType: null,
-  fallbackMimeType: null,
+  primaryMimeType: undefined,
+  fallbackMimeType: undefined,
   sizes: null,
   showCopyright: false,
 };

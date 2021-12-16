@@ -2,7 +2,7 @@ import buildIChefUrl from '#lib/utilities/ichefURL';
 
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
 
-const getMimeType = srcset => {
+export const getMimeType = srcset => {
   if (!srcset) return null;
 
   const [firstSrcset] = srcset?.split(',');
