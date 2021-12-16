@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import {
   threeLinks,
   oneLinkOnly,
@@ -39,4 +40,14 @@ describe('ScrollablePromo', () => {
     expect(queryByRole('list')).toBeInTheDocument();
     expect(getAllByRole('listitem').length).toEqual(3);
   });
+
+  shouldMatchSnapshot(
+    'it should match a11y snashot for single card',
+    <ScrollablePromo blocks={oneLinkOnly} />,
+  );
+
+  shouldMatchSnapshot(
+    'it should match a11y snashot for list',
+    <ScrollablePromo blocks={threeLinks} />,
+  );
 });
