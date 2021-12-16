@@ -1,12 +1,6 @@
 import services from '../serviceConfigs';
 import isLiveEnv from '#lib/utilities/isLive';
 
-const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
-const FONTS_ORIGINS = [
-  'https://gel.files.bbci.co.uk',
-  'https://ws-downloads.files.bbci.co.uk',
-];
-
 const getAssetOrigins = service => {
   const COOKIE_ORIGINS = isLiveEnv()
     ? ['https://www.bbc.com/cookieoven', 'https://www.bbc.co.uk/cookieoven']
@@ -14,6 +8,13 @@ const getAssetOrigins = service => {
         'https://www.test.bbc.com/cookieoven',
         'https://www.test.bbc.co.uk/cookieoven',
       ];
+
+  const IMAGES_ORIGIN = 'https://ichef.bbci.co.uk';
+
+  const FONTS_ORIGINS = [
+    'https://gel.files.bbci.co.uk',
+    'https://ws-downloads.files.bbci.co.uk',
+  ];
 
   const assetOrigins = [
     ...COOKIE_ORIGINS,

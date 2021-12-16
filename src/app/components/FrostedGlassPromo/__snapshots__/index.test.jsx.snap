@@ -3,19 +3,28 @@
 exports[`Frosted Glass Promo when given props directly 1`] = `
 .emotion-0 {
   display: inline-block;
+  position: relative;
   width: 100%;
   max-width: 400px;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-0:hover .emotion-16,
-.emotion-0:focus .emotion-16 {
+.emotion-0:hover a {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -30,37 +39,81 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.emotion-9 {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-9 {
+.emotion-13 {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 1rem;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  background: rgb(32,34,36);
+}
+
+.emotion-15 {
+  margin: 0;
+}
+
+.emotion-17 {
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9375rem;
+  line-height: 1.33;
+  margin: 0.625rem 0.5rem 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0.75rem 1rem 0 1rem;
+  }
+}
+
+.emotion-17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-19 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-9 {
+  .emotion-19 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -83,99 +136,85 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   }
 }
 
-.emotion-11 {
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-}
-
-.emotion-13 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-}
-
-.emotion-15 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 0.9375rem;
-  line-height: 1.33;
-  padding: 0.625rem 0.5rem 0 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-15 {
-    font-size: 1rem;
-    line-height: 1.25;
-    padding: 0.875rem 1rem 0 1rem;
-  }
-}
-
 <div>
-  <a
+  <div
     class="emotion-0 emotion-1"
-    href="/mundo/internacional-23038380"
+    data-testid="frosted-promo-0"
   >
-    <div
+    <a
+      aria-hidden="true"
       class="emotion-2 emotion-3"
+      href="/mundo/internacional-23038380"
+      tabindex="-1"
+    />
+    <div
+      class="emotion-4 emotion-5"
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <img
-        alt="Orange 2"
-        class="emotion-4 emotion-5 emotion-6"
-        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
-        width="976"
-      />
+      <picture
+        class="emotion-6 emotion-7"
+      >
+        <source />
+        <img
+          alt="Orange 2"
+          class="emotion-8 emotion-9 emotion-10"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+          width="976"
+        />
+      </picture>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-11 emotion-12"
     >
-      <div
-        class="emotion-9 emotion-10"
-      />
-      <div
-        class="emotion-11 emotion-12"
-      />
       <div
         class="emotion-13 emotion-14"
       >
-        <div
+        <h3
           class="emotion-15 emotion-16"
         >
-          Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
-        </div>
+          <a
+            class="emotion-17 emotion-18"
+            href="/mundo/internacional-23038380"
+          >
+            Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
+          </a>
+        </h3>
         4 mayo 2021
       </div>
+      <div
+        class="emotion-19 emotion-20"
+      />
     </div>
-  </a>
+  </div>
 </div>
 `;
 
 exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 .emotion-0 {
   display: inline-block;
+  position: relative;
   width: 100%;
   max-width: 400px;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-0:hover .emotion-16,
-.emotion-0:focus .emotion-16 {
+.emotion-0:hover a {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -190,37 +229,115 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.emotion-9 {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-9 {
+.emotion-13 {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 1rem;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  background: rgb(32,34,36);
+}
+
+.emotion-15 {
+  margin: 0;
+}
+
+.emotion-17 {
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9375rem;
+  line-height: 1.33;
+  margin: 0.625rem 0.5rem 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0.75rem 1rem 0 1rem;
+  }
+}
+
+.emotion-17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-20 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0.5rem 0 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    padding: 0.625rem 1rem 0 1rem;
+  }
+}
+
+.emotion-22 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-9 {
+  .emotion-22 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -228,7 +345,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -243,141 +360,97 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   }
 }
 
-.emotion-11 {
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-}
-
-.emotion-13 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-}
-
-.emotion-15 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 0.9375rem;
-  line-height: 1.33;
-  padding: 0.625rem 0.5rem 0 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-15 {
-    font-size: 1rem;
-    line-height: 1.25;
-    padding: 0.875rem 1rem 0 1rem;
-  }
-}
-
-.emotion-18 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 0.8125rem;
-  padding: 0.625rem 0.5rem 0 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-18 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-18 {
-    font-size: 0.875rem;
-    padding: 0.625rem 1rem 0 1rem;
-  }
-}
-
 <div>
-  <a
+  <div
     class="emotion-0 emotion-1"
-    href="/mundo/internacional-23038380"
+    data-testid="frosted-promo-0"
   >
-    <div
+    <a
+      aria-hidden="true"
       class="emotion-2 emotion-3"
+      href="/mundo/internacional-23038380"
+      tabindex="-1"
+    />
+    <div
+      class="emotion-4 emotion-5"
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <img
-        alt="Orange 2"
-        class="emotion-4 emotion-5 emotion-6"
-        height="549"
-        sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
-        srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
-        width="976"
-      />
+      <picture
+        class="emotion-6 emotion-7"
+      >
+        <source
+          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
+        />
+        <source
+          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
+        />
+        <img
+          alt="Orange 2"
+          class="emotion-8 emotion-9 emotion-10"
+          height="549"
+          sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+          width="976"
+        />
+      </picture>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-11 emotion-12"
     >
-      <div
-        class="emotion-9 emotion-10"
-      />
-      <div
-        class="emotion-11 emotion-12"
-      />
       <div
         class="emotion-13 emotion-14"
       >
-        <div
+        <h3
           class="emotion-15 emotion-16"
         >
-          El colorido encanto del arte callejero chilango 17
-        </div>
+          <a
+            class="emotion-17 emotion-18"
+            href="/mundo/internacional-23038380"
+          >
+            El colorido encanto del arte callejero chilango 17
+          </a>
+        </h3>
         <time
-          class="emotion-17 emotion-18 emotion-19"
+          class="emotion-19 emotion-20 emotion-21"
           datetime="2016-05-05"
         >
           5 mayo 2016
         </time>
       </div>
+      <div
+        class="emotion-22 emotion-23"
+      />
     </div>
-  </a>
+  </div>
 </div>
 `;
 
 exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 .emotion-0 {
   display: inline-block;
+  position: relative;
   width: 100%;
   max-width: 400px;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.emotion-0:hover .emotion-16,
-.emotion-0:focus .emotion-16 {
+.emotion-0:hover a {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+.emotion-4 {
   position: relative;
   height: 0;
   overflow: hidden;
@@ -392,37 +465,115 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 77px 22px;
     background-size: 77px 22px;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-2 {
+  .emotion-4 {
     -webkit-background-size: 93px 27px;
     background-size: 93px 27px;
   }
 }
 
-.emotion-5 {
+.emotion-6 {
   display: block;
   width: 100%;
   visibility: visible;
+}
+
+.emotion-9 {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
-.emotion-7 {
+.emotion-11 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-9 {
+.emotion-13 {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 1rem;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  background: rgb(32,34,36);
+}
+
+.emotion-15 {
+  margin: 0;
+}
+
+.emotion-17 {
+  display: inline-block;
+  font-family: ReithSerif,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9375rem;
+  line-height: 1.33;
+  margin: 0.625rem 0.5rem 0 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-17 {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0.75rem 1rem 0 1rem;
+  }
+}
+
+.emotion-17:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-20 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: #6E6E73;
+  display: block;
+  font-family: ReithSans,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 0.8125rem;
+  padding: 0.625rem 0.5rem 0 0.5rem;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-20 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 25rem) {
+  .emotion-20 {
+    font-size: 0.875rem;
+    padding: 0.625rem 1rem 0 1rem;
+  }
+}
+
+.emotion-22 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-9 {
+  .emotion-22 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -430,7 +581,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -445,121 +596,68 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   }
 }
 
-.emotion-11 {
-  z-index: 2;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
-  background: rgb(32,34,36);
-}
-
-.emotion-13 {
-  position: relative;
-  z-index: 3;
-  padding-bottom: 1rem;
-}
-
-.emotion-15 {
-  font-family: ReithSerif,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 0.9375rem;
-  line-height: 1.33;
-  padding: 0.625rem 0.5rem 0 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-15 {
-    font-size: 1rem;
-    line-height: 1.25;
-    padding: 0.875rem 1rem 0 1rem;
-  }
-}
-
-.emotion-18 {
-  font-size: 0.875rem;
-  line-height: 1.125rem;
-  color: #6E6E73;
-  display: block;
-  font-family: ReithSans,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: white;
-  font-size: 0.8125rem;
-  padding: 0.625rem 0.5rem 0 0.5rem;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-18 {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-18 {
-    font-size: 0.8125rem;
-    line-height: 1rem;
-  }
-}
-
-@media (min-width: 25rem) {
-  .emotion-18 {
-    font-size: 0.875rem;
-    padding: 0.625rem 1rem 0 1rem;
-  }
-}
-
 <div>
-  <a
+  <div
     class="emotion-0 emotion-1"
-    href="https://www.bbc.com/pidgin/sport-51434980"
+    data-testid="frosted-promo-0"
   >
-    <div
+    <a
+      aria-hidden="true"
       class="emotion-2 emotion-3"
+      href="https://www.bbc.com/pidgin/sport-51434980"
+      tabindex="-1"
+    />
+    <div
+      class="emotion-4 emotion-5"
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <img
-        alt="E dey good for your"
-        class="emotion-4 emotion-5 emotion-6"
-        height="351"
-        sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg"
-        srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 400w"
-        width="624"
-      />
+      <picture
+        class="emotion-6 emotion-7"
+      >
+        <source
+          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
+        />
+        <source
+          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 400w"
+        />
+        <img
+          alt="E dey good for your"
+          class="emotion-8 emotion-9 emotion-10"
+          height="351"
+          sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
+          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg"
+          width="624"
+        />
+      </picture>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-11 emotion-12"
     >
-      <div
-        class="emotion-9 emotion-10"
-      />
-      <div
-        class="emotion-11 emotion-12"
-      />
       <div
         class="emotion-13 emotion-14"
       >
-        <div
+        <h3
           class="emotion-15 emotion-16"
         >
-          Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
-        </div>
+          <a
+            class="emotion-17 emotion-18"
+            href="https://www.bbc.com/pidgin/sport-51434980"
+          >
+            Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
+          </a>
+        </h3>
         <time
-          class="emotion-17 emotion-18 emotion-19"
+          class="emotion-19 emotion-20 emotion-21"
           datetime="2020-02-17"
         >
           17 febrero 2020
         </time>
       </div>
+      <div
+        class="emotion-22 emotion-23"
+      />
     </div>
-  </a>
+  </div>
 </div>
 `;
