@@ -9,6 +9,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
+import { getMimeType } from '#lib/utilities/srcSet';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 
@@ -48,6 +49,7 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
         src={src}
         alt={alt}
         srcset={srcset}
+        primaryMimeType={getMimeType(srcset)}
         sizes={sizes}
         ratio={100}
         width={mediumImageSize}

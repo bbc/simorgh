@@ -4149,14 +4149,14 @@ module.exports = () => ({
           },
           test: {
             paths: ['/mundo/23263889'],
-            enabled: false,
+            enabled: true,
           },
           local: {
             paths: [
               '/mundo/23263889',
               '/mundo/noticias-internacional-51266689',
             ],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -5253,7 +5253,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/persian/afghanistan'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -10015,7 +10015,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/articles/c3xd4x9prgyo/simp'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
@@ -10049,7 +10049,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/simp'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
