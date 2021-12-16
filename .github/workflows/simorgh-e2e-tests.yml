@@ -12,6 +12,8 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    container:
+      options: --user 1001 --shm-size=2g
     env:
       CI: true
       LOG_LEVEL: 'error'
