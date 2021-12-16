@@ -13,6 +13,7 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     container:
+      image: cypress/browsers:node12.14.1-chrome83-ff77
       options: --user 1001 --shm-size=2g
     env:
       CI: true
