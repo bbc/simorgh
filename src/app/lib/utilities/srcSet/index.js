@@ -3,10 +3,10 @@ import buildIChefUrl from '#lib/utilities/ichefURL';
 const DEFAULT_RESOLUTIONS = [240, 320, 480, 624, 800];
 
 export const getMimeType = srcset => {
-  if (!srcset) return null;
+  if (!srcset || typeof srcset !== 'string') return null;
 
-  const [firstSrcset] = srcset?.split(',');
-  const [firstSrcsetUrl] = firstSrcset?.split(' ');
+  const [firstSrcset] = srcset.split(',');
+  const [firstSrcsetUrl] = firstSrcset.split(' ');
   const urlFileExtension = firstSrcsetUrl.split('.').pop();
 
   switch (urlFileExtension) {
