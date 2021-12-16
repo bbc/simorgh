@@ -24,6 +24,7 @@ const Link = styled.a`
   ${({ service }) => service && getSerifRegular(service)}
   width: 100%;
 
+  word-break: break-word;
   text-overflow: ellipsis;
   text-decoration: none;
 

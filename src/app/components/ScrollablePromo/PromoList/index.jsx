@@ -12,7 +12,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 
 const ScrollPromo = styled.ul`
   display: flex;
-  overflow-wrap: break-word;
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
@@ -62,11 +61,11 @@ const StyledList = styled.li`
 
 const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
-  const threeblocks = blocks.slice(1, 4);
+  const listblocks = blocks.slice(1, 4);
 
   return (
     <ScrollPromo dir={dir} role="list">
-      {threeblocks.map((block, index) => {
+      {listblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
           <StyledList key={index} dir={dir}>

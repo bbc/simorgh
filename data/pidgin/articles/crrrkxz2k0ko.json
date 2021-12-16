@@ -715,6 +715,82 @@
           }
         },
         {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Long headline ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Long headline ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a longlonglonglonglonglonglonglonglonglonglonglong headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a longlonglonglonglonglonglonglonglonglonglonglong headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                    "locator": "https://www.bbc.co.uk/yoruba",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a longlonglonglonglonglonglonglonglonglonglonglong headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
           "type": "text",
           "model": {
             "blocks": [
