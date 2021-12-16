@@ -7,15 +7,9 @@ import visitPage from '../../support/helpers/visitPage';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
-    it(
-      'should have no detectable a11y violations on page load',
-      {
-        retries: 2,
-      },
-      () => {
-        checkA11y();
-      },
-    );
+    it.skip('should have no detectable a11y violations on page load', () => {
+      checkA11y();
+    });
 
     it('should render topic tags if they are in the json, and they should navigate to correct topic page', () => {
       if (
