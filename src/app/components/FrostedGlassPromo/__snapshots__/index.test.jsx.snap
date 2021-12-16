@@ -52,24 +52,19 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: block;
   width: 100%;
   visibility: visible;
-}
-
-.emotion-9 {
-  display: block;
-  width: 100%;
   height: auto;
 }
 
-.emotion-11 {
+.emotion-9 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-11 {
   position: relative;
   z-index: 3;
   padding-bottom: 1rem;
@@ -78,11 +73,11 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
   background: rgb(32,34,36);
 }
 
-.emotion-15 {
+.emotion-13 {
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -96,24 +91,24 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.75rem 1rem 0 1rem;
   }
 }
 
-.emotion-17:focus {
+.emotion-15:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-19 {
+.emotion-17 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-19 {
+  .emotion-17 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -152,29 +147,24 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <picture
-        class="emotion-6 emotion-7"
-      >
-        <source />
-        <img
-          alt="Orange 2"
-          class="emotion-8 emotion-9 emotion-10"
-          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
-          width="976"
-        />
-      </picture>
+      <img
+        alt="Orange 2"
+        class="emotion-6 emotion-7 emotion-8"
+        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+        width="976"
+      />
     </div>
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-9 emotion-10"
     >
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-11 emotion-12"
       >
         <h3
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           <a
-            class="emotion-17 emotion-18"
+            class="emotion-15 emotion-16"
             href="/mundo/internacional-23038380"
           >
             Además de sus decenas de museos tradicionales, Ciudad de México es una galería al aire libre de arte callejero, en la que exponen artistas nacionales y extranjeros. Lo invitamos a un recorrido.
@@ -183,7 +173,7 @@ exports[`Frosted Glass Promo when given props directly 1`] = `
         4 mayo 2021
       </div>
       <div
-        class="emotion-19 emotion-20"
+        class="emotion-17 emotion-18"
       />
     </div>
   </div>
@@ -242,24 +232,19 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: block;
   width: 100%;
   visibility: visible;
-}
-
-.emotion-9 {
-  display: block;
-  width: 100%;
   height: auto;
 }
 
-.emotion-11 {
+.emotion-9 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-11 {
   position: relative;
   z-index: 3;
   padding-bottom: 1rem;
@@ -268,11 +253,11 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
   background: rgb(32,34,36);
 }
 
-.emotion-15 {
+.emotion-13 {
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -286,19 +271,19 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.75rem 1rem 0 1rem;
   }
 }
 
-.emotion-17:focus {
+.emotion-15:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-20 {
+.emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -312,32 +297,32 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.875rem;
     padding: 0.625rem 1rem 0 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-20 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-22 {
+  .emotion-20 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -345,7 +330,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/DDFC/test/_63482865_orange2.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -376,50 +361,41 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <picture
-        class="emotion-6 emotion-7"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg.webp 400w"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
-        />
-        <img
-          alt="Orange 2"
-          class="emotion-8 emotion-9 emotion-10"
-          height="549"
-          sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
-          width="976"
-        />
-      </picture>
+      <img
+        alt="Orange 2"
+        class="emotion-6 emotion-7 emotion-8"
+        height="549"
+        sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
+        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg"
+        srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/DDFC/test/_63482865_orange2.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/DDFC/test/_63482865_orange2.jpg 400w"
+        width="976"
+      />
     </div>
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-9 emotion-10"
     >
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-11 emotion-12"
       >
         <h3
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           <a
-            class="emotion-17 emotion-18"
+            class="emotion-15 emotion-16"
             href="/mundo/internacional-23038380"
           >
             El colorido encanto del arte callejero chilango 17
           </a>
         </h3>
         <time
-          class="emotion-19 emotion-20 emotion-21"
+          class="emotion-17 emotion-18 emotion-19"
           datetime="2016-05-05"
         >
           5 mayo 2016
         </time>
       </div>
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-20 emotion-21"
       />
     </div>
   </div>
@@ -478,24 +454,19 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   display: block;
   width: 100%;
   visibility: visible;
-}
-
-.emotion-9 {
-  display: block;
-  width: 100%;
   height: auto;
 }
 
-.emotion-11 {
+.emotion-9 {
   position: relative;
   overflow: hidden;
 }
 
-.emotion-13 {
+.emotion-11 {
   position: relative;
   z-index: 3;
   padding-bottom: 1rem;
@@ -504,11 +475,11 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
   background: rgb(32,34,36);
 }
 
-.emotion-15 {
+.emotion-13 {
   margin: 0;
 }
 
-.emotion-17 {
+.emotion-15 {
   display: inline-block;
   font-family: ReithSerif,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -522,19 +493,19 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-17 {
+  .emotion-15 {
     font-size: 1rem;
     line-height: 1.25;
     margin: 0.75rem 1rem 0 1rem;
   }
 }
 
-.emotion-17:focus {
+.emotion-15:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-20 {
+.emotion-18 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -548,32 +519,32 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-20 {
+  .emotion-18 {
     font-size: 0.875rem;
     padding: 0.625rem 1rem 0 1rem;
   }
 }
 
-.emotion-22 {
+.emotion-20 {
   display: none;
 }
 
 @supports (filter: blur(15px)) {
-  .emotion-22 {
+  .emotion-20 {
     display: block;
     z-index: 1;
     position: absolute;
@@ -581,7 +552,7 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
     top: -15px;
     left: 0;
     right: 0;
-    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp');
+    background: #202224 url('https://ichef.bbci.co.uk/news/240/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -612,50 +583,41 @@ exports[`Frosted Glass Promo when given props for a Link promo 1`] = `
       data-e2e="image-placeholder"
       style="padding-bottom: 52%;"
     >
-      <picture
-        class="emotion-6 emotion-7"
-      >
-        <source
-          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg.webp 400w"
-        />
-        <source
-          srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 400w"
-        />
-        <img
-          alt="E dey good for your"
-          class="emotion-8 emotion-9 emotion-10"
-          height="351"
-          sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
-          src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg"
-          width="624"
-        />
-      </picture>
+      <img
+        alt="E dey good for your"
+        class="emotion-6 emotion-7 emotion-8"
+        height="351"
+        sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
+        src="https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg"
+        srcset="https://ichef.bbci.co.uk/news/280/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 280w, https://ichef.bbci.co.uk/news/400/cpsdevpb/C105/test/_63731494__110870927_climategrief5.jpg 400w"
+        width="624"
+      />
     </div>
     <div
-      class="emotion-11 emotion-12"
+      class="emotion-9 emotion-10"
     >
       <div
-        class="emotion-13 emotion-14"
+        class="emotion-11 emotion-12"
       >
         <h3
-          class="emotion-15 emotion-16"
+          class="emotion-13 emotion-14"
         >
           <a
-            class="emotion-17 emotion-18"
+            class="emotion-15 emotion-16"
             href="https://www.bbc.com/pidgin/sport-51434980"
           >
             Man City vs West Ham: Bad weather force Premier League to cancel Sunday match
           </a>
         </h3>
         <time
-          class="emotion-19 emotion-20 emotion-21"
+          class="emotion-17 emotion-18 emotion-19"
           datetime="2020-02-17"
         >
           17 febrero 2020
         </time>
       </div>
       <div
-        class="emotion-22 emotion-23"
+        class="emotion-20 emotion-21"
       />
     </div>
   </div>

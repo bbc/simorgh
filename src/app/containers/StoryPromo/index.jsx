@@ -10,8 +10,7 @@ import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import { createSrcsets } from '#lib/utilities/srcSet';
-import buildIChefURL from '#lib/utilities/ichefURL';
+import { createSrcset } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import {
@@ -52,21 +51,12 @@ const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const { webpSrcset, fallbackSrcset } = createSrcsets({
-    originCode,
-    locator,
-    originalImageWidth: width,
-    imageResolutions,
-  });
+  const srcset = createSrcset(originCode, locator, width, imageResolutions);
   const sizes = useLargeImages
     ? '(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px'
     : '(max-width: 1008px) 33vw, 321px';
   const DEFAULT_IMAGE_RES = 660;
-  const src = buildIChefURL({
-    originCode,
-    locator,
-    resolution: DEFAULT_IMAGE_RES,
-  });
+  const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
 
   return (
     <ImageWithPlaceholder
@@ -77,8 +67,7 @@ const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={imageValues.copyrightHolder}
-      srcset={webpSrcset}
-      fallbackSrcset={fallbackSrcset}
+      srcset={srcset}
       sizes={sizes}
     />
   );

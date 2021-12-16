@@ -1,64 +1,47 @@
-import { createSrcsets, getPlaceholderSrcSet } from '.';
+import { createSrcset, getPlaceholderSrcSet } from '.';
 
 describe('create srcset', () => {
   const srcsetScenarios = [
     {
-      originCode: 'cpsdevpb',
-      locator: 'testland',
+      originCode: 'test',
+      location: 'testland',
       width: 1024,
-      expected: {
-        webpSrcset:
-          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland.webp 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland.webp 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland.webp 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/testland.webp 800w',
-        fallbackSrcset:
-          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/testland 800w',
-      },
+      expected:
+        'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/800/test/testland 800w',
       summary:
         'should return a srcset with test in originCode and testland in location',
     },
     {
       originCode: 'pips',
-      locator: 'testland',
+      location: 'testland',
       width: 1024,
-      expected: { webpSrcset: null, fallbackSrcset: null },
+      expected: null,
       summary: 'should return null with pips originCode',
     },
     {
       originCode: 'test',
-      locator: 'testland',
+      location: 'testland',
       width: 640,
-      expected: {
-        webpSrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
-        fallbackSrcset:
-          'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
-      },
+      expected:
+        'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/640/test/testland 640w',
       summary:
         'width of 640 should return srcset with maximum allowed size of 640',
     },
     {
-      originCode: 'cpsdevpb',
-      locator: 'testland',
+      originCode: 'test',
+      location: 'testland',
       width: 2048,
-      expected: {
-        webpSrcset:
-          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland.webp 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland.webp 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland.webp 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/testland.webp 800w',
-        fallbackSrcset:
-          'https://ichef.bbci.co.uk/news/240/cpsdevpb/testland 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/testland 320w, https://ichef.bbci.co.uk/news/480/cpsdevpb/testland 480w, https://ichef.bbci.co.uk/news/624/cpsdevpb/testland 624w, https://ichef.bbci.co.uk/news/800/cpsdevpb/testland 800w',
-      },
+      expected:
+        'https://ichef.bbci.co.uk/news/240/test/testland 240w, https://ichef.bbci.co.uk/news/320/test/testland 320w, https://ichef.bbci.co.uk/news/480/test/testland 480w, https://ichef.bbci.co.uk/news/624/test/testland 624w, https://ichef.bbci.co.uk/news/800/test/testland 800w',
       summary: 'width of 2048 should return all default srcset values',
     },
   ];
 
   srcsetScenarios.forEach(
-    ({ originCode, locator, width, expected, summary }) => {
+    ({ originCode, location, width, expected, summary }) => {
       it(summary, () => {
-        const { webpSrcset, fallbackSrcset } = createSrcsets({
-          originCode,
-          locator,
-          originalImageWidth: width,
-        });
-        expect(webpSrcset).toEqual(expected.webpSrcset);
-        expect(fallbackSrcset).toEqual(expected.fallbackSrcset);
+        const srcset = createSrcset(originCode, location, width);
+        expect(srcset).toEqual(expected);
       });
     },
   );

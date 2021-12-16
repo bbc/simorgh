@@ -6,6 +6,7 @@ import { GEL_SPACING_DBL, GEL_SPACING } from '@bbc/gel-foundations/spacings';
 import { GEL_LONG_PRIMER } from '@bbc/gel-foundations/typography';
 import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import Image from '@bbc/psammead-image';
 
 const NOJS_BACKGROUND_COLOUR = 'rgba(34, 34, 34, 0.75)';
 
@@ -50,10 +51,10 @@ const StyledMessage = styled.strong`
 const Message = ({ service, message, placeholderSrc, placeholderSrcset }) => (
   <StyledWrapper>
     {placeholderSrc && (
-      <img
+      <Image
         alt=""
         src={placeholderSrc}
-        srcSet={placeholderSrcset}
+        srcset={placeholderSrcset}
         aria-hidden="true"
       />
     )}

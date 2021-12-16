@@ -264,12 +264,12 @@ describe('StoryPromo Container', () => {
       ).toEqual(cpsItem.indexImage.altText);
     });
 
-    it('should render amp-img with src & alt and amp-img fallback when platform is amp', () => {
+    it('should render amp-img with src & alt when platform is amp', () => {
       const { container } = render(
         <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
-      expect(container.getElementsByTagName('amp-img').length).toEqual(2);
+      expect(container.getElementsByTagName('amp-img').length).toEqual(1);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),
