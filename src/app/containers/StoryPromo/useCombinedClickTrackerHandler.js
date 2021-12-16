@@ -9,12 +9,14 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
     ...(blockData && {
       ...blockData,
       preventNavigation: true,
+      hasOptimizely: true,
     }),
   });
   const handleLinkLevelClick = useClickTrackerHandler({
     ...(linkData && {
       ...linkData,
       preventNavigation: true,
+      hasOptimizely: true,
     }),
   });
 

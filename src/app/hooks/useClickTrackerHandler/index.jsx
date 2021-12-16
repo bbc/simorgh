@@ -2,6 +2,7 @@
 import { useContext, useCallback, useState } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
 import { isValidClick } from './clickTypes';
@@ -17,6 +18,7 @@ const useClickTrackerHandler = (props = {}) => {
   const url = path(['url'], props);
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
+  const hasOptimizely = path(['hasOptimizely'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -29,6 +31,7 @@ const useClickTrackerHandler = (props = {}) => {
     props,
   );
   const { service } = useContext(ServiceContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
   return useCallback(
     async event => {
@@ -56,6 +59,10 @@ const useClickTrackerHandler = (props = {}) => {
 
           event.stopPropagation();
           event.preventDefault();
+
+          if (hasOptimizely) {
+            optimizely.track('component_clicks');
+          }
 
           try {
             await sendEventBeacon({
@@ -93,6 +100,8 @@ const useClickTrackerHandler = (props = {}) => {
       url,
       advertiserID,
       format,
+      optimizely,
+      hasOptimizely,
     ],
   );
 };
