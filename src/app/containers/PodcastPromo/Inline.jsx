@@ -135,6 +135,7 @@ const Promo = () => {
     eventTrackingData,
     sizes,
     srcset,
+    primaryMimeType,
   } = getPromo(podcastPromo);
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
@@ -180,6 +181,7 @@ const Promo = () => {
               <ImageWithPlaceholder
                 src={imgSrc}
                 srcset={srcset}
+                primaryMimeType={primaryMimeType}
                 sizes={sizes}
                 alt={alt}
                 height={1}
