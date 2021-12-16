@@ -287,7 +287,6 @@ exports[`Media Player: Canonical Entry renders a landscape container with a plac
       <picture
         class="emotion-19 emotion-20"
       >
-        <source />
         <img
           alt=""
           class="emotion-21 emotion-22"
@@ -501,7 +500,6 @@ exports[`Media Player: Canonical Entry renders a placeholder image with guidance
       <picture
         class="emotion-21 emotion-22"
       >
-        <source />
         <img
           alt=""
           class="emotion-23 emotion-24"
@@ -683,7 +681,6 @@ exports[`Media Player: Canonical Entry renders a portrait container with a place
       <picture
         class="emotion-19 emotion-20"
       >
-        <source />
         <img
           alt=""
           class="emotion-21 emotion-22"
@@ -990,7 +987,6 @@ exports[`Media Player: Canonical Entry renders with no-js styles when noJsClassN
       <picture
         class="emotion-21 emotion-22"
       >
-        <source />
         <img
           alt=""
           class="emotion-23 emotion-24"
