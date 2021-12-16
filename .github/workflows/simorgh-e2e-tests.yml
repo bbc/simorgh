@@ -11,7 +11,7 @@ on:
       - latest
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       CI: true
       LOG_LEVEL: 'error'
