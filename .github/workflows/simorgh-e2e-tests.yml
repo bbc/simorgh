@@ -18,6 +18,7 @@ jobs:
       CYPRESS_SKIP_EU: true
       CYPRESS_SMOKE: true
       CYPRESS_APP_ENV: 'local'
+      DEBUG: 'cypress:*'
 
     steps:
       - name: Checkout
@@ -27,5 +28,4 @@ jobs:
         with:
           build: yarn build
           start: yarn start
-          headless: false
           
