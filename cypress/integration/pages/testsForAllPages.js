@@ -7,7 +7,7 @@ import visitPage from '../../support/helpers/visitPage';
 
 export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
   describe(`testsToAlwaysRunForAllPages to run for ${service} ${pageType}`, () => {
-    it.skip('should have no detectable a11y violations on page load', () => {
+    it('should have no detectable a11y violations on page load', () => {
       checkA11y();
     });
 

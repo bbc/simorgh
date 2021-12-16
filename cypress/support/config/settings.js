@@ -10241,7 +10241,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
