@@ -28,4 +28,4 @@ jobs:
         with:
           build: yarn build
           start: yarn start
-          browser: chrome
+          browser: firefox
