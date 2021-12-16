@@ -28,4 +28,6 @@ jobs:
         with:
           build: yarn build
           start: yarn start
-          browser: firefox
+          browser: chrome
+          headless: true
+          
