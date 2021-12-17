@@ -14,6 +14,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
+import { OptimizelyContext } from '@optimizely/react-sdk';
+import { useContext } from 'react';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
@@ -295,6 +297,42 @@ describe('Click tracking', () => {
   });
 
   it('should be able to override the campaignID that is sent to ATI', async () => {
+    const spyFetch = jest.spyOn(global, 'fetch');
+    const campaignID = 'custom-campaign';
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, campaignID }} />
+      </WithContexts>,
+    );
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    const [[viewEventUrl]] = spyFetch.mock.calls;
+
+    expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
+      'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
+    );
+  });
+
+  it('should fire event to optimizely if optional isOptimizely is true', async () => {
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={defaultProps} />
+      </WithContexts>,
+    );
+
+    const { optimizely } = useContext(OptimizelyContext);
+
+    const clickSpy = jest.spyOn(optimizely, 'call');
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    act(() => userEvent.click(getByTestId('test-component')));
+
+    expect(urlToObject(viewEventUrl)).toEqual({});
+  });
+
+  it('should not fire event to optimizely if optional isOptimizely is not passed as an argument', async () => {
     const spyFetch = jest.spyOn(global, 'fetch');
     const campaignID = 'custom-campaign';
     const { getByTestId } = render(
