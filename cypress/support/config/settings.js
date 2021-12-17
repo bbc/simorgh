@@ -10238,7 +10238,7 @@ module.exports = () => ({
           },
           local: {
             paths: ['/zhongwen/articles/c3xd4x9prgyo/trad'],
-            enabled: false,
+            enabled: true,
           },
         },
         smoke: true,
