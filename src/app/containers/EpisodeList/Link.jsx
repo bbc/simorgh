@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/aria-role */
 import React from 'react';
-import { node, string, bool } from 'prop-types';
+import { node, string, bool, number } from 'prop-types';
 import styled from '@emotion/styled';
 import { C_METAL, C_POSTBOX, C_STONE } from '@bbc/psammead-styles/colours';
 import MediaIndicator from './MediaIndicator';
@@ -51,15 +51,25 @@ const StyledAnchor = styled.a`
   }
 `;
 
-const Link = ({ children, showMediaIndicator, dir, ...props }) => {
+const Link = ({ children, showMediaIndicator, dir, index, ...props }) => {
   return (
-    <StyledAnchor showMediaIndicator={showMediaIndicator} {...props}>
+    <StyledAnchor
+      showMediaIndicator={showMediaIndicator}
+      // This is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      aria-labelledby={`episodeLinkIndex-${index}`}
+      {...props}
+    >
       {showMediaIndicator && (
-        <MediaIndicatorWrapper dir={dir}>
+        <MediaIndicatorWrapper dir={dir} aria-hidden="true">
           <MediaIndicator size="2.5rem" />
         </MediaIndicatorWrapper>
       )}
-      <span role="text">{children}</span>
+      <span
+        role="text"
+        id={`episodeLinkIndex-${index}`} // ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+      >
+        {children}
+      </span>
     </StyledAnchor>
   );
 };
@@ -67,6 +77,7 @@ const Link = ({ children, showMediaIndicator, dir, ...props }) => {
 Link.propTypes = {
   children: node.isRequired,
   dir: string.isRequired,
+  index: number.isRequired,
   showMediaIndicator: bool,
 };
 
