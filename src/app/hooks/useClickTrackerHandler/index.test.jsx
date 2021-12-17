@@ -329,6 +329,11 @@ describe('Click tracking', () => {
     fireEvent.click(getByTestId('test-component'));
 
     expect(clickSpy).toHaveBeenCalledTimes(2);
+    expect(clickSpy).toHaveBeenCalledWith({
+      componentName: 'brand',
+      format: 'CHD=promo::2',
+      hasOptimizely: true,
+    });
   });
 
   it('should not fire event to optimizely if optional isOptimizely is not passed as an argument', async () => {
