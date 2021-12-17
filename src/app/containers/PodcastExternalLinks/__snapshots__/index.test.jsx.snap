@@ -143,12 +143,13 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="Apple, A brand podcast, внешняя"
+          aria-labelledby="externalLinkId-Apple"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
+            id="externalLinkId-Apple"
             role="text"
           >
             <span
@@ -159,7 +160,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
-              , A brand podcast
+              , A brand podcast, внешняя
             </span>
           </span>
         </a>
@@ -169,12 +170,13 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="Spotify, A brand podcast, внешняя"
+          aria-labelledby="externalLinkId-Spotify"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
+            id="externalLinkId-Spotify"
             role="text"
           >
             <span
@@ -185,7 +187,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
-              , A brand podcast
+              , A brand podcast, внешняя
             </span>
           </span>
         </a>
@@ -195,12 +197,13 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
         dir="ltr"
       >
         <a
-          aria-label="RSS, A brand podcast, внешняя"
+          aria-labelledby="externalLinkId-RSS"
           class="emotion-8 emotion-9"
           dir="ltr"
           href="https://bbc.com"
         >
           <span
+            id="externalLinkId-RSS"
             role="text"
           >
             <span
@@ -211,7 +214,7 @@ exports[`PodcastExternalLinks Should render external links 1`] = `
             <span
               class="emotion-10 emotion-11"
             >
-              , A brand podcast
+              , A brand podcast, внешняя
             </span>
           </span>
         </a>

@@ -83,9 +83,9 @@ describe('PodcastExternalLinks', () => {
     expect(aside.getAttribute('aria-labelledBy')).toEqual('third-party-links');
   });
 
-  it('should render hidden text in the links', () => {
+  it('should render hidden text in the links with external text', () => {
     const { getAllByText } = render(<Component links={links} />);
-    const visuallyHiddenText = getAllByText(', A brand podcast');
+    const visuallyHiddenText = getAllByText(', A brand podcast, внешняя');
     expect(visuallyHiddenText.length).toEqual(3);
   });
 

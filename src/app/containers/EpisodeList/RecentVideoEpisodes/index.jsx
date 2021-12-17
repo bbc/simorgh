@@ -89,7 +89,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
         ulProps={ulProps}
         liProps={liProps}
       >
-        {episodes.map(episode => (
+        {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} dir={dir}>
             <EpisodeList.Image
               dir={dir}
@@ -112,7 +112,7 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
               })}
             />
             {/* these must be concatenated for screen reader UX */}
-            <EpisodeList.Link href={getUrl(episode.id)}>
+            <EpisodeList.Link href={getUrl(episode.id)} index={index}>
               <VisuallyHiddenText>{`${videoLabel}, `}</VisuallyHiddenText>
               <EpisodeList.Title className="episode-list__title--hover episode-list__title--visited">
                 {episode.brandTitle}
