@@ -14,6 +14,7 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
+import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { useContext } from 'react';
 
@@ -314,22 +315,20 @@ describe('Click tracking', () => {
     );
   });
 
-  it('should fire event to optimizely if optional isOptimizely is true', async () => {
+  it.only('should fire event to optimizely if optional isOptimizely is true', async () => {
+    const clickSpy = jest.spyOn(clickTracking, 'default');
+
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
         <TestComponent hookProps={defaultProps} />
       </WithContexts>,
     );
 
-    const { optimizely } = useContext(OptimizelyContext);
+    fireEvent.click(getByTestId('test-component'));
 
-    const clickSpy = jest.spyOn(optimizely, 'call');
+    fireEvent.click(getByTestId('test-component'));
 
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    expect(urlToObject(viewEventUrl)).toEqual({});
+    expect(clickSpy).toHaveBeenCalledTimes(2);
   });
 
   it('should not fire event to optimizely if optional isOptimizely is not passed as an argument', async () => {
