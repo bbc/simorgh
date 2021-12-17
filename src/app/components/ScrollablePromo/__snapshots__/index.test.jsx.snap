@@ -98,7 +98,6 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  overflow-wrap: break-word;
   list-style: none;
   padding-right: 0;
   margin: 0;
@@ -183,6 +182,7 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
 
 .emotion-8 {
   width: 100%;
+  word-break: break-word;
   text-overflow: ellipsis;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -394,6 +394,7 @@ exports[`ScrollablePromo it should match a11y snashot for single card 1`] = `
 
 .emotion-6 {
   width: 100%;
+  word-break: break-word;
   text-overflow: ellipsis;
   -webkit-text-decoration: none;
   text-decoration: none;
