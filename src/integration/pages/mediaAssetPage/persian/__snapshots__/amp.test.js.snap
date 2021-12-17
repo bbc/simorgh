@@ -416,7 +416,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
         "width": 1024,
       },
       "inLanguage": Object {
@@ -440,7 +440,7 @@ Object {
         "name": "BBC News فارسی",
         "publishingPrinciples": "https://www.bbc.com/persian/institutional-49283091",
       },
-      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg",
       "url": "http://localhost:7080/persian/iran-23231114",
     },
   ],
@@ -462,7 +462,7 @@ Object {
 
 exports[`AMP Media Asset Page SEO OG description 1`] = `"Trump summary text"`;
 
-exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO OG image alt 1`] = `"Trump getting upset"`;
 
@@ -488,7 +488,7 @@ exports[`AMP Media Asset Page SEO Twitter description 1`] = `"Trump summary text
 
 exports[`AMP Media Asset Page SEO Twitter image alt 1`] = `"Trump getting upset"`;
 
-exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
+exports[`AMP Media Asset Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_persian/14DFC/test/_63700558_p01lmkk5.jpg"`;
 
 exports[`AMP Media Asset Page SEO Twitter site 1`] = `"@bbcpersian"`;
 
