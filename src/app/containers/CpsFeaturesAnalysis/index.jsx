@@ -81,7 +81,7 @@ PromoListComponent.defaultProps = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker({ hasOptimizely: true });
+  const viewRef = useViewTracker(eventTrackingData);
   const { isAmp } = useContext(RequestContext);
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
@@ -107,7 +107,6 @@ const PromoComponent = ({ promo, dir }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
-        hasOptimizely
       />
     </div>
   );
