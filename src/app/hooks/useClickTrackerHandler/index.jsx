@@ -60,7 +60,7 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
-          if (hasOptimizely) {
+          if (hasOptimizely && optimizely) {
             optimizely.track('component_clicks');
           }
 

@@ -6,6 +6,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import useClickTrackerHandler from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -14,8 +15,6 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
-import { OptimizelyContext } from '@optimizely/react-sdk';
-import { useContext } from 'react';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 
@@ -314,40 +313,38 @@ describe('Click tracking', () => {
     );
   });
 
-  it('should fire event to optimizely if optional isOptimizely is true', async () => {
+  it('should fire event to optimizely if hasOptimizely is true', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
+
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={defaultProps} />
+        <OptimizelyContext.Provider value={mockOptimizely}>
+          <TestComponent hookProps={{ ...defaultProps, hasOptimizely: true }} />
+        </OptimizelyContext.Provider>
       </WithContexts>,
     );
 
-    const { optimizely } = useContext(OptimizelyContext);
+    fireEvent.click(getByTestId('test-component'));
 
-    const clickSpy = jest.spyOn(optimizely, 'call');
-
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    act(() => userEvent.click(getByTestId('test-component')));
-
-    expect(urlToObject(viewEventUrl)).toEqual({});
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
   });
 
-  it('should not fire event to optimizely if optional isOptimizely is not passed as an argument', async () => {
-    const spyFetch = jest.spyOn(global, 'fetch');
-    const campaignID = 'custom-campaign';
+  it('should not fire event to Optimizely if hasOptimizely is not passed/false', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
+
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <TestComponent hookProps={{ ...defaultProps, campaignID }} />
+        <OptimizelyContext.Provider value={mockOptimizely}>
+          <TestComponent hookProps={defaultProps} />
+        </OptimizelyContext.Provider>
       </WithContexts>,
     );
 
-    act(() => userEvent.click(getByTestId('test-component')));
+    fireEvent.click(getByTestId('test-component'));
 
-    const [[viewEventUrl]] = spyFetch.mock.calls;
-
-    expect(urlToObject(viewEventUrl).searchParams.atc).toEqual(
-      'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
-    );
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
   });
 });
 
