@@ -112,14 +112,10 @@ const StoryPromoContainer = ({
   serviceDatetimeLocale,
   eventTrackingData,
   labelId,
-  hasOptimizely,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
-  const handleClickTracking = useCombinedClickTrackerHandler(
-    eventTrackingData,
-    hasOptimizely,
-  );
+  const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
   const linkId = buildUniquePromoId(labelId, item, index);
 
@@ -307,7 +303,6 @@ StoryPromoContainer.propTypes = {
   }),
   labelId: string,
   index: number,
-  hasOptimizely: bool,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -321,7 +316,6 @@ StoryPromoContainer.defaultProps = {
   eventTrackingData: null,
   labelId: '',
   index: 0,
-  hasOptimizely: false,
 };
 
 export default StoryPromoContainer;

@@ -61,7 +61,6 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
               eventTrackingData={eventTrackingData}
-              hasOptimizely
             />
           </StoryPromoLi>
         );
