@@ -73,7 +73,7 @@ const useViewTracker = (props = {}) => {
         ].every(Boolean);
 
         if (shouldSendEvent) {
-          if (hasOptimizely) {
+          if (hasOptimizely && optimizely) {
             optimizely.track('component_views');
           }
 
