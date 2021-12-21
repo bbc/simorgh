@@ -4,6 +4,7 @@ import isEmpty from 'ramda/src/isEmpty';
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
+import handlePromoData from '../handlePromoData';
 import {
   augmentWithTimestamp,
   addIdsToBlocks,
@@ -23,6 +24,7 @@ const logger = nodeLogger(__filename);
 const transformJson = pipe(
   handleGroupBlocks,
   handleEmptyParagraphBlocks,
+  handlePromoData,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
