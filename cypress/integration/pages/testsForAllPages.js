@@ -18,7 +18,7 @@ export const testsThatAlwaysRunForAllPages = ({ service, pageType }) => {
         Cypress.env('APP_ENV') !== 'local'
       ) {
         cy.url().then(url => {
-          const urlForData = url.includes('amp') ? url.slice(0, -4) : url;
+          const urlForData = url.replace('.amp', '');
 
           const firstVisitedPage = url;
 

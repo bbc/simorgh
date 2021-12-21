@@ -478,7 +478,18 @@ exports[`AMP persian/afghanistan IDX page Story Promo Image should match image 1
   height="351"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
-  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
+  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg.webp 624w"
   width="624"
-/>
+>
+  <amp-img
+    alt="هبت الله آخوندزاده"
+    attribution="BBC"
+    fallback=""
+    height="351"
+    layout="responsive"
+    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
+    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 320w, https://ichef.bbci.co.uk/news/624/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg 624w"
+    width="624"
+  />
+</amp-img>
 `;

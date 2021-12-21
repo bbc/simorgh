@@ -314,9 +314,20 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg.webp 549w"
   width="549"
-/>
+>
+  <amp-img
+    alt="Tenista de 1904"
+    attribution="Getty Images"
+    fallback=""
+    height="549"
+    layout="responsive"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
+    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 480w, https://ichef.bbci.co.uk/news/549/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg 549w"
+    width="549"
+  />
+</amp-img>
 `;
 
 exports[`AMP Photo Gallery Page Main heading should match text 1`] = `"Río 2016, el antes y el ahora: cómo ha cambiado la ropa deportiva en más de un siglo de juegos olímpicos"`;
@@ -451,7 +462,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
         "width": 1024,
       },
       "inLanguage": Object {
@@ -475,7 +486,7 @@ Object {
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg",
       "url": "http://localhost:7080/mundo/deportes-36935058",
     },
   ],
@@ -484,7 +495,7 @@ Object {
 
 exports[`AMP Photo Gallery Page SEO OG description 1`] = `"La estética de la ropa deportiva ha ido evolucionando en cada edición olímpica, pero no solo se trata de lucir bien, pues en varias competencias contar con un traje adecuado puede ser un factor que contribuya al triunfo."`;
 
-exports[`AMP Photo Gallery Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`AMP Photo Gallery Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`AMP Photo Gallery Page SEO OG image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
@@ -510,7 +521,7 @@ exports[`AMP Photo Gallery Page SEO Twitter description 1`] = `"La estética de 
 
 exports[`AMP Photo Gallery Page SEO Twitter image alt 1`] = `"Gimnastas en los primeros juegos"`;
 
-exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
+exports[`AMP Photo Gallery Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/16506/production/_90689319_gettyimages-2642105-1.jpg"`;
 
 exports[`AMP Photo Gallery Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

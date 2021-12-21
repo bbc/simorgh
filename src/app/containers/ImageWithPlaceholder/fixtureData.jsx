@@ -69,7 +69,11 @@ const baseFixture = {
   ratio: 56.25,
   src: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg',
   srcset:
+    'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w',
+  fallbackSrcset:
     'https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w',
+  primaryMimeType: 'image/webp',
+  fallbackMimeType: 'image/jpeg',
   width: 640,
 };
 
@@ -84,7 +88,11 @@ const baseFixturePng = {
   ratio: 56.25,
   src: 'https://ichef.bbci.co.uk/news/640/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png',
   srcset:
+    'https://ichef.bbci.co.uk/news/640/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png.webp 640w',
+  fallbackSrcset:
     'https://ichef.bbci.co.uk/news/640/cpsprodpb/14763/production/_112811838__112171791_nicktriggle_tr-nc.png 640w',
+  primaryMimeType: 'image/webp',
+  fallbackMimeType: 'image/png',
   width: 640,
 };
 

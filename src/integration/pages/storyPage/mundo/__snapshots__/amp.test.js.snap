@@ -314,9 +314,20 @@ exports[`AMP Story Page Image should match snapshot 1`] = `
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
-  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+  srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg.webp 800w"
   width="976"
-/>
+>
+  <amp-img
+    alt="A person holding a union jack umbrella in front of Big Ben"
+    attribution="Getty Images"
+    fallback=""
+    height="549"
+    layout="responsive"
+    src="https://ichef.bbci.co.uk/news/640/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg"
+    srcset="https://ichef.bbci.co.uk/news/240/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 320w, https://ichef.bbci.co.uk/news/480/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 480w, https://ichef.bbci.co.uk/news/624/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 624w, https://ichef.bbci.co.uk/news/800/cpsprodpb/17D42/production/_110620679_gettyimages-542984918.jpg 800w"
+    width="976"
+  />
+</amp-img>
 `;
 
 exports[`AMP Story Page Main heading should match text 1`] = `"Brexit: qué cambiará para visitar, trabajar y estudiar en Reino Unido tras la salida del país de la Unión Europea"`;
@@ -468,7 +479,7 @@ Object {
       "image": Object {
         "@type": "ImageObject",
         "height": 576,
-        "url": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
         "width": 1024,
       },
       "inLanguage": Object {
@@ -492,7 +503,7 @@ Object {
         "name": "BBC News Mundo",
         "publishingPrinciples": "https://www.bbc.com/mundo/institucional-51359666",
       },
-      "thumbnailUrl": "https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
+      "thumbnailUrl": "https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg",
       "url": "http://localhost:7080/mundo/noticias-internacional-51266689",
     },
   ],
@@ -501,7 +512,7 @@ Object {
 
 exports[`AMP Story Page SEO OG description 1`] = `"Tras casi cuatro años de desacuerdos y negociaciones, este viernes Reino Unido dejará formalmente la Unión Europea. ¿Qué cambios supone esto para quienes quieran hacer turismo, estudiar o trabajar en Reino Unido?"`;
 
-exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`AMP Story Page SEO OG image 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`AMP Story Page SEO OG image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
@@ -527,7 +538,7 @@ exports[`AMP Story Page SEO Twitter description 1`] = `"Tras casi cuatro años d
 
 exports[`AMP Story Page SEO Twitter image alt 1`] = `"A person holding a union jack umbrella in front of Big Ben"`;
 
-exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.test.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
+exports[`AMP Story Page SEO Twitter image src 1`] = `"https://ichef.bbci.co.uk/news/1024/branded_mundo/17D42/production/_110620679_gettyimages-542984918.jpg"`;
 
 exports[`AMP Story Page SEO Twitter site 1`] = `"@bbcmundo"`;
 

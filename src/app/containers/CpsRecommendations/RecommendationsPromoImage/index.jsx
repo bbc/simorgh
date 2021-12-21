@@ -2,7 +2,8 @@ import React from 'react';
 import { shape, bool } from 'prop-types';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import ImageWithPlaceholder from '../../ImageWithPlaceholder';
-import { createSrcset } from '#lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
+import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 
@@ -18,9 +19,19 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const srcset = createSrcset(originCode, locator, width, imageResolutions);
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: width,
+      imageResolutions,
+    });
   const DEFAULT_IMAGE_RES = 660;
-  const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
+  const src = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
 
   return (
     <ImageWithPlaceholder
@@ -30,7 +41,10 @@ const RecommendationsImage = ({ indexImage, lazyLoad }) => {
       fallback={false}
       {...indexImage}
       copyright={copyrightHolder}
-      srcset={srcset}
+      srcset={primarySrcset}
+      fallbackSrcset={fallbackSrcset}
+      primaryMimeType={primaryMimeType}
+      fallbackMimeType={fallbackMimeType}
       lazyLoad={lazyLoad}
     />
   );
