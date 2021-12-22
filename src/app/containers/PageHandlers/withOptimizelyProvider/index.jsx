@@ -1,7 +1,26 @@
 import React, { useContext } from 'react';
 import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
+import { v4 as uuid } from 'uuid';
+import Cookie from 'js-cookie';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getAtUserId } from '#lib/analyticsUtils';
+import onClient from '#lib/utilities/onClient';
+import isOperaProxy from '#lib/utilities/isOperaProxy';
+
+const getCknsMvt = () => {
+  // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
+  // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
+  if (!onClient() || isOperaProxy()) return null;
+
+  const cookieName = 'ckns_mvt';
+  const cookieValue = Cookie.get(cookieName);
+  const expires = 365; // expires in 12 Months
+
+  if (!cookieValue) {
+    Cookie.set(cookieName, uuid(), { expires, path: '/' });
+  }
+
+  return cookieValue;
+};
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
@@ -19,7 +38,7 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
         isServerSide
         timeout={500}
         user={{
-          id: noUserId ? null : getAtUserId(),
+          id: noUserId ? null : getCknsMvt(),
           attributes: {
             service,
           },
