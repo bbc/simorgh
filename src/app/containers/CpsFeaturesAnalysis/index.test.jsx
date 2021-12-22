@@ -203,7 +203,7 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
   it('should implement 1 BLOCK level view tracker', () => {
     const expected = {
       componentName: 'features',
-      hasOptimizely: true,
+      optimizely: null,
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 
