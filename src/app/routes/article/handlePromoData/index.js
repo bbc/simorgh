@@ -9,11 +9,7 @@ const handlePromoData = pageData => {
   const finalBlock = dataBlocks.length - 1;
 
   if (dataBlocks[finalBlock].type === 'links') {
-    dataBlocks[finalBlock] = assocPath(
-      ['type'],
-      'relatedContent',
-      dataBlocks[finalBlock],
-    );
+    dataBlocks[finalBlock].type = 'relatedContent';
   }
   return setBlocks(dataBlocks, pageData);
 };
