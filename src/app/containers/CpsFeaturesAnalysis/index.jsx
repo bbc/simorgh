@@ -3,6 +3,7 @@ import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
+import { OptimizelyContext } from '@optimizely/react-sdk';
 import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -14,19 +15,20 @@ import useViewTracker from '#hooks/useViewTracker';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import useToggle from '#hooks/useToggle';
 
-const eventTrackingData = {
+const getEventTrackingData = optimizely => ({
   block: {
     componentName: 'features',
-    hasOptimizely: true,
+    optimizely,
   },
-};
+});
 
 const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
 const HIGH_IMPACT_VARIATION = 'variation_1';
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData.block);
+  const { optimizely } = useContext(OptimizelyContext);
+  const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
   const { isAmp } = useContext(RequestContext);
 
   const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
@@ -60,7 +62,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={eventTrackingData}
+              eventTrackingData={getEventTrackingData(optimizely)}
             />
           </StoryPromoLi>
         );
@@ -81,7 +83,8 @@ PromoListComponent.defaultProps = {
 
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const viewRef = useViewTracker(eventTrackingData);
+  const { optimizely } = useContext(OptimizelyContext);
+  const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');

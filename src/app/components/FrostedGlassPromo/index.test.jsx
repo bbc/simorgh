@@ -92,7 +92,6 @@ describe('Frosted Glass Promo', () => {
     expect(clickTrackerSpy).toHaveBeenCalledWith({
       componentName: 'features',
       url: cpsPromoFixture.item.locators.assetUri,
-      hasOptimizely: true,
     });
   });
 });

@@ -80,7 +80,6 @@ const FrostedGlassPromo = ({
   const clickTracker = useClickTrackerHandler({
     ...(eventTrackingData || {}),
     url,
-    hasOptimizely: true,
   });
 
   const onClick = eventTrackingData ? clickTracker : () => {};

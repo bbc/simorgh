@@ -179,7 +179,7 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
     const expected = {
       componentName: 'features',
       preventNavigation: true,
-      hasOptimizely: true,
+      optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 

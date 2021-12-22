@@ -6,7 +6,6 @@ import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
-import { OptimizelyContext } from '@optimizely/react-sdk';
 import useClickTrackerHandler from '.';
 import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -313,15 +312,13 @@ describe('Click tracking', () => {
     );
   });
 
-  it('should fire event to optimizely if hasOptimizely is true', async () => {
+  it('should fire event to Optimizely if optimizely object exists', async () => {
     const mockOptimizelyTrack = jest.fn();
     const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
 
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <OptimizelyContext.Provider value={mockOptimizely}>
-          <TestComponent hookProps={{ ...defaultProps, hasOptimizely: true }} />
-        </OptimizelyContext.Provider>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
       </WithContexts>,
     );
 
@@ -330,15 +327,13 @@ describe('Click tracking', () => {
     expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
   });
 
-  it('should not fire event to Optimizely if hasOptimizely is not passed/false', async () => {
+  it('should not fire event to Optimizely if optimizely object is undefined', async () => {
     const mockOptimizelyTrack = jest.fn();
-    const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
+    const mockOptimizely = undefined;
 
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
-        <OptimizelyContext.Provider value={mockOptimizely}>
-          <TestComponent hookProps={defaultProps} />
-        </OptimizelyContext.Provider>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
       </WithContexts>,
     );
 
