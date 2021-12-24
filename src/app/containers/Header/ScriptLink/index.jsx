@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { compile } from 'path-to-regexp';
-import { useRouteMatch } from 'react-router-dom';
+import { useMatch } from 'react-router-dom';
 import ScriptLink from '@bbc/psammead-script-link';
 import { UserContext } from '#contexts/UserContext';
 import { ServiceContext } from '#contexts/ServiceContext';
@@ -36,7 +36,8 @@ const ScriptLinkContainer = () => {
   const { service, script, scriptLink } = useContext(ServiceContext);
   const { enabled: scriptLinkEnabled } = useToggle('scriptLink');
   const { enabled: variantCookieEnabled } = useToggle('variantCookie');
-  const { path, params } = useRouteMatch();
+  // useMatch expects a pattern argument. I didn't get round to fixing this so I have commented out use of this component for now
+  const { path, params } = useMatch();
 
   if (!scriptLinkEnabled) {
     return null;

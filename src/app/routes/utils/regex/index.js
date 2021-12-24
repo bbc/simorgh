@@ -3,7 +3,6 @@ import {
   getArticleRegex,
   getArticleSwRegex,
   getArticleManifestRegex,
-  getFrontPageRegex,
   getSwRegex,
   getManifestRegex,
   getCpsAssetRegex,
@@ -24,16 +23,26 @@ import {
   getAfricaEyeTVPageRegex,
 } from './utils';
 
-const allServices = Object.keys(services);
+// this is a bit of a mess just now
 
-export const articlePath = getArticleRegex(allServices);
-export const articleDataPath = `${articlePath}.json`;
+export const allServices = Object.keys(services);
+export const serviceRegex = allServices.join('|');
+export const variantRegex = ['/simp', '/trad', '/cyr', '/lat'].join('|');
+const articleLocalRegex = ['articles', 'erthyglau', 'sgeulachdan'].join('|');
+const idRegex = 'c[a-zA-Z0-9]{10}o';
+
+export const articlePageRegex = new RegExp(
+  `^/(${serviceRegex})(${articleLocalRegex})/(${idRegex})(${variantRegex})?(.amp)?$`,
+);
+export const articleDataPath = `/:service(${serviceRegex})/:local(${articleLocalRegex})/:id(${idRegex}):variant(${variantRegex})?.json?`;
 
 export const articleSwPath = getArticleSwRegex(allServices);
 export const articleManifestPath = getArticleManifestRegex(allServices);
 
-export const frontPagePath = getFrontPageRegex(allServices);
-export const frontPageDataPath = `${frontPagePath}.json`;
+export const frontPageRegex = new RegExp(
+  `^/(${serviceRegex})(${variantRegex})?(.amp)?$`,
+);
+export const frontPageDataPath = `/:service(${serviceRegex}):variant(${variantRegex})?.json`;
 
 export const frontPageSwPath = getSwRegex(allServices);
 export const frontPageManifestPath = getManifestRegex(allServices);

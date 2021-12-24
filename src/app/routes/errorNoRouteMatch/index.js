@@ -3,6 +3,7 @@ import { ERROR_PAGE } from '#utils/pageTypes';
 
 export default {
   component: ErrorPage,
+  path: '*',
   getInitialData: () => Promise.resolve({ status: 404, errorCode: 404 }),
   pageType: ERROR_PAGE,
 };

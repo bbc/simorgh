@@ -4,8 +4,11 @@
  * https://github.com/jtart/react-universal-app
  */
 import React from 'react';
-import { StaticRouter, BrowserRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+
+// I removed props spreading in this file too
 
 export class ClientApp extends React.Component {
   // Having an error boundary here means that if hydration fails, users are left with the server-rendered DOM
@@ -14,7 +17,7 @@ export class ClientApp extends React.Component {
 
   render() {
     return (
-      <BrowserRouter {...this.props}>
+      <BrowserRouter>
         <App initialData={this.props.data} />
       </BrowserRouter>
     );
@@ -22,7 +25,7 @@ export class ClientApp extends React.Component {
 }
 
 export const ServerApp = props => (
-  <StaticRouter {...props}>
+  <StaticRouter location={props.location}>
     <App initialData={props.data} bbcOrigin={props.bbcOrigin} />
   </StaticRouter>
 );

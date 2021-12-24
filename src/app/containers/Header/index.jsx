@@ -64,13 +64,13 @@ const HeaderContainer = () => {
         <Header
           linkId="brandLink"
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          // scriptLink={scriptLink && <ScriptLink />}
         />
       ) : (
         <Header
           brandRef={brandRef}
           skipLink={skipLink}
-          scriptLink={scriptLink && <ScriptLink />}
+          // scriptLink={scriptLink && <ScriptLink />}
         />
       )}
       {showNav && <NavigationContainer />}

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import getVariantRedirectUrl from './getVariantRedirectUrl';
 
 const WithVariant = Component => {
@@ -21,7 +21,7 @@ const WithVariant = Component => {
       return <Component {...props} />;
     }
 
-    return <Redirect to={redirectPath} />;
+    return <Navigate to={redirectPath} />;
   };
 
   VariantContainer.propTypes = {

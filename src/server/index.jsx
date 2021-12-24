@@ -4,7 +4,6 @@ import ramdaPath from 'ramda/src/path';
 // not part of react-helmet
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
-import routes from '#app/routes';
 import {
   articleManifestPath,
   articleSwPath,
@@ -118,6 +117,9 @@ if (process.env.SIMORGH_APP_ENV === 'local') {
   local(server);
 }
 
+// I need to get to the bottom of this but in dev mode the favicon is repeatedly requested with .json on end each time. You end up with favicon.ico.json.json.json.json.json requests until you kill thr server
+server.get('/favicon.ico', (req, res) => res.status(204));
+
 // Catch all for all routes
 server.get(
   '/*',
@@ -174,7 +176,6 @@ server.get(
         bbcOrigin,
         data,
         isAmp,
-        routes,
         service,
         url,
         variant,
@@ -193,23 +194,11 @@ server.get(
       } else {
         throw new Error('unknown result');
       }
-    } catch ({ message, status = 500 }) {
-      sendCustomMetric({
-        metricName: NON_200_RESPONSE,
-        statusCode: status,
-        pageType: derivedPageType,
-        requestUrl: url,
-      });
-
-      logger.error(SERVER_SIDE_REQUEST_FAILED, {
-        status,
-        message,
-        url,
-        headers,
-      });
+    } catch (error) {
+      console.log(error);
 
       // Return an internal server error for any uncaught errors
-      res.status(500).send(message);
+      res.status(500).send(error);
     }
   },
 );

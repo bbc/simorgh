@@ -8,7 +8,7 @@ import {
   StoryPage,
   FeatureIdxPage,
 } from '#pages';
-import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
+import { allServices } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,
   MEDIA_ASSET_PAGE,
@@ -18,29 +18,56 @@ import {
   CORRESPONDENT_STORY_PAGE,
 } from '../utils/pageTypes';
 
-// CPS Asset Mapping to PageType
-const CpsAsset = props => {
-  const type = path(['pageData', 'metadata', 'type'], props);
+// const assetUriRegex = '[a-z0-9-_]{0,}[0-9]{8,}';
+// const legacyAssetUriRegex = '[a-z0-9-_]{1,}/[a-z0-9-_/]{1,}';
 
-  const PageType = {
+// `/:service(${serviceRegex}):variant(${variantRegex})?/:assetUri(${assetUriRegex}):amp(${ampRegex})?`;
+
+const CANONICAL_PATHS = allServices.map(service => `/${service}/:assetUri`);
+const CANONICAL_SERVICE_VARIANT_PATHS = [
+  '/zhongwen/simp/:assetUri',
+  '/zhongwen/trad/:assetUri',
+  '/serbian/cyr/:assetUri',
+  '/serbian/lat/:assetUri',
+];
+
+const AMP_PATHS = CANONICAL_PATHS.map(canonicalPath => `${canonicalPath}.amp`);
+const AMP_SERVICE_VARIANT_PATH = CANONICAL_SERVICE_VARIANT_PATHS.map(
+  canonicalPath => `${canonicalPath}.amp`,
+);
+
+const getCpsAssetPageType = path(['pageData', 'metadata', 'type']);
+
+const component = props => {
+  const pageType = getCpsAssetPageType(props);
+
+  const Component = {
     [STORY_PAGE]: StoryPage,
     [CORRESPONDENT_STORY_PAGE]: StoryPage,
     [PHOTO_GALLERY_PAGE]: PhotoGalleryPage,
     [MEDIA_ASSET_PAGE]: MediaAssetPage,
     [FEATURE_INDEX_PAGE]: FeatureIdxPage,
-  }[type];
+  }[pageType];
 
-  return PageType ? (
-    <PageType {...props} pageType={type} />
+  return Component ? (
+    <Component {...props} pageType={pageType} />
   ) : (
     <ErrorPage {...props} pageType={ERROR_PAGE} errorCode={404} />
   );
 };
 
-export default {
-  path: [cpsAssetPagePath, legacyAssetPagePath],
-  exact: true,
-  component: CpsAsset,
+const pageType = 'cpsAsset';
+
+const cpsAssetRoutes = [
+  CANONICAL_PATHS,
+  CANONICAL_SERVICE_VARIANT_PATHS,
+  AMP_PATHS,
+  AMP_SERVICE_VARIANT_PATH,
+].map(cpsAssetPath => ({
+  path: cpsAssetPath,
+  component,
   getInitialData,
-  pageType: 'cpsAsset',
-};
+  pageType,
+}));
+
+export default cpsAssetRoutes;

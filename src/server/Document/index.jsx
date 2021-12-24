@@ -29,14 +29,7 @@ const getLinkAttributes = chunk => ({
   ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
 });
 
-const renderDocument = async ({
-  bbcOrigin,
-  data,
-  isAmp,
-  routes,
-  service,
-  url,
-}) => {
+const renderDocument = async ({ bbcOrigin, data, isAmp, service, url }) => {
   const isDev = process.env.NODE_ENV === 'development';
   const cache = createCache({ key: 'bbc' });
   const { extractCritical } = createEmotionServer(cache);
@@ -75,15 +68,8 @@ const renderDocument = async ({
     renderToString(
       <ChunkExtractorManager extractor={commonLoadableState}>
         <CacheProvider value={cache}>
-          <ServerApp
-            location={url}
-            routes={routes}
-            data={data}
-            bbcOrigin={bbcOrigin}
-            context={context}
-            service={service}
-            isAmp={isAmp}
-          />
+          {/* we were overproviding props here */}
+          <ServerApp location={url} data={data} bbcOrigin={bbcOrigin} />
         </CacheProvider>
       </ChunkExtractorManager>,
     ),
