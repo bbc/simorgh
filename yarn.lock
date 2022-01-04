@@ -8779,15 +8779,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"compression-webpack-plugin@npm:9.1.1":
-  version: 9.1.1
-  resolution: "compression-webpack-plugin@npm:9.1.1"
+"compression-webpack-plugin@npm:9.2.0":
+  version: 9.2.0
+  resolution: "compression-webpack-plugin@npm:9.2.0"
   dependencies:
     schema-utils: ^4.0.0
     serialize-javascript: ^6.0.0
   peerDependencies:
     webpack: ^5.1.0
-  checksum: 6c7dd65379effcc36376113909a1c3856072c15d948ea20969da07949467f03588b99d4b82fd91b210fac947718d870f61fdb9e11dc99b0d7d8a88cc4f9d6b45
+  checksum: 50ef78d0973f87ed8d7c30fdb31b009d409c288a77ee842d9b3b5b2348048f55148f510d3a0bd30b5c954e6701ed9fc08c3616ce46ad1eec8e0954b336a5f4b9
   languageName: node
   linkType: hard
 
@@ -19722,7 +19722,7 @@ resolve@^2.0.0-next.3:
     chrome-launcher: 0.15.0
     cli-table: 0.3.11
     compression: 1.7.4
-    compression-webpack-plugin: 9.1.1
+    compression-webpack-plugin: 9.2.0
     copy-webpack-plugin: 9.1.0
     core-js: 3.19.3
     crypto: 1.0.1
