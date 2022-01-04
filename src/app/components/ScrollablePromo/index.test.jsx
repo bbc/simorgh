@@ -42,7 +42,7 @@ describe('ScrollablePromo', () => {
   });
 
   shouldMatchSnapshot(
-    'it should match a11y snashot for single card',
+    'it should match a11y snapshot for single card',
     <ScrollablePromo blocks={oneLinkOnly} />,
   );
 
