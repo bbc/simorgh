@@ -11,7 +11,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 
 const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(
   FeaturesAnalysis,
-  true,
+  false,
 );
 
 /* eslint-disable react/prop-types */

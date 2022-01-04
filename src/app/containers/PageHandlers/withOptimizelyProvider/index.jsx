@@ -30,7 +30,7 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-const withOptimizelyProvider = (Component, noUserId = false) => {
+const withOptimizelyProvider = (Component, hasUserId = true) => {
   return props => {
     const { service } = useContext(ServiceContext);
 
@@ -40,7 +40,7 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
         isServerSide
         timeout={500}
         user={{
-          id: noUserId ? null : getCknsMvt(),
+          id: hasUserId && getCknsMvt(),
           attributes: {
             service,
           },

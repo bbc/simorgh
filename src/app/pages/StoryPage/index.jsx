@@ -4,7 +4,8 @@ import isLive from '#lib/utilities/isLive';
 
 import withOptimizelyProvider from '#app/containers/PageHandlers/withOptimizelyProvider';
 
-const OptimizelyStoryPage = withOptimizelyProvider(StoryPage, isLive());
+const hasUserId = !isLive();
+const OptimizelyStoryPage = withOptimizelyProvider(StoryPage, hasUserId);
 
 export default applyBasicPageHandlers({
   addVariantHandling: false,

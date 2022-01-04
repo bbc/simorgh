@@ -12,7 +12,7 @@ import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, true);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, false);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const ComponentWithContext = () => (

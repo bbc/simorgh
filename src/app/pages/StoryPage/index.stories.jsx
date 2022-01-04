@@ -16,7 +16,7 @@ import { UserContextProvider } from '#contexts/UserContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 
-const PageWithOptimizely = withOptimizelyProvider(StoryPage, true);
+const PageWithOptimizely = withOptimizelyProvider(StoryPage, false);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
