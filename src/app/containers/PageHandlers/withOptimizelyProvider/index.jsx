@@ -16,7 +16,9 @@ const getCknsMvt = () => {
   const expires = 365; // expires in 12 Months
 
   if (!cookieValue) {
+    const cookieUuid = uuid();
     Cookie.set(cookieName, uuid(), { expires, path: '/' });
+    return cookieUuid;
   }
 
   return cookieValue;
