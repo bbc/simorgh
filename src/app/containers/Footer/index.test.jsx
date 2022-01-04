@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { C_POSTBOX, C_WHITE } from '@bbc/psammead-styles/colours';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
-import { ServiceContext } from '#contexts/ServiceContext';
 import FooterContainer from '.';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const RealDate = Date;
 

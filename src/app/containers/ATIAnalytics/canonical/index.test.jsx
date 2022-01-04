@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import * as beacon from '#lib/analyticsUtils/sendBeacon';
 import CanonicalATIAnalytics from '.';
+import * as beacon from '#lib/analyticsUtils/sendBeacon';
 
 describe('Canonical ATI Analytics', () => {
   afterEach(() => {

@@ -1,4 +1,13 @@
 import Cookie from 'js-cookie';
+import {
+  chartbeatUID,
+  useCanonical,
+  getSylphidCookie,
+  buildSections,
+  getType,
+  getTitle,
+  getConfig,
+} from '.';
 import onClient from '#lib/utilities/onClient';
 import * as articleUtils from '#lib/analyticsUtils/article';
 import * as frontPageUtils from '#lib/analyticsUtils/indexPage';
@@ -14,15 +23,6 @@ import {
   PHOTO_GALLERY_PAGE,
   STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import {
-  chartbeatUID,
-  useCanonical,
-  getSylphidCookie,
-  buildSections,
-  getType,
-  getTitle,
-  getConfig,
-} from '.';
 
 let isOnClient = false;
 

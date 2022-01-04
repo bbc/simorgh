@@ -1,5 +1,5 @@
-import { LIBRARY_VERSION } from '#lib/analyticsUtils';
 import { buildATIPageTrackPath } from '../../atiUrl';
+import { LIBRARY_VERSION } from '#lib/analyticsUtils';
 
 export const buildMostReadATIParams = (
   pageData,

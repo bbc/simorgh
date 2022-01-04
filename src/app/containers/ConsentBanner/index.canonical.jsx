@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { oneOfType, func, shape, any } from 'prop-types';
 
-import { UserContext } from '#contexts/UserContext';
 import Banner from './Banner/index.canonical';
 import useConsentBanners from './useConsentBanners';
+import { UserContext } from '#contexts/UserContext';
 
 const Canonical = ({ onDismissFocusRef }) => {
   const { updateCookiePolicy } = useContext(UserContext);

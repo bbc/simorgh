@@ -1,4 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
+import fetchPageData from '../../utils/fetchPageData';
+import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
+import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
+import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import pathWithLogging, {
   LOG_LEVELS,
 } from '#lib/utilities/logging/pathWithLogging';
@@ -6,11 +10,8 @@ import { TV_MISSING_FIELD } from '#lib/logger.const';
 import getEpisodeAvailability, {
   getUrl,
 } from '#lib/utilities/episodeAvailability';
+
 import processRecentEpisodes from '#app/routes/utils/processRecentEpisodes';
-import fetchPageData from '../../utils/fetchPageData';
-import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
-import getPlaceholderImageUrl from '../../utils/getPlaceholderImageUrl';
-import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 const DEFAULT_TOGGLE_VALUE = { enabled: false, value: 4 };
 

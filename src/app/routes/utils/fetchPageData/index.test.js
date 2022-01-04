@@ -1,7 +1,7 @@
 import { setWindowValue, resetWindowValue } from '@bbc/psammead-test-helpers';
 import loggerMock from '#testHelpers/loggerMock'; // Must be imported before fetchPageData
-import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 import fetchPageData from '.';
+import { DATA_FETCH_ERROR, DATA_REQUEST_RECEIVED } from '#lib/logger.const';
 
 const expectedBaseUrl = 'http://localhost';
 const requestedPathname = '/path/to/asset';

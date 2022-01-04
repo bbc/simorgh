@@ -6,14 +6,14 @@ import { renderHook } from '@testing-library/react-hooks';
 import { render, act, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { waitFor } from '@testing-library/dom';
+import useClickTrackerHandler from '.';
+import pidginData from './fixtureData/tori-51745682.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { EventTrackingContextProvider } from '#contexts/EventTrackingContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as trackingToggle from '#hooks/useTrackingToggle';
-import pidginData from './fixtureData/tori-51745682.json';
-import useClickTrackerHandler from '.';
 
 const trackingToggleSpy = jest.spyOn(trackingToggle, 'default');
 

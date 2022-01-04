@@ -2,9 +2,9 @@ import React from 'react';
 import path from 'ramda/src/path';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
+import RelatedContentPromoList from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import RelatedContentPromoList from './index';
 
 const promoItems = path(
   ['relatedContent', 'groups', 0, 'promos'],

@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import WithTimeMachine from '#testHelpers/withTimeMachine';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import { OnDemandTvPage } from '..';
 import afrique from './fixtureData/afrique';
 import pashto from './fixtureData/pashto';
+import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 const onDemandTvFixtures = {
   pashto,

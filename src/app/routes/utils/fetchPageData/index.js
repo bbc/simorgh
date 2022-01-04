@@ -11,9 +11,9 @@ import {
   NOT_FOUND,
   UPSTREAM_CODES_TO_PROPAGATE_IN_SIMORGH,
 } from '#lib/statusCodes.const';
+import getErrorStatusCode from './utils/getErrorStatusCode';
 import { PRIMARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import onClient from '#lib/utilities/onClient';
-import getErrorStatusCode from './utils/getErrorStatusCode';
 import getUrl from './utils/getUrl';
 
 const logger = nodeLogger(__filename);

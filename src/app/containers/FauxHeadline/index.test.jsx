@@ -5,9 +5,9 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { latin } from '@bbc/gel-foundations/scripts';
+import FauxHeadlineContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
-import FauxHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
 const FauxHeadlineContainerWithContext = data => (

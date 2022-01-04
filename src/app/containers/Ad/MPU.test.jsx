@@ -3,8 +3,8 @@ import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import MPU from './MPU';
+import { FEATURE_INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const toggles = {
   ads: {

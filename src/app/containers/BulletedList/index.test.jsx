@@ -1,8 +1,8 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { ServiceContext } from '#contexts/ServiceContext';
 import BulletedListContainer from './index';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { orderedList } from './fixtures';
 
 describe('BulletedListContainer', () => {

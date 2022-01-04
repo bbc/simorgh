@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -8,7 +9,6 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { buildATIUrl, buildATIEventTrackingParams } from '.';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

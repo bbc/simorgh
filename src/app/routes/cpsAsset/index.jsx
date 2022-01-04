@@ -1,5 +1,6 @@
 import React from 'react';
 import path from 'ramda/src/path';
+import getInitialData from './getInitialData';
 import {
   ErrorPage,
   MediaAssetPage,
@@ -7,7 +8,6 @@ import {
   StoryPage,
   FeatureIdxPage,
 } from '#pages';
-import getInitialData from './getInitialData';
 import { cpsAssetPagePath, legacyAssetPagePath } from '../utils/regex';
 import {
   FEATURE_INDEX_PAGE,

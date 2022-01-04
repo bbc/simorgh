@@ -8,8 +8,8 @@ import addIdsToGroups from '#app/routes/utils/sharedDataTransformers/addIdsToGro
 import filterGroupsWithoutStraplines from '#app/routes/utils/sharedDataTransformers/filterGroupsWithoutStraplines';
 import getConfig from '#app/routes/utils/getConfig';
 import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
-import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import { INDEX_PAGE } from '#app/routes/utils/pageTypes';
 
 const transformJson = pipe(
   filterUnknownContentTypes,

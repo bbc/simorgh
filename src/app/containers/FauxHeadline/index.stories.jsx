@@ -1,7 +1,7 @@
 import React from 'react';
 import { latin } from '@bbc/gel-foundations/scripts';
-import { ServiceContext } from '#contexts/ServiceContext';
 import FauxHeadlineContainer from '.';
+import { ServiceContext } from '#contexts/ServiceContext';
 import blocksSingleFragment from '../Headings/testHelpers';
 
 const headline = blocksSingleFragment('This is a headline.', []);

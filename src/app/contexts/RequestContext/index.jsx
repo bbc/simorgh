@@ -1,5 +1,11 @@
 import React from 'react';
 import { bool, node, oneOf, string, number } from 'prop-types';
+import getStatsDestination from './getStatsDestination';
+import getStatsPageIdentifier from './getStatsPageIdentifier';
+import getOriginContext from './getOriginContext';
+import getEnv from './getEnv';
+import getMetaUrls from './getMetaUrls';
+import variantPropType from '../../models/propTypes/variants';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -14,12 +20,6 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
-import getStatsDestination from './getStatsDestination';
-import getStatsPageIdentifier from './getStatsPageIdentifier';
-import getOriginContext from './getOriginContext';
-import getEnv from './getEnv';
-import getMetaUrls from './getMetaUrls';
-import variantPropType from '../../models/propTypes/variants';
 
 export const RequestContext = React.createContext({});
 

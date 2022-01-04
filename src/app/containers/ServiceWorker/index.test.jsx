@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ServiceContext } from '#contexts/ServiceContext';
 import ServiceWorkerContainer from './index';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const contextStub = {
   swPath: '/articles/sw.js',

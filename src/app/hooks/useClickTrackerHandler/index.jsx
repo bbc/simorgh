@@ -4,10 +4,10 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 
 import { sendEventBeacon } from '#containers/ATIAnalytics/beacon/index';
+import { isValidClick } from './clickTypes';
 import { EventTrackingContext } from '#app/contexts/EventTrackingContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useTrackingToggle from '#hooks/useTrackingToggle';
-import { isValidClick } from './clickTypes';
 
 const EVENT_TYPE = 'click';
 

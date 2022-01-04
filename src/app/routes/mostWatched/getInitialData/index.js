@@ -1,5 +1,5 @@
-import getMostWatchedUrl from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
 import fetchPageData from '../../utils/fetchPageData';
+import getMostWatchedUrl from '#lib/utilities/getUrlHelpers/getMostWatchedUrl';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import processMostWatched from '../../utils/processMostWatched';
 

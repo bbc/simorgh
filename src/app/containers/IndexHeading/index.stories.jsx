@@ -1,8 +1,8 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import IndexHeadingContainer from '.';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service }) => (

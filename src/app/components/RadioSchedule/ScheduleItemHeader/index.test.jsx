@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import * as scripts from '@bbc/gel-foundations/scripts';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '.';
 import '@testing-library/jest-dom/extend-expect';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 const script = scripts.arabic;
 const service = 'arabic';

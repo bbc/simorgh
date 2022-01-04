@@ -6,8 +6,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import mostWatchedData from '#data/pidgin/mostWatched/index.json';
-import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 import MostWatchedPage from './MostWatchedPage';
+import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
 
 const pageData = {
   mostWatched: mostWatchedData.records.slice(0, 3).map(item => item.promo),

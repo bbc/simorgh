@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ComponentUsingContext } from '#testHelpers/mockComponents';
+import WithContexts from './withContexts';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
 import getStatsDestination from '#contexts/RequestContext/getStatsDestination';
 import getStatsPageIdentifier from '#contexts/RequestContext/getStatsPageIdentifier';
@@ -10,7 +11,6 @@ import * as serviceContextImports from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
 import { ARTICLE_PAGE, FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import WithContexts from './withContexts';
 
 jest.mock('#contexts/RequestContext/getOriginContext', () => jest.fn());
 

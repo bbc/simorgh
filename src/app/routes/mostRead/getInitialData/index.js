@@ -1,5 +1,5 @@
-import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import fetchPageData from '../../utils/fetchPageData';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
 export default async ({ service, variant, pageType }) => {

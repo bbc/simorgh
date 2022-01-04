@@ -1,12 +1,12 @@
 import React, { createRef } from 'react';
 import { render } from '@testing-library/react';
+import ConsentBanner from './index';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { service as pidginServiceConfig } from '#lib/config/services/pidgin';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import ConsentBanner from './index';
 
 const defaultToggleState = {
   chartbeatAnalytics: {

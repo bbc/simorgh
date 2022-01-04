@@ -4,9 +4,9 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import CpsMetadata from './index';
 import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import CpsMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();
 

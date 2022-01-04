@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import * as SectionLabel from '@bbc/psammead-section-label';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import IndexPageSection from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import IndexPageSection from '.';
 
 const group = {
   type: 'responsive-top-stories',

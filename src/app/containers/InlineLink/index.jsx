@@ -4,9 +4,9 @@ import { pathToRegexp } from 'path-to-regexp';
 import InlineLink from '@bbc/psammead-inline-link';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
+import { inlineLinkModelPropTypes } from '#models/propTypes/inlineLink';
 import { articlePath } from '../../routes/utils/regex';
 
 const InternalInlineLink = InlineLink.withComponent(Link);

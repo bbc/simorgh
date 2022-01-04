@@ -3,9 +3,9 @@ import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
 import { arabic, latin } from '@bbc/gel-foundations/scripts';
 import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];

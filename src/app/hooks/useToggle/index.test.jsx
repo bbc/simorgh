@@ -1,8 +1,8 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 import useToggle from '.';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 describe('useToggle custom hook', () => {
   it('should return enabled true if a toggle is true', async () => {

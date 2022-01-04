@@ -26,12 +26,12 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { C_GHOST } from '@bbc/psammead-styles/colours';
 
+import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 import { storyItem } from '#models/propTypes/storyItem';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Grid, { GridWrapper, GridItemLarge } from '#app/components/Grid';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
-import SkipLinkWrapper from '../../components/SkipLinkWrapper';
 
 const LargeGridColumns = {
   group0: 1,

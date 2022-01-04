@@ -1,21 +1,21 @@
 import React, { useEffect, useState, useContext } from 'react';
 import 'isomorphic-fetch';
 import { oneOf, string, elementType, shape } from 'prop-types';
+import { MostReadLink, MostReadItemWrapper } from './Item';
+import MostReadList from './List';
+import MostReadRank from './Rank';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import nodeLogger from '#lib/logger.node';
 import { shouldRenderLastUpdated } from '#lib/utilities/filterPopularStaleData/isDataStale';
+import LastUpdated from './LastUpdated';
+import processMostRead from '../utilities/processMostRead';
+import mostReadShape from '../utilities/mostReadShape';
 import {
   MOST_READ_CLIENT_REQUEST,
   MOST_READ_FETCH_ERROR,
 } from '#lib/logger.const';
 import useViewTracker from '#hooks/useViewTracker';
-import { MostReadLink, MostReadItemWrapper } from './Item';
-import MostReadList from './List';
-import MostReadRank from './Rank';
-import LastUpdated from './LastUpdated';
-import processMostRead from '../utilities/processMostRead';
-import mostReadShape from '../utilities/mostReadShape';
 
 const logger = nodeLogger(__filename);
 

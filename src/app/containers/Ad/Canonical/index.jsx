@@ -5,12 +5,12 @@ import { oneOf, string } from 'prop-types';
 import styled from '@emotion/styled';
 import { C_LUNAR_LIGHT } from '@bbc/psammead-styles/colours';
 import pathOr from 'ramda/src/pathOr';
+import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import isLive from '#lib/utilities/isLive';
-import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import getAdsAriaLabel from '../utilities/getAdsAriaLabel';
-import { leaderboardStyles, mpuStyles } from '../utilities/adSlotStyles';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
 const AdContainer = styled.section`
   background-color: ${C_LUNAR_LIGHT};

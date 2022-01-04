@@ -15,9 +15,9 @@ import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { string, arrayOf, shape } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import Blocks from '#containers/Blocks';
+import UnorderedList from '../BulletedList';
 import Text from '#containers/Text';
 import { GridItemLarge } from '#app/components/Grid';
-import UnorderedList from '../BulletedList';
 
 const GistWrapper = styled.div`
   color: ${C_METAL};

@@ -1,6 +1,6 @@
+import { sendEventBeacon } from '.';
 import * as sendBeacon from '#lib/analyticsUtils/sendBeacon';
 import * as analyticsUtils from '#lib/analyticsUtils';
-import { sendEventBeacon } from '.';
 
 const sendBeaconSpy = jest.spyOn(sendBeacon, 'default');
 analyticsUtils.getAtUserId = jest.fn().mockReturnValue('123-456-789');

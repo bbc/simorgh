@@ -1,10 +1,10 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { MostReadLink, getParentColumns } from '.';
 import { getItem, getItemWrapperArray } from '../../utilities';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 // eslint-disable-next-line react/prop-types
 const WithContexts = ({ children }) => (

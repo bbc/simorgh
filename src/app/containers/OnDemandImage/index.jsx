@@ -8,8 +8,8 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getMimeType } from '#lib/utilities/srcSet';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
+import { getMimeType } from '#lib/utilities/srcSet';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
 

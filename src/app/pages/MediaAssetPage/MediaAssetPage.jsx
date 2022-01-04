@@ -13,6 +13,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import last from 'ramda/src/last';
+import MediaMessage from './MediaMessage';
 import { getImageParts } from '#app/routes/cpsAsset/getInitialData/convertToOptimoBlocks/blocks/image/helpers';
 import CpsMetadata from '#containers/CpsMetadata';
 import LinkedData from '#containers/LinkedData';
@@ -28,6 +29,7 @@ import Blocks from '#containers/Blocks';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import MostWatchedContainer from '#containers/MostWatched';
 import ATIAnalytics from '#containers/ATIAnalytics';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import {
@@ -39,8 +41,6 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import { GelPageGrid, GridItemLarge } from '#app/components/Grid';
 import RelatedTopics from '#containers/RelatedTopics';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import MediaMessage from './MediaMessage';
 
 const StyledTimestamp = styled(Timestamp)`
   @media (max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX}) {

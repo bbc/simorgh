@@ -9,8 +9,8 @@ import { service as arabicConfig } from '#lib/config/services/arabic';
 import { service as igboConfig } from '#lib/config/services/igbo';
 import { service as serbianConfig } from '#lib/config/services/serbian';
 import { getLocalMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
-import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 import FrontPage from '.';
+import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
 
 const serviceDataSets = {
   arabic: { default: arabicData },

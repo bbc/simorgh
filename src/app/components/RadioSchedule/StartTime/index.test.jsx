@@ -1,8 +1,8 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 import StartTime from './index';
+import { ServiceContextProvider } from '#app/contexts/ServiceContext';
 
 const testUnixTimestamp = 1566914061212;
 

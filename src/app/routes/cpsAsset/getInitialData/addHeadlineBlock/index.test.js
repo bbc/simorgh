@@ -1,4 +1,3 @@
-import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import deepClone from '../../../utils/jsonClone';
 import addHeadlineBlock from '.';
 import {
@@ -6,6 +5,8 @@ import {
   getFauxHeadlineBlock,
   getHeadlineBlock,
 } from './models';
+
+import { STORY_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const input = {
   metadata: {

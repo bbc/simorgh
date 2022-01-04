@@ -8,10 +8,10 @@ import {
   oneOfType,
   object,
 } from 'prop-types';
+import FigureContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
-import FigureContainer from '.';
 
 const serviceContextStubNews = {
   imageCaptionOffscreenText: 'Image caption, ',

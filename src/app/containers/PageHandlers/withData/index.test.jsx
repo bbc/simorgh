@@ -7,8 +7,8 @@ import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
-import frontPageDataPidgin from '#data/pidgin/frontpage';
 import WithData from '.';
+import frontPageDataPidgin from '#data/pidgin/frontpage';
 
 // eslint-disable-next-line react/prop-types
 jest.mock('#pages/ErrorPage/ErrorPage', () => ({ errorCode }) => (

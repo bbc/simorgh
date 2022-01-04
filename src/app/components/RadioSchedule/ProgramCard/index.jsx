@@ -14,9 +14,9 @@ import {
 } from '@bbc/gel-foundations/typography';
 import { shape, string, number } from 'prop-types';
 import { formatDuration } from '@bbc/psammead-timestamp-container/utilities';
-import { ServiceContext } from '#contexts/ServiceContext';
 import ScheduleItemHeader from '../ScheduleItemHeader';
 import { programStateConfig } from '../utilities';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const CardWrapper = styled.div`
   padding-top: ${GEL_SPACING};

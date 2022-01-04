@@ -1,10 +1,10 @@
+import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   FRONT_PAGE,
   INDEX_PAGE,
   FEATURE_INDEX_PAGE,
 } from '#app/routes/utils/pageTypes';
-import { buildIndexPageATIParams, buildIndexPageATIUrl } from './buildParams';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

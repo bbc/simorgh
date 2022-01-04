@@ -1,11 +1,12 @@
 import loggerMock from '#testHelpers/loggerMock';
 
+import fetchMarkup from '.';
+
 import {
   INCLUDE_ERROR,
   INCLUDE_FETCH_ERROR,
   INCLUDE_REQUEST_RECEIVED,
 } from '#lib/logger.const';
-import fetchMarkup from '.';
 
 const includeMarkup = `<div>Include Markup</div><script type="text/javascript" src="localhost/idt1.js"></script>`;
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import reactRouterConfig from 'react-router-config';
 import { render, act } from '@testing-library/react';
+import { App } from './App';
 import getToggles from '#app/lib/utilities/getToggles';
 import routes from '#app/routes';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import { App } from './App';
 
 jest.mock('react-router-config');
 jest.mock('#app/lib/utilities/getToggles');

@@ -15,9 +15,9 @@ import { Headline } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
-import { GridItemLarge } from '#app/components/Grid';
 import Fragment from '../Fragment';
 import Blocks from '../Blocks';
+import { GridItemLarge } from '#app/components/Grid';
 
 // missing CSS 'display: block;' in psammead branch `explicitly-set-h1-styles-display-and-font-weight`
 const FauxHeadline = props => <Headline as="strong" {...props} />;

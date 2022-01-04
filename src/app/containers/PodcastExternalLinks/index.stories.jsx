@@ -1,9 +1,9 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
+import PodcastExternalLinksComponent from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import PodcastExternalLinksComponent from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, variant }) => (

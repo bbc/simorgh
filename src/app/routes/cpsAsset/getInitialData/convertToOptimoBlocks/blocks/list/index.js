@@ -1,5 +1,5 @@
-import { orderedListType, unorderedListType } from '#app/models/blocks';
 import convertParagraph from '../paragraph';
+import { orderedListType, unorderedListType } from '#app/models/blocks';
 
 const convertToList = async block => {
   const type = block.numbered ? orderedListType : unorderedListType;

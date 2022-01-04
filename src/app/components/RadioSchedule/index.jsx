@@ -5,9 +5,9 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { grid } from '@bbc/psammead-styles/detection';
 import Grid from '@bbc/psammead-grid';
 import { arrayOf, number, shape, string } from 'prop-types';
-import { ServiceContext } from '#contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';
+import { ServiceContext } from '#contexts/ServiceContext';
 
 const StartTimeWrapper = styled.div`
   padding-bottom: ${GEL_SPACING};

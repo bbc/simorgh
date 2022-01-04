@@ -3,8 +3,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import OnDemandImage from '.';
+import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const component = ({ url, isAmp, service, alt }) => (

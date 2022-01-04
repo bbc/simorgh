@@ -6,11 +6,11 @@ import { Headline, SubHeading } from '@bbc/psammead-headings';
 import { textDefaultPropTypes } from '#models/propTypes';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { headlineModelPropTypes } from '#models/propTypes/headline';
-import idSanitiser from '#lib/utilities/idSanitiser';
-import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
 import Fragment from '../Fragment';
 import InlineContainer from '../InlineContainer';
 import Blocks from '../Blocks';
+import idSanitiser from '#lib/utilities/idSanitiser';
+import { GridItemMedium, GridItemLarge } from '#app/components/Grid';
 
 const StyledHeadline = styled(Headline)`
   :focus {

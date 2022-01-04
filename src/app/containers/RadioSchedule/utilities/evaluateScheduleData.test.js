@@ -1,5 +1,5 @@
-import persianRadioScheduleData from '#data/persian/bbc_persian_radio/schedule.json';
 import { getIsProgramValid } from './evaluateScheduleData';
+import persianRadioScheduleData from '#data/persian/bbc_persian_radio/schedule.json';
 
 describe('evaluateScheduleData', () => {
   describe('isProgramValid', () => {

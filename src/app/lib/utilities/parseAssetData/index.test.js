@@ -1,5 +1,4 @@
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 import {
   getHeadline,
   getFirstPublished,
@@ -10,6 +9,7 @@ import {
   getLang,
   getSummary,
 } from '.';
+import { articleDataNews } from '#pages/ArticlePage/fixtureData';
 
 describe('ArticleMain utils', () => {
   it('getHeadline › it should return the correct value', () => {

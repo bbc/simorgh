@@ -4,12 +4,12 @@ import styled from '@emotion/styled';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_QUIN } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
-import { GridItemMedium } from '#app/components/Grid';
 import Blocks from '../Blocks';
 import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import Inline from '../InlineContainer';
+import { paragraphModelPropTypes } from '#models/propTypes/paragraph';
+import { GridItemMedium } from '#app/components/Grid';
 
 const componentsToRender = { fragment, urlLink: InlineLink, inline: Inline };
 

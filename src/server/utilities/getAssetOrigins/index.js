@@ -1,5 +1,5 @@
-import isLiveEnv from '#lib/utilities/isLive';
 import services from '../serviceConfigs';
+import isLiveEnv from '#lib/utilities/isLive';
 
 const getAssetOrigins = service => {
   const COOKIE_ORIGINS = isLiveEnv()

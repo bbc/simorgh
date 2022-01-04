@@ -1,9 +1,9 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
+import Gist from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import Gist from '.';
 import blocks from './fixtures';
 
 // eslint-disable-next-line react/prop-types

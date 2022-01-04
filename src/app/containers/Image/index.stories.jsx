@@ -1,6 +1,6 @@
 import React from 'react';
-import { GridWrapper } from '#app/components/Grid';
 import ImageContainer from '.';
+import { GridWrapper } from '#app/components/Grid';
 import {
   custom,
   imageData,

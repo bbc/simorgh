@@ -14,6 +14,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 
 // components to test
+import StoryPage from '.';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
 
 // mock data
@@ -24,13 +25,12 @@ import igboPageData from '#data/igbo/cpsAssets/afirika-23252735';
 import igboMostReadData from '#data/igbo/mostRead/index.json';
 import igboSecondaryColumnData from '#data/igbo/secondaryColumn/index.json';
 import russianPageDataWithInlinePromo from '#data/russian/cpsAssets/news-55041160';
+import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
 import russianMostReadData from '#data/russian/mostRead/index.json';
 import russianSecondaryColumnData from '#data/russian/secondaryColumn/index.json';
 import ukrainianInRussianPageData from '#data/ukrainian/cpsAssets/news-russian-23333960.json';
 import ukrainianSecondaryColumnData from '#data/ukrainian/secondaryColumn/index.json';
 import ukrainianMostReadData from '#data/ukrainian/mostRead/index.json';
-import russianPageDataWithoutInlinePromo from './fixtureData/russianPageDataWithoutPromo';
-import StoryPage from '.';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 
