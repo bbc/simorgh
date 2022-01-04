@@ -85,12 +85,12 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "text": " Single Card test: ",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "text": " Single Card test: ",
                         "attributes": []
                       }
                     }
@@ -127,440 +127,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Show all links (no images)",
+                              "text": "This is a single card.",
                               "blocks": [
                                 {
                                   "type": "fragment",
                                   "model": {
-                                    "text": "Show all links (no images)",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
-                  "blocks": [
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Image to ignore",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Image to ignore",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 976,
-                              "height": 549,
-                              "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
-                              "imageType": "background",
-                              "originCode": "cpsdevpb",
-                              "copyrightHolder": "BBC"
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Show headline",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Show headline",
-                                    "locator": "https://www.bbc.co.uk/pidgin",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Show headline",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link with Headline",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link with Headline",
-                                    "locator": "https://www.bbc.com/mundo",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link with Headline",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "https://www.bbc.com/brasil",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "https://www.bbc.com/brasil",
-                                    "locator": "https://www.bbc.com/brasil",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "https://www.bbc.com/brasil",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Show all links (no images)",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Show all links (no images)",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
-                  "blocks": [
-                    {
-                      "type": "image",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "altText",
-                            "model": {
-                              "blocks": [
-                                {
-                                  "type": "text",
-                                  "model": {
-                                    "blocks": [
-                                      {
-                                        "type": "paragraph",
-                                        "model": {
-                                          "text": "Image to ignore",
-                                          "blocks": [
-                                            {
-                                              "type": "fragment",
-                                              "model": {
-                                                "text": "Image to ignore",
-                                                "attributes": []
-                                              }
-                                            }
-                                          ]
-                                        }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "type": "rawImage",
-                            "model": {
-                              "width": 976,
-                              "height": 549,
-                              "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
-                              "imageType": "background",
-                              "originCode": "cpsdevpb",
-                              "copyrightHolder": "BBC"
-                            }
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a normal length.",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is a normal length.",
-                                    "locator": "https://www.bbc.co.uk/pidgin",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is a normal length.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                                    "locator": "https://www.bbc.com/mundo",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is a very long headline. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is the last of very long headlines. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is the last of very long headlines. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                                    "locator": "https://www.bbc.com/brasil",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is the last of very long headlines. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Single link",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Single link",
+                                    "text": "This is a single card.",
                                     "attributes": []
                                   }
                                 }
@@ -585,12 +157,12 @@
                           {
                             "type": "paragraph",
                             "model": {
-                              "text": "Single link",
+                              "text": "This is a single card.",
                               "blocks": [
                                 {
                                   "type": "urlLink",
                                   "model": {
-                                    "text": "Single link",
+                                    "text": "This is a single card.",
                                     "locator": "https://www.bbc.com/pidgin",
                                     "blocks": [
                                       {
@@ -623,444 +195,12 @@
               {
                 "type": "paragraph",
                 "model": {
-                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "text": " Double Cards test: ",
                   "blocks": [
                     {
                       "type": "fragment",
                       "model": {
-                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Long headline ",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Long headline ",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                    "locator": "https://www.bbc.co.uk/yoruba",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Long headline ",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Long headline ",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "This is a long word Antidisestablishmentarianism headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "This is a long word Antidisestablishmentarianism headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                    "locator": "https://www.bbc.co.uk/yoruba",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "This is a long word Antidisestablishmentarianism headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                        "attributes": []
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "links",
-          "model": {
-            "blocks": [
-              {
-                "type": "title",
-                "model": {
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Only show 3 links",
-                              "blocks": [
-                                {
-                                  "type": "fragment",
-                                  "model": {
-                                    "text": "Only show 3 links",
-                                    "attributes": []
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link 1",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link 1",
-                                    "locator": "https://www.bbc.com/pidgin",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link 1",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link 2",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link 2",
-                                    "locator": "https://www.bbc.com/mundo",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link 2",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fyoruba",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link 3",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link 3",
-                                    "locator": "https://www.bbc.com/yoruba",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link 3",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link 4 (not shown)",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link 4 (not shown)",
-                                    "locator": "https://www.bbc.com/brasil",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link 4 (not shown)",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "link",
-                "model": {
-                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Farabic",
-                  "blocks": [
-                    {
-                      "type": "text",
-                      "model": {
-                        "blocks": [
-                          {
-                            "type": "paragraph",
-                            "model": {
-                              "text": "Link 5 (not shown)",
-                              "blocks": [
-                                {
-                                  "type": "urlLink",
-                                  "model": {
-                                    "text": "Link 5 (not shown)",
-                                    "locator": "https://www.bbc.com/arabic",
-                                    "blocks": [
-                                      {
-                                        "type": "fragment",
-                                        "model": {
-                                          "text": "Link 5 (not shown)",
-                                          "attributes": []
-                                        }
-                                      }
-                                    ],
-                                    "isExternal": false
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        {
-          "type": "text",
-          "model": {
-            "blocks": [
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": {
-                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "text": " Double Cards test: ",
                         "attributes": []
                       }
                     }
@@ -1273,6 +413,341 @@
                                         "type": "fragment",
                                         "model": {
                                           "text": "Mundo homepage",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Triple Cards test: ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Triple Cards test: ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": { "text": "", "attributes": [] }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Show all links (no images)",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Show all links (no images)",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Image to ignore",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Image to ignore",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a normal length.",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a normal length.",
+                                    "locator": "https://www.bbc.co.uk/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a normal length.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                    "locator": "https://www.bbc.com/mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is the last of very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is the last of very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                    "locator": "https://www.bbc.com/brasil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is the last of very long string of text. I am creating this for a test purpose. I love creating these type of tests. I really do not know what to write.",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Overflowing word test: ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Overflowing word test: ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Long headline ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Long headline ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a long word Antidisestablishmentarianism that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a long word Antidisestablishmentarianism that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                    "locator": "https://www.bbc.co.uk/yoruba",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a long word Antidisestablishmentarianism that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
                                           "attributes": []
                                         }
                                       }
