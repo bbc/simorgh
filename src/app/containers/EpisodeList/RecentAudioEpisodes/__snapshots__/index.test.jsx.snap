@@ -412,10 +412,12 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           dir="ltr"
         >
           <a
+            aria-labelledby="episodeLinkIndex-0"
             class="emotion-21 emotion-22"
             href="/indonesia/bbc_indonesian_radio/w172xnm8j4tz686"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -463,6 +465,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               </div>
             </div>
             <span
+              id="episodeLinkIndex-0"
               role="text"
             >
               <span
@@ -530,10 +533,12 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           dir="ltr"
         >
           <a
+            aria-labelledby="episodeLinkIndex-1"
             class="emotion-21 emotion-22"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrkv2"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -581,6 +586,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               </div>
             </div>
             <span
+              id="episodeLinkIndex-1"
               role="text"
             >
               <span
@@ -638,10 +644,12 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           dir="ltr"
         >
           <a
+            aria-labelledby="episodeLinkIndex-2"
             class="emotion-21 emotion-22"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjrg2y"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -689,6 +697,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               </div>
             </div>
             <span
+              id="episodeLinkIndex-2"
               role="text"
             >
               <span
@@ -746,10 +755,12 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
           dir="ltr"
         >
           <a
+            aria-labelledby="episodeLinkIndex-3"
             class="emotion-21 emotion-22"
             href="/indonesia/bbc_indonesian_radio/w172xnm84wjgw3s"
           >
             <div
+              aria-hidden="true"
               class="emotion-23 emotion-24"
               dir="ltr"
             >
@@ -797,6 +808,7 @@ exports[`RecentAudioEpisodes should render audio episodes correctly 1`] = `
               </div>
             </div>
             <span
+              id="episodeLinkIndex-3"
               role="text"
             >
               <span

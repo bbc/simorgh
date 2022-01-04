@@ -17,12 +17,13 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const { webpSrcset, fallbackSrcset } = createSrcsets({
-    originCode,
-    locator,
-    originalImageWidth: width,
-    imageResolutions,
-  });
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: width,
+      imageResolutions,
+    });
   const sizes = '(max-width: 1008px) 50vw, 496px';
   const DEFAULT_IMAGE_RES = 660;
   const src = buildIChefURL({
@@ -40,8 +41,10 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={copyrightHolder}
-      srcset={webpSrcset}
+      srcset={primarySrcset}
       fallbackSrcset={fallbackSrcset}
+      primaryMimeType={primaryMimeType}
+      fallbackMimeType={fallbackMimeType}
       sizes={sizes}
     />
   );
