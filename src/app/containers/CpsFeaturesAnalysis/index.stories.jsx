@@ -1,12 +1,12 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
 import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import FeaturesAnalysis from '.';
 
 /* eslint-disable react/prop-types */
 const Component = ({

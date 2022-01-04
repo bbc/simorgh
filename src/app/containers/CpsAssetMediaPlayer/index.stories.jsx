@@ -1,14 +1,14 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import CpsAssetMediaPlayerContainer from '.';
-import videoBlock from './fixtures';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import CpsAssetMediaPlayerContainer from '.';
+import videoBlock from './fixtures';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 const defaultToggles = {
   mediaPlayer: {

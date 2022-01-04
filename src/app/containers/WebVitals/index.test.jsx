@@ -5,11 +5,11 @@ import { render } from '@testing-library/react';
 import useWebVitals from '@bbc/web-vitals';
 
 // Container to test
-import WebVitals from '.';
 
 // Contexts
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
+import WebVitals from '.';
 
 // Mock the useWebVitals Hook
 jest.mock('@bbc/web-vitals');
