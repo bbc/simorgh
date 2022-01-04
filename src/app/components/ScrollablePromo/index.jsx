@@ -30,7 +30,6 @@ const ScrollablePromo = ({ blocks }) => {
   }
   const isSingleItem = blocks.length === 2;
 
-  // IF NO PROMO RETURN NULL
   return (
     <GridItemMediumNoMargin>
       {isSingleItem ? (
