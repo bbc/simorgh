@@ -96,18 +96,6 @@
                     }
                   ]
                 }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": { "text": "", "attributes": [] }
-                    }
-                  ]
-                }
               }
             ]
           }
@@ -203,18 +191,6 @@
                         "text": " Double Cards test: ",
                         "attributes": []
                       }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": { "text": "", "attributes": [] }
                     }
                   ]
                 }
@@ -447,18 +423,6 @@
                         "text": " Triple Cards test: ",
                         "attributes": []
                       }
-                    }
-                  ]
-                }
-              },
-              {
-                "type": "paragraph",
-                "model": {
-                  "text": "",
-                  "blocks": [
-                    {
-                      "type": "fragment",
-                      "model": { "text": "", "attributes": [] }
                     }
                   ]
                 }
