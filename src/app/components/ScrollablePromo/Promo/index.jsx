@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
@@ -16,7 +17,6 @@ import {
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-import React, { useContext } from 'react';
 
 const C_GREY_8 = '#202224';
 
