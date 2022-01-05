@@ -9,10 +9,10 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const eventTrackingData = {
   block: {
