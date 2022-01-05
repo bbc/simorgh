@@ -11,10 +11,11 @@ import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
 import encodeChunkFilename from '../utilities/encodeChunkUri';
 
+const MAIN_ASSET = 'mainAsset';
+
 const crossOrigin = 'anonymous';
 const getScriptAttributes = bundleType => chunk => {
   const { type, url } = chunk || {};
-  const MAIN_ASSET = 'mainAsset';
 
   return {
     crossOrigin,
@@ -26,7 +27,7 @@ const getScriptAttributes = bundleType => chunk => {
 };
 const getLinkAttributes = chunk => ({
   crossOrigin,
-  rel: 'modulepreload',
+  rel: chunk.type === MAIN_ASSET ? 'modulepreload' : 'preload',
   ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
 });
 
