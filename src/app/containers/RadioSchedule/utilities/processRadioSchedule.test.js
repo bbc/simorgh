@@ -1,8 +1,8 @@
+import persianRadioScheduleData from '#data/persian/bbc_persian_radio/schedule.json';
 import processRadioSchedule, {
   getLink,
   getProgramState,
 } from './processRadioSchedule';
-import persianRadioScheduleData from '#data/persian/bbc_persian_radio/schedule.json';
 
 describe('getLink', () => {
   let program;

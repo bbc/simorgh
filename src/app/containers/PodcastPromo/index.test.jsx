@@ -7,12 +7,11 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
-
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 
 import { service as russianServiceConfig } from '#lib/config/services/russian';
+import { InlinePodcastPromo, SecondaryColumnPodcastPromo } from '.';
 
 /* eslint-disable react/prop-types */
 const PromoWithContext = ({

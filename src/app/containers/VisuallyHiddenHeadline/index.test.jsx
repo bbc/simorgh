@@ -5,8 +5,8 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import VisuallyHiddenHeadlineContainer from '.';
 import { textBlock } from '#models/blocks';
+import VisuallyHiddenHeadlineContainer from '.';
 import blocksSingleFragment from '../Headings/testHelpers';
 
 describe('VisuallyHiddenHeadline', () => {

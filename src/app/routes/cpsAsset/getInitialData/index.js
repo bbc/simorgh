@@ -1,5 +1,10 @@
 import pipe from 'ramda/src/pipe';
 import path from 'ramda/src/path';
+import {
+  MEDIA_ASSET_PAGE,
+  STORY_PAGE,
+  PHOTO_GALLERY_PAGE,
+} from '#app/routes/utils/pageTypes';
 import fetchPageData from '../../utils/fetchPageData';
 import {
   augmentWithTimestamp,
@@ -20,11 +25,6 @@ import addAnalyticsCounterName from './addAnalyticsCounterName';
 import convertToOptimoBlocks from './convertToOptimoBlocks';
 import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
-import {
-  MEDIA_ASSET_PAGE,
-  STORY_PAGE,
-  PHOTO_GALLERY_PAGE,
-} from '#app/routes/utils/pageTypes';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 

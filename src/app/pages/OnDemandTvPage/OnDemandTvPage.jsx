@@ -17,21 +17,21 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import VisuallyHiddenText from '@bbc/psammead-visually-hidden-text';
 import { formatUnixTimestamp } from '@bbc/psammead-timestamp-container/utilities';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import ATIAnalytics from '../../containers/ATIAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
 import LinkedData from '#containers/LinkedData';
-import MetadataContainer from '../../containers/Metadata';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledTvHeadingContainer from '#containers/OnDemandHeading/StyledTvHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
-import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import AVPlayer from '#containers/AVPlayer';
 import RecentVideoEpisodes from '#containers/EpisodeList/RecentVideoEpisodes';
 import FooterTimestamp from '#app/containers/OnDemandFooterTimestamp';
+import getPlaceholderImageUrl from '../../routes/utils/getPlaceholderImageUrl';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import MetadataContainer from '../../containers/Metadata';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 
 const getGroups = (zero, one, two, three, four, five) => ({
   group0: zero,
