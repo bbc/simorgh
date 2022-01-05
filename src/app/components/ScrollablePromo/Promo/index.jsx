@@ -76,7 +76,7 @@ const Promo = ({ block }) => {
     textBlock,
   );
 
-  const clickTrackerHandler = useClickTrackerHandler({
+  const clickTracker = useClickTrackerHandler({
     componentName: 'scrollable-promo',
     href,
   });
@@ -88,7 +88,7 @@ const Promo = ({ block }) => {
         service={service}
         script={script}
         dir={dir}
-        onClick={clickTrackerHandler}
+        onClick={clickTracker}
       >
         {title}
       </Link>

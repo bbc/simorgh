@@ -94,18 +94,18 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 .emotion-2 {
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 
 @media (min-width: 25rem) {
   .emotion-2 {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-2 {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -134,6 +134,11 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 .emotion-6 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   width: 100%;
   word-break: break-word;
   text-overflow: ellipsis;
@@ -144,6 +149,20 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   color: #202224;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-6:hover,
@@ -163,12 +182,15 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
   >
     <div
       class="emotion-2 emotion-3"
+      dir="ltr"
     >
       <div
         class="emotion-4 emotion-5"
+        dir="ltr"
       >
         <a
           class="emotion-6 emotion-7"
+          dir="ltr"
           href="https://www.bbc.com/pidgin"
         >
           Single link
@@ -278,7 +300,7 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  padding-right: 0;
+  padding-left: 0;
   margin: 0;
   overflow-x: scroll;
   scroll-behavior: auto;
@@ -303,35 +325,35 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
 
 @media (min-width: 0rem) {
   .emotion-4 {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   .emotion-4:first-child {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
   }
 
   .emotion-4:last-child {
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }
 
 @media (min-width: 25rem) {
   .emotion-4 {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .emotion-4:first-child {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
 @media (min-width: 63rem) {
   .emotion-4 {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 
   .emotion-4:first-child {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -360,6 +382,11 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
 }
 
 .emotion-8 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   width: 100%;
   word-break: break-word;
   text-overflow: ellipsis;
@@ -370,6 +397,20 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   color: #202224;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-8 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
 }
 
 .emotion-8:hover,
@@ -389,16 +430,20 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
   >
     <ul
       class="emotion-2 emotion-3"
+      dir="ltr"
       role="list"
     >
       <li
         class="emotion-4 emotion-5"
+        dir="ltr"
       >
         <div
           class="emotion-6 emotion-7"
+          dir="ltr"
         >
           <a
             class="emotion-8 emotion-9"
+            dir="ltr"
             href="https://www.bbc.co.uk/pidgin"
           >
             Show headline
@@ -407,12 +452,15 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
       </li>
       <li
         class="emotion-4 emotion-5"
+        dir="ltr"
       >
         <div
           class="emotion-6 emotion-7"
+          dir="ltr"
         >
           <a
             class="emotion-8 emotion-9"
+            dir="ltr"
             href="https://www.bbc.com/mundo"
           >
             Link with Headline
@@ -421,12 +469,15 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
       </li>
       <li
         class="emotion-4 emotion-5"
+        dir="ltr"
       >
         <div
           class="emotion-6 emotion-7"
+          dir="ltr"
         >
           <a
             class="emotion-8 emotion-9"
+            dir="ltr"
             href="https://www.bbc.com/brasil"
           >
             https://www.bbc.com/brasil
