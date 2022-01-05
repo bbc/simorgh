@@ -1,10 +1,10 @@
 import React from 'react';
-
 import CpsRecommendations from '.';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
-
+import services from '#server/utilities/serviceConfigs';
+import newsMultipleItems from './newsFixture';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
@@ -19,6 +19,29 @@ const Component = ({ items, service, dir }) => {
       enabled: false,
     },
   };
+  const serviceContextStub = {
+    service,
+    script: services[service].default.script,
+    dir: services[service].default.dir,
+    recommendations: {
+      hasStoryRecommendations: true,
+      skipLink: {
+        text:
+          service === 'news'
+            ? 'Skip recommendations and continue reading'
+            : services[service].default.recommendations.skipLink.text,
+        endTextVisuallyHidden:
+          service === 'news'
+            ? 'End of recommendations'
+            : services[service].default.recommendations.skipLink
+                .endTextVisuallyHidden,
+      },
+    },
+    translations: {
+      recommendationTitle:
+        services[service].default.translations.recommendationTitle,
+    },
+  };
   const parentGridCols = {
     group0: 8,
     group1: 8,
@@ -29,7 +52,7 @@ const Component = ({ items, service, dir }) => {
   };
   return (
     <div dir={dir}>
-      <ServiceContextProvider service={service}>
+      <ServiceContext.Provider value={serviceContextStub}>
         <RequestContextProvider
           isAmp={false}
           pageType={STORY_PAGE}
@@ -42,7 +65,7 @@ const Component = ({ items, service, dir }) => {
             <CpsRecommendations items={items} parentColumns={parentGridCols} />
           </ToggleContext.Provider>
         </RequestContextProvider>
-      </ServiceContextProvider>
+      </ServiceContext.Provider>
     </div>
   );
 };
@@ -52,6 +75,14 @@ export default {
   title: 'Containers/CPS Recommendations',
   parameters: { chromatic: { disable: true } },
 };
+
+export const NewsSingleItem = () => (
+  <Component items={[newsMultipleItems[0]]} service="news" dir="ltr" />
+);
+
+export const NewsMultipleItems = () => (
+  <Component items={newsMultipleItems} service="news" dir="ltr" />
+);
 
 export const MultipleItems = () => (
   <Component items={mundoRecommendationsData} service="mundo" dir="ltr" />
