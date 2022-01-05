@@ -3,7 +3,9 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import ScrollablePromo from '.';
+import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 import {
   threeLinks,
   oneLinkOnly,
@@ -17,11 +19,20 @@ const BackGround = styled.div`
   background-color: #f6f6f6;
   padding: 2rem;
 `;
+
 // eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ data, service, script, dir }) => (
   <BackGround>
     <ServiceContextProvider service={service} script={script} dir={dir}>
-      <ScrollablePromo blocks={data} />
+      <RequestContextProvider isAmp={false} service={service}>
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <ScrollablePromo blocks={data} />
+        </ToggleContextProvider>
+      </RequestContextProvider>
     </ServiceContextProvider>
   </BackGround>
 );
