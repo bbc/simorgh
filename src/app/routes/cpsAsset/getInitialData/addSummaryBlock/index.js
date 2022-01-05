@@ -1,9 +1,9 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
-import deepClone from '../../../utils/jsonClone';
 import { singleTextBlock } from '#app/models/blocks';
-import { insertBlockAfterHeadline } from '../helpers';
 import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
+import deepClone from '../../../utils/jsonClone';
+import { insertBlockAfterHeadline } from '../helpers';
 
 const getSummary = json => {
   const summary = pathOr(null, ['promo', 'summary'], json);

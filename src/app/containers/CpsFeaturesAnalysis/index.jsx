@@ -8,13 +8,13 @@ import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import useViewTracker from '#hooks/useViewTracker';
+import useToggle from '#hooks/useToggle';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import useMediaQuery from '#hooks/useMediaQuery';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
-import useViewTracker from '#hooks/useViewTracker';
-import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import useToggle from '#hooks/useToggle';
-import useMediaQuery from '#hooks/useMediaQuery';
 
 const eventTrackingData = {
   block: {

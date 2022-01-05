@@ -1,10 +1,10 @@
+import * as analyticsUtils from '#lib/analyticsUtils';
+import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
+import payloadLegacy from '#data/gahuza/legacyAssets/video/2016/01/160108_australia_fire_video.json';
 import {
   buildCpsAssetPageATIParams,
   buildCpsAssetPageATIUrl,
 } from './buildParams';
-import * as analyticsUtils from '#lib/analyticsUtils';
-import payload from '#data/pidgin/cpsAssets/tori-49450859.json';
-import payloadLegacy from '#data/gahuza/legacyAssets/video/2016/01/160108_australia_fire_video.json';
 
 // Mocks
 analyticsUtils.getAtUserId = jest.fn();
