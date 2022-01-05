@@ -80,10 +80,10 @@ server
     }),
   )
   .use(gnuTP())
+  .use(logResponseTime)
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
-  })
-  .use(logResponseTime);
+  });
 
 /*
  * Application env routes
