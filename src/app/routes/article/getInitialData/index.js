@@ -1,6 +1,10 @@
 import pipe from 'ramda/src/pipe';
 import isEmpty from 'ramda/src/isEmpty';
 
+import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
+import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
+import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
+import nodeLogger from '#lib/logger.node';
 import fetchPageData from '../../utils/fetchPageData';
 import handleGroupBlocks from '../handleGroupBlocks';
 import handleEmptyParagraphBlocks from '../handleEmptyParagraphBlocks';
@@ -12,11 +16,6 @@ import {
 } from '../../utils/sharedDataTransformers';
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
-import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
-
-import { DATA_FETCH_ERROR_SECONDARY_COLUMN } from '#lib/logger.const';
-import nodeLogger from '#lib/logger.node';
 
 const logger = nodeLogger(__filename);
 

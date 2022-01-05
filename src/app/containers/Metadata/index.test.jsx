@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
-import MetadataContainer from './index';
 import {
   ARTICLE_PAGE,
   FRONT_PAGE,
@@ -18,6 +17,7 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import frontPageData from '#data/igbo/frontpage/index.json';
 import liveRadioPageData from '#data/korean/bbc_korean_radio/liveradio.json';
 import { getSummary } from '#lib/utilities/parseAssetData/index';
+import MetadataContainer from './index';
 
 const dotComOrigin = 'https://www.bbc.com';
 const dotCoDotUKOrigin = 'https://www.bbc.co.uk';

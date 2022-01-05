@@ -5,15 +5,15 @@ import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
+import loggerMock from '#testHelpers/loggerMock';
+import { ROUTING_INFORMATION } from '#lib/logger.const';
+import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import loggerMock from '#testHelpers/loggerMock';
-import { ROUTING_INFORMATION } from '#lib/logger.const';
-import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Helmet } from 'react-helmet';
-import ManifestContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
+import ManifestContainer from '.';
 
 const contextStub = {
   manifestPath: '/manifest.json',

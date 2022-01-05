@@ -10,12 +10,8 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { useLocation } from 'react-router-dom';
 import pathOr from 'ramda/src/pathOr';
-import MetadataContainer from '../../containers/Metadata';
-import ATIAnalytics from '../../containers/ATIAnalytics';
-import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
 import Grid, { GelPageGrid } from '#app/components/Grid';
-import { ServiceContext } from '../../contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import StyledRadioHeadingContainer from '#containers/OnDemandHeading/StyledRadioHeadingContainer';
 import OnDemandParagraphContainer from '#containers/OnDemandParagraph';
@@ -29,6 +25,10 @@ import RadioScheduleContainer from '#containers/RadioSchedule';
 import RecentAudioEpisodes from '#containers/EpisodeList/RecentAudioEpisodes';
 import FooterTimestamp from '#containers/OnDemandFooterTimestamp';
 import PodcastExternalLinks from '#containers/PodcastExternalLinks';
+import { ServiceContext } from '../../contexts/ServiceContext';
+import ChartbeatAnalytics from '../../containers/ChartbeatAnalytics';
+import ATIAnalytics from '../../containers/ATIAnalytics';
+import MetadataContainer from '../../containers/Metadata';
 
 const SKIP_LINK_ANCHOR_ID = 'content';
 

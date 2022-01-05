@@ -6,9 +6,9 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import HeadingsContainer from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { textBlock } from '#models/blocks';
+import HeadingsContainer from '.';
 import blocksSingleFragment from './testHelpers';
 
 // eslint-disable-next-line react/prop-types
