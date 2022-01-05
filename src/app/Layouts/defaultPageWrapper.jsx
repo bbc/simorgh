@@ -5,12 +5,12 @@ import pathOr from 'ramda/src/pathOr';
 import GlobalStyles from '@bbc/psammead-styles/global-styles';
 import styled from '@emotion/styled';
 import { C_GHOST, C_MIDNIGHT_BLACK } from '@bbc/psammead-styles/colours';
+import WebVitals from '#app/containers/WebVitals';
 import HeaderContainer from '../containers/Header';
 import FooterContainer from '../containers/Footer';
 import ManifestContainer from '../containers/Manifest';
 import ServiceWorkerContainer from '../containers/ServiceWorker';
 import { ServiceContext } from '../contexts/ServiceContext';
-import WebVitals from '#app/containers/WebVitals';
 
 const Wrapper = styled.div`
   min-height: 100vh;

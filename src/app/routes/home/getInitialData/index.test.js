@@ -1,11 +1,11 @@
 import fetchMock from 'fetch-mock';
-import getInitialData from '.';
 
 // Fixture Data
 import frontPageJsonHausa from '#data/hausa/frontpage/index.json';
 import radioScheduleJson from '#data/hausa/bbc_hausa_radio/schedule.json';
 
 import { FRONT_PAGE as pageType } from '#app/routes/utils/pageTypes';
+import getInitialData from '.';
 
 jest.mock('../../utils/getConfig', () => jest.fn());
 

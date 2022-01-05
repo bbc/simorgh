@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import path from 'ramda/src/path';
-import RecommendationsPromo from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
+import RecommendationsPromo from '.';
 
 const promos = path(['relatedContent', 'groups', 0, 'promos'], pidginPageData);
 

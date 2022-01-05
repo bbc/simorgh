@@ -8,10 +8,10 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { promoProps, cpsPromoFixture, linkPromoFixture } from './fixtures';
 
 import Promo from '.';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
 const Component = ({ service = 'mundo', variant, ...rest }) => {

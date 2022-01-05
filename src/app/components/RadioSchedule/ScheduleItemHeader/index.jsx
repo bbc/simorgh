@@ -11,8 +11,8 @@ import { getSansBold, getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_KINGFISHER } from '@bbc/psammead-styles/colours';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import durationDictionary, { programStateConfig } from '../utilities';
 import { ServiceContext } from '#contexts/ServiceContext';
+import durationDictionary, { programStateConfig } from '../utilities';
 
 const TitleWrapper = styled.span`
   color: ${({ titleColor }) => titleColor};
