@@ -1,207 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
-@media (max-width: 14.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-0 {
-    margin-left: 0%;
-  }
-}
-
-@media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-0 {
-    margin-left: 20%;
-  }
-}
-
-@media (min-width: 80rem) {
-  .emotion-0 {
-    margin-left: 40%;
-  }
-}
-
-@supports (display: grid) {
-  .emotion-0 {
-    display: block;
-    width: initial;
-    margin: 0;
-  }
-
-  @media (max-width: 14.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(6, 1fr);
-      grid-column-end: span 6;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 1;
-    }
-  }
-
-  @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(5, 1fr);
-      grid-column-end: span 5;
-      grid-column-start: 2;
-    }
-  }
-
-  @media (min-width: 80rem) {
-    .emotion-0 {
-      grid-template-columns: repeat(10, 1fr);
-      grid-column-end: span 10;
-      grid-column-start: 5;
-    }
-  }
-}
-
-.emotion-2 {
-  margin-left: 0.5rem;
-}
-
-@media (min-width: 25rem) {
-  .emotion-2 {
-    margin-left: 1rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-2 {
-    margin-left: 0;
-  }
-}
-
-.emotion-4 {
-  margin-bottom: 1.5rem;
-  background-color: #FFFFFF;
-  padding: 1rem;
-}
-
-@media (min-width: 0rem) {
-  .emotion-4 {
-    width: 14.8125rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-4 {
-    width: 11.125rem;
-  }
-}
-
-@media (min-width: 63rem) {
-  .emotion-4 {
-    width: 12.6875rem;
-  }
-}
-
-.emotion-6 {
-  font-size: 0.9375rem;
-  line-height: 1.25rem;
-  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  width: 100%;
-  word-break: break-word;
-  text-overflow: ellipsis;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  color: #202224;
-}
-
-@media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media (min-width: 37.5rem) {
-  .emotion-6 {
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-}
-
-.emotion-6:hover,
-.emotion-6:focus {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-6:visited {
-  color: #545658;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-    dir="ltr"
-  >
-    <div
-      class="emotion-2 emotion-3"
-      dir="ltr"
-    >
-      <div
-        class="emotion-4 emotion-5"
-        dir="ltr"
-      >
-        <a
-          class="emotion-6 emotion-7"
-          dir="ltr"
-          href="https://www.bbc.com/pidgin"
-        >
-          Single link
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
+exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 @media (max-width: 14.9375rem) {
   .emotion-0 {
     margin-left: 0%;
@@ -485,6 +284,207 @@ exports[`ScrollablePromo it should match a11y snashot for list 1`] = `
         </div>
       </li>
     </ul>
+  </div>
+</div>
+`;
+
+exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
+@media (max-width: 14.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 15rem) and (max-width: 24.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 25rem) and (max-width: 37.4375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+  .emotion-0 {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 63rem) and (max-width: 79.9375rem) {
+  .emotion-0 {
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 80rem) {
+  .emotion-0 {
+    margin-left: 40%;
+  }
+}
+
+@supports (display: grid) {
+  .emotion-0 {
+    display: block;
+    width: initial;
+    margin: 0;
+  }
+
+  @media (max-width: 14.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 15rem) and (max-width: 24.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 25rem) and (max-width: 37.4375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(6, 1fr);
+      grid-column-end: span 6;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 1;
+    }
+  }
+
+  @media (min-width: 63rem) and (max-width: 79.9375rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(5, 1fr);
+      grid-column-end: span 5;
+      grid-column-start: 2;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .emotion-0 {
+      grid-template-columns: repeat(10, 1fr);
+      grid-column-end: span 10;
+      grid-column-start: 5;
+    }
+  }
+}
+
+.emotion-2 {
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 25rem) {
+  .emotion-2 {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-2 {
+    margin-left: 0;
+  }
+}
+
+.emotion-4 {
+  margin-bottom: 1.5rem;
+  background-color: #FFFFFF;
+  padding: 1rem;
+}
+
+@media (min-width: 0rem) {
+  .emotion-4 {
+    width: 14.8125rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-4 {
+    width: 11.125rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .emotion-4 {
+    width: 12.6875rem;
+  }
+}
+
+.emotion-6 {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 100%;
+  word-break: break-word;
+  text-overflow: ellipsis;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #202224;
+}
+
+@media (min-width: 20rem) and (max-width: 37.4375rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .emotion-6 {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
+.emotion-6:hover,
+.emotion-6:focus {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-6:visited {
+  color: #545658;
+}
+
+<div>
+  <div
+    class="emotion-0 emotion-1"
+    dir="ltr"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      dir="ltr"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        dir="ltr"
+      >
+        <a
+          class="emotion-6 emotion-7"
+          dir="ltr"
+          href="https://www.bbc.com/pidgin"
+        >
+          Single link
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 `;

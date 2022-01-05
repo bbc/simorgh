@@ -2,15 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import {
   threeLinks,
   oneLinkOnly,
   moreThanThreeLinks,
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
-import { RequestContextProvider } from '#contexts/RequestContext';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
-import { ToggleContextProvider } from '#app/contexts/ToggleContext';
 
 /* eslint-disable react/prop-types */
 const Component = ({ service = 'pidgin', variant, ...rest }) => {

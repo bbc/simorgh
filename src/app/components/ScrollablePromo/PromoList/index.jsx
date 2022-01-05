@@ -7,8 +7,8 @@ import {
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
-import Promo from '../Promo';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Promo from '../Promo';
 
 const ScrollPromo = styled.ul`
   display: flex;
