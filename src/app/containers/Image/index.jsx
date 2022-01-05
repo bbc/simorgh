@@ -1,7 +1,6 @@
 import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
-import ArticleFigure from '../ArticleFigure';
 import {
   GridItemLargeNoMargin,
   GridItemMedium,
@@ -10,6 +9,7 @@ import {
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
+import ArticleFigure from '../ArticleFigure';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;

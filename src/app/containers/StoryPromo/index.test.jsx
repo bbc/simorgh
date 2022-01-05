@@ -10,6 +10,7 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -27,7 +28,6 @@ import {
   mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { buildUniquePromoId } from './utilities';
 
 const onlyOneRelatedItem = {

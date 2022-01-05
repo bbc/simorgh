@@ -1,5 +1,5 @@
-import { buildTvRadioATIParams, buildTvRadioATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { buildTvRadioATIParams, buildTvRadioATIUrl } from './buildParams';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

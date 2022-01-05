@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { C_GHOST, C_EBON } from '@bbc/psammead-styles/colours';
-import CpsOnwardJourney from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import CpsOnwardJourney from '.';
 import '@testing-library/jest-dom';
 
 describe('CpsOnwardJourney', () => {
