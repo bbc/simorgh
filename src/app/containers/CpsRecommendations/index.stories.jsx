@@ -1,13 +1,13 @@
 import React from 'react';
-import CpsRecommendations from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import services from '#server/utilities/serviceConfigs';
-import newsMultipleItems from './newsFixture';
 import mundoRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.ltr.json';
 import arabicRecommendationsData from '#pages/StoryPage/fixtureData/recommendations.rtl.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import newsMultipleItems from './newsFixture';
+import CpsRecommendations from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ items, service, dir }) => {

@@ -1,5 +1,5 @@
-import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 import { localBaseUrl } from '#testHelpers/config';
+import getCookieOvenEndpoints from './getCookieOvenEndpoints';
 
 const POLICY_APPROVED = '111';
 const POLICY_DENIED = '000';

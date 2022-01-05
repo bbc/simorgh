@@ -1,4 +1,3 @@
-import { buildATIPageTrackPath } from '../../atiUrl';
 import { LIBRARY_VERSION, getPublishedDatetime } from '#lib/analyticsUtils';
 import {
   getContentId,
@@ -7,6 +6,7 @@ import {
   getPageIdentifier,
   getPageTitle,
 } from '#lib/analyticsUtils/indexPage';
+import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildIndexPageATIParams = (
   indexPageData,

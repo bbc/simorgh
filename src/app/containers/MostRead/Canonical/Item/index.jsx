@@ -13,11 +13,11 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import Grid from '@bbc/psammead-grid';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import {
   mostReadListGridProps,
   mostReadItemGridProps,
 } from '../../utilities/gridProps';
-import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 
 export const getParentColumns = columnLayout => {
   if (columnLayout !== 'oneColumn') {

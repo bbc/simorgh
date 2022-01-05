@@ -1,15 +1,15 @@
 import {
+  ARTICLE_PAGE,
+  FRONT_PAGE,
+  INDEX_PAGE,
+} from '#app/routes/utils/pageTypes';
+import {
   getContentId,
   getLanguage,
   getPageIdentifier,
   getPageTitle,
   getContentType,
 } from '.';
-import {
-  ARTICLE_PAGE,
-  FRONT_PAGE,
-  INDEX_PAGE,
-} from '#app/routes/utils/pageTypes';
 
 describe('getPageIdentifier', () => {
   const goodData = {

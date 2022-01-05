@@ -11,10 +11,10 @@ import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { C_EBON, C_METAL, C_GREY_2 } from '@bbc/psammead-styles/colours';
 import { shape, string, oneOfType } from 'prop-types';
-import Grid from '../../../components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
-import RecommendationsImage from '../RecommendationsPromoImage';
 import { storyItem } from '#models/propTypes/storyItem';
+import Grid from '../../../components/Grid';
+import RecommendationsImage from '../RecommendationsPromoImage';
 import useCombinedClickTrackerHandler from '../../StoryPromo/useCombinedClickTrackerHandler';
 
 const StyledPromoWrapper = styled.div`
