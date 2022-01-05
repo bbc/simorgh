@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { PromoSingleBlock } from '../helpers/fixtureData';
-import Promo from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import { PromoSingleBlock } from '../helpers/fixtureData';
+import Promo from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 /* eslint-disable react/prop-types */
