@@ -2,11 +2,11 @@ import React from 'react';
 import fetchMock from 'fetch-mock';
 import { render, act } from '@testing-library/react';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
-import processRadioSchedule from '../utilities/processRadioSchedule';
-import CanonicalRadioSchedule from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import CanonicalRadioSchedule from '.';
+import processRadioSchedule from '../utilities/processRadioSchedule';
 
 const endpoint = 'https://localhost/arabic/bbc_arabic_radio/schedule.json';
 

@@ -1,11 +1,11 @@
 // components to test
-import getAssetType from './getAssetType';
 
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
 import styJson from '#data/mundo/cpsAssets/23263889.json';
 
 import { MEDIA_ASSET_PAGE, STORY_PAGE } from '#app/routes/utils/pageTypes';
+import getAssetType from './getAssetType';
 
 describe('getAssetType', () => {
   it(`should return an assetType of ${STORY_PAGE}`, () => {
