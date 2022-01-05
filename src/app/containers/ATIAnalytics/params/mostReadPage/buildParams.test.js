@@ -1,5 +1,5 @@
-import { buildMostReadATIParams, buildMostReadATIUrl } from './buildParams';
 import * as analyticsUtils from '#lib/analyticsUtils';
+import { buildMostReadATIParams, buildMostReadATIUrl } from './buildParams';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

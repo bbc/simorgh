@@ -3,9 +3,9 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { BrowserRouter } from 'react-router-dom';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ArticleMediaPlayerContainer from '.';
 import { validAresMediaVideoBlock } from '../MediaPlayer/fixtureData';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */

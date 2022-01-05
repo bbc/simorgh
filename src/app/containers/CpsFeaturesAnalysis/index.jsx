@@ -6,11 +6,11 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
+import useViewTracker from '#hooks/useViewTracker';
+import useToggle from '#hooks/useToggle';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
-import useViewTracker from '#hooks/useViewTracker';
-import useToggle from '#hooks/useToggle';
 
 const eventTrackingData = {
   block: {

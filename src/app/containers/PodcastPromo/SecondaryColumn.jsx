@@ -6,13 +6,13 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
-import getPromo from './shared';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
+import PromoComponent from './components';
+import getPromo from './shared';
 
 const ResponsivePodcastPromoWrapper = styled.div`
   margin-top: ${GEL_SPACING_TRPL};

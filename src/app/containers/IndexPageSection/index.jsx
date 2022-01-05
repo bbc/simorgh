@@ -16,10 +16,10 @@ import {
 import SectionLabel from '@bbc/psammead-section-label';
 import { StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import Grid from '#app/components/Grid';
-import UsefulLinksComponent from './UsefulLinks';
 import { ServiceContext } from '#contexts/ServiceContext';
 import groupShape from '#models/propTypes/frontPageGroup';
 import idSanitiser from '#lib/utilities/idSanitiser';
+import UsefulLinksComponent from './UsefulLinks';
 import {
   getAllowedItems,
   removeFirstSlotRadioBulletin,

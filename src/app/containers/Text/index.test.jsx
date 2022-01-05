@@ -4,8 +4,8 @@ import {
   isNull,
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
-import TextContainer from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
 
 const listItemBlock = (id = null, listBlocks) => ({

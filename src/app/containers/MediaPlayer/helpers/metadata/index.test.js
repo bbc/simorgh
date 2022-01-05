@@ -1,3 +1,4 @@
+import { getType } from '#app/containers/ChartbeatAnalytics/utils';
 import {
   mediaPlayerMetadata,
   getThumbnailUri,
@@ -15,7 +16,6 @@ import {
   multipleAresMetadataBlock,
   validLegacyAresMetadataBlock,
 } from '../../fixtureData';
-import { getType } from '#app/containers/ChartbeatAnalytics/utils';
 
 const embedSource =
   'https://www.test.bbc.com/ws/av-embeds/articles/c3wmq4d1y3wo/p01k6mtv/en-GB';

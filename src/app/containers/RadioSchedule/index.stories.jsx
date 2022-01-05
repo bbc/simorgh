@@ -3,13 +3,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import moment from 'moment';
-import RadioScheduleContainer from '.';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 import { getLocalRadioScheduleEndpoint } from '#lib/utilities/getUrlHelpers/getRadioSchedulesUrls';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import RadioScheduleContainer from '.';
 
 // Currently, only these services have radio schedule data
 const radioServices = {

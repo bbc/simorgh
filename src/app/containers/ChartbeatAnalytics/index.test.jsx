@@ -1,6 +1,7 @@
 import React from 'react';
 import { node, string, shape } from 'prop-types';
 import { render } from '@testing-library/react';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { RequestContextProvider } from '../../contexts/RequestContext';
 import { ServiceContextProvider } from '../../contexts/ServiceContext';
 import { ToggleContext } from '../../contexts/ToggleContext';
@@ -10,7 +11,6 @@ import * as testUtils from './utils';
 import * as amp from './amp';
 import { localBaseUrl } from '../../../testHelpers/config';
 import frontPageData from '../../../../data/news/frontpage';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   chartbeatAnalytics: {

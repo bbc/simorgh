@@ -1,9 +1,9 @@
 import nodeLogger from '#testHelpers/loggerMock';
-import filterPopularStaleData from '.';
 import {
   MOST_READ_STALE_DATA,
   MOST_WATCHED_STALE_DATA,
 } from '#lib/logger.const';
+import filterPopularStaleData from '.';
 
 describe('filterPopularStaleData', () => {
   it('should log MOST_READ_STALE_DATA when lastRecordTimestamp is greater than 60min', () => {

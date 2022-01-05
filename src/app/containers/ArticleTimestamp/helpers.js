@@ -1,6 +1,6 @@
 import moment from 'moment-timezone';
-import { formatDate, formatDateAndTime } from './timeFormats';
 import isTenHoursAgo from '#lib/utilities/isTenHoursAgo';
+import { formatDate, formatDateAndTime } from './timeFormats';
 
 export const isFirstRelative = (lastPublished, firstPublished) =>
   lastPublished === firstPublished && isTenHoursAgo(firstPublished);
