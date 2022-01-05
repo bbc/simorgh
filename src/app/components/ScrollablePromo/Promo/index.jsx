@@ -14,6 +14,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 
@@ -74,9 +75,21 @@ const Promo = ({ block }) => {
     ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
     textBlock,
   );
+
+  const clickTrackerHandler = useClickTrackerHandler({
+    componentName: 'scrollable-promo',
+    href,
+  });
+
   return (
     <PromoBox dir={dir}>
-      <Link href={href} service={service} script={script} dir={dir}>
+      <Link
+        href={href}
+        service={service}
+        script={script}
+        dir={dir}
+        onClick={clickTrackerHandler}
+      >
         {title}
       </Link>
     </PromoBox>

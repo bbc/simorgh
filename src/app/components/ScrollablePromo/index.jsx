@@ -7,6 +7,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
+import useViewTracker from '#hooks/useViewTracker';
 import Promo from './Promo';
 import PromoList from './PromoList';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
@@ -24,6 +25,10 @@ const PromoWrapper = styled.div`
 `;
 
 const ScrollablePromo = ({ blocks }) => {
+  const viewTracker = useViewTracker({
+    componentName: 'scrollable-promo',
+  });
+
   const { dir } = useContext(ServiceContext);
   if (isEmpty(blocks)) {
     return null;
@@ -31,7 +36,7 @@ const ScrollablePromo = ({ blocks }) => {
   const isSingleItem = blocks.length === 2;
 
   return (
-    <GridItemMediumNoMargin>
+    <GridItemMediumNoMargin ref={viewTracker}>
       {isSingleItem ? (
         <PromoWrapper dir={dir}>
           <Promo block={blocks[1]} />
