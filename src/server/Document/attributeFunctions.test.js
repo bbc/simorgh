@@ -84,10 +84,10 @@ describe('getScriptAttributes', () => {
     ${'modern'}
     ${'legacy'}
   `(
-    'includes crossOrigin and defer attributes where chunk is null - $bundleType bundle',
+    'returns no attributes where chunk is null - $bundleType bundle',
     ({ bundleType }) => {
       const attributes = getScriptAttributes(bundleType)(null);
-      expect(attributes).toEqual({ crossOrigin: 'anonymous', defer: true });
+      expect(attributes).toEqual({});
     },
   );
 
