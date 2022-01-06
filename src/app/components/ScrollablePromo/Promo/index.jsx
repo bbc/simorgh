@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
-import { C_GREY_6, C_WHITE } from '@bbc/psammead-styles/colours';
+import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
@@ -16,8 +16,6 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
-
-const C_GREY_8 = '#202224';
 
 const Link = styled.a`
   ${({ script }) => script && getPica(script)}
