@@ -230,43 +230,43 @@ Object {
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 4`] = `
 Object {
-  "text": "Sports",
-  "url": "/afrique/topics/c404v54yrqyt",
+  "text": "Santé",
+  "url": "/afrique/topics/c06gq9jxz3rt",
 }
 `;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 5`] = `
 Object {
-  "text": "Economie",
-  "url": "/afrique/topics/cnq687nr9v1t",
+  "text": "Bien-être",
+  "url": "/afrique/topics/c0vmyy90q8zt",
 }
 `;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 6`] = `
 Object {
-  "text": "Culture",
-  "url": "/afrique/topics/cnq687nrrw8t",
+  "text": "Science",
+  "url": "/afrique/topics/cdr561vr57gt",
 }
 `;
 
 exports[`AMP Feature Index page Header Navigation link should match text and url 7`] = `
-Object {
-  "text": "Au féminin",
-  "url": "/afrique/38058576",
-}
-`;
-
-exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
 Object {
   "text": "Technologie",
   "url": "/afrique/topics/cnq687nn703t",
 }
 `;
 
+exports[`AMP Feature Index page Header Navigation link should match text and url 8`] = `
+Object {
+  "text": "Economie",
+  "url": "/afrique/topics/cnq687nr9v1t",
+}
+`;
+
 exports[`AMP Feature Index page Header Navigation link should match text and url 9`] = `
 Object {
-  "text": "Santé",
-  "url": "/afrique/topics/c06gq9jxz3rt",
+  "text": "Culture",
+  "url": "/afrique/topics/cnq687nrrw8t",
 }
 `;
 
@@ -281,6 +281,13 @@ exports[`AMP Feature Index page Header Navigation link should match text and url
 Object {
   "text": "Nos émissions",
   "url": "/afrique/media-54074891",
+}
+`;
+
+exports[`AMP Feature Index page Header Navigation link should match text and url 12`] = `
+Object {
+  "text": "Ecoutez en direct",
+  "url": "/afrique/bbc_afrique_radio/liveradio",
 }
 `;
 
