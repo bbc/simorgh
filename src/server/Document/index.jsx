@@ -27,7 +27,7 @@ const getScriptAttributes = bundleType => chunk => {
 };
 const getLinkAttributes = chunk => ({
   crossOrigin,
-  rel: chunk.type === MAIN_ASSET ? 'modulepreload' : 'preload',
+  rel: 'modulepreload',
   ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
 });
 
