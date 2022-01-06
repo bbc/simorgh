@@ -16,9 +16,6 @@ import styUkrainianAssetData from '#data/ukrainian/cpsAssets/news-53561143.json'
 import styUkrainianInRussianAssetData from '#data/ukrainian/cpsAssets/features-russian-53477115.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import ATIAnalytics from '.';
-import * as amp from './amp';
-import * as canonical from './canonical';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -29,6 +26,9 @@ import {
   STORY_PAGE,
   CORRESPONDENT_STORY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import ATIAnalytics from '.';
+import * as amp from './amp';
+import * as canonical from './canonical';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');

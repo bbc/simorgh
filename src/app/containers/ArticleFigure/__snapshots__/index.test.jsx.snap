@@ -2145,7 +2145,6 @@ exports[`ArticleFigure should render an image and caption for a portrait with ne
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -2377,7 +2376,6 @@ exports[`ArticleFigure should render an image and caption for a square with nest
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -2609,7 +2607,6 @@ exports[`ArticleFigure should render an image with alt text 1`] = `
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -3020,7 +3017,6 @@ exports[`ArticleFigure should render an image with caption and copyright 1`] = `
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -3446,7 +3442,6 @@ exports[`ArticleFigure should render an image with caption text 1`] = `
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -3879,7 +3874,6 @@ exports[`ArticleFigure should render an image with caption text with inline link
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"
@@ -4161,7 +4155,6 @@ exports[`ArticleFigure should render an image with copyright text 1`] = `
           <picture
             class="emotion-8 emotion-9"
           >
-            <source />
             <img
               alt="Pauline Clayton"
               class="emotion-10 emotion-11 emotion-12"

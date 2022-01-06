@@ -5,13 +5,13 @@ import { render, act } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import _OnDemandTvPage from './OnDemandTvPage';
 import pashtoPageData from '#data/pashto/bbc_pashto_tv/tv_programmes/w13xttn4';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import getInitialData from '#app/routes/onDemandTV/getInitialData';
 import withMediaError from '#lib/utilities/episodeAvailability/withMediaError';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import _OnDemandTvPage from './OnDemandTvPage';
 
 const OnDemandTvPage = withMediaError(_OnDemandTvPage);
 

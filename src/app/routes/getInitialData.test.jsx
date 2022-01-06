@@ -1,5 +1,5 @@
-import routes from './index';
 import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import routes from './index';
 
 const MOCK_PATH = 'mock-path';
 

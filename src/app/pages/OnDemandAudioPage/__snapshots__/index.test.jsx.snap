@@ -1796,6 +1796,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
               >
                 <source
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
+                  type="image/png"
                 />
                 <img
                   alt="BBC News پښتو"
@@ -2699,6 +2700,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
               >
                 <source
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
+                  type="image/png"
                 />
                 <img
                   alt="BBC News 코리아"
@@ -3566,6 +3568,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
               >
                 <source
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
+                  type="image/png"
                 />
                 <img
                   alt="BBC News 코리아"

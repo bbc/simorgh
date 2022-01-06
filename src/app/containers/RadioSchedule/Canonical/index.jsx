@@ -23,10 +23,10 @@ import { C_LUNAR, C_EBON, C_METAL } from '@bbc/psammead-styles/colours';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import RadioSchedule from '#components/RadioSchedule';
-import processRadioSchedule from '../utilities/processRadioSchedule';
-import radioSchedulesShape from '../utilities/radioScheduleShape';
 import webLogger from '#lib/logger.web';
 import { RADIO_SCHEDULE_FETCH_ERROR } from '#lib/logger.const';
+import processRadioSchedule from '../utilities/processRadioSchedule';
+import radioSchedulesShape from '../utilities/radioScheduleShape';
 
 const logger = webLogger();
 

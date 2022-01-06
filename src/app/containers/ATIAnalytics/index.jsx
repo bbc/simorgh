@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { pageDataPropType } from '#models/propTypes/data';
 import CanonicalATIAnalytics from './canonical';
 import AmpATIAnalytics from './amp';
 import { buildArticleATIUrl } from './params/article/buildParams';
@@ -9,7 +10,6 @@ import { buildCpsAssetPageATIUrl } from './params/cpsAssetPage/buildParams';
 import { buildMostReadATIUrl } from './params/mostReadPage/buildParams';
 import { buildMostWatchedATIUrl } from './params/mostWatchedPage/buildParams';
 import { buildIndexPageATIUrl } from './params/indexPage/buildParams';
-import { pageDataPropType } from '#models/propTypes/data';
 
 const ATIAnalytics = ({ data }) => {
   const requestContext = useContext(RequestContext);
