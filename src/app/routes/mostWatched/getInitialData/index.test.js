@@ -1,6 +1,6 @@
-import getInitialData from '.';
 import mostWatchedJson from '#data/pidgin/mostWatched';
 import { MOST_WATCHED_PAGE } from '#app/routes/utils/pageTypes';
+import getInitialData from '.';
 
 fetch.mockResponse(JSON.stringify(mostWatchedJson));
 

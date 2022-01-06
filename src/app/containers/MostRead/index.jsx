@@ -3,9 +3,9 @@ import { oneOf, string, elementType, bool } from 'prop-types';
 import { RequestContext } from '#contexts/RequestContext';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useToggle from '#hooks/useToggle';
+import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 import Canonical from './Canonical';
 import mostReadShape from './utilities/mostReadShape';
-import { getMostReadEndpoint } from '#lib/utilities/getUrlHelpers/getMostReadUrls';
 
 const blockLevelEventTrackingData = {
   componentName: 'most-read',

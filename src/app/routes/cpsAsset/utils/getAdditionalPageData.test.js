@@ -2,8 +2,6 @@
 import fetchMock from 'fetch-mock';
 
 // components to test
-import getAdditionalPageData from './getAdditionalPageData';
-import hasRecommendations from './hasRecommendations';
 
 // mock data
 import mapJson from '#data/pidgin/cpsAssets/media-23256549.json';
@@ -13,6 +11,8 @@ import mostReadJson from '#data/mundo/mostRead/index.json';
 import mostWatchedJson from '#data/pidgin/mostWatched/index.json';
 import secondaryColumnJson from '#data/mundo/secondaryColumn/index.json';
 import recommendationsJson from '#data/mundo/recommendations/index.json';
+import hasRecommendations from './hasRecommendations';
+import getAdditionalPageData from './getAdditionalPageData';
 
 fetchMock.config.overwriteRoutes = false; // http://www.wheresrhys.co.uk/fetch-mock/#usageconfiguration allows us to mock the same endpoint multiple times
 

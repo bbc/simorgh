@@ -1,8 +1,8 @@
 import path from 'ramda/src/path';
+import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import fetchPageData from '../../utils/fetchPageData';
 import overrideRendererOnTest from '../../utils/overrideRendererOnTest';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
-import withRadioSchedule from '#app/routes/utils/withRadioSchedule';
 import getRadioService from '../../utils/getRadioService';
 
 const getLanguage = path(['metadata', 'language']);

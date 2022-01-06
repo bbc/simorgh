@@ -1,8 +1,8 @@
 import React from 'react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
-import Fragment from './index';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Fragment from './index';
 
 const newsContext = {
   service: 'news',

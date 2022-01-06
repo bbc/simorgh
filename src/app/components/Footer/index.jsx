@@ -15,9 +15,9 @@ import {
   GEL_GROUP_5_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 
+import { AmpCookieSettingsButton } from '#app/containers/ConsentBanner/Banner/cookie.amp';
 import Link from './Link';
 import List from './List';
-import { AmpCookieSettingsButton } from '#app/containers/ConsentBanner/Banner/cookie.amp';
 
 const SitewideLinksWrapper = styled.div`
   ${({ script }) => script && getBrevier(script)}

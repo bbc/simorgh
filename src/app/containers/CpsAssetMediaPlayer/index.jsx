@@ -15,13 +15,13 @@ import {
   GEL_SPACING_QUAD,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
-import MediaPlayerContainer from '../MediaPlayer';
 import { GridItemLargeNoMargin } from '#app/components/Grid';
 import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import MediaPlayerContainer from '../MediaPlayer';
 import getAssetUri from './utils/getAssetUri';
 
 const Wrapper = styled(GridItemLargeNoMargin)`
