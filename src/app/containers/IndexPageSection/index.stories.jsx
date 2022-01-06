@@ -2,14 +2,14 @@ import React from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import IndexPageSection from '.';
 
 import igboData from '#data/igbo/frontpage/index.json';
 import pidginData from '#data/pidgin/frontpage/index.json';
 import russianData from '#data/russian/frontpage/index.json';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { FRONT_PAGE } from '#app/routes/utils/pageTypes';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import IndexPageSection from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, data, isAmp = false }) => (

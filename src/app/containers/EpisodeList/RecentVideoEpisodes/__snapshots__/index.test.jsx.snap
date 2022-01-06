@@ -564,10 +564,12 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             class="emotion-33 emotion-34"
           >
             <a
+              aria-labelledby="episodeLinkIndex-0"
               class="emotion-35 emotion-36"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gllfk"
             >
               <span
+                id="episodeLinkIndex-0"
                 role="text"
               >
                 <span
@@ -655,10 +657,12 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             class="emotion-33 emotion-34"
           >
             <a
+              aria-labelledby="episodeLinkIndex-1"
               class="emotion-35 emotion-36"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2ghpjg"
             >
               <span
+                id="episodeLinkIndex-1"
                 role="text"
               >
                 <span
@@ -746,10 +750,12 @@ exports[`Recent Video Episodes should render video episodes correctly 1`] = `
             class="emotion-33 emotion-34"
           >
             <a
+              aria-labelledby="episodeLinkIndex-2"
               class="emotion-35 emotion-36"
               href="/afrique/bbc_afrique_tv/tv/w172xc9xq2gdsmc"
             >
               <span
+                id="episodeLinkIndex-2"
                 role="text"
               >
                 <span

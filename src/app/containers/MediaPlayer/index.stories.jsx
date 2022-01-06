@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import MediaPlayerContainer from '.';
-import { validVideoWithCaptionBlock } from './fixtureData';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { validVideoWithCaptionBlock } from './fixtureData';
+import MediaPlayerContainer from '.';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ service, isAmp = false }) => {

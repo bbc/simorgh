@@ -1,9 +1,9 @@
-import { getImageParts } from './helpers';
 import {
   blockContainingText,
   rawImageBlock,
   imageBlocks,
 } from '#app/models/blocks';
+import { getImageParts } from './helpers';
 
 const captionBlock = ({ caption }) => {
   if (!caption) return null;

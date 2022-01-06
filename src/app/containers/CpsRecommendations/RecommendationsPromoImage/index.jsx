@@ -1,11 +1,11 @@
 import React from 'react';
 import { shape, bool } from 'prop-types';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
-import ImageWithPlaceholder from '../../ImageWithPlaceholder';
 import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
+import ImageWithPlaceholder from '../../ImageWithPlaceholder';
 
 const RecommendationsImage = ({ indexImage, lazyLoad }) => {
   if (!indexImage) {
