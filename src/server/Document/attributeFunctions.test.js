@@ -1,16 +1,17 @@
 import { getLinkAttributes, getScriptAttributes } from './attributeFunctions';
 
+const chunk = {
+  filename: 'static/js/modern.main-node_modules_a.js',
+  integrity: null,
+  scriptType: 'script',
+  chunk: 'main',
+  url: 'http://localhost:1124/static/js/modern.main-node_modules_a.js',
+  path: '/Users/bennea27/Documents/workspace/simorgh/build/public/static/js/modern.main-node_modules_a.js',
+  type: 'mainAsset',
+  linkType: 'preload',
+};
+
 describe('getLinkAttributes', () => {
-  const chunk = {
-    filename: 'static/js/modern.main-node_modules_a.js',
-    integrity: null,
-    scriptType: 'script',
-    chunk: 'main',
-    url: 'http://localhost:1124/static/js/modern.main-node_modules_a.js',
-    path: '/Users/bennea27/Documents/workspace/simorgh/build/public/static/js/modern.main-node_modules_a.js',
-    type: 'mainAsset',
-    linkType: 'preload',
-  };
   it('includes crossOrigin attribute', () => {
     const attributes = getLinkAttributes(chunk);
 
@@ -39,17 +40,6 @@ describe('getLinkAttributes', () => {
 });
 
 describe('getScriptAttributes', () => {
-  const chunk = {
-    filename: 'static/js/modern.main-node_modules_a.js',
-    integrity: null,
-    scriptType: 'script',
-    chunk: 'main',
-    url: 'http://localhost:1124/static/js/modern.main-node_modules_a.js',
-    path: '/Users/bennea27/Documents/workspace/simorgh/build/public/static/js/modern.main-node_modules_a.js',
-    type: 'mainAsset',
-    linkType: 'preload',
-  };
-
   it.each`
     bundleType
     ${'modern'}
