@@ -47,7 +47,7 @@ describe('ScrollablePromo', () => {
   );
 
   shouldMatchSnapshot(
-    'it should match a11y snashot for list',
+    'it should match a11y snapshot for list',
     <ScrollablePromo blocks={threeLinks} />,
   );
 });
