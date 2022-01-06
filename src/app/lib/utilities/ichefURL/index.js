@@ -22,6 +22,7 @@ const buildPlaceholderLocator = (src, resolution) => {
   const parts = src.split('/');
   const [protocol, blank, domain, type, imgService, width, ...extraParts] =
     parts;
+  if (protocol !== 'https:') return src;
   const definedWidth = `${resolution[0]}x${resolution[1]}`;
   const newUrl = [
     protocol,
@@ -32,7 +33,6 @@ const buildPlaceholderLocator = (src, resolution) => {
     definedWidth,
     ...extraParts,
   ];
-  return src;
   return newUrl.join('/');
 };
 

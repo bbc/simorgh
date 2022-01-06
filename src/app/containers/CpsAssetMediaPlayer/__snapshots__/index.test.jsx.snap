@@ -163,7 +163,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
             layout="fill"
             placeholder="true"
             src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
-            srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
+            srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 384w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 432w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 512w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 608w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 640w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 688w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 720w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 768w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 832w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 976w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1024w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1376w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1920w"
             width="9"
           />
           <noscript />
@@ -508,7 +508,7 @@ exports[`MediaPlayer render the amp player 1`] = `
             layout="fill"
             placeholder="true"
             src="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg"
-            srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 240w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 624w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w"
+            srcset="ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 320w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 384w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 432w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 480w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 512w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 608w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 640w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 688w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 720w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 768w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 800w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 832w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 976w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1024w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1376w, ichef.test.bbci.co.uk/images/ic/$widthxn/p01kx435.jpg 1920w"
             width="9"
           />
           <noscript />
