@@ -105,12 +105,28 @@ describe('create srcset', () => {
 });
 
 describe('Placeholder srcset', () => {
-  const locator = 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg';
-  const originCode = 'mpv';
-  const expected =
-    'https://ichef.test.bbci.co.uk/images/ic/240xn/p01kdbpk.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kdbpk.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kdbpk.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kdbpk.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kdbpk.jpg 800w';
-  it('should placeholder image with srcset', () => {
-    const placeholderSrcset = getPlaceholderSrcSet({ locator, originCode });
-    expect(placeholderSrcset).toEqual(expected);
-  });
+  const placeholderSrcsetScenario = [
+    {
+      locator: 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg',
+      originCode: 'mpv',
+      expected:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01kdbpk.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kdbpk.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kdbpk.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kdbpk.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kdbpk.jpg 800w',
+      summary: 'should placeholder image with srcset',
+    },
+    {
+      locator: 'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg',
+      originCode: 'pips',
+      expected:
+        'https://ichef.test.bbci.co.uk/images/ic/320x180/p01mt2kt.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/384x216/p01mt2kt.jpg 384w, https://ichef.test.bbci.co.uk/images/ic/432x243/p01mt2kt.jpg 432w, https://ichef.test.bbci.co.uk/images/ic/480x270/p01mt2kt.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/512x288/p01mt2kt.jpg 512w, https://ichef.test.bbci.co.uk/images/ic/608x342/p01mt2kt.jpg 608w, https://ichef.test.bbci.co.uk/images/ic/640x360/p01mt2kt.jpg 640w, https://ichef.test.bbci.co.uk/images/ic/688x387/p01mt2kt.jpg 688w, https://ichef.test.bbci.co.uk/images/ic/720x405/p01mt2kt.jpg 720w, https://ichef.test.bbci.co.uk/images/ic/768x432/p01mt2kt.jpg 768w, https://ichef.test.bbci.co.uk/images/ic/800x450/p01mt2kt.jpg 800w, https://ichef.test.bbci.co.uk/images/ic/832x468/p01mt2kt.jpg 832w, https://ichef.test.bbci.co.uk/images/ic/976x549/p01mt2kt.jpg 976w, https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg 1024w, https://ichef.test.bbci.co.uk/images/ic/1376x774/p01mt2kt.jpg 1376w, https://ichef.test.bbci.co.uk/images/ic/1920x1080/p01mt2kt.jpg 1920w',
+      summary:
+        'should placeholder image with srcset if size already set and originCode pips',
+    },
+  ];
+  placeholderSrcsetScenario.forEach(
+    ({ locator, originCode, expected, summary }) => {
+      it(summary, () => {
+        expect(getPlaceholderSrcSet({ locator, originCode })).toEqual(expected);
+      });
+    },
+  );
 });
