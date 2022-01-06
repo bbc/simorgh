@@ -61,7 +61,7 @@ const MediaPlayerContainer = ({
   if (!aresMediaBlock) {
     return null;
   }
-
+  console.log(aresMediaBlock);
   const { originCode, locator } = pathOr(
     {},
     ['model', 'blocks', 1, 'model', 'blocks', 0, 'model'],

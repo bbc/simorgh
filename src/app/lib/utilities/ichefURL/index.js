@@ -18,9 +18,27 @@ const buildPlaceholderSrc = (src, resolution) => {
   return newUrl.join('/');
 };
 
+const buildPlaceholderLocator = (src, resolution) => {
+  const parts = src.split('/');
+  const [protocol, blank, domain, type, imgService, width, ...extraParts] =
+    parts;
+  const definedWidth = `${resolution[0]}x${resolution[1]}`;
+  const newUrl = [
+    protocol,
+    blank,
+    domain,
+    type,
+    imgService,
+    definedWidth,
+    ...extraParts,
+  ];
+  return src;
+  return newUrl.join('/');
+};
+
 const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   if (originCode === 'pips') {
-    return locator;
+    return buildPlaceholderLocator(locator, resolution);
   }
 
   if (originCode === 'mpv') {
