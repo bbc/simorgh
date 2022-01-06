@@ -6,8 +6,8 @@ import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
-import articleData from '#data/pidgin/articles/crrrkxz2k0ko';
-import secondaryColumn from '#data/pidgin/secondaryColumn';
+import articleData from '#data/news/articles/c5jje4ejkqvo';
+import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import ArticlePageComponent from './ArticlePage';
 
@@ -20,18 +20,18 @@ const ComponentWithContext = () => (
       frostedPromo: { enabled: true, value: 1 },
     }}
   >
-    {/* Service set to pidgin to enable most read. Article data is in english */}
-    <ServiceContextProvider service="pidgin">
+    {/* Service set to news to enable most read. Article data is in english */}
+    <ServiceContextProvider service="news">
       <RequestContextProvider
         isAmp={false}
         pageType={ARTICLE_PAGE}
-        service="pidgin"
+        service="news"
       >
         <UserContextProvider>
           <MemoryRouter>
             <Page
               pageData={{ ...articleData, secondaryColumn }}
-              mostReadEndpointOverride="./data/pidgin/mostRead/index.json"
+              mostReadEndpointOverride="./data/news/mostRead/index.json"
             />
           </MemoryRouter>
         </UserContextProvider>
