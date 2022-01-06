@@ -96,6 +96,7 @@ const directives = {
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://cdn.optimizely.com/',
+      'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
