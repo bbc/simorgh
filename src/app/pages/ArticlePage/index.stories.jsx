@@ -12,7 +12,7 @@ import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
 import ArticlePageComponent from './ArticlePage';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, false);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const ComponentWithContext = () => (

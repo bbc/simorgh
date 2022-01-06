@@ -1,10 +1,19 @@
 import React, { useContext } from 'react';
-import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
+import {
+  createInstance,
+  OptimizelyProvider,
+  setLogger,
+} from '@optimizely/react-sdk';
 import { v4 as uuid } from 'uuid';
 import Cookie from 'js-cookie';
 import { ServiceContext } from '#contexts/ServiceContext';
+import isLive from '#lib/utilities/isLive';
 import onClient from '#lib/utilities/onClient';
 import isOperaProxy from '#lib/utilities/isOperaProxy';
+
+if (isLive()) {
+  setLogger(null);
+}
 
 const getCknsMvt = () => {
   // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
@@ -30,9 +39,18 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-const withOptimizelyProvider = (Component, hasUserId = true) => {
+const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
+    const isStoryBook = process.env.STORYBOOK;
+    const disableOptimizely = isStoryBook || isLive();
+
+    const getUserId = () => {
+      if (disableOptimizely) {
+        return null;
+      }
+      return getCknsMvt();
+    };
 
     return (
       <OptimizelyProvider
@@ -40,7 +58,7 @@ const withOptimizelyProvider = (Component, hasUserId = true) => {
         isServerSide
         timeout={500}
         user={{
-          id: hasUserId && getCknsMvt(),
+          id: getUserId(),
           attributes: {
             service,
           },
