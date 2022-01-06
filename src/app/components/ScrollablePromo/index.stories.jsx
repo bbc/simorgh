@@ -2,8 +2,8 @@ import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import ScrollablePromo from '.';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import ScrollablePromo from '.';
 import {
   threeLinks,
   oneLinkOnly,

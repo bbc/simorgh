@@ -58,12 +58,11 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import ScrollablePromo from '#components/ScrollablePromo';
 
 import SecondaryColumn from './SecondaryColumn';
 
 import ArticlePageGrid, { Primary } from './ArticlePageGrid';
-
-import ScrollablePromo from '#app/components/ScrollablePromo';
 
 const componentsToRender = {
   visuallyHiddenHeadline,

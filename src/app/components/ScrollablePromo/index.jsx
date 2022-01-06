@@ -7,10 +7,10 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import Promo from './Promo';
-import PromoList from './PromoList';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
+import Promo from './Promo';
+import PromoList from './PromoList';
 
 const PromoWrapper = styled.div`
   ${({ dir }) => `margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};`}
