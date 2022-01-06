@@ -20,10 +20,10 @@ const buildPlaceholderSrc = (src, resolution) => {
 
 const buildPlaceholderLocator = (src, resolution) => {
   const parts = src.split('/');
-  const [protocol, blank, domain, type, imgService, width, ...extraParts] =
-    parts;
+  const [protocol, blank, domain, type, imgService, ...extraParts] = parts;
   if (protocol !== 'https:') return src;
   const definedWidth = `${resolution[0]}x${resolution[1]}`;
+  extraParts.shift();
   const newUrl = [
     protocol,
     blank,
