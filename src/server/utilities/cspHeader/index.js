@@ -95,6 +95,7 @@ const directives = {
       ...bbcDomains,
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
+      'https://cdn.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
@@ -115,6 +116,7 @@ const directives = {
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
+      'https://cdn.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
