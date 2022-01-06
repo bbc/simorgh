@@ -1,14 +1,14 @@
 import React from 'react';
 import { arrayOf, shape, bool, oneOf } from 'prop-types';
 import { StoryPromoLi } from '@bbc/psammead-story-promo-list';
+import Grid from '#app/components/Grid';
+import { storyItem } from '#models/propTypes/storyItem';
 import {
   topStoryColumns,
   leadingStoryColumns,
   regularStoryColumns,
   noImageStoryColumns,
 } from './storyColumns';
-import Grid from '#app/components/Grid';
-import { storyItem } from '#models/propTypes/storyItem';
 import BulletinContainer from '../Bulletin';
 import StoryPromoContainer from '../StoryPromo';
 

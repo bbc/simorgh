@@ -1,15 +1,15 @@
 import loggerMock from '#testHelpers/loggerMock';
-import processUnavailableMedia, {
-  unavailableMediaBlock,
-  addUnavailableMediaBlock,
-  EXTERNAL_VPID,
-} from '.';
 import {
   MEDIA_ASSET_REVOKED,
   MEDIA_METADATA_UNAVAILABLE,
   MEDIA_ASSET_EXPIRED,
   NO_MEDIA_BLOCK,
 } from '#lib/logger.const';
+import processUnavailableMedia, {
+  unavailableMediaBlock,
+  addUnavailableMediaBlock,
+  EXTERNAL_VPID,
+} from '.';
 
 describe('processUnavailableMedia', () => {
   const expectedProcessedData = {

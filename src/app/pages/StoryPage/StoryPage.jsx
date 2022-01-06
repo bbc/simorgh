@@ -32,7 +32,6 @@ import FeaturesAnalysis from '#containers/CpsFeaturesAnalysis';
 import MostReadContainer from '#containers/MostRead';
 import ATIAnalytics from '#containers/ATIAnalytics';
 import ComscoreAnalytics from '#containers/ComscoreAnalytics';
-import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 import fauxHeadline from '#containers/FauxHeadline';
 import visuallyHiddenHeadline from '#containers/VisuallyHiddenHeadline';
 import CpsTable from '#containers/CpsTable';
@@ -46,7 +45,6 @@ import {
   getLastPublished,
   getAboutTags,
 } from '#lib/utilities/parseAssetData';
-import categoryType from './categoryMap/index';
 import Include from '#containers/Include';
 import { ServiceContext } from '#contexts/ServiceContext';
 import AdContainer from '#containers/Ad';
@@ -55,6 +53,8 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import categoryType from './categoryMap/index';
+import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};

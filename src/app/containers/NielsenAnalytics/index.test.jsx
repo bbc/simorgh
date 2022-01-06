@@ -5,8 +5,8 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { UserContext } from '#contexts/UserContext';
-import NielsenAnalytics from '.';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import NielsenAnalytics from '.';
 
 const mockToggleDispatch = jest.fn();
 

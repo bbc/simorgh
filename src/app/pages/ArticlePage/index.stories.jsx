@@ -5,12 +5,12 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import ArticlePageComponent from './ArticlePage';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import ArticlePageComponent from './ArticlePage';
 
 const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, false);
 const Page = withPageWrapper(PageWithOptimizely);
