@@ -18,7 +18,7 @@ const buildPlaceholderSrc = (src, resolution) => {
   return newUrl.join('/');
 };
 
-const buildPlaceholderLocator = (src, resolution) => {
+const buildPipsPlaceholderSrc = (src, resolution) => {
   const parts = src.split('/');
   const [protocol, blank, domain, type, imgService, ...extraParts] = parts;
   if (protocol !== 'https:') return src;
@@ -38,7 +38,7 @@ const buildPlaceholderLocator = (src, resolution) => {
 
 const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
   if (originCode === 'pips') {
-    return buildPlaceholderLocator(locator, resolution);
+    return buildPipsPlaceholderSrc(locator, resolution);
   }
 
   if (originCode === 'mpv') {
