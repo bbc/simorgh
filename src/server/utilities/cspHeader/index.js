@@ -117,6 +117,7 @@ const directives = {
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
       'https://cdn.optimizely.com/',
+      'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
