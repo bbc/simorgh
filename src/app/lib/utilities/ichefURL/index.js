@@ -22,7 +22,7 @@ const buildPipsPlaceholderSrc = (src, resolution) => {
   const parts = src.split('/');
   const [protocol, blank, domain, type, imgService, ...extraParts] = parts;
   if (protocol !== 'https:') return src;
-  const definedWidth = `${resolution[0]}x${resolution[1]}`;
+  const definedResolution = `${resolution[0]}x${resolution[1]}`;
   extraParts.shift();
   const newUrl = [
     protocol,
@@ -30,7 +30,7 @@ const buildPipsPlaceholderSrc = (src, resolution) => {
     domain,
     type,
     imgService,
-    definedWidth,
+    definedResolution,
     ...extraParts,
   ];
   return newUrl.join('/');
