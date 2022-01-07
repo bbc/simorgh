@@ -1,7 +1,16 @@
 import React, { useContext } from 'react';
-import { createInstance, OptimizelyProvider } from '@optimizely/react-sdk';
+import {
+  createInstance,
+  OptimizelyProvider,
+  setLogger,
+} from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getAtUserId } from '#lib/analyticsUtils';
+import isLive from '#lib/utilities/isLive';
+
+if (isLive()) {
+  setLogger(null);
+}
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
