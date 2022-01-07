@@ -3,11 +3,13 @@ import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 
+import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
@@ -18,26 +20,39 @@ const eventTrackingData = {
   },
 };
 
+const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
+const HIGH_IMPACT_VARIATION = 'variation_1';
+
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const viewRef = useViewTracker(eventTrackingData.block);
   const { isAmp } = useContext(RequestContext);
+
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
+
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
 
   const selectComponent = index => {
     if (isAmp) return StoryPromo;
-    if (!frostedPromoEnabled) return StoryPromo;
-    return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+    if (isLive()) {
+      if (!frostedPromoEnabled) return StoryPromo;
+      return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+    }
+    if (index === 0 && promoVariation === HIGH_IMPACT_VARIATION) {
+      return FrostedGlassPromo;
+    }
+    return StoryPromo;
   };
 
   return (
     <StoryPromoUl>
       {promoItems.map((item, promoIndex) => {
-        const PromoComponent = selectComponent(promoIndex);
+        const StoryPromoComponent = selectComponent(promoIndex);
+
         return (
           <StoryPromoLi key={item.id || item.uri} ref={viewRef}>
-            <PromoComponent
+            <StoryPromoComponent
               item={item}
               index={promoIndex}
               dir={dir}
@@ -70,17 +85,23 @@ const PromoComponent = ({ promo, dir }) => {
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
 
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
+
   const selectComponent = () => {
     if (isAmp) return StoryPromo;
-    if (!frostedPromoEnabled) return StoryPromo;
-    return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+    if (isLive()) {
+      if (!frostedPromoEnabled) return StoryPromo;
+      return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+    }
+    if (promoVariation === HIGH_IMPACT_VARIATION) return FrostedGlassPromo;
+    return StoryPromo;
   };
 
-  const ChosenComponent = selectComponent();
+  const StoryPromoComponent = selectComponent();
 
   return (
     <div ref={viewRef}>
-      <ChosenComponent
+      <StoryPromoComponent
         item={promo}
         dir={dir}
         displayImage
