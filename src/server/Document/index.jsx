@@ -9,7 +9,10 @@ import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
-import { getLinkAttributes, getScriptAttributes } from './attributeFunctions';
+import {
+  getLinkAttributes,
+  getScriptAttributes,
+} from '../utilities/attributeFunctions';
 
 const renderDocument = async ({
   bbcOrigin,

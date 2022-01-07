@@ -1,4 +1,4 @@
-import { getLinkAttributes, getScriptAttributes } from './attributeFunctions';
+import { getLinkAttributes, getScriptAttributes } from '.';
 
 const chunk = {
   filename: 'static/js/modern.main-node_modules_a.js',

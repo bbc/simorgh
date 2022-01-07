@@ -1,4 +1,4 @@
-import encodeChunkFilename from '../utilities/encodeChunkUri';
+import encodeChunkFilename from '../encodeChunkUri';
 
 const crossOrigin = 'anonymous';
 
