@@ -85,8 +85,7 @@ export const createSrcsets = ({
   };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
-  if (!originCode) return '';
-  if (!locator) return '';
+  if (!originCode || !locator) return '';
   if (originCode === 'pips') {
     return PIPS_RESOLUTIONS.map(
       resolution =>
