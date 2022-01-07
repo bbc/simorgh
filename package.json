@@ -20,7 +20,8 @@
     "nth-check": "2.0.1",
     "prismjs": "1.25.0",
     "react-is": "17.0.2",
-    "trim": "1.0.1"
+    "trim": "1.0.1",
+    "postcss": "8.2.13"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
