@@ -40,6 +40,7 @@ const AmpMediaPlayer = ({
         <AmpImg
           layout="fill"
           src={placeholderSrc}
+          srcset={placeholderSrcset}
           placeholder
           alt=""
           height={height}
