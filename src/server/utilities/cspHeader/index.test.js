@@ -576,7 +576,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
-            `report-to default;` +
+            `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(
