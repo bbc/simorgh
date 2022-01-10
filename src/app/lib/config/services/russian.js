@@ -219,7 +219,7 @@ export const mainTranslations = {
     linkText: 'Откройте полную версию страницы, чтобы увидеть весь контент.',
   },
   topStoriesTitle: 'Главное',
-  featuresAnalysisTitle: 'Журнал',
+  featuresAnalysisTitle: 'Не пропустите',
 };
 
 export const service = {

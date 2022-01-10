@@ -3,11 +3,11 @@ import { render } from '@testing-library/react';
 import path from 'ramda/src/path';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import pidginPageData from '#data/pidgin/cpsAssets/tori-49450859';
-import RecommendationsPromoList from './index';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import * as viewTracking from '#hooks/useViewTracker';
+import RecommendationsPromoList from './index';
 
 process.env.SIMORGH_BASE_URL = 'http://bbc.com';
 

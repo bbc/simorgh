@@ -1,7 +1,7 @@
 import React from 'react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
-import Blocks from './index';
 import { blockContainingText, singleTextBlock } from '#models/blocks';
+import Blocks from './index';
 
 const unknownTestBlock = {
   type: 'test',

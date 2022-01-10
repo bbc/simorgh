@@ -7,12 +7,12 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import PhotoGalleryPage from '.';
 import noOnwardJourneys from '#data/pidgin/cpsAssets/sport-23252855';
 import someCpsOnwardJourneys from '#data/azeri/cpsAssets/azerbaijan-44208474.json';
 import allCpsOnwardJourneys from '#data/pidgin/cpsAssets/tori-49221071.json';
 import pglAboutData from '#data/afaanoromoo/cpsAssets/oduu-41217768';
 import getInitialData from '#app/routes/cpsAsset/getInitialData';
+import PhotoGalleryPage from '.';
 
 jest.mock('#containers/ChartbeatAnalytics', () => {
   const ChartbeatAnalytics = () => <div>chartbeat</div>;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import mergeDeepLeft from 'ramda/src/mergeDeepLeft';
-import ArticlePage from './ArticlePage';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -19,6 +18,7 @@ import {
   singleTextBlock,
 } from '#models/blocks/index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ArticlePage from './ArticlePage';
 
 // temporary: will be removed with https://github.com/bbc/simorgh/issues/836
 const articleDataNewsNoHeadline = JSON.parse(JSON.stringify(articleDataNews));

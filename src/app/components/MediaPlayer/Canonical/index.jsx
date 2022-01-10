@@ -77,7 +77,7 @@ const Canonical = ({
 
     window.addEventListener('message', handler);
     return () => window.removeEventListener('message', handler);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>

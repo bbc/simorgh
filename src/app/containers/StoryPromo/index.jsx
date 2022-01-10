@@ -6,7 +6,6 @@ import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import pathOr from 'ramda/src/pathOr';
 import LiveLabel from '@bbc/psammead-live-label';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
-import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
@@ -20,13 +19,14 @@ import {
   getUrl,
   getIsLive,
 } from '#lib/utilities/getStoryPromoInfo';
+import loggerNode from '#lib/logger.node';
+import { MEDIA_MISSING } from '#lib/logger.const';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
-import loggerNode from '#lib/logger.node';
-import { MEDIA_MISSING } from '#lib/logger.const';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
 import PromoTimestamp from './Timestamp';
 

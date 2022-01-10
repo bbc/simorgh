@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
+import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 import { PhotoGalleryPage } from '..';
 import pageData from './fixtureData';
-import { PHOTO_GALLERY_PAGE } from '#app/routes/utils/pageTypes';
 
 const Component = () => (
   <BrowserRouter>

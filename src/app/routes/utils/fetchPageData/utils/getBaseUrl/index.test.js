@@ -1,5 +1,5 @@
-import getBaseUrl from '.';
 import { localBaseUrl } from '#testHelpers/config';
+import getBaseUrl from '.';
 
 describe('Client', () => {
   const logicMap = [
