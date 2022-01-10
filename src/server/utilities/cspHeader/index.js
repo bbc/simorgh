@@ -396,8 +396,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
-    // The "default" report-to group header is injected by GTM
-    'report-to': 'default',
+    'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
 });
@@ -405,7 +404,6 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
 
-  // We will switch our reporting to this soon, but GTM does not currently handle this header correctly
   res.setHeader(
     'report-to',
     JSON.stringify({
