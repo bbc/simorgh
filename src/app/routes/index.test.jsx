@@ -10,7 +10,6 @@ import fetchMock from 'fetch-mock';
 import defaultToggles from '#lib/config/toggles';
 
 // components being tested
-import routes from './index';
 
 // mock data
 import liveRadioPageJson from '#data/korean/bbc_korean_radio/liveradio.json';
@@ -30,6 +29,7 @@ import indexPageJson from '#data/ukrainian/ukraine_in_russian';
 import storyPageRecommendationsData from '#data/mundo/recommendations/index.json';
 
 import { FRONT_PAGE, ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import routes from './index';
 
 fetchMock.config.fallbackToNetwork = true; // ensures non mocked requests fallback to an actual network request
 

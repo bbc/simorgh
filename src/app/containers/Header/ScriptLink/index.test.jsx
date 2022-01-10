@@ -10,7 +10,6 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { service as serbianServiceConfig } from '#lib/config/services/serbian';
 import { service as ukChinaServiceConfig } from '#lib/config/services/ukchina';
 import * as cookies from '#contexts/UserContext/cookies';
-import ScriptLinkContainer, { getVariantHref } from '.';
 import {
   articlePath,
   cpsAssetPagePath,
@@ -18,6 +17,7 @@ import {
   frontPagePath,
   legacyAssetPagePath,
 } from '#app/routes/utils/regex';
+import ScriptLinkContainer, { getVariantHref } from '.';
 
 const setPreferredVariantCookieSpy = jest.spyOn(
   cookies,

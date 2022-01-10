@@ -1,9 +1,9 @@
 import React from 'react';
 import { shape, string, oneOfType } from 'prop-types';
-import Grid from '../../../components/Grid';
-import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
+import Grid from '../../../components/Grid';
+import StoryPromo from '../../StoryPromo';
 
 const RelatedContentPromo = ({ promo, dir, eventTrackingData }) => {
   const viewRef = useViewTracker(eventTrackingData);

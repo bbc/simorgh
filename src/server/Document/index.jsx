@@ -9,25 +9,10 @@ import { Helmet } from 'react-helmet';
 import { ServerApp } from '#app/containers/App';
 import getAssetOrigins from '../utilities/getAssetOrigins';
 import DocumentComponent from './component';
-import encodeChunkFilename from '../utilities/encodeChunkUri';
-
-const crossOrigin = 'anonymous';
-const getScriptAttributes = bundleType => chunk => {
-  const { type, url } = chunk || {};
-  const MAIN_ASSET = 'mainAsset';
-
-  return {
-    crossOrigin,
-    defer: true,
-    ...(url && { src: encodeChunkFilename(chunk) }),
-    ...(bundleType === 'modern' && type === MAIN_ASSET && { type: 'module' }),
-    ...(bundleType === 'legacy' && type === MAIN_ASSET && { noModule: true }),
-  };
-};
-const getLinkAttributes = chunk => ({
-  crossOrigin,
-  ...(chunk && chunk.url && { href: encodeChunkFilename(chunk) }),
-});
+import {
+  getLinkAttributes,
+  getScriptAttributes,
+} from '../utilities/attributeFunctions';
 
 const renderDocument = async ({
   bbcOrigin,

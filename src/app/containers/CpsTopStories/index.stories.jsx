@@ -1,12 +1,12 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import TopStories from '.';
 import topStories from '#pages/StoryPage/topStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
-import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
+import TopStories from '.';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ isAmp = false, service, dir = 'ltr', data }) => (

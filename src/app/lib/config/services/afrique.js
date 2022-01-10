@@ -332,8 +332,20 @@ export const service = {
         url: '/afrique/topics/cvqxn21vx11t',
       },
       {
-        title: 'Sports',
-        url: '/afrique/topics/c404v54yrqyt',
+        title: 'Santé',
+        url: '/afrique/topics/c06gq9jxz3rt',
+      },
+      {
+        title: 'Bien-être',
+        url: '/afrique/topics/c0vmyy90q8zt',
+      },
+      {
+        title: 'Science',
+        url: '/afrique/topics/cdr561vr57gt',
+      },
+      {
+        title: 'Technologie',
+        url: '/afrique/topics/cnq687nn703t',
       },
       {
         title: 'Economie',
@@ -344,24 +356,16 @@ export const service = {
         url: '/afrique/topics/cnq687nrrw8t',
       },
       {
-        title: 'Au féminin',
-        url: '/afrique/38058576',
-      },
-      {
-        title: 'Technologie',
-        url: '/afrique/topics/cnq687nn703t',
-      },
-      {
-        title: 'Santé',
-        url: '/afrique/topics/c06gq9jxz3rt',
-      },
-      {
         title: 'Vidéos',
         url: '/afrique/media/video',
       },
       {
         title: 'Nos émissions',
         url: '/afrique/media-54074891',
+      },
+      {
+        title: 'Ecoutez en direct',
+        url: '/afrique/bbc_afrique_radio/liveradio',
       },
     ],
   },

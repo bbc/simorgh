@@ -3,11 +3,11 @@ import pathOr from 'ramda/src/pathOr';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import StoryPromoContainer from '.';
 import fixture from '#data/pidgin/frontpage';
+import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
-import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)

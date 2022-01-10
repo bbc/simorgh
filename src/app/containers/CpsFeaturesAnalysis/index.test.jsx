@@ -1,16 +1,19 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
-import FeaturesAnalysis from '.';
 import features from '#pages/StoryPage/featuresAnalysis.json';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import isLive from '#lib/utilities/isLive';
+import FeaturesAnalysis from '.';
+
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
 const toggleFixture = ({ frostedPromoCount = 0 } = {}) => ({
   eventTracking: { enabled: true },
@@ -22,12 +25,13 @@ const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
   frostedPromoCount = 0,
+  isAmp = false,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
       <RequestContextProvider
         bbcOrigin={bbcOrigin}
-        isAmp={false}
+        isAmp={isAmp}
         pageType={STORY_PAGE}
         pathname="/pidgin/tori-49450859"
         service="pidgin"
@@ -89,69 +93,89 @@ const renderFeaturesAnalysisNoTitle = ({
 jest.mock('#lib/utilities/isLive', () => jest.fn());
 
 describe('CpsFeaturesAnalysis', () => {
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
+
   it('tests use a fixture that has multiple features', () => {
     expect(features.length).toBeGreaterThan(1);
   });
 
-  it('should render Story Feature components when given appropriate data', () => {
-    isLive.mockImplementationOnce(() => true);
+  it('should render without the top high impact promo', () => {
+    const { queryAllByTestId } = renderFeaturesAnalysis();
 
-    const { asFragment } = renderFeaturesAnalysis();
-
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
-      features.length,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
   });
 
-  it('should render Story Promo components without <ul> when given single item in collection', () => {
+  it('should not render the top high impact promo, when on the live environment', () => {
     isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue('variation_1');
 
+    const { queryAllByTestId } = renderFeaturesAnalysis();
+
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
+  });
+
+  it('should not render the top high impact promo, when on amp', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { queryAllByTestId } = renderFeaturesAnalysis({ isAmp: true });
+
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
+  });
+
+  it('should render with the top high impact promo', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { queryAllByTestId } = renderFeaturesAnalysis();
+
+    expect(queryAllByTestId('frosted-promo-loader').length).toBe(1);
+  });
+
+  it('should render Story Promo component without a list when given a single item in the collection', () => {
     const topFeaturesOneItem = [features[0]];
 
-    expect(features[0]).toBeTruthy();
-
-    const { asFragment } = renderFeaturesAnalysis({
+    const { queryByRole } = renderFeaturesAnalysis({
       content: topFeaturesOneItem,
     });
 
-    expect(document.querySelector(`li[class*='StoryPromoLi']`)).toBeNull();
+    expect(queryByRole('list')).toBe(null);
+  });
 
-    expect(document.querySelector(`ul`)).toBeNull();
+  it('should render Story Promo component with a list when given multiple items in the collection', () => {
+    const { queryByRole } = renderFeaturesAnalysis();
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(queryByRole('list')).toBeTruthy();
   });
 
   it('should have a section with a "region" role (a11y) and [aria-labelledby="features-analysis-heading"]', () => {
-    renderFeaturesAnalysis();
-    expect(
-      document.querySelectorAll(
-        `section[role='region'][aria-labelledby="features-analysis-heading"]`,
-      ).length,
-    ).toBe(1);
-  });
+    const { queryByRole } = renderFeaturesAnalysis();
 
-  it('should have an [id] #features-analysis-heading', () => {
-    renderFeaturesAnalysis();
-    expect(document.querySelector(`#features-analysis-heading`)).toBeTruthy();
+    const region = queryByRole('region');
+
+    expect(region).toBeTruthy();
+    expect(region.getAttribute('aria-labelledby')).toBe(
+      'features-analysis-heading',
+    );
   });
 
   it('should not render Features and Analysis components if no data is passed', () => {
-    renderFeaturesAnalysisNull();
-    expect(document.querySelectorAll(`li[class*='StoryPromoLi']`).length).toBe(
-      0,
-    );
+    const { queryAllByRole } = renderFeaturesAnalysisNull();
+
+    expect(queryAllByRole('listitem').length).toBe(0);
   });
+
   it('should render a default title if translations are not available', () => {
-    renderFeaturesAnalysisNoTitle();
-    expect(screen.getByText(`Features & Analysis`)).toBeTruthy();
+    const { queryByText } = renderFeaturesAnalysisNoTitle();
+    expect(queryByText('Features & Analysis')).toBeTruthy();
   });
 });
 
 describe('CpsFeaturesAnalysis - Event Tracking', () => {
   it('should implement 2 BLOCK level click trackers(1 for each promo item) and 0 link level click trackers', () => {
     isLive.mockImplementationOnce(() => true);
+    useOptimizelyVariation.mockReturnValue(null);
+
     const expected = {
       componentName: 'features',
       preventNavigation: true,
@@ -194,6 +218,7 @@ const countFrostedPromos = container =>
 
 describe('CpsFeaturesAnalysis - Frosted Promos', () => {
   it('should not render frosted promos by default', async () => {
+    isLive.mockImplementationOnce(() => true);
     const { container } = renderFeaturesAnalysis({
       frostedPromoCount: null,
     });
@@ -202,6 +227,7 @@ describe('CpsFeaturesAnalysis - Frosted Promos', () => {
   });
 
   it('can render a single frosted promo', async () => {
+    isLive.mockImplementationOnce(() => true);
     const { container } = renderFeaturesAnalysis({
       frostedPromoCount: 1,
     });
@@ -210,6 +236,8 @@ describe('CpsFeaturesAnalysis - Frosted Promos', () => {
   });
 
   it('can render multiple frosted promos', async () => {
+    isLive.mockImplementation(() => true);
+
     const { container } = renderFeaturesAnalysis({
       frostedPromoCount: features.length,
     });
