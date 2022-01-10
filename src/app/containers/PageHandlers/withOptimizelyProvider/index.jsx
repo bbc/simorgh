@@ -15,7 +15,7 @@ if (isLive()) {
   setLogger(null);
 }
 
-const getCknsMvt = () => {
+const getOpimizelyUserId = () => {
   // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
   // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
   if (!onClient() || isOperaProxy()) return null;
@@ -49,7 +49,7 @@ const withOptimizelyProvider = Component => {
       if (disableOptimizely) {
         return null;
       }
-      return getCknsMvt();
+      return getOpimizelyUserId();
     };
 
     return (
