@@ -102,6 +102,18 @@ exports[`Document Component should render correctly 1`] = `
       name="viewport"
     />
     <link
+      href="modern.main.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulePreload"
+    />
+    <link
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"

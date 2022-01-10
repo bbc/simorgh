@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderToString } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
 import { JSDOM } from 'jsdom';
 
@@ -22,6 +22,13 @@ describe('Document Component', () => {
       <script src="modern.main.js" />
       <script src="modern.vendor.js" />
       <script src="modern.igbo.js" />
+    </>
+  );
+  const links = (
+    <>
+      <link rel="modulePreload" href="modern.main.js" />
+      <link rel="modulePreload" href="modern.vendor.js" />
+      <link rel="modulePreload" href="modern.igbo.js" />
     </>
   );
 
@@ -56,20 +63,43 @@ describe('Document Component', () => {
       modernScripts={modernScripts}
       service={service}
       isAmp={isAmp}
+      links={links}
     />
   );
 
-  it('should render correctly', async () => {
+  it('should render correctly', () => {
     const dom = new JSDOM(
       renderToString(<TestDocumentComponent service="news" isAmp={false} />),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
   });
 
-  it('should render AMP version correctly', async () => {
+  it('should render AMP version correctly', () => {
     const dom = new JSDOM(
       renderToString(<TestDocumentComponent service="news" isAmp />),
     );
     expect(dom.window.document.documentElement).toMatchSnapshot();
+  });
+
+  it('should not render preload links on amp', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" isAmp />),
+    );
+
+    const head = dom.window.document.querySelector('head');
+    const linksHtml = renderToStaticMarkup(links);
+
+    expect(head).not.toContainHTML(linksHtml);
+  });
+
+  it('should render preload links on canonical', () => {
+    const dom = new JSDOM(
+      renderToString(<TestDocumentComponent service="news" />),
+    );
+
+    const head = dom.window.document.querySelector('head');
+    const linksHtml = renderToStaticMarkup(links);
+
+    expect(head).toContainHTML(linksHtml);
   });
 });
