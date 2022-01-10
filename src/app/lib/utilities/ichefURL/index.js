@@ -2,33 +2,18 @@
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
-  const parts = src.split('/');
-  const [domain, media, imgService, width, ...extraParts] = parts;
-  const definedWidth = width.replace('$width', resolution);
+  // return standard img url pips
+  if (src.includes('urn:')) return src;
+  const noProtocolSrc = src.replace('https://', '');
+  const parts = noProtocolSrc.split('/');
+  const [domain, media, imgService, ...extraParts] = parts;
+  // shift is used to delete the old resolution.
+  extraParts.shift();
+  const definedResolution = `${resolution}xn`;
   const domainWithProtocol = `https://${domain}`;
-
   const newUrl = [
     domainWithProtocol,
     media,
-    imgService,
-    definedWidth,
-    ...extraParts,
-  ];
-
-  return newUrl.join('/');
-};
-
-const buildPipsPlaceholderSrc = (src, resolution) => {
-  const parts = src.split('/');
-  const [protocol, blank, domain, type, imgService, ...extraParts] = parts;
-  if (protocol !== 'https:') return src;
-  const definedResolution = `${resolution[0]}x${resolution[1]}`;
-  extraParts.shift();
-  const newUrl = [
-    protocol,
-    blank,
-    domain,
-    type,
     imgService,
     definedResolution,
     ...extraParts,
@@ -37,11 +22,7 @@ const buildPipsPlaceholderSrc = (src, resolution) => {
 };
 
 const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
-  if (originCode === 'pips') {
-    return buildPipsPlaceholderSrc(locator, resolution);
-  }
-
-  if (originCode === 'mpv') {
+  if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }
 
