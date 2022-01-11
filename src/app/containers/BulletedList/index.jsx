@@ -31,7 +31,16 @@ const getLinkBlock = path([
 const withClickHandler = (Component, clickHandler) => props =>
   <Component {...props} onClick={clickHandler} />;
 
-const BulletedListContainer = ({ blocks, className, ...rest }) => {
+const BulletedListContainer = ({
+  blocks,
+  className,
+  blockGroupType,
+  blockGroupIndex,
+  ...rest
+}) => {
+  console.log('xxx blockGroupType', blockGroupType);
+  console.log('xxx blockGroupIndex', blockGroupIndex);
+
   const linkBlock = blocks.find(getLinkBlock);
   const hasLinkBlock = Boolean(linkBlock);
   const position = pathOr('', ['position'], rest);
