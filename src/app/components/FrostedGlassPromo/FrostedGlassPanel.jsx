@@ -54,7 +54,7 @@ const Children = styled.div`
 const FrostedGlassPanel = ({ image, children }) => {
   const { isLoading, colour } = useImageColour(image, {
     fallbackColour: FALLBACK_COLOUR,
-    minimumContrast: 10,
+    minimumContrast: 8,
     contrastColour: '#ffffff',
   });
 
