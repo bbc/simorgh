@@ -13,6 +13,7 @@ import {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
+  SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
@@ -52,11 +53,6 @@ const server = express();
  * Default headers, compression, logging, status route
  */
 
-const getBuildMetadata = () => {
-  const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  return buildMetadata;
-};
-
 const skipMiddleware = (_req, _res, next) => {
   next();
 };
@@ -82,7 +78,12 @@ server
   .use(gnuTP())
   .use(logResponseTime)
   .get('/status', (req, res) => {
-    res.status(200).send(getBuildMetadata());
+    try {
+      res.status(200).send('Ok');
+    } catch (error) {
+      logger.error(SERVER_STATUS_ENDPOINT_ERROR, { error });
+      res.status(500).send('Unable to determine status');
+    }
   });
 
 /*

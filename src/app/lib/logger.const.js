@@ -51,6 +51,7 @@ const logCodes = {
   SERVER_SIDE_RENDER_REQUEST_RECEIVED: 'ssr_request_received',
   SERVER_SIDE_REQUEST_FAILED: 'ssr_request_failed',
   SERVICE_WORKER_SENDFILE_ERROR: 'server_sendfile_error_sw',
+  SERVER_STATUS_ENDPOINT_ERROR: 'server_status_endpoint_error',
 
   // Config
   CONFIG_REQUEST_RECEIVED: 'config_request_received',
