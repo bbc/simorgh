@@ -51,11 +51,17 @@ const Children = styled.div`
     `}
 `;
 
-const FrostedGlassPanel = ({ image, children, minimumContrast }) => {
+const FrostedGlassPanel = ({
+  image,
+  children,
+  minimumContrast,
+  paletteSize,
+}) => {
   const { isLoading, colour } = useImageColour(image, {
     fallbackColour: FALLBACK_COLOUR,
     minimumContrast,
     contrastColour: '#ffffff',
+    paletteSize,
   });
 
   return (
@@ -72,10 +78,12 @@ FrostedGlassPanel.propTypes = {
   image: string.isRequired,
   children: node.isRequired,
   minimumContrast: number,
+  paletteSize: number,
 };
 
 FrostedGlassPanel.defaultProps = {
   minimumContrast: 8,
+  paletteSize: 10,
 };
 
 export default FrostedGlassPanel;
