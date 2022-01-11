@@ -1,17 +1,18 @@
 import React, { useContext, useRef } from 'react';
 import SkipLink from '@bbc/psammead-brand/skip-link';
-import BrandContainer from '../Brand';
-import NavigationContainer from '../Navigation';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import ConsentBanner from '../ConsentBanner';
-import ScriptLink from './ScriptLink';
 import useToggle from '#hooks/useToggle';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ScriptLink from './ScriptLink';
+import ConsentBanner from '../ConsentBanner';
+import NavigationContainer from '../Navigation';
+import BrandContainer from '../Brand';
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
+  // linkId={linkId || 'topPage'} is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
   return (
     <>
       <ConsentBanner onDismissFocusRef={brandRef} />
@@ -20,7 +21,7 @@ const Header = ({ brandRef, borderBottom, skipLink, scriptLink, linkId }) => {
         skipLink={skipLink}
         scriptLink={scriptLink}
         brandRef={brandRef}
-        linkId={linkId}
+        linkId={linkId || 'topPage'}
       />
     </>
   );

@@ -1,12 +1,12 @@
 import nodeLogger from '#testHelpers/loggerMock';
-import processMostRead from './processMostRead';
 import pidginData from '#data/pidgin/mostRead';
 import kyrgyzData from '#data/kyrgyz/mostRead';
-import { setStaleLastRecordTimeStamp } from './testHelpers';
 import {
   MOST_READ_DATA_INCOMPLETE,
   MOST_READ_STALE_DATA,
 } from '#lib/logger.const';
+import { setStaleLastRecordTimeStamp } from './testHelpers';
+import processMostRead from './processMostRead';
 
 const expectedPidginData = [
   {

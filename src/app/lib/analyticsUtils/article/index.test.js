@@ -45,15 +45,15 @@ describe('getContentId', () => {
   it('should find value in good data', () => {
     const goodData = {
       metadata: {
-        locators: {
-          optimoUrn: 'urn:bbc:optimo:asset:c0g992jmmkko',
+        analyticsLabels: {
+          contentId: 'urn:bbc:optimo:asset:c0g992jmmkko',
         },
       },
     };
 
     const contentId = getContentId(goodData);
 
-    expect(contentId).toEqual('urn:bbc:optimo:c0g992jmmkko');
+    expect(contentId).toEqual('urn:bbc:optimo:asset:c0g992jmmkko');
   });
 
   it('should return null in bad data', () => {

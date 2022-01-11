@@ -39,11 +39,26 @@ const ImageWithPlaceholder = ({
   src,
   sizes,
   srcset,
+  fallbackSrcset,
+  primaryMimeType,
+  fallbackMimeType,
   width,
+  darkMode,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
-  const imageProps = { alt, src, sizes, width, srcset, fade, height };
+  const imageProps = {
+    alt,
+    src,
+    sizes,
+    width,
+    srcset,
+    fallbackSrcset,
+    primaryMimeType,
+    fallbackMimeType,
+    fade,
+    height,
+  };
   const imgType = src.split('.').pop();
   const imageToRender = (
     <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
@@ -67,6 +82,7 @@ const ImageWithPlaceholder = ({
       <ImagePlaceholder
         forwardStyle={isLoaded ? { background: 'none' } : null}
         ratio={ratio}
+        darkMode={darkMode}
       >
         {isAmp ? (
           <AmpImg
@@ -75,6 +91,7 @@ const ImageWithPlaceholder = ({
             layout="responsive"
             src={src}
             srcset={srcset}
+            fallbackSrcset={fallbackSrcset}
             height={height}
             width={width}
             style={!isImgJpg ? { backgroundColor: C_GHOST } : null}
@@ -92,6 +109,7 @@ ImageWithPlaceholder.propTypes = {
   alt: string.isRequired,
   copyright: string,
   children: node,
+  darkMode: bool,
   height: number,
   fade: bool,
   fallback: bool,
@@ -100,6 +118,9 @@ ImageWithPlaceholder.propTypes = {
   ratio: number.isRequired,
   src: string.isRequired,
   srcset: string,
+  fallbackSrcset: string,
+  primaryMimeType: string,
+  fallbackMimeType: string,
   sizes: string,
   width: number.isRequired,
 };
@@ -107,12 +128,16 @@ ImageWithPlaceholder.propTypes = {
 ImageWithPlaceholder.defaultProps = {
   copyright: null,
   children: null,
+  darkMode: null,
   height: null,
   fade: false,
   fallback: true,
   lazyLoad: false,
   preload: false,
   srcset: null,
+  fallbackSrcset: null,
+  primaryMimeType: undefined,
+  fallbackMimeType: undefined,
   sizes: null,
 };
 

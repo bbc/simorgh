@@ -351,10 +351,12 @@ exports[`RelatedContentPromo it renders a Story Promo wrapped in a Grid componen
           class="emotion-14 emotion-15"
         >
           <a
+            aria-labelledby="promo-pidgin44508901-1"
             class="emotion-16 emotion-17"
             href="/pidgin/44508901"
           >
             <span
+              id="promo-pidgin44508901-1"
               role="text"
             >
               <span>

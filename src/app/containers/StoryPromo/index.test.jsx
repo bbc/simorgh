@@ -10,6 +10,7 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -27,7 +28,7 @@ import {
   mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import { buildUniquePromoId } from './utilities';
 
 const onlyOneRelatedItem = {
   ...indexAlsosItem,
@@ -135,27 +136,33 @@ describe('StoryPromo Container', () => {
     let cpsContainer;
     let overtypedSummaryContainer;
     let assetTypeContainer;
+    const labelId = `test-group-id`;
 
     beforeEach(() => {
       cpsItem = deepClone(completeItem);
-      cpsContainer = render(<WrappedStoryPromo item={cpsItem} />).container;
+      cpsContainer = render(
+        <WrappedStoryPromo item={cpsItem} labelId={labelId} />,
+      ).container;
 
       overtypedSummaryItem = deepClone(itemWithOvertypedSummary);
       overtypedSummaryContainer = render(
-        <WrappedStoryPromo item={overtypedSummaryItem} />,
+        <WrappedStoryPromo item={overtypedSummaryItem} labelId={labelId} />,
       ).container;
 
       assetTypeItem = deepClone(standardLinkItem);
       assetTypeContainer = render(
-        <WrappedStoryPromo item={assetTypeItem} />,
+        <WrappedStoryPromo item={assetTypeItem} labelId={labelId} />,
       ).container;
     });
 
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
+      const uriLabelId = buildUniquePromoId(labelId, assetTypeItem);
+      const assetUriId = buildUniquePromoId(labelId, cpsItem);
+
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        cpsItem.headlines.headline,
+        `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
       );
       expect(cpsContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         cpsItem.summary,
@@ -169,7 +176,7 @@ describe('StoryPromo Container', () => {
       ).toEqual(itemWithOvertypedSummary.overtypedSummary);
 
       expect(assetTypeContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
-        assetTypeItem.name,
+        `<span id="${uriLabelId}">${assetTypeItem.name}</span>`,
       );
       expect(assetTypeContainer.getElementsByTagName('p')[0].innerHTML).toEqual(
         assetTypeItem.summary,
@@ -257,12 +264,12 @@ describe('StoryPromo Container', () => {
       ).toEqual(cpsItem.indexImage.altText);
     });
 
-    it('should render amp-img with src & alt when platform is amp', () => {
+    it('should render amp-img with src & alt and amp-img fallback when platform is amp', () => {
       const { container } = render(
         <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
-      expect(container.getElementsByTagName('amp-img').length).toEqual(1);
+      expect(container.getElementsByTagName('amp-img').length).toEqual(2);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),

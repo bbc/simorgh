@@ -6,10 +6,10 @@ import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
-import Grid from '../../../components/Grid';
-import StoryPromo from '../../StoryPromo';
 import { storyItem } from '#models/propTypes/storyItem';
 import useViewTracker from '#hooks/useViewTracker';
+import Grid from '../../../components/Grid';
+import StoryPromo from '../../StoryPromo';
 
 const MediaStoryPromoLi = styled(StoryPromoLi)`
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
@@ -51,7 +51,7 @@ const RelatedContentPromoList = ({
       as={isMediaContent ? MostWatchedOl : StoryPromoUl}
       enableGelGutters
     >
-      {promoItems.map(item => (
+      {promoItems.map((item, index) => (
         <Grid
           item
           columns={{
@@ -68,10 +68,12 @@ const RelatedContentPromoList = ({
         >
           <StoryPromo
             item={item}
+            index={index}
             dir={dir}
             displaySummary={false}
             isSingleColumnLayout={isMediaContent}
             eventTrackingData={eventTrackingData}
+            labelId="rel-content"
           />
         </Grid>
       ))}

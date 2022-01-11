@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-import { buildATIUrl, buildATIEventTrackingParams } from '.';
 import * as analyticsUtils from '#lib/analyticsUtils';
 import {
   ARTICLE_PAGE,
@@ -9,6 +8,7 @@ import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import { buildATIUrl, buildATIEventTrackingParams } from '.';
 
 analyticsUtils.getAtUserId = jest.fn();
 analyticsUtils.getCurrentTime = jest.fn().mockReturnValue('00-00-00');
@@ -36,6 +36,7 @@ const article = {
   metadata: {
     analyticsLabels: {
       counterName: 'service.page',
+      contentId: 'urn:bbc:optimo:asset:54321',
     },
     locators: {
       optimoUrn: 'http://www.bbc.co.uk',
@@ -164,7 +165,7 @@ describe('ATIAnalytics params', () => {
         serviceContext,
       );
       expect(url).toMatchInlineSnapshot(
-        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3A%2F%2Fwww.bbc.co.uk]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originhttp://www.example.com"`,
+        `"s=598285&s2=atiAnalyticsProducerId&p=service.articles.%2F%2Fwww.bbc.co.uk.page&r=0x0x24x24&re=1024x768&hl=00-00-00&lng=en-US&x1=[urn%3Abbc%3Aoptimo%3Aasset%3A54321]&x2=[responsive]&x3=[atiAnalyticsAppName]&x4=[language]&x5=[http%253A%252F%252Flocalhost%252F]&x6=[originhttp%253A%252F%252Fwww.example.com]&x7=[article]&x8=[simorgh]&x9=[pageTitle]&x11=[1970-01-01T00%3A00%3A00.000Z]&x12=[1970-01-01T00%3A00%3A00.000Z]&x13=[thing%2Benglish%2Blabel%2B1~thing%2Benglish%2Blabel%2B2]&x14=[thing%2Bid%2B1~thing%2Bid%2B2]&ref=originhttp://www.example.com"`,
       );
     });
 
@@ -268,7 +269,7 @@ describe('ATIAnalytics params', () => {
       );
       expect(params).toEqual({
         appName: 'atiAnalyticsAppName',
-        contentId: 'urn:bbc:optimo://www.bbc.co.uk',
+        contentId: 'urn:bbc:optimo:asset:54321',
         contentType: 'article',
         isUK: 'isUK',
         language: 'language',

@@ -5,9 +5,9 @@ import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import { grid } from '@bbc/psammead-styles/detection';
 import Grid from '@bbc/psammead-grid';
 import { arrayOf, number, shape, string } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
 import ProgramCard from './ProgramCard';
 import StartTime from './StartTime';
-import { ServiceContext } from '#contexts/ServiceContext';
 
 const StartTimeWrapper = styled.div`
   padding-bottom: ${GEL_SPACING};
@@ -79,7 +79,11 @@ const RadioSchedule = ({ schedule, ...props }) => {
           <StartTimeWrapper>
             <StartTime timestamp={program.startTime} />
           </StartTimeWrapper>
-          <ProgramCard {...props} program={program} />
+          <ProgramCard
+            {...props}
+            program={program}
+            id={id} // This ID is a temporary fix for the a11y nested span's bug experienced in TalkBack, refer to the following issue: https://github.com/bbc/simorgh/issues/9652
+          />
         </StyledFlexGrid>
       ))}
     </StyledGrid>

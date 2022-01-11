@@ -102,6 +102,18 @@ exports[`Document Component should render correctly 1`] = `
       name="viewport"
     />
     <link
+      href="modern.main.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.vendor.js"
+      rel="modulePreload"
+    />
+    <link
+      href="modern.igbo.js"
+      rel="modulePreload"
+    />
+    <link
       href="/favicon.ico"
       rel="shortcut icon"
       type="image/x-icon"
@@ -148,13 +160,22 @@ exports[`Document Component should render correctly 1`] = `
       <!--[if !IE]&gt;&lt;!-->
     </div>
     <script
-      src="main.js"
+      src="modern.main.js"
     />
     <script
-      src="vendor.js"
+      src="modern.vendor.js"
     />
     <script
-      src="igbo.js"
+      src="modern.igbo.js"
+    />
+    <script
+      src="legacy.main.js"
+    />
+    <script
+      src="legacy.vendor.js"
+    />
+    <script
+      src="legacy.igbo.js"
     />
     <div>
       <!--&lt;![endif]-->

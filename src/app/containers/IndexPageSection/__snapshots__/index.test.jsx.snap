@@ -460,43 +460,48 @@ HTMLCollection [
   }
 }
 
-.emotion-31 {
+.emotion-30 {
   display: block;
   width: 100%;
   visibility: visible;
-  height: auto;
 }
 
 .emotion-33 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emotion-35 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-33>* {
+.emotion-35>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-35 {
+.emotion-37 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-35 {
+  .emotion-37 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-35 {
+  .emotion-37 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-35 {
+  .emotion-37 {
     display: block;
     width: initial;
     padding: initial;
@@ -504,19 +509,19 @@ HTMLCollection [
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-35 {
+    .emotion-37 {
       grid-column: 4/span 3;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-35 {
+    .emotion-37 {
       grid-column: 7/span 6;
     }
   }
 }
 
-.emotion-37 {
+.emotion-39 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -528,20 +533,20 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-39 {
+.emotion-41 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -550,7 +555,7 @@ HTMLCollection [
   overflow-wrap: anywhere;
 }
 
-.emotion-39:before {
+.emotion-41:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -562,17 +567,17 @@ HTMLCollection [
   z-index: 1;
 }
 
-.emotion-39:hover,
-.emotion-39:focus {
+.emotion-41:hover,
+.emotion-41:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-39:visited {
+.emotion-41:visited {
   color: #6E6E73;
 }
 
-.emotion-41 {
+.emotion-43 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -584,27 +589,27 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-41 {
+  .emotion-43 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-41 {
+  .emotion-43 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-41 {
+  .emotion-43 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-43 {
+.emotion-45 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -615,61 +620,61 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-46 {
+.emotion-48 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-46 {
+  .emotion-48 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-46:last-child {
+.emotion-48:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-46 {
+  .emotion-48 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-46 {
+  .emotion-48 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-46:first-child {
+.emotion-48:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-46:first-child {
+  .emotion-48:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-46:last-child {
+.emotion-48:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -678,7 +683,7 @@ HTMLCollection [
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -687,7 +692,7 @@ HTMLCollection [
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -696,7 +701,7 @@ HTMLCollection [
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -705,7 +710,7 @@ HTMLCollection [
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -714,7 +719,7 @@ HTMLCollection [
 }
 
 @media (min-width: 80rem) {
-  .emotion-46 {
+  .emotion-48 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -723,80 +728,80 @@ HTMLCollection [
 }
 
 @supports (display: grid) {
-  .emotion-46 {
+  .emotion-48 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-46 {
+    .emotion-48 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-48 {
+.emotion-50 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-48 {
+  .emotion-50 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-48 {
+    .emotion-50 {
       display: block;
     }
   }
 }
 
-.emotion-50 {
+.emotion-52 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -804,39 +809,39 @@ HTMLCollection [
 }
 
 @media (min-width: 63rem) {
-  .emotion-50 {
+  .emotion-52 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-50 {
+  .emotion-52 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-56 {
+  .emotion-58 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-56>* {
+.emotion-58>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-56>* {
+  .emotion-58>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-58 {
+.emotion-60 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -844,13 +849,13 @@ HTMLCollection [
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-58 {
+  .emotion-60 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-58 {
+  .emotion-60 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -858,7 +863,7 @@ HTMLCollection [
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-58 {
+  .emotion-60 {
     display: block;
     width: initial;
     padding: initial;
@@ -866,13 +871,13 @@ HTMLCollection [
   }
 
   @media (min-width: 63rem) {
-    .emotion-58 {
+    .emotion-60 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-60 {
+.emotion-62 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -884,20 +889,20 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-60 {
+  .emotion-62 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-60 {
+  .emotion-62 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-64 {
+.emotion-66 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: Helmet,Freesans,Helvetica,Arial,sans-serif;
@@ -909,28 +914,28 @@ HTMLCollection [
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-64 {
+  .emotion-66 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-64 {
+  .emotion-66 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-64 {
+  .emotion-66 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-64 {
+  .emotion-66 {
     display: none;
     visibility: hidden;
   }
@@ -995,42 +1000,58 @@ HTMLCollection [
                   data-e2e="image-placeholder"
                   style="padding-bottom: 56.25%;"
                 >
-                  <img
-                    alt="Image Alt text 1"
-                    class="emotion-30 emotion-31 emotion-32"
-                    height="1152"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
-                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
-                    width="2048"
-                  />
+                  <picture
+                    class="emotion-30 emotion-31"
+                  >
+                    <source
+                      srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg.webp 660w"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
+                      type="image/jpeg"
+                    />
+                    <img
+                      alt="Image Alt text 1"
+                      class="emotion-32 emotion-33 emotion-34"
+                      height="1152"
+                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
+                      width="2048"
+                    />
+                  </picture>
                 </div>
                 <div
-                  class="emotion-33 emotion-34"
+                  class="emotion-35 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-35 emotion-36"
+              class="emotion-37 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-37 emotion-38"
+                class="emotion-39 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  aria-labelledby="promo-1"
+                  class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 1 headline
+                  <span
+                    id="promo-1"
+                  >
+                    Top Story 1 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-41 emotion-42"
+                class="emotion-43 emotion-44"
               >
                 Summary text 1
               </p>
               <time
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1039,15 +1060,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-46 emotion-21"
+          class="emotion-16 emotion-48 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-48 emotion-23"
+            class="emotion-50 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-50 emotion-25"
+              class="emotion-52 emotion-25"
               dir="ltr"
             >
               <div
@@ -1067,31 +1088,36 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-56 emotion-34"
+                  class="emotion-58 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-58 emotion-36"
+              class="emotion-60 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-60 emotion-38"
+                class="emotion-62 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  aria-labelledby="promo-top-stories-1"
+                  class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  <span
+                    id="promo-top-stories-1"
+                  >
+                    Top Story 2 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-64 emotion-42"
+                class="emotion-66 emotion-44"
               >
                 Summary text 2
               </p>
               <time
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1100,15 +1126,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-46 emotion-21"
+          class="emotion-16 emotion-48 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-48 emotion-23"
+            class="emotion-50 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-50 emotion-25"
+              class="emotion-52 emotion-25"
               dir="ltr"
             >
               <div
@@ -1128,31 +1154,36 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-56 emotion-34"
+                  class="emotion-58 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-58 emotion-36"
+              class="emotion-60 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-60 emotion-38"
+                class="emotion-62 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  aria-labelledby="promo-top-stories-2"
+                  class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 3 headline
+                  <span
+                    id="promo-top-stories-2"
+                  >
+                    Top Story 3 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-64 emotion-42"
+                class="emotion-66 emotion-44"
               >
                 Summary text 3
               </p>
               <time
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1161,15 +1192,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-46 emotion-21"
+          class="emotion-16 emotion-48 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-48 emotion-23"
+            class="emotion-50 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-50 emotion-25"
+              class="emotion-52 emotion-25"
               dir="ltr"
             >
               <div
@@ -1189,31 +1220,36 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-56 emotion-34"
+                  class="emotion-58 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-58 emotion-36"
+              class="emotion-60 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-60 emotion-38"
+                class="emotion-62 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  aria-labelledby="promo-top-stories-3"
+                  class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 4 headline
+                  <span
+                    id="promo-top-stories-3"
+                  >
+                    Top Story 4 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-64 emotion-42"
+                class="emotion-66 emotion-44"
               >
                 Summary text 4
               </p>
               <time
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1222,15 +1258,15 @@ HTMLCollection [
           </div>
         </li>
         <li
-          class="emotion-16 emotion-46 emotion-21"
+          class="emotion-16 emotion-48 emotion-21"
           dir="ltr"
         >
           <div
-            class="emotion-48 emotion-23"
+            class="emotion-50 emotion-23"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-50 emotion-25"
+              class="emotion-52 emotion-25"
               dir="ltr"
             >
               <div
@@ -1250,31 +1286,36 @@ HTMLCollection [
                   </div>
                 </div>
                 <div
-                  class="emotion-56 emotion-34"
+                  class="emotion-58 emotion-36"
                 />
               </div>
             </div>
             <div
-              class="emotion-58 emotion-36"
+              class="emotion-60 emotion-38"
               dir="ltr"
             >
               <h3
-                class="emotion-60 emotion-38"
+                class="emotion-62 emotion-40"
               >
                 <a
-                  class="emotion-39 emotion-40"
+                  aria-labelledby="promo-top-stories-4"
+                  class="emotion-41 emotion-42"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 5 headline
+                  <span
+                    id="promo-top-stories-4"
+                  >
+                    Top Story 5 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-64 emotion-42"
+                class="emotion-66 emotion-44"
               >
                 Summary text 5
               </p>
               <time
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
                 datetime="1970-01-19"
               >
                 19 Jenụwarị 1970
@@ -1762,43 +1803,48 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 }
 
-.emotion-33 {
+.emotion-32 {
   display: block;
   width: 100%;
   visibility: visible;
-  height: auto;
 }
 
 .emotion-35 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emotion-37 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-35>* {
+.emotion-37>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-37 {
+.emotion-39 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-39 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-37 {
+  .emotion-39 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-37 {
+  .emotion-39 {
     display: block;
     width: initial;
     padding: initial;
@@ -1806,19 +1852,19 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-37 {
+    .emotion-39 {
       grid-column: 4/span 3;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-37 {
+    .emotion-39 {
       grid-column: 7/span 6;
     }
   }
 }
 
-.emotion-39 {
+.emotion-41 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -1830,20 +1876,20 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-41 {
+.emotion-43 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -1852,7 +1898,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   overflow-wrap: anywhere;
 }
 
-.emotion-41:before {
+.emotion-43:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -1864,17 +1910,17 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   z-index: 1;
 }
 
-.emotion-41:hover,
-.emotion-41:focus {
+.emotion-43:hover,
+.emotion-43:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-41:visited {
+.emotion-43:visited {
   color: #6E6E73;
 }
 
-.emotion-43 {
+.emotion-45 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -1886,27 +1932,27 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-43 {
+  .emotion-45 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-43 {
+  .emotion-45 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-45 {
+.emotion-47 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -1917,61 +1963,61 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-45 {
+  .emotion-47 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-45 {
+  .emotion-47 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
 }
 
-.emotion-48 {
+.emotion-50 {
   padding: 0.5rem 0 1rem;
 }
 
 @media (max-width: 62.9375rem) {
-  .emotion-48 {
+  .emotion-50 {
     border-bottom: 0.0625rem solid #F2F2F2;
   }
 }
 
-.emotion-48:last-child {
+.emotion-50:last-child {
   border: none;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-48 {
+  .emotion-50 {
     padding: 1rem 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-48 {
+  .emotion-50 {
     padding: 0 0 1.5rem;
   }
 }
 
-.emotion-48:first-child {
+.emotion-50:first-child {
   padding-top: 0;
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-48:first-child {
+  .emotion-50:first-child {
     padding-top: 1rem;
   }
 }
 
-.emotion-48:last-child {
+.emotion-50:last-child {
   padding-bottom: 0;
 }
 
 @media (max-width: 14.9375rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1980,7 +2026,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 15rem) and (max-width: 24.9375rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1989,7 +2035,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 25rem) and (max-width: 37.4375rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(6/6*(100% - 6 * 0.5rem) + 5 * 0.5rem );
     margin: 0 0.25rem;
     display: inline-block;
@@ -1998,7 +2044,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(6/6*(100% - 6 * 1rem) + 5 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2007,7 +2053,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 63rem) and (max-width: 79.9375rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2016,7 +2062,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 80rem) {
-  .emotion-48 {
+  .emotion-50 {
     width: calc(2/8*(100% - 8 * 1rem) + 1 * 1rem );
     margin: 0 0.5rem;
     display: inline-block;
@@ -2025,80 +2071,80 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (display: grid) {
-  .emotion-48 {
+  .emotion-50 {
     display: block;
     width: initial;
     margin: 0;
   }
 
   @media (max-width: 14.9375rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 15rem) and (max-width: 24.9375rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 25rem) and (max-width: 37.4375rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(6, 1fr);
       grid-column-end: span 6;
     }
   }
 
   @media (min-width: 63rem) and (max-width: 79.9375rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-48 {
+    .emotion-50 {
       grid-template-columns: repeat(2, 1fr);
       grid-column-end: span 2;
     }
   }
 }
 
-.emotion-50 {
+.emotion-52 {
   position: relative;
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-50 {
+  .emotion-52 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 0.5rem;
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-50 {
+    .emotion-52 {
       grid-column-gap: 1rem;
     }
   }
 
   @media (min-width: 63rem) {
-    .emotion-50 {
+    .emotion-52 {
       display: block;
     }
   }
 }
 
-.emotion-52 {
+.emotion-54 {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -2106,39 +2152,39 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 63rem) {
-  .emotion-52 {
+  .emotion-54 {
     display: block;
     width: 100%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-52 {
+  .emotion-54 {
     width: initial;
     grid-column: 1/span 2;
   }
 }
 
 @media (min-width: 25rem) {
-  .emotion-58 {
+  .emotion-60 {
     position: absolute;
     bottom: 0;
   }
 }
 
-.emotion-58>* {
+.emotion-60>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
 @media (max-width: 24.9375rem) {
-  .emotion-58>* {
+  .emotion-60>* {
     height: 1.25rem;
     padding: 0.25rem 0.25rem 0;
   }
 }
 
-.emotion-60 {
+.emotion-62 {
   display: inline-block;
   vertical-align: top;
   width: 66.67%;
@@ -2146,13 +2192,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-60 {
+  .emotion-62 {
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-60 {
+  .emotion-62 {
     display: block;
     width: 100%;
     padding: 0.5rem 0;
@@ -2160,7 +2206,7 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-60 {
+  .emotion-62 {
     display: block;
     width: initial;
     padding: initial;
@@ -2168,13 +2214,13 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
   }
 
   @media (min-width: 63rem) {
-    .emotion-60 {
+    .emotion-62 {
       padding-top: 0.5rem;
     }
   }
 }
 
-.emotion-62 {
+.emotion-64 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -2186,20 +2232,20 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-62 {
+  .emotion-64 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-62 {
+  .emotion-64 {
     font-size: 1rem;
     line-height: 1.25rem;
   }
 }
 
-.emotion-66 {
+.emotion-68 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -2211,28 +2257,28 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-68 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-66 {
+  .emotion-68 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (max-width: 37.4375rem) {
-  .emotion-66 {
+  .emotion-68 {
     display: none;
     visibility: hidden;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-66 {
+  .emotion-68 {
     display: none;
     visibility: hidden;
   }
@@ -2301,42 +2347,58 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   data-e2e="image-placeholder"
                   style="padding-bottom: 56.25%;"
                 >
-                  <img
-                    alt="Image Alt text 1"
-                    class="emotion-32 emotion-33 emotion-34"
-                    height="1152"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-                    src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
-                    srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
-                    width="2048"
-                  />
+                  <picture
+                    class="emotion-32 emotion-33"
+                  >
+                    <source
+                      srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg.webp 660w"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image1.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image1.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image1.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image1.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image1.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image1.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg 660w"
+                      type="image/jpeg"
+                    />
+                    <img
+                      alt="Image Alt text 1"
+                      class="emotion-34 emotion-35 emotion-36"
+                      height="1152"
+                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                      src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
+                      width="2048"
+                    />
+                  </picture>
                 </div>
                 <div
-                  class="emotion-35 emotion-36"
+                  class="emotion-37 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-37 emotion-38"
+              class="emotion-39 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-39 emotion-40"
+                class="emotion-41 emotion-42"
               >
                 <a
-                  class="emotion-41 emotion-42"
+                  aria-labelledby="promo-1"
+                  class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 1 headline
+                  <span
+                    id="promo-1"
+                  >
+                    Top Story 1 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-43 emotion-44"
+                class="emotion-45 emotion-46"
               >
                 Summary text 1
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-47 emotion-48"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2345,15 +2407,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-48 emotion-23"
+          class="emotion-18 emotion-50 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-25"
+            class="emotion-52 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-27"
+              class="emotion-54 emotion-27"
               dir="ltr"
             >
               <div
@@ -2373,31 +2435,36 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-60 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-62 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-64 emotion-42"
               >
                 <a
-                  class="emotion-41 emotion-42"
+                  aria-labelledby="promo-top-stories-1"
+                  class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 2 headline
+                  <span
+                    id="promo-top-stories-1"
+                  >
+                    Top Story 2 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-68 emotion-46"
               >
                 Summary text 2
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-47 emotion-48"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2406,15 +2473,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-48 emotion-23"
+          class="emotion-18 emotion-50 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-25"
+            class="emotion-52 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-27"
+              class="emotion-54 emotion-27"
               dir="ltr"
             >
               <div
@@ -2434,31 +2501,36 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-60 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-62 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-64 emotion-42"
               >
                 <a
-                  class="emotion-41 emotion-42"
+                  aria-labelledby="promo-top-stories-2"
+                  class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 3 headline
+                  <span
+                    id="promo-top-stories-2"
+                  >
+                    Top Story 3 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-68 emotion-46"
               >
                 Summary text 3
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-47 emotion-48"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2467,15 +2539,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-48 emotion-23"
+          class="emotion-18 emotion-50 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-25"
+            class="emotion-52 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-27"
+              class="emotion-54 emotion-27"
               dir="ltr"
             >
               <div
@@ -2495,31 +2567,36 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-60 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-62 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-64 emotion-42"
               >
                 <a
-                  class="emotion-41 emotion-42"
+                  aria-labelledby="promo-top-stories-3"
+                  class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 4 headline
+                  <span
+                    id="promo-top-stories-3"
+                  >
+                    Top Story 4 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-68 emotion-46"
               >
                 Summary text 4
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-47 emotion-48"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -2528,15 +2605,15 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
           </div>
         </li>
         <li
-          class="emotion-18 emotion-48 emotion-23"
+          class="emotion-18 emotion-50 emotion-23"
           dir="ltr"
         >
           <div
-            class="emotion-50 emotion-25"
+            class="emotion-52 emotion-25"
             data-e2e="story-promo"
           >
             <div
-              class="emotion-52 emotion-27"
+              class="emotion-54 emotion-27"
               dir="ltr"
             >
               <div
@@ -2556,31 +2633,36 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                   </div>
                 </div>
                 <div
-                  class="emotion-58 emotion-36"
+                  class="emotion-60 emotion-38"
                 />
               </div>
             </div>
             <div
-              class="emotion-60 emotion-38"
+              class="emotion-62 emotion-40"
               dir="ltr"
             >
               <h3
-                class="emotion-62 emotion-40"
+                class="emotion-64 emotion-42"
               >
                 <a
-                  class="emotion-41 emotion-42"
+                  aria-labelledby="promo-top-stories-4"
+                  class="emotion-43 emotion-44"
                   href="https://www.bbc.co.uk"
                 >
-                  Top Story 5 headline
+                  <span
+                    id="promo-top-stories-4"
+                  >
+                    Top Story 5 headline
+                  </span>
                 </a>
               </h3>
               <p
-                class="emotion-66 emotion-44"
+                class="emotion-68 emotion-46"
               >
                 Summary text 5
               </p>
               <time
-                class="emotion-45 emotion-46"
+                class="emotion-47 emotion-48"
                 datetime="1970-01-19"
               >
                 19 January 1970
@@ -3557,10 +3639,15 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-26 emotion-27"
             >
               <a
+                aria-labelledby="promo-top-stories-1"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 1 headline
+                <span
+                  id="promo-top-stories-1"
+                >
+                  Top Story 1 headline
+                </span>
               </a>
             </h3>
             <p
@@ -3643,10 +3730,15 @@ exports[`IndexPageSection Container snapshots should render correctly with a lin
               class="emotion-57 emotion-27"
             >
               <a
+                aria-labelledby="promo-1"
                 class="emotion-28 emotion-29"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 2 headline
+                <span
+                  id="promo-1"
+                >
+                  Top Story 2 headline
+                </span>
               </a>
             </h3>
             <p
@@ -3935,43 +4027,48 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   }
 }
 
-.emotion-27 {
+.emotion-26 {
   display: block;
   width: 100%;
   visibility: visible;
-  height: auto;
 }
 
 .emotion-29 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.emotion-31 {
   position: absolute;
   bottom: 0;
 }
 
-.emotion-29>* {
+.emotion-31>* {
   height: 2rem;
   padding: 0.5rem 0.25rem;
 }
 
-.emotion-31 {
+.emotion-33 {
   display: inline-block;
   vertical-align: top;
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-31 {
+  .emotion-33 {
     width: 50%;
     padding: 0 1rem;
   }
 }
 
 @media (min-width: 63rem) {
-  .emotion-31 {
+  .emotion-33 {
     width: 50%;
   }
 }
 
 @supports (grid-template-columns: fit-content(200px)) {
-  .emotion-31 {
+  .emotion-33 {
     display: block;
     width: initial;
     padding: initial;
@@ -3979,19 +4076,19 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   }
 
   @media (min-width: 37.5rem) {
-    .emotion-31 {
+    .emotion-33 {
       grid-column: 4/span 3;
     }
   }
 
   @media (min-width: 80rem) {
-    .emotion-31 {
+    .emotion-33 {
       grid-column: 7/span 6;
     }
   }
 }
 
-.emotion-33 {
+.emotion-35 {
   color: #222222;
   margin: 0;
   padding-bottom: 0.5rem;
@@ -4003,20 +4100,20 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-33 {
+  .emotion-35 {
     font-size: 1.375rem;
     line-height: 1.625rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-33 {
+  .emotion-35 {
     font-size: 1.75rem;
     line-height: 2rem;
   }
 }
 
-.emotion-35 {
+.emotion-37 {
   position: static;
   color: #222222;
   -webkit-text-decoration: none;
@@ -4025,7 +4122,7 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   overflow-wrap: anywhere;
 }
 
-.emotion-35:before {
+.emotion-37:before {
   bottom: 0;
   content: '';
   left: 0;
@@ -4037,17 +4134,17 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
   z-index: 1;
 }
 
-.emotion-35:hover,
-.emotion-35:focus {
+.emotion-37:hover,
+.emotion-37:focus {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-35:visited {
+.emotion-37:visited {
   color: #6E6E73;
 }
 
-.emotion-37 {
+.emotion-39 {
   font-size: 0.9375rem;
   line-height: 1.125rem;
   font-family: ReithSans,Helvetica,Arial,sans-serif;
@@ -4059,27 +4156,27 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 0.9375rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-37 {
+  .emotion-39 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) and (max-width: 62.9375rem) {
-  .emotion-37 {
+  .emotion-39 {
     display: none;
     visibility: hidden;
   }
 }
 
-.emotion-39 {
+.emotion-41 {
   font-size: 0.875rem;
   line-height: 1.125rem;
   color: #6E6E73;
@@ -4090,14 +4187,14 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
 }
 
 @media (min-width: 20rem) and (max-width: 37.4375rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
 }
 
 @media (min-width: 37.5rem) {
-  .emotion-39 {
+  .emotion-41 {
     font-size: 0.8125rem;
     line-height: 1rem;
   }
@@ -4157,42 +4254,58 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
               data-e2e="image-placeholder"
               style="padding-bottom: 56.25%;"
             >
-              <img
-                alt="Image Alt text 1"
-                class="emotion-26 emotion-27 emotion-28"
-                height="1152"
-                sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-                src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
-                srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
-                width="2048"
-              />
+              <picture
+                class="emotion-26 emotion-27"
+              >
+                <source
+                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg.webp 660w"
+                  type="image/webp"
+                />
+                <source
+                  srcset="https://ichef.bbci.co.uk/news/70/cpsprodpb/0A06/production/image.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsprodpb/0A06/production/image.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsprodpb/0A06/production/image.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsprodpb/0A06/production/image.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsprodpb/0A06/production/image.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsprodpb/0A06/production/image.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg 660w"
+                  type="image/jpeg"
+                />
+                <img
+                  alt="Image Alt text 1"
+                  class="emotion-28 emotion-29 emotion-30"
+                  height="1152"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
+                  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
+                  width="2048"
+                />
+              </picture>
             </div>
             <div
-              class="emotion-29 emotion-30"
+              class="emotion-31 emotion-32"
             />
           </div>
         </div>
         <div
-          class="emotion-31 emotion-32"
+          class="emotion-33 emotion-34"
           dir="ltr"
         >
           <h3
-            class="emotion-33 emotion-34"
+            class="emotion-35 emotion-36"
           >
             <a
-              class="emotion-35 emotion-36"
+              aria-labelledby="promo-1"
+              class="emotion-37 emotion-38"
               href="https://www.bbc.co.uk"
             >
-              Top Story 1 headline
+              <span
+                id="promo-1"
+              >
+                Top Story 1 headline
+              </span>
             </a>
           </h3>
           <p
-            class="emotion-37 emotion-38"
+            class="emotion-39 emotion-40"
           >
             Summary text 1
           </p>
           <time
-            class="emotion-39 emotion-40"
+            class="emotion-41 emotion-42"
             datetime="1970-01-19"
           >
             19 January 1970
@@ -5184,10 +5297,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-32 emotion-33"
             >
               <a
+                aria-labelledby="promo-1"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 1 headline
+                <span
+                  id="promo-1"
+                >
+                  Top Story 1 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5245,10 +5363,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="promo-top-stories-1"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 2 headline
+                <span
+                  id="promo-top-stories-1"
+                >
+                  Top Story 2 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5306,10 +5429,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="promo-top-stories-2"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 3 headline
+                <span
+                  id="promo-top-stories-2"
+                >
+                  Top Story 3 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5367,10 +5495,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="promo-top-stories-3"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 4 headline
+                <span
+                  id="promo-top-stories-3"
+                >
+                  Top Story 4 headline
+                </span>
               </a>
             </h3>
             <p
@@ -5428,10 +5561,15 @@ exports[`IndexPageSection Container snapshots should render without a bar 1`] = 
               class="emotion-55 emotion-33"
             >
               <a
+                aria-labelledby="promo-top-stories-4"
                 class="emotion-34 emotion-35"
                 href="https://www.bbc.co.uk"
               >
-                Top Story 5 headline
+                <span
+                  id="promo-top-stories-4"
+                >
+                  Top Story 5 headline
+                </span>
               </a>
             </h3>
             <p

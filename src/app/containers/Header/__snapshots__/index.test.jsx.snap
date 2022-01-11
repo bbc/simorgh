@@ -278,12 +278,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -300,12 +300,12 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -752,15 +752,17 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
+          aria-labelledby="BrandLink-topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
+          id="topPage"
         >
           <svg
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -786,6 +788,7 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
             role="text"
           >
             <span
@@ -966,10 +969,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-home"
                 class="emotion-83 emotion-84"
                 href="/pidgin"
               >
-                Home
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
               </a>
             </li>
             <li
@@ -977,10 +985,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-nigeria"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
-                Nigeria
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
               </a>
             </li>
             <li
@@ -988,10 +1001,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-africa"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c404v061z85t"
               >
-                Africa
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
               </a>
             </li>
             <li
@@ -999,10 +1017,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-world"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c0823e52dd0t"
               >
-                World
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
               </a>
             </li>
             <li
@@ -1010,10 +1033,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-video"
                 class="emotion-83 emotion-84"
                 href="/pidgin/media/video"
               >
-                Video
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
               </a>
             </li>
             <li
@@ -1021,10 +1049,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-sport"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
-                Sport
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
               </a>
             </li>
             <li
@@ -1032,10 +1065,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-entertainment"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
-                Entertainment
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
               </a>
             </li>
             <li
@@ -1043,10 +1081,15 @@ exports[`Header Snapshots should render correctly for WS frontPage 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-most-popular"
                 class="emotion-83 emotion-84"
                 href="/pidgin/popular/read"
               >
-                Most popular
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
               </a>
             </li>
           </ul>
@@ -1335,12 +1378,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -1357,12 +1400,12 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -1809,15 +1852,17 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
+          aria-labelledby="BrandLink-topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
+          id="topPage"
         >
           <svg
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -1843,6 +1888,7 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
             role="text"
           >
             <span
@@ -2023,10 +2069,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-home"
                 class="emotion-83 emotion-84"
                 href="/pidgin"
               >
-                Home
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
               </a>
             </li>
             <li
@@ -2034,10 +2085,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-nigeria"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
-                Nigeria
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
               </a>
             </li>
             <li
@@ -2045,10 +2101,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-africa"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c404v061z85t"
               >
-                Africa
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
               </a>
             </li>
             <li
@@ -2056,10 +2117,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-world"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c0823e52dd0t"
               >
-                World
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
               </a>
             </li>
             <li
@@ -2067,10 +2133,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-video"
                 class="emotion-83 emotion-84"
                 href="/pidgin/media/video"
               >
-                Video
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
               </a>
             </li>
             <li
@@ -2078,10 +2149,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-sport"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
-                Sport
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
               </a>
             </li>
             <li
@@ -2089,10 +2165,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-entertainment"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
-                Entertainment
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
               </a>
             </li>
             <li
@@ -2100,10 +2181,15 @@ exports[`Header Snapshots should render correctly for WS radio page 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-most-popular"
                 class="emotion-83 emotion-84"
                 href="/pidgin/popular/read"
               >
-                Most popular
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
               </a>
             </li>
           </ul>
@@ -2392,12 +2478,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
 .emotion-21 {
   display: inline-block;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -2414,12 +2500,12 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 14.880600000000001rem;
-  min-width: 9.9204rem;
-  -webkit-flex: 1 1 9.9204rem;
-  -ms-flex: 1 1 9.9204rem;
-  flex: 1 1 9.9204rem;
-  -ms-flex-preferred-size: 14.880600000000001rem;
+  max-width: 14.544046360309068rem;
+  min-width: 9.696030906872712rem;
+  -webkit-flex: 1 1 9.696030906872712rem;
+  -ms-flex: 1 1 9.696030906872712rem;
+  flex: 1 1 9.696030906872712rem;
+  -ms-flex-preferred-size: 14.544046360309068rem;
 }
 
 @media (min-width: 25rem) {
@@ -2866,15 +2952,17 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
         class="emotion-19 emotion-20"
       >
         <a
+          aria-labelledby="BrandLink-topPage"
           class="emotion-21 emotion-22"
           href="/pidgin"
+          id="topPage"
         >
           <svg
             aria-hidden="true"
             class="emotion-23 emotion-24"
             focusable="false"
             height="24"
-            viewBox="0 0 238 24"
+            viewBox="0 0 238.4254 24.59"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
@@ -2900,6 +2988,7 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
           </svg>
           <span
             class="emotion-25 emotion-26"
+            id="BrandLink-topPage"
             role="text"
           >
             <span
@@ -3080,10 +3169,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-home"
                 class="emotion-83 emotion-84"
                 href="/pidgin"
               >
-                Home
+                <span
+                  id="dropdownNavigation-home"
+                >
+                  Home
+                </span>
               </a>
             </li>
             <li
@@ -3091,10 +3185,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-nigeria"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c2dwqd1zr92t"
               >
-                Nigeria
+                <span
+                  id="dropdownNavigation-nigeria"
+                >
+                  Nigeria
+                </span>
               </a>
             </li>
             <li
@@ -3102,10 +3201,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-africa"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c404v061z85t"
               >
-                Africa
+                <span
+                  id="dropdownNavigation-africa"
+                >
+                  Africa
+                </span>
               </a>
             </li>
             <li
@@ -3113,10 +3217,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-world"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/c0823e52dd0t"
               >
-                World
+                <span
+                  id="dropdownNavigation-world"
+                >
+                  World
+                </span>
               </a>
             </li>
             <li
@@ -3124,10 +3233,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-video"
                 class="emotion-83 emotion-84"
                 href="/pidgin/media/video"
               >
-                Video
+                <span
+                  id="dropdownNavigation-video"
+                >
+                  Video
+                </span>
               </a>
             </li>
             <li
@@ -3135,10 +3249,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-sport"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cjgn7gv77vrt"
               >
-                Sport
+                <span
+                  id="dropdownNavigation-sport"
+                >
+                  Sport
+                </span>
               </a>
             </li>
             <li
@@ -3146,10 +3265,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-entertainment"
                 class="emotion-83 emotion-84"
                 href="/pidgin/topics/cqywjyzk2vyt"
               >
-                Entertainment
+                <span
+                  id="dropdownNavigation-entertainment"
+                >
+                  Entertainment
+                </span>
               </a>
             </li>
             <li
@@ -3157,10 +3281,15 @@ exports[`Header Snapshots should render correctly for news article 1`] = `
               role="listitem"
             >
               <a
+                aria-labelledby="dropdownNavigation-most-popular"
                 class="emotion-83 emotion-84"
                 href="/pidgin/popular/read"
               >
-                Most popular
+                <span
+                  id="dropdownNavigation-most-popular"
+                >
+                  Most popular
+                </span>
               </a>
             </li>
           </ul>

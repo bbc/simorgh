@@ -762,10 +762,12 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           dir="rtl"
         >
           <a
+            aria-labelledby="bulletin-radio2016"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
+              id="bulletin-radio2016"
               role="text"
             >
               <span
@@ -880,10 +882,15 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow - rtl 1`] = `
           class="emotion-46 emotion-47"
         >
           <a
+            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-1"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <p
@@ -1545,10 +1552,15 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-7 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidginsport44416820-text-1"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-pidginsport44416820-text-1"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -1653,10 +1665,15 @@ exports[`FrontPageStoryRows Container - snapshots LeadingRow 1`] = `
           class="emotion-42 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidgin-audio-1"
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-pidgin-audio-1"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <p
@@ -2348,10 +2365,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           dir="rtl"
         >
           <a
+            aria-labelledby="bulletin-radio2016"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
+              id="bulletin-radio2016"
               role="text"
             >
               <span
@@ -2466,10 +2485,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
+            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <p
@@ -2527,10 +2551,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
+            aria-labelledby="promo-urdupakistan48346840-text-3"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
-            رمضان، عید اور سپیشل پکوان
+            <span
+              id="promo-urdupakistan48346840-text-3"
+            >
+              رمضان، عید اور سپیشل پکوان
+            </span>
           </a>
         </h3>
         <p
@@ -2588,10 +2617,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images - rtl 1
           class="emotion-46 emotion-47"
         >
           <a
+            aria-labelledby="promo-urdusport48361817-text-4"
             class="emotion-48 emotion-49"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
-            کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            <span
+              id="promo-urdusport48361817-text-4"
+            >
+              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            </span>
           </a>
         </h3>
         <p
@@ -3041,10 +3075,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
+            aria-labelledby="promo-pidginsport44416820-text-1"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-pidginsport44416820-text-1"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -3124,10 +3163,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
+            aria-labelledby="promo-pidgin-audio-2"
             class="emotion-17 emotion-18"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-pidgin-audio-2"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <p
@@ -3185,10 +3229,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
+            aria-labelledby="promo-pidginsport44439411-text-3"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
-            World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            <span
+              id="promo-pidginsport44439411-text-3"
+            >
+              World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            </span>
           </a>
         </h3>
         <time
@@ -3241,10 +3290,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow with images 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
+            aria-labelledby="promo-pidginsport44425543-text-4"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
-            Select your best ever African 11 players for World Cup
+            <span
+              id="promo-pidginsport44425543-text-4"
+            >
+              Select your best ever African 11 players for World Cup
+            </span>
           </a>
         </h3>
         <time
@@ -3950,10 +4004,12 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           dir="rtl"
         >
           <a
+            aria-labelledby="bulletin-radio2016"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
+              id="bulletin-radio2016"
               role="text"
             >
               <span
@@ -4042,10 +4098,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
+            aria-labelledby="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/bbc_urdu_tv/tv_programmes/w13xttn1?limit=4"
           >
-            سیربین ٹی وی پروگرام آن ڈیمانڈ
+            <span
+              id="promo-urdubbc_urdu_tvtv_programmesw13xttn1limit4-video-2"
+            >
+              سیربین ٹی وی پروگرام آن ڈیمانڈ
+            </span>
           </a>
         </h3>
         <time
@@ -4073,10 +4134,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
+            aria-labelledby="promo-urdupakistan48346840-text-3"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/pakistan-48346840"
           >
-            رمضان، عید اور سپیشل پکوان
+            <span
+              id="promo-urdupakistan48346840-text-3"
+            >
+              رمضان، عید اور سپیشل پکوان
+            </span>
           </a>
         </h3>
         <time
@@ -4104,10 +4170,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images - rt
           class="emotion-38 emotion-39"
         >
           <a
+            aria-labelledby="promo-urdusport48361817-text-4"
             class="emotion-40 emotion-41"
             href="https://www.bbc.com/urdu/sport-48361817"
           >
-            کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            <span
+              id="promo-urdusport48361817-text-4"
+            >
+              کرکٹ ورلڈ کپ پر بی بی سی اردو کا خصوصی ضمیمہ
+            </span>
           </a>
         </h3>
         <time
@@ -4518,10 +4589,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidginsport44416820-text-1"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-pidginsport44416820-text-1"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time
@@ -4575,10 +4651,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidgin-audio-2"
             class="emotion-9 emotion-10"
             href="http://www.bbc.com/pidgin"
           >
-            Audio promo
+            <span
+              id="promo-pidgin-audio-2"
+            >
+              Audio promo
+            </span>
           </a>
         </h3>
         <time
@@ -4606,10 +4687,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidginsport44439411-text-3"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44439411"
           >
-            World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            <span
+              id="promo-pidginsport44439411-text-3"
+            >
+              World Cup 2018 Quiz: You fit name all di players wey don score Super Eagles goal for World Cup?
+            </span>
           </a>
         </h3>
         <time
@@ -4637,10 +4723,15 @@ exports[`FrontPageStoryRows Container - snapshots RegularRow without images 1`] 
           class="emotion-7 emotion-8"
         >
           <a
+            aria-labelledby="promo-pidginsport44425543-text-4"
             class="emotion-9 emotion-10"
             href="https://www.bbc.com/pidgin/sport-44425543"
           >
-            Select your best ever African 11 players for World Cup
+            <span
+              id="promo-pidginsport44425543-text-4"
+            >
+              Select your best ever African 11 players for World Cup
+            </span>
           </a>
         </h3>
         <time
@@ -5058,10 +5149,12 @@ exports[`FrontPageStoryRows Container - snapshots TopRow - rtl 1`] = `
           dir="rtl"
         >
           <a
+            aria-labelledby="bulletin-radio2016"
             class="emotion-13 emotion-14"
             href="http://www.bbc.com/urdu/indepth/rio_olympics_2016_urdu"
           >
             <span
+              id="bulletin-radio2016"
               role="text"
             >
               <span
@@ -5466,10 +5559,15 @@ exports[`FrontPageStoryRows Container - snapshots TopRow 1`] = `
           class="emotion-15 emotion-16"
         >
           <a
+            aria-labelledby="promo-pidginsport44416820-text-1"
             class="emotion-17 emotion-18"
             href="https://www.bbc.com/pidgin/sport-44416820"
           >
-            Take dis predictor choose who go reach World Cup final
+            <span
+              id="promo-pidginsport44416820-text-1"
+            >
+              Take dis predictor choose who go reach World Cup final
+            </span>
           </a>
         </h3>
         <time

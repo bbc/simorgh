@@ -439,19 +439,20 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-18 emotion-19"
               href="/news"
             >
               <span
                 class="emotion-20 emotion-21"
                 dir="ltr"
+                id="dropdownNavigation-home"
                 role="text"
               >
                 <span
                   class="emotion-10 emotion-11"
                 >
-                  Current page
-                  , 
+                  Current page, 
                 </span>
                 Home
               </span>
@@ -462,10 +463,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-18 emotion-19"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -473,10 +479,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-18 emotion-19"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -484,10 +495,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-18 emotion-19"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -495,10 +511,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-18 emotion-19"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -506,10 +527,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-18 emotion-19"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -517,10 +543,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-18 emotion-19"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -528,10 +559,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-18 emotion-19"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -539,10 +575,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-18 emotion-19"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -550,10 +591,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-18 emotion-19"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -561,10 +607,15 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-18 emotion-19"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>
@@ -585,11 +636,13 @@ exports[`Navigation Container should correctly render amp navigation 1`] = `
             role="listitem"
           >
             <a
+              aria-labelledby="NavigationLinks-Home"
               class="emotion-71 emotion-72"
               href="/news"
             >
               <span
                 class="emotion-73 emotion-74"
+                id="NavigationLinks-Home"
                 role="text"
               >
                 <span
@@ -1098,10 +1151,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-18 emotion-19"
               href="/news"
             >
-              Home
+              <span
+                id="dropdownNavigation-home"
+              >
+                Home
+              </span>
             </a>
           </li>
           <li
@@ -1109,10 +1167,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-18 emotion-19"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -1120,10 +1183,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-18 emotion-19"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -1131,10 +1199,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-18 emotion-19"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -1142,10 +1215,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-18 emotion-19"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -1153,10 +1231,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-18 emotion-19"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -1164,10 +1247,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-18 emotion-19"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -1175,10 +1263,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-18 emotion-19"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -1186,10 +1279,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-18 emotion-19"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -1197,10 +1295,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-18 emotion-19"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -1208,10 +1311,15 @@ exports[`Navigation Container should correctly render amp navigation on non-home
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-18 emotion-19"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>
@@ -1735,10 +1843,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-18 emotion-19"
               href="/news"
             >
-              Home
+              <span
+                id="dropdownNavigation-home"
+              >
+                Home
+              </span>
             </a>
           </li>
           <li
@@ -1746,10 +1859,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-18 emotion-19"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -1757,10 +1875,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-18 emotion-19"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -1768,10 +1891,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-18 emotion-19"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -1779,10 +1907,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-18 emotion-19"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -1790,10 +1923,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-18 emotion-19"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -1801,10 +1939,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-18 emotion-19"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -1812,10 +1955,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-18 emotion-19"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -1823,10 +1971,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-18 emotion-19"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -1834,10 +1987,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-18 emotion-19"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -1845,10 +2003,15 @@ exports[`Navigation Container should correctly render amp navigation on non-navi
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-18 emotion-19"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>
@@ -2416,11 +2579,13 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
               role="listitem"
             >
               <a
+                aria-labelledby="NavigationLinks-Home"
                 class="emotion-18 emotion-19"
                 href="/news"
               >
                 <span
                   class="emotion-20 emotion-21"
+                  id="NavigationLinks-Home"
                   role="text"
                 >
                   <span
@@ -2569,19 +2734,20 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-70 emotion-71"
               href="/news"
             >
               <span
                 class="emotion-72 emotion-73"
                 dir="ltr"
+                id="dropdownNavigation-home"
                 role="text"
               >
                 <span
                   class="emotion-10 emotion-11"
                 >
-                  Current page
-                  , 
+                  Current page, 
                 </span>
                 Home
               </span>
@@ -2592,10 +2758,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-70 emotion-71"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -2603,10 +2774,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-70 emotion-71"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -2614,10 +2790,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-70 emotion-71"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -2625,10 +2806,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-70 emotion-71"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -2636,10 +2822,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-70 emotion-71"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -2647,10 +2838,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-70 emotion-71"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -2658,10 +2854,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-70 emotion-71"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -2669,10 +2870,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-70 emotion-71"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -2680,10 +2886,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-70 emotion-71"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -2691,10 +2902,15 @@ exports[`Navigation Container should correctly render canonical navigation 1`] =
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-70 emotion-71"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>
@@ -3192,10 +3408,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-66 emotion-67"
               href="/news"
             >
-              Home
+              <span
+                id="dropdownNavigation-home"
+              >
+                Home
+              </span>
             </a>
           </li>
           <li
@@ -3203,10 +3424,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-66 emotion-67"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -3214,10 +3440,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-66 emotion-67"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -3225,10 +3456,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-66 emotion-67"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -3236,10 +3472,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-66 emotion-67"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -3247,10 +3488,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-66 emotion-67"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -3258,10 +3504,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-66 emotion-67"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -3269,10 +3520,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-66 emotion-67"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -3280,10 +3536,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-66 emotion-67"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -3291,10 +3552,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-66 emotion-67"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -3302,10 +3568,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-66 emotion-67"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>
@@ -3803,10 +4074,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-home"
               class="emotion-66 emotion-67"
               href="/news"
             >
-              Home
+              <span
+                id="dropdownNavigation-home"
+              >
+                Home
+              </span>
             </a>
           </li>
           <li
@@ -3814,10 +4090,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-uk"
               class="emotion-66 emotion-67"
               href="/news/uk"
             >
-              UK
+              <span
+                id="dropdownNavigation-uk"
+              >
+                UK
+              </span>
             </a>
           </li>
           <li
@@ -3825,10 +4106,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-world"
               class="emotion-66 emotion-67"
               href="/news/world"
             >
-              World
+              <span
+                id="dropdownNavigation-world"
+              >
+                World
+              </span>
             </a>
           </li>
           <li
@@ -3836,10 +4122,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-business"
               class="emotion-66 emotion-67"
               href="/news/business"
             >
-              Business
+              <span
+                id="dropdownNavigation-business"
+              >
+                Business
+              </span>
             </a>
           </li>
           <li
@@ -3847,10 +4138,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-politics"
               class="emotion-66 emotion-67"
               href="/news/politics"
             >
-              Politics
+              <span
+                id="dropdownNavigation-politics"
+              >
+                Politics
+              </span>
             </a>
           </li>
           <li
@@ -3858,10 +4154,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-tech"
               class="emotion-66 emotion-67"
               href="/news/technology"
             >
-              Tech
+              <span
+                id="dropdownNavigation-tech"
+              >
+                Tech
+              </span>
             </a>
           </li>
           <li
@@ -3869,10 +4170,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-science"
               class="emotion-66 emotion-67"
               href="/news/science_and_environment"
             >
-              Science
+              <span
+                id="dropdownNavigation-science"
+              >
+                Science
+              </span>
             </a>
           </li>
           <li
@@ -3880,10 +4186,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-health"
               class="emotion-66 emotion-67"
               href="/news/health"
             >
-              Health
+              <span
+                id="dropdownNavigation-health"
+              >
+                Health
+              </span>
             </a>
           </li>
           <li
@@ -3891,10 +4202,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-family-&-education"
               class="emotion-66 emotion-67"
               href="/news/education"
             >
-              Family & Education
+              <span
+                id="dropdownNavigation-family-&-education"
+              >
+                Family & Education
+              </span>
             </a>
           </li>
           <li
@@ -3902,10 +4218,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-entertainment-&-arts"
               class="emotion-66 emotion-67"
               href="/news/entertainment_and_arts"
             >
-              Entertainment & Arts
+              <span
+                id="dropdownNavigation-entertainment-&-arts"
+              >
+                Entertainment & Arts
+              </span>
             </a>
           </li>
           <li
@@ -3913,10 +4234,15 @@ exports[`Navigation Container should correctly render canonical navigation on no
             role="listitem"
           >
             <a
+              aria-labelledby="dropdownNavigation-stories"
               class="emotion-66 emotion-67"
               href="/news/stories"
             >
-              Stories
+              <span
+                id="dropdownNavigation-stories"
+              >
+                Stories
+              </span>
             </a>
           </li>
         </ul>

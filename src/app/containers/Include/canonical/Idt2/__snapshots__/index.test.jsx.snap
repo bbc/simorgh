@@ -232,18 +232,30 @@ exports[`Include: IDT2 Canonical should render fallback when disallowed scripts 
   visibility: visible;
 }
 
+.emotion-4 {
+  display: block;
+  width: 100%;
+}
+
 <div>
   <div
     class="emotion-0 emotion-1"
     dir="ltr"
   >
-    <img
-      alt="An image."
+    <picture
       class="emotion-2 emotion-3"
-      id="include-1"
-      src="https://www.bbc.com/ws/includes/idt2/image/816"
-      srcset="https://www.bbc.com/ws/includes/idt2/image/470 470w,https://www.bbc.com/ws/includes/idt2/image/816 816w"
-    />
+    >
+      <source
+        srcset="https://www.bbc.com/ws/includes/idt2/image/470 470w,https://www.bbc.com/ws/includes/idt2/image/816 816w"
+        type="image/jpeg"
+      />
+      <img
+        alt="An image."
+        class="emotion-4 emotion-5"
+        id="include-1"
+        src="https://www.bbc.com/ws/includes/idt2/image/816"
+      />
+    </picture>
   </div>
 </div>
 `;

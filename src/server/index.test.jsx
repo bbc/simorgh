@@ -5,15 +5,15 @@ import dotenv from 'dotenv';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import defaultToggles from '#lib/config/toggles';
+import loggerMock from '#testHelpers/loggerMock';
+import { ROUTING_INFORMATION } from '#lib/logger.const';
+import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 import Document from './Document/component';
 import routes from '../app/routes';
 import getAssetOrigins from './utilities/getAssetOrigins';
 import * as renderDocument from './Document';
 import sendCustomMetrics from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
-import loggerMock from '#testHelpers/loggerMock';
-import { ROUTING_INFORMATION } from '#lib/logger.const';
-import { FRONT_PAGE, MEDIA_PAGE } from '#app/routes/utils/pageTypes';
 
 // mimic the logic in `src/index.js` which imports the `server/index.jsx`
 dotenv.config({ path: './envConfig/local.env' });
@@ -46,13 +46,18 @@ jest.mock('react-helmet', () => ({
   },
 }));
 
-jest.mock('@loadable/server', () => ({
-  ChunkExtractor: () => ({
-    collectChunks: arg => arg,
-    getScriptElements: () => '__mock_script_elements__',
-    getLinkElements: () => '__mock_link_elements__',
-  }),
-}));
+jest.mock('@loadable/server', () => {
+  class ChunkExtractor {
+    collectChunks = arg => arg;
+
+    getScriptElements = () => '__mock_script_elements__';
+
+    getLinkElements = () => '__mock_link_elements__';
+  }
+  return {
+    ChunkExtractor,
+  };
+});
 
 jest.mock('#app/routes/utils/fetchPageData/utils/getRouteProps');
 jest.mock('#app/lib/utilities/getToggles/withCache');
@@ -118,7 +123,8 @@ const testRenderedData =
         helmet={{ head: 'tags' }}
         isAmp={isAmp}
         service={service}
-        scripts="__mock_script_elements__"
+        legacyScripts="__mock_script_elements__"
+        modernScripts="__mock_script_elements__"
         links="__mock_link_elements__"
       />,
     );
@@ -1316,7 +1322,8 @@ describe('Server', () => {
             helmet={{ head: 'tags' }}
             isAmp={isAmp}
             service={service}
-            scripts="__mock_script_elements__"
+            legacyScripts="__mock_script_elements__"
+            modernScripts="__mock_script_elements__"
             links="__mock_link_elements__"
           />,
         );

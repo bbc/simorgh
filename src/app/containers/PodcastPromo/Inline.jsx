@@ -19,14 +19,14 @@ import {
 } from '@bbc/gel-foundations/typography';
 import { getSerifMedium } from '@bbc/psammead-styles/font-styles';
 import { C_LUNAR } from '@bbc/psammead-styles/colours';
-import getPromo from './shared';
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
-import PromoComponent from './components';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 import ImageWithPlaceholder from '#containers/ImageWithPlaceholder';
 import SkipLinkWrapper from '#components/SkipLinkWrapper';
+import PromoComponent from './components';
+import getPromo from './shared';
 
 const GEL_GROUP_1_WIDTH_260PX = '16.25rem';
 const GEL_GROUP_1_WIDTH_320PX = '20rem';
@@ -135,6 +135,7 @@ const Promo = () => {
     eventTrackingData,
     sizes,
     srcset,
+    primaryMimeType,
   } = getPromo(podcastPromo);
 
   const viewTrackerRef = useViewTracker(eventTrackingData);
@@ -180,6 +181,7 @@ const Promo = () => {
               <ImageWithPlaceholder
                 src={imgSrc}
                 srcset={srcset}
+                primaryMimeType={primaryMimeType}
                 sizes={sizes}
                 alt={alt}
                 height={1}

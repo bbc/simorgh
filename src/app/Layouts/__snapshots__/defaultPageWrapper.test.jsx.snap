@@ -293,12 +293,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
 .emotion-23 {
   display: inline-block;
   width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
+  max-width: 10.359862550698512rem;
+  min-width: 6.906575033799008rem;
+  -webkit-flex: 1 1 6.906575033799008rem;
+  -ms-flex: 1 1 6.906575033799008rem;
+  flex: 1 1 6.906575033799008rem;
+  -ms-flex-preferred-size: 10.359862550698512rem;
 }
 
 @media (max-width: 14.9375rem) {
@@ -315,12 +315,12 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
   padding-bottom: 0.375rem;
   height: 1.5rem;
   width: 100%;
-  max-width: 10.496849999999998rem;
-  min-width: 6.9979rem;
-  -webkit-flex: 1 1 6.9979rem;
-  -ms-flex: 1 1 6.9979rem;
-  flex: 1 1 6.9979rem;
-  -ms-flex-preferred-size: 10.496849999999998rem;
+  max-width: 10.359862550698512rem;
+  min-width: 6.906575033799008rem;
+  -webkit-flex: 1 1 6.906575033799008rem;
+  -ms-flex: 1 1 6.906575033799008rem;
+  flex: 1 1 6.906575033799008rem;
+  -ms-flex-preferred-size: 10.359862550698512rem;
 }
 
 @media (min-width: 25rem) {
@@ -1004,15 +1004,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-topPage"
             class="emotion-23 emotion-24"
             href="/news"
+            id="topPage"
           >
             <svg
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
               height="24"
-              viewBox="0 0 167.95 24"
+              viewBox="0 0 153.2569 22.19"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
@@ -1034,6 +1036,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-topPage"
             >
               BBC News
             </span>
@@ -1242,10 +1245,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-home"
                   class="emotion-97 emotion-98"
                   href="/news"
                 >
-                  Home
+                  <span
+                    id="dropdownNavigation-home"
+                  >
+                    Home
+                  </span>
                 </a>
               </li>
               <li
@@ -1253,10 +1261,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-uk"
                   class="emotion-97 emotion-98"
                   href="/news/uk"
                 >
-                  UK
+                  <span
+                    id="dropdownNavigation-uk"
+                  >
+                    UK
+                  </span>
                 </a>
               </li>
               <li
@@ -1264,10 +1277,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-world"
                   class="emotion-97 emotion-98"
                   href="/news/world"
                 >
-                  World
+                  <span
+                    id="dropdownNavigation-world"
+                  >
+                    World
+                  </span>
                 </a>
               </li>
               <li
@@ -1275,10 +1293,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-business"
                   class="emotion-97 emotion-98"
                   href="/news/business"
                 >
-                  Business
+                  <span
+                    id="dropdownNavigation-business"
+                  >
+                    Business
+                  </span>
                 </a>
               </li>
               <li
@@ -1286,10 +1309,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-politics"
                   class="emotion-97 emotion-98"
                   href="/news/politics"
                 >
-                  Politics
+                  <span
+                    id="dropdownNavigation-politics"
+                  >
+                    Politics
+                  </span>
                 </a>
               </li>
               <li
@@ -1297,10 +1325,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-tech"
                   class="emotion-97 emotion-98"
                   href="/news/technology"
                 >
-                  Tech
+                  <span
+                    id="dropdownNavigation-tech"
+                  >
+                    Tech
+                  </span>
                 </a>
               </li>
               <li
@@ -1308,10 +1341,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-science"
                   class="emotion-97 emotion-98"
                   href="/news/science_and_environment"
                 >
-                  Science
+                  <span
+                    id="dropdownNavigation-science"
+                  >
+                    Science
+                  </span>
                 </a>
               </li>
               <li
@@ -1319,10 +1357,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-health"
                   class="emotion-97 emotion-98"
                   href="/news/health"
                 >
-                  Health
+                  <span
+                    id="dropdownNavigation-health"
+                  >
+                    Health
+                  </span>
                 </a>
               </li>
               <li
@@ -1330,10 +1373,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-family-&-education"
                   class="emotion-97 emotion-98"
                   href="/news/education"
                 >
-                  Family & Education
+                  <span
+                    id="dropdownNavigation-family-&-education"
+                  >
+                    Family & Education
+                  </span>
                 </a>
               </li>
               <li
@@ -1341,10 +1389,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-entertainment-&-arts"
                   class="emotion-97 emotion-98"
                   href="/news/entertainment_and_arts"
                 >
-                  Entertainment & Arts
+                  <span
+                    id="dropdownNavigation-entertainment-&-arts"
+                  >
+                    Entertainment & Arts
+                  </span>
                 </a>
               </li>
               <li
@@ -1352,10 +1405,15 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
                 role="listitem"
               >
                 <a
+                  aria-labelledby="dropdownNavigation-stories"
                   class="emotion-97 emotion-98"
                   href="/news/stories"
                 >
-                  Stories
+                  <span
+                    id="dropdownNavigation-stories"
+                  >
+                    Stories
+                  </span>
                 </a>
               </li>
             </ul>
@@ -1381,15 +1439,17 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
           class="emotion-21 emotion-22"
         >
           <a
+            aria-labelledby="BrandLink-footer"
             class="emotion-23 emotion-24"
             href="/news"
+            id="footer"
           >
             <svg
               aria-hidden="true"
               class="emotion-25 emotion-26"
               focusable="false"
               height="24"
-              viewBox="0 0 167.95 24"
+              viewBox="0 0 153.2569 22.19"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
@@ -1411,6 +1471,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
             </svg>
             <span
               class="emotion-27 emotion-28"
+              id="BrandLink-footer"
             >
               BBC News
             </span>
@@ -1525,7 +1586,7 @@ exports[`defaultPageWrapper should render default page wrapper with children 1`]
               ©
                
             </span>
-            2021 BBC. The BBC is not responsible for the content of external sites.
+            2022 BBC. The BBC is not responsible for the content of external sites.
              
             <a
               class="emotion-194 emotion-163"

@@ -3,9 +3,9 @@ import { TEXT_VARIANTS } from '@bbc/psammead-storybook-helpers';
 import { arabic, latin } from '@bbc/gel-foundations/scripts';
 import { boolean } from '@storybook/addon-knobs';
 import React from 'react';
+import { ServiceContextProvider } from '#contexts/ServiceContext';
 import ProgramCard from '../ProgramCard';
 import RadioSchedule from '../index';
-import { ServiceContextProvider } from '#contexts/ServiceContext';
 
 // Will remove and clean up in future PRs
 export const stateTypes = ['live', 'onDemand', 'onDemand', 'next'];
@@ -47,6 +47,7 @@ export const renderProgramCard = ({
   displaySummary = boolean('show summary', true),
   linkComponent = 'a',
   linkComponentAttr = 'href',
+  id,
 }) => {
   const { text, articlePath, longText, dir, timezone } = TEXT_VARIANTS[service];
 
@@ -65,6 +66,7 @@ export const renderProgramCard = ({
     brandTitle: text,
     summary: displaySummary ? longText : null,
     duration,
+    id,
   };
 
   return (
@@ -75,7 +77,7 @@ export const renderProgramCard = ({
       locale="ar"
       timezone={timezone}
     >
-      <ProgramCard program={program} {...props} />
+      <ProgramCard program={program} id={id} {...props} />
     </ServiceContextProvider>
   );
 };

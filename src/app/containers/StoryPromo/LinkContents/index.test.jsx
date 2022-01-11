@@ -3,12 +3,12 @@ import compose from 'ramda/src/compose';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import LinkContents from '.';
 import {
   MEDIA_ASSET_PAGE,
   STORY_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import LinkContents from '.';
 
 const defaultProps = {
   summary: 'A summary',
@@ -84,7 +84,9 @@ describe('Story Promo Link Contents', () => {
   it("should render a story's headline as bare text", () => {
     const { container } = renderWithContext(<LinkContents item={item} />);
 
-    expect(container.innerHTML).toEqual(item.headlines.headline);
+    expect(container.innerHTML).toEqual(
+      `<span>${item.headlines.headline}</span>`,
+    );
   });
 
   it('should render overtyped headline if provided', () => {
@@ -93,7 +95,7 @@ describe('Story Promo Link Contents', () => {
     );
 
     expect(container.innerHTML).toEqual(
-      itemWithOvertypedHeadline.headlines.overtyped,
+      `<span>${itemWithOvertypedHeadline.headlines.overtyped}</span>`,
     );
   });
 
