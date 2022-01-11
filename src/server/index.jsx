@@ -30,8 +30,6 @@ import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
 
-const fs = require('fs');
-
 const morgan = require('morgan');
 
 const logger = nodeLogger(__filename);
