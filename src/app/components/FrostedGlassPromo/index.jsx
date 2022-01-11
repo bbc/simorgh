@@ -74,6 +74,7 @@ const FrostedGlassPromo = ({
   url,
   eventTrackingData,
   index,
+  minimumContrast,
 }) => {
   const { script, service } = useContext(ServiceContext);
 
@@ -113,7 +114,10 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <FrostedGlassPanel image={image.smallSrc || image.src}>
+      <FrostedGlassPanel
+        image={image.smallSrc || image.src}
+        minimumContrast={minimumContrast}
+      >
         <H3>
           <A script={script} service={service} href={url} onClick={onClick}>
             {children}
@@ -131,6 +135,7 @@ FrostedGlassPromo.propTypes = {
   footer: node,
   eventTrackingData: shape({}),
   index: number,
+  minimumContrast: number,
   image: shape({
     src: string.isRequired,
     alt: string.isRequired,
@@ -147,6 +152,7 @@ FrostedGlassPromo.defaultProps = {
   footer: null,
   eventTrackingData: null,
   index: 0,
+  minimumContrast: 8,
 };
 
 export default withData(FrostedGlassPromo);
