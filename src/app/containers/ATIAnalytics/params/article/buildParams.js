@@ -10,6 +10,7 @@ import {
   getContentId,
   getPageIdentifier,
   getPromoHeadline,
+  getNationsProducer,
 } from '../../../../lib/analyticsUtils/article';
 
 export const buildArticleATIParams = (
@@ -41,6 +42,7 @@ export const buildArticleATIParams = (
     statsDestination,
     previousPath,
     origin,
+    nationsProducer: getNationsProducer(articleData),
   };
 };
 
