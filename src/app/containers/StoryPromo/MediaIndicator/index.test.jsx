@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot, isNull } from '@bbc/psammead-test-helpers';
 import { latin, arabic } from '@bbc/gel-foundations/scripts';
-import MediaIndicator from '.';
 import {
   MEDIA_ASSET_PAGE,
   PHOTO_GALLERY_PAGE,
 } from '#app/routes/utils/pageTypes';
+import MediaIndicator from '.';
 
 const audioItem = {
   headlines: {

@@ -2,8 +2,8 @@ import React from 'react';
 import * as optimizelyReactSdk from '@optimizely/react-sdk';
 import { render } from '@testing-library/react';
 import { latin } from '@bbc/gel-foundations/scripts';
-import withOptimizelyProvider from '.';
 import { ServiceContext } from '#contexts/ServiceContext';
+import withOptimizelyProvider from '.';
 
 describe('withOptimizelyProvider HOC', () => {
   const optimizelyProviderSpy = jest.spyOn(

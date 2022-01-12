@@ -1,9 +1,9 @@
-import getRowDetails from './rowDetails';
 import {
   TopRow,
   RegularRow,
   LeadingRow,
 } from '#app/containers/FrontPageStoryRows';
+import getRowDetails from './rowDetails';
 
 const rowValues = {
   'top story, regular, regular, no image': {

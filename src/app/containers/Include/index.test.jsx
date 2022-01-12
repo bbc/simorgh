@@ -1,14 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import loggerMock from '#testHelpers/loggerMock';
-import IncludeContainer from '.';
 import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
+import { INCLUDE_RENDERED } from '#lib/logger.const';
+import { STORY_PAGE } from '#app/routes/utils/pageTypes';
+import IncludeContainer from '.';
 import * as idt2Amp from './amp/Idt2Amp';
 import * as vjAmp from './amp/VjAmp';
 import * as canonical from './canonical';
-import { INCLUDE_RENDERED } from '#lib/logger.const';
-import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 const defaultToggleState = {
   include: {

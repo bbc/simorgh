@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
-import RadioSchedulesWithContext from './utilities/testHelpers';
 import arabicRadioScheduleData from '#data/arabic/bbc_arabic_radio/schedule.json';
+import RadioSchedulesWithContext from './utilities/testHelpers';
 
 describe('RadioScheduleData', () => {
   afterEach(() => {

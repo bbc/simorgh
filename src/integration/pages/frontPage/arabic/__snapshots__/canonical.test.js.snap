@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/arabic"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 بي بي سي. بي بي سي ليست مسؤولة عن محتوى المواقع الخارجية. سياستنا بخصوص الروابط الخارجية."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, عربي"`;
 
@@ -361,7 +361,7 @@ exports[`Story Promo Image should match image 1`] = `
   class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
   height="549"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-  src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
   width="976"
 />
 `;

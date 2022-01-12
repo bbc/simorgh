@@ -5,17 +5,8 @@ import ramdaPath from 'ramda/src/path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
-import {
-  articleManifestPath,
-  articleSwPath,
-  frontPageManifestPath,
-  frontPageSwPath,
-} from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
-import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/cspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
@@ -25,6 +16,15 @@ import {
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
+import injectCspHeader from './utilities/cspHeader';
+import logResponseTime from './utilities/logResponseTime';
+import renderDocument from './Document';
+import {
+  articleManifestPath,
+  articleSwPath,
+  frontPageManifestPath,
+  frontPageSwPath,
+} from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
@@ -80,10 +80,10 @@ server
     }),
   )
   .use(gnuTP())
+  .use(logResponseTime)
   .get('/status', (req, res) => {
     res.status(200).send(getBuildMetadata());
-  })
-  .use(logResponseTime);
+  });
 
 /*
  * Application env routes

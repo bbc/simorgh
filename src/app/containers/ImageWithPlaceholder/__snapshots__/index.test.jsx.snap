@@ -157,9 +157,11 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
     >
       <source
         srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
+        type="image/webp"
       />
       <source
         srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+        type="image/jpeg"
       />
       <img
         alt="Pauline Clayton"

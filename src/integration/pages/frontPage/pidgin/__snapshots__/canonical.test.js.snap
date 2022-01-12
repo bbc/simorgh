@@ -69,7 +69,7 @@ Object {
 
 exports[`Canonical Front Page Footer I can click on the BBC branding and it would take me to the homepage 1`] = `"/pidgin"`;
 
-exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2021 BBC. De external site no concern BBC. De way wey we de take go external link."`;
+exports[`Canonical Front Page Footer I can see the footer copyright and external linking text 1`] = `"© 2022 BBC. De external site no concern BBC. De way wey we de take go external link."`;
 
 exports[`Canonical Front Page Header I can see the branding 1`] = `"BBC News, Pidgin"`;
 
@@ -313,7 +313,7 @@ exports[`Story Promo Image should match image 1`] = `
   class="eehpdyc0 bbc-rb7xa0 e1enwo3v0"
   height="549"
   sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
-  src="https://ichef.test.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
+  src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
   width="976"
 />
 `;
