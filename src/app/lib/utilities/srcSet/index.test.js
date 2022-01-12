@@ -117,7 +117,7 @@ describe('Placeholder srcset', () => {
       locator: 'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg',
       originCode: 'pips',
       expected:
-        'https://ichef.test.bbci.co.uk/images/ic/320xn/p01mt2kt.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/384xn/p01mt2kt.jpg 384w, https://ichef.test.bbci.co.uk/images/ic/432xn/p01mt2kt.jpg 432w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mt2kt.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/512xn/p01mt2kt.jpg 512w, https://ichef.test.bbci.co.uk/images/ic/608xn/p01mt2kt.jpg 608w, https://ichef.test.bbci.co.uk/images/ic/640xn/p01mt2kt.jpg 640w, https://ichef.test.bbci.co.uk/images/ic/688xn/p01mt2kt.jpg 688w, https://ichef.test.bbci.co.uk/images/ic/720xn/p01mt2kt.jpg 720w, https://ichef.test.bbci.co.uk/images/ic/768xn/p01mt2kt.jpg 768w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mt2kt.jpg 800w, https://ichef.test.bbci.co.uk/images/ic/832xn/p01mt2kt.jpg 832w, https://ichef.test.bbci.co.uk/images/ic/976xn/p01mt2kt.jpg 976w, https://ichef.test.bbci.co.uk/images/ic/1024xn/p01mt2kt.jpg 1024w, https://ichef.test.bbci.co.uk/images/ic/1376xn/p01mt2kt.jpg 1376w, https://ichef.test.bbci.co.uk/images/ic/1920xn/p01mt2kt.jpg 1920w',
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mt2kt.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mt2kt.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mt2kt.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mt2kt.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mt2kt.jpg 800w',
       summary:
         'should placeholder image with srcset if size already set and originCode pips',
     },
