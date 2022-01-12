@@ -2,21 +2,21 @@
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
-  // return standard img url pips
+  // return urn schemes unmodified
   if (src.includes('urn:')) return src;
   const noProtocolSrc = src.replace('https://', '');
-  const parts = noProtocolSrc.split('/');
-  const [domain, media, imgService, ...extraParts] = parts;
-  // shift is used to delete the old resolution.
-  extraParts.shift();
-  const definedResolution = `${resolution}xn`;
-  const domainWithProtocol = `https://${domain}`;
+  const urlParts = noProtocolSrc.split('/');
+  const [domain, mediaType, imgService, ...extraParts] = urlParts;
+  // Slice use to cut off the old resolution
+  const newExtraParts = extraParts.slice(1);
+  const newResolution = `${resolution}xn`;
   const newUrl = [
-    domainWithProtocol,
-    media,
+    'https:/',
+    domain,
+    mediaType,
     imgService,
-    definedResolution,
-    ...extraParts,
+    newResolution,
+    ...newExtraParts,
   ];
   return newUrl.join('/');
 };
