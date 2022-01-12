@@ -1,7 +1,11 @@
+const {
+  addMatchImageSnapshotPlugin,
+} = require('cypress-image-snapshot/plugin');
 const envConfig = require('../support/config/envs');
 
 /* eslint-disable no-param-reassign */
 module.exports = (on, config) => {
+  addMatchImageSnapshotPlugin(on, config);
   config.baseUrl = envConfig(config.env.APP_ENV, config.env.UK).baseUrl;
 
   // Debugging console logs to see running config
