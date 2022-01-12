@@ -3,6 +3,7 @@ const {
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
+  getNationsProducer,
 } = require('.');
 
 describe('getPageIdentifier', () => {
@@ -126,6 +127,36 @@ describe('getPromoHeadline', () => {
     };
 
     const promoHeadline = getPromoHeadline(badData);
+
+    expect(promoHeadline).toEqual(null);
+  });
+});
+
+describe('getNationsProducer', () => {
+  it('should find value in good data', () => {
+    const goodData = {
+      metadata: {
+        analyticsLabels: {
+          nations_producer: 'desired value',
+        },
+      },
+    };
+
+    const promoHeadline = getNationsProducer(goodData);
+
+    expect(promoHeadline).toEqual('desired value');
+  });
+
+  it('should return null in bad data', () => {
+    const badData = {
+      metadata: {
+        analyticsLabels: {
+          unknown: 'missed value',
+        },
+      },
+    };
+
+    const promoHeadline = getNationsProducer(badData);
 
     expect(promoHeadline).toEqual(null);
   });
