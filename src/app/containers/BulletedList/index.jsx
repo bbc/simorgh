@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import pick from 'ramda/src/pick';
-import path from 'ramda/src/path';
-import pathOr from 'ramda/src/pathOr';
 import BulletedList from '@bbc/psammead-bulleted-list';
 import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
@@ -17,17 +15,6 @@ const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const getLinkBlock = path([
-  'model',
-  'blocks',
-  0,
-  'model',
-  'blocks',
-  0,
-  'model',
-  'locator',
-]);
-
 const withClickHandler = (Component, clickHandler) => props =>
   <Component {...props} onClick={clickHandler} />;
 
@@ -41,13 +28,8 @@ const BulletedListContainer = ({
   console.log('xxx blockGroupType', blockGroupType);
   console.log('xxx blockGroupIndex', blockGroupIndex);
 
-  const linkBlock = blocks.find(getLinkBlock);
-  const hasLinkBlock = Boolean(linkBlock);
-  const position = pathOr('', ['position'], rest);
-  const blockPosition = hasLinkBlock ? position.join(0, 1) : null;
-
   const eventTrackingData = {
-    componentName: `bullet${blockPosition}`,
+    componentName: `bullet${blockGroupIndex}`,
     format: 'CHD=bullet',
   };
   const viewRef = useViewTracker(eventTrackingData);
@@ -61,14 +43,15 @@ const BulletedListContainer = ({
         script={script}
         service={service}
         dir={dir}
-        ref={hasLinkBlock ? viewRef : null}
+        ref={blockGroupType === 'listWithLink' ? viewRef : null}
       >
         <Blocks
           blocks={blocks}
           componentsToRender={{
-            listItem: hasLinkBlock
-              ? withClickHandler(listItem, handleClickTracking)
-              : listItem,
+            listItem:
+              blockGroupType === 'listWithLink'
+                ? withClickHandler(listItem, handleClickTracking)
+                : listItem,
           }}
         />
       </BulletedList>
