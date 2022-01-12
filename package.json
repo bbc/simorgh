@@ -269,10 +269,5 @@
       "cloud-init"
     ]
   },
-  "buildMetadata": {
-    "commitHash": "383522b",
-    "deployEnvironment": "green",
-    "version": "1.0.0"
-  },
   "packageManager": "yarn@3.1.1"
 }
