@@ -29,6 +29,7 @@ export default ArticlePageGrid;
 
 const GridPrimaryColumn = styled(Grid)`
   padding-bottom: ${GEL_SPACING_QUAD};
+  max-width: 100%;
 `;
 
 export const Primary = props => (
