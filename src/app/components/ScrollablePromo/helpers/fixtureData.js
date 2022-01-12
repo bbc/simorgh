@@ -210,20 +210,20 @@ export const threeLinks = [
                 id: '57c9fb66',
                 type: 'paragraph',
                 model: {
-                  text: 'https://www.bbc.com/brasil',
+                  text: 'Brasil homepage',
                   blocks: [
                     {
                       id: 'a0f0efea',
                       type: 'urlLink',
                       model: {
-                        text: 'https://www.bbc.com/brasil',
+                        text: 'Brasil homepage',
                         locator: 'https://www.bbc.com/brasil',
                         blocks: [
                           {
                             id: '883f74a8',
                             type: 'fragment',
                             model: {
-                              text: 'https://www.bbc.com/brasil',
+                              text: 'Brasil homepage',
                               attributes: [],
                             },
                             position: [4, 4, 1, 1, 1, 1],
