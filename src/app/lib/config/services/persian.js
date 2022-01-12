@@ -66,16 +66,15 @@ export const service = {
     showRelatedTopics: true,
     podcastPromo: {
       title: 'پادکست',
-      brandTitle: 'به عبارت دیگر',
-      brandDescription:
-        'گفتگو با چهره‌های سیاسی، هنری و ادبی از تلویزیون فارسی بی بی سی.',
+      brandTitle: 'رادیو فارسی بی‌بی‌سی',
+      brandDescription: 'پادکست چشم‌انداز بامدادی رادیو بی‌بی‌سی',
       image: {
-        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p036kbm2.jpg',
-        alt: 'پادکست',
+        src: 'https://ichef.bbci.co.uk/images/ic/$recipe/p02h1lnx.jpg',
+        alt: 'رادیو فارسی بی‌بی‌سی',
       },
       linkLabel: {
         text: 'برنامه ها',
-        href: 'https://www.bbc.com/persian/podcasts/p036kbdd',
+        href: 'https://www.bbc.com/persian/podcasts/p02pc9mc',
       },
       skipLink: {
         text: 'از %title% رد شوید و به خواندن ادامه دهید',
