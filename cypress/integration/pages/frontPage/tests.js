@@ -57,6 +57,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
         }
       });
     });
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it.only('Front page', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.matchImageSnapshot();
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
+    });
   });
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
