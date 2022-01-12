@@ -848,20 +848,20 @@ export const twoLinksWithNoImages = [
                 id: 'e638573a',
                 type: 'paragraph',
                 model: {
-                  text: 'Miundo homepage',
+                  text: 'Mundo homepage',
                   blocks: [
                     {
                       id: 'a80e1290',
                       type: 'urlLink',
                       model: {
-                        text: 'Miundo homepage',
+                        text: 'Mundo homepage',
                         locator: 'https://www.bbc.co.uk/mundo',
                         blocks: [
                           {
                             id: 'fe04d224',
                             type: 'fragment',
                             model: {
-                              text: 'Miundo homepage',
+                              text: 'Mundo homepage',
                               attributes: [],
                             },
                             position: [11, 3, 2, 1, 1, 1],
