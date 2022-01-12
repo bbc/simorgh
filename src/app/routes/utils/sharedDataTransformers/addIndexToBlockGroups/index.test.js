@@ -133,4 +133,116 @@ describe('addIndexToBlockGroups', () => {
       },
     });
   });
+
+  it('should return the data unchanged if the predicate returns false', () => {
+    const blockGroup = {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'foo',
+            },
+          ],
+        },
+      },
+    };
+    const predicate = () => false;
+    const actual = addIndexToBlockGroups(predicate, {
+      blockGroupType: 'fooBlockGroup',
+    })(blockGroup);
+
+    expect(actual).toEqual(blockGroup);
+  });
+
+  it('should return the data unchanged if the data is not valid page data structure even if the predicate returns true', () => {
+    const blockGroup = {
+      model: {
+        blocks: [
+          {
+            type: 'foo',
+          },
+        ],
+      },
+    };
+    const predicate = () => true;
+    const actual = addIndexToBlockGroups(predicate, {
+      blockGroupType: 'fooBlockGroup',
+    })(blockGroup);
+
+    expect(actual).toEqual(blockGroup);
+  });
+
+  it('should return the data unchanged if the data is not valid page data structure and if the predicate returns false', () => {
+    const blockGroup = {
+      model: {
+        blocks: [
+          {
+            type: 'foo',
+          },
+        ],
+      },
+    };
+    const predicate = () => false;
+    const actual = addIndexToBlockGroups(predicate, {
+      blockGroupType: 'fooBlockGroup',
+    })(blockGroup);
+
+    expect(actual).toEqual(blockGroup);
+  });
+
+  it('should throw an error if no predicate function provided', () => {
+    const blockGroup = {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'foo',
+            },
+          ],
+        },
+      },
+    };
+
+    expect(() => {
+      addIndexToBlockGroups(undefined, {
+        blockGroupType: 'fooBlockGroup',
+      })(blockGroup);
+    }).toThrow();
+  });
+
+  it('should throw an error if no blockGroupType is provided', () => {
+    const blockGroup = {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'foo',
+            },
+          ],
+        },
+      },
+    };
+
+    expect(() => {
+      addIndexToBlockGroups(() => true, {})(blockGroup);
+    }).toThrow();
+  });
+
+  it('should throw an error if no options provided', () => {
+    const blockGroup = {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'foo',
+            },
+          ],
+        },
+      },
+    };
+
+    expect(() => {
+      addIndexToBlockGroups(() => true)(blockGroup);
+    }).toThrow();
+  });
 });
