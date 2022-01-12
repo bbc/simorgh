@@ -32,6 +32,7 @@ describe('getPromo', () => {
       srcset:
         'https://ichef.bbci.co.uk/images/ic/128x128/p0776f5z.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p0776f5z.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p0776f5z.jpg 480w',
       sizes: '(min-width: 1008px) 228px, 30vw',
+      primaryMimeType: 'image/jpeg',
       eventTrackingData: {
         componentName: 'promo-podcast',
       },

@@ -10,6 +10,7 @@ import { MEDIA_MISSING } from '#lib/logger.const';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import {
   completeItem,
   itemWithOvertypedSummary,
@@ -27,7 +28,6 @@ import {
   mapWithoutMediaError,
 } from './helpers/fixtureData';
 import StoryPromoContainer from '.';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import { buildUniquePromoId } from './utilities';
 
 const onlyOneRelatedItem = {
@@ -264,12 +264,12 @@ describe('StoryPromo Container', () => {
       ).toEqual(cpsItem.indexImage.altText);
     });
 
-    it('should render amp-img with src & alt when platform is amp', () => {
+    it('should render amp-img with src & alt and amp-img fallback when platform is amp', () => {
       const { container } = render(
         <WrappedStoryPromo platform="amp" item={cpsItem} />,
       );
 
-      expect(container.getElementsByTagName('amp-img').length).toEqual(1);
+      expect(container.getElementsByTagName('amp-img').length).toEqual(2);
       expect(container.getElementsByTagName('img').length).toEqual(0);
       expect(
         container.getElementsByTagName('amp-img')[0].getAttribute('src'),

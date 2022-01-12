@@ -5,31 +5,30 @@ import ramdaPath from 'ramda/src/path';
 import helmet from 'helmet';
 import gnuTP from 'gnu-terry-pratchett';
 import routes from '#app/routes';
-import {
-  articleManifestPath,
-  articleSwPath,
-  frontPageManifestPath,
-  frontPageSwPath,
-} from '../app/routes/utils/regex';
 import nodeLogger from '#lib/logger.node';
-import renderDocument from './Document';
 import getRouteProps from '#app/routes/utils/fetchPageData/utils/getRouteProps';
-import logResponseTime from './utilities/logResponseTime';
-import injectCspHeader from './utilities/cspHeader';
 import {
   SERVICE_WORKER_SENDFILE_ERROR,
   MANIFEST_SENDFILE_ERROR,
   SERVER_SIDE_RENDER_REQUEST_RECEIVED,
   SERVER_SIDE_REQUEST_FAILED,
   ROUTING_INFORMATION,
+  SERVER_STATUS_ENDPOINT_ERROR,
 } from '#lib/logger.const';
 import getToggles from '#app/lib/utilities/getToggles/withCache';
 import { OK } from '#lib/statusCodes.const';
+import injectCspHeader from './utilities/cspHeader';
+import logResponseTime from './utilities/logResponseTime';
+import renderDocument from './Document';
+import {
+  articleManifestPath,
+  articleSwPath,
+  frontPageManifestPath,
+  frontPageSwPath,
+} from '../app/routes/utils/regex';
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
-
-const fs = require('fs');
 
 const morgan = require('morgan');
 
@@ -51,11 +50,6 @@ const server = express();
 /*
  * Default headers, compression, logging, status route
  */
-
-const getBuildMetadata = () => {
-  const { buildMetadata } = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  return buildMetadata;
-};
 
 const skipMiddleware = (_req, _res, next) => {
   next();
@@ -80,10 +74,15 @@ server
     }),
   )
   .use(gnuTP())
+  .use(logResponseTime)
   .get('/status', (req, res) => {
-    res.status(200).send(getBuildMetadata());
-  })
-  .use(logResponseTime);
+    try {
+      res.status(200).send('Ok');
+    } catch (error) {
+      logger.error(SERVER_STATUS_ENDPOINT_ERROR, { error });
+      res.status(500).send('Unable to determine status');
+    }
+  });
 
 /*
  * Application env routes

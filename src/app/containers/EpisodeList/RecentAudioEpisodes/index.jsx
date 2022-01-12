@@ -113,11 +113,12 @@ const RecentAudioEpisodes = ({ masterBrand, episodes, brandId, pageType }) => {
         ulProps={ulProps}
         liProps={liProps}
       >
-        {episodes.map(episode => (
+        {episodes.map((episode, index) => (
           <EpisodeList.Episode key={episode.id} ref={viewTrackerRef}>
             <EpisodeList.Link
               href={getUrl(episode.id)}
               onClick={clickTrackerHandler}
+              index={index}
             >
               {/* these must be concatenated for screen reader UX */}
               <VisuallyHiddenText>{`${audioLabel}, `}</VisuallyHiddenText>

@@ -1,11 +1,11 @@
 import path from 'ramda/src/path';
-import { buildATIPageTrackPath } from '../../atiUrl';
 import {
   getPublishedDatetime,
   getContentId,
   LIBRARY_VERSION,
   getThingAttributes,
 } from '#lib/analyticsUtils';
+import { buildATIPageTrackPath } from '../../atiUrl';
 
 export const buildCpsAssetPageATIParams = (
   pageData,

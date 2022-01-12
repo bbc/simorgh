@@ -95,6 +95,8 @@ const directives = {
       ...bbcDomains,
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
+      'https://cdn.optimizely.com/',
+      'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
@@ -115,6 +117,8 @@ const directives = {
       'https://modules.wearehearken.eu',
       'https://*.akamaihd.net',
       'https://logws1363.ati-host.net', // ATI
+      'https://cdn.optimizely.com/',
+      'https://logx.optimizely.com/',
       'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net', // Web-Vitals monitoring
       ...advertisingDirectives.connectSrc,
       "'self'",
@@ -392,8 +396,7 @@ const helmetCsp = ({ isAmp, isLive }) => ({
     'media-src': generateMediaSrc({ isAmp, isLive }),
     'worker-src': generateWorkerSrc({ isAmp }),
     'prefetch-src': generatePrefetchSrc({ isAmp, isLive }),
-    // The "default" report-to group header is injected by GTM
-    'report-to': 'default',
+    'report-to': 'worldsvc',
     'upgrade-insecure-requests': [],
   },
 });
@@ -401,7 +404,6 @@ const helmetCsp = ({ isAmp, isLive }) => ({
 const injectCspHeader = (req, res, next) => {
   const { isAmp } = getRouteProps(req.url);
 
-  // We will switch our reporting to this soon, but GTM does not currently handle this header correctly
   res.setHeader(
     'report-to',
     JSON.stringify({

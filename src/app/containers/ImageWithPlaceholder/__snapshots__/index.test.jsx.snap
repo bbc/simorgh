@@ -87,24 +87,25 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
       height="360"
       layout="responsive"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
       width="640"
-    />
+    >
+      <amp-img
+        alt="Pauline Clayton"
+        attribution="Getty Images"
+        fallback=""
+        height="360"
+        layout="responsive"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+        width="640"
+      />
+    </amp-img>
   </div>
 </div>
 `;
 
 exports[`ImageWithPlaceholder should render an image 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 .emotion-0 {
   position: relative;
   height: 0;
@@ -133,14 +134,15 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-2 {
   display: block;
   width: 100%;
   visibility: visible;
-  -webkit-animation: animation-0 0.2s linear;
-  animation: animation-0 0.2s linear;
-  -webkit-transition: visibility 0.2s linear;
-  transition: visibility 0.2s linear;
+}
+
+.emotion-5 {
+  display: block;
+  width: 100%;
   height: auto;
 }
 
@@ -150,14 +152,25 @@ exports[`ImageWithPlaceholder should render an image 1`] = `
     data-e2e="image-placeholder"
     style="padding-bottom: 56.25%;"
   >
-    <img
-      alt="Pauline Clayton"
-      class="emotion-2 emotion-3 emotion-4"
-      height="360"
-      src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
-      srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
-      width="640"
-    />
+    <picture
+      class="emotion-2 emotion-3"
+    >
+      <source
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg.webp 640w"
+        type="image/webp"
+      />
+      <source
+        srcset="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg 640w"
+        type="image/jpeg"
+      />
+      <img
+        alt="Pauline Clayton"
+        class="emotion-4 emotion-5 emotion-6"
+        height="360"
+        src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
+        width="640"
+      />
+    </picture>
   </div>
 </div>
 `;

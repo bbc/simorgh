@@ -3,10 +3,6 @@ import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { BrowserRouter } from 'react-router-dom';
 import WithTimeMachine from '#testHelpers/withTimeMachine';
 
-import StoryPage from './StoryPage';
-import mundoPageData from './fixtureData/mundo';
-import persianPageData from './fixtureData/persian';
-import portuguesePageData from './fixtureData/portuguese';
 import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -14,8 +10,14 @@ import { ToggleContext } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import portuguesePageData from './fixtureData/portuguese';
+import persianPageData from './fixtureData/persian';
+import mundoPageData from './fixtureData/mundo';
+import StoryPage from './StoryPage';
 
-const Page = withPageWrapper(StoryPage);
+const PageWithOptimizely = withOptimizelyProvider(StoryPage, true);
+const Page = withPageWrapper(PageWithOptimizely);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {
   const showTopStories = boolean('Show Top Stories', true);
@@ -45,6 +47,10 @@ const toggleState = {
   },
   mostRead: {
     enabled: true,
+  },
+  frostedPromo: {
+    enabled: true,
+    value: 1,
   },
 };
 

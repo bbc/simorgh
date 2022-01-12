@@ -17,8 +17,6 @@ import {
   AmpMediaPlayer,
   MediaMessage,
 } from '#components/MediaPlayer';
-import Caption from '../Caption';
-import Metadata from './Metadata';
 import getEmbedUrl from '#lib/utilities/getUrlHelpers/getEmbedUrl';
 import { getPlaceholderSrcSet } from '#lib/utilities/srcSet';
 import filterForBlockType from '#lib/utilities/blockHandlers';
@@ -30,6 +28,8 @@ import {
   mediaPlayerPropTypes,
   emptyBlockArrayDefaultProps,
 } from '#models/propTypes';
+import Metadata from './Metadata';
+import Caption from '../Caption';
 import logMissingMediaId from './helpers/logMissingMediaId';
 
 const DEFAULT_WIDTH = 512;

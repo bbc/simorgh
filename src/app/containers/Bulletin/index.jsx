@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import pathOr from 'ramda/src/pathOr';
 import { shape, bool, oneOfType } from 'prop-types';
 import Bulletin from '@bbc/psammead-bulletin';
-import ImageWithPlaceholder from '../ImageWithPlaceholder';
-import { createSrcset } from '#lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
+import buildIChefURL from '#lib/utilities/ichefURL';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
 import getLocator from '#lib/utilities/imageSrcHelpers/locator';
 import { tvBulletinItem, radioBulletinItem } from '#models/propTypes/bulletin';
 import { ServiceContext } from '#contexts/ServiceContext';
+import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const BulletinImage = ({ imageValues, lazyLoad }) => {
   const { path, height, width, altText, copyrightHolder } = imageValues;
@@ -16,10 +17,20 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
   const originCode = getOriginCode(path);
   const locator = getLocator(path);
   const imageResolutions = [70, 95, 144, 183, 240, 320, 660];
-  const srcset = createSrcset(originCode, locator, width, imageResolutions);
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: width,
+      imageResolutions,
+    });
   const sizes = '(max-width: 1008px) 50vw, 496px';
   const DEFAULT_IMAGE_RES = 660;
-  const src = `https://ichef.bbci.co.uk/news/${DEFAULT_IMAGE_RES}${path}`;
+  const src = buildIChefURL({
+    originCode,
+    locator,
+    resolution: DEFAULT_IMAGE_RES,
+  });
 
   return (
     <ImageWithPlaceholder
@@ -30,7 +41,10 @@ const BulletinImage = ({ imageValues, lazyLoad }) => {
       {...imageValues}
       lazyLoad={lazyLoad}
       copyright={copyrightHolder}
-      srcset={srcset}
+      srcset={primarySrcset}
+      fallbackSrcset={fallbackSrcset}
+      primaryMimeType={primaryMimeType}
+      fallbackMimeType={fallbackMimeType}
       sizes={sizes}
     />
   );
@@ -86,7 +100,6 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
   // This offscreen text should come from a fully translated string.
   // https://github.com/bbc/simorgh/issues/5626
   const offScreenText = isLive ? `${ctaText} Live` : ctaText;
-
   return (
     <Bulletin
       script={script}
@@ -102,6 +115,7 @@ const BulletinContainer = ({ item, lazyLoadImage }) => {
       liveText={liveText}
       offScreenText={offScreenText}
       lang={ctaTextIsEnglish ? 'en-GB' : null}
+      ariaId={headline}
     />
   );
 };

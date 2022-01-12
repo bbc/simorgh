@@ -8,6 +8,7 @@ import {
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import { ServiceContext } from '#contexts/ServiceContext';
+import { getMimeType } from '#lib/utilities/srcSet';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 
 const paddingDir = ({ dir }) => `padding-${dir === 'rtl' ? 'left' : 'right'}`;
@@ -48,6 +49,7 @@ const OnDemandImage = ({ imageUrl, alt: altFromProps, dir }) => {
         src={src}
         alt={alt}
         srcset={srcset}
+        primaryMimeType={getMimeType(srcset)}
         sizes={sizes}
         ratio={100}
         width={mediumImageSize}
