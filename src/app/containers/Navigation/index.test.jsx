@@ -4,8 +4,8 @@ import { render } from '@testing-library/react';
 import { service as newsConfig } from '#lib/config/services/news';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import Navigation from './index';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import Navigation from './index';
 
 describe('Navigation Container', () => {
   shouldMatchSnapshot(

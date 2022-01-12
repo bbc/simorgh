@@ -3,11 +3,11 @@ import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import PodcastExternalLinks from '.';
 
 import * as viewTracking from '#hooks/useViewTracker';
 import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#app/contexts/ToggleContext';
+import PodcastExternalLinks from '.';
 
 /* eslint-disable react/prop-types */
 const Component = ({ links, service = 'russian', variant = null }) => (
@@ -83,9 +83,9 @@ describe('PodcastExternalLinks', () => {
     expect(aside.getAttribute('aria-labelledBy')).toEqual('third-party-links');
   });
 
-  it('should render hidden text in the links', () => {
+  it('should render hidden text in the links with external text', () => {
     const { getAllByText } = render(<Component links={links} />);
-    const visuallyHiddenText = getAllByText(', A brand podcast');
+    const visuallyHiddenText = getAllByText(', A brand podcast, внешняя');
     expect(visuallyHiddenText.length).toEqual(3);
   });
 

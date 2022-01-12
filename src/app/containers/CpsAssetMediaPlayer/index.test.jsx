@@ -7,9 +7,9 @@ import {
 } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import CpsAssetMediaPlayerContainer from '.';
 import videoBlock from './fixtures';
-import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 
 const GenerateMediaPlayer = ({
   /* eslint-disable react/prop-types */

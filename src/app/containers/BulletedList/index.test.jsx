@@ -10,12 +10,15 @@ import * as clickTracking from '#hooks/useClickTrackerHandler';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 // eslint-disable-next-line react/prop-types
-const BulletsWithContext = ({ blocks, ...rest }) => (
+const BulletsWithContext = ({ blocks, blockGroupIndex }) => (
   <ToggleContextProvider>
     <ServiceContext.Provider
       value={{ script: arabic, service: 'arabic', dir: 'rtl' }}
     >
-      <BulletedListContainer blocks={blocks} position={rest.position} />
+      <BulletedListContainer
+        blocks={blocks}
+        blockGroupIndex={blockGroupIndex}
+      />
     </ServiceContext.Provider>
   </ToggleContextProvider>
 );
@@ -23,32 +26,36 @@ const BulletsWithContext = ({ blocks, ...rest }) => (
 describe('BulletedListContainer', () => {
   shouldMatchSnapshot(
     'should render ltr correctly',
-    <BulletsWithContext blocks={orderedList.model.blocks} position={[1, 1]} />,
+    <BulletsWithContext
+      blocks={orderedList.model.blocks}
+      blockGroupIndex={1}
+    />,
   );
 
   shouldMatchSnapshot(
     'should render rtl correctly',
-    <BulletsWithContext blocks={orderedList.model.blocks} position={[2, 1]} />,
+    <BulletsWithContext
+      blocks={orderedList.model.blocks}
+      blockGroupIndex={2}
+    />,
   );
 
   describe('getEventTrackingData', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
-    const positionD = [3, 1];
-    const positionE = [4, 1];
 
     it('should call the view tracking hook with the correct params with one list', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
         <BulletsWithContext
           blocks={listItemD.model.blocks}
-          position={positionD}
+          blockGroupIndex={1}
         />,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bullet301',
+        componentName: 'bullet1',
         format: 'CHD=bullet',
       });
     });
@@ -58,23 +65,23 @@ describe('BulletedListContainer', () => {
       render(
         <BulletsWithContext
           blocks={listItemD.model.blocks}
-          position={positionD}
+          blockGroupIndex={1}
         />,
       );
       render(
         <BulletsWithContext
           blocks={listItemE.model.blocks}
-          position={positionE}
+          blockGroupIndex={2}
         />,
       );
 
       expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
       expect(viewTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bullet301',
+        componentName: 'bullet1',
         format: 'CHD=bullet',
       });
       expect(viewTrackerSpy).toHaveBeenLastCalledWith({
-        componentName: 'bullet401',
+        componentName: 'bullet2',
         format: 'CHD=bullet',
       });
     });
@@ -84,12 +91,12 @@ describe('BulletedListContainer', () => {
       render(
         <BulletsWithContext
           blocks={listItemD.model.blocks}
-          position={positionD}
+          blockGroupIndex={1}
         />,
       );
 
       expect(clickTrackerSpy).toHaveBeenCalledWith({
-        componentName: 'bullet301',
+        componentName: 'bullet1',
         format: 'CHD=bullet',
       });
     });

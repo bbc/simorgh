@@ -140,6 +140,8 @@ describe('cspHeader', () => {
         ...bbcDomains,
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
+        'https://cdn.optimizely.com/',
+        'https://logx.optimizely.com/',
         'https://europe-west1-bbc-otg-traf-mgr-bq-prod-4591.cloudfunctions.net',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
@@ -354,6 +356,8 @@ describe('cspHeader', () => {
         'https://modules.wearehearken.eu',
         'https://*.akamaihd.net',
         'https://logws1363.ati-host.net',
+        'https://cdn.optimizely.com/',
+        'https://logx.optimizely.com/',
         'https://europe-west1-bbc-otg-traf-mgr-bq-dev-4105.cloudfunctions.net',
         'https://csi.gstatic.com',
         'https://pagead2.googlesyndication.com',
@@ -572,7 +576,7 @@ describe('cspHeader', () => {
             `media-src ${mediaSrcExpectation.join(' ')};` +
             `worker-src ${workerSrcExpectation.join(' ')};` +
             `prefetch-src ${prefetchSrcExpectation.join(' ')};` +
-            `report-to default;` +
+            `report-to worldsvc;` +
             `upgrade-insecure-requests`;
 
           expect(headers['Content-Security-Policy']).toEqual(

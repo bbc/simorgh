@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import { string, shape, arrayOf, bool, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
-import getAboutTagsContent from './getAboutTagsContent';
 import serialiseForScript from '#lib/utilities/serialiseForScript';
 import getBrandedImage from '#lib/utilities/getBrandedImage';
+import getAboutTagsContent from './getAboutTagsContent';
 
 const LinkedData = ({
   showAuthor,

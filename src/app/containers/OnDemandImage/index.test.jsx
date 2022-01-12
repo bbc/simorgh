@@ -3,8 +3,8 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { render } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
-import OnDemandImage from '.';
 import { MEDIA_PAGE } from '#app/routes/utils/pageTypes';
+import OnDemandImage from '.';
 
 // eslint-disable-next-line react/prop-types
 const component = ({ url, isAmp, service, alt }) => (
@@ -39,9 +39,6 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
       'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg',
     );
     expect(img.alt).toEqual('BBC News پښتو');
-    expect(img.srcset).toEqual(
-      'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg 128w,https://ichef.bbci.co.uk/images/ic/240x240/p063j1dv.jpg 240w,https://ichef.bbci.co.uk/images/ic/480x480/p063j1dv.jpg 480w',
-    );
     expect(img.sizes).toEqual('(min-width: 1008px) 228px, 30vw');
   });
 

@@ -5,17 +5,24 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
-import ArticlePageComponent from './ArticlePage';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
+import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import ArticlePageComponent from './ArticlePage';
 
-const Page = withPageWrapper(ArticlePageComponent);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, true);
+const Page = withPageWrapper(PageWithOptimizely);
 
 const ComponentWithContext = () => (
-  <ToggleContextProvider>
-    {/* Service set to pidgin to enable most read. Article data is in english */}
+  <ToggleContextProvider
+    toggles={{
+      eventTracking: { enabled: true },
+      frostedPromo: { enabled: true, value: 1 },
+    }}
+  >
+    {/* Service set to news to enable most read. Article data is in english */}
     <ServiceContextProvider service="news">
       <RequestContextProvider
         isAmp={false}
@@ -39,7 +46,7 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   decorators: [withKnobs],
+  parameters: { layout: 'fullscreen' },
 };
 
 export const ArticlePage = ComponentWithContext;
-ArticlePage.storyName = 'Pages/Article Page';

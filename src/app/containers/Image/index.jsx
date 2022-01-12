@@ -1,15 +1,15 @@
 import React from 'react';
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import { imageModelPropTypes } from '#models/propTypes/image';
-import ArticleFigure from '../ArticleFigure';
 import {
   GridItemLargeNoMargin,
   GridItemMedium,
   GridItemSmall,
 } from '#app/components/Grid';
-import { createSrcset } from '#lib/utilities/srcSet';
+import { createSrcsets } from '#lib/utilities/srcSet';
 import buildIChefURL from '#lib/utilities/ichefURL';
 import urlWithPageAnchor from '#lib/utilities/pageAnchor';
+import ArticleFigure from '../ArticleFigure';
 
 const DEFAULT_IMAGE_RES = 640;
 const LAZYLOAD_FROM_BLOCK = 4;
@@ -53,7 +53,12 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
     locator,
     resolution: DEFAULT_IMAGE_RES,
   });
-  const srcSet = createSrcset(originCode, locator, width);
+  const { primarySrcset, primaryMimeType, fallbackSrcset, fallbackMimeType } =
+    createSrcsets({
+      originCode,
+      locator,
+      originalImageWidth: width,
+    });
   const lazyLoad = shouldLazyLoad(position);
 
   let GridWrapper = GridItemLargeNoMargin;
@@ -75,7 +80,10 @@ const ImageContainer = ({ blocks, position, sizes, shouldPreload }) => {
         ratio={ratio}
         src={rawImageSrc}
         width={width}
-        srcset={srcSet}
+        srcset={primarySrcset}
+        fallbackSrcset={fallbackSrcset}
+        primaryMimeType={primaryMimeType}
+        fallbackMimeType={fallbackMimeType}
         sizes={sizes}
         showCopyright
         lazyLoad={lazyLoad}

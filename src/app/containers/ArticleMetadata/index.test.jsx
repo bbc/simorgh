@@ -4,12 +4,12 @@ import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import ArticleMetadata from './index';
 import {
   articleDataNews,
   articleDataPersian,
 } from '#pages/ArticlePage/fixtureData';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import ArticleMetadata from './index';
 
 const getISOStringDate = date => new Date(date).toISOString();
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import ConsentBanner from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 
 // eslint-disable-next-line react/prop-types
 const Component = ({ platform }) => (
