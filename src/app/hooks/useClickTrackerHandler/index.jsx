@@ -78,6 +78,9 @@ const useClickTrackerHandler = (props = {}) => {
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
+              if (optimizely) {
+                optimizely.close();
+              }
               window.location.assign(nextPageUrl);
             }
           }
