@@ -4,34 +4,13 @@ import {
   OptimizelyProvider,
   setLogger,
 } from '@optimizely/react-sdk';
-import { v4 as uuid } from 'uuid';
-import Cookie from 'js-cookie';
 import { ServiceContext } from '#contexts/ServiceContext';
 import isLive from '#lib/utilities/isLive';
-import onClient from '#lib/utilities/onClient';
-import isOperaProxy from '#lib/utilities/isOperaProxy';
+import getOptimizelyUserId from './getOptimizelyUserId';
 
 if (isLive()) {
   setLogger(null);
 }
-
-const getOpimizelyUserId = () => {
-  // Users accessing the site on opera "extreme data saving mode" have the pages rendered by an intermediate service
-  // Attempting to track these users is just tracking that proxy, causing all opera mini visitors to have the same id
-  if (!onClient() || isOperaProxy()) return null;
-
-  const cookieName = 'ckns_mvt';
-  const cookieValue = Cookie.get(cookieName);
-  const expires = 365; // expires in 12 Months
-
-  if (!cookieValue) {
-    const cookieUuid = uuid();
-    Cookie.set(cookieName, cookieUuid, { expires, path: '/' });
-    return cookieUuid;
-  }
-
-  return cookieValue;
-};
 
 const optimizely = createInstance({
   sdkKey: process.env.SIMORGH_OPTIMIZELY_SDK_KEY,
@@ -49,7 +28,7 @@ const withOptimizelyProvider = Component => {
       if (disableOptimizely) {
         return null;
       }
-      return getOpimizelyUserId();
+      return getOptimizelyUserId();
     };
 
     return (
