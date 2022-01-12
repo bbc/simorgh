@@ -12,7 +12,6 @@ const hasLink = pipe(
   path(['model', 'blocks', 0, 'model', 'blocks', 0, 'type']),
   equals('urlLink'),
 );
-
 const isListWithLink = block => {
   if (hasList(block)) {
     const listItems = getListItems(block);
