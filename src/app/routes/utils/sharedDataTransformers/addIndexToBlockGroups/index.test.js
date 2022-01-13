@@ -7,24 +7,24 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
             {
-              type: 'foo',
+              type: 'orderedList',
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
           ],
         },
       },
     };
-    const predicate = ({ type }) => type === 'foo';
+    const predicate = ({ type }) => type === 'orderedList';
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBlockGroup',
+      blockGroupType: 'specialListBlock',
     })(blockGroup);
 
     expect(actual).toEqual({
@@ -32,20 +32,20 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
               blockGroupIndex: 1,
-              blockGroupType: 'fooBlockGroup',
+              blockGroupType: 'specialListBlock',
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
             {
-              type: 'foo',
+              type: 'orderedList',
               blockGroupIndex: 2,
-              blockGroupType: 'fooBlockGroup',
+              blockGroupType: 'specialListBlock',
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
           ],
         },
@@ -59,38 +59,38 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
               model: {
                 blocks: [
                   {
-                    type: 'baz',
+                    type: 'listItem',
                   },
                 ],
               },
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
             {
-              type: 'foo',
+              type: 'orderedList',
               model: {
                 blocks: [
                   {
-                    type: 'baz',
+                    type: 'listItem',
                   },
                 ],
               },
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
           ],
         },
       },
     };
-    const predicate = ({ type }) => type === 'foo';
+    const predicate = ({ type }) => type === 'orderedList';
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBazBlockGroup',
+      blockGroupType: 'specialListItem',
       pathToBlockGroup: ['model', 'blocks', 0],
     })(blockGroup);
 
@@ -99,34 +99,34 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
               model: {
                 blocks: [
                   {
-                    type: 'baz',
+                    type: 'listItem',
                     blockGroupIndex: 1,
-                    blockGroupType: 'fooBazBlockGroup',
+                    blockGroupType: 'specialListItem',
                   },
                 ],
               },
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
             {
-              type: 'foo',
+              type: 'orderedList',
               model: {
                 blocks: [
                   {
-                    type: 'baz',
+                    type: 'listItem',
                     blockGroupIndex: 2,
-                    blockGroupType: 'fooBazBlockGroup',
+                    blockGroupType: 'specialListItem',
                   },
                 ],
               },
             },
             {
-              type: 'bar',
+              type: 'paragraph',
             },
           ],
         },
@@ -140,7 +140,7 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
           ],
         },
@@ -148,7 +148,7 @@ describe('addIndexToBlockGroups', () => {
     };
     const predicate = () => false;
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBlockGroup',
+      blockGroupType: 'specialListBlock',
     })(blockGroup);
 
     expect(actual).toEqual(blockGroup);
@@ -159,14 +159,14 @@ describe('addIndexToBlockGroups', () => {
       model: {
         blocks: [
           {
-            type: 'foo',
+            type: 'orderedList',
           },
         ],
       },
     };
     const predicate = () => true;
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBlockGroup',
+      blockGroupType: 'specialListBlock',
     })(blockGroup);
 
     expect(actual).toEqual(blockGroup);
@@ -177,14 +177,14 @@ describe('addIndexToBlockGroups', () => {
       model: {
         blocks: [
           {
-            type: 'foo',
+            type: 'orderedList',
           },
         ],
       },
     };
     const predicate = () => false;
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBlockGroup',
+      blockGroupType: 'specialListBlock',
     })(blockGroup);
 
     expect(actual).toEqual(blockGroup);
@@ -196,7 +196,7 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
           ],
         },
@@ -204,7 +204,7 @@ describe('addIndexToBlockGroups', () => {
     };
     const predicate = () => true;
     const actual = addIndexToBlockGroups(predicate, {
-      blockGroupType: 'fooBlockGroup',
+      blockGroupType: 'specialListBlock',
       pathToBlockGroup: ['model', 'blocks', 0],
     })(blockGroup);
 
@@ -217,7 +217,7 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
           ],
         },
@@ -226,7 +226,7 @@ describe('addIndexToBlockGroups', () => {
 
     expect(() => {
       addIndexToBlockGroups(undefined, {
-        blockGroupType: 'fooBlockGroup',
+        blockGroupType: 'specialListBlock',
       })(blockGroup);
     }).toThrow();
   });
@@ -237,7 +237,7 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
           ],
         },
@@ -255,7 +255,7 @@ describe('addIndexToBlockGroups', () => {
         model: {
           blocks: [
             {
-              type: 'foo',
+              type: 'orderedList',
             },
           ],
         },
