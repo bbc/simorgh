@@ -22,7 +22,7 @@ const ComponentWithContext = () => (
       frostedPromo: { enabled: true, value: 1 },
     }}
   >
-    {/* Service set to pidgin to enable most read. Article data is in english */}
+    {/* Service set to news to enable most read. Article data is in english */}
     <ServiceContextProvider service="news">
       <RequestContextProvider
         isAmp={false}
@@ -46,6 +46,7 @@ export default {
   Component: ComponentWithContext,
   title: 'Pages/Article Page',
   decorators: [withKnobs],
+  parameters: { layout: 'fullscreen' },
 };
 
 export const ArticlePage = ComponentWithContext;
