@@ -110,6 +110,16 @@ export const testsThatFollowSmokeTestConfig = ({
             appConfig[config[service].name][variant].lang,
           );
         });
+        it.only('Error Page 404', () => {
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            Cypress.browser.isHeadless
+          ) {
+            cy.matchImageSnapshot();
+          } else {
+            cy.log('Snapshot skipped in headed mode');
+          }
+        });
       });
       if (envConfig.standaloneErrorPages) {
         describe(`${service} error page routes`, () => {

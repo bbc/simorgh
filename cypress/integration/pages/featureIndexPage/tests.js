@@ -4,7 +4,17 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
 export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
-  describe(`No testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {});
+  describe(`Running tests for ${service} ${pageType}`, () => {
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it.only('Feature Index Page', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.matchImageSnapshot();
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
+    });
+  });
 };
 
 // For testing low priority things e.g. cosmetic differences, and a safe place to put slow tests.
