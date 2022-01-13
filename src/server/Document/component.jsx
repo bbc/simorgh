@@ -49,7 +49,7 @@ const Document = ({
     <html lang="en-GB" {...noJsHtmlAttrs} {...htmlAttrs}>
       <head>
         {meta}
-        {links}
+        {!isAmp && links}
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <ResourceHints assetOrigins={assetOrigins} />
         {title}
