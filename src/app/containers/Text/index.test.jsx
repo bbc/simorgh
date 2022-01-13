@@ -5,9 +5,9 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 const defaultToggles = {
   eventTracking: {

@@ -6,11 +6,10 @@ import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMedium } from '#app/components/Grid';
-import Blocks from '../Blocks';
-import listItem, { ListItemPropTypes } from '../BulletedListItem';
-
 import useViewTracker from '#hooks/useViewTracker';
 import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
+import Blocks from '../Blocks';
+import listItem, { ListItemPropTypes } from '../BulletedListItem';
 
 const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};

@@ -2,9 +2,9 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import Gist from '.';
 import fixtureData, { fixtureDataOneItem } from './fixtures';
-import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 const defaultToggles = {
   eventTracking: {
