@@ -118,5 +118,14 @@ export default ({ service, pageType, variant, isAmp }) => {
         });
       });
     });
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it.only('On Demand TV', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.matchImageSnapshot();
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
+    });
   });
 };

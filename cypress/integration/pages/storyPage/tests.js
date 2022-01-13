@@ -110,6 +110,15 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
         cy.log('Service is run in local.');
       }
     });
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it.only('Story Page', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.matchImageSnapshot();
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
+    });
   });
 };
 

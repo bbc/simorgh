@@ -42,6 +42,15 @@ export default ({ service, pageType, variant, isAmp }) => {
         });
       });
     });
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it.only('On Demand Audio', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.matchImageSnapshot();
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
+    });
     describe(`Tests for ${service} ${pageType} ${variant} with toggle use`, () => {
       before(() => {
         cy.getToggles(service);
