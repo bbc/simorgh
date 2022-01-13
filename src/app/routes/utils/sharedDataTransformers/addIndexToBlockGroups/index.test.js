@@ -22,8 +22,8 @@ describe('addIndexToBlockGroups', () => {
         },
       },
     };
-    const predicate = ({ type }) => type === 'orderedList';
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = ({ type }) => type === 'orderedList';
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListBlock',
     })(blockGroup);
 
@@ -88,8 +88,8 @@ describe('addIndexToBlockGroups', () => {
         },
       },
     };
-    const predicate = ({ type }) => type === 'orderedList';
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = ({ type }) => type === 'orderedList';
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListItem',
       pathToBlockGroup: ['model', 'blocks', 0],
     })(blockGroup);
@@ -146,8 +146,8 @@ describe('addIndexToBlockGroups', () => {
         },
       },
     };
-    const predicate = () => false;
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = () => false;
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListBlock',
     })(blockGroup);
 
@@ -164,8 +164,8 @@ describe('addIndexToBlockGroups', () => {
         ],
       },
     };
-    const predicate = () => true;
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = () => true;
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListBlock',
     })(blockGroup);
 
@@ -182,8 +182,8 @@ describe('addIndexToBlockGroups', () => {
         ],
       },
     };
-    const predicate = () => false;
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = () => false;
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListBlock',
     })(blockGroup);
 
@@ -202,8 +202,8 @@ describe('addIndexToBlockGroups', () => {
         },
       },
     };
-    const predicate = () => true;
-    const actual = addIndexToBlockGroups(predicate, {
+    const isOrderedList = () => true;
+    const actual = addIndexToBlockGroups(isOrderedList, {
       blockGroupType: 'specialListBlock',
       pathToBlockGroup: ['model', 'blocks', 0],
     })(blockGroup);
