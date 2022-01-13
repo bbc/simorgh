@@ -4,6 +4,7 @@ import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import last from 'ramda/src/last';
 import styled from '@emotion/styled';
+import isLive from '#lib/utilities/isLive';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -77,7 +78,7 @@ const componentsToRender = {
   timestamp: props => <Timestamp {...props} popOut={false} />,
   social: SocialEmbedContainer,
   group: gist,
-  links: props => <ScrollablePromo {...props} />,
+  links: isLive() ? null : props => <ScrollablePromo {...props} />,
 };
 
 const Wrapper = styled.div`

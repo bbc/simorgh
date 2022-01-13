@@ -250,7 +250,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
             class="emotion-8 emotion-9"
             href="https://www.bbc.com/brasil"
           >
-            https://www.bbc.com/brasil
+            Brasil homepage
           </a>
         </div>
       </li>
