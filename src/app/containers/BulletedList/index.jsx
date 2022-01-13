@@ -26,9 +26,6 @@ const BulletedListContainer = ({
   blockGroupIndex,
   ...rest
 }) => {
-  console.log('xxx blockGroupType', blockGroupType);
-  console.log('xxx blockGroupIndex', blockGroupIndex);
-
   const eventTrackingData = {
     componentName: `bullet${blockGroupIndex}`,
     format: 'CHD=bullet',
