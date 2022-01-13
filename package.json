@@ -24,7 +24,8 @@
     "react-is": "17.0.2",
     "trim": "1.0.1",
     "postcss": "8.2.13",
-    "node-forge": "1.2.0"
+    "node-forge": "1.2.0",
+    "follow-redirects": "1.14.7"
   },
   "scripts": {
     "amp:validate": "wait-on -t 20000 http://localhost:7080/status && node ./scripts/ampHtmlValidator/cli.js",
@@ -268,11 +269,6 @@
     "requires": [
       "cloud-init"
     ]
-  },
-  "buildMetadata": {
-    "commitHash": "383522b",
-    "deployEnvironment": "green",
-    "version": "1.0.0"
   },
   "packageManager": "yarn@3.1.1"
 }
