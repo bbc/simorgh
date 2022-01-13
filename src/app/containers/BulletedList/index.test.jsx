@@ -45,7 +45,7 @@ describe('BulletedListContainer', () => {
       jest.clearAllMocks();
     });
 
-    it('should call the view tracking hook with the correct params with one list', () => {
+    it('should call the view tracking hook with the correct params with one list with at least one link', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
         <BulletsWithContext
@@ -60,7 +60,7 @@ describe('BulletedListContainer', () => {
       });
     });
 
-    it('should call the view tracking hook with the correct params with multiple lists', () => {
+    it('should call the view tracking hook with the correct params with multiple lists with at least one link', () => {
       const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
       render(
         <BulletsWithContext
