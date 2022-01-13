@@ -5,13 +5,20 @@ import set from 'ramda/src/set';
 import view from 'ramda/src/view';
 
 /**
- * Iterates over page data with the content.model.blocks structure and calls the predicate function on each top level block item. The predicate receives the current iterated block as an argument. If the predicate function returns true then blockGroupType and blockGroupIndex properties are added to the block group and returned as in a new page data object. If the predicate function is false then the block group will remain unchanged.
+ * Returns a new deeply cloned enriched page data object. `addIndexToBlockGroups` iterates over page data's top level blocks (`pageData.content.model.blocks`) and
+ * calls the predicate function on each block item. The predicate receives the current iterated block as an argument that can be used to test the block group
+ * structure. If the predicate function returns true then `blockGroupType` and `blockGroupIndex` props are merged into to the block group. If the predicate function
+ * is false then the block group will remain unchanged. After all blocks have been iterated on the enriched page data object is returned.
  *
- * @param {callback} predicate A function that returns true or false. When true, the current iterated block will receive the blockGroupType and blockGroupIndex properties. When false, the current iterated block will be unaffacted.
+ * This is a useful function for adding indexes to block groups that have a specific structure created in Optimo. For example, adding indexes to orderered lists
+ * that contain list items with external links. With these indexes we can set up event tracking in the component to get insight on how a user interacts with this
+ * sort of content.
+ *
+ * @param {callback} predicate A predicate function that receives the current top-level block group as an argument and must returns true or false.
  * @param {Object} options options.
- * @param {string} options.blockGroupType The name of blockGroupType type. This is added as a property to block groups that pass the predicate function. If you pass in 'listWithParagraph' The result will look like { blockGroupType: 'listWithParagraph' }
- * @param {string[]} options.pathToBlockGroup Use this to add blockGroupType and blockGroupIndex properties to a nested objects of blocks that pass the predicate function. pathToBlockGroup should be a data path represented as an array that is used as a Ramda path e.g. ['model', 'blocks', 0] .
- * @return {Object} the new page data object.
+ * @param {string} options.blockGroupType The name of `blockGroupType` type. This is added as a property to block groups that pass the predicate function. If you pass in `'listWithParagraph'` The result will look like `{ blockGroupType: 'listWithParagraph' }`.
+ * @param {string[]} options.pathToBlockGroup Use this to add `blockGroupType` and `blockGroupIndex` props to nested objects of top-level blocks that pass the predicate function. `pathToBlockGroup` should be a data path represented as an array that is used as a Ramda path e.g. `['model', 'blocks', 0]`.
+ * @return {Object} the enriched page data object.
  */
 
 const addIndexToBlockGroups =
