@@ -17,7 +17,7 @@ import view from 'ramda/src/view';
  * @param {callback} predicate A predicate function that receives the current top-level block group as an argument and must returns true or false.
  * @param {Object} options options.
  * @param {string} options.blockGroupType The name of `blockGroupType` type. This is added as a property to block groups that pass the predicate function. If you pass in `'listWithParagraph'` The result will look like `{ blockGroupType: 'listWithParagraph' }`.
- * @param {string[]} options.pathToBlockGroup Use this to add `blockGroupType` and `blockGroupIndex` props to nested objects of top-level blocks that pass the predicate function. `pathToBlockGroup` should be a data path represented as an array that is used as a Ramda path e.g. `['model', 'blocks', 0]`.
+ * @param {string[]} options.pathToBlockGroup Use this to add the `blockGroupType` and `blockGroupIndex` props to nested objects of top-level blocks that pass the predicate function. `pathToBlockGroup` should be a data path represented as an array that is used as a Ramda path e.g. `['model', 'blocks', 0]`.
  * @return {Object} the enriched page data object.
  */
 
