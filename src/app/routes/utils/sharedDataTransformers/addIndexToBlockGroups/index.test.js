@@ -190,6 +190,27 @@ describe('addIndexToBlockGroups', () => {
     expect(actual).toEqual(blockGroup);
   });
 
+  it('should return the data unchanged if predicate returns true but pathToBlockGroup does not exist', () => {
+    const blockGroup = {
+      content: {
+        model: {
+          blocks: [
+            {
+              type: 'foo',
+            },
+          ],
+        },
+      },
+    };
+    const predicate = () => true;
+    const actual = addIndexToBlockGroups(predicate, {
+      blockGroupType: 'fooBlockGroup',
+      pathToBlockGroup: ['model', 'blocks', 0],
+    })(blockGroup);
+
+    expect(actual).toEqual(blockGroup);
+  });
+
   it('should throw an error if no predicate function provided', () => {
     const blockGroup = {
       content: {
