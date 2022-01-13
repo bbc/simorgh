@@ -192,7 +192,9 @@ server.get(
       } else {
         throw new Error('unknown result');
       }
-    } catch ({ message, status = 500 }) {
+    } catch (error) {
+      console.log('HEllllloooo',error);
+      const { message, status = 500 } = error;
       sendCustomMetric({
         metricName: NON_200_RESPONSE,
         statusCode: status,
@@ -202,7 +204,7 @@ server.get(
 
       logger.error(SERVER_SIDE_REQUEST_FAILED, {
         status,
-        message,
+        message: error,
         url,
         headers,
       });
