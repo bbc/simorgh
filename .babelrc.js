@@ -40,7 +40,7 @@ module.exports = api => {
         targets: {
           ...(useModern
             ? {
-                esmodules: true,
+                browsers: ['safari > 9', 'supports es6-module'],
               }
             : {
                 browsers: [
