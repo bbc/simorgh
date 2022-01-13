@@ -115,6 +115,8 @@ export const testsThatFollowSmokeTestConfig = ({
             Cypress.env('APP_ENV') === 'local' &&
             Cypress.browser.isHeadless
           ) {
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(2000);
             cy.matchImageSnapshot();
           } else {
             cy.log('Snapshot skipped in headed mode');
