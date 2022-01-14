@@ -42,15 +42,15 @@ const addIndexToBlockGroups =
             ? path(pathToBlockGroup, previousMatchingBlock).blockGroupIndex + 1
             : 1;
           const lens = lensPath(pathToBlockGroup);
-          const blockGroupBlock = view(lens, block);
+          const blockGroup = view(lens, block);
 
-          if (blockGroupBlock) {
+          if (blockGroup) {
             return [
               ...accumulator,
               set(
                 lens,
                 {
-                  ...blockGroupBlock,
+                  ...blockGroup,
                   blockGroupType,
                   blockGroupIndex,
                 },
