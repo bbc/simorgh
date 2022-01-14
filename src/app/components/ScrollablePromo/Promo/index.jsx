@@ -21,11 +21,12 @@ const Link = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
   width: 100%;
-  word-break: break-word;
+  word-wrap: break-word;
   text-overflow: ellipsis;
   text-decoration: none;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
