@@ -1,5 +1,6 @@
 import pipe from 'ramda/src/pipe';
 import isEmpty from 'ramda/src/isEmpty';
+import identity from 'ramda/src/identity';
 import isLive from '#lib/utilities/isLive';
 import { SECONDARY_DATA_TIMEOUT } from '#app/lib/utilities/getFetchTimeouts';
 import getSecondaryColumnUrl from '#lib/utilities/getUrlHelpers/getSecondaryColumnUrl';
@@ -23,7 +24,7 @@ const logger = nodeLogger(__filename);
 const transformJson = pipe(
   handleGroupBlocks,
   handleEmptyParagraphBlocks,
-  isLive() ? null : handlePromoData,
+  isLive() ? identity : handlePromoData,
   augmentWithTimestamp,
   addIdsToBlocks,
   applyBlockPositioning,
