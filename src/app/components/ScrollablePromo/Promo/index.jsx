@@ -21,7 +21,7 @@ const Link = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
   width: 100%;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   text-decoration: none;
 
