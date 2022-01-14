@@ -27,3 +27,9 @@ jobs:
         with:
           build: yarn build
           start: yarn start
+      - name: Cypress Image Snapshots
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
