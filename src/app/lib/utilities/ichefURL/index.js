@@ -5,7 +5,6 @@ const buildPlaceholderSrc = (src, resolution) => {
   if (src.includes('urn:')) return src;
   const urlParts = src.replace('https://', '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
-  // Slice use to cut off the old resolution
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
   const newResolution = `${resolution}xn`;
   const newUrl = [
