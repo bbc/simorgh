@@ -96,6 +96,7 @@ exports[`should render a ltr article (pidgin) with most read correctly 1`] = `
 
 .emotion-6 {
   padding-bottom: 2rem;
+  max-width: 100%;
 }
 
 @media (max-width: 14.9375rem) {
@@ -1839,6 +1840,7 @@ exports[`should render a news article correctly 1`] = `
 
 .emotion-6 {
   padding-bottom: 2rem;
+  max-width: 100%;
 }
 
 @media (max-width: 14.9375rem) {
@@ -2357,6 +2359,7 @@ exports[`should render a news article with headline in the middle correctly 1`] 
 
 .emotion-6 {
   padding-bottom: 2rem;
+  max-width: 100%;
 }
 
 @media (max-width: 14.9375rem) {
@@ -2902,6 +2905,7 @@ exports[`should render a news article without headline correctly 1`] = `
 
 .emotion-6 {
   padding-bottom: 2rem;
+  max-width: 100%;
 }
 
 @media (max-width: 14.9375rem) {
@@ -3289,6 +3293,7 @@ exports[`should render a rtl article (persian) with most read correctly 1`] = `
 
 .emotion-6 {
   padding-bottom: 2rem;
+  max-width: 100%;
 }
 
 @media (max-width: 14.9375rem) {

@@ -3,6 +3,7 @@ import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
 import styled from '@emotion/styled';
+import isLive from '#lib/utilities/isLive';
 import { string, node } from 'prop-types';
 import {
   GEL_GROUP_1_SCREEN_WIDTH_MAX,
@@ -58,6 +59,7 @@ import {
 import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import ScrollablePromo from '#components/ScrollablePromo';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -74,6 +76,7 @@ const componentsToRender = {
   timestamp: props => <Timestamp {...props} popOut={false} />,
   social: SocialEmbedContainer,
   group: gist,
+  links: isLive() ? null : props => <ScrollablePromo {...props} />,
 };
 
 const Wrapper = styled.div`
