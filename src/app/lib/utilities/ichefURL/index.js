@@ -8,14 +8,13 @@ const buildPlaceholderSrc = (src, resolution) => {
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
   const newResolution = `${resolution}xn`;
   const newUrl = [
-    'https:/',
     domain,
     mediaType,
     imgService,
     newResolution,
     ...remainingUrlPartsWithoutResolution,
   ];
-  return newUrl.join('/');
+  return `https://${newUrl.join('/')}`;
 };
 
 const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
