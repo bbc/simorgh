@@ -16,6 +16,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
 const Link = styled.a`
   ${({ script }) => script && getPica(script)}
@@ -46,7 +47,11 @@ const PromoBox = styled.div`
   margin-bottom: ${GEL_SPACING_TRPL};
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
+
+  ${({ isOperaMini }) =>
+    isOperaMini
+      ? `width:100%;`
+      : `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -54,7 +59,7 @@ const PromoBox = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     width: 12.6875rem;
-  }
+  }`}
 `;
 
 const Promo = ({ block }) => {
@@ -73,8 +78,11 @@ const Promo = ({ block }) => {
     ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
     textBlock,
   );
+
+  const isOperaMini = useOperaMiniDetection();
+
   return (
-    <PromoBox dir={dir}>
+    <PromoBox dir={dir} isOperaMini={isOperaMini}>
       <Link href={href} service={service} script={script} dir={dir}>
         {title}
       </Link>
