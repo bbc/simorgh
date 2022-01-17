@@ -10,9 +10,26 @@ import { RequestContext } from '#contexts/RequestContext';
 
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
-const StyledImage = styled(Image)`
-  height: auto;
-`;
+const StyledImage = () => (
+  <picture className="bbc-1sbld47-StyledPicture e1enwo3v1">
+    <source
+      srcSet="https://ichef.bbci.co.uk/news/70/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg.webp 660w"
+      type="image/webp"
+    />
+    <source
+      srcSet="https://ichef.bbci.co.uk/news/70/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 70w, https://ichef.bbci.co.uk/news/95/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 95w, https://ichef.bbci.co.uk/news/144/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 144w, https://ichef.bbci.co.uk/news/183/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 183w, https://ichef.bbci.co.uk/news/240/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 240w, https://ichef.bbci.co.uk/news/320/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 320w, https://ichef.bbci.co.uk/news/660/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg 660w"
+      type="image/jpeg"
+    />
+    <img
+      src="https://ichef.bbci.co.uk/news/660/cpsdevpb/C13C/test/_63486494_a77a56ca-be96-4113-84d0-d9be7f8ee6f9.jpg"
+      alt="bbc"
+      sizes="(max-width: 1008px) 33vw, 321px"
+      width="660"
+      height="371"
+      className="eehpdyc0 bbc-15pa1ki-StyledImg-StyledImage e1enwo3v0"
+    />
+  </picture>
+);
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
   lazyLoad ? (
@@ -60,9 +77,7 @@ const ImageWithPlaceholder = ({
     height,
   };
   const imgType = src.split('.').pop();
-  const imageToRender = (
-    <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
-  );
+  const imageToRender = <StyledImage onLoad={null} {...imageProps} />;
   const shouldPreload = !isAmp && preload;
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
 
@@ -74,7 +89,7 @@ const ImageWithPlaceholder = ({
             rel="preload"
             as="image"
             href={src}
-            imagesrcset={srcset}
+            imagesrcSet={srcset}
             imagesizes={sizes}
           />
         </Helmet>
@@ -83,6 +98,7 @@ const ImageWithPlaceholder = ({
         forwardStyle={isLoaded ? { background: 'none' } : null}
         ratio={ratio}
         darkMode={darkMode}
+        onl
       >
         {isAmp ? (
           <AmpImg
@@ -90,8 +106,8 @@ const ImageWithPlaceholder = ({
             attribution={copyright || ''}
             layout="responsive"
             src={src}
-            srcset={srcset}
-            fallbackSrcset={fallbackSrcset}
+            srcSet={srcset}
+            fallbackSrcSet={fallbackSrcset}
             height={height}
             width={width}
             style={!isImgJpg ? { backgroundColor: C_GHOST } : null}
