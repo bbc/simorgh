@@ -134,30 +134,28 @@ describe('getPromoHeadline', () => {
 
 describe('getNationsProducer', () => {
   it('should find value in good data', () => {
-    const goodData = {
+    const hasNationsProducer = {
       metadata: {
         analyticsLabels: {
-          nations_producer: 'desired value',
+          nations_producer: 'england',
         },
       },
     };
 
-    const promoHeadline = getNationsProducer(goodData);
+    const nationsProducer = getNationsProducer(hasNationsProducer);
 
-    expect(promoHeadline).toEqual('desired value');
+    expect(nationsProducer).toEqual('england');
   });
 
   it('should return null in bad data', () => {
-    const badData = {
+    const noNationsProducer = {
       metadata: {
-        analyticsLabels: {
-          unknown: 'missed value',
-        },
+        analyticsLabels: {},
       },
     };
 
-    const promoHeadline = getNationsProducer(badData);
+    const nationsProducer = getNationsProducer(noNationsProducer);
 
-    expect(promoHeadline).toEqual(null);
+    expect(nationsProducer).toEqual(null);
   });
 });
