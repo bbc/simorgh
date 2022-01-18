@@ -6,6 +6,7 @@ import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
@@ -50,7 +51,7 @@ const PromoBox = styled.div`
 
   ${({ isOperaMini }) =>
     isOperaMini
-      ? `width:100%;`
+      ? `width: calc(100% - ${GEL_SPACING});`
       : `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
@@ -82,7 +83,7 @@ const Promo = ({ block }) => {
   const isOperaMini = useOperaMiniDetection();
 
   return (
-    <PromoBox dir={dir} isOperaMini={isOperaMini}>
+    <PromoBox dir={dir} isOperaMini={true}>
       <Link href={href} service={service} script={script} dir={dir}>
         {title}
       </Link>

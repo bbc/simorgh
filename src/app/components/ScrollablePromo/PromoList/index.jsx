@@ -8,6 +8,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 
 const ScrollPromo = styled.ul`
@@ -15,6 +16,7 @@ const ScrollPromo = styled.ul`
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
+  ${({ isOperaMini }) => (isOperaMini ? `flex-direction: column;` : '')}
 
   overflow-x: scroll;
   /* Avoid using smooth scrolling as it causes accessibility issues */
@@ -32,39 +34,49 @@ const ScrollPromo = styled.ul`
 const StyledList = styled.li`
   display: flex;
   flex-shrink: 0;
+  
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
     margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
-    &:first-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
-    }
-    &:last-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'right' : 'left')}: ${GEL_SPACING};
-    }
   }
   @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
     margin-${({ dir }) =>
-      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-      &:first-child {
-        margin-${({ dir }) =>
-          dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
-      }
+      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};   
   }
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-    margin-${({ dir }) =>
-      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
+  ${({ isOperaMini, dir }) =>
+    isOperaMini
+      ? `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+        margin-${dir === 'ltr' ? `left` : `right`}: 0;    
+    }`
+      : `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+    &:first-child {
+      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+    }
+    &:last-child {
+      margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
+    }
+  }
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+    
       &:first-child {
-        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0;
+        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
       }
   }
+  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
+      &:first-child {
+        margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+      }
+  }`}
 `;
 
 const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
+  const isOperaMini = useOperaMiniDetection();
   const listblocks = blocks.slice(1, 4);
 
   return (
-    <ScrollPromo dir={dir} role="list">
+    <ScrollPromo dir={dir} role="list" isOperaMini={true}>
       {listblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
