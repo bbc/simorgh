@@ -27,6 +27,8 @@ import processUnavailableMedia from './processUnavailableMedia';
 import processMostWatched from '../../utils/processMostWatched';
 import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
+import isListWithLink from '../../utils/isListWithLink';
+import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 export const only =
   (pageTypes, transformer) =>
@@ -60,6 +62,10 @@ const processOptimoBlocks = toggles =>
     addIdsToBlocks,
     applyBlockPositioning,
     cpsOnlyOnwardJourneys,
+    addIndexToBlockGroups(isListWithLink, {
+      blockGroupType: 'listWithLink',
+      pathToBlockGroup: ['model', 'blocks', 0],
+    }),
   );
 
 // Here pathname is passed as a prop specifically for CPS includes
