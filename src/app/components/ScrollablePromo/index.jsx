@@ -36,7 +36,7 @@ const ScrollablePromo = ({ blocks }) => {
     <GridItemMediumNoMargin>
       {isSingleItem ? (
         <PromoWrapper dir={dir}>
-          <Promo block={blocks[0]} />
+          <Promo block={blocksWithoutTitle[0]} />
         </PromoWrapper>
       ) : (
         <PromoList blocks={blocksWithoutTitle} />
