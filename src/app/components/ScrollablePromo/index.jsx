@@ -29,7 +29,7 @@ const ScrollablePromo = ({ blocks }) => {
     return null;
   }
   const blocksWithoutTitle =
-    blocks[0].type === 'title' ? blocks.slice(1, 4) : blocks;
+    blocks[0].type === 'title' ? blocks.slice(1, 4) : blocks.slice(0, 2);
   const isSingleItem = blocksWithoutTitle.length === 1;
 
   return (
