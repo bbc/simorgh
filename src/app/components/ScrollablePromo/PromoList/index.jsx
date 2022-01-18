@@ -62,9 +62,11 @@ const StyledList = styled.li`
 const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
 
+  const listBlocks = blocks.slice(0, 3);
+
   return (
     <ScrollPromo dir={dir} role="list">
-      {blocks.map((block, index) => {
+      {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
           <StyledList key={index} dir={dir}>
