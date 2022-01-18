@@ -28,16 +28,18 @@ const ScrollablePromo = ({ blocks }) => {
   if (isEmpty(blocks)) {
     return null;
   }
-  const isSingleItem = blocks.length === 2;
+  const blocksWithoutTitle =
+    blocks[0].type === 'title' ? blocks.slice(1, 4) : blocks;
+  const isSingleItem = blocksWithoutTitle.length === 1;
 
   return (
     <GridItemMediumNoMargin>
       {isSingleItem ? (
         <PromoWrapper dir={dir}>
-          <Promo block={blocks[1]} />
+          <Promo block={blocks[0]} />
         </PromoWrapper>
       ) : (
-        <PromoList blocks={blocks} />
+        <PromoList blocks={blocksWithoutTitle} />
       )}
     </GridItemMediumNoMargin>
   );
