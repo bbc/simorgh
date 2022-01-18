@@ -12,6 +12,7 @@ import {
 } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
@@ -45,14 +46,20 @@ const Link = styled.a`
 `;
 
 const PromoBox = styled.div`
-  margin-bottom: ${GEL_SPACING_TRPL};
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
 
   ${({ isOperaMini }) =>
     isOperaMini
-      ? `width: calc(100% - ${GEL_SPACING});`
-      : `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
+      ? `
+        margin-bottom: ${GEL_SPACING_DBL};
+        width: calc(100% - ${GEL_SPACING});
+        @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+          width: calc(100% - ${GEL_SPACING_DBL});
+        }
+        `
+      : `margin-bottom: ${GEL_SPACING_TRPL};
+      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
