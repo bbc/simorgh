@@ -126,7 +126,15 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
   .emotion-4 {
     margin-right: 0.5rem;
   }
+}
 
+@media (min-width: 25rem) {
+  .emotion-4 {
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 0rem) {
   .emotion-4:first-child {
     margin-right: 0.5rem;
   }
@@ -137,10 +145,6 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 }
 
 @media (min-width: 25rem) {
-  .emotion-4 {
-    margin-right: 1rem;
-  }
-
   .emotion-4:first-child {
     margin-right: 1rem;
   }
@@ -157,9 +161,9 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 }
 
 .emotion-6 {
-  margin-bottom: 1.5rem;
   background-color: #FFFFFF;
   padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 0rem) {
@@ -370,9 +374,9 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 }
 
 .emotion-4 {
-  margin-bottom: 1.5rem;
   background-color: #FFFFFF;
   padding: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 0rem) {
