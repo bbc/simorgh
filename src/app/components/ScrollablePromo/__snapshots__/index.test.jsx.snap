@@ -430,7 +430,7 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
       >
         <a
           class="emotion-6 emotion-7"
-          href="https://www.bbc.com/pidgin"
+          href=""
         >
           Single link
         </a>
