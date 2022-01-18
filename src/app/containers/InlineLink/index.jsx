@@ -13,7 +13,7 @@ const InternalInlineLink = InlineLink.withComponent(Link);
 
 const componentsToRender = { fragment };
 
-const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
+const InlineLinkContainer = ({ locator, isExternal, blocks, onClick }) => {
   const { externalLinkText } = useContext(ServiceContext);
   const regexp = pathToRegexp(articlePath, [], {
     start: false,
@@ -38,6 +38,11 @@ const InlineLinkContainer = ({ locator, isExternal, blocks }) => {
     <InlineLink
       href={locator}
       aria-label={isExternal ? `${linkText}${externalLinkText}` : null}
+      onClick={event => {
+        if (onClick) {
+          onClick(event);
+        }
+      }}
     >
       <Blocks blocks={blocks} componentsToRender={componentsToRender} />
     </InlineLink>

@@ -6,13 +6,22 @@ import fragment from '../Fragment';
 import InlineLink from '../InlineLink';
 import inline from '../InlineContainer';
 
-const componentsToRender = { fragment, urlLink: InlineLink, inline };
+const withClickHandler = (Component, clickHandler) => props =>
+  <Component {...props} onClick={clickHandler} />;
 
-const BulletedListItemContainer = ({ blocks }) => {
+const BulletedListItemContainer = ({ blocks, onClick }) => {
   const contentBlocks = blocks.map(block => block.model.blocks).flat();
+
   return (
     <BulletedListItem>
-      <Blocks blocks={contentBlocks} componentsToRender={componentsToRender} />
+      <Blocks
+        blocks={contentBlocks}
+        componentsToRender={{
+          fragment,
+          inline,
+          urlLink: onClick ? withClickHandler(InlineLink, onClick) : InlineLink,
+        }}
+      />
     </BulletedListItem>
   );
 };

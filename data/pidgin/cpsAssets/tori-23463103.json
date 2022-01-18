@@ -1,0 +1,260 @@
+{
+    "metadata":{
+       "id":"urn:bbc:ares::asset:pidgin/tori-23463103",
+       "locators":{
+          "assetUri":"/pidgin/tori-23463103",
+          "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23463103",
+          "curie":"http://www.bbc.co.uk/asset/ad52fc1a-e429-48a6-8cf7-0c65aa66d707",
+          "assetId":"23463103"
+       },
+       "type":"STY",
+       "createdBy":"pidgin-v6",
+       "language":"pcm",
+       "lastUpdated":1635946336211,
+       "firstPublished":1635328490000,
+       "lastPublished":1635328490000,
+       "timestamp":1635328490000,
+       "options":{
+          "isIgorSeoTagsEnabled":false,
+          "includeComments":false,
+          "allowRightHandSide":true,
+          "isFactCheck":false,
+          "allowDateStamp":true,
+          "suitableForSyndication":true,
+          "hasNewsTracker":false,
+          "allowRelatedStoriesBox":true,
+          "isKeyContent":false,
+          "allowHeadline":true,
+          "allowAdvertising":true,
+          "hasContentWarning":false,
+          "isBreakingNews":false,
+          "allowPrintingSharingLinks":true
+       },
+       "analyticsLabels":{
+          "cps_asset_type":"sty",
+          "counterName":"pidgin.news.story.23463103.page",
+          "cps_asset_id":"23463103",
+          "contentId":"urn:bbc:cps:curie:asset:ad52fc1a-e429-48a6-8cf7-0c65aa66d707"
+       },
+       "tags":{
+          
+       },
+       "version":"v1.3.14",
+       "blockTypes":[
+          "paragraph",
+          "list"
+       ],
+       "includeComments":false,
+       "atiAnalytics":{
+          "producerName":"PIDGIN",
+          "producerId":"70"
+       },
+       "readTime":1,
+       "siteUri":"/pidgin"
+    },
+    "content":{
+       "blocks":[
+          {
+             "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. - Link 1 below",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "numbered":false,
+             "items":[
+                {
+                   "text":"<link><caption>Link</caption><url href=\"https://www.bbc.co.uk\" platform=\"highweb\"/><url href=\"https://www.bbc.co.uk\" platform=\"enhancedmobile\"/></link>",
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<itemMeta>pidgin/tori-23462373</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"Pollution tag test - CPS",
+                            "headline":"Pollution tag test - CPS",
+                            "overtyped":"Pollution tag test - CPS"
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/pidgin/tori-23462373"
+                         },
+                         "summary":"Pollution Tag test on CPS",
+                         "timestamp":1635162444000,
+                         "language":"pcm",
+                         "passport":{
+                            "category":{
+                               "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                               "categoryName":"News"
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:pidgin/tori-23462373",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                }
+             ],
+             "type":"list"
+          },
+          {
+             "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "numbered":false,
+             "items":[
+                {
+                   "text":"No links",
+                   "markupType":"plain_text",
+                   "type":"listItem"
+                },
+                {
+                   "text":"No links",
+                   "markupType":"plain_text",
+                   "type":"listItem"
+                }
+             ],
+             "type":"list"
+          },
+          {
+             "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "numbered":false,
+             "items":[
+                {
+                   "text":"Link 2",
+                   "markupType":"plain_text",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<itemMeta>pidgin/tori-23462373</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"Pollution tag test - CPS",
+                            "headline":"Pollution tag test - CPS",
+                            "overtyped":"Pollution tag test - CPS"
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/pidgin/tori-23462373"
+                         },
+                         "summary":"Pollution Tag test on CPS",
+                         "timestamp":1635162444000,
+                         "language":"pcm",
+                         "passport":{
+                            "category":{
+                               "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                               "categoryName":"News"
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:pidgin/tori-23462373",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                }
+             ],
+             "type":"list"
+          },
+          {
+             "text":"Link 3",
+             "markupType":"plain_text",
+             "type":"paragraph"
+          },
+          {
+             "numbered":false,
+             "items":[
+                {
+                   "text":"<link><caption>Link</caption><url href=\"https://www.bbc.co.uk\" platform=\"highweb\"/><url href=\"https://www.bbc.co.uk\" platform=\"enhancedmobile\"/></link>",
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<itemMeta>pidgin/tori-23462373</itemMeta>",
+                   "meta":[
+                      {
+                         "headlines":{
+                            "shortHeadline":"Pollution tag test - CPS",
+                            "headline":"Pollution tag test - CPS",
+                            "overtyped":"Pollution tag test - CPS"
+                         },
+                         "locators":{
+                            "href":"https://www.bbc.com/pidgin/tori-23462373"
+                         },
+                         "summary":"Pollution Tag test on CPS",
+                         "timestamp":1635162444000,
+                         "language":"pcm",
+                         "passport":{
+                            "category":{
+                               "categoryId":"http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                               "categoryName":"News"
+                            },
+                            "taggings":[
+                               
+                            ]
+                         },
+                         "id":"urn:bbc:ares::asset:pidgin/tori-23462373",
+                         "type":"cps"
+                      }
+                   ],
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                },
+                {
+                   "text":"<link><caption>External Link</caption><altText>ITV</altText><url href=\"https://www.itv.com\" platform=\"highweb\"/></link>",
+                   "markupType":"candy_xml",
+                   "type":"listItem"
+                }
+             ],
+             "type":"list"
+          }
+       ]
+    },
+    "promo":{
+       "headlines":{
+          "shortHeadline":"Bullet pointATI test",
+          "headline":"Bullet point ATI test"
+       },
+       "locators":{
+          "assetUri":"/pidgin/tori-23463103",
+          "cpsUrn":"urn:bbc:content:assetUri:pidgin/tori-23463103",
+          "curie":"http://www.bbc.co.uk/asset/ad52fc1a-e429-48a6-8cf7-0c65aa66d707",
+          "assetId":"23463103"
+       },
+       "summary":"Bullet point ATI test",
+       "timestamp":1635328490000,
+       "language":"pcm",
+       "id":"urn:bbc:ares::asset:pidgin/tori-23463103",
+       "type":"cps"
+    },
+    "relatedContent":{
+       "section":{
+          "subType":"index",
+          "name":"Tori",
+          "uri":"/pidgin/tori",
+          "type":"simple"
+       },
+       "site":{
+          "subType":"site",
+          "name":"BBC Pidgin",
+          "uri":"/pidgin",
+          "type":"simple"
+       },
+       "groups":[
+          
+       ]
+    }
+ }
