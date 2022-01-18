@@ -2,14 +2,23 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import Gist from '.';
 import fixtureData, { fixtureDataOneItem } from './fixtures';
 
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
+
 // eslint-disable-next-line react/prop-types
 const GistWithContext = ({ blocks = fixtureData }) => (
-  <ServiceContextProvider dir="ltr" service="news" lang="en-GB">
-    <Gist blocks={blocks} />
-  </ServiceContextProvider>
+  <ToggleContextProvider toggles={defaultToggles}>
+    <ServiceContextProvider dir="ltr" service="news" lang="en-GB">
+      <Gist blocks={blocks} />
+    </ServiceContextProvider>
+  </ToggleContextProvider>
 );
 
 describe('Gist', () => {
