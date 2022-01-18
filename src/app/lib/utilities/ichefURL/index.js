@@ -2,7 +2,7 @@
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
-  if (src.includes(/urn:|localhost:7080/)) return src;
+  if (src.includes('urn:') || src.includes('localhost:')) return src;
   const urlParts = src.replace(/https:\/\/|http:\/\//, '').split('/');
   const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
   const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
