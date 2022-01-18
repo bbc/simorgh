@@ -46,28 +46,29 @@ const StyledList = styled.li`
   ${({ isOperaMini, dir }) =>
     isOperaMini
       ? `@media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-        margin-${dir === 'ltr' ? `left` : `right`}: 0;    
-    }`
-      : `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-    &:first-child {
-      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
-    }
-    &:last-child {
-      margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
-    }
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-    
-      &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+        margin-${dir === 'ltr' ? `left` : `right`}: 0;}`
+      : `
+      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+        &:first-child {
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+        }
+        &:last-child {
+          margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
+        }
       }
-  }
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-      &:first-child {
-        margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+      @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+        
+          &:first-child {
+            margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+          }
       }
-  }`}
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+          margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
+          &:first-child {
+            margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+          }
+      }
+  `}
 `;
 
 const PromoList = ({ blocks }) => {
@@ -76,11 +77,11 @@ const PromoList = ({ blocks }) => {
   const listblocks = blocks.slice(1, 4);
 
   return (
-    <ScrollPromo dir={dir} role="list" isOperaMini={true}>
+    <ScrollPromo dir={dir} role="list" isOperaMini={isOperaMini}>
       {listblocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <StyledList key={index} dir={dir}>
+          <StyledList key={index} dir={dir} isOperaMini={isOperaMini}>
             <Promo block={block} />
           </StyledList>
         );

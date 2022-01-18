@@ -83,7 +83,7 @@ const Promo = ({ block }) => {
   const isOperaMini = useOperaMiniDetection();
 
   return (
-    <PromoBox dir={dir} isOperaMini={true}>
+    <PromoBox dir={dir} isOperaMini={isOperaMini}>
       <Link href={href} service={service} script={script} dir={dir}>
         {title}
       </Link>
