@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { string, number, bool, node } from 'prop-types';
+import { string, number, bool, node, elementType } from 'prop-types';
 import styled from '@emotion/styled';
 import LazyLoad from 'react-lazyload';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
@@ -11,9 +11,7 @@ import { RequestContext } from '#contexts/RequestContext';
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
 const StyledImage = styled(Image)`
-  object-fit: cover;
-  object-position: center center;
-  height: 100px;
+  height: auto;
 `;
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
@@ -46,6 +44,7 @@ const ImageWithPlaceholder = ({
   fallbackMimeType,
   width,
   darkMode,
+  imageComponent: ImageComponent,
 }) => {
   const { isAmp } = useContext(RequestContext);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -63,7 +62,7 @@ const ImageWithPlaceholder = ({
   };
   const imgType = src.split('.').pop();
   const imageToRender = (
-    <StyledImage onLoad={() => setIsLoaded(true)} {...imageProps} />
+    <ImageComponent onLoad={() => setIsLoaded(true)} {...imageProps} />
   );
   const shouldPreload = !isAmp && preload;
   const isImgJpg = imgType === 'jpg' || imgType === 'jpeg';
@@ -125,6 +124,7 @@ ImageWithPlaceholder.propTypes = {
   fallbackMimeType: string,
   sizes: string,
   width: number.isRequired,
+  imageComponent: elementType,
 };
 
 ImageWithPlaceholder.defaultProps = {
@@ -141,6 +141,7 @@ ImageWithPlaceholder.defaultProps = {
   primaryMimeType: undefined,
   fallbackMimeType: undefined,
   sizes: null,
+  imageComponent: StyledImage,
 };
 
 export default ImageWithPlaceholder;

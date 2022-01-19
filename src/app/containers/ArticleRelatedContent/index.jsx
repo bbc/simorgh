@@ -3,10 +3,12 @@ import { arrayOf, shape, string } from 'prop-types';
 import tail from 'ramda/src/tail';
 import identity from 'ramda/src/identity';
 import path from 'ramda/src/path';
-import pick from 'ramda/src/pick';
 import pathOr from 'ramda/src/pathOr';
 import pathEq from 'ramda/src/pathEq';
 import { C_GREY_2 } from '@bbc/psammead-styles/colours';
+import styled from '@emotion/styled';
+import Image from '@bbc/psammead-image';
+import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import { gridColumnsPrimary } from '../../pages/ArticlePage/ArticlePageGrid';
 
@@ -24,17 +26,29 @@ export const getCustomTitle = path([
   'text',
 ]);
 
-const determineImageDimensions = ({ width, height }) => {
-  // return { width: 976, height: 549 };
+const StyledImage = styled(Image)`
+  object-fit: cover;
+  height: auto;
+  @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
+    height: 12rem;
+  }
+`;
+
+// Optimo allows editorial to provide promo images of any aspect ratio
+// For rendering, we need images with a consistent aspect ratio
+// This function ensures the image element has a width:height of 16:9
+// We then crop using object-fit: cover on the element's css
+const getImageSize = ({ width, height }) => {
   const targetRatio = 0.5625;
   const actualRatio = height / width;
   const imageIsTooTall = actualRatio > targetRatio;
 
   if (imageIsTooTall) {
-    return { width: height * targetRatio, height };
+    return { width: Math.round(height * targetRatio), height };
   }
-  return { width: height / targetRatio, height };
+  return { width: Math.round(height / targetRatio), height };
 };
+
 export const buildStoryPromos = optimoRelatedContent => {
   return optimoRelatedContent
     .map(item => {
@@ -55,8 +69,8 @@ export const buildStoryPromos = optimoRelatedContent => {
           assetUri: path(['blocks', 0, 'model', 'locator'], contentBlock),
         },
         indexImage: {
-          ...pick(['copyrightHolder'], imageDataBlock),
-          ...determineImageDimensions(imageDataBlock),
+          ...getImageSize(imageDataBlock),
+          copyrightHolder: imageDataBlock.copyrightHolder,
           path: `/${imageDataBlock.originCode}/${imageDataBlock.locator}`,
           altText: path(
             [
@@ -100,6 +114,7 @@ const ArticleRelatedContent = ({ content }) => {
       parentColumns={gridColumnsPrimary}
       content={storyPromoItems}
       sectionLabelBackground={C_GREY_2}
+      imageComponent={StyledImage}
     />
   );
 };
