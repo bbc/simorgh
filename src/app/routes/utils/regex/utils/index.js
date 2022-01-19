@@ -80,7 +80,7 @@ export const getOnDemandTvRegex = services => {
 
 export const getTopicPageRegex = services => {
   const serviceRegex = getServiceRegex(services);
-  return `/:service(${serviceRegex})/topic/:id(${mediaIdRegex}):amp(${ampRegex})?`;
+  return `/:service(${serviceRegex})/topics/:id(${assetUriRegex}):amp(${ampRegex})?`;
 };
 
 export const getErrorPageRegex = services => {

@@ -1,5 +1,3 @@
-//imports route and combines them
-
 import { TopicPage } from '#pages';
 import { topicPath } from '#utils/regex';
 import { TOPIC_PAGE } from '#utils/pageTypes';
