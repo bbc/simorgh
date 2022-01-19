@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-const TopicsPage = ({ pageData }) => {
+const TopicPage = ({ pageData }) => {
   return <div>{pageData.title}</div>;
 };
 
-export default TopicsPage;
+export default TopicPage;

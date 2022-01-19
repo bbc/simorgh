@@ -1,9 +1,9 @@
 import pipe from 'ramda/src/pipe';
-import TopicsPage from './TopicsPage';
+import TopicPage from './TopicPage';
 import applyBasicPageHandlers from '../utils/applyBasicPageHandlers';
 
 export default pipe(
   applyBasicPageHandlers({
     addVariantHandling: false,
   }),
-)(TopicsPage);
+)(TopicPage);
