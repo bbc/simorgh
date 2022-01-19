@@ -24,6 +24,17 @@ export const getCustomTitle = path([
   'text',
 ]);
 
+const determineImageDimensions = ({ width, height }) => {
+  // return { width: 976, height: 549 };
+  const targetRatio = 0.5625;
+  const actualRatio = height / width;
+  const imageIsTooTall = actualRatio > targetRatio;
+
+  if (imageIsTooTall) {
+    return { width: height * targetRatio, height };
+  }
+  return { width: height / targetRatio, height };
+};
 export const buildStoryPromos = optimoRelatedContent => {
   return optimoRelatedContent
     .map(item => {
@@ -44,7 +55,8 @@ export const buildStoryPromos = optimoRelatedContent => {
           assetUri: path(['blocks', 0, 'model', 'locator'], contentBlock),
         },
         indexImage: {
-          ...pick(['width', 'height', 'copyrightHolder'], imageDataBlock),
+          ...pick(['copyrightHolder'], imageDataBlock),
+          ...determineImageDimensions(imageDataBlock),
           path: `/${imageDataBlock.originCode}/${imageDataBlock.locator}`,
           altText: path(
             [

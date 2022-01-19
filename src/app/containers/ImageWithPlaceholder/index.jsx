@@ -11,7 +11,9 @@ import { RequestContext } from '#contexts/RequestContext';
 const LAZYLOAD_OFFSET = 250; // amount of pixels below the viewport to begin loading the image
 
 const StyledImage = styled(Image)`
-  height: auto;
+  object-fit: cover;
+  object-position: center center;
+  height: 100px;
 `;
 
 const renderImage = (imageToRender, lazyLoad, fallback) =>
