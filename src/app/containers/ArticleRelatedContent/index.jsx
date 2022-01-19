@@ -61,6 +61,11 @@ export const buildStoryPromos = optimoRelatedContent => {
       if (!(imageBlock && contentBlock && imageDataBlock)) return null;
 
       return {
+        // By default, the heading will be an h3 within the story promo component
+        // Because optimo promos will have no content below the heading, it should be a div instead
+        // TODO: when ARES add support for timestamps and summaries, this will need to be dynamically
+        // set to an h3 if the item has any content below the heading (eg, either a timestamp or a summary)
+        headingTag: 'div',
         id: item.id,
         headlines: {
           headline: contentBlock.text,

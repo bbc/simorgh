@@ -199,10 +199,12 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride = getHeadingTagOverride({
-    pageType,
-    isContentTypeGuide,
-  });
+  const headingTagOverride =
+    item.headingTag ||
+    getHeadingTagOverride({
+      pageType,
+      isContentTypeGuide,
+    });
 
   const StyledLink = styled(Link)`
     overflow-wrap: anywhere;
