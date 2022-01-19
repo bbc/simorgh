@@ -311,6 +311,36 @@ describe('Click tracking', () => {
       'PUB-[custom-campaign]-[brand]-[]-[CHD=promo::2]-[news::pidgin.news.story.51745682.page]-[]-[]-[]',
     );
   });
+
+  it('should fire event to Optimizely if optimizely object exists', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
+      </WithContexts>,
+    );
+
+    fireEvent.click(getByTestId('test-component'));
+
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+  });
+
+  it('should not fire event to Optimizely if optimizely object is undefined', async () => {
+    const mockOptimizelyTrack = jest.fn();
+    const mockOptimizely = undefined;
+
+    const { getByTestId } = render(
+      <WithContexts pageData={pidginData}>
+        <TestComponent hookProps={{ ...defaultProps, ...mockOptimizely }} />
+      </WithContexts>,
+    );
+
+    fireEvent.click(getByTestId('test-component'));
+
+    expect(mockOptimizelyTrack).toHaveBeenCalledTimes(0);
+  });
 });
 
 describe('Error handling', () => {
