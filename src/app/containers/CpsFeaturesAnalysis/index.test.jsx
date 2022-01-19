@@ -95,6 +95,19 @@ jest.mock('#lib/utilities/isLive', () => jest.fn());
 describe('CpsFeaturesAnalysis', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+    Object.defineProperty(window, 'matchMedia', {
+      writable: true,
+      value: jest.fn().mockImplementation(query => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // deprecated
+        removeListener: jest.fn(), // deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
   });
 
   it('tests use a fixture that has multiple features', () => {
@@ -179,6 +192,7 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
     const expected = {
       componentName: 'features',
       preventNavigation: true,
+      optimizely: null,
     };
     const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
 
@@ -202,6 +216,7 @@ describe('CpsFeaturesAnalysis - Event Tracking', () => {
   it('should implement 1 BLOCK level view tracker', () => {
     const expected = {
       componentName: 'features',
+      optimizely: null,
     };
     const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
 

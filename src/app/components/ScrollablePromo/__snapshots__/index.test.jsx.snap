@@ -182,11 +182,12 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
 
 .emotion-8 {
   width: 100%;
-  word-break: break-word;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   -webkit-text-decoration: none;
   text-decoration: none;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -250,7 +251,7 @@ exports[`ScrollablePromo it should match a11y snapshot for list 1`] = `
             class="emotion-8 emotion-9"
             href="https://www.bbc.com/brasil"
           >
-            https://www.bbc.com/brasil
+            Brasil homepage
           </a>
         </div>
       </li>
@@ -394,11 +395,12 @@ exports[`ScrollablePromo it should match a11y snapshot for single card 1`] = `
 
 .emotion-6 {
   width: 100%;
-  word-break: break-word;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   -webkit-text-decoration: none;
   text-decoration: none;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import { render, fireEvent } from '@testing-library/react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import InlineLinkContainer from './index';
 
@@ -30,6 +31,20 @@ const testInternalInlineLink = (description, locator, blocks, isExternal) => {
     </StaticRouter>,
   );
 };
+
+// eslint-disable-next-line react/prop-types
+const InlineLinkContext = ({ locator, isExternal, blocks, onClick }) => (
+  <StaticRouter>
+    <ServiceContextProvider service="news">
+      <InlineLinkContainer
+        locator={locator}
+        blocks={blocks}
+        isExternal={isExternal}
+        onClick={onClick}
+      />
+    </ServiceContextProvider>
+  </StaticRouter>
+);
 
 describe('InlineLinkContainer', () => {
   describe('link matching routes for SPA', () => {
@@ -83,5 +98,49 @@ describe('InlineLinkContainer', () => {
         />
       </ServiceContextProvider>,
     );
+  });
+
+  describe('onClick', () => {
+    const mockOnClick = jest.fn();
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('onClick event on links', () => {
+      it('should send event when onClick is not undefined', () => {
+        const { getByText } = render(
+          <InlineLinkContext
+            locator="https://www.bbc.com/news"
+            isExternal={false}
+            blocks={[fragmentBlock('This is a link')]}
+            onClick={mockOnClick}
+          />,
+        );
+
+        const linkButton = getByText('This is a link');
+
+        expect(mockOnClick.mock.calls.length).toBe(0);
+
+        fireEvent.click(linkButton, { button: 0 });
+
+        expect(mockOnClick.mock.calls.length).toBe(1);
+      });
+
+      it('should not send event when onClick is undefined', () => {
+        const { getByText } = render(
+          <InlineLinkContext
+            locator="https://www.bbc.com/news"
+            isExternal={false}
+            blocks={[fragmentBlock('This is a link')]}
+            onClick={undefined}
+          />,
+        );
+
+        const linkButton = getByText('This is a link');
+
+        fireEvent.click(linkButton, { button: 0 });
+
+        expect(mockOnClick.mock.calls.length).toBe(0);
+      });
+    });
   });
 });
