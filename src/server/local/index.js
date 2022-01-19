@@ -171,7 +171,7 @@ export default server => {
     .get(topicDataPath, async ({ params }, res, next) => {
       const { service, id } = params;
 
-      const dataFilePath = path.join(process.cwd(), 'data', service, mediaId);
+      const dataFilePath = path.join(process.cwd(), 'data', service, id);
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
