@@ -2,7 +2,21 @@ import React from 'react';
 import { string, number } from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { AmpImg } from '@bbc/psammead-image';
+import { C_LUNAR } from '@bbc/psammead-styles/colours';
+import { BBC_BLOCKS } from '@bbc/psammead-assets/svgs';
 import Message from '../Message';
+
+const bgImageRegular = `url(data:image/svg+xml;base64,${BBC_BLOCKS})`;
+
+const placeholderImgStyle = {
+  position: 'relative',
+  overflow: 'hidden',
+  backgroundColor: C_LUNAR,
+  backgroundPosition: 'center center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: '93px 27px',
+  backgroundImage: bgImageRegular,
+};
 
 const AmpHead = () => (
   <Helmet>
@@ -39,8 +53,8 @@ const AmpMediaPlayer = ({
       >
         <AmpImg
           layout="fill"
-          src={placeholderSrc}
-          srcset={placeholderSrcset}
+          style={placeholderImgStyle}
+          src=""
           placeholder
           alt=""
           height={height}
