@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -7,6 +7,9 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getAtUserId } from '#lib/analyticsUtils';
 import isLive from '#lib/utilities/isLive';
+import useMediaQuery from '#hooks/useMediaQuery';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+import onClient from '#lib/utilities/onClient';
 
 if (isLive()) {
   setLogger(null);
@@ -21,6 +24,18 @@ const optimizely = createInstance({
 const withOptimizelyProvider = (Component, noUserId = false) => {
   return props => {
     const { service } = useContext(ServiceContext);
+    let mobile;
+
+    if (onClient()) {
+      const matchMedia = window.matchMedia(
+        `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+      );
+      if (matchMedia.matches) {
+        mobile = true;
+      } else {
+        mobile = false;
+      }
+    }
 
     return (
       <OptimizelyProvider
@@ -31,6 +46,7 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
           id: noUserId ? null : getAtUserId(),
           attributes: {
             service,
+            mobile,
           },
         }}
       >
