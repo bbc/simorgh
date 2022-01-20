@@ -5,38 +5,40 @@ import { latin } from '@bbc/gel-foundations/scripts';
 import { ServiceContext } from '#contexts/ServiceContext';
 import withOptimizelyProvider from '.';
 
-describe('withOptimizelyProvider HOC', () => {
-  const optimizelyProviderSpy = jest.spyOn(
-    optimizelyReactSdk.OptimizelyProvider.prototype,
-    'render',
-  );
+const optimizelyProviderSpy = jest.spyOn(
+  optimizelyReactSdk.OptimizelyProvider.prototype,
+  'render',
+);
 
-  const props = {
-    bbcOrigin: 'https://www.bbc.com',
-    id: 'c0000000000o',
-    service: 'news',
-    isAmp: true,
-    pathname: '/pathname',
-    status: 200,
-    showAdsBasedOnLocation: true,
-    toggles: {
-      testToggle: {
-        enabled: false,
-      },
+const props = {
+  bbcOrigin: 'https://www.bbc.com',
+  id: 'c0000000000o',
+  service: 'news',
+  isAmp: true,
+  pathname: '/pathname',
+  status: 200,
+  showAdsBasedOnLocation: true,
+  toggles: {
+    testToggle: {
+      enabled: false,
     },
-  };
+  },
+};
 
-  it('should load Optimizely with correct params', () => {
-    const Component = () => <h1>Hola Optimizely</h1>;
+const TestComponent = () => {
+  const Component = () => <h1>Hola Optimizely</h1>;
 
-    const OptimizelyComponent = withOptimizelyProvider(Component);
+  const OptimizelyComponent = withOptimizelyProvider(Component);
 
-    const TestComponent = () => (
-      <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
-        <OptimizelyComponent {...props} />
-      </ServiceContext.Provider>
-    );
+  return (
+    <ServiceContext.Provider value={{ script: latin, service: 'news' }}>
+      <OptimizelyComponent {...props} />
+    </ServiceContext.Provider>
+  );
+};
 
+describe('withOptimizelyProvider HOC', () => {
+  it('should enrich the component with the Optimizely API', () => {
     render(<TestComponent />);
 
     expect(optimizelyProviderSpy).toHaveBeenCalledTimes(1);

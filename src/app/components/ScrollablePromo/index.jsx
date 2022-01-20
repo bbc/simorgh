@@ -3,6 +3,7 @@ import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import isEmpty from 'ramda/src/isEmpty';
+import tail from 'ramda/src/tail';
 import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
@@ -28,16 +29,19 @@ const ScrollablePromo = ({ blocks }) => {
   if (isEmpty(blocks)) {
     return null;
   }
-  const isSingleItem = blocks.length === 2;
+
+  const blocksWithoutTitle = blocks[0].type === 'title' ? tail(blocks) : blocks;
+
+  const isSingleItem = blocksWithoutTitle.length === 1;
 
   return (
     <GridItemMediumNoMargin>
       {isSingleItem ? (
         <PromoWrapper dir={dir}>
-          <Promo block={blocks[1]} />
+          <Promo block={blocksWithoutTitle[0]} />
         </PromoWrapper>
       ) : (
-        <PromoList blocks={blocks} />
+        <PromoList blocks={blocksWithoutTitle} />
       )}
     </GridItemMediumNoMargin>
   );

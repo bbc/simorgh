@@ -79,14 +79,13 @@ const OperaStyledList = styled.li`
 const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
-
-  const listblocks = blocks.slice(1, 4);
+  const listBlocks = blocks.slice(0, 3);
 
   const List = isOperaMini ? OperaStyledList : StyledList;
 
   return (
     <ScrollPromo dir={dir} role="list" isOperaMini={isOperaMini}>
-      {listblocks.map((block, index) => {
+      {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
           <List key={index} dir={dir} isOperaMini={isOperaMini}>
