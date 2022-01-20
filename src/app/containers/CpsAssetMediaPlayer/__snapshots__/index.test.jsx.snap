@@ -186,7 +186,7 @@ exports[`MediaPlayer render amp legacy media player 1`] = `
           <div
             class="emotion-7 emotion-8"
             data-e2e="image-placeholder"
-            placeholder="true"
+            placeholder=""
             style="padding-bottom: 56.25%;"
           />
           <noscript />
@@ -554,7 +554,7 @@ exports[`MediaPlayer render the amp player 1`] = `
           <div
             class="emotion-7 emotion-8"
             data-e2e="image-placeholder"
-            placeholder="true"
+            placeholder=""
             style="padding-bottom: 56.25%;"
           />
           <noscript />

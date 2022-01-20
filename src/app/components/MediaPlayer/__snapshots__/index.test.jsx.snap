@@ -52,7 +52,7 @@ exports[`Media Player: AMP Entry renders a landscape container with an amp-ifram
       <div
         class="emotion-2 emotion-3"
         data-e2e="image-placeholder"
-        placeholder="true"
+        placeholder=""
         style="padding-bottom: 56.25%;"
       />
       <noscript />
@@ -113,7 +113,7 @@ exports[`Media Player: AMP Entry renders a portrait container with amp-iframe an
       <div
         class="emotion-2 emotion-3"
         data-e2e="image-placeholder"
-        placeholder="true"
+        placeholder=""
         style="padding-bottom: 56.25%;"
       />
       <noscript />
@@ -180,7 +180,7 @@ exports[`Media Player: AMP Entry renders the audio skin 1`] = `
       <div
         class="emotion-2 emotion-3"
         data-e2e="image-placeholder"
-        placeholder="true"
+        placeholder=""
         style="padding-bottom: 56.25%;"
       />
       <noscript />

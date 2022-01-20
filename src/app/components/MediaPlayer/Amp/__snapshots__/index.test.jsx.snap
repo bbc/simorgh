@@ -43,7 +43,7 @@ exports[`Media Player: Amp should render an amp-iframe with an amp-img nested in
     <div
       class="emotion-0 emotion-1"
       data-e2e="image-placeholder"
-      placeholder="true"
+      placeholder=""
       style="padding-bottom: 56.25%;"
     />
     <noscript />

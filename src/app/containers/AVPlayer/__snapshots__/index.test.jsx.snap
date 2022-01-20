@@ -317,7 +317,7 @@ exports[`AVPlayer for On Demand Radio should match snapshot for AMP AVPlayer 1`]
           <div
             class="emotion-11 emotion-12"
             data-e2e="image-placeholder"
-            placeholder="true"
+            placeholder=""
             style="padding-bottom: 56.25%;"
           />
           <noscript />

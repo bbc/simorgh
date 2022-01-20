@@ -157,7 +157,7 @@ exports[`MediaPlayer Calls the amp media player 1`] = `
           <div
             class="emotion-6 emotion-7"
             data-e2e="image-placeholder"
-            placeholder="true"
+            placeholder=""
             style="padding-bottom: 56.25%;"
           />
           <noscript />

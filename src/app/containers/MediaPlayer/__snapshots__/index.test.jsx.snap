@@ -350,7 +350,7 @@ exports[`MediaPlayer Renders the AMP player when platform is AMP 1`] = `
         <div
           class="emotion-4 emotion-5"
           data-e2e="image-placeholder"
-          placeholder="true"
+          placeholder=""
           style="padding-bottom: 56.25%;"
         />
         <noscript />

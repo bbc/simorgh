@@ -438,7 +438,7 @@ exports[`Radio Page Main should match snapshot for AMP 1`] = `
               <div
                 class="emotion-20 emotion-21"
                 data-e2e="image-placeholder"
-                placeholder="true"
+                placeholder=""
                 style="padding-bottom: 56.25%;"
               />
               <noscript />
