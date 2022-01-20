@@ -29,6 +29,7 @@ import {
 import sendCustomMetric from './utilities/customMetrics';
 import { NON_200_RESPONSE } from './utilities/customMetrics/metrics.const';
 import local from './local';
+import fetch from './fetch';
 
 const morgan = require('morgan');
 
@@ -148,6 +149,7 @@ server.get(
         variant,
         pageType,
         toggles,
+        fetch,
       });
 
       data.toggles = toggles;
