@@ -14,7 +14,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import handlePromoData from '#app/routes/article/handlePromoData';
 import ArticlePageComponent from './ArticlePage';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, true);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
 // eslint-disable-next-line react/prop-types
