@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
   createInstance,
   OptimizelyProvider,
@@ -7,7 +7,6 @@ import {
 import { ServiceContext } from '#contexts/ServiceContext';
 import { getAtUserId } from '#lib/analyticsUtils';
 import isLive from '#lib/utilities/isLive';
-import useMediaQuery from '#hooks/useMediaQuery';
 import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
 import onClient from '#lib/utilities/onClient';
 
