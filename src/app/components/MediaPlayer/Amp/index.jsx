@@ -1,7 +1,7 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import ImagePlaceholderAmp from '@bbc/psammead-image-placeholder';
+import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Message from '../Message';
 
 const AmpHead = () => (
@@ -35,7 +35,7 @@ const AmpMediaPlayer = ({
         allowfullscreen="allowfullscreen"
         data-e2e="media-player"
       >
-        <ImagePlaceholderAmp ratio={56.25} placeholder="true" />
+        <ImagePlaceholder ratio={56.25} placeholder="" />
         <noscript>
           <Message
             service={service}
