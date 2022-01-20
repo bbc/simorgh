@@ -48,18 +48,8 @@ const Link = styled.a`
 const PromoBox = styled.div`
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
-
-  ${({ isOperaMini }) =>
-    isOperaMini
-      ? `
-        margin-bottom: ${GEL_SPACING_DBL};
-        width: calc(100% - ${GEL_SPACING});
-        @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-          width: calc(100% - ${GEL_SPACING_DBL});
-        }
-        `
-      : `margin-bottom: ${GEL_SPACING_TRPL};
-      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
+  margin-bottom: ${GEL_SPACING_TRPL};
+  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
   @media (min-width: ${GEL_GROUP_3_SCREEN_WIDTH_MIN}) {
@@ -67,11 +57,21 @@ const PromoBox = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     width: 12.6875rem;
-  }`}
+  }
+`;
+
+const OperaPromoBox = styled.div`
+  background-color: ${C_WHITE};
+  padding: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_DBL};
+  width: calc(100% - ${GEL_SPACING});
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(100% - ${GEL_SPACING_DBL});
+  }
 `;
 
 const Promo = ({ block }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
@@ -89,12 +89,14 @@ const Promo = ({ block }) => {
 
   const isOperaMini = useOperaMiniDetection();
 
+  const WrapperPromoBox = isOperaMini ? OperaPromoBox : PromoBox;
+
   return (
-    <PromoBox dir={dir} isOperaMini={isOperaMini}>
-      <Link href={href} service={service} script={script} dir={dir}>
+    <WrapperPromoBox>
+      <Link href={href} service={service} script={script}>
         {title}
       </Link>
-    </PromoBox>
+    </WrapperPromoBox>
   );
 };
 
