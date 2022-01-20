@@ -41,6 +41,7 @@ export const buildATIPageTrackPath = ({
   previousPath,
   categoryName,
   campaigns,
+  nationsProducer,
 }) => {
   const href = getHref(platform);
   const referrer = getReferrer(platform, origin, previousPath);
@@ -152,6 +153,12 @@ export const buildATIPageTrackPath = ({
       key: 'x9',
       description: 'page title',
       value: sanitise(pageTitle),
+      wrap: true,
+    },
+    {
+      key: 'x10',
+      description: "Which home nation's editorial team produced the content",
+      value: nationsProducer,
       wrap: true,
     },
     {
