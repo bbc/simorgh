@@ -17,6 +17,7 @@ const useClickTrackerHandler = (props = {}) => {
   const url = path(['url'], props);
   const advertiserID = path(['advertiserID'], props);
   const format = path(['format'], props);
+  const optimizely = path(['optimizely'], props);
 
   const { trackingIsEnabled } = useTrackingToggle(componentName);
   const [clicked, setClicked] = useState(false);
@@ -57,6 +58,10 @@ const useClickTrackerHandler = (props = {}) => {
           event.stopPropagation();
           event.preventDefault();
 
+          if (optimizely) {
+            optimizely.track('component_clicks');
+          }
+
           try {
             await sendEventBeacon({
               type: EVENT_TYPE,
@@ -73,6 +78,9 @@ const useClickTrackerHandler = (props = {}) => {
             });
           } finally {
             if (nextPageUrl && !preventNavigation) {
+              if (optimizely) {
+                optimizely.close();
+              }
               window.location.assign(nextPageUrl);
             }
           }
@@ -93,6 +101,7 @@ const useClickTrackerHandler = (props = {}) => {
       url,
       advertiserID,
       format,
+      optimizely,
     ],
   );
 };
