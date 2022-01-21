@@ -16,7 +16,7 @@ import persianPageData from './fixtureData/persian';
 import mundoPageData from './fixtureData/mundo';
 import StoryPage from './StoryPage';
 
-const PageWithOptimizely = withOptimizelyProvider(StoryPage, true);
+const PageWithOptimizely = withOptimizelyProvider(StoryPage);
 const Page = withPageWrapper(PageWithOptimizely);
 
 const withSecondaryColumnsKnob = pageData => storyFn => {

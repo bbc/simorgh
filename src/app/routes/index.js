@@ -7,6 +7,7 @@ import mostWatched from './mostWatched';
 import podcast from './podcast';
 import onDemandRadio from './onDemandRadio';
 import onDemandTV from './onDemandTV';
+import topic from './topic';
 import idx from './idx';
 import error from './error';
 import errorNoRouteMatch from './errorNoRouteMatch';
@@ -20,6 +21,7 @@ export default [
   podcast,
   onDemandRadio,
   onDemandTV,
+  topic,
   idx,
   cpsAsset,
   error,
