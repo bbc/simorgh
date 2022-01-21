@@ -1,11 +1,11 @@
-import { readFile } from 'fs/promises';
+import { promises as fs } from 'fs';
 
 const fallbackCertPath = '/etc/pki/certificate.pem';
 
 const load = async path => {
   let cert;
   try {
-    cert = await readFile(path, 'UTF-8');
+    cert = await fs.readFile(path, 'UTF-8');
     return cert;
   } catch (error) {
     return '';
