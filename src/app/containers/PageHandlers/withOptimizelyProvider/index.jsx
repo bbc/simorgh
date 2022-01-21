@@ -5,8 +5,8 @@ import {
   setLogger,
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getAtUserId } from '#lib/analyticsUtils';
 import isLive from '#lib/utilities/isLive';
+import getOptimizelyUserId from './getOptimizelyUserId';
 
 if (isLive()) {
   setLogger(null);
@@ -18,9 +18,18 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-const withOptimizelyProvider = (Component, noUserId = false) => {
+const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
+    const isStoryBook = process.env.STORYBOOK;
+    const disableOptimizely = isStoryBook || isLive();
+
+    const getUserId = () => {
+      if (disableOptimizely) {
+        return null;
+      }
+      return getOptimizelyUserId();
+    };
 
     return (
       <OptimizelyProvider
@@ -28,7 +37,7 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
         isServerSide
         timeout={500}
         user={{
-          id: noUserId ? null : getAtUserId(),
+          id: getUserId(),
           attributes: {
             service,
           },

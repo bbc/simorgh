@@ -3,6 +3,7 @@ const {
   getPageIdentifier,
   getLanguage,
   getPromoHeadline,
+  getNationsProducer,
 } = require('.');
 
 describe('getPageIdentifier', () => {
@@ -128,5 +129,33 @@ describe('getPromoHeadline', () => {
     const promoHeadline = getPromoHeadline(badData);
 
     expect(promoHeadline).toEqual(null);
+  });
+});
+
+describe('getNationsProducer', () => {
+  it('should find value in good data', () => {
+    const hasNationsProducer = {
+      metadata: {
+        analyticsLabels: {
+          nations_producer: 'england',
+        },
+      },
+    };
+
+    const nationsProducer = getNationsProducer(hasNationsProducer);
+
+    expect(nationsProducer).toEqual('england');
+  });
+
+  it('should return null in bad data', () => {
+    const noNationsProducer = {
+      metadata: {
+        analyticsLabels: {},
+      },
+    };
+
+    const nationsProducer = getNationsProducer(noNationsProducer);
+
+    expect(nationsProducer).toEqual(null);
   });
 });

@@ -6,17 +6,32 @@ import { GEL_SPACING_TRPL } from '@bbc/gel-foundations/spacings';
 import { arrayOf, shape, oneOf, string } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { GridItemMedium } from '#app/components/Grid';
+import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import Blocks from '../Blocks';
 import listItem, { ListItemPropTypes } from '../BulletedListItem';
-
-const componentsToRender = { listItem };
 
 const StyledGridItemMedium = styled(GridItemMedium)`
   margin-bottom: ${GEL_SPACING_TRPL};
 `;
 
-const BulletedListContainer = ({ blocks, className, ...rest }) => {
+const withClickHandler = (Component, clickHandler) => props =>
+  <Component {...props} onClick={clickHandler} />;
+
+const BulletedListContainer = ({
+  blocks,
+  className,
+  blockGroupType,
+  blockGroupIndex,
+  ...rest
+}) => {
+  const eventTrackingData = {
+    componentName: `bullet${blockGroupIndex}`,
+    format: 'CHD=bullet',
+  };
+  const viewRef = useViewTracker(eventTrackingData);
   const { script, service, dir } = useContext(ServiceContext);
+  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   return (
     <StyledGridItemMedium className={className}>
@@ -25,8 +40,17 @@ const BulletedListContainer = ({ blocks, className, ...rest }) => {
         script={script}
         service={service}
         dir={dir}
+        ref={blockGroupType === 'listWithLink' ? viewRef : null}
       >
-        <Blocks blocks={blocks} componentsToRender={componentsToRender} />
+        <Blocks
+          blocks={blocks}
+          componentsToRender={{
+            listItem:
+              blockGroupType === 'listWithLink'
+                ? withClickHandler(listItem, handleClickTracking)
+                : listItem,
+          }}
+        />
       </BulletedList>
     </StyledGridItemMedium>
   );
@@ -41,6 +65,6 @@ export const ListPropTypes = {
 
 BulletedListContainer.propTypes = { ...ListPropTypes };
 
-BulletedListContainer.defualtProps = { className: null };
+BulletedListContainer.defaultProps = { className: null };
 
 export default BulletedListContainer;

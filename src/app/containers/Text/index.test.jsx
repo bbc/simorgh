@@ -5,8 +5,15 @@ import {
   suppressPropWarnings,
 } from '@bbc/psammead-test-helpers';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import TextContainer from './index';
 import { paragraphBlock, fragmentBlock } from './fixtures';
+
+const defaultToggles = {
+  eventTracking: {
+    enabled: true,
+  },
+};
 
 const listItemBlock = (id = null, listBlocks) => ({
   id,
@@ -67,9 +74,11 @@ describe('TextContainer', () => {
 
     shouldMatchSnapshot(
       'should render correctly',
-      <ServiceContextProvider service="news">
-        <TextContainer {...data} />
-      </ServiceContextProvider>,
+      <ToggleContextProvider toggles={defaultToggles}>
+        <ServiceContextProvider service="news">
+          <TextContainer {...data} />
+        </ServiceContextProvider>
+      </ToggleContextProvider>,
     );
   });
 });
