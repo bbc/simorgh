@@ -1,5 +1,7 @@
+import { fablPath } from '../../../../../.secret';
+
 export default async ({ fetch }) => {
-  const spikePath = process.env.SIMORGH_BFF_PATH;
+  const spikePath = fablPath;
   const result = await fetch(spikePath);
   const { status } = result;
   const body = await result.json();
