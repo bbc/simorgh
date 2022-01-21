@@ -10,4 +10,3 @@ export const MEDIA_ASSET_PAGE = 'MAP';
 export const STORY_PAGE = 'STY';
 export const PHOTO_GALLERY_PAGE = 'PGL';
 export const CORRESPONDENT_STORY_PAGE = 'CSP';
-export const TOPIC_PAGE = 'TOPIC';
