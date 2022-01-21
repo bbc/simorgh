@@ -1,5 +1,6 @@
 import { TopicPage } from '#pages';
 import { topicPath } from '#utils/regex';
+import { TOPIC_PAGE } from '#utils/pageTypes';
 import getInitialData from './getInitialData';
 
 export default {
@@ -7,5 +8,5 @@ export default {
   exact: true,
   component: TopicPage,
   getInitialData,
-  pageType: 'TOPIC_PAGE',
+  pageType: TOPIC_PAGE,
 };
