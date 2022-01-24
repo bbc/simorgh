@@ -35,8 +35,8 @@ export const testsThatFollowSmokeTestConfigForAMPOnly = ({
           const media = getBlockData('video', body);
           if (media && media.type === 'video') {
             cy.get('[data-e2e="media-player"]').within(() => {
-              cy.get('amp-img')
-                .should('have.attr', 'src')
+              cy.get('div')
+                .should('have.attr', 'data-e2e')
                 .should('not.be.empty');
             });
           }

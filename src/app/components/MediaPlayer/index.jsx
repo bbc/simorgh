@@ -119,8 +119,6 @@ export const AmpMediaPlayer = ({
         placeholderSrc={placeholderSrc}
         src={src}
         title={title}
-        height={portrait ? 9 : 16}
-        width={portrait ? 16 : 9}
         noJsMessage={noJsMessage}
         service={service}
       />

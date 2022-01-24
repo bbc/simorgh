@@ -1,7 +1,7 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { string } from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { AmpImg } from '@bbc/psammead-image';
+import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import Message from '../Message';
 
 const AmpHead = () => (
@@ -19,8 +19,6 @@ const AmpMediaPlayer = ({
   placeholderSrc,
   placeholderSrcset,
   title,
-  height,
-  width,
   noJsMessage,
   service,
 }) => {
@@ -37,16 +35,7 @@ const AmpMediaPlayer = ({
         allowfullscreen="allowfullscreen"
         data-e2e="media-player"
       >
-        <AmpImg
-          layout="fill"
-          src={placeholderSrc}
-          srcset={placeholderSrcset}
-          placeholder
-          alt=""
-          height={height}
-          width={width}
-          data-e2e="media-player__placeholder"
-        />
+        <ImagePlaceholder ratio={56.25} placeholder="" />
         <noscript>
           <Message
             service={service}
@@ -65,8 +54,6 @@ AmpMediaPlayer.propTypes = {
   placeholderSrc: string.isRequired,
   placeholderSrcset: string,
   title: string.isRequired,
-  height: number.isRequired,
-  width: number.isRequired,
   noJsMessage: string.isRequired,
   service: string.isRequired,
 };
