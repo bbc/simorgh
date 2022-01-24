@@ -18,7 +18,7 @@
     "immer": "9.0.7",
     "json-schema": "0.4.0",
     "moment": "2.29.1",
-    "nanoid": "3.1.25",
+    "nanoid": "3.1.31",
     "node-fetch": "2.6.7",
     "node-forge": "1.2.0",
     "nth-check": "2.0.1",
