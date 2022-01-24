@@ -9,6 +9,7 @@ import { C_GREY_2 } from '@bbc/psammead-styles/colours';
 import styled from '@emotion/styled';
 import Image from '@bbc/psammead-image';
 import { GEL_GROUP_3_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
+import isLive from '#lib/utilities/isLive';
 import CpsRelatedContent from '#containers/CpsRelatedContent';
 import { gridColumnsPrimary } from '../../pages/ArticlePage/ArticlePageGrid';
 
@@ -100,6 +101,7 @@ export const buildStoryPromos = optimoRelatedContent => {
 };
 
 const ArticleRelatedContent = ({ content }) => {
+  if (isLive()) return null;
   if (!pathEq(['type'], 'relatedContent', content)) return null;
   const items = pathOr([], ['model', 'blocks'], content);
 

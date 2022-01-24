@@ -503,7 +503,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
             class="emotion-32 emotion-33"
             dir="ltr"
           >
-            <h3
+            <div
               class="emotion-34 emotion-35"
             >
               <a
@@ -517,7 +517,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
                   News homepage
                 </span>
               </a>
-            </h3>
+            </div>
           </div>
         </div>
       </div>
