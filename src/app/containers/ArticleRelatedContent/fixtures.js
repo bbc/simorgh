@@ -162,7 +162,7 @@ export const storyPromoContent = [
     indexImage: {
       path: '/cpsdevpb/72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png',
       height: 562,
-      width: 316,
+      width: 999,
       altText: 'BBC Test Image',
       copyrightHolder: 'BBC',
     },

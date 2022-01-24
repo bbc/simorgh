@@ -484,7 +484,7 @@ exports[`ArticleRelatedContent should render related content 1`] = `
               <div
                 class="emotion-28 emotion-29"
                 data-e2e="image-placeholder"
-                style="padding-bottom: 177.84810126582278%;"
+                style="padding-bottom: 56.25625625625625%;"
               >
                 <div
                   class="lazyload-wrapper "

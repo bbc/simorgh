@@ -39,14 +39,9 @@ const StyledImage = styled(Image)`
 // For rendering, we need images with a consistent aspect ratio
 // This function ensures the image element has a width:height of 16:9
 // We then crop using object-fit: cover on the element's css
-const getImageSize = ({ width, height }) => {
+const getImageSize = ({ height }) => {
   const targetRatio = 0.5625;
-  const actualRatio = height / width;
-  const imageIsTooTall = actualRatio > targetRatio;
 
-  if (imageIsTooTall) {
-    return { width: Math.round(height * targetRatio), height };
-  }
   return { width: Math.round(height / targetRatio), height };
 };
 
