@@ -151,6 +151,7 @@ export const relatedContentBlockWithTitle = {
 
 export const storyPromoContent = [
   {
+    headingTag: 'div',
     id: '9478991a',
     headlines: {
       headline: 'News homepage',
