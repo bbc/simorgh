@@ -43,3 +43,5 @@ exports[`regex utils snapshots should create expected regex from getRecommendati
 exports[`regex utils snapshots should create expected regex from getSecondaryColumnDataRegex 1`] = `"/:service(news|persian|igbo)/sty-secondary-column:variant(/simp|/trad|/cyr|/lat)?.json"`;
 
 exports[`regex utils snapshots should create expected regex from getSwRegex 1`] = `"/:service(news|persian|igbo)/sw.js"`;
+
+exports[`regex utils snapshots should create expected regex from getTopicPageRegex 1`] = `"/:service(news|persian|igbo)/topics/:id([a-z0-9]+):amp(.amp)?"`;

@@ -6,26 +6,30 @@ import { getPica } from '@bbc/gel-foundations/typography';
 import { getSerifBold } from '@bbc/psammead-styles/font-styles';
 import { C_GREY_6, C_GREY_8, C_WHITE } from '@bbc/psammead-styles/colours';
 import {
+  GEL_SPACING,
   GEL_SPACING_DBL,
   GEL_SPACING_TRPL,
 } from '@bbc/gel-foundations/spacings';
 import {
   GEL_GROUP_0_SCREEN_WIDTH_MIN,
+  GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_3_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 import filterForBlockType from '#lib/utilities/blockHandlers';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 
 const Link = styled.a`
   ${({ script }) => script && getPica(script)}
   ${({ service }) => service && getSerifBold(service)}
   width: 100%;
-  word-break: break-word;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   text-decoration: none;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -42,9 +46,9 @@ const Link = styled.a`
 `;
 
 const PromoBox = styled.div`
-  margin-bottom: ${GEL_SPACING_TRPL};
   background-color: ${C_WHITE};
   padding: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_TRPL};
   @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}) {
     width: 14.8125rem;
   }
@@ -56,8 +60,18 @@ const PromoBox = styled.div`
   }
 `;
 
+const OperaPromoBox = styled.div`
+  background-color: ${C_WHITE};
+  padding: ${GEL_SPACING_DBL};
+  margin-bottom: ${GEL_SPACING_DBL};
+  width: calc(100% - ${GEL_SPACING});
+  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
+    width: calc(100% - ${GEL_SPACING_DBL});
+  }
+`;
+
 const Promo = ({ block }) => {
-  const { script, service, dir } = useContext(ServiceContext);
+  const { script, service } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
     'text',
@@ -72,12 +86,17 @@ const Promo = ({ block }) => {
     ['model', 'blocks', '0', 'model', 'blocks', '0', 'model', 'text'],
     textBlock,
   );
+
+  const isOperaMini = useOperaMiniDetection();
+
+  const WrapperPromoBox = isOperaMini ? OperaPromoBox : PromoBox;
+
   return (
-    <PromoBox dir={dir}>
-      <Link href={href} service={service} script={script} dir={dir}>
+    <WrapperPromoBox>
+      <Link href={href} service={service} script={script}>
         {title}
       </Link>
-    </PromoBox>
+    </WrapperPromoBox>
   );
 };
 

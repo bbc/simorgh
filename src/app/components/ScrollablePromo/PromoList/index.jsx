@@ -8,6 +8,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 
 const ScrollPromo = styled.ul`
@@ -15,6 +16,7 @@ const ScrollPromo = styled.ul`
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
+  ${({ isOperaMini }) => (isOperaMini ? `flex-direction: column;` : '')}
 
   overflow-x: scroll;
   /* Avoid using smooth scrolling as it causes accessibility issues */
@@ -32,45 +34,63 @@ const ScrollPromo = styled.ul`
 const StyledList = styled.li`
   display: flex;
   flex-shrink: 0;
-  @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
-    margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
-    &:first-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: ${GEL_SPACING};
-    }
-    &:last-child {
-      margin-${({ dir }) => (dir === 'ltr' ? 'right' : 'left')}: ${GEL_SPACING};
-    }
-  }
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
-    margin-${({ dir }) =>
-      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-      &:first-child {
-        margin-${({ dir }) =>
-          dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
-      }
-  }
 
-  @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
-    margin-${({ dir }) =>
-      dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
-      &:first-child {
-        margin-${({ dir }) => (dir === 'ltr' ? 'left' : 'right')}: 0;
+  ${({ dir }) =>
+    `
+      @media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+        margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+        &:first-child {
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+        }
+        &:last-child {
+          margin-${dir === 'ltr' ? 'right' : 'left'}: ${GEL_SPACING};
+        }
       }
-  }
+      @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+        margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};  
+
+        &:first-child {
+          margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING_DBL};
+        }
+      }
+      @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+          margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};
+          &:first-child {
+            margin-${dir === 'ltr' ? 'left' : 'right'}: 0;
+          }
+      }
+  `}
+`;
+
+const OperaStyledList = styled.li`
+  display: flex;
+  flex-shrink: 0;
+
+  ${({ dir }) => `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
+    }
+    @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: ${GEL_SPACING_DBL};   
+    }
+    @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}){
+      margin-${dir === 'ltr' ? `left` : `right`}: 0;}`}
 `;
 
 const PromoList = ({ blocks }) => {
   const { dir } = useContext(ServiceContext);
-  const listblocks = blocks.slice(1, 4);
+  const isOperaMini = useOperaMiniDetection();
+  const listBlocks = blocks.slice(0, 3);
+
+  const List = isOperaMini ? OperaStyledList : StyledList;
 
   return (
-    <ScrollPromo dir={dir} role="list">
-      {listblocks.map((block, index) => {
+    <ScrollPromo dir={dir} role="list" isOperaMini={isOperaMini}>
+      {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <StyledList key={index} dir={dir}>
+          <List key={index} dir={dir} isOperaMini={isOperaMini}>
             <Promo block={block} />
-          </StyledList>
+          </List>
         );
       })}
     </ScrollPromo>

@@ -5,6 +5,7 @@ import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 const useCombinedClickTrackerHandler = eventTrackingData => {
   const blockData = path(['block'], eventTrackingData);
   const linkData = path(['link'], eventTrackingData);
+  const optimizely = path(['block', 'optimizely'], eventTrackingData);
   const handleBlockLevelClick = useClickTrackerHandler({
     ...(blockData && {
       ...blockData,
@@ -29,6 +30,7 @@ const useCombinedClickTrackerHandler = eventTrackingData => {
       await handleLinkLevelClick(event);
     }
     if (nextPageUrl) {
+      if (optimizely) optimizely.close();
       window.location.assign(nextPageUrl);
     }
   };
