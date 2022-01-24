@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, number, bool } from 'prop-types';
+import { arrayOf, shape, number, bool, string, elementType } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import styled from '@emotion/styled';
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
@@ -19,10 +19,18 @@ const StyledCpsOnwardJourney = styled(CpsOnwardJourney)`
   margin-bottom: ${GEL_SPACING_DBL};
 `;
 
-const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
+const CpsRelatedContent = ({
+  content,
+  parentColumns,
+  isMediaContent,
+  title: _title,
+  sectionLabelBackground,
+  imageComponent,
+}) => {
   const { translations } = useContext(ServiceContext);
 
-  const title = pathOr('Related Content', ['relatedContent'], translations);
+  const title =
+    _title || pathOr('Related Content', ['relatedContent'], translations);
 
   return (
     <StyledCpsOnwardJourney
@@ -35,6 +43,8 @@ const CpsRelatedContent = ({ content, parentColumns, isMediaContent }) => {
       promoListComponent={RelatedContentPromoList}
       columnType="secondary"
       eventTrackingData={eventTrackingData}
+      sectionLabelBackground={sectionLabelBackground}
+      imageComponent={imageComponent}
     />
   );
 };
@@ -53,12 +63,18 @@ CpsRelatedContent.propTypes = {
     group5: number,
   }),
   isMediaContent: bool,
+  title: string,
+  sectionLabelBackground: string,
+  imageComponent: elementType,
 };
 
 CpsRelatedContent.defaultProps = {
   content: [],
   parentColumns: null,
   isMediaContent: false,
+  title: null,
+  sectionLabelBackground: undefined,
+  imageComponent: undefined,
 };
 
 export default CpsRelatedContent;
