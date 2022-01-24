@@ -1,4 +1,4 @@
-import { ERROR_PAGE } from '#app/routes/utils/pageTypes';
+import { ERROR_PAGE, TOPIC_PAGE } from '#app/routes/utils/pageTypes';
 import routes from './index';
 
 const MOCK_PATH = 'mock-path';
@@ -7,8 +7,10 @@ const toggles = {
   liveRadioSchedule: { enabled: true },
 };
 
+const pageTypesToSkip = [ERROR_PAGE, TOPIC_PAGE];
+
 routes
-  .filter(route => route.pageType !== ERROR_PAGE)
+  .filter(route => !pageTypesToSkip.includes(route.pageType))
   .forEach(({ getInitialData, pageType }) => {
     it(`${pageType} - should handle Ares 404`, async () => {
       global.fetch.mockResponseOnce(JSON.stringify({}), { status: 404 });

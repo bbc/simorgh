@@ -11,6 +11,7 @@ import {
   mostWatchedDataPath,
   onDemandRadioDataPath,
   onDemandTvDataPath,
+  topicDataPath,
   recommendationsDataRegex,
   secondaryColumnDataRegexPath,
   africaEyeTVDataPath,
@@ -164,6 +165,13 @@ export default server => {
         brandEpisode,
         mediaId,
       );
+
+      sendDataFile(res, `${dataFilePath}.json`, next);
+    })
+    .get(topicDataPath, async ({ params }, res, next) => {
+      const { service, id } = params;
+
+      const dataFilePath = path.join(process.cwd(), 'data', service, id);
 
       sendDataFile(res, `${dataFilePath}.json`, next);
     })
