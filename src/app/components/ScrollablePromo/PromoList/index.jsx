@@ -11,14 +11,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 
-const ScrollPromo = styled.ul`
+const StandardScrollPromo = styled.ul`
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
-  ${({ isOperaMini }) =>
-    isOperaMini
-      ? ``
-      : `display: flex;
+  display: flex;
   overflow-x: scroll;
   /* Avoid using smooth scrolling as it causes accessibility issues */
   scroll-behavior: auto;
@@ -29,7 +26,13 @@ const ScrollPromo = styled.ul`
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
-  }`}
+  }
+`;
+
+const OperaScrollPromo = styled.ul`
+  list-style: none;
+  ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
+  margin: 0;
 `;
 
 const StyledList = styled.li`
@@ -79,6 +82,7 @@ const PromoList = ({ blocks }) => {
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
+  const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
 
   return (
