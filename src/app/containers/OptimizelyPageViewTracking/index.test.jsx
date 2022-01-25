@@ -34,6 +34,14 @@ ContextWrap.propTypes = {
 describe('Optimizely Page View tracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+
+    window.matchMedia = jest.fn().mockImplementation(() => {
+      return {
+        matches: true,
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+      };
+    });
   });
 
   it('should call Optimizely track function for Article Page on page render', () => {
