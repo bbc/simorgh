@@ -12,12 +12,13 @@ import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 
 const ScrollPromo = styled.ul`
-  display: flex;
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
-  ${({ isOperaMini }) => (isOperaMini ? `flex-direction: column;` : '')}
-
+  ${({ isOperaMini }) =>
+    isOperaMini
+      ? ``
+      : `display: flex;
   overflow-x: scroll;
   /* Avoid using smooth scrolling as it causes accessibility issues */
   scroll-behavior: auto;
@@ -28,7 +29,7 @@ const ScrollPromo = styled.ul`
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
-  }
+  }`}
 `;
 
 const StyledList = styled.li`
@@ -63,9 +64,6 @@ const StyledList = styled.li`
 `;
 
 const OperaStyledList = styled.li`
-  display: flex;
-  flex-shrink: 0;
-
   ${({ dir }) => `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
       margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
     }
@@ -88,7 +86,7 @@ const PromoList = ({ blocks }) => {
       {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <List key={index} dir={dir} isOperaMini={isOperaMini}>
+          <List key={index} dir={dir}>
             <Promo block={block} />
           </List>
         );
