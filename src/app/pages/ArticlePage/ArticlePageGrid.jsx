@@ -12,7 +12,7 @@ const gridColumns = gridConfig(8, 8, 8, 8, 12, 12);
 const gridMargins = gridConfig(false, false, false, false, true, true);
 const gridOffset = gridConfig(0, 0, 0, 0, 0, 0);
 
-const gridColumnsPrimary = gridConfig(8, 8, 8, 8, 8, 8);
+export const gridColumnsPrimary = gridConfig(8, 8, 8, 8, 8, 8);
 export const gridColumnsSecondary = gridConfig(8, 8, 8, 8, 4, 4);
 
 const StyledGelPageGrid = styled(GelPageGrid)`

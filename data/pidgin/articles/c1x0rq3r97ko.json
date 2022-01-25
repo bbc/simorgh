@@ -1,637 +1,1163 @@
 {
-  "metadata":{
-     "id":"urn:bbc:ares::article:c1x0rq3r97ko",
-     "locators":{
-        "optimoUrn":"urn:bbc:optimo:asset:c1x0rq3r97ko",
-        "canonicalUrl":"https://www.bbc.com/pidgin/articles/c1x0rq3r97ko"
-     },
-     "type":"article",
-     "createdBy":"Pidgin",
-     "language":"az",
-     "lastUpdated":1626770043167,
-     "firstPublished":1615541541153,
-     "lastPublished":1624961950398,
-     "timestamp":1624961950398,
-     "options":{
-        
-     },
-     "analyticsLabels":{
-        
-     },
-     "passport":{
-        "language":"az",
-        "home":"http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-        "locator":"urn:bbc:optimo:asset:c1x0rq3r97ko",
-        "availability":"AVAILABLE",
-        "taggings":[
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
-              "value":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
-           },
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
-              "value":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id"
-           },
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value":"http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-           }
-        ],
-        "schemaVersion":"1.2.0",
-        "publishedState":"PUBLISHED",
-        "predicates":{
-           "about":[
-              {
-                 "value":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                 "thingLabel":"Donald Trump",
-                 "thingUri":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                 "thingId":"c7c7fcfe-5246-434e-9422-cdc925fe3a79",
-                 "thingType":[
-                    "core:Person",
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "tagging:Agent",
-                    "tagging:AmbiguousTerm"
-                 ],
-                 "thingSameAs":[
-                    "http://dbpedia.org/resource/Donald_Trump"
-                 ],
-                 "thingEnglishLabel":"Donald Trump",
-                 "type":"about"
-              }
-           ],
-           "formats":[
-              {
-                 "value":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                 "thingLabel":"Analysis",
-                 "thingUri":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                 "thingId":"170f311e-fd87-4255-85db-8b4aee12594d",
-                 "thingType":[
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                 ],
-                 "thingSameAs":[
-                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
-                 ],
-                 "thingEnglishLabel":"Analysis",
-                 "thingPreferredLabel":"Analysis",
-                 "thingLabelLanguage":"az",
-                 "type":"formats"
-              }
-           ]
+  "metadata": {
+    "id": "urn:bbc:ares::article:crrrkxz2k0ko",
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+      "canonicalUrl": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko"
+    },
+    "type": "article",
+    "createdBy": "Pidgin",
+    "language": "pcm",
+    "lastUpdated": 1638962951452,
+    "firstPublished": 1637670147913,
+    "lastPublished": 1638873511565,
+    "timestamp": 1638873511565,
+    "options": {},
+    "analyticsLabels": {
+      "contentId": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+      "producer": "Pidgin"
+    },
+    "passport": {
+      "language": "pcm",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+      "locator": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
         }
-     },
-     "tags":{
-        "about":[
-           {
-              "thingLabel":"Donald Trump",
-              "thingUri":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-              "thingId":"c7c7fcfe-5246-434e-9422-cdc925fe3a79",
-              "thingType":[
-                 "core:Person",
-                 "tagging:TagConcept",
-                 "core:Thing",
-                 "tagging:Agent",
-                 "tagging:AmbiguousTerm"
-              ],
-              "thingSameAs":[
-                 "http://dbpedia.org/resource/Donald_Trump"
-              ],
-              "thingEnglishLabel":"Donald Trump",
-              "thingLabelLanguage":"az",
-              "thingPreferredLabel":"Donald Trump"
-           }
-        ]
-     },
-     "version":"v1.3.13",
-     "blockTypes":[
-        "headline",
-        "text",
-        "paragraph",
-        "fragment",
-        "social",
-        "renditions",
-        "subheadline",
-        "urlLink",
-        "aresOEmbed"
-     ],
-     "suitableForSyndication":true,
-     "readTime":1
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "tags": {},
+    "version": "v1.3.15",
+    "blockTypes": [
+      "headline",
+      "text",
+      "paragraph",
+      "fragment",
+      "links",
+      "title",
+      "link",
+      "image",
+      "altText",
+      "rawImage",
+      "urlLink"
+    ],
+    "suitableForSyndication": true,
+    "readTime": 1
   },
-  "content":{
-     "model":{
-        "blocks":[
-           {
-              "type":"headline",
-              "model":{
-                 "blocks":[
+  "content": {
+    "model": {
+      "blocks": [
+        {
+          "type": "headline",
+          "model": {
+            "blocks": [
+              {
+                "type": "text",
+                "model": {
+                  "blocks": [
                     {
-                       "type":"text",
-                       "model":{
-                          "blocks":[
-                             {
-                                "type":"paragraph",
-                                "model":{
-                                   "text":"Test: Twitter Embeds",
-                                   "blocks":[
+                      "type": "paragraph",
+                      "model": {
+                        "text": "Test Links page",
+                        "blocks": [
+                          {
+                            "type": "fragment",
+                            "model": {
+                              "text": "Test Links page",
+                              "attributes": []
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Show all links (no images)",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Show all links (no images)",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fpidgin",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
                                       {
-                                         "type":"fragment",
-                                         "model":{
-                                            "text":"Test: Twitter Embeds",
-                                            "attributes":[
-                                               
-                                            ]
-                                         }
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Image to ignore",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Image to ignore",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
                                       }
-                                   ]
+                                    ]
+                                  }
                                 }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:4621c57f-e31f-4bda-8222-dd0f83c00438",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"BBC Pidgin",
-                                      "author_url":"https://twitter.com/bbcnewspidgin",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/bbcnewspidgin/status/1401130492313866243",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Logan Paul vs Mayweather: Date, time and how to watch di fight.<br><br>Wen dis Youtuber &amp; Former professional boxer jam dis weekend, wetin you think say go happun?<br><br>Read more here: <a href=\"https://t.co/mLHxByELjA\">https://t.co/mLHxByELjA</a> <a href=\"https://t.co/lp7GmXfGTF\">pic.twitter.com/lp7GmXfGTF</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"subheadline",
-              "model":{
-                 "blocks":[
-                    {
-                       "type":"text",
-                       "model":{
-                          "blocks":[
-                             {
-                                "type":"paragraph",
-                                "model":{
-                                   "text":"This is a test page using twitter embeds",
-                                   "blocks":[
-                                      {
-                                         "type":"fragment",
-                                         "model":{
-                                            "text":"This is a test page using twitter embeds",
-                                            "attributes":[
-                                               
-                                            ]
-                                         }
-                                      }
-                                   ]
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/bbcnewspidgin/status/1401185471951261699?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:97d321f5-2b50-4f8d-b6ef-b9a44947f15d",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"BBC Pidgin",
-                                      "author_url":"https://twitter.com/bbcnewspidgin",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/bbcnewspidgin/status/1401185471951261699",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Overnight raid for Solhan, Burkina Faso don kill plenty pipo.<a href=\"https://t.co/4T8XPASDcm\">https://t.co/4T8XPASDcm</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401185471951261699?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/bbcnewspidgin/status/1401130492313866243?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:b6995c74-868a-4d6c-9572-ee831c12863a",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"BBC Pidgin",
-                                      "author_url":"https://twitter.com/bbcnewspidgin",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/bbcnewspidgin/status/1401130492313866243",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Logan Paul vs Mayweather: Date, time and how to watch di fight.<br><br>Wen dis Youtuber &amp; Former professional boxer jam dis weekend, wetin you think say go happun?<br><br>Read more here: <a href=\"https://t.co/mLHxByELjA\">https://t.co/mLHxByELjA</a> <a href=\"https://t.co/lp7GmXfGTF\">pic.twitter.com/lp7GmXfGTF</a></p>&mdash; BBC Pidgin (@bbcnewspidgin) <a href=\"https://twitter.com/bbcnewspidgin/status/1401130492313866243?ref_src=twsrc%5Etfw\">June 5, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/BBCBreaking/status/1408514959072501765?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:47ef8d59-22da-4d43-bb02-73ec785ef9b6",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"BBC Breaking News",
-                                      "author_url":"https://twitter.com/BBCBreaking",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/BBCBreaking/status/1408514959072501765",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">A US judge jails former police officer Derek Chauvin for 22-and-a-half years for the murder of George Floyd on a Minneapolis street <a href=\"https://t.co/fMd2tGM2i2\">https://t.co/fMd2tGM2i2</a></p>&mdash; BBC Breaking News (@BBCBreaking) <a href=\"https://twitter.com/BBCBreaking/status/1408514959072501765?ref_src=twsrc%5Etfw\">June 25, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"text",
-              "model":{
-                 "blocks":[
-                    {
-                       "type":"paragraph",
-                       "model":{
-                          "text":"Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
-                          "blocks":[
-                             {
-                                "type":"fragment",
-                                "model":{
-                                   "text":"Did you know? We can now embed tweets in Optimo pages? Pretty cool, huh? ",
-                                   "attributes":[
-                                      
-                                   ]
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/PunHubOnline/status/1354085055589711873?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:5e8ea6ba-a29a-4503-b05d-c0d15cf3f4ea",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"PunHub",
-                                      "author_url":"https://twitter.com/PunHubOnline",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/PunHubOnline/status/1354085055589711873",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/xd36NQPDDo\">pic.twitter.com/xd36NQPDDo</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1354085055589711873?ref_src=twsrc%5Etfw\">January 26, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"text",
-              "model":{
-                 "blocks":[
-                    {
-                       "type":"paragraph",
-                       "model":{
-                          "text":"I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: https://twitter.com/punhubonline/status/1354085055589711873?s=21",
-                          "blocks":[
-                             {
-                                "type":"fragment",
-                                "model":{
-                                   "text":"I've embedded a tweet! It wasn't what I was expecting... I thought it was going to be this guy: ",
-                                   "attributes":[
-                                      
-                                   ]
-                                }
-                             },
-                             {
-                                "type":"urlLink",
-                                "model":{
-                                   "text":"https://twitter.com/punhubonline/status/1354085055589711873?s=21",
-                                   "blocks":[
-                                      {
-                                         "type":"fragment",
-                                         "model":{
-                                            "text":"https://twitter.com/punhubonline/status/1354085055589711873?s=21",
-                                            "attributes":[
-                                               
-                                            ]
-                                         }
-                                      }
-                                   ],
-                                   "locator":"https://twitter.com/punhubonline/status/1354085055589711873?s=21",
-                                   "isExternal":true
-                                }
-                             }
-                          ]
-                       }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
                     },
                     {
-                       "type":"paragraph",
-                       "model":{
-                          "text":"I really hope publishing this won't break anything....  ",
-                          "blocks":[
-                             {
-                                "type":"fragment",
-                                "model":{
-                                   "text":"I really hope publishing this won't break anything....  ",
-                                   "attributes":[
-                                      
-                                   ]
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/PunHubOnline/status/1382720301444833284?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:82dfc7f6-1d53-4271-a400-801f787ff25e",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"PunHub",
-                                      "author_url":"https://twitter.com/PunHubOnline",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/PunHubOnline/status/1382720301444833284",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/2zidvoJ58f\">pic.twitter.com/2zidvoJ58f</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1382720301444833284?ref_src=twsrc%5Etfw\">April 15, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           },
-           {
-              "type":"social",
-              "model":{
-                 "source":"https://twitter.com/PunHubOnline/status/1379819411570356228?s=20",
-                 "blocks":[
-                    {
-                       "type":"renditions",
-                       "model":{
-                          "locator":"urn:bbc:optimo:social:71aa905e-56dc-4048-8cb7-07ba4ef04fba",
-                          "blocks":[
-                             {
-                                "type":"aresOEmbed",
-                                "model":{
-                                   "oembed":{
-                                      "version":"1.0",
-                                      "author_name":"PunHub",
-                                      "author_url":"https://twitter.com/PunHubOnline",
-                                      "provider_name":"Twitter",
-                                      "provider_url":"https://twitter.com",
-                                      "url":"https://twitter.com/PunHubOnline/status/1379819411570356228",
-                                      "html":"<blockquote class=\"twitter-tweet\"><p lang=\"und\" dir=\"ltr\"><a href=\"https://t.co/QXqBWEpRrF\">pic.twitter.com/QXqBWEpRrF</a></p>&mdash; PunHub (@PunHubOnline) <a href=\"https://twitter.com/PunHubOnline/status/1379819411570356228?ref_src=twsrc%5Etfw\">April 7, 2021</a></blockquote>\n",
-                                      "width":550
-                                   }
-                                }
-                             }
-                          ]
-                       }
-                    }
-                 ]
-              }
-           }
-        ]
-     }
-  },
-  "promo":{
-     "locators":{
-        "optimoUrn":"urn:bbc:optimo:asset:c1x0rq3r97ko",
-        "canonicalUrl":"https://www.bbc.com/pidgin/articles/c1x0rq3r97ko"
-     },
-     "timestamp":1624961950398,
-     "suitableForSyndication":true,
-     "language":"az",
-     "headlines":{
-        "seoHeadline":"Test twitter",
-        "promoHeadline":{
-           "blocks":[
-              {
-                 "type":"text",
-                 "model":{
-                    "blocks":[
-                       {
-                          "type":"paragraph",
-                          "model":{
-                             "text":"Test: Twitter Embeds",
-                             "blocks":[
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Show headline",
+                              "blocks": [
                                 {
-                                   "type":"fragment",
-                                   "model":{
-                                      "text":"Test: Twitter Embeds",
-                                      "attributes":[
-                                         
-                                      ]
-                                   }
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Show headline",
+                                    "locator": "https://www.bbc.co.uk/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Show headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
                                 }
-                             ]
+                              ]
+                            }
                           }
-                       }
-                    ]
-                 }
-              }
-           ]
-        }
-     },
-     "images":{
-        
-     },
-     "summary":{
-        "blocks":[
-           {
-              "type":"text",
-              "model":{
-                 "blocks":[
-                    {
-                       "type":"paragraph",
-                       "model":{
-                          "text":"Fanny is a good girl according to We Rate Dogs",
-                          "blocks":[
-                             {
-                                "type":"fragment",
-                                "model":{
-                                   "text":"Fanny is a good girl according to We Rate Dogs",
-                                   "attributes":[
-                                      
-                                   ]
-                                }
-                             }
-                          ]
-                       }
+                        ]
+                      }
                     }
-                 ]
-              }
-           }
-        ]
-     },
-     "passport":{
-        "language":"az",
-        "home":"http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
-        "locator":"urn:bbc:optimo:asset:c1x0rq3r97ko",
-        "availability":"AVAILABLE",
-        "taggings":[
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/creativework/format",
-              "value":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
-           },
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/creativework/about",
-              "value":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id"
-           },
-           {
-              "predicate":"http://www.bbc.co.uk/ontologies/bbc/infoClass",
-              "value":"http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
-           }
-        ],
-        "schemaVersion":"1.2.0",
-        "publishedState":"PUBLISHED",
-        "predicates":{
-           "about":[
+                  ]
+                }
+              },
               {
-                 "value":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                 "thingLabel":"Donald Trump",
-                 "thingUri":"http://www.bbc.co.uk/things/c7c7fcfe-5246-434e-9422-cdc925fe3a79#id",
-                 "thingId":"c7c7fcfe-5246-434e-9422-cdc925fe3a79",
-                 "thingType":[
-                    "core:Person",
-                    "tagging:TagConcept",
-                    "core:Thing",
-                    "tagging:Agent",
-                    "tagging:AmbiguousTerm"
-                 ],
-                 "thingSameAs":[
-                    "http://dbpedia.org/resource/Donald_Trump"
-                 ],
-                 "thingEnglishLabel":"Donald Trump",
-                 "type":"about"
-              }
-           ],
-           "formats":[
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link with Headline",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link with Headline",
+                                    "locator": "https://www.bbc.com/mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link with Headline",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
               {
-                 "value":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                 "thingLabel":"Analysis",
-                 "thingUri":"http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
-                 "thingId":"170f311e-fd87-4255-85db-8b4aee12594d",
-                 "thingType":[
-                    "tagging:TagConcept",
-                    "tagging:Format"
-                 ],
-                 "thingSameAs":[
-                    "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
-                 ],
-                 "thingEnglishLabel":"Analysis",
-                 "thingPreferredLabel":"Analysis",
-                 "thingLabelLanguage":"az",
-                 "type":"formats"
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "https://www.bbc.com/brasil",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "https://www.bbc.com/brasil",
+                                    "locator": "https://www.bbc.com/brasil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "https://www.bbc.com/brasil",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
               }
-           ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Single link",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Single link",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Single link",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Single link",
+                                    "locator": "https://www.bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Single link",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Long headline ",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Long headline ",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fyoruba",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                    "locator": "https://www.bbc.co.uk/yoruba",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "This is a long headline that should be truncated to 3 lines only in the promo. I could go on and on and on and on and on. ",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Only show 3 links",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Only show 3 links",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fpidgin",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link 1",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link 1",
+                                    "locator": "https://www.bbc.com/pidgin",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link 1",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fmundo",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link 2",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link 2",
+                                    "locator": "https://www.bbc.com/mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link 2",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fyoruba",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link 3",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link 3",
+                                    "locator": "https://www.bbc.com/yoruba",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link 3",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Fbrasil",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link 4 (not shown)",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link 4 (not shown)",
+                                    "locator": "https://www.bbc.com/brasil",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link 4 (not shown)",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.com%2Farabic",
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Link 5 (not shown)",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Link 5 (not shown)",
+                                    "locator": "https://www.bbc.com/arabic",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Link 5 (not shown)",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "links",
+          "model": {
+            "blocks": [
+              {
+                "type": "title",
+                "model": {
+                  "blocks": [
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Related content block",
+                              "blocks": [
+                                {
+                                  "type": "fragment",
+                                  "model": {
+                                    "text": "Related content block",
+                                    "attributes": []
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:cps:curie:asset:b5c53243-a695-e059-e040-850a02846523",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "BBC Test Image",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "BBC Test Image",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 640,
+                              "height": 562,
+                              "locator": "72c5/test/47abb9d0-5431-11ec-b75b-9f9fe566903d.png",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "News homepage",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "News homepage",
+                                    "locator": "https://www.bbc.co.uk/news",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "News homepage",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "link",
+                "model": {
+                  "locator": "urn:bbc:content:url-promo:https%3A%2F%2Fwww.bbc.co.uk%2Fmundo",
+                  "blocks": [
+                    {
+                      "type": "image",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "altText",
+                            "model": {
+                              "blocks": [
+                                {
+                                  "type": "text",
+                                  "model": {
+                                    "blocks": [
+                                      {
+                                        "type": "paragraph",
+                                        "model": {
+                                          "text": "Breaking News image",
+                                          "blocks": [
+                                            {
+                                              "type": "fragment",
+                                              "model": {
+                                                "text": "Breaking News image",
+                                                "attributes": []
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "rawImage",
+                            "model": {
+                              "width": 976,
+                              "height": 549,
+                              "locator": "33e9/test/5efe5660-5431-11ec-b75b-9f9fe566903d.jpg",
+                              "imageType": "background",
+                              "originCode": "cpsdevpb",
+                              "copyrightHolder": "BBC"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "model": {
+                        "blocks": [
+                          {
+                            "type": "paragraph",
+                            "model": {
+                              "text": "Mundo homepage",
+                              "blocks": [
+                                {
+                                  "type": "urlLink",
+                                  "model": {
+                                    "text": "Mundo homepage",
+                                    "locator": "https://www.bbc.co.uk/mundo",
+                                    "blocks": [
+                                      {
+                                        "type": "fragment",
+                                        "model": {
+                                          "text": "Mundo homepage",
+                                          "attributes": []
+                                        }
+                                      }
+                                    ],
+                                    "isExternal": false
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
-     },
-     "id":"urn:bbc:ares::article:c1x0rq3r97ko",
-     "type":"optimo"
+      ]
+    }
   },
-  "relatedContent":{
-     "site":{
-        "subType":"site",
-        "name":"Pidgin",
-        "uri":"/pidgin",
-        "type":"simple"
-     },
-     "groups":[
-        
-     ]
+  "promo": {
+    "locators": {
+      "optimoUrn": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+      "canonicalUrl": "https://www.bbc.com/pidgin/articles/crrrkxz2k0ko"
+    },
+    "timestamp": 1638873511565,
+    "suitableForSyndication": true,
+    "language": "pcm",
+    "headlines": {
+      "seoHeadline": "Test Links page",
+      "promoHeadline": {
+        "blocks": [
+          {
+            "type": "text",
+            "model": {
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "model": {
+                    "text": "Test Links page",
+                    "blocks": [
+                      {
+                        "type": "fragment",
+                        "model": {
+                          "text": "Test Links page",
+                          "attributes": []
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "images": {
+      "defaultPromoImage": {
+        "blocks": [
+          {
+            "type": "altText",
+            "model": {
+              "blocks": [
+                {
+                  "type": "text",
+                  "model": {
+                    "blocks": [
+                      {
+                        "type": "paragraph",
+                        "model": {
+                          "text": "Image to ignore",
+                          "blocks": [
+                            {
+                              "type": "fragment",
+                              "model": {
+                                "text": "Image to ignore",
+                                "attributes": []
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "rawImage",
+            "model": {
+              "width": 976,
+              "height": 549,
+              "locator": "37e1/test/80c445c0-5431-11ec-b75b-9f9fe566903d.jpg",
+              "imageType": "background",
+              "originCode": "cpsdevpb",
+              "copyrightHolder": "BBC"
+            }
+          }
+        ]
+      }
+    },
+    "summary": {
+      "blocks": [
+        {
+          "type": "text",
+          "model": {
+            "blocks": [
+              {
+                "type": "paragraph",
+                "model": {
+                  "text": "",
+                  "blocks": [
+                    {
+                      "type": "fragment",
+                      "model": {
+                        "text": "",
+                        "attributes": []
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "passport": {
+      "language": "pcm",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Pidgin",
+      "locator": "urn:bbc:optimo:asset:crrrkxz2k0ko",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/infoClass",
+          "value": "http://www.bbc.co.uk/things/0db2b959-cbf8-4661-965f-050974a69bb5#id"
+        }
+      ],
+      "schemaVersion": "1.3.0",
+      "publishedState": "PUBLISHED"
+    },
+    "id": "urn:bbc:ares::article:crrrkxz2k0ko",
+    "type": "optimo"
+  },
+  "relatedContent": {
+    "site": {
+      "subType": "site",
+      "name": "Pidgin",
+      "uri": "/pidgin",
+      "type": "simple"
+    },
+    "groups": []
   }
 }
