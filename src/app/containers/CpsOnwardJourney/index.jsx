@@ -167,6 +167,7 @@ const CpsOnwardJourney = ({
   parentColumns,
   promoListComponent: PromoListComponent,
   promoComponent: PromoComponent,
+  imageComponent,
   sectionLabelOverrideAs,
   sectionLabelBar,
   sectionLabelBackground,
@@ -226,6 +227,7 @@ const CpsOnwardJourney = ({
               promo={singleContent}
               dir={dir}
               eventTrackingData={eventTrackingData}
+              imageComponent={imageComponent}
             />
           </SingleContentWrapper>
         ) : (
@@ -234,6 +236,7 @@ const CpsOnwardJourney = ({
             dir={dir}
             isMediaContent={isMediaContent}
             eventTrackingData={eventTrackingData}
+            imageComponent={imageComponent}
           />
         )}
       </OptionallyRenderedSkipWrapper>
@@ -262,7 +265,7 @@ CpsOnwardJourney.propTypes = {
   sectionLabelBar: bool,
   sectionLabelBackground: string,
   /* since this component is reused in both the main and secondary columns,
-      the property below help ensure that it layss out properrly in both
+      the property below helps ensure that it lays out properly in both
       usages.
   */
   columnType: oneOf(['main', 'secondary']).isRequired,
@@ -270,6 +273,7 @@ CpsOnwardJourney.propTypes = {
   eventTrackingData: shape({
     componentName: string,
   }),
+  imageComponent: elementType,
 };
 
 CpsOnwardJourney.defaultProps = {
@@ -284,6 +288,7 @@ CpsOnwardJourney.defaultProps = {
   sectionLabelBackground: C_GHOST,
   skipLink: null,
   eventTrackingData: null,
+  imageComponent: undefined,
 };
 
 export default CpsOnwardJourney;
