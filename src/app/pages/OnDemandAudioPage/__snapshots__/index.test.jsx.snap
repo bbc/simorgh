@@ -914,15 +914,11 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               src="https://polling.test.bbc.co.uk/ws/av-embeds/media/pashto/bbc_pashto_radio/w3ct0lz1/ps/amp?morph_env=live"
               title="اډیو پلیئر"
             >
-              <amp-img
-                alt=""
-                attribution=""
-                data-e2e="media-player__placeholder"
-                height="16"
-                layout="fill"
-                placeholder="true"
-                src="http://localhost:7080/images/amp_audio_placeholder.png"
-                width="9"
+              <div
+                class="emotion-27 emotion-28"
+                data-e2e="image-placeholder"
+                placeholder=""
+                style="padding-bottom: 56.25%;"
               />
               <noscript />
             </amp-iframe>

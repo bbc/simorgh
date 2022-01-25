@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import path from 'ramda/src/path';
 import pathOr from 'ramda/src/pathOr';
 import propEq from 'ramda/src/propEq';
+import last from 'ramda/src/last';
 import styled from '@emotion/styled';
 import isLive from '#lib/utilities/isLive';
 import { string, node } from 'prop-types';
@@ -60,6 +61,7 @@ import filterForBlockType from '#lib/utilities/blockHandlers';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import ScrollablePromo from '#components/ScrollablePromo';
+import ArticleRelatedContent from '#containers/ArticleRelatedContent';
 
 import SecondaryColumn from './SecondaryColumn';
 
@@ -212,10 +214,10 @@ const ArticlePage = ({ pageData, mostReadEndpointOverride }) => {
               tagBackgroundColour={C_WHITE}
             />
           )}
+          <ArticleRelatedContent content={last(blocks)} />
         </Primary>
         <SecondaryColumn pageData={pageData} />
       </ArticlePageGrid>
-
       <MostReadContainer
         mostReadEndpointOverride={mostReadEndpointOverride}
         wrapper={MostReadWrapper}
