@@ -1,7 +1,5 @@
 import { promises as fs } from 'fs';
 
-const fallbackCertPath = '/etc/pki/certificate.pem';
-
 const load = async path => {
   let cert;
   try {
@@ -28,8 +26,7 @@ const getCert = async () => {
   const { caPath, certChainPath, keyPath } = getCertPath();
 
   const ca = await load(caPath);
-  const certChain =
-    (await load(certChainPath)) || (await load(fallbackCertPath));
+  const certChain = await load(certChainPath);
   const key = await load(keyPath);
 
   return { ca, certChain, key, caPath, certChainPath, keyPath };
