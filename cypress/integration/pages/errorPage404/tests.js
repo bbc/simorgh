@@ -115,10 +115,10 @@ export const testsThatFollowSmokeTestConfig = ({
             Cypress.env('APP_ENV') === 'local' &&
             Cypress.browser.isHeadless
           ) {
-            // eslint-disable-next-line func-names
-            document.fonts.ready.then(function () {
-              cy.matchImageSnapshot();
-            });
+            cy.document().its('fonts.status').should('equal', 'loaded');
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(3000);
+            cy.matchImageSnapshot();
           } else {
             cy.log('Snapshot skipped in headed mode');
           }
