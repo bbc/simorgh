@@ -35,14 +35,6 @@ ContextWrap.propTypes = {
 describe('Optimizely Page View tracking', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-
-    window.matchMedia = jest.fn().mockImplementation(() => {
-      return {
-        matches: true,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
   });
 
   it('should call Optimizely track function for Article Page on page render', async () => {
@@ -60,24 +52,6 @@ describe('Optimizely Page View tracking', () => {
   it('should not call Optimizely track function for Article Page on AMP', () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp>
-        <OptimizelyPageViewTracking />
-      </ContextWrap>,
-    );
-
-    expect(optimizely.track).toHaveBeenCalledTimes(0);
-  });
-
-  it('should not call Optimizely track function for Article Page on desktop', () => {
-    window.matchMedia = jest.fn().mockImplementation(() => {
-      return {
-        matches: false,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      };
-    });
-
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <OptimizelyPageViewTracking />
       </ContextWrap>,
     );
