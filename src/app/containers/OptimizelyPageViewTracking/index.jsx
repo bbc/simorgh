@@ -20,8 +20,8 @@ const OptimizelyPageViewTracking = () => {
     if (sendPageViewEvent) {
       optimizely.onReady().then(() => {
         optimizely.track('page_views');
+        setPageViewSent(true);
       });
-      setPageViewSent(true);
     }
   }, [sendPageViewEvent, optimizely]);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, bool } from 'prop-types';
-import { render } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -8,7 +8,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import OptimizelyPageViewTracking from '.';
 
 const optimizely = {
-  onReady: jest.fn().mockResolvedValue(),
+  onReady: jest.fn(() => Promise.resolve()),
   track: jest.fn(),
 };
 
@@ -46,13 +46,15 @@ describe('Optimizely Page View tracking', () => {
   });
 
   it('should call Optimizely track function for Article Page on page render', async () => {
-    render(
-      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-        <OptimizelyPageViewTracking />
-      </ContextWrap>,
-    );
+    await act(async () => {
+      render(
+        <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+          <OptimizelyPageViewTracking />
+        </ContextWrap>,
+      );
+    });
 
-    await optimizely.onReady().then(() => {
+    await waitFor(() => {
       expect(optimizely.track).toHaveBeenCalledTimes(1);
     });
   });
