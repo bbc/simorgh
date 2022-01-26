@@ -8,9 +8,12 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it.only('Index Page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          // eslint-disable-next-line cypress/no-unnecessary-waiting
-          cy.wait(3000);
-          cy.matchImageSnapshot();
+          // eslint-disable-next-line func-names
+          document.fonts.ready.then(function () {
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(1000);
+            cy.matchImageSnapshot();
+          });
         } else {
           cy.log('Snapshot skipped in headed mode');
         }
