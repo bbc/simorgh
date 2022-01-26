@@ -117,8 +117,6 @@ export const testsThatFollowSmokeTestConfig = ({
           ) {
             // eslint-disable-next-line func-names
             document.fonts.ready.then(function () {
-              // eslint-disable-next-line cypress/no-unnecessary-waiting
-              cy.wait(1000);
               cy.matchImageSnapshot();
             });
           } else {
