@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, bool } from 'prop-types';
-import { render, act, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
@@ -46,13 +46,11 @@ describe('Optimizely Page View tracking', () => {
   });
 
   it('should call Optimizely track function for Article Page on page render', async () => {
-    await act(async () => {
-      render(
-        <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
-          <OptimizelyPageViewTracking />
-        </ContextWrap>,
-      );
-    });
+    render(
+      <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
+        <OptimizelyPageViewTracking />
+      </ContextWrap>,
+    );
 
     await waitFor(() => {
       expect(optimizely.track).toHaveBeenCalledTimes(1);
