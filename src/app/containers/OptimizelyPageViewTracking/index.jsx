@@ -14,11 +14,13 @@ const OptimizelyPageViewTracking = () => {
     setMobile(event.matches),
   );
 
-  const sendPageViewEvent = optimizely && mobile && !isAmp && !pageViewSent;
+  const sendPageViewEvent = mobile && !isAmp && !pageViewSent;
 
   useEffect(() => {
     if (sendPageViewEvent) {
-      optimizely.track('page_views');
+      optimizely.onReady().then(() => {
+        optimizely.track('page_views');
+      });
       setPageViewSent(true);
     }
   }, [sendPageViewEvent, optimizely]);

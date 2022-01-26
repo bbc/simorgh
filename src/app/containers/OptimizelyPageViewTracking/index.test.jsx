@@ -8,6 +8,7 @@ import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import OptimizelyPageViewTracking from '.';
 
 const optimizely = {
+  onReady: jest.fn().mockResolvedValue(),
   track: jest.fn(),
 };
 
@@ -44,14 +45,16 @@ describe('Optimizely Page View tracking', () => {
     });
   });
 
-  it('should call Optimizely track function for Article Page on page render', () => {
+  it('should call Optimizely track function for Article Page on page render', async () => {
     render(
       <ContextWrap pageType={ARTICLE_PAGE} service="news" isAmp={false}>
         <OptimizelyPageViewTracking />
       </ContextWrap>,
     );
 
-    expect(optimizely.track).toHaveBeenCalledTimes(1);
+    await optimizely.onReady().then(() => {
+      expect(optimizely.track).toHaveBeenCalledTimes(1);
+    });
   });
 
   it('should not call Optimizely track function for Article Page on AMP', () => {
