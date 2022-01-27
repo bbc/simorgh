@@ -17,7 +17,7 @@ import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 const getEventTrackingData = optimizely => ({
   block: {
     componentName: 'features',
-    optimizely,
+    ...(optimizely && { optimizely }),
   },
 });
 
@@ -26,11 +26,14 @@ const HIGH_IMPACT_VARIATION = 'variation_1';
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
   const { isAmp } = useContext(RequestContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
   const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
+
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
@@ -61,7 +64,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={getEventTrackingData(optimizely)}
+              eventTrackingData={eventTrackingData}
             />
           </StoryPromoLi>
         );
@@ -83,13 +86,15 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
-
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
 
   const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
+
+  const viewRef = useViewTracker(eventTrackingData);
 
   const selectComponent = () => {
     if (isAmp) return StoryPromo;
