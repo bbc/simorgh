@@ -1,9 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
@@ -12,7 +10,6 @@ import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
 import useToggle from '#hooks/useToggle';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import useMediaQuery from '#hooks/useMediaQuery';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
@@ -28,21 +25,12 @@ const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
 const HIGH_IMPACT_VARIATION = 'variation_1';
 
 const PromoListComponent = ({ promoItems, dir }) => {
-  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
   const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
   const { isAmp } = useContext(RequestContext);
 
-  const [mobile, setMobile] = useState(false);
-
-  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
-    setMobile(event.matches),
-  );
-
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID, {
-    service,
-    mobile,
-  });
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
 
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
@@ -93,24 +81,15 @@ PromoListComponent.defaultProps = {
 };
 
 const PromoComponent = ({ promo, dir }) => {
-  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
   const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
 
-  const [mobile, setMobile] = useState(false);
-
-  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
-    setMobile(event.matches),
-  );
-
   const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
     useToggle('frostedPromo');
 
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID, {
-    service,
-    mobile,
-  });
+  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
 
   const selectComponent = () => {
     if (isAmp) return StoryPromo;
