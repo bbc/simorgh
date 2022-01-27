@@ -1,0 +1,1189 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:hindi/india-60128834",
+    "locators": {
+      "assetUri": "/hindi/india-60128834",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/india-60128834",
+      "curie": "http://www.bbc.co.uk/asset/76318b65-19ac-47c4-afb4-3a678cab4384",
+      "assetId": "60128834"
+    },
+    "type": "STY",
+    "createdBy": "hindi-v6",
+    "language": "hi",
+    "lastUpdated": 1643181506799,
+    "firstPublished": 1643121413000,
+    "lastPublished": 1643172761000,
+    "timestamp": 1643172761000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Uttar+Pradesh+Legislative+Assembly+election+2022~India~2017+State+Assembly+elections+in+India~Uttar+Pradesh~Bharatiya+Janata+Party~India+elections+2016",
+      "cps_asset_id": "60128834",
+      "ldp_ids": "59f28e6e-ec4d-424f-84f0-94f832e0fbd4~5a08f030-710f-4168-acee-67294a90fc75~74bb431d-3e69-4159-a9c9-4e27299b854a~7c657c38-57a4-4d98-b283-f3b6a8b16bd9~be29b70d-39b5-4875-9bbb-fe13adf2d69b~c6e06486-6e48-4a1e-b304-a2bb7d60066c",
+      "contentId": "urn:bbc:cps:curie:asset:76318b65-19ac-47c4-afb4-3a678cab4384",
+      "counterName": "hindi.india.story.60128834.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "hi",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator": "urn:bbc:cps:curie:asset:76318b65-19ac-47c4-afb4-3a678cab4384",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+            "thingLabel": "उत्तर प्रदेश चुनाव 2022",
+            "thingUri": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+            "thingId": "59f28e6e-ec4d-424f-84f0-94f832e0fbd4",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q85738025",
+              "http://dbpedia.org/resource/2022_Uttar_Pradesh_Legislative_Assembly_election"
+            ],
+            "thingEnglishLabel": "Uttar Pradesh Legislative Assembly election 2022",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingLabel": "भारत",
+            "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/India",
+              "http://sws.geonames.org/1269750/",
+              "http://www.wikidata.org/entity/Q668"
+            ],
+            "thingEnglishLabel": "India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+            "thingLabel": "विधानसभा चुनाव 2017",
+            "thingUri": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+            "thingId": "74bb431d-3e69-4159-a9c9-4e27299b854a",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+            "thingSameAs": [
+              "http://en.wikipedia.org/wiki/2017_elections_in_India#Legislative_Assembly_elections"
+            ],
+            "thingEnglishLabel": "2017 State Assembly elections in India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+            "thingLabel": "उत्तर प्रदेश",
+            "thingUri": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+            "thingId": "7c657c38-57a4-4d98-b283-f3b6a8b16bd9",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": ["http://dbpedia.org/resource/Uttar_Pradesh"],
+            "thingEnglishLabel": "Uttar Pradesh",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+            "thingLabel": "भारतीय जनता पार्टी",
+            "thingUri": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+            "thingId": "be29b70d-39b5-4875-9bbb-fe13adf2d69b",
+            "thingType": [
+              "tagging:Agent",
+              "core:Organisation",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Bharatiya_Janata_Party"
+            ],
+            "thingEnglishLabel": "Bharatiya Janata Party",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+            "thingLabel": "विधानसभा चुनाव 2016",
+            "thingUri": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+            "thingId": "c6e06486-6e48-4a1e-b304-a2bb7d60066c",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/2016_elections_in_India"
+            ],
+            "thingEnglishLabel": "India elections 2016",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingLabel": "Analysis",
+            "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+            ],
+            "thingEnglishLabel": "Analysis",
+            "thingPreferredLabel": "Analysis",
+            "thingLabelLanguage": "hi",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "उत्तर प्रदेश चुनाव 2022",
+          "thingUri": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+          "thingId": "59f28e6e-ec4d-424f-84f0-94f832e0fbd4",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q85738025",
+            "http://dbpedia.org/resource/2022_Uttar_Pradesh_Legislative_Assembly_election"
+          ],
+          "topicName": "उत्तर प्रदेश चुनाव 2022",
+          "topicId": "cv85zqzm07wt",
+          "curationList": [
+            {
+              "curationId": "7ee5a7b3-12ae-4ce1-8b7f-2efa05da5318",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Uttar Pradesh Legislative Assembly election 2022",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Uttar Pradesh Legislative Assembly election 2022"
+        },
+        {
+          "thingLabel": "भारत",
+          "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+          "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/India",
+            "http://sws.geonames.org/1269750/",
+            "http://www.wikidata.org/entity/Q668"
+          ],
+          "topicName": "भारत",
+          "topicId": "ckdxnkz7607t",
+          "curationList": [
+            {
+              "curationId": "056dd909-0188-42dd-b164-d88ba2145db8",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "India",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "India"
+        },
+        {
+          "thingLabel": "विधानसभा चुनाव 2017",
+          "thingUri": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+          "thingId": "74bb431d-3e69-4159-a9c9-4e27299b854a",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+          "thingSameAs": [
+            "http://en.wikipedia.org/wiki/2017_elections_in_India#Legislative_Assembly_elections"
+          ],
+          "topicName": "विधानसभा चुनाव 2017",
+          "topicId": "ckdxnkz65v1t",
+          "curationList": [
+            {
+              "curationId": "7ae7289f-20fc-4df1-b38e-ef10d7877f6c",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "2017 State Assembly elections in India",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "2017 State Assembly elections in India"
+        },
+        {
+          "thingLabel": "उत्तर प्रदेश",
+          "thingUri": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+          "thingId": "7c657c38-57a4-4d98-b283-f3b6a8b16bd9",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+          "thingSameAs": ["http://dbpedia.org/resource/Uttar_Pradesh"],
+          "topicName": "उत्तर प्रदेश",
+          "topicId": "c7zp510pgv8t",
+          "curationList": [
+            {
+              "curationId": "fa661c7c-0fd3-4a84-8c93-3e7c3e5908a5",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Uttar Pradesh",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Uttar Pradesh"
+        },
+        {
+          "thingLabel": "भारतीय जनता पार्टी",
+          "thingUri": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+          "thingId": "be29b70d-39b5-4875-9bbb-fe13adf2d69b",
+          "thingType": [
+            "tagging:Agent",
+            "core:Organisation",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "core:Thing"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Bharatiya_Janata_Party"],
+          "topicName": "भारतीय जनता पार्टी",
+          "topicId": "c340qrv0qggt",
+          "curationList": [
+            {
+              "curationId": "5b853c1a-de28-46b3-b74d-17cea51a92b4",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Bharatiya Janata Party",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "Bharatiya Janata Party"
+        },
+        {
+          "thingLabel": "विधानसभा चुनाव 2016",
+          "thingUri": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+          "thingId": "c6e06486-6e48-4a1e-b304-a2bb7d60066c",
+          "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/2016_elections_in_India"
+          ],
+          "topicName": "विधानसभा चुनाव 2016",
+          "topicId": "c340qrv782vt",
+          "curationList": [
+            {
+              "curationId": "f3d755ea-5d48-43bb-b688-3861b650116a",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "India elections 2016",
+          "thingLabelLanguage": "hi",
+          "thingPreferredLabel": "India elections 2016"
+        }
+      ]
+    },
+    "version": "v1.3.15",
+    "blockTypes": ["image", "paragraph", "list", "crosshead", "heading"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "HINDI", "producerId": "52" },
+    "readTime": 4,
+    "siteUri": "/hindi",
+    "topics": [
+      {
+        "topicName": "भारतीय जनता पार्टी",
+        "topicId": "c340qrv0qggt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "5b853c1a-de28-46b3-b74d-17cea51a92b4",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:Agent",
+          "core:Organisation",
+          "tagging:AmbiguousTerm",
+          "tagging:TagConcept",
+          "core:Thing"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "विधानसभा चुनाव 2016",
+        "topicId": "c340qrv782vt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f3d755ea-5d48-43bb-b688-3861b650116a",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Event", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "उत्तर प्रदेश",
+        "topicId": "c7zp510pgv8t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "fa661c7c-0fd3-4a84-8c93-3e7c3e5908a5",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Place"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "विधानसभा चुनाव 2017",
+        "topicId": "ckdxnkz65v1t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7ae7289f-20fc-4df1-b38e-ef10d7877f6c",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "भारत",
+        "topicId": "ckdxnkz7607t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "056dd909-0188-42dd-b164-d88ba2145db8",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      },
+      {
+        "topicName": "उत्तर प्रदेश चुनाव 2022",
+        "topicId": "cv85zqzm07wt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "7ee5a7b3-12ae-4ce1-8b7f-2efa05da5318",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "122994261",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/3F79/production/_122994261_46ce62f8-e7f9-44b4-a574-a83bc78cdbee.jpg",
+        "path": "/cpsprodpb/3F79/production/_122994261_46ce62f8-e7f9-44b4-a574-a83bc78cdbee.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "राघवेंद्र प्रताप सिंह और सैय्यदा खातून",
+        "caption": "राघवेंद्र प्रताप सिंह (बाएं) भाजपा की टिकट पर डुमरियागंज विधानसभा सीट पर 171 मतों के अंतर से जीते थे. बीएसपी की सैय्यदा ख़ातून (दाएं) दूसरे नंबर पर रहीं थी. अब सैय्यदा ख़ातून समाजवादी पार्टी में हैं.",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "बात 2017 के उत्तर प्रदेश विधानसभा चुनाव की है. सिद्धार्थनगर ज़िले की डुमरियागंज विधानसभा सीट पर राघवेंद्र प्रताप सिंह भाजपा के उम्मीदवार थे. मतगणना के दिन आखिरी वक़्त तक राघवेंद्र प्रताप सिंह नतीजों को लेकर असमंजस में थे, आखिरकार परिणाम आए तो उन्हें सिर्फ 171 मतों से जीत हासिल हुई. ",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "दूसरी तरफ बहुजन समाज पार्टी की उम्मीदवार सैय्यदा ख़ातून की किस्मत ने उनका साथ नहीं दिया. उन्हें इस बात का जरा भी अंदाजा नहीं था कि वो 171 मतों से हार जाएंगी.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "डुमरियागंज मुस्लिम बहुल सीट है. यहां मुस्लिम मतदाताओं की संख्या डेढ़ लाख से ज्यादा है. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>बीबीसी </bold>से बातचीत में सैय्यदा ख़ातून बताती हैं, ''पिछले चुनाव में कांग्रेस और समाजवादी पार्टी एक साथ लड़े थे. इस विधानसभा सीट पर कांग्रेस को ब्राह्मण समाज के करीब 8-10 हजार वोट हर चुनाव में पड़ते हैं. वो सारे वोट समाजवादी पार्टी को ना जाकर सीधे भाजपा को चले गए. अगर कांग्रेस अकेले चुनाव लड़ती तो मैं आसानी से चुनाव जीत जाती''. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "उन्हें मात देने वाले राघवेंद्र प्रताप ने बीबीसी से कहा, ''पिछले चुनाव में लोगों को लग रहा था कि मैं तीसरे नंबर का उम्मीदवार हूं. करीब बीस हजार ऐसे वोट थे जो लोगों ने सिर्फ इसलिए नहीं दिए कि मैं हार रहा हूं, इसलिए भी जीत हार का अंतर काफी कम रहा. इस चुनाव में मैं बड़े अंतर से डुमरियागंज विधानसभा सीट से जीत दर्ज करूंगा''",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/india-60124465</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "आरपीएन सिंह बीजेपी में शामिल होकर बोले- 'दुरुस्त आए', सपा-कांग्रेस पर क्या असर?",
+                  "headline": "आरपीएन सिंह बीजेपी में शामिल होकर बोले- 'दुरुस्त आए', सपा-कांग्रेस पर क्या असर?",
+                  "overtyped": "आरपीएन सिंह बीजेपी में शामिल होकर बोले- 'दुरुस्त आए', सपा-कांग्रेस पर क्या असर?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-60124465"
+                },
+                "summary": "पडरौना के राजा कहे जाने वाले आरपीएन सिंह ने राजनीति के 'नए अध्याय' की शुरुआत कर दी है, लेकिन इससे उत्तर प्रदेश की राजनीति पर कितना असर पड़ेगा?",
+                "timestamp": 1643161886000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-60124465",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>hindi/india-48387240</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "दिग्गज जो बहुत कम अंतर से जीते-हारे",
+                  "headline": "लोकसभा चुनाव 2019: वो दिग्गज जो बहुत कम अंतर से जीते-हारे",
+                  "overtyped": "दिग्गज जो बहुत कम अंतर से जीते-हारे"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-48387240"
+                },
+                "summary": "उत्तर प्रदेश और बिहार में कई ऐसे दिग्गज नेता रहे जिन्हें बहुत कम अंतरों से जीत हार मिली.",
+                "timestamp": 1558685967000,
+                "language": "hi",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis",
+                    "categoryName": "Analysis"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-48387240",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "122993907",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1151B/production/_122993907_gettyimages-1145557238.jpg",
+        "path": "/cpsprodpb/1151B/production/_122993907_gettyimages-1145557238.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "मतगणना",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "'लड़ाई 80-20 की'",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "उत्तर प्रदेश में साल 2017 में हुए विधानसभा चुनाव में 40 से ज्यादा ऐसी सीटें थीं, जहां मामला लगभग बराबरी का था. कई विधानसभा सीटों पर जीत हार का अंतर 200 वोट से भी कम था. ऐसी सभी सीटों पर राजनीतिक पार्टियां ही नहीं उनके उम्मीदवार भी फूंक-फूंक कर कदम बढ़ा रहे हैं. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "राजनीतिक पार्टियां इन सीटों पर कोई जोखिम उठाना नहीं चाहेंगी. वजह साफ है, 40 से 50 सीटों पर जीत-हार, उत्तर प्रदेश में किसी पार्टी का भविष्य तय कर सकती हैं. जानकारों का मानना है कि 2017 के विधानसभा चुनाव में डुमरियागंज विधानसभा चुनाव में 'हिंदू-मुस्लिम कार्ड' जोर-शोर से चला. इस बार भी हालात अलग नहीं हैं. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "राघवेंद्र प्रताप सिंह कहते हैं, ''इस बार मैं चुनाव नहीं लड़ रहा हूं. हिंदू समाज चुनाव लड़ रहा है. यहां पर लड़ाई 80-20 की ही है''.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "मीरापुर विधानसभा में भी मुक़ाबला कांटे का रहा. 2017 विधानसभा चुनाव में भाजपा के उम्मीदवार अवतार सिंह भड़ाना ने समाजवादी पार्टी के उम्मीदवार लियाकत अली को सिर्फ 193 वोटों के अंतर से हराया. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "साल 2017 के उत्तर प्रदेश चुनाव में 17 ऐसी सीटें थी जहां जीत हार का अंतर दो हजार से भी कम रहा. इनमें नौ सीटों पर भाजपा, पांच सीटों पर सपा, दो पर बसपा और एक सीट पर अपना दल (सोनेलाल) ने जीत दर्ज की.  वहीं दूसरी तरफ पांच सीटों पर बसपा, सात सीटों पर सपा और तीन सीटों पर बीजेपी दूसरे नंबर पर रही.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/india-60011861</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "बीजेपी क्या योगी और मौर्य को सुरक्षित सीटों से मैदान में उतार रही है?",
+                  "headline": "उत्तर प्रदेश: बीजेपी क्या योगी और मौर्य को सुरक्षित सीटों से मैदान में उतार रही है?",
+                  "overtyped": "बीजेपी क्या योगी और मौर्य को सुरक्षित सीटों से मैदान में उतार रही है?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-60011861"
+                },
+                "summary": "अयोध्या और मथुरा से योगी आदित्यनाथ के चुनाव लड़ने की चर्चा के बाद आख़िरकार उन्हें उनके अपने गोरखपुर से मैदान में उतारने का फ़ैसला किया गया है, जबकि सिराथू केशव प्रसाद मौर्य की पुरानी सीट है.",
+                "timestamp": 1642305980000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-60011861",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>hindi/india-59944106</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "उत्तर प्रदेश चुनाव: यूपी की राजनीति में छोटे दलों की क्या भूमिका है?",
+                  "headline": "उत्तर प्रदेश चुनाव: यूपी की राजनीति में छोटे दलों की क्या भूमिका है?",
+                  "overtyped": "उत्तर प्रदेश चुनाव: यूपी की राजनीति में छोटे दलों की क्या भूमिका है?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-59944106"
+                },
+                "summary": "पिछले तीन चुनावों से बसपा, सपा और बीजेपी पूर्ण बहुमत से सरकार बना रही हैं तो छोटे दलों का सहारा लेने को आतुर क्यों रहती हैं ये पार्टियां?",
+                "timestamp": 1641955882000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-59944106",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "122993508",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/13A9B/production/_122993508_gfx1.jpg",
+        "path": "/cpsprodpb/13A9B/production/_122993508_gfx1.jpg",
+        "height": 1039,
+        "width": 1280,
+        "altText": "नज़दीकी टक्कर",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "क्या कहते हैं नजदीकी मुकाबले ?",
+        "markupType": "plain_text",
+        "type": "heading"
+      },
+      {
+        "text": "आंकड़े बताते हैं कि पिछली बार यूपी में भाजपा की लहर के बावजूद उनके कई उम्मीदवार हारते हारते बचे. वहीं दूसरी पार्टियों के कई उम्मीदवार ऐसे हैं जो कुछ वोट से हार गए. जीत-हार का अंतर 100 वोट से 5 हजार के बीच ही रहा.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "सी-वोटर के यशवंत देशमुख बताते हैं, ''विधानसभा चुनाव में दस से पंद्रह प्रतिशत ऐसी सीटें होती हैं जहां जीत-हार का अंतर काफी कम होता है. हर चुनाव में जीत-हार का अंतर बदलता रहता है. अगर किसी विधानसभा सीट पर जीतने वाले उम्मीदवार ने अच्छा काम नहीं किया है तो संभावना रहती है कि वो अगले चुनाव में हार जाएगा''. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "2017 यूपी विधानसभा चुनाव में 27 ऐसी सीटें भी रहीं जहां जीत-हार का अंतर 2 हजार से 5 हजार का रहा. इन 27 विधानसभा सीटों में भाजपा ने 13, सपा ने आठ, बसपा ने चार, राष्ट्रीय लोकदल और भारतीय राष्ट्रीय कांग्रेस ने एक-एक सीट पर जीत दर्ज की. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/india-59974742</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "योगी आदित्यनाथ का साथ छोड़ते नेता, बीजेपी कर पाएगी भरपाई?",
+                  "headline": "उत्तर प्रदेश चुनावः योगी आदित्यनाथ का साथ छोड़ते नेता, बीजेपी कर पाएगी भरपाई?",
+                  "overtyped": "योगी आदित्यनाथ का साथ छोड़ते नेता, बीजेपी कर पाएगी भरपाई?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-59974742"
+                },
+                "summary": "बीते 48 घंटों में योगी सरकार के दो बड़े मंत्रियों ने इस्तीफ़ा दिया है और गुरुवार को विधायक मुकेश वर्मा ने भी इस्तीफ़े की चिट्ठी भेज दी है. कई और नेताओं के इस्तीफ़े की चर्चा है. ये बीजेपी को झटका है या स्वाभाविक राजनीतिक घटनाक्रम?",
+                "timestamp": 1642065145000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-59974742",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>hindi/india-59696692</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "उत्तर प्रदेश चुनाव: बीजेपी के लिए निषाद समाज का साथ क्यों ज़रूरी है?",
+                  "headline": "उत्तर प्रदेश चुनाव: बीजेपी के लिए निषाद समाज का साथ क्यों ज़रूरी है?",
+                  "overtyped": "उत्तर प्रदेश चुनाव: बीजेपी के लिए निषाद समाज का साथ क्यों ज़रूरी है?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-59696692"
+                },
+                "summary": "बीजेपी ने शुक्रवार को लखनऊ में 'निषाद पार्टी' के साथ एक संयुक्त रैली की. अमित शाह ने इस रैली में आश्वासन दिया कि अगर बीजेपी की सरकार दोबारा बनती है तो निषाद समुदाय के एजेंडे को पूरा किया जाएगा.",
+                "timestamp": 1639750935000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-59696692",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "id": "122993510",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/0603/production/_122993510_gfx2.jpg",
+        "path": "/cpsprodpb/0603/production/_122993510_gfx2.jpg",
+        "height": 492,
+        "width": 1280,
+        "altText": "नज़दीकी टक्कर",
+        "copyrightHolder": "BBC",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "चुनाव विश्लेषक प्रो.संजय कुमार के मुताबिक, ''जिन सीटों पर जीत-हार का अंतर कम हैं, वहां पार्टी (नतीजों का) आधार नहीं होती. अगर पार्टी आधार होती तो पूरे राज्य में नजदीकी मुकाबला होता लेकिन ऐसा नहीं था. इस तरह की सीटों पर स्थानीय मुद्दे और उम्मीदवार सबसे ज्यादा असर डालते हैं''. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "जिस विधानसभा सीट पर सभी मुख्य पार्टियों के उम्मीदवार मजबूत होते हैं वहां भी जीत हार का अंतर काफी कम हो जाता है. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. संजय कुमार बताते हैं, ''अगर किसी सीट पर मुकाबला चौतरफा हो यानी सभी मुख्य पार्टियों के उम्मीदवार मजबूत हों तो जीत हार का अंतर काफी कम हो जाता है. ऐसे में नुकसान भी बराबर का होता है''. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "122993512",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/5423/production/_122993512_gettyimages-1145557573.jpg",
+        "path": "/cpsprodpb/5423/production/_122993512_gettyimages-1145557573.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "मतगणना",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "<bold>नजदीकी </bold><bold>मुक़ाबले </bold><bold>के लिए नई रणनीति </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "जानकार मानते हैं कि जब पार्टियां गठबंधन करती हैं तो इन सीटों का खास ख्याल रखती हैं जहां पिछले विधानसभा चुनाव में जीत-हार का अंतर काफी कम रहा. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "प्रो. संजय कुमार के मुताबिक, ''जब कोई पार्टी इस तरह की सीट पर दोबारा चुनाव लड़ती है तो इन बातों पर ज्यादा ध्यान रखा जाता है कि किन वजहों से पार्टी की जीत-हार कुछ हजार वोटों ने तय की. कोशिश ये रहती है कि जिस समुदाय से कम वोट मिले हैं उन पर खास ध्यान दिया जाए''. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "नजदीकी मुकाबले में जीत पक्की के लिए हर पार्टी उम्मीदवार से लेकर वोटों के गणित पर खास नजर रख रही है. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "समाजवादी पार्टी के प्रवक्ता अनुराग भदौरिया ने <bold>बीबीसी</bold> से कहा, ''हमारे संगठन के लोग चुनाव हारने के बाद भी उन सीटों पर काम करते रहे, जिसका परिणाम हमें इस बार देखने को मिलेगा. समाजवादी पार्टी ने ऐसी सीटों पर अलग से संगठन के लोगों को नियुक्त किया हुआ है''. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>hindi/60125462</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "क्या सपा में गए अपने पिता एसपी मौर्य के लिए प्रचार करेंगी BJP सांसद संघमित्रा मौर्य?",
+                  "headline": "क्या सपा में गए अपने पिता एसपी मौर्य के लिए प्रचार करेंगी BJP सांसद संघमित्रा मौर्य?",
+                  "overtyped": "क्या सपा में गए अपने पिता एसपी मौर्य के लिए प्रचार करेंगी BJP सांसद संघमित्रा मौर्य?"
+                },
+                "locators": { "href": "https://www.bbc.com/hindi/60125462" },
+                "summary": "स्वामी प्रसाद मौर्य के बीजेपी छोड़ने के बाद से ही संघमित्रा मौर्य सुर्ख़ियों में रहीं. उन्होंने साफ़ किया है कि वो फ़िलहाल बीजेपी में ही रहेंगी. पिता-पुत्री के रिश्तों से लेकर बीजेपी की कार्यकर्ता के तौर पर अपने पूरे राजनीतिक सफ़र पर उन्होंने बीबीसी से बात की.",
+                "timestamp": 1643181499000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/60125462",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>hindi/india-59966280</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "उत्तर प्रदेश चुनाव में गै़र यादव ओबीसी वोट इतने अहम क्यों है?",
+                  "headline": "उत्तर प्रदेश चुनाव: स्वामी प्रसाद मौर्य तो बहाना है, ग़ैर यादव ओबीसी वोट बैंक पर सभी पार्टियों का निशाना है",
+                  "overtyped": "उत्तर प्रदेश चुनाव में गै़र यादव ओबीसी वोट इतने अहम क्यों है? "
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/hindi/india-59966280"
+                },
+                "summary": "दो दिन में योगी सरकार के दो बड़े मंत्रियों ने इस्तीफ़ा दिया और दोनों अन्य पिछड़ी जाति से ताल्लुक रखते हैं. अखिलेश यादव ने एक फ़ोटो ट्वीट करके बीजेपी की धड़कनें और बढ़ा दी हैं. इस रिपोर्ट के ज़रिए जानिए उत्तर प्रदेश चुनाव में ग़ैर यादव ओबीसी वोट क्यों है अहम?",
+                "timestamp": 1642056840000,
+                "language": "hi",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:hindi/india-59966280",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "<bold>(</bold><bold>बीबीसी हिन्दी के एंड्रॉएड ऐप के लिए आप </bold><link><caption>यहां क्लिक</caption><altText>यहां क्लिक</altText><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"highweb\"/><url href=\"https://play.google.com/store/apps/details?id=uk.co.bbc.hindi\" platform=\"enhancedmobile\"/></link><bold> कर सकते हैं. आप हमें </bold><link><caption>फ़ेसबुक</caption><altText>फ़ेसबुक</altText><url href=\"https://www.facebook.com/bbchindi\" platform=\"highweb\"/><url href=\"https://www.facebook.com/bbchindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>ट्विटर</caption><altText>ट्विटर</altText><url href=\"https://twitter.com/BBCHindi\" platform=\"highweb\"/><url href=\"https://twitter.com/BBCHindi\" platform=\"enhancedmobile\"/></link><bold>, </bold><link><caption>इंस्टाग्राम</caption><url href=\"https://www.instagram.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.instagram.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> और </bold><link><caption>यूट्यूब</caption><url href=\"https://www.youtube.com/bbchindi/\" platform=\"highweb\"/><url href=\"https://www.youtube.com/bbchindi/\" platform=\"enhancedmobile\"/></link><bold> पर फ़ॉलो भी कर सकते हैं.</bold><bold>)</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "जिन सीटों पर कांटे की टक्कर, वहां क्या रणनीति बना रहे हैं BJP और SP",
+      "headline": "उत्तर प्रदेश चुनाव: जिन सीटों पर कांटे की टक्कर, वहां क्या रणनीति बना रहे हैं BJP और SP"
+    },
+    "locators": {
+      "assetUri": "/hindi/india-60128834",
+      "cpsUrn": "urn:bbc:content:assetUri:hindi/india-60128834",
+      "curie": "http://www.bbc.co.uk/asset/76318b65-19ac-47c4-afb4-3a678cab4384",
+      "assetId": "60128834"
+    },
+    "summary": "उत्तर प्रदेश में कुछ ऐसी सीटें हैं जहां पिछले विधानसभा चुनावों में हार-जीत का फ़ैसला चंद वोटों से हुआ था. राजनीतिक दल इस बार इन सीटों के लिए क्या योजना बना रहे हैं, पढ़िए",
+    "timestamp": 1643172761000,
+    "language": "hi",
+    "byline": {
+      "name": "अभिनव गोयल",
+      "title": "बीबीसी संवाददाता",
+      "persons": [
+        { "name": "अभिजीत श्रीवास्तव", "function": "बीबीसी संवाददाता" }
+      ]
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "hi",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Hindi",
+      "locator": "urn:bbc:cps:curie:asset:76318b65-19ac-47c4-afb4-3a678cab4384",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/e91b614e-d7c9-419e-9525-58038966d285#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+            "thingLabel": "उत्तर प्रदेश चुनाव 2022",
+            "thingUri": "http://www.bbc.co.uk/things/59f28e6e-ec4d-424f-84f0-94f832e0fbd4#id",
+            "thingId": "59f28e6e-ec4d-424f-84f0-94f832e0fbd4",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q85738025",
+              "http://dbpedia.org/resource/2022_Uttar_Pradesh_Legislative_Assembly_election"
+            ],
+            "thingEnglishLabel": "Uttar Pradesh Legislative Assembly election 2022",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingLabel": "भारत",
+            "thingUri": "http://www.bbc.co.uk/things/5a08f030-710f-4168-acee-67294a90fc75#id",
+            "thingId": "5a08f030-710f-4168-acee-67294a90fc75",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/India",
+              "http://sws.geonames.org/1269750/",
+              "http://www.wikidata.org/entity/Q668"
+            ],
+            "thingEnglishLabel": "India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+            "thingLabel": "विधानसभा चुनाव 2017",
+            "thingUri": "http://www.bbc.co.uk/things/74bb431d-3e69-4159-a9c9-4e27299b854a#id",
+            "thingId": "74bb431d-3e69-4159-a9c9-4e27299b854a",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Event"],
+            "thingSameAs": [
+              "http://en.wikipedia.org/wiki/2017_elections_in_India#Legislative_Assembly_elections"
+            ],
+            "thingEnglishLabel": "2017 State Assembly elections in India",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+            "thingLabel": "उत्तर प्रदेश",
+            "thingUri": "http://www.bbc.co.uk/things/7c657c38-57a4-4d98-b283-f3b6a8b16bd9#id",
+            "thingId": "7c657c38-57a4-4d98-b283-f3b6a8b16bd9",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Place"],
+            "thingSameAs": ["http://dbpedia.org/resource/Uttar_Pradesh"],
+            "thingEnglishLabel": "Uttar Pradesh",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+            "thingLabel": "भारतीय जनता पार्टी",
+            "thingUri": "http://www.bbc.co.uk/things/be29b70d-39b5-4875-9bbb-fe13adf2d69b#id",
+            "thingId": "be29b70d-39b5-4875-9bbb-fe13adf2d69b",
+            "thingType": [
+              "tagging:Agent",
+              "core:Organisation",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "core:Thing"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Bharatiya_Janata_Party"
+            ],
+            "thingEnglishLabel": "Bharatiya Janata Party",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+            "thingLabel": "विधानसभा चुनाव 2016",
+            "thingUri": "http://www.bbc.co.uk/things/c6e06486-6e48-4a1e-b304-a2bb7d60066c#id",
+            "thingId": "c6e06486-6e48-4a1e-b304-a2bb7d60066c",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/2016_elections_in_India"
+            ],
+            "thingEnglishLabel": "India elections 2016",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingLabel": "Analysis",
+            "thingUri": "http://www.bbc.co.uk/things/170f311e-fd87-4255-85db-8b4aee12594d#id",
+            "thingId": "170f311e-fd87-4255-85db-8b4aee12594d",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [
+              "http://www.bbc.co.uk/ontologies/applicationlogic-news/Analysis"
+            ],
+            "thingEnglishLabel": "Analysis",
+            "thingPreferredLabel": "Analysis",
+            "thingLabelLanguage": "hi",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "122993912",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/55B3/production/_122993912_new.jpg",
+      "path": "/cpsprodpb/55B3/production/_122993912_new.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "राघवेंद्र प्रताप सिंह और सैय्यदा खातून",
+      "caption": "राघवेंद्र प्रताप सिंह (बाएं) भाजपा की टिकट पर डुमरियागंज विधानसभा सीट पर 171 मतों के अंतर से जीते थे. बीएसपी की सैय्यदा ख़ातून (दाएं) दूसरे नंबर पर रहीं थी. अब सैय्यदा ख़ातून समाजवादी पार्टी में हैं.",
+      "copyrightHolder": "BBC",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:hindi/india-60128834",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "भारत",
+      "uri": "/hindi/india",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Hindi",
+      "uri": "/hindi",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "क्या सपा में गए अपने पिता एसपी मौर्य के लिए प्रचार करेंगी BJP सांसद संघमित्रा मौर्य?",
+              "headline": "क्या सपा में गए अपने पिता एसपी मौर्य के लिए प्रचार करेंगी BJP सांसद संघमित्रा मौर्य?"
+            },
+            "locators": {
+              "assetUri": "/hindi/60125462",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/60125462"
+            },
+            "summary": "स्वामी प्रसाद मौर्य के बीजेपी छोड़ने के बाद से ही संघमित्रा मौर्य सुर्ख़ियों में रहीं. उन्होंने साफ़ किया है कि वो फ़िलहाल बीजेपी में ही रहेंगी. पिता-पुत्री के रिश्तों से लेकर बीजेपी की कार्यकर्ता के तौर पर अपने पूरे राजनीतिक सफ़र पर उन्होंने बीबीसी से बात की.",
+            "timestamp": 1643181499000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122990987",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1343D/production/_122990987_ec6e7df7-688a-420c-9c6b-b3a453e343bc.jpg",
+              "path": "/cpsprodpb/1343D/production/_122990987_ec6e7df7-688a-420c-9c6b-b3a453e343bc.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "स्वामी प्रसाद मौर्य के साथ संघमित्रा मौर्य",
+              "copyrightHolder": "Twitter/Swami Prasad Maurya",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/60125462",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "उत्तर प्रदेश चुनाव: बीजेपी के लिए निषाद समाज का साथ क्यों ज़रूरी है?",
+              "headline": "उत्तर प्रदेश चुनाव: बीजेपी के लिए निषाद समाज का साथ क्यों ज़रूरी है?"
+            },
+            "locators": {
+              "assetUri": "/hindi/india-59696692",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/india-59696692"
+            },
+            "summary": "बीजेपी ने शुक्रवार को लखनऊ में 'निषाद पार्टी' के साथ एक संयुक्त रैली की. अमित शाह ने इस रैली में आश्वासन दिया कि अगर बीजेपी की सरकार दोबारा बनती है तो निषाद समुदाय के एजेंडे को पूरा किया जाएगा.",
+            "timestamp": 1639750935000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122256450",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1559/production/_122256450_a15f6506-ec3d-4962-a1f3-b1937ecb0011.jpg",
+              "path": "/cpsprodpb/1559/production/_122256450_a15f6506-ec3d-4962-a1f3-b1937ecb0011.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "अमित शाह",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/india-59696692",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "आरपीएन सिंह बीजेपी में शामिल होकर बोले- 'दुरुस्त आए', सपा-कांग्रेस पर क्या असर?",
+              "headline": "आरपीएन सिंह बीजेपी में शामिल होकर बोले- 'दुरुस्त आए', सपा-कांग्रेस पर क्या असर?"
+            },
+            "locators": {
+              "assetUri": "/hindi/india-60124465",
+              "cpsUrn": "urn:bbc:content:assetUri:/hindi/india-60124465"
+            },
+            "summary": "पडरौना के राजा कहे जाने वाले आरपीएन सिंह ने राजनीति के 'नए अध्याय' की शुरुआत कर दी है, लेकिन इससे उत्तर प्रदेश की राजनीति पर कितना असर पड़ेगा?",
+            "timestamp": 1643161886000,
+            "language": "hi",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122991258",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/14CE3/production/_122991258_aa.jpg",
+              "path": "/cpsprodpb/14CE3/production/_122991258_aa.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "आरपीएन सिंह",
+              "copyrightHolder": "ANI",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:hindi/india-60124465",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
