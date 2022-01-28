@@ -110,7 +110,7 @@ export const testsThatFollowSmokeTestConfig = ({
             appConfig[config[service].name][variant].lang,
           );
         });
-        it.only('Error Page 404', () => {
+        it('Error Page 404', () => {
           if (
             Cypress.env('APP_ENV') === 'local' &&
             Cypress.browser.isHeadless
@@ -118,7 +118,7 @@ export const testsThatFollowSmokeTestConfig = ({
             cy.document().its('fonts.status').should('equal', 'loaded');
             // eslint-disable-next-line cypress/no-unnecessary-waiting
             cy.wait(3000);
-            cy.matchImageSnapshot();
+            cy.matchImageSnapshot({ capture: 'fullPage' });
           } else {
             cy.log('Snapshot skipped in headed mode');
           }

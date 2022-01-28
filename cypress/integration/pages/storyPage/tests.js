@@ -111,11 +111,11 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
       }
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
-      it.only('Story Page', () => {
+      it('Story Page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.matchImageSnapshot();
+          cy.matchImageSnapshot({ capture: 'fullPage' });
         } else {
           cy.log('Snapshot skipped in headed mode');
         }

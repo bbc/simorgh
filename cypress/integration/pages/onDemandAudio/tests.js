@@ -43,7 +43,7 @@ export default ({ service, pageType, variant, isAmp }) => {
       });
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
-      it.only('On Demand Audio', () => {
+      it('On Demand Audio', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
           // eslint-disable-next-line cypress/no-unnecessary-waiting

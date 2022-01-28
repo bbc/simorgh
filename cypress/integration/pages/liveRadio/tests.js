@@ -34,7 +34,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
       });
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
-      it.only('Live Radio', () => {
+      it('Live Radio', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
           // eslint-disable-next-line cypress/no-unnecessary-waiting
