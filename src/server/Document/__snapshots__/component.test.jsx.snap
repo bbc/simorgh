@@ -78,6 +78,7 @@ exports[`Document Component should render AMP version correctly 1`] = `
   >
     <div
       id="root"
+      role="presentation"
     >
       <h1
         data-reactroot=""
@@ -146,6 +147,7 @@ exports[`Document Component should render correctly 1`] = `
   <body>
     <div
       id="root"
+      role="presentation"
     >
       <h1
         data-reactroot=""

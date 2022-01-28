@@ -89,7 +89,11 @@ const Document = ({
         )}
       </head>
       <body {...ampGeoPendingAttrs}>
-        <div id="root" dangerouslySetInnerHTML={{ __html: html }} />
+        <div
+          id="root"
+          role="presentation"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
         {scriptsAllowed && (
           <script
             dangerouslySetInnerHTML={{
