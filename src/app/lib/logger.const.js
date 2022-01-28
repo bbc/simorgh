@@ -13,6 +13,7 @@ const logCodes = {
   DATA_FETCH_ERROR_SECONDARY_COLUMN: 'data_fetch_error_secondary_column',
   DATA_NOT_FOUND: 'data_response_404',
   DATA_REQUEST_RECEIVED: 'data_request_received',
+  BFF_FETCH_ERROR: 'bff_fetch_error',
 
   // Files
   LOCAL_SENDFILE_ERROR: 'local_sendfile_error',

@@ -1,6 +1,10 @@
 import { Agent } from 'https';
 import fetch from 'node-fetch';
+import nodeLogger from '#lib/logger.node';
+import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import getCerts from './certs';
+
+const logger = nodeLogger(__filename);
 
 let agentMemo = null;
 
@@ -18,7 +22,7 @@ const getAgent = async () => {
   return agentMemo;
 };
 
-const fetchWithCerts = async requestUrl => {
+const fetchWithCerts = async (requestUrl, service) => {
   const agent = await getAgent();
 
   const opts = {
@@ -32,12 +36,11 @@ const fetchWithCerts = async requestUrl => {
   try {
     return await fetch(requestUrl, opts);
   } catch (error) {
-    const socketConnectionFailedErrors = ['ECONNRESET', 'EPIPE', 'ETIMEDOUT'];
-    if (socketConnectionFailedErrors.includes(error.code)) {
-      return fetch(requestUrl, opts);
-    }
-
-    throw error;
+    logger.error(BFF_FETCH_ERROR, {
+      service,
+      error,
+    });
+    return null;
   }
 };
 
