@@ -1,0 +1,936 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:persian/iran-60165609",
+    "locators": {
+      "assetUri": "/persian/iran-60165609",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-60165609",
+      "curie": "http://www.bbc.co.uk/asset/d9a173a1-548b-4254-be70-64bf160bb5db",
+      "assetId": "60165609"
+    },
+    "type": "STY",
+    "createdBy": "persian-v6",
+    "language": "fa",
+    "lastUpdated": 1643377673510,
+    "firstPublished": 1643377665000,
+    "lastPublished": 1643377665000,
+    "timestamp": 1643377665000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Coronavirus+lockdown+measures~Iran~Coronavirus+pandemic~Coronavirus+vaccines~Iran+health~Iran+coronavirus+lockdown+restrictions~Health",
+      "cps_asset_id": "60165609",
+      "ldp_ids": "485943c9-556e-46ed-8707-3cf40d60691d~511accd7-6ee6-4dfb-8e2b-b236be8cb14c~5fe79b8d-56e5-4aff-8b05-21f9ad731912~67634070-62db-491e-8bb4-434f21123d6d~9981f626-77d0-496f-84a6-c289b46d89d5~a1a3df86-2c00-436d-8025-b397ab5ae500~c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+      "contentId": "urn:bbc:cps:curie:asset:d9a173a1-548b-4254-be70-64bf160bb5db",
+      "counterName": "persian.iran.story.60165609.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+      "locator": "urn:bbc:cps:curie:asset:d9a173a1-548b-4254-be70-64bf160bb5db",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+            "thingLabel": "تعطیلی و محدودیت‌های کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+            "thingId": "485943c9-556e-46ed-8707-3cf40d60691d",
+            "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q87866152",
+              "http://dbpedia.org/resource/COVID-19_pandemic_lockdowns"
+            ],
+            "thingEnglishLabel": "Coronavirus lockdown measures",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingLabel": "ایران",
+            "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/130758/"],
+            "thingEnglishLabel": "Iran",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "شیوع ویروس کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "thingLabel": "واکسن کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "thingId": "67634070-62db-491e-8bb4-434f21123d6d",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_vaccine",
+              "http://www.wikidata.org/entity/Q87719492"
+            ],
+            "thingEnglishLabel": "Coronavirus vaccines",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+            "thingLabel": "بهداشت و درمان ایران",
+            "thingUri": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+            "thingId": "9981f626-77d0-496f-84a6-c289b46d89d5",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": ["http://dbpedia.org/resource/Health_care_in_Iran"],
+            "thingEnglishLabel": "Iran health",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+            "thingLabel": "تعطیلی و محدودیت‌های کرونا در ایران",
+            "thingUri": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+            "thingId": "a1a3df86-2c00-436d-8025-b397ab5ae500",
+            "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Iran coronavirus lockdown restrictions",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingLabel": "بهداشت و درمان",
+            "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Genre"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Health",
+              "http://www.wikidata.org/entity/Q12147"
+            ],
+            "thingEnglishLabel": "Health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "fa",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "تعطیلی و محدودیت‌های کرونا",
+          "thingUri": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+          "thingId": "485943c9-556e-46ed-8707-3cf40d60691d",
+          "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q87866152",
+            "http://dbpedia.org/resource/COVID-19_pandemic_lockdowns"
+          ],
+          "topicName": "تعطیلی و محدودیت‌های کرونا",
+          "topicId": "cyz05l3gzdnt",
+          "curationList": [
+            {
+              "curationId": "f0fd58b6-49bc-4c97-a3da-252eaeea7d1d",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus lockdown measures",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Coronavirus lockdown measures"
+        },
+        {
+          "thingLabel": "ایران",
+          "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+          "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+          "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/130758/"],
+          "topicName": "ایران",
+          "topicId": "ckdxnwvwwjnt",
+          "curationList": [
+            {
+              "curationId": "a7971bb0-8dd2-4f3f-9b5a-d22d1cda561d",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Iran",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Iran"
+        },
+        {
+          "thingLabel": "شیوع ویروس کرونا",
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/COVID-19_pandemic",
+            "http://www.wikidata.org/entity/Q81068910"
+          ],
+          "topicName": "شیوع ویروس کرونا",
+          "topicId": "c00gmr40p29t",
+          "curationList": [
+            {
+              "curationId": "82de81da-b0f9-46a7-89ed-413e64986628",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus pandemic",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Coronavirus pandemic"
+        },
+        {
+          "thingLabel": "واکسن کرونا",
+          "thingUri": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+          "thingId": "67634070-62db-491e-8bb4-434f21123d6d",
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/COVID-19_vaccine",
+            "http://www.wikidata.org/entity/Q87719492"
+          ],
+          "topicName": "واکسن کرونا",
+          "topicId": "c4mrl8lp667t",
+          "curationList": [
+            {
+              "curationId": "36864501-57fb-4d07-bc58-53ef9857f04e",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus vaccines",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Coronavirus vaccines"
+        },
+        {
+          "thingLabel": "بهداشت و درمان ایران",
+          "thingUri": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+          "thingId": "9981f626-77d0-496f-84a6-c289b46d89d5",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": ["http://dbpedia.org/resource/Health_care_in_Iran"],
+          "topicName": "بهداشت و درمان ایران",
+          "topicId": "cxnykjzq1p6t",
+          "curationList": [
+            {
+              "curationId": "f2314e97-ef6b-4ac6-a531-d62ef4949b93",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Iran health",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Iran health"
+        },
+        {
+          "thingLabel": "تعطیلی و محدودیت‌های کرونا در ایران",
+          "thingUri": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+          "thingId": "a1a3df86-2c00-436d-8025-b397ab5ae500",
+          "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+          "thingSameAs": [],
+          "topicName": "تعطیلی و محدودیت‌های کرونا در ایران",
+          "topicId": "c9r913x3ydxt",
+          "curationList": [
+            {
+              "curationId": "d385a21a-eb2e-404c-9c72-6d069cd1d71f",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Iran coronavirus lockdown restrictions",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Iran coronavirus lockdown restrictions"
+        },
+        {
+          "thingLabel": "بهداشت و درمان",
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "tagging:Genre"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ],
+          "topicName": "بهداشت و درمان",
+          "topicId": "cxnykjzqr1yt",
+          "curationList": [
+            {
+              "curationId": "27910848-3296-4945-b7d9-215ebcba9d2d",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Health",
+          "thingLabelLanguage": "fa",
+          "thingPreferredLabel": "Health"
+        }
+      ]
+    },
+    "version": "v1.3.15",
+    "blockTypes": ["image", "paragraph", "list"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "PERSIAN", "producerId": "69" },
+    "readTime": 3,
+    "siteUri": "/persian",
+    "topics": [
+      {
+        "topicName": "شیوع ویروس کرونا",
+        "topicId": "c00gmr40p29t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "82de81da-b0f9-46a7-89ed-413e64986628",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "واکسن کرونا",
+        "topicId": "c4mrl8lp667t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "36864501-57fb-4d07-bc58-53ef9857f04e",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "تعطیلی و محدودیت‌های کرونا در ایران",
+        "topicId": "c9r913x3ydxt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "d385a21a-eb2e-404c-9c72-6d069cd1d71f",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Event", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "ایران",
+        "topicId": "ckdxnwvwwjnt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "a7971bb0-8dd2-4f3f-9b5a-d22d1cda561d",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Place", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "بهداشت و درمان ایران",
+        "topicId": "cxnykjzq1p6t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f2314e97-ef6b-4ac6-a531-d62ef4949b93",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "بهداشت و درمان",
+        "topicId": "cxnykjzqr1yt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "27910848-3296-4945-b7d9-215ebcba9d2d",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      },
+      {
+        "topicName": "تعطیلی و محدودیت‌های کرونا",
+        "topicId": "cyz05l3gzdnt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f0fd58b6-49bc-4c97-a3da-252eaeea7d1d",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "123035613",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/7BA5/production/_123035613_mediaitem123035612.jpg",
+        "path": "/cpsprodpb/7BA5/production/_123035613_mediaitem123035612.jpg",
+        "height": 620,
+        "width": 976,
+        "altText": "کرونا در ایران",
+        "copyrightHolder": "Irna",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "با افزایش میزان مبتلایان به کووید ۱۹ در ایران و تغییر رنگ‌های نقشه جغرافیایی میزان بستری، امروز وزیر بهداشت ایران نیز تاکید کرد که &quot;عملا وارد پیک ششم شده‌ایم&quot;.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بهرام عین‌الهی در حساب توییترش با اعلام ورود به موج ششم شیوع کرونا نوشت که &quot;توصیه اکید و حتی خواهش ما رعایت همان راهکارهای ساده اما مهم و حیاتی است، استفاده صحیح از ماسک، رعایت شیوه نامه‌های بهداشتی و تزریق واکسن به ویژه دوز سوم است.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "به گزارش خبرآنلاین، روند بستری مبتلایان پس از ۱۵۶ روز مجددا افزایش یافته:: &quot;بر اساس تجربه سایر کشورها و به خاطر سرعت شیوع امیکرون، در صورت عدم تعطیلی شهرهایی که وضعیت قرمز دارند، احتمال افزایش انفجاری بستری‌شدگان بسیار جدی است&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "براساس تازه‌ترین نقشه شیوع کرونا ایران در حال حاضر شهرستان‌های کاشان، فردوس، قم، ابرکوه، اردکان، خاتم، مهریز به وضعیت قرمز که نشان از بالاترین حد بستری به کرونا است، رسیده‌اند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "همچنین ۴۳  شهر شامل اصفهان (استان اصفهان)، بوشهر، تنگستان، دشتستان، گناوه (استان بوشهر) پاکدشت، تهران، دماوند، ری، شمیرانات، فیروزکوه، قرچک، ملارد، ورامین (استان تهران)، سامان (استان چهارمحال و بختیاری)، بینالود، تربت حیدریه، مشهد (خراسان رضوی)، ایرانشهر (سیستان و بلوچستان)، شیراز، کوار، گراش (استان فارس)، انار، جیرفت، رفسنجان، زرند، سیرجان، کرمان (استان)، لاهیجان (استان گیلان)، خرم آباد (استان لرستان)، رامسر، سوادکوه (استان مازندران)، اراک، ساوه (استان مرکزی)، بستک، بندر لنگه، بندرعباس، پارسیان، جاسک (استان هرمزگان)، بهاباد، تفت، میبد، یزد (استان یزد) در وضعیت نارنجی قرار گرفتند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>persian/iran-60096765</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "اختصاصی؛ ۳۰۰ هزار نفر در ایران قربانی همه‌گیری کرونا شده‌اند",
+                  "headline": "دو سال مرگبار؛ ۳۰۰ هزار نفر در ایران قربانی همه‌گیری کرونا شده‌اند",
+                  "overtyped": "اختصاصی؛ ۳۰۰ هزار نفر در ایران قربانی همه‌گیری کرونا شده‌اند"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/persian/iran-60096765"
+                },
+                "summary": "بررسی‌های بی‌بی‌سی فارسی نشان می‌دهند در دو سالی که از آغاز همه‌گیری کووید-۱۹ در ایران گذشته، حدود ۳۰۰ هزار نفر در ایران قربانی این همه‌گیری شده‌اند. این رقم بیش از دو برابر آمار رسمی جانباختگان کرونا در ایران در همین مدت است. این برآورد با مقایسه موارد هفتگی فوت ثبت‌شده در این مدت با میانگین موارد هفتگی فوت در ۵ سال پیش از آغاز همه‌گیری انجام شده است.",
+                "timestamp": 1642873230000,
+                "language": "fa",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:persian/iran-60096765",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>persian/iran-60080261</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "هشدار نسبت به بازگشایی مدارس و دانشگاه‌ها همزمان با گسترش سویه اومیکرون در ایران",
+                  "headline": "هشدار نسبت به بازگشایی مدارس و دانشگاه‌ها همزمان با گسترش سویه اومیکرون در ایران",
+                  "overtyped": "هشدار نسبت به بازگشایی مدارس و دانشگاه‌ها همزمان با گسترش سویه اومیکرون در ایران"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/persian/iran-60080261"
+                },
+                "summary": "دو کارشناس بهداشت و درمان ایران هشدار داده‌اند که در حالیکه سویه اومیکرون در ایران در حال حاضر گسترش است، بازگشایی مدارس و دانشگاه‌ها \"کار درستی نیست\".",
+                "timestamp": 1642750561000,
+                "language": "fa",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+                    "categoryName": "News"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:persian/iran-60080261",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>persian/iran-60027270</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "'برگزاری حضوری' کلاس‌ها در مراکز آموزشی ایران با 'کاهش' محدودیت‌های کرونا",
+                  "headline": "'برگزاری حضوری' کلاس‌ها در مراکز آموزشی ایران با 'کاهش' محدودیت‌های کرونا",
+                  "overtyped": "'برگزاری حضوری' کلاس‌ها در مراکز آموزشی ایران با 'کاهش' محدودیت‌های کرونا"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/persian/iran-60027270"
+                },
+                "summary": "وزارت آموزش و پرورش ایران در ابلاغیه‌ای که رسانه‌های ایران آن را منتشر کرده‌اند، از \"برگزاری حضوری\" کلاس‌ها در مراکز آموزشی وابسته به این وزارتخانه با \"کاهش\" محدودیت‌های مرتبط با کرونا در این کشور خبر داده است. ابلاغیه اخیر در حالیست که مسعود یونسیان دبیر کمیته اپیدمیولوژی و پژوهش کمیته علمی کشوری مقابله با کرونا اخیرا هشدار داده بود که درصد ابتلا به اومیکرون و تعداد موارد بیماری در کشور در حال \"افزایش\" است و به نظر می‌رسد که \"موج ششم\" در راه است.",
+                "timestamp": 1642501710000,
+                "language": "fa",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:persian/iran-60027270",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "۲۱۷ شهرستان ایران هم‌اکنون در وضعیت زرد و ۱۸۱ شهرستان نیز در وضعیت آبی هستند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "نقشه وضعیت مبتلایان به کرونا در ایران از هفته گذشته از رنگ زرد به نارنجی و سپس به قرمز تغییر کرد.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "براساس اعلام وزارت بهداشت ایران در شبانه‌روز گذشته ۱۶ هزار و ۷۵۷ مبتلای جدید به کرونا در ایران شناسایی شده که به نسبت روز گذشته بیش از ۲ هزار نفر افزایش را نشان می‌دهد و همچنین ۲۳ نفر نیز جان خود را از دست داده‌اند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123038874",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/BB0B/production/_123038874_mediaitem123038873.jpg",
+        "path": "/cpsprodpb/BB0B/production/_123038874_mediaitem123038873.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "کرونا در ایران",
+        "copyrightHolder": "Hamshahri",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "وزارت بهداشت ایران می‌گوید از ابتدای همه‌گیری کرونا تا به امروز ۱۳۲ هزار و ۳۵۶ نفر در اثر ابتلا به کووید ۱۹ جان خود را از دست داده‌اند اما تحقیقات و بررسی‌های بی‌بی‌سی فارسی نشان می‌دهند در دو سالی که از آغاز همه‌گیری کووید ۱۹ در ایران گذشته، حدود ۳۰۰ هزار نفر در ایران قربانی این همه‌گیری شده‌اند. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "این رقم بیش از دو برابر آمار رسمی جانباختگان کرونا در ایران در همین مدت است.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "در همین حال وزارت بهداشت ایران امروز اعلام کرد که تاکنون بیش از ۶۰ میلیون و ۶۱۸ هزار نفر دوز اول و بیش از ۵۳ میلیون و ۹۱۷ هزار نفر دوز دوم و تنها ۱۶ میلیون و ۱۷۵ هزار و ۷۶۸ نفر دوز سوم واکسن کرونا را تزریق کرده‌اند.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "بسیاری از مقامات بهداشتی و درمانی معتقدند که موثرترین راه برای جلوگیری از ابتلا به سویه اومیکرون، که بنابر تحقیقات سریعترین سویه ویروس کرونا در انتقال و شیوع است، تزریق دوز سوم واکسن کرونا است.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "احمد طباطبایی از مسئولان ستاد مقابله با کرونا ایران نیز امروز تایید کرد که &quot;یقینا سویه غالب کرونا در کشور اومیکرون است&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "به گفته وی، به دلیل &quot;تعداد بیماران زیاد است ممکن است با مسائلی مانند کمبود دارو مواجه شویم&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "سعید کریمی، معاون درمان وزارت بهداشت ایران نیز گفته است: &quot;سرایت این سویه شدید بوده و بیمارستان‌های کشور ضمن آمادگی کامل، باید دستگاه‌های اکسیژن، ونتیلاتور و همچنین دارو به میزان کافی در دسترس داشته باشند.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "آقای کریمی گفت که &quot;مقاومت در برابر اومیکرون با تزریق دوز اول و دوم فقط ۱۰ درصد است، اما دوز سوم سبب می‌شود تا مقاومت در برابر این سویه به ۸۰ درصد برسد.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<link><caption>خبرهای بیشتر را در کانال تلگرام بی بی سی فارسی بخوانید</caption><url href=\"https://www.telegram.me/bbcpersian\" platform=\"highweb\"/></link>",
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "کرونا در ایران؛ وزیر بهداشت: وارد موج ششم شیوع کرونا شده‌ایم",
+      "headline": "کرونا در ایران؛ وزیر بهداشت: وارد موج ششم شیوع کرونا شده‌ایم"
+    },
+    "locators": {
+      "assetUri": "/persian/iran-60165609",
+      "cpsUrn": "urn:bbc:content:assetUri:persian/iran-60165609",
+      "curie": "http://www.bbc.co.uk/asset/d9a173a1-548b-4254-be70-64bf160bb5db",
+      "assetId": "60165609"
+    },
+    "summary": "با افزایش میزان مبتلایان به کووید ۱۹ در ایران و تغییر رنگ‌های نقشه جغرافیایی میزان بستری، امروز وزیر بهداشت ایران نیز تاکید کرد که \"عملا وارد پیک ششم شده‌ایم\". روند بستری مبتلایان پس از ۱۵۶ روز مجددا افزایش یافته و براساس آخرین نقشه شیوع کرونا ایران در حال حاضر شهرستان‌های کاشان، فردوس، قم، ابرکوه، اردکان، خاتم، مهریز به وضعیت قرمز کرونا رسیده‌اند.",
+    "timestamp": 1643377665000,
+    "language": "fa",
+    "passport": {
+      "category": {
+        "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/News",
+        "categoryName": "News"
+      },
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "fa",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Persian",
+      "locator": "urn:bbc:cps:curie:asset:d9a173a1-548b-4254-be70-64bf160bb5db",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/093fff0e-e9bb-4d78-9e0b-7920c6357368#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+            "thingLabel": "تعطیلی و محدودیت‌های کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/485943c9-556e-46ed-8707-3cf40d60691d#id",
+            "thingId": "485943c9-556e-46ed-8707-3cf40d60691d",
+            "thingType": ["core:Theme", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q87866152",
+              "http://dbpedia.org/resource/COVID-19_pandemic_lockdowns"
+            ],
+            "thingEnglishLabel": "Coronavirus lockdown measures",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingLabel": "ایران",
+            "thingUri": "http://www.bbc.co.uk/things/511accd7-6ee6-4dfb-8e2b-b236be8cb14c#id",
+            "thingId": "511accd7-6ee6-4dfb-8e2b-b236be8cb14c",
+            "thingType": ["tagging:TagConcept", "core:Place", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/130758/"],
+            "thingEnglishLabel": "Iran",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "شیوع ویروس کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "thingLabel": "واکسن کرونا",
+            "thingUri": "http://www.bbc.co.uk/things/67634070-62db-491e-8bb4-434f21123d6d#id",
+            "thingId": "67634070-62db-491e-8bb4-434f21123d6d",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_vaccine",
+              "http://www.wikidata.org/entity/Q87719492"
+            ],
+            "thingEnglishLabel": "Coronavirus vaccines",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+            "thingLabel": "بهداشت و درمان ایران",
+            "thingUri": "http://www.bbc.co.uk/things/9981f626-77d0-496f-84a6-c289b46d89d5#id",
+            "thingId": "9981f626-77d0-496f-84a6-c289b46d89d5",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": ["http://dbpedia.org/resource/Health_care_in_Iran"],
+            "thingEnglishLabel": "Iran health",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+            "thingLabel": "تعطیلی و محدودیت‌های کرونا در ایران",
+            "thingUri": "http://www.bbc.co.uk/things/a1a3df86-2c00-436d-8025-b397ab5ae500#id",
+            "thingId": "a1a3df86-2c00-436d-8025-b397ab5ae500",
+            "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Iran coronavirus lockdown restrictions",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingLabel": "بهداشت و درمان",
+            "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Genre"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Health",
+              "http://www.wikidata.org/entity/Q12147"
+            ],
+            "thingEnglishLabel": "Health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "fa",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "123038872",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/6CEB/production/_123038872_mediaitem123035612.jpg",
+      "path": "/cpsprodpb/6CEB/production/_123038872_mediaitem123035612.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "کرونا در ایران",
+      "copyrightHolder": "Irna",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:persian/iran-60165609",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "صفحه ایران",
+      "uri": "/persian/iran",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Persian",
+      "uri": "/persian",
+      "type": "simple"
+    },
+    "groups": []
+  }
+}

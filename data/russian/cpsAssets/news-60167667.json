@@ -1,0 +1,1163 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:russian/news-60167667",
+    "locators": {
+      "assetUri": "/russian/news-60167667",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-60167667",
+      "curie": "http://www.bbc.co.uk/asset/ced9bef4-c317-4dad-b1b7-914f6e30894e",
+      "assetId": "60167667"
+    },
+    "type": "STY",
+    "createdBy": "russian-v6",
+    "language": "ru",
+    "lastUpdated": 1643381378278,
+    "firstPublished": 1643381357000,
+    "lastPublished": 1643381357000,
+    "timestamp": 1643381357000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Ukraine+escalation~Alexander+Lukashenko~Belarus~Belarusian+presidential+election+2020",
+      "cps_asset_id": "60167667",
+      "ldp_ids": "23d96e97-b777-413a-a8c5-85a2eda98613~8e4cf198-3ed8-4c85-886f-96979e54d7f5~b8767c64-2661-4b35-8388-7f6ca1a771fd~dde15d4e-2789-4e72-9737-9d1acbcc7174",
+      "contentId": "urn:bbc:cps:curie:asset:ced9bef4-c317-4dad-b1b7-914f6e30894e",
+      "counterName": "russian.news.story.60167667.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:ced9bef4-c317-4dad-b1b7-914f6e30894e",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingLabel": "Кризис вокруг Украины",
+            "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+            "thingEnglishLabel": "Ukraine escalation",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+            "thingLabel": "Лукашенко",
+            "thingUri": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+            "thingId": "8e4cf198-3ed8-4c85-886f-96979e54d7f5",
+            "thingType": [
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:Agent",
+              "core:Person"
+            ],
+            "thingSameAs": ["http://dbpedia.org/resource/Alexander_Lukashenko"],
+            "thingEnglishLabel": "Alexander Lukashenko",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+            "thingLabel": "Беларусь",
+            "thingUri": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+            "thingId": "b8767c64-2661-4b35-8388-7f6ca1a771fd",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/630336/"],
+            "thingEnglishLabel": "Belarus",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+            "thingLabel": "Выборы в Беларуси 2020",
+            "thingUri": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+            "thingId": "dde15d4e-2789-4e72-9737-9d1acbcc7174",
+            "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q75556449"],
+            "thingEnglishLabel": "Belarusian presidential election 2020",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ru",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Кризис вокруг Украины",
+          "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+          "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+          "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+          "topicName": "Кризис вокруг Украины",
+          "topicId": "cez0n29ggrdt",
+          "curationList": [
+            {
+              "curationId": "d7407b1e-9bca-4aad-ba81-bc80d391c171",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Ukraine escalation",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Ukraine escalation"
+        },
+        {
+          "thingLabel": "Лукашенко",
+          "thingUri": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+          "thingId": "8e4cf198-3ed8-4c85-886f-96979e54d7f5",
+          "thingType": [
+            "tagging:AmbiguousTerm",
+            "core:Thing",
+            "tagging:TagConcept",
+            "tagging:Agent",
+            "core:Person"
+          ],
+          "thingSameAs": ["http://dbpedia.org/resource/Alexander_Lukashenko"],
+          "topicName": "Лукашенко",
+          "topicId": "c61k92j6pvqt",
+          "curationList": [
+            {
+              "curationId": "00088255-4e90-4eb7-a3f0-cadb90b72e0c",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Alexander Lukashenko",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Alexander Lukashenko"
+        },
+        {
+          "thingLabel": "Беларусь",
+          "thingUri": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+          "thingId": "b8767c64-2661-4b35-8388-7f6ca1a771fd",
+          "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+          "thingSameAs": ["http://sws.geonames.org/630336/"],
+          "topicName": "Беларусь",
+          "topicId": "c8jvq6pn8mvt",
+          "curationList": [
+            {
+              "curationId": "ff24054e-17cd-43c4-8467-caf9e1efa037",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Belarus",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Belarus"
+        },
+        {
+          "thingLabel": "Выборы в Беларуси 2020",
+          "thingUri": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+          "thingId": "dde15d4e-2789-4e72-9737-9d1acbcc7174",
+          "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q75556449"],
+          "topicName": "Выборы в Беларуси 2020",
+          "topicId": "c1w5d2kdykxt",
+          "curationList": [
+            {
+              "curationId": "c8ad1eb4-9838-472e-a367-0068316a5ed8",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Belarusian presidential election 2020",
+          "thingLabelLanguage": "ru",
+          "thingPreferredLabel": "Belarusian presidential election 2020"
+        }
+      ]
+    },
+    "version": "v1.3.15",
+    "blockTypes": ["image", "paragraph", "list", "crosshead", "media"],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "RUSSIAN", "producerId": "75" },
+    "readTime": 5,
+    "siteUri": "/russian",
+    "topics": [
+      {
+        "topicName": "Выборы в Беларуси 2020",
+        "topicId": "c1w5d2kdykxt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "c8ad1eb4-9838-472e-a367-0068316a5ed8",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Event", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      },
+      {
+        "topicName": "Лукашенко",
+        "topicId": "c61k92j6pvqt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "00088255-4e90-4eb7-a3f0-cadb90b72e0c",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": [
+          "tagging:AmbiguousTerm",
+          "core:Thing",
+          "tagging:TagConcept",
+          "tagging:Agent",
+          "core:Person"
+        ],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      },
+      {
+        "topicName": "Беларусь",
+        "topicId": "c8jvq6pn8mvt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "ff24054e-17cd-43c4-8467-caf9e1efa037",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Place", "tagging:TagConcept", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      },
+      {
+        "topicName": "Кризис вокруг Украины",
+        "topicId": "cez0n29ggrdt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "d7407b1e-9bca-4aad-ba81-bc80d391c171",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Event", "core:Thing"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "123028144",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/AC96/production/_123028144_gettyimages-1238034983-594x594.jpg",
+        "path": "/cpsprodpb/AC96/production/_123028144_gettyimages-1238034983-594x594.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Александр Лукашенко",
+        "caption": "Ежегодное послание Александра Лукашенко прошло в более \"народном\" формате. Среди 2,5 тыс гостей были представлены все сферы жизни Беларуси",
+        "copyrightHolder": "Pavel Orlovsky/TASS",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "В своем ежегодном послании к белорусскому народу и Национальному собранию Александр Лукашенко покаялся, что вовремя не среагировал на подрывную работу Запада внутри Беларуси, пообещал белорусам долгую жизнь и попросил молодежь не думать, что хлеб растет на деревьях.",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "В этом году послание прошло в новом формате - в аудиторию были приглашены представители разных сфер жизни: представители власти, политики, экономисты, журналисты, учителя и другие. Отныне, обещает Лукашенко, его общение с народом будут проходить именно так. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Русская служба Би-би-си следила за выступлением Александра Лукашенко и собрала основные моменты его речи.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>russian/features-59323131</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "\"Вырежем всех мерзавцев, которых вы финансировали\": полная расшифровка интервью Александра Лукашенко Би-би-си",
+                  "headline": "\"Вырежем всех мерзавцев, которых вы финансировали\": полная расшифровка интервью Александра Лукашенко Би-би-си",
+                  "overtyped": "\"Вырежем всех мерзавцев, которых вы финансировали\": полная расшифровка интервью Александра Лукашенко Би-би-си"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/features-59323131"
+                },
+                "summary": "Аргументация и то, как вел себя лидер Беларуси во время интервью с корреспондентом Би-би-си, представляются нам важными в понимании личности человека, которого называют \"последним диктатором Европы\". Поэтому предлагаем вам полную расшифровку этого разговора.",
+                "timestamp": 1637601215000,
+                "language": "ru",
+                "passport": {
+                  "category": {
+                    "categoryId": "http://www.bbc.co.uk/ontologies/applicationlogic-news/Feature",
+                    "categoryName": "Feature"
+                  },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/features-59323131",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>russian/news-59803171</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Поправки в конституцию Беларуси: Лукашенко как отец нации и уступка Кремлю",
+                  "headline": "Поправки в конституцию Беларуси: Лукашенко как отец нации и уступка Кремлю",
+                  "overtyped": "Поправки в конституцию Беларуси: Лукашенко как отец нации и уступка Кремлю"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/news-59803171"
+                },
+                "summary": "На белорусском Национальном правовом интернет-портале появился проект поправок в конституцию республики. В документе прописаны некоторые изменения в структуре власти и русский язык в качестве государственного. Правозащитники считают, что проект новой конституции никак не изменит жизнь в стране.",
+                "timestamp": 1640629150000,
+                "language": "ru",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/news-59803171",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>russian/features-59513839</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "\"Ты словил этого красавца?\" Как люди Лукашенко охотятся за белорусами в России",
+                  "headline": "\"Ты словил этого красавца?\" Как люди Лукашенко охотятся за белорусами в России",
+                  "overtyped": "\"Ты словил этого красавца?\" Как люди Лукашенко охотятся за белорусами в России"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/russian/features-59513839"
+                },
+                "summary": "Россия помогает Беларуси ловить участников протестов против Александра Лукашенко. C августа 2020 года в Москве, Петербурге и других городах арестовали как минимум 20 белорусов. В задержаниях участвуют белорусские силовики. Зачем белорусы бегут в Россию и законна ли их экстрадиция?",
+                "timestamp": 1638511415000,
+                "language": "ru",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:russian/features-59513839",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "Будет ли Беларусь участвовать в войне против Украины?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "p0bkwls4",
+        "subType": "clip",
+        "format": "video",
+        "title": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+        "synopses": {
+          "short": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+          "long": "Александр Лукашенко выступил с ежегодным обращением к народу и парламенту. Во время выступления он прокомментировал кризис вокруг Украины. \n\n\"Так будет война или нет? Да, она будет. Но только в двух случаях\", - сказал Лукашенко.",
+          "medium": "По его мнению, она начнется только в двух случаях."
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bkwnt3.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+        "versions": [
+          {
+            "versionId": "p0bkwlsg",
+            "types": ["Original"],
+            "duration": 85,
+            "durationISO8601": "PT1M25S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1643373176000
+          }
+        ],
+        "imageCopyright": "TASS",
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "Лукашенко несколько раз в своем выступлении коснулся перспективы российского военного вторжения в Украину, о котором с ноября предупреждают западные страны во главе с США. Западные разведки считают, что часть российских войск может перейти украинскую границу с территории Беларуси, указывая в этой связи на прибывающие в эту страну российские войска. 25 января Госдепартамент предупредил Беларусь о &quot;быстром и решительном ответе&quot; со стороны США и их союзников в случае, если она позволит использовать свою территорию для агрессии против Украины.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Москва и Минск объявляли, что в Беларуси в феврале пройдут совместные военные учения; российские официальные лица отрицают планы нападения на Украину.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Комментируя кризис вокруг Украины и перспективы начала военных действий, Лукашенко сказал, что война будет в двух случаях. &quot;Если против Беларуси будет совершена прямая агрессия, если против нашей Беларуси будет развязана горячая война. И второй момент, когда быть войне, и Беларусь будет в ней участвовать, - если на нашего союзника Российскую Федерацию осуществят непосредственное нападение&quot;, - указал он.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Думаю, что это как исключение, и очень-очень надеюсь, сегодня почти уверен, что воевать мы не будем даже по причине этих двух случаев&quot;, - добавил Лукашенко.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "При этом, отвечая позднее на вопрос учительницы из Могилева о том, надо ли ей волноваться, что двух ее сыновей могут отправить воевать, Лукашенко сказал, что намерений посылать на войну чьих-либо детей, включая своих собственных, у него нет.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Политическая повестка",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Основной упор в своей речи Александр Лукашенко сделал на суверенитете и независимости Беларуси. Беларусы проделали большой путь для обретения национального государства, и второго шанса у них не будет, сказал он.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Лукашенко горячо убеждал аудиторию в том, что в нынешнем историческом моменте независимости страны грозит реальная опасность, но бдительность властей не дает планам темных сил осуществиться.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Что же произошло в августе 2020 года? Произошла попытка прервать эволюцию белорусского народа&quot;, - заявил он, представляя свою, негативную версию массовых протестов, последовавших за президентскими выборами, которые многие и в Беларуси, и за рубежом считают фальсифицированными. Лукашенко объявил себя победителем тех выборов и продолжает удерживать власть в стране.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Мятежники хотели поставить Беларусь на колени и подчинить ее внешнему влиянию, заявил он. &quot;На разрушение Беларуси было брошено 6 млрд долларов - вот как хотелось разрушить наше государство&quot;, - убеждал собравшихся Лукашенко.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По словам Лукашенко, по отношению к Беларуси на протяжении многих лет применялась многоэтапная, скоординированная технология. Запад через различные образовательные программы и семинары долго навязывал народу определенную идеологию.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Он покаялся, что недооценил и не отреагировал вовремя на активность, которую разводили на территории страны агенты западного влияния - &quot;так называемые экологи, правозащитники и псевдожурналисты&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По его словам, он был слишком занят вопросами экономики.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Отказ от русского языка (Лукашенко сказал &quot;нашего русского языка&quot;), снос памятников, навязывание НАТО, церковный раскол - все это он назвал сценарием, по которому темные силы мечтают повести Беларусь с целью ее разрушения.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Примером внутреннего развала, утраты национальной независимости и переписывания истории он назвал Украину и заверил, что ничего такого на своей территории не допустит. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По его словам, он прекрасно понимает, что в стране есть прослойка граждан, которой хотелось бы другого государственного устройства, и пообещал учитывать их интересы. Правда, далее он тут же косвенно сравнил стремление к новому устройству с бандитизмом. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"Демократия - это дисциплина\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "&quot;Я же диктатор, мне трудно понимать демократию&quot;, - так  Александр Лукашенко начал отвечать на вопрос из зала о том, как он понимает демократию по-белорусски. Зал одобрительно засмеялся.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "А демократия, по его мнению, это дисциплина, а не анархия, к которой могут привести чрезмерные свободы западной демократии.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Кроме того, считает Лукашенко, западная демократия себя дискредитировала и не может считаться примером для подражания. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Он напомнил, что в США - стране свободы слова - &quot;заткнули рот целому президенту&quot; (имея в виду, вероятно, решения частных соцсетей забанить аккаунты Дональда Трампа после штурма Капитолия его сторонниками 6 января 2021 года). &quot;Чуть в тюрьму Трампа не посадили. За что? За то, что он говорил?&quot; - сказал Лукашенко.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Отвечая на другой вопрос о допустимом количестве президентских сроков, он сказал, что вообще-то является сторонников максимум двух. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Я осознаю, что многим надоел. Утюг включил - там Лукашенко&quot;, - сказал он, но ситуация в стране, по его словам, не позволяла ему покинуть пост.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "А от последних выборов он не отказался, чтобы потом народ не упрекнул его в предательстве. По его словам, &quot;никаких Бабарико&quot; он не гнобил, но все кандидаты были жуликами.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Лукашенко также отмел обвинения в создании культа личности в стране.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Я не забронзовел, и вы всегда можете мне в лоб сказать, что я должен делать&quot;, - сказал он и призвал недовольных внутри страны &quot;не подпевать нашим беглым&quot;, которые, сидя за границей, говорят, что &quot;Лукашенко что-то там под себя создает&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Предложения по конституции  ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "123028146",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/FAB6/production/_123028146_gettyimages-1238034023-594x594.jpg",
+        "path": "/cpsprodpb/FAB6/production/_123028146_gettyimages-1238034023-594x594.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Послание Александра Лукашенко",
+        "caption": "Ежегодное послание Александра Лукашенко прошло в более \"народном\" формате. Среди 2,5 тыс гостей были представлены все сферы жизни Беларуси",
+        "copyrightHolder": "Pavel Orlovsky/TASS",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Одним из первых законопроектов в случае, если белорусы в ходе референдума поддержат <link><caption>обновленную конституцию</caption><url href=\"https://www.bbc.com/russian/news-59803171\" platform=\"highweb\"/></link>, Лукашенко обещает сделать законопрект о гражданском обществе. ",
+        "markupType": "candy_xml",
+        "aresUrl": "https://ares-api.api.bbci.co.uk/api/asset/russian/front_page-59803171",
+        "type": "paragraph"
+      },
+      {
+        "text": "В своем послании он много говорил о том, что &quot;перебежчики за рубежом&quot; внушают народу искаженное представление о сути этого понятия. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Народное голосование запланировано на 27 февраля этого года. Среди прочего в новой версии конституции будут внесены поправки в законодательную функцию президента, прописаны условия его неприкосновенности и шаги на случай насильственной смерти главы государства.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Также в новой редакции указаны намерения Беларуси по развитию мирного атома и прописано определение брака как союза мужчины и женщины. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По словам Лукашенко, в работе над документом учитывался запрос общества на сохранение основных социальных гарантий и ценностей, обеспечение безопасности, расширение прав и свобод граждан.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Лукашенко напомнил, что независимость страны стоит очень дорого. &quot;Готовы ли белорусы платить за свою независимость?&quot; - спросил он с трибуны. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ответ на этот вопрос он надеется получить в ходе референдума по конституции и расчитывает, что белорусы, как он выразился, будут готовы отдать последнее.  ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"На самый верх не метьте\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Была в его речи и попытка обратиться к белорусской молодежи. Он пригласил ее участвовать в социальной и политической жизни страны, но предупредил, что метить на самый верх не надо.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Тот факт, что сам он стал президентом в достаточно молодом возрасте, Лукашенко назвал случайностью. Больше такого не будет, пообещал он.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Не надо думать, что хлеб или гамбургеры растут на деревьях, попросил Лукашенко: &quot;Труд - мерило всего. Это не я придумал&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "По его мнению, молодежи надо платить хорошую зарплату, но захваливать ее - вредно: &quot;С ними надо вести разговор на равных, без формализма и фальши&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"Как хотите лечите людей\"",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "В социальной сфере Александр Лукашенко намерен прежде всего взять под личный контроль вопрос продолжительности жизни белорусов. Все силы белорусской медицины будут брошены на обеспечение ранней диагностики. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Как хотите лечите людей, что хотите там творите, но человек должен жить&quot;, - обозначил он свое распоряжение министерству здравоохранения. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Беларусь должна стать передовым биоцентром, и профильным ведомствам дано указание обеспечить здоровье нации - &quot;как хотите, хоть через госзаказ&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "На Западе, сказал Лукашенко, никто никого бесплатно лечить не будет: &quot;Кольнут пятую точку, и будешь лежать под забором, пока не поднимешься&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "\"Безумство на контроле\" ",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "id": "123028148",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/148D6/production/_123028148_gettyimages-1238034318-594x594.jpg",
+        "path": "/cpsprodpb/148D6/production/_123028148_gettyimages-1238034318-594x594.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Александр Лукашенко",
+        "caption": "Лукашенко заявил, что Беларусь находится в эпицентре политического переустройства мира",
+        "copyrightHolder": "Pavel Orlovsky/TASS",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "О планах власти в области экономики Лукашенко говорил весьма канцелярским языком. Часто звучали слова &quot;квартал&quot; и &quot;пятилетка&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Обновление инфраструктуры в стране он считает еще и политической задачей, потому что &quot;беглые мерзавцы сразу винят власть&quot;, как только что-то рушится. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Также Александр Лукашенко считает, что Беларусь практически полностью готова к импортозамещению во всех сферах, включая информационные технологии. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Партнерство с Россией, по его словам, - основа экономической стабильности Баларуси, и Минск будет искать еще большего сближения с Москвой. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;И хватит обвинять Россию в том, что она хочет поглотить Беларусь. Нет таких целей&quot;, - заверил Лукашенко. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Дружбу с Китаем, стратегическое и торговое сотрудничество с этой страной он также считает одним из приоритетов для Беларуси. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Поэтому никакие санкции Беларуси нипочем, считает Лукашенко. По его словам, у страны не такой большой объем экспорта, и нескольких дружественных партнеров с миллиардным населением достаточно для достижения внешнеторговых целей. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Соседним странам, в частности, Литве Лукашенко предложил сохранить лицо, и &quot;пока еще безумство на контроле&quot;, прекратить экономическую войну с Беларусью, которая на следующим этапе может &quot;перерасти в горячую [войну]&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "\"Я же диктатор, мне трудно понимать демократию\". Что Лукашенко сказал о своей новой конституции и войне с Украиной",
+      "headline": "\"Я же диктатор, мне трудно понимать демократию\". Что Лукашенко сказал о своей новой конституции и войне с Украиной"
+    },
+    "locators": {
+      "assetUri": "/russian/news-60167667",
+      "cpsUrn": "urn:bbc:content:assetUri:russian/news-60167667",
+      "curie": "http://www.bbc.co.uk/asset/ced9bef4-c317-4dad-b1b7-914f6e30894e",
+      "assetId": "60167667"
+    },
+    "summary": "В своем ежегодном послании к белорусскому народу и Национальному собранию Александр Лукашенко покаялся, что вовремя не среагировал на подрывную работу Запада внутри Беларуси, пообещал белорусам долгую жизнь, попросил молодежь не думать, что хлеб растет на деревьях, и заверил, что поглощения страны Россией не будет.",
+    "timestamp": 1643381357000,
+    "language": "ru",
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e4739461b000e9dabfc",
+          "campaignName": "WS - Update me"
+        }
+      ],
+      "language": "ru",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Russian",
+      "locator": "urn:bbc:cps:curie:asset:ced9bef4-c317-4dad-b1b7-914f6e30894e",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/0143a201-5690-4cb1-95a8-03ab60e66bfd#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/bf928ac3-b3bd-4d47-924e-cca1bdc29174#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingLabel": "Кризис вокруг Украины",
+            "thingUri": "http://www.bbc.co.uk/things/23d96e97-b777-413a-a8c5-85a2eda98613#id",
+            "thingId": "23d96e97-b777-413a-a8c5-85a2eda98613",
+            "thingType": ["tagging:TagConcept", "core:Event", "core:Thing"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q110254389"],
+            "thingEnglishLabel": "Ukraine escalation",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+            "thingLabel": "Лукашенко",
+            "thingUri": "http://www.bbc.co.uk/things/8e4cf198-3ed8-4c85-886f-96979e54d7f5#id",
+            "thingId": "8e4cf198-3ed8-4c85-886f-96979e54d7f5",
+            "thingType": [
+              "tagging:AmbiguousTerm",
+              "core:Thing",
+              "tagging:TagConcept",
+              "tagging:Agent",
+              "core:Person"
+            ],
+            "thingSameAs": ["http://dbpedia.org/resource/Alexander_Lukashenko"],
+            "thingEnglishLabel": "Alexander Lukashenko",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+            "thingLabel": "Беларусь",
+            "thingUri": "http://www.bbc.co.uk/things/b8767c64-2661-4b35-8388-7f6ca1a771fd#id",
+            "thingId": "b8767c64-2661-4b35-8388-7f6ca1a771fd",
+            "thingType": ["core:Place", "tagging:TagConcept", "core:Thing"],
+            "thingSameAs": ["http://sws.geonames.org/630336/"],
+            "thingEnglishLabel": "Belarus",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+            "thingLabel": "Выборы в Беларуси 2020",
+            "thingUri": "http://www.bbc.co.uk/things/dde15d4e-2789-4e72-9737-9d1acbcc7174#id",
+            "thingId": "dde15d4e-2789-4e72-9737-9d1acbcc7174",
+            "thingType": ["core:Thing", "core:Event", "tagging:TagConcept"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q75556449"],
+            "thingEnglishLabel": "Belarusian presidential election 2020",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "ru",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "123028141",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/3766/production/_123028141_gettyimages-1238036601-594x594.jpg",
+      "path": "/cpsprodpb/3766/production/_123028141_gettyimages-1238036601-594x594.jpg",
+      "height": 549,
+      "width": 976,
+      "altText": "Александр Лукашенко",
+      "copyrightHolder": "Andrei Stasevich/TASS",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:russian/news-60167667",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Новости",
+      "uri": "/russian/news",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "Новости на русском языке",
+      "uri": "/russian",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "\"Окрестино, на 10 суток\". Родственники россиянки не понимают, за что ее арестовали в Минске",
+              "headline": "\"Окрестино, на 10 суток\". Родственники россиянки Цвикевич не понимают, за что ее арестовали в Минске"
+            },
+            "locators": {
+              "assetUri": "/russian/news-60172252",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-60172252"
+            },
+            "summary": "Родственники россиянки Веры Цвикевич, задержанной в Минске в четверг, пока не знают точно, за что та была помещена в изолятор временного содержания. Они говорят, что российские консульские представители еще не навестили Цвикевич. Известно, что основанием для ареста стала статья 342 УК РБ - \"Организация и подготовка действий, грубо нарушающих общественный порядок, либо активное участие в них\".",
+            "timestamp": 1643377965000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "123040334",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A928/production/_123040334_tass_47502879.jpg",
+              "path": "/cpsprodpb/A928/production/_123040334_tass_47502879.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "человек с бело-красно-белым флагом",
+              "copyrightHolder": "SOPA Images/TASS",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-60172252",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+              "headline": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины"
+            },
+            "locators": {
+              "assetUri": "/russian/media-60116936",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/media-60116936"
+            },
+            "summary": "По его мнению, она начнется только в двух случаях.",
+            "timestamp": 1643373529000,
+            "language": "ru",
+            "cpsType": "MAP",
+            "media": {
+              "id": "p0bkwls4",
+              "subType": "clip",
+              "format": "video",
+              "title": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+              "synopses": {
+                "short": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+                "long": "Александр Лукашенко выступил с ежегодным обращением к народу и парламенту. Во время выступления он прокомментировал кризис вокруг Украины. \n\n\"Так будет война или нет? Да, она будет. Но только в двух случаях\", - сказал Лукашенко.",
+                "medium": "По его мнению, она начнется только в двух случаях."
+              },
+              "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bkwnt3.jpg",
+              "embedding": true,
+              "advertising": true,
+              "caption": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+              "versions": [
+                {
+                  "versionId": "p0bkwlsg",
+                  "types": ["Original"],
+                  "duration": 85,
+                  "durationISO8601": "PT1M25S",
+                  "warnings": {},
+                  "availableTerritories": { "uk": true, "nonUk": true },
+                  "availableFrom": 1643373176000
+                }
+              ],
+              "imageCopyright": "TASS",
+              "smpKind": "programme",
+              "type": "media"
+            },
+            "indexImage": {
+              "id": "122971234",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A8D1/production/_122971234_p0bkwnt3.jpg",
+              "path": "/cpsprodpb/A8D1/production/_122971234_p0bkwnt3.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Александр Лукашенко выступил с ежегодным обращением к народу и парламенту.",
+              "caption": "\"Так будет война или нет?\" Лукашенко прокомментировал кризис вокруг Украины",
+              "copyrightHolder": "TASS",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:russian/media-60116936",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "\"Вы молиться на нас должны до сих пор\". Александр Лукашенко о миграционном кризисе, протестах в Беларуси и отношениях с Путиным",
+              "headline": "\"Путин мне ничего не советовал\". Интервью Александра Лукашенко о миграционном кризисе, протестах в Беларуси и отношениях с Россией"
+            },
+            "locators": {
+              "assetUri": "/russian/media-59374556",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/media-59374556"
+            },
+            "summary": "Интервью президента Беларуси корреспонденту Би-би-си Стиву Розенбергу.",
+            "timestamp": 1637577297000,
+            "language": "ru",
+            "cpsType": "MAP",
+            "media": {
+              "id": "59374557",
+              "subType": "primary",
+              "format": "video",
+              "externalId": "p0b5jk3m",
+              "entityType": "Clip",
+              "caption": "\"Путин мне ничего не советовал\". Интервью Александра Лукашенко Би-би-си",
+              "type": "external_vpid"
+            },
+            "indexImage": {
+              "id": "121751761",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/414B/production/_121751761_p0b5jkx8.jpg",
+              "path": "/cpsprodpb/414B/production/_121751761_p0b5jkx8.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Интервью Александра Лукашенко Би-би-си",
+              "copyrightHolder": "BBC",
+              "type": "image"
+            },
+            "mediaType": "Video",
+            "id": "urn:bbc:ares::asset:russian/media-59374556",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Тариф пятилетний. Главный редактор белорусской \"Нашей Нивы\" поговорил с Би-би-си из СИЗО о преследовании издания",
+              "headline": "Тариф пятилетний. Главный редактор белорусской \"Нашей Нивы\" поговорил с Би-би-си из СИЗО о преследовании издания"
+            },
+            "locators": {
+              "assetUri": "/russian/features-59095969",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/features-59095969"
+            },
+            "summary": "Главный редактор белорусского независимого издания \"Наша Нива\" Егор Мартинович с июля 2021 года находится под стражей. Формально, по обвинению в экономическом преступлении, но власти уже дважды блокировали сайт газеты, а ее журналисты покинули Беларусь. Русская служба Би-би-си смогла задать Мартиновичу вопросы, получить ответы на них - и рассказывает о \"Нашей Ниве\" и ее преследовании.",
+            "timestamp": 1635742203000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "121271269",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/177D9/production/_121271269_63979337-4757-452d-99e0-e693366d9c19.jpg",
+              "path": "/cpsprodpb/177D9/production/_121271269_63979337-4757-452d-99e0-e693366d9c19.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Егор Мартинович",
+              "caption": "Егор Мартинович стал главредом \"Нашей Нивы\" в 2017 году",
+              "copyrightHolder": "Nasha Niva",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/features-59095969",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Суд в Беларуси приговорил оппозиционера Тихановского к 18 годам колонии",
+              "headline": "Суд в Беларуси приговорил оппозиционера Тихановского к 18 годам колонии"
+            },
+            "locators": {
+              "assetUri": "/russian/news-59637832",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-59637832"
+            },
+            "summary": "Проходивший в закрытом режиме суд в Гомеле приговорил блогера и оппозиционера Сергея Тихановского к 18 годам колонии усиленного режима.",
+            "timestamp": 1639482257000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122088539",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/16D94/production/_122088539_gettyimages-1233349681.jpg",
+              "path": "/cpsprodpb/16D94/production/_122088539_gettyimages-1233349681.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Светлана Тихановская с фотографией мужа",
+              "caption": "Светлана Тихановская: \"Комментируя его так называемый приговор [Сергея Тихановского] , я буду задавать себе только один вопрос: что я буду делать с этой новостью\"?",
+              "copyrightHolder": "AFP",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-59637832",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "NYT: диспетчер рассказал, как офицер КГБ Беларуси контролировал посадку рейса Ryanair",
+              "headline": "NYT: диспетчер рассказал, как офицер КГБ Беларуси контролировал посадку рейса Ryanair"
+            },
+            "locators": {
+              "assetUri": "/russian/news-59577117",
+              "cpsUrn": "urn:bbc:content:assetUri:/russian/news-59577117"
+            },
+            "summary": "Авиадиспетчер, посадивший 23 мая в Минске самолет Ryanair с Романом Протасевичем на борту, а затем сбежавший из Беларуси, заявил, что команды на диспетчерской вышке давал офицер КГБ, пишет газета New York Times.",
+            "timestamp": 1639034820000,
+            "language": "ru",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "122029034",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/A854/production/_122029034_tass_46016607.jpg",
+              "path": "/cpsprodpb/A854/production/_122029034_tass_46016607.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "Boeing 737-800 авиакомпании Ryanair в аэропорту Вильнюса после принудительной посадки в Минске",
+              "caption": "\"Боинг-737-800\" авиакомпании Ryanair в аэропорту Вильнюса после принудительной посадки в Минске",
+              "copyrightHolder": "TASS",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:russian/news-59577117",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}

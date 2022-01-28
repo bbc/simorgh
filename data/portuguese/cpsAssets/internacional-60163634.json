@@ -1,0 +1,1459 @@
+{
+  "metadata": {
+    "id": "urn:bbc:ares::asset:portuguese/internacional-60163634",
+    "locators": {
+      "assetUri": "/portuguese/internacional-60163634",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-60163634",
+      "curie": "http://www.bbc.co.uk/asset/42e11be8-b705-4e1f-a32c-a0a03c5a4547",
+      "assetId": "60163634"
+    },
+    "type": "STY",
+    "createdBy": "brasil-v6",
+    "language": "pt-BR",
+    "lastUpdated": 1643362166241,
+    "firstPublished": 1643359203000,
+    "lastPublished": 1643359203000,
+    "timestamp": 1643359203000,
+    "options": {
+      "isIgorSeoTagsEnabled": false,
+      "includeComments": false,
+      "allowRightHandSide": true,
+      "isFactCheck": false,
+      "allowDateStamp": true,
+      "suitableForSyndication": true,
+      "hasNewsTracker": false,
+      "allowRelatedStoriesBox": true,
+      "isKeyContent": false,
+      "allowHeadline": true,
+      "allowAdvertising": true,
+      "hasContentWarning": false,
+      "isBreakingNews": false,
+      "allowPrintingSharingLinks": true
+    },
+    "analyticsLabels": {
+      "ldp_tags": "Science~Omicron+variant~Coronavirus+pandemic~Vaccination~Medicine~Health",
+      "cps_asset_id": "60163634",
+      "ldp_ids": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53~2e0f389d-dac8-4bad-a9b2-8307ab9dab75~5fe79b8d-56e5-4aff-8b05-21f9ad731912~7e89ce05-b3da-4ead-b917-446e4c1a26c4~918e9487-dc88-44e2-8168-057149670ec3~c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+      "contentId": "urn:bbc:cps:curie:asset:42e11be8-b705-4e1f-a32c-a0a03c5a4547",
+      "counterName": "portuguese.world.story.60163634.page",
+      "cps_asset_type": "sty"
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "pt-br",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+      "locator": "urn:bbc:cps:curie:asset:42e11be8-b705-4e1f-a32c-a0a03c5a4547",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "thingLabel": "Ciência",
+            "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q336",
+              "http://dbpedia.org/resource/Science"
+            ],
+            "thingEnglishLabel": "Science",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+            "thingLabel": "Variante ômicron",
+            "thingUri": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+            "thingId": "2e0f389d-dac8-4bad-a9b2-8307ab9dab75",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q109739412"],
+            "thingEnglishLabel": "Omicron variant",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "Coronavírus",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "thingLabel": "Vacinas",
+            "thingUri": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "thingId": "7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q134808",
+              "http://dbpedia.org/resource/Vaccine"
+            ],
+            "thingEnglishLabel": "Vaccination",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+            "thingLabel": "Medicina",
+            "thingUri": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+            "thingId": "918e9487-dc88-44e2-8168-057149670ec3",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Medicine",
+              "http://www.wikidata.org/entity/Q11190"
+            ],
+            "thingEnglishLabel": "Medicine",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingLabel": "Saúde",
+            "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Genre"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Health",
+              "http://www.wikidata.org/entity/Q12147"
+            ],
+            "thingEnglishLabel": "Health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "pt-br",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "tags": {
+      "about": [
+        {
+          "thingLabel": "Ciência",
+          "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+          "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q336",
+            "http://dbpedia.org/resource/Science"
+          ],
+          "topicName": "Ciência",
+          "topicId": "cr50y580rjxt",
+          "curationList": [
+            {
+              "curationId": "9985571a-0cf8-4345-9363-cf5300b52f42",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Science",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Science"
+        },
+        {
+          "thingLabel": "Variante ômicron",
+          "thingUri": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+          "thingId": "2e0f389d-dac8-4bad-a9b2-8307ab9dab75",
+          "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+          "thingSameAs": ["http://www.wikidata.org/entity/Q109739412"],
+          "topicName": "Variante ômicron",
+          "topicId": "c53l5znp697t",
+          "curationList": [
+            {
+              "curationId": "f9bc1855-1bae-4e24-b7b0-ef17d235709b",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Omicron variant",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Omicron variant"
+        },
+        {
+          "thingLabel": "Coronavírus",
+          "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+          "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/COVID-19_pandemic",
+            "http://www.wikidata.org/entity/Q81068910"
+          ],
+          "topicName": "Coronavírus",
+          "topicId": "clmq8rgyyvjt",
+          "curationList": [
+            {
+              "curationId": "ec8f5da4-6474-40af-a497-8d9643ba4723",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Coronavirus pandemic",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Coronavirus pandemic"
+        },
+        {
+          "thingLabel": "Vacinas",
+          "thingUri": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+          "thingId": "7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+          "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+          "thingSameAs": [
+            "http://www.wikidata.org/entity/Q134808",
+            "http://dbpedia.org/resource/Vaccine"
+          ],
+          "topicName": "Vacinas",
+          "topicId": "cxnyknq5p9kt",
+          "curationList": [
+            {
+              "curationId": "0dc28fc6-c758-49b4-9008-45cec401bb01",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Vaccination",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Vaccination"
+        },
+        {
+          "thingLabel": "Medicina",
+          "thingUri": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+          "thingId": "918e9487-dc88-44e2-8168-057149670ec3",
+          "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Medicine",
+            "http://www.wikidata.org/entity/Q11190"
+          ],
+          "topicName": "Medicina",
+          "topicId": "c8y94y3jj2kt",
+          "curationList": [
+            {
+              "curationId": "63b87bb0-e828-457c-bc8b-d0d1c380fad9",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Medicine",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Medicine"
+        },
+        {
+          "thingLabel": "Saúde",
+          "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+          "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+          "thingType": [
+            "core:Thing",
+            "core:Theme",
+            "tagging:AmbiguousTerm",
+            "tagging:TagConcept",
+            "tagging:Genre"
+          ],
+          "thingSameAs": [
+            "http://dbpedia.org/resource/Health",
+            "http://www.wikidata.org/entity/Q12147"
+          ],
+          "topicName": "Saúde",
+          "topicId": "c340q430z4vt",
+          "curationList": [
+            {
+              "curationId": "14b2c487-3723-4ff9-aa40-25ce7fb32590",
+              "curationType": "vivo-stream"
+            }
+          ],
+          "thingEnglishLabel": "Health",
+          "thingLabelLanguage": "pt-br",
+          "thingPreferredLabel": "Health"
+        }
+      ]
+    },
+    "version": "v1.3.15",
+    "blockTypes": [
+      "image",
+      "paragraph",
+      "list",
+      "crosshead",
+      "media",
+      "social_embed"
+    ],
+    "includeComments": false,
+    "atiAnalytics": { "producerName": "BRASIL", "producerId": "33" },
+    "readTime": 12,
+    "siteUri": "/portuguese",
+    "topics": [
+      {
+        "topicName": "Saúde",
+        "topicId": "c340q430z4vt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "14b2c487-3723-4ff9-aa40-25ce7fb32590",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "core:Theme", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      },
+      {
+        "topicName": "Variante ômicron",
+        "topicId": "c53l5znp697t",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "f9bc1855-1bae-4e24-b7b0-ef17d235709b",
+            "curationType": "vivo-stream",
+            "position": 0,
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      },
+      {
+        "topicName": "Medicina",
+        "topicId": "c8y94y3jj2kt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "63b87bb0-e828-457c-bc8b-d0d1c380fad9",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      },
+      {
+        "topicName": "Coronavírus",
+        "topicId": "clmq8rgyyvjt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "ec8f5da4-6474-40af-a497-8d9643ba4723",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["tagging:TagConcept", "core:Thing", "core:Event"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      },
+      {
+        "topicName": "Ciência",
+        "topicId": "cr50y580rjxt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "9985571a-0cf8-4345-9363-cf5300b52f42",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      },
+      {
+        "topicName": "Vacinas",
+        "topicId": "cxnyknq5p9kt",
+        "subjectList": [
+          {
+            "subjectId": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "subjectType": "tag"
+          }
+        ],
+        "curationList": [
+          {
+            "curationId": "0dc28fc6-c758-49b4-9008-45cec401bb01",
+            "curationType": "vivo-stream",
+            "visualProminence": "NORMAL"
+          }
+        ],
+        "types": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+        "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil"
+      }
+    ]
+  },
+  "content": {
+    "blocks": [
+      {
+        "id": "123032003",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/7547/production/_123032003_2.png",
+        "path": "/cpsprodpb/7547/production/_123032003_2.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Quatro ampolas de vacina e quatro injeções",
+        "caption": "Por ora, não há qualquer definição se as vacinas contra a covid-19 precisarão ser aplicadas todos os anos",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "O rápido espalhamento da variante ômicron mundo afora levantou duas questões importantes: será que precisaremos de vacinas atualizadas para lidar com essa ou com as novas versões do coronavírus que podem surgir nos próximos meses? E, se isso for realmente necessário, será que todo mundo deverá tomar novas doses a cada ano?",
+        "role": "introduction",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Por ora, a ciência parece ter mais dúvidas do que certezas a respeito desses pontos. Não existe definição sobre se a vacinação contra a covid-19 será anual ou se as três doses oferecidas atualmente para boa parte da população serão suficientes para conferir uma proteção forte e duradoura.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "numbered": false,
+        "items": [
+          {
+            "text": "<itemMeta>portuguese/geral-60143972</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "A ômicron é realmente menos perigosa que as outras variantes de covid?",
+                  "headline": "Ômicron: variante é realmente menos perigosa que as outras de covid?",
+                  "overtyped": "A ômicron é realmente menos perigosa que as outras variantes de covid?"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/portuguese/geral-60143972"
+                },
+                "summary": "Todos nós provavelmente já ouvimos no último mês que a variante ômicron é menos virulenta que as anteriores. Mas essa informação é segura? No que se baseou essa conclusão?",
+                "timestamp": 1643228056000,
+                "language": "pt-BR",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:portuguese/geral-60143972",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          },
+          {
+            "text": "<itemMeta>portuguese/brasil-60120427</itemMeta>",
+            "meta": [
+              {
+                "headlines": {
+                  "shortHeadline": "Tratamento precoce: 3 antivirais aprovados no exterior contra covid",
+                  "headline": "Tratamento precoce: 3 antivirais aprovados no exterior contra covid",
+                  "overtyped": "Tratamento precoce: 3 antivirais aprovados no exterior contra covid"
+                },
+                "locators": {
+                  "href": "https://www.bbc.com/portuguese/brasil-60120427"
+                },
+                "summary": "Remédios que previnem hospitalização e morte pela infecção com o coronavírus já são prescritos em várias partes do mundo, mas não há perspectiva para aprovação desses fármacos ou incorporação deles no sistema público do Brasil.",
+                "timestamp": 1643190750000,
+                "language": "pt-BR",
+                "passport": {
+                  "category": { "categoryId": "", "categoryName": "" },
+                  "taggings": []
+                },
+                "id": "urn:bbc:ares::asset:portuguese/brasil-60120427",
+                "type": "cps"
+              }
+            ],
+            "markupType": "candy_xml",
+            "type": "listItem"
+          }
+        ],
+        "type": "list"
+      },
+      {
+        "text": "A experiência com outras doenças mostra que os dois caminhos são possíveis. Temos vacinas que precisam ser aplicadas poucas vezes na vida, caso daquelas que protegem contra febre amarela ou sarampo, e outras que requerem reaplicações periódicas, como os produtos que resguardam contra a gripe (doses anuais) ou contra o tétano (uma dose a cada dez anos).",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Para saber melhor o futuro da vacinação contra a covid-19, especialistas ouvidos pela BBC News Brasil avaliam que é preciso ter respostas claras para cinco perguntas básicas, que você confere a seguir.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "1. Quanto tempo dura a imunidade após a terceira dose?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Com exceção da Janssen, todas as outras vacinas contra a covid-19 utilizadas em boa parte do mundo tinham um esquema inicial com duas doses.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Esses produtos foram testados e aprovados com um objetivo principal: diminuir o risco de desenvolver as formas mais graves da doença, que estão relacionadas à hospitalização e morte.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "E, como era de se esperar, o avanço da campanha de vacinação em vários países foi seguido por uma queda importante nos casos, nas internações e nos óbitos relacionados à infecção pelo coronavírus.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "No segundo semestre de 2021, porém, algumas pesquisas começaram a indicar que a resposta imune obtida após a aplicação das duas doses diminuía com o passar do tempo — no caso da CoronaVac, por exemplo, foi observada uma queda importante nos anticorpos entre quatro e seis meses depois de completado o esquema vacinal primário. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Esses estudos fizeram com que alguns países logo adotassem a política de oferecer uma terceira dose, primeiro para idosos e indivíduos com sistema imune comprometido, depois para todos os adultos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Embora essa decisão não fosse consenso entre toda a comunidade científica até novembro, a necessidade de uma terceira dose virou quase unanimidade com o aparecimento da ômicron no final de 2021. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Um dos motivos para isso é o fato de a variante carregar uma quantidade considerável de mutações genéticas na proteína S, sigla para spike (ou espícula, em português), a estrutura do coronavírus que se conecta às nossas células e dá início à infecção. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O grande problema é que as principais vacinas disponíveis, como as de Pfizer, AstraZeneca e Janssen, são baseadas justamente na tal da espícula do vírus &quot;original&quot;, detectado inicialmente em Wuhan, na China, no final de 2019. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ou seja: uma transformação importante na espícula, como aconteceu com a ômicron, pode significar que a resposta imunológica obtida após a vacinação deixe de funcionar tão bem como observado até então, e não consiga mais identificar e barrar as novas versões virais. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "121900766",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1048C/production/_121900766_4.png",
+        "path": "/cpsprodpb/1048C/production/_121900766_4.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Ilustração de uma célula e do coronavírus",
+        "caption": "A espícula (estrutura vermelha) se conecta com receptores da célula (estrutura azul) para dar início à infecção",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Na prática, as vacinas realmente perderam parte de seu poder diante dessa nova variante. No caso do imunizante da AstraZeneca, por exemplo, <link><caption>cientistas do Imperial College, do Reino Unido, calcularam</caption><url href=\"https://www.imperial.ac.uk/news/232698/omicron-largely-evades-immunity-from-past/\" platform=\"highweb\"/></link> que a efetividade das duas doses contra a infecção sintomática pela ômicron despenca para 0 a 20% (antes, ela alcançava até os 90%).",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "A boa notícia é que esse mesmo grupo observou que dá para restaurar boa parte dessa proteção com uma terceira dose de vacina: no estudo, após o reforço, a efetividade subiu novamente para 55 a 80%. O mesmo fenômeno também ocorreu com outros imunizantes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Sabemos que a ômicron adquiriu maior resistência às vacinas, mas ela não é completamente resistente. Ela consegue escapar parcialmente dos anticorpos, mas ainda há uma proteção importante, especialmente após as três doses&quot;, avalia o virologista Flávio da Fonseca, professor da Universidade Federal de Minas Gerais.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;As vacinas que temos agora estão funcionando, com alta proteção contra hospitalizações e óbitos. E é justamente isso o que nós queremos delas&quot;, concorda a epidemiologista Denise Garrett, vice-presidente do Instituto Sabin de Vacinas, nos Estados Unidos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os dados de vida real mostram a importância das três doses, <link><caption>como revelam os gráficos do sistema de saúde de Nova York</caption><url href=\"https://www1.nyc.gov/site/doh/covid/covid-19-data.page#daily\" platform=\"highweb\"/></link>, também nos EUA. Nas duas primeiras semanas de janeiro, é possível observar cinco vezes mais casos de covid, sete vezes mais hospitalizações e cinco vezes mais mortes em indivíduos que não foram vacinados na cidade. ",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "id": "123032005",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/C367/production/_123032005_5.png",
+        "path": "/cpsprodpb/C367/production/_123032005_5.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Gráfico de hospitalizações por covid em Nova York",
+        "caption": "Em Nova York, a taxa de hospitalizações de não vacinados (linha roxa) é quase sete vezes maior do que a de vacinados (linha laranja)",
+        "copyrightHolder": "Divulgação/NYC Health",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Mas aí vem a grande pergunta: a proteção da terceira dose dura quanto tempo? Será que ela também vai cair daqui a alguns meses, como observado após o esquema primário com as duas aplicações? Se sim, haverá necessidade de um novo reforço vacinal? Por ora, ninguém tem certeza sobre essas questões.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Numa entrevista recente, o imunologista Anthony Fauci, líder da resposta à pandemia nos Estados Unidos, apresentou algumas sugestões do que pode acontecer.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Penso que após a primeira, a segunda, a terceira e, quem sabe, a quarta dose, é provável que tenhamos um nível de proteção que pode transformar a covid num quadro leve, ou sem sintomas. E aí o coronavírus ficará cada vez mais próximo de outros causadores do resfriado comum&quot;, projeta. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O médico José Cassio de Moraes, professor da Faculdade de Ciências Médicas da Santa Casa de São Paulo, aponta algumas incertezas sobre esse cenário futuro. &quot;Nós ainda não temos um correlato de proteção, ou seja, qual é a quantidade de anticorpos que precisamos para não pegarmos a covid.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Precisamos observar os próximos meses, para conferir se essa diferença de proteção que vemos hoje entre vacinados e não vacinados diminui ou se ela se mantém com o passar do tempo&quot; complementa o especialista, que também representa a Associação Brasileira de Saúde Coletiva (Abrasco). ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "E vale lembrar aqui que nem só de anticorpos vive a resposta imunológica. Existem várias camadas de proteção que também ajudam a eliminar os agentes invasores do organismo.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Fazer anticorpos e manter as 'fronteiras fechadas' é algo muito custoso para o corpo. Se o vírus não aparece, é natural que esse sistema se desmantele após algum tempo&quot;, ensina o clínico e imunologista Eduardo Finger, coordenador do Laboratório de Pesquisa Experimental do Hospital Alemão Oswaldo Cruz, em São Paulo. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Mas essa expertise não se perde. Ela fica 'guardada' nas células de memória do sistema imune, que são ativadas e montam uma resposta rapidamente caso o vírus apareça. Com isso, a pessoa pode até se infectar, mas o patógeno não vai ter acesso livre aos órgãos vitais&quot;, completa.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "É justamente isso que parece estar acontecendo agora: pessoas que tiveram covid anteriormente ou estão vacinadas com duas ou três doses até pegam a ômicron, mas na grande maioria das vezes os sintomas são mais leves e não ocorrem grandes complicações pulmonares. Ou seja: nesses casos, o vírus até conseguiu escapar da primeira barreira de proteção (os anticorpos), mas logo as células de memória são ativadas e impedem um mal maior. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "p0bgnhmv",
+        "subType": "clip",
+        "format": "video",
+        "title": "Por que vacinados ainda podem pegar covid (e não é falha do imunizante)",
+        "synopses": {
+          "short": "Por que vacinados ainda podem pegar covid (e não é falha do imunizante)",
+          "long": "De Caetano Veloso a Ronaldo Fenômeno, várias personalidades divulgaram que receberam um diagnóstico positivo para covid-19 nos últimos dias. A maioria absoluta já estava vacinada com duas ou três doses da vacina e alguns estão infectados pela segunda vez.\n\nOs anúncios serviram de combustível para a criação (ou a reciclagem) de notícias falsas, que acusam os imunizantes de não funcionarem como o esperado.\n\nAs notícias também levantaram algumas dúvidas na cabeça das pessoas: se as vacinas são efetivas, como é que tanta gente pegou covid?\n\nNeste vídeo, o repórter André Biernath mostra o que está por trás desse aumento de casos e explica por que isso não é sinal da ineficácia das vacinas.",
+          "medium": "O que está por trás do aumento de casos de covid-19 no Brasil e por que isso não quer dizer que a vacina não funciona"
+        },
+        "imageUrl": "ichef.bbci.co.uk/images/ic/$recipe/p0bgpzlm.jpg",
+        "embedding": true,
+        "advertising": true,
+        "caption": "Por que vacinados ainda podem pegar covid (e não é falha do imunizante)",
+        "versions": [
+          {
+            "versionId": "p0bgnhn7",
+            "types": ["Original"],
+            "duration": 327,
+            "durationISO8601": "PT5M27S",
+            "warnings": {},
+            "availableTerritories": { "uk": true, "nonUk": true },
+            "availableFrom": 1641981226000
+          }
+        ],
+        "smpKind": "programme",
+        "type": "media"
+      },
+      {
+        "text": "2. As vacinas disponíveis continuam a funcionar contra as novas variantes?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Como você conferiu nos parágrafos anteriores, as vacinas até perdem um pouco de efetividade diante da ômicron, mas continuam a evitar hospitalizações e mortes. Porém, nada garante que o mesmo vá acontecer com as próximas variantes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Os cientistas esperam que novas versões do coronavírus surjam ao longo dos próximos meses. Durante o processo de replicação nas células, o patógeno sofre mutações aleatórias a todo momento. Boa parte dessas alterações genéticas não dá em nada, mas há uma parcela delas que resulta em melhorias (ao menos do ponto de vista do vírus) na capacidade de transmissão, de escape imunológico ou de agressividade.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nada garante, portanto, que as novas linhagens consigam driblar ainda melhor a proteção obtida com as vacinas atuais e levem a um novo aumento nos casos, nas internações e nas mortes por covid.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Na visão de Fonseca, que também é presidente da Sociedade Brasileira de Virologia, a boa notícia é que a ômicron se tornou tão predominante em todo o mundo que há grandes chances de a próxima variante se originar a partir dela.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Esse fenômeno ainda não aconteceu até agora: todas as variantes de preocupação detectadas tiveram uma origem independente. Ou seja: a delta não surgiu diretamente da gama, e a beta não é derivada da alfa. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "121992175",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/DF29/production/_121992175_gettyimages-1299802510.jpg",
+        "path": "/cpsprodpb/DF29/production/_121992175_gettyimages-1299802510.jpg",
+        "height": 549,
+        "width": 976,
+        "altText": "Ilustração do coronavírus",
+        "caption": "Ômicron não será a última variante do coronavírus a aparecer, garantem os especialistas",
+        "copyrightHolder": "Getty",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Mas, dado o potencial de espalhamento e a circulação da ômicron, é provável que a próxima versão do coronavírus seja parecida com ela. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Se a 'receita' da ômicron deu certo, a tendência é que as próximas variantes mantenham esse curso de menor letalidade&quot;, aposta Fonseca.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mas o que acontece se surgir um coronavírus com mutações que escapam totalmente das vacinas? Daí sim será necessário realmente atualizar os produtos que temos à disposição.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Não existe, porém, um limiar definido de quando isso pode acontecer — no início da pandemia, a Organização Mundial da Saúde (OMS) decidiu que os imunizantes deveriam ter uma eficácia mínima de 50% contra os casos mais graves para serem aprovados. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Conforme surgirem as variantes, vamos ter que pesar os riscos e os benefícios das vacinas que temos à disposição&quot;, antevê Moraes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Se a efetividade de uma delas cai de 90% para 80%, não me parece ser algo tão grave. Agora, se essa taxa diminuir para 20%, será necessário ter novas vacinas&quot;, complementa o médico. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "3. Qual a capacidade das farmacêuticas e dos governos de atualizar, testar, aprovar, fabricar e distribuir as novas vacinas?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Vale lembrar que as tentativas de atualizar as vacinas estão em curso. Recentemente, representantes das farmacêuticas Pfizer e Moderna disseram que desenvolvem novas versões de seus produtos para barrar a ômicron. A expectativa é que os resultados dos testes sejam divulgados no próximo mês de março.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O problema é que, até lá, a atual onda de casos, hospitalizações e mortes já deve ter arrefecido em boa parte do planeta. Será que faz sentido então criar um produto específico contra essa variante?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Numa coletiva de imprensa realizada recentemente, Fauci avaliou que buscar novos imunizantes contra a ômicron é &quot;prudente&quot;, mas talvez eles nem sejam necessários.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Faz sentido ao menos pensar em doses de reforço que mirem a ômicron. Talvez nem precisemos delas, mas é prudente nos prepararmos para a possibilidade de que essa seja uma variante persistente, que precisaremos continuar a enfrentar&quot;, comentou.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Finger concorda. &quot;A ômicron é tão infectante e rápida que talvez ela acabe com o número de pessoas suscetíveis antes de março.&quot;",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Mesmo assim, ainda existem indivíduos que poderiam se beneficiar de uma quarta dose ou de uma vacina específica contra essa variante&quot;, acrescenta. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Em tese, a atualização das vacinas de mRNA (como as de Pfizer e Moderna) ou de vetor viral (caso de AstraZeneca e Janssen) nem é tão complicada assim: basta trocar a sequência genética, de modo que ela fique mais parecida à espícula da ômicron. Esse processo pode ser feito no laboratório em poucos dias.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "O que demora mesmo é a próxima etapa: avaliar as novas versões dos imunizantes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Como falamos de vacinas novas, é preciso ter um cuidado um pouco maior e fazer estudos, que demoram em torno de dois meses, para acompanhar se as atualizações são eficazes e seguras&quot;, diz Moraes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "E, mesmo se os testes forem bem-sucedidos, há ainda a etapa de aprovação com as agências regulatórias, a fabricação das doses e a distribuição delas, o que certamente acrescenta mais alguns meses nessa conta. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123032007",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/11187/production/_123032007_3.png",
+        "path": "/cpsprodpb/11187/production/_123032007_3.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Fábrica de vacinas",
+        "caption": "O processo de criação, aprovação e produção de vacinas atualizadas pode levar cerca de seis meses",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Se as vacinas atualizadas forem realmente necessárias, será que é possível acelerar todo esse processo, de modo que o produto fique disponível a tempo de aliviar o impacto das novas variantes?",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "A vacinação contra a gripe pode servir de modelo nesse contexto. Todos os anos a OMS monitora as cepas do vírus influenza que estão circulando com mais intensidade e recomenda qual deve ser a composição do imunizante que será utilizado pelos países.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Geralmente, a formulação vacinal contra a gripe para o Hemisfério Norte é divulgada em fevereiro/março e, para o Hemisfério Sul, em setembro. Assim, dá tempo de os produtores fabricarem as doses e disponibilizá-las no início da temporada de frio, quando os casos da doença costumam aumentar.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Nesse caso, não há necessidade de fazer grandes estudos clínicos, já que a mudança em alguns ingredientes (no caso, as cepas de vírus que estão incluídas) não altera a segurança do produto. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "No Brasil, por exemplo, o responsável por produzir a vacina contra a gripe é o Instituto Butantan, que segue as diretrizes da OMS e entrega todos os anos ao Ministério da Saúde cerca de 80 milhões de doses. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Mais uma vez, ainda não dá pra saber se esse esquema anual será necessário também para a covid.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;E, mesmo se a vacina contra o coronavírus precisar ser atualizada de ano em ano, não haverá a exigência de testes clínicos toda vez, já que será necessário modificar apenas um componente ou outro da formulação para se adequar às variantes em circulação no momento&quot;, acredita Fonseca. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "As bases para um esquema de atualização das vacinas contra a covid foram lançadas recentemente, numa reunião organizada pela Food and Drug Administration (FDA), dos EUA, e pela Agência Europeia de Medicamentos (EMA).",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "No encontro, os representantes das entidades concordaram que &quot;a administração de múltiplas doses de reforço em curtos intervalos não é uma abordagem sustentável no longo prazo&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Eles também apontaram que é necessário que a comunidade científica internacional e as farmacêuticas continuem a &quot;buscar alternativas para as vacinas disponíveis atualmente&quot;. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Por fim, as instituições concordam que as versões atualizadas dos imunizantes precisam &quot;demonstrar que a resposta imunológica, medida através dos anticorpos neutralizantes, seja superior ao alcançado com as vacinas disponíveis anteriormente&quot;.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "4. Qual será a sazonalidade da covid e quem estará no público-alvo da vacinação?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Um aspecto que traz outras dúvidas sobre o futuro da vacinação contra a covid é se haverá uma época do ano em que a transmissão do vírus será mais alta.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Como estamos numa situação pandêmica, em que os casos acontecem durante o ano todo, ainda não foi possível determinar uma sazonalidade da doença&quot;, conta Fonseca.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Precisamos entender como será o padrão de circulação do coronavírus ao longo do ano pelos continentes&quot;, complementa o virologista.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Se levarmos em conta o que acontece com outros vírus respiratórios, como os causadores de resfriados e gripe, a tendência é que as infecções se concentrem geralmente entre o outono e o inverno.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123032010",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/03FF/production/_123032010_1.png",
+        "path": "/cpsprodpb/03FF/production/_123032010_1.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Profissional de saúde prepara vacina contra a gripe",
+        "caption": "Vacinação anual contra a gripe costuma começar no início do outuno, antes de os casos começarem a subir",
+        "copyrightHolder": "Erasmo Salomao/Ministério da Saúde",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "E isso tem mais a ver com o comportamento do ser humano do que com os patógenos: em dias mais frios, a tendência é ficarmos mais tempo em lugares fechados, próximos uns dos outros, o que facilita a transmissão desses agentes infecciosos. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Se esse mesmo padrão se repetir com a covid e houver a necessidade de vacinações anuais, a tendência é que as campanhas se concentrem, então, no início do outono, como já ocorre com a gripe.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Outro aspecto que precisará ser discutido é a necessidade de vacinar toda a população, ou se apenas alguns grupos mais vulneráveis às complicações da doença, como idosos, gestantes, pessoas com sistema imune comprometido ou crianças, serão contemplados nesse reforço anual.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "5. Quais inovações virão com a segunda geração de imunizantes?",
+        "markupType": "plain_text",
+        "type": "crosshead"
+      },
+      {
+        "text": "Por fim, vale destacar que os produtos de Pfizer, AstraZeneca, Janssen e a CoronaVac, entre outros, são a primeira geração de vacinas contra a covid-19.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Há uma série de candidatos a imunizantes de segunda geração que estão avançando nos testes atualmente. Além de continuarem a proteger contra a doença, eles têm o potencial de resolver alguns pontos negativos e deficiências observados nessa primeira leva.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Uma vacina nova que precisaríamos agora seriam as intranasais, capazes de barrar a infecção pelo coronavírus&quot;, diz Garrett.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Ao contrário dos imunizantes atuais, que evitam casos mais graves, hospitalizações e óbitos por covid, a proposta das vacinas intranasais (aplicadas em forma de líquido ou spray direto nariz) é evitar que o vírus invada as células e dê início à infecção.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Existem vários produtos desse tipo em teste e alguns resultados são esperados ainda para 2022.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "123032072",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/698F/production/_123032072_4.png",
+        "path": "/cpsprodpb/698F/production/_123032072_4.png",
+        "height": 549,
+        "width": 976,
+        "altText": "Homem aplica vacina no nariz",
+        "caption": "Vacina intranasal contra a covid facilitaria a aplicação, seria mais acessível a quem tem medo de agulhas e poderia evitar infecção pelo coronavírus",
+        "copyrightHolder": "Getty Images",
+        "positionHint": "full-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "Ainda na seara das inovações, alguns laboratórios trabalham na criação de vacinas que consigam criar uma imunidade contra vários tipos de coronavírus (e não apenas o Sars-CoV-2, o causador da covid). ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Já outras farmacêuticas estão desenvolvendo imunizantes conjugados, que prometem trazer numa única dose proteção contra covid e gripe. ",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Também é possível esperar que os novos produtos causem ainda menos efeitos colaterais, possam ser armazenados ou transportados mais facilmente e garantam uma proteção duradoura.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Conforme essas inovações forem testadas e aprovadas, poderemos avaliar todos os seus benefícios e conferir se elas vão trazer ganhos ao nosso programa público&quot;, acredita Moraes.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Uma vacina intranasal segura e eficaz que possa ser conservada em temperatura ambiente, por exemplo, traria muitas vantagens&quot;, complementa o médico.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "E, claro, se a segunda geração de imunizantes realmente ganhar espaço, isso também pode influenciar no esquema de aplicação de novas doses ou como serão feitos esses reforços de tempos em tempos.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "Enquanto esse futuro não chega e as respostas para as questões estão em aberto, todos os especialistas ao menos têm certeza sobre uma coisa: é preciso diminuir a desigualdade e garantir que a população de todos os países receba as vacinas disponíveis atualmente.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "text": "&quot;Em vez de pensarmos na aplicação de uma quarta ou de uma quinta dose, deveríamos estar vacinando o mundo inteiro agora. O impacto sobre a pandemia certamente seria bem maior&quot;, conclui Garrett.",
+        "markupType": "plain_text",
+        "type": "paragraph"
+      },
+      {
+        "id": "104602229",
+        "subType": "body",
+        "href": "http://c.files.bbci.co.uk/1683C/production/_104602229_line976.jpg",
+        "path": "/cpsprodpb/1683C/production/_104602229_line976.jpg",
+        "height": 2,
+        "width": 464,
+        "altText": "Línea",
+        "copyrightHolder": "BBC",
+        "positionHint": "body-width",
+        "originCode": "cpsprodpb",
+        "type": "image"
+      },
+      {
+        "text": "<bold>Sabia que a BBC está também no Telegram? </bold><link><caption>Inscreva-se no canal</caption><url href=\"http://telegram.me/bbcbrasil\" platform=\"highweb\"/><url href=\"http://telegram.me/bbcbrasil\" platform=\"enhancedmobile\"/></link><bold>.</bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "text": "<bold>Já assistiu aos nossos novos vídeos no </bold><link><caption>YouTube</caption><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"highweb\"/><url href=\"https://www.youtube.com/channel/UCthbIFAxbXTTQEC7EcQvP1Q\" platform=\"enhancedmobile\"/></link><bold>? Inscreva-se no nosso canal! </bold>",
+        "markupType": "candy_xml",
+        "type": "paragraph"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=q0ULzaJtuec",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Auschwitz: sobrevivente brasileiro descreve horrores do campo de concentração",
+            "author_name": "BBC News Brasil",
+            "author_url": "https://www.youtube.com/user/BBCBrasil",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/q0ULzaJtuec/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/q0ULzaJtuec?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Brasil: Auschwitz: sobrevivente brasileiro descreve horrores do campo de concentração"
+          }
+        },
+        "id": "q0ULzaJtuec",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=CNn9JYGjf18",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Anatomia do mal: o que exames psicológicos revelaram sobre nazistas",
+            "author_name": "BBC News Brasil",
+            "author_url": "https://www.youtube.com/user/BBCBrasil",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/CNn9JYGjf18/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/CNn9JYGjf18?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Brasil: Anatomia do mal: o que exames psicológicos revelaram sobre nazistas"
+          }
+        },
+        "id": "CNn9JYGjf18",
+        "type": "social_embed"
+      },
+      {
+        "href": "https://www.youtube.com/watch?v=B6hxf7b7rxA",
+        "source": "youtube",
+        "embed": {
+          "oembed": {
+            "version": "1.0",
+            "title": "Quando poderemos ter vacinas contra a ômicron, se necessário?",
+            "author_name": "BBC News Brasil",
+            "author_url": "https://www.youtube.com/user/BBCBrasil",
+            "provider_name": "YouTube",
+            "provider_url": "https://www.youtube.com/",
+            "thumbnail_url": "https://i.ytimg.com/vi/B6hxf7b7rxA/hqdefault.jpg",
+            "thumbnail_width": 480,
+            "thumbnail_height": 360,
+            "html": "<iframe width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/B6hxf7b7rxA?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+            "width": 200,
+            "height": 113
+          },
+          "fallback_image": {
+            "fallback_image_width": 500,
+            "fallback_image_height": 269,
+            "alt_text": "YouTube post by BBC News Brasil: Quando poderemos ter vacinas contra a ômicron, se necessário?"
+          }
+        },
+        "id": "B6hxf7b7rxA",
+        "type": "social_embed"
+      }
+    ]
+  },
+  "promo": {
+    "headlines": {
+      "shortHeadline": "Vacinação contra covid: 5 perguntas definem quantas doses tomaremos no futuro",
+      "headline": "Vacinação contra covid: 5 perguntas definem quantas doses tomaremos no futuro"
+    },
+    "locators": {
+      "assetUri": "/portuguese/internacional-60163634",
+      "cpsUrn": "urn:bbc:content:assetUri:portuguese/internacional-60163634",
+      "curie": "http://www.bbc.co.uk/asset/42e11be8-b705-4e1f-a32c-a0a03c5a4547",
+      "assetId": "60163634"
+    },
+    "summary": "Especialistas apontam as questões essenciais para definir a periodicidade da vacinação contra a covid.",
+    "timestamp": 1643359203000,
+    "language": "pt-BR",
+    "byline": {
+      "name": "André Biernath",
+      "title": "Da BBC News Brasil em São Paulo",
+      "persons": [
+        {
+          "name": "André Biernath",
+          "function": "Da BBC News Brasil em São Paulo"
+        }
+      ]
+    },
+    "passport": {
+      "campaigns": [
+        {
+          "campaignId": "5a988e3739461b000e9dabfa",
+          "campaignName": "WS - Give me perspective"
+        }
+      ],
+      "language": "pt-br",
+      "home": "http://www.bbc.co.uk/ontologies/passport/home/Brasil",
+      "locator": "urn:bbc:cps:curie:asset:42e11be8-b705-4e1f-a32c-a0a03c5a4547",
+      "availability": "AVAILABLE",
+      "taggings": [
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/audience/motivation",
+          "value": "http://www.bbc.co.uk/things/7047e74c-b9ae-4c02-a4a8-748df451ac58#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/editorialSensitivity",
+          "value": "http://www.bbc.co.uk/things/c6979033-cb72-4d07-9897-adc348a4332e#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/assetType",
+          "value": "http://www.bbc.co.uk/things/22ea958e-2004-4f34-80a7-bf5acad52f6f#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/contributor",
+          "value": "http://www.bbc.co.uk/things/4abb18b9-d7ab-452d-891d-39b8f9ebfdb6#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/about",
+          "value": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/creativework/format",
+          "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id"
+        },
+        {
+          "predicate": "http://www.bbc.co.uk/ontologies/bbc/primaryMediaType",
+          "value": "http://www.bbc.co.uk/things/5566b81b-8509-44c1-8503-018a0eab317d#id"
+        }
+      ],
+      "schemaVersion": "1.4.0",
+      "publishedState": "PUBLISHED",
+      "predicates": {
+        "about": [
+          {
+            "value": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "thingLabel": "Ciência",
+            "thingUri": "http://www.bbc.co.uk/things/0f469e6a-d4a6-46f2-b727-2bd039cb6b53#id",
+            "thingId": "0f469e6a-d4a6-46f2-b727-2bd039cb6b53",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q336",
+              "http://dbpedia.org/resource/Science"
+            ],
+            "thingEnglishLabel": "Science",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+            "thingLabel": "Variante ômicron",
+            "thingUri": "http://www.bbc.co.uk/things/2e0f389d-dac8-4bad-a9b2-8307ab9dab75#id",
+            "thingId": "2e0f389d-dac8-4bad-a9b2-8307ab9dab75",
+            "thingType": ["core:Thing", "tagging:TagConcept", "core:Theme"],
+            "thingSameAs": ["http://www.wikidata.org/entity/Q109739412"],
+            "thingEnglishLabel": "Omicron variant",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingLabel": "Coronavírus",
+            "thingUri": "http://www.bbc.co.uk/things/5fe79b8d-56e5-4aff-8b05-21f9ad731912#id",
+            "thingId": "5fe79b8d-56e5-4aff-8b05-21f9ad731912",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Event"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/COVID-19_pandemic",
+              "http://www.wikidata.org/entity/Q81068910"
+            ],
+            "thingEnglishLabel": "Coronavirus pandemic",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "thingLabel": "Vacinas",
+            "thingUri": "http://www.bbc.co.uk/things/7e89ce05-b3da-4ead-b917-446e4c1a26c4#id",
+            "thingId": "7e89ce05-b3da-4ead-b917-446e4c1a26c4",
+            "thingType": ["core:Theme", "core:Thing", "tagging:TagConcept"],
+            "thingSameAs": [
+              "http://www.wikidata.org/entity/Q134808",
+              "http://dbpedia.org/resource/Vaccine"
+            ],
+            "thingEnglishLabel": "Vaccination",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+            "thingLabel": "Medicina",
+            "thingUri": "http://www.bbc.co.uk/things/918e9487-dc88-44e2-8168-057149670ec3#id",
+            "thingId": "918e9487-dc88-44e2-8168-057149670ec3",
+            "thingType": ["tagging:TagConcept", "core:Thing", "core:Theme"],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Medicine",
+              "http://www.wikidata.org/entity/Q11190"
+            ],
+            "thingEnglishLabel": "Medicine",
+            "type": "about"
+          },
+          {
+            "value": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingLabel": "Saúde",
+            "thingUri": "http://www.bbc.co.uk/things/c4794229-7f87-43ce-ac0a-6cfcd6d3cef2#id",
+            "thingId": "c4794229-7f87-43ce-ac0a-6cfcd6d3cef2",
+            "thingType": [
+              "core:Thing",
+              "core:Theme",
+              "tagging:AmbiguousTerm",
+              "tagging:TagConcept",
+              "tagging:Genre"
+            ],
+            "thingSameAs": [
+              "http://dbpedia.org/resource/Health",
+              "http://www.wikidata.org/entity/Q12147"
+            ],
+            "thingEnglishLabel": "Health",
+            "type": "about"
+          }
+        ],
+        "formats": [
+          {
+            "value": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingLabel": "News report",
+            "thingUri": "http://www.bbc.co.uk/things/46c0517d-9927-4d1a-9954-8c63a3f7a888#id",
+            "thingId": "46c0517d-9927-4d1a-9954-8c63a3f7a888",
+            "thingType": ["tagging:TagConcept", "tagging:Format"],
+            "thingSameAs": [],
+            "thingEnglishLabel": "Report",
+            "thingPreferredLabel": "Report",
+            "thingLabelLanguage": "pt-br",
+            "type": "formats"
+          }
+        ]
+      }
+    },
+    "indexImage": {
+      "id": "123032007",
+      "subType": "index",
+      "href": "http://c.files.bbci.co.uk/11187/production/_123032007_3.png",
+      "path": "/cpsprodpb/11187/production/_123032007_3.png",
+      "height": 549,
+      "width": 976,
+      "altText": "Fábrica de vacinas",
+      "caption": "O processo de criação, aprovação e produção de vacinas atualizadas pode levar cerca de seis meses",
+      "copyrightHolder": "Getty Images",
+      "originCode": "cpsprodpb",
+      "type": "image"
+    },
+    "id": "urn:bbc:ares::asset:portuguese/internacional-60163634",
+    "type": "cps"
+  },
+  "relatedContent": {
+    "section": {
+      "subType": "index",
+      "name": "Internacional",
+      "uri": "/portuguese/internacional",
+      "type": "simple"
+    },
+    "site": {
+      "subType": "site",
+      "name": "BBC Brasil",
+      "uri": "/portuguese",
+      "type": "simple"
+    },
+    "groups": [
+      {
+        "type": "see-alsos",
+        "promos": [
+          {
+            "headlines": {
+              "shortHeadline": "Covid longa: os sintomas do efeito prolongado do coronavírus",
+              "headline": "Covid longa: os sintomas do efeito prolongado do coronavírus"
+            },
+            "locators": {
+              "assetUri": "/portuguese/internacional-60113249",
+              "cpsUrn": "urn:bbc:content:assetUri:/portuguese/internacional-60113249"
+            },
+            "summary": "Um número significativo de pessoas apresenta problemas de saúde de longo prazo após se recuperar da infecção inicial.",
+            "timestamp": 1643131071000,
+            "language": "pt-BR",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "119450435",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D09D/production/_119450435_gettyimages-1254866783.jpg",
+              "path": "/cpsprodpb/D09D/production/_119450435_gettyimages-1254866783.jpg",
+              "height": 549,
+              "width": 976,
+              "altText": "A young woman lies in bed with her hand on her forehead",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/internacional-60113249",
+            "type": "cps"
+          },
+          {
+            "headlines": {
+              "shortHeadline": "Os tratamentos contra covid já disponíveis e como funcionam",
+              "headline": "Os tratamentos contra covid já disponíveis e como funcionam"
+            },
+            "locators": {
+              "assetUri": "/portuguese/geral-60111646",
+              "cpsUrn": "urn:bbc:content:assetUri:/portuguese/geral-60111646"
+            },
+            "summary": "Alguns corticoides, antivirais e anti-inflamatórios tiveram eficácia testada para o tratamento da covid-19. Saiba quais são eles.",
+            "timestamp": 1643106579000,
+            "language": "pt-BR",
+            "cpsType": "STY",
+            "indexImage": {
+              "id": "114246997",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/1385C/production/_114246997_1024treatmentgettyimages-1255593809.jpg",
+              "path": "/cpsprodpb/1385C/production/_114246997_1024treatmentgettyimages-1255593809.jpg",
+              "height": 576,
+              "width": 1024,
+              "altText": "Woman in hospital bed",
+              "copyrightHolder": "Getty Images",
+              "type": "image"
+            },
+            "id": "urn:bbc:ares::asset:portuguese/geral-60111646",
+            "type": "cps"
+          }
+        ]
+      }
+    ]
+  }
+}
