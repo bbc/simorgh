@@ -11,13 +11,11 @@ import { ServiceContext } from '#contexts/ServiceContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
 
-const ScrollPromo = styled.ul`
-  display: flex;
+const StandardScrollPromo = styled.ul`
   list-style: none;
   ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
   margin: 0;
-  ${({ isOperaMini }) => (isOperaMini ? `flex-direction: column;` : '')}
-
+  display: flex;
   overflow-x: scroll;
   /* Avoid using smooth scrolling as it causes accessibility issues */
   scroll-behavior: auto;
@@ -29,6 +27,12 @@ const ScrollPromo = styled.ul`
   &::-webkit-scrollbar {
     display: none;
   }
+`;
+
+const OperaScrollPromo = styled.ul`
+  list-style: none;
+  ${({ dir }) => `padding-${dir === 'ltr' ? 'left' : 'right'}: 0;`}
+  margin: 0;
 `;
 
 const StyledList = styled.li`
@@ -63,9 +67,6 @@ const StyledList = styled.li`
 `;
 
 const OperaStyledList = styled.li`
-  display: flex;
-  flex-shrink: 0;
-
   ${({ dir }) => `@media (min-width: ${GEL_GROUP_0_SCREEN_WIDTH_MIN}){
       margin-${dir === 'ltr' ? 'left' : 'right'}: ${GEL_SPACING};
     }
@@ -81,6 +82,7 @@ const PromoList = ({ blocks }) => {
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
 
+  const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
 
   return (
@@ -88,7 +90,7 @@ const PromoList = ({ blocks }) => {
       {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
-          <List key={index} dir={dir} isOperaMini={isOperaMini}>
+          <List key={index} dir={dir}>
             <Promo block={block} />
           </List>
         );
