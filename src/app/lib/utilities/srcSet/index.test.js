@@ -105,12 +105,28 @@ describe('create srcset', () => {
 });
 
 describe('Placeholder srcset', () => {
-  const locator = 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg';
-  const originCode = 'mpv';
-  const expected =
-    'https://ichef.test.bbci.co.uk/images/ic/240xn/p01kdbpk.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kdbpk.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kdbpk.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kdbpk.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kdbpk.jpg 800w';
-  it('should placeholder image with srcset', () => {
-    const placeholderSrcset = getPlaceholderSrcSet({ locator, originCode });
-    expect(placeholderSrcset).toEqual(expected);
-  });
+  const placeholderSrcsetScenario = [
+    {
+      locator: 'ichef.test.bbci.co.uk/images/ic/$widthxn/p01kdbpk.jpg',
+      originCode: 'mpv',
+      expected:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01kdbpk.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01kdbpk.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01kdbpk.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01kdbpk.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01kdbpk.jpg 800w',
+      summary: 'should placeholder image with srcset',
+    },
+    {
+      locator: 'https://ichef.test.bbci.co.uk/images/ic/1024x576/p01mt2kt.jpg',
+      originCode: 'pips',
+      expected:
+        'https://ichef.test.bbci.co.uk/images/ic/240xn/p01mt2kt.jpg 240w, https://ichef.test.bbci.co.uk/images/ic/320xn/p01mt2kt.jpg 320w, https://ichef.test.bbci.co.uk/images/ic/480xn/p01mt2kt.jpg 480w, https://ichef.test.bbci.co.uk/images/ic/624xn/p01mt2kt.jpg 624w, https://ichef.test.bbci.co.uk/images/ic/800xn/p01mt2kt.jpg 800w',
+      summary:
+        'should placeholder image with srcset if size already set and originCode pips',
+    },
+  ];
+  placeholderSrcsetScenario.forEach(
+    ({ locator, originCode, expected, summary }) => {
+      it(summary, () => {
+        expect(getPlaceholderSrcSet({ locator, originCode })).toEqual(expected);
+      });
+    },
+  );
 });

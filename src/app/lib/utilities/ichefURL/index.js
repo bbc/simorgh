@@ -2,28 +2,23 @@
 const WEBP_ORIGIN_CODES = ['cpsdevpb', 'cpsprodpb'];
 
 const buildPlaceholderSrc = (src, resolution) => {
-  const parts = src.split('/');
-  const [domain, media, imgService, width, ...extraParts] = parts;
-  const definedWidth = width.replace('$width', resolution);
-  const domainWithProtocol = `https://${domain}`;
-
+  if (src.includes('urn:') || src.includes('localhost:')) return src;
+  const urlParts = src.replace(/https?:\/\//g, '').split('/');
+  const [domain, mediaType, imgService, ...remainingUrlParts] = urlParts;
+  const remainingUrlPartsWithoutResolution = remainingUrlParts.slice(1);
+  const newResolution = `${resolution}xn`;
   const newUrl = [
-    domainWithProtocol,
-    media,
+    domain,
+    mediaType,
     imgService,
-    definedWidth,
-    ...extraParts,
+    newResolution,
+    ...remainingUrlPartsWithoutResolution,
   ];
-
-  return newUrl.join('/');
+  return `https://${newUrl.join('/')}`;
 };
 
 const buildIChefURL = ({ originCode, locator, resolution, isWebP = false }) => {
-  if (originCode === 'pips') {
-    return locator;
-  }
-
-  if (originCode === 'mpv') {
+  if (originCode === 'mpv' || originCode === 'pips') {
     return buildPlaceholderSrc(locator, resolution);
   }
 

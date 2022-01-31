@@ -53,7 +53,7 @@ describe('getIchefURL', () => {
     );
   });
 
-  it('return standard img url pips', () => {
+  it('return urn scheme unmodified', () => {
     const locator = 'urn:bbc:pips:pid:p054n8j6';
     const originCode = 'pips';
     expect(getIChefURL({ locator, originCode })).toEqual(locator);
