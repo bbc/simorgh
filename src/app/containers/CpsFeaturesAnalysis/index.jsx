@@ -112,7 +112,12 @@ const PromoComponent = ({ promo, dir }) => {
     switch (true) {
       case isAmp:
         return IMPROVED_PROMO_VARIATIONS.default;
-      case promoVariation:
+      case [
+        'variation_1',
+        'variation_2',
+        'variation_3',
+        'variation_4',
+      ].includes(promoVariation):
         return IMPROVED_PROMO_VARIATIONS[promoVariation];
       default:
         return IMPROVED_PROMO_VARIATIONS.default;
