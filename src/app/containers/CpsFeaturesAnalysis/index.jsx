@@ -33,7 +33,7 @@ const IMPROVED_PROMO_VARIATIONS = {
   variation_4: props => (
     <FrostedGlassPromo {...props} minimumContrast={7} paletteSize={20} />
   ),
-  default: StoryPromo,
+  Control: StoryPromo,
 };
 
 const PromoListComponent = ({ promoItems, dir }) => {
@@ -45,12 +45,12 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
   // TODO: remove after testing is complete
-  console.log(`Using promo variation '${promoVariation || 'default'}'`);
+  console.log(`Using promo variation '${promoVariation || 'control'}'`);
 
   const selectComponent = index => {
     switch (true) {
       case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.default;
+        return IMPROVED_PROMO_VARIATIONS.Control;
       case promoVariation === 'variation_1' && index === 0:
         return IMPROVED_PROMO_VARIATIONS.variation_1;
       case promoVariation === 'variation_2':
@@ -59,8 +59,10 @@ const PromoListComponent = ({ promoItems, dir }) => {
         return IMPROVED_PROMO_VARIATIONS.variation_3;
       case promoVariation === 'variation_4':
         return IMPROVED_PROMO_VARIATIONS.variation_4;
+      case promoVariation === 'Control':
+        return IMPROVED_PROMO_VARIATIONS.Control;
       default:
-        return IMPROVED_PROMO_VARIATIONS.default;
+        return IMPROVED_PROMO_VARIATIONS.Control;
     }
   };
 
@@ -106,12 +108,12 @@ const PromoComponent = ({ promo, dir }) => {
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
   // TODO: remove after testing is complete
-  console.log(`Using promo variation '${promoVariation || 'default'}'`);
+  console.log(`Using promo variation '${promoVariation || 'control'}'`);
 
   const selectComponent = () => {
     switch (true) {
       case isAmp:
-        return IMPROVED_PROMO_VARIATIONS.default;
+        return IMPROVED_PROMO_VARIATIONS.Control;
       case [
         'variation_1',
         'variation_2',
@@ -119,8 +121,10 @@ const PromoComponent = ({ promo, dir }) => {
         'variation_4',
       ].includes(promoVariation):
         return IMPROVED_PROMO_VARIATIONS[promoVariation];
+      case promoVariation === 'Control':
+        return IMPROVED_PROMO_VARIATIONS.Control;
       default:
-        return IMPROVED_PROMO_VARIATIONS.default;
+        return IMPROVED_PROMO_VARIATIONS.Control;
     }
   };
 
