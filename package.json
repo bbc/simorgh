@@ -26,6 +26,7 @@
     "prismjs": "1.25.0",
     "prop-types": "15.7.2",
     "react-is": "17.0.2",
+    "simple-get": "4.0.1",
     "trim": "1.0.1"
   },
   "scripts": {
