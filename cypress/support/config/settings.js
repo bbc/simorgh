@@ -348,7 +348,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
@@ -7243,7 +7243,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       topicPage: { environments: undefined, smoke: false },
       mediaAssetPage: {
