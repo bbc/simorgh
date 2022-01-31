@@ -3,12 +3,10 @@ import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
-import useToggle from '#hooks/useToggle';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
@@ -21,8 +19,22 @@ const getEventTrackingData = optimizely => ({
   },
 });
 
-const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
-const HIGH_IMPACT_VARIATION = 'variation_1';
+const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
+const IMPROVED_PROMO_VARIATIONS = {
+  variation_1: props => (
+    <FrostedGlassPromo {...props} minimumContrast={10} paletteSize={10} />
+  ),
+  variation_2: props => (
+    <FrostedGlassPromo {...props} minimumContrast={10} paletteSize={10} />
+  ),
+  variation_3: props => (
+    <FrostedGlassPromo {...props} minimumContrast={7} paletteSize={20} />
+  ),
+  variation_4: props => (
+    <FrostedGlassPromo {...props} minimumContrast={7} paletteSize={20} />
+  ),
+  default: StoryPromo,
+};
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
@@ -30,21 +42,23 @@ const PromoListComponent = ({ promoItems, dir }) => {
   const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
   const { isAmp } = useContext(RequestContext);
 
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
-
-  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
-    useToggle('frostedPromo');
+  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
   const selectComponent = index => {
-    if (isAmp) return StoryPromo;
-    if (isLive()) {
-      if (!frostedPromoEnabled) return StoryPromo;
-      return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+    switch (true) {
+      case isAmp:
+        return IMPROVED_PROMO_VARIATIONS.default;
+      case promoVariation === 'variation_1' && index === 0:
+        return IMPROVED_PROMO_VARIATIONS.variation_1;
+      case promoVariation === 'variation_2':
+        return IMPROVED_PROMO_VARIATIONS.variation_2;
+      case promoVariation === 'variation_3' && index === 0:
+        return IMPROVED_PROMO_VARIATIONS.variation_3;
+      case promoVariation === 'variation_4':
+        return IMPROVED_PROMO_VARIATIONS.variation_4;
+      default:
+        return IMPROVED_PROMO_VARIATIONS.default;
     }
-    if (index === 0 && promoVariation === HIGH_IMPACT_VARIATION) {
-      return FrostedGlassPromo;
-    }
-    return StoryPromo;
   };
 
   return (
@@ -86,19 +100,17 @@ const PromoComponent = ({ promo, dir }) => {
   const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
 
-  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
-    useToggle('frostedPromo');
-
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID);
+  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
   const selectComponent = () => {
-    if (isAmp) return StoryPromo;
-    if (isLive()) {
-      if (!frostedPromoEnabled) return StoryPromo;
-      return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+    switch (true) {
+      case isAmp:
+        return IMPROVED_PROMO_VARIATIONS.default;
+      case promoVariation:
+        return IMPROVED_PROMO_VARIATIONS[promoVariation];
+      default:
+        return IMPROVED_PROMO_VARIATIONS.default;
     }
-    if (promoVariation === HIGH_IMPACT_VARIATION) return FrostedGlassPromo;
-    return StoryPromo;
   };
 
   const StoryPromoComponent = selectComponent();
@@ -110,6 +122,7 @@ const PromoComponent = ({ promo, dir }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
+        eventTrackingData={getEventTrackingData(optimizely)}
       />
     </div>
   );
