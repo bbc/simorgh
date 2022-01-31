@@ -48,7 +48,7 @@ export default ({ service, pageType, variant, isAmp }) => {
           cy.document().its('fonts.status').should('equal', 'loaded');
           // eslint-disable-next-line cypress/no-unnecessary-waiting
           cy.wait(3000);
-          cy.matchImageSnapshot();
+          cy.matchImageSnapshot({ capture: 'fullPage' });
         } else {
           cy.log('Snapshot skipped in headed mode');
         }
