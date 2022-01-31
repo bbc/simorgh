@@ -105,6 +105,9 @@ const PromoComponent = ({ promo, dir }) => {
 
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
+  // TODO: remove after testing is complete
+  console.log(`Using promo variation '${promoVariation || 'default'}'`);
+
   const selectComponent = () => {
     switch (true) {
       case isAmp:
