@@ -83,6 +83,21 @@ export default ({ service, pageType, variant }) => {
           });
         });
       });
+      describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+        it('Articles', () => {
+          if (
+            Cypress.env('APP_ENV') === 'local' &&
+            Cypress.browser.isHeadless
+          ) {
+            cy.document().its('fonts.status').should('equal', 'loaded');
+            // eslint-disable-next-line cypress/no-unnecessary-waiting
+            cy.wait(3000);
+            cy.matchImageSnapshot({ capture: 'fullPage' });
+          } else {
+            cy.log('Snapshot skipped in headed mode');
+          }
+        });
+      });
     });
   });
 };
