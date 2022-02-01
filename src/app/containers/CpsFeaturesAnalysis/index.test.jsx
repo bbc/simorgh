@@ -15,16 +15,10 @@ import FeaturesAnalysis from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn(() => null));
 
-const toggleFixture = ({ frostedPromoCount = 0 } = {}) => ({
-  eventTracking: { enabled: true },
-  frostedPromo: { enabled: true, value: frostedPromoCount },
-});
-
 // eslint-disable-next-line react/prop-types
 const renderFeaturesAnalysis = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
-  frostedPromoCount = 0,
   isAmp = false,
 } = {}) => {
   return render(
@@ -37,7 +31,7 @@ const renderFeaturesAnalysis = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
+        <ToggleContextProvider>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -47,7 +41,6 @@ const renderFeaturesAnalysis = ({
 
 const renderFeaturesAnalysisNull = ({
   bbcOrigin = 'https://www.test.bbc.co.uk',
-  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="pidgin">
@@ -59,7 +52,7 @@ const renderFeaturesAnalysisNull = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
+        <ToggleContextProvider>
           <FeaturesAnalysis content={[]} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -70,7 +63,6 @@ const renderFeaturesAnalysisNull = ({
 const renderFeaturesAnalysisNoTitle = ({
   content = features,
   bbcOrigin = 'https://www.test.bbc.co.uk',
-  frostedPromoCount = 0,
 } = {}) => {
   return render(
     <ServiceContextProvider service="news">
@@ -82,7 +74,7 @@ const renderFeaturesAnalysisNoTitle = ({
         service="pidgin"
         statusCode={200}
       >
-        <ToggleContextProvider toggles={toggleFixture({ frostedPromoCount })}>
+        <ToggleContextProvider>
           <FeaturesAnalysis content={content} enableGridWrapper />
         </ToggleContextProvider>
       </RequestContextProvider>
@@ -112,37 +104,6 @@ describe('CpsFeaturesAnalysis', () => {
 
   it('tests use a fixture that has multiple features', () => {
     expect(features.length).toBeGreaterThan(1);
-  });
-
-  it('should render without the top high impact promo', () => {
-    const { queryAllByTestId } = renderFeaturesAnalysis();
-
-    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
-  });
-
-  it('should not render the top high impact promo, when on the live environment', () => {
-    isLive.mockImplementationOnce(() => true);
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    const { queryAllByTestId } = renderFeaturesAnalysis();
-
-    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
-  });
-
-  it('should not render the top high impact promo, when on amp', () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    const { queryAllByTestId } = renderFeaturesAnalysis({ isAmp: true });
-
-    expect(queryAllByTestId('frosted-promo-loader').length).toBe(0);
-  });
-
-  it('should render with the top high impact promo', () => {
-    useOptimizelyVariation.mockReturnValue('variation_1');
-
-    const { queryAllByTestId } = renderFeaturesAnalysis();
-
-    expect(queryAllByTestId('frosted-promo-loader').length).toBe(1);
   });
 
   it('should render Story Promo component without a list when given a single item in the collection', () => {
@@ -232,31 +193,41 @@ const countFrostedPromos = container =>
   container.querySelectorAll('[data-testid^=frosted-promo]').length;
 
 describe('CpsFeaturesAnalysis - Frosted Promos', () => {
-  it('should not render frosted promos by default', async () => {
-    isLive.mockImplementationOnce(() => true);
-    const { container } = renderFeaturesAnalysis({
-      frostedPromoCount: null,
-    });
+  it('should render without the top high impact promo', () => {
+    const { container } = renderFeaturesAnalysis();
 
     expect(countFrostedPromos(container)).toBe(0);
   });
 
-  it('can render a single frosted promo', async () => {
-    isLive.mockImplementationOnce(() => true);
-    const { container } = renderFeaturesAnalysis({
-      frostedPromoCount: 1,
-    });
+  it('should not render the top high impact promo, when on amp', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = renderFeaturesAnalysis({ isAmp: true });
+
+    expect(countFrostedPromos(container)).toBe(0);
+  });
+
+  it('should render with the top high impact promo', () => {
+    useOptimizelyVariation.mockReturnValue('variation_1');
+
+    const { container } = renderFeaturesAnalysis();
 
     expect(countFrostedPromos(container)).toBe(1);
   });
 
-  it('can render multiple frosted promos', async () => {
-    isLive.mockImplementation(() => true);
+  it('should render with all high impact promos', () => {
+    useOptimizelyVariation.mockReturnValue('variation_2');
 
-    const { container } = renderFeaturesAnalysis({
-      frostedPromoCount: features.length,
-    });
+    const { container } = renderFeaturesAnalysis();
 
-    expect(countFrostedPromos(container)).toBe(features.length);
+    expect(countFrostedPromos(container)).toBe(2);
+  });
+
+  it('should not render the high impact promos, when no variation is specified', () => {
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const { container } = renderFeaturesAnalysis();
+
+    expect(countFrostedPromos(container)).toBe(0);
   });
 });
