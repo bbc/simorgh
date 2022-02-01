@@ -44,9 +44,6 @@ const PromoListComponent = ({ promoItems, dir }) => {
 
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
 
-  // TODO: remove after testing is complete
-  console.log(`Using promo variation '${promoVariation || 'control'}'`);
-
   const selectComponent = index => {
     switch (true) {
       case isAmp:
@@ -106,9 +103,6 @@ const PromoComponent = ({ promo, dir }) => {
   const { isAmp } = useContext(RequestContext);
 
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
-
-  // TODO: remove after testing is complete
-  console.log(`Using promo variation '${promoVariation || 'control'}'`);
 
   const selectComponent = () => {
     switch (true) {
