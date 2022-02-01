@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import features from '#pages/StoryPage/featuresAnalysis.json';
+import features from '#pages/StoryPage/newsFeaturesAnalysis.json';
 import featuresRtl from '#pages/StoryPage/featuresAnalysisRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -14,7 +14,7 @@ const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(FeaturesAnalysis);
 /* eslint-disable react/prop-types */
 const Component = ({
   isAmp = false,
-  service = 'igbo',
+  service = 'news',
   dir = 'ltr',
   data = features,
 }) => (
@@ -48,28 +48,28 @@ export default {
 };
 
 // Canonical
-export const Igbo = () => <Component data={features} />;
+export const News = () => <Component data={features} />;
 export const Arabic = () => (
   <Component data={featuresRtl} service="arabic" dir="rtl" />
 );
-export const IgboWithOneItem = () => <Component data={[features[0]]} />;
+export const NewsWithOneItem = () => <Component data={[features[0]]} />;
 export const ArabicWithOneItem = () => (
   <Component data={[featuresRtl[0]]} service="arabic" dir="rtl" />
 );
 
 // Amp
-export const IgboAmp = () => <Component isAmp data={features} />;
-IgboAmp.decorators = [AmpDecorator];
+export const NewsAmp = () => <Component isAmp data={features} />;
+NewsAmp.decorators = [AmpDecorator];
 
 export const ArabicAmp = () => (
   <Component isAmp data={featuresRtl} service="arabic" dir="rtl" />
 );
 ArabicAmp.decorators = [AmpDecorator];
 
-export const IgboWithOneItemAmp = () => (
+export const NewsWithOneItemAmp = () => (
   <Component isAmp data={[features[0]]} />
 );
-IgboWithOneItemAmp.decorators = [AmpDecorator];
+NewsWithOneItemAmp.decorators = [AmpDecorator];
 
 export const ArabicWithOneItemAmp = () => (
   <Component isAmp data={[featuresRtl[0]]} service="arabic" dir="rtl" />
