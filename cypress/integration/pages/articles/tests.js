@@ -189,12 +189,17 @@ export const testsThatFollowSmokeTestConfig = ({
   describe(`Visual comparison tests for ${service} ${pageType}`, () => {
     it('Articles', () => {
       if (Cypress.env('APP_ENV') === 'local') {
+        cy.setCookie('ckns_privacy', 'july2019');
+        cy.setCookie('ckns_policy', '111');
+        cy.setCookie('ckns_explicit', '1');
+        cy.reload();
         cy.document().its('fonts.status').should('equal', 'loaded');
 
-        cy.scrollTo('bottom', { duration: 6000 });
+        cy.scrollTo('bottom', { duration: 4000 });
+        cy.scrollTo('top', { duration: 2000 });
         cy.matchImageSnapshot({
           capture: 'fullPage',
-          blackout: ['iframe'],
+          blackout: ['[data-e2e="media-player"]'],
         });
       } else {
         cy.log('Snapshot skipped in headed mode');
