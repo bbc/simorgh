@@ -7,7 +7,11 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 
 import Promo from '.';
-import { cpsPromoFixture, linkPromoFixture } from './fixtures';
+import {
+  cpsPromoFixture,
+  linkPromoFixture,
+  cpsNewsPromoFixture,
+} from './fixtures';
 
 // eslint-disable-next-line react/prop-types
 const Wrappers = ({ service, variant, children }) => {
@@ -33,7 +37,7 @@ const Component = props => {
   );
   const mainBody = text(
     'Main Body',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam magna, lacinia ut arcu in, vulputate ultricies lectus. Vestibulum purus ligula, finibus vel ultrices in, pretium non neque. Sed mauris ante, mollis ac metus fermentum, vestibulum malesuada felis. Nullam a congue mauris. Nulla venenatis felis ac eleifend rutrum.',
+    'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
   );
   return (
     <Wrappers {...props}>
@@ -55,6 +59,14 @@ const WithCPSPromoData = props => {
   );
 };
 
+const WithNewsCPSPromoData = props => {
+  return (
+    <Wrappers {...props}>
+      <Promo {...cpsNewsPromoFixture} />
+    </Wrappers>
+  );
+};
+
 const WithLinkPromoData = props => {
   return (
     <Wrappers {...props}>
@@ -71,4 +83,5 @@ export default {
 
 export const Standalone = Component;
 export const CPSPromo = WithCPSPromoData;
+export const CPSNewsPromo = WithNewsCPSPromoData;
 export const LinkPromo = WithLinkPromoData;
