@@ -4,7 +4,10 @@ import { renderHook, act, cleanup } from '@testing-library/react-hooks';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 import useScrollDepth from '.';
+
+jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
 const optimizelyMock = {
   onReady: jest.fn(() => Promise.resolve()),
@@ -37,7 +40,7 @@ wrapper.defaultProps = {
   service: 'news',
 };
 
-describe.only('useScrollDepth', () => {
+describe('useScrollDepth', () => {
   const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
   const removeEventListenerSpy = jest.spyOn(document, 'removeEventListener');
 
@@ -87,6 +90,22 @@ describe.only('useScrollDepth', () => {
     });
 
     expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
+  });
+
+  it('should not call Optimizely track function for users not in an experiment', async () => {
+    useOptimizelyVariation.mockReturnValue(null);
+
+    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+
+    act(() => {
+      result.current.setScrollDepth(25);
+      result.current.setScrollDepth(50);
+      result.current.setScrollDepth(75);
+      result.current.setScrollDepth(100);
+    });
+
+    expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
+
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
