@@ -1,6 +1,7 @@
 import React from 'react';
 import path from 'ramda/src/path';
 import hasPath from 'ramda/src/hasPath';
+import pick from 'ramda/src/pick';
 
 import { createSrcsets } from '#lib/utilities/srcSet';
 import getOriginCode from '#lib/utilities/imageSrcHelpers/originCode';
@@ -95,10 +96,11 @@ const validate = props => {
 
 const withData = Component => props => {
   const data = normalise(props);
+  const additionalProps = pick(['minimumContrast', 'paletteSize'], props);
   if (!validate(data)) {
     return null;
   }
-  return <Component {...data} />;
+  return <Component {...data} {...additionalProps} />;
 };
 
 export default withData;

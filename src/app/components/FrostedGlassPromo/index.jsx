@@ -131,6 +131,7 @@ const FrostedGlassPromo = ({
   );
 };
 
+// New properties are also likely to require whitelisting in the withData HoC
 FrostedGlassPromo.propTypes = {
   children: node.isRequired,
   url: string.isRequired,
