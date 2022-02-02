@@ -19,7 +19,7 @@ const useScrollDepth = () => {
   const [scrollSeventyFive, setScrollSeventyFive] = useState(false);
   const [scrollHundred, setScrollHundred] = useState(false);
 
-  const sendScrollEvents = !isAmp
+  const sendScrollEvents = !isAmp;
 
   useEffect(() => {
     if (scrollDepth >= 25 && !scrollTwentyFive && sendScrollEvents) {
