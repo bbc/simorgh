@@ -1,15 +1,18 @@
 import React from 'react';
 import pathOr from 'ramda/src/pathOr';
+import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import fixture from '#data/pidgin/frontpage';
+import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
+import pidginFixture from '#data/pidgin/frontpage';
+import newsFixture from '#data/news/frontpage';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import { guideLinkItem } from './helpers/fixtureData';
 
-const mediaFixture = type =>
+const mediaFixture = (type, fixture) =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
@@ -18,7 +21,7 @@ const mediaFixture = type =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
-const promoFixture = type =>
+const promoFixture = (type, fixture) =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
@@ -30,35 +33,60 @@ const promoFixture = type =>
 const firstFixture = pathOr(
   null,
   ['content', 'groups', '0', 'items', '0'],
-  fixture,
+  pidginFixture,
 );
 
 firstFixture.timestamp = Date.now();
 
-const audioFixture = mediaFixture('audio');
-const videoFixture = mediaFixture('video');
-const standardPromo = promoFixture('Text');
-const videoPromo = promoFixture('Video');
-const featurePromo = promoFixture('Feature');
-const audioPromo = promoFixture('Audio');
-const galleryPromo = promoFixture('Gallery');
-const podcastPromo = promoFixture('Podcast');
+const audioFixture = service =>
+  service === 'news'
+    ? mediaFixture('audio', newsFixture)
+    : mediaFixture('audio', pidginFixture);
+const videoFixture = service =>
+  service === 'news'
+    ? mediaFixture('video', newsFixture)
+    : mediaFixture('video', pidginFixture);
+const standardPromo = service =>
+  service === 'news'
+    ? promoFixture('Text', newsFixture)
+    : promoFixture('Text', pidginFixture);
+const videoPromo = service =>
+  service === 'news'
+    ? promoFixture('Video', newsFixture)
+    : promoFixture('Video', pidginFixture);
+const featurePromo = service =>
+  service === 'news'
+    ? promoFixture('Feature', newsFixture)
+    : promoFixture('Feature', pidginFixture);
+const audioPromo = service =>
+  service === 'news'
+    ? promoFixture('Audio', newsFixture)
+    : promoFixture('Audio', pidginFixture);
+const galleryPromo = service =>
+  service === 'news'
+    ? promoFixture('Gallery', newsFixture)
+    : promoFixture('Gallery', pidginFixture);
+const podcastPromo = service =>
+  service === 'news'
+    ? promoFixture('Podcast', newsFixture)
+    : promoFixture('Podcast', pidginFixture);
 
 /* eslint-disable react/prop-types */
 const Component = ({
-  isAmp = false,
+  service,
+  isAmp,
   item,
-  promoType = 'regular',
-  isSingleColumnLayout = false,
+  promoType,
+  isSingleColumnLayout,
 }) => (
-  <ServiceContextProvider service="news">
+  <ServiceContextProvider service={service}>
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={isAmp}
       pathname="/pathname"
       pageType={ARTICLE_PAGE}
-      service="news"
+      service={service}
     >
       <ToggleContextProvider
         toggles={{
@@ -82,67 +110,78 @@ export default {
 };
 
 // Canonical
-export const Audio = () => <Component item={audioFixture} />;
-export const Video = () => <Component item={videoFixture} />;
-export const StandardLink = () => <Component item={standardPromo} />;
-export const FeatureLink = () => <Component item={featurePromo} />;
-export const VideoLink = () => <Component item={videoPromo} />;
-export const AudioLink = () => <Component item={audioPromo} />;
-export const GalleryLink = () => <Component item={galleryPromo} />;
-export const PodcastLink = () => <Component item={podcastPromo} />;
-export const Regular = () => <Component item={firstFixture} />;
-export const RegularSingleColumn = () => (
-  <Component item={firstFixture} isSingleColumnLayout />
-);
-export const Leading = () => (
-  <Component promoType="leading" item={firstFixture} />
-);
-export const Top = () => <Component promoType="top" item={firstFixture} />;
-export const GuidePromo = () => <Component item={guideLinkItem} />;
-
-// Canonical
-export const AudioAmp = () => <Component isAmp item={audioFixture} />;
-AudioAmp.decorators = [AmpDecorator];
-
-export const VideoAmp = () => <Component isAmp item={videoFixture} />;
-VideoAmp.decorators = [AmpDecorator];
-
-export const StandardLinkAmp = () => <Component isAmp item={standardPromo} />;
-StandardLinkAmp.decorators = [AmpDecorator];
-
-export const FeatureLinkAmp = () => <Component isAmp item={featurePromo} />;
-FeatureLinkAmp.decorators = [AmpDecorator];
-
-export const VideoLinkAmp = () => <Component isAmp item={videoPromo} />;
-VideoLinkAmp.decorators = [AmpDecorator];
-
-export const AudioLinkAmp = () => <Component isAmp item={audioPromo} />;
-AudioLinkAmp.decorators = [AmpDecorator];
-
-export const GalleryLinkAmp = () => <Component isAmp item={galleryPromo} />;
-GalleryLinkAmp.decorators = [AmpDecorator];
-
-export const PodcastLinkAmp = () => <Component isAmp item={podcastPromo} />;
-PodcastLinkAmp.decorators = [AmpDecorator];
-
-export const RegularAmp = () => <Component isAmp item={firstFixture} />;
-RegularAmp.decorators = [AmpDecorator];
+export const Promo = () => {
+  const selectService = select(
+    'service',
+    { news: 'news', pidgin: 'pidgin' },
+    'news',
+  );
+  return (
+    <Component
+      item={select(
+        'type',
+        {
+          audioFixture: audioFixture(selectService),
+          videoFixture: videoFixture(selectService),
+          standardPromo: standardPromo(selectService),
+          featurePromo: featurePromo(selectService),
+          videoPromo: videoPromo(selectService),
+          audioPromo: audioPromo(selectService),
+          galleryPromo: galleryPromo(selectService),
+          podcastPromo: podcastPromo(selectService),
+          firstFixture,
+          guideLinkItem,
+        },
+        audioFixture,
+      )}
+      service={selectService}
+      promoType={select(
+        'Promo Type',
+        {
+          regular: 'regular',
+          leading: 'leading',
+          top: 'top',
+        },
+        'regular',
+      )}
+      isAmp={false}
+      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+    />
+  );
+};
+Promo.decorators = [withKnobs];
 
 // Amp
-export const RegularSingleColumnAmp = () => (
-  <Component isAmp item={firstFixture} isSingleColumnLayout />
+export const PromoAmp = () => (
+  <Component
+    item={select(
+      'type',
+      {
+        audioFixture,
+        videoFixture,
+        standardPromo,
+        featurePromo,
+        videoPromo,
+        audioPromo,
+        galleryPromo,
+        podcastPromo,
+        firstFixture,
+        guideLinkItem,
+      },
+      audioFixture,
+    )}
+    service={select('service', { news: 'news', pidgin: 'pidgin' }, 'news')}
+    promoType={select(
+      'Promo Type',
+      {
+        regular: 'regular',
+        leading: 'leading',
+        top: 'top',
+      },
+      'regular',
+    )}
+    isAmp
+    isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+  />
 );
-RegularSingleColumnAmp.decorators = [AmpDecorator];
-
-export const LeadingAmp = () => (
-  <Component isAmp promoType="leading" item={firstFixture} />
-);
-LeadingAmp.decorators = [AmpDecorator];
-
-export const TopAmp = () => (
-  <Component isAmp promoType="top" item={firstFixture} />
-);
-TopAmp.decorators = [AmpDecorator];
-
-export const GuidePromoAmp = () => <Component isAmp item={guideLinkItem} />;
-GuidePromoAmp.decorators = [AmpDecorator];
+PromoAmp.decorators = [withKnobs, AmpDecorator];
