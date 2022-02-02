@@ -4,7 +4,6 @@ import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import pidginFixture from '#data/pidgin/frontpage';
 import newsFixture from '#data/news/frontpage';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
