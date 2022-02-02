@@ -26,6 +26,7 @@
     "prismjs": "1.25.0",
     "prop-types": "15.7.2",
     "react-is": "17.0.2",
+    "simple-get": "4.0.1",
     "trim": "1.0.1"
   },
   "scripts": {
@@ -127,7 +128,7 @@
     "@emotion/styled": "11.6.0",
     "@loadable/component": "5.15.2",
     "@loadable/server": "5.15.2",
-    "@optimizely/react-sdk": "2.7.0",
+    "@optimizely/react-sdk": "2.8.0",
     "@testing-library/user-event": "13.5.0",
     "aws-embedded-metrics": "2.0.4",
     "compression": "1.7.4",

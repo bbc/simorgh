@@ -44,6 +44,11 @@ jest.mock('#containers/ComscoreAnalytics', () => {
   return ComscoreAnalytics;
 });
 
+jest.mock('#containers/OptimizelyPageViewTracking', () => {
+  const OptimizelyPageViewTracking = () => null;
+  return OptimizelyPageViewTracking;
+});
+
 jest.mock('#containers/Ad', () => {
   const AdsContainer = () => <div data-testid="sty-ads">STY ADS</div>;
   return AdsContainer;

@@ -2951,38 +2951,44 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/js-sdk-datafile-manager@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "@optimizely/js-sdk-datafile-manager@npm:0.8.1"
+"@optimizely/js-sdk-datafile-manager@npm:^0.9.1":
+  version: 0.9.2
+  resolution: "@optimizely/js-sdk-datafile-manager@npm:0.9.2"
   dependencies:
-    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-logging": ^0.3.1
     "@optimizely/js-sdk-utils": ^0.4.0
-    decompress-response: ^4.2.1
-  peerDependencies:
     "@react-native-async-storage/async-storage": ^1.2.0
-  checksum: 762e876a3d2e53d0e53d034055ba80aac1280791f909f2229097b71140b23c8f2af57efc3bb67acea8be36369a00b382cea6e9f92243b3ce5db71e1b0db5196d
+    decompress-response: ^4.2.1
+  dependenciesMeta:
+    "@react-native-async-storage/async-storage":
+      optional: true
+  checksum: 0d419259aca8b1622f52a921ff3c321afe8359cd17d845f88bd8da3bbd189fedfd079e1928e77e0daac8f45c4ae4574c266da505abc5d442e3148a52b3076d05
   languageName: node
   linkType: hard
 
-"@optimizely/js-sdk-event-processor@npm:^0.8.2":
-  version: 0.8.2
-  resolution: "@optimizely/js-sdk-event-processor@npm:0.8.2"
+"@optimizely/js-sdk-event-processor@npm:^0.9.2":
+  version: 0.9.3
+  resolution: "@optimizely/js-sdk-event-processor@npm:0.9.3"
   dependencies:
-    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-logging": ^0.3.1
     "@optimizely/js-sdk-utils": ^0.4.0
-  peerDependencies:
     "@react-native-async-storage/async-storage": ^1.2.0
     "@react-native-community/netinfo": 5.9.4
-  checksum: f0eda015559627a50d462dc416580bf6ccda9dacf0f1f67806da6dcf012d6bb6accc7ba0e07bae6fec5dc2d3f865faca57cfc1a0f3df287db13cc171279bf04c
+  dependenciesMeta:
+    "@react-native-async-storage/async-storage":
+      optional: true
+    "@react-native-community/netinfo":
+      optional: true
+  checksum: 976d2453f5707750d476be3f6b65be11cc8eaa2cbdce4f074fffb0ac345738934edebf0696737538e2bd9fc98f30f198b54b76607c79aab619f732ec96bd3a85
   languageName: node
   linkType: hard
 
-"@optimizely/js-sdk-logging@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@optimizely/js-sdk-logging@npm:0.1.0"
+"@optimizely/js-sdk-logging@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@optimizely/js-sdk-logging@npm:0.3.1"
   dependencies:
-    "@optimizely/js-sdk-utils": ^0.1.0
-  checksum: b1d2de26cf46e880ddc1d1fa2d4cae9711d7ba47a3914ec0f9537a9bcaf53f68e339bdb1f2af6c1c1fc122514b11634c7e4a4afa54e6f3836763d6fd90035088
+    "@optimizely/js-sdk-utils": ^0.4.0
+  checksum: b93ddfd00d928cb154d0becc2fcc253c1c0d9cb3417b7bfc39e6cb5d4bcf582b9dee868383f0d507782e9a9dac85e6bd5cdd5d7e5689526de9be52ae7182c48c
   languageName: node
   linkType: hard
 
@@ -2995,32 +3001,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@optimizely/optimizely-sdk@npm:^4.7.0":
-  version: 4.7.0
-  resolution: "@optimizely/optimizely-sdk@npm:4.7.0"
+"@optimizely/optimizely-sdk@npm:^4.9.1":
+  version: 4.9.1
+  resolution: "@optimizely/optimizely-sdk@npm:4.9.1"
   dependencies:
-    "@optimizely/js-sdk-datafile-manager": ^0.8.1
-    "@optimizely/js-sdk-event-processor": ^0.8.2
-    "@optimizely/js-sdk-logging": ^0.1.0
+    "@optimizely/js-sdk-datafile-manager": ^0.9.1
+    "@optimizely/js-sdk-event-processor": ^0.9.2
+    "@optimizely/js-sdk-logging": ^0.3.1
     "@optimizely/js-sdk-utils": ^0.4.0
-    json-schema: ^0.2.3
+    json-schema: ^0.4.0
     murmurhash: 0.0.2
-  checksum: 311aae2e1abe3a743ae64ee61d95aeba84c11410cc8a797dbc91fb79932b62352decc096add71612b5e3e9949380a238a91ad4b2438d047176301725a8755c36
+  checksum: 54720957d3bd4cc5b57830d5c92d3765f75eccd744733d4aee1103bc27e359b9ae3bafab4c8ce525c70cf8358a138fb7ff573ae735f32c3c4e2fa870b61152fe
   languageName: node
   linkType: hard
 
-"@optimizely/react-sdk@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@optimizely/react-sdk@npm:2.7.0"
+"@optimizely/react-sdk@npm:2.8.0":
+  version: 2.8.0
+  resolution: "@optimizely/react-sdk@npm:2.8.0"
   dependencies:
-    "@optimizely/js-sdk-logging": ^0.1.0
-    "@optimizely/optimizely-sdk": ^4.7.0
+    "@optimizely/js-sdk-logging": ^0.3.1
+    "@optimizely/optimizely-sdk": ^4.9.1
     hoist-non-react-statics: ^3.3.0
     prop-types: ^15.6.2
     utility-types: ^2.1.0 || ^3.0.0
   peerDependencies:
     react: ">=16.8.0"
-  checksum: f950df837f3c6ee0ca39c2c4b515131f032bb955a235e0df027817d374e8085041c06f82d07b8908e5fa5461656b5d474926c78c04bffbda3cd43bef0299d6d1
+  checksum: 936ddb1bdb191b956ccebd1ad15a03336fb276cf3cffc262888f04957a89508520559498a91227f5296fc464bd018cfff9a6765761628824bef3c19facfc4644
   languageName: node
   linkType: hard
 
@@ -3074,6 +3080,26 @@ __metadata:
   version: 2.11.0
   resolution: "@popperjs/core@npm:2.11.0"
   checksum: 84d6f197d3ddfd8a5b05c7276c3692d8404c96128a946ab0a800b25567d8fc231928319c1f97a67e0817e76ce2a1b735589ef0f38f8e8835692408660a2395a1
+  languageName: node
+  linkType: hard
+
+"@react-native-async-storage/async-storage@npm:^1.2.0":
+  version: 1.15.17
+  resolution: "@react-native-async-storage/async-storage@npm:1.15.17"
+  dependencies:
+    merge-options: ^3.0.4
+  peerDependencies:
+    react-native: ^0.0.0-0 || 0.60 - 0.67 || 1000.0.0
+  checksum: 4c3dd30f6969bdcb2a5cafd82a8751e69f1c2c48f226c95f389b61246f19645229c178da35147310eee8b17f0f55d64ce3820101fc6f494cd6720cd69b9ad87f
+  languageName: node
+  linkType: hard
+
+"@react-native-community/netinfo@npm:5.9.4":
+  version: 5.9.4
+  resolution: "@react-native-community/netinfo@npm:5.9.4"
+  peerDependencies:
+    react-native: ">=0.59"
+  checksum: ea6b3cbc0088e23b333662de42ee9e2ef8d32d4cd49822e5cc26588031f7c90c7adc40888822275b0bc15aa19ae7cb12df19bc731f9093bedec0cd127a89141a
   languageName: node
   linkType: hard
 
@@ -8399,12 +8425,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decompress-response@npm:^4.2.0, decompress-response@npm:^4.2.1":
+"decompress-response@npm:^4.2.1":
   version: 4.2.1
   resolution: "decompress-response@npm:4.2.1"
   dependencies:
     mimic-response: ^2.0.0
   checksum: 4e783ca4dfe9417354d61349750fe05236f565a4415a6ca20983a311be2371debaedd9104c0b0e7b36e5f167aeaae04f84f1a0b3f8be4162f1d7d15598b8fdba
+  languageName: node
+  linkType: hard
+
+"decompress-response@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "decompress-response@npm:6.0.0"
+  dependencies:
+    mimic-response: ^3.1.0
+  checksum: d377cf47e02d805e283866c3f50d3d21578b779731e8c5072d6ce8c13cc31493db1c2f6784da9d1d5250822120cefa44f1deab112d5981015f2e17444b763812
   languageName: node
   linkType: hard
 
@@ -14316,6 +14351,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"merge-options@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "merge-options@npm:3.0.4"
+  dependencies:
+    is-plain-obj: ^2.1.0
+  checksum: d86ddb3dd6e85d558dbf25dc944f3527b6bacb944db3fdda6e84a3f59c4e4b85231095f58b835758b9a57708342dee0f8de0dffa352974a48221487fe9f4584f
+  languageName: node
+  linkType: hard
+
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -14456,6 +14500,13 @@ __metadata:
   version: 2.1.0
   resolution: "mimic-response@npm:2.1.0"
   checksum: 014fad6ab936657e5f2f48bd87af62a8e928ebe84472aaf9e14fec4fcb31257a5edff77324d8ac13ddc6685ba5135cf16e381efac324e5f174fb4ddbf902bf07
+  languageName: node
+  linkType: hard
+
+"mimic-response@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "mimic-response@npm:3.1.0"
+  checksum: 25739fee32c17f433626bf19f016df9036b75b3d84a3046c7d156e72ec963dd29d7fc8a302f55a3d6c5a4ff24259676b15d915aad6480815a969ff2ec0836867
   languageName: node
   linkType: hard
 
@@ -18424,7 +18475,7 @@ __metadata:
     "@loadable/component": 5.15.2
     "@loadable/server": 5.15.2
     "@loadable/webpack-plugin": 5.15.2
-    "@optimizely/react-sdk": 2.7.0
+    "@optimizely/react-sdk": 2.8.0
     "@storybook/addon-a11y": 6.4.9
     "@storybook/addon-controls": 6.4.9
     "@storybook/addon-docs": 6.4.9
@@ -18546,14 +18597,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-get@npm:^3.0.3":
-  version: 3.1.0
-  resolution: "simple-get@npm:3.1.0"
+"simple-get@npm:4.0.1":
+  version: 4.0.1
+  resolution: "simple-get@npm:4.0.1"
   dependencies:
-    decompress-response: ^4.2.0
+    decompress-response: ^6.0.0
     once: ^1.3.1
     simple-concat: ^1.0.0
-  checksum: cca91a9ab2b532fa8d367757c196b54e2dfe3325aab0298d66a3e2a45a29a9d335d1a3fb41f036dad14000f78baddd4170fbf9621d72869791d2912baf9469aa
+  checksum: e4132fd27cf7af230d853fa45c1b8ce900cb430dd0a3c6d3829649fe4f2b26574c803698076c4006450efb0fad2ba8c5455fbb5755d4b0a5ec42d4f12b31d27e
   languageName: node
   linkType: hard
 
