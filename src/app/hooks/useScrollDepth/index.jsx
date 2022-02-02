@@ -60,6 +60,7 @@ const useScrollDepth = () => {
     scrollHundred,
     scrollSeventyFive,
     scrollTwentyFive,
+    sendScrollEvents,
   ]);
 
   return {

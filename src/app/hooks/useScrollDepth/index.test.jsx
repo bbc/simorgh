@@ -18,9 +18,9 @@ const wrapper = ({ isAmp, pageType, service, children }) => (
     service={service}
     pathname="/pathname"
   >
-  <OptimizelyProvider optimizely={optimizelyMock} isServerSide>
-    {children}
-  </OptimizelyProvider>
+    <OptimizelyProvider optimizely={optimizelyMock} isServerSide>
+      {children}
+    </OptimizelyProvider>
   </RequestContextProvider>
 );
 
@@ -34,7 +34,7 @@ wrapper.propTypes = {
 wrapper.defaultProps = {
   isAmp: false,
   pageType: ARTICLE_PAGE,
-  service: 'news'
+  service: 'news',
 };
 
 describe.only('useScrollDepth', () => {
@@ -72,9 +72,12 @@ describe.only('useScrollDepth', () => {
   });
 
   it('should not fire events for pages on AMP', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper, initialProps: {
-      isAmp: true,
-    } });
+    const { result } = renderHook(() => useScrollDepth(), {
+      wrapper,
+      initialProps: {
+        isAmp: true,
+      },
+    });
 
     act(() => {
       result.current.setScrollDepth(25);
