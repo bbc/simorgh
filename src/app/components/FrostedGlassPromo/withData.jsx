@@ -94,13 +94,15 @@ const validate = props => {
   }
 };
 
-const withData = Component => props => {
-  const data = normalise(props);
-  const additionalProps = pick(['minimumContrast', 'paletteSize'], props);
-  if (!validate(data)) {
-    return null;
-  }
-  return <Component {...data} {...additionalProps} />;
-};
+const withData =
+  (Component, propsToPassThrough = []) =>
+  props => {
+    const data = normalise(props);
+    const additionalProps = pick(propsToPassThrough, props);
+    if (!validate(data)) {
+      return null;
+    }
+    return <Component {...data} {...additionalProps} />;
+  };
 
 export default withData;

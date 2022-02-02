@@ -131,7 +131,12 @@ const FrostedGlassPromo = ({
   );
 };
 
-// New properties are also likely to require whitelisting in the withData HoC
+// This component can receive promo data in a range of different formats
+// It uses a withData HoC to convert the prop to a standardised schema
+// This array is the list of props that should just be passed straight through
+// to the component, without requiring any preprocessing
+const propsToPassThrough = ['minimumContrast', 'paletteSize'];
+
 FrostedGlassPromo.propTypes = {
   children: node.isRequired,
   url: string.isRequired,
@@ -160,4 +165,4 @@ FrostedGlassPromo.defaultProps = {
   paletteSize: 10,
 };
 
-export default withData(FrostedGlassPromo);
+export default withData(FrostedGlassPromo, propsToPassThrough);
