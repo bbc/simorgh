@@ -151,36 +151,43 @@ export const Promo = () => {
 Promo.decorators = [withKnobs];
 
 // Amp
-export const PromoAmp = () => (
-  <Component
-    item={select(
-      'type',
-      {
+export const PromoAmp = () => {
+  const selectService = select(
+    'service',
+    { news: 'news', pidgin: 'pidgin' },
+    'news',
+  );
+  return (
+    <Component
+      item={select(
+        'type',
+        {
+          audioFixture: audioFixture(selectService),
+          videoFixture: videoFixture(selectService),
+          standardPromo: standardPromo(selectService),
+          featurePromo: featurePromo(selectService),
+          videoPromo: videoPromo(selectService),
+          audioPromo: audioPromo(selectService),
+          galleryPromo: galleryPromo(selectService),
+          podcastPromo: podcastPromo(selectService),
+          firstFixture,
+          guideLinkItem,
+        },
         audioFixture,
-        videoFixture,
-        standardPromo,
-        featurePromo,
-        videoPromo,
-        audioPromo,
-        galleryPromo,
-        podcastPromo,
-        firstFixture,
-        guideLinkItem,
-      },
-      audioFixture,
-    )}
-    service={select('service', { news: 'news', pidgin: 'pidgin' }, 'news')}
-    promoType={select(
-      'Promo Type',
-      {
-        regular: 'regular',
-        leading: 'leading',
-        top: 'top',
-      },
-      'regular',
-    )}
-    isAmp
-    isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
-  />
-);
+      )}
+      service={selectService}
+      promoType={select(
+        'Promo Type',
+        {
+          regular: 'regular',
+          leading: 'leading',
+          top: 'top',
+        },
+        'regular',
+      )}
+      isAmp
+      isSingleColumnLayout={boolean('isSingleColumnLayout', false)}
+    />
+  );
+};
 PromoAmp.decorators = [withKnobs, AmpDecorator];
