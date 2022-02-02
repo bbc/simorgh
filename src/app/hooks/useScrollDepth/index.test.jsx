@@ -1,6 +1,9 @@
 import React from 'react';
+import { node, string, bool } from 'prop-types';
 import { renderHook, act, cleanup } from '@testing-library/react-hooks';
 import { OptimizelyProvider } from '@optimizely/react-sdk';
+import { RequestContextProvider } from '#contexts/RequestContext';
+import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useScrollDepth from '.';
 
 const optimizelyMock = {
@@ -8,13 +11,33 @@ const optimizelyMock = {
   track: jest.fn(),
 };
 
-const wrapper = ({ children }) => (
+const wrapper = ({ isAmp, pageType, service, children }) => (
+  <RequestContextProvider
+    isAmp={isAmp}
+    pageType={pageType}
+    service={service}
+    pathname="/pathname"
+  >
   <OptimizelyProvider optimizely={optimizelyMock} isServerSide>
     {children}
   </OptimizelyProvider>
+  </RequestContextProvider>
 );
 
-describe('useScrollDepth', () => {
+wrapper.propTypes = {
+  children: node.isRequired,
+  pageType: string.isRequired,
+  isAmp: bool.isRequired,
+  service: string.isRequired,
+};
+
+wrapper.defaultProps = {
+  isAmp: false,
+  pageType: ARTICLE_PAGE,
+  service: 'news'
+};
+
+describe.only('useScrollDepth', () => {
   const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
   const removeEventListenerSpy = jest.spyOn(document, 'removeEventListener');
 
@@ -46,6 +69,21 @@ describe('useScrollDepth', () => {
         { passive: true },
       );
     });
+  });
+
+  it('should not fire events for pages on AMP', () => {
+    const { result } = renderHook(() => useScrollDepth(), { wrapper, initialProps: {
+      isAmp: true,
+    } });
+
+    act(() => {
+      result.current.setScrollDepth(25);
+      result.current.setScrollDepth(50);
+      result.current.setScrollDepth(75);
+      result.current.setScrollDepth(100);
+    });
+
+    expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
