@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
+import useScrollDepth from '#hooks/useScrollDepth';
 
 const OptimizelyPageViewTracking = () => {
   const { isAmp } = useContext(RequestContext);

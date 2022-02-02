@@ -57,6 +57,10 @@ const useScrollDepth = () => {
     scrollSeventyFive,
     scrollTwentyFive,
   ]);
+
+  return {
+    setScrollDepth,
+  };
 };
 
 export default useScrollDepth;
