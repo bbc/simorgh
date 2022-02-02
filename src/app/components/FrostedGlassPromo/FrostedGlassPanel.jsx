@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { node, string } from 'prop-types';
+import { node, number, string } from 'prop-types';
 
 import { GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import useImageColour from '../../hooks/useImageColour';
@@ -51,11 +51,17 @@ const Children = styled.div`
     `}
 `;
 
-const FrostedGlassPanel = ({ image, children }) => {
+const FrostedGlassPanel = ({
+  image,
+  children,
+  minimumContrast,
+  paletteSize,
+}) => {
   const { isLoading, colour } = useImageColour(image, {
     fallbackColour: FALLBACK_COLOUR,
-    minimumContrast: 10,
+    minimumContrast,
     contrastColour: '#ffffff',
+    paletteSize,
   });
 
   return (
@@ -71,6 +77,13 @@ const FrostedGlassPanel = ({ image, children }) => {
 FrostedGlassPanel.propTypes = {
   image: string.isRequired,
   children: node.isRequired,
+  minimumContrast: number,
+  paletteSize: number,
+};
+
+FrostedGlassPanel.defaultProps = {
+  minimumContrast: 8,
+  paletteSize: 10,
 };
 
 export default FrostedGlassPanel;
