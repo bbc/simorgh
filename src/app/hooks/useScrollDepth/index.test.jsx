@@ -105,7 +105,6 @@ describe('useScrollDepth', () => {
     });
 
     expect(optimizelyMock.track).toHaveBeenCalledTimes(0);
-
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
