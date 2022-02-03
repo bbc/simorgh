@@ -5,8 +5,10 @@ import {
   setLogger,
 } from '@optimizely/react-sdk';
 import { ServiceContext } from '#contexts/ServiceContext';
-import { getAtUserId } from '#lib/analyticsUtils';
 import isLive from '#lib/utilities/isLive';
+import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
+import onClient from '#lib/utilities/onClient';
+import getOptimizelyUserId from './getOptimizelyUserId';
 
 if (isLive()) {
   setLogger(null);
@@ -18,9 +20,30 @@ const optimizely = createInstance({
   eventFlushInterval: 1000,
 });
 
-const withOptimizelyProvider = (Component, noUserId = false) => {
+const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
+    const isStoryBook = process.env.STORYBOOK;
+    const disableOptimizely = isStoryBook || isLive();
+    let mobile;
+
+    const getUserId = () => {
+      if (disableOptimizely) {
+        return null;
+      }
+      return getOptimizelyUserId();
+    };
+
+    if (onClient()) {
+      const matchMedia = window.matchMedia(
+        `(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`,
+      );
+      if (matchMedia.matches) {
+        mobile = true;
+      } else {
+        mobile = false;
+      }
+    }
 
     return (
       <OptimizelyProvider
@@ -28,9 +51,10 @@ const withOptimizelyProvider = (Component, noUserId = false) => {
         isServerSide
         timeout={500}
         user={{
-          id: noUserId ? null : getAtUserId(),
+          id: getUserId(),
           attributes: {
             service,
+            mobile,
           },
         }}
       >

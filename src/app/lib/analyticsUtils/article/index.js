@@ -24,3 +24,11 @@ export const getLanguage = articleData =>
 
 export const getPromoHeadline = articleData =>
   pathOr(null, ['promo', 'headlines', 'seoHeadline'], articleData);
+
+export const getNationsProducer = articleData => {
+  return pathOr(
+    null,
+    ['metadata', 'analyticsLabels', 'nations_producer'],
+    articleData,
+  );
+};

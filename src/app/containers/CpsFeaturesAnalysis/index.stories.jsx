@@ -9,10 +9,7 @@ import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvi
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
 import FeaturesAnalysis from '.';
 
-const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(
-  FeaturesAnalysis,
-  true,
-);
+const FeaturesAnalysisWithOptimizely = withOptimizelyProvider(FeaturesAnalysis);
 
 /* eslint-disable react/prop-types */
 const Component = ({

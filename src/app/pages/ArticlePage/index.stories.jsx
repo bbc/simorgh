@@ -7,15 +7,18 @@ import { RequestContextProvider } from '#contexts/RequestContext';
 import { UserContextProvider } from '#contexts/UserContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import articleData from '#data/news/articles/c5jje4ejkqvo';
+import articleDataWithRelatedContent from '#data/afrique/articles/c7yn6nznljdo';
 import secondaryColumn from '#data/news/secondaryColumn';
 import withPageWrapper from '#containers/PageHandlers/withPageWrapper';
 import withOptimizelyProvider from '#containers/PageHandlers/withOptimizelyProvider';
+import handlePromoData from '#app/routes/article/handlePromoData';
 import ArticlePageComponent from './ArticlePage';
 
-const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent, true);
+const PageWithOptimizely = withOptimizelyProvider(ArticlePageComponent);
 const Page = withPageWrapper(PageWithOptimizely);
 
-const ComponentWithContext = () => (
+// eslint-disable-next-line react/prop-types
+const ComponentWithContext = ({ data = articleData }) => (
   <ToggleContextProvider
     toggles={{
       eventTracking: { enabled: true },
@@ -32,7 +35,7 @@ const ComponentWithContext = () => (
         <UserContextProvider>
           <MemoryRouter>
             <Page
-              pageData={{ ...articleData, secondaryColumn }}
+              pageData={{ ...data, secondaryColumn }}
               mostReadEndpointOverride="./data/news/mostRead/index.json"
             />
           </MemoryRouter>
@@ -50,3 +53,9 @@ export default {
 };
 
 export const ArticlePage = ComponentWithContext;
+export const ArticlePageWithRelatedContent = props => (
+  <ComponentWithContext
+    {...props}
+    data={handlePromoData(articleDataWithRelatedContent)}
+  />
+);
