@@ -9,6 +9,7 @@ const useImageColour = (
     fallbackColour = '#000000',
     minimumContrast = 0,
     contrastColour = '#ffffff',
+    paletteSize = 10,
   } = {},
 ) => {
   const [palette, setPalette] = useState(null);
@@ -20,9 +21,6 @@ const useImageColour = (
     setIsLoading(false);
   };
 
-  // We extract 10 colours to give us more opportunity to find the most vibrant one
-  const QUANTITY_OF_COLOURS_TO_EXTRACT = 10;
-
   useEffect(() => {
     try {
       setIsLoading(true);
@@ -30,7 +28,7 @@ const useImageColour = (
       const colorThief = new ColorThief();
       const img = new Image();
       img.addEventListener('load', () => {
-        setPalette(colorThief.getPalette(img, QUANTITY_OF_COLOURS_TO_EXTRACT));
+        setPalette(colorThief.getPalette(img, paletteSize));
         setIsLoading(false);
         setError(null);
       });
@@ -41,7 +39,7 @@ const useImageColour = (
     } catch (err) {
       setErrorState();
     }
-  }, [url]);
+  }, [url, paletteSize]);
 
   return {
     colour: selectColour({
