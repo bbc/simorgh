@@ -4,14 +4,14 @@ import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
-import pidginFixture from '#data/pidgin/frontpage';
-import newsFixture from '#data/news/frontpage';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+// import fixture from '#data/news/frontpage';
+import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { guideLinkItem } from './helpers/fixtureData';
+import { guideLinkItem } from './helpers/fixtureData'; // done
 
-const mediaFixture = (type, fixture) =>
+const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
@@ -20,7 +20,7 @@ const mediaFixture = (type, fixture) =>
         pathOr(null, ['media', 'format'], item) === type,
     );
 
-const promoFixture = (type, fixture) =>
+const promoFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
     .flatMap(group => pathOr(null, ['items'], group))
     .find(
@@ -29,63 +29,39 @@ const promoFixture = (type, fixture) =>
         pathOr(null, ['contentType'], item) === type,
     );
 
+// missing data
 const firstFixture = pathOr(
   null,
   ['content', 'groups', '0', 'items', '0'],
-  pidginFixture,
+  fixture,
 );
 
 firstFixture.timestamp = Date.now();
-
-const audioFixture = service =>
-  service === 'news'
-    ? mediaFixture('audio', newsFixture)
-    : mediaFixture('audio', pidginFixture);
-const videoFixture = service =>
-  service === 'news'
-    ? mediaFixture('video', newsFixture)
-    : mediaFixture('video', pidginFixture);
-const standardPromo = service =>
-  service === 'news'
-    ? promoFixture('Text', newsFixture)
-    : promoFixture('Text', pidginFixture);
-const videoPromo = service =>
-  service === 'news'
-    ? promoFixture('Video', newsFixture)
-    : promoFixture('Video', pidginFixture);
-const featurePromo = service =>
-  service === 'news'
-    ? promoFixture('Feature', newsFixture)
-    : promoFixture('Feature', pidginFixture);
-const audioPromo = service =>
-  service === 'news'
-    ? promoFixture('Audio', newsFixture)
-    : promoFixture('Audio', pidginFixture);
-const galleryPromo = service =>
-  service === 'news'
-    ? promoFixture('Gallery', newsFixture)
-    : promoFixture('Gallery', pidginFixture);
-const podcastPromo = service =>
-  service === 'news'
-    ? promoFixture('Podcast', newsFixture)
-    : promoFixture('Podcast', pidginFixture);
+// Maybe is better if we fetch the news page and we add the promos that we miss from pidgin. This will result in less translation :D
+const audioFixture = mediaFixture('audio'); // done
+const videoFixture = mediaFixture('video'); // done
+const standardPromo = promoFixture('Text'); // translation needed
+const videoPromo = promoFixture('Video'); // translation needed
+const featurePromo = promoFixture('Feature'); // translation needed
+const audioPromo = promoFixture('Audio'); // done
+const galleryPromo = promoFixture('Gallery'); // translation needed
+const podcastPromo = promoFixture('Podcast'); // missing data
 
 /* eslint-disable react/prop-types */
 const Component = ({
-  service,
-  isAmp,
-  item,
-  promoType,
-  isSingleColumnLayout,
+  isAmp = false,
+  item = audioFixture,
+  promoType = 'regular',
+  isSingleColumnLayout = false,
 }) => (
-  <ServiceContextProvider service={service}>
+  <ServiceContextProvider service="news">
     <RequestContextProvider
       bbcOrigin="https://www.test.bbc.co.uk"
       id="c0000000000o"
       isAmp={isAmp}
       pathname="/pathname"
       pageType={ARTICLE_PAGE}
-      service={service}
+      service="news"
     >
       <ToggleContextProvider
         toggles={{
@@ -110,30 +86,24 @@ export default {
 
 // Canonical
 export const Promo = () => {
-  const selectService = select(
-    'service',
-    { news: 'news', pidgin: 'pidgin' },
-    'news',
-  );
   return (
     <Component
       item={select(
         'type',
         {
-          audioFixture: audioFixture(selectService),
-          videoFixture: videoFixture(selectService),
-          standardPromo: standardPromo(selectService),
-          featurePromo: featurePromo(selectService),
-          videoPromo: videoPromo(selectService),
-          audioPromo: audioPromo(selectService),
-          galleryPromo: galleryPromo(selectService),
-          podcastPromo: podcastPromo(selectService),
+          audioFixture,
+          videoFixture,
+          standardPromo,
+          featurePromo,
+          videoPromo,
+          audioPromo,
+          galleryPromo,
+          podcastPromo,
           firstFixture,
           guideLinkItem,
         },
         audioFixture,
       )}
-      service={selectService}
       promoType={select(
         'Promo Type',
         {
@@ -152,30 +122,24 @@ Promo.decorators = [withKnobs];
 
 // Amp
 export const PromoAmp = () => {
-  const selectService = select(
-    'service',
-    { news: 'news', pidgin: 'pidgin' },
-    'news',
-  );
   return (
     <Component
       item={select(
         'type',
         {
-          audioFixture: audioFixture(selectService),
-          videoFixture: videoFixture(selectService),
-          standardPromo: standardPromo(selectService),
-          featurePromo: featurePromo(selectService),
-          videoPromo: videoPromo(selectService),
-          audioPromo: audioPromo(selectService),
-          galleryPromo: galleryPromo(selectService),
-          podcastPromo: podcastPromo(selectService),
+          audioFixture,
+          videoFixture,
+          standardPromo,
+          featurePromo,
+          videoPromo,
+          audioPromo,
+          galleryPromo,
+          podcastPromo,
           firstFixture,
           guideLinkItem,
         },
         audioFixture,
       )}
-      service={selectService}
       promoType={select(
         'Promo Type',
         {
