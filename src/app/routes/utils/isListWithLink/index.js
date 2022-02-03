@@ -8,16 +8,28 @@ const hasList = pipe(
   either(equals('unorderedList'), equals('orderedList')),
 );
 const getListItems = path(['model', 'blocks', 0, 'model', 'blocks']);
-const hasLink = pipe(
+const hasUrlLink = pipe(
   path(['model', 'blocks', 0, 'model', 'blocks', 0, 'type']),
   equals('urlLink'),
 );
+
+const hasLinks = pipe(path(['type']), equals('links'));
+const getLinkItems = path(['model', 'blocks']);
+const hasLink = pipe(path(['type']), equals('link'));
+
 const isListWithLink = block => {
   if (hasList(block)) {
     const listItems = getListItems(block);
-    const listItemsContainLink = listItems.some(hasLink);
+    const listItemsContainLink = listItems.some(hasUrlLink);
 
     return listItemsContainLink;
+  }
+
+  if (hasLinks(block)) {
+    const linkItems = getLinkItems(block);
+    const linkItemsContainsLink = linkItems.some(hasLink);
+
+    return linkItemsContainsLink;
   }
 
   return false;

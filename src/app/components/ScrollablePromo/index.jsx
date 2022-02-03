@@ -34,6 +34,8 @@ const ScrollablePromo = ({ blocks }) => {
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
+  console.log("THIS IS IS TGE REST >>>>", blocks);
+
   return (
     <GridItemMediumNoMargin>
       {isSingleItem ? (

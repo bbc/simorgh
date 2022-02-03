@@ -14,6 +14,8 @@ import {
   applyBlockPositioning,
   addIndexesToEmbeds,
 } from '../../utils/sharedDataTransformers';
+import isListWithLink from '../../utils/isListWithLink';
+import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
 
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 
@@ -27,6 +29,10 @@ const transformJson = pipe(
   addIdsToBlocks,
   applyBlockPositioning,
   addIndexesToEmbeds,
+  addIndexToBlockGroups(isListWithLink, {
+    blockGroupType: 'link',
+    pathToBlockGroup: ['model', 'blocks', 1],
+  }),
 );
 
 const validateResponse = ({ status, json }) => {
