@@ -26,22 +26,26 @@ const useScrollDepth = () => {
   const sendScrollEvents = hasVariationKey && !isAmp;
 
   useEffect(() => {
-    if (scrollDepth >= 25 && !scrollTwentyFive && sendScrollEvents) {
+    if (!sendScrollEvents) {
+      return null;
+    }
+
+    if (scrollDepth >= 25 && !scrollTwentyFive) {
       optimizely.track('scroll25');
       setScrollTwentyFive(true);
     }
 
-    if (scrollDepth >= 50 && !scrollFifty && sendScrollEvents) {
+    if (scrollDepth >= 50 && !scrollFifty) {
       optimizely.track('scroll50');
       setScrollFifty(true);
     }
 
-    if (scrollDepth >= 75 && !scrollSeventyFive && sendScrollEvents) {
+    if (scrollDepth >= 75 && !scrollSeventyFive) {
       optimizely.track('scroll75');
       setScrollSeventyFive(true);
     }
 
-    if (scrollDepth >= 100 && !scrollHundred && sendScrollEvents) {
+    if (scrollDepth >= 100 && !scrollHundred) {
       optimizely.track('scroll100');
       setScrollHundred(true);
     }
