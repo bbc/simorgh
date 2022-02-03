@@ -11,7 +11,7 @@ const getScrollDepth = () =>
       100,
   );
 
-const useScrollDepth = () => {
+const useOptimizelyScrollDepth = () => {
   const { isAmp } = useContext(RequestContext);
   const { optimizely } = useContext(OptimizelyContext);
   const [scrollDepth, setScrollDepth] = useState(0);
@@ -76,4 +76,4 @@ const useScrollDepth = () => {
   };
 };
 
-export default useScrollDepth;
+export default useOptimizelyScrollDepth;

@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { OptimizelyContext } from '@optimizely/react-sdk';
 import { RequestContext } from '#contexts/RequestContext';
-import useScrollDepth from '#hooks/useScrollDepth';
+import useOptimizelyScrollDepth from '#hooks/useOptimizelyScrollDepth';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
 const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
@@ -16,7 +16,7 @@ const OptimizelyPageViewTracking = () => {
 
   const sendPageViewEvent = hasVariationKey && !isAmp && !pageViewSent;
 
-  useScrollDepth();
+  useOptimizelyScrollDepth();
 
   useEffect(() => {
     if (sendPageViewEvent) {

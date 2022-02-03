@@ -5,7 +5,7 @@ import { OptimizelyProvider } from '@optimizely/react-sdk';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ARTICLE_PAGE } from '#app/routes/utils/pageTypes';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import useScrollDepth from '.';
+import useOptimizelyScrollDepth from '.';
 
 jest.mock('#hooks/useOptimizelyVariation', () => jest.fn());
 
@@ -40,7 +40,7 @@ wrapper.defaultProps = {
   service: 'news',
 };
 
-describe('useScrollDepth', () => {
+describe('useOptimizelyScrollDepth', () => {
   const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
   const removeEventListenerSpy = jest.spyOn(document, 'removeEventListener');
 
@@ -53,7 +53,7 @@ describe('useScrollDepth', () => {
   });
 
   it('should call add event listener with scroll', () => {
-    renderHook(() => useScrollDepth());
+    renderHook(() => useOptimizelyScrollDepth());
 
     expect(addEventListenerSpy).toHaveBeenCalledWith(
       'scroll',
@@ -63,7 +63,7 @@ describe('useScrollDepth', () => {
   });
 
   it('should call remove event listener with scroll', () => {
-    renderHook(() => useScrollDepth());
+    renderHook(() => useOptimizelyScrollDepth());
 
     cleanup().then(() => {
       expect(removeEventListenerSpy).toHaveBeenCalledWith(
@@ -75,7 +75,7 @@ describe('useScrollDepth', () => {
   });
 
   it('should not fire events for pages on AMP', () => {
-    const { result } = renderHook(() => useScrollDepth(), {
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
       wrapper,
       initialProps: {
         isAmp: true,
@@ -95,7 +95,9 @@ describe('useScrollDepth', () => {
   it('should not call Optimizely track function for users not in an experiment', async () => {
     useOptimizelyVariation.mockReturnValue(null);
 
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(25);
@@ -108,7 +110,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 25% threshold', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(25);
@@ -119,7 +123,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 25% threshold multiple times.', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(25);
@@ -131,7 +137,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 50% threshold and lower thresholds', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(50);
@@ -142,7 +150,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 50% threshold multiple times.', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(50);
@@ -154,7 +164,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 75% threshold and lower thresholds', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(75);
@@ -165,7 +177,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should only fire event once when scroll depth reaches 75% threshold multiple times.', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(75);
@@ -177,7 +191,9 @@ describe('useScrollDepth', () => {
   });
 
   it('should fire event when scroll depth reaches 100% threshold and lower thresholds', () => {
-    const { result } = renderHook(() => useScrollDepth(), { wrapper });
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
 
     act(() => {
       result.current.setScrollDepth(100);
@@ -185,5 +201,19 @@ describe('useScrollDepth', () => {
 
     expect(optimizelyMock.track).toHaveBeenCalledTimes(4);
     expect(optimizelyMock.track).toHaveBeenLastCalledWith('scroll100');
+  });
+
+  it('should only fire event once when scroll depth reaches 100% threshold multiple times.', () => {
+    const { result } = renderHook(() => useOptimizelyScrollDepth(), {
+      wrapper,
+    });
+
+    act(() => {
+      result.current.setScrollDepth(100);
+      result.current.setScrollDepth(90);
+      result.current.setScrollDepth(100);
+    });
+
+    expect(optimizelyMock.track).toHaveBeenCalledTimes(4);
   });
 });
