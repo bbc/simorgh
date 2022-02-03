@@ -1,6 +1,6 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -35,11 +35,15 @@ const Component = props => {
     'Main Body',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam magna, lacinia ut arcu in, vulputate ultricies lectus. Vestibulum purus ligula, finibus vel ultrices in, pretium non neque. Sed mauris ante, mollis ac metus fermentum, vestibulum malesuada felis. Nullam a congue mauris. Nulla venenatis felis ac eleifend rutrum.',
   );
+  const minimumContrast = number('Minimum Contrast', 8);
+  const paletteSize = number('Palette Size', 20, { min: 2, max: 99 });
   return (
     <Wrappers {...props}>
       <Promo
         image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
         url="#"
+        minimumContrast={minimumContrast}
+        paletteSize={paletteSize}
       >
         {mainBody}
       </Promo>

@@ -1,18 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { arrayOf, shape, number, oneOf, oneOfType, string } from 'prop-types';
 import pathOr from 'ramda/src/pathOr';
 import { StoryPromoLi, StoryPromoUl } from '@bbc/psammead-story-promo-list';
-import { GEL_GROUP_3_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/dist/breakpoints';
-
 import { OptimizelyContext } from '@optimizely/react-sdk';
-import isLive from '#lib/utilities/isLive';
 import { storyItem, linkPromo } from '#models/propTypes/storyItem';
 import { ServiceContext } from '#contexts/ServiceContext';
 import { RequestContext } from '#contexts/RequestContext';
 import useViewTracker from '#hooks/useViewTracker';
-import useToggle from '#hooks/useToggle';
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
-import useMediaQuery from '#hooks/useMediaQuery';
 import CpsOnwardJourney from '../CpsOnwardJourney';
 import StoryPromo from '../StoryPromo';
 import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
@@ -20,43 +15,55 @@ import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 const getEventTrackingData = optimizely => ({
   block: {
     componentName: 'features',
-    optimizely,
+    ...(optimizely && { optimizely }),
   },
 });
 
-const HIGH_IMPACT_EXPERIMENT_ID = 'high_impact_feature_analysis_promo';
-const HIGH_IMPACT_VARIATION = 'variation_1';
+const IMPROVED_PROMO_EXPERIMENT_ID = 'improved_promos';
+const IMPROVED_PROMO_VARIATIONS = {
+  variation_1: props => (
+    <FrostedGlassPromo {...props} minimumContrast={10} paletteSize={10} />
+  ),
+  variation_2: props => (
+    <FrostedGlassPromo {...props} minimumContrast={10} paletteSize={10} />
+  ),
+  variation_3: props => (
+    <FrostedGlassPromo {...props} minimumContrast={7} paletteSize={20} />
+  ),
+  variation_4: props => (
+    <FrostedGlassPromo {...props} minimumContrast={7} paletteSize={20} />
+  ),
+  Control: StoryPromo,
+};
 
 const PromoListComponent = ({ promoItems, dir }) => {
-  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { isAmp } = useContext(RequestContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
-  const [mobile, setMobile] = useState(false);
+  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
 
-  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
-    setMobile(event.matches),
-  );
-
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID, {
-    service,
-    mobile,
-  });
-
-  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
-    useToggle('frostedPromo');
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   const selectComponent = index => {
-    if (isAmp) return StoryPromo;
-    if (isLive()) {
-      if (!frostedPromoEnabled) return StoryPromo;
-      return index + 1 <= frostedPromoCount ? FrostedGlassPromo : StoryPromo;
+    switch (true) {
+      case isAmp:
+        return IMPROVED_PROMO_VARIATIONS.Control;
+      case promoVariation === 'variation_1' && index === 0:
+        return IMPROVED_PROMO_VARIATIONS.variation_1;
+      case promoVariation === 'variation_2':
+        return IMPROVED_PROMO_VARIATIONS.variation_2;
+      case promoVariation === 'variation_3' && index === 0:
+        return IMPROVED_PROMO_VARIATIONS.variation_3;
+      case promoVariation === 'variation_4':
+        return IMPROVED_PROMO_VARIATIONS.variation_4;
+      case promoVariation === 'Control':
+        return IMPROVED_PROMO_VARIATIONS.Control;
+      default:
+        return IMPROVED_PROMO_VARIATIONS.Control;
     }
-    if (index === 0 && promoVariation === HIGH_IMPACT_VARIATION) {
-      return FrostedGlassPromo;
-    }
-    return StoryPromo;
   };
 
   return (
@@ -73,7 +80,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={getEventTrackingData(optimizely)}
+              eventTrackingData={eventTrackingData}
             />
           </StoryPromoLi>
         );
@@ -93,33 +100,32 @@ PromoListComponent.defaultProps = {
 };
 
 const PromoComponent = ({ promo, dir }) => {
-  const { serviceDatetimeLocale, service } = useContext(ServiceContext);
+  const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
 
-  const [mobile, setMobile] = useState(false);
+  const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
 
-  useMediaQuery(`(max-width: ${GEL_GROUP_3_SCREEN_WIDTH_MAX})`, event =>
-    setMobile(event.matches),
-  );
-
-  const { enabled: frostedPromoEnabled, value: frostedPromoCount } =
-    useToggle('frostedPromo');
-
-  const promoVariation = useOptimizelyVariation(HIGH_IMPACT_EXPERIMENT_ID, {
-    service,
-    mobile,
-  });
+  const viewRef = useViewTracker(eventTrackingData);
 
   const selectComponent = () => {
-    if (isAmp) return StoryPromo;
-    if (isLive()) {
-      if (!frostedPromoEnabled) return StoryPromo;
-      return frostedPromoCount > 0 ? FrostedGlassPromo : StoryPromo;
+    switch (true) {
+      case isAmp:
+        return IMPROVED_PROMO_VARIATIONS.Control;
+      case [
+        'variation_1',
+        'variation_2',
+        'variation_3',
+        'variation_4',
+      ].includes(promoVariation):
+        return IMPROVED_PROMO_VARIATIONS[promoVariation];
+      case promoVariation === 'Control':
+        return IMPROVED_PROMO_VARIATIONS.Control;
+      default:
+        return IMPROVED_PROMO_VARIATIONS.Control;
     }
-    if (promoVariation === HIGH_IMPACT_VARIATION) return FrostedGlassPromo;
-    return StoryPromo;
   };
 
   const StoryPromoComponent = selectComponent();
@@ -131,6 +137,7 @@ const PromoComponent = ({ promo, dir }) => {
         dir={dir}
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
+        eventTrackingData={getEventTrackingData(optimizely)}
       />
     </div>
   );

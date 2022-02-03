@@ -67,8 +67,7 @@ export const createSrcsets = ({
   };
 };
 export const getPlaceholderSrcSet = ({ originCode, locator, isWebP }) => {
-  if (!originCode) return '';
-  if (!locator) return '';
+  if (!originCode || !locator) return '';
   return DEFAULT_RESOLUTIONS.map(
     resolution =>
       `${buildIChefUrl({

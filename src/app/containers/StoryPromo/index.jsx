@@ -1,5 +1,13 @@
 import React, { useContext } from 'react';
-import { shape, bool, oneOf, oneOfType, string, number } from 'prop-types';
+import {
+  shape,
+  bool,
+  oneOf,
+  oneOfType,
+  string,
+  number,
+  elementType,
+} from 'prop-types';
 import styled from '@emotion/styled';
 import StoryPromo, { Headline, Summary, Link } from '@bbc/psammead-story-promo';
 import { GEL_GROUP_4_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
@@ -40,7 +48,12 @@ const SingleColumnStoryPromo = styled(StoryPromo)`
   }
 `;
 
-const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
+const StoryPromoImage = ({
+  useLargeImages,
+  imageValues,
+  lazyLoad,
+  imageComponent,
+}) => {
   if (!imageValues) {
     const landscapeRatio = (9 / 16) * 100;
     return <ImagePlaceholder ratio={landscapeRatio} />;
@@ -83,6 +96,7 @@ const StoryPromoImage = ({ useLargeImages, imageValues, lazyLoad }) => {
       primaryMimeType={primaryMimeType}
       fallbackMimeType={fallbackMimeType}
       sizes={sizes}
+      imageComponent={imageComponent}
     />
   );
 };
@@ -91,6 +105,7 @@ StoryPromoImage.propTypes = {
   useLargeImages: bool.isRequired,
   lazyLoad: bool,
   imageValues: storyItem.indexImage,
+  imageComponent: elementType,
 };
 
 StoryPromoImage.defaultProps = {
@@ -101,6 +116,7 @@ StoryPromoImage.defaultProps = {
     height: '',
     width: '',
   }),
+  imageComponent: undefined,
 };
 
 const StoryPromoContainer = ({
@@ -115,6 +131,7 @@ const StoryPromoContainer = ({
   serviceDatetimeLocale,
   eventTrackingData,
   labelId,
+  imageComponent,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
@@ -182,10 +199,12 @@ const StoryPromoContainer = ({
 
   const useLargeImages = promoType === 'top' || promoType === 'leading';
 
-  const headingTagOverride = getHeadingTagOverride({
-    pageType,
-    isContentTypeGuide,
-  });
+  const headingTagOverride =
+    item.headingTag ||
+    getHeadingTagOverride({
+      pageType,
+      isContentTypeGuide,
+    });
 
   const StyledLink = styled(Link)`
     overflow-wrap: anywhere;
@@ -255,6 +274,7 @@ const StoryPromoContainer = ({
       useLargeImages={useLargeImages}
       lazyLoad={lazyLoadImage}
       imageValues={imageValues}
+      imageComponent={imageComponent}
     />
   );
 
@@ -306,6 +326,7 @@ StoryPromoContainer.propTypes = {
   }),
   labelId: string,
   index: number,
+  imageComponent: elementType,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -319,6 +340,7 @@ StoryPromoContainer.defaultProps = {
   eventTrackingData: null,
   labelId: '',
   index: 0,
+  imageComponent: undefined,
 };
 
 export default StoryPromoContainer;

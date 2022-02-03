@@ -74,6 +74,8 @@ const FrostedGlassPromo = ({
   url,
   eventTrackingData,
   index,
+  minimumContrast,
+  paletteSize,
 }) => {
   const { script, service } = useContext(ServiceContext);
 
@@ -113,7 +115,11 @@ const FrostedGlassPromo = ({
           image,
         )}
       />
-      <FrostedGlassPanel image={image.smallSrc || image.src}>
+      <FrostedGlassPanel
+        image={image.smallSrc || image.src}
+        minimumContrast={minimumContrast}
+        paletteSize={paletteSize}
+      >
         <H3>
           <A script={script} service={service} href={url} onClick={onClick}>
             {children}
@@ -125,12 +131,20 @@ const FrostedGlassPromo = ({
   );
 };
 
+// This component can receive promo data in a range of different formats
+// It uses a withData HoC to convert the prop to a standardised schema
+// This array is the list of props that should just be passed straight through
+// to the component, without requiring any preprocessing
+const propsToPassThrough = ['minimumContrast', 'paletteSize'];
+
 FrostedGlassPromo.propTypes = {
   children: node.isRequired,
   url: string.isRequired,
   footer: node,
   eventTrackingData: shape({}),
   index: number,
+  minimumContrast: number,
+  paletteSize: number,
   image: shape({
     src: string.isRequired,
     alt: string.isRequired,
@@ -147,6 +161,8 @@ FrostedGlassPromo.defaultProps = {
   footer: null,
   eventTrackingData: null,
   index: 0,
+  minimumContrast: 8,
+  paletteSize: 10,
 };
 
-export default withData(FrostedGlassPromo);
+export default withData(FrostedGlassPromo, propsToPassThrough);
