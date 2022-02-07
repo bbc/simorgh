@@ -43,30 +43,32 @@ const Component = ({
   item = audioFixture,
   promoType = 'regular',
   isSingleColumnLayout = false,
-}) => (
-  <ServiceContextProvider service="news">
-    <RequestContextProvider
-      bbcOrigin="https://www.test.bbc.co.uk"
-      id="c0000000000o"
-      isAmp={isAmp}
-      pathname="/pathname"
-      pageType={ARTICLE_PAGE}
-      service="news"
-    >
-      <ToggleContextProvider
-        toggles={{
-          eventTracking: { enabled: false },
-        }}
+}) => {
+  return (
+    <ServiceContextProvider service="news">
+      <RequestContextProvider
+        bbcOrigin="https://www.test.bbc.co.uk"
+        id="c0000000000o"
+        isAmp={isAmp}
+        pathname="/pathname"
+        pageType={ARTICLE_PAGE}
+        service="news"
       >
-        <StoryPromoContainer
-          item={item}
-          promoType={promoType}
-          isSingleColumnLayout={isSingleColumnLayout}
-        />
-      </ToggleContextProvider>
-    </RequestContextProvider>
-  </ServiceContextProvider>
-);
+        <ToggleContextProvider
+          toggles={{
+            eventTracking: { enabled: false },
+          }}
+        >
+          <StoryPromoContainer
+            item={item}
+            promoType={promoType}
+            isSingleColumnLayout={isSingleColumnLayout}
+          />
+        </ToggleContextProvider>
+      </RequestContextProvider>
+    </ServiceContextProvider>
+  );
+};
 
 export default {
   title: 'Containers/Story Promo',
