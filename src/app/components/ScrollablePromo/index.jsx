@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object, number } from 'prop-types';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 import styled from '@emotion/styled';
 import isEmpty from 'ramda/src/isEmpty';
@@ -10,6 +10,7 @@ import {
 } from '@bbc/gel-foundations/breakpoints';
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
+import useViewTracker from '#hooks/useViewTracker';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -24,8 +25,16 @@ const PromoWrapper = styled.div`
   }
 `;
 
-const ScrollablePromo = ({ blocks }) => {
+const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
   const { dir } = useContext(ServiceContext);
+
+  const eventTrackingData = {
+    componentName: `edoj${blockGroupIndex}`,
+    format: 'CHD=edoj',
+  };
+
+  const viewRef = useViewTracker(eventTrackingData);
+
   if (isEmpty(blocks)) {
     return null;
   }
@@ -34,16 +43,14 @@ const ScrollablePromo = ({ blocks }) => {
 
   const isSingleItem = blocksWithoutTitle.length === 1;
 
-  console.log("THIS IS IS TGE REST >>>>", blocks);
-
   return (
     <GridItemMediumNoMargin>
       {isSingleItem ? (
-        <PromoWrapper dir={dir}>
+        <PromoWrapper dir={dir} ref={viewRef}>
           <Promo block={blocksWithoutTitle[0]} />
         </PromoWrapper>
       ) : (
-        <PromoList blocks={blocksWithoutTitle} />
+        <PromoList blocks={blocksWithoutTitle} viewTracker={viewRef} />
       )}
     </GridItemMediumNoMargin>
   );
@@ -58,6 +65,11 @@ ScrollablePromo.propTypes = {
       }).isRequired,
     }),
   ).isRequired,
+  blockGroupIndex: number,
+};
+
+ScrollablePromo.defaultProps = {
+  blockGroupIndex: null,
 };
 
 export default ScrollablePromo;

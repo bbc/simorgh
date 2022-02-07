@@ -1,12 +1,25 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { shouldMatchSnapshot } from '@bbc/psammead-test-helpers';
+import * as viewTracking from '#hooks/useViewTracker';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
+import { ServiceContext } from '#contexts/ServiceContext';
 import {
   threeLinks,
   oneLinkOnly,
   moreThanThreeLinks,
 } from './helpers/fixtureData';
 import ScrollablePromo from '.';
+import { edOjA, edOjB } from './fixtures';
+
+// eslint-disable-next-line react/prop-types
+const ScrollablePromoWithContext = ({ blocks, blockGroupIndex }) => (
+  <ToggleContextProvider>
+    <ServiceContext.Provider value={{ service: 'news' }}>
+      <ScrollablePromo blocks={blocks} blockGroupIndex={blockGroupIndex} />
+    </ServiceContext.Provider>
+  </ToggleContextProvider>
+);
 
 describe('ScrollablePromo', () => {
   it('should return null if no data is passed', () => {
@@ -39,6 +52,69 @@ describe('ScrollablePromo', () => {
     );
     expect(queryByRole('list')).toBeInTheDocument();
     expect(getAllByRole('listitem').length).toEqual(3);
+  });
+
+  describe.only('getEventTrackingData', () => {
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call the view tracking hook with the correct params with one list with at least one link', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+
+      render(
+        <ScrollablePromoWithContext
+          blocks={edOjA.model.blocks}
+          blockGroupIndex={1}
+        />,
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'edoj1',
+        format: 'CHD=edoj',
+      });
+    });
+
+    it('should call the view tracking hook with the correct params with multiple edoj components', () => {
+      const viewTrackerSpy = jest.spyOn(viewTracking, 'default');
+      render(
+        <ScrollablePromoWithContext
+          blocks={edOjA.model.blocks}
+          blockGroupIndex={1}
+        />,
+      );
+      render(
+        <ScrollablePromoWithContext
+          blocks={edOjB.model.blocks}
+          blockGroupIndex={2}
+        />,
+      );
+
+      expect(viewTrackerSpy).toHaveBeenCalledTimes(2);
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'edoj1',
+        format: 'CHD=edoj',
+      });
+      expect(viewTrackerSpy).toHaveBeenCalledWith({
+        componentName: 'edoj2',
+        format: 'CHD=edoj',
+      });
+    });
+
+    // it('should call the click tracking hook with the correct params', () => {
+    //   const clickTrackerSpy = jest.spyOn(clickTracking, 'default');
+    //   render(
+    //     <BulletsWithContext
+    //       blocks={listItemD.model.blocks}
+    //       blockGroupIndex={1}
+    //     />,
+    //   );
+
+    //   expect(clickTrackerSpy).toHaveBeenCalledWith({
+    //     componentName: 'bullet1',
+    //     format: 'CHD=bullet',
+    //   });
+    // });
   });
 
   shouldMatchSnapshot(

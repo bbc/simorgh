@@ -6,7 +6,7 @@ import {
   GEL_GROUP_2_SCREEN_WIDTH_MIN,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useOperaMiniDetection from '#hooks/useOperaMiniDetection';
 import Promo from '../Promo';
@@ -77,7 +77,7 @@ const OperaStyledList = styled.li`
       margin-${dir === 'ltr' ? `left` : `right`}: 0;}`}
 `;
 
-const PromoList = ({ blocks }) => {
+const PromoList = ({ blocks, viewTracker }) => {
   const { dir } = useContext(ServiceContext);
   const isOperaMini = useOperaMiniDetection();
   const listBlocks = blocks.slice(0, 3);
@@ -85,8 +85,15 @@ const PromoList = ({ blocks }) => {
   const ScrollPromo = isOperaMini ? OperaScrollPromo : StandardScrollPromo;
   const List = isOperaMini ? OperaStyledList : StyledList;
 
+  console.log('ref', viewTracker);
+
   return (
-    <ScrollPromo dir={dir} role="list" isOperaMini={isOperaMini}>
+    <ScrollPromo
+      dir={dir}
+      role="list"
+      isOperaMini={isOperaMini}
+      ref={viewTracker}
+    >
       {listBlocks.map((block, index) => {
         return (
           // eslint-disable-next-line react/no-array-index-key
@@ -108,6 +115,7 @@ PromoList.propTypes = {
       }).isRequired,
     }),
   ).isRequired,
+  viewTracker: func.isRequired,
 };
 
 export default PromoList;

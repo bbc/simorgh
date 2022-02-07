@@ -30,7 +30,7 @@ const transformJson = pipe(
   applyBlockPositioning,
   addIndexesToEmbeds,
   addIndexToBlockGroups(isListWithLink, {
-    blockGroupType: 'link',
+    blockGroupType: 'edOjLinks',
   }),
 );
 
