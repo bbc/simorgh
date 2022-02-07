@@ -11,6 +11,7 @@ import {
 import { GridItemMediumNoMargin } from '#app/components/Grid';
 import { ServiceContext } from '#contexts/ServiceContext';
 import useViewTracker from '#hooks/useViewTracker';
+import useClickTrackerHandler from '#hooks/useClickTrackerHandler';
 import Promo from './Promo';
 import PromoList from './PromoList';
 
@@ -34,6 +35,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
   };
 
   const viewRef = useViewTracker(eventTrackingData);
+  const handleClickTracking = useClickTrackerHandler(eventTrackingData);
 
   if (isEmpty(blocks)) {
     return null;
@@ -47,10 +49,14 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
     <GridItemMediumNoMargin>
       {isSingleItem ? (
         <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} />
+          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking}/>
         </PromoWrapper>
       ) : (
-        <PromoList blocks={blocksWithoutTitle} viewTracker={viewRef} />
+        <PromoList
+          blocks={blocksWithoutTitle}
+          viewTracker={viewRef}
+          onClick={handleClickTracking}
+        />
       )}
     </GridItemMediumNoMargin>
   );

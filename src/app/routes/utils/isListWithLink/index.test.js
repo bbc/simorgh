@@ -105,7 +105,7 @@ describe('isListWithLink', () => {
     expect(actual).toEqual(true);
   });
 
-  it('should return true if the block group structure is an Editorial Onward Journey links with any list item containing a link', () => {
+  it('should return true if the block group structure is an editorial onward journey links with any list item containing a link', () => {
     const blockGroup = {
       ...listItemWithEdOjLinks,
       type: 'links',
@@ -115,7 +115,7 @@ describe('isListWithLink', () => {
     expect(actual).toEqual(true);
   });
 
-  it('should return false if the block group structure does not contain any Editorial Onward Journey links', () => {
+  it('should return false if the block group structure does not contain any editorial onward journey links', () => {
     const blockGroup = {
       ...listItemWithNoEdOjLinks,
       type: 'links',
