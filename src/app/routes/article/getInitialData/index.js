@@ -31,7 +31,6 @@ const transformJson = pipe(
   addIndexesToEmbeds,
   addIndexToBlockGroups(isListWithLink, {
     blockGroupType: 'link',
-    pathToBlockGroup: ['model', 'blocks', 1],
   }),
 );
 
