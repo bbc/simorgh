@@ -49,7 +49,7 @@ const ScrollablePromo = ({ blocks, blockGroupIndex }) => {
     <GridItemMediumNoMargin>
       {isSingleItem ? (
         <PromoWrapper dir={dir} ref={viewRef}>
-          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking}/>
+          <Promo block={blocksWithoutTitle[0]} onClick={handleClickTracking} />
         </PromoWrapper>
       ) : (
         <PromoList
