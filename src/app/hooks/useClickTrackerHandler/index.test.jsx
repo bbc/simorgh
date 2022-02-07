@@ -312,9 +312,14 @@ describe('Click tracking', () => {
     );
   });
 
-  it('should fire event to Optimizely if optimizely object exists', async () => {
+  it.only('should fire event to Optimizely if optimizely object exists', async () => {
     const mockOptimizelyTrack = jest.fn();
-    const mockOptimizely = { optimizely: { track: mockOptimizelyTrack } };
+    const mockOptimizely = {
+      optimizely: {
+        track: mockOptimizelyTrack,
+        user: { attributes: { foo: 'bar' }, id: 'test' },
+      },
+    };
 
     const { getByTestId } = render(
       <WithContexts pageData={pidginData}>
