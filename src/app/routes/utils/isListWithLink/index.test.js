@@ -56,6 +56,16 @@ const listItemWithEdOjLinks = {
   },
 };
 
+const listItemWithNoEdOjLinks = {
+  model: {
+    blocks: [
+      {
+        type: 'title',
+      },
+    ],
+  },
+};
+
 describe('isListWithLink', () => {
   it('should return true if the block group structure is an unordered list with any list item containing a link', () => {
     const blockGroup = {
@@ -95,7 +105,7 @@ describe('isListWithLink', () => {
     expect(actual).toEqual(true);
   });
 
-  it('should return true if the block group structure is an links with any list item containing a link', () => {
+  it('should return true if the block group structure is an Editorial Onward Journey links with any list item containing a link', () => {
     const blockGroup = {
       ...listItemWithEdOjLinks,
       type: 'links',
@@ -103,6 +113,16 @@ describe('isListWithLink', () => {
     const actual = isListWithLink(blockGroup);
 
     expect(actual).toEqual(true);
+  });
+
+  it('should return false if the block group structure does not contain any Editorial Onward Journey links', () => {
+    const blockGroup = {
+      ...listItemWithNoEdOjLinks,
+      type: 'links',
+    };
+    const actual = isListWithLink(blockGroup);
+
+    expect(actual).toEqual(false);
   });
 
   it('should return false if the block group structure is a list with all list items containing no link', () => {
