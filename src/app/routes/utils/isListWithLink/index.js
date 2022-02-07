@@ -13,8 +13,8 @@ const hasUrlLink = pipe(
   equals('urlLink'),
 );
 
-const hasLinks = pipe(path(['type']), equals('links'));
-const getLinkItems = path(['model', 'blocks']);
+const hasEdOjLinks = pipe(path(['type']), equals('links'));
+const getEdOjLinkItems = path(['model', 'blocks']);
 const hasLink = pipe(path(['type']), equals('link'));
 
 const isListWithLink = block => {
@@ -25,8 +25,8 @@ const isListWithLink = block => {
     return listItemsContainLink;
   }
 
-  if (hasLinks(block)) {
-    const linkItems = getLinkItems(block);
+  if (hasEdOjLinks(block)) {
+    const linkItems = getEdOjLinkItems(block);
     const linkItemsContainsLink = linkItems.some(hasLink);
 
     return linkItemsContainsLink;
