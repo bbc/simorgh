@@ -1,6 +1,6 @@
 import React from 'react';
 import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, number } from '@storybook/addon-knobs';
 
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
@@ -39,11 +39,15 @@ const Component = props => {
     'Main Body',
     'Man City vs West Ham: Bad weather force Premier League to cancel Sunday match',
   );
+  const minimumContrast = number('Minimum Contrast', 8);
+  const paletteSize = number('Palette Size', 20, { min: 2, max: 99 });
   return (
     <Wrappers {...props}>
       <Promo
         image={{ src: imageUrl, alt: '', width: 500, height: 250, ratio: 52 }}
         url="#"
+        minimumContrast={minimumContrast}
+        paletteSize={paletteSize}
       >
         {mainBody}
       </Promo>

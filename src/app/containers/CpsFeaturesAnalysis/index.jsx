@@ -15,7 +15,7 @@ import FrostedGlassPromo from '../../components/FrostedGlassPromo/lazy';
 const getEventTrackingData = optimizely => ({
   block: {
     componentName: 'features',
-    optimizely,
+    ...(optimizely && { optimizely }),
   },
 });
 
@@ -38,11 +38,14 @@ const IMPROVED_PROMO_VARIATIONS = {
 
 const PromoListComponent = ({ promoItems, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
-  const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely).block);
   const { isAmp } = useContext(RequestContext);
+  const { optimizely } = useContext(OptimizelyContext);
 
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
+
+  const viewRef = useViewTracker(eventTrackingData.block);
 
   const selectComponent = index => {
     switch (true) {
@@ -77,7 +80,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displayImage
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
-              eventTrackingData={getEventTrackingData(optimizely)}
+              eventTrackingData={eventTrackingData}
             />
           </StoryPromoLi>
         );
@@ -99,10 +102,13 @@ PromoListComponent.defaultProps = {
 const PromoComponent = ({ promo, dir }) => {
   const { serviceDatetimeLocale } = useContext(ServiceContext);
   const { optimizely } = useContext(OptimizelyContext);
-  const viewRef = useViewTracker(getEventTrackingData(optimizely));
   const { isAmp } = useContext(RequestContext);
 
   const promoVariation = useOptimizelyVariation(IMPROVED_PROMO_EXPERIMENT_ID);
+  const hasVariationKey = promoVariation !== null;
+  const eventTrackingData = getEventTrackingData(hasVariationKey && optimizely);
+
+  const viewRef = useViewTracker(eventTrackingData);
 
   const selectComponent = () => {
     switch (true) {
