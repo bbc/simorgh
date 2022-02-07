@@ -36,6 +36,26 @@ const listItemWithNoLink = {
   },
 };
 
+const listItemWithEdOjLinks = {
+  model: {
+    blocks: [
+      {
+        type: 'title',
+      },
+      {
+        type: 'link',
+        model: {
+          blocks: [
+            {
+              locator: 'myLink',
+            },
+          ],
+        },
+      },
+    ],
+  },
+};
+
 describe('isListWithLink', () => {
   it('should return true if the block group structure is an unordered list with any list item containing a link', () => {
     const blockGroup = {
@@ -69,6 +89,16 @@ describe('isListWithLink', () => {
         ],
       },
       type: 'text',
+    };
+    const actual = isListWithLink(blockGroup);
+
+    expect(actual).toEqual(true);
+  });
+
+  it('should return true if the block group structure is an links with any list item containing a link', () => {
+    const blockGroup = {
+      ...listItemWithEdOjLinks,
+      type: 'links',
     };
     const actual = isListWithLink(blockGroup);
 
