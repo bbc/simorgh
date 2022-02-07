@@ -312,7 +312,7 @@ describe('Click tracking', () => {
     );
   });
 
-  it.only('should fire event to Optimizely if optimizely object exists', async () => {
+  it('should fire event to Optimizely if optimizely object exists', async () => {
     const mockOptimizelyTrack = jest.fn();
     const mockOptimizely = {
       optimizely: {
