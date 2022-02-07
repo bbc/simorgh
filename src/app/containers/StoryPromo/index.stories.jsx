@@ -5,11 +5,10 @@ import { ServiceContextProvider } from '#contexts/ServiceContext';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
 import { ARTICLE_PAGE, MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
-// import fixture from '#data/news/frontpage';
 import fixture from './helpers/storiesFixture';
 import StoryPromoContainer from '.';
 import AmpDecorator from '../../../../.storybook/helpers/ampDecorator';
-import { guideLinkItem } from './helpers/fixtureData'; // done
+import { guideLinkItem } from './helpers/fixtureData';
 
 const mediaFixture = type =>
   pathOr(null, ['content', 'groups'], fixture)
@@ -29,23 +28,14 @@ const promoFixture = type =>
         pathOr(null, ['contentType'], item) === type,
     );
 
-// missing data
-const firstFixture = pathOr(
-  null,
-  ['content', 'groups', '0', 'items', '0'],
-  fixture,
-);
-
-firstFixture.timestamp = Date.now();
-// Maybe is better if we fetch the news page and we add the promos that we miss from pidgin. This will result in less translation :D
-const audioFixture = mediaFixture('audio'); // done
-const videoFixture = mediaFixture('video'); // done
-const standardPromo = promoFixture('Text'); // translation needed
-const videoPromo = promoFixture('Video'); // translation needed
-const featurePromo = promoFixture('Feature'); // translation needed
-const audioPromo = promoFixture('Audio'); // done
-const galleryPromo = promoFixture('Gallery'); // translation needed
-const podcastPromo = promoFixture('Podcast'); // missing data
+const audioFixture = mediaFixture('audio');
+const videoFixture = mediaFixture('video');
+const standardPromo = promoFixture('Text');
+const videoPromo = promoFixture('Video');
+const featurePromo = promoFixture('Feature');
+const audioPromo = promoFixture('Audio');
+const galleryPromo = promoFixture('Gallery');
+const podcastPromo = promoFixture('Podcast');
 
 /* eslint-disable react/prop-types */
 const Component = ({
@@ -99,7 +89,6 @@ export const Promo = () => {
           audioPromo,
           galleryPromo,
           podcastPromo,
-          firstFixture,
           guideLinkItem,
         },
         audioFixture,
@@ -135,7 +124,6 @@ export const PromoAmp = () => {
           audioPromo,
           galleryPromo,
           podcastPromo,
-          firstFixture,
           guideLinkItem,
         },
         audioFixture,

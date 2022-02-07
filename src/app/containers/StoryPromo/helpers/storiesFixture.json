@@ -532,6 +532,37 @@
             "type": "link"
           },
           {
+            "name": "US Air Force warning over Area 51 Facebook event",
+            "summary": "More than a million people RSVP to an event calling for people to break into the Nevada base.",
+            "indexImage": {
+              "id": "105038413",
+              "subType": "index",
+              "href": "http://c.files.bbci.co.uk/D5DD/production/_107894745_alien976.jpg",
+              "path": "/cpsprodpb/D5DD/production/_107894745_alien976.jpg",
+              "height": 364,
+              "width": 647,
+              "altText": "A Roswell-style alien and UFO",
+              "caption": "Some people believe Area 51 is home to crashed alien spaceships",
+              "copyrightHolder": "Getty Images"
+            },
+            "indexThumbnail": {
+              "id": "97486099",
+              "subType": "index-thumbnail",
+              "href": "http://c.files.bbci.co.uk/D5DD/production/_107894745_alien976.jpg",
+              "path": "/cpsprodpb/D5DD/production/_107894745_alien976.jpg",
+              "height": 180,
+              "width": 320,
+              "altText": "A Roswell-style alien and UFO",
+              "caption": "Some people believe Area 51 is home to crashed alien spaceships",
+              "copyrightHolder": "Getty Images"
+            },
+            "uri": "http://www.bbc.com/afrique/37733017",
+            "contentType": "Podcast",
+            "assetTypeCode": "PRO",
+            "timestamp": 1546455546000,
+            "type": "link"
+          },
+          {
             "name": "Gallery promo",
             "indexImage": {
               "id": "63692548",
