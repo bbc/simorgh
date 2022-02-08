@@ -314,10 +314,16 @@ describe('Click tracking', () => {
 
   it('should fire event to Optimizely if optimizely object exists', async () => {
     const mockOptimizelyTrack = jest.fn();
+    const mockUserId = 'test';
+    const mockAttributes = { foo: 'bar' };
+    const mockOverrideAttributes = {
+      ...mockAttributes,
+      [`clicked_${defaultProps.componentName}`]: true,
+    };
     const mockOptimizely = {
       optimizely: {
         track: mockOptimizelyTrack,
-        user: { attributes: { foo: 'bar' }, id: 'test' },
+        user: { attributes: mockAttributes, id: mockUserId },
       },
     };
 
@@ -330,6 +336,11 @@ describe('Click tracking', () => {
     fireEvent.click(getByTestId('test-component'));
 
     expect(mockOptimizelyTrack).toHaveBeenCalledTimes(1);
+    expect(mockOptimizelyTrack).toHaveBeenCalledWith(
+      'component_clicks',
+      mockUserId,
+      mockOverrideAttributes,
+    );
   });
 
   it('should not fire event to Optimizely if optimizely object is undefined', async () => {
