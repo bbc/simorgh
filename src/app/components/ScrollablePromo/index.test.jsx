@@ -59,7 +59,7 @@ describe('ScrollablePromo', () => {
     expect(getAllByRole('listitem').length).toEqual(3);
   });
 
-  describe('getEventTrackingData', () => {
+  describe('event tracking in editorial onward journeys', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
