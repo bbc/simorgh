@@ -55,7 +55,7 @@ describe('ScrollablePromo', () => {
     expect(getAllByRole('listitem').length).toEqual(3);
   });
 
-  describe.only('getEventTrackingData', () => {
+  describe('getEventTrackingData', () => {
     afterEach(() => {
       jest.clearAllMocks();
     });
