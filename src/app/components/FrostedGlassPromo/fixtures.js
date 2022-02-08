@@ -76,6 +76,60 @@ export const cpsPromoFixture = {
       path: '/cpsdevpb/DDFC/test/_63482865_orange2.jpg',
       height: 549,
       width: 976,
+      altText: 'naranja 2',
+      caption: 'naranja 2',
+      copyrightHolder: 'BBC',
+      type: 'image',
+    },
+    options: {
+      isBreakingNews: false,
+      isFactCheck: false,
+    },
+    id: 'urn:bbc:ares::asset:mundo/internacional-23038380',
+    type: 'cps',
+  },
+  dir: 'ltr',
+  displayImage: true,
+  displaySummary: false,
+  eventTrackingData: {
+    block: {
+      componentName: 'features',
+    },
+  },
+};
+
+export const cpsNewsPromoFixture = {
+  item: {
+    headlines: {
+      headline: 'The colorful charm of chilango street art 17',
+    },
+    locators: {
+      assetUri: '/mundo/internacional-23038380',
+      cpsUrn: 'urn:bbc:content:assetUri:mundo/internacional-23038380',
+      assetId: '23038380',
+    },
+    summary:
+      'In addition to its dozens of traditional museums, Mexico City is an open-air gallery of street art, in which national and foreign artists exhibit. We invite you on a tour.',
+    timestamp: 1462445134000,
+    language: 'en',
+    byline: {
+      name: 'Aled Scourfield',
+      title: 'BBC News, Wales',
+      persons: [
+        {
+          name: 'Aled Scourfield',
+          function: 'BBC News, Wales',
+        },
+      ],
+    },
+    cpsType: 'STY',
+    indexImage: {
+      id: '63482865',
+      subType: 'index',
+      href: 'http://b.files.bbci.co.uk/DDFC/test/_63482865_orange2.jpg',
+      path: '/cpsdevpb/DDFC/test/_63482865_orange2.jpg',
+      height: 549,
+      width: 976,
       altText: 'Orange 2',
       caption: 'Orange 2',
       copyrightHolder: 'BBC',
