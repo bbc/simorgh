@@ -185,6 +185,13 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
     });
+    describe(`Article Secondary Column`, () => {
+      it('should have at least one story promo in Features', () => {
+        cy.get('[data-e2e=features-analysis-heading]').within(() => {
+          cy.get('[data-e2e=story-promo]').first().should('be.visible');
+        });
+      });
+    });
   });
   describe(`Visual comparison tests for ${service} ${pageType}`, () => {
     it('Articles', () => {

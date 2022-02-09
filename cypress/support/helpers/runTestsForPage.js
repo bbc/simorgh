@@ -48,6 +48,25 @@ const runTestsForPage = ({
         describe(`${pageType} - ${currentPath} - Canonical`, () => {
           before(() => {
             Cypress.env('currentPath', currentPath);
+
+            if (pageType === 'articles') {
+              cy.intercept(
+                {
+                  method: 'GET',
+                  pathname: '/datafiles/LptPKDnHyAFu9V12s5xCz.json',
+                },
+                { statusCode: 404 },
+              );
+            }
+            if (pageType === 'storyPage') {
+              cy.intercept(
+                {
+                  method: 'GET',
+                  pathname: '/datafiles/LptPKDnHyAFu9V12s5xCz.json',
+                },
+                { foo: '123' },
+              );
+            }
             visitPage(currentPath, pageType);
           });
 
