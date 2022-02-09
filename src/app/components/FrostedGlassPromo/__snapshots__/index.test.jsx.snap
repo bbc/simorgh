@@ -387,7 +387,7 @@ exports[`Frosted Glass Promo when given props for a CPS promo 1`] = `
           type="image/jpeg"
         />
         <img
-          alt="Orange 2"
+          alt="naranja 2"
           class="emotion-8 emotion-9 emotion-10"
           height="549"
           sizes="(max-width: 300px) 280px, (min-width: 1008px) 280px, 400px"
