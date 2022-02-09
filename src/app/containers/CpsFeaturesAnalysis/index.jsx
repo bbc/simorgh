@@ -81,6 +81,7 @@ const PromoListComponent = ({ promoItems, dir }) => {
               displaySummary={false}
               serviceDatetimeLocale={serviceDatetimeLocale}
               eventTrackingData={eventTrackingData}
+              sectionType="features-and-analysis"
             />
           </StoryPromoLi>
         );
@@ -138,6 +139,7 @@ const PromoComponent = ({ promo, dir }) => {
         displayImage
         serviceDatetimeLocale={serviceDatetimeLocale}
         eventTrackingData={getEventTrackingData(optimizely)}
+        sectionType="features-and-analysis"
       />
     </div>
   );
