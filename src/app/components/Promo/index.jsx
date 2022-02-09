@@ -1,6 +1,13 @@
-import React from 'react';
-import { string, shape, arrayOf, element } from 'prop-types';
-import { scriptPropType } from '@bbc/gel-foundations/prop-types';
+import React, { useContext } from 'react';
+import styled from '@emotion/styled';
+import { arrayOf, element } from 'prop-types';
+import { ServiceContext } from '#contexts/ServiceContext';
+
+import Image from './image';
+import Heading from './heading';
+import Body from './body';
+import Footer from './footer';
+import A from './a';
 
 const PromoContext = React.createContext({});
 const withPromoContext = Component => props =>
@@ -11,20 +18,28 @@ const withPromoContext = Component => props =>
   );
 
 const Wrapper = styled.section`
-  background-color: ${C_LUNAR};
-  padding: ${GEL_SPACING_DBL};
+  position: relative;
 `;
 
-const Promo = ({ script, service, children, ...props }) => (
-  <PromoContext.Provider value={{ script, service }}>
-    {children}
-  </PromoContext.Provider>
-);
+const Promo = ({ children }) => {
+  const { script, service } = useContext(ServiceContext);
+  return (
+    <Wrapper>
+      <PromoContext.Provider value={{ script, service }}>
+        {children}
+      </PromoContext.Provider>
+    </Wrapper>
+  );
+};
+
+Promo.Image = withPromoContext(Image);
+Promo.Heading = withPromoContext(Heading);
+Promo.Body = withPromoContext(Body);
+Promo.Footer = withPromoContext(Footer);
+Promo.A = withPromoContext(A);
 
 Promo.propTypes = {
   children: arrayOf(element).isRequired,
-  script: shape(scriptPropType).isRequired,
-  service: string.isRequired,
 };
 
 Promo.defaultProps = {};
