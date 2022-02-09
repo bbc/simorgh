@@ -8,7 +8,8 @@ import { C_EBON } from '@bbc/psammead-styles/colours';
 const H1 = styled.h1`
   ${({ service }) => getSansRegular(service)}
   ${({ script }) => getBodyCopy(script)}
-  color: ${C_EBON}
+  color: ${C_EBON};
+  margin-top: 0;
 `;
 
 const Heading = props => {

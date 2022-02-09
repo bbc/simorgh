@@ -42,7 +42,8 @@ const direction = ({ dir }) => (dir === 'ltr' ? 'right' : 'left');
 const Item = styled.div`
   vertical-align: top;
   display: inline-block;
-  margin-bottom: ${GEL_SPACING_TRPL};
+  margin-bottom: ${GEL_SPACING_DBL};
+  width: 100%;
   @media (max-width: ${GEL_GROUP_2_SCREEN_WIDTH_MAX}) {
     border-top: 1px ${C_PEBBLE} solid;
     padding-top: ${GEL_SPACING};
@@ -56,6 +57,7 @@ const Item = styled.div`
   }
   @media (min-width: ${GEL_GROUP_4_SCREEN_WIDTH_MIN}) {
     margin-${direction}: ${GEL_SPACING_DBL};
+    margin-bottom: ${GEL_SPACING_TRPL};
     width: calc(25% - ${GEL_SPACING_HLF_TRPL});
     &:nth-of-type(4n) {
       margin-${direction}: 0;
