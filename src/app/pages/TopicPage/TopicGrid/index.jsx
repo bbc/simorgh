@@ -10,7 +10,7 @@ import {
   GEL_GROUP_3_SCREEN_WIDTH_MAX,
   GEL_GROUP_4_SCREEN_WIDTH_MIN,
 } from '@bbc/gel-foundations/breakpoints';
-import { C_PEBBLE } from '@bbc/psammead-styles/dist/colours';
+import { C_PEBBLE } from '@bbc/psammead-styles/colours';
 import {
   GEL_SPACING,
   GEL_SPACING_HLF_TRPL,
