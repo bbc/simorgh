@@ -25,12 +25,12 @@ export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
 
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
 
-export const buildUniquePromoId = (
+export const buildUniquePromoId = ({
   sectionType,
   promoGroupId,
   promoItem,
   promoIndex = 0,
-) => {
+}) => {
   const assetUri = pathOr('', ['locators', 'assetUri'], promoItem);
   const uri = pathOr('', ['uri'], promoItem);
   const asset = assetUri || uri;

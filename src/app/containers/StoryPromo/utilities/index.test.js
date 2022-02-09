@@ -81,53 +81,73 @@ describe('buildUniquePromoId', () => {
   const labelId = 'test-group-id';
   it('should return id of promo-link with contentType and URI if contentType exists', () => {
     expect(
-      buildUniquePromoId('', labelId, secondaryColumnNoAssetURI, 0),
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: secondaryColumnNoAssetURI,
+        promoIndex: 0,
+      }),
     ).toEqual('promo-test-group-id-news-radiobulletin-1');
   });
 
   it('should return id using URI if assetURI does not exist', () => {
-    expect(buildUniquePromoId('', labelId, standardLinkItem, 1)).toEqual(
-      'promo-test-group-id-azeri-text-2',
-    );
+    expect(
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: standardLinkItem,
+        promoIndex: 1,
+      }),
+    ).toEqual('promo-test-group-id-azeri-text-2');
   });
 
   it('should return id using assetURI does not exist and contentType does not exist', () => {
-    expect(buildUniquePromoId('', labelId, completeItem, 2)).toEqual(
-      'promo-test-group-id-3',
-    );
+    expect(
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: completeItem,
+        promoIndex: 2,
+      }),
+    ).toEqual('promo-test-group-id-3');
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {
     expect(
-      buildUniquePromoId('', labelId, secondaryColumnContentType, 3),
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: secondaryColumnContentType,
+        promoIndex: 3,
+      }),
     ).toEqual('promo-test-group-id-radiobulletin-4');
   });
 
   it('should sanitise link from item and split from last forward slash', () => {
     expect(
-      buildUniquePromoId(
-        '',
-        labelId,
-        { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
-        4,
-      ),
+      buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
+        promoIndex: 4,
+      }),
     ).toEqual('promo-test-group-id-aaabbbccc-5');
   });
 
   it('should return id of promo-link with contentType and URI if contentType exists for a "Top Stories" promo', () => {
     expect(
-      buildUniquePromoId('top-stories', labelId, secondaryColumnNoAssetURI, 0),
+      buildUniquePromoId({
+        sectionType: 'top-stories',
+        promoGroupId: labelId,
+        promoItem: secondaryColumnNoAssetURI,
+        promoIndex: 0,
+      }),
     ).toEqual('top-stories-promo-test-group-id-news-radiobulletin-1');
   });
 
   it('should return id of promo-link with contentType and URI if contentType exists for a "Features and Analysis" promo', () => {
     expect(
-      buildUniquePromoId(
-        'features-and-analysis',
-        labelId,
-        secondaryColumnNoAssetURI,
-        0,
-      ),
+      buildUniquePromoId({
+        sectionType: 'features-and-analysis',
+        promoGroupId: labelId,
+        promoItem: secondaryColumnNoAssetURI,
+        promoIndex: 0,
+      }),
     ).toEqual('features-and-analysis-promo-test-group-id-news-radiobulletin-1');
   });
 });

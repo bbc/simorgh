@@ -138,7 +138,12 @@ const StoryPromoContainer = ({
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const linkId = buildUniquePromoId(sectionType, labelId, item, index);
+  const linkId = buildUniquePromoId({
+    sectionType,
+    promoGroupId: labelId,
+    promoItem: item,
+    promoIndex: index,
+  });
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
