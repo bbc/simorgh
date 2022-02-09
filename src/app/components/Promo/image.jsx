@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   }
 `;
 
+// TODO: media indicators, srcsets and webp
 const Image = props => {
   return (
     <Wrapper>
@@ -30,7 +31,5 @@ const Image = props => {
 Image.propTypes = {
   alt: string.isRequired,
 };
-
-Image.defaultProps = {};
 
 export default Image;

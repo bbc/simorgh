@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from '@emotion/styled';
 import { C_EBON } from '@bbc/psammead-styles/colours';
 
-const StyledA = styled.a`
+const A = styled.a`
   color: ${C_EBON};
   text-decoration: none;
   &:hover {
@@ -18,12 +17,5 @@ const StyledA = styled.a`
   }
 `;
 
-const A = props => {
-  return <StyledA {...props} />;
-};
-
-A.propTypes = {};
-
-A.defaultProps = {};
-
+// TODO: event tracking
 export default A;

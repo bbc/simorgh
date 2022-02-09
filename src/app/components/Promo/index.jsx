@@ -69,6 +69,4 @@ Promo.propTypes = {
   children: arrayOf(element).isRequired,
 };
 
-Promo.defaultProps = {};
-
 export default Promo;
