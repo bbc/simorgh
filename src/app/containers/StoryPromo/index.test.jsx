@@ -158,8 +158,14 @@ describe('StoryPromo Container', () => {
     afterEach(cleanup);
 
     it('should render h3, a, p, time', () => {
-      const uriLabelId = buildUniquePromoId(labelId, assetTypeItem);
-      const assetUriId = buildUniquePromoId(labelId, cpsItem);
+      const uriLabelId = buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: assetTypeItem,
+      });
+      const assetUriId = buildUniquePromoId({
+        promoGroupId: labelId,
+        promoItem: cpsItem,
+      });
 
       expect(cpsContainer.querySelectorAll('h3 a')[0].innerHTML).toEqual(
         `<span id="${assetUriId}">${cpsItem.headlines.headline}</span>`,
