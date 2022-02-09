@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
-import topStories from '#pages/StoryPage/topStories.json';
+import newsTopStories from '#pages/StoryPage/newsTopStories.json';
 import topStoriesRtl from '#pages/StoryPage/topStoriesRtl.json';
 import { RequestContextProvider } from '#contexts/RequestContext';
 import { ToggleContextProvider } from '#contexts/ToggleContext';
@@ -43,32 +43,32 @@ export default {
 };
 
 // Canonical
-export const Igbo = () => <Component service="igbo" data={topStories} />;
+export const News = () => <Component service="news" data={newsTopStories} />;
 export const Arabic = () => (
   <Component service="arabic" dir="rtl" data={topStoriesRtl} />
 );
-export const IgboWithOneItem = () => (
-  <Component service="igbo" data={[topStories[0]]} />
+export const NewsWithOneItem = () => (
+  <Component service="news" data={[newsTopStories[0]]} />
 );
 export const ArabicWithOneItem = () => (
   <Component service="arabic" dir="rtl" data={[topStoriesRtl[0]]} />
 );
 
 // Amp
-export const IgboAmp = () => (
-  <Component isAmp service="igbo" data={topStories} />
+export const NewsAmp = () => (
+  <Component isAmp service="news" data={newsTopStories} />
 );
-IgboAmp.decorators = [AmpDecorator];
+NewsAmp.decorators = [AmpDecorator];
 
 export const ArabicAmp = () => (
   <Component isAmp service="arabic" dir="rtl" data={topStoriesRtl} />
 );
 ArabicAmp.decorators = [AmpDecorator];
 
-export const IgboWithOneItemAmp = () => (
-  <Component isAmp service="igbo" data={[topStories[0]]} />
+export const NewsWithOneItemAmp = () => (
+  <Component isAmp service="news" data={[newsTopStories[0]]} />
 );
-IgboWithOneItemAmp.decorators = [AmpDecorator];
+NewsWithOneItemAmp.decorators = [AmpDecorator];
 
 export const ArabicWithOneItemAmp = () => (
   <Component isAmp service="arabic" dir="rtl" data={[topStoriesRtl[0]]} />
