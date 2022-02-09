@@ -1,7 +1,8 @@
 import pathOr from 'ramda/src/pathOr';
 import path from 'ramda/src/path';
 import getDataUrl from '../../../support/helpers/getDataUrl';
-
+import appConfig from '../../../../src/server/utilities/serviceConfigs';
+import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
 // For testing important features that differ between services, e.g. Timestamps.
 // We recommend using inline conditional logic to limit tests to services which differ.
 export const testsThatAlwaysRun = ({ service, pageType }) => {
@@ -9,7 +10,11 @@ export const testsThatAlwaysRun = ({ service, pageType }) => {
 };
 
 // For testing features that may differ across services but share a common logic e.g. translated strings.
-export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
+export const testsThatFollowSmokeTestConfig = ({
+  service,
+  pageType,
+  variant,
+}) => {
   describe(`testsThatFollowSmokeTestConfig to run for ${service} ${pageType}`, () => {
     describe(`STY Body`, () => {
       it('should render a description for the page', () => {
@@ -49,8 +54,19 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     });
     describe(`STY Secondary Column`, () => {
       it('should have at least one story promo in Features', () => {
-        cy.get('[data-e2e=features-analysis-heading]').within(() => {
-          cy.get('[data-e2e=story-promo]').first().should('be.visible');
+        cy.log(getServiceWithVariantName(service));
+        const secondaryColumnUrl =
+          variant === 'default'
+            ? `/${appConfig[service].default.service}/sty-secondary-column.json`
+            : `/${getServiceWithVariantName(
+                service,
+              )}/sty-secondary-column/${variant}.json`;
+        cy.request(secondaryColumnUrl).then(({ body }) => {
+          if (body.features) {
+            cy.get('[data-e2e=features-analysis-heading]').within(() => {
+              cy.get('[data-e2e=story-promo]').first().should('be.visible');
+            });
+          }
         });
       });
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
