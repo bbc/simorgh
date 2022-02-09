@@ -179,6 +179,7 @@ exports[`VJ include container on Amp should render an amp-iframe with an image p
         </button>
       </div>
       <amp-img
+        data-hero="true"
         layout="fill"
         placeholder="true"
         src="https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-asdf/app_launcher_ws_640_7ania.png"
