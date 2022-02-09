@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from '@emotion/styled';
+import { arrayOf, shape } from 'prop-types';
 
 import { ServiceContext } from '#contexts/ServiceContext';
 
@@ -64,8 +65,12 @@ const TopicGrid = ({ promos }) => {
   );
 };
 
-TopicGrid.propTypes = {};
+TopicGrid.propTypes = {
+  promos: arrayOf(shape({})),
+};
 
-TopicGrid.defaultProps = {};
+TopicGrid.defaultProps = {
+  promos: [],
+};
 
 export default TopicGrid;
