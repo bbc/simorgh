@@ -4,11 +4,11 @@ import React from 'react';
 import { string } from 'prop-types';
 import TopicGrid from './TopicGrid';
 
-const TopicPage = ({ pageData }) => {
+const TopicPage = ({ pageData, promos }) => {
   return (
     <>
       <div>{pageData.title}</div>
-      <TopicGrid />
+      <TopicGrid promos={promos} />
     </>
   );
 };

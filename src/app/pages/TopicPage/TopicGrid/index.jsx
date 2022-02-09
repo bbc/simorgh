@@ -19,24 +19,6 @@ import {
 
 import TopicPromo from '../TopicPromo';
 
-const rand = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const fixtureHeading = () =>
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed lacus mi. In sed nunc non ante viverra aliquam. Quisque aliquam scelerisque eros, semper fermentum ipsum vehicula eu. Integer nec.'
-    .split(' ')
-    .slice(0, rand(5, 30))
-    .join(' ');
-const fixtureCat = () =>
-  `http://placekitten.com/${rand(200, 300)}/${rand(170, 250)}`;
-
-const fixture = new Array(23).fill().map((_, id) => ({
-  id,
-  heading: fixtureHeading(),
-  footer: '8th February 2022',
-  href: '#',
-  imageSrc: fixtureCat(),
-  imageAlt: 'evil monster',
-}));
-
 const direction = ({ dir }) => (dir === 'ltr' ? 'right' : 'left');
 const Item = styled.div`
   vertical-align: top;
@@ -69,11 +51,11 @@ const Wrapper = styled.div`
   max-width: 82rem;
 `;
 
-const TopicGrid = () => {
+const TopicGrid = ({ promos }) => {
   const { dir } = useContext(ServiceContext);
   return (
     <Wrapper>
-      {fixture.map(promo => (
+      {promos.map(promo => (
         <Item key={promo.id} dir={dir}>
           <TopicPromo {...promo} />
         </Item>

@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import ImagePlaceholder from '@bbc/psammead-image-placeholder';
 import { string } from 'prop-types';
 import { GEL_SPACING } from '@bbc/gel-foundations/spacings';
-import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 
 const Img = styled.img`
   width: 100%;
@@ -12,9 +11,6 @@ const Img = styled.img`
 
 const Wrapper = styled.div`
   margin-bottom: ${GEL_SPACING};
-  @media (min-width: ${GEL_GROUP_2_SCREEN_WIDTH_MIN}) {
-    margin-bottom: 0;
-  }
 `;
 
 // TODO: media indicators, srcsets and webp
