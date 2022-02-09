@@ -94,7 +94,7 @@ const VjAmp = ({ ampMetadata: { imageWidth, imageHeight, image, src } }) => {
           <div overflow="">
             <button type="button">Show more</button>
           </div>
-          <amp-img layout="fill" src={image} placeholder />
+          <amp-img layout="fill" src={image} placeholder data-hero />
         </StyledAmpIframe>
       </GridItemMedium>
     </>
