@@ -132,12 +132,13 @@ const StoryPromoContainer = ({
   eventTrackingData,
   labelId,
   imageComponent,
+  sectionType,
 }) => {
   const { script, service, translations } = useContext(ServiceContext);
   const { pageType } = useContext(RequestContext);
   const handleClickTracking = useCombinedClickTrackerHandler(eventTrackingData);
 
-  const linkId = buildUniquePromoId(labelId, item, index);
+  const linkId = buildUniquePromoId(sectionType, labelId, item, index);
 
   const liveLabel = pathOr('LIVE', ['media', 'liveLabel'], translations);
 
@@ -327,6 +328,7 @@ StoryPromoContainer.propTypes = {
   labelId: string,
   index: number,
   imageComponent: elementType,
+  sectionType: string,
 };
 
 StoryPromoContainer.defaultProps = {
@@ -341,6 +343,7 @@ StoryPromoContainer.defaultProps = {
   labelId: '',
   index: 0,
   imageComponent: undefined,
+  sectionType: '',
 };
 
 export default StoryPromoContainer;
