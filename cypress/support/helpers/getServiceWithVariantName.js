@@ -9,6 +9,5 @@ export default service => {
   if (service === 'serbianCyr' || service === 'serbianLat') {
     service = 'serbian';
   }
-  console.log(service);
   return service;
 };

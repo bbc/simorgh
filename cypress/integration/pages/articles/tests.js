@@ -1,6 +1,9 @@
+import path from 'ramda/src/path';
+import getDataUrl from '../../../support/helpers/getDataUrl';
 import config from '../../../support/config/services';
 import appConfig from '../../../../src/server/utilities/serviceConfigs';
 import { getBlockByType, getBlockData } from './helpers';
+import getServiceWithVariantName from '../../../support/helpers/getServiceWithVariantName';
 
 // TODO: Remove after https://github.com/bbc/simorgh/issues/2959
 const serviceHasFigure = service =>
@@ -185,32 +188,110 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
     });
-    describe(`Article Secondary Column`, () => {
+    describe(`STY Secondary Column`, () => {
       it('should have at least one story promo in Features', () => {
-        cy.get('[data-e2e=features-analysis-heading]').within(() => {
-          cy.get('[data-e2e=story-promo]').first().should('be.visible');
-        });
+        if (service !== 'scotland') {
+          const secondaryColumnUrl =
+            variant === 'default'
+              ? `/${appConfig[service].default.service}/sty-secondary-column.json`
+              : `/${getServiceWithVariantName(
+                  service,
+                )}/sty-secondary-column/${variant}.json`;
+          cy.request(secondaryColumnUrl).then(({ body }) => {
+            if (body.features) {
+              cy.get('[data-e2e=features-analysis-heading]').within(() => {
+                cy.get('[data-e2e=story-promo]').first().should('be.visible');
+              });
+            }
+          });
+        } else {
+          cy.log('No secondary column on scotland service');
+        }
+      });
+      it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
+        cy.log(service);
+        if (Cypress.env('APP_ENV') !== 'local') {
+          cy.getToggles(service);
+          cy.url().then(url => {
+            const urlForData = url.replace('.amp', '');
+
+            const firstVisitedPage = url;
+
+            cy.request(getDataUrl(urlForData)).then(() => {
+              cy.fixture(`toggles/${service}.json`).then(toggles => {
+                const podcastPromoIsEnabled = path(
+                  ['podcastPromo', 'enabled'],
+                  toggles,
+                );
+                cy.log(
+                  `Story page is configured for podcast promo? ${podcastPromoIsEnabled}`,
+                );
+                if (podcastPromoIsEnabled) {
+                  // Gets the podcast promo name
+                  cy.get(
+                    `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`,
+                  ).then($tag => {
+                    const podcastTitle = $tag.text();
+                    cy.wrap(podcastTitle).as('podcastTitle');
+                  });
+                  // Clicks on the podcast promo link
+                  cy.get(
+                    `section[aria-labelledby*='podcast-promo'] > div:nth-child(2) > div:nth-child(2) > h3 > a`,
+                  ).click();
+
+                  // Waits for page load to allow Cypress to retrieve url
+                  // eslint-disable-next-line cypress/no-unnecessary-waiting
+                  cy.wait(1000);
+
+                  cy.url().then(urlTwo => {
+                    const isPodcastBrandPage = urlTwo.includes('/podcasts/');
+
+                    // If link leads to a Podcast brand page, check the title is as expected
+                    // If link leads to a Podcast aggregate page, check the first link leads to podcast page
+                    if (isPodcastBrandPage) {
+                      cy.get('@podcastTitle').then(title => {
+                        cy.get('h1').should('contain', title);
+                      });
+                    } else {
+                      // This could fail if editorial chooses a MAP page to be the first promo link instead of a podcast page
+                      cy.get('[data-e2e=story-promo]')
+                        .first()
+                        .find('a')
+                        .invoke('attr', 'href')
+                        .should('contain', '/podcasts/');
+                    }
+                  });
+                  cy.visit(firstVisitedPage);
+                } else {
+                  cy.log('Podcast promo is not enabled in toggles');
+                }
+              });
+            });
+          });
+        } else {
+          cy.log('Service is run in local.');
+        }
       });
     });
-  });
-  describe(`Visual comparison tests for ${service} ${pageType}`, () => {
-    it('Articles', () => {
-      if (Cypress.env('APP_ENV') === 'local') {
-        cy.setCookie('ckns_privacy', 'july2019');
-        cy.setCookie('ckns_policy', '111');
-        cy.setCookie('ckns_explicit', '1');
-        cy.reload();
-        cy.document().its('fonts.status').should('equal', 'loaded');
+    describe(`Visual comparison tests for ${service} ${pageType}`, () => {
+      it('Articles', () => {
+        if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.setCookie('ckns_privacy', 'july2019');
+          cy.setCookie('ckns_policy', '111');
+          cy.setCookie('ckns_explicit', '1');
+          cy.reload();
+          cy.document().its('fonts.status').should('equal', 'loaded');
 
-        cy.scrollTo('bottom', { duration: 4000 });
-        cy.scrollTo('top', { duration: 2000 });
-        cy.matchImageSnapshot({
-          capture: 'fullPage',
-          blackout: ['[data-e2e="media-player"]'],
-        });
-      } else {
-        cy.log('Snapshot skipped in headed mode');
-      }
+          cy.scrollTo('bottom', { duration: 4000 });
+          cy.scrollTo('top', { duration: 2000 });
+          cy.matchImageSnapshot({
+            capture: 'fullPage',
+            blackout: ['[data-e2e="media-player"]'],
+          });
+        } else {
+          cy.log('Snapshot skipped in headed mode');
+        }
+      });
     });
   });
 };
