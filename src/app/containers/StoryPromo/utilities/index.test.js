@@ -80,36 +80,54 @@ describe('getHeadingTagOverride', () => {
 describe('buildUniquePromoId', () => {
   const labelId = 'test-group-id';
   it('should return id of promo-link with contentType and URI if contentType exists', () => {
-    expect(buildUniquePromoId(labelId, secondaryColumnNoAssetURI, 0)).toEqual(
-      'promo-test-group-id-news-radiobulletin-1',
-    );
+    expect(
+      buildUniquePromoId('', labelId, secondaryColumnNoAssetURI, 0),
+    ).toEqual('promo-test-group-id-news-radiobulletin-1');
   });
 
   it('should return id using URI if assetURI does not exist', () => {
-    expect(buildUniquePromoId(labelId, standardLinkItem, 1)).toEqual(
+    expect(buildUniquePromoId('', labelId, standardLinkItem, 1)).toEqual(
       'promo-test-group-id-azeri-text-2',
     );
   });
 
   it('should return id using assetURI does not exist and contentType does not exist', () => {
-    expect(buildUniquePromoId(labelId, completeItem, 2)).toEqual(
+    expect(buildUniquePromoId('', labelId, completeItem, 2)).toEqual(
       'promo-test-group-id-3',
     );
   });
 
   it('should return id with contentType only if assetURI and URI do not exist', () => {
-    expect(buildUniquePromoId(labelId, secondaryColumnContentType, 3)).toEqual(
-      'promo-test-group-id-radiobulletin-4',
-    );
+    expect(
+      buildUniquePromoId('', labelId, secondaryColumnContentType, 3),
+    ).toEqual('promo-test-group-id-radiobulletin-4');
   });
 
   it('should sanitise link from item and split from last forward slash', () => {
     expect(
       buildUniquePromoId(
+        '',
         labelId,
         { locators: { assetUri: 'a/a/ab.b.b@c@c@c' } },
         4,
       ),
     ).toEqual('promo-test-group-id-aaabbbccc-5');
+  });
+
+  it('should return id of promo-link with contentType and URI if contentType exists for a "Top Stories" promo', () => {
+    expect(
+      buildUniquePromoId('top-stories', labelId, secondaryColumnNoAssetURI, 0),
+    ).toEqual('top-stories-promo-test-group-id-news-radiobulletin-1');
+  });
+
+  it('should return id of promo-link with contentType and URI if contentType exists for a "Features and Analysis" promo', () => {
+    expect(
+      buildUniquePromoId(
+        'features-and-analysis',
+        labelId,
+        secondaryColumnNoAssetURI,
+        0,
+      ),
+    ).toEqual('features-and-analysis-promo-test-group-id-news-radiobulletin-1');
   });
 });
