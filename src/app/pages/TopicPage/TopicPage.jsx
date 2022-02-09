@@ -5,10 +5,12 @@ import { string } from 'prop-types';
 import TopicGrid from './TopicGrid';
 
 const TopicPage = ({ pageData }) => {
-  return <>
-    <div>{pageData.title}</div>
-    <TopicGrid />
-  </>;
+  return (
+    <>
+      <div>{pageData.title}</div>
+      <TopicGrid />
+    </>
+  );
 };
 
 TopicPage.propTypes = {
