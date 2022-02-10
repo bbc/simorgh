@@ -1,6 +1,7 @@
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import { INTERNAL_SERVER_ERROR } from '#lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
+import { fixturePromos } from '#pages/TopicPage/fixtures';
 
 const logger = nodeLogger(__filename);
 
@@ -23,6 +24,7 @@ export default async ({ fetch, service }) => {
       status,
       pageData: {
         ...data,
+        promos: fixturePromos(),
       },
     };
   } catch (error) {
