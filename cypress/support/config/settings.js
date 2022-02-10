@@ -323,7 +323,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandTV: {
         environments: {
@@ -461,7 +461,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
     },
     specialFeatures: {
@@ -3150,7 +3150,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       errorPage404: {
         environments: {
@@ -3413,7 +3413,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       onDemandTV: { environments: undefined, smoke: false },
       topicPage: { environments: undefined, smoke: false },
@@ -4798,7 +4798,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: false,
+        smoke: true,
       },
       onDemandAudio: {
         environments: {
@@ -5195,7 +5195,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostWatchedPage: {
         environments: {
@@ -8807,7 +8807,7 @@ module.exports = () => ({
             enabled: true,
           },
         },
-        smoke: true,
+        smoke: false,
       },
       mostReadPage: {
         environments: {
