@@ -6,20 +6,16 @@ import getCerts from './certs';
 
 const logger = nodeLogger(__filename);
 
-let agentMemo = null;
-
 const getAgent = async () => {
-  const certsMemo = await getCerts();
-  const { certChain, key, ca, caPath, keyPath, certChainPath } = certsMemo;
+  const { certChain, key, ca } = await getCerts();
 
-  if (!ca) throw new Error(`No CA Bundle found at ${caPath}`);
-  if (!certChain)
-    throw new Error(`No Public Key Chain found at ${certChainPath}`);
-  if (!key) throw new Error(`No Private Key found at ${keyPath}`);
+  if (!ca) throw new Error(`No CA Bundle found`);
+  if (!certChain) throw new Error(`No Public Key Chain found`);
+  if (!key) throw new Error(`No Private Key found`);
 
   const agentOptions = { cert: certChain, key, ca };
-  agentMemo = new Agent(agentOptions);
-  return agentMemo;
+  const agent = new Agent(agentOptions);
+  return agent;
 };
 
 const fetchWithCerts = async (requestUrl, service) => {
