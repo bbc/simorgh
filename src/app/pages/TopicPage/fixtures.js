@@ -16,4 +16,5 @@ export const fixturePromos = () =>
     href: '#',
     imageSrc: fixtureCat(),
     imageAlt: 'evil monster',
+    timestamp: new Date().getTime() - rand(100000, 100000000),
   }));
