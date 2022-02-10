@@ -853,6 +853,7 @@ exports[`OnDemand Radio Page  should match snapshot for AMP 1`] = `
               <amp-img
                 alt="BBC News پښتو"
                 attribution=""
+                data-hero="true"
                 height="240"
                 layout="responsive"
                 src="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png"

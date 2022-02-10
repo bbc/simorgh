@@ -109,6 +109,7 @@ exports[`AmpIncludeContainer should render for a valid IDT2 include without fall
     <amp-img
       alt="image alt text"
       attribution=""
+      data-hero="true"
       height="1864"
       layout="responsive"
       src="https://foobar.com/includes/image/816"
