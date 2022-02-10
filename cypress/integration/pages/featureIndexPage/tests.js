@@ -12,11 +12,9 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
           cy.setCookie('ckns_policy', '111');
           cy.setCookie('ckns_explicit', '1');
           cy.reload();
-          cy.scrollTo('bottom', { duration: 4000 });
-          cy.scrollTo('top', { duration: 2000 });
           cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.matchImageSnapshot({ capture: 'fullPage' });
+          cy.matchImageSnapshot();
         } else {
           cy.log('Snapshot skipped in headed mode');
         }
