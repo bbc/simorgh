@@ -445,6 +445,7 @@ exports[`Story Promo Image should match image 1`] = `
 <amp-img
   alt="Senator Ahmad Lawan and Ali Ndume"
   attribution="Other"
+  data-hero="true"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/16D8E/production/_107328539_ninthnationalassemblypidgin_senate_reps_1080.jpg"
@@ -454,6 +455,7 @@ exports[`Story Promo Image should match image 1`] = `
   <amp-img
     alt="Senator Ahmad Lawan and Ali Ndume"
     attribution="Other"
+    data-hero="true"
     fallback=""
     height="549"
     layout="responsive"

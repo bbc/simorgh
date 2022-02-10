@@ -425,6 +425,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
 <amp-img
   alt="Чоловік з келихом"
   attribution="Getty Images"
+  data-hero="true"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/DE34/production/_111648865_1stimage.png"
@@ -435,6 +436,7 @@ exports[`AMP ukrainian/ukraine_in_russian IDX page Story Promo Image should matc
   <amp-img
     alt="Чоловік з келихом"
     attribution="Getty Images"
+    data-hero="true"
     fallback=""
     height="549"
     layout="responsive"
