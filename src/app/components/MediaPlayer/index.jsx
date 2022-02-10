@@ -60,36 +60,24 @@ const CanonicalMediaPlayerComponent = ({
 
   return (
     <StyledContainer portrait={portrait} data-e2e="media-player">
-      {placeholderActive ? (
-        <Placeholder
-          onClick={handlePlaceholderClick}
-          src={placeholderSrc}
-          srcset={placeholderSrcset}
-          service={service}
-          mediaInfo={mediaInfo}
-          noJsClassName={noJsClassName}
-          noJsMessage={noJsMessage}
-        />
-      ) : (
-        <Canonical
-          src={src}
-          placeholderSrcset={placeholderSrcset}
-          showPlaceholder={showPlaceholder}
-          title={title}
-          placeholderSrc={placeholderSrc}
-          service={service}
-          noJsMessage={noJsMessage}
-          showLoadingImage={showLoadingImage}
-          darkMode={darkMode}
-          onMediaInitialised={onMediaInitialised}
-          onMediaPlaying={onMediaPlaying}
-          onMediaPause={onMediaPause}
-          onMediaEnded={onMediaEnded}
-          onMediaPlaylistEnded={onMediaPlaylistEnded}
-          onMediaError={onMediaError}
-          acceptableEventOrigins={acceptableEventOrigins}
-        />
-      )}
+      <Canonical
+        src={src}
+        placeholderSrcset={placeholderSrcset}
+        showPlaceholder={showPlaceholder}
+        title={title}
+        placeholderSrc={placeholderSrc}
+        service={service}
+        noJsMessage={noJsMessage}
+        showLoadingImage={showLoadingImage}
+        darkMode={darkMode}
+        onMediaInitialised={onMediaInitialised}
+        onMediaPlaying={onMediaPlaying}
+        onMediaPause={onMediaPause}
+        onMediaEnded={onMediaEnded}
+        onMediaPlaylistEnded={onMediaPlaylistEnded}
+        onMediaError={onMediaError}
+        acceptableEventOrigins={acceptableEventOrigins}
+      />
     </StyledContainer>
   );
 };
