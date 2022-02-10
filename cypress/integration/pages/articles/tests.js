@@ -276,10 +276,6 @@ export const testsThatFollowSmokeTestConfig = ({
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Articles', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.setCookie('ckns_privacy', 'july2019');
-          cy.setCookie('ckns_policy', '111');
-          cy.setCookie('ckns_explicit', '1');
-          cy.reload();
           cy.document().its('fonts.status').should('equal', 'loaded');
 
           cy.scrollTo('bottom', { duration: 4000 });

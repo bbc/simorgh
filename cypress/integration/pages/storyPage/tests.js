@@ -136,8 +136,9 @@ export const testsThatFollowSmokeTestConfig = ({
     });
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Story Page', () => {
-        cy.scrollTo('bottom', { duration: 6000 });
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
+          cy.scrollTo('bottom', { duration: 6000 });
+          cy.scrollTo('top', { duration: 6000 });
           cy.document().its('fonts.status').should('equal', 'loaded');
 
           cy.matchImageSnapshot({ capture: 'fullPage' });
