@@ -1,20 +1,23 @@
 // render whatever data we get from getinitialdata i.e hello world
 
 import React from 'react';
-import { string } from 'prop-types';
+import { shape, arrayOf, string } from 'prop-types';
+import TopicGrid from './TopicGrid';
 
 const TopicPage = ({ pageData }) => {
-  return <div>{pageData.title}</div>;
+  return (
+    <>
+      <div>{pageData.title}</div>
+      <TopicGrid promos={pageData.promos} />
+    </>
+  );
 };
 
 TopicPage.propTypes = {
-  pageData: {},
-  title: string,
-};
-
-TopicPage.defaultProps = {
-  pageData: {},
-  title: '',
+  pageData: shape({
+    title: string.isRequired,
+    promos: arrayOf(shape({})).isRequired,
+  }).isRequired,
 };
 
 export default TopicPage;
