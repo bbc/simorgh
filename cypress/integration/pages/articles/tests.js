@@ -278,8 +278,8 @@ export const testsThatFollowSmokeTestConfig = ({
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
           cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.scrollTo('bottom', { duration: 4000 });
-          cy.scrollTo('top', { duration: 2000 });
+          cy.scrollTo('bottom', { duration: 6000 });
+          cy.scrollTo('top', { duration: 4000 });
           cy.matchImageSnapshot({
             capture: 'fullPage',
             blackout: ['[data-e2e="media-player"]'],

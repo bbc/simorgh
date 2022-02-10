@@ -117,7 +117,7 @@ export const testsThatFollowSmokeTestConfig = ({
           ) {
             cy.document().its('fonts.status').should('equal', 'loaded');
 
-            cy.matchImageSnapshot({ capture: 'fullPage' });
+            cy.matchImageSnapshot();
           } else {
             cy.log('Snapshot skipped in headed mode');
           }
