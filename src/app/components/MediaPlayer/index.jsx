@@ -60,6 +60,15 @@ const CanonicalMediaPlayerComponent = ({
 
   return (
     <StyledContainer portrait={portrait} data-e2e="media-player">
+      <Placeholder
+        onClick={handlePlaceholderClick}
+        src={placeholderSrc}
+        srcset={placeholderSrcset}
+        service={service}
+        mediaInfo={mediaInfo}
+        noJsClassName={noJsClassName}
+        noJsMessage={noJsMessage}
+      />
       <Canonical
         src={src}
         placeholderSrcset={placeholderSrcset}
@@ -78,6 +87,7 @@ const CanonicalMediaPlayerComponent = ({
         onMediaError={onMediaError}
         acceptableEventOrigins={acceptableEventOrigins}
       />
+      )}
     </StyledContainer>
   );
 };
