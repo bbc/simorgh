@@ -58,6 +58,27 @@ const Canonical = ({
     ${showPlaceholder ? backgroundStyle : null}
   `;
 
+  useEffect(() => {
+    const handler = e => {
+      if (!isValidEvent(e, acceptableEventOrigins)) return;
+
+      const callback = {
+        mediaInitialised: onMediaInitialised,
+        mediaPlaying: onMediaPlaying,
+        mediaPause: onMediaPause,
+        mediaEnded: onMediaEnded,
+        mediaPlaylistEnded: onMediaPlaylistEnded,
+        mediaError: onMediaError,
+      }[e.data.event];
+
+      // lgtm[js/unvalidated-dynamic-method-call]
+      if (callback) callback(e);
+    };
+
+    window.addEventListener('message', handler);
+    return () => window.removeEventListener('message', handler);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <>
       <StyledIframe
@@ -68,9 +89,11 @@ const Canonical = ({
         gesture="media"
         allowFullScreen
       />
-
-      <ImagePlaceholder ratio={56.25} darkMode={darkMode} />
-
+      {showLoadingImage && (
+        <LoadingImageWrapper>
+          <ImagePlaceholder ratio={56.25} darkMode={darkMode} />
+        </LoadingImageWrapper>
+      )}
       <noscript>
         <Message
           service={service}
