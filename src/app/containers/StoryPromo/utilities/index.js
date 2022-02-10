@@ -25,7 +25,12 @@ export const getHeadingTagOverride = ({ pageType, isContentTypeGuide }) => {
 
 export const isPgl = item => pathOr(null, ['cpsType'], item) === 'PGL';
 
-export const buildUniquePromoId = (promoGroupId, promoItem, promoIndex = 0) => {
+export const buildUniquePromoId = ({
+  sectionType,
+  promoGroupId,
+  promoItem,
+  promoIndex = 0,
+}) => {
   const assetUri = pathOr('', ['locators', 'assetUri'], promoItem);
   const uri = pathOr('', ['uri'], promoItem);
   const asset = assetUri || uri;
@@ -33,7 +38,14 @@ export const buildUniquePromoId = (promoGroupId, promoItem, promoIndex = 0) => {
   const assetId = assetParts[assetParts.length - 1].replace(/\W/g, '');
   const contentType = pathOr('', ['contentType'], promoItem);
 
-  return ['promo', promoGroupId, assetId, contentType, promoIndex + 1]
+  return [
+    sectionType,
+    'promo',
+    promoGroupId,
+    assetId,
+    contentType,
+    promoIndex + 1,
+  ]
     .filter(Boolean)
     .join('-')
     .toLowerCase();
