@@ -68,6 +68,17 @@ const Canonical = ({
         gesture="media"
         allowFullScreen
       />
+
+      <ImagePlaceholder ratio={56.25} darkMode={darkMode} />
+
+      <noscript>
+        <Message
+          service={service}
+          message={noJsMessage}
+          placeholderSrc={placeholderSrc}
+          placeholderSrcset={placeholderSrcset}
+        />
+      </noscript>
     </>
   );
 };
