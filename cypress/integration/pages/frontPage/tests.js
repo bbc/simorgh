@@ -64,7 +64,7 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
           cy.setCookie('ckns_policy', '111');
           cy.setCookie('ckns_explicit', '1');
           cy.reload();
-          cy.scrollTo('centre', { duration: 4000 });
+          cy.scrollTo('center', { duration: 4000 });
           cy.scrollTo('bottom', { duration: 6000 });
           cy.scrollTo('top', { duration: 6000 });
           cy.document().its('fonts.status').should('equal', 'loaded');
