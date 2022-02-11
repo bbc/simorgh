@@ -167,7 +167,7 @@
         "overtyped":"Mas noticias"
       },
       "locators":{
-        "assetUri":"/mundo/vert-cap-23038373",
+        "assetUri":"/mundo/articles/c45965g63xno",
         "cpsUrn":"urn:bbc:content:assetUri:mundo/vert-cap-23038373",
         "assetId":"23038373"
       },
@@ -208,7 +208,7 @@
         "headline":"Cómo Venezuela se metió de lleno en la campaña electoral de España"
       },
       "locators":{
-        "assetUri":"/mundo/noticias-23048155",
+        "assetUri":"/mundo/articles/c45965g63xno",
         "cpsUrn":"urn:bbc:content:assetUri:mundo/noticias-23048155",
         "assetId":"23048155"
       },
@@ -239,7 +239,7 @@
         "headline":"Cómo usar Google Maps sin conexión a internet"
       },
       "locators":{
-        "assetUri":"/mundo/blog-de-los-editores-23038590",
+        "assetUri":"/mundo/articles/c45965g63xno",
         "cpsUrn":"urn:bbc:content:assetUri:mundo/blog-de-los-editores-23038590",
         "assetId":"23038590"
       },
@@ -291,7 +291,7 @@
         "headline":"El colorido encanto del arte callejero chilango 17"
       },
       "locators":{
-        "assetUri":"/mundo/internacional-23038380",
+        "assetUri":"/mundo/articles/c45965g63xno",
         "cpsUrn":"urn:bbc:content:assetUri:mundo/internacional-23038380",
         "assetId":"23038380"
       },
