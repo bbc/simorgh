@@ -22,6 +22,8 @@ import ampOnlyServices from './ampOnlyServices';
 import visitPage from './visitPage';
 import getAmpUrl from './getAmpUrl';
 
+require('dotenv').config();
+
 // This function takes all types of tests we have and runs in this series of steps with the fewest possible page visits
 
 // Pass arguments in from each page's index.js file
@@ -49,11 +51,16 @@ const runTestsForPage = ({
           before(() => {
             Cypress.env('currentPath', currentPath);
 
+            const sdkKeyOptimizely =
+              Cypress.env('APP_ENV') === 'live'
+                ? '4Rje1JY7YY1FhaiHJ88Zi'
+                : 'LptPKDnHyAFu9V12s5xCz';
+
             if (pageType === 'articles') {
               cy.intercept(
                 {
                   method: 'GET',
-                  pathname: '/datafiles/LptPKDnHyAFu9V12s5xCz.json',
+                  pathname: `/datafiles/${sdkKeyOptimizely}.json`,
                 },
                 { statusCode: 404 },
               );
@@ -62,7 +69,7 @@ const runTestsForPage = ({
               cy.intercept(
                 {
                   method: 'GET',
-                  pathname: '/datafiles/LptPKDnHyAFu9V12s5xCz.json',
+                  pathname: `/datafiles/${sdkKeyOptimizely}.json`,
                 },
                 { foo: '123' },
               );

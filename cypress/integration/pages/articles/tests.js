@@ -188,7 +188,7 @@ export const testsThatFollowSmokeTestConfig = ({
         });
       });
     });
-    describe(`STY Secondary Column`, () => {
+    describe(`Articles Secondary Column`, () => {
       it('should have at least one story promo in Features', () => {
         if (service !== 'scotland') {
           const secondaryColumnUrl =

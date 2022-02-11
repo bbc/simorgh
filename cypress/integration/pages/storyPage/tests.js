@@ -54,20 +54,24 @@ export const testsThatFollowSmokeTestConfig = ({
     });
     describe(`STY Secondary Column`, () => {
       it('should have at least one story promo in Features', () => {
-        cy.log(getServiceWithVariantName(service));
-        const secondaryColumnUrl =
-          variant === 'default'
-            ? `/${appConfig[service].default.service}/sty-secondary-column.json`
-            : `/${getServiceWithVariantName(
-                service,
-              )}/sty-secondary-column/${variant}.json`;
-        cy.request(secondaryColumnUrl).then(({ body }) => {
-          if (body.features) {
-            cy.get('[data-e2e=features-analysis-heading]').within(() => {
-              cy.get('[data-e2e=story-promo]').first().should('be.visible');
-            });
-          }
-        });
+        cy.log(service);
+        if (service !== 'newsround' && service !== 'news') {
+          const secondaryColumnUrl =
+            variant === 'default'
+              ? `/${appConfig[service].default.service}/sty-secondary-column.json`
+              : `/${getServiceWithVariantName(
+                  service,
+                )}/sty-secondary-column/${variant}.json`;
+          cy.request(secondaryColumnUrl).then(({ body }) => {
+            if (body.features) {
+              cy.get('[data-e2e=features-analysis-heading]').within(() => {
+                cy.get('[data-e2e=story-promo]').first().should('be.visible');
+              });
+            }
+          });
+        } else {
+          cy.log('No features section on newsround or news');
+        }
       });
       it.skip('should render podcast promo if in json and should navigate to correct podcast page', () => {
         cy.log(service);
