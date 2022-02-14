@@ -1,3 +1,5 @@
+import isAmp from '../../../support/helpers/isAmp';
+
 export const testsThatAlwaysRun = ({ service, pageType }) => {
   describe(`No testsToAlwaysRun to run for ${service} ${pageType}`, () => {});
 };
@@ -8,15 +10,18 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) => {
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Index Page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.setCookie('ckns_privacy', 'july2019');
-          cy.setCookie('ckns_policy', '111');
-          cy.setCookie('ckns_explicit', '1');
-          cy.reload();
-          cy.scrollTo('bottom', { duration: 6000 });
-          cy.scrollTo('top', { duration: 6000 });
-          cy.document().its('fonts.status').should('equal', 'loaded');
-
-          cy.matchImageSnapshot({ capture: 'fullPage' });
+          if (!isAmp()) {
+            cy.setCookie('ckns_privacy', 'july2019');
+            cy.setCookie('ckns_policy', '111');
+            cy.setCookie('ckns_explicit', '1');
+            cy.reload();
+            cy.scrollTo('bottom', { duration: 6000 });
+            cy.scrollTo('top', { duration: 6000 });
+            cy.document().its('fonts.status').should('equal', 'loaded');
+            cy.matchImageSnapshot({ capture: 'fullPage' });
+          } else {
+            cy.matchImageSnapshot();
+          }
         } else {
           cy.log('Snapshot skipped in headed mode');
         }

@@ -1,3 +1,4 @@
+import isAmp from '../../../support/helpers/isAmp';
 // Limiting to one service for now
 const serviceHasPublishedPromo = service => service === 'arabic';
 
@@ -60,8 +61,8 @@ export const testsThatFollowSmokeTestConfig = ({ service, pageType }) =>
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Front page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          // arabic and persian front pages are very deep and are having problems with lazy loading
-          if (service !== 'arabic' && service !== 'persian') {
+          // arabic and persian front pages, and amp pages, are very deep and are having problems with lazy loading
+          if (service !== 'arabic' && service !== 'persian' && !isAmp()) {
             cy.setCookie('ckns_privacy', 'july2019');
             cy.setCookie('ckns_policy', '111');
             cy.setCookie('ckns_explicit', '1');
