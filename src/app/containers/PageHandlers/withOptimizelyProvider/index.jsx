@@ -24,7 +24,7 @@ const withOptimizelyProvider = Component => {
   return props => {
     const { service } = useContext(ServiceContext);
     const isStoryBook = process.env.STORYBOOK;
-    const disableOptimizely = isStoryBook || isLive();
+    const disableOptimizely = isStoryBook;
     let mobile;
 
     const getUserId = () => {
@@ -49,7 +49,7 @@ const withOptimizelyProvider = Component => {
       <OptimizelyProvider
         optimizely={optimizely}
         isServerSide
-        timeout={500}
+        timeout={1000}
         user={{
           id: getUserId(),
           attributes: {
