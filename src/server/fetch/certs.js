@@ -19,9 +19,13 @@ const getCert = async () => {
       keyPath,
     });
 
+    if (!ca) throw new Error(`No valid CA Bundle found`);
+    if (!certChain) throw new Error(`No valid Public Key Chain found`);
+    if (!key) throw new Error(`No valid Private Key found`);
+
     return { ca, certChain, key };
   } catch (error) {
-    return { error };
+    throw new Error(`Error loading certificate: ${error}`);
   }
 };
 

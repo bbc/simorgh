@@ -1,27 +1,9 @@
-import { Agent } from 'https';
 import fetch from 'node-fetch';
 import nodeLogger from '#lib/logger.node';
 import { BFF_FETCH_ERROR } from '#lib/logger.const';
-import getCerts from './certs';
+import getAgent from './agent';
 
 const logger = nodeLogger(__filename);
-
-let agentMemo = null;
-
-const getAgent = async () => {
-  if (agentMemo) {
-    return agentMemo;
-  }
-  const { certChain, key, ca } = await getCerts();
-
-  if (!ca) throw new Error(`No CA Bundle found`);
-  if (!certChain) throw new Error(`No Public Key Chain found`);
-  if (!key) throw new Error(`No Private Key found`);
-
-  const agentOptions = { cert: certChain, key, ca };
-  agentMemo = new Agent(agentOptions);
-  return agentMemo;
-};
 
 const fetchWithCerts = async (requestUrl, service) => {
   const agent = await getAgent();
