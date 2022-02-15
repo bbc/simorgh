@@ -9,10 +9,6 @@ jest.mock('https', () => ({
 jest.mock('./certs');
 
 describe('Agent', () => {
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
   it('should only call for the certificate once, then store in memo', async () => {
     getCerts.mockReturnValue({
       ca: 'someCa',
