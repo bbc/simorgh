@@ -3,6 +3,7 @@ import { withServicesKnob } from '@bbc/psammead-storybook-helpers';
 import { withKnobs } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { ServiceContextProvider } from '#contexts/ServiceContext';
+import { ToggleContextProvider } from '#contexts/ToggleContext';
 import ScrollablePromo from '.';
 import {
   threeLinks,
@@ -19,11 +20,13 @@ const BackGround = styled.div`
 `;
 // eslint-disable-next-line react/prop-types
 const ScrollablePromoComponent = ({ data, service, script, dir }) => (
-  <BackGround>
-    <ServiceContextProvider service={service} script={script} dir={dir}>
-      <ScrollablePromo blocks={data} />
-    </ServiceContextProvider>
-  </BackGround>
+  <ToggleContextProvider>
+    <BackGround>
+      <ServiceContextProvider service={service} script={script} dir={dir}>
+        <ScrollablePromo blocks={data} />
+      </ServiceContextProvider>
+    </BackGround>
+  </ToggleContextProvider>
 );
 
 export default {
