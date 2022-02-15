@@ -141,11 +141,17 @@ export const testsThatFollowSmokeTestConfig = ({
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Story Page', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.scrollTo('bottom', { duration: 6000 });
-          cy.scrollTo('top', { duration: 6000 });
-          cy.document().its('fonts.status').should('equal', 'loaded');
+          cy.url().then(url => {
+            if (!url.includes('.amp')) {
+              cy.scrollTo('bottom', { duration: 6000 });
+              cy.scrollTo('top', { duration: 6000 });
+              cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.matchImageSnapshot({ capture: 'fullPage' });
+              cy.matchImageSnapshot({ capture: 'fullPage' });
+            } else {
+              cy.matchImageSnapshot();
+            }
+          });
         } else {
           cy.log('Snapshot skipped in headed mode');
         }
