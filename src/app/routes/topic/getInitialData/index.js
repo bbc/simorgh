@@ -23,7 +23,7 @@ export default async ({ fetch, service }) => {
     return {
       status,
       pageData: {
-        ...data,
+        title: 'Hello world',
         promos: fixturePromos(),
       },
     };
