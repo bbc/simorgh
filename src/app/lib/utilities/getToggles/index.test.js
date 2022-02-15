@@ -14,14 +14,17 @@ const mockResponse = {
 };
 fetchMock.mock(mockUrl, mockResponse);
 
-describe('getToggles', () => {
+describe.only('getToggles', () => {
   beforeEach(async () => {
     jest.resetModules();
     await import('#testHelpers/loggerMock');
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
   });
 
-  afterEach(fetchMock.resetHistory);
+  afterEach(() => {
+    jest.resetAllMocks();
+    fetchMock.resetHistory();
+  });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
     const mockDefaultToggles = {
@@ -62,6 +65,7 @@ describe('getToggles', () => {
           url: mockUrl,
         },
       );
+
       expect(toggles).toEqual({
         ...mockDefaultToggles.local,
         ...mockResponse.toggles,
@@ -143,6 +147,26 @@ describe('getToggles', () => {
         url: mockServiceUrl,
       });
       expect(toggles).toEqual(mockDefaultToggles.local);
+    });
+
+    it.only('should call hrtime and logger getToggles in called on server', async () => {
+      process.hrtime = jest.fn();
+      const nodeLogger = await import('#testHelpers/loggerMock');
+      const getToggles = await import('.');
+      await getToggles.default('mundo');
+
+      expect(process.hrtime).toHaveBeenCalledTimes(2);
+      expect(nodeLogger.default.info).toHaveBeenCalledTimes(2);
+    });
+
+    it('should call hrtime and logger getToggles in called on server', async () => {
+      const nodeLogger = await import('#testHelpers/loggerMock');
+      const getToggles = await import('.');
+      process.hrtime = jest.fn().mockImplementation(() => {});
+      await getToggles.default('mundo');
+
+      expect(process).toHaveBeenCalledTimes(0);
+      expect(nodeLogger.default.info).toHaveBeenCalledTimes(0);
     });
   });
 });
