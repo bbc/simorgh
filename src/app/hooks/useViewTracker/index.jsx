@@ -72,7 +72,16 @@ const useViewTracker = (props = {}) => {
 
         if (shouldSendEvent) {
           if (optimizely) {
-            optimizely.track('component_views');
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`viewed_${componentName}`]: true,
+            };
+
+            optimizely.track(
+              'component_views',
+              optimizely.user.id,
+              overrideAttributes,
+            );
           }
 
           sendEventBeacon({

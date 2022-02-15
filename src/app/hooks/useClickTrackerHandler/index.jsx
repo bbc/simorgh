@@ -59,7 +59,16 @@ const useClickTrackerHandler = (props = {}) => {
           event.preventDefault();
 
           if (optimizely) {
-            optimizely.track('component_clicks');
+            const overrideAttributes = {
+              ...optimizely.user.attributes,
+              [`clicked_${componentName}`]: true,
+            };
+
+            optimizely.track(
+              'component_clicks',
+              optimizely.user.id,
+              overrideAttributes,
+            );
           }
 
           try {
