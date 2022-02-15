@@ -31,16 +31,18 @@ const fetchPageData = async ({
   path,
   timeout,
   shouldLogFetchTime = !onClient(),
+  options,
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
-  const fetchOptions = {
+  const defaultOptions = {
     headers: {
       'User-Agent': 'Simorgh/ws-web-rendering',
     },
     timeout: effectiveTimeout,
   };
+  const fetchOptions = options || defaultOptions;
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,

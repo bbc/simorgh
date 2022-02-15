@@ -2,28 +2,27 @@ import { BFF_FETCH_ERROR } from '#lib/logger.const';
 import { INTERNAL_SERVER_ERROR } from '#lib/statusCodes.const';
 import nodeLogger from '#lib/logger.node';
 import { fixturePromos } from '#pages/TopicPage/fixtures';
+import fetchPageData from '../../utils/fetchPageData';
 
 const logger = nodeLogger(__filename);
 
-const validateResponse = async response => {
-  const { status } = response;
-  if (response.status === 200) {
-    const { data } = await response.json();
-    return { data, status };
-  }
-
-  return null;
-};
-
-export default async ({ fetch, service }) => {
+export default async ({ getAgent, service }) => {
+  const agent = await getAgent();
+  const options = {
+    method: 'GET',
+    agent,
+    headers: {
+      Accept: 'application/json',
+    },
+  };
   try {
-    const fablPath = process.env.BFF_PATH;
-    const response = await fetch(fablPath, service);
-    const { status, data } = await validateResponse(response);
+    const path = process.env.BFF_PATH;
+    // const response = await fetch(fablPath, service);
+    const { status, json } = await fetchPageData({ path, options });
     return {
       status,
       pageData: {
-        ...data,
+        ...json,
         promos: fixturePromos(),
       },
     };

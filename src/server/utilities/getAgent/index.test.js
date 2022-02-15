@@ -1,5 +1,5 @@
 import { Agent } from 'https';
-import getAgent from './agent';
+import getAgent from '.';
 import getCerts from './certs';
 
 jest.mock('https', () => ({
