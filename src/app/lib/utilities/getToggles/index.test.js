@@ -14,7 +14,7 @@ const mockResponse = {
 };
 fetchMock.mock(mockUrl, mockResponse);
 
-describe.only('getToggles', () => {
+describe('getToggles', () => {
   beforeEach(async () => {
     jest.resetModules();
     await import('#testHelpers/loggerMock');
@@ -56,6 +56,8 @@ describe.only('getToggles', () => {
     it('should return the merged local and remote toggles and log that this happened', async () => {
       const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
+      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
+
       const toggles = await getToggles.default('mundo');
 
       expect(nodeLogger.default.info).toHaveBeenCalledWith(
@@ -149,23 +151,53 @@ describe.only('getToggles', () => {
       expect(toggles).toEqual(mockDefaultToggles.local);
     });
 
-    it.only('should call hrtime and logger getToggles in called on server', async () => {
-      process.hrtime = jest.fn();
+    it('should calculate and log response time of toggles call when called on server', async () => {
       const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
+      const hrtTimeSpy = jest
+        .spyOn(process, 'hrtime')
+        .mockReturnValue([10, 1000]);
+      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
+      const expectedOptions = {
+        headers: {
+          origin: 'http://localhost',
+        },
+        timeout: NaN,
+      };
+
       await getToggles.default('mundo');
 
-      expect(process.hrtime).toHaveBeenCalledTimes(2);
+      expect(fetchMock.calls().length).toBe(1);
+      const [url, options] = fetchMock.calls()[0];
+      expect(url).toEqual(
+        'https://mock-config-endpoint/?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
+      );
+      expect(options).toStrictEqual(expectedOptions);
+      expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
       expect(nodeLogger.default.info).toHaveBeenCalledTimes(2);
     });
 
-    it('should call hrtime and logger getToggles in called on server', async () => {
+    it('should not calculate and log response when running on client', async () => {
       const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
-      process.hrtime = jest.fn().mockImplementation(() => {});
+      const hrtTimeSpy = jest.spyOn(process, 'hrtime');
+      jest.spyOn(window, 'document', 'get').mockReturnValue({});
+      const expectedOptions = {
+        headers: {
+          origin: 'http://localhost',
+        },
+        timeout: NaN,
+      };
+
       await getToggles.default('mundo');
 
-      expect(process).toHaveBeenCalledTimes(0);
+      expect(fetchMock.calls().length).toBe(1);
+      const [url, options] = fetchMock.calls()[0];
+      expect(url).toEqual(
+        'https://mock-config-endpoint/?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
+      );
+      expect(options).toStrictEqual(expectedOptions);
+      expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
       expect(nodeLogger.default.info).toHaveBeenCalledTimes(0);
     });
   });
