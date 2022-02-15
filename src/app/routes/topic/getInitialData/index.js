@@ -17,7 +17,6 @@ export default async ({ getAgent, service }) => {
   };
   try {
     const path = process.env.BFF_PATH;
-    // const response = await fetch(fablPath, service);
     const { status, json } = await fetchPageData({ path, options });
     return {
       status,
