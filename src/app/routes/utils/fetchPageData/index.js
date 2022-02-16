@@ -31,7 +31,7 @@ const fetchPageData = async ({
   path,
   timeout,
   shouldLogFetchTime = !onClient(),
-  options,
+  agent,
   ...loggerArgs
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
@@ -41,7 +41,7 @@ const fetchPageData = async ({
       'User-Agent': 'Simorgh/ws-web-rendering',
     },
     timeout: effectiveTimeout,
-    ...options,
+    ...(agent && { agent }),
   };
 
   logger.info(DATA_REQUEST_RECEIVED, {
