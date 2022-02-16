@@ -103,10 +103,9 @@ describe('Image', () => {
     it('should render an image with a sizes attribute', () => {
       render(<ImageContainer sizes="100vw" {...data} />);
 
-      const imgEl = screen.getByAltText(
-        'Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17.',
-      );
-      const sizesAttribute = imgEl.getAttribute('sizes');
+      const sourceEl = document.querySelector('source');
+
+      const sizesAttribute = sourceEl.getAttribute('sizes');
 
       expect(sizesAttribute).toBe('100vw');
     });
