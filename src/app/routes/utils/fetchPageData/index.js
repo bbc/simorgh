@@ -36,13 +36,13 @@ const fetchPageData = async ({
 }) => {
   const url = path.startsWith('http') ? path : getUrl(path);
   const effectiveTimeout = timeout || PRIMARY_DATA_TIMEOUT;
-  const defaultOptions = {
+  const fetchOptions = {
     headers: {
       'User-Agent': 'Simorgh/ws-web-rendering',
     },
     timeout: effectiveTimeout,
+    ...options,
   };
-  const fetchOptions = options || defaultOptions;
 
   logger.info(DATA_REQUEST_RECEIVED, {
     data: url,

@@ -11,9 +11,6 @@ export default async ({ getAgent, service }) => {
   const options = {
     method: 'GET',
     agent,
-    headers: {
-      Accept: 'application/json',
-    },
   };
   try {
     const path = process.env.BFF_PATH;
