@@ -39,7 +39,6 @@ describe('AudioPlayer blocks OnDemandHeading', () => {
       'https://ichef.bbci.co.uk/images/ic/128x128/p063j1dv.jpg',
     );
     expect(img.alt).toEqual('BBC News پښتو');
-    expect(img.sizes).toEqual('(min-width: 1008px) 228px, 30vw');
   });
 
   it('should correctly pass through an alt attribute', () => {
