@@ -1912,9 +1912,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bbc/psammead-image@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@bbc/psammead-image@npm:3.1.1"
+"@bbc/psammead-image@npm:3.1.2":
+  version: 3.1.2
+  resolution: "@bbc/psammead-image@npm:3.1.2"
   dependencies:
     ramda: ^0.27.1
   peerDependencies:
@@ -1922,7 +1922,7 @@ __metadata:
     "@emotion/styled": ^11.0.0
     prop-types: ^15.6.2
     react: ">=16.9.0"
-  checksum: 5f4125dc50bc2c968956afac0ecd49704d527a61fe46fc12aa5fb6174dce070179c9feaa3a4604402301452c77f8ef8f2d7cbef6cd9fb6a980a12fc2cf00bfcf
+  checksum: 7ccac39cc587be197715662954a010c56c7a80fdbdd9663ad9df76b01a2946698fe9b4ee3de2e7119832b1efd812665805d7d968d30dcf546c3f4d7f9fad993e
   languageName: node
   linkType: hard
 
@@ -18958,7 +18958,7 @@ __metadata:
     "@bbc/psammead-grid": 3.1.14
     "@bbc/psammead-heading-index": 3.0.28
     "@bbc/psammead-headings": 5.0.28
-    "@bbc/psammead-image": 3.1.1
+    "@bbc/psammead-image": 3.1.2
     "@bbc/psammead-image-placeholder": 3.4.12
     "@bbc/psammead-inline-link": 3.0.26
     "@bbc/psammead-live-label": 2.0.33
