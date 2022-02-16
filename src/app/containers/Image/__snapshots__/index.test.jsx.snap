@@ -804,7 +804,6 @@ exports[`Image with data should render an image with alt text and caption 1`] = 
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />
@@ -1186,7 +1185,6 @@ exports[`Image with data should render an image with alt text and offscreen copy
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/cpsprodpb/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />
@@ -1561,7 +1559,6 @@ exports[`Image with data should render an image with other originCode - this wou
                 alt="Map of the UK displaying Syrian refugees and asylum seekers per 10000 population. Ranges from 0 to 17."
                 class="emotion-12 emotion-13 emotion-14"
                 height="420"
-                sizes="100vw"
                 src="https://ichef.bbci.co.uk/news/640/other/439A/production/_100960371_syrians_and_asylum_v2-nc.png"
                 width="640"
               />

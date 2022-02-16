@@ -1017,7 +1017,6 @@ HTMLCollection [
                       alt="Image Alt text 1"
                       class="emotion-32 emotion-33 emotion-34"
                       height="1152"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                       width="2048"
                     />
@@ -2366,7 +2365,6 @@ exports[`IndexPageSection Container snapshots should render correctly for canoni
                       alt="Image Alt text 1"
                       class="emotion-34 emotion-35 emotion-36"
                       height="1152"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image1.jpg"
                       width="2048"
                     />
@@ -4275,7 +4273,6 @@ exports[`IndexPageSection Container snapshots should render with only one item 1
                   alt="Image Alt text 1"
                   class="emotion-28 emotion-29 emotion-30"
                   height="1152"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/0A06/production/image.jpg"
                   width="2048"
                 />

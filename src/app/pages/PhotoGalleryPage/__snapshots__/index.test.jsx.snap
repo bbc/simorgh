@@ -1174,7 +1174,6 @@ exports[`Photo Gallery Page should not show the pop-out timestamp when allowDate
                             alt="Masaraa Aaxee Minilik"
                             class="emotion-24 emotion-25 emotion-26"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                             width="976"
                           />
@@ -3251,7 +3250,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with about t
                             alt="Masaraa Aaxee Minilik"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/CB33/production/_97491025_img_1060.jpg"
                             width="976"
                           />
@@ -5780,7 +5778,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with all CPS
                             alt="Bole festival for Pitakwa"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/100A1/production/_108179656_fe0d4dce-1aa8-440b-bce8-ca42985b3791.jpg"
                             width="976"
                           />
@@ -7586,7 +7583,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with no onwa
                             alt="Bill Clinton"
                             class="emotion-29 emotion-30 emotion-31"
                             height="549"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsdevpb/1840E/test/_63724399_clinton.jpg"
                             width="976"
                           />
@@ -10063,7 +10059,6 @@ exports[`Photo Gallery Page snapshots should match snapshot for PGL with non-CPS
                             alt="AXC parlamentinin birinci iclasının açılışı"
                             class="emotion-29 emotion-30 emotion-31"
                             height="650"
-                            sizes="(min-width: 1008px) 760px, 100vw"
                             src="https://ichef.test.bbci.co.uk/news/640/cpsprodpb/1DBC/production/_101621670_0-158827.jpg"
                             width="976"
                           />

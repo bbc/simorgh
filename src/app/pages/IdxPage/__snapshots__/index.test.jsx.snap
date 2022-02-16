@@ -2445,7 +2445,6 @@ exports[`IdxPage - Persian Snapshots should render a persian idx page correctly 
                       alt="هبت الله آخوندزاده"
                       class="emotion-32 emotion-33 emotion-34"
                       height="351"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
                       width="624"
                     />
@@ -6008,7 +6007,6 @@ exports[`IdxPage - Ukrainian Snapshots should render a ukrainian idx page correc
                       alt="трамвай"
                       class="emotion-32 emotion-33 emotion-34"
                       height="549"
-                      sizes="(max-width: 600px) 100vw, (max-width: 1008px) 50vw, 496px"
                       src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1667D/production/_112337719_gettyimages-1210623351.jpg"
                       width="976"
                     />
