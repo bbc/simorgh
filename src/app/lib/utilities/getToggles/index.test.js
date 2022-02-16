@@ -158,21 +158,10 @@ describe('getToggles', () => {
         .spyOn(process, 'hrtime')
         .mockReturnValue([10, 1000]);
       jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
-      const expectedOptions = {
-        headers: {
-          origin: 'http://localhost',
-        },
-        timeout: NaN,
-      };
 
       await getToggles.default('mundo');
 
       expect(fetchMock.calls().length).toBe(1);
-      const [url, options] = fetchMock.calls()[0];
-      expect(url).toEqual(
-        'https://mock-config-endpoint/?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
-      );
-      expect(options).toStrictEqual(expectedOptions);
       expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
       expect(nodeLogger.default.info).toHaveBeenCalledTimes(2);
     });
@@ -182,21 +171,10 @@ describe('getToggles', () => {
       const getToggles = await import('.');
       const hrtTimeSpy = jest.spyOn(process, 'hrtime');
       jest.spyOn(window, 'document', 'get').mockReturnValue({});
-      const expectedOptions = {
-        headers: {
-          origin: 'http://localhost',
-        },
-        timeout: NaN,
-      };
 
       await getToggles.default('mundo');
 
       expect(fetchMock.calls().length).toBe(1);
-      const [url, options] = fetchMock.calls()[0];
-      expect(url).toEqual(
-        'https://mock-config-endpoint/?application=simorgh&service=mundo&__amp_source_origin=http://localhost',
-      );
-      expect(options).toStrictEqual(expectedOptions);
       expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
       expect(nodeLogger.default.info).toHaveBeenCalledTimes(0);
     });

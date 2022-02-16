@@ -12,7 +12,7 @@ import getOriginContext from '#contexts/RequestContext/getOriginContext';
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
-const logResponseTime = async (url, service, timeout) => {
+const logResponseTime = async (url, origin, service, timeout) => {
   const isBrowser =
     typeof window !== 'undefined' && typeof window.document !== 'undefined';
 
@@ -54,7 +54,7 @@ const getToggles = async (service, cache) => {
   }
 
   try {
-    const response = await logResponseTime(url, service, timeout);
+    const response = await logResponseTime(url, origin, service, timeout);
 
     if (!response.ok) {
       logger.error(CONFIG_FETCH_ERROR, {
