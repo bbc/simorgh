@@ -8,13 +8,13 @@ import {
   TOGGLE_API_RESPONSE_TIME,
 } from '#lib/logger.const';
 import getOriginContext from '#contexts/RequestContext/getOriginContext';
-import { isNil } from 'ramda';
 
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
 const logResponseTime = async (url, origin, service, timeout) => {
-  const isBrowser = !isNil(window) && !isNil(window.document);
+  const isBrowser =
+    typeof window !== 'undefined' && typeof window.document !== 'undefined';
 
   if (isBrowser) {
     return fetch(url, { headers: { origin }, timeout });
