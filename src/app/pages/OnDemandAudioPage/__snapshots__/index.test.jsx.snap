@@ -1791,6 +1791,7 @@ exports[`OnDemand Radio Page  should match snapshot for Canonical 1`] = `
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b23c8.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b23c8.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b23c8.png 480w"
                   type="image/png"
                 />
@@ -2695,6 +2696,7 @@ exports[`OnDemand Radio Page  should show the 'content not yet available' messag
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
                   type="image/png"
                 />
@@ -3563,6 +3565,7 @@ exports[`OnDemand Radio Page  should show the expired content message if episode
                 class="emotion-29 emotion-30"
               >
                 <source
+                  sizes="(min-width: 1008px) 228px, 30vw"
                   srcset="https://ichef.bbci.co.uk/images/ic/128x128/p08b8lzc.png 128w,https://ichef.bbci.co.uk/images/ic/240x240/p08b8lzc.png 240w,https://ichef.bbci.co.uk/images/ic/480x480/p08b8lzc.png 480w"
                   type="image/png"
                 />

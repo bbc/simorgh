@@ -2498,10 +2498,12 @@ exports[`Story Page should not show the pop-out timestamp when allowDateStamp is
                               class="emotion-31 emotion-32"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -6488,10 +6490,12 @@ exports[`Story Page should render correctly when the secondary column data is no
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />
@@ -10048,10 +10052,12 @@ exports[`Story Page snapshots should match snapshot for STY 1`] = `
                               class="emotion-36 emotion-37"
                             >
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg.webp 800w"
                                 type="image/webp"
                               />
                               <source
+                                sizes="(min-width: 1008px) 645px, 100vw"
                                 srcset="https://ichef.test.bbci.co.uk/news/240/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 240w, https://ichef.test.bbci.co.uk/news/320/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 320w, https://ichef.test.bbci.co.uk/news/480/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 480w, https://ichef.test.bbci.co.uk/news/624/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 624w, https://ichef.test.bbci.co.uk/news/800/cpsdevpb/6ACE/test/_63724372_gettyimages-1098075358.jpg 800w"
                                 type="image/jpeg"
                               />

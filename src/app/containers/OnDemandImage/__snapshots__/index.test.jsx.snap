@@ -67,6 +67,7 @@ exports[`AudioPlayer blocks OnDemandHeading should render correctly 1`] = `
         class="emotion-4 emotion-5"
       >
         <source
+          sizes="(min-width: 1008px) 228px, 30vw"
           srcset="https://mock-url 128w,https://mock-url 240w,https://mock-url 480w"
         />
         <img
