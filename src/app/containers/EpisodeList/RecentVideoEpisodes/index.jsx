@@ -107,7 +107,6 @@ const RecentVideoEpisodes = ({ masterBrand, episodes }) => {
                     height="9"
                     src={episode.image}
                     alt={episode.altText}
-                    data-hero
                   />
                 ),
               })}
