@@ -58,6 +58,7 @@ exports[`Media Player: Placeholder should render a video placeholder 1`] = `
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-7:hover,
@@ -254,6 +255,7 @@ exports[`Media Player: Placeholder should render a video placeholder with guidan
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-9:hover,
@@ -430,6 +432,7 @@ exports[`Media Player: Placeholder should render a video placeholder without dur
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-7:hover,
@@ -587,6 +590,7 @@ exports[`Media Player: Placeholder should render an audio placeholder 1`] = `
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-7:hover,
@@ -760,6 +764,7 @@ exports[`Media Player: Placeholder should render an audio placeholder without du
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-7:hover,
@@ -959,6 +964,7 @@ exports[`Media Player: Placeholder should render no-js styles when noJsClassName
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-9:hover,

@@ -109,6 +109,7 @@ exports[`MediaPlayer Calls the canonical placeholder when platform is canonical 
   width: 5rem;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .emotion-13:hover,
