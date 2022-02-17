@@ -276,16 +276,20 @@ export const testsThatFollowSmokeTestConfig = ({
     describe(`Visual comparison tests for ${service} ${pageType}`, () => {
       it('Articles', () => {
         if (Cypress.env('APP_ENV') === 'local' && Cypress.browser.isHeadless) {
-          cy.document().its('fonts.status').should('equal', 'loaded');
+          cy.url().then(url => {
+            if (!url.includes('.amp')) {
+              cy.document().its('fonts.status').should('equal', 'loaded');
 
-          cy.scrollTo('bottom', { duration: 6000 });
-          cy.scrollTo('top', { duration: 4000 });
-          cy.matchImageSnapshot({
-            capture: 'fullPage',
-            blackout: ['[data-e2e="media-player"]'],
+              cy.scrollTo('bottom', { duration: 6000 });
+              cy.scrollTo('top', { duration: 4000 });
+              cy.matchImageSnapshot({
+                capture: 'fullPage',
+                blackout: ['[data-e2e="media-player"]'],
+              });
+            } else {
+              cy.log('Snapshot skipped in headed mode');
+            }
           });
-        } else {
-          cy.log('Snapshot skipped in headed mode');
         }
       });
     });
