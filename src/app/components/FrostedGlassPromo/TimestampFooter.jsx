@@ -4,9 +4,9 @@ import { getSansRegular } from '@bbc/psammead-styles/font-styles';
 import { GEL_GROUP_2_SCREEN_WIDTH_MIN } from '@bbc/gel-foundations/breakpoints';
 import { GEL_SPACING, GEL_SPACING_DBL } from '@bbc/gel-foundations/spacings';
 
-import Timestamp from '../../containers/StoryPromo/Timestamp';
+import PromoTimestamp from '#components/Promo/timestamp';
 
-const StyledTimestamp = styled(Timestamp)`
+const StyledTimestamp = styled(PromoTimestamp)`
   ${({ service }) => service && getSansRegular(service)}
   color: white;
 

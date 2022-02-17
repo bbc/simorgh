@@ -30,13 +30,13 @@ import {
 import loggerNode from '#lib/logger.node';
 import { MEDIA_MISSING } from '#lib/logger.const';
 import { MEDIA_ASSET_PAGE } from '#app/routes/utils/pageTypes';
+import PromoTimestamp from '#components/Promo/timestamp';
 import LinkContents from './LinkContents';
 import MediaIndicatorContainer from './MediaIndicator';
 import IndexAlsosContainer from './IndexAlsos';
 import { getHeadingTagOverride, buildUniquePromoId } from './utilities';
 import ImageWithPlaceholder from '../ImageWithPlaceholder';
 import useCombinedClickTrackerHandler from './useCombinedClickTrackerHandler';
-import PromoTimestamp from './Timestamp';
 
 const logger = loggerNode(__filename);
 
@@ -258,10 +258,9 @@ const StoryPromoContainer = ({
         </Summary>
       )}
       {displayTimestamp && (
-        <PromoTimestamp
-          timestamp={timestamp}
-          serviceDatetimeLocale={serviceDatetimeLocale}
-        />
+        <PromoTimestamp serviceDatetimeLocale={serviceDatetimeLocale}>
+          {timestamp}
+        </PromoTimestamp>
       )}
       {promoType === 'top' && relatedItems && (
         <IndexAlsosContainer
