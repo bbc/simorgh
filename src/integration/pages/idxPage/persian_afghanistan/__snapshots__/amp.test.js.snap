@@ -475,6 +475,7 @@ exports[`AMP persian/afghanistan IDX page Story Promo Image should match image 1
 <amp-img
   alt="هبت الله آخوندزاده"
   attribution="BBC"
+  data-hero="false"
   height="351"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/7729/production/_91750503_1f1635b5-2a70-437b-8579-b0dcedab31fb.jpg"
@@ -484,6 +485,7 @@ exports[`AMP persian/afghanistan IDX page Story Promo Image should match image 1
   <amp-img
     alt="هبت الله آخوندزاده"
     attribution="BBC"
+    data-hero="false"
     fallback=""
     height="351"
     layout="responsive"

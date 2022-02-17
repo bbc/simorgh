@@ -311,6 +311,7 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
 <amp-img
   alt="Tenista de 1904"
   attribution="Getty Images"
+  data-hero="false"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/640/cpsprodpb/4C33/production/_90570591_gettyimages-3046790.jpg"
@@ -320,6 +321,7 @@ exports[`AMP Photo Gallery Page Image should match snapshot 1`] = `
   <amp-img
     alt="Tenista de 1904"
     attribution="Getty Images"
+    data-hero="false"
     fallback=""
     height="549"
     layout="responsive"

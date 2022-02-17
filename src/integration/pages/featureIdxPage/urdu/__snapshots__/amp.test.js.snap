@@ -435,6 +435,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
 <amp-img
   alt="بل گیٹس"
   attribution="AFP/getty images"
+  data-hero="false"
   height="576"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B04F/production/_112753154_bill.jpg"
@@ -444,6 +445,7 @@ exports[`AMP Feature Index page Story Promo Image should match image 1`] = `
   <amp-img
     alt="بل گیٹس"
     attribution="AFP/getty images"
+    data-hero="false"
     fallback=""
     height="576"
     layout="responsive"

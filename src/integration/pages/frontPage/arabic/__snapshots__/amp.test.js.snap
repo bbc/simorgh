@@ -491,6 +491,7 @@ exports[`Story Promo Image should match image 1`] = `
 <amp-img
   alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
   attribution="Reuters"
+  data-hero="false"
   height="549"
   layout="responsive"
   src="https://ichef.bbci.co.uk/news/660/cpsprodpb/17FC4/production/_107844289_055122086-1.jpg"
@@ -500,6 +501,7 @@ exports[`Story Promo Image should match image 1`] = `
   <amp-img
     alt="متظاهرون يحتفلون بالتوصل لاتفاق بين المجلس العسكري والمتظاهرين"
     attribution="Reuters"
+    data-hero="false"
     fallback=""
     height="549"
     layout="responsive"
