@@ -1,12 +1,22 @@
 import React from 'react';
-import { string, number } from 'prop-types';
+import { string, number, oneOf } from 'prop-types';
 
-import Promo from '#components/Promo';
+import Promo, { MEDIA_TYPES } from '#components/Promo';
 
-const TopicPromo = ({ heading, timestamp, imageSrc, imageAlt, href }) => {
+const TopicPromo = ({
+  heading,
+  timestamp,
+  imageSrc,
+  imageAlt,
+  href,
+  mediaType,
+  mediaDuration,
+}) => {
   return (
     <Promo>
-      <Promo.Image src={imageSrc} alt={imageAlt} />
+      <Promo.Image src={imageSrc} alt={imageAlt}>
+        <Promo.MediaLabel type={mediaType}>{mediaDuration}</Promo.MediaLabel>
+      </Promo.Image>
       <Promo.A href={href}>
         <Promo.Heading>{heading}</Promo.Heading>
       </Promo.A>
@@ -21,8 +31,13 @@ TopicPromo.propTypes = {
   imageSrc: string.isRequired,
   imageAlt: string.isRequired,
   href: string.isRequired,
+  mediaType: oneOf(Object.keys(MEDIA_TYPES)),
+  mediaDuration: number,
 };
 
-TopicPromo.defaultProps = {};
+TopicPromo.defaultProps = {
+  mediaType: null,
+  mediaDuration: null,
+};
 
 export default TopicPromo;

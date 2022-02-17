@@ -8,6 +8,7 @@ import { GEL_GROUP_2_SCREEN_WIDTH_MAX } from '@bbc/gel-foundations/breakpoints';
 import { ServiceContext } from '#contexts/ServiceContext';
 
 import Image from './image';
+import MediaLabel, { TYPES } from './media-label';
 import Heading from './heading';
 import Body from './body';
 import Footer from './footer';
@@ -61,6 +62,7 @@ const Promo = ({ children }) => {
 };
 
 Promo.Image = withPromoContext(Image);
+Promo.MediaLabel = withPromoContext(MediaLabel);
 Promo.Heading = withPromoContext(Heading);
 Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
@@ -71,4 +73,5 @@ Promo.propTypes = {
   children: arrayOf(element).isRequired,
 };
 
+export const MEDIA_TYPES = TYPES;
 export default Promo;

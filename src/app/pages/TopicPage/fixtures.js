@@ -9,12 +9,18 @@ const fixtureCat = () =>
 
 // eslint-disable-next-line import/prefer-default-export
 export const fixturePromos = () =>
-  new Array(23).fill().map((_, id) => ({
-    id,
-    heading: fixtureHeading(),
-    footer: '8th February 2022',
-    href: '#',
-    imageSrc: fixtureCat(),
-    imageAlt: 'evil monster',
-    timestamp: new Date().getTime() - rand(100000, 100000000),
-  }));
+  new Array(23).fill().map((_, id) => {
+    const mediaType = ['VIDEO', 'AUDIO', 'PHOTO_GALLERY', null][rand(0, 4)];
+    return {
+      id,
+      heading: fixtureHeading(),
+      href: '#',
+      imageSrc: fixtureCat(),
+      imageAlt: 'evil monster',
+      timestamp: new Date().getTime() - rand(100000, 100000000),
+      mediaType,
+      ...(['VIDEO', 'AUDIO'].includes(mediaType) && {
+        mediaDuration: rand(10, 10000),
+      }),
+    };
+  });
