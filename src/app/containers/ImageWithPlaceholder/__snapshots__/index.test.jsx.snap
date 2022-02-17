@@ -84,6 +84,7 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
     <amp-img
       alt="Pauline Clayton"
       attribution="Getty Images"
+      data-hero="false"
       height="360"
       layout="responsive"
       src="https://ichef.bbci.co.uk/news/640/cpsprodpb/E7DB/production/_101655395_paulineclayton.jpg"
@@ -93,6 +94,7 @@ exports[`ImageWithPlaceholder should render an AMP image 1`] = `
       <amp-img
         alt="Pauline Clayton"
         attribution="Getty Images"
+        data-hero="false"
         fallback=""
         height="360"
         layout="responsive"
