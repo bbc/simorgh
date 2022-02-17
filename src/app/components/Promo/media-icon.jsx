@@ -16,7 +16,7 @@ export const TYPES = {
   PHOTO_GALLERY: 'photogallery',
 };
 
-const StyledMediaIndicator = styled.div`
+const Wrapper = styled.div`
   padding: ${GEL_SPACING_HLF};
   color: ${C_EBON};
   background-color: ${C_WHITE};
@@ -38,26 +38,26 @@ const formatChildren = children => {
   return <StyledTime dateTime={isoDuration}>{durationString}</StyledTime>;
 };
 
-const MediaLabel = ({ script, service, children, type }) => {
+const MediaIcon = ({ script, service, children, type }) => {
   if (!type) return null;
   return (
-    <StyledMediaIndicator script={script} service={service}>
+    <Wrapper script={script} service={service}>
       {mediaIcons[TYPES[type]]}
       {formatChildren(children)}
-    </StyledMediaIndicator>
+    </Wrapper>
   );
 };
 
-MediaLabel.propTypes = {
+MediaIcon.propTypes = {
   script: shape(scriptPropType).isRequired,
   service: string.isRequired,
   type: oneOf(Object.keys(TYPES)),
   children: number,
 };
 
-MediaLabel.defaultProps = {
+MediaIcon.defaultProps = {
   children: null,
   type: null,
 };
 
-export default MediaLabel;
+export default MediaIcon;

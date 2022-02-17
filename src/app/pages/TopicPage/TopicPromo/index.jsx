@@ -15,7 +15,7 @@ const TopicPromo = ({
   return (
     <Promo>
       <Promo.Image src={imageSrc} alt={imageAlt}>
-        <Promo.MediaLabel type={mediaType}>{mediaDuration}</Promo.MediaLabel>
+        <Promo.MediaIcon type={mediaType}>{mediaDuration}</Promo.MediaIcon>
       </Promo.Image>
       <Promo.A href={href}>
         <Promo.Heading>{heading}</Promo.Heading>
