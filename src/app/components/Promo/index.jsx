@@ -12,6 +12,7 @@ import Heading from './heading';
 import Body from './body';
 import Footer from './footer';
 import A from './a';
+import Timestamp from './timestamp';
 
 const PromoContext = React.createContext({});
 const withPromoContext = Component => props =>
@@ -64,6 +65,7 @@ Promo.Heading = withPromoContext(Heading);
 Promo.Body = withPromoContext(Body);
 Promo.Footer = withPromoContext(Footer);
 Promo.A = withPromoContext(A);
+Promo.Timestamp = withPromoContext(Timestamp);
 
 Promo.propTypes = {
   children: arrayOf(element).isRequired,
