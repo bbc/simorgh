@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { arrayOf, shape, string, oneOfType, object } from 'prop-types';
+import { arrayOf, shape, string, oneOfType, object, func } from 'prop-types';
 import styled from '@emotion/styled';
 import pathOr from 'ramda/src/pathOr';
 import { getPica } from '@bbc/gel-foundations/typography';
@@ -70,7 +70,7 @@ const OperaPromoBox = styled.div`
   }
 `;
 
-const Promo = ({ block }) => {
+const Promo = ({ block, onClick }) => {
   const { script, service } = useContext(ServiceContext);
   const textBlock = filterForBlockType(
     pathOr({}, ['model', 'blocks'], block),
@@ -93,7 +93,7 @@ const Promo = ({ block }) => {
 
   return (
     <WrapperPromoBox>
-      <Link href={href} service={service} script={script}>
+      <Link href={href} service={service} script={script} onClick={onClick}>
         {title}
       </Link>
     </WrapperPromoBox>
@@ -106,6 +106,7 @@ Promo.propTypes = {
       blocks: arrayOf(oneOfType([string, object])),
     }).isRequired,
   }).isRequired,
+  onClick: func.isRequired,
 };
 
 export default Promo;
