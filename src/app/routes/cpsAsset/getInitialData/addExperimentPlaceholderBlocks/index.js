@@ -48,7 +48,7 @@ const addExperimentPlaceholderBlocks = originalJson => {
       },
     },
     blocks1,
-    6,
+    5,
   );
   const blocks3 = insertExperimentBlock(
     {
@@ -60,7 +60,7 @@ const addExperimentPlaceholderBlocks = originalJson => {
       },
     },
     blocks2,
-    7,
+    5,
   );
   const blocks4 = insertExperimentBlock(
     {
