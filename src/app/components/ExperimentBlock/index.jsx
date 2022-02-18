@@ -1,6 +1,6 @@
 import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
 
-const ExperimentBlock = (showForVariant, experimentId, children) => {
+const ExperimentBlock = ({ showForVariant, experimentId, children }) => {
   const promoVariation = useOptimizelyVariation(experimentId);
 
   if (promoVariation === showForVariant) {

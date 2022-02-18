@@ -4,8 +4,8 @@ import { STORY_PAGE } from '#app/routes/utils/pageTypes';
 import { getNthCpsParagraphIndex } from '../helpers';
 import deepClone from '../../../utils/jsonClone';
 
-const insertExperimentBlock = (experimentBlock, blocks, paragraphIndex) => {
-  const paragraphIndex = getNthCpsParagraphIndex(blocks, paragraphIndex);
+const insertExperimentBlock = (experimentBlock, blocks, insertIndex) => {
+  const paragraphIndex = getNthCpsParagraphIndex(blocks, insertIndex);
 
   if (!paragraphIndex) {
     return blocks;
@@ -16,7 +16,7 @@ const insertExperimentBlock = (experimentBlock, blocks, paragraphIndex) => {
   return [...parts[0], { ...experimentBlock }, ...parts[1]];
 };
 
-const addExperimentPlaceholderBlocks = originalJson => {
+const addExperimentPlaceholderBlocks = service => originalJson => {
   const json = deepClone(originalJson);
   const pageType = path(['metadata', 'type'], json);
   const { allowAdvertising } = path(['metadata', 'options'], json);
@@ -26,24 +26,52 @@ const addExperimentPlaceholderBlocks = originalJson => {
     return json;
   }
 
+  /**
+   * Default recommendations for services outside of the experiment
+   */
+
+  if (service !== 'hindi') {
+    const { assetUri } = path(['metadata', 'locators'], json);
+
+    const defaultRecommendationsBlock = {
+      type: 'wsoj',
+      model: {
+        type: 'recommendations',
+        path: `/api/recommend?recSys=2&limit=4&assetUri=${assetUri}`,
+      },
+    };
+
+    json.content.model.blocks = insertExperimentBlock(
+      defaultRecommendationsBlock,
+      blocks,
+      5,
+    );
+
+    return json;
+  }
+
+  /**
+   * For the Hindi service, we need to insert the experiment blocks into the pageData
+   */
+
+  // Control rec block
   const blocks1 = insertExperimentBlock(
     {
       type: 'experimentBlock',
       model: {
-        showForVariant: 'control',
-        experimentId: 'recommendationsExperiment',
+        showForVariation: 'control',
       },
     },
     blocks,
     5,
   );
 
+  // Split recs blocks
   const blocks2 = insertExperimentBlock(
     {
       type: 'experimentBlock',
       model: {
-        showForVariant: 'variantA',
-        experimentId: 'recommendationsExperiment',
+        showForVariation: 'variation_a',
         part: 1,
       },
     },
@@ -54,24 +82,24 @@ const addExperimentPlaceholderBlocks = originalJson => {
     {
       type: 'experimentBlock',
       model: {
-        showForVariant: 'variantC',
-        experimentId: 'recommendationsExperiment',
+        showForVariation: 'variation_a',
         part: 2,
       },
     },
     blocks2,
-    5,
+    10,
   );
+
+  // Scrollable recs block
   const blocks4 = insertExperimentBlock(
     {
       type: 'experimentBlock',
       model: {
-        showForVariant: 'variantA',
-        experimentId: 'recommendationsExperiment',
+        showForVariation: 'variation_c',
       },
     },
     blocks3,
-    10,
+    5,
   );
 
   json.content.model.blocks = blocks4;

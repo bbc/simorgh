@@ -54,9 +54,10 @@ import { RequestContext } from '#contexts/RequestContext';
 import useToggle from '#hooks/useToggle';
 import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
+import useOptimizelyVariation from '#hooks/useOptimizelyVariation';
+import OPTIMIZELY_EXPERIMENT_IDS from '#lib/config/optimizely/experimentIds';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
-import ExperimentBlock from '#app/components/ExperimentBlock';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -72,6 +73,13 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     lang,
     showRelatedTopics,
   } = useContext(ServiceContext);
+
+  // const experimentVariation = useOptimizelyVariation(
+  //   OPTIMIZELY_EXPERIMENT_IDS.hindiRecommendations,
+  // );
+
+  const experimentVariation = 'variation_a';
+
   const { enabled: preloadLeadImageToggle } = useToggle('preloadLeadImage');
   const title = path(['promo', 'headlines', 'headline'], pageData);
   const shortHeadline = path(['promo', 'headlines', 'shortHeadline'], pageData);
@@ -206,51 +214,34 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
     experimentBlock: props => {
-      const { showForVariant, experimentId } = props.model;
-
-      if (showForVariant === 'control') {
+      const { showForVariation, part } = props;
+      if (showForVariation === 'control' && experimentVariation === 'control') {
         return (
-          <ExperimentBlock
-            showForVariant={showForVariant}
-            experimentId={experimentId}
-          >
-            <div>Recs with 4 items</div>
-          </ExperimentBlock>
+          <CpsRecommendations
+            {...props}
+            parentColumns={gridColsMain}
+            items={recommendationsInitialData}
+          />
         );
       }
-      if (showForVariant === 'variantA') {
-        const { part } = props.model;
+      if (
+        showForVariation === 'variation_a' &&
+        experimentVariation === 'variation_a'
+      ) {
         if (part === 1) {
-          return (
-            <ExperimentBlock
-              showForVariant={showForVariant}
-              experimentId={experimentId}
-            >
-              <div>Recs with 2 items, first 2 recs</div>
-            </ExperimentBlock>
-          );
+          return <div>Recs with 2 items, first 2 recs</div>;
         }
         if (part === 2) {
-          return (
-            <ExperimentBlock
-              showForVariant={showForVariant}
-              experimentId={experimentId}
-            >
-              <div>Recs with 2 items, last 2 recs</div>
-            </ExperimentBlock>
-          );
+          return <div>Recs with 2 items, last 2 recs</div>;
         }
       }
-      if (showForVariant === 'variantC') {
-        return (
-          <ExperimentBlock
-            showForVariant={showForVariant}
-            experimentId={experimentId}
-          >
-            <div>scrolling recs</div>
-          </ExperimentBlock>
-        );
+      if (
+        showForVariation === 'variation_c' &&
+        experimentVariation === 'variation_c'
+      ) {
+        return <div>scrolling recs</div>;
       }
+
       return null;
     },
   };
