@@ -217,7 +217,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             <div>Recs with 4 items</div>
           </ExperimentBlock>
         );
-      } else if (showForVariant === 'variantA') {
+      }
+      if (showForVariant === 'variantA') {
         const { part } = props.model;
         if (part === 1) {
           return (
@@ -239,7 +240,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
             </ExperimentBlock>
           );
         }
-      } else if (showForVariant === 'variantC') {
+      }
+      if (showForVariant === 'variantC') {
         return (
           <ExperimentBlock
             showForVariant={showForVariant}
@@ -249,6 +251,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           </ExperimentBlock>
         );
       }
+      return null;
     },
   };
 
