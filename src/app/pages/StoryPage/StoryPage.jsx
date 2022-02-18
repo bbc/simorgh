@@ -56,6 +56,7 @@ import RelatedTopics from '#containers/RelatedTopics';
 import NielsenAnalytics from '#containers/NielsenAnalytics';
 import categoryType from './categoryMap/index';
 import cpsAssetPagePropTypes from '../../models/propTypes/cpsAssetPage';
+import ExperimentBlock from '#app/components/ExperimentBlock';
 
 const MpuContainer = styled(AdContainer)`
   margin-bottom: ${GEL_SPACING_TRPL};
@@ -204,6 +205,51 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       <Disclaimer {...props} increasePaddingOnDesktop={false} />
     ),
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
+    experimentBlock: props => {
+      const { showForVariant, experimentId } = props.model;
+
+      if (showForVariant === 'control') {
+        return (
+          <ExperimentBlock
+            showForVariant={showForVariant}
+            experimentId={experimentId}
+          >
+            <div>Recs with 4 items</div>
+          </ExperimentBlock>
+        );
+      } else if (showForVariant === 'variantA') {
+        const { part } = props.model;
+        if (part === 1) {
+          return (
+            <ExperimentBlock
+              showForVariant={showForVariant}
+              experimentId={experimentId}
+            >
+              <div>Recs with 2 items, first 2 recs</div>
+            </ExperimentBlock>
+          );
+        }
+        if (part === 2) {
+          return (
+            <ExperimentBlock
+              showForVariant={showForVariant}
+              experimentId={experimentId}
+            >
+              <div>Recs with 2 items, last 2 recs</div>
+            </ExperimentBlock>
+          );
+        }
+      } else if (showForVariant === 'variantC') {
+        return (
+          <ExperimentBlock
+            showForVariant={showForVariant}
+            experimentId={experimentId}
+          >
+            <div>scrolling recs</div>
+          </ExperimentBlock>
+        );
+      }
+    },
   };
 
   const StyledTimestamp = styled(Timestamp)`

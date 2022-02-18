@@ -29,6 +29,7 @@ import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
+import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
 
 export const only =
   (pageTypes, transformer) =>
@@ -66,6 +67,7 @@ const processOptimoBlocks = toggles =>
       blockGroupType: 'listWithLink',
       pathToBlockGroup: ['model', 'blocks', 0],
     }),
+    addExperimentPlaceholderBlocks,
   );
 
 // Here pathname is passed as a prop specifically for CPS includes
