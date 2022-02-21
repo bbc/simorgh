@@ -70,7 +70,7 @@ const addExperimentPlaceholderBlocks = service => originalJson => {
       block: {
         type: 'experimentBlock',
         model: {
-          showForVariation: 'variation_a',
+          showForVariation: 'variation_1',
           part: 1,
         },
       },
@@ -80,7 +80,7 @@ const addExperimentPlaceholderBlocks = service => originalJson => {
       block: {
         type: 'experimentBlock',
         model: {
-          showForVariation: 'variation_a',
+          showForVariation: 'variation_1',
           part: 2,
         },
       },
@@ -91,7 +91,7 @@ const addExperimentPlaceholderBlocks = service => originalJson => {
       block: {
         type: 'experimentBlock',
         model: {
-          showForVariation: 'variation_c',
+          showForVariation: 'variation_3',
         },
       },
       insertIndex: 5,

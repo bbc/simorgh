@@ -228,8 +228,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       }
 
       if (
-        showForVariation === 'variation_a' &&
-        experimentVariation === 'variation_a'
+        showForVariation === 'variation_1' &&
+        experimentVariation === 'variation_1'
       ) {
         if (part === 1) {
           return <div>Recs with 2 items, first 2 recs</div>;
@@ -240,8 +240,8 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
       }
 
       if (
-        showForVariation === 'variation_c' &&
-        experimentVariation === 'variation_c'
+        showForVariation === 'variation_3' &&
+        experimentVariation === 'variation_3'
       ) {
         return <div>scrolling recs</div>;
       }
