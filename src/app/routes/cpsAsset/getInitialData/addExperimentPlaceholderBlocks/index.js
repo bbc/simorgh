@@ -20,7 +20,7 @@ const addExperimentPlaceholderBlocks = service => originalJson => {
   const json = deepClone(originalJson);
   const pageType = path(['metadata', 'type'], json);
   const { allowAdvertising } = path(['metadata', 'options'], json);
-  const blocks = path(['content', 'model', 'blocks'], json);
+  let blocks = path(['content', 'model', 'blocks'], json);
 
   if (pageType !== STORY_PAGE || !blocks || !allowAdvertising) {
     return json;
@@ -54,55 +54,55 @@ const addExperimentPlaceholderBlocks = service => originalJson => {
    * For the Hindi service, we need to insert the experiment blocks into the pageData
    */
 
-  // Control rec block
-  const blocks1 = insertExperimentBlock(
+  const experimentBlocks = [
+    // Control recs block
     {
-      type: 'experimentBlock',
-      model: {
-        showForVariation: 'control',
+      block: {
+        type: 'experimentBlock',
+        model: {
+          showForVariation: 'control',
+        },
       },
+      insertIndex: 5,
     },
-    blocks,
-    5,
-  );
+    // Split recs blocks
+    {
+      block: {
+        type: 'experimentBlock',
+        model: {
+          showForVariation: 'variation_a',
+          part: 1,
+        },
+      },
+      insertIndex: 5,
+    },
+    {
+      block: {
+        type: 'experimentBlock',
+        model: {
+          showForVariation: 'variation_a',
+          part: 2,
+        },
+      },
+      insertIndex: 10,
+    },
+    // Scrollable recs block
+    {
+      block: {
+        type: 'experimentBlock',
+        model: {
+          showForVariation: 'variation_c',
+        },
+      },
+      insertIndex: 5,
+    },
+  ];
 
-  // Split recs blocks
-  const blocks2 = insertExperimentBlock(
-    {
-      type: 'experimentBlock',
-      model: {
-        showForVariation: 'variation_a',
-        part: 1,
-      },
-    },
-    blocks1,
-    5,
-  );
-  const blocks3 = insertExperimentBlock(
-    {
-      type: 'experimentBlock',
-      model: {
-        showForVariation: 'variation_a',
-        part: 2,
-      },
-    },
-    blocks2,
-    10,
-  );
+  experimentBlocks.forEach(({ block, insertIndex }) => {
+    blocks = insertExperimentBlock(block, blocks, insertIndex);
+  });
 
-  // Scrollable recs block
-  const blocks4 = insertExperimentBlock(
-    {
-      type: 'experimentBlock',
-      model: {
-        showForVariation: 'variation_c',
-      },
-    },
-    blocks3,
-    5,
-  );
-
-  json.content.model.blocks = blocks4;
+  json.content.model.blocks = blocks;
 
   return json;
 };
