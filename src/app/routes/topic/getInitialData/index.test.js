@@ -19,4 +19,6 @@ describe('get error codes for initial data request responses ', () => {
   it.skip('should throw an error and status code - code 404', () => {});
 
   it.skip('should throw an error and status code - code 400', () => {});
+
+  it.skip('should throw an error when the page data is undefined', () => {});
 });
