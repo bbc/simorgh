@@ -21,7 +21,10 @@ describe('getToggles', () => {
     process.env.SIMORGH_CONFIG_URL = 'https://mock-config-endpoint';
   });
 
-  afterEach(fetchMock.resetHistory);
+  afterEach(() => {
+    jest.resetAllMocks();
+    fetchMock.resetHistory();
+  });
 
   it('should return defaultToggles if enableFetchingToggles is not enabled', async () => {
     const mockDefaultToggles = {
@@ -53,6 +56,8 @@ describe('getToggles', () => {
     it('should return the merged local and remote toggles and log that this happened', async () => {
       const nodeLogger = await import('#testHelpers/loggerMock');
       const getToggles = await import('.');
+      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
+
       const toggles = await getToggles.default('mundo');
 
       expect(nodeLogger.default.info).toHaveBeenCalledWith(
@@ -62,6 +67,7 @@ describe('getToggles', () => {
           url: mockUrl,
         },
       );
+
       expect(toggles).toEqual({
         ...mockDefaultToggles.local,
         ...mockResponse.toggles,
@@ -143,6 +149,34 @@ describe('getToggles', () => {
         url: mockServiceUrl,
       });
       expect(toggles).toEqual(mockDefaultToggles.local);
+    });
+
+    it('should calculate and log response time of toggles call when called on server', async () => {
+      const nodeLogger = await import('#testHelpers/loggerMock');
+      const getToggles = await import('.');
+      const hrtTimeSpy = jest
+        .spyOn(process, 'hrtime')
+        .mockReturnValue([10, 1000]);
+      jest.spyOn(window, 'document', 'get').mockReturnValue(undefined);
+
+      await getToggles.default('mundo');
+
+      expect(fetchMock.calls().length).toBe(1);
+      expect(hrtTimeSpy).toHaveBeenCalledTimes(2);
+      expect(nodeLogger.default.info).toHaveBeenCalledTimes(2);
+    });
+
+    it('should not calculate and log response when running on client', async () => {
+      const nodeLogger = await import('#testHelpers/loggerMock');
+      const getToggles = await import('.');
+      const hrtTimeSpy = jest.spyOn(process, 'hrtime');
+      jest.spyOn(window, 'document', 'get').mockReturnValue({});
+
+      await getToggles.default('mundo');
+
+      expect(fetchMock.calls().length).toBe(1);
+      expect(hrtTimeSpy).toHaveBeenCalledTimes(0);
+      expect(nodeLogger.default.info).toHaveBeenCalledTimes(0);
     });
   });
 });

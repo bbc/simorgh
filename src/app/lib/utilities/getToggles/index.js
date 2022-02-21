@@ -12,6 +12,27 @@ import getOriginContext from '#contexts/RequestContext/getOriginContext';
 const logger = nodeLogger(__filename);
 const NS_PER_SEC = 1e9;
 
+const logResponseTime = async (url, origin, service, timeout) => {
+  const isBrowser =
+    typeof window !== 'undefined' && typeof window.document !== 'undefined';
+
+  if (isBrowser) {
+    return fetch(url, { headers: { origin }, timeout });
+  }
+
+  logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
+  const startHrTime = process.hrtime();
+  const response = await fetch(url, { headers: { origin }, timeout });
+  const elapsedHrTime = process.hrtime(startHrTime);
+  logger.info(TOGGLE_API_RESPONSE_TIME, {
+    nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
+    url,
+    service,
+  });
+
+  return response;
+};
+
 const getToggles = async (service, cache) => {
   const environment = process.env.SIMORGH_APP_ENV || 'local';
   const timeout =
@@ -33,15 +54,7 @@ const getToggles = async (service, cache) => {
   }
 
   try {
-    logger.info(CONFIG_REQUEST_RECEIVED, { url, service });
-    const startHrTime = process.hrtime();
-    const response = await fetch(url, { headers: { origin }, timeout });
-    const elapsedHrTime = process.hrtime(startHrTime);
-    logger.info(TOGGLE_API_RESPONSE_TIME, {
-      nanoseconds: elapsedHrTime[0] * NS_PER_SEC + elapsedHrTime[1],
-      url,
-      service,
-    });
+    const response = await logResponseTime(url, origin, service, timeout);
 
     if (!response.ok) {
       logger.error(CONFIG_FETCH_ERROR, {
