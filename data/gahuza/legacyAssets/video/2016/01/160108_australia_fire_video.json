@@ -22,7 +22,8 @@
     },
     "analyticsLabels": {
       "cps_asset_type": "map",
-      "cps_asset_id": "42074194"
+      "cps_asset_id": "42074194",
+      "contentId": "urn:bbc:cps:curie:asset:a753e377-f11b-5646-9c9b-4775bfa4e692"
     },
     "tags": {},
     "version": "v1.1.3",
