@@ -215,7 +215,11 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
     podcastPromo: podcastPromoEnabled && InlinePodcastPromo,
     experimentBlock: props => {
       const { showForVariation, part } = props;
-      if (showForVariation === 'control' && experimentVariation === 'control') {
+      // Return 'control' variation if 'control' is returned from Optimizely or experiment is not enabled
+      if (
+        showForVariation === 'control' &&
+        (experimentVariation === 'control' || !experimentVariation)
+      ) {
         return (
           <CpsRecommendations
             {...props}
@@ -224,6 +228,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           />
         );
       }
+
       if (
         showForVariation === 'variation_a' &&
         experimentVariation === 'variation_a'
@@ -235,6 +240,7 @@ const StoryPage = ({ pageData, mostReadEndpointOverride }) => {
           return <div>Recs with 2 items, last 2 recs</div>;
         }
       }
+
       if (
         showForVariation === 'variation_c' &&
         experimentVariation === 'variation_c'
