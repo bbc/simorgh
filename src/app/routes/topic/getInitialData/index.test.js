@@ -1,9 +1,12 @@
 import getInitialData from '.';
+import getAgent from '../../../../server/utilities/getAgent';
 
 describe('get initial data for topic', () => {
-  it.skip('should return our topic title', () => {
-    const { pageData } = getInitialData();
-    expect(pageData.title).toEqual('Hello world');
+  it('should return our topic title', () => {
+    const { pageData } = getInitialData(getAgent(), 'pidgin');
+    expect(pageData)
+      .toEqual('Hello world')
+      .catch(e => expect(e).toMatch('error'));
   });
 
   it.skip('should return title, type, firstPublished, link, imageUrl and id from a summary', () => {});
