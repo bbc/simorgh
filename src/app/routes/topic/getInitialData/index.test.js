@@ -4,10 +4,10 @@ import getAgent from '../../../../server/utilities/getAgent';
 describe('get initial data for topic', () => {
   it('should return our topic title', async () => {
     const { pageData } = await getInitialData({
-      agent: getAgent(),
+      getAgent,
       service: 'pidgin',
     });
-    expect(pageData)
+    expect(pageData.title)
       .toEqual('Hello world')
       .catch(e => expect(e).toMatch('error'));
   });
