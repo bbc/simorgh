@@ -97,7 +97,7 @@ const ImageWithPlaceholder = ({
             height={height}
             width={width}
             style={!isImgJpg ? { backgroundColor: C_GHOST } : null}
-            data-hero={isHero}
+            {...(isHero && { 'data-hero': true })}
           />
         ) : (
           renderImage(imageToRender, lazyLoad, fallback)
