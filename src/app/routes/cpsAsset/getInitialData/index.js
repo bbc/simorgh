@@ -18,6 +18,7 @@ import timestampToMilliseconds from './timestampToMilliseconds';
 import addSummaryBlock from './addSummaryBlock';
 import cpsOnlyOnwardJourneys from './cpsOnlyOnwardJourneys';
 import insertPodcastPromo from './insertPodcastPromo';
+import addRecommendationsBlock from './addRecommendationsBlock';
 import addBylineBlock from './addBylineBlock';
 import addMpuBlock from './addMpuBlock';
 import addAnalyticsCounterName from './addAnalyticsCounterName';
@@ -28,7 +29,7 @@ import getAdditionalPageData from '../utils/getAdditionalPageData';
 import getErrorStatusCode from '../../utils/fetchPageData/utils/getErrorStatusCode';
 import isListWithLink from '../../utils/isListWithLink';
 import addIndexToBlockGroups from '../../utils/sharedDataTransformers/addIndexToBlockGroups';
-import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
+// import addExperimentPlaceholderBlocks from './addExperimentPlaceholderBlocks';
 
 export const only =
   (pageTypes, transformer) =>
@@ -46,7 +47,7 @@ const formatPageData = pipe(
   only([STORY_PAGE], insertPodcastPromo),
 );
 
-const processOptimoBlocks = toggles => service =>
+const processOptimoBlocks = toggles => () =>
   pipe(
     only([MEDIA_ASSET_PAGE], processUnavailableMedia),
     addHeadlineBlock,
@@ -57,10 +58,11 @@ const processOptimoBlocks = toggles => service =>
       augmentWithDisclaimer(toggles),
     ),
     addBylineBlock,
+    addRecommendationsBlock,
     addMpuBlock,
     addIdsToBlocks,
     applyBlockPositioning,
-    addExperimentPlaceholderBlocks(service),
+    // addExperimentPlaceholderBlocks(service),
     cpsOnlyOnwardJourneys,
     addIndexToBlockGroups(isListWithLink, {
       blockGroupType: 'listWithLink',
