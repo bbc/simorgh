@@ -2,8 +2,11 @@ import getInitialData from '.';
 import getAgent from '../../../../server/utilities/getAgent';
 
 describe('get initial data for topic', () => {
-  it('should return our topic title', () => {
-    const { pageData } = getInitialData(getAgent(), 'pidgin');
+  it('should return our topic title', async () => {
+    const { pageData } = await getInitialData({
+      agent: getAgent(),
+      service: 'pidgin',
+    });
     expect(pageData)
       .toEqual('Hello world')
       .catch(e => expect(e).toMatch('error'));
