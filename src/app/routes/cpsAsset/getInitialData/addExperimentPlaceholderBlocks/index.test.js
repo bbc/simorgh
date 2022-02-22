@@ -502,13 +502,13 @@ describe('addExperimentPlaceholderBlocks', () => {
             {
               type: 'experimentBlock',
               model: {
-                showForVariation: 'variation_c',
+                showForVariation: 'variation_3',
               },
             },
             {
               type: 'experimentBlock',
               model: {
-                showForVariation: 'variation_a',
+                showForVariation: 'variation_1',
                 part: 1,
               },
             },
@@ -571,7 +571,7 @@ describe('addExperimentPlaceholderBlocks', () => {
             {
               type: 'experimentBlock',
               model: {
-                showForVariation: 'variation_a',
+                showForVariation: 'variation_1',
                 part: 2,
               },
             },
@@ -714,13 +714,13 @@ describe('addExperimentPlaceholderBlocks', () => {
             {
               type: 'experimentBlock',
               model: {
-                showForVariation: 'variation_c',
+                showForVariation: 'variation_3',
               },
             },
             {
               type: 'experimentBlock',
               model: {
-                showForVariation: 'variation_a',
+                showForVariation: 'variation_1',
                 part: 1,
               },
             },
