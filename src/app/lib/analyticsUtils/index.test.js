@@ -475,7 +475,7 @@ describe('getAtUserId', () => {
   });
 
   it('should return the AT user id', () => {
-    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    Cookie.set('atuserid', '{ "val": "some-random-uuid" }');
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
 
@@ -483,7 +483,7 @@ describe('getAtUserId', () => {
   });
 
   it('should store the existing AT user id as a stringified JSON value in cookies again so that we update the cookie expiration date', () => {
-    Cookie.set('atuserid', { val: 'some-random-uuid' });
+    Cookie.set('atuserid', '{ "val": "some-random-uuid" }');
     cookieSetterSpy.mockClear();
     const atUserId = getAtUserId();
     const [[cookieName, cookieValue, cookieOptions]] =
@@ -581,7 +581,7 @@ describe('getCampaignType', () => {
 });
 
 describe('getRSSMarketingString', () => {
-  describe.only('"RSS" prefix', () => {
+  describe('"RSS" prefix', () => {
     it('returns "src_medium" when marketing string is present in url', () => {
       const href = 'https://www.bbc.com/mundo?at_medium=RSS';
       expect(getRSSMarketingString(href, 'RSS')).toEqual([SRC_RSS_FIXTURE]);
