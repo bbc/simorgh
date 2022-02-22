@@ -3,12 +3,9 @@ import getAgent from '../../../../server/utilities/getAgent';
 
 describe('get initial data for topic', () => {
   it('should return our topic title', async () => {
-    const BFF_PATH =
-      'https://fabl.api.bbci.co.uk/preview/module/spike-simorgh-bff?id=c95y35941vrt&service=pidgin';
     const { pageData } = await getInitialData({
       getAgent,
       service: 'pidgin',
-      path: BFF_PATH,
     });
     expect(pageData.title)
       .toEqual('Donald Trump')

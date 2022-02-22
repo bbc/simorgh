@@ -7,6 +7,8 @@ import fetchPageData from '../../utils/fetchPageData';
 const logger = nodeLogger(__filename);
 
 export default async ({ getAgent, service }) => {
+  const BFF_PATH =
+    'https://fabl.api.bbci.co.uk/preview/module/spike-simorgh-bff?id=c95y35941vrt&service=pidgin';
   const agent = await getAgent();
   try {
     const path = process.env.BFF_PATH;
