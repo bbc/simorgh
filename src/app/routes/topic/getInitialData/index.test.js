@@ -1,6 +1,8 @@
 import * as fetchPageData from '#app/routes/utils/fetchPageData';
 import getInitialData from '.';
 
+process.env.BFF_PATH = 'https://mock-bff-path';
+
 const topicJSON = {
   data: {
     title: 'Donald Trump',
@@ -55,7 +57,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'mock-bff-path?id=54321&service=pidgin',
+      path: 'https://mock-bff-path?id=54321&service=pidgin',
       agent,
     });
   });
@@ -71,7 +73,7 @@ describe('get initial data for topic', () => {
     });
 
     expect(fetchDataSpy).toHaveBeenCalledWith({
-      path: 'mock-bff-path?id=54321&service=serbian&variant=sr-cyrl',
+      path: 'https://mock-bff-path?id=54321&service=serbian&variant=sr-cyrl',
       agent,
     });
   });
