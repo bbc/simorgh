@@ -367,6 +367,10 @@ export const service = {
         url: '/russian',
       },
       {
+        title: 'Украина',
+        url: '/russian/topics/cez0n29ggrdt',
+      },
+      {
         title: 'Коронавирус',
         url: '/russian/in-depth-51962199',
       },
