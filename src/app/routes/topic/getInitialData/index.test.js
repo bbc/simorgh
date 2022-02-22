@@ -3,12 +3,15 @@ import getAgent from '../../../../server/utilities/getAgent';
 
 describe('get initial data for topic', () => {
   it('should return our topic title', async () => {
+    const BFF_PATH =
+      'https://fabl.api.bbci.co.uk/preview/module/spike-simorgh-bff?id=c95y35941vrt&service=pidgin';
     const { pageData } = await getInitialData({
       getAgent,
       service: 'pidgin',
+      path: BFF_PATH,
     });
     expect(pageData.title)
-      .toEqual('Hello world')
+      .toEqual('Donald Trump')
       .catch(e => expect(e).toMatch('error'));
   });
 
@@ -26,5 +29,11 @@ describe('get error codes for initial data request responses ', () => {
 
   it.skip('should throw an error and status code - code 400', () => {});
 
-  it.skip('should throw an error when the page data is undefined', () => {});
+  it.skip('should throw an error when the page data is undefined', async () => {
+    const { pageData } = await getInitialData({
+      getAgent,
+      service: 'pigeon',
+    });
+    expect(pageData).toEqual(undefined);
+  });
 });
